@@ -9,7 +9,8 @@ const service = {
   atiAnalyticsAppName: 'news-nepali',
   brandName: 'BBC News नेपाली',
   product: 'BBC News नेपाली',
-  defaultImage: 'https://www.bbc.co.uk/news/special/2015/newsspec_11063/nepali_1024x576.png',
+  defaultImage:
+    'https://www.bbc.co.uk/news/special/2015/newsspec_11063/nepali_1024x576.png',
   defaultImageAltText: 'BBC News नेपाली',
   dir: `ltr`,
   externalLinkText: ', external',
@@ -36,7 +37,7 @@ const service = {
         statusCode: '404',
         title: '४०४: पेज फेला परेन',
         message:
-          "गल्ती वेब एड्रेस टाइप भएर यस्तो भएको हुनसक्छ। कृपया वेब एड्रेस र हिज्जे जाँच गर्नुहोस्।",
+          'गल्ती वेब एड्रेस टाइप भएर यस्तो भएको हुनसक्छ। कृपया वेब एड्रेस र हिज्जे जाँच गर्नुहोस्।',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +51,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '५०० - एरर',
-        message:
-          "त्रु्टी देखियो। कृपया पेज रिफ्रेस गर्नुहोस्।",
+        message: 'त्रु्टी देखियो। कृपया पेज रिफ्रेस गर्नुहोस्।',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +116,7 @@ const service = {
       video: 'भिडियो',
     },
   },
-  brandSVG: brandSVGs['nepali'] || brandSVGs.news,
+  brandSVG: brandSVGs.nepali || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +154,7 @@ const service = {
     ],
     copyrightText: 'बाहिरी वेबसाइटहरुको सामग्रीका लागि बीबीसी जिम्मेवार छैन।',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

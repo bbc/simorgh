@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - 페이지를 찾을 수 없습니다',
         message:
-          "웹사이트 주소를 잘못 입력하셨을 수 있습니다. 주소와 철자를 확인해 주십시오.",
+          '웹사이트 주소를 잘못 입력하셨을 수 있습니다. 주소와 철자를 확인해 주십시오.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - 오류',
-        message:
-          "오류가 발생했습니다. 페이지를 새로 고쳐 주십시오.",
+        message: '오류가 발생했습니다. 페이지를 새로 고쳐 주십시오.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: '비디오',
     },
   },
-  brandSVG: brandSVGs['korean'] || brandSVGs.news,
+  brandSVG: brandSVGs.korean || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBC는 외부 인터넷 사이트의 내용에 대한 책임이 없습니다.',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

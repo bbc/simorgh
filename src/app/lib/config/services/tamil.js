@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404-பக்கம் கிடைக்கப்பெறவில்லை',
         message:
-          "இணைய தள விலாசம் தவறாக தட்டச்சு செய்யப்பட்டதால் இது நேர்ந்திருக்கலாம். விலாசத்தையும் , எழுத்துக்களையும் சரிபார்க்கவும்.",
+          'இணைய தள விலாசம் தவறாக தட்டச்சு செய்யப்பட்டதால் இது நேர்ந்திருக்கலாம். விலாசத்தையும் , எழுத்துக்களையும் சரிபார்க்கவும்.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500-பிழை',
-        message:
-          "இது ஒரு பிழை, மீண்டும் பக்கத்தைப் புதுப்பிக்கவும்",
+        message: 'இது ஒரு பிழை, மீண்டும் பக்கத்தைப் புதுப்பிக்கவும்',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'வீடியோ',
     },
   },
-  brandSVG: brandSVGs['tamil'] || brandSVGs.news,
+  brandSVG: brandSVGs.tamil || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'வெளியார் இணைய தளங்களில் உள்ள விஷயங்களுக்கு பிபிசி பொறுப்பாகாது',
+    copyrightText:
+      'வெளியார் இணைய தளங்களில் உள்ள விஷயங்களுக்கு பிபிசி பொறுப்பாகாது',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

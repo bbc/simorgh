@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Sayfa bulunamadı',
         message:
-          "Bunun sebebi, internet adresini yanlış yazmanız olabilir. Lütfen adresi ve nasıl yazıldığını kontrol edin.",
+          'Bunun sebebi, internet adresini yanlış yazmanız olabilir. Lütfen adresi ve nasıl yazıldığını kontrol edin.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Hata',
-        message:
-          "Bir hata oluştu. Lütfen sayfayı yeniden yükleyin.",
+        message: 'Bir hata oluştu. Lütfen sayfayı yeniden yükleyin.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'İzleyin',
     },
   },
-  brandSVG: brandSVGs['turkce'] || brandSVGs.news,
+  brandSVG: brandSVGs.turkce || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC, diğer internet sayfalarının içeriğinden sorumlu değildir',
+    copyrightText:
+      'BBC, diğer internet sayfalarının içeriğinden sorumlu değildir',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

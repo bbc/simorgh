@@ -9,7 +9,8 @@ const service = {
   atiAnalyticsAppName: 'news-japanese',
   brandName: 'BBCニュース',
   product: 'BBCニュース',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/twitter/bbc_japan_1024.png',
+  defaultImage:
+    'https://news.files.bbci.co.uk/ws/img/logos/twitter/bbc_japan_1024.png',
   defaultImageAltText: 'BBCニュース',
   dir: `ltr`,
   externalLinkText: ', external',
@@ -35,8 +36,7 @@ const service = {
       404: {
         statusCode: '404',
         title: '404 - ページが見つかりません',
-        message:
-          "URLが正しいか確認してください。",
+        message: 'URLが正しいか確認してください。',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - エラー',
-        message:
-          "エラーが起きました。ページを読み込み直してください",
+        message: 'エラーが起きました。ページを読み込み直してください',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Video',
     },
   },
-  brandSVG: brandSVGs['japanese'] || brandSVGs.news,
+  brandSVG: brandSVGs.japanese || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBCは外部サイトの内容に責任を負いません',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

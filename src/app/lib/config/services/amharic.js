@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - ገጹ አልተገኘም',
         message:
-          "ይህ የድረገጽ አድራሻውን በትክክል ስላላስገቡ ሊሆን ይችላል፡፡ እባክዎትን አድራሻውን እና ፊደላቱን ያረጋግጡ፡፡",
+          'ይህ የድረገጽ አድራሻውን በትክክል ስላላስገቡ ሊሆን ይችላል፡፡ እባክዎትን አድራሻውን እና ፊደላቱን ያረጋግጡ፡፡',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - ስህተት',
-        message:
-          "ስህተት ተፈጥሯል ፡ እባክዎን ገጽዎን ያድሱ",
+        message: 'ስህተት ተፈጥሯል ፡ እባክዎን ገጽዎን ያድሱ',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'ተንቀሳቃሽ ምስል',
     },
   },
-  brandSVG: brandSVGs['amharic'] || brandSVGs.news,
+  brandSVG: brandSVGs.amharic || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

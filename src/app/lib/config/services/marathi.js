@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - पृष्ठ आढळले नाही',
         message:
-          "कदाचित आपण वेब पत्त्यामध्ये चुकीने टाईप केल्याने असे होऊ शकते. कृपया पत्ता आणि शब्दलेखन तपासा.",
+          'कदाचित आपण वेब पत्त्यामध्ये चुकीने टाईप केल्याने असे होऊ शकते. कृपया पत्ता आणि शब्दलेखन तपासा.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - त्रुटी',
-        message:
-          "एक त्रुटी आली. कृपया पृष्ठ रीफ्रेश करा",
+        message: 'एक त्रुटी आली. कृपया पृष्ठ रीफ्रेश करा',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'व्हिडिओ',
     },
   },
-  brandSVG: brandSVGs['marathi'] || brandSVGs.news,
+  brandSVG: brandSVGs.marathi || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

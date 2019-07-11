@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Ba a samu shafin ba',
         message:
-          "Mai yiwuwa ba ku rubuta adireshin daidai ba. Sake duba adireshin da kuma rubutun.",
+          'Mai yiwuwa ba ku rubuta adireshin daidai ba. Sake duba adireshin da kuma rubutun.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Kuskure',
-        message:
-          "An samu kuskure. A sabunta shafi.",
+        message: 'An samu kuskure. A sabunta shafi.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Bidiyo',
     },
   },
-  brandSVG: brandSVGs['hausa'] || brandSVGs.news,
+  brandSVG: brandSVGs.hausa || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBC ba tada alhaki game da shafukan da ba nata ba',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

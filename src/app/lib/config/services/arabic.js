@@ -35,8 +35,7 @@ const service = {
       404: {
         statusCode: '404',
         title: '404 الصفحة غير موجودة',
-        message:
-          "نرجو التأكد من اسم الموقع",
+        message: 'نرجو التأكد من اسم الموقع',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +49,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 خطأ',
-        message:
-          "خطأ، حمل الصفحة من جديد",
+        message: 'خطأ، حمل الصفحة من جديد',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +114,7 @@ const service = {
       video: 'فيديو',
     },
   },
-  brandSVG: brandSVGs['arabic'] || brandSVGs.news,
+  brandSVG: brandSVGs.arabic || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +152,7 @@ const service = {
     ],
     copyrightText: 'بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

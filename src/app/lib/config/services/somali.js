@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Boggan lama hayo',
         message:
-          "Waxaa dhici karta inaad cinwaanka web-ka khalad u qortay. Fadlan hubi cinwaanka iyo hingaadda",
+          'Waxaa dhici karta inaad cinwaanka web-ka khalad u qortay. Fadlan hubi cinwaanka iyo hingaadda',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Khalad',
-        message:
-          "Khalad ayaa dhacay. Fadlan bogga cusbooneysii",
+        message: 'Khalad ayaa dhacay. Fadlan bogga cusbooneysii',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Muuqaal',
     },
   },
-  brandSVG: brandSVGs['somali'] || brandSVGs.news,
+  brandSVG: brandSVGs.somali || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC-du mas\'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda',
+    copyrightText:
+      "BBC-du mas'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda",
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

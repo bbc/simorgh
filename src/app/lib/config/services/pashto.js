@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Page not found',
         message:
-          "کیدای شي د ویبپاڼې ادرس مو سم نه وي لیکلی. لطفا پته او املا یې یو ځل بیا وګورئ.",
+          'کیدای شي د ویبپاڼې ادرس مو سم نه وي لیکلی. لطفا پته او املا یې یو ځل بیا وګورئ.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Error',
-        message:
-          "یوه تخنیکي ستونزه وه. لطفا پاڼه مو رفرش کړئ",
+        message: 'یوه تخنیکي ستونزه وه. لطفا پاڼه مو رفرش کړئ',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'ویډیو',
     },
   },
-  brandSVG: brandSVGs['pashto'] || brandSVGs.news,
+  brandSVG: brandSVGs.pashto || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده.',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

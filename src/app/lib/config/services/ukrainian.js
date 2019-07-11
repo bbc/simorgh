@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Сторінку не знайдено',
         message:
-          "Можливо, ви ввели неправильну адресу. Будь ласка, перевірте адресу і написання.",
+          'Можливо, ви ввели неправильну адресу. Будь ласка, перевірте адресу і написання.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Помилка',
-        message:
-          "Сталася помилка. Будь ласка, перезавантажте сторінку.",
+        message: 'Сталася помилка. Будь ласка, перезавантажте сторінку.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Відео',
     },
   },
-  brandSVG: brandSVGs['ukrainian'] || brandSVGs.news,
+  brandSVG: brandSVGs.ukrainian || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'ВВС не несе відповідальність за зміст зовнішніх інтернет-сайтів',
+    copyrightText:
+      'ВВС не несе відповідальність за зміст зовнішніх інтернет-сайтів',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

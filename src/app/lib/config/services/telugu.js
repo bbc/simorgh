@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - పేజీ కనుగొనబడలేదు',
         message:
-          "మీరు వెబ్ చిరునామాను తప్పుగా టైప్ చేసినందున ఇలా జరిగి ఉండవచ్చు. దయచేసి చిరునామాను సరిచూసుకోండి మరియు అక్షరదోషాలు ఉంటే దిద్దండి.",
+          'మీరు వెబ్ చిరునామాను తప్పుగా టైప్ చేసినందున ఇలా జరిగి ఉండవచ్చు. దయచేసి చిరునామాను సరిచూసుకోండి మరియు అక్షరదోషాలు ఉంటే దిద్దండి.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - దోషం',
-        message:
-          "ఒక దోషం ఉంది. దయచేసి పేజీని రిఫ్రెష్ చేయండి.",
+        message: 'ఒక దోషం ఉంది. దయచేసి పేజీని రిఫ్రెష్ చేయండి.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'వీడియో',
     },
   },
-  brandSVG: brandSVGs['telugu'] || brandSVGs.news,
+  brandSVG: brandSVGs.telugu || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'బయటి ఇంటర్నెట్ సైట్‌లలోని కంటెంట్‌కు BBC బాధ్యత వహించదు',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

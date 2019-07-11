@@ -35,8 +35,7 @@ const service = {
       404: {
         statusCode: '404',
         title: '404 - ไม่พบหน้าเว็บ',
-        message:
-          "กรุุณาตรวจสอบ URL และตัวสะกด อาจมีการพิมพ์ไม่ถูกต้อง",
+        message: 'กรุุณาตรวจสอบ URL และตัวสะกด อาจมีการพิมพ์ไม่ถูกต้อง',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +49,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - เกิดความผิดพลาด',
-        message:
-          "เกิดความผิดพลาด กรุณารีเฟรชหน้าเว็บใหม่",
+        message: 'เกิดความผิดพลาด กรุณารีเฟรชหน้าเว็บใหม่',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +114,7 @@ const service = {
       video: 'วิดีโอ',
     },
   },
-  brandSVG: brandSVGs['thai'] || brandSVGs.news,
+  brandSVG: brandSVGs.thai || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +152,7 @@ const service = {
     ],
     copyrightText: 'บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาจากเว็บไซต์ภายนอก',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

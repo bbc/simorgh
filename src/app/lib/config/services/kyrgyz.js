@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Барак табылган жок',
         message:
-          "Бул веб-даректи туура эмес тергенден келип чыгышы мүмкүн. Даректи жана анын жазылышын текшерип көрүңүз.",
+          'Бул веб-даректи туура эмес тергенден келип чыгышы мүмкүн. Даректи жана анын жазылышын текшерип көрүңүз.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Ката',
-        message:
-          "Ката келип чыкты. Бетти жаңылап көрүңүз.",
+        message: 'Ката келип чыкты. Бетти жаңылап көрүңүз.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Видео',
     },
   },
-  brandSVG: brandSVGs['kyrgyz'] || brandSVGs.news,
+  brandSVG: brandSVGs.kyrgyz || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
+    copyrightText:
+      'Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

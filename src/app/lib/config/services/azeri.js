@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Səhifə tapılmadı',
         message:
-          "Ola bilər ki, internet səhifəsinin ünvanını səhv yazmısınız. Zəhmət olmasa ünvanı və yazılışını bir də yoxlayın",
+          'Ola bilər ki, internet səhifəsinin ünvanını səhv yazmısınız. Zəhmət olmasa ünvanı və yazılışını bir də yoxlayın',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - səhv',
-        message:
-          "Bu səhvdir. Lütfən səhifəni təzələyin.",
+        message: 'Bu səhvdir. Lütfən səhifəni təzələyin.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Video',
     },
   },
-  brandSVG: brandSVGs['azeri'] || brandSVGs.news,
+  brandSVG: brandSVGs.azeri || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBC kənar saytların məzmunu üçün məsuliyyət daşımır',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

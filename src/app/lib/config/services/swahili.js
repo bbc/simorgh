@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404: Ukurasa haupatikani kwa sasa',
         message:
-          "Kwa sababu huenda anwani uliyoandika siyo sawa. Tafadhali angalia tena",
+          'Kwa sababu huenda anwani uliyoandika siyo sawa. Tafadhali angalia tena',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500-Kosa',
-        message:
-          "Pametokea kosa, fungua upya ukurasa",
+        message: 'Pametokea kosa, fungua upya ukurasa',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Video',
     },
   },
-  brandSVG: brandSVGs['swahili'] || brandSVGs.news,
+  brandSVG: brandSVGs.swahili || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC haina haihusiki vyovyote na taarifa za mitandao ya kujitegemea',
+    copyrightText:
+      'BBC haina haihusiki vyovyote na taarifa za mitandao ya kujitegemea',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

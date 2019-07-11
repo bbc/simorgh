@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '৪০৪ - পেজ পাওয়া যায়নি',
         message:
-          "হয়তো আপনি ওয়েব ঠিকানা টাইপ করতে ভুল করেছেন। অনুগ্রহ করে ঠিকানা এবং বানান আরেকবার দেখুন",
+          'হয়তো আপনি ওয়েব ঠিকানা টাইপ করতে ভুল করেছেন। অনুগ্রহ করে ঠিকানা এবং বানান আরেকবার দেখুন',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '৫০০ - এরর',
-        message:
-          "কোন ভুল হয়েছে। অনুগ্রহ করে পেজ রিফ্রেশ করুন",
+        message: 'কোন ভুল হয়েছে। অনুগ্রহ করে পেজ রিফ্রেশ করুন',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'ভিডিও',
     },
   },
-  brandSVG: brandSVGs['bengali'] || brandSVGs.news,
+  brandSVG: brandSVGs.bengali || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'ইন্টারনেটে অন্যান্য সাইটের জন্য বিবিসি দায়বদ্ধ নয়',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - صفہ دستیاب نہیں',
         message:
-          "ہو سکتا ہے آپ نے ویب سائٹ کا پتہ غلط درج کیا ہو۔ برائے مہربانی پتہ اور املا کی غلطیاں ٹھیک کریں",
+          'ہو سکتا ہے آپ نے ویب سائٹ کا پتہ غلط درج کیا ہو۔ برائے مہربانی پتہ اور املا کی غلطیاں ٹھیک کریں',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - ایرر',
-        message:
-          "اس صفحے پر ایرر تھا۔ برائے مہربانی صفحہ ریفریش کیجیے",
+        message: 'اس صفحے پر ایرر تھا۔ برائے مہربانی صفحہ ریفریش کیجیے',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'ویڈیو',
     },
   },
-  brandSVG: brandSVGs['urdu'] || brandSVGs.news,
+  brandSVG: brandSVGs.urdu || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

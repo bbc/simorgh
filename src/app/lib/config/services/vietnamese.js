@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Không tìm thấy trang này',
         message:
-          "Lỗi có thể do địa chỉ trang web không đúng. Hãy kiểm tra địa chỉ và chính tả.",
+          'Lỗi có thể do địa chỉ trang web không đúng. Hãy kiểm tra địa chỉ và chính tả.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: 'Lỗi 500',
-        message:
-          "Vừa bị lỗi. Hãy tải lại.",
+        message: 'Vừa bị lỗi. Hãy tải lại.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Video',
     },
   },
-  brandSVG: brandSVGs['vietnamese'] || brandSVGs.news,
+  brandSVG: brandSVGs.vietnamese || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBC không chịu trách nhiệm nội dung các trang bên ngoài',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

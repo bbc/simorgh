@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - पन्ना नहीं मिला',
         message:
-          "वेब एड्रेस गलत टाइप किए जाने के कारण ऐसा हो सकता है. कृपया वेबस एड्रेस और उसकी वर्तनी को जांचिए.",
+          'वेब एड्रेस गलत टाइप किए जाने के कारण ऐसा हो सकता है. कृपया वेबस एड्रेस और उसकी वर्तनी को जांचिए.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Error',
-        message:
-          "त्रुटि पाई गई. कृपया पन्ने को रिफ्रेश कीजिए.",
+        message: 'त्रुटि पाई गई. कृपया पन्ने को रिफ्रेश कीजिए.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'वीडियो',
     },
   },
-  brandSVG: brandSVGs['hindi'] || brandSVGs.news,
+  brandSVG: brandSVGs.hindi || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'बीबीसी बाहरी इंटरनेट साइट की सामग्री के लिए ज़िम्मेदार नहीं है',
+    copyrightText:
+      'बीबीसी बाहरी इंटरनेट साइट की सामग्री के लिए ज़िम्मेदार नहीं है',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

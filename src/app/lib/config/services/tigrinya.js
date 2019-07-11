@@ -35,8 +35,7 @@ const service = {
       404: {
         statusCode: '404',
         title: '404-ዘይተረኸበ ገፅ',
-        message:
-          "ኣድራሻ መርበብ ሓበሬታ ብቕኑዕ ዘይተፅሓፈ ከይኸውን፤ኣድራሻን ፊደላትን ዶ ክተረጋግፁ?",
+        message: 'ኣድራሻ መርበብ ሓበሬታ ብቕኑዕ ዘይተፅሓፈ ከይኸውን፤ኣድራሻን ፊደላትን ዶ ክተረጋግፁ?',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +49,7 @@ const service = {
       500: {
         statusCode: '500',
         title: 'ጌጋ',
-        message:
-          "ዝተፈጥረ ጌጋ\'ሎ፤እቲ ገፅ ክሕደስ ኣለዎ።",
+        message: "ዝተፈጥረ ጌጋ'ሎ፤እቲ ገፅ ክሕደስ ኣለዎ።",
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +114,7 @@ const service = {
       video: 'ቪድዮ',
     },
   },
-  brandSVG: brandSVGs['tigrinya'] || brandSVGs.news,
+  brandSVG: brandSVGs.tigrinya || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +152,7 @@ const service = {
     ],
     copyrightText: 'ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

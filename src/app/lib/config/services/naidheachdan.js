@@ -7,10 +7,11 @@ const service = {
   articleAuthor: `https://www.facebook.com/BBCNaidheachdan`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-naidheachdan',
-  brandName: 'Naidheachdan a\' BhBC',
-  product: 'Naidheachdan a\' BhBC',
-  defaultImage: 'https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png',
-  defaultImageAltText: 'Naidheachdan a\' BhBC',
+  brandName: "Naidheachdan a' BhBC",
+  product: "Naidheachdan a' BhBC",
+  defaultImage:
+    'https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png',
+  defaultImageAltText: "Naidheachdan a' BhBC",
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -36,28 +37,27 @@ const service = {
         statusCode: '404',
         title: '404 – Chan eil sgeul air an duilleig',
         message:
-          "\'S dòcha gur e as coireach gun do sgrìobh sibh an seòladh ceàrr. Thoiribh sùil air an t-seòladh agus an litreachadh.",
+          "'S dòcha gur e as coireach gun do sgrìobh sibh an seòladh ceàrr. Thoiribh sùil air an t-seòladh agus an litreachadh.",
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
           'Searching for this page using the BBC search bar',
         ],
         callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'Duilleag Dachaigh Naidheachdan a\' BhBC',
+        callToActionLinkText: "Duilleag Dachaigh Naidheachdan a' BhBC",
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/naidheachdan',
       },
       500: {
         statusCode: '500',
         title: '500 - Mearachd',
-        message:
-          "Bha trioblaid ann. Ùraich an duilleag.",
+        message: 'Bha trioblaid ann. Ùraich an duilleag.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
         ],
         callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'Duilleag Dachaigh Naidheachdan a\' BhBC',
+        callToActionLinkText: "Duilleag Dachaigh Naidheachdan a' BhBC",
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/naidheachdan',
       },
@@ -116,7 +116,7 @@ const service = {
       video: 'Bhidio',
     },
   },
-  brandSVG: brandSVGs['naidheachdan'] || brandSVGs.news,
+  brandSVG: brandSVGs.naidheachdan || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +152,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'Chan eil uallach air a\' BhBC son na tha air làraichean-lìn eile',
+    copyrightText:
+      "Chan eil uallach air a' BhBC son na tha air làraichean-lìn eile",
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

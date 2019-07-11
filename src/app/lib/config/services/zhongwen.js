@@ -35,8 +35,7 @@ const service = {
       404: {
         statusCode: '404',
         title: '404-找不到网页',
-        message:
-          "这可能是因为你输入错误的网址。请检查网址和拼写方法。",
+        message: '这可能是因为你输入错误的网址。请检查网址和拼写方法。',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +49,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500-错误',
-        message:
-          "出现了错误。请刷新网页。",
+        message: '出现了错误。请刷新网页。',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +114,7 @@ const service = {
       video: '视频',
     },
   },
-  brandSVG: brandSVGs['zhongwen'] || brandSVGs.news,
+  brandSVG: brandSVGs.zhongwen || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +152,7 @@ const service = {
     ],
     copyrightText: 'BBC不为BBC以外的网站的内容负责',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Hari ikosa',
         message:
-          "Ibishobora kuba vyatewe n\'uko wanditse nabi adresse y\'urubuga",
+          "Ibishobora kuba vyatewe n'uko wanditse nabi adresse y'urubuga",
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Ikosa',
-        message:
-          "Habaye ikosa, subire utanguze",
+        message: 'Habaye ikosa, subire utanguze',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Video',
     },
   },
-  brandSVG: brandSVGs['gahuza'] || brandSVGs.news,
+  brandSVG: brandSVGs.gahuza || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBC ntibazwa ibivuye mu mguga zitari izayo',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - පිටුව සොයා ගත නොහැක',
         message:
-          "ඔබ වෙබ් අඩවියේ නම වැරදියට සටහන් කළා විය හැකිය. කරුණාකර වෙබ් අඩවියේ නම යලිත් වරක් විමසන්න.",
+          'ඔබ වෙබ් අඩවියේ නම වැරදියට සටහන් කළා විය හැකිය. කරුණාකර වෙබ් අඩවියේ නම යලිත් වරක් විමසන්න.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - වරදක්',
-        message:
-          "කිසියම් වරදක් සිදු වී තිබේ. කරුණාකර පිටුව යාවත්කාලීන කරන්න.",
+        message: 'කිසියම් වරදක් සිදු වී තිබේ. කරුණාකර පිටුව යාවත්කාලීන කරන්න.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'වීඩියෝ',
     },
   },
-  brandSVG: brandSVGs['sinhala'] || brandSVGs.news,
+  brandSVG: brandSVGs.sinhala || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'වෙනත් අන්තර්ජාල අඩවිවල අන්තර්ගතය පිළිබඳව බීබීසීය වගකීමෙන් නොබැඳේ',
+    copyrightText:
+      'වෙනත් අන්තර්ජාල අඩවිවල අන්තර්ගතය පිළිබඳව බීබීසීය වගකීමෙන් නොබැඳේ',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

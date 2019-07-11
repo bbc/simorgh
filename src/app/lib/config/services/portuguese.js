@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404- Página não encontrada',
         message:
-          "Isto pode ter acontecido por que você digitou o endereço errado. Por favor cheque o endereço.",
+          'Isto pode ter acontecido por que você digitou o endereço errado. Por favor cheque o endereço.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '505 - Erro',
-        message:
-          "Houve um erro. Por favor recarregue a página.",
+        message: 'Houve um erro. Por favor recarregue a página.',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Vídeo',
     },
   },
-  brandSVG: brandSVGs['portuguese'] || brandSVGs.news,
+  brandSVG: brandSVGs.portuguese || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +151,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
+    copyrightText:
+      'A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

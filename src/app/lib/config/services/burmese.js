@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - စာမျက်နှာ ရှာမတွေ့ပါ',
         message:
-          "ဤသို့ဖြစ်ရခြင်းမှာ ဝက်ဘ်ဆိုက်လိပ်စာ မှားရိုက်မိခြင်းကြောင့် ဖြစ်နိုင်ပါသည်။ လိပ်စာနဲ့ စာလုံးပေါင်းကို ကျေးဇူးပြုပြီး ပြန်ကြည့်ပေးပါ။",
+          'ဤသို့ဖြစ်ရခြင်းမှာ ဝက်ဘ်ဆိုက်လိပ်စာ မှားရိုက်မိခြင်းကြောင့် ဖြစ်နိုင်ပါသည်။ လိပ်စာနဲ့ စာလုံးပေါင်းကို ကျေးဇူးပြုပြီး ပြန်ကြည့်ပေးပါ။',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -51,7 +51,7 @@ const service = {
         statusCode: '500',
         title: '500 - အမှားနံပါတ်',
         message:
-          "မှားယွင်းမှု တစ်ခု ဖြစ်နေပါသည်။ ကျေးဇူးပြု၍ စာမျက်နှာကို နောက်တခေါက် ပြန်ဝင်ပါ။",
+          'မှားယွင်းမှု တစ်ခု ဖြစ်နေပါသည်။ ကျေးဇူးပြု၍ စာမျက်နှာကို နောက်တခေါက် ပြန်ဝင်ပါ။',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +116,7 @@ const service = {
       video: 'ဗီဒီယို',
     },
   },
-  brandSVG: brandSVGs['burmese'] || brandSVGs.news,
+  brandSVG: brandSVGs.burmese || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +152,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'ပြင်ပ ဝက်ဘ်ဆိုက်ပါ အကြောင်းအရာများအပေါ် ဘီဘီစီက တာဝန်မယူပါ။',
+    copyrightText:
+      'ပြင်ပ ဝက်ဘ်ဆိုက်ပါ အကြောင်းအရာများအပေါ် ဘီဘီစီက တာဝန်မယူပါ။',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

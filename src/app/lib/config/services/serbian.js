@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Stranica nije pronađena',
         message:
-          "Razlog može biti što ste veb-adresu uneli pogrešno. Proverite adresu i da li ima grešaka u kucanju.",
+          'Razlog može biti što ste veb-adresu uneli pogrešno. Proverite adresu i da li ima grešaka u kucanju.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Greška',
-        message:
-          "Došlo je do greške. Osvežite stranicu",
+        message: 'Došlo je do greške. Osvežite stranicu',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Video',
     },
   },
-  brandSVG: brandSVGs['serbian'] || brandSVGs.news,
+  brandSVG: brandSVGs.serbian || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBC nije odgovoran za sadržaj sajtova sa spoljnih linkova',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

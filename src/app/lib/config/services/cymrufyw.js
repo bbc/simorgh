@@ -9,7 +9,8 @@ const service = {
   atiAnalyticsAppName: 'news-cymrufyw',
   brandName: 'BBC Cymru Fyw',
   product: 'BBC Cymru Fyw',
-  defaultImage: 'https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png',
+  defaultImage:
+    'https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png',
   defaultImageAltText: 'BBC Cymru Fyw',
   dir: `ltr`,
   externalLinkText: ', external',
@@ -34,9 +35,9 @@ const service = {
     error: {
       404: {
         statusCode: '404',
-        title: '404 - Methu dod o hyd I\'r dudalen',
+        title: "404 - Methu dod o hyd I'r dudalen",
         message:
-          "Efallai bod hyn oherwydd i chi deipio cyfeiriad y wefan yn anghywir. Gwirwch y cyfeiriad a\'r sillafu",
+          "Efallai bod hyn oherwydd i chi deipio cyfeiriad y wefan yn anghywir. Gwirwch y cyfeiriad a'r sillafu",
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +51,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Gwall',
-        message:
-          "Roedd gwall. Adnewyddwch y dudalen",
+        message: 'Roedd gwall. Adnewyddwch y dudalen',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +116,7 @@ const service = {
       video: 'Fideo',
     },
   },
-  brandSVG: brandSVGs['cymrufyw'] || brandSVGs.news,
+  brandSVG: brandSVGs.cymrufyw || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -152,9 +152,9 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'Dyw\'r BBC ddim yn gyfrifol am safleoedd rhyngrwyd allanol.',
+    copyrightText: "Dyw'r BBC ddim yn gyfrifol am safleoedd rhyngrwyd allanol.",
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

@@ -7,10 +7,10 @@ const service = {
   articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-uzbek',
-  brandName: 'BBC News O\'zbek',
-  product: 'BBC News O\'zbek',
+  brandName: "BBC News O'zbek",
+  product: "BBC News O'zbek",
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
-  defaultImageAltText: 'BBC News O\'zbek',
+  defaultImageAltText: "BBC News O'zbek",
   dir: `ltr`,
   externalLinkText: ', external',
   imageCaptionOffscreenText: 'Image caption, ',
@@ -21,7 +21,7 @@ const service = {
   locale: `uz-UZ`,
   datetimeLocale: `uz-UZ`.toLowerCase(),
   service: 'uzbek',
-  serviceName: 'News O\'zbek',
+  serviceName: "News O'zbek",
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcuzbek',
   twitterSite: '@bbcuzbek',
@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404- Саҳифа топилмади',
         message:
-          "Бунга сабаб Сиз веб саҳифа адресини нотўғри ёзган бўлишингиз мумкин. Илтимос, текшириб қайтадан ёзинг",
+          'Бунга сабаб Сиз веб саҳифа адресини нотўғри ёзган бўлишингиз мумкин. Илтимос, текшириб қайтадан ёзинг',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500- Хато',
-        message:
-          "Муаммо пайдо бўлди. Илтимос, саҳифани янгиланг",
+        message: 'Муаммо пайдо бўлди. Илтимос, саҳифани янгиланг',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Видео',
     },
   },
-  brandSVG: brandSVGs['uzbek'] || brandSVGs.news,
+  brandSVG: brandSVGs.uzbek || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBC ташқи интернет саҳифалар учун масъул эмас',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

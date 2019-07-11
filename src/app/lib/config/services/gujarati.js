@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: '404 - Page not found',
         message:
-          "વેબએડ્રેસ લખવામાં ભૂલ હોવાથી આમ થયું છે. કૃપા કરી વેબએડ્રેસ અને સ્પેલિંગ ચકાસો",
+          'વેબએડ્રેસ લખવામાં ભૂલ હોવાથી આમ થયું છે. કૃપા કરી વેબએડ્રેસ અને સ્પેલિંગ ચકાસો',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Error',
-        message:
-          "Page error, પેજ રિફ્રેશ કરો",
+        message: 'Page error, પેજ રિફ્રેશ કરો',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'વીડિયો',
     },
   },
-  brandSVG: brandSVGs['gujarati'] || brandSVGs.news,
+  brandSVG: brandSVGs.gujarati || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;

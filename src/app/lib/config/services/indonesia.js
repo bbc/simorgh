@@ -36,7 +36,7 @@ const service = {
         statusCode: '404',
         title: 'Error: 404 Halaman tidak ditemukan',
         message:
-          "Masalah ini mungkin karena Anda salah ketik mengetik alamat situs. Periksa kembali alamat dan ejaan.",
+          'Masalah ini mungkin karena Anda salah ketik mengetik alamat situs. Periksa kembali alamat dan ejaan.',
         solutions: [
           'Double checking the url',
           'Hitting the refresh button in your browser',
@@ -50,8 +50,7 @@ const service = {
       500: {
         statusCode: '500',
         title: '500 - Error',
-        message:
-          "Terjadi kesalahan, Mohon perbarui laman",
+        message: 'Terjadi kesalahan, Mohon perbarui laman',
         solutions: [
           'Hitting the refresh button in your browser',
           'Coming back again later',
@@ -116,7 +115,7 @@ const service = {
       video: 'Video',
     },
   },
-  brandSVG: brandSVGs['indonesia'] || brandSVGs.news,
+  brandSVG: brandSVGs.indonesia || brandSVGs.news,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,7 +153,7 @@ const service = {
     ],
     copyrightText: 'BBC tidak bertanggung jawab atas konten internet luar',
   },
-  fonts: []
+  fonts: [],
 };
 
 export default service;
