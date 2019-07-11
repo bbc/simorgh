@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import useToggle from './useToggle';

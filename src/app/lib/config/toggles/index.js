@@ -1,7 +1,7 @@
 const toggles = {
   test: {
     mpulse: {
-      enabled: false,
+      enabled: true,
     },
     audioVideo: {
       enabled: true,
