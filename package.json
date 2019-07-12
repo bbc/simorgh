@@ -197,23 +197,6 @@
     "webpack-dev-server": "^3.7.2",
     "yaml-js": "^0.2.3"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/(src|scripts)/**/*.{js,jsx}",
-      "!**/src/testHelpers/**",
-      "!**/*.stories.jsx"
-    ],
-    "setupFiles": [
-      "./src/testHelpers/jest-setup.js"
-    ],
-    "testMatch": [
-      "**/__tests__/**/*.js?(x)",
-      "**/?(*.)+(spec|test).js?(x)"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
-  },
   "spec": {
     "executable": [
       "./bake-scripts/*"
