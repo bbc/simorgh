@@ -20,7 +20,6 @@ def runDevelopmentTests(){
 }
 
 def runProductionTests(){
-  sh 'apt-get purge chromium && apt-get install -y chromium=72.0.3626.53'
   sh 'make installProd'
   sh 'make productionTests'
 }
