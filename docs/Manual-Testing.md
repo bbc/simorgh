@@ -12,7 +12,7 @@ When there is a change to a Font implementation, or to a Heading, Caption or Tex
 This article has special characters in the headline, subheadline, caption & paragraphs:
 
 - Test https://www.test.bbc.com/news/articles/cev804m5n0vo
-- Local http://localhost:7080/news/articles/cev804m5n0vo
+- Local http://localhost.bbc.com:7080/news/articles/cev804m5n0vo
 
 The characters should be using Reith and rendering correctly. See this screenshot:
 
