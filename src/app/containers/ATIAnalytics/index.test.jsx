@@ -34,8 +34,8 @@ ContextWrap.propTypes = {
 const mockData = {};
 const mockAtiQueryParams = 'key1=value1&key2=value2';
 
-describe('Page View Analytics Container', () => {
-  describe('pageType=article', () => {
+describe('ATI Analytics Container', () => {
+  describe('pageType article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
