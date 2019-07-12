@@ -96,7 +96,7 @@
     "@bbc/psammead-figure": "^1.0.2",
     "@bbc/psammead-headings": "^2.0.2",
     "@bbc/psammead-image": "^1.0.3",
-    "@bbc/psammead-image-placeholder": "^1.0.1",
+    "@bbc/psammead-image-placeholder": "^1.0.5",
     "@bbc/psammead-inline-link": "^1.1.6",
     "@bbc/psammead-locales": "^1.0.0",
     "@bbc/psammead-media-indicator": "^1.1.2",
