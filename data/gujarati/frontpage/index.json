@@ -1,0 +1,2736 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::index:gujarati/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/gujarati/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:gujarati/front_page",
+      "curie": "http://www.bbc.co.uk/asset/4fc98f02-40e9-98fe-e050-17ac2b8c2e71/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "gujarati-v6",
+    "language": "gu",
+    "lastUpdated": 1562926351562,
+    "firstPublished": 1495101021000,
+    "lastPublished": 1534426979000,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "gujarati.page",
+      "cps_asset_id": "23126385",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "responsive-top-stories",
+      "single-section-digest",
+      "responsive-cluster",
+      "special-reports",
+      "responsive-must-see",
+      "responsive-inspire",
+      "responsive-in-depth",
+      "featured-site-top-stories",
+      "useful-links",
+      "av-live-streams"
+    ],
+    "title": "મુખ્ય સમાચાર",
+    "summary": "બ્રેકિંગ ન્યુઝ, હવામાન, વેપાર, મનોરંજન, ગુજરાત, ભારત અને વિશ્વના સમાચાર, વિશ્લેષણ, BBCના ખાસ અહેવાલો, ટીવી બુલેટિન, વિડિઓ અને ફોટો ગેલેરી."
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "responsive-top-stories",
+        "title": "Top Stories",
+        "items": [
+          {
+            "headlines": {
+              "headline": "વિશ્વમાં એવા ક્યા દેશો છે જ્યાં તમે સસ્તામાં નાગરિકતા ખરીદી શકો?"
+            },
+            "locators": {
+              "assetUri": "/gujarati/23148513",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/23148513"
+            },
+            "summary": "વિશ્વમાં એવા કેટલાક દેશો છે જે ધનિકોને પોતાને ત્યાં આકર્ષવા માટે નાગરિકતા વેંચી રહ્યાં છે. તેઓ આ નાગરિકતા બહુ સસ્તા ભાવમાં વેંચતા હોવાથી લોકો ત્યાં રોકાણ કરવા આકર્ષાય છે.",
+            "timestamp": 1502875254000,
+            "byline": {
+              "name": "Kim Gittleson",
+              "title": "BBC reporter, New York",
+              "persons": [
+                {
+                  "name": "Kim Gittleson",
+                  "function": "BBC reporter, New York",
+                  "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/60713000/jpg/_60713933_kim.jpg"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              }
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63589028",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/140B2/test/_63589028__75259430_80211290.jpg",
+              "path": "/cpsdevpb/140B2/test/_63589028__75259430_80211290.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "ૂાેૂ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "મુખ્ય સમાચાર",
+              "uri": "/gujarati/front_page",
+              "type": "simple"
+            },
+            "overtypedSummary": "વિશ્વમાં એવા પણ દેશો છે જે ધનિકોને પોતાને ત્યાં આકર્ષવા માટે નાગરિકતા વેંચી રહ્યાં છે. તેઓ આ નાગરિકતા બહુ સસ્તા ભાવમાં વેંચતા હોવાથી લોકો ત્યાં રોકાણ કરવા આકર્ષાય છે. ",
+            "id": "urn:bbc:ares::asset:gujarati/23148513",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Flights axed as Monarch ceases trading"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23155321",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23155321"
+            },
+            "summary": "Passengers are warned not to visit airports as the airline's flights will not be departing.",
+            "timestamp": 1506928576000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63593788",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/15AA3/test/_63593788_hi042111718.jpg",
+              "path": "/cpsdevpb/15AA3/test/_63593788_hi042111718.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Men standing at protest",
+              "caption": "The men gathered in the field to protest ahead of the crucial vote",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23155321",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "1859માં આવો દેખાતો હતો તાજમહેલ, જુઓ પ્રાચીન ભારતની 10 તસ્વીરો"
+            },
+            "locators": {
+              "assetUri": "/gujarati/23148511",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/23148511"
+            },
+            "summary": "આ તસ્વીરો બ્રિટિશ ઈન્ડિયાની છે, જેમાં પ્રાચીન ભારતની ઝલક જોવા મળે છે",
+            "timestamp": 1502875705000,
+            "cpsType": "PGL",
+            "indexImage": {
+              "id": "63589012",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/526A/test/_63589012__97277876_india.jpg",
+              "path": "/cpsdevpb/526A/test/_63589012__97277876_india.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "Taj mahal of 1959",
+              "caption": "1859માં તાજમહેલ આવો દેખાતો હતો",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "મુખ્ય સમાચાર",
+              "uri": "/gujarati/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:gujarati/23148511",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "અંતિમ સંસ્કારનો નવો વિકલ્પ ગ્રીન સ્મશાનગૃહ"
+            },
+            "locators": {
+              "assetUri": "/gujarati/23148612",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/23148612"
+            },
+            "summary": "અગ્નિ સંસ્કાર અને દફનવિધિ સિવાય અંતિમ સંસ્કારનો ત્રીજો વિકલ્પ છે ગ્રીન સ્મશાનગૃહ. વિદેશમાં આ વિકલ્પ ઉપલબ્ધ છે પણ ભારતમાં નવો છે.",
+            "timestamp": 1502887019000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63589138",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/144FE/test/_63589138_pic3.jpg",
+              "path": "/cpsdevpb/144FE/test/_63589138_pic3.jpg",
+              "height": 313,
+              "width": 556,
+              "altText": "alkaline hydrolysis machine",
+              "caption": "આલ્કાલાઇન હાઇડ્રોલીસિસ મશીન",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63589197",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/1355E/test/_63589197_pic3.jpg",
+              "path": "/cpsdevpb/1355E/test/_63589197_pic3.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "alkaline hydrolysis machine",
+              "caption": "આલ્કાલાઇન હાઇડ્રોલીસિસ મશીન",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "મુખ્ય સમાચાર",
+              "uri": "/gujarati/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:gujarati/23148612",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "રોબોટના જમાનામાં આ કૌશલ્ય જરૂરી"
+            },
+            "locators": {
+              "assetUri": "/gujarati/23148624",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/23148624"
+            },
+            "summary": "આ એવા કૌશલ્ય છે જે ઘણા જ ઉપયોગી છે અને તેને વિક્સાવવાથી ફાયદો મળી શકે છે",
+            "timestamp": 1502886517000,
+            "byline": {
+              "name": "લિવિયા ગેરશન,",
+              "title": "BBC કેપિટલ",
+              "persons": [
+                {
+                  "name": "Abdihafid Ismail",
+                  "function": "bbc somali"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63589135",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/CFCE/test/_63589135_first.jpg",
+              "path": "/cpsdevpb/CFCE/test/_63589135_first.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A robot",
+              "caption": "રોબોટથી અનુભૂતિથી હજુ દૂર છે",
+              "copyrightHolder": "Getty Images"
+            },
+            "imageThumbnail": {
+              "id": "63589171",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/432E/test/_63589171_first.jpg",
+              "path": "/cpsdevpb/432E/test/_63589171_first.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "A robot",
+              "caption": "રોબોટથી અનુભૂતિથી હજુ દૂર છે",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "મુખ્ય સમાચાર",
+              "uri": "/gujarati/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:gujarati/23148624",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ટોઈલેટ સીટથી પણ વધારે ગંદી જગ્યા ઘરમાં હોઈ શકે?",
+              "overtyped": "ઘરમાં ટોઈલેટ સીટથી પણ વધારે ગંદી જગ્યા કઈ હોય છે? "
+            },
+            "locators": {
+              "assetUri": "/gujarati/23148553",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/23148553"
+            },
+            "summary": "\"સુક્ષ્મ જીવાણુંઓના સંદર્ભમાં જોઇએ તો ટોઇલેટ સીટ સૌથી ચોખ્ખી વસ્તુઓમાંથી એક છે, જીવાણુંઓની વાત કરીએ તો ટોઇલેટ સીટ કરતાં ચોખ્ખી હોય તેવી ખૂબ ઓછી વસ્તુઓ છે.\"",
+            "timestamp": 1502879401000,
+            "byline": {
+              "name": "શૅર્લોટ્ટ પ્રિટ્ચાર્ડ",
+              "title": "બીબીસી ન્યૂઝ",
+              "persons": [
+                {
+                  "name": "Charlotte Pritchard",
+                  "function": "Producer, Radio 4"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63589064",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/B412/test/_63589064_toi1.jpg",
+              "path": "/cpsdevpb/B412/test/_63589064_toi1.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Toilet seat",
+              "copyrightHolder": "Thinkstock"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "મુખ્ય સમાચાર",
+              "uri": "/gujarati/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:gujarati/23148553",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 1"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126376",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126376"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098468000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126376",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 12"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23129722",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23129722"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496564894000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23129722",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 9"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126384",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126384"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098614000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126384",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 10"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126386",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126386"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098627000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126386",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 7"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126382",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126382"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098565000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126382",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 8"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126383",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126383"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098576000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126383",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 6"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126381",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126381"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126381",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Top stories strapline"
+        },
+        "semanticGroupName": "Top Stories"
+      },
+      {
+        "type": "single-section-digest",
+        "title": "Special event 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 2"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23129723",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23129723"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496564903000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23129723",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Special event 1"
+      },
+      {
+        "type": "responsive-cluster",
+        "title": "Cluster 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 4"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126379",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126379"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098524000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126379",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 3"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126378",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126378"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098505000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126378",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 3"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23129724",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23129724"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496564916000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23129724",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 11"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126387",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126387"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098643000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126387",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "MI ચેમ્પિયન: આ દિગ્ગજોના ચક્રવ્યૂમાં ફસાઇ RPS, આ રીતે આપી માત",
+              "overtyped": "MI ચેમ્પિયન: આ દિગ્ગજોના ચક્રવ્યૂમાં ફસાઇ RPS, આ રીતે આપી માત overtype ૨૩૨૪૬૭"
+            },
+            "locators": {
+              "assetUri": "/gujarati/23127665",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/23127665"
+            },
+            "summary": "મુંબઇ ઇન્ડિયન્સ હૈદરાબાદમાં પૂણે સુપરાજાયન્ટને રોમાંચક મેચમાં અંતિમ બોલે 1 રને હરાવી IPLમાં ત્રીજી વખત ચેમ્પિયન બન્યું હતું.",
+            "timestamp": 1496765558000,
+            "byline": {
+              "name": "વરુણ વડોદરા",
+              "title": "બીબીસી ન્યૂઝ રિપોર્ટર",
+              "persons": [
+                {
+                  "name": "વરુણ વડોદરા",
+                  "function": "બીબીસી ન્યૂઝ રિપોર્ટર",
+                  "thumbnail": "http://b.files.bbci.co.uk/14431/test/_63539928_160208083807_syrian_kids-4.jpg"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63538387",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/1322F/test/_63538387_160327160553_india_cricket_512x288_getty.jpg",
+              "path": "/cpsdevpb/1322F/test/_63538387_160327160553_india_cricket_512x288_getty.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "MI ચેમ્પિયન",
+              "caption": "MI ચેમ્પિયન",
+              "copyrightHolder": "Reuters"
+            },
+            "imageThumbnail": {
+              "id": "63538389",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/1804F/test/_63538389_160327160553_india_cricket_512x288_getty.jpg",
+              "path": "/cpsdevpb/1804F/test/_63538389_160327160553_india_cricket_512x288_getty.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "MI ચેમ્પિયન",
+              "caption": "MI ચેમ્પિયન",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "મુખ્ય સમાચાર",
+              "uri": "/gujarati/front_page",
+              "type": "simple"
+            },
+            "overtypedSummary": "મુંબઇ ઇન્ડિયન્સ હૈદરાબાદમાં પૂણે સુપરાજાયન્ટને રોમાંચક મેચમાં અંતિમ બોલે 1 રને હરાવી IPLમાં ત્રીજી વખત ચેમ્પિયન બન્યું હતું overtype.",
+            "id": "urn:bbc:ares::asset:gujarati/23127665",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "શિખર-રોહિતની કરી પ્રશંસા",
+              "overtyped": "શિખર-રોહિતની કરી પ્રશંસા overtype"
+            },
+            "locators": {
+              "assetUri": "/gujarati/other-news-23130286",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23130286"
+            },
+            "summary": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
+            "timestamp": 1496745098000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p01blkgh",
+              "subType": "clip",
+              "format": "audio",
+              "title": "શિખર-રોહિતની કરી પ્રશંસા",
+              "synopses": {
+                "short": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."
+              },
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blmqx.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "યુવરાજ સિંહ અને વિરાટ કોહલી",
+              "versions": [
+                {
+                  "versionId": "p01blkgq",
+                  "types": ["Original"],
+                  "duration": 16,
+                  "durationISO8601": "PT16S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1496679977000
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "63539794",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/C281/test/_63539794_p01blmqx.jpg",
+              "path": "/cpsdevpb/C281/test/_63539794_p01blmqx.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "શિખર-રોહિતની કરી પ્રશંસા",
+              "copyrightHolder": "Reuters"
+            },
+            "imageThumbnail": {
+              "id": "63539796",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/110A1/test/_63539796_p01blmqx.jpg",
+              "path": "/cpsdevpb/110A1/test/_63539796_p01blmqx.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "શિખર-રોહિતની કરી પ્રશંસા",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો overtype.",
+            "id": "urn:bbc:ares::asset:gujarati/other-news-23130286",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 14"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126390",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126390"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098681000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126390",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 13"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126389",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126389"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098666000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126389",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 12"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126388",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126388"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098654000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126388",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Cluster 1"
+        },
+        "semanticGroupName": "Cluster 1"
+      },
+      {
+        "type": "special-reports",
+        "title": "Special reports 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 4"
+            },
+            "locators": {
+              "assetUri": "/gujarati/international-23129725",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-23129725"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496564938000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/international-23129725",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Special reports 1"
+      },
+      {
+        "type": "responsive-must-see",
+        "title": "Section 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 5"
+            },
+            "locators": {
+              "assetUri": "/gujarati/international-23129726",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-23129726"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496565690000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/international-23129726",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 15"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126391",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126391"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098697000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126391",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 20"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126396",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126396"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098826000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126396",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ"
+            },
+            "locators": {
+              "assetUri": "/gujarati/media-23130284",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-23130284"
+            },
+            "summary": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
+            "timestamp": 1496744090000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p01blkbb",
+              "subType": "clip",
+              "format": "video",
+              "title": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ",
+              "synopses": {
+                "short": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ- તેની સામે હું ક્લબ ક્રિકેટર લાગી રહ્યો હતો",
+                "medium": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
+                "long": "શું કહ્યું વિરાટ કોહલીએ?\n \n- વિરાટ કોહલી અને યુવરાજની બેટિંગના દમ પર ભારતે 319 રન બનાવ્યા હતા. યુવરાજે 32 બોલમાં 53 રનની વિસ્ફોટક ઇનિંગ રમી હતી. જ્યારે વિરાટે 68 બોલમાં 81 રન બનાવ્યા હતા.\n- વિરાટે મેચ બાદ કહ્યું પત્રકાર પરિષદમાં કહ્યું કે જ્યારે હું રન નહતો બનાવી રહ્યો, ત્યારે યુવીએ દબાણ નાખ્યુ હતું, જે રીતે તે બોલને મારી રહ્યો હતો, હું તેની સામે એક ક્લબ બેટ્સમેન જેવો લાગી રહ્યો હતો."
+              },
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blkd6.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "યુવરાજ સિંહ અને વિરાટ કોહલી",
+              "versions": [
+                {
+                  "versionId": "p01blkbd",
+                  "types": ["Original"],
+                  "duration": 20,
+                  "durationISO8601": "PT20S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1496677744000
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "63539792",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/7461/test/_63539792_p01blkd6.jpg",
+              "path": "/cpsdevpb/7461/test/_63539792_p01blkd6.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ",
+              "copyrightHolder": "વવમ લાૈે"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/media-23130284",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 19"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126395",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126395"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098764000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126395",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "સચિન, ગાંગુલી અને લક્ષ્મણ લેશે ઉમેદવારોનો ઇન્ટરવ્યૂ rewrite"
+            },
+            "locators": {
+              "assetUri": "/gujarati/other-news-23130528",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23130528"
+            },
+            "summary": "BCCI પ્રમાણે, ટીમ ઇન્ડિયાના હેડ કોચ માટે 31 મે સુધી ઉમેદવારો અપ્લાય કરી શકે છે.",
+            "timestamp": 1496766545000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "cpsType": "PGL",
+            "indexImage": {
+              "id": "63539857",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/12875/test/_63539857_160507010424_abe_kuriles_624x415_getty_nocredit.jpg",
+              "path": "/cpsdevpb/12875/test/_63539857_160507010424_abe_kuriles_624x415_getty_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "કેટલો સફળ કોચ છે કુંબલે",
+              "caption": "કેટલો સફળ કોચ છે કુંબલે",
+              "copyrightHolder": "BBC ગુજરાતી"
+            },
+            "imageThumbnail": {
+              "id": "63539859",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/17695/test/_63539859_160507010424_abe_kuriles_624x415_getty_nocredit.jpg",
+              "path": "/cpsdevpb/17695/test/_63539859_160507010424_abe_kuriles_624x415_getty_nocredit.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "કેટલો સફળ કોચ છે કુંબલે",
+              "caption": "કેટલો સફળ કોચ છે કુંબલે",
+              "copyrightHolder": "BBC ગુજરાતી"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/other-news-23130528",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Update me/keep me on trend"
+        },
+        "semanticGroupName": "Section 1"
+      },
+      {
+        "type": "responsive-inspire",
+        "title": "Section 2",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 6"
+            },
+            "locators": {
+              "assetUri": "/gujarati/international-23129727",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-23129727"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496565211000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/international-23129727",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 21"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126397",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126397"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098839000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126397",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 26"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126402",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126402"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098893000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126402",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 25"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126401",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126401"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098880000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126401",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 24"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126400",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126400"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098868000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126400",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 23"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126399",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126399"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098858000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126399",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 22"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126398",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126398"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098849000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126398",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Amuse/Inspire"
+        },
+        "semanticGroupName": "Section 2"
+      },
+      {
+        "type": "responsive-in-depth",
+        "title": "Section 3",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 7"
+            },
+            "locators": {
+              "assetUri": "/gujarati/other-news-23129728",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23129728"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496565252000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/other-news-23129728",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 27"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126403",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126403"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098903000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126403",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 29"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126405",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126405"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098922000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126405",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 28"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126404",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126404"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098913000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126404",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 32"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126409",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126409"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098968000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126409",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 31"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126408",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126408"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098942000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126408",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 30"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126407",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126407"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098932000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126407",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Educate/Perspective"
+        },
+        "semanticGroupName": "Section 3"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "Sport",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 8"
+            },
+            "locators": {
+              "assetUri": "/gujarati/other-news-23129729",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23129729"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496565268000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/other-news-23129729",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 33"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126410",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126410"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098977000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126410",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 42"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126419",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126419"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495099619000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126419",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 41"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126418",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126418"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495099600000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126418",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 40"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126417",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126417"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495099588000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126417",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 39"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126416",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126416"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495099577000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126416",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 38"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126415",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126415"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495099034000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126415",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 37"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126414",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126414"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495099022000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126414",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 36"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126413",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126413"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495099014000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126413",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 35"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126412",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126412"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098999000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126412",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 34"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126411",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126411"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098988000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126411",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Sport"
+        },
+        "semanticGroupName": "Sport"
+      },
+      {
+        "type": "special-reports",
+        "title": "Special reports 2",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 9"
+            },
+            "locators": {
+              "assetUri": "/gujarati/other-news-23129730",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23129730"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496567302000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/other-news-23129730",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Special reports 2"
+      },
+      {
+        "type": "useful-links",
+        "title": "Useful links",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 10"
+            },
+            "locators": {
+              "assetUri": "/gujarati/media-23129731",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-23129731"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496565344000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/media-23129731",
+            "type": "cps"
+          },
+          {
+            "name": "ગુજરાતમાં ચોમાસું 15 જૂન આસપાસ બેસશે, અંબાલાલ પટેલે કહ્યું આ તારીખ સુધી વાવણી ના કરશો promo",
+            "summary": "કેરળમાં ચોમાસું નિયત સમય કરતાં એક દિવસ વહેલાં બેસી જતા હવામાન વિભાગની સારું ચોમાસું જવાની આગાહી સાચી ઠરશે તેવું લાગી રહ્યું છે.",
+            "indexImage": {
+              "id": "63539901",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/2AF1/test/_63539901_150515135349_metro_paveletskaya_green_97.jpg",
+              "path": "/cpsdevpb/2AF1/test/_63539901_150515135349_metro_paveletskaya_green_97.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "“જો વરસાદ 21 જૂને આવે તો પાકમાં રોગ-જીવાત ઓછો આવે.",
+              "caption": "“જો વરસાદ 21 જૂને આવે તો પાકમાં રોગ-જીવાત ઓછો આવે.",
+              "copyrightHolder": "Getty Images"
+            },
+            "indexThumbnail": {
+              "id": "63539923",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/80E1/test/_63539923_150515135349_metro_paveletskaya_green_97.jpg",
+              "path": "/cpsdevpb/80E1/test/_63539923_150515135349_metro_paveletskaya_green_97.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "“જો વરસાદ 21 જૂને આવે તો પાકમાં રોગ-જીવાત ઓછો આવે.",
+              "caption": "“જો વરસાદ 21 જૂને આવે તો પાકમાં રોગ-જીવાત ઓછો આવે.",
+              "copyrightHolder": "Getty Images"
+            },
+            "uri": "http://www.test.bbc.co.uk/gujarati/live/international-23130291?_x_candy_override=https://api.test.bbc.co.uk",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1496759620000,
+            "type": "link"
+          },
+          {
+            "name": "આંતરરાષ્ટ્રીય",
+            "summary": "આંતરરાષ્ટ્રીય સમાચાર",
+            "uri": "http://www.test.bbc.co.uk/gujarati?_x_candy_override=https://api.test.bbc.co.uk",
+            "contentType": "Unknown",
+            "assetTypeCode": "URL",
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 44"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126430",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126430"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495100984000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126430",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 43"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126429",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126429"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495100975000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126429",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Useful Links"
+        },
+        "semanticGroupName": "Useful links"
+      },
+      {
+        "type": "av-live-streams",
+        "title": "AV stories live",
+        "items": [
+          {
+            "name": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 17",
+            "summary": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.co.uk/news",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1496567231000,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "TV bulletin"
+        },
+        "semanticGroupName": "AV stories live"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "Frequency info",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ટ્વીટર પર વીડિયો પોસ્ટ કરીને ભારતીય ચેકપોસ્ટ ઉડાવવાનો કર્યો દાવો 13"
+            },
+            "locators": {
+              "assetUri": "/gujarati/institutional-23129734",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/institutional-23129734"
+            },
+            "summary": "મોદીએ મેક્રો સાથેની સંયુક્ત પત્રકાર પરિષદમાં પેરિસ સમજુતી ભવિષ્યની પેઢીઓને પણ લાભાન્વિત કરશે.",
+            "timestamp": 1496565511000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63496587",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "path": "/cpsdevpb/132E9/test/_63496587_160115154437_dhaka_kite_976x549_salmansaeed.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "અમેરિકી",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/institutional-23129734",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 18"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126394",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126394"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098748000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126394",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 17"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126393",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126393"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098720000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126393",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 16"
+            },
+            "locators": {
+              "assetUri": "/gujarati/india-23126392",
+              "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126392"
+            },
+            "summary": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન ટાપુના મોટાભાગના લોકો ગુજરાતી વંશના છે",
+            "timestamp": 1495098709000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63537407",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/11349/test/_63537407__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/11349/test/_63537407__67981132_comp2_624.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "imageThumbnail": {
+              "id": "63537409",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/16169/test/_63537409__67981132_comp2_624.jpg",
+              "path": "/cpsdevpb/16169/test/_63537409__67981132_comp2_624.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "ટોરોન્ટો",
+              "caption": "ટોરોન્ટો",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:gujarati/india-23126392",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Frequency info"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "મુખ્ય સમાચાર",
+    "uri": "/gujarati/front_page",
+    "id": "urn:bbc:ares::index:gujarati/front_page/desktop/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "મુખ્ય સમાચાર",
+      "uri": "/gujarati/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC ગુજરાતી",
+      "uri": "/gujarati",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
