@@ -10,11 +10,11 @@ import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 const componentsToRender = { fragment, urlLink: InlineLink };
 
 const ParagraphContainer = ({ blocks }) => {
-  const { script } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
 
   return (
     <GridItemConstrainedMedium>
-      <Paragraph script={script}>
+      <Paragraph script={script} service={service}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </Paragraph>
     </GridItemConstrainedMedium>
