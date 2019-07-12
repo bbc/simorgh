@@ -11,6 +11,17 @@ import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];
 
+const pageTypeMetadata = {
+  article: {
+    schemaOrg: 'Article',
+    openGraph: 'article',
+  },
+  frontPage: {
+    schemaOrg: 'WebPage',
+    openGraph: 'website',
+  },
+};
+
 /* An array of each thingLabel from tags.about & tags.mention */
 const allTags = tags => {
   const { about, mentions } = tags;
@@ -29,12 +40,12 @@ const getDescription = (metadata, promo) =>
   deepGet(['headlines', 'seoHeadline'], promo) ||
   deepGet(['summary'], metadata);
 
-const getLink = (origin, service, id, assetType, linkType = '') => {
+const getLink = (origin, service, id, pageType, linkType = '') => {
   // according to https://github.com/bbc/simorgh/pull/1945, canonical links should use .com
   const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
 
   let link =
-    assetType === 'article'
+    pageType === 'article'
       ? `${linkOrigin}/${service}/articles/${id}`
       : `${linkOrigin}/${service}`;
 
@@ -45,8 +56,8 @@ const getLink = (origin, service, id, assetType, linkType = '') => {
   return link;
 };
 
-const getTimeTags = (timeTag, assetType) => {
-  if (assetType !== 'article') {
+const getTimeTags = (timeTag, pageType) => {
+  if (pageType !== 'article') {
     return null;
   }
 
@@ -67,7 +78,7 @@ const getAppleTouchUrl = service => {
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
-  const { origin, platform } = useContext(RequestContext);
+  const { origin, pageType, platform } = useContext(RequestContext);
   const {
     service,
     brandName,
@@ -90,15 +101,14 @@ const MetadataContainer = ({ metadata, promo }) => {
   }
 
   const id = aresArticleId.split(':').pop();
-  const assetType = metadata.type;
 
-  const timeFirstPublished = getTimeTags(metadata.firstPublished, assetType);
-  const timeLastPublished = getTimeTags(metadata.lastPublished, assetType);
+  const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
+  const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
 
-  const canonicalLink = getLink(origin, service, id, assetType, 'canonical');
+  const canonicalLink = getLink(origin, service, id, pageType, 'canonical');
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
-  const ampLink = getLink(origin, service, id, assetType, 'amp');
+  const ampLink = getLink(origin, service, id, pageType, 'amp');
   const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
   const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const appleTouchIcon = getAppleTouchUrl(service);
@@ -159,7 +169,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
         seoHeadline={getTitle(promo)}
-        type={assetType}
+        type={deepGet([pageType, 'schemaOrg'], pageTypeMetadata)}
         about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
       />
       <Metadata
@@ -189,9 +199,9 @@ const MetadataContainer = ({ metadata, promo }) => {
         title={getTitle(promo)}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
-        type={assetType}
+        type={deepGet([pageType, 'openGraph'], pageTypeMetadata)}
         service={service}
-        showArticleTags={assetType === 'article'}
+        showArticleTags={pageType === 'article'}
         iconSizes={iconSizes}
       />
     </Fragment>

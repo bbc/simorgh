@@ -9,7 +9,7 @@ import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import frontPageData from '../../../../data/igbo/frontpage/index.json';
 
-const Container = (service, bbcOrigin, platform, data, id) => {
+const Container = (service, bbcOrigin, platform, data, id, pageType) => {
   const serviceConfig = services[service];
 
   return (
@@ -18,7 +18,7 @@ const Container = (service, bbcOrigin, platform, data, id) => {
         bbcOrigin={bbcOrigin}
         id={id}
         isAmp={platform === 'amp'}
-        pageType="article"
+        pageType={pageType}
         service={service}
       >
         <MetadataContainer {...data} />
@@ -124,6 +124,7 @@ describe('Metadata Container', () => {
           'canonical',
           articleDataNews,
           'c0000000001o',
+          'article',
         ),
       );
 
@@ -171,7 +172,7 @@ describe('Metadata Container', () => {
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'Article Headline for SEO',
-          'article',
+          'Article',
           [
             {
               '@type': 'Thing',
@@ -195,6 +196,7 @@ describe('Metadata Container', () => {
           'amp',
           articleDataNews,
           'c0000000001o',
+          'article',
         ),
       );
 
@@ -242,7 +244,7 @@ describe('Metadata Container', () => {
           'News',
           'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           'Article Headline for SEO',
-          'article',
+          'Article',
           [
             {
               '@type': 'Thing',
@@ -266,6 +268,7 @@ describe('Metadata Container', () => {
           'canonical',
           articleDataPersian,
           'c4vlle3q337o',
+          'article',
         ),
       );
 
@@ -300,7 +303,7 @@ describe('Metadata Container', () => {
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
-          'article',
+          'Article',
         ),
       );
     });
@@ -313,6 +316,7 @@ describe('Metadata Container', () => {
           'amp',
           articleDataPersian,
           'c4vlle3q337o',
+          'article',
         ),
       );
 
@@ -347,7 +351,7 @@ describe('Metadata Container', () => {
           'Persian',
           'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           'سرصفحه مقاله',
-          'article',
+          'Article',
         ),
       );
     });
@@ -359,7 +363,8 @@ describe('Metadata Container', () => {
           dotComOrigin,
           'canonical',
           frontPageData,
-          'c4vlle3q337o',
+          null,
+          'frontPage',
         ),
       );
 
@@ -385,7 +390,7 @@ describe('Metadata Container', () => {
           null,
           'Ogbako',
           services.igbo,
-          'IDX',
+          'website',
           'igbo',
           false,
         ),
@@ -399,7 +404,7 @@ describe('Metadata Container', () => {
           'Igbo',
           'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
           'Ogbako',
-          'IDX',
+          'WebPage',
         ),
       );
     });
