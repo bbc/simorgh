@@ -12,14 +12,12 @@ import {
   sanitise,
 } from '../../lib/analyticsUtils';
 
-export const atiBaseUrl = 'https://a1.api.bbc.co.uk/hit.xiti?';
-
 /*
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
 
-export const atiPageViewParams = ({
+const atiPageViewParams = ({
   appName,
   contentId,
   contentType,
@@ -152,3 +150,5 @@ export const atiPageViewParams = ({
 
   return parsedAtiValues.join('&');
 };
+
+export default atiPageViewParams;

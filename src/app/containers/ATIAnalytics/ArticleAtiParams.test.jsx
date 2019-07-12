@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from './ArticleAtiParams';
-import * as atiUrl from './atiUrl';
+import * as atiPageViewParams from './atiUrl';
 import * as commonTestUtils from '../../lib/analyticsUtils';
 import * as testUtils from '../../lib/analyticsUtils/article';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -54,12 +54,12 @@ describe('ArticleAtiParams', () => {
 
     it('should call atiPageViewParams with the params from the Contexts', () => {
       const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiUrl.atiPageViewParams = mock;
+      atiPageViewParams.default = mock;
 
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 
-      expect(atiUrl.atiPageViewParams).toHaveBeenCalledTimes(1);
-      expect(atiUrl.atiPageViewParams).toHaveBeenCalledWith({
+      expect(mock).toHaveBeenCalledTimes(1);
+      expect(mock).toHaveBeenCalledWith({
         appName: 'news',
         contentId: 'urn:bbc:optimo:c0000000000o',
         contentType: 'article',
