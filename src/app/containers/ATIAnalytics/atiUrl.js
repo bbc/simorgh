@@ -31,6 +31,8 @@ const atiPageViewParams = ({
   statsDestination,
   timePublished,
   timeUpdated,
+  origin,
+  previousPath,
 }) => {
   const pageViewBeaconValues = [
     {
@@ -98,7 +100,7 @@ const atiPageViewParams = ({
     {
       key: 'x6',
       description: 'referrer url',
-      value: getReferrer(platform),
+      value: getReferrer(platform, origin, previousPath),
       wrap: true,
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },

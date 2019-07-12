@@ -36,6 +36,7 @@ const input = {
   isAmp: true,
   pageType: 'frontpage',
   service: 'service',
+  previousPath: '/previous-path',
 };
 
 const expectedOutput = {
@@ -47,6 +48,7 @@ const expectedOutput = {
   platform: 'amp',
   statsDestination: 'getStatsDestination',
   statsPageIdentifier: 'getStatsPageIdentifier',
+  previousPath: '/previous-path',
 };
 
 describe('RequestContext', () => {

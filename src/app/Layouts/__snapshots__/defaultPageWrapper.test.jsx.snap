@@ -11,6 +11,7 @@ exports[`defaultPageWrapper should render with children 1`] = `
       id="c0000000000o"
       isAmp={true}
       pageType="article"
+      previousPath={null}
       service="news"
     >
       <ServiceWorkerContainer />
