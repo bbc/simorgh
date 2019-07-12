@@ -101,7 +101,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
+              args '-u root -v /etc/pki:/certs apt-get purge chromium && apt-get install -y chromium=72.0.3626.53'
             }
           }
           steps {
