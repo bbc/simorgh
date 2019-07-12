@@ -9,8 +9,8 @@ describe('Amp Consent Banner Container - Banner', () => {
     <ServiceContextProvider service="news">
       <Banner
         type="privacy"
-        acceptAction={{ tap: ['cookieId.show, privacyId.hide'] }}
-        rejectAction={{ tap: ['cookieId.show, privacyId.hide'] }}
+        acceptAction="tap:cookieId.show, privacyId.hide"
+        rejectAction="tap:cookieId.show, privacyId.hide"
         promptId="promptId"
         hidden
       />
@@ -22,8 +22,8 @@ describe('Amp Consent Banner Container - Banner', () => {
     <ServiceContextProvider service="news">
       <Banner
         type="cookie"
-        acceptAction={{ tap: ['parentId.accept'] }}
-        rejectAction={{ tap: ['parentId.reject'] }}
+        acceptAction="tap:parentId.accept"
+        rejectAction="tap:parentId.reject"
         promptId="promptId"
         hidden
       />
