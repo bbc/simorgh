@@ -106,7 +106,7 @@
     "@bbc/psammead-sitewide-links": "^1.0.2",
     "@bbc/psammead-story-promo": "^1.0.0-alpha.4",
     "@bbc/psammead-story-promo-list": "^1.0.2",
-    "@bbc/psammead-styles": "^1.1.2",
+    "@bbc/psammead-styles": "^1.1.3",
     "@bbc/psammead-timestamp-container": "^1.2.2",
     "@bbc/psammead-visually-hidden-text": "^1.0.1",
     "assets-webpack-plugin": "^3.9.8",
