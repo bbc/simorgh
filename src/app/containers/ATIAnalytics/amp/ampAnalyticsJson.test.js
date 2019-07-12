@@ -4,7 +4,7 @@ describe('AMP ATI Analytics', () => {
   it('should match this JSON structure', () => {
     expect(
       ampAnalyticsJson({
-        baseUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
+        baseUrl: 'https://exampleBaseAtiUrl.com?',
         pageviewParams: 'param1=value1&param2=value2',
       }),
     ).toEqual({
@@ -14,7 +14,7 @@ describe('AMP ATI Analytics', () => {
         image: true,
       },
       requests: {
-        base: 'https://a1.api.bbc.co.uk/hit.xiti?',
+        base: 'https://exampleBaseAtiUrl.com?',
         pageview: '${base}param1=value1&param2=value2', // eslint-disable-line no-template-curly-in-string
       },
       triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
