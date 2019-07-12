@@ -1,58 +1,45 @@
 import React from 'react';
-import { node } from 'prop-types';
-import renderer from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
+import { render } from 'enzyme';
 import CanonicalATIAnalytics from '.';
-
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { shouldMatchSnapshot } from '../../../../testHelpers';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
-
-const ContextWrap = ({ children }) => (
-  <ServiceContextProvider service="news">
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      service="news"
-    >
-      {children}
-    </RequestContextProvider>
-  </ServiceContextProvider>
-);
-
-ContextWrap.propTypes = {
-  children: node.isRequired,
-};
-
-const mockPageviewParams = 'key=value&key2=value2';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  shouldMatchSnapshot(
-    'should render correctly',
-    <ContextWrap>
-      <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
-    </ContextWrap>,
-  );
+  const atiBaseUrl = 'https://foobar.com?';
+  const mockPageviewParams = 'key=value&key2=value2';
+  const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
 
-  it('should call sendBeacon function with the ATI url', () => {
-    const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
+  it('calls atiBaseURL and sendBeacon with required params', () => {
+    const expectedUrl = `${atiBaseUrl}${mockPageviewParams}`;
+
+    process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
     beacon.default = mockSendBeacon;
 
-    renderer.create(
-      <ContextWrap>
-        <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />
-      </ContextWrap>,
-    );
+    act(() => {
+      create(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+    });
 
     expect(mockSendBeacon).toHaveBeenCalledTimes(1);
-    expect(mockSendBeacon).toHaveBeenCalledWith(
-      'https://a1.api.bbc.co.uk/hit.xiti?key=value&key2=value2',
+    expect(mockSendBeacon).toHaveBeenCalledWith(expectedUrl);
+  });
+
+  it('should render a noscript image for non-JS users', () => {
+    const renderedATI = render(
+      <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
+    );
+
+    expect(renderedATI.html()).toBe(
+      `<img height="1px" width="1px" alt="" src="https://foobar.com?key=value&amp;key2=value2"/>`,
     );
   });
+
+  shouldMatchSnapshot(
+    'should render correctly',
+    <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
+  );
 });

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { atiPageViewParams } from './atiUrl';
+import atiPageViewParams from './atiUrl';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 
