@@ -1,6 +1,6 @@
 import * as genericLabelHelpers from '../../lib/analyticsUtils';
 
-const { atiPageViewParams } = require('./atiUrl');
+const atiPageViewParams = require('./atiUrl').default;
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
