@@ -5,7 +5,7 @@
 min=500
 max=600
 
-services=( "news" "persian" "igbo" "yoruba" "pidgin" )
+services=( "afaanoromoo" "afrique" "amharic" "arabic" "azeri" "bengali" "burmese" "cymrufyw" "gahuza" "gujarati" "hausa" "hindi" "igbo" "indonesia" "japanese" "korean" "kyrgyz" "marathi" "mundo" "naidheachdan" "nepali" "news" "pashto" "persian" "pidgin" "portuguese" "punjabi" "russian" "serbian" "sinhala" "somali" "swahili" "tamil" "telugu" "thai" "tigrinya" "turkce" "ukchina" "ukrainian" "urdu" "uzbek" "vietnamese" "yoruba" "zhongwen" )
 failure=false
 
 for service in ${services[@]}
