@@ -4,6 +4,8 @@ import { shouldMatchSnapshot } from '../../../testHelpers';
 import FrontPageContainer from './index';
 import igboConfig from '../../lib/config/services/igbo';
 import igboData from '../../../../data/igbo/frontpage';
+import toggleReducer from '../../reducers/ToggleReducer';
+import defaultToggles from '../../lib/config/toggles';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
@@ -73,12 +75,14 @@ describe('FrontPageContainer', () => {
           return {
             ...original,
             useContext: jest.fn(),
+            useReducer: jest.fn(),
           };
         });
 
-        const { useContext } = jest.requireMock('react');
+        const { useContext, useReducer } = jest.requireMock('react');
         useContext.mockReturnValue(igboConfig);
         FrontPageComponent = jest.requireActual('.').default;
+        useReducer.mockReturnValue([toggleReducer, defaultToggles]);
       });
 
       it('should not render frontpage if still loading', () => {
