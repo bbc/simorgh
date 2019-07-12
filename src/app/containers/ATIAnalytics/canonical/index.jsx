@@ -13,7 +13,13 @@ const CanonicalATIAnalytics = ({ pageviewParams }) => {
 
   return (
     <noscript>
-      <img height="1px" width="1px" alt="" src={atiPageViewUrl} />
+      <img
+        height="1px"
+        width="1px"
+        alt=""
+        style={{ position: 'absolute' }}
+        src={atiPageViewUrl}
+      />
     </noscript>
   );
 };
