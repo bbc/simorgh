@@ -126,7 +126,7 @@
     "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.0",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.23",
+    "moment-timezone": "^0.5.26",
     "moment-timezone-data-webpack-plugin": "^1.1.0",
     "morgan": "^1.9.1",
     "path-to-regexp": "^3.0.0",
@@ -195,23 +195,6 @@
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-dev-server": "^3.7.2",
     "yaml-js": "^0.2.3"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/(src|scripts)/**/*.{js,jsx}",
-      "!**/src/testHelpers/**",
-      "!**/*.stories.jsx"
-    ],
-    "setupFiles": [
-      "./src/testHelpers/jest-setup.js"
-    ],
-    "testMatch": [
-      "**/__tests__/**/*.js?(x)",
-      "**/?(*.)+(spec|test).js?(x)"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
   },
   "spec": {
     "executable": [
