@@ -35,12 +35,18 @@ jobs:
         - xvfb-run -a npm run test:prod:travis
         - npm run audit:ci
     - stage: test
+      if: branch != latest AND type = push
+      name: 'Chromatic test if not latest'
+      script:
+        - chromatic test
+    - stage: test
       if: branch = latest AND type = push
-      name: 'Test third party dependencies'
+      name: 'Test third party dependencies and chromatic'
       install: npm install cypress@latest
       addons:
         chrome: stable
       script:
+        - chromatic test --auto-accept-changes
         - xvfb-run -a npm run cypress:3rdParty
 notifications:
   email: false
