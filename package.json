@@ -41,8 +41,6 @@
     "test:e2e:test_env": "CYPRESS_APP_ENV=test npm run cypress",
     "test:e2e:live_env": "CYPRESS_APP_ENV=live npm run cypress",
     "test:e2e:interactive": "npm run killApp && npm run build && run-p --race start cypress:interactive",
-    "test:e2e:storybook": "npm run killStorybook && run-p --race storybook cypress:storybook",
-    "test:e2e:storybook:interactive": "npm run killStorybook && run-p --race storybook cypress:storybook:interactive",
     "lighthouse": "npm run lighthouse:article && npm run lighthouse:frontpage",
     "lighthouse:article": "lighthouse http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po --chrome-flags=\"--no-sandbox --headless --disable-gpu\" --output json --output html --output-path simorgh --config-path scripts/lighthouseConfig.js && node scripts/lighthouseBudget.js run",
     "lighthouse:frontpage": "lighthouse http://localhost.bbc.com:7080/igbo --chrome-flags=\"--no-sandbox --headless --disable-gpu\" --output json --output html --output-path simorgh --config-path scripts/lighthouseConfig.js && node scripts/lighthouseBudget.js run",
