@@ -104,7 +104,7 @@
     "@bbc/psammead-paragraph": "^2.0.1",
     "@bbc/psammead-section-label": "^1.0.2",
     "@bbc/psammead-sitewide-links": "^1.0.2",
-    "@bbc/psammead-story-promo": "^1.0.0-alpha.4",
+    "@bbc/psammead-story-promo": "^2.0.4",
     "@bbc/psammead-story-promo-list": "^1.0.2",
     "@bbc/psammead-styles": "^1.1.2",
     "@bbc/psammead-timestamp-container": "^1.2.2",
