@@ -108,7 +108,10 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 .c7 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  fill: #222222;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
 }
 
 .c5 {
@@ -256,6 +259,13 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   .c14 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c5 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -476,7 +486,10 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 .c8 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  fill: #222222;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
 }
 
 .c6 {
@@ -624,6 +637,13 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   .c15 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c6 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -847,7 +867,10 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .c7 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  fill: #222222;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
 }
 
 .c5 {
@@ -990,6 +1013,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   .c13 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c5 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -1199,7 +1229,10 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .c8 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  fill: #222222;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
 }
 
 .c6 {
@@ -1342,6 +1375,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   .c14 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c6 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -2109,7 +2149,10 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 .c7 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  fill: #222222;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 .c5 {
@@ -2257,6 +2300,13 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   .c14 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c5 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -2474,7 +2524,10 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 .c8 {
   vertical-align: middle;
   margin: 0 0.25rem;
-  fill: #222222;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 .c6 {
@@ -2622,6 +2675,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   .c15 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c6 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
