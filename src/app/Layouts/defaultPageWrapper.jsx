@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { node } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
@@ -8,7 +8,7 @@ import ConsentBanner from '../containers/ConsentBanner';
 import GlobalStyle from '../lib/globalStyles';
 
 const PageWrapper = ({ children }) => (
-  <>
+  <Fragment>
     <GlobalStyle />
     <ServiceWorkerContainer />
     <ManifestContainer />
@@ -16,7 +16,7 @@ const PageWrapper = ({ children }) => (
     <HeaderContainer />
     {children}
     <FooterContainer />
-  </>
+  </Fragment>
 );
 
 PageWrapper.propTypes = {
