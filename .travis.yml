@@ -35,7 +35,7 @@ jobs:
         - npm run audit:ci
     - stage: test
       if: branch != latest AND type = push
-      name: 'Chromatic test if branch is not latest'
+      name: 'Chromatic test only if branch is not latest'
       script:
         - chromatic test
     - stage: test
