@@ -6,33 +6,9 @@ import { shouldMatchSnapshot } from '../../../../testHelpers';
 import * as atiUrl from '../atiUrl';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-
-const { useContext } = jest.requireMock('react');
-
-const contextToReturn = {
-  service: 'news',
-  id: 'c0000000000o',
-  isAmp: false,
-  pageType: 'article',
-  env: 'live',
-  bbcOrigin: 'https://www.bbc.co.uk',
-};
-
 describe('Canonical ATI Analytics', () => {
-  beforeEach(() => {
-    useContext.mockReturnValue(contextToReturn);
-  });
-
   afterEach(() => {
     jest.clearAllMocks();
-    useContext.mockReset();
   });
 
   const atiBaseUrl = 'https://foobar.com?';
@@ -50,7 +26,6 @@ describe('Canonical ATI Analytics', () => {
       create(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
     });
 
-    expect(mockAtiBaseUrl).toHaveBeenCalledWith('live');
     expect(mockSendBeacon).toHaveBeenCalledTimes(1);
     expect(mockSendBeacon).toHaveBeenCalledWith(expectedUrl);
   });

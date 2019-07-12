@@ -2,7 +2,6 @@ import React from 'react';
 import { string } from 'prop-types';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
 import { atiBaseUrl } from '../atiUrl';
-import { RequestContext } from '../../../contexts/RequestContext';
 
 const JsonInlinedScript = data => (
   <script
@@ -13,12 +12,11 @@ const JsonInlinedScript = data => (
 );
 
 const AmpATIAnalytics = ({ pageviewParams }) => {
-  const { env } = React.useContext(RequestContext);
   return (
     <amp-analytics>
       {JsonInlinedScript(
         getAmpAnalyticsJson({
-          baseUrl: atiBaseUrl(env),
+          baseUrl: atiBaseUrl(),
           pageviewParams,
         }),
       )}

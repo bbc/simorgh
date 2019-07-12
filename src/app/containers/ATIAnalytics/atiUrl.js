@@ -12,12 +12,7 @@ import {
   sanitise,
 } from '../../lib/analyticsUtils';
 
-export const atiBaseUrl = env => {
-  if (env === 'local' || env === 'test') {
-    return 'https://logws1363.ati-host.net?';
-  }
-  return 'https://a1.api.bbc.co.uk/hit.xiti?';
-};
+export const atiBaseUrl = () => process.env.SIMORGH_ATI_BASE_URL;
 
 /*
  * For AMP pages, certain browser and device values are determined
