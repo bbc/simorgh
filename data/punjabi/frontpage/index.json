@@ -9,9 +9,9 @@
     "type": "IDX",
     "createdBy": "punjabi-v6",
     "language": "pa",
-    "lastUpdated": 1542122479875,
+    "lastUpdated": 1562930023898,
     "firstPublished": 1497279141,
-    "lastPublished": 1540033734,
+    "lastPublished": 1562930014,
     "options": {
       "allowAdvertising": true
     },
@@ -21,7 +21,7 @@
       "cps_asset_type": "idx"
     },
     "tags": {},
-    "version": "v0.4.11",
+    "version": "v1.0.10",
     "blockTypes": [
       "responsive-top-stories",
       "responsive-cluster",
@@ -29,7 +29,9 @@
       "responsive-inspire",
       "responsive-in-depth",
       "featured-site-top-stories"
-    ]
+    ],
+    "title": "ਨਿਊਜ਼",
+    "summary": "ਪੰਜਾਬ ਤੇ ਭਾਰਤ ਸਬੰਧੀ ਤੇ ਕੌਮਾਂਤਰੀ ਖ਼ਬਰਾਂ ਲਈ ਬੀਬੀਸੀ ਪੰਜਾਬੀ ’ਤੇ ਆਓ। ਇੱਥੇ ਤੁਹਾਨੂੰ ਸਿਆਸਤ ਤੇ ਸਮਾਜ ਨਾਲ ਜੁੜੀਆਂ ਖ਼ਬਰਾਂ ਤੋਂ ਇਲਾਵਾ ਫੋਟੋ ਫੀਚਰ, ਵੀਡੀਓ ਤੇ ਮਨੋਰਥ ਭਰਪੂਰ ਲੇਖ ਵੀ ਮਿਲਣਗੇ। ਨੌਜਵਾਨਾਂ ਤੇ ਔਰਤਾਂ ਦਾ ਖ਼ਾਸ ਧਿਆਨ ਰੱਖਦੇ ਹੋਏ ਸੋਸ਼ਲ ਮੀਡੀਆ ਰੁਝਾਨਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਮਿਲੇਗੀ।"
   },
   "content": {
     "groups": [
@@ -40,21 +42,21 @@
         "items": [
           {
             "headlines": {
-              "headline": "'ਇਹ ਦਸਹਿਰਾ ਸਾਡੇ ਘਰ ਦਾ ਦਹਿਨ ਕਰ ਗਿਆ'"
+              "headline": "ਇਸ ਤਰ੍ਹਾਂ ਬੱਚਿਆਂ ਦਾ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਦਾ ਹੈ ਇਹ ਸਕੂਲ"
             },
             "locators": {
-              "assetUri": "/punjabi/india-45926492",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45926492"
+              "assetUri": "/punjabi/india-48961069",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48961069"
             },
-            "summary": "ਇਸ ਹਾਦਸੇ ਵਿੱਚ ਆਪਣਿਆਂ ਨੂੰ ਗੁਆ ਚੁੱਕੇ ਪੀੜਤ ਪਰਿਵਾਰਾਂ ਦੀ ਦੁਖਭਰੀ ਕਹਾਣੀ",
-            "timestamp": 1540032493,
+            "summary": "ਯੋਗਾ ਦਾ ਹਿੱਸਾ ਹੋਣ ਕਰਕੇ ਇਸ ਲਈ ਹਰੇਕ ਵਿਦਿਆਰਥੀ ਨੂੰ ਉਲਟੇ ਹੱਥਾਂ ਨਾਲ ਕੰਨ ਫੜ ਕੇ ਅਜਿਹਾ ਕਰਨਾ ਲਾਜ਼ਮੀ",
+            "timestamp": 1562930011,
             "byline": {
-              "name": "ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਚਾਵਲਾ",
-              "title": "Corresponsal en Berlín",
+              "name": "ਸੱਤ ਸਿੰਘ",
+              "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ",
               "persons": [
                 {
-                  "name": "Jenny Hill",
-                  "function": "Corresponsal en Berlín"
+                  "name": "서명진",
+                  "function": "BBC 코리아"
                 }
               ]
             },
@@ -65,175 +67,89 @@
               },
               "campaigns": [
                 {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103941221",
+              "id": "107848293",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2FB6/production/_103941221_asss.jpg",
-              "path": "/cpsprodpb/2FB6/production/_103941221_asss.jpg",
+              "href": "http://c.files.bbci.co.uk/9974/production/_107848293_bbc-500studentsweremadetostandunderhotsunanddosquattingexcerciseaspartof'superyogaforbrain'inharyanaboardrunschool.3.jpg",
+              "path": "/cpsprodpb/9974/production/_107848293_bbc-500studentsweremadetostandunderhotsunanddosquattingexcerciseaspartof'superyogaforbrain'inharyanaboardrunschool.3.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ",
-              "copyrightHolder": "Gurpreet cHawla / bbc"
+              "altText": "ਯੋਗਾ",
+              "copyrightHolder": "Sat singh/bbc"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
             "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
             "relatedItems": [
               {
-                "name": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ : ਤਾਜ਼ਾ ਹਾਲਾਤ ਤੇ ਦੁਖਦ ਕਹਾਣੀਆਂ",
-                "uri": "https://www.bbc.com/punjabi/india-45925154"
+                "headlines": {
+                  "headline": "ਦਲਿਤ ਨਾਲ ਵਿਆਹ ਕਰਵਾਉਣ ਵਾਲੀ ਭਾਜਪਾ ਵਿਧਾਇਕ ਦੀ ਧੀ ਨੂੰ 'ਜਾਨ ਦਾ ਖ਼ਤਰਾ'"
+                },
+                "locators": {
+                  "assetUri": "/punjabi/india-48956343",
+                  "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-48956343"
+                },
+                "summary": "ਭਾਜਪਾ ਵਿਧਾਇਕ ਦੀ ਧੀ ਨੇ ਸੋਸ਼ਲ ਮੀਡੀਆ 'ਤੇ ਇੱਕ ਵੀਡੀਓ ਪਾ ਕੇ ਕਿਹਾ ਹੈ ਕਿ ਮੇਰੇ ਪਿਤਾ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਬੰਦੇ ਸਾਡਾ ਪਿੱਛਾ ਕਰ ਰਹੇ ਹਨ",
+                "timestamp": 1562917926,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:punjabi/india-48956343",
+                "type": "cps"
               },
               {
                 "headlines": {
-                  "headline": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ: ਕਦੋਂ, ਕੀ ਅਤੇ ਕਿਵੇਂ ਹੋਇਆ"
+                  "headline": "ਕ੍ਰਿਕਟ ਦੇ ਗ਼ਮ 'ਚ ਭਾਰਤੀ ਦੂਤੀ ਚੰਦ ਦੀ ਇਹ ਸ਼ਾਨਦਾਰ ਜਿੱਤ ਕਿਉਂ ਭੁੱਲ ਗਏ"
                 },
                 "locators": {
-                  "assetUri": "/punjabi/india-45917911",
-                  "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-45917911"
+                  "assetUri": "/punjabi/india-48956344",
+                  "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-48956344"
                 },
-                "summary": "ਅੰਮ੍ਰਿਤਸਰ ਵਿਚ ਦਸਹਿਰੇ ਮੌਕੇ ਰਾਵਣ ਦਾ ਪੁਤਲਾ ਜਲਾਏ ਜਾਣ ਮੌਕੇ ਨੇੜਲੀ ਰੇਲ ਪਟੜੀ ਉੱਤੇ ਖੜ੍ਹੇ ਲੋਕ ਰੇਲ ਗੱਡੀ ਥੱਲੇ ਆਉਣ ਨਾਲ ਮਾਰੇ ਗਏ।",
-                "timestamp": 1539998230,
+                "summary": "ਟੀਮ ਇੰਡੀਆ ਦੀ ਸੈਮੀਫਾਈਨਲ 'ਚ ਹਾਰ ਤੋਂ ਇੱਕ ਦਿਨ ਪਹਿਲਾਂ ਦੂਤੀ ਚੰਦ ਨੇ ਸ਼ਾਨਦਾਰ ਪ੍ਰਦਰਸ਼ਨ ਕੀਤਾ ਸੀ, ਪਰ ਲੋਕਾਂ ਕ੍ਰਿਕਟ ਟੀਮ ਦੀ ਹਾਰ ਦਾ ਗ਼ਮ ਜ਼ਿਆਦਾ ਹੈ",
+                "timestamp": 1562917909,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:punjabi/india-45917911"
+                "id": "urn:bbc:ares::asset:punjabi/india-48956344",
+                "type": "cps"
               }
             ],
-            "id": "urn:bbc:ares::asset:punjabi/india-45926492"
+            "id": "urn:bbc:ares::asset:punjabi/india-48961069",
+            "type": "cps"
           },
           {
-            "headlines": {
-              "headline": "ਸਾਊਦੀ ਅਰਬ ਨੇ ਮੰਨਿਆ ਪੱਤਰਕਾਰ ਖਾਸ਼ੋਗੀ ਦਾ 'ਕਤਲ' ਹੋਇਆ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45910615",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45910615"
-            },
-            "summary": "ਸਾਊਦੀ ਅਰਬ ਦੇ ਪੱਤਰਕਾਰ ਜਮਾਲ ਖਾਸ਼ੋਗੀ 2 ਅਕਤੂਬਰ ਤੋਂ ਲਾਪਤਾ ਹਨ। ਪੜ੍ਹੋ ਇਸ ਪੱਤਰਕਾਰ ਬਾਰੇ ਕਈ ਤੱਥ",
-            "timestamp": 1540014369,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
-                }
-              ]
-            },
-            "cpsType": "STY",
+            "name": "ਮਿਸ਼ਨ ਮੂਨ -2 : ਚੰਦਰਯਾਨ ਦਾ ਧਰਤੀ ਤੋਂ ਚੰਦ ਤੱਕ ਸਫ਼ਰ",
+            "summary": "ਭਾਰਤ ਦਾ ਮਿਸ਼ਨ ਮੂਨ -2 : ਚੰਦਰਯਾਨ ਦੇ ਧਰਤੀ ਤੋਂ ਚੰਦ ਤੱਕ ਸਫ਼ਰ ਨੂੰ ਗ੍ਰਫ਼ਾਕਿਸ ਰਾਹੀ ਸਮਝੋ",
             "indexImage": {
-              "id": "103939576",
+              "id": "107848290",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/10809/production/_103939576__103937975_050049044.jpg",
-              "path": "/cpsprodpb/10809/production/_103939576__103937975_050049044.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਜਮਾਲ ਖਸ਼ੋਗੀ",
-              "caption": "ਸਾਊਦੀ ਅਰਬ ਦੇ ਸਰਕਾਰੀ ਟੀਵੀ ਚੈਨਲ ਨੇ ਸ਼ੁਰੂਆਤੀ ਜਾਂਚ ਦੇ ਹਵਾਲੇ ਨਾਲ ਦੱਸਿਆ ਹੈ ਕਿ ਖਾਸ਼ੋਗੀ ਦੀ ਦੂਤਾਵਾਸ ਅੰਦਰ ਝਗੜੇ ਦੌਰਾਨ ਉਹ ਮਾਰੇ ਗਏ।",
-              "copyrightHolder": "AFP/GETTY"
+              "href": "http://c.files.bbci.co.uk/2444/production/_107848290_cover.png",
+              "path": "/cpsprodpb/2444/production/_107848290_cover.png",
+              "height": 540,
+              "width": 960,
+              "altText": "ਚੰਦਰਯਾਨ",
+              "copyrightHolder": "BBC"
             },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45910615"
+            "uri": "https://www.bbc.com/punjabi/extra/JZmsi7IDHK/chandrayan-2_punjabi",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1562924311,
+            "type": "link"
           },
           {
             "headlines": {
-              "headline": "15 ਘੰਟੇ ਦੀ ਦੇਰੀ 'ਤੇ ਕੈਪਟਨ ਦੀ ਸਫ਼ਾਈ"
+              "headline": "ਉਹ ਖ਼ਤਰਨਾਕ ਸ਼ੂਟਰ ਜਿਸ ਤੋਂ ਹਿਟਲਰ ਦੀ ਫੌਜ ਵੀ ਡਰਦੀ ਸੀ"
             },
             "locators": {
-              "assetUri": "/punjabi/india-45924892",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45924892"
+              "assetUri": "/punjabi/international-48960185",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48960185"
             },
-            "summary": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸੇ ਬਾਰੇ ਮੁੱਖ ਮੰਤਰੀ ਪੰਜਾਬ ਕੈਪਟਨ ਅਮਰਿੰਦਰ ਸਿੰਘ ਨੇ ਕੀਤੀ ਪ੍ਰੈਸ ਕਾਨਫਰੰਸ",
-            "timestamp": 1540021703,
-            "byline": {
-              "name": " ਰਵਿੰਦਰ ਸਿੰਘ ਰੌਬਿਨ/ ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਚਾਵਲਾ",
-              "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ ",
-              "persons": [
-                {
-                  "name": "حسن خرسند",
-                  "function": "تحلیلگر اقتصادی"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103941228",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/14126/production/_103941228_ebb560e9-6d24-45fd-b42d-ef8d6c4a9533.jpg",
-              "path": "/cpsprodpb/14126/production/_103941228_ebb560e9-6d24-45fd-b42d-ef8d6c4a9533.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਕੈਪਟਨ ਅਮਰਿੰਦਰ ਸਿੰਘ",
-              "caption": "ਇਹ ਤੂੰ-ਤੂੰ, ਮੈਂ -ਮੈਂ ਦਾ ਸਮਾਂ ਨਹੀਂ ਹੈ, ਬਲਕਿ ਮਿਲਕੇ ਕੰਮ ਕਰਨ ਦਾ ਸਮਾਂ ਹੈ",
-              "copyrightHolder": "Ravinder SIngh Robin/BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45924892"
-          },
-          {
-            "headlines": {
-              "headline": "ਮ੍ਰਿਤਕਾਂ 'ਚ ਰਾਮਲੀਲ੍ਹਾ ਦਾ ਰਾਵਣ ਵੀ ਸ਼ਾਮਲ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45924642",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45924642"
-            },
-            "summary": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸੇ ਵਿਚ ਮਾਰੇ ਲੋਕਾਂ ਦੇ ਰਿਸ਼ਤੇਦਾਰ ਪੂਰੀ ਰਾਤ ਟਾਰਚਾਂ ਤੇ ਮੋਬਾਇਲ ਫੋਨਾਂ ਨਾਲ ਆਪਣਿਆਂ ਨੂੰ ਲੱਭਦੇ ਰਹੇ।",
-            "timestamp": 1540026597,
-            "byline": {
-              "name": "ਸਰਬਜੀਤ ਸਿੰਘ ਧਾਲੀਵਾਲ",
-              "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ ",
-              "persons": [
-                {
-                  "name": "서명진",
-                  "function": "BBC 코리아"
-                }
-              ]
-            },
+            "summary": "14 ਦੀ ਉਮਰ ਉਮਰ ’ਚ ਹਥਿਆਰਾਂ ਨਾਲ ਵਾਹ ਪਿਆ ਅਤੇ 25 ਦੀ ਹੁੰਦਿਆਂ-ਹੁੰਦਿਆਂ 309 ਲੋਕਾਂ ਨੂੰ ਆਪਣਾ ਸ਼ਿਕਾਰ ਬਣਾਇਆ",
+            "timestamp": 1562919374,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -242,44 +158,91 @@
               "campaigns": [
                 {
                   "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
+                  "campaignName": "WS - Give me perspective"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103940404",
+              "id": "107845893",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/9DD4/production/_103940404_manjitsingh.jpg",
-              "path": "/cpsprodpb/9DD4/production/_103940404_manjitsingh.jpg",
+              "href": "http://c.files.bbci.co.uk/9BAE/production/_107845893_gettyimages-163954004.jpg",
+              "path": "/cpsprodpb/9BAE/production/_107845893_gettyimages-163954004.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ",
-              "caption": "ਮਨਜੀਤ ਮੁਤਾਬਕ ਪਰਿਵਾਰ ਵਿਚ ਮਾਮੀ ਜੀ ਤੋਂ ਇਲਾਵਾ ਉਨ੍ਹਾਂ ਦੀ ਇੱਕ ਬੇਟੀ ਦੋ ਬੇਟੇ ਰਹਿ ਗਏ ਹਨ।",
+              "altText": "ਨਾਜੀ, ਹਿਟਲਰ, ਲਿਊਡਮਿਲਾ",
+              "caption": "ਲਿਊਡਮਿਲਾ ਦਾ 14 ਦੀ ਉਮਰ ਉਮਰ 'ਚ ਹਥਿਆਰਾਂ ਨਾਲ ਵਾਹ ਪਿਆ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "id": "urn:bbc:ares::asset:punjabi/international-48960185",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਪਾਣੀ ਬਚਾਉਣਾ ਸਿੱਖਣਾ ਹੈ ਤਾਂ ਮੋਗਾ ਤੇ ਮਾਨਸਾ ਦੇ ਇਨ੍ਹਾਂ ਪਿੰਡਾਂ ਵੱਲ ਦੇਖੋ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48944546",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48944546"
+            },
+            "summary": "ਇੱਥੇ ਤਾਂ ਮਹਿਮਾਨਾਂ ਵੱਲੋਂ ਗਲਾਸ ਵਿੱਚ ਛੱਡੇ ਗਏ ਪੀਣ ਵਾਲੇ ਪਾਣੀ ਨੂੰ ਵੀ ਸਾਂਭਿਆ ਜਾਂਦਾ ਹੈ",
+            "timestamp": 1562919613,
+            "byline": {
+              "name": "ਮੋਗਾ ਤੋਂ ਸੁਰਿੰਦਰ ਮਾਨ ਅਤੇ ਬਰਨਾਲਾ ਤੋਂ ਸੁਖਚਰਨ ਪ੍ਰੀਤ ਦੀ ਰਿਪੋਰਟ",
+              "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ",
+              "persons": [
+                {
+                  "name": "Abigail Simmons",
+                  "function": "Education reporter"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107845897",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/137EE/production/_107845897_paniii.jpg",
+              "path": "/cpsprodpb/137EE/production/_107845897_paniii.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਪਾਣੀ",
               "copyrightHolder": "BBC"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
             "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45924642"
+            "id": "urn:bbc:ares::asset:punjabi/india-48944546",
+            "type": "cps"
           },
           {
             "headlines": {
-              "headline": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ : 11 ਨੁਕਤਿਆਂ 'ਚ ਪੂਰੀ ਕਹਾਣੀ"
+              "headline": "ਕ੍ਰਿਕਟ ਦੇ ਗ਼ਮ 'ਚ ਭਾਰਤੀ ਦੂਤੀ ਚੰਦ ਦੀ ਇਹ ਸ਼ਾਨਦਾਰ ਜਿੱਤ ਕਿਉਂ ਭੁੱਲ ਗਏ"
             },
             "locators": {
-              "assetUri": "/punjabi/india-45917137",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45917137"
+              "assetUri": "/punjabi/india-48956344",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48956344"
             },
-            "summary": "ਅੰਮ੍ਰਿਤਸਰ 'ਚ ਦਸਹਿਰੇ ਮੌਕੇ ਜਲਦਾ ਰਾਵਣ ਦੇਖਦੇ ਲੋਕਾਂ ਦੇ ਰੇਲ ਗੱਡੀ ਥੱਲੇ ਆਉਣ ਨਾਲ 59 ਮੌਤਾਂ ਦੀ ਪੁਸ਼ਟੀ",
-            "timestamp": 1540024781,
+            "summary": "ਟੀਮ ਇੰਡੀਆ ਦੀ ਸੈਮੀਫਾਈਨਲ 'ਚ ਹਾਰ ਤੋਂ ਇੱਕ ਦਿਨ ਪਹਿਲਾਂ ਦੂਤੀ ਚੰਦ ਨੇ ਸ਼ਾਨਦਾਰ ਪ੍ਰਦਰਸ਼ਨ ਕੀਤਾ ਸੀ, ਪਰ ਲੋਕਾਂ ਕ੍ਰਿਕਟ ਟੀਮ ਦੀ ਹਾਰ ਦਾ ਗ਼ਮ ਜ਼ਿਆਦਾ ਹੈ",
+            "timestamp": 1562917909,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -288,147 +251,39 @@
               "campaigns": [
                 {
                   "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
-                },
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
+                  "campaignName": "WS - Give me perspective"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103940402",
+              "id": "107844497",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/4FB4/production/_103940402_gettyimages-1052530594.jpg",
-              "path": "/cpsprodpb/4FB4/production/_103940402_gettyimages-1052530594.jpg",
+              "href": "http://c.files.bbci.co.uk/13654/production/_107844497_duteee.jpg",
+              "path": "/cpsprodpb/13654/production/_107844497_duteee.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ",
-              "caption": "ਅਜੇ ਵੀ 20 ਦੇ ਕਰੀਬ ਅਜਿਹੀਆਂ ਲਾਸ਼ਾਂ ਹਨ ਜਿਨ੍ਹਾਂ ਦੀ ਪਛਾਣ ਨਹੀਂ ਹੋ ਸਕੀ ਹੈ।",
-              "copyrightHolder": "Getty Images"
+              "altText": "ਐਥਲੀਟ",
+              "copyrightHolder": "Reuters"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
             "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45917137"
+            "id": "urn:bbc:ares::asset:punjabi/india-48956344",
+            "type": "cps"
           },
           {
             "headlines": {
-              "headline": "'ਗੱਡੀ ਹੇਠ ਆਉਂਦੇ ਲੋਕੀਂ ਮੈਂ ਅੱਖੀ ਦੇਖੇ ਤੇ ਲਾਸ਼ਾਂ ਹੱਥੀਂ ਚੁੱਕੀਆਂ'"
+              "headline": "ਦਲਿਤ ਨਾਲ ਵਿਆਹ ਕਰਵਾਉਣ ਵਾਲੀ ਭਾਜਪਾ ਵਿਧਾਇਕ ਦੀ ਧੀ ਨੂੰ 'ਜਾਨ ਦਾ ਖ਼ਤਰਾ'"
             },
             "locators": {
-              "assetUri": "/punjabi/india-45922145",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45922145"
+              "assetUri": "/punjabi/india-48956343",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48956343"
             },
-            "summary": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ ਦੇ ਸ਼ਿਕਾਰ ਹੋਏ ਲੋਕਾਂ ਦੇ ਪਰਿਵਾਰਕ ਮੈਂਬਰਾਂ ਦੇ ਰੌਂਗਟੇ ਖੜ੍ਹੇ ਕਰਨ ਵਾਲੇ ਵੈਣ",
-            "timestamp": 1539998353,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103938547",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/12357/production/_103938547_womenweeping.jpg",
-              "path": "/cpsprodpb/12357/production/_103938547_womenweeping.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ",
-              "caption": "ਬੰਬ- ਪਟਾਕਿਆਂ ਦੀ ਅਵਾਜ਼ ਵਿਚ ਲੋਕਾਂ ਨੂੰ ਰੇਲ ਗੱਡੀ ਦੀ ਅਵਾਜ਼ ਸੁਣਾਈ ਨਹੀਂ ਦਿੱਤੀ ਅਤੇ ਹਾਦਸਾ ਵਾਪਰ ਗਿਆ।",
-              "copyrightHolder": "Gurpeet Singh chawla/bbc"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45922145"
-          },
-          {
-            "headlines": {
-              "headline": "'ਡੇਢ ਸਾਲ ਦੀ ਨੂਰ ਮੇਰੀ ਗੋਦ 'ਚ ਸੀ, ਭੀੜ ਨੇ ਉਸ ਨੂੰ ਕੁਚਲ ਦਿੱਤਾ'"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45924647",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45924647"
-            },
-            "summary": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸੇ ਵਿੱਚ ਦਸਹਿਰਾ ਮੇਲੇ ਦੌਰਾਨ ਹਾਦਸੇ ਵਿੱਚ ਆਪਣਿਆਂ ਨੂੰ ਗੁਆਉਣ ਵਾਲਿਆਂ ਨੇ ਬੀਬੀਸੀ ਨੂੰ ਦੱਸੀ ਹੱਢਬੀਤੀ",
-            "timestamp": 1540006939,
-            "byline": {
-              "name": "ਰਵਿੰਦਰ ਸਿੰਘ ਰੌਬਿਨ ",
-              "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ",
-              "persons": [
-                {
-                  "name": "서명진",
-                  "function": "BBC 코리아"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103938685",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/E53B/production/_103938685_child.jpg",
-              "path": "/cpsprodpb/E53B/production/_103938685_child.jpg",
-              "height": 576,
-              "width": 1024,
-              "altText": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ",
-              "copyrightHolder": "Ravinder singh robin/bbc"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45924647"
-          },
-          {
-            "headlines": {
-              "headline": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ: ਕਦੋਂ, ਕੀ ਅਤੇ ਕਿਵੇਂ ਹੋਇਆ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45917911",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45917911"
-            },
-            "summary": "ਅੰਮ੍ਰਿਤਸਰ ਵਿਚ ਦਸਹਿਰੇ ਮੌਕੇ ਰਾਵਣ ਦਾ ਪੁਤਲਾ ਜਲਾਏ ਜਾਣ ਮੌਕੇ ਨੇੜਲੀ ਰੇਲ ਪਟੜੀ ਉੱਤੇ ਖੜ੍ਹੇ ਲੋਕ ਰੇਲ ਗੱਡੀ ਥੱਲੇ ਆਉਣ ਨਾਲ ਮਾਰੇ ਗਏ।",
-            "timestamp": 1539998230,
-            "byline": {
-              "name": "ਰਵਿੰਦਰ ਸਿੰਘ ਰੌਬਿਨ",
-              "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ",
-              "persons": [
-                {
-                  "name": "จิราพร คูหากาญจน์",
-                  "function": "ช่างภาพวิดีโอ"
-                }
-              ]
-            },
+            "summary": "ਭਾਜਪਾ ਵਿਧਾਇਕ ਦੀ ਧੀ ਨੇ ਸੋਸ਼ਲ ਮੀਡੀਆ 'ਤੇ ਇੱਕ ਵੀਡੀਓ ਪਾ ਕੇ ਕਿਹਾ ਹੈ ਕਿ ਮੇਰੇ ਪਿਤਾ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਬੰਦੇ ਸਾਡਾ ਪਿੱਛਾ ਕਰ ਰਹੇ ਹਨ",
+            "timestamp": 1562917926,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -437,33 +292,28 @@
               "campaigns": [
                 {
                   "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
+                  "campaignName": "WS - Update me"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103938543",
+              "id": "107829494",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/8717/production/_103938543_gettyimages-1052526522.jpg",
-              "path": "/cpsprodpb/8717/production/_103938543_gettyimages-1052526522.jpg",
+              "href": "http://c.files.bbci.co.uk/C154/production/_107829494_01.jpg",
+              "path": "/cpsprodpb/C154/production/_107829494_01.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਅੰਮ੍ਰਿਤਸਰ ਵਿਚ ਦਸਹਿਰੇ ਮੌਕੇ",
-              "caption": "ਹਾਦਸਾ ਸ਼ਹਿਰ ਦੇ ਪੂਰਬੀ ਹਿੱਸੇ ਵਿਚ ਜੌੜੇ ਫਾਟਕ ਕੋਲ ਵਾਪਰਿਆ ਹੈ। ਇਹ ਹਾਦਸਾ ਸ਼ੁੱਕਰਵਾਰ ਨੂੰ ਸ਼ਾਮੀ ਕਰੀਬ ਸਾਢੇ ਛੇ ਵਜੇ ਧੋਬੀ ਗੇਟ ਨੇੜੇ ਰਾਵਣ ਜਲਾਉਣ ਮੌਕੇ ਵਾਪਰਿਆ।",
-              "copyrightHolder": "Getty Images"
+              "altText": "ਸਾਕਸ਼ੀ ਆਪਣੇ ਪਤੀ ਨਾਲ",
+              "copyrightHolder": "video grab"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
             "prominence": "standard",
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45917911"
+            "id": "urn:bbc:ares::asset:punjabi/india-48956343",
+            "type": "cps"
           }
         ],
         "strapline": {
@@ -476,109 +326,234 @@
         "title": "Cluster 1",
         "items": [
           {
-            "name": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ : ਤਾਜ਼ਾ ਹਾਲਾਤ ਤੇ ਦੁਖਦ ਕਹਾਣੀਆਂ",
-            "summary": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ : ਤਾਜ਼ਾ ਹਾਲਾਤ ਤੇ ਦੁਖਦ ਕਹਾਣੀਆਂ",
-            "indexImage": {
-              "id": "103939208",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/139A5/production/_103939208__103938547_womenweeping.jpg",
-              "path": "/cpsprodpb/139A5/production/_103939208__103938547_womenweeping.jpg",
-              "height": 371,
-              "width": 660,
-              "altText": "ਅੰਮ੍ਰਿਤਸਰ",
-              "copyrightHolder": "BBC"
+            "headlines": {
+              "headline": "ਭਾਰਤ ਸੈਮੀ-ਫਾਈਨਲ ਦੀ ਰੇਸ ’ਚੋਂ ਕਿਉਂ ਬਾਹਰ ਹੋਇਆ"
             },
-            "uri": "https://www.bbc.com/punjabi/india-45925154"
-          },
-          {
-            "name": "ਕਿੰਨਰ ਨਾਲ ਵਿਆਹ ਕਰਵਾਉਣ ਵਾਲੇ ਮਰਦ ਦੀ ਕਹਾਣੀ",
-            "summary": "ਕਿੰਨਰ ਨਾਲ ਵਿਆਹ ਕਰਵਾਉਣ ਵਾਲੇ ਮਰਦ ਦੀ ਕਹਾਣੀ",
-            "indexImage": {
-              "id": "103902205",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/C42C/production/_103902205__103748838_eunuch-1.jpg",
-              "path": "/cpsprodpb/C42C/production/_103902205__103748838_eunuch-1.jpg",
-              "height": 371,
-              "width": 660,
-              "altText": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਵਿਸ਼ੇਸ਼",
-              "copyrightHolder": "BBC"
+            "locators": {
+              "assetUri": "/punjabi/india-48944541",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48944541"
             },
-            "uri": "https://www.bbc.com/punjabi/india-45876154"
-          },
-          {
-            "name": "ਸਮਲਿੰਗੀ ਸੈਕਸ ਅਪਰਾਧ ਦੇ ਦਾਇਰੇ ਤੋਂ ਬਾਹਰ",
-            "summary": "ਭਾਰਤ ਵਿੱਚ ਸਮਲਿੰਗੀ ਹੋਣਾ ਹੁਣ ਜੁਰਮ ਨਹੀਂ, ਪਰ ਕੁਝ ਦੇਸਾਂ ਵਿੱਚ ਇਸ ਲਈ ਮੌਤ ਦੀ ਸਜ਼ਾ",
-            "indexImage": {
-              "id": "103685945",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/D6AE/production/_103685945_lgbt.jpg",
-              "path": "/cpsprodpb/D6AE/production/_103685945_lgbt.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "ਸਮਲਿੰਗੀ",
-              "copyrightHolder": "Getty Images"
+            "summary": "ਵਿਸ਼ਵ ਕੱਪ 2019 ਦੇ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਨਿਊਜ਼ੀਲੈਂਡ ਨੇ ਭਾਰਤ ਨੂੰ 18 ਦੌੜਾਂ ਨਾਲ ਹਰਾ ਦਿੱਤਾ ਹੈ।",
+            "timestamp": 1562840361,
+            "byline": {
+              "name": "ਜਸਪਾਲ ਸਿੰਘ",
+              "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
+              "persons": [
+                {
+                  "name": "Abdujalil Abdurasulov",
+                  "function": "BBC News, Bishkek"
+                }
+              ]
             },
-            "uri": "https://www.bbc.com/punjabi/india-45466404"
-          },
-          {
-            "name": "ਕਿਸਾਨਾਂ ਦਾ ਕਬਰਿਸਤਾਨ ਬਣ ਰਿਹਾ ਪੰਜਾਬ",
-            "summary": "ਹਰੀ ਕ੍ਰਾਂਤੀ ਦੇ ਦੌਰ ਤੋਂ 16000 ਕਿਸਾਨਾਂ ਦੇ ਕਬਰਿਸਤਾਨ 'ਚ ਕਿਵੇਂ ਤਬਦੀਲ ਹੋਇਆ ਪੰਜਾਬ?",
-            "indexImage": {
-              "id": "103686438",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/1460C/production/_103686438_farming.jpg",
-              "path": "/cpsprodpb/1460C/production/_103686438_farming.jpg",
-              "height": 546,
-              "width": 971,
-              "altText": "ਕਿਸਾਨ",
-              "copyrightHolder": "BBC"
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
             },
-            "uri": "https://www.bbc.com/punjabi/resources/idt-sh/farmers_in_punjab"
-          },
-          {
-            "name": "'ਚਿੱਟਾ' ਕਿਵੇਂ ਕਾਲਾ ਕਰ ਰਿਹਾ ਪੰਜਾਬ ਦਾ ਭਵਿੱਖ",
-            "summary": "ਪੰਜਾਬ ਵਿੱਚ ਨਸ਼ੇ ਦੀ ਸਮੱਸਿਆ ਬਾਰੇ ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਦੀ ਖਾਸ ਲੜੀ।",
+            "cpsType": "STY",
             "indexImage": {
-              "id": "103686441",
+              "id": "107827458",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/3884/production/_103686441_drugs.jpg",
-              "path": "/cpsprodpb/3884/production/_103686441_drugs.jpg",
+              "href": "http://c.files.bbci.co.uk/14DE0/production/_107827458_afpkohli.jpg",
+              "path": "/cpsprodpb/14DE0/production/_107827458_afpkohli.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਪੰਜਾਬ ਵਿੱਚ ਨਸ਼ਾ",
-              "copyrightHolder": "BBC"
+              "altText": "ਵਿਰਾਟ ਕੋਹਲੀ",
+              "caption": "ਵਿਰਾਟ ਕੋਹਲੀ ਨੇ ਮੰਨਿਆ ਹੈ ਕਿ 45 ਮਿੰਟ ਦਾ ਖਰਾਬ ਖੇਡ ਉਨ੍ਹਾਂ ਦੀ ਸੈਮੀਫਾਈਨਲ ਦੀ ਹਾਰ ਦਾ ਕਾਰਨ ਬਣਿਆ",
+              "copyrightHolder": "AFP"
             },
-            "uri": "https://www.bbc.com/punjabi/india-45400071"
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48944541",
+            "type": "cps"
           },
           {
-            "name": "ਏਸ਼ੀਆਈ ਖੇਡਾਂ: ਤਗਮੇ ਜਿਤਣ 'ਚ ਪੰਜਾਬ 'ਤੇ ਹਰਿਆਣਾ ਦੀ ਹਿੱਸੇਦਾਰੀ",
-            "summary": "ਏਸ਼ੀਆਈ ਖੇਡਾਂ ਵਿੱਚ ਪੰਜਾਬ ਤੇ ਹਰਿਆਣਾ ਦੇ ਖਿਡਾਰੀਆਂ ਦੀ ਹਿੱਸੇਦਾਰੀ ਰਹੀ।",
+            "headlines": {
+              "headline": "ਕੀ ਭਾਰਤ ਪੁਲਾੜ ਵਿੱਚ ਮਹਾਂਸ਼ਕਤੀ ਬਣ ਗਿਆ ਹੈ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/media-48938362",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-48938362"
+            },
+            "summary": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਮੋਦੀ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਭਾਰਤ ਪੁਲਾੜ ਵਿੱਚ ਨਿਵੇਸ਼ ਕਰਨ ਵਾਲਾ ਮਹਾਂਸ਼ਕਤੀਸ਼ਾਲੀ ਦੇਸ਼ ਹੈ।",
+            "timestamp": 1562835503,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07ghcrt",
+              "subType": "clip",
+              "format": "video",
+              "title": "ਕੀ ਭਾਰਤ ਪੁਲਾੜ ਵਿੱਚ ਮਹਾਂਸ਼ਕਤੀ ਬਣ ਗਿਆ ਹੈ?",
+              "synopses": {
+                "short": "ਕੀ ਭਾਰਤ ਪੁਲਾੜ ਵਿੱਚ ਮਹਾਂਸ਼ਕਤੀ ਬਣ ਗਿਆ ਹੈ?",
+                "long": "ਭਾਰਤ ਅੱਜ ਕਈ ਦੇਸਾਂ ਤੇ ਕੰਪਨੀਆਂ ਲਈ ਉਪਗ੍ਰਹਿ ਲਾਂਚ ਕਰਨ ਦਾ ਟਿਕਾਣਾ ਹੈ। \nਹੁਣ ਤੱਕ ਭਾਰਤ 260 ਤੋਂ ਵੱਧ ਉਪਗ੍ਰਹਿ ਲਾਂਚ ਕਰ ਚੁੱਕਾ ਹੈ। ਇਸ ਵਿੱਚ ਕਈ ਅਰਬ ਡਾਲਰ ਦਾ ਨਿਵੇਸ਼ ਹੈ। \nਸਰਕਾਰ ਲਈ ਇਹ ਮਾਣ ਦੀ ਗੱਲ ਹੈ।",
+                "medium": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਮੋਦੀ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਭਾਰਤ ਪੁਲਾੜ ਵਿੱਚ ਨਿਵੇਸ਼ ਕਰਨ ਵਾਲਾ ਮਹਾਂਸ਼ਕਤੀਸ਼ਾਲੀ ਦੇਸ਼ ਹੈ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gj3zs.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ਕੀ ਭਾਰਤ ਪੁਲਾੜ ਵਿੱਚ ਮਹਾਂਸ਼ਕਤੀ ਬਣ ਗਿਆ ਹੈ?",
+              "versions": [
+                {
+                  "versionId": "p07ghcrx",
+                  "types": ["Original"],
+                  "duration": 152,
+                  "durationISO8601": "PT2M32S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562758933
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
             "indexImage": {
-              "id": "103686444",
+              "id": "107823560",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/ADB4/production/_103686444_asiangames.jpg",
-              "path": "/cpsprodpb/ADB4/production/_103686444_asiangames.jpg",
+              "href": "http://c.files.bbci.co.uk/1984/production/_107823560_p07ghjxz.jpg",
+              "path": "/cpsprodpb/1984/production/_107823560_p07ghjxz.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਖੇਡਾਂ",
-              "copyrightHolder": "Getty Images"
+              "altText": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਮੋਦੀ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਭਾਰਤ ਪੁਲਾੜ ਵਿੱਚ ਨਿਵੇਸ਼ ਕਰਨ ਵਾਲਾ ਮਹਾਂਸ਼ਕਤੀਸ਼ਾਲੀ ਦੇਸ਼ ਹੈ",
+              "copyrightHolder": "ਭਾਰਤ ਅੱਜ ਕਈ ਦੇਸਾਂ ਤੇ ਕੰਪਨੀਆਂ ਲਈ ਉਪਗ੍ਰਹਿ ਲਾਂਚ ਕਰਨ ਦ"
             },
-            "uri": "https://www.bbc.com/punjabi/india-45390143"
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/media-48938362",
+            "type": "cps"
           },
           {
-            "name": "ਰਾਮ ਰਹੀਮ ਨੂੰ ਸਜ਼ਾ ਹੋਣ ਮਗਰੋਂ ਕੀ-ਕੀ ਬਦਲਿਆ?",
-            "summary": "ਡੇਰਾ ਮੁਖੀ ਰਾਮ ਰਹੀਮ ਨੂੰ ਬਲਾਤਕਾਰ ਮਾਮਲੇ ਵਿੱਚ ਦੋਸ਼ੀ ਕਰਾਰ ਹੋਣ 'ਤੇ 20 ਸਾਲ ਦੀ ਸਜ਼ਾ ਸੁਣਾਈ ਹੈ",
+            "headlines": {
+              "headline": "World Cup 2019: 45 ਮਿੰਟਾਂ ਦੇ ਮਾੜੇ ਕ੍ਰਿਕਟ ਨੇ ਵਰਲਡ ਕੱਪ ਤੋਂ ਬਾਹਰ ਕੀਤਾ - ਵਿਰਾਟ ਕੋਹਲੀ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-48905579",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48905579"
+            },
+            "summary": "ਮੈਨਚੈਸਟਰ ਦੇ ਓਲਡ ਟਰੈਫਰਡ ਮੈਦਾਨ ਵਿੱਚ ਸੈਮੀ-ਫਾਈਨਲ 'ਚ ਨਿਊਜ਼ੀਲੈਂਡ ਨੇ ਭਾਰਤ ਨੂੰ 18 ਦੌੜਾਂ ਨਾਲ ਹਰਾਇਆ।",
+            "timestamp": 1562777747,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
             "indexImage": {
-              "id": "103169765",
+              "id": "98439911",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/DDDC/production/_103169765_mediaitem103169764.jpg",
-              "path": "/cpsprodpb/DDDC/production/_103169765_mediaitem103169764.jpg",
+              "href": "http://c.files.bbci.co.uk/2ED9/production/_98439911_gettyimages-696275336.jpg",
+              "path": "/cpsprodpb/2ED9/production/_98439911_gettyimages-696275336.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਗੁਰਮੀਤ ਰਾਮ ਰਹੀਮ",
+              "altText": "ਕ੍ਰਿਕਟ",
+              "copyrightHolder": "PAUL ELLIS/AFP/Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/international-48905579",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਬਜਟ 2019: ਮੱਧ ਵਰਗ ਨੂੰ ਰਾਹਤ ਨਹੀਂ, ਅਮੀਰਾਂ 'ਤੇ ਹੋਰ ਟੈਕਸ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/live/india-48851406",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/live/india-48851406"
+            },
+            "summary": "ਕੇਂਦਰੀ ਵਿੱਤ ਮੰਤਰੀ ਨਿਰਮਲਾ ਸੀਤਾਰਮਨ ਨੇ ਸੰਸਦ ਵਿੱਚ ਬਜਟ ਪੇਸ਼ ਕੀਤਾ। 2 ਘੰਟੇ ਤੋਂ ਵੱਧ ਚੱਲਿਆ ਭਾਸ਼ਣ",
+            "timestamp": 1562141247,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "LIV",
+            "indexImage": {
+              "id": "107755402",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4FE7/production/_107755402_nirmala.jpg",
+              "path": "/cpsprodpb/4FE7/production/_107755402_nirmala.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "ਬਜਟ 2019",
               "copyrightHolder": "Getty Images"
             },
-            "uri": "https://www.bbc.com/punjabi/india-45310050"
+            "commentary": {
+              "order": "descending",
+              "assetUUID": "6139843F2055294E85F41B51F27C1CA5",
+              "channels": {
+                "enhancedmobile": "bbc.cps.asset.48851407_EnhancedMobile",
+                "desktop": "bbc.cps.asset.48851407_HighWeb",
+                "highweb": "bbc.cps.asset.48851407_HighWeb",
+                "mobile": "bbc.cps.asset.48851407_EnhancedMobile"
+              }
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/live/india-48851406",
+            "type": "cps"
+          },
+          {
+            "name": "ਵਿਸ਼ਵ ਕੱਪ 2019: ਕੁਝ ਦਿਲਚਸਪ ਖ਼ਬਰਾਂ",
+            "summary": "ਕ੍ਰਿਕਟ ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਕਈ ਦਿਲਚਸਪ ਪਲ, ਕਿੱਸੇ ਅਤੇ ਰਿਕਾਰਡ ਹਨ",
+            "indexImage": {
+              "id": "107181367",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12A1E/production/_107181367_iiii.jpg",
+              "path": "/cpsprodpb/12A1E/production/_107181367_iiii.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਵਰਲਡ ਕੱਪ",
+              "copyrightHolder": "ICC/TWITTER"
+            },
+            "uri": "https://www.bbc.com/punjabi/india-48470132",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1559287939,
+            "type": "link"
           }
         ],
         "strapline": {
@@ -592,62 +567,14 @@
         "items": [
           {
             "headlines": {
-              "headline": "ਛੋਟੇ ਸਰਦਾਰ ਦਾ ਵੱਡਾ ਕਾਰਨਾਮਾ"
+              "headline": "'ਕ੍ਰਿਕਟ ਸਿਰਫ ਮਰਦਾਂ ਦੀ ਖੇਡ ਨਹੀਂ ਹੈ'"
             },
             "locators": {
-              "assetUri": "/punjabi/india-45903594",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45903594"
+              "assetUri": "/punjabi/india-48960193",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48960193"
             },
-            "summary": "ਅਰਸ਼ਦੀਪ ਨੇ ਇਹ ਜੇਤੂ ਫੋਟੋ ਕਪੂਰਥਲਾ ਦੇ ਨੇੜੇ ਖਿੱਚੀ ਸੀ, ਜਿਸ ਵਿੱਚ ਦੋ ਉੱਲੂ ਇੱਕ ਪਾਈਪ 'ਚੋਂ ਬਾਹਰ ਵੱਲ ਝਾਤੀ ਮਾਰਦੇ ਨਜ਼ਰ ਆ ਰਹੇ ਹਨ",
-            "timestamp": 1539936301,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "Educate me"
-                },
-                {
-                  "campaignId": "5a988e3139461b000e9dabf9",
-                  "campaignName": "Divert me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103914465",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/DC79/production/_103914465_30126949_443149912794218_645152955997093888_o.jpg",
-              "path": "/cpsprodpb/DC79/production/_103914465_30126949_443149912794218_645152955997093888_o.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਅਰਸ਼ਦੀਪ ਸਿੰਘ",
-              "copyrightHolder": "facebook/AdySinghIndia"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45903594"
-          },
-          {
-            "headlines": {
-              "headline": "ਇਹ ਕੁੜੀ ਮੁੱਕੇਬਾਜ਼ੀ ਨਾਲ ਪੂਰੇ ਦੇਸ ਦੀ ਆਸ ਬਣੀ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45886221",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45886221"
-            },
-            "summary": "ਰਾਮਲਾ ਚਾਹੁੰਦੀ ਹੈ ਕਿ ਹੋਰ ਮੁਸਲਮਾਨ ਔਰਤਾਂ ਖੇਡਾਂ ਵਿੱਚ ਆਉਣ।",
-            "timestamp": 1539793133,
+            "summary": "ਇਨ੍ਹਾਂ ਮੁਸਲਿਮ ਕੁੜੀਆਂ ਦੇ ਸੁਪਨੇ ਸਮਾਜ ਦੀਆਂ ਰੁਕਾਵਟਾਂ ਨਾਲੋਂ ਕਿਤੇ ਮਜ਼ਬੂਤ ਹਨ",
+            "timestamp": 1562913405,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -656,70 +583,278 @@
               "campaigns": [
                 {
                   "campaignId": "5a988e2139461b000e9dabf7",
-                  "campaignName": "Inspire me"
+                  "campaignName": "WS - Inspire me"
                 }
               ]
             },
             "cpsType": "MAP",
-            "indexImage": {
-              "id": "103902203",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/760C/production/_103902203_p06p29ws.jpg",
-              "path": "/cpsprodpb/760C/production/_103902203_p06p29ws.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਸੋਮਾਲੀਆ ਦੀ ਮੁੱਕੇਬਾਜ਼",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06p298v",
+            "media": {
+              "id": "p07gpnnk",
               "subType": "clip",
               "format": "video",
-              "title": "ਇਹ ਕੁੜੀ ਮੁੱਕੇਬਾਜ਼ੀ ਨਾਲ ਪੂਰੇ ਦੇਸ ਦੀ ਆਸ ਬਣੀ",
+              "title": "'ਕ੍ਰਿਕਟ ਸਿਰਫ ਮਰਦਾਂ ਦੀ ਖੇਡ ਨਹੀਂ ਹੈ'",
               "synopses": {
-                "short": "ਇਸ ਕੁੜੀ ਨੇ ਪਰਿਵਾਰ ਤੋਂ ਮੁੱਕੇਬਾਜ਼ੀ ਲੁਕਾਈ, ਹੁਣ ਓਲੰਪਿਕ ਗੋਲਡ ਹੈ ਨਿਸ਼ਾਨਾ",
-                "long": "ਗੁਪਤ ਤਰੀਕੇ ਨਾਲ ਟਰੇਨਿੰਗ ਲੈ ਰਹੀ ਰਾਮਲਾ ਅਲੀ ਨੂੰ ਉਮੀਦ ਹੈ ਕਿ ਉਹ 2020 ਉਲੰਪਿਕ ’ਚ ਸੋਮਾਲੀਆ ਦੀ ਨੁਮਾਇੰਦਗੀ ਕਰੇਗੀ। ਰਾਮਲਾ ਚਾਹੁੰਦੀ ਹੈ ਕਿ ਹੋਰ ਮੁਸਲਮਾਨ ਔਰਤਾਂ ਖੇਡਾਂ ਵਿੱਚ ਆਉਣ।",
-                "medium": "ਰਾਮਲਾ ਚਾਹੁੰਦੀ ਹੈ ਕਿ ਹੋਰ ਮੁਸਲਮਾਨ ਔਰਤਾਂ ਖੇਡਾਂ ਵਿੱਚ ਆਉਣ।"
+                "short": "'ਕ੍ਰਿਕਟ ਸਿਰਫ ਮਰਦਾਂ ਦੀ ਖੇਡ ਨਹੀਂ ਹੈ'",
+                "long": "ਆਜ਼ਮ ਕੈਂਪਸ ਦੇ ਖੇਡ ਨਿਰਦੇਸ਼ਕ ਗੁਲਜ਼ਾਰ ਸ਼ੇਖ਼ ਦੀ ਕਹਿਣਾ ਹੈ ਕਿ ਉਨ੍ਹਾਂ 11 ਕੁੜੀਆਂ ਤਲਾਸ਼ਣੀਆਂ ਸਨ ਪਰ ਹੁਣ ਮਹਿਲਾ ਵਿਸ਼ਵ ਕੱਪ ਤੋਂ ਬਾਅਦ ਇੱਥੇ 30 ਤੋਂ 40 ਕੁੜੀਆਂ ਹਨ। ਇਨ੍ਹਾਂ ਵਿੱਚੋਂ 11 ਕੁੜੀਆਂ ਕੱਢਣੀਆਂ ਚੁਣੌਤੀ ਹੈ।\n\nਰਿਪੋਰਟਰ- ਹਾਲਿਮਾ ਕੁਰੈਸ਼ੀ\nਸ਼ੂਟ- ਨਿਤਿਨ ਨਾਗਰਕਰ\nਐਡਿਟ- ਸ਼ਰਧ ਬਢੇ\nਪ੍ਰੋਡਿਊਸਰ- ਜਾਨ੍ਹਵੀ ਮੂਲੇ",
+                "medium": "ਪੂਣੇ ਦੇ ਆਜ਼ਮ ਕੈਂਪਸ ਵਿੱਚ ਸਥਾਨਕ ਮੁਸਲਿਮ ਕੁੜੀਆਂ ਹਿਜਾਬ ਪਾ ਕੇ ਕ੍ਰਿਕਟ ਖੇਡਦੀਆਂ ਹਨ"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p29ws.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gpsss.jpg",
               "embedding": true,
-              "warnings": {},
               "advertising": true,
-              "caption": "ਸੋਮਾਲੀਆ ਦੀ ਮੁੱਕੇਬਾਜ਼",
+              "caption": "'ਪਹਿਲਾਂ ਰੀਤੀ-ਰਿਵਾਜਾਂ ਦੀ ਪਾਲਣਾ ਕਰਨੀ ਪੈਂਦੀ'",
               "versions": [
                 {
-                  "versionId": "p06p298y",
+                  "versionId": "p07gpnnp",
                   "types": ["Original"],
-                  "duration": 169,
+                  "duration": 162,
+                  "durationISO8601": "PT2M42S",
+                  "warnings": {},
                   "availableTerritories": {
                     "uk": true,
                     "nonUk": true
-                  }
+                  },
+                  "availableFrom": 1562910957
                 }
               ],
               "imageCopyright": "BBC"
             },
+            "indexImage": {
+              "id": "107845891",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4D8E/production/_107845891_p07gppbc.jpg",
+              "path": "/cpsprodpb/4D8E/production/_107845891_p07gppbc.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਕ੍ਰਿਕਟ",
+              "copyrightHolder": "BBC"
+            },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45886221"
+            "id": "urn:bbc:ares::asset:punjabi/india-48960193",
+            "type": "cps"
           },
           {
             "headlines": {
-              "headline": "‘ਮੇਰਾ ਰਾਖਾ ਬਾਬਾ ਨਾਨਕ ਹੈ...ਮੈਨੂੰ ਆਪਣੇ ਖ਼ੁਦਾ ’ਤੇ ਭਰੋਸਾ ਹੈ’"
+              "headline": "ਫ਼ੈਸ਼ਨ ਜਗਤ ਦੀਆਂ ਮਿੱਥਾਂ ਨੂੰ ਤੋੜਦੀਆਂ ਇਹ ਔਰਤਾਂ"
             },
             "locators": {
-              "assetUri": "/punjabi/international-45885743",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45885743"
+              "assetUri": "/punjabi/media-48927647",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-48927647"
             },
-            "summary": "ਅਫ਼ਗਾਨਿਸਤਾਨ ’ਚ ਜੂਨ ਮਹੀਨੇ ਸੰਸਦੀ ਚੋਣਾਂ ’ਚ ਨਾਮਜ਼ਦਗੀ ਪੱਤਰ ਭਰਨ ਵਾਲੇ ਅਵਤਾਰ ਸਿੰਘ ਖ਼ਾਲਸਾ ਦੇ ਪੁੱਤਰ ਹਨ ਨਰਿੰਦਰ ਸਿੰਘ ਖ਼ਾਲਸਾ",
-            "timestamp": 1539781163,
+            "summary": "ਭਾਰਤੀ ਮੂਲ ਦੇ ਆਯੂਸ਼ ਕੇਜਰੀਵਾਲ ਗਲਾਸਗੋ ਵਿੱਚ ਸਾੜੀ ਡਿਜ਼ਾਇਨਰ ਹਨ ਉਹ ਕਾਲੀਆਂ ਤੇ ਮੋਟੀਆਂ ਔਰਤਾਂ ਕੋਲੋਂ ਸਾੜੀਆਂ ਦੀ ਪ੍ਰਮੋਸ਼ਨ ਕਰਵਾਉਂਦੇ ਹਨ।",
+            "timestamp": 1562826151,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gfh83",
+              "subType": "clip",
+              "format": "video",
+              "title": "ਕਾਲੇ ਤੇ ਮੋਟੇ ਲੋਕਾਂ 'ਚ ਆਤਮਵਿਸ਼ਵਾਸ ਭਰਦਾ ਹੈ ਇਹ ਡਿਜ਼ਾਇਨਰ",
+              "synopses": {
+                "short": "ਕਾਲੇ ਤੇ ਮੋਟੇ ਲੋਕਾਂ 'ਚ ਆਤਮਵਿਸ਼ਵਾਸ ਭਰਦਾ ਹੈ ਇਹ ਡਿਜ਼ਾਇਨਰ",
+                "long": "ਭਾਰਤੀ ਮੂਲ ਦੇ ਆਯੂਸ਼ ਕੇਜਰੀਵਾਲ ਗਲਾਸਗੋ ਵਿੱਚ ਸਾੜੀ ਡਿਜ਼ਾਇਨਰ ਹਨ ਉਹ ਕਾਲੀਆਂ ਤੇ ਮੋਟੀਆਂ ਔਰਤਾਂ ਕੋਲੋਂ ਸਾੜੀਆਂ ਦੀ ਪ੍ਰਮੋਸ਼ਨ ਕਰਵਾਉਂਦੇ ਹਨ। \n'ਕਾਲਾ ਜਾਂ ਮੋਟਾ ਸੋਹਣਾ ਨਹੀਂ ਹੁੰਦਾ' ਇਸ ਸੋਚ ਨੂੰ ਉਹ ਖ਼ਤਮ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹਨ। \nਰਿਪੋਰਟ: ਸਮਰਾ ਫਾਤਿਮਾ",
+                "medium": "ਭਾਰਤੀ ਮੂਲ ਦੇ ਆਯੂਸ਼ ਕੇਜਰੀਵਾਲ ਗਲਾਸਗੋ ਵਿੱਚ ਸਾੜੀ ਡਿਜ਼ਾਇਨਰ ਹਨ ਉਹ ਕਾਲੀਆਂ ਤੇ ਮੋਟੀਆਂ ਔਰਤਾਂ ਕੋਲੋਂ ਸਾੜੀਆਂ ਦੀ ਪ੍ਰਮੋਸ਼ਨ ਕਰਵਾਉਂਦੇ ਹਨ।"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07glf1t.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ਕਾਲੇ ਤੇ ਮੋਟੇ ਲੋਕਾਂ 'ਚ ਆਤਮਵਿਸ਼ਵਾਸ ਭਰਦਾ ਹੈ ਇਹ ਡਿਜ਼ਾਇਨਰ",
+              "versions": [
+                {
+                  "versionId": "p07gfh8b",
+                  "types": ["Original"],
+                  "duration": 126,
+                  "durationISO8601": "PT2M6S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562686218
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107809292",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/726A/production/_107809292_p07gfk1v.jpg",
+              "path": "/cpsprodpb/726A/production/_107809292_p07gfk1v.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Modelling",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/media-48927647",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "‘ਮੈਂ ਕੂੜਾ ਚੁਗਦੀ ਸੀ, ਰਗਬੀ ਨੇ ਜ਼ਿੰਦਗੀ ਬਦਲ ਦਿੱਤੀ’"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48922190",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48922190"
+            },
+            "summary": "ਇਨ੍ਹਾਂ ਬੱਚਿਆਂ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਰਗਬੀ ਨੇ ਇਨ੍ਹਾਂ ਦੀ ਜ਼ਿੰਦਗੀ ਬਦਲ ਦਿੱਤੀ ਹੈ।",
+            "timestamp": 1562685215,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gfg2l",
+              "subType": "clip",
+              "format": "video",
+              "title": "‘ਪਹਿਲਾਂ ਮੈਂ ਕੂੜਾ ਚੁਗਦੀ ਹੁੰਦੀ ਸੀ ਪਰ ਰਗਬੀ ਨੇ ਜ਼ਿੰਦਗੀ ਬਦਲ ਦਿੱਤੀ’",
+              "synopses": {
+                "short": "‘ਪਹਿਲਾਂ ਮੈਂ ਕੂੜਾ ਚੁਗਦੀ ਹੁੰਦੀ ਸੀ ਪਰ ਰਗਬੀ ਨੇ ਜ਼ਿੰਦਗੀ ਬਦਲ ਦਿੱਤੀ’",
+                "long": "ਦਿੱਲੀ ਦੀ ਇੱਕ ਸੰਸਥਾ ਯੈਲੋ ਸਟ੍ਰੀਟਸ ਦਿੱਲੀ ਦੇ ਸਹੂਲਤਾਂ ਤੋਂ ਵਾਂਝੇ ਬੱਚਿਆਂ ਦਾ ਰਗਬੀ ਦੀ ਮਦਦ ਨਾਲ ਹੁਨਰ ਨਿਖਾਰ ਰਹੀ ਹੈ। \nਵੀਡੀਓ: ਵੀਜੇ ਪਿਯੁਸ਼ ਨਾਗਪਾਲ",
+                "medium": "ਇਨ੍ਹਾਂ ਬੱਚਿਆਂ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਰਗਬੀ ਨੇ ਇਨ੍ਹਾਂ ਦੀ ਜ਼ਿੰਦਗੀ ਬਦਲ ਦਿੱਤੀ ਹੈ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gfhdh.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "‘ਪਹਿਲਾਂ ਮੈਂ ਕੂੜਾ ਚੁਗਦੀ ਹੁੰਦੀ ਸੀ ਪਰ ਰਗਬੀ ਨੇ ਜ਼ਿੰਦਗੀ ਬਦਲ ਦਿੱਤੀ’",
+              "versions": [
+                {
+                  "versionId": "p07gfg2r",
+                  "types": ["Original"],
+                  "duration": 149,
+                  "durationISO8601": "PT2M29S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562684708
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107803220",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/08B6/production/_107803220_p07gdz90.jpg",
+              "path": "/cpsprodpb/08B6/production/_107803220_p07gdz90.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਰਗਬੀ",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48922190",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "‘ਹਾਂ ਸਮਲਿੰਗੀ ਹਾਂ ਤੇ ਪਾਰਟਨਰ ਬਚਪਨ ਦੀ ਦੋਸਤ ਹੈ’"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48366504",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48366504"
+            },
+            "summary": "ਧਾਵਕ ਨੇ ਦੱਸਿਆ ਕਿ ਉਨ੍ਹਾਂ ਨੇ ਕਿਸੇ ਹੋਰ ਦੇ ਦੱਸਣ ਤੋਂ ਪਹਿਲਾਂ ਹੀ ਖੁਦ ਆਪਣੇ ਰਿਸ਼ਤੇ ਨੂੰ ਜਗ ਜ਼ਾਹਰ ਕਰਨਾ ਬਿਹਤਰ ਸਮਝਿਆ।",
+            "timestamp": 1558540207,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p079z59r",
+              "subType": "clip",
+              "format": "video",
+              "title": "ਮੇਰੇ ਸਮਲਿੰਗੀ ਹੋਣ ਬਾਰੇ, ਕੋਈ ਹੋਰ ਦੱਸੇ ਮੈਂ ਆਪ ਹੀ ਦੱਸ ਦਿੱਤਾ - ਦੂਤੀ ਚੰਦ, ਦੌੜਾਕ",
+              "synopses": {
+                "short": "ਦੌੜਾਕ ਦੂਤੀ ਚੰਦ ਨੇ ਖ਼ੁਲਾਸਾ ਕੀਤਾ ਹੈ ਕਿ ਉਹ ਸਮਲਿੰਗੀ ਹਨ",
+                "long": "ਦੂਤੀ ਚੰਦ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਉਨ੍ਹਾਂ ਦਾ ਰਿਸ਼ਤਾ ਗੈਰ-ਕਾਨੂੰਨੀ ਨਹੀਂ ਹੈ ਤੇ ਉਹ ਸਮਾਂ ਆਉਣ ਤੇ ਆਪਣੀ ਸਾਥੀ ਨਾਲ ਵਿਆਹ ਕਰਾ ਕੇ ਘੜ ਵਸਾਉਣਆ ਚਾਹੁਣਗੇ। ਫਿਲਹਾਲ ਉਨ੍ਹਾਂ ਦਾ ਨਿਸ਼ਾਨਾ ਆਉਣ ਵਾਲੇ ਟੋਕੀਓ ਉਲੰਪਿਕ ਹਨ। ਉਨ੍ਹਾਂ ਇਹ ਵੀ ਕਿਹਾ ਕਿ ਉਨ੍ਹਾਂ ਦੇ ਪਰਿਵਾਰ ਵਾਲਿਆਂ ਨੇ ਉਨ੍ਹਾਂ ਦਾ ਸਾਥ ਨਹੀਂ ਦਿੱਤਾ, ਹਾਲਾਂਕਿ ਵਿਦੇਸ਼ਾਂ ਵਿੱਚ ਕਈ ਅਜਿਹੇ ਖਿਡਾਰੀ ਹਨ, ਜਿਨ੍ਹਾਂ ਨੇ ਸਮਲਿੰਗੀ ਵਿਆਹ ਕਰਵਾਏ ਹਨ।",
+                "medium": "ਧਾਵਕ ਨੇ ਦੱਸਿਆ ਕਿ ਉਨ੍ਹਾਂ ਨੇ ਕਿਸੇ ਹੋਰ ਦੇ ਦੱਸਣ ਤੋੋਂ ਪਹਿਲਾਂ ਖ਼ੁਦ ਹੀ ਆਪਣੇ ਰਿਸ਼ਤੇ ਨੂੰ ਜੱਗ ਜ਼ਾਹਰ ਕਰਨਾ ਬੁਿਹਤਰ ਸਮਝਿਆ।"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07ggpcd.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ਦੌੜਾਕ ਦੂਤੀ ਚੰਦ ਨੇ ਖ਼ੁਲਾਸਾ ਕੀਤਾ ਹੈ ਕਿ ਉਹ ਸਮਲਿੰਗੀ ਹਨ",
+              "versions": [
+                {
+                  "versionId": "p079z59t",
+                  "types": ["Original"],
+                  "duration": 207,
+                  "durationISO8601": "PT3M27S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1558518966
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107061926",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F5C4/production/_107061926_p079z6wg.jpg",
+              "path": "/cpsprodpb/F5C4/production/_107061926_p079z6wg.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਦੂਤੀ ਚੰਦ",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48366504",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਓਲੰਪਿਕ ਤੈਰਾਕ ਨੇ ਇੰਝ ਬਚਾਈ ਸਮੁੰਦਰ 'ਚ ਡੁੱਬਦੇ ਸ਼ਖਸ ਦੀ ਜਾਨ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48917555",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48917555"
+            },
+            "summary": "ਕਿੱਥੇ ਕੀਤੀ ਜਹਾਜ਼ਾਂ ਨੇ ਗਲਤ ਪਰੇਡ ਤੇ ਟਰੰਪ ਨੇ ਕਿਉਂ ਕੀਤਾ ਬਰਤਾਨਵੀ ਰਾਜਦੂਤ ਤੋਂ ਕਿਨਾਰਾ ਸਮੇਤ 5 ਅਹਿਮ ਖ਼ਬਰਾਂ",
+            "timestamp": 1562638070,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -728,503 +863,40 @@
               "campaigns": [
                 {
                   "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103902201",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/27EC/production/_103902201_p06p2h8y.jpg",
-              "path": "/cpsprodpb/27EC/production/_103902201_p06p2h8y.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Narinder Singh Khalsa",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06p2gdy",
-              "subType": "clip",
-              "format": "video",
-              "title": "‘ਮੇਰਾ ਰਾਖਾ ਬਾਬਾ ਨਾਨਕ ਹੈ...ਮੈਨੂੰ ਆਪਣੇ ਖ਼ੁਦਾ ’ਤੇ ਭਰੋਸਾ ਹੈ’",
-              "synopses": {
-                "short": "ਨਰਿੰਦਰ ਸਿੰਘ ਖ਼ਾਲਸਾ: ਅਫ਼ਗਾਨਿਸਤਾਨ ਦੀਆਂ ਸੰਸਦੀ ਚੋਣਾਂ ਲੜਨ ਵਾਲੇ ਇਕੱਲੇ ਸਿੱਖ",
-                "long": "ਨਰਿੰਦਰ ਸਿੰਘ ਖ਼ਾਲਸਾ ਅਫ਼ਗਾਨਿਸਤਾਨ ਦੇ ਘੱਟ ਗਿਣਤੀ ਸਿੱਖ ਭਾਈਚਾਰੇ ਤੋਂ ਹਨ। ਉਹ ਸ਼ਨਿੱਚਰਵਾਰ ਨੂੰ ਹੋਣ ਵਾਲੀਆਂ ਸੰਸਦੀ ਚੋਣਾਂ ’ਚ ਉਮੀਦਵਾਰ ਹਨ। ਨਰਿੰਦਰ ਸਿੰਘ ਆਪਣੇ ਪਿਤਾ ਅਤੇ ਸਾਬਕਾ ਸੰਸਦ ਮੈਂਬਰ ਅਵਤਾਰ ਸਿੰਘ ਖ਼ਾਲਸਾ ਦੇ ਨਕਸ਼-ਏ-ਕਦਮਾਂ ’ਤੇ ਚੱਲਣਾ ਚਾਹੁੰਦੇ ਹਨ। ਅਵਤਾਰ ਸਿੰਘ ਇਸੇ ਸਾਲ ਹੀ ਕਾਬੁਲ ’ਚ ਹੋਏ ਇੱਕ ਬੰਬ ਧਮਾਕੇ ’ਚ ਮਾਰੇ ਗਏ ਸਨ। ਨਰਿੰਦਰ ਸਿੰਘ ਕਹਿੰਦੇ ਹਨ ਕਿ ਉਹ ਸੰਸਦ ’ਚ ਆਪਣੇ ਭਾਈਚਾਰੇ ਦੀ ਆਵਾਜ਼ ਚੁੱਕਣਾ ਚਾਹੁੰਦੇ ਹਨ।",
-                "medium": "ਅਫ਼ਗਾਨਿਸਤਾਨ ’ਚ ਜੂਨ ਮਹੀਨੇ ਸੰਸਦੀ ਚੋਣਾਂ ’ਚ ਨਾਮਜ਼ਦਗੀ ਪੱਤਰ ਭਰਨ ਵਾਲੇ ਅਵਤਾਰ ਸਿੰਘ ਖ਼ਾਲਸਾ ਦੇ ਪੁੱਤਰ ਹਨ ਨਰਿੰਦਰ ਸਿੰਘ ਖ਼ਾਲਸਾ"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p2h8y.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਨਰਿੰਦਰ ਸਿੰਘ ਖ਼ਾਲਸਾ: ਅਫ਼ਗਾਨਿਸਤਾਨ ਦੀਆਂ ਸੰਸਦੀ ਚੋਣਾਂ ਲੜਨ ਵਾਲੇ ਇਕੱਲੇ ਸਿੱਖ",
-              "versions": [
-                {
-                  "versionId": "p06p2gf1",
-                  "types": ["Original"],
-                  "duration": 145,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45885743"
-          },
-          {
-            "headlines": {
-              "headline": "ਫੂਡ ਐਪ ਇਸ ਤਰ੍ਹਾਂ ਭਰਦੀ ਹੈ ਗਰੀਬ ਬੱਚਿਆਂ ਦਾ ਟਿੱਢ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45882291",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45882291"
-            },
-            "summary": "ਇੱਕ ਅਜਿਹੀ ਐਪ ਜਿਸ ਨਾਲ ਇੱਕ ਹੋਟਲ, ਮੈਰਿਜ ਹਾਲ ਜਾਂਗ ਘਰ ਵਿੱਚ ਬਚੇ ਖਾਣੇ ਨੂੰ ਦਾਨ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।",
-            "timestamp": 1539755541,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2139461b000e9dabf7",
-                  "campaignName": "Inspire me"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103888386",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/10B24/production/_103888386_p06p0mpv.jpg",
-              "path": "/cpsprodpb/10B24/production/_103888386_p06p0mpv.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Kekai",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06p0kwp",
-              "subType": "clip",
-              "format": "video",
-              "title": "ਫੂਡ ਐਪ ਜੋ ਭਰਦੀ ਹੈ ਗਰੀਬ ਬੱਚਿਆਂ ਦਾ ਟਿੱਢ",
-              "synopses": {
-                "short": "ਫੂਡ ਐਪ ਜੋ ਭਰਦੀ ਹੈ ਗਰੀਬ ਬੱਚਿਆਂ ਦਾ ਟਿੱਢ",
-                "long": "ਮੱਧ ਪ੍ਰਦੇਸ਼ ਵਿੱਚ ਇੱਕ ਅਜਿਹੀ ਐਪ ਬਣਾਈ ਗਈ ਹੈ ਜਿਸ ਨਾਲ ਇੱਕ ਹੋਟਲ, ਮੈਰਿਜ ਹਾਲ ਜਾਂਗ ਘਰ ਵਿੱਚ ਬਚੇ ਖਾਣੇ ਨੂੰ ਦਾਨ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਰੋਜ਼ਾਨਾ ਸ਼ਹਿਰ ਦੇ ਕਈ ਹੋਟਲ ਬਚੇ ਹੋਏ ਖਾਣੇ ਦੀ ਡਿਟੇਲ ਐਪ ਤੇ ਅਪਲੋਡ ਕਰਦੇ ਹਨ।",
-                "medium": "ਇੱਕ ਅਜਿਹੀ ਐਪ ਜਿਸ ਨਾਲ ਇੱਕ ਹੋਟਲ, ਮੈਰਿਜ ਹਾਲ ਜਾਂਗ ਘਰ ਵਿੱਚ ਬਚੇ ਖਾਣੇ ਨੂੰ ਦਾਨ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p0mpv.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਫੂਡ ਐਪ ਜੋ ਭਰਦੀ ਹੈ ਗਰੀਬ ਬੱਚਿਆਂ ਦਾ ਟਿੱਢ",
-              "versions": [
-                {
-                  "versionId": "p06p0kwr",
-                  "types": ["Original"],
-                  "duration": 202,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45882291"
-          },
-          {
-            "headlines": {
-              "headline": "ਕੁੜੀਆਂ 'ਪਿੰਜਰੇ' 'ਚ ਨਹੀਂ ਆਪਣੇ ਦਮ 'ਤੇ ਮਹਿਫੂਜ਼ ਹੋਣਗੀਆਂ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45859933",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45859933"
-            },
-            "summary": "ਪੰਜਾਬੀ ਯੂਨੀਵਰਸਿਟੀ ਵਿੱਚ ਕੁੜੀਆਂ ਵੱਲੋਂ ਸ਼ੁਰੂ ਕੀਤੀ ਗਈ ਪਿੰਜਰਾ ਤੋੜ ਮੁਹਿੰਮ ਬਾਰੇ ਅਮਨਦੀਪ ਕੌਰ ਦਾ ਨਜ਼ਰੀਆ",
-            "timestamp": 1539605240,
-            "byline": {
-              "name": "ਅਮਨਦੀਪ ਕੌਰ",
-              "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ",
-              "persons": [
-                {
-                  "name": "서명진",
-                  "function": "BBC 코리아"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
+                  "campaignName": "WS - Update me"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103866076",
+              "id": "107799087",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/105FA/production/_103866076_img_5526.jpg",
-              "path": "/cpsprodpb/105FA/production/_103866076_img_5526.jpg",
+              "href": "http://c.files.bbci.co.uk/13113/production/_107799087_782f0e16-4e56-4ac1-b6ab-4b811ce8026a.jpg",
+              "path": "/cpsprodpb/13113/production/_107799087_782f0e16-4e56-4ac1-b6ab-4b811ce8026a.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਪੰਜਾਬੀ ਯੂਨੀਵਰਸਿਟੀ 'ਚ ਕੁੜੀਆਂ ਦੇ ਹੋਸਟਲ 24 ਘੰਟੇ ਖੋਲ੍ਹਣ ਦੀ ਮੰਗ",
-              "caption": "ਪੰਜਾਬੀ ਯੂਨੀਵਰਸਿਟੀ 'ਚ ਕੁੜੀਆਂ ਦੇ ਹੋਸਟਲ 24 ਘੰਟੇ ਖੋਲ੍ਹਣ ਦੀ ਮੰਗ ਲੈ ਕੇ ਧਰਨੇ 'ਤੇ ਬੈਠੀਆਂ ਸਨ",
-              "copyrightHolder": "BBC"
+              "altText": "ਜੇਤੂ ਤੈਰਾਕ ਮੈਗਨੀਨੀ",
+              "copyrightHolder": "AFP"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45859933"
+            "id": "urn:bbc:ares::asset:punjabi/india-48917555",
+            "type": "cps"
           },
           {
             "headlines": {
-              "headline": "ਇਹ ਕੁੜੀ ਕਦੇ ਪੈਨ ਨਹੀਂ ਸੀ ਫੜ ਸਕਦੀ, ਹੁਣ ਗੋਲਡ ਮੈਡਲ ਫੜਿਆ"
+              "headline": "ਫਾਜ਼ਿਲਕਾ ਦਾ ਕ੍ਰਿਕਟਰ ਇੰਗਲੈਂਡ 'ਚ ਦਿਖਾਏਗਾ ਦਮ"
             },
             "locators": {
-              "assetUri": "/punjabi/india-45842681",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45842681"
+              "assetUri": "/punjabi/india-48913635",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48913635"
             },
-            "summary": "ਏਕਤਾ ਭਿਆਨ ਨੇ ਜਕਾਰਤਾ ਵਿੱਚ ਚੱਲ ਰਹੀਆਂ ਪੈਰਾ ਏਸ਼ੀਅਨ ਖੇਡਾਂ ਵਿੱਚ ਸੋਨ ਤਗਮਾ ਜਿੱਤਿਆ ਹੈ।",
-            "timestamp": 1539448299,
+            "summary": "ਮਨਦੀਪ ਸਿੰਘ ਦੀ ਚੋਣ ਭਾਰਤੀ ਕ੍ਰਿਕਟ ਟੀਮ (ਫਿਜ਼ੀਕਲੀ ਚੈਲੇਂਜਡ) ਲਈ ਹੋਈ ਹੈ।",
+            "timestamp": 1562667485,
             "byline": {
-              "name": "ਸਤ ਸਿੰਘ ",
-              "title": "ਹਿਸਾਰ ਤੋਂ ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ",
-              "persons": [
-                {
-                  "name": "Jenny Hill",
-                  "function": "Corresponsal en Berlín"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2139461b000e9dabf7",
-                  "campaignName": "Inspire me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103848683",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/971C/production/_103848683_bbcekta3.jpg",
-              "path": "/cpsprodpb/971C/production/_103848683_bbcekta3.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਏਕਤਾ ਬਹਿਆਂ",
-              "copyrightHolder": "Sat Singh/BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45842681"
-          }
-        ],
-        "strapline": {
-          "name": "ਪ੍ਰੇਰਣਾਦਾਇਕ "
-        },
-        "semanticGroupName": "Section 1"
-      },
-      {
-        "type": "responsive-inspire",
-        "title": "ਦ੍ਰਿਸ਼ਟੀਕੋਣ ",
-        "items": [
-          {
-            "headlines": {
-              "headline": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ : ਜਵਾਬ ਮੰਗਦੇ ਪੰਜ ਸਵਾਲ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45924569",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45924569"
-            },
-            "summary": "ਅੰਮ੍ਰਿਤਸਰ ਰੇਲ ਹਾਦਸਾ ਜੁੜੇ ਕੁਝ ਅਜਿਹੇ ਸਵਾਲ ਜਿਨ੍ਹਾਂ ਦਾ ਉੱਤਰ ਹਰ ਕੋਈ ਮੰਗ ਰਿਹਾ ਹੈ।",
-            "timestamp": 1540003130,
-            "byline": {
-              "name": "ਸਰਬਜੀਤ ਸਿੰਘ ਧਾਲੀਵਾਲ",
-              "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
-              "persons": [
-                {
-                  "name": "Jenny Hill",
-                  "function": "Corresponsal en Berlín"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103938629",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/16A0B/production/_103938629_34ae0bf4-037d-47e0-ac91-1d839037add1.jpg",
-              "path": "/cpsprodpb/16A0B/production/_103938629_34ae0bf4-037d-47e0-ac91-1d839037add1.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਅੰਮ੍ਰਿਤਸਰ",
-              "copyrightHolder": "Ravinder Singh Robin/bbc"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45924569"
-          },
-          {
-            "headlines": {
-              "headline": "'15 ਮਿੰਟਾਂ ਬਾਅਦ ਮੇਰੀ ਪਤਨੀ ਤੇ ਜੌੜੇ ਬੱਚੇ ਮਰੇ ਹੋਏ ਮਿਲੇ'"
-            },
-            "locators": {
-              "assetUri": "/punjabi/media-45907906",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-45907906"
-            },
-            "summary": "ਬੀਬੀਸੀ ਨੇ ਸੱਚ ਦੀ ਭਾਲ ਲਈ ਰਸਾਇਣਕ ਹਮਲੇ ਦੀਆਂ 164 ਰਿਪੋਰਟਾਂ ਖੰਘਾਲੀਆਂ",
-            "timestamp": 1539950036,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e1739461b000e9dabf6",
-                  "campaignName": "CS"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103928630",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/0E62/production/_103928630_p06p6h3r.jpg",
-              "path": "/cpsprodpb/0E62/production/_103928630_p06p6h3r.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Syria",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06p6ggq",
-              "subType": "clip",
-              "format": "video",
-              "title": "15 ਮਿੰਟਾਂ ਬਾਅਦ ਮੇਰੀ ਪਤਨੀ ਤੇ ਜੌੜੇ ਬੱਚੇ ਮਰੇ ਹੋਏ ਮਿਲੇ",
-              "synopses": {
-                "short": "ਸੀਰੀਆ ਰਸਾਇਣਕ ਹਮਲਾ : 15 ਮਿੰਟਾਂ ਬਾਅਦ ਮੇਰੀ ਪਤਨੀ ਤੇ ਜੌੜੇ ਬੱਚੇ ਮਰੇ ਹੋਏ ਮਿਲੇ",
-                "long": "ਬੀਬੀਸੀ ਨੇ ਸੱਚ ਦੀ ਭਾਲ ਲਈ ਰਸਾਇਣਕ ਹਮਲੇ ਦੀਆਂ 164 ਰਿਪੋਰਟਾਂ ਖੰਘਾਲੀਆਂ, ਜਿਸ ਵਿਚੋਂ 106 ਰਸਾਇਣਕ ਹਮਲਿਆਂ ਦੀ ਪੁਸ਼ਟੀ ਹੋਈ।  ਦੇਖੋ ਬੀਬੀਸ ਨੂੰ ਹੋਰ ਕੀ ਤੱਥ ਮਿਲੇ",
-                "medium": "ਬੀਬੀਸੀ ਨੇ ਸੱਚ ਦੀ ਭਾਲ ਲਈ ਰਸਾਇਣਕ ਹਮਲੇ ਦੀਆਂ 164 ਰਿਪੋਰਟਾਂ ਖੰਘਾਲੀਆਂ"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p6h3r.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਸੀਰੀਆ ਰਸਾਇਣਕ ਹਮਲਾ : 15 ਮਿੰਟਾਂ ਬਾਅਦ ਮੇਰੀ ਪਤਨੀ ਤੇ ਜੌੜੇ ਬੱਚੇ ਮਰੇ ਹੋਏ ਮਿਲੇ",
-              "versions": [
-                {
-                  "versionId": "p06p6ggs",
-                  "types": ["Original"],
-                  "duration": 176,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "Media",
-              "uri": "/punjabi/media"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/media-45907906"
-          },
-          {
-            "headlines": {
-              "headline": "ਅਕਾਲ ਤਖਤ ਜਥੇਦਾਰ ਦੇ ਅਸਤੀਫ਼ੇ 'ਤੇ ਕੌਣ ਕੀ ਕਹਿ ਰਿਹਾ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45915601",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45915601"
-            },
-            "summary": "ਸ਼੍ਰੋਮਣੀ ਕਮੇਟੀ ਦੇ ਪ੍ਰਧਾਨ ਗੋਬਿੰਦ ਸਿੰਘ ਲੌਂਗੋਵਾਲ ਨੇ ਕਾਰਜਕਾਰਨੀ ਦੀ ਐਮਰਜੈਂਸੀ ਬੈਠਕ ਬੁਲਾਈ",
-            "timestamp": 1539952838,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "101900352",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/62D4/production/_101900352_mediaitem101898043.jpg",
-              "path": "/cpsprodpb/62D4/production/_101900352_mediaitem101898043.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਗਿਆਨੀ ਗੁਰਬਚਨ ਸਿੰਘ",
-              "copyrightHolder": "Ravinder singh robin/bbc"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45915601"
-          },
-          {
-            "name": "ਆਪਣੇ ਦੋਸਤਾਂ ਨੂੰ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਪਾਰਟੀ 'ਤੇ ਸੱਦੋ",
-            "summary": "Learning English: ਸਿੱਖਣ ਲਈ ਇਸ ਲਿੰਕ ਉੱਪਰ ਕਲਿੱਕ ਕਰੋ",
-            "indexImage": {
-              "id": "103779657",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/127B1/production/_103779657_gettycredit1920x1080.jpg",
-              "path": "/cpsprodpb/127B1/production/_103779657_gettycredit1920x1080.jpg",
-              "height": 540,
-              "width": 960,
-              "altText": "ਸਹੇਲੀਆਂ",
-              "copyrightHolder": "Getty Images"
-            },
-            "uri": "https://bbc.in/2E5yjmB"
-          },
-          {
-            "headlines": {
-              "headline": "ਔਰਤਾਂ ਨੂੰ ਤਲਾਕ ਦੀ ਕੀ ਕੀਮਤ ਅਦਾ ਕਰਨੀ ਪੈਂਦੀ ਹੈ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45888827",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45888827"
-            },
-            "summary": "ਮਨੁੱਖੀ ਅਧਿਕਾਰ ਕਾਰਕੁਨ ਅਸਮਾ ਜਹਾਂਗੀਰ ਦੇ ਕੀਤੇ ਕਾਰਜਾਂ ਨੂੰ ਯਾਦ ਕਰਦੇ ਹੋਏ ਪਾਕਿਸਤਾਨ ਵਿੱਚ ਹੋਇਆ ਯਾਦਗਾਰੀ ਸਮਾਗਮ।",
-            "timestamp": 1539952048,
-            "byline": {
-              "name": "ਮੋਨਾਅ ਰਾਣਾ",
-              "title": "ਲਾਹੌਰ ਤੋਂ ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ ",
-              "persons": [
-                {
-                  "name": ". .",
-                  "function": "BBC News"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103930576",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/107AF/production/_103930576_gg88.jpg",
-              "path": "/cpsprodpb/107AF/production/_103930576_gg88.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਬੁਲਾਰਿਆਂ ਨੇ ਮੰਨਿਆ ਕਿ ਅਸਮਾ ਜਹਾਂਗੀਰ ਵਰਗਾ ਕੰਮ ਕੋਈ ਨਹੀਂ ਕਰ ਸਕਿਆ",
-              "caption": "ਬੁਲਾਰਿਆਂ ਨੇ ਮੰਨਿਆ ਕਿ ਅਸਮਾ ਜਹਾਂਗੀਰ ਵਰਗਾ ਕੰਮ ਕੋਈ ਨਹੀਂ ਕਰ ਸਕਿਆ",
-              "copyrightHolder": "MONAA RANA/BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45888827"
-          },
-          {
-            "headlines": {
-              "headline": "ਜਥੇਦਾਰ ਨੇ ਅਸਤੀਫ਼ੇ 'ਚ ਡੇਰਾ ਮੁਖੀ ਨੂੰ ਮਾਫ਼ੀ ਬਾਰੇ ਕੀ ਕਿਹਾ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45906841",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45906841"
-            },
-            "summary": "ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ ਦੇ ਜਥੇਦਾਰ ਗਿਆਨੀ ਗੁਰਬਚਨ ਸਿੰਘ ਨੇ ਆਪਣੇ ਅਹੁਦੇ ਤੋਂ ਅਸਤੀਫ਼ਾ ਦੇ ਦਿੱਤਾ ਹੈ।",
-            "timestamp": 1539928629,
-            "byline": {
-              "name": "ਰਵਿੰਦਰ ਸਿੰਘ ਰੌਬਿਨ",
+              "name": "ਸੁਖਚਰਨ ਪ੍ਰੀਤ",
               "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਦੇ ਲਈ ",
               "persons": [
                 {
@@ -1240,50 +912,166 @@
               },
               "campaigns": [
                 {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103923997",
+              "id": "107799078",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/1383C/production/_103923997_52e6744b-e39e-4510-b3a6-b00e69c1003a.jpg",
-              "path": "/cpsprodpb/1383C/production/_103923997_52e6744b-e39e-4510-b3a6-b00e69c1003a.jpg",
+              "href": "http://c.files.bbci.co.uk/1543B/production/_107799078_mandi.jpg",
+              "path": "/cpsprodpb/1543B/production/_107799078_mandi.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਅਕਾਲ ਤਖ਼ਤ ਦੇ ਜਥੇਦਾਰ ਗਿਆਨੀ ਗੁਰਬਚਨ ਸਿੰਘ",
-              "copyrightHolder": "Ravinder singh robin/bbc"
+              "altText": "ਮਨਦੀਪ ਸਿੰਘ",
+              "copyrightHolder": "Sukhcharan preet/bbc"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45906841"
+            "id": "urn:bbc:ares::asset:punjabi/india-48913635",
+            "type": "cps"
           },
           {
             "headlines": {
-              "headline": "'ਸੱਚ ਬੋਲਣ 'ਤੇ ਸ਼ੱਕ ਹਮੇਸ਼ਾ ਕੁੜੀਆਂ 'ਤੇ ਹੁੰਦਾ ਹੈ'"
+              "headline": "ਬਿਨਾਂ ਹੱਥਾਂ ਦੇ ਵੀ ਕਮਾਲ ਦਾ ਲਿਖਣ ਵਾਲੀ ਬੱਚੀ ਨੂੰ ਮਿਲੋ"
             },
             "locators": {
-              "assetUri": "/punjabi/india-45854837",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45854837"
+              "assetUri": "/punjabi/media-48902699",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-48902699"
             },
-            "summary": "#MeToo ਮੁਹਿੰਮ ਵਿਚ ਸ਼ਾਮਲ ਹੋਣ ਤੋਂ ਕਿਉਂ ਡਰ ਰਹੀਆਂ ਹਨ ਪੰਜਾਬ ਦੀਆਂ ਔਰਤਾਂ ।",
-            "timestamp": 1539871584,
+            "summary": "10 ਸਾਲਾ ਸਾਰਾ ਦੇ ਦੋਵੇਂ ਹੱਥ ਨਹੀਂ ਹਨ ਫਿਰ ਵੀ ਉਸਦੀ ਲਿਖਾਈ ਕਮਾਲ ਦੀ ਹੈ।",
+            "timestamp": 1562576355,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07g8r67",
+              "subType": "clip",
+              "format": "video",
+              "title": "ਬਿਨਾਂ ਹੱਥਾਂ ਦੇ ਵੀ ਕਮਾਲ ਦਾ ਲਿਖਣ ਵਾਲੀ ਸਾਰਾ",
+              "synopses": {
+                "short": "ਬਿਨਾਂ ਹੱਥਾਂ ਦੇ ਵੀ ਕਮਾਲ ਦਾ ਲਿਖਣ ਵਾਲੀ ਸਾਰਾ",
+                "long": "10 ਸਾਲਾ ਸਾਰਾ ਦੇ ਦੋਵੇਂ ਹੱਥ ਨਹੀਂ ਹਨ ਫਿਰ ਵੀ ਉਸਦੀ ਰਾਈਟਿੰਗ ਕਮਾਲ ਦੀ ਹੈ। ਸਾਰਾ ਅਮਰੀਕਾ ਦੀ ਰਹਿਣ ਵਾਲੀ ਹੈ ਅਤੇ ਉਨ੍ਹਾਂ ਨੇ ਇੱਕ ਹੈਂਡਰਾਈਟਿੰਗ ਕੰਪੀਟੀਸ਼ਨ ਵਿੱਚ ਆਪਣਾ ਲੋਹਾ ਮਨਵਾਇਆ ਹੈ ਪਰ ਉਨ੍ਹਾਂ ਨੇ ਇਹ ਕਾਰਨਾਮਾ ਕਿਵੇਂ ਕੀਤਾ। ਦੇਖੋ ਇਸ ਵੀਡੀਓ ਵਿੱਚ।",
+                "medium": "10 ਸਾਲਾ ਸਾਰਾ ਦੇ ਦੋਵੇਂ ਹੱਥ ਨਹੀਂ ਹਨ ਫਿਰ ਵੀ ਉਸਦੀ ਰਾਈਟਿੰਗ ਕਮਾਲ ਦੀ ਹੈ।"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07g8ssj.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ਬਿਨਾਂ ਹੱਥਾਂ ਦੇ ਵੀ ਕਮਾਲ ਦਾ ਲਿਖਣ ਵਾਲੀ ਸਾਰਾ",
+              "versions": [
+                {
+                  "versionId": "p07g8r69",
+                  "types": ["Original"],
+                  "duration": 104,
+                  "durationISO8601": "PT1M44S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562515069
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107784915",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CAEC/production/_107784915_p07g8rhm.jpg",
+              "path": "/cpsprodpb/CAEC/production/_107784915_p07g8rhm.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "disability",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/media-48902699",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "ਪ੍ਰੇਰਣਾਦਾਇਕ "
+        },
+        "semanticGroupName": "Section 1"
+      },
+      {
+        "type": "responsive-inspire",
+        "title": "ਦ੍ਰਿਸ਼ਟੀਕੋਣ ",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ਪ੍ਰੇਮ ਸਬੰਧ ਵਿੱਚ ਹਿੰਸਾ ਝੱਲਣ ਵਾਲੀ ਕੁੜੀ ਦੀ ਅਸਲ ਕਹਾਣੀ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48942858",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48942858"
+            },
+            "summary": "ਫ਼ਿਲਮ ਕਬੀਰ ਸਿੰਘ ਦੇ ਡਾਇਰੈਕਟਰ ਦੇ ਬਿਆਨ 'ਤੇ ਅਜਿਹੀ ਕੁੜੀ ਦੀ ਕਹਾਣੀ, ਜਿਸ ਨੇ ਪਿਆਰ ਵਿੱਚ ਹਿੰਸਾ ਝੱਲੀ।",
+            "timestamp": 1562825822,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+                "categoryName": "Opinion"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107826808",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/13BDE/production/_107826808_6920bb32-a86b-4994-930d-afaade6f6b9c.jpg",
+              "path": "/cpsprodpb/13BDE/production/_107826808_6920bb32-a86b-4994-930d-afaade6f6b9c.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਫ਼ਿਲਮ ਕਬੀਰ ਸਿੰਘ",
+              "copyrightHolder": "FACEBOOK/KABIRSINGHMOVIE"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48942858",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਮਿੱਠਾ ਪੀਣ ਦੇ ਸ਼ੌਕੀਨਾਂ ਲਈ ਕੈਂਸਰ ਦਾ ਕਿੰਨਾ ਖ਼ਤਰਾ ਹੈ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-48949103",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48949103"
+            },
+            "summary": "ਬ੍ਰਿਟਿਸ਼ ਮੈਡੀਕਲ ਜਨਰਲ ਵਿੱਚ ਕਿਹਾ ਗਿਆ ਹੈ ਕਿ ਮਿੱਠੇ ਪਦਾਰਥਾਂ ਤੇ ਕੈਂਸਰ ਦਾ ਸਬੰਧ ਹੈ",
+            "timestamp": 1562917389,
             "byline": {
-              "name": "ਨਿਧੀ ਭਾਰਤੀ",
-              "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ",
+              "name": "ਜੇਮਜ਼ ਗਾਲਾਘਰ",
+              "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
               "persons": [
                 {
-                  "name": "Aamer Ahmed Khan",
-                  "function": "BBC Urdu"
+                  "name": "अभिजीत श्रीवास्तव",
+                  "function": "बीबीसी संवाददाता"
                 }
               ]
             },
@@ -1294,32 +1082,277 @@
               },
               "campaigns": [
                 {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103916513",
+              "id": "107829667",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/7B49/production/_103916513_simranjitkaurgill.jpg",
-              "path": "/cpsprodpb/7B49/production/_103916513_simranjitkaurgill.jpg",
+              "href": "http://c.files.bbci.co.uk/12B94/production/_107829667_gettyimages-961736622.jpg",
+              "path": "/cpsprodpb/12B94/production/_107829667_gettyimages-961736622.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਸਿਮਰਨਜੀਤ ਕੌਰ ਗਿੱਲ",
-              "copyrightHolder": "Simranjeet kaur/bbc"
+              "altText": "ਡਰਿੰਕਸ",
+              "copyrightHolder": "Getty Images"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
+            "id": "urn:bbc:ares::asset:punjabi/international-48949103",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਪੰਜਾਬੀ ਮੁੰਡੇ ਤੇ ਵਿਦੇਸ਼ੀ ਕੁੜੀ ਦੇ ਇਸ਼ਕ ਦੀ ਨਸ਼ੇ ਨਾਲ ਜੰਗ"
             },
-            "id": "urn:bbc:ares::asset:punjabi/india-45854837"
+            "locators": {
+              "assetUri": "/punjabi/india-48932459",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48932459"
+            },
+            "summary": "ਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਚੈਟ ਤੋਂ ਬਾਅਦ ਨਤਾਸ਼ਾ ਗੁਰਦਾਸਪੁਰ ਗਈ ਤੇ ਮਲਕੀਤ ਦਾ ਇਲਾਜ ਕਰਵਾ ਰਹੀ ਹੈ, ਦੋਵੇਂ ਵਿਆਹ ਕਰਵਾ ਚੁੱਕੇ ਹਨ।",
+            "timestamp": 1562917915,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107829750",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16A0/production/_107829750_img_4146.jpg",
+              "path": "/cpsprodpb/16A0/production/_107829750_img_4146.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਮਲਕੀਤ ਸਿੰਘ ਤੇ ਨਤਾਸ਼ਾ",
+              "copyrightHolder": "gurpreet chawla/bbc"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48932459",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਸੁਖਬੀਰ ਅਤੇ ਮਜੀਠੀਆ ਨੂੰ ਜ਼ਮਾਨਤ ਦਿੰਦਿਆਂ ਕੋਰਟ ਨੇ ਕੀ ਕਿਹਾ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48959911",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48959911"
+            },
+            "summary": "ਸੁਖਬੀਰ ਤੇ ਮਜੀਠੀਆ ਨੂੰ ਅਲਾਦਤ ਦੀ ਹਦਾਇਤ, ਭੋਪਾਲ 'ਚ 8 ਸਾਲ ਦੀ ਬੱਚੀ ਨਾ ਬਲਾਤਕਾਰ ਤੇ ਕਤਲ ਦੇ ਮਾਮਲੇ 'ਚ ਫਾਂਸੀ ਸਣੇ 5 ਅਹਿਮ ਖ਼ਬਰਾਂ",
+            "timestamp": 1562898078,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107844493",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9A14/production/_107844493_ebbdb23e-4dd3-4601-bdf5-751b8bcf3a30.jpg",
+              "path": "/cpsprodpb/9A14/production/_107844493_ebbdb23e-4dd3-4601-bdf5-751b8bcf3a30.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਸੁਖਬੀਰ ਬਾਦਲ ਮਜੀਠੀਆ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48959911",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਗਰਭਵਤੀ ਪਤਨੀ ਨੂੰ ਲੈਣ ਗਏ ਦਲਿਤ ਦਾ ਪੁਲਿਸ ਸਾਹਮਣੇ ਕਤਲ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48937246",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48937246"
+            },
+            "summary": "ਪੁਲਿਸ ਨੇ ਕੁੜੀ ਦੇ ਪਿਤਾ ਸਮੇਤ ਅੱਠ ਲੋਕਾਂ ਨੂੰ ਮਾਮਲੇ ਵਿੱਚ ਮੁਲਜ਼ਮ ਕਰਾਰ ਦਿੱਤਾ ਹੈ।",
+            "timestamp": 1562777764,
+            "byline": {
+              "name": "ਤੇਜਸ ਵੈਦ",
+              "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ ",
+              "persons": [
+                {
+                  "name": "حسن خرسند",
+                  "function": "تحلیلگر اقتصادی"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107818344",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/AD5D/production/_107818344_17a023f0-a2a6-4778-81ee-5fcbc69ae5bb.jpg",
+              "path": "/cpsprodpb/AD5D/production/_107818344_17a023f0-a2a6-4778-81ee-5fcbc69ae5bb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਗੁਜਰਾਤ ਵਿੱਚ ਦਲਿਤ ਨੌਜਵਾਨ ਦਾ ਕਤਲ",
+              "copyrightHolder": "SOLANKI FAMIL"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48937246",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਟੀਮ ਫੋਟੋ 'ਚ ਰਵੀ ਸ਼ਾਸਤਰੀ ਦੀ ਕੁਰਸੀ ਹੇਠ ਸ਼ਰਾਬ ਦੀ ਬੋਤਲ ਦਾ ਕੀ ਹੈ ਸੱਚ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48937241",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48937241"
+            },
+            "summary": "ਇੱਕ ਤਸਵੀਰ ਵਿੱਚ ਟੀਮ ਇੰਡੀਆ ਦੇ ਕੋਚ ਦੀ ਕੁਰਸੀ ਹੇਠਾਂ ਸ਼ਰਾਬ ਦੀ ਬੋਤਲ ਨਜ਼ਰ ਆ ਰਹੀ ਹੈ।",
+            "timestamp": 1562773085,
+            "byline": {
+              "name": " ਫ਼ੈਕਟ ਚੈੱਕ ਟੀਮ",
+              "title": "ਬੀਬੀਸੀ ਨਿਊਜ਼",
+              "persons": [
+                {
+                  "name": "حسن خرسند",
+                  "function": "تحلیلگر اقتصادی"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+                "categoryName": "Fact Check"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107818712",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5515/production/_107818712_promoimage.png",
+              "path": "/cpsprodpb/5515/production/_107818712_promoimage.png",
+              "height": 549,
+              "width": 976,
+              "altText": "ਟੀਮ ਇੰਡੀਆ, ਰਵੀ ਸ਼ਾਸਤਰੀ",
+              "copyrightHolder": "Social Media"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48937241",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਸ਼ੋਇਬ ਅਖ਼ਤਰ ਦੀਆਂ ਭਾਰਤੀ ਬੱਲੇਬਾਜ਼ਾਂ ਨੂੰ ਖਰੀਆਂ-ਖਰੀਆਂ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48948909",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48948909"
+            },
+            "summary": "ਵੀਡੀਓ ਰਾਹੀਂ ਭਾਰਤੀ ਟੀਮ ਦੀ ਨਿਊਜ਼ੀਲੈਂਡ ਹੱਥੋਂ ਹੋਈ ਹਾਰ ਬਾਰੇ ਤੰਜ ਕਸੇ",
+            "timestamp": 1562835019,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gljyt",
+              "subType": "clip",
+              "format": "video",
+              "title": "ਸ਼ੋਇਬ ਅਖ਼ਤਰ ਦੀਆਂ ਭਾਰਤੀ ਬੱਲੇਬਾਜ਼ਾਂ ਨੂੰ ਖਰੀਆਂ-ਖਰੀਆਂ",
+              "synopses": {
+                "short": "ਸ਼ੋਇਬ ਅਖ਼ਤਰ ਦੀਆਂ ਭਾਰਤੀ ਬੱਲੇਬਾਜ਼ਾਂ ਨੂੰ ਖਰੀਆਂ-ਖਰੀਆਂ",
+                "long": "ਸ਼ੋਇਬ ਅਖ਼ਤਰ ਨੇ ਵੀਡੀਓ ਰਾਹੀਂ ਭਾਰਤੀ ਟੀਮ ਦੀ ਨਿਊਜ਼ੀਲੈਂਡ ਹੱਥੋਂ ਹੋਈ ਹਾਰ ਬਾਰੇ ਤੰਜ ਕਸੇ, ਨਸੀਹਤਾਂ ਦਿੱਤੀਆਂ ਤੇ ਕੁਝ ਸ਼ਲਾਘਾ ਵੀ ਕੀਤੀ।",
+                "medium": "ਵੀਡੀਓ ਰਾਹੀਂ ਭਾਰਤੀ ਟੀਮ ਦੀ ਨਿਊਜ਼ੀਲੈਂਡ ਹੱਥੋਂ ਹੋਈ ਹਾਰ ਬਾਰੇ ਤੰਜ ਕਸੇ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07glpt9.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ਸ਼ੋਇਬ ਅਖ਼ਤਰ ਦੀਆਂ ਭਾਰਤੀ ਬੱਲੇਬਾਜ਼ਾਂ ਨੂੰ ਖਰੀਆਂ-ਖਰੀਆਂ",
+              "versions": [
+                {
+                  "versionId": "p07gljyw",
+                  "types": ["Original"],
+                  "duration": 194,
+                  "durationISO8601": "PT3M14S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562832303
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107831971",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/45F9/production/_107831971_p07glk91.jpg",
+              "path": "/cpsprodpb/45F9/production/_107831971_p07glk91.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "ਵੀਡੀਓ ਰਾਹੀਂ ਭਾਰਤੀ ਟੀਮ ਦੀ ਨਿਊਜ਼ੀਲੈਂਡ ਹੱਥੋਂ ਹੋਈ ਹਾਰ ਬਾਰੇ ਤੰਜ ਕਸੇ",
+              "copyrightHolder": "ਸ਼ੋਇਬ ਅਖ਼ਤਰ ਨੇ ਵੀਡੀਓ ਰਾਹੀਂ ਭਾਰਤੀ ਟੀਮ ਦੀ ਨਿਊਜ਼ੀਲੈਂਡ"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48948909",
+            "type": "cps"
           }
         ],
         "strapline": {
@@ -1333,17 +1366,58 @@
         "items": [
           {
             "headlines": {
-              "headline": "ਹੁਣ ਸਾਰੀ ਰਾਤ ਰੱਟੇ ਲਾਉਣ ਦੀ ਲੋੜ ਨਹੀਂ, ਯਾਦਦਾਸ਼ਤ ਵਧਾਉਣੀ ਏ ਤਾਂ ਇਹ ਪੜ੍ਹੋ"
+              "headline": "#BottleCapChallenge: ਜਿਸ ਪਿੱਛੇ ਹਾਲੀਵੁੱਡ ਤੇ ਬਾਲੀਵੁੱਡ ਦੇ ਸਿਤਾਰੇ ਹੋਏ ਦੀਵਾਨੇ"
             },
             "locators": {
-              "assetUri": "/punjabi/international-45902974",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45902974"
+              "assetUri": "/punjabi/india-48939981",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48939981"
             },
-            "summary": "ਮਨੋਵਿਗਿਆਨ ਦੇ ਲੈਕਚਰਾਰ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਇਹ ਚੇਤਾਵਨੀ ਦਿੰਦੇ ਹਨ ਕਿ, \"ਜੋ ਤੁਸੀਂ ਕਰ ਰਹੇ ਹੋ ਇਹ ਸਹੀ ਨਹੀਂ ਹੈ",
-            "timestamp": 1539955325,
+            "summary": "ਅਕਸ਼ੈ ਕੁਮਾਰ ਨੇ ਅੰਗਰੇਜ਼ੀ ਫਿਲਮਾਂ ਦੇ ਐਕਸ਼ਨ ਹੀਰੋ ਜੈਸਨ ਸਟੈਥਮ ਤੋਂ ਪ੍ਰੈਰਿਤ ਹੋ ਕੇ ਇਹ ਚੈਲੇਂਜ ਲਿਆ।",
+            "timestamp": 1562896007,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107833871",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/45A9/production/_107833871_annitafbnew.jpg",
+              "path": "/cpsprodpb/45A9/production/_107833871_annitafbnew.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਟੀਵੀ ਅਦਾਕਾਰਾ ਅਨੀਤਾ ਹੰਸਾਨੰਦਾਨੀ ਰੇੱਡੀ",
+              "caption": "ਟੀਵੀ ਅਦਾਕਾਰਾ ਅਨੀਤਾ ਹੰਸਾਨੰਦਾਨੀ ਰੇੱਡੀ ਨੇ ਨੱਕ ਤੋਂ ਬੋਤਲ ਖੋਲ੍ਹ ਕੇ ਚੈਲੇਂਜ ਪੂਰਾ ਕੀਤਾ",
+              "copyrightHolder": "Anita Hassanandani Reddy/Facebook"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48939981",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਮੋਬਾਈਲ ਫੋਨ ਕਾਰਨ ਹੋ ਰਹੀ ਨਵੀਂ ਬਿਮਾਰੀ ਦੇ ਕੀ ਨੇ ਲੱਛਣ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48929103",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48929103"
+            },
+            "summary": "ਇੰਟਰਨੈੱਟ ਦੀ ਵਧੇਰੇ ਵਰਤੋਂ ਨਾਲ ਸਰੀਰਕ ਬਿਮਾਰੀਆਂ ਨਾਲ ਵੀ ਲੋਕ ਪੀੜਤ ਹੋ ਰਹੇ ਹਨ।",
+            "timestamp": 1562754704,
             "byline": {
-              "name": "ਕ੍ਰਿਸਟਾਈਨ ਰੋ",
-              "title": "ਬੀਬੀਸੀ ਫਿਊਚਰ ",
+              "name": "ਰਵਿੰਦਰ ਸਿੰਘ ਰੋਬਿਨ",
+              "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਦੇ ਲਈ ",
               "persons": [
                 {
                   "name": "حسن خرسند",
@@ -1359,45 +1433,531 @@
               "campaigns": [
                 {
                   "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "Educate me"
+                  "campaignName": "WS - Educate me"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103930578",
+              "id": "107811238",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/155CF/production/_103930578_gettyimages-527488798-1.jpg",
-              "path": "/cpsprodpb/155CF/production/_103930578_gettyimages-527488798-1.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਨੀਂਦ, ਸੋਣਾ, ਵਿਦਿਆਰਥੀ, ਪੜ੍ਹਾਈ",
-              "caption": "ਨੀਂਦ ਨਾ ਲੈਣ ਨਾਲ ਬੱਚਿਆਂ ਦੀ ਯਾਦਦਾਸ਼ਤ 'ਤੇ ਅਸਰ ਪੈਂਦਾ ਹੈ",
+              "href": "http://c.files.bbci.co.uk/1450B/production/_107811238_gettyimages-1136256708.jpg",
+              "path": "/cpsprodpb/1450B/production/_107811238_gettyimages-1136256708.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "ਪੰਜਾਬ, ਮੋਬਾਈਲ ਫੋਨ",
               "copyrightHolder": "Getty Images"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45902974"
+            "id": "urn:bbc:ares::asset:punjabi/india-48929103",
+            "type": "cps"
           },
           {
             "headlines": {
-              "headline": "ਕੋਹਲੀ ਨੇ ਮੀਟ ਤੇ ਦੁੱਧ-ਦਹੀਂ ਖਾਣਾ ਕਿਉਂ ਛੱਡਿਆ"
+              "headline": "ਪੰਜਾਬੀ ਮੁੰਡੇ ਤੇ ਵਿਦੇਸ਼ੀ ਕੁੜੀ ਦੇ ਇਸ਼ਕ ਦੀ ਨਸ਼ੇ ਖ਼ਿਲਾਫ਼ ਜੰਗ"
             },
             "locators": {
-              "assetUri": "/punjabi/india-45905054",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45905054"
+              "assetUri": "/punjabi/india-48948903",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48948903"
             },
-            "summary": "ਵਿਰਾਟ ਕੋਹਲੀ ਆਖ਼ਰ ਅਜਿਹਾ ਕਰਕੇ ਕੀ ਹਾਸਿਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹਨ? ਇਸ ਦਾ ਅਸਰ ਕੀ ਹੋਵੇਗਾ।",
-            "timestamp": 1539948927,
+            "summary": "ਇੱਕ ਡੈਨਿਸ਼ ਲੜਕੀ ਪੰਜਾਬ ਦੇ ਇੱਕ ਨਸ਼ਾ ਪੀੜਤ ਨੌਜਵਾਨ ਨਾਲ ਵਿਆਹ ਕਰ ਉਸ ਨੂੰ ਨਸ਼ੇ ਦੀ ਦਲਦਲ ਵਿੱਚੋ ਕੱਢਣ ਦੇ ਯਤਨ ਕਰ ਰਹੀ ਹੈ",
+            "timestamp": 1562832595,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07glh9p",
+              "subType": "clip",
+              "format": "video",
+              "title": "ਪੰਜਾਬੀ ਮੁੰਡੇ ਤੇ ਵਿਦੇਸ਼ੀ ਕੁੜੀ ਦੇ ਇਸ਼ਕ ਦੀ ਨਸ਼ੇ ਖ਼ਿਲਾਫ਼ ਜੰਗ",
+              "synopses": {
+                "short": "ਪੰਜਾਬੀ ਮੁੰਡੇ ਤੇ ਵਿਦੇਸ਼ੀ ਕੁੜੀ ਦੇ ਇਸ਼ਕ ਦੀ ਨਸ਼ੇ ਖ਼ਿਲਾਫ਼ ਜੰਗ",
+                "long": "ਇੱਕ ਡੈਨਿਸ਼ ਲੜਕੀ ਪੰਜਾਬ ਦੇ ਇੱਕ ਨਸ਼ਾ ਪੀੜਤ ਨੌਜਵਾਨ ਨਾਲ ਵਿਆਹ ਕਰ ਉਸ ਨੂੰ ਨਸ਼ੇ ਦੀ ਦਲਦਲ ਵਿੱਚੋ ਕੱਢਣ ਦੇ ਯਤਨ ਕਰ ਰਹੀ ਹੈ | \nਨਤਾਸ਼ਾ ਡੈਨਮਾਰਕ ਦੀ ਰਹਿਣ ਵਾਲੀ ਹੈ ਤੇ ਇਨ੍ਹੀ ਦਿਨਾਂ ֹ'ਚ ਪੰਜਾਬ ਦੇ ਗੁਰਦਾਸਪੁਰ ਦੇ ਰੈੱਡ ਕਰਾਸ ਨਸ਼ਾ ਛਡਾਓ ਕੇਂਦਰ 'ਚ ਆਪਣੇ ਪੰਜਾਬੀ ਪਤੀ ਮਲਕੀਤ ਸਿੰਘ ਦਾ ਇਲਾਜ ਕਰਵਾ ਰਹੀ ਹੈ।\n(ਰਿਪੋਰਟ: ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਚਾਵਲਾ, ਐਡਿਟ: ਰਾਜਨ ਪਪਨੇਜਾ)",
+                "medium": "ਇੱਕ ਡੈਨਿਸ਼ ਲੜਕੀ ਪੰਜਾਬ ਦੇ ਇੱਕ ਨਸ਼ਾ ਪੀੜਤ ਨੌਜਵਾਨ ਨਾਲ ਵਿਆਹ ਕਰ ਉਸ ਨੂੰ ਨਸ਼ੇ ਦੀ ਦਲਦਲ ਵਿੱਚੋ ਕੱਢਣ ਦੇ ਯਤਨ ਕਰ ਰਹੀ ਹੈ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gljz0.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ਪੰਜਾਬੀ ਮੁੰਡੇ ਤੇ ਵਿਦੇਸ਼ੀ ਕੁੜੀ ਦੇ ਇਸ਼ਕ ਦੀ ਨਸ਼ੇ ਖ਼ਿਲਾਫ਼ ਜੰਗ",
+              "versions": [
+                {
+                  "versionId": "p07glh9s",
+                  "types": ["Original"],
+                  "duration": 273,
+                  "durationISO8601": "PT4M33S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562831435
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107831969",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17A91/production/_107831969_p07gljfg.jpg",
+              "path": "/cpsprodpb/17A91/production/_107831969_p07gljfg.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਇੱਕ ਡੈਨਿਸ਼ ਲੜਕੀ ਪੰਜਾਬ ਦੇ ਇੱਕ ਨਸ਼ਾ ਪੀੜਤ ਨੌਜਵਾਨ ਨਾਲ ਵਿਆਹ ਕਰ ਉਸ ਨੂੰ ਨਸ਼ੇ ਦੀ ਦਲਦਲ ਵਿੱਚੋ ਕੱਢਣ ਦੇ ਯਤਨ ਕਰ ਰਹੀ ਹੈ",
+              "copyrightHolder": "ਇੱਕ ਡੈਨਿਸ਼ ਲੜਕੀ ਪੰਜਾਬ ਦੇ ਇੱਕ ਨਸ਼ਾ ਪੀੜਤ ਨੌਜਵਾਨ ਨਾਲ "
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48948903",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਇਹ ‘ਸੈਮੀ-ਅਰੇਂਜਡ’ ਮੈਰਿਜ ਕੀ ਹੈ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48922817",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48922817"
+            },
+            "summary": "ਲਵ ਮੈਰਿਜ, ਅਰੇਂਜਡ ਮੈਰਿਜ ਤੇ ਲਵ-ਕਮ-ਅਰੇਂਜਡ ਮੈਰਿਜ ਸੁਣੀ ਹੈ...",
+            "timestamp": 1562725482,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gdyfv",
+              "subType": "clip",
+              "format": "video",
+              "title": "ਇਹ ‘ਸੈਮੀ-ਅਰੇਂਜਡ’ ਮੈਰਿਜ ਕੀ ਹੈ",
+              "synopses": {
+                "short": "ਇਹ ਸੈਮੀ-ਅਰੇਂਜਡ ਮੈਰਿਜ ਕੀ ਹੁੰਦੀ ਹੈ",
+                "long": "ਲਵ ਮੈਰਿਜ, ਅਰੇਂਜਡ ਮੈਰਿਜ ਤੇ ਲਵ-ਕਮ-ਅਰੇਂਜਡ ਮੈਰਿਜ ਸੁਣੀ ਹੈ, ਪਰ ਸੈਮੀ-ਅਰੇਂਜਡ ਮੈਰਿਜ ਕੀ ਹੈ? \nਇਸ ਵਿੱਚ ਕੁੜੀ ਆਪਣੇ ਮਾਪਿਆਂ ਵੱਲੋਂ ਦੱਸੇ ਗਏ ਰਿਸ਼ਤੇ ਨੂੰ ਨਾਂਹ ਕਰ ਸਕਦੀ ਹੈ।",
+                "medium": "ਲਵ ਮੈਰਿਜ, ਅਰੇਂਜਡ ਮੈਰਿਜ ਤੇ ਲਵ-ਕਮ-ਅਰੇਂਜਡ ਮੈਰਿਜ ਸੁਣੀ ਹੈ..."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gggd3.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ਇਹ ਸੈਮੀ-ਅਰੇਂਜਡ ਮੈਰਿਜ ਕੀ ਹੁੰਦੀ ਹੈ",
+              "versions": [
+                {
+                  "versionId": "p07gdyfx",
+                  "types": ["Original"],
+                  "duration": 267,
+                  "durationISO8601": "PT4M27S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562674328
+                }
+              ],
+              "imageCopyright": "Getty Images"
+            },
+            "indexImage": {
+              "id": "107803176",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1063A/production/_107803176_p07gdyst.jpg",
+              "path": "/cpsprodpb/1063A/production/_107803176_p07gdyst.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਇਹ ਸੈਮੀ-ਅਰੇਂਜਡ ਮੈਰਿਜ ਕੀ ਹੁੰਦੀ ਹੈ?",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48922817",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਕੰਗਨਾ ਰਣੌਤ ਨੂੰ ਗੁੱਸਾ ਕਿਉਂ ਆਉਂਦਾ ਹੈ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48922461",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48922461"
+            },
+            "summary": "ਫ਼ਿਲਮ ਦੇ ਗੀਤ ‘ਵੱਖਰਾ ਸਵੈਗ’ ਦੇ ਲਾਂਚ ਮੌਕੇ ਕੰਗਨਾ ਤੇ ਇੱਕ ਪੱਤਰਕਾਰ ਵਿਚਾਲੇ ਬਹਿਸ ਹੋ ਗਈ",
+            "timestamp": 1562674707,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gdjk6",
+              "subType": "clip",
+              "format": "video",
+              "title": "ਕੰਗਨਾ ਰਣੌਤ ਨੂੰ ਗੁੱਸਾ ਕਿਉਂ ਆਉਂਦਾ ਹੈ",
+              "synopses": {
+                "short": "ਕੰਗਨਾ ਰਣੌਤ ਨੂੰ ਗੁੱਸਾ ਕਿਉਂ ਆਉਂਦਾ ਹੈ",
+                "long": "ਕੰਗਨਾ ਰਣੌਤ ਦੀ ਫ਼ਿਲਮ ‘ਜਜਮੈਂਟਲ ਹੈ ਕਿਆ?’ ਆਉਣ ਵਾਲੀ ਹੈ। ਉਨ੍ਹਾਂ ਨਾਲ ਰਾਜਕੁਮਾਰ ਰਾਓ ਵੀ ਹਨ। ਫ਼ਿਲਮ ਦੇ ਗੀਤ ‘ਵੱਖਰਾ ਸਵੈਗ’ ਦੇ ਲਾਂਚ ਮੌਕੇ ਕੰਗਨਾ ਤੇ ਇੱਕ ਪੱਤਰਕਾਰ ਵਿਚਾਲੇ ਬਹਿਸ ਹੋ ਗਈ।",
+                "medium": "ਫ਼ਿਲਮ ਦੇ ਗੀਤ ‘ਵੱਖਰਾ ਸਵੈਗ’ ਦੇ ਲਾਂਚ ਮੌਕੇ ਕੰਗਨਾ ਤੇ ਇੱਕ ਪੱਤਰਕਾਰ ਵਿਚਾਲੇ ਬਹਿਸ ਹੋ ਗਈ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gdz7s.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ਕੰਗਨਾ ਰਣੌਤ ਨੂੰ ਗੁੱਸਾ ਕਿਉਂ ਆਉਂਦਾ ਹੈ",
+              "versions": [
+                {
+                  "versionId": "p07gdjk8",
+                  "types": ["Original"],
+                  "duration": 459,
+                  "durationISO8601": "PT7M39S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562666474
+                }
+              ],
+              "imageCopyright": "ANI"
+            },
+            "indexImage": {
+              "id": "107803173",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/910A/production/_107803173_kang1.jpg",
+              "path": "/cpsprodpb/910A/production/_107803173_kang1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਕੰਗਨਾ ਰਣੌਤ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48922461",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਭਾਰਤ ਵਿੱਚ 'ਸੈਮੀ-ਅਰੇਂਜਡ' ਵਿਆਹ ਦਾ ਰੁਝਾਨ ਕੀ ਹੈ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-48884055",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48884055"
+            },
+            "summary": "ਤੁਸੀਂ ਲਵ ਮੈਰਿਜ, ਲਵ ਕਮ ਅਰੇਂਜਡ ਅਤੇ ਅਰੇਂਜਡ ਮੈਰਿਜ ਬਾਰੇ ਤਾਂ ਸੁਣਿਆ ਹੋਵੇਗਾ ਪਰ ਇਹ 'ਸੈਮੀ ਅਰੇਂਜਡ' ਮੈਰਿਜ ਕੀ ਹੈ",
+            "timestamp": 1562560452,
             "byline": {
-              "name": " ਸੂਰਿਆਂਸ਼ੀ ਪਾਂਡੇ",
+              "name": "ਸਿੰਧੁਵਾਸਿਨੀ",
+              "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
+              "persons": [
+                {
+                  "name": "इकबाल अहमद",
+                  "function": "बीबीसी संवाददाता"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107770315",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C86B/production/_107770315_1.getty.jpg",
+              "path": "/cpsprodpb/C86B/production/_107770315_1.getty.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਵਿਆਹ",
+              "caption": "ਸੰਕੇਤਕ ਤਸਵੀਰ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-48884055",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਉਹ 5 ਮੁਲਕ ਜਿਨ੍ਹਾਂ ਨੇ ਲੋਕਾਂ ਦੀ ਜ਼ਿੰਦਗੀ ਤਕਨੀਕ ਪੱਖੋਂ ਸੁਖਾਲੀ ਬਣਾਈ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-48900877",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48900877"
+            },
+            "summary": "ਇਹ ਉਹ 5 ਦੇਸ ਹਨ ਜੋ ਤਕਨੀਕ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਮੁਹੱਈਆ ਕਰਵਾਉਣ ਵਿੱਚ ਸਭ ਤੋਂ ਅੱਗੇ ਹਨ।",
+            "timestamp": 1562583784,
+            "byline": {
+              "name": "ਲਿੰਡਸੇ ਗੈਲੋਵੋ",
+              "title": "ਬੀਬੀਸੀ ਟਰੈਵਲ ",
+              "persons": [
+                {
+                  "name": "حسن خرسند",
+                  "function": "تحلیلگر اقتصادی"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107785747",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12406/production/_107785747_bd2aa5e7-1cff-42a4-892e-888b825f9ae2.jpg",
+              "path": "/cpsprodpb/12406/production/_107785747_bd2aa5e7-1cff-42a4-892e-888b825f9ae2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਇਸਰਾਇਲ",
+              "copyrightHolder": "Alamy"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/international-48900877",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "ਰੋਚਕ  "
+        },
+        "semanticGroupName": "Section 3"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "world",
+        "items": [
+          {
+            "headlines": {
+              "headline": "‘ਜੇ ਜੱਜ ਕੋਲ ਸ਼ਿਕਾਇਤ ਕਰੋ ਤਾਂ ਉਹ ਵੀ ਸੈਕਸ ਮੰਗਣਗੇ’"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-48951793",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48951793"
+            },
+            "summary": "ਅਫ਼ਗਾਨਿਸਤਾਨ ਸੁਰੱਖਿਆ ਦੇ ਮਾਮਲੇ ਵਿੱਚ ਔਰਤਾਂ ਲਈ ਸਭ ਤੋਂ ਖ਼ਤਰਨਾਕ ਦੇਸਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।",
+            "timestamp": 1562894728,
+            "byline": {
+              "name": "ਯੋਗਿਤਾ ਲਿਮੇ",
+              "title": "ਬੀਬੀਸੀ ਨਿਊਜ਼, ਕਾਬੁਲ ",
+              "persons": [
+                {
+                  "name": "حسن خرسند",
+                  "function": "تحلیلگر اقتصادی"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107834817",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/118A3/production/_107834817_5857c65c-ab10-40b8-b2f2-2b51e68acf05.jpg",
+              "path": "/cpsprodpb/118A3/production/_107834817_5857c65c-ab10-40b8-b2f2-2b51e68acf05.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਅਫ਼ਗਾਨਿਸਤਾਨ, ਸਰੀਰਕ ਸ਼ੋਸ਼ਣ ਦੀਆਂ ਸ਼ਿਕਾਰ ਔਰਤਾਂ",
+              "caption": "ਸਾਬਕਾ ਸਰਕਾਰੀ ਮੁਲਾਜ਼ਮ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਸੀਨੀਅਤ ਮੰਤਰੀ ਨੇ ਉਸ ਨੂੰ ਸੈਕਸ ਲਈ ਮਜਬੂਰ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/international-48951793",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਈਰਾਨ ਨੇ ਕੀਤਾ ਯੂਰੇਨੀਅਮ ਉਤਪਾਦਨ ਵਧਾਉਣ ਦਾ ਐਲਾਨ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-48899512",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48899512"
+            },
+            "summary": "ਈਰਾਨ ਦੇ ਇਸ ਐਲਾਨ ਨਾਲ ਹੋਰ ਵਧੇਗਾ ਤਣਾਅ, ਟਰੰਪ ਪਹਿਲਾਂ ਹੀ ਧਮਕੀ ਦੇ ਚੁੱਕੇ ਹਨ।",
+            "timestamp": 1562550359,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107779066",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10231/production/_107779066_gettyimages-1149479391.jpg",
+              "path": "/cpsprodpb/10231/production/_107779066_gettyimages-1149479391.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਈਰਾਨ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/international-48899512",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਮਰੀਅਮ ਨਵਾਜ਼ ਵੱਲੋਂ ਜਾਰੀ ਵੀਡੀਓ 'ਤੇ ਪਾਕਿਸਤਾਨ ਵਿੱਚ ਹੰਗਾਮਾ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-48901605",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48901605"
+            },
+            "summary": "ਵੀਡੀਓ ਵਿੱਚ ਜੱਜ ਨੇ ਨਵਾਜ਼ ਸ਼ਰੀਫ਼ ਦੇ ਖ਼ਿਲਾਫ਼ ਫ਼ੈਸਲਾ ਦੇਣ ਲਈ ਕਥਿਤ ਤੌਰ 'ਤੇ ਦਬਾਅ ਦੀ ਗੱਲ ਮੰਨੀ ਸੀ। ਜੱਜ ਨੇ ਵੀਡੀਓ ਨੂੰ ਫ਼ਰਜ਼ੀ ਦੱਸਿਆ",
+            "timestamp": 1562550098,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107780911",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2E84/production/_107780911__102519305_gettyimages-809109590.jpg",
+              "path": "/cpsprodpb/2E84/production/_107780911__102519305_gettyimages-809109590.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਮਰੀਅਮ ਨਵਾਜ਼",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/international-48901605",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਅਮਰੀਕਾ ਨਾਲ ਉਲਝ ਰਹੇ ਈਰਾਨ ਦੀ ਬ੍ਰਿਟੇਨ ਨੂੰ ਵੀ ਚਿਤਾਵਨੀ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-48886371",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48886371"
+            },
+            "summary": "ਈਰਾਨ ਨੇ ਕਿਹਾ ਯੂਕੇ ਦਾ ਕੋਈ ਸਨਮਾਨ ਨਹੀਂ ਉਹ ਸਿਰਫ਼ ਅਮਰੀਕੀ ਇਸ਼ਾਰਿਆਂ ਉੱਤੇ ਨੱਚਦਾ ਹੈ।",
+            "timestamp": 1562376261,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107769415",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C928/production/_107769415_mediaitem107529190.jpg",
+              "path": "/cpsprodpb/C928/production/_107769415_mediaitem107529190.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Hassan Rouhani",
+              "copyrightHolder": "EPA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:punjabi/international-48886371",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ਪੰਜਾਬੀ ਮੂਲ ਦੀ ਪੁਲਿਸ ਵਾਲੀ ਵੱਲੋਂ ਆਪਣੇ ਹੀ ਵਿਭਾਗ 'ਤੇ ਵਿਤਕਰੇ ਦੇ ਇਲਜ਼ਾਮ"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-48899201",
+              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48899201"
+            },
+            "summary": "ਪਰਮ ਸੰਧੂ UK ਵਿੱਚ ਉੱਚ ਅਹੁਦੇ 'ਤੇ ਕੰਮ ਕਰਨ ਵਾਲੀਆਂ ਏਸ਼ੀਆ ਮੂਲ ਦੀਆਂ ਘੱਟਗਿਣਤੀ ਔਰਤਾਂ ਵਿਚੋਂ ਇੱਕ ਹਨ",
+            "timestamp": 1562486404,
+            "byline": {
+              "name": "ਡੈਨੀ ਸ਼ਾਅ",
               "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ ",
               "persons": [
                 {
@@ -1413,888 +1973,56 @@
               },
               "campaigns": [
                 {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "Educate me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103928623",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/7FAA/production/_103928623_gettyimages-942960022.jpg",
-              "path": "/cpsprodpb/7FAA/production/_103928623_gettyimages-942960022.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਵਿਰਾਟ ਕੋਹਲੀ",
-              "caption": "ਭਾਰਤੀ ਕ੍ਰਿਕਟ ਟੀਮ ਦੇ ਕਪਤਾਨ ਵਿਰਾਟ ਕੋਹਲੀ ਨੇ ਅਪਣਾਇਆ ਵੀਗਨ ਖਾਣਾ",
-              "copyrightHolder": "NurPhoto"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45905054"
-          },
-          {
-            "headlines": {
-              "headline": "ਕੌਫੀ ’ਚ ਡਿਜ਼ਾਇਨ ਤੁਸੀਂ ਪਹਿਲਾਂ ਵੀ ਦੇਖੇ ਹੋਣਗੇ ਪਰ ਕੀ ਕਦੇ ਸੈਲਫ਼ੀ ਦੇਖੀ ਹੈ?"
-            },
-            "locators": {
-              "assetUri": "/punjabi/media-45906540",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-45906540"
-            },
-            "summary": "ਇਹ ਨਵਾਂ ਟਰੈਂਡ ਹੈ, ਪਹਿਲਾ ਕੌਫੀ ਤਿਆਰ ਹੁੰਦੀ ਹੈ ਅਤੇ ਫੇਰ 3D ਪ੍ਰਿਟਿੰਗ ਦੀ ਮਦਦ ਨਾਲ ਤੁਹਾਡੀ ਤਸਵੀਰ ਕੌਫੀ ’ਤੇ ਆ ਜਾਂਦੀ ਹੈ",
-            "timestamp": 1539950178,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e1739461b000e9dabf6",
-                  "campaignName": "CS"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103930573",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/927F/production/_103930573_p06p6df7.jpg",
-              "path": "/cpsprodpb/927F/production/_103930573_p06p6df7.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Selfieccino",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06p6bx1",
-              "subType": "clip",
-              "format": "video",
-              "title": "ਕੌਫੀ ’ਚ ਡਿਜ਼ਾਇਨ ਤੁਸੀਂ ਪਹਿਲਾਂ ਵੀ ਦੇਖੇ ਹੋਣਗੇ ਪਰ ਕੀ ਕਦੇ ਸੈਲਫ਼ੀ ਦੇਖੀ ਹੈ?",
-              "synopses": {
-                "short": "ਕੌਫੀ ’ਚ ਡਿਜ਼ਾਇਨ ਤੁਸੀਂ ਪਹਿਲਾਂ ਵੀ ਦੇਖੇ ਹੋਣਗੇ ਪਰ ਕੀ ਕਦੇ ਸੈਲਫ਼ੀ ਦੇਖੀ ਹੈ?",
-                "long": "ਇਹ ਨਵਾਂ ਟਰੈਂਡ ਹੈ, ਪਹਿਲਾ ਕੌਫੀ ਤਿਆਰ ਹੁੰਦੀ ਹੈ, ਉਸ ਦੇ ਉਪਰ ਵਹਿਪਡ ਕ੍ਰੀਮ ਦੀ ਲੇਅਰ ਲਗਾ ਕੇ ਤੁਹਾਡੀ ਫੋਟੋ ਮੰਗੀ ਜਾਂਦੀ ਹੈਅਤੇ ਫੇਰ 3D ਪ੍ਰਿਟਿੰਗ ਦੀ ਮਦਦ ਨਾਲ ਤੁਹਾਡੀ ਤਸਵੀਰ ਕੌਫੀ ’ਤੇ ਆ ਜਾਂਦੀ ਹੈ",
-                "medium": "ਇਹ ਨਵਾਂ ਟਰੈਂਡ ਹੈ, ਪਹਿਲਾ ਕੌਫੀ ਤਿਆਰ ਹੁੰਦੀ ਹੈ ਅਤੇ ਫੇਰ 3D ਪ੍ਰਿਟਿੰਗ ਦੀ ਮਦਦ ਨਾਲ ਤੁਹਾਡੀ ਤਸਵੀਰ ਕੌਫੀ ’ਤੇ ਆ ਜਾਂਦੀ ਹੈ"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p6df7.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਕੌਫੀ ’ਚ ਡਿਜ਼ਾਇਨ ਤੁਸੀਂ ਪਹਿਲਾਂ ਵੀ ਦੇਖੇ ਹੋਣਗੇ ਪਰ ਕੀ ਕਦੇ ਸੈਲਫ਼ੀ ਦੇਖੀ ਹੈ?",
-              "versions": [
-                {
-                  "versionId": "p06p6bx5",
-                  "types": ["Original"],
-                  "duration": 99,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "Media",
-              "uri": "/punjabi/media"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/media-45906540"
-          },
-          {
-            "headlines": {
-              "headline": "ਐਮਜੇ ਅਕਬਰ ਦਾ ਅਸਤੀਫ਼ਾ ਕਰਾਉਣ ਵਾਲੀ #MeToo ਕਦੋਂ ਸ਼ੁਰੂ ਹੋਈ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45894817",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45894817"
-            },
-            "summary": "ਸੋਸ਼ਲ ਮੀਡੀਆ ਉੱਤੇ ਛਿੜੀ#MeToo ਮੁਹਿੰਮ ਨੇ ਸੰਸਦ ਦੇ ਹੰਗਾਮੇ ਨੂੰ ਵੀ ਪਿੱਛੇ ਛੱਡ ਦਿੱਤਾ ਹੈ।",
-            "timestamp": 1539858968,
-            "byline": {
-              "name": " ਟੀਮ ਬੀਬੀਸੀ ਹਿੰਦੀ ",
-              "title": "ਦਿੱਲੀ ",
-              "persons": [
-                {
-                  "name": "حسن خرسند",
-                  "function": "تحلیلگر اقتصادی"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "Educate me"
-                },
-                {
-                  "campaignId": "5a988e3e39461b000e9dabfb",
-                  "campaignName": "Keep me on trend"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103913865",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/DDFF/production/_103913865_gettyimages-1054414588.jpg",
-              "path": "/cpsprodpb/DDFF/production/_103913865_gettyimages-1054414588.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "#metoo",
-              "caption": "ਇਸੇ ਤਰ੍ਹਾਂ ਕੁਝ ਲੋਕਾਂ ਨੇ #Womenwhoroar ਨਾਮ ਦਾ ਹੈਸ਼ਟੈਗ ਵੀ ਵਰਤਿਆ ਸੀ ਪਰ ਇਹ ਮਸ਼ਹੂਰ ਨਹੀਂ ਹੋ ਸਕੇ",
-              "copyrightHolder": "iStock"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45894817"
-          },
-          {
-            "headlines": {
-              "headline": "ਇਹ ਅਨੋਖੀ ਰਾਮ ਲੀਲਾ ਤੁਹਾਨੂੰ ਵੀ ਕਰ ਲਵੇਗੀ ਆਕਰਸ਼ਿਤ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/media-45894822",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-45894822"
-            },
-            "summary": "ਛੇ ਦਹਾਕਿਆਂ ਤੋਂ ਹਰ ਸਾਲ ਹੋਣ ਵਾਲੀ ਅਜਿਹੀ ਰਾਮ ਲੀਲਾ ਜਿਹੜੀ ਭੀੜ ਤੋਂ ਵੱਖਰੀ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ।",
-            "timestamp": 1539855429,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3139461b000e9dabf9",
-                  "campaignName": "Divert me"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103912731",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/3599/production/_103912731_p06p3shm.jpg",
-              "path": "/cpsprodpb/3599/production/_103912731_p06p3shm.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Ramleela",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06p3rx1",
-              "subType": "clip",
-              "format": "video",
-              "title": "ਇਹ ਅਨੋਖੀ ਰਾਮ ਲੀਲਾ ਤੁਹਾਨੂੰ ਵੀ ਕਰ ਲਵੇਗੀ ਆਕਰਸ਼ਿਤ",
-              "synopses": {
-                "short": "ਇਹ ਅਨੋਖੀ ਰਾਮ ਲੀਲਾ ਤੁਹਾਨੂੰ ਵੀ ਕਰ ਲਵੇਗੀ ਆਕਰਸ਼ਿਤ",
-                "long": "ਛੇ ਦਹਾਕਿਆਂ ਤੋਂ ਹਰ ਸਾਲ ਹੋਣ ਵਾਲੀ ਅਜਿਹੀ ਰਾਮ ਲੀਲਾ ਜਿਹੜੀ ਭੀੜ ਤੋਂ ਵੱਖਰੀ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ। ਦਿੱਲੀ ਵਿੱਚ ਸ਼੍ਰੀਰਾਮ ਭਾਰਤੀ ਕਲਾ ਕੇਂਦਰ ਪਿਛਲੇ 60 ਸਾਲਾਂ ਤੋਂ ਇਹ ਰਾਮ ਲੀਲਾ ਕਰਵਾ ਰਿਹਾ ਹੈ।\nਵੀਡੀਓ: ਅੰਸ਼ੂਲ ਵਰਮਾ, ਸ਼ਾਰਿਕ ਅਹਿਮਦ",
-                "medium": "ਛੇ ਦਹਾਕਿਆਂ ਤੋਂ ਹਰ ਸਾਲ ਹੋਣ ਵਾਲੀ ਅਜਿਹੀ ਰਾਮ ਲੀਲਾ ਜਿਹੜੀ ਭੀੜ ਤੋਂ ਵੱਖਰੀ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ।"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p3shm.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਇਹ ਅਨੋਖੀ ਰਾਮ ਲੀਲਾ ਤੁਹਾਨੂੰ ਵੀ ਕਰ ਲਵੇਗੀ ਆਕਰਸ਼ਿਤ",
-              "versions": [
-                {
-                  "versionId": "p06p3rx6",
-                  "types": ["Original"],
-                  "duration": 268,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "Media",
-              "uri": "/punjabi/media"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/media-45894822"
-          },
-          {
-            "headlines": {
-              "headline": "ਮਿਸ ਟਰਾਂਸ ਕੁਇਨ ਇੰਡੀਆ 2018 ਨੂੰ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-45830536",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-45830536"
-            },
-            "summary": "ਇਸ ਮੁਕਾਬਲੇ ਜ਼ਰੀਏ ਇਹ ਕੁੜੀਆਂ ਟਰਾਂਸਜੈਂਡਰਾਂ ਬਾਰੇ ਗਲਤਫਹਿਮੀਆਂ ਨੂੰ ਖ਼ਤਮ ਕਰਨਾ ਚਾਹੁੰਦੀਆਂ ਹਨ।",
-            "timestamp": 1539329839,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2139461b000e9dabf7",
-                  "campaignName": "Inspire me"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103831520",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/09D1/production/_103831520_capture.jpguuuuu.jpg",
-              "path": "/cpsprodpb/09D1/production/_103831520_capture.jpguuuuu.jpg",
-              "height": 922,
-              "width": 1639,
-              "altText": "ਟਰਾਂਸ ਕਵੀਨ 2018",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06nl8xs",
-              "subType": "clip",
-              "format": "video",
-              "title": "ਮਿਸ ਟਰਾਂਸ ਕਵੀਨ ਇੰਡੀਆ 2018 ਨੂੰ",
-              "synopses": {
-                "short": "ਟਰਾਂਸਜੈਂਡਰ ਕੁੜੀਆਂ ਦਾ ਖੂਬਸੂਰਤੀ ਦੇ ਮੁਕਾਬਲੇ ਪਿੱਛੇ ਜੋਸ਼ ਤੇ ਜਜ਼ਬਾ",
-                "long": "ਇਸ ਮੁਕਾਬਲੇ ਜ਼ਰੀਏ ਇਹ ਕੁੜੀਆਂ ਟਰਾਂਸਜੈਂਡਰਾਂ ਬਾਰੇ ਗਲਤਫਹਿਮੀਆਂ ਨੂੰ ਖ਼ਤਮ ਕਰਨਾ ਚਾਹੁੰਦੀਆਂ ਹਨ। ਵੀਣਾ ਨੇ ਇਹ ਮੁਕਾਬਲਾ ਜਿੱਤਿਆ। ਵੀਣਾ ਸਲਮਾਨ ਖਾਨ ਨਾਲ ਕੰਮ ਕਰਨ ਦਾ ਸੁਪਨਾ ਰੱਖਦੀ ਹੈ।",
-                "medium": "ਇਸ ਮੁਕਾਬਲੇ ਜ਼ਰੀਏ ਇਹ ਕੁੜੀਆਂ ਟਰਾਂਸਜੈਂਡਰਾਂ ਬਾਰੇ ਗਲਤਫਹਿਮੀਆਂ ਨੂੰ ਖ਼ਤਮ ਕਰਨਾ ਚਾਹੁੰਦੀਆਂ ਹਨ।"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06nl927.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਟਰਾਂਸ ਕਵੀਨ 2018",
-              "versions": [
-                {
-                  "versionId": "p06nl8xv",
-                  "types": ["Original"],
-                  "duration": 152,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਭਾਰਤ",
-              "uri": "/punjabi/india"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-45830536"
-          },
-          {
-            "headlines": {
-              "headline": "ਮਿਲੋ, ਉਸ ਸ਼ਖ਼ਸ ਨੂੰ ਜਿਹੜਾ ਸਕਿੰਟਾ ਵਿੱਚ ਆਵਾਜ਼ ਬਦਲ ਲੈਂਦਾ ਹੈ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/media-45870029",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-45870029"
-            },
-            "summary": "ਚੇਤਨ ਸ਼ਸ਼ੀਤਲ ਇੱਕ ਮਸ਼ਹੂਰ ਮਿਮੀਕਰੀ ਕਲਾਕਾਰ ਅਤੇ ਵੌਇਸ ਓਵਰ ਆਰਟਿਸਟ ਹਨ।",
-            "timestamp": 1539756357,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3139461b000e9dabf9",
-                  "campaignName": "Divert me"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103876394",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/C0D7/production/_103876394_p06nybrk.jpg",
-              "path": "/cpsprodpb/C0D7/production/_103876394_p06nybrk.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Mimicry artist",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06nybl5",
-              "subType": "clip",
-              "format": "video",
-              "title": "ਮਿਲੋ, ਉਸ ਸ਼ਖ਼ਸ ਨੂੰ ਜਿਹੜਾ ਸਕਿੰਟਾ ਵਿੱਚ ਆਵਾਜ਼ ਬਦਲ ਲੈਂਦਾ ਹੈ",
-              "synopses": {
-                "short": "ਮਿਲੋ, ਉਸ ਸ਼ਖ਼ਸ ਨੂੰ ਜਿਹੜਾ ਸਕਿੰਟਾ ਵਿੱਚ ਆਵਾਜ਼ ਬਦਲ ਲੈਂਦਾ ਹੈ",
-                "long": "ਉਨ੍ਹਾਂ ਨੇ ਅਮਿਤਾਭ ਬੱਚਨ ਅਤੇ ਸ਼ਾਹਰੁਖ਼ ਖਾਨ ਤੋਂ ਲੈ ਕੇ ਕਈ ਵੱਡੇ ਕਾਲਾਕਾਰਾਂ ਦੀਆਂ ਆਵਾਜ਼ਾਂ ਕੱਢੀਆਂ ਹਨ।",
-                "medium": "ਚੇਤਨ ਸ਼ਸ਼ੀਤਲ ਇੱਕ ਮਸ਼ਹੂਰ ਮਿਮੀਕਰੀ ਕਲਾਕਾਰ ਅਤੇ ਵੌਇਸ ਓਵਰ ਆਰਟਿਸਟ ਹਨ।"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06nybrk.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਮਿਲੋ, ਉਸ ਸ਼ਖ਼ਸ ਨੂੰ ਜਿਹੜਾ ਸਕਿੰਟਾ ਵਿੱਚ ਆਵਾਜ਼ ਬਦਲ ਲੈਂਦਾ ਹੈ",
-              "versions": [
-                {
-                  "versionId": "p06nybl7",
-                  "types": ["Original"],
-                  "duration": 347,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "Media",
-              "uri": "/punjabi/media"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/media-45870029"
-          },
-          {
-            "headlines": {
-              "headline": "'ਰਿਸ਼ਤਿਆਂ ਵਿੱਚ ਅਸਲੀ ਮੁੱਲ ਤਾਂ ਪਿਆਰ ਦਾ ਹੈ'"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45849683",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45849683"
-            },
-            "summary": "ਭਾਰਤੀ ਮੂਲ ਦੀ ਇਲੇਨ ਅਤੇ ਸਿਮੋ ਦਾ ਦੱਖਣੀ ਅਫਰੀਕਾ ਵਿੱਚ ਇੱਕ ਅੰਤਰ ਨਸਲੀ ਜੋੜਾ ਹੈ।",
-            "timestamp": 1539505577,
-            "byline": {
-              "name": "ਜ਼ੁਬੈਰ ਅਹਿਮਦ",
-              "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
-              "persons": [
-                {
-                  "name": "Jenny Hill",
-                  "function": "Corresponsal en Berlín"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103857204",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/9D53/production/_103857204_couple1.jpg",
-              "path": "/cpsprodpb/9D53/production/_103857204_couple1.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਅੰਤਰ-ਨਸਲੀ ਵਿਆਹ",
-              "caption": "ਦੱਖਣੀ ਅਫਰੀਕਾ ਵਿਚਲੇ ਭਾਰਤੀਆਂ ਵਿੱਚ ਹਾਲੇ ਵੀ ਖੇਤਰ, ਜਾਤ ਅਤੇ ਗੋਤ ਦੇਖ ਕੇ ਵਿਆਹ ਹੁੰਦੇ ਹਨ। ਅਜਿਹੇ ਵਿੱਚ ਭਾਰਤੀ ਸਮਾਜ ਤੋਂ ਬਾਹਰ ਜਾ ਕੇ ਵਿਆਹ ਕਰਵਾਉਣਾ, ਕਿਸੇ ਬਗਾਵਤ ਤੋਂ ਘੱਟ ਨਹੀਂ ਸੀ।",
-              "copyrightHolder": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45849683"
-          }
-        ],
-        "strapline": {
-          "name": "ਰੋਚਕ  "
-        },
-        "semanticGroupName": "Section 3"
-      },
-      {
-        "type": "featured-site-top-stories",
-        "title": "world",
-        "items": [
-          {
-            "headlines": {
-              "headline": "ਖਾਣੇ ਦੀ ਕਮੀ ਕਾਰਨ ਇਹ ਮਾਵਾਂ ਬੱਚੇ ਦਾਨ ਕਰ ਰਹੀਆਂ ਹਨ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45882297",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45882297"
-            },
-            "summary": "ਮਹਿੰਗਾਈ ਵਧਣ ਕਾਰਨ ਇਹ ਮਾਵਾਂ ਆਪਣੇ ਬੱਚਿਆਂ ਦਾ ਪਾਲਣ-ਪੋਸ਼ਣ ਨਹੀਂ ਕਰ ਪਾ ਰਹੀਆਂ ਹਨ।",
-            "timestamp": 1539940015,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e1739461b000e9dabf6",
-                  "campaignName": "CS"
-                },
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
-                },
-                {
                   "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103927141",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/375C/production/_103927141_vvvv.jpg",
-              "path": "/cpsprodpb/375C/production/_103927141_vvvv.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਵੈਨਜ਼ੁਏਲਾ",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06p0nh0",
-              "subType": "clip",
-              "format": "video",
-              "title": "ਖਾਣੇ ਦੀ ਘਾਟ ਕਾਰਨ ਇਹ ਮਾਵਾਂ ਬੱਚੇ ਦਾਨ ਕਰ ਰਹੀਆਂ ਹਨ",
-              "synopses": {
-                "short": "ਪਾਲਣ-ਪੋਸ਼ਣ ਵਿੱਚ ਅਸਮਰੱਥ ਮਾਵਾਂ ਬੱਚੇ ਦੇਣ ਲਈ ਮਜਬੂਰ",
-                "long": "ਵੇਨਜ਼ੁਏਲਾ ਵਿੱਚ ਮਹਿੰਗਾਈ ਵਧਣ ਕਾਰਨ ਇਹ ਮਾਵਾਂ ਆਪਣੇ ਬੱਚਿਆਂ ਨੂੰ ਭੋਜਨ ਵੀ ਨਹੀਂ ਖਵਾ ਸਕਦੀਆਂ। ਇਸ ਲਈ ਜ਼ਿਆਦਾਤਰ ਬੱਚੇ ਸੜਕਾਂ ਉੱਤੇ ਰਹਿ ਰਹੇ ਹਨ ਜਾਂ ਫਿਰ ਛੱਡੇ ਜਾ ਰਹੇ ਹਨ।",
-                "medium": "ਮਹਿੰਗਾਈ ਵਧਣ ਕਾਰਨ ਇਹ ਮਾਵਾਂ ਆਪਣੇ ਬੱਚਿਆਂ ਦਾ ਪਾਲਣ-ਪੋਸ਼ਣ ਨਹੀਂ ਕਰ ਪਾ ਰਹੀਆਂ ਹਨ।"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p0q99.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਪਾਲਣ-ਪੋਸ਼ਣ ਵਿੱਚ ਅਸਮਰੱਥ ਮਾਵਾਂ ਬੱਚੇ ਦੇਣ ਲਈ ਮਜਬੂਰ",
-              "versions": [
-                {
-                  "versionId": "p06p0nh2",
-                  "types": ["Original"],
-                  "duration": 148,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "Getty Images"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45882297"
-          },
-          {
-            "headlines": {
-              "headline": "ਜਦੋਂ ਆਪਣਿਆਂ ਦੇ ਅਸਤ ਲੈ ਕੇ ਆਉਂਦੇ ਹਾਂ ਤਾਂ ਲੋਕੀ ਪੱਥਰ ਮਾਰਦੇ ਨੇ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45878036",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45878036"
-            },
-            "summary": "ਅਫ਼ਗਾਨਿਸਤਾਨ ਵਿਚ ਹਿੰਦੂ ਤੇ ਸਿੱਖਾਂ ਦੇ ਆਗੂ ਨਰਿੰਦਰ ਸਿੰਘ ਨੇ ਬੀਬੀਸੀ ਨੂੰ ਦੱਸੀ ਭਾਈਚਾਰੇ ਦੀ ਹੋਣੀ",
-            "timestamp": 1539866533,
-            "byline": {
-              "name": " ਨਸੀਰ ਬਹਜ਼ਾਬ",
-              "title": "ਬੀਬੀਸੀ ਫਾਰਸੀ ਸੇਵਾ",
-              "persons": [
-                {
-                  "name": "Jenny Hill",
-                  "function": "Corresponsal en Berlín"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
+                  "campaignName": "WS - Update me"
                 }
               ]
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "103916511",
+              "id": "107777742",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2D29/production/_103916511_ddf11301-8b76-4ad0-9e7d-48de88634bd3.jpg",
-              "path": "/cpsprodpb/2D29/production/_103916511_ddf11301-8b76-4ad0-9e7d-48de88634bd3.jpg",
+              "href": "http://c.files.bbci.co.uk/60C9/production/_107777742_ee503c2c-d0b9-4267-8c42-6d65a50ac8f8.jpg",
+              "path": "/cpsprodpb/60C9/production/_107777742_ee503c2c-d0b9-4267-8c42-6d65a50ac8f8.jpg",
               "height": 549,
               "width": 976,
-              "altText": "ਅਫਗਾਨਿਸਤਾਨ",
-              "caption": "ਦੋਹਾਂ ਭਾਈਚਾਰਿਆਂ ਦਾ ਸਿਰਫ ਇੱਕੋ ਨੁਮਾਇੰਦਾ ਸੰਸਦ ਵਿੱਚ ਜਾਂਦਾ ਹੈ।",
+              "altText": "ਪਰਮ ਸੰਧੂ",
               "copyrightHolder": "BBC"
             },
             "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45878036"
-          },
-          {
-            "headlines": {
-              "headline": "ਕਲਮ ਦੀ ਆਜ਼ਾਦੀ ਲੱਭਦਾ ਲਾਪਤਾ ਪੱਤਰਕਾਰ ਖਾਸ਼ੋਗੀ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45876744",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45876744"
-            },
-            "summary": "ਸਾਊਦੀ ਅਰਬ ਦੇ ਪੱਤਰਕਾਰ ਜਮਾਲ ਖਾਸ਼ੋਗੀ 2 ਅਕਤੂਬਰ ਤੋਂ ਲਾਪਤਾ ਹਨ।",
-            "timestamp": 1539752047,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "Give me perspective"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103894219",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/16471/production/_103894219_khashogi.jpg",
-              "path": "/cpsprodpb/16471/production/_103894219_khashogi.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਪੱਤਰਕਾਰ ਖਾਸ਼ੋਗੀ",
-              "copyrightHolder": "AFP"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45876744"
-          },
-          {
-            "headlines": {
-              "headline": "ਹਾਰਵਰਡ ਯੂਨੀਵਰਸਿਟੀ ਦਾ ਏਸ਼ੀਆਈ ਵਿਦਿਆਰਥੀਆਂ ਨਾਲ 'ਭੇਦਭਾਵ'?"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45873024",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45873024"
-            },
-            "summary": "ਅਮਰੀਕਾ ਦੀ ਮਸ਼ਹੂਰ ਹਾਰਵਰਡ ਯੂਨੀਵਰਿਸਟੀ ਖ਼ਿਲਾਫ਼ ਇੱਕ ਗਰੁੱਪ ਨੇ ਮੁਕੱਦਮਾ ਦਰਜ ਕਰਵਾਇਆ ਹੈ।",
-            "timestamp": 1539675401,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "Update me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103879999",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/1869D/production/_103879999_3..jpg",
-              "path": "/cpsprodpb/1869D/production/_103879999_3..jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਰੂੜ੍ਹੀਵਾਦੀ ਕਾਰਕੁਨ ਐਡਵਰਡ ਬਲੱਮ ਵੱਲੋਂ ਬਣਾਏ ਗਏ ਸਟੂਡੈਂਟਸ ਫ਼ਾਰ ਫੇਅਰ ਐਡਮਿਸ਼ਨਜ਼ ਗਰੁੱਪ 'ਚ ਸ਼ਾਮਿਲ ਪ੍ਰਦਰਸ਼ਨਕਾਰੀ",
-              "caption": "ਰੂੜ੍ਹੀਵਾਦੀ ਕਾਰਕੁਨ ਐਡਵਰਡ ਬਲੱਮ ਵੱਲੋਂ ਬਣਾਏ ਗਏ ਸਟੂਡੈਂਟਸ ਫ਼ਾਰ ਫੇਅਰ ਐਡਮਿਸ਼ਨਜ਼ ਗਰੁੱਪ 'ਚ ਸ਼ਾਮਿਲ ਪ੍ਰਦਰਸ਼ਨਕਾਰੀ",
-              "copyrightHolder": "Getty Images"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45873024"
-          },
-          {
-            "headlines": {
-              "headline": "ਪਹਿਲੀ ਸੰਸਾਰ ਜੰਗ ਦੀ ਰੰਗਦਾਰ ਫਿਲਮ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45843433",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45843433"
-            },
-            "summary": "ਇਨ੍ਹਾਂ ਤਸਵੀਰਾ ਨੂੰ ਕੰਪਿਊਟਰ ਦੀ ਸਹਾਇਤਾ ਨਾਲ ਰੰਗਦਾਰ ਬਣਾਇਆ ਗਿਆ ਹੈ।",
-            "timestamp": 1539403351,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e1739461b000e9dabf6",
-                  "campaignName": "CS"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103842090",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2340/production/_103842090_p06nqfxc.jpg",
-              "path": "/cpsprodpb/2340/production/_103842090_p06nqfxc.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਪਹਿਲੀ ਵਿਸ਼ਵ ਜੰਗ ਦੀ ਰੰਗਦਾਰ ਫਿਲਮ",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06nqccz",
-              "subType": "clip",
-              "format": "video",
-              "title": "ਪਹਿਲੀ ਵਿਸ਼ਵ ਜੰਗ ਦੀ ਰੰਗਦਾਰ ਫਿਲਮ",
-              "synopses": {
-                "short": "ਪਹਿਲੀ ਆਲਮੀ ਜੰਗ ਦੀਆਂ ਇਨ੍ਹਾਂ ਤਸਵੀਰਾ ਵੱਚ ਕੰਪਿਊਟਰ ਦੀ ਸਹਾਇਤਾ ਨਾਲ ਰੰਗਦਾਰ ਬਣਾਇਆ ਗਿਆ ਹੈ।",
-                "long": "ਅਸੀਂ ਆਲਮੀ ਜੰਗ ਨੂੰ ਕਾਲੀ ਤੇ ਸਫੈਦ ਲੜਾਈ ਸਮਝਜਦੇ ਹਾਂ। ਇਸ ਬਾਰੇ ਸਾਡੀਆਂ ਫਿਲਮਾਂ ਅਜਿਹੀਆਂ ਹੀ ਹਨ ਪਰ ਅਸਲੀਅਤ ਅਜਿਹੀ ਨਹੀਂ ਸੀ",
-                "medium": "ਪੁਰਸਕਾਰ ਜੇਤੂ ਨਿਰਦੇਸ਼ਕ, ਪੀਟਰ ਜੈਕਸਨ ਨੇ ਇਨ੍ਹਾਂ ਨਾਲ 'ਦੇ ਸ਼ੈਲ ਨਾਟ ਗਰੋ ਓਲਡ' ਫਿਲਮ ਬਣਾਈ ਹੈ। ਉਨ੍ਹਾਂ ਮੁਤਾਬਕ, ਸੈਨਿਕਾਂ ਲਈ ਇਹ ਪੂਰੀ ਰੰਗਦਾਰ ਲੜਾਈ ਸੀ।"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06nqfxc.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਪਹਿਲੀ ਵਿਸ਼ਵ ਜੰਗ ਦੀ ਰੰਗਦਾਰ ਫਿਲਮ",
-              "versions": [
-                {
-                  "versionId": "p06nqcd2",
-                  "types": ["Original"],
-                  "duration": 131,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ]
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45843433"
-          },
-          {
-            "headlines": {
-              "headline": "ਰਾਜਕੁਮਾਰੀ ਨੇ ਦਿੱਤਾ ਪੁਸ਼ਾਕ ਰਾਹੀਂ ਖ਼ੂਬਸੂਰਤ ਸੁਨੇਹਾ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-45849675",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-45849675"
-            },
-            "summary": "ਬ੍ਰਿਟੇਨ ਦੀ ਰਾਜਕੁਮਾਰੀ ਨੇ ਆਪਣੇ ਵਿਆਹ ਮੌਕੇ ਲੱਭਿਆ ਦੁਨੀਆਂ ਨੂੰ ਸੁਨੇਹਾ ਦੇਣ ਦਾ ਅਨੋਖਾ ਤਰੀਕਾ।",
-            "timestamp": 1539512435,
-            "byline": {
-              "name": "ਗੈਰੀ ਹੌਲਟ ਅਤੇ ਕੇਸੇਵਾ ਬਰਾਉਨੀ",
-              "title": "ਬੀਬੀਸੀ ਨਿਊਜ਼",
-              "persons": [
-                {
-                  "name": "Jenny Hill",
-                  "function": "Corresponsal en Berlín"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2139461b000e9dabf7",
-                  "campaignName": "Inspire me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103858696",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/11035/production/_103858696_352d395a-a782-4043-af10-935f84d8cb3a.jpg",
-              "path": "/cpsprodpb/11035/production/_103858696_352d395a-a782-4043-af10-935f84d8cb3a.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਰਾਜਕੁਮਾਰੀ ਯੂਜੀਨੀ",
-              "caption": "ਰਾਜਕੁਮਾਰੀ ਦੀ ਡਰੈਸ ਬਰਤਾਨਵੀ ਡਿਜ਼ਾਈਨਰ ਪੀਟਰ ਪਿਲੋਟੋ ਅਤੇ ਕਰਿਸਟੋਫਰ ਡੀ ਵੋਸ ਨੇ ਡਿਜ਼ਾਈਨ ਕੀਤੀ ਸੀ। ਇਸ ਗੱਲ ਦਾ ਖ਼ਾਸ ਖਿਆਲ ਰੱਖਿਆ ਗਿਆ ਸੀ ਕਿ ਅਪਰੇਸ਼ਨ ਦਾ ਦਾਗ ਨਜ਼ਰ ਆਵੇ।",
-              "copyrightHolder": "REX/SHUTTERSTOCK"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "ਕੌਮਾਂਤਰੀ",
-              "uri": "/punjabi/international"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-45849675"
+            "id": "urn:bbc:ares::asset:punjabi/international-48899201",
+            "type": "cps"
           }
         ],
         "strapline": {
           "name": "ਕੌਮਾਂਤਰੀ ਮੰਚ"
         },
         "semanticGroupName": "Sport"
-      },
-      {
-        "type": "responsive-cluster",
-        "title": "ਕੌਮਾਂਤਰੀ ਮੰਚ",
-        "items": [
-          {
-            "headlines": {
-              "headline": "ਯਮਨ: ਹਵਾਈ ਹਮਲੇ 'ਚ 42 ਮਾਸੂਮਾਂ ਦਾ ਕਤਲ"
-            },
-            "locators": {
-              "assetUri": "/punjabi/media-45906835",
-              "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-45906835"
-            },
-            "summary": "ਇਸ ਹਵਾਈ ਹਮਲੇ ਨੇ ਉੱਤਰੀ ਯਮਨ ਦੇ ਦਾਹਯਾਨ 'ਤੇ ਡੂੰਘੇ ਜ਼ਖ਼ਮ ਛੱਡੇ ਹਨ।",
-            "timestamp": 1539886363,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e1739461b000e9dabf6",
-                  "campaignName": "CS"
-                }
-              ]
-            },
-            "cpsType": "MAP",
-            "indexImage": {
-              "id": "103917998",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/15F73/production/_103917998_p06p6709.jpg",
-              "path": "/cpsprodpb/15F73/production/_103917998_p06p6709.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Yemen",
-              "copyrightHolder": "BBC"
-            },
-            "video": {
-              "id": "p06p65pr",
-              "subType": "clip",
-              "format": "video",
-              "title": "ਯਮਨ: ਹਵਾਈ ਹਮਲੇ 'ਚ 42 ਮਾਸੂਮਾਂ ਦਾ ਕਤਲ",
-              "synopses": {
-                "short": "ਯਮਨ: ਹਵਾਈ ਹਮਲੇ 'ਚ 42 ਮਾਸੂਮਾਂ ਦਾ ਕਤਲ",
-                "long": "ਇਸ ਹਵਾਈ ਹਮਲੇ ਨੇ ਉੱਤਰੀ ਯਮਨ ਦੇ ਦਾਹਯਾਨ 'ਤੇ ਡੂੰਘੇ ਜ਼ਖ਼ਮ ਛੱਡੇ ਹਨ। ਜਿੱਥੇ ਸਕੂਲ ਦੇ 42 ਬੱਚੇ ਮਾਰੇ ਗਏ।",
-                "medium": "ਇਸ ਹਵਾਈ ਹਮਲੇ ਨੇ ਉੱਤਰੀ ਯਮਨ ਦੇ ਦਾਹਯਾਨ 'ਤੇ ਡੂੰਘੇ ਜ਼ਖ਼ਮ ਛੱਡੇ ਹਨ।"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p6709.jpg",
-              "embedding": true,
-              "warnings": {},
-              "advertising": true,
-              "caption": "ਯਮਨ: ਹਵਾਈ ਹਮਲੇ 'ਚ 42 ਮਾਸੂਮਾਂ ਦਾ ਕਤਲ",
-              "versions": [
-                {
-                  "versionId": "p06p65pw",
-                  "types": ["Original"],
-                  "duration": 160,
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  }
-                }
-              ],
-              "imageCopyright": "BBC"
-            },
-            "options": {
-              "isFactCheck": false,
-              "isBreakingNews": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "Media",
-              "uri": "/punjabi/media"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/media-45906835"
-          }
-        ],
-        "semanticGroupName": "Cluster 2"
       }
     ]
   },
-  "promo": null,
+  "promo": {
+    "subType": "IDX",
+    "name": "ਨਿਊਜ਼",
+    "uri": "/punjabi/front_page",
+    "id": "urn:bbc:ares::index:punjabi/front_page/desktop/domestic",
+    "type": "simple"
+  },
   "relatedContent": {
     "section": {
       "subType": "index",
       "name": "ਨਿਊਜ਼",
-      "uri": "/punjabi/front_page"
+      "uri": "/punjabi/front_page",
+      "type": "simple"
     },
     "site": {
       "subType": "site",
       "name": "BBC ਪੰਜਾਬੀ",
-      "uri": "/punjabi"
+      "uri": "/punjabi",
+      "type": "simple"
     },
     "groups": []
   }
