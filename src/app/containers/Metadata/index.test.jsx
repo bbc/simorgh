@@ -11,6 +11,7 @@ import frontPageData from '../../../../data/igbo/frontpage/index.json';
 
 const Container = (service, bbcOrigin, platform, data, id) => {
   const serviceConfig = services[service];
+
   return (
     <ServiceContextProvider {...serviceConfig}>
       <RequestContextProvider
@@ -368,7 +369,12 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           false,
-          [],
+          [
+            {
+              href: 'https://www.bbc.com/igbo',
+              hrefLang: 'ig',
+            },
+          ],
           'https://www.bbc.com/igbo.amp',
           'https://www.bbc.com/igbo',
           'BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.',
