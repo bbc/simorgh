@@ -5,6 +5,7 @@ exports[`Story Promo Media Indicator should not render if item media object has 
   datetime="PT1H33M20S"
   duration="1:33:20"
   offscreenText={null}
+  topStory={false}
   type={null}
 />
 `;
@@ -14,6 +15,7 @@ exports[`Story Promo Media Indicator should render correctly 1`] = `
   datetime="PT1H33M20S"
   duration="1:33:20"
   offscreenText={null}
+  topStory={false}
   type="video"
 />
 `;
@@ -23,6 +25,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
   datetime={null}
   duration={null}
   offscreenText={null}
+  topStory={false}
   type="video"
 />
 `;
