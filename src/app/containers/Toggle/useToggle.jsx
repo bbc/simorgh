@@ -16,8 +16,7 @@ const useToggle = toggleName => {
   const { toggleState } = useContext(ToggleContext);
 
   const toggleEnv = envMapping[env];
-  const { enabled } = isToggleEnabled(toggleName, toggleState[toggleEnv]); // hard coded to test for now, env should be passed in from the request context
-
+  const { enabled } = isToggleEnabled(toggleName, toggleState[toggleEnv]);
   return { enabled };
 };
 
