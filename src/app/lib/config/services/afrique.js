@@ -3,7 +3,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import * as brandSVGs from '@bbc/psammead-assets/svgs';
 
 const service = {
-  lang: `fr-002`,
+  lang: `fr`,
   articleAuthor: `https://facebook.com/bbcnewsafrique`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-afrique',
@@ -18,8 +18,8 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `fr-002`,
-  datetimeLocale: `fr-002`.toLowerCase(),
+  locale: `fr`,
+  datetimeLocale: `fr`,
   service: 'afrique',
   serviceName: 'News Afrique',
   themeColor: `${C_POSTBOX}`,
