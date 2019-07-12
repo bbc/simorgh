@@ -7,26 +7,26 @@ const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'), 'gi');
 
 const { error } = console;
 
-const FAIL_TESTS_ON_REACT_WARNINGS = true;
+const FAIL_TESTS_ON_REACT_WARNINGS = false;
 
 // eslint-disable-next-line no-console
 console.error = (message, ...rest) => {
   if (REACT_ERRORS_REGEX.test(message)) {
     if (FAIL_TESTS_ON_REACT_WARNINGS) {
-      // eslint-disable-next-line no-console
-      console.log(
+      throw new Error(
         [
           chalk.red.bold(
-            `IMPORTANT! Soon this test will not pass because React warnings were detected. Please don't add any more tests containing React warnings`,
+            'Test failed because React warnings were detected. Please fix the following:',
           ),
           chalk.red(message),
         ].join('\n'),
       );
     } else {
-      throw new Error(
+      // eslint-disable-next-line no-console
+      console.log(
         [
           chalk.red.bold(
-            'Test failed because React warnings were detected. Please fix the following:',
+            `IMPORTANT! Soon this test will not pass because React warnings were detected. Please don't add any more tests containing React warnings`,
           ),
           chalk.red(message),
         ].join('\n'),
