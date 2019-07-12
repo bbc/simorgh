@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
-import { atiBaseUrl } from '../atiUrl';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 
 const CanonicalATIAnalytics = ({ pageviewParams }) => {
-  const [atiPageViewUrl] = useState(atiBaseUrl() + pageviewParams);
+  const [atiPageViewUrl] = useState(
+    process.env.SIMORGH_ATI_BASE_URL + pageviewParams,
+  );
 
   useEffect(() => {
     sendBeacon(atiPageViewUrl);

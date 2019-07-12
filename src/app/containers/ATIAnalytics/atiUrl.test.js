@@ -1,16 +1,6 @@
 import * as genericLabelHelpers from '../../lib/analyticsUtils';
 
-const { atiBaseUrl, atiPageViewParams } = require('./atiUrl');
-
-describe('ATI Base Url', () => {
-  it('should return URL set in envConfig', () => {
-    process.env = Object.assign(process.env, {
-      SIMORGH_ATI_BASE_URL: 'https://foobar.com',
-    });
-
-    expect(atiBaseUrl()).toBe('https://foobar.com');
-  });
-});
+const { atiPageViewParams } = require('./atiUrl');
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign

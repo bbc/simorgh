@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import AmpATIAnalytics from '.';
-import * as atiUrl from '../atiUrl';
-
-const atiBaseUrl = 'https://foobar.com?';
 
 describe('Amp ATI Analytics', () => {
   let container;
+
+  const atiBaseUrl = 'https://foobar.com?';
 
   beforeEach(() => {
     jest.resetModules();
@@ -16,9 +15,7 @@ describe('Amp ATI Analytics', () => {
   });
 
   it('creates an AMP analytics container with required parameters', () => {
-    const mockAtiBaseUrl = jest.fn().mockReturnValue(atiBaseUrl);
-
-    atiUrl.atiBaseUrl = mockAtiBaseUrl;
+    process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
 
     act(() => {
       ReactDOM.render(

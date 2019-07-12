@@ -3,7 +3,6 @@ import { create, act } from 'react-test-renderer';
 import { render } from 'enzyme';
 import CanonicalATIAnalytics from '.';
 import { shouldMatchSnapshot } from '../../../../testHelpers';
-import * as atiUrl from '../atiUrl';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 
 describe('Canonical ATI Analytics', () => {
@@ -14,12 +13,11 @@ describe('Canonical ATI Analytics', () => {
   const atiBaseUrl = 'https://foobar.com?';
   const mockPageviewParams = 'key=value&key2=value2';
   const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
-  const mockAtiBaseUrl = jest.fn().mockReturnValue(atiBaseUrl);
 
   it('calls atiBaseURL and sendBeacon with required params', () => {
     const expectedUrl = `${atiBaseUrl}${mockPageviewParams}`;
 
-    atiUrl.atiBaseUrl = mockAtiBaseUrl;
+    process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
     beacon.default = mockSendBeacon;
 
     act(() => {

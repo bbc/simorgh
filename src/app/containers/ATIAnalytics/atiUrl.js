@@ -12,14 +12,12 @@ import {
   sanitise,
 } from '../../lib/analyticsUtils';
 
-export const atiBaseUrl = () => process.env.SIMORGH_ATI_BASE_URL;
-
 /*
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
 
-export const atiPageViewParams = ({
+const atiPageViewParams = ({
   appName,
   contentId,
   contentType,
@@ -150,3 +148,5 @@ export const atiPageViewParams = ({
 
   return parsedAtiValues.join('&');
 };
+
+export default atiPageViewParams;
