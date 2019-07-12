@@ -41,7 +41,7 @@ const loadableConfig = {
     webpack: () => [require.resolveWeak('./gahuza.js')],
   },
   gujarati: {
-    loader: () => import(/* webpackChunkName: 'gujarti' */ './gujarati.js'),
+    loader: () => import(/* webpackChunkName: 'gujarati' */ './gujarati.js'),
     webpack: () => [require.resolveWeak('./gujarati.js')],
   },
   hausa: {
@@ -159,12 +159,12 @@ const loadableConfig = {
     webpack: () => [require.resolveWeak('./ukchina.js')],
   },
   ukrainian: {
-    loader: () => import(/* webpackChunkName: 'news' */ './news.js'),
-    webpack: () => [require.resolveWeak('./news.js')],
+    loader: () => import(/* webpackChunkName: 'ukrainian' */ './ukrainian.js'),
+    webpack: () => [require.resolveWeak('./ukrainian.js')],
   },
   urdu: {
-    loader: () => import(/* webpackChunkName: 'news' */ './news.js'),
-    webpack: () => [require.resolveWeak('./news.js')],
+    loader: () => import(/* webpackChunkName: 'urdu' */ './urdu.js'),
+    webpack: () => [require.resolveWeak('./urdu.js')],
   },
   uzbek: {
     loader: () => import(/* webpackChunkName: 'uzbek' */ './uzbek.js'),
