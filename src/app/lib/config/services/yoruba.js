@@ -9,6 +9,7 @@ const yoruba = {
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
+  isoLocale: 'yo',
   datetimeLocale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',

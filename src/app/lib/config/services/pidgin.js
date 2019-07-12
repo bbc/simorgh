@@ -9,6 +9,7 @@ const pidgin = {
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
+  isoLocale: null,
   datetimeLocale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
