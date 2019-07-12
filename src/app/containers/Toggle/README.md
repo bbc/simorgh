@@ -9,7 +9,7 @@ The toggle container is a component that is designed to wrap other components an
 At the time of writing feature toggles are designed to be global (i.e not service specific) and are dependant on the application environment.
 feature toggles can be found in `src/app/lib/config/toggles`
 
-## Useage
+## Usage
 
 To conditionally render a component based on the value of a toggle you can either wrap the child component or use the custom `useToggle` hook.
 
