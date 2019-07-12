@@ -85,7 +85,7 @@ const igbo = {
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Ka anyị mara ma i kwernyere na iwu ndị a',
+        title: 'Ka anyị mara ma i kwenyere n’iwu ndị a',
         description: {
           uk: {
             first: 'Anyị na-eji ',
