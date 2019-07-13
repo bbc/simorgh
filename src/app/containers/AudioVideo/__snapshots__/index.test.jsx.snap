@@ -359,6 +359,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
     id="c0000000000o"
     isAmp={true}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -802,6 +803,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
     id="c0000000000o"
     isAmp={true}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -1277,6 +1279,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
     id="c0000000000o"
     isAmp={true}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -1720,6 +1723,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -2163,6 +2167,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -2638,6 +2643,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -3081,6 +3087,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
     id="c0000000000o"
     isAmp={true}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -3524,6 +3531,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     id="c0000000000o"
     isAmp={true}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -3999,6 +4007,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     id="c0000000000o"
     isAmp={true}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -4476,6 +4485,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     id="c0000000000o"
     isAmp={true}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -4925,6 +4935,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
     id="c0000000000o"
     isAmp={true}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -5429,6 +5440,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -5933,6 +5945,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -6376,6 +6389,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -6851,6 +6865,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead
@@ -7328,6 +7343,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    previousPath={null}
     service="news"
   >
     <AudioVideoHead

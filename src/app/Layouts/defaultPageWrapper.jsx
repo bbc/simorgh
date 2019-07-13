@@ -18,6 +18,7 @@ const PageWrapper = ({
   isAmp,
   pageType,
   dials,
+  previousPath,
 }) => (
   <DialContextProvider dials={dials}>
     <ServiceContextProvider service={service}>
@@ -28,6 +29,7 @@ const PageWrapper = ({
         isAmp={isAmp}
         pageType={pageType}
         service={service}
+        previousPath={previousPath}
       >
         <ServiceWorkerContainer />
         <ManifestContainer />
@@ -47,12 +49,14 @@ PageWrapper.propTypes = {
   isAmp: bool.isRequired,
   pageType: string.isRequired,
   service: string.isRequired,
+  previousPath: string,
   dials: objectOf(bool).isRequired,
 };
 
 PageWrapper.defaultProps = {
   bbcOrigin: null,
   id: null,
+  previousPath: null,
 };
 
 PageWrapper.defaultProps = {};
