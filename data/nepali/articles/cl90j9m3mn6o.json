@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cl90j9m3mn6o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cl90j9m3mn6o"
+    },
+    "type": "article",
+    "createdBy": "Nepali",
+    "language": "ne",
+    "lastUpdated": 1562942370542,
+    "firstPublished": 1562942363761,
+    "lastPublished": 1562942363761,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ne",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "नेपालकी प्रथम महिला प्रहरी चैतमाया डङ्‌गोलको सेवा अनुभव कस्तो",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "नेपालकी प्रथम महिला प्रहरी चैतमाया डङ्‌गोलको सेवा अनुभव कस्तो",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "हालै ८७ वर्ष लागेकी काठमाण्डूकी चैतमाया डङ्‌गोलले सपनामा पनि सोचेकी थिइनन् उनले सुरक्षा निकायमा ३२ वर्ष बिताउछु भनेर।",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "हालै ८७ वर्ष लागेकी काठमाण्डूकी चैतमाया डङ्‌गोलले सपनामा पनि सोचेकी थिइनन् उनले सुरक्षा निकायमा ३२ वर्ष बिताउछु भनेर।",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "चावहिल गणेशस्थान नजिकै बस्ने व्यापारिक पृष्ठभूमिका कान्छा डङ्‌गोल र तरिमाया डङ्‌गोलकी जेठी छोरी चैतमायालाई प्रहरीमा जागिर लगाउनु परिवारको कुनै लालसा पनि थिएन।",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "चावहिल गणेशस्थान नजिकै बस्ने व्यापारिक पृष्ठभूमिका कान्छा डङ्‌गोल र तरिमाया डङ्‌गोलकी जेठी छोरी चैतमायालाई प्रहरीमा जागिर लगाउनु परिवारको कुनै लालसा पनि थिएन।",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "तर उनको चाहना विपरित वि.स. २००८ सालतिर उनले एकाएक नेपाल प्रहरीमा जागिर खाइन्।",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "तर उनको चाहना विपरित वि.स. २००८ सालतिर उनले एकाएक नेपाल प्रहरीमा जागिर खाइन्।",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "हाल उनी नेपालको प्रथम महिला प्रहरीका रूपमा परिचित छिन् र प्रहरी लगायतका विभिन्न संगठनले उनको सम्मान गर्दै आएका छन्।",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "हाल उनी नेपालको प्रथम महिला प्रहरीका रूपमा परिचित छिन् र प्रहरी लगायतका विभिन्न संगठनले उनको सम्मान गर्दै आएका छन्।",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "नेपालकी प्रथम महिला प्रहरी चैतमाया डङ्‌गोलको सेवा अनुभव कस्तो"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cl90j9m3mn6o"
+    },
+    "summary": "",
+    "timestamp": 1562942363761,
+    "id": "urn:bbc:ares::article:cl90j9m3mn6o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Nepali",
+      "uri": "/nepali",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
