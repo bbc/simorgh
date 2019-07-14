@@ -1,10 +1,10 @@
-import audioVideoMetadata from './audioVideoMetadata';
+import audioVideoMetadata from '.';
 import {
   noAresMediaMetadata,
   multipleAresMetadata,
   videoClipGlobalGuidanceBlock,
   audioClipGlobalGuidanceBlock,
-} from './helpers/fixtures';
+} from '../helpers/fixtures';
 
 describe('audioVideoMetadata', () => {
   it('returns correct video metadata', () => {

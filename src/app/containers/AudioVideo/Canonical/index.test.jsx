@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import Canonical from './Canonical';
+import { shouldMatchSnapshot } from '../../../../testHelpers';
+import Canonical from '.';
 
 describe('Canonical', () => {
   const examplePID = 'p01k6msm';

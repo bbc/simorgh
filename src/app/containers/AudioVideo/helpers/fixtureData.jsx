@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AudioVideoContainer from '.';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import AudioVideoContainer from '../index';
+import { RequestContextProvider } from '../../../contexts/RequestContext';
 import {
   captionBlock,
   videoClipGlobalGuidanceBlock,
@@ -11,10 +11,10 @@ import {
   audioClipGlobalGuidanceBlock,
   audioClipNonUkBlock,
   audioClipUkOnlyBlock,
-} from './helpers/fixtures';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import generateAVSettings from '../../lib/utilities/audioVideo/generateAVSettings';
-import AudioVideoHead from '../../components/AudioVideoHead';
+} from './fixtures';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import generateAVSettings from '../../../lib/utilities/audioVideo/generateAVSettings';
+import AudioVideoHead from '../../../components/AudioVideoHead';
 
 const generateFixtureData = ({ platform, blocks, type }) => {
   const avBlock = {

@@ -1,6 +1,6 @@
-import deepGet from '../../lib/utilities/deepGet';
+import deepGet from '../../../lib/utilities/deepGet';
 
-const videoMetadata = blocks => {
+const audioVideoMetadata = blocks => {
   const aresMediaBlocks = deepGet(['model', 'blocks'], blocks);
   const listContent = [];
   const metadata = {
@@ -34,4 +34,4 @@ const videoMetadata = blocks => {
   return listContent.length > 0 ? metadata : null;
 };
 
-export default videoMetadata;
+export default audioVideoMetadata;
