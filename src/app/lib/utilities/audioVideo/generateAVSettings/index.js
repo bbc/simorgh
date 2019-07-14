@@ -1,6 +1,6 @@
-import mediaPlayerSettings from './mediaPlayerSettings';
-import deepGet from '../deepGet';
-import filterForBlockType from '../blockHandlers';
+import mediaPlayerSettings from '../mediaPlayerSettings';
+import deepGet from '../../deepGet';
+import filterForBlockType from '../../blockHandlers';
 
 const generateAVSettings = ({
   audioVideoBlocks,

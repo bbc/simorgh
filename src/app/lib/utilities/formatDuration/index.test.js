@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import formatDuration from './formatDuration';
+import formatDuration from '.';
 
 describe('formatDuration', () => {
   it('should handle 1:23:45', () => {

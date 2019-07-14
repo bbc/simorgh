@@ -1,6 +1,6 @@
-import mediatorURL from './mediatorUrl';
-import filterForBlockType from '../blockHandlers';
-import deepGet from '../deepGet';
+import mediatorURL from '../mediatorUrl';
+import filterForBlockType from '../../blockHandlers';
+import deepGet from '../../deepGet';
 
 const mediaPlayerSettings = ({
   aresMediaBlocks,

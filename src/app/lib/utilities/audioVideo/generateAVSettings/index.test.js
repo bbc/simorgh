@@ -1,10 +1,10 @@
-import generateAVSettings from './generateAVSettings';
+import generateAVSettings from '.';
 import {
   video,
   expectedVideoSettingsObject,
   audio,
   expectedAudioSettingsObject,
-} from './helpers/fixtures';
+} from '../helpers/fixtures';
 
 describe('generateAVSettings', () => {
   it('should return nothing if empty array', () => {

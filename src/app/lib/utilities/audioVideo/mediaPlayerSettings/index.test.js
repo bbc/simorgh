@@ -1,4 +1,4 @@
-import mediaPlayerSettings from './mediaPlayerSettings';
+import mediaPlayerSettings from '.';
 import {
   videoAresMediaBlocks,
   expectedVideoSettingsObject,
@@ -6,7 +6,7 @@ import {
   expectedAudioSettingsObject,
   fakeAudioEpisodeAresMediaBlocks,
   expectedFakeAudioEpisodeSettingsObject,
-} from './helpers/fixtures';
+} from '../helpers/fixtures';
 
 describe('mediaPlayerSettings', () => {
   describe('insufficient data', () => {
