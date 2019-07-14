@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, element } from 'prop-types';
-import { GhostGrid, GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { GhostGrid, GridItemConstrainedMedium } from '../../../lib/styledGrid';
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {

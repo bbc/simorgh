@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, element } from 'prop-types';
-import ErrorMain from '../ErrorMain';
+import ErrorMain from '../../ErrorMain';
 
 const WithError = Component => {
   const ErrorContainer = ({ error, ...props }) => {

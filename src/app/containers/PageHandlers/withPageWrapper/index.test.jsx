@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import WithPageWrapper from './withPageWrapper';
+import { shouldMatchSnapshot } from '../../../../testHelpers';
+import WithPageWrapper from '.';
 
 const dataProps = {
   isAmp: false,

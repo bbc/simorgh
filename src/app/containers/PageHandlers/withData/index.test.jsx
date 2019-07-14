@@ -1,8 +1,8 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
-import WithData from './withData';
-import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
+import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import { articleDataNews, articleDataPersian } from '../../Article/fixtureData';
+import WithData from '.';
+import frontPageDataPidgin from '../../../../../data/pidgin/frontpage';
 
 describe('withData HOC', () => {
   const Component = () => <h1>Hola</h1>;

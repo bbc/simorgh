@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import WithLoading from './withLoading';
+import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import WithLoading from '.';
 
 describe('withLoading HOC', () => {
   const Component = () => <h1>Hola</h1>;

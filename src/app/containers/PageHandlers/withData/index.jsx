@@ -1,9 +1,9 @@
 import React from 'react';
 import { shape, element, string } from 'prop-types';
-import articlePropTypes from '../../models/propTypes/article';
-import ErrorMain from '../ErrorMain';
-import deepGet from '../../lib/utilities/deepGet';
-import getPassportHome from '../../lib/utilities/getPassportHome';
+import articlePropTypes from '../../../models/propTypes/article';
+import ErrorMain from '../../ErrorMain';
+import deepGet from '../../../lib/utilities/deepGet';
+import getPassportHome from '../../../lib/utilities/getPassportHome';
 
 // checks for data, status, setting default status if not found
 const constructRenderObject = data => ({

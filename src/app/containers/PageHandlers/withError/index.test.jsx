@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import WithError from './withError';
+import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import WithError from '.';
 
 describe('withError HOC', () => {
   const Component = () => <h1>Hola</h1>;
