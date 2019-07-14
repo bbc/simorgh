@@ -2,6 +2,7 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const { getClientEnvVars } = require('./src/clientEnvVars');
@@ -54,6 +55,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : prodPublicPath,
     },
     optimization: {
+      minimizer: [new TerserPlugin()],
       // specify min/max file sizes for each JS chunk for optimal performance
       splitChunks: {
         chunks: 'initial',
