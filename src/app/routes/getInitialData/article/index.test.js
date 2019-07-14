@@ -12,7 +12,7 @@ jest.mock(
 );
 
 jest.mock(
-  '../../../../lib/utilities/preprocessor/rules/addIdsToBlocks',
+  '../../../lib/utilities/preprocessor/rules/addIdsToBlocks',
   () => mockAddIdsToBlocks,
 );
 
