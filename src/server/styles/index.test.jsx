@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { ServerStyleSheet } from 'styled-components';
 import { renderToString } from 'react-dom/server';
-import { getStyleTag } from './styles'; // eslint-disable-line no-unused-vars
-import packageLock from '../../package-lock.json';
+import { getStyleTag } from '.'; // eslint-disable-line no-unused-vars
+import packageLock from '../../../package-lock.json';
 
 // mock up and render a simple styled application
 const sheet = new ServerStyleSheet();
@@ -13,10 +13,10 @@ const StyledDivUsingQuotes = styled.div`
   background-image: url('https://placehold.it/640x360');
 `;
 const expectedOutput = inlineAttribute => `<style ${inlineAttribute} data-reactroot="">
-/* sc-component-id: StyledHeading-av5ml9-0 */
-.gDvQnu{color:teal;}
-/* sc-component-id: StyledDivUsingQuotes-av5ml9-1 */
-.bKGMUB{background-image:url('https://placehold.it/640x360');}</style>`;
+/* sc-component-id: StyledHeading-sc-1jg6qvn-0 */
+.ihxuKn{color:teal;}
+/* sc-component-id: StyledDivUsingQuotes-sc-1jg6qvn-1 */
+.kUqnEs{background-image:url('https://placehold.it/640x360');}</style>`;
 
 renderToString(
   sheet.collectStyles(
@@ -32,7 +32,7 @@ describe('getStyleTag', () => {
       const inlineCss = renderToString(getStyleTag(sheet));
       expect(inlineCss).toBe(
         expectedOutput(
-          `data-styled="gDvQnu bKGMUB" data-styled-version="${packageLock.dependencies['styled-components'].version}"`,
+          `data-styled="ihxuKn kUqnEs" data-styled-version="${packageLock.dependencies['styled-components'].version}"`,
         ),
       );
     });

@@ -1,23 +1,23 @@
-import baseUrl from './utils/getBaseUrl';
-import onClient from '../../lib/utilities/onClient';
-import fetchData from './utils/fetchData';
+import baseUrl from '../utils/getBaseUrl';
+import onClient from '../../../lib/utilities/onClient';
+import fetchData from '../utils/fetchData';
 
 const mockApplyTimestampRules = jest.fn();
 const mockAddIdsToBlocks = jest.fn();
 const mockApplyBlockPositioning = jest.fn();
 
 jest.mock(
-  '../../lib/utilities/preprocessor/rules/timestamp',
+  '../../../lib/utilities/preprocessor/rules/timestamp',
   () => mockApplyTimestampRules,
 );
 
 jest.mock(
-  '../../lib/utilities/preprocessor/rules/addIdsToBlocks',
+  '../../../../lib/utilities/preprocessor/rules/addIdsToBlocks',
   () => mockAddIdsToBlocks,
 );
 
 jest.mock(
-  '../../lib/utilities/preprocessor/rules/blockPositioning',
+  '../../../lib/utilities/preprocessor/rules/blockPositioning',
   () => mockApplyBlockPositioning,
 );
 
@@ -30,21 +30,21 @@ const preprocessorRules = [
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
 const getBaseUrlMockOrigin = 'https://www.getBaseUrl.com';
-jest.mock('./utils/getBaseUrl', () => jest.fn());
+jest.mock('../utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
 let onClientMockResponse = true;
-jest.mock('../../lib/utilities/onClient', () => jest.fn());
+jest.mock('../../../lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockResponse);
 
 const fetchDataMockResponse = {
   pageData: 'foo',
   status: 123,
 };
-jest.mock('./utils/fetchData', () => jest.fn());
+jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => fetchDataMockResponse);
 
-const getArticleInitialData = require('./article').default;
+const getArticleInitialData = require('.').default;
 
 const defaultIdParam = 'c0000000001o';
 const defaultServiceParam = 'news';

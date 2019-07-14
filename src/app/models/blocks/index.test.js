@@ -8,7 +8,7 @@ import {
   blockArrayModel,
   imageBlock,
   rawImageModel,
-} from './blocks';
+} from '.';
 
 const testModel = {
   type: 'testingType',

@@ -1,9 +1,9 @@
-import baseUrl from './utils/getBaseUrl';
-import onClient from '../../lib/utilities/onClient';
-import fetchData from './utils/fetchData';
-import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/cpstypes';
-import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
-import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
+import baseUrl from '../utils/getBaseUrl';
+import onClient from '../../../lib/utilities/onClient';
+import fetchData from '../utils/fetchData';
+import filterUnknownCpsTypes from '../../../lib/utilities/preprocessor/rules/cpstypes';
+import filterEmptyGroupItems from '../../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
+import applySquashTopstories from '../../../lib/utilities/preprocessor/rules/topstories';
 
 const preprocessorRules = [
   filterUnknownCpsTypes,
@@ -14,21 +14,21 @@ const preprocessorRules = [
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
 const getBaseUrlMockOrigin = 'https://www.getBaseUrl.com';
-jest.mock('./utils/getBaseUrl', () => jest.fn());
+jest.mock('../utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
 let onClientMockResponse = true;
-jest.mock('../../lib/utilities/onClient', () => jest.fn());
+jest.mock('../../../lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockResponse);
 
 const fetchDataMockResponse = {
   pageData: 'foo',
   status: 123,
 };
-jest.mock('./utils/fetchData', () => jest.fn());
+jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => fetchDataMockResponse);
 
-const getFrontpageInitialData = require('./frontpage').default;
+const getFrontpageInitialData = require('.').default;
 
 const defaultServiceParam = 'news';
 const defaultAmpParam = '';
