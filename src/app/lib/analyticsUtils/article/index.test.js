@@ -4,7 +4,7 @@ const {
   getLanguage,
   getPromoHeadline,
   getThingAttributes,
-} = require('./article');
+} = require('.');
 
 describe('getPageIdentifier', () => {
   const goodData = {

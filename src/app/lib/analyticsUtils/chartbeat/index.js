@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import onClient from '../utilities/onClient';
+import onClient from '../../utilities/onClient';
 
 const ID_COOKIE = 'ckns_sylphid';
 

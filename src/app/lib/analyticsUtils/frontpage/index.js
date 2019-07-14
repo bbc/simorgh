@@ -1,4 +1,4 @@
-import deepGet from '../utilities/deepGet';
+import deepGet from '../../utilities/deepGet';
 
 export const getPageIdentifier = frontpageData =>
   deepGet(['metadata', 'analyticsLabels', 'counterName'], frontpageData) ||

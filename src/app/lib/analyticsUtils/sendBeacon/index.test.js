@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import { loggerMock } from '../../../testHelpers';
+import { loggerMock } from '../../../../testHelpers';
 
 let fetchResponse;
 let isOnClient;
@@ -8,8 +8,8 @@ describe('sendBeacon', () => {
   beforeEach(() => {
     isOnClient = true;
     fetch.mockImplementation(() => fetchResponse);
-    jest.mock('../utilities/onClient', () => jest.fn());
-    const onClient = require('../utilities/onClient');
+    jest.mock('../../utilities/onClient', () => jest.fn());
+    const onClient = require('../../utilities/onClient');
     onClient.mockImplementation(() => isOnClient);
   });
 
@@ -18,7 +18,7 @@ describe('sendBeacon', () => {
   });
 
   it(`should fetch`, () => {
-    const sendBeacon = require('./sendBeacon').default;
+    const sendBeacon = require('./index').default;
 
     sendBeacon('https://foobar.com');
 
@@ -30,7 +30,7 @@ describe('sendBeacon', () => {
   it(`should not fetch when not on client`, () => {
     isOnClient = false;
 
-    const sendBeacon = require('./sendBeacon').default;
+    const sendBeacon = require('./index').default;
 
     sendBeacon('https://foobar.com');
 
@@ -50,7 +50,7 @@ describe('sendBeacon', () => {
     });
 
     it(`should send error to logger`, async () => {
-      const sendBeacon = require('./sendBeacon').default;
+      const sendBeacon = require('./index').default;
 
       await sendBeacon('https://foobar.com');
 

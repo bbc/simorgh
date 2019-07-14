@@ -6,12 +6,12 @@ import {
   getDomain,
   buildSections,
   getType,
-} from './chartbeat';
-import onClient from '../utilities/onClient';
+} from '.';
+import onClient from '../../utilities/onClient';
 
 let isOnClient = false;
 
-jest.mock('../utilities/onClient', () => jest.fn());
+jest.mock('../../utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 describe('Chartbeat utilities', () => {

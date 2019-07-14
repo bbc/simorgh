@@ -1,9 +1,4 @@
-import {
-  getContentId,
-  getLanguage,
-  getPageIdentifier,
-  getPageTitle,
-} from './frontpage';
+import { getContentId, getLanguage, getPageIdentifier, getPageTitle } from '.';
 
 describe('getPageIdentifier', () => {
   const goodData = {
