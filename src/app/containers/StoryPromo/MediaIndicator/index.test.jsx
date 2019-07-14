@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
-import MediaIndicator from './MediaIndicator';
+import { shouldShallowMatchSnapshot, isNull } from '../../../../testHelpers';
+import MediaIndicator from '.';
 
 const item = {
   headlines: {

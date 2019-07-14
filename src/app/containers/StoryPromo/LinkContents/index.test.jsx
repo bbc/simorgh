@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import LinkContents from './LinkContents';
+import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import LinkContents from '.';
 
 const item = {
   cpsType: 'STY',

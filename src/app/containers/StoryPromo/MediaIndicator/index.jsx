@@ -2,10 +2,9 @@ import React from 'react';
 import moment from 'moment-timezone';
 import { shape, bool } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
-
-import { storyItem } from '../../models/propTypes/storyItem';
-import deepGet from '../../lib/utilities/deepGet';
-import formatDuration from '../../lib/utilities/formatDuration';
+import { storyItem } from '../../../models/propTypes/storyItem';
+import deepGet from '../../../lib/utilities/deepGet';
+import formatDuration from '../../../lib/utilities/formatDuration';
 
 const MediaIndicator = ({ item, topStory }) => {
   const isMedia = deepGet(['cpsType'], item) === 'MAP';

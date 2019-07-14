@@ -1,4 +1,4 @@
-import aboutTagsContent, { checkType, checkSameAs } from './linkedDataAbout';
+import aboutTagsContent, { checkType, checkSameAs } from '.';
 
 describe('linkedDataAbout', () => {
   describe('checkType', () => {

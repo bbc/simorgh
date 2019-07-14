@@ -4,10 +4,10 @@ import { shape } from 'prop-types';
 
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 
-import { ServiceContext } from '../../contexts/ServiceContext';
-import deepGet from '../../lib/utilities/deepGet';
-import formatDuration from '../../lib/utilities/formatDuration';
-import { storyItem } from '../../models/propTypes/storyItem';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import deepGet from '../../../lib/utilities/deepGet';
+import formatDuration from '../../../lib/utilities/formatDuration';
+import { storyItem } from '../../../models/propTypes/storyItem';
 
 const LinkContents = ({ item }) => {
   const {
