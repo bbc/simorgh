@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { cleanup, render, waitForElement } from '@testing-library/react';
-import createLoadableContext from './createLoadableContext';
-import { ServiceContext } from '../ServiceContext';
+import createLoadableContext from '.';
+import { ServiceContext } from '../../ServiceContext';
 import dynamicServiceFixtureData from './fixtures';
 
 const Component = () => {
