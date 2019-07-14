@@ -1,14 +1,14 @@
 import { useContext } from 'react';
-import atiPageViewParams from './atiUrl';
-import { RequestContext } from '../../contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { getPublishedDatetime } from '../../lib/analyticsUtils';
+import atiPageViewParams from '../../atiUrl';
+import { RequestContext } from '../../../../contexts/RequestContext';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 import {
   getContentId,
   getLanguage,
   getPageIdentifier,
   getPageTitle,
-} from '../../lib/analyticsUtils/frontpage';
+} from '../../../../lib/analyticsUtils/frontpage';
 
 const FrontPageAtiParams = frontpageData => {
   const { platform, statsDestination } = useContext(RequestContext);
