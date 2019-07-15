@@ -120,13 +120,13 @@ export const getHref = platform => {
   return null;
 };
 
-export const getReferrer = platform => {
+export const getReferrer = (platform, origin, previousPath) => {
   if (platform === 'amp') {
     return `\${documentReferrer}`;
   }
 
-  if (onClient() && document.referrer) {
-    return document.referrer;
+  if (onClient() && (document.referrer || previousPath)) {
+    return previousPath ? `${origin}${previousPath}` : document.referrer;
   }
 
   return null;
