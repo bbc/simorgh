@@ -1,0 +1,1577 @@
+{
+    "metadata": {
+        "id": "urn:bbc:ares::index:naidheachdan/front_page/mobile/domestic",
+        "locators": {
+            "assetUri": "/naidheachdan/front_page",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/front_page",
+            "curie": "http://www.bbc.co.uk/asset/b497176f-6cf3-ca4e-e040-850ac7847d83/mobile/domestic"
+        },
+        "type": "IDX",
+        "createdBy": "naidheachdan-v6",
+        "language": "gd",
+        "lastUpdated": 1542712111981,
+        "firstPublished": 1323087839,
+        "lastPublished": 1538501965,
+        "options": {
+            "allowAdvertising": true
+        },
+        "analyticsLabels": {
+            "counterName": "naidheachdan.page",
+            "cps_asset_id": "16034318",
+            "cps_asset_type": "idx"
+        },
+        "tags": {},
+        "version": "v0.4.11",
+        "blockTypes": [
+            "container-top-stories",
+            "av-stories-now",
+            "top-feature-promo",
+            "av-live-streams",
+            "special-reports",
+            "featured-site-top-stories",
+            "feature-main"
+        ]
+    },
+    "content": {
+        "groups": [
+            {
+                "type": "container-top-stories",
+                "title": "Top Stories",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Bùth bhiadh ionadail do Bharraigh?"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19842252",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19842252"
+                        },
+                        "summary": "Dh'fhaodadh gun stèidhichear bùth a reiceas biadh ionadail ann am Barraigh.",
+                        "timestamp": 1493293294,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63309443",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63309000/jpg/_63309443_x8gq3ws3.jpg",
+                            "path": "/tmcs/media/images/63309000/jpg/_63309443_x8gq3ws3.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Bàgh a' Chaisteil",
+                            "copyrightHolder": "Undiscovered Scotland"
+                        },
+                        "imageThumbnail": {
+                            "id": "63309445",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63309000/jpg/_63309445_x8gq3ws3.jpg",
+                            "path": "/tmcs/media/images/63309000/jpg/_63309445_x8gq3ws3.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Bàgh a' Chaisteil",
+                            "copyrightHolder": "Undiscovered Scotland"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19842252"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "naidheachdan tesdt for mobile switchoff"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/23027421",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/23027421"
+                        },
+                        "summary": "Dithis mhinistear eile air Eaglais na h-Alba fhàgail ri linn seasamh na h-eaglaise air ministearan gèidh.",
+                        "timestamp": 1456917930,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63284099",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63284000/jpg/_63284099_000141890-1.jpg",
+                            "path": "/tmcs/media/images/63284000/jpg/_63284099_000141890-1.jpg",
+                            "height": 432,
+                            "width": 768,
+                            "altText": "Àrd-Sheanadh Eaglais na h-Alba",
+                            "copyrightHolder": "PA"
+                        },
+                        "imageThumbnail": {
+                            "id": "63285828",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63285000/jpg/_63285828_000141890-1.jpg",
+                            "path": "/tmcs/media/images/63285000/jpg/_63285828_000141890-1.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Àrd-Sheanadh Eaglais na h-Alba",
+                            "copyrightHolder": "PA"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/23027421"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Dàil air fastadh ceannard-sgoile"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19842248",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19842248"
+                        },
+                        "summary": "Comhairle na Gàidhealtachd a' cur dàil air agallamhan airson ceannard do Bhun-sgoil Ghàidhlig Inbhir Nis, am measg buairidh mu chomas cànain.",
+                        "timestamp": 1349423817,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63309376",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63309000/jpg/_63309376_inv_gaelic_school.jpg",
+                            "path": "/tmcs/media/images/63309000/jpg/_63309376_inv_gaelic_school.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Bun-sgoil Ghàidhlig Inbhir Nis",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "63309378",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63309000/jpg/_63309378_inv_gaelic_school.jpg",
+                            "path": "/tmcs/media/images/63309000/jpg/_63309378_inv_gaelic_school.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Bun-sgoil Ghàidhlig Inbhir Nis",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19842248"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Iomairt Oxfam an aghaidh \"Fuadaichean\""
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19828244",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19828244"
+                        },
+                        "summary": "Oxfam airson stad a chur air a bhith a' reic fearainn ann an dùthchannan bochda ri companaidhean mòra, ga shamhlachadh ris na Fuadaichean.",
+                        "timestamp": 1349355488,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63286816",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63286000/jpg/_63286816_016110694-1.jpg",
+                            "path": "/tmcs/media/images/63286000/jpg/_63286816_016110694-1.jpg",
+                            "height": 432,
+                            "width": 768,
+                            "altText": "Tuathanach",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "imageThumbnail": {
+                            "id": "63286818",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63286000/jpg/_63286818_016110694-1.jpg",
+                            "path": "/tmcs/media/images/63286000/jpg/_63286818_016110694-1.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Tuathanach",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19828244"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Seirbheis Smàlaidh a' dùnadh"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19842255",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19842255"
+                        },
+                        "summary": "Dùil gun dùin aonad-smàlaidh Shlèite san Eilean Sgitheanach ro dheireadh na bliadhna.",
+                        "timestamp": 1349430947,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63311622",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63311000/jpg/_63311622_ceinw0q8.jpg",
+                            "path": "/tmcs/media/images/63311000/jpg/_63311622_ceinw0q8.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Àird Shlèite",
+                            "copyrightHolder": "Undiscovered Scotland"
+                        },
+                        "imageThumbnail": {
+                            "id": "63311624",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63311000/jpg/_63311624_ceinw0q8.jpg",
+                            "path": "/tmcs/media/images/63311000/jpg/_63311624_ceinw0q8.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Àird Shlèite",
+                            "copyrightHolder": "Undiscovered Scotland"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19842255"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Ospadal Sgitheanach fhathast dùinte"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19828243",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19828243"
+                        },
+                        "summary": "Dùil gum fosgail Ospadal an Ath Leathainn do dh'euslaintich ùra 's luchd-tadhail a-rithist air an deireadh-sheachdain.",
+                        "timestamp": 1349342909,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63260009",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63260000/jpg/_63260009_003110300-1.jpg",
+                            "path": "/tmcs/media/images/63260000/jpg/_63260009_003110300-1.jpg",
+                            "height": 431,
+                            "width": 767,
+                            "altText": "Glanadh",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "63260477",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63260000/jpg/_63260477_003110300-1.jpg",
+                            "path": "/tmcs/media/images/63260000/jpg/_63260477_003110300-1.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Glanadh",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19828243"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Ainm oifigeil do sgoil Dhùn Èideann"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19828245",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19828245"
+                        },
+                        "summary": "Sgoil Ghàidhlig ùr Dhùn Èideann air a h-ainm oifigeil fhaighinn.",
+                        "timestamp": 1349356138,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "53332750",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/53332000/jpg/_53332750__49007247_hi000137292-1.jpg",
+                            "path": "/tmcs/media/images/53332000/jpg/_53332750__49007247_hi000137292-1.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Gaelic school",
+                            "copyrightHolder": "bbc"
+                        },
+                        "imageThumbnail": {
+                            "id": "56329103",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/56329000/gif/_56329103_bonnington-primary.gif",
+                            "path": "/tmcs/media/images/56329000/gif/_56329103_bonnington-primary.gif",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Bonnington Primary. From Google maps",
+                            "caption": "Bonnington Primary is to transformed into the Gaelic school",
+                            "copyrightHolder": "Other"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19828245"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "20 oifis Comhairle a' falbh"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19818991",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19818991"
+                        },
+                        "summary": "Dùnaidh Comhairle na Gàidhealtachd timcheall air 20 de na h-oifisean a th' aca eadar Inbhir Nis is Inbhir Pheofharain.",
+                        "timestamp": 1349273208,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63271677",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63271000/jpg/_63271677_highland_council_0.jpg",
+                            "path": "/tmcs/media/images/63271000/jpg/_63271677_highland_council_0.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Prìomh Oifisean Comhairle na Gàidhealtachd",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "63271941",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63271000/jpg/_63271941_highland_council_0.jpg",
+                            "path": "/tmcs/media/images/63271000/jpg/_63271941_highland_council_0.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Prìomh Oifisean Comhairle na Gàidhealtachd",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19818991"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Dithis mhinistear a' fàgail Eaglais na h-Alba"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19826876",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19826876"
+                        },
+                        "summary": "Dithis mhinistear eile air Eaglais na h-Alba fhàgail ri linn seasamh na h-eaglaise air ministearan gèidh.",
+                        "timestamp": 1349341382,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63284099",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63284000/jpg/_63284099_000141890-1.jpg",
+                            "path": "/tmcs/media/images/63284000/jpg/_63284099_000141890-1.jpg",
+                            "height": 432,
+                            "width": 768,
+                            "altText": "Àrd-Sheanadh Eaglais na h-Alba",
+                            "copyrightHolder": "PA"
+                        },
+                        "imageThumbnail": {
+                            "id": "63285828",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63285000/jpg/_63285828_000141890-1.jpg",
+                            "path": "/tmcs/media/images/63285000/jpg/_63285828_000141890-1.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Àrd-Sheanadh Eaglais na h-Alba",
+                            "copyrightHolder": "PA"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19826876"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Cùis Dhòmhnaill MhicChoinnich \"fhathast fosgailte\""
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19815192",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19815192"
+                        },
+                        "summary": "Dh'innis na h-ùghdarrasan san Tuirc gu bheil cùis mhiseanairaidh à Leòdhas a tha a dhìth san dùthaich, \"fhathast fosgailte.\"",
+                        "timestamp": 1349261681,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "62648580",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/62648000/jpg/_62648580_ararat_bbc.jpg",
+                            "path": "/tmcs/media/images/62648000/jpg/_62648580_ararat_bbc.jpg",
+                            "height": 432,
+                            "width": 768,
+                            "altText": "Beinn Ararat",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "62648217",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/62648000/jpg/_62648217_donald_304.jpg",
+                            "path": "/tmcs/media/images/62648000/jpg/_62648217_donald_304.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Dòmhnall MacCoinnich",
+                            "copyrightHolder": "Other"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19815192"
+                    }
+                ],
+                "semanticGroupName": "Top Stories"
+            },
+            {
+                "type": "av-stories-now",
+                "title": "Watch/Listen",
+                "items": [
+                    {
+                        "name": "Russian and London orchestras join forces",
+                        "summary": "It is an ambitious project to bring together two of the world's major orchestras in one performance.",
+                        "indexImage": {
+                            "id": "63284223",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63284000/jpg/_63284223_1h5kh9zb.jpg",
+                            "path": "/tmcs/media/images/63284000/jpg/_63284223_1h5kh9zb.jpg",
+                            "height": 360,
+                            "width": 640,
+                            "altText": "Vladimir Jurowski at orchestra rehearsal",
+                            "copyrightHolder": "BBC"
+                        },
+                        "indexThumbnail": {
+                            "id": "63284225",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63284000/jpg/_63284225_1h5kh9zb.jpg",
+                            "path": "/tmcs/media/images/63284000/jpg/_63284225_1h5kh9zb.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Vladimir Jurowski at orchestra rehearsal",
+                            "copyrightHolder": "BBC"
+                        },
+                        "uri": "http://www.bbc.co.uk/news/world-europe-19827245"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Mayor renews demand over airport 1"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-london-23120284",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-london-23120284"
+                        },
+                        "summary": "The Mayor of London has renewed his call for a new airport in the Thames Estuary and accused the government of \"risking inertia\" by not making faster progress..",
+                        "timestamp": 1493376065,
+                        "cpsType": "MAP",
+                        "indexImage": {
+                            "id": "63301979",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301979_63301978.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301979_63301978.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Boris Johnson",
+                            "copyrightHolder": "BBC"
+                        },
+                        "video": {
+                            "id": "63304144",
+                            "subType": "index",
+                            "format": "video",
+                            "externalId": "p00zbz64",
+                            "duration": "PT2M26S",
+                            "caption": "Boris Johnson says the new hub is crucial for the capital's economy",
+                            "image": {
+                                "id": "63304144",
+                                "subType": "thumbnail",
+                                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301977_63301976.jpg",
+                                "path": "/tmcs/media/images/63301000/jpg/_63301977_63301976.jpg",
+                                "height": 360,
+                                "width": 640,
+                                "altText": "One suggestion is to build a runway in the Thames Estuary",
+                                "copyrightHolder": "other"
+                            },
+                            "embedding": false,
+                            "available": true,
+                            "live": false
+                        },
+                        "imageThumbnail": {
+                            "id": "63301981",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301981_63301978.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301981_63301978.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Boris Johnson",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "London",
+                            "uri": "/naidheachdan/england/london"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-england-london-23120284"
+                    }
+                ],
+                "strapline": {
+                    "name": "Coimhead/Èist"
+                },
+                "semanticGroupName": "Watch/Listen"
+            },
+            {
+                "type": "top-feature-promo",
+                "title": "Explainers",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "McGowan to undergo op on Monday"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/football/19804914",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/football/19804914"
+                        },
+                        "summary": "St Mirren's Paul McGowan will be sidelined for up to three months after his shoulder operation on Monday.",
+                        "timestamp": 1349386412,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63255196",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63255000/jpg/_63255196_paul_mcgowan.jpg",
+                            "path": "/tmcs/media/images/63255000/jpg/_63255196_paul_mcgowan.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "St Mirren forward Paul McGowan",
+                            "copyrightHolder": "SNS"
+                        },
+                        "imageThumbnail": {
+                            "id": "63255198",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63255000/jpg/_63255198_paul_mcgowan.jpg",
+                            "path": "/tmcs/media/images/63255000/jpg/_63255198_paul_mcgowan.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "St Mirren forward Paul McGowan",
+                            "copyrightHolder": "SNS"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Football",
+                            "uri": "/naidheachdan/football/scottish_premier_league/st_mirren"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/football/19804914"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Mayor renews demand over airport 2"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-london-23120285",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-london-23120285"
+                        },
+                        "summary": "The Mayor of London has renewed his call for a new airport in the Thames Estuary and accused the government of \"risking inertia\" by not making faster progress..",
+                        "timestamp": 1493376078,
+                        "cpsType": "MAP",
+                        "indexImage": {
+                            "id": "63301979",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301979_63301978.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301979_63301978.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Boris Johnson",
+                            "copyrightHolder": "BBC"
+                        },
+                        "video": {
+                            "id": "63304144",
+                            "subType": "index",
+                            "format": "video",
+                            "externalId": "p00zbz64",
+                            "duration": "PT2M26S",
+                            "caption": "Boris Johnson says the new hub is crucial for the capital's economy",
+                            "image": {
+                                "id": "63304144",
+                                "subType": "thumbnail",
+                                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301977_63301976.jpg",
+                                "path": "/tmcs/media/images/63301000/jpg/_63301977_63301976.jpg",
+                                "height": 360,
+                                "width": 640,
+                                "altText": "One suggestion is to build a runway in the Thames Estuary",
+                                "copyrightHolder": "other"
+                            },
+                            "embedding": false,
+                            "available": true,
+                            "live": false
+                        },
+                        "imageThumbnail": {
+                            "id": "63301981",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301981_63301978.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301981_63301978.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Boris Johnson",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "London",
+                            "uri": "/naidheachdan/england/london"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-england-london-23120285"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Gearradh mhinistearan is choithionalan"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19813622",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19813622"
+                        },
+                        "summary": "Connspaid mu phlanaichean atharrachadh a thoirt air na tha de mhinistearan agus de choithionalan ann an Clèir an Loch Carrann 's an Eilein Sgitheanaich de dh'Eaglais na h-Alba.",
+                        "timestamp": 1349258557,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63261623",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63261000/jpg/_63261623_church-450-1.jpg",
+                            "path": "/tmcs/media/images/63261000/jpg/_63261623_church-450-1.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Eaglais na h-Alba ann am Port Rìgh",
+                            "copyrightHolder": "Undiscovered Scotland"
+                        },
+                        "imageThumbnail": {
+                            "id": "63261625",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63261000/jpg/_63261625_church-450-1.jpg",
+                            "path": "/tmcs/media/images/63261000/jpg/_63261625_church-450-1.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Eaglais na h-Alba ann am Port Rìgh",
+                            "copyrightHolder": "Undiscovered Scotland"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19813622"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "MOD \"a' bacadh thuathan-gaoithe\""
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19812352",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19812352"
+                        },
+                        "summary": "Dragh gu bheil an MOD a' cur an aghaidh gach pròiseict gaoithe ann an Uibhist.",
+                        "timestamp": 1349251462,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63259902",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63259000/jpg/_63259902_windfarmandrig_0.jpg",
+                            "path": "/tmcs/media/images/63259000/jpg/_63259902_windfarmandrig_0.jpg",
+                            "height": 405,
+                            "width": 720,
+                            "altText": "Crann-gaoithe",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "63259904",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63259000/jpg/_63259904_windfarmandrig_0.jpg",
+                            "path": "/tmcs/media/images/63259000/jpg/_63259904_windfarmandrig_0.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Crann-gaoithe",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19812352"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Uard dùinte san Rathaig Mhòr"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19805002",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19805002"
+                        },
+                        "summary": "Tha NHS na Gàidhealtachd air uard 4C ann an Ospadal an Rathaig Mhòr ann an Inbhir Nis a dhùnadh fad 24 uairean 's obair glanaidh a' dol air adhart ann.",
+                        "timestamp": 1349187189,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63247798",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63247000/jpg/_63247798_raigmore_external_0.jpg",
+                            "path": "/tmcs/media/images/63247000/jpg/_63247798_raigmore_external_0.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Ospadal an Rathaig Mhòr",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "63247800",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63247000/jpg/_63247800_raigmore_external_0.jpg",
+                            "path": "/tmcs/media/images/63247000/jpg/_63247800_raigmore_external_0.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Ospadal an Rathaig Mhòr",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19805002"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Mayor renews demand over airport 3"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-london-23120286",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-london-23120286"
+                        },
+                        "summary": "The Mayor of London has renewed his call for a new airport in the Thames Estuary and accused the government of \"risking inertia\" by not making faster progress..",
+                        "timestamp": 1493376181,
+                        "cpsType": "MAP",
+                        "indexImage": {
+                            "id": "63301979",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301979_63301978.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301979_63301978.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Boris Johnson",
+                            "copyrightHolder": "BBC"
+                        },
+                        "video": {
+                            "id": "63304144",
+                            "subType": "index",
+                            "format": "video",
+                            "externalId": "p00zbz64",
+                            "duration": "PT2M26S",
+                            "caption": "Boris Johnson says the new hub is crucial for the capital's economy",
+                            "image": {
+                                "id": "63304144",
+                                "subType": "thumbnail",
+                                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301977_63301976.jpg",
+                                "path": "/tmcs/media/images/63301000/jpg/_63301977_63301976.jpg",
+                                "height": 360,
+                                "width": 640,
+                                "altText": "One suggestion is to build a runway in the Thames Estuary",
+                                "copyrightHolder": "other"
+                            },
+                            "embedding": false,
+                            "available": true,
+                            "live": false
+                        },
+                        "imageThumbnail": {
+                            "id": "63301981",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301981_63301978.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301981_63301978.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Boris Johnson",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "London",
+                            "uri": "/naidheachdan/england/london"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-england-london-23120286"
+                    }
+                ],
+                "strapline": {
+                    "name": "Poileataigs"
+                },
+                "semanticGroupName": "Explainers"
+            },
+            {
+                "type": "av-live-streams",
+                "title": "AV stories live",
+                "items": [
+                    {
+                        "name": "An Là",
+                        "summary": "Naidheachdan ionadail, nàiseanta is eadar-nàiseanta gach là le sgioba-naidheachd BBC ALBA",
+                        "indexImage": {
+                            "id": "63448705",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63448000/jpg/_63448705_63448703.jpg",
+                            "path": "/tmcs/media/images/63448000/jpg/_63448705_63448703.jpg",
+                            "height": 360,
+                            "width": 640,
+                            "altText": "An La presenters",
+                            "copyrightHolder": "BBC"
+                        },
+                        "indexThumbnail": {
+                            "id": "63448713",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63448000/jpg/_63448713_63448703.jpg",
+                            "path": "/tmcs/media/images/63448000/jpg/_63448713_63448703.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "An La presenters",
+                            "copyrightHolder": "BBC"
+                        },
+                        "uri": "http://www.bbc.co.uk/programmes/b00drynf"
+                    }
+                ],
+                "strapline": {
+                    "name": "Programan",
+                    "type": "LINK",
+                    "links": {
+                        "enhancedmobile": "http://www.bbc.co.uk/programmes/b00drynf",
+                        "mobile": "http://www.bbc.co.uk/programmes/b00drynf"
+                    }
+                },
+                "semanticGroupName": "AV stories live"
+            },
+            {
+                "type": "special-reports",
+                "title": "Special reports",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Àireamh bheag aig coinneimh comhairle"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19805006",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19805006"
+                        },
+                        "summary": "Cha robh ach 30 duine aig coinneamh le Comhairle na Gàidhealtachd oidhche Luain agus sgrùdadh ga dhèanamh air buidseat an ùghdarrais.",
+                        "timestamp": 1349198703,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63249457",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63249000/jpg/_63249457_dingwall_consult.jpg",
+                            "path": "/tmcs/media/images/63249000/jpg/_63249457_dingwall_consult.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Co-chomhairleachadh Comhairle na Gàidhealtachd",
+                            "copyrightHolder": "BBC"
+                        },
+                        "imageThumbnail": {
+                            "id": "63249459",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63249000/jpg/_63249459_dingwall_consult.jpg",
+                            "path": "/tmcs/media/images/63249000/jpg/_63249459_dingwall_consult.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Co-chomhairleachadh Comhairle na Gàidhealtachd",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19805006"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Cuir fios gu sgioba nan naidheachdan"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19178668",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19178668"
+                        },
+                        "summary": "Cuir fios gu sgioba nan naidheachdan",
+                        "timestamp": 1344438330,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "58042126",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/58042000/jpg/_58042126_ingest.jpg",
+                            "path": "/tmcs/media/images/58042000/jpg/_58042126_ingest.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Seòmar Naidheachd",
+                            "copyrightHolder": "bbc"
+                        },
+                        "imageThumbnail": {
+                            "id": "58042128",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/58042000/jpg/_58042128_ingest.jpg",
+                            "path": "/tmcs/media/images/58042000/jpg/_58042128_ingest.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Seòmar Naidheachd",
+                            "copyrightHolder": "bbc"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19178668"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Cead son leudachadh tuath-gaoithe"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19805007",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19805007"
+                        },
+                        "summary": "Dh' aontaich Riaghaltas na h-Alba ri planaichean airson leudachadh air tuath-gaoithe Loch Luicheart faisg air Gairbh ann an Siorrachd Rois.",
+                        "timestamp": 1349193410,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63250372",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63250000/jpg/_63250372_tv002423007.jpg",
+                            "path": "/tmcs/media/images/63250000/jpg/_63250372_tv002423007.jpg",
+                            "height": 431,
+                            "width": 767,
+                            "altText": "Muilnean gaoithe",
+                            "copyrightHolder": "PA"
+                        },
+                        "imageThumbnail": {
+                            "id": "63250374",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63250000/jpg/_63250374_tv002423007.jpg",
+                            "path": "/tmcs/media/images/63250000/jpg/_63250374_tv002423007.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Muilnean gaoithe",
+                            "copyrightHolder": "PA"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19805007"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Mayor renews demand over airport"
+                        },
+                        "locators": {
+                            "assetUri": "/news/uk-england-london-19833679",
+                            "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-london-19833679"
+                        },
+                        "summary": "The Mayor of London has renewed his call for a new airport in the Thames Estuary and accused the government of \"risking inertia\" by not making faster progress..",
+                        "timestamp": 1349373939,
+                        "cpsType": "MAP",
+                        "indexImage": {
+                            "id": "63301979",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301979_63301978.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301979_63301978.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Boris Johnson",
+                            "copyrightHolder": "BBC"
+                        },
+                        "video": {
+                            "id": "63304144",
+                            "subType": "index",
+                            "format": "video",
+                            "externalId": "p00zbz64",
+                            "duration": "PT2M26S",
+                            "caption": "Boris Johnson says the new hub is crucial for the capital's economy",
+                            "image": {
+                                "id": "63304144",
+                                "subType": "thumbnail",
+                                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301977_63301976.jpg",
+                                "path": "/tmcs/media/images/63301000/jpg/_63301977_63301976.jpg",
+                                "height": 360,
+                                "width": 640,
+                                "altText": "One suggestion is to build a runway in the Thames Estuary",
+                                "copyrightHolder": "other"
+                            },
+                            "embedding": false,
+                            "available": true,
+                            "live": false
+                        },
+                        "imageThumbnail": {
+                            "id": "63301981",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301981_63301978.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301981_63301978.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Boris Johnson",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "London",
+                            "uri": "/naidheachdan/england/london"
+                        },
+                        "id": "urn:bbc:ares::asset:news/uk-england-london-19833679"
+                    }
+                ],
+                "strapline": {
+                    "name": "Poileataigs"
+                },
+                "semanticGroupName": "Special reports"
+            },
+            {
+                "type": "featured-site-top-stories",
+                "title": "Other site promotion",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Rangers to meet ICT in League Cup"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/football/19831253",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/football/19831253"
+                        },
+                        "summary": "The Scottish League Cup draw pairs Rangers with Inverness, Dundee United and Hearts, Celtic with St Johnstone and St Mirren and Aberdeen.",
+                        "timestamp": 1349364205,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63301998",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301998_alexander_brown.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301998_alexander_brown.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Rangers goalkeeper Neil Alexander poses with former Ibrox goalie Bobby Brown",
+                            "copyrightHolder": "SNS"
+                        },
+                        "imageThumbnail": {
+                            "id": "63302118",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63302000/jpg/_63302118_alexander_brown.jpg",
+                            "path": "/tmcs/media/images/63302000/jpg/_63302118_alexander_brown.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Rangers goalkeeper Neil Alexander poses with former Ibrox goalie Bobby Brown",
+                            "copyrightHolder": "SNS"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Football",
+                            "uri": "/naidheachdan/football/scottish_league_cup"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/football/19831253"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Inverness CT v Ross County (Fri)"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/football/19754564",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/football/19754564"
+                        },
+                        "summary": "Preview followed by live coverage of Friday's game between Inverness CT and Ross County in the Scottish Premier League.",
+                        "timestamp": 1349388010,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63306336",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63306000/jpg/_63306336_foran.jpg",
+                            "path": "/tmcs/media/images/63306000/jpg/_63306336_foran.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Inverness captain Richie Foran",
+                            "copyrightHolder": "SNS"
+                        },
+                        "imageThumbnail": {
+                            "id": "63306346",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63306000/jpg/_63306346_foran.jpg",
+                            "path": "/tmcs/media/images/63306000/jpg/_63306346_foran.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Inverness captain Richie Foran",
+                            "copyrightHolder": "SNS"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Football",
+                            "uri": "/naidheachdan/football/scottish_premier_league"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/football/19754564"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Tiernan-Locke signs for Team Sky"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/cycling/19829747",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/cycling/19829747"
+                        },
+                        "summary": "Tour of Britain winner Jonathan Tiernan-Locke leaves Endura Racing and signs for Team Sky on a two-year deal.",
+                        "timestamp": 1349350453,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63289044",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63289000/jpg/_63289044_jonathan_tiernan-lock_getty2.jpg",
+                            "path": "/tmcs/media/images/63289000/jpg/_63289044_jonathan_tiernan-lock_getty2.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Jonathan Tiernan-Locke",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "imageThumbnail": {
+                            "id": "63289042",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63289000/jpg/_63289042_jonathan_tiernan-lock_getty2.jpg",
+                            "path": "/tmcs/media/images/63289000/jpg/_63289042_jonathan_tiernan-lock_getty2.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Jonathan Tiernan-Locke",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Cycling",
+                            "uri": "/naidheachdan/cycling"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/cycling/19829747"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Eagles target Super League place"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/rugby-league/19842714",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/rugby-league/19842714"
+                        },
+                        "summary": "Sheffield Eagles chairman Ian Swire says they are considering making an application for a Super League licence.",
+                        "timestamp": 1349428258,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63309934",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63309000/jpg/_63309934_sw03_featherstone-sheffield.jpg",
+                            "path": "/tmcs/media/images/63309000/jpg/_63309934_sw03_featherstone-sheffield.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Sheffield Eagles",
+                            "copyrightHolder": "SWPIX.COM"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Rugby League",
+                            "uri": "/naidheachdan/rugby_league"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/rugby-league/19842714"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "England select Shawcross & Lennon"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/football/19828475",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/football/19828475"
+                        },
+                        "summary": "Ryan Shawcross, Aaron Lennon and Fraser Forster are named in the England squad for the World Cup qualifiers.",
+                        "timestamp": 1349362804,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63286248",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63286000/jpg/_63286248_63286241.jpg",
+                            "path": "/tmcs/media/images/63286000/jpg/_63286248_63286241.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Stoke City's Ryan Shawcross",
+                            "copyrightHolder": "Empics"
+                        },
+                        "imageThumbnail": {
+                            "id": "63292905",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63292000/jpg/_63292905_63286241.jpg",
+                            "path": "/tmcs/media/images/63292000/jpg/_63292905_63286241.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Stoke City's Ryan Shawcross",
+                            "copyrightHolder": "Empics"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Football",
+                            "uri": "/naidheachdan/football"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/football/19828475"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Holt hits out at England policy2"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/football/19830762",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/football/19830762"
+                        },
+                        "summary": "Norwich's Grant Holt says he has given up on playing for England and believes other players are being denied chances.",
+                        "timestamp": 1349369503,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
+                                "categoryName": "News"
+                            }
+                        },
+                        "cpsType": "STY",
+                        "imageThumbnail": {
+                            "id": "63301345",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63301000/jpg/_63301345_149629932.jpg",
+                            "path": "/tmcs/media/images/63301000/jpg/_63301345_149629932.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Grant Holt",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Football",
+                            "uri": "/naidheachdan/football/championship/norwich"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/football/19830762"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Adams banned for doping offence"
+                        },
+                        "locators": {
+                            "assetUri": "/sport/boxing/19833884",
+                            "cpsUrn": "urn:bbc:content:assetUri:sport/boxing/19833884"
+                        },
+                        "summary": "London-based heavyweight Ali Adams is given a two-year ban for an anti-doping offence following his loss to Audley Harrison.",
+                        "timestamp": 1349359394,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63296864",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63296000/jpg/_63296864_ali_adams_getty.jpg",
+                            "path": "/tmcs/media/images/63296000/jpg/_63296864_ali_adams_getty.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Ali Adams",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "imageThumbnail": {
+                            "id": "63296863",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63296000/jpg/_63296863_ali_adams_getty.jpg",
+                            "path": "/tmcs/media/images/63296000/jpg/_63296863_ali_adams_getty.jpg",
+                            "height": 81,
+                            "width": 144,
+                            "altText": "Ali Adams",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Boxing",
+                            "uri": "/naidheachdan/boxing"
+                        },
+                        "id": "urn:bbc:ares::asset:sport/boxing/19833884"
+                    }
+                ],
+                "strapline": {
+                    "name": "Spòrs"
+                },
+                "semanticGroupName": "Other site promotion"
+            },
+            {
+                "type": "feature-main",
+                "title": "Features",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Caisteal cheatharnaich chliùitich"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19815197",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19815197"
+                        },
+                        "summary": "Dh'fhaodadh gun càrar ballachan caisteil Loch an Doirb ma gheibh tuath-gaoithe air Mòinteach Dhamh-Ath cead.",
+                        "timestamp": 1349270894,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63260996",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63260000/jpg/_63260996_lochindorb_dorothycarse.jpg",
+                            "path": "/tmcs/media/images/63260000/jpg/_63260996_lochindorb_dorothycarse.jpg",
+                            "height": 351,
+                            "width": 624,
+                            "altText": "Caisteal Loch an Doirb",
+                            "copyrightHolder": "dorothy carse/geograph"
+                        },
+                        "imageThumbnail": {
+                            "id": "63260588",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63260000/jpg/_63260588_lochindorb_dorothycarse.jpg",
+                            "path": "/tmcs/media/images/63260000/jpg/_63260588_lochindorb_dorothycarse.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Caisteal Loch an Doirb",
+                            "copyrightHolder": "Dorothy Carse/Geograph"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19815197"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Pàrras nam Feòrag"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19721604",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19721604"
+                        },
+                        "summary": "Sia de na sgìrean as fhearr airson feòragan fhaicinn faisg air Inbhir Nis.",
+                        "timestamp": 1348652781,
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "63109761",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63109000/jpg/_63109761_feoragan.jpg",
+                            "path": "/tmcs/media/images/63109000/jpg/_63109761_feoragan.jpg",
+                            "height": 261,
+                            "width": 464,
+                            "altText": "Feòrag",
+                            "caption": "Feòragan pailt mu chuairt Inbhir Nis",
+                            "copyrightHolder": "Forestry Commission Scotland"
+                        },
+                        "imageThumbnail": {
+                            "id": "63109763",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63109000/jpg/_63109763_feoragan.jpg",
+                            "path": "/tmcs/media/images/63109000/jpg/_63109763_feoragan.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Feòrag",
+                            "caption": "Feòragan pailt mu chuairt Inbhir Nis",
+                            "copyrightHolder": "Forestry Commission Scotland"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19721604"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Naidheachdan 11:00m"
+                        },
+                        "locators": {
+                            "assetUri": "/naidheachdan/19834618",
+                            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19834618"
+                        },
+                        "summary": "Geàrr-chunntas air naidheachdan 11:00m.",
+                        "timestamp": 1349358771,
+                        "cpsType": "MAP",
+                        "indexImage": {
+                            "id": "58089476",
+                            "subType": "index",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/58089000/jpg/_58089476_phones.jpg",
+                            "path": "/tmcs/media/images/58089000/jpg/_58089476_phones.jpg",
+                            "height": 360,
+                            "width": 640,
+                            "altText": "Stiùidio",
+                            "copyrightHolder": "bbc"
+                        },
+                        "video": {
+                            "id": "63296384",
+                            "subType": "index",
+                            "format": "audio",
+                            "externalId": "p00zbppy",
+                            "duration": "PT1M55S",
+                            "caption": "Geàrr-chunntas air naidheachdan 11:00m.",
+                            "image": {
+                                "id": "63296384",
+                                "subType": "thumbnail",
+                                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/58089000/jpg/_58089476_phones.jpg",
+                                "path": "/tmcs/media/images/58089000/jpg/_58089476_phones.jpg",
+                                "height": 360,
+                                "width": 640,
+                                "altText": "Stiùidio",
+                                "copyrightHolder": "bbc"
+                            },
+                            "embedding": false,
+                            "available": true,
+                            "live": false
+                        },
+                        "imageThumbnail": {
+                            "id": "63295427",
+                            "subType": "index-thumbnail",
+                            "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63295000/jpg/_63295427_phones.jpg",
+                            "path": "/tmcs/media/images/63295000/jpg/_63295427_phones.jpg",
+                            "height": 180,
+                            "width": 320,
+                            "altText": "Stiùidio",
+                            "copyrightHolder": "bbc"
+                        },
+                        "options": {
+                            "isFactCheck": false,
+                            "isBreakingNews": false
+                        },
+                        "section": {
+                            "subType": "IDX",
+                            "name": "Dachaigh",
+                            "uri": "/naidheachdan/dachaigh"
+                        },
+                        "id": "urn:bbc:ares::asset:naidheachdan/19834618"
+                    }
+                ],
+                "strapline": {
+                    "name": "Sgeulachdan aithriseach"
+                },
+                "semanticGroupName": "Features"
+            }
+        ]
+    },
+    "promo": null,
+    "relatedContent": {
+        "section": {
+            "subType": "index",
+            "name": "Dachaigh",
+            "uri": "/naidheachdan/dachaigh"
+        },
+        "site": {
+            "subType": "site",
+            "name": "Naidheachdan",
+            "uri": "/naidheachdan"
+        },
+        "groups": []
+    }
+}
