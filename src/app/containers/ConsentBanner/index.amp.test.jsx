@@ -35,9 +35,9 @@ describe('Amp Consent Banner Container', () => {
   it('should render two banners with correct amp actions and visibility', () => {
     expect(Banner).toHaveBeenCalledWith(
       {
-        acceptAction: { tap: ['cookie.show, privacy.hide'] },
+        acceptAction: 'tap:cookie.show, privacy.hide',
         promptId: 'privacy',
-        rejectAction: { tap: ['cookie.show, privacy.hide'] },
+        rejectAction: 'tap:cookie.show, privacy.hide',
         type: 'privacy',
       },
       {},
@@ -45,10 +45,10 @@ describe('Amp Consent Banner Container', () => {
 
     expect(Banner).toHaveBeenCalledWith(
       {
-        acceptAction: { tap: ['consent.accept'] },
+        acceptAction: 'tap:consent.accept',
         hidden: true,
         promptId: 'cookie',
-        rejectAction: { tap: ['consent.reject'] },
+        rejectAction: 'tap:consent.reject',
         type: 'cookie',
       },
       {},

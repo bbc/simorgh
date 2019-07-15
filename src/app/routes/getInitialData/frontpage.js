@@ -14,7 +14,7 @@ const preprocessorRules = [
 const getFrontpageInitialData = async ({ service }) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
-    : process.env.SIMORGH_FRONTPAGE_BASE_URL;
+    : process.env.SIMORGH_BASE_URL;
 
   const url = `${baseUrl}/${service}.json`;
 

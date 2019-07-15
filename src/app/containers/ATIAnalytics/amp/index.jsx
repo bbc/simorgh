@@ -1,7 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-import { atiBaseUrl } from '../atiUrl';
 
 const JsonInlinedScript = data => (
   <script
@@ -16,7 +15,7 @@ const AmpATIAnalytics = ({ pageviewParams }) => {
     <amp-analytics>
       {JsonInlinedScript(
         getAmpAnalyticsJson({
-          baseUrl: atiBaseUrl,
+          baseUrl: process.env.SIMORGH_ATI_BASE_URL,
           pageviewParams,
         }),
       )}
@@ -24,6 +23,8 @@ const AmpATIAnalytics = ({ pageviewParams }) => {
   );
 };
 
-AmpATIAnalytics.propTypes = { pageviewParams: string.isRequired };
+AmpATIAnalytics.propTypes = {
+  pageviewParams: string.isRequired,
+};
 
 export default AmpATIAnalytics;
