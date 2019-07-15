@@ -55,6 +55,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : prodPublicPath,
     },
     optimization: {
+      minimize: true,
       // specify min/max file sizes for each JS chunk for optimal performance
       splitChunks: {
         chunks: 'initial',
