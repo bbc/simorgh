@@ -14,7 +14,6 @@ import {
 } from './helpers/fixtures';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import generateAVSettings from '../../lib/utilities/audioVideo/generateAVSettings';
-import AudioVideoHead from '../../components/AudioVideoHead';
 
 const generateFixtureData = ({ platform, blocks, type }) => {
   const avBlock = {
@@ -34,15 +33,6 @@ const generateFixtureData = ({ platform, blocks, type }) => {
         pageType="article"
         service="news"
       >
-        <AudioVideoHead
-          audioVideoAssets={generateAVSettings({
-            audioVideoBlocks,
-            env: 'local',
-            platform: 'canonical',
-            statsDestination: 'NEWS_PS_TEST',
-            statsPageIdentifier: 'news.articles.c0000000031o.page',
-          })}
-        />
         <AudioVideoContainer blocks={blocks} />
       </RequestContextProvider>
     </ServiceContextProvider>

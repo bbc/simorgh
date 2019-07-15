@@ -1,7 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import deepGet from '../../lib/utilities/deepGet';
-import Canonical from './Canonical';
+import Canonical from './canonical';
+import Amp from './amp';
 import Caption from '../Caption';
 import videoMetadata from './audioVideoMetadata';
 import {
@@ -88,7 +89,9 @@ const AudioVideoContainer = ({ blocks }) => {
         <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
           {platform === 'canonical' ? (
             <Canonical id={pid} blocks={blocks} portrait={portrait} />
-          ) : null}
+          ) : (
+            <Amp />
+          )}
         </ChildWrapper>
         <ChildWrapper
           gridColumnStart={1}
