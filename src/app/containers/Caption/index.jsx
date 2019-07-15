@@ -36,8 +36,8 @@ const renderParagraph = paragraphBlock => {
   );
 };
 
-const renderCaption = (paragraphBlocks, offscreenText, script) => (
-  <Caption script={script}>
+const renderCaption = (paragraphBlocks, offscreenText, script, service) => (
+  <Caption script={script} service={service}>
     {offscreenText ? (
       <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
     ) : null}
@@ -51,6 +51,7 @@ const renderCaption = (paragraphBlocks, offscreenText, script) => (
 const CaptionContainer = ({ block, type }) => {
   const {
     script,
+    service,
     imageCaptionOffscreenText,
     videoCaptionOffscreenText,
     defaultCaptionOffscreenText,
@@ -69,7 +70,7 @@ const CaptionContainer = ({ block, type }) => {
     block,
   );
 
-  return renderCaption(paragraphBlocks, offscreenText, script);
+  return renderCaption(paragraphBlocks, offscreenText, script, service);
 };
 
 CaptionContainer.propTypes = {

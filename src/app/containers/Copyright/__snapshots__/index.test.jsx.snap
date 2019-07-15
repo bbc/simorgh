@@ -10,6 +10,7 @@ exports[`should render Copyright with news service context 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c0 {
@@ -49,6 +50,7 @@ exports[`should render Copyright with persian service context 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c0 {
