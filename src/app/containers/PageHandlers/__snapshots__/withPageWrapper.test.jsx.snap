@@ -11,6 +11,7 @@ Array [
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c1 {
@@ -35,9 +36,11 @@ Array [
 
 .c4 {
   box-sizing: content-box;
-  fill: #FFFFFF;
+  color: #FFFFFF;
+  fill: currentColor;
   padding-top: 1rem;
   padding-bottom: 0.75rem;
+  height: 1.5rem;
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
@@ -126,6 +129,7 @@ Array [
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c2 {
@@ -150,9 +154,11 @@ Array [
 
 .c5 {
   box-sizing: content-box;
-  fill: #FFFFFF;
+  color: #FFFFFF;
+  fill: currentColor;
   padding-top: 1rem;
   padding-bottom: 0.75rem;
+  height: 1.5rem;
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
@@ -214,6 +220,8 @@ Array [
   font-size: 0.875rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c8 {
