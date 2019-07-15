@@ -69,26 +69,26 @@ const noMediaFormat = {
 describe('Story Promo Media Indicator', () => {
   shouldShallowMatchSnapshot(
     'should render correctly',
-    <MediaIndicator item={item} />,
+    <MediaIndicator item={item} service="news" />,
   );
 
   shouldShallowMatchSnapshot(
     'should render correctly even without duration',
-    <MediaIndicator item={noDurationItem} />,
+    <MediaIndicator item={noDurationItem} service="news" />,
   );
 
   shouldShallowMatchSnapshot(
     'should not render if item media object has no format',
-    <MediaIndicator item={noMediaFormat} />,
+    <MediaIndicator item={noMediaFormat} service="news" />,
   );
 
   isNull(
     'should not render if item is not media',
-    <MediaIndicator item={nonMediaItem} />,
+    <MediaIndicator item={nonMediaItem} service="news" />,
   );
 
   isNull(
     'should not render if item media object is missing',
-    <MediaIndicator item={noMediaObject} />,
+    <MediaIndicator item={noMediaObject} service="news" />,
   );
 });

@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
+const { DuplicatesPlugin } = require('inspectpack/plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
@@ -86,6 +87,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           from: 'public',
         },
       ]),
+      new DuplicatesPlugin({
+        // Emit compilation warning or error? (Default: `false`)
+        emitErrors: true,
+        // Display full duplicates information? (Default: `false`)
+        verbose: true,
+      }),
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
