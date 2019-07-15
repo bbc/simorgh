@@ -81,6 +81,9 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c3 {
@@ -121,6 +124,9 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #222222;
@@ -455,6 +461,9 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c3 {
@@ -501,6 +510,9 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #222222;
@@ -844,6 +856,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c3 {
@@ -884,6 +899,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #222222;
@@ -1202,6 +1220,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c3 {
@@ -1248,6 +1269,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #222222;
@@ -1575,6 +1599,9 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c3 {
@@ -1847,6 +1874,9 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c3 {
@@ -2134,6 +2164,9 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c3 {
@@ -2174,6 +2207,9 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #222222;
@@ -2505,6 +2541,9 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c3 {
@@ -2551,6 +2590,9 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #222222;

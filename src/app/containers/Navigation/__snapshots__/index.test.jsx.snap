@@ -146,6 +146,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       },
     }
   }
+  service="igbo"
   skipLinkText="Wụga n’ọdịnaya"
 >
   <NavigationUl>
@@ -297,6 +298,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           },
         }
       }
+      service="igbo"
       url="/igbo"
     >
       Akụkọ
@@ -449,6 +451,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           },
         }
       }
+      service="igbo"
       url="/igbo/egwuregwu"
     >
       Egwuregwu
@@ -601,6 +604,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           },
         }
       }
+      service="igbo"
       url="/igbo/media/video"
     >
       Ihe nkiri
@@ -753,6 +757,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           },
         }
       }
+      service="igbo"
       url="/igbo/popular/read"
     >
       Nke ka ewuewu

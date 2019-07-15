@@ -84,6 +84,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           format="D MMMM YYYY"
           script={script}
           padding={false}
+          service={service}
         />
       )}
     </Fragment>
@@ -98,7 +99,9 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
     <StoryPromoComponent
       image={Image}
       info={Info}
-      mediaIndicator={<MediaIndicator item={item} topStory={topStory} />}
+      mediaIndicator={
+        <MediaIndicator item={item} topStory={topStory} service={service} />
+      }
       topStory={topStory}
     />
   );
