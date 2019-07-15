@@ -1,9 +1,9 @@
-import services from '../../cypressSharedHelpers/config/services';
+import services from '../support/config/services';
 import {
   getElement,
   hasHtmlLangDirAttributes,
-} from '../../cypressSharedHelpers/bodyTestHelper';
-import { checkCanonicalURL } from '../../cypressSharedHelpers/metaTestHelper';
+} from '../support/bodyTestHelper';
+import { checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef

@@ -18,7 +18,7 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
     └── support                     # Helper utilities for tests
         └── config*
 
-\*Config exists in 2 places. Configs for running tests are in `/support/config/` and `cypressSharedHelpers/config/`. Config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
+\*Config exists in 2 places. Configs for running tests are in `/support/config/` and `3rdPartyCypress/cypress/support/config/`. Config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
 
 ## Running Test
 

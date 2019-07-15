@@ -1,6 +1,6 @@
-import services from '../../cypressSharedHelpers/config/services';
-import { getElement } from '../../cypressSharedHelpers/bodyTestHelper';
-import { checkCanonicalURL } from '../../cypressSharedHelpers/metaTestHelper';
+import services from '../support/config/services';
+import { getElement } from '../support/bodyTestHelper';
+import { checkCanonicalURL } from '../support/metaTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.

@@ -3,7 +3,7 @@ import {
   errorPageInlineLink,
   errorTitle,
   hasHtmlLangDirAttributes,
-} from '../../cypressSharedHelpers/bodyTestHelper';
+} from '../support/bodyTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 import news from '../../src/app/lib/config/services/news';
 

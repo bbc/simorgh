@@ -1,4 +1,4 @@
-import config from '../../cypressSharedHelpers/config/services';
+import config from '../support/config/services';
 import {
   copyrightDataWindow,
   headlineDataWindow,
@@ -9,7 +9,7 @@ import {
   visibleImageNoCaption,
   visibleImageWithCaption,
   shouldContainText,
-} from '../../cypressSharedHelpers/bodyTestHelper';
+} from '../support/bodyTestHelper';
 
 const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;

@@ -1,5 +1,5 @@
 import envConfig from '../support/config/envs';
-import services from '../../cypressSharedHelpers/config/services';
+import services from '../support/config/services';
 import {
   describeForLocalOnly,
   describeForLocalAndTest,

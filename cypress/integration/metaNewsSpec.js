@@ -1,10 +1,10 @@
 import envConfig from '../support/config/envs';
-import services from '../../cypressSharedHelpers/config/services';
+import services from '../support/config/services';
 import {
   getElement,
   getSecondElement,
   hasHtmlLangDirAttributes,
-} from '../../cypressSharedHelpers/bodyTestHelper';
+} from '../support/bodyTestHelper';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -14,7 +14,7 @@ import {
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
-} from '../../cypressSharedHelpers/metaTestHelper';
+} from '../support/metaTestHelper';
 
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef

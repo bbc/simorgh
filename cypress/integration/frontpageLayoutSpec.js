@@ -1,4 +1,4 @@
-import services from '../../cypressSharedHelpers/config/services';
+import services from '../support/config/services';
 import { el } from '../support/frontpageElements';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 

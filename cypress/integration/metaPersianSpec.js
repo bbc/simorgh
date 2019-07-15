@@ -1,4 +1,4 @@
-import services from '../../cypressSharedHelpers/config/services';
+import services from '../support/config/services';
 import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import {
   checkAmpHTML,
@@ -9,8 +9,8 @@ import {
   openGraphMeta,
   retrieveMetaDataContent,
   twitterMeta,
-} from '../../cypressSharedHelpers/metaTestHelper';
-import { hasHtmlLangDirAttributes } from '../../cypressSharedHelpers/bodyTestHelper';
+} from '../support/metaTestHelper';
+import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 
 describeForLocalAndTest('Persian Article Meta Tests', () => {
   // eslint-disable-next-line no-undef

@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 global.Cypress = { env: () => 'local' };
 
-const config = require('../cypressSharedHelpers/config/services').default;
+const config = require('../cypress/support/config/services').default;
 
 let browser;
 let page;

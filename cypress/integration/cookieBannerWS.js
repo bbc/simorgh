@@ -1,4 +1,4 @@
-import { worldServiceCookieBannerTranslations } from '../../cypressSharedHelpers/bodyTestHelper';
+import { worldServiceCookieBannerTranslations } from '../support/bodyTestHelper';
 import describeForEuOnly from '../support/describeForEuOnly';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 import services from '../../src/app/lib/config/services';

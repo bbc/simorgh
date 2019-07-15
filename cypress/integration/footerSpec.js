@@ -1,9 +1,9 @@
-import services from '../../cypressSharedHelpers/config/services';
+import services from '../support/config/services';
 import {
   checkFooterLinks,
   getElement,
   shouldContainText,
-} from '../../cypressSharedHelpers/bodyTestHelper';
+} from '../support/bodyTestHelper';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
