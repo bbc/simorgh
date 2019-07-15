@@ -26,7 +26,9 @@ To conditionally render a component based on the value of a toggle you can eithe
 ### Rendering a fallback UI component if the toggle value is set to false
 
 ```
-<Toggle toggleName="foo" fallbackComponent={<h1>I am the fallback UI</h1>}>
+const FallbackUI = () => (<h1>I am the fallback UI</h1>)
+
+<Toggle toggleName="foo" FallbackComponent={FallbackUI}>
     <ChildComponent>
         <p>If the toggle foo is set to false the fallbackComponent will be rendered here instead.</p>
     </ChildComponent>
