@@ -281,6 +281,9 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 .c6 {
   color: #6E6E73;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -462,6 +465,9 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 .c5 {
   color: #6E6E73;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -633,6 +639,9 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 .c5 {
   color: #6E6E73;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -1384,6 +1393,9 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 .c7 {
   color: #6E6E73;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -1571,6 +1583,9 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 .c6 {
   color: #6E6E73;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -1748,6 +1763,9 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 .c6 {
   color: #6E6E73;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
