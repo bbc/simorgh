@@ -50,7 +50,9 @@ Object.keys(services)
             if (
               fontFamily &&
               !fontFamiliesArray.includes(fontFamily) &&
-              fontFamily.startsWith(`${services[service].pageTypes.fontStartsWith}`)
+              fontFamily.startsWith(
+                `${services[service].pageTypes.fontStartsWith}`,
+              )
             ) {
               fontFamiliesArray.push(fontFamily);
             }
