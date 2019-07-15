@@ -99,7 +99,7 @@ describe('FrontPageContainer', () => {
         );
 
         const { textContent } = container.querySelector('main');
-        expect(textContent).toContain('Internal server error');
+        expect(textContent).toContain('Mperi');
         expect(textContent).not.toContain('FrontPageMain');
       });
 
