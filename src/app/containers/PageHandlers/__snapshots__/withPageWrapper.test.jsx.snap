@@ -219,6 +219,9 @@ Array [
   background-color: #222222;
   font-size: 0.875rem;
   line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c8 {

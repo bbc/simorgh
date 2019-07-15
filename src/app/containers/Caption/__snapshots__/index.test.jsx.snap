@@ -17,6 +17,9 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   font-size: 1.0625rem;
   line-height: 1.5rem;
   color: #6E6E73;
+  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -91,6 +94,9 @@ exports[`should render caption text with example News offscreen text 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #6E6E73;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -165,6 +171,9 @@ exports[`should render caption with mutiple paragraphs 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #6E6E73;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }

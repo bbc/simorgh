@@ -22,6 +22,9 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -30,6 +33,9 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -390,6 +396,9 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -398,6 +407,9 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -773,6 +785,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -781,6 +796,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1125,6 +1143,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1133,6 +1154,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1492,6 +1516,9 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1500,6 +1527,9 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1758,6 +1788,9 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1766,6 +1799,9 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2039,6 +2075,9 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2047,6 +2086,9 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2404,6 +2446,9 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -2412,6 +2457,9 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding-bottom: 0.5rem;
 }
