@@ -79,14 +79,14 @@ const Amp = () => (
       <div id={promptId}>
         <Banner
           type="privacy"
-          acceptAction={{ tap: [`${cookieId}.show, ${privacyId}.hide`] }}
-          rejectAction={{ tap: [`${cookieId}.show, ${privacyId}.hide`] }}
+          acceptAction={`tap:${cookieId}.show, ${privacyId}.hide`}
+          rejectAction={`tap:${cookieId}.show, ${privacyId}.hide`}
           promptId={privacyId}
         />
         <Banner
           type="cookie"
-          acceptAction={{ tap: [`${parentId}.accept`] }}
-          rejectAction={{ tap: [`${parentId}.reject`] }}
+          acceptAction={`tap:${parentId}.accept`}
+          rejectAction={`tap:${parentId}.reject`}
           promptId={cookieId}
           hidden
         />
