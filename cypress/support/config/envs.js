@@ -5,6 +5,7 @@ const config = {
     assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
     assetOrigin: 'https://news.files.bbci.co.uk',
     atiAnalyticsWSBucket: '598342',
+    atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -12,6 +13,7 @@ const config = {
     assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
     assetOrigin: 'https://news.test.files.bbci.co.uk',
     atiAnalyticsWSBucket: '598343',
+    atiUrl: 'https://logws1363.ati-host.net?',
   },
   local: {
     baseUrl: 'http://localhost.bbc.com:7080',
@@ -19,6 +21,7 @@ const config = {
     assetUrl: 'http://localhost.bbc.com:7080',
     assetOrigin: 'http://localhost.bbc.com:7080',
     atiAnalyticsWSBucket: '598343',
+    atiUrl: 'https://logws1363.ati-host.net?',
   },
 };
 
