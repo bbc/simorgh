@@ -25,7 +25,7 @@ Object.keys(services)
   .forEach(service => {
     describe(`${service} Article Meta Tests`, () => {
       // eslint-disable-next-line no-undef
-      before(() => {
+      beforeEach(() => {
         cy.visit(
           `/${service}/articles/${services[service].pageTypes.articles.asset}`,
         );
@@ -50,7 +50,7 @@ Object.keys(services)
             if (
               fontFamily &&
               !fontFamiliesArray.includes(fontFamily) &&
-              fontFamily.startsWith('Reith')
+              fontFamily.startsWith(`${services[service].pageTypes.fontStartsWith}`)
             ) {
               fontFamiliesArray.push(fontFamily);
             }
