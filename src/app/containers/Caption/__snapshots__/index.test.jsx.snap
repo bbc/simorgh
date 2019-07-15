@@ -10,14 +10,13 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c0 {
   font-size: 1.0625rem;
   line-height: 1.5rem;
   color: #6E6E73;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -85,14 +84,13 @@ exports[`should render caption text with example News offscreen text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #6E6E73;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -160,14 +158,13 @@ exports[`should render caption with mutiple paragraphs 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c0 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #6E6E73;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
