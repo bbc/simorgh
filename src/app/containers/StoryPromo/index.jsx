@@ -52,7 +52,7 @@ StoryPromoImage.propTypes = {
 };
 
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
-  const { script, datetimeLocale } = useContext(ServiceContext);
+  const { script, datetimeLocale, service } = useContext(ServiceContext);
   const headline = deepGet(['headlines', 'headline'], item);
   const url = deepGet(['locators', 'assetUri'], item);
   const summary = deepGet(['summary'], item);
@@ -65,14 +65,14 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const Info = (
     <Fragment>
       {headline && (
-        <Headline script={script} topStory={topStory}>
+        <Headline script={script} service={service} topStory={topStory}>
           <Link href={url}>
             <LinkContents item={item} />
           </Link>
         </Headline>
       )}
       {summary && (
-        <Summary script={script} topStory={topStory}>
+        <Summary script={script} service={service} topStory={topStory}>
           {summary}
         </Summary>
       )}
@@ -84,6 +84,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           format="D MMMM YYYY"
           script={script}
           padding={false}
+          service={service}
         />
       )}
     </Fragment>
@@ -98,7 +99,9 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
     <StoryPromoComponent
       image={Image}
       info={Info}
-      mediaIndicator={<MediaIndicator item={item} topStory={topStory} />}
+      mediaIndicator={
+        <MediaIndicator item={item} topStory={topStory} service={service} />
+      }
       topStory={topStory}
     />
   );
