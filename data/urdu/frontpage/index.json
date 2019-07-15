@@ -1,0 +1,2687 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::index:urdu/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/urdu/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:urdu/front_page",
+      "curie": "http://www.bbc.co.uk/asset/3d1502ce-7d77-f9bf-e050-380a4e8011de/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "urdu-v6",
+    "language": "ur",
+    "lastUpdated": 1562931663769,
+    "firstPublished": 1474550213,
+    "lastPublished": 1562931656,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "urdu.page",
+      "cps_asset_id": "37438387",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [
+      "top-story",
+      "secondary-top-story",
+      "special-reports",
+      "picture-gallery-stories",
+      "single-section-digest",
+      "featured-site-top-stories",
+      "av-stories-now",
+      "programmes-standard",
+      "section-digest",
+      "feature-main"
+    ],
+    "title": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
+    "summary": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔"
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "top-story",
+        "title": "Top story",
+        "maxRelatedLinks": 4,
+        "items": [
+          {
+            "headlines": {
+              "headline": "وزارت قانون کا جج ارشد ملک کو کام کرنے سے روکنے کا حکم"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48962005",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48962005"
+            },
+            "summary": "وفاقی وزیر قانون ڈاکٹر فروغ نسیم نے کہا ہے کہ احتساب عدالت کے جج ارشد ملک کو فوری طور پر مزید کام کرنے سے روک دیا گیا ہے اور انہیں محکمہ قانون کو رپورٹ کرنے کا کہا گیا ہے۔",
+            "timestamp": 1562931653,
+            "byline": {
+              "name": "شہزاد ملک  ",
+              "title": "بی بی سی اردو ڈاٹ کام، اسلام آباد",
+              "persons": [
+                {
+                  "name": "شہزاد ملک",
+                  "function": "بی بی سی اردو ڈاٹ کام، اسلام آباد"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107846645",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D588/production/_107846645_5b55afcc-831d-464d-892c-2ea2d6dc19c1.jpg",
+              "path": "/cpsprodpb/D588/production/_107846645_5b55afcc-831d-464d-892c-2ea2d6dc19c1.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "ارشد ملک",
+              "copyrightHolder": "Rehan Dashti"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "’نواز شریف کو جیل بھیجنے والے جج دباؤ میں تھے‘"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-48893349",
+                  "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-48893349"
+                },
+                "summary": "مریم نواز نے پاناما مقدمے میں نواز شریف کو جیل بھیجنے والے جج کی ایک ویڈیو جاری کی ہے جس میں جج فیصلہ لکھنے سے متعلق کچھ ’نامعلوم افراد‘ کی طرف سے دباؤ کے بارے میں بتا رہے ہیں۔",
+                "timestamp": 1562419930,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:urdu/pakistan-48893349",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "ججوں کی آڈیوز، ویڈیوز اور تاریخی اعترافات"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-48904617",
+                  "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-48904617"
+                },
+                "summary": "عدالتی تاریخ میں ججز کی ایسی ویڈیوز، آڈیوز یا اعترافی بیانات سامنے آئے جن کو مد نظر رکھ کر یہ اندازہ لگایا جا سکتا ہے کہ ایک جج کو کس طرح کی مشکلات یا دباؤ کا سامنا رہتا ہے۔",
+                "timestamp": 1562585313,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:urdu/pakistan-48904617",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48962005",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Top story - Urdu"
+        },
+        "semanticGroupName": "Top story"
+      },
+      {
+        "type": "secondary-top-story",
+        "title": "More top stories",
+        "maxRelatedLinks": 2,
+        "items": [
+          {
+            "headlines": {
+              "headline": "’انسانی حقوق کی خلاف ورزی کے ملزم کو کیوں تعینات کیا؟‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48954185",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48954185"
+            },
+            "summary": "سندھ میں انسانی حقوق کی وزارت کے نئے فوکل پرسن افتخار لوند کی تعنیاتی پر کمیٹی سینیٹ برائے انسانی حقوق نے نوٹس لے لیا ہے جن پر الزام تھا کہ انھوں نے اپنے ملازم پر تشدد کیا ہے۔",
+            "timestamp": 1562927802,
+            "byline": {
+              "name": "ریاض سہیل ",
+              "title": "بی بی سی اردو ڈاٹ کام، کراچی",
+              "persons": [
+                {
+                  "name": "ریاض سہیل",
+                  "function": "بی بی سی اردو ڈاٹ کام، کراچی"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107840098",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15BAC/production/_107840098_withmazari.jpg",
+              "path": "/cpsprodpb/15BAC/production/_107840098_withmazari.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "میر افتخار",
+              "copyrightHolder": "FACEBOOK"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "حراست کے دوران ’چمڑے کے پٹّے سے مارا جاتا تھا‘"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-41750715",
+                  "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-41750715"
+                },
+                "summary": "رواں سال کے دوران لاپتہ ہونے والے پاکستانی بلاگر عاصم سعید جنھوں نے اس وقت برطانیہ میں سیاسی پناہ کی درخواست دے رکھی ہے نے الزام لگایا ہے کہ ان پر دورانِ گمشدگی ’سرکاری خفیہ ایجنسی‘ نے تشدد کیا۔",
+                "timestamp": 1508935129,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:urdu/pakistan-41750715",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48954185",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "’شاہ محمود اور خالی کرسیوں سے خطاب کا تجربہ‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48960456",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48960456"
+            },
+            "summary": "وزیر خارجہ شاہ محمود قریشی نے پاکستان میں سینسرشپ کو مغربی میڈیا کی طرف سے پھیلایا جانے والا منفی تاثر قرار دیا ہے تاہم ناقدین ان کے بیان کو زمینی حقائق کے منافی قرار دے رہے ہیں۔",
+            "timestamp": 1562921376,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107845128",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/140EA/production/_107845128_shahone.jpg",
+              "path": "/cpsprodpb/140EA/production/_107845128_shahone.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "لندن کانفرنس",
+              "caption": "سنسر شپ ہے نہ مانیٹرنگ اور نہ ہی کوئی دباؤ ہے",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "نشریات کی معطلی: ’یہ نہیں پتا چلتا کہ حکم آتا کہاں سے ہے‘"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-48917775",
+                  "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-48917775"
+                },
+                "summary": "پاکستان میں تین ٹی وی چینلز کی نشریات 19 گھنٹے سے زیادہ عرصے تک معطلی کے بعد بحال ہو گئیں تاہم چینلز کی انتظامیہ کا کہنا ہے کہ وہ نہیں جانتے کہ نشریات کیوں اور کس کی ہدایت پر معطل ہوئی تھیں۔",
+                "timestamp": 1562662194,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:urdu/pakistan-48917775",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48960456",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "غلام علی: کراٹے کی دنیا کا پاکستانی ’بادشاہ گر’"
+            },
+            "locators": {
+              "assetUri": "/urdu/sport-48905087",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-48905087"
+            },
+            "summary": "اتار چڑھاؤ سے بھرپور 37 سالہ سفر کے دوران کوئٹہ کے علاقے ہزارہ ٹاؤن کے رہائشی غلام علی نے سائیکلیں بھی بنائیں، موٹر سائیکلوں کی مرمت بھی کی اور لوگوں کے کپڑے بھی سیے۔",
+            "timestamp": 1562904625,
+            "byline": {
+              "name": "موسیٰ یاوری",
+              "title": "بی بی سی اردو ڈاٹ کام، کوئٹہ",
+              "persons": [
+                {
+                  "name": "موسیٰ یاوری",
+                  "function": "بی بی سی اردو"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107845513",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7B42/production/_107845513_1.jpg",
+              "path": "/cpsprodpb/7B42/production/_107845513_1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "کراٹے",
+              "caption": "غلام علی کی شاگرد لڑکیوں نے ساؤتھ ایشین گیمز میں گولڈ میڈلز جیتنے کی ہیٹ ٹرک کی",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "’جو مخالف تھے وہی اب حوصلہ افزائی کرتے ہیں‘"
+                },
+                "locators": {
+                  "assetUri": "/urdu/sport-43167380",
+                  "cpsUrn": "urn:bbc:content:assetUri:/urdu/sport-43167380"
+                },
+                "summary": "کوئٹہ سے تعلق رکھنے والی کلثوم ہزارہ نے سارک کھیلوں میں کراٹے میں سونے کا تمغہ جیتنے کی ہیٹ ٹرک کی ہے اور اب ان کی نظریں اولمپک مقابلوں پر ہیں۔ دیکھیے موسیٰ یاوری کی رپورٹ۔",
+                "timestamp": 1519701428,
+                "cpsType": "MAP",
+                "id": "urn:bbc:ares::asset:urdu/sport-43167380",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:urdu/sport-48905087",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "More top stories"
+      },
+      {
+        "type": "special-reports",
+        "title": "Special reports 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "میرٹھ کے سرحدی علاقے، ہندو مسلمان دونوں ہی خوفزدہ"
+            },
+            "locators": {
+              "assetUri": "/urdu/regional-48949463",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-48949463"
+            },
+            "summary": "میرٹھ میں جب امن ہو تو زیادہ تر لوگ اچھے ہمسایوں کی طرح رہتے ہیں مگر جب شہر میں کشیدگی ہو تو ایسا محسوس ہوتا ہے کہ آج کی رات قیامت کی رات ثابت ہو گی۔",
+            "timestamp": 1562890835,
+            "byline": {
+              "name": "سہیل حلیم",
+              "title": "بی بی سی اردو، دہلی",
+              "persons": [
+                {
+                  "name": "سہیل حلیم",
+                  "function": "بی بی سی اردو، دہلی"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107833108",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/13905/production/_107833108_43b06546-0b60-46ce-bec1-16d4528610a1.jpg",
+              "path": "/cpsprodpb/13905/production/_107833108_43b06546-0b60-46ce-bec1-16d4528610a1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "گھنٹہ گھر",
+              "copyrightHolder": "BBC/ SAMEERATMAJ MISHRA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/regional-48949463",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "پاکستان میں ریل کا سفر محفوظ کیوں نہیں رہا؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48933804",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48933804"
+            },
+            "summary": "کسی زمانے میں محفوظ ترین قرار دیا جانے والا ریل کا سفر پاکستان میں اب اتنا محفوظ نہیں رہا، اس کی بنیادی وجوہات فرسودہ ریلوے ٹریک اور سگنل کا نظام اور افرادی قوت کی کمی ہے۔",
+            "timestamp": 1562900412,
+            "byline": {
+              "name": "دانش حسین",
+              "title": "بی بی سی اردو ڈاٹ کام، اسلام آباد",
+              "persons": [
+                {
+                  "name": "دانش حسین",
+                  "function": "بی بی سی اردو"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107844793",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9B40/production/_107844793_train222.jpg",
+              "path": "/cpsprodpb/9B40/production/_107844793_train222.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ٹرین",
+              "caption": "صادق آباد کے قریب کوئٹہ جانے والی اکبر ایکسپریس کو پیش آئے حادثے میں اب تک 20 سے زائد افراد ہلاک جبکہ 60 سے زائد زخمی ہوئے ہیں",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48933804",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "کیا میٹھے مشروبات کینسر کا باعث بنتے ہیں؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/science-48954183",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/science-48954183"
+            },
+            "summary": "ایک برطانوی جریدے میں شائع ہونے والی تحقیق کے مطابق ایک ہفتے میں میٹھے مشروب کے دو کین پینے سے کینسر کا مرض لاحق ہونے کا خطرہ 18 فیصد تک بڑھ جاتا ہے۔",
+            "timestamp": 1562915663,
+            "byline": {
+              "name": "جیمز  گالاهر",
+              "title": "نامہ نگار صحت و سائنس، بی بی سی نیوز ",
+              "persons": [
+                {
+                  "name": "جیمز گالاهر",
+                  "function": "گزارشگر علوم و بهداشت"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107837459",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/174F1/production/_107837459__107821211_gettyimages-178087070.jpg",
+              "path": "/cpsprodpb/174F1/production/_107837459__107821211_gettyimages-178087070.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "مشروب",
+              "caption": "تحقیق میں یہ بات سامنے آئی ہے کہ میٹھے مشروبات استعمال کرنے والے ہر ایک ہزار افراد میں سے 22 افراد کینسر کے مرض میں مبتلا تھے",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/science-48954183",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "آخر کنگنا رناوت کو اتنا غصہ کیوں آتا ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/entertainment-48960075",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-48960075"
+            },
+            "summary": "اس ہفتے کی شوبز ڈائری میں پڑھیے کنگنا رناوت کا صحافی سے ہوئے تازہ جھگڑے کا احوال اور جانیے کہ شاہ رخ خان اور ان کے صاحبزادے فلم 'لائن کِنگ‘ میں کیا کر رہے ہیں؟",
+            "timestamp": 1562906118,
+            "byline": {
+              "name": "نصرت جہاں  ",
+              "title": "بی بی سی اردو ڈاٹ کام، لندن",
+              "persons": [
+                {
+                  "name": "نصرت جہاں",
+                  "function": "بی بی سی اردو ڈاٹ کام، لندن"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107844660",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/19F4/production/_107844660_gettyimages-957413822.jpg",
+              "path": "/cpsprodpb/19F4/production/_107844660_gettyimages-957413822.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "کنگنا رناوت",
+              "caption": "اس بار کنگنا کا جھگڑا رتک روشن یا کرن جوہر سے نہیں بلکہ ایک صحافی جسٹن راؤ سے ہوا ہے",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/entertainment-48960075",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Special reports 1"
+      },
+      {
+        "type": "picture-gallery-stories",
+        "title": "Picture galleries",
+        "items": [
+          {
+            "headlines": {
+              "headline": "باربرداری کے انوکھے انداز"
+            },
+            "locators": {
+              "assetUri": "/urdu/world-48933802",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/world-48933802"
+            },
+            "summary": "سامان لادنے کے موضوع پر ہمارے قارئین نے اپنی کھینچی ہوئی مختلف تصاویر بھیجی ہیں جن میں اس کے انوکھے انداز دیکھے جاسکتے ہیں۔",
+            "timestamp": 1562814149,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "PGL",
+            "indexImage": {
+              "id": "107818104",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9CF5/production/_107818104_mediaitem107818103.jpg",
+              "path": "/cpsprodpb/9CF5/production/_107818104_mediaitem107818103.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ہو چی من میں موٹر سائیکل پر لادھا ہوا سامان",
+              "copyrightHolder": "JOANNE DITCHAM"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/world-48933802",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "بنگلہ دیش میں روہنگیا پناہ گزینوں کی زندگی مشکل تر"
+            },
+            "locators": {
+              "assetUri": "/urdu/regional-48933801",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-48933801"
+            },
+            "summary": "بنگلہ دیش میں روہنگیا پناہ گزینوں کے کیمپوں میں مون سون کی شدید بارشوں کا پانی گھر آنے سے ہزاروں لوگ دربدر ہو گئے ہیں",
+            "timestamp": 1562748719,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107787874",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/BB06/production/_107787874_66d26983-f1c1-4e22-ad36-accb1a6982c2.jpg",
+              "path": "/cpsprodpb/BB06/production/_107787874_66d26983-f1c1-4e22-ad36-accb1a6982c2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Boy with umbrella in front of flooded village",
+              "copyrightHolder": "UNICEF"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/regional-48933801",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "تصاویر",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/media/photogalleries",
+            "desktop": "http://www.bbc.com/urdu/media/photogalleries",
+            "mobile": "http://www.bbc.com/urdu/media/photogalleries",
+            "enhancedmobile": "http://www.bbc.com/urdu/media/photogalleries"
+          }
+        },
+        "semanticGroupName": "Picture galleries"
+      },
+      {
+        "type": "single-section-digest",
+        "title": "Section 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "حاصل بزنجو کے چیئرمین سینیٹ بننے کے کتنے امکانات؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48948754",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48948754"
+            },
+            "summary": "سینیٹ میں اپوزیشن جماعتوں نے چیئرمین صادق سنجرانی کے خلاف عدم اعتماد کی قرارداد جمع کروانے کے بعد حاصل بزنجو کو اس عہدے کے لیے مشترکہ امیدوار نامزد کیا ہے۔",
+            "timestamp": 1562841624,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832504",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9E4B/production/_107832504_efb62c12-4c12-4332-a700-7f4fff127d75.jpg",
+              "path": "/cpsprodpb/9E4B/production/_107832504_efb62c12-4c12-4332-a700-7f4fff127d75.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "حاصل بزنجو",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48948754",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "صوفی محمد اور شدت پسندی کی لہر"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48933808",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48933808"
+            },
+            "summary": "افغانستان میں ہزاروں نوجوان رضاکار جنگجوؤں کی موت کا ذمہ دار قرار دیے جانے والے کالعدم تنظیم تحریک نفاذ شریعت کے بانی اور مرکزی امیر صوفی محمد پشاور میں وفات پا گئے۔",
+            "timestamp": 1562848243,
+            "byline": {
+              "name": "رفعت اللہ اورکزئی  ",
+              "title": "بی بی سی اردو ڈاٹ کام، پشاور ",
+              "persons": [
+                {
+                  "name": "رفعت اللہ اورکزئئ",
+                  "function": "بی بی سی اردو ڈاٹ کام، پشاور"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99518329",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/168DD/production/_99518329_b1088be1-b665-43b9-8a64-1d2000fbd3e2.jpg",
+              "path": "/cpsprodpb/168DD/production/_99518329_b1088be1-b665-43b9-8a64-1d2000fbd3e2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "مولانا صوفی",
+              "caption": "صوفی محمد وہ شخص ہیں جنھوں نے اپنی سوچ اور عقائد کی وجہ سے اپنی عمر کا ایک بڑا حصہ قید میں گزارا ہے",
+              "copyrightHolder": "FILE PHOTO"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48933808",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "پاکستان",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/pakistan",
+            "desktop": "http://www.bbc.com/urdu/pakistan",
+            "mobile": "http://www.bbc.com/urdu/pakistan",
+            "enhancedmobile": "http://www.bbc.com/urdu/pakistan"
+          }
+        },
+        "semanticGroupName": "Section 1"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "Sport",
+        "items": [
+          {
+            "headlines": {
+              "headline": "انگلینڈ کی ٹیم 27 سال بعد فائنل میں پہنچ گئی"
+            },
+            "locators": {
+              "assetUri": "/urdu/live/sport-48949173",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/live/sport-48949173"
+            },
+            "summary": "کرکٹ ورلڈ کپ 2019 کے دوسرے سیمی فائنل میں میزبان انگلینڈ نے دفاعی چیمپیئن آسٹریلیا کے 224 رنز کے ہدف کے تعاقب میں جیسن رائے کی شاندار بیٹنگ کی بدولت آٹھ وکٹوں سے کامیابی حاصل کر کے فائنل میں رسائی حاصل کر لی ہے۔",
+            "timestamp": 1562834007,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "LIV",
+            "indexImage": {
+              "id": "107841779",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17DB2/production/_107841779_gettyimages-1161413895.jpg",
+              "path": "/cpsprodpb/17DB2/production/_107841779_gettyimages-1161413895.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "کرکٹ",
+              "copyrightHolder": "Getty Images"
+            },
+            "commentary": {
+              "order": "descending",
+              "assetUUID": "75C7ECADC2A76042A0582D83D73948C2",
+              "channels": {
+                "enhancedmobile": "bbc.cps.asset.48949174_EnhancedMobile",
+                "desktop": "bbc.cps.asset.48949174_HighWeb",
+                "highweb": "bbc.cps.asset.48949174_HighWeb",
+                "mobile": "bbc.cps.asset.48949174_EnhancedMobile"
+              }
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/live/sport-48949173",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "'جب فنچ نے پہلے بیٹنگ کا فیصلہ کیا'"
+            },
+            "locators": {
+              "assetUri": "/urdu/sport-48958653",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-48958653"
+            },
+            "summary": "بظاہر میچ کے 80 اوورز مکمل ہونے پر مورگن کا چوکا آسٹریلیا کی شکست کا اعلان ثابت ہوا مگر دراصل آسٹریلیا میچ شروع ہونے سے آدھا گھنٹہ قبل ہی ہار چکا تھا جب فنچ نے پہلے بیٹنگ کا فیصلہ کیا۔",
+            "timestamp": 1562871864,
+            "byline": {
+              "name": "سمیع چوہدری  ",
+              "title": "کرکٹ تجزیہ کار",
+              "persons": [
+                {
+                  "name": "سمیع چوہدری",
+                  "function": "کرکٹ تجزیہ کار"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107843142",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5E46/production/_107843142_gettyimages-1161341321.jpg",
+              "path": "/cpsprodpb/5E46/production/_107843142_gettyimages-1161341321.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "فنچ نے پہلے بیٹنگ کا فیصلہ کر کے خود ہی اپنے پاؤں پہ کلہاڑی مار لی اور جب بیٹنگ کے لیے بھی آئے تو اپنے قدم کریز میں جمانے کی بجائے اٹکھیلیاں کرنے کی کوشش کی",
+              "caption": "فنچ نے پہلے بیٹنگ کا فیصلہ کر کے خود ہی اپنے پاؤں پہ کلہاڑی مار لی اور جب بیٹنگ کے لیے بھی آئے تو اپنے قدم کریز میں جمانے کی بجائے اٹکھیلیاں کرنے کی کوشش کی",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/sport-48958653",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "کھیل",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/sport",
+            "desktop": "http://www.bbc.com/urdu/sport",
+            "mobile": "http://www.bbc.com/urdu/sport",
+            "enhancedmobile": "http://www.bbc.com/urdu/sport"
+          }
+        },
+        "semanticGroupName": "Sport"
+      },
+      {
+        "type": "av-stories-now",
+        "title": "Watch/Listen",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ہزارہ نوجوانوں کا کراٹے ’کنگ میکر‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/sport-48906136",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-48906136"
+            },
+            "summary": "جب بلوچستان میں ہزارہ کمیونٹی کو دہشت گردی کا نشانہ بنایا جا رہا تھا تو کراٹے انسٹرکٹر غلام علی نے ہزارہ نوجوانوں کو ایک پلیٹ فارم دیا اور اس محنت کا صلہ ان شاگردوں نے عالمی سطح پر کامیابیاں حاصل کر کے دیا۔",
+            "timestamp": 1562904285,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07g9jwk",
+              "subType": "clip",
+              "format": "video",
+              "title": "ہزارہ نوجوانوں کا کراٹے ’کنگ میکر‘",
+              "synopses": {
+                "short": "غلام علی: ہزارہ نوجوانوں کا کراٹے ’کنگ میکر‘",
+                "long": "پاکستان کے شہر کوئٹہ میں ہزارہ کمیونٹی سے تعلق رکھنے والے غلام علی ہزارہ نے تقریباً 37 سال قبل کراٹے کھیلنا شروع کیا۔ جب بلوچستان میں ہزارہ کمیونٹی کو دہشت گردی کا نشانہ بنایا جا رہا تھا تو انھوں نے مقامی ہزارہ نوجوانوں کو کراٹے کلب کی شکل میں ایک پلیٹ فارم دیا اور ان شاگردوں نے عالمی سطح پر کامیابیاں حاصل کر کے ان کا نام روشن کر دیا۔ دیکھیے موسیٰ یاوری کی ڈیجیٹل ویڈیو۔"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gpdb2.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "کنگ میکر",
+              "versions": [
+                {
+                  "versionId": "p07g9jwm",
+                  "types": ["Original"],
+                  "duration": 136,
+                  "durationISO8601": "PT2M16S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562567500
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107845017",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1158E/production/_107845017_p07gpd79.jpg",
+              "path": "/cpsprodpb/1158E/production/_107845017_p07gpd79.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ہزارہ نوجوانوں کا کراٹے ’کنگ میکر‘",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/sport-48906136",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "کیا انسانی پیروں کا سائز بڑھ رہا ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/48958655",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/48958655"
+            },
+            "summary": "گذشتہ دو دہائیوں میں ہمارے پیروں کے سائز میں تقریباً دو سائز تک اضافہ ہو گیا ہے۔ مگر اس کی وجہ کیا ہے؟",
+            "timestamp": 1562892901,
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gp8dy",
+              "subType": "clip",
+              "format": "video",
+              "title": "کیا انسانی پیروں کا سائز بڑھ رہا ہے؟",
+              "synopses": {
+                "short": "کیا انسانی پیروں کا سائز بڑھ رہا ہے؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gp8hq.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "کیا انسانی پیروں کا سائز بڑھ رہا ہے؟",
+              "versions": [
+                {
+                  "versionId": "p07gp8f0",
+                  "types": ["Original"],
+                  "duration": 113,
+                  "durationISO8601": "PT1M53S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562892481
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107843145",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D376/production/_107843145_p07gp8hq.jpg",
+              "path": "/cpsprodpb/D376/production/_107843145_p07gp8hq.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "پاؤں",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
+              "uri": "/urdu/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:urdu/48958655",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "فلم انڈسٹری چھوڑنے والی کشمیری اداکارہ زائرہ وسیم کے کیریئر پر ایک نظر"
+            },
+            "locators": {
+              "assetUri": "/urdu/entertainment-48948755",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-48948755"
+            },
+            "summary": "پرسنالٹی آف دی ویک زائرہ وسیم نے 15 سال کی عمر میں فلم دنگل سے اپنے کیریئر کا آغاز کیا اور سپر سٹار بننے کے صرف تین سال بعد انھوں نے فلم انڈسٹری کو خیرباد کہہ دیا۔",
+            "timestamp": 1562851880,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07ffy5j",
+              "subType": "clip",
+              "format": "audio",
+              "title": "پرسنالٹی آف دی ویک: اداکارہ، ریئلٹی شو جج، یوگا گرو اور بزنس وومن شلپا شیٹی",
+              "synopses": {
+                "short": "آج وہ ایک کامیاب ریئلٹی شو جج ہیں۔"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07fg0p6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "پرسنالٹی آف دی ویک: اداکارہ، ریئلٹی شو جج، یوگا گرو اور بزنس وومن شلپا شیٹی",
+              "versions": [
+                {
+                  "versionId": "p07ffy5n",
+                  "types": ["Original"],
+                  "duration": 274,
+                  "durationISO8601": "PT4M34S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1561723561
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107835822",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5945/production/_107835822_p07gm883.jpg",
+              "path": "/cpsprodpb/5945/production/_107835822_p07gm883.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "زائرہ وسیم",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/entertainment-48948755",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ایک بو اچھی یا بری کیسے بنتی ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/science-48817061",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/science-48817061"
+            },
+            "summary": "ہمارا دماغ ایک بو کو کیسے سمجھتا ہے اور کیا یہ ممکن ہے کہ دو لوگوں کو ایک بو سونگھنے میں ایک جیسی ہی لگے؟",
+            "timestamp": 1562736985,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07frc36",
+              "subType": "clip",
+              "format": "video",
+              "title": "ایک بو اچھی یا بری کیسے بنتی ہے؟",
+              "synopses": {
+                "short": "ایک بو اچھی یا بری کیسے بنتی ہے؟",
+                "long": "انسان کھربوں قسم کی بو سونگھ سکتا ہے، آپ دنیا کو کس نظر سے دیکھتے ہیں بو اس پر بھی اثر کرتی ہے۔ لیکن ہمارا دماغ ایک بو کو کیسے سمجھتا ہے؟ اور کیا یہ ممکن ہے کہ دو لوگوں کو ایک بو سونگھنے میں ایک جیسی ہی لگے؟",
+                "medium": "ہمارا دماغ ایک بو کو کیسے سمجھتا ہے اور کیا یہ ممکن ہے کہ دو لوگوں کو ایک بو سونگھنے میں ایک جیسی ہی لگے؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07frcz7.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "انسان کھربوں قسم کی بو سونگھ سکتا ہے",
+              "versions": [
+                {
+                  "versionId": "p07frc38",
+                  "types": ["Original"],
+                  "duration": 132,
+                  "durationISO8601": "PT2M12S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562059193
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107711143",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/853F/production/_107711143_p07frcz7.jpg",
+              "path": "/cpsprodpb/853F/production/_107711143_p07frcz7.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "بُو",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/science-48817061",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "کیا روبوٹس آپ کی نوکری چھین سکتے ہیں؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/science-48925662",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/science-48925662"
+            },
+            "summary": "نت نئی ٹیکنالوجی نے انسان کی ضرورت کو کم کر دیا ہے۔ جاپان میں کچھ ایسے روبوٹس کو ڈیزائن کیا گیا ہے جو انسانوں کی طرح کام کرتے ہیں۔ لیکن آخر جاپان کو ان کی ضرورت کیوں پڑی؟",
+            "timestamp": 1562677168,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gdzcf",
+              "subType": "clip",
+              "format": "video",
+              "title": "کون سے روبوٹس آپ کی نوکری کے لیے خطرہ ہیں؟",
+              "synopses": {
+                "short": "کون سے روبوٹس آپ کی نوکری کے لیے خطرہ بن سکتے ہیں؟",
+                "long": "نت نئی ٹیکنالوجی نے انسان کی ضرورت کو کم کر دیا ہے۔ جاپان میں کچھ ایسے روبوٹس کو ڈیزائن کیا گیا ہے جو انسانوں کی طرح کام کرتے ہیں۔ یہ روبوٹس بچوں کی دیکھ بھال سے لے کر ہوتل میں بطور ویٹر کام کر سکتے ہیں۔ لیکن جاپان کو ان کی ضرورت کیوں پڑی؟ دیکھیے یہ ڈیجیٹل ویڈیو۔۔۔",
+                "medium": "نت نئی ٹیکنالوجی نے انسان کی ضرورت کو کم کر دیا ہے۔ جاپان میں کچھ ایسے روبوٹس کو ڈیزائن کیا گیا ہے جو انسانوں کی طرح کام کرتے ہیں۔ لیکن آخر جاپان کو ان کی ضرورت کیوں پڑی؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gdzq8.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "روبوٹس",
+              "versions": [
+                {
+                  "versionId": "p07gdzch",
+                  "types": ["Original"],
+                  "duration": 125,
+                  "durationISO8601": "PT2M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562675328
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107806519",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/165A8/production/_107806519_p07gdzq8.jpg",
+              "path": "/cpsprodpb/165A8/production/_107806519_p07gdzq8.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "روبوٹس",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/science-48925662",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "سندھ میں ٹڈی دل کے حملے سے کسان پریشان"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48917729",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48917729"
+            },
+            "summary": "پاکستان میں بلوچستان کے علاقوں چاغی اور خضدار کے بعد ٹڈی دل نے ان دنوں خیرپور کے کاشت کاروں کو پریشان کر رکھا ہے۔",
+            "timestamp": 1562656316,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gd38h",
+              "subType": "clip",
+              "format": "video",
+              "title": "سندھ میں ٹڈی دل کے حملے سے کسان پریشان",
+              "synopses": {
+                "short": "سندھ میں ٹڈی دل کے حملے سے کسان پریشان",
+                "long": "پاکستان میں بلوچستان کے علاقوں چاغی اور خضدار کے بعد ٹڈی دل نے ان دنوں خیرپور کے کاشت کاروں کو پریشان کر رکھا ہے، یہ ٹڈیاں کہاں سے آئیں اور ان سے چھٹکارا حاصل کرنے کے لیے کیا کوششیں کی جا رہی ہیں۔ دیکھیے چونڈکو سے ریاض سہیل کی ڈیجیٹل ویڈیو۔",
+                "medium": "پاکستان میں بلوچستان کے علاقوں چاغی اور خضدار کے بعد ٹڈی دل نے ان دنوں خیرپور کے کاشت کاروں کو پریشان کر رکھا ہے۔ دیکھیے چونڈکو سے ریاض سہیل کی ڈیجیٹل ویڈیو۔"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gd6xw.jpg",
+              "embedding": false,
+              "advertising": true,
+              "caption": "سندھ میں ٹڈی دل کے حملے سے کسان پریشان ہیں",
+              "versions": [
+                {
+                  "versionId": "p07gd6x4",
+                  "types": ["Editorial"],
+                  "duration": 129,
+                  "durationISO8601": "PT2M9S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562651223
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107800395",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E7A4/production/_107800395_p07gd6xw.jpg",
+              "path": "/cpsprodpb/E7A4/production/_107800395_p07gd6xw.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "ٹڈی",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48917729",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "عبدالستار ایدھی سپر ہیرو کے روپ میں!"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48906142",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48906142"
+            },
+            "summary": "آج کل کے دور میں بچے اور بڑے کسی نہ کسی سُپر ہیرو کے فین ہوتے ہیں یا انھیں بہت شوق سے دیکھتے ہیں۔ پاکستان کے عبدالستار ایدھی (مرحوم) بھی ’ایدھی بابا‘ کے نام سے ایک سُپر ہیرو کے روپ میں نظر آئیں گے۔ مذید جاننے کے لیے دیکھیے ہماری ڈیجیٹل ویڈیو۔",
+            "timestamp": 1562580781,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07g9zbr",
+              "subType": "clip",
+              "format": "video",
+              "title": "ایدھی",
+              "synopses": {
+                "short": "ایدھی"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07g9zl4.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "ایدھی",
+              "versions": [
+                {
+                  "versionId": "p07g9zbv",
+                  "types": ["Original"],
+                  "duration": 92,
+                  "durationISO8601": "PT1M32S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562579847
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107788970",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1F34/production/_107788970_whatsappimage2019-07-08at2.56.36pm.jpg",
+              "path": "/cpsprodpb/1F34/production/_107788970_whatsappimage2019-07-08at2.56.36pm.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ایدھی بابا",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48906142",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "’بھائیوں نے کہا تم لڑکی ہو کر ریپ میوزک کرو گی‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/entertainment-48759742",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-48759742"
+            },
+            "summary": "’گلی گرل‘ کے نام سے مشہور لیاری کی ایوا بی کا ریپ سٹار بننے کا سفر آسان نہیں تھا کیونکہ اپنا یہ شوق پورا کرنے کے لیے انھیں اپنے بھائیوں کو منانے میں کافی سال لگ گئے۔",
+            "timestamp": 1562550086,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07f4dt0",
+              "subType": "clip",
+              "format": "video",
+              "title": "’بھائیوں نے کہا تم لڑکی ہو کر ریپ کرو گی‘",
+              "synopses": {
+                "short": "لیاری کی ایوا بی: ’بھائیوں نے کہا تم لڑکی ہو کر ریپ کرو گی‘",
+                "long": "ایوا لیاری میں پلی بڑھی ہیں اور یہاں کی گلیوں میں ہی انھوں نے اپنے دوستوں سے ریپ سیکھا۔ انھیں ’گلی گرل‘ کا نام بھی یہیں دیا گیا ہے۔\nایوا کہتی ہیں کہ ریپر بننے کے لیے انھیں اپنے بھائیوں کو منانے میں کافی سال لگ گئے۔ ریپ سٹار بننے کا ان کا یہ سفر کیسے شروع ہوا۔ دیکھیے اس ڈیجیٹل ویڈیو میں۔۔۔",
+                "medium": "’گلی گرل‘ کے نام سے مشہور لیاری کی ایوا بی کا ریپ سٹاربننے کا سفر آسان نہیں تھا کیونکہ انھیں اپنا یہ شوق پورا کرنے کے لیےاپنے بھائیوں کو منانے میں کافی سال لگ گئے۔"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07g9rqm.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "ایوا بی",
+              "versions": [
+                {
+                  "versionId": "p07g9qxq",
+                  "types": ["Editorial"],
+                  "duration": 170,
+                  "durationISO8601": "PT2M50S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1561466997
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107787553",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8AFA/production/_107787553_p07f4gmg.jpg",
+              "path": "/cpsprodpb/8AFA/production/_107787553_p07f4gmg.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "گلی گرل",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/entertainment-48759742",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "ملٹی میڈیا",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/media/video",
+            "desktop": "http://www.bbc.com/urdu/media/video",
+            "mobile": "http://www.bbc.com/urdu/media/video",
+            "enhancedmobile": "http://www.bbc.com/urdu/media/video"
+          }
+        },
+        "semanticGroupName": "Watch/Listen"
+      },
+      {
+        "type": "programmes-standard",
+        "title": "Programmes",
+        "items": [
+          {
+            "name": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
+            "summary": "سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر لائیو دیکھا جا سکتا ہے۔ اس لنک پر آپ اس کا آن ڈیمانڈ ورژن دیکھ سکتے ہیں۔",
+            "indexImage": {
+              "id": "94651323",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg",
+              "path": "/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "سیربین",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4",
+            "contentType": "Video",
+            "assetTypeCode": "PRO",
+            "timestamp": 1486468188,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "سیربین آن ڈیمانڈ"
+        },
+        "semanticGroupName": "Programmes"
+      },
+      {
+        "type": "section-digest",
+        "title": "Showcase 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "’ایران کا اقدام ناقابل یقین بدنیتی پر مبنی ہے‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/world-48948753",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/world-48948753"
+            },
+            "summary": "برطانیہ کے وزیرِ خارجہ جیرمی ہنٹ نے وعدہ کیا ہے کہ اگر وہ برطانیہ کے وزیرِاعظم بنے تو وہ برطانوی بحریہ کے بجٹ پر کٹوتی کے فیصلے کو واپس لیں گے۔",
+            "timestamp": 1562908715,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832500",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/020B/production/_107832500_mediaitem107832498.jpg",
+              "path": "/cpsprodpb/020B/production/_107832500_mediaitem107832498.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "برطانوی بحریہ کا جہاز",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/world-48948753",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "ورلڈ",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/world",
+            "desktop": "http://www.bbc.com/urdu/world",
+            "mobile": "http://www.bbc.com/urdu/world",
+            "enhancedmobile": "http://www.bbc.com/urdu/world"
+          }
+        },
+        "semanticGroupName": "Showcase 1"
+      },
+      {
+        "type": "section-digest",
+        "title": "Showcase 2",
+        "items": [
+          {
+            "headlines": {
+              "headline": "’انڈین فوجیوں کو غیر فوجی سوشل میڈیا گروپ چھوڑنے کا حکم‘",
+              "overtyped": "’انڈین فوجیوں کو غیر فوجی سوشل میڈیا چھوڑنے کا حکم‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/regional-48933810",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-48933810"
+            },
+            "summary": "انڈین فوج کے سابق افسر کرنل دنویر سنگھ نے بی بی سی سے بات کرتے ہوئے کہا کہ انڈین فوج کے سربراہ کو ایسا لگتا ہے کہ سابق فوجیوں کی رائے سے ان کے فیصلے متاثر ہو رہے ہیں۔",
+            "timestamp": 1562835859,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "96587200",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0116/production/_96587200_d4bf9cf9-d5ff-42ac-a606-b460abb30bca.jpg",
+              "path": "/cpsprodpb/0116/production/_96587200_d4bf9cf9-d5ff-42ac-a606-b460abb30bca.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "واٹس ایپ",
+              "caption": "فوجی ذرائع کے مطابق ایسی اطلاعات ہیں کہ انڈیا نے واٹس ایپ کے ذریعے پاکستانی فوجی افسران تک رسائی حاصل کرنے کا منصوبہ بنایا ہے",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/regional-48933810",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "آس پاس",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/regional",
+            "desktop": "http://www.bbc.com/urdu/regional",
+            "mobile": "http://www.bbc.com/urdu/regional",
+            "enhancedmobile": "http://www.bbc.com/urdu/regional"
+          }
+        },
+        "semanticGroupName": "Showcase 2"
+      },
+      {
+        "type": "section-digest",
+        "title": "Showcase 3",
+        "items": [
+          {
+            "headlines": {
+              "headline": "نکی مناج کا سعودی عرب میں کنسرٹ منسوخ کرنے کا اعلان"
+            },
+            "locators": {
+              "assetUri": "/urdu/entertainment-48932972",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-48932972"
+            },
+            "summary": "گلوکارہ نکی مناج نے ہم جنس پرست اور حقوقِ انسانی کی تنظیموں کی تنقید کے بعد سعودی عرب کے شہر جدہ میں منعقد ہونے والے عالمی میلے میں اپنے فن کا مظاہرہ کرنے سے انکار کر دیا ہے۔",
+            "timestamp": 1562737798,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107815359",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17477/production/_107815359_gettyimages-839985390.jpg",
+              "path": "/cpsprodpb/17477/production/_107815359_gettyimages-839985390.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "نکی مناج",
+              "caption": "نکی مناج کے اس طے شدہ کنسرٹ پر سعودی عرب میں انسانی حقوق کی صورتحال پر نظر رکھنے والوں کی جانب سے تنقید کی جا رہی تھی۔",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/entertainment-48932972",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "فن فنکار",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/entertainment",
+            "desktop": "http://www.bbc.com/urdu/entertainment",
+            "mobile": "http://www.bbc.com/urdu/entertainment",
+            "enhancedmobile": "http://www.bbc.com/urdu/entertainment"
+          }
+        },
+        "semanticGroupName": "Showcase 3"
+      },
+      {
+        "type": "section-digest",
+        "title": "Showcase 4",
+        "items": [
+          {
+            "headlines": {
+              "headline": "کیا ہمیں اپنے کپڑے نہیں دھونے چاہییں؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/science-48920765",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/science-48920765"
+            },
+            "summary": "معروف فیشن ڈیزائنر سٹیلا مکارٹنی کے مطابق کپڑے میلے ہو جائیں تو انھیں دھونے کی ضرورت نہیں بلکہ ان کا میل اور ان پر لگی گندگی خشک ہونے کے بعد برش سے صاف کی جا سکتی ہے۔",
+            "timestamp": 1562746742,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107816693",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9AED/production/_107816693_clothes.jpg",
+              "path": "/cpsprodpb/9AED/production/_107816693_clothes.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "کپڑے",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/science-48920765",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "سائنس",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "desktop": "http://www.bbc.com/urdu/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "mobile": "http://www.bbc.com/urdu/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "enhancedmobile": "http://www.bbc.com/urdu/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+          }
+        },
+        "semanticGroupName": "Showcase 4"
+      },
+      {
+        "type": "section-digest",
+        "title": "Showcase 5",
+        "items": [
+          {
+            "headlines": {
+              "headline": "کیا مخصوص غذاؤں سے جنسی قوت بڑھتی ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/science-48813150",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/science-48813150"
+            },
+            "summary": "انسانی قوتِ باہ بڑھانے کے لیے مختلف غذاؤں کے بارے دیومالائی کہانیاں بیان کی جاتی رہی ہیں لیکن سائنسی تحقیق سے ایسی غذاؤں اور جنسی طاقت میں اضافے کا کوئی تعلق ثابت نہیں ہوا۔",
+            "timestamp": 1562557420,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107641508",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/13A82/production/_107641508_p07c8kth.jpg",
+              "path": "/cpsprodpb/13A82/production/_107641508_p07c8kth.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "قوتِ باہ شہوت جنس غدا خوراک",
+              "caption": "کیا ایسی غدائیں ہیں جن سے جنسی خواہش پیدا ہوتی ہے؟",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/science-48813150",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "ہیلتھ",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/urdu/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "desktop": "http://www.bbc.com/urdu/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "mobile": "http://www.bbc.com/urdu/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "enhancedmobile": "http://www.bbc.com/urdu/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+          }
+        },
+        "semanticGroupName": "Showcase 5"
+      },
+      {
+        "type": "section-digest",
+        "title": "Showcase 6",
+        "items": [
+          {
+            "headlines": {
+              "headline": "’نیٹ فلکس شریعہ پالیسی سے متصادم‘: پاکستانی بینک نے ادائیگی روک دی",
+              "overtyped": "’نیٹ فلکس غیر شرعی ہے‘: پاکستانی بینک نے ادائیگی روک دی"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48924555",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48924555"
+            },
+            "summary": "پاکستان میں میزان بینک نے اپنے ایک صارف کو بتایا ہے کہ ان کے بینک کا کارڈ نیٹ فلکس کو ادائیگی کے لیے استعمال نہیں ہو سکتا کیوں کہ یہ ان کی ’شریعہ پالیسی‘ کے خلاف ہے۔",
+            "timestamp": 1562675890,
+            "byline": {
+              "name": "سحر بلوچ",
+              "title": "بی بی سی اردو ڈاٹ کام، اسلام آباد",
+              "persons": [
+                {
+                  "name": "سحر بلوچ",
+                  "function": "بی بی سی اردو ڈاٹ کام، کراچی"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107806169",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/177A0/production/_107806169_d07e30f3-a320-4413-855e-5e69503280f1.jpg",
+              "path": "/cpsprodpb/177A0/production/_107806169_d07e30f3-a320-4413-855e-5e69503280f1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "نیٹفلکس",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "پاکستان میں میزان بینک نے اپنے ایک صارف کو بتایا ہے کہ ان کے بینک کا کارڈ نیٹ فلکس کو ادائیگی کے لیے استعمال نہیں ہو سکتا کیوں کہ یہ ان کی ’شریعہ پالیسی‘ کے خلاف ہے۔",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48924555",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "ٹیکنالوجی"
+        },
+        "semanticGroupName": "Showcase 6"
+      },
+      {
+        "type": "special-reports",
+        "title": "Special reports 2",
+        "items": [
+          {
+            "name": "رمضان، عید اور سپیشل پکوان",
+            "summary": "کیا آپ نے کبھی غور کیا کہ بعض ریستوران اور ڈھابے کھانے کے لیے دوسروں سے زیادہ مشہور کیوں ہوتے ہیں؟ ٹیکنالوجی کے اس دور میں بھی کیا کھانا بنانے کی خفیہ تراکیب موجود ہیں۔ بی بی سی اردو کی اس نئی سیریز میں ہم آپ کو ایسی ہی کچھ دکانوں اور ڈھابوں پر لے چلیں گے تاکہ آپ جان سکیں کہ آخر ان کا کھانا اتنا مشہور کیوں ہے؟",
+            "indexImage": {
+              "id": "107041360",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/18AA/production/_107041360_ff.jpg",
+              "path": "/cpsprodpb/18AA/production/_107041360_ff.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "پکوان",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/urdu/pakistan-48346840",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1558416392,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "خصوصی ضمیمہ"
+        },
+        "semanticGroupName": "Special reports 2"
+      },
+      {
+        "type": "single-section-digest",
+        "title": "ملٹی میڈیا",
+        "items": [
+          {
+            "name": "کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ",
+            "summary": "انگلینڈ اور ویلز میں جاری دنیائے کرکٹ کے سب سے بڑے مقابلوں پر بی بی سی اردو کی خصوصی کوریج دیکھنے کے لیے کلک کریں",
+            "indexImage": {
+              "id": "101059429",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1694F/production/_101059429_world_cup_trophy_getty.jpg",
+              "path": "/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "The World Cup trophy",
+              "copyrightHolder": "Getty Images"
+            },
+            "uri": "https://www.bbc.com/urdu/sport-48361817",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1559585104,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "ورلڈ کپ 2019"
+        },
+        "semanticGroupName": "Section 2"
+      },
+      {
+        "type": "feature-main",
+        "title": "Features",
+        "maxRelatedLinks": 0,
+        "items": [
+          {
+            "headlines": {
+              "headline": "’ہر کوئی آپ سے جنسی تعلق قائم کرنا چاہتا ہے‘",
+              "overtyped": "افغانستان: ’ہر مرد آپ سے جنسی تعلق قائم کرنا چاہتا ہے‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/regional-48948433",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-48948433"
+            },
+            "summary": "افغانستان میں حکومتی سطح پر جنسی ہراس کے الزامات نے تہلکہ مچا دیا ہے۔ بی بی سی نے معاملے کی تحقیقات کے دوران ایسی خواتین سے بات کی جنھوں نے ہراس کے اس ماحول کی بھیانک منظر کشی کی۔",
+            "timestamp": 1562832116,
+            "byline": {
+              "name": "یوگیتا لیمائے",
+              "title": "بی بی سی نیوز، کابل",
+              "persons": [
+                {
+                  "name": "یوگیتا لیمائے",
+                  "function": "ممبئی نامہ نگار، بی بی سی نیوز"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107830162",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/65F7/production/_107830162_afp.jpg",
+              "path": "/cpsprodpb/65F7/production/_107830162_afp.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "فغانستانی خواتین",
+              "caption": "افغانستان تسلسل سے عورتوں کے لیے بدترین ملک کی فہرست میں بدترین ممالک میں گنا جاتا ہے۔",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "افغانستان میں حکومتی سطح پر جنسی ہراس کے الزامات کی تحقیقات کے دوران بی بی سی سے بات کرتے ہوئے مبینہ ہراس کا شکار خواتین نے اس ماحول کی بھیانک منظر کشی کی۔",
+            "id": "urn:bbc:ares::asset:urdu/regional-48948433",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "نیوزی لینڈ نے کس طرح انڈیا کے خواب توڑ دیے"
+            },
+            "locators": {
+              "assetUri": "/urdu/sport-48952924",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-48952924"
+            },
+            "summary": "عالمی کپ کے سیمی فائنل میچ میں انڈیا کی شکست کی بڑی وجہ گیارہ کھلاڑیوں میں مڈل آڈر پر کھیلنے والوں کا غلط انتخاب تھی۔",
+            "timestamp": 1562851799,
+            "byline": {
+              "name": "سریش مینن ",
+              "title": "کرٹ کے مبصر",
+              "persons": [
+                {
+                  "name": "Suresh Menon",
+                  "function": "Sports writer"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107829948",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14C00/production/_107829948_mediaitem107829897.jpg",
+              "path": "/cpsprodpb/14C00/production/_107829948_mediaitem107829897.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "India\"s captain Virat Kohli reacts at the end of play during the 2019 Cricket World Cup first semi-final between New Zealand and India at Old Trafford in Manchester, northwest England, on July 10, 2019.",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/sport-48952924",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ویڈیو اور آڈیو کا فورینزک تجزیہ کیسے ہوتا ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/science-48933803",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/science-48933803"
+            },
+            "summary": "برطانوی فورینزک ماہر کے مطابق ویڈیوز میں تصاویر یا آواز سے کی گئی چھیڑ چھاڑ باآسانی پکڑی جا سکتی ہے تاہم پاکستانی حکام کے مطابق سرکاری سطح پر صوتی تجزیے کے لیے درکار ٹیکنالوجی میسر نہیں۔",
+            "timestamp": 1562819907,
+            "byline": {
+              "name": "عمر دراز ننگیانہ",
+              "title": "بی بی سی اردو ڈاٹ کام، لاہور",
+              "persons": [
+                {
+                  "name": "عمر دراز ننگیانہ",
+                  "function": "بی بی سی اردو لاہور"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107830128",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/140B7/production/_107830128_gettyimages-1155296010.jpg",
+              "path": "/cpsprodpb/140B7/production/_107830128_gettyimages-1155296010.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "فورینزک تجزیہ (فائل فوٹو)",
+              "caption": "تجزیہ کار زیادہ تر تصدیق کرتے وقت وہ سافٹ ویئر استعمال کرتے ہیں جو انھوں نے اپنی سائنسی تحقیق کی روشنی میں خود تیار کیا ہو",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "برطانوی فورینزک ماہر کے مطابق ویڈیوز میں تصاویر یا آواز سے چھیڑ چھاڑ پکڑی جا سکتی ہے تاہم پاکستان میں سرکاری سطح پر صوتی تجزیے کی سہولت نہیں۔",
+            "id": "urn:bbc:ares::asset:urdu/science-48933803",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "’مرید نے اپنی محنت اور زورِ بازو پر اپنی دنیا بنائی تھی‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48940152",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48940152"
+            },
+            "summary": "کراچی میں منگل کی شب قتل ہونے والے اینکر پرسن مرید عباس کی زندگی نشیب و فراز سے بھرپور تھی اور انھوں نے اپنی یہ دنیا اپنے بل بوتے پر تعمیر کی تھی۔",
+            "timestamp": 1562812713,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107825917",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11910/production/_107825917_62533854_1988879717883377_3669082233307660288_n.jpg",
+              "path": "/cpsprodpb/11910/production/_107825917_62533854_1988879717883377_3669082233307660288_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "مرید عباس",
+              "copyrightHolder": "Facebook/Mureed.Abbas.9"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48940152",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "عمران خان کا دورۂ امریکہ کس نوعیت کا ہو گا؟",
+              "overtyped": "عمران خان کا دورۂ امریکہ کس نوعیت کا ہو گا"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48935161",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48935161"
+            },
+            "summary": "عمران خان کے دورۂ امریکہ کے بارے میں عمومی رائے یہی ہے کہ یہ ایک ’ورکنگ وزٹ‘ ہے جس میں قیام و طعام کی ذمہ داری مہمان کی ہوتی ہے نہ کہ میزبان کی۔",
+            "timestamp": 1562814866,
+            "byline": {
+              "name": "عماد خالق  ",
+              "title": "بی بی سی اردو ڈاٹ کام، اسلام آباد",
+              "persons": [
+                {
+                  "name": "عماد خالق",
+                  "function": "بی بی سی اردو ڈاٹ کام، اسلام آباد"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107818480",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2121/production/_107818480_gettyimages-1077013004.jpg",
+              "path": "/cpsprodpb/2121/production/_107818480_gettyimages-1077013004.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "عمران خان",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "عمران خان کے دورۂ امریکہ کے بارے میں عمومی رائے یہی ہے کہ یہ ’ورکنگ وزٹ‘ ہے جس میں قیام و طعام کی ذمہ داری مہمان کی ہوتی ے نہ کہ میزبان کی۔",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48935161",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ٹی وی پر کون آئے گا، کیا پیمرا یہ فیصلہ کر سکتا ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48946143",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48946143"
+            },
+            "summary": "پیمرا کے سابق چیئرمین ابصار عالم سمجھتے ہیں کہ اگر ادارہ کسی شخص کا انٹرویو یا پریس کانفرنس چلانے سے روک رہا ہے یا حکومت ایسی کوشش کر رہی ہے تو یہ غیرآئینی و غیرقانونی اقدامات ہیں۔",
+            "timestamp": 1562812693,
+            "byline": {
+              "name": "فرحت جاوید",
+              "title": "بی بی سی اردو، اسلام آباد",
+              "persons": [
+                {
+                  "name": "فرحت جاوید",
+                  "function": "بی بی سی اردو، اسلام آباد"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107829395",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E800/production/_107829395_gettyimages-1149260319.jpg",
+              "path": "/cpsprodpb/E800/production/_107829395_gettyimages-1149260319.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "پاکستان",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "پیمرا کے سابق چیئرمین کے مطابق اگر ادارہ کوئی انٹرویو یا پریس کانفرنس روک رہا ہے یا حکومت ایسی کوشش کر رہی ہے تو یہ غیرقانونی اقدام ہے۔ ",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48946143",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "گندی باتیں۔۔۔"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48923375",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48923375"
+            },
+            "summary": "چند دن پہلے ٹوئٹر پر ایک ٹاپ ٹرینڈ دیکھا تو یقین سا ہو چلا کہ جس نسل کی تربیت دو دہائیوں سے جاری تھی وہ اب اتنی مکمل ہو چکی ہے کہ اب ہماری لغت میں سے گالیوں کے علاوہ باقی سارے لفظ نکال ہی دیے گئے ہیں: محمد حنیف کا کالم۔",
+            "timestamp": 1562741858,
+            "byline": {
+              "name": "محمد  حنیف",
+              "title": "صحافی و تجزیہ کار",
+              "persons": [
+                {
+                  "name": "محمد حنیف",
+                  "function": "صحافی و تجزیہ کار",
+                  "thumbnail": "http://c.files.bbci.co.uk/9E09/production/_102875404_hanif.jpg"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+                "categoryName": "Opinion"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107804508",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/13A9C/production/_107804508_cffb9f0a-8fbc-45ed-910c-9a289182463f.jpg",
+              "path": "/cpsprodpb/13A9C/production/_107804508_cffb9f0a-8fbc-45ed-910c-9a289182463f.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "واٹس ایپ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48923375",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "فرانسیسی میزائل لیبیا کے باغی جنرل تک کیسے پہنچے؟",
+              "overtyped": "فرانسیسی میزائل لیبیا کے باغی جنرل تک کیسے پہنچے"
+            },
+            "locators": {
+              "assetUri": "/urdu/world-48940991",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/world-48940991"
+            },
+            "summary": "فرانس اب وضاحت دے رہا ہے کہ یہ میزائل جور جنرل ہفتر کے ایک کیمپ سے برآمد ہوئے ہیں یہ خراب تھے اور انھیں تلف کیا جانا تھا ۔",
+            "timestamp": 1562807267,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107818065",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DB11/production/_107818065_82dcce44-d26b-41fc-a6be-1603c577c4e6.jpg",
+              "path": "/cpsprodpb/DB11/production/_107818065_82dcce44-d26b-41fc-a6be-1603c577c4e6.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "لیبیا ہفتر فرانس میزائل",
+              "caption": "لیبیائی قومی فوج کے سربراہ جنرل ہفتر جن کے کیمپ سے فرانسیسی فوج کے میزائل برآمد ہوئے حالانکہ لیبیا میں کسی بھی فریق کو اسلحہ سپلائی کرنے پر پابندی لگی ہوئی ہے۔",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/world-48940991",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "فلپائن کے ساحل پر بکھری کوکین کہاں سے آئی ہے؟",
+              "overtyped": "فلپائن کے ساحل پر کوکین کہاں سے آئی"
+            },
+            "locators": {
+              "assetUri": "/urdu/world-48920795",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/world-48920795"
+            },
+            "summary": "پچھلے کچھ ماہ سے فلپائن کے مشرقی ساحلوں پر لاکھوں ڈالر مالیت کی کوکین پراسرار طور پر سمندر سے بہہ کر آ رہی ہے جو فلپائن کے حکام کے لیے ایک مخمصہ بن گیا ہے۔",
+            "timestamp": 1562720133,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107801890",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2652/production/_107801890__107800740_mediaitem107800738.jpg",
+              "path": "/cpsprodpb/2652/production/_107801890__107800740_mediaitem107800738.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "کوکین",
+              "copyrightHolder": "Maubam Police"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "فلپائن کے مشرقی ساحلوں پر گذشتہ چند ماہ سے لاکھوں ڈالر مالیت کی کوکین پراسرار طور پر سمندر سے بہہ کر آ رہی ہے اور اس کی اصلیت   حکام کے لیے ایک معمہ ہے۔ ",
+            "id": "urn:bbc:ares::asset:urdu/world-48920795",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "کیا روی شاستری کی کرسی کے نیچے شراب کی بوتل تھی؟",
+              "overtyped": "شاستری کی کرسی کے نیچے شراب کی بوتل؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/sport-48938101",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-48938101"
+            },
+            "summary": "سوشل میڈیا پر شیئر کی جانے والی تصویر میں انڈین کرکٹ ٹیم کی گروپ فوٹو میں روی شاستری کی کرسی کے نیچے شراب کی بوتل پڑی ہوئی نظر آ رہی ہے۔",
+            "timestamp": 1562760293,
+            "byline": {
+              "name": "فیکٹ چیک ٹیم",
+              "title": "بی بی سی نیوز",
+              "persons": [
+                {
+                  "name": "Sanjay Dasgupta",
+                  "function": "BBC News"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107822179",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17B62/production/_107822179_gettyimages-1154018493.jpg",
+              "path": "/cpsprodpb/17B62/production/_107822179_gettyimages-1154018493.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "کوہلی اور شاستری",
+              "copyrightHolder": "Getty Images"
+            },
+            "imageThumbnail": {
+              "id": "107819519",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/165C7/production/_107819519_promoimage.png",
+              "path": "/cpsprodpb/165C7/production/_107819519_promoimage.png",
+              "height": 180,
+              "width": 320,
+              "altText": "انڈین کرکٹ ٹیم",
+              "caption": "انڈین کرکٹ ٹیم",
+              "copyrightHolder": "Social Media"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/sport-48938101",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "نہ چلنے والی فلمیں"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48917726",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48917726"
+            },
+            "summary": "کچھ فلمیں منظر عام پر آ چکی ہیں اور کچھ کی تیاری ہے۔ وہ منظر عام پر آئیں گی یا نہیں معلوم نہیں مگر یہ تو طے ہے کہ نظام نہ چلنے والی فلموں پر کھڑا ہے۔ :عاصمہ شیرازی کا کالم۔",
+            "timestamp": 1562638148,
+            "byline": {
+              "name": "عاصمہ شیرازی  ",
+              "title": " صحافی",
+              "persons": [
+                {
+                  "name": "عاصمہ شیرازی",
+                  "function": "صحافی"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107799131",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/338F/production/_107799131_gettyimages-1154089176.jpg",
+              "path": "/cpsprodpb/338F/production/_107799131_gettyimages-1154089176.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "مریم نواز",
+              "caption": "مریم نواز نے دعویٰ کیا ہے کہ حکومت جج ارشد ملک کی ٹیپ کی حقیقت جانتی ہے اسی لیے خود فارینزک آڈٹ کرنے کے اعلان سے پیچھے ہٹ گئی ہے",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "کچھ فلمیں منظر عام پر آ چکی ہیں اور کچھ کی تیاری ہے۔ وہ منظر عام پر آئیں گی یا نہیں معلوم نہیں مگر یہ تو طے ہے کہ نظام نہ چلنے والی فلموں پر کھڑا ہے:عاصمہ شیرازی کا کالم۔",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48917726",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "کیا دھونی کے جانے کا وقت آ گیا ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/sport-48891428",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-48891428"
+            },
+            "summary": "مہندر سنگھ دھونی کے بغیر انڈیا کی ون ڈے ٹیم کے بارے سوچنا ناقابل یقین لگتا ہے کیونکہ ایک زمانے سے وہ وکٹوں کے پیچھے چیزیں کنٹرول کرتے یا پھر رنز کا پیچھا کرتے نظر آ رہے ہیں۔",
+            "timestamp": 1562656914,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107769748",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14B3C/production/_107769748_4a8b2c28-c014-46f9-afa3-ef0cf28fd7c8.jpg",
+              "path": "/cpsprodpb/14B3C/production/_107769748_4a8b2c28-c014-46f9-afa3-ef0cf28fd7c8.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "دھونی",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/sport-48891428",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ایمازون کے 25 سال: کامیابی کی ایک داستان"
+            },
+            "locators": {
+              "assetUri": "/urdu/world-48904616",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/world-48904616"
+            },
+            "summary": "جس کمپنی نے کتابوں کی آن لائن فروخت سے کام شروع کیا تھا وہ 25 برس بعد نہ صرف دنیا کی سب سے قابلِ قدر کمپنیوں میں سے ایک ہے بلکہ اس کے بانی دنیا کے امیر ترین آدمی ہیں۔",
+            "timestamp": 1562646221,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107785840",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12FA/production/_107785840_azmazone.png",
+              "path": "/cpsprodpb/12FA/production/_107785840_azmazone.png",
+              "height": 549,
+              "width": 976,
+              "altText": "ایمازون",
+              "caption": "گذشتہ سال ایپل کے بعد ایمازون دنیا کی دوسری بڑی ایسی پبلک کمپنی تھی جس کی مالیت ایک ٹریلین ڈالر تک تھی",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/world-48904616",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "صدر ٹرمپ دنیا کو کس نظر سے دیکھتے ہیں؟",
+              "overtyped": "صدر ٹرمپ دنیا کو کس نظر سے دیکھتے ہیں"
+            },
+            "locators": {
+              "assetUri": "/urdu/world-48910060",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/world-48910060"
+            },
+            "summary": "امریکہ میں برطانوی سفیر کی جانب سے امریکہ کی ایران کے متعلق 'غیر مربوط اور منتشر' پالیسی اور 'بے اعتبار روسیوں' کے ساتھ ممکنہ رابطے جیسے بیان نے صدر ٹرمپ کو مشتعل کر دیا ہے۔",
+            "timestamp": 1562655937,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107784505",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C574/production/_107784505_5463779a-d55a-493f-8d18-3740100779a5.jpg",
+              "path": "/cpsprodpb/C574/production/_107784505_5463779a-d55a-493f-8d18-3740100779a5.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ڈونلڈ ٹرمپ",
+              "caption": "لیک ہونے والے ای میلز مین برطانوی سفیر نے صدر ٹرمپ کی حکومت کو 'نااہل' اور 'ناکارہ' کہا ہے",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/world-48910060",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ایران جوہری معاہدہ: کیا کوئی راستہ بچا ہے؟",
+              "overtyped": "ایران جوہری معاہدہ: کیا کوئی راستہ بچا ہے"
+            },
+            "locators": {
+              "assetUri": "/urdu/world-48906138",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/world-48906138"
+            },
+            "summary": "امریکہ، ایران کے ساتھ کیے گئے جوہری معاہدے کو ترک کر چکا ہے اور ایران کھلے عام اس میں درج شرائط کی خلاف ورزی کر رہا ہے، ایسے میں آگے کیا ہو گا؟",
+            "timestamp": 1562578277,
+            "byline": {
+              "name": "جوناتھن مارکس",
+              "title": "تـجزیہ نگار، دفاعی و سفارتی امور",
+              "persons": [
+                {
+                  "name": "جوناتھن مارکس",
+                  "function": "تـجزیہ نگار، دفاعی و سفارتی امور"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107779905",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C735/production/_107779905_gettyimages-482086798.jpg",
+              "path": "/cpsprodpb/C735/production/_107779905_gettyimages-482086798.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Protesters against the Iran nuclear deal",
+              "copyrightHolder": "AFP/Getty"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/world-48906138",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "فیچر اور تجزیے"
+        },
+        "semanticGroupName": "Features"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "College of journalism",
+        "items": [
+          {
+            "name": "دستاویزی فلم بنانے کے گُر",
+            "summary": "آپ کوئی بھی فلم بندی کر رہے ہوں، اس میں غیر متوقع مسائل کا پیش آنا لازمی بات ہے۔ فلمیں بنانا مزے کا کام ہے لیکن اس میں بہت سی چیزوں کا خیال رکھنا پڑتا ہے۔",
+            "indexImage": {
+              "id": "107809165",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DB7E/production/_107809165_saharzand.jpg",
+              "path": "/cpsprodpb/DB7E/production/_107809165_saharzand.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "سحر زند",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/ur/articles/art20190618111915920",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1562690836,
+            "type": "link"
+          },
+          {
+            "name": "درست تحریر کے لیے اہم باتیں",
+            "summary": "درست تحریر کے لیے اہم باتیں",
+            "indexImage": {
+              "id": "100450438",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/145CD/production/_100450438_9d0b03bc-47a9-4007-93f2-9ab4aab79b4a.jpg",
+              "path": "/cpsprodpb/145CD/production/_100450438_9d0b03bc-47a9-4007-93f2-9ab4aab79b4a.jpg",
+              "height": 468,
+              "width": 832,
+              "altText": "بی بی سی اردو",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.co.uk/academy/ur/articles/art20130702112134708",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1478687879,
+            "type": "link"
+          },
+          {
+            "name": "ادارتی میٹنگز",
+            "summary": "پروڈکشن کے عمل کا پہلا قدم خبر کا اچھا آئیڈیا ہے۔ ادارتی میٹنگز میں پروڈیوسر اور تحقیق کار یہ بتا سکتے ہیں کہ اس آئیڈیا کو قابلِ عمل کیسے بنایا جا سکتا ہے۔",
+            "uri": "http://www.bbc.co.uk/academy/ur/articles/art20170302101212627",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1521198020,
+            "type": "link"
+          },
+          {
+            "name": "انٹرویو کے رہنما اصول",
+            "summary": "انٹرویو کی مختلف اقسام ہیں اور ان کے لیے کچھ بنیادی اصول نظر میں رکھنے ضروری ہیں-",
+            "uri": "http://www.bbc.co.uk/academy/ur/articles/art20130702112134654",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1521198157,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "بی بی سی اکیڈمی",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.co.uk/academy/ur",
+            "desktop": "http://www.bbc.co.uk/academy/ur",
+            "mobile": "http://www.bbc.co.uk/academy/ur",
+            "enhancedmobile": "http://www.bbc.co.uk/academy/ur"
+          }
+        },
+        "semanticGroupName": "College of journalism"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
+    "uri": "/urdu/front_page",
+    "id": "urn:bbc:ares::index:urdu/front_page/desktop/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
+      "uri": "/urdu/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Urdu",
+      "uri": "/urdu",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

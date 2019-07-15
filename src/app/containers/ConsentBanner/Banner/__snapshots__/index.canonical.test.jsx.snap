@@ -3,6 +3,8 @@
 exports[`Canonical Consent Banner Container - Banner should correctly render cookie banner 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: #323232;
   padding: 1rem 0.5rem;
 }
@@ -229,6 +231,8 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 exports[`Canonical Consent Banner Container - Banner should correctly render privacy banner 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: #323232;
   padding: 1rem 0.5rem;
 }
