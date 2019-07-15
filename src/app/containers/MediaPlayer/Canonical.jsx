@@ -40,13 +40,14 @@ const MediaPlayer = () => (
 
 const Canonical = () => {
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
+  const handlePlaceholderClick = () => setShowMediaPlayer(true);
 
   return (
     <StyledContainer>
       {showMediaPlayer ? (
         <MediaPlayer />
       ) : (
-        <StyledPlaceholder onClick={() => setShowMediaPlayer(true)}>
+        <StyledPlaceholder onClick={handlePlaceholderClick}>
           <Image alt="Img alt" src={IMG_SRC} />
         </StyledPlaceholder>
       )}

@@ -13,12 +13,12 @@ import {
   AudioClipUk,
   AudioClipNonUk,
 } from './fixtureData';
-import AudioVideoContainer from '.';
+import MediaPlayerContainer from '.';
 import { videoClipGlobalGuidanceBlock } from './helpers/fixtures';
 import * as gridComponents from '../../lib/styledGrid';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 
-describe('AudioVideo', () => {
+describe('Media Player', () => {
   describe('with no data', () => {
     isNull('canonical - should render null', NoData({ platform: 'canonical' }));
     isNull('amp - should render null', NoData({ platform: 'amp' }));
@@ -39,7 +39,7 @@ describe('AudioVideo', () => {
 
       renderer.create(
         <RequestContextProvider isAmp>
-          <AudioVideoContainer blocks={[videoClipGlobalGuidanceBlock]} />
+          <MediaPlayerContainer blocks={[videoClipGlobalGuidanceBlock]} />
         </RequestContextProvider>,
       );
 

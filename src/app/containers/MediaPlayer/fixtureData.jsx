@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AudioVideoContainer from '.';
+import MediaPlayerContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import {
   captionBlock,
@@ -13,7 +13,7 @@ import {
   audioClipUkOnlyBlock,
 } from './helpers/fixtures';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import generateAVSettings from '../../lib/utilities/audioVideo/generateAVSettings';
+import generateAVSettings from '../../lib/utilities/mediaPlayer/generateAVSettings';
 
 const generateFixtureData = ({ platform, blocks, type }) => {
   const avBlock = {
@@ -22,7 +22,7 @@ const generateFixtureData = ({ platform, blocks, type }) => {
     },
     type,
   };
-  const audioVideoBlocks =
+  const mediaPlayerBlocks =
     type === 'audio' || type === 'video' ? [avBlock] : [];
   return (
     <ServiceContextProvider service="news">
@@ -33,7 +33,7 @@ const generateFixtureData = ({ platform, blocks, type }) => {
         pageType="article"
         service="news"
       >
-        <AudioVideoContainer blocks={blocks} />
+        <MediaPlayerContainer blocks={blocks} />
       </RequestContextProvider>
     </ServiceContextProvider>
   );

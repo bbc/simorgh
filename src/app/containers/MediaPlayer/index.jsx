@@ -4,7 +4,7 @@ import deepGet from '../../lib/utilities/deepGet';
 import Canonical from './canonical';
 import Amp from './amp';
 import Caption from '../Caption';
-import videoMetadata from './audioVideoMetadata';
+import videoMetadata from './metadata';
 import {
   NestedGridParentLarge,
   NestedGridParentSmall,
@@ -15,7 +15,7 @@ import {
 } from '../../lib/styledGrid';
 
 import {
-  audioVideoPropTypes,
+  mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
@@ -42,7 +42,7 @@ const selectWrappers = orientation => {
   return { ParentWrapper, ChildWrapper, Container, wrapperSpan, portrait };
 };
 
-const AudioVideoContainer = ({ blocks }) => {
+const MediaPlayerContainer = ({ blocks }) => {
   const { platform } = React.useContext(RequestContext);
 
   if (!blocks) {
@@ -109,8 +109,8 @@ const AudioVideoContainer = ({ blocks }) => {
   );
 };
 
-AudioVideoContainer.propTypes = audioVideoPropTypes;
+MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
 
-AudioVideoContainer.defaultProps = emptyBlockArrayDefaultProps;
+MediaPlayerContainer.defaultProps = emptyBlockArrayDefaultProps;
 
-export default AudioVideoContainer;
+export default MediaPlayerContainer;
