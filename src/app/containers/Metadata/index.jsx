@@ -87,6 +87,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     defaultImageAltText,
     dir,
     locale,
+    isoLang,
     themeColor,
     twitterCreator,
     twitterSite,
@@ -130,8 +131,17 @@ const MetadataContainer = ({ metadata, promo }) => {
     },
   ];
 
+  const alternateLinksWsSites = [
+    {
+      href: canonicalLink,
+      hrefLang: isoLang,
+    },
+  ];
+
   if (ENGLISH_SERVICES.includes(service)) {
     alternateLinks = alternateLinksEnglishSites;
+  } else if (isoLang) {
+    alternateLinks = alternateLinksWsSites;
   }
 
   const iconSizes = {
