@@ -10,6 +10,7 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c0 {
@@ -85,6 +86,7 @@ exports[`should render caption text with example News offscreen text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c0 {
@@ -160,6 +162,7 @@ exports[`should render caption with mutiple paragraphs 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c0 {

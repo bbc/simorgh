@@ -103,6 +103,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c7 {
@@ -481,6 +482,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c8 {
@@ -862,6 +864,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c7 {
@@ -1224,6 +1227,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c8 {
@@ -2144,6 +2148,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c7 {
@@ -2519,6 +2524,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c8 {

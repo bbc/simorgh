@@ -262,6 +262,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c4 {
@@ -458,6 +459,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c5 {
@@ -630,6 +632,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c5 {
@@ -1368,6 +1371,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c5 {
@@ -1570,6 +1574,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c6 {
@@ -1748,6 +1753,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c6 {
