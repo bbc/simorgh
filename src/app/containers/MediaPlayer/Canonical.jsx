@@ -13,6 +13,7 @@ const StyledIframe = styled.iframe`
   width: 100%;
   height: 100%;
   border: 0;
+  overflow: hidden;
 `;
 
 const StyledPlaceholder = styled.div`
@@ -24,16 +25,11 @@ const StyledPlaceholder = styled.div`
   height: 100%;
 `;
 
-const StyledContainer = styled.div`
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-`;
-
 const MediaPlayer = () => (
   <StyledIframe
     title="Canonical Media Player"
     src="https://www.bbc.co.uk/news/uk-politics-46827301/embed/p06w3lfm"
+    scrolling="no"
     allowFullScreen
   />
 );
@@ -42,16 +38,12 @@ const Canonical = () => {
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
   const handlePlaceholderClick = () => setShowMediaPlayer(true);
 
-  return (
-    <StyledContainer>
-      {showMediaPlayer ? (
-        <MediaPlayer />
-      ) : (
-        <StyledPlaceholder onClick={handlePlaceholderClick}>
-          <Image alt="Img alt" src={IMG_SRC} />
-        </StyledPlaceholder>
-      )}
-    </StyledContainer>
+  return showMediaPlayer ? (
+    <MediaPlayer />
+  ) : (
+    <StyledPlaceholder onClick={handlePlaceholderClick}>
+      <Image alt="Img alt" src={IMG_SRC} />
+    </StyledPlaceholder>
   );
 };
 
