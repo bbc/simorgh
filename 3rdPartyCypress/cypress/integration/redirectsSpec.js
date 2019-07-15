@@ -1,6 +1,15 @@
-import services from '../../../cypressSharedHelpers/config/services';
-import { testRedirect } from '../../../cypressSharedHelpers/metaTestHelper';
-import { describeForLocalAndTest } from '../../../cypressSharedHelpers/limitEnvRuns';
+import services from '../support/config/services';
+import describeForLocalAndTest from '../support/limitEnvRuns';
+
+const testRedirect = (url, expectedStatus, expectedUrl) => {
+  cy.request({
+    url,
+    followRedirect: false,
+  }).then(resp => {
+    expect(resp.status).to.eq(expectedStatus);
+    expect(resp.redirectedToUrl).to.eq(expectedUrl);
+  });
+};
 
 describeForLocalAndTest('Persian redirects', () => {
   // We are testing redirects from .co.uk to com
