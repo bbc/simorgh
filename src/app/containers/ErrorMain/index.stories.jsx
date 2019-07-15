@@ -23,4 +23,34 @@ storiesOf('Error Page', module)
     <ServiceContextProvider service="persian">
       <ErrorMain status={500} />
     </ServiceContextProvider>
+  ))
+  .add('404 - Igbo', () => (
+    <ServiceContextProvider service="igbo">
+      <ErrorMain status={404} />
+    </ServiceContextProvider>
+  ))
+  .add('500 - Igbo', () => (
+    <ServiceContextProvider service="igbo">
+      <ErrorMain status={500} />
+    </ServiceContextProvider>
+  ))
+  .add('404 - Pidgin', () => (
+    <ServiceContextProvider service="pidgin">
+      <ErrorMain status={404} />
+    </ServiceContextProvider>
+  ))
+  .add('500 - Pidgin', () => (
+    <ServiceContextProvider service="pidgin">
+      <ErrorMain status={500} />
+    </ServiceContextProvider>
+  ))
+  .add('404 - Yoruba', () => (
+    <ServiceContextProvider service="yoruba">
+      <ErrorMain status={404} />
+    </ServiceContextProvider>
+  ))
+  .add('500 - Yoruba', () => (
+    <ServiceContextProvider service="yoruba">
+      <ErrorMain status={500} />
+    </ServiceContextProvider>
   ));
