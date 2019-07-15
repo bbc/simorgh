@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import isToggleEnabled from './toggleUtils';
+import isToggleEnabled from './utils/isToggleEnabled';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
 

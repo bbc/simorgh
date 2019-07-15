@@ -1,4 +1,4 @@
-import isToggleEnabled from './toggleUtils';
+import isToggleEnabled from './isToggleEnabled';
 
 const fixtureData = {
   foo: {
