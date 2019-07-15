@@ -43,7 +43,7 @@ const yoruba = {
         ],
         callToActionFirst: 'Lọ́nà míràn, ẹ le è kàn sí ojú òpó ìròyìn ',
         callToActionLinkText: 'BBC News Yorùbá',
-        callToActionLast: '',
+        callToActionLast: '.',
         callToActionLinkUrl: 'https://www.bbc.com/yoruba',
       },
       500: {
@@ -57,7 +57,7 @@ const yoruba = {
         ],
         callToActionFirst: 'Lọ́nà míràn, ẹ le è kàn sí ojú òpó ìròyìn ',
         callToActionLinkText: 'BBC News Yorùbá',
-        callToActionLast: '',
+        callToActionLast: '.',
         callToActionLinkUrl: 'https://www.bbc.com/yoruba',
       },
     },
