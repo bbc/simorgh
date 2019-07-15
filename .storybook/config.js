@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import GlobalStyle from '../src/app/lib/globalStyles';
-import { ServiceContextProvider } from '../src/app/contexts/ServiceContext'
+import { ServiceContextProvider } from '../src/app/contexts/ServiceContext';
 
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
 
