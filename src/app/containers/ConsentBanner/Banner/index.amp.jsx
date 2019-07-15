@@ -23,7 +23,7 @@ const AmpConsentBannerContainer = ({
   promptId,
   hidden,
 }) => {
-  const { translations, script } = useContext(ServiceContext);
+  const { translations, script, service } = useContext(ServiceContext);
   const consentBannerConfig = translations.consentBanner[type];
 
   return (
@@ -39,6 +39,7 @@ const AmpConsentBannerContainer = ({
       )}
       hidden={hidden}
       script={script}
+      service={service}
     />
   );
 };
