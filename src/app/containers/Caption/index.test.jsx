@@ -11,12 +11,14 @@ const newsServiceContextStub = {
   videoCaptionOffscreenText: 'Video caption, ',
   defaultCaptionOffscreenText: 'Caption, ',
   script: latin,
+  service: 'news',
 };
 const persianServiceContextStub = {
   imageCaptionOffscreenText: ' ، عنوان تصویر',
   videoCaptionOffscreenText: ' ، عنوان ویدئو',
   defaultCaptionOffscreenText: ' ، عنوان',
   script: arabic,
+  service: 'persian',
 };
 
 const captionBlock = blockContainingText('caption', 'Some caption text...');
