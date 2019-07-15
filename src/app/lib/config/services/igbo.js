@@ -50,7 +50,7 @@ const igbo = {
         statusCode: '500',
         title: 'Mperi',
         message:
-          'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ.Gbalịa ọzọ:',
+          'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ. Gbalịa ọzọ:',
         solutions: [
           'Kpatụ ọdụmbi Refresh dị na braụza gị aka',
           'Ga alọghachị azụ ma e mechaa',
