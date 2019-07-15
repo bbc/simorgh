@@ -6,6 +6,11 @@ exports[`Canonical ATI Analytics should render correctly 1`] = `
     alt=""
     height="1px"
     src="https://foobar.com?key=value&key2=value2"
+    style={
+      Object {
+        "position": "absolute",
+      }
+    }
     width="1px"
   />
 </noscript>

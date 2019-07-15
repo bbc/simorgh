@@ -10,6 +10,7 @@ exports[`BrandContainer should render correctly 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c1 {
@@ -33,9 +34,11 @@ exports[`BrandContainer should render correctly 1`] = `
 
 .c4 {
   box-sizing: content-box;
-  fill: #FFFFFF;
+  color: #FFFFFF;
+  fill: currentColor;
   padding-top: 1rem;
   padding-bottom: 0.75rem;
+  height: 1.5rem;
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;

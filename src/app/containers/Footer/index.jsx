@@ -13,7 +13,7 @@ const currentYear = () => new Date().getFullYear();
 const getCopyrightText = text => `\u00A9 ${currentYear()} ${text} `;
 
 const FooterContainer = () => {
-  const { footer } = useContext(ServiceContext);
+  const { footer, service } = useContext(ServiceContext);
 
   if (!footer) {
     return null;
@@ -28,6 +28,7 @@ const FooterContainer = () => {
         links={links}
         copyrightText={getCopyrightText(copyrightText)}
         externalLink={externalLink}
+        service={service}
       />
     </Footer>
   );
