@@ -18,6 +18,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
         id="c0000000000o"
         isAmp={true}
         pageType="article"
+        previousPath={null}
         service="news"
       >
         <Component
@@ -31,6 +32,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
           id="c0000000000o"
           isAmp={true}
           pageType="article"
+          previousPath={null}
           service="news"
         />
       </RequestContextProvider>

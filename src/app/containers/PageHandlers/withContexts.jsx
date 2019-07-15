@@ -9,7 +9,15 @@ import { ToggleContextProvider } from '../../contexts/ToggleContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
-    const { bbcOrigin, id, service, isAmp, pageType, dials } = props;
+    const {
+      bbcOrigin,
+      id,
+      service,
+      isAmp,
+      pageType,
+      previousPath,
+      dials,
+    } = props;
     return (
       <ToggleContextProvider>
         <DialContextProvider dials={dials}>
@@ -20,6 +28,7 @@ const WithContexts = Component => {
               isAmp={isAmp}
               pageType={pageType}
               service={service}
+              previousPath={previousPath}
             >
               <Component {...props} />
             </RequestContextProvider>
@@ -34,6 +43,7 @@ const WithContexts = Component => {
     id: string,
     isAmp: bool.isRequired,
     pageType: string.isRequired,
+    previousPath: string,
     service: string.isRequired,
     dials: objectOf(bool).isRequired,
   };
@@ -41,6 +51,7 @@ const WithContexts = Component => {
   WithContextsContainer.defaultProps = {
     bbcOrigin: null,
     id: null,
+    previousPath: null,
   };
 
   return WithContextsContainer;

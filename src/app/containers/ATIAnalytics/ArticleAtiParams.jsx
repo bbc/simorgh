@@ -13,7 +13,9 @@ import {
 } from '../../lib/analyticsUtils/article';
 
 const ArticleAtiParams = articleData => {
-  const { platform, isUK, statsDestination } = useContext(RequestContext);
+  const { platform, isUK, statsDestination, previousPath, origin } = useContext(
+    RequestContext,
+  );
   const { atiAnalyticsAppName, service } = useContext(ServiceContext);
 
   return atiPageViewParams({
@@ -31,6 +33,8 @@ const ArticleAtiParams = articleData => {
     platform,
     service,
     statsDestination,
+    previousPath,
+    origin,
   });
 };
 
