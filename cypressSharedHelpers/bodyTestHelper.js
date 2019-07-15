@@ -35,21 +35,12 @@ export const getBlockData = (blockType, win) => {
   return getBlockByType(blocks, blockType);
 };
 
-export const firstHeadlineDataWindow = () => {
+export const headlineDataWindow = (type, heading) => {
   cy.window().then(win => {
-    const headlineData = getBlockData('headline', win);
-    const { text } = headlineData.model.blocks[0].model.blocks[0].model;
+    const headingData = getBlockData(type, win);
+    const { text } = headingData.model.blocks[0].model.blocks[0].model;
 
-    shouldMatchReturnedData(text, 'h1');
-  });
-};
-
-export const firstSubheadlineDataWindow = () => {
-  cy.window().then(win => {
-    const subheadingData = getBlockData('subheadline', win);
-    const { text } = subheadingData.model.blocks[0].model.blocks[0].model;
-
-    shouldMatchReturnedData(text, 'h2');
+    shouldMatchReturnedData(text, heading);
   });
 };
 

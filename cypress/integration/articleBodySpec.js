@@ -1,9 +1,8 @@
 import config from '../../cypressSharedHelpers/config/services';
 import {
   copyrightDataWindow,
-  firstHeadlineDataWindow,
+  headlineDataWindow,
   firstParagraphDataWindow,
-  firstSubheadlineDataWindow,
   getElement,
   placeholderImageLoaded,
   renderedTitle,
@@ -27,7 +26,7 @@ Object.keys(config)
       });
 
       it('should render an H1, which contains/displays a styled headline', () => {
-        firstHeadlineDataWindow();
+        headlineDataWindow('headline', 'h1');
       });
 
       it('should render a formatted timestamp', () => {
@@ -46,7 +45,7 @@ Object.keys(config)
       it('should render an H2, which contains/displays a styled subheading', () => {
         cy.window().then(win => {
           if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-            firstSubheadlineDataWindow();
+            headlineDataWindow('subheadline', 'h2');
           }
         });
       });
