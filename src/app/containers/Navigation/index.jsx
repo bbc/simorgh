@@ -6,7 +6,9 @@ import Navigation, {
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const NavigationContainer = () => {
-  const { script, translations, navigation } = useContext(ServiceContext);
+  const { script, translations, navigation, service } = useContext(
+    ServiceContext,
+  );
   const { currentPage, skipLinkText } = translations;
 
   if (!navigation || navigation.length === 0) {
@@ -14,7 +16,7 @@ const NavigationContainer = () => {
   }
 
   return (
-    <Navigation script={script} skipLinkText={skipLinkText}>
+    <Navigation script={script} skipLinkText={skipLinkText} service={service}>
       <NavigationUl>
         {navigation.map((item, index) => {
           const { title, url } = item;
@@ -27,6 +29,7 @@ const NavigationContainer = () => {
               script={script}
               active={active}
               currentPageText={currentPage}
+              service={service}
             >
               {title}
             </NavigationLi>
