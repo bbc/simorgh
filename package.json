@@ -70,10 +70,7 @@
     "type": "git",
     "url": "git+https://github.com/bbc/simorgh.git"
   },
-  "keywords": [
-    "BBC",
-    "Article"
-  ],
+  "keywords": ["BBC", "Article"],
   "author": "BBC",
   "license": "Apache-2.0",
   "bugs": {
@@ -81,12 +78,7 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/polyfill": "^7.2.5",
-    "@babel/preset-env": "^7.5.4",
-    "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.5.4",
     "@bbc/gel-foundations": "3.0.3",
     "@bbc/psammead-assets": "^1.0.6",
@@ -110,7 +102,6 @@
     "@bbc/psammead-styles": "^1.1.3",
     "@bbc/psammead-timestamp-container": "^2.0.0",
     "@bbc/psammead-visually-hidden-text": "^1.0.7",
-    "babel-loader": "^8.0.5",
     "compression": "^1.7.3",
     "core-js": "^3.1.4",
     "es6-promise": "^4.2.8",
@@ -124,7 +115,6 @@
     "moment-timezone": "^0.5.26",
     "morgan": "^1.9.1",
     "polyfill-crypto.getrandomvalues": "1.0.0",
-    "prop-types": "^15.6.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
@@ -134,10 +124,14 @@
     "react-router-dom": "^5.0.1",
     "styled-components": "^4.3.2",
     "uuid": "^3.3.2",
-    "webpack": "^4.35.3",
     "winston": "^3.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@bbc/psammead-storybook-helpers": "^3.1.3",
     "@storybook/addon-knobs": "^5.1.9",
@@ -149,6 +143,7 @@
     "audit-ci": "^2.1.0",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "babel-plugin-styled-components": "^1.10.6",
     "brotli-webpack-plugin": "^1.0.0",
@@ -181,6 +176,7 @@
     "npm-run-all": "^4.1.5",
     "path-to-regexp": "^3.0.0",
     "prettier": "^1.18.2",
+    "prop-types": "^15.6.2",
     "react-test-renderer": "^16.8.6",
     "snyk": "^1.193.0",
     "speculate": "^2.0.0",
@@ -193,6 +189,7 @@
     "supertest": "^4.0.2",
     "swagger-cli": "^2.3.0",
     "wait-on": "^3.3.0",
+    "webpack": "^4.35.3",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2",
@@ -201,18 +198,12 @@
     "yaml-js": "^0.2.3"
   },
   "spec": {
-    "executable": [
-      "./bake-scripts/*"
-    ],
+    "executable": ["./bake-scripts/*"],
     "post": [
       "mkdir -p /etc/bake-scripts/",
       "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
     ],
     "prune": false,
-    "requires": [
-      "td-agent",
-      "cloudteam-td-agent-setup",
-      "dial-agent"
-    ]
+    "requires": ["td-agent", "cloudteam-td-agent-setup", "dial-agent"]
   }
 }
