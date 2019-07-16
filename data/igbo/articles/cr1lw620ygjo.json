@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cr1lw620ygjo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cr1lw620ygjo"
+    },
+    "type": "article",
+    "createdBy": "Igbo",
+    "language": "ig",
+    "lastUpdated": 1562936761827,
+    "firstPublished": 1562936759286,
+    "lastPublished": 1562936759286,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ig",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Nigeria vs South Africa: Ugo eberela na mgbagbu",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Nigeria vs South Africa: Ugo eberela na mgbagbu",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ndị otu egwuregwu bọọlụ Super Eagles nke Naijiria ekwuola na ha di njikere maka asọmpi nke ha na ndị ogbo ha nke mba Saut Afrịka n'agba anọ ikpeazụ nke iko mba Afrịka.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ndị otu egwuregwu bọọlụ Super Eagles nke Naijiria ekwuola na ha di njikere maka asọmpi nke ha na ndị ogbo ha nke mba Saut Afrịka n'agba anọ ikpeazụ nke iko mba Afrịka.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Mba Saut Afrịka gosiri na ha so n'ihe a na-eme mgbe ha gbapụrụ mba Ijipt na-agbanyeghi na ọbụ be ha ka a nọ asọ mpi 'African Cup of Nations' (AFCON) nke afọ a.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Mba Saut Afrịka gosiri na ha so n'ihe a na-eme mgbe ha gbapụrụ mba Ijipt na-agbanyeghi na ọbụ be ha ka a nọ asọ mpi 'African Cup of Nations' (AFCON) nke afọ a.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Nigeria vs South Africa: Ugo eberela na mgbagbu"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cr1lw620ygjo"
+    },
+    "summary": "",
+    "timestamp": 1562936759286,
+    "id": "urn:bbc:ares::article:cr1lw620ygjo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Igbo",
+      "uri": "/igbo",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

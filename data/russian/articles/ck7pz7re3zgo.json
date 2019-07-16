@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:ck7pz7re3zgo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo"
+    },
+    "type": "article",
+    "createdBy": "Russian",
+    "language": "ru",
+    "lastUpdated": 1562941788605,
+    "firstPublished": 1562941784981,
+    "lastPublished": 1562941784981,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ru",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Пугало полицейского с камерой следит за водителями под Ливерпулем",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Пугало полицейского с камерой следит за водителями под Ливерпулем",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Жительнице британского городка Лидиэйт всерьез надоели водители, постоянно превышающие скорость на ее улице - и она вышла из положения творчески.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Жительнице британского городка Лидиэйт всерьез надоели водители, постоянно превышающие скорость на ее улице - и она вышла из положения творчески.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Эди Поуп смастерила чучело полицейского с портативной камерой для замера скорости.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Эди Поуп смастерила чучело полицейского с портативной камерой для замера скорости.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Пугало полицейского с камерой следит за водителями под Ливерпулем"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo"
+    },
+    "summary": "",
+    "timestamp": 1562941784981,
+    "id": "urn:bbc:ares::article:ck7pz7re3zgo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Russian",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
