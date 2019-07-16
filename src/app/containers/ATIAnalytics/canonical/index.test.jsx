@@ -34,7 +34,7 @@ describe('Canonical ATI Analytics', () => {
     );
 
     expect(renderedATI.html()).toBe(
-      `<img height="1px" width="1px" alt="" src="https://foobar.com?key=value&amp;key2=value2"/>`,
+      `<img height="1px" width="1px" alt="" style="position:absolute" src="https://foobar.com?key=value&amp;key2=value2"/>`,
     );
   });
 
