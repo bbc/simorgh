@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c18q7nedn2ko",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c18q7nedn2ko"
+    },
+    "type": "article",
+    "createdBy": "Naidheachdan",
+    "language": "gd",
+    "lastUpdated": 1563022117737,
+    "firstPublished": 1563022114054,
+    "lastPublished": 1563022114054,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "gd",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Naidheachdan"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Cabers ag amas air an tuilleadh eachdraidh",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Cabers ag amas air an tuilleadh eachdraidh",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tha Cabair Fèidh ag amas air caibideal ùr a sgrìobhadh nan eachdraidh ann an Cupa na Camanachd is fios aca a-nise gur e Baile Ùr an t-Slèibh a bhios nan aghaidh san iar-chuairt dheireannaich.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tha Cabair Fèidh ag amas air caibideal ùr a sgrìobhadh nan eachdraidh ann an Cupa na Camanachd is fios aca a-nise gur e Baile Ùr an t-Slèibh a bhios nan aghaidh san iar-chuairt dheireannaich.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tha Cabers aig an ìre seo den fharpais airson a' chiad turas bho 1963 às dèidh dhaibh an gnothach a dhèanamh air Loch Abar 7-4 Disathairne.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tha Cabers aig an ìre seo den fharpais airson a' chiad turas bho 1963 às dèidh dhaibh an gnothach a dhèanamh air Loch Abar 7-4 Disathairne.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Feumar a dhol air ais nas fhaide na sin, gu 1939, airson an turas mu dheireadh a bhuannaich iad an cupa.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Feumar a dhol air ais nas fhaide na sin, gu 1939, airson an turas mu dheireadh a bhuannaich iad an cupa.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tha sgeulachdan air an innse fhathast mun sgioba sin aig Cabers a rinn a' chùis air Caol Bhòid ann an Inbhir Nis sa bhliadhna 'ud, is gu dearbh air an dearbh sgioba ann an Inbhir Aora ann an cuairt dheireannach 1934.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tha sgeulachdan air an innse fhathast mun sgioba sin aig Cabers a rinn a' chùis air Caol Bhòid ann an Inbhir Nis sa bhliadhna 'ud, is gu dearbh air an dearbh sgioba ann an Inbhir Aora ann an cuairt dheireannach 1934.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Cabers ag amas air an tuilleadh eachdraidh"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c18q7nedn2ko"
+    },
+    "summary": "",
+    "timestamp": 1563022114054,
+    "id": "urn:bbc:ares::article:c18q7nedn2ko",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Naidheachdan",
+      "uri": "/naidheachdan",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

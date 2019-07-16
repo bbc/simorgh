@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c45965g63xno",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno"
+    },
+    "type": "article",
+    "createdBy": "Mundo",
+    "language": "es",
+    "lastUpdated": 1562941659639,
+    "firstPublished": 1562941654757,
+    "lastPublished": 1562941654757,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "es",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno"
+    },
+    "summary": "",
+    "timestamp": 1562941654757,
+    "id": "urn:bbc:ares::article:c45965g63xno",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Mundo",
+      "uri": "/mundo",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

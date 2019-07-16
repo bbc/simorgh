@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0q2zq8pzvzo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo"
+    },
+    "type": "article",
+    "createdBy": "Indonesia",
+    "language": "id",
+    "lastUpdated": 1562941591144,
+    "firstPublished": 1562941587903,
+    "lastPublished": 1562941587903,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "id",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Disebut lebih bergizi dari susu sapi, maukah Anda beralih ke susu unta?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Disebut lebih bergizi dari susu sapi, maukah Anda beralih ke susu unta?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Apakah Anda mau beralih minum susu unta? Semakin banyak peternak unta di Australia yang berharap Anda mau mencoba susu unta.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Apakah Anda mau beralih minum susu unta? Semakin banyak peternak unta di Australia yang berharap Anda mau mencoba susu unta.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bukan hal yang aneh bagi para pemilik usaha kecil untuk memperlakukan pekerja mereka seperti keluarga.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bukan hal yang aneh bagi para pemilik usaha kecil untuk memperlakukan pekerja mereka seperti keluarga.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tentu saja pekerja itu biasanya bukan binatang berkaki empat yang berpunuk.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tentu saja pekerja itu biasanya bukan binatang berkaki empat yang berpunuk.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Disebut lebih bergizi dari susu sapi, maukah Anda beralih ke susu unta?"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo"
+    },
+    "summary": "",
+    "timestamp": 1562941587903,
+    "id": "urn:bbc:ares::article:c0q2zq8pzvzo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Indonesia",
+      "uri": "/indonesia",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

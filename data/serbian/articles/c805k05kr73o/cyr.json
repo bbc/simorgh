@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c805k05kr73o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o"
+    },
+    "type": "article",
+    "createdBy": "Serbian",
+    "language": "sr-cyrl",
+    "lastUpdated": 1562943443816,
+    "firstPublished": 1562943437714,
+    "lastPublished": 1562943437714,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "sr-cyrl",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Ратови звезда: Нишки џедаји помажу децу без родитеља",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Ратови звезда: Нишки џедаји помажу децу без родитеља",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "У далекој галаксији, на југу Србије, у Нишу, сила се пробудила.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "У далекој галаксији, на југу Србије, у Нишу, сила се пробудила.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Иако их према актуелним дешавањима у серијалу Ратови звезда готово и нема, џедаји се већ неколико година успешно окупљају у Нишу.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Иако их према актуелним дешавањима у серијалу ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ратови звезда",
+                        "attributes": [
+                          "italic"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " готово и нема, џедаји се већ неколико година успешно окупљају у Нишу.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Са више од сто чланова, нишки Џедајски покрет можда не одржава мир у свемиру, али покушава да животе неких Нишлија учини бољим.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Са више од сто чланова, нишки Џедајски покрет можда не одржава мир у свемиру, али покушава да животе неких Нишлија учини бољим.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Поред попкултурних конвенција на којима окупљају фанове Ратова звезда, нишки џедаји организују и хуманитарне акције.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Поред попкултурних конвенција на којима окупљају фанове ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ратова звезда",
+                        "attributes": [
+                          "italic"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", нишки џедаји организују и хуманитарне акције.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "А овог лета су решили да оду корак даље и организују камп намењен деци без родитеља.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "А овог лета су решили да оду корак даље и организују камп намењен деци без родитеља.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Камп, који ће бити одржан на Власинском језеру, носиће назив „Сила прати храбре\".",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Камп, који ће бити одржан на Власинском језеру, носиће назив „Сила прати храбре\".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Ратови звезда: Нишки џедаји помажу децу без родитеља"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o"
+    },
+    "summary": "",
+    "timestamp": 1562943437714,
+    "id": "urn:bbc:ares::article:c805k05kr73o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Serbian",
+      "uri": "/serbian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
