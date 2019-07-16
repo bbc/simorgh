@@ -20,6 +20,7 @@ import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import getDials from './getDials';
+import serviceOverrides from './serviceOverrides';
 
 const morgan = require('morgan');
 
@@ -37,6 +38,13 @@ class LoggerStream {
     logger.info(message.substring(0, message.lastIndexOf('\n')));
   }
 }
+
+const constructDataFilePath = (pageType, service, id) => {
+  const serviceName = serviceOverrides[service] || service;
+  const dataPath = pageType === 'frontpage' ? 'index.json' : `${id}.json`;
+
+  return path.join(process.cwd(), 'data', serviceName, pageType, dataPath);
+};
 
 const server = express();
 
@@ -89,26 +97,14 @@ if (process.env.APP_ENV === 'local') {
     .get(articleDataRegexPath, async ({ params }, res, next) => {
       const { service, id } = params;
 
-      const dataFilePath = path.join(
-        process.cwd(),
-        'data',
-        service,
-        'articles',
-        `${id}.json`,
-      );
+      const dataFilePath = constructDataFilePath('articles', service, id);
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(frontpageDataRegexPath, async ({ params }, res, next) => {
       const { service } = params;
 
-      const dataFilePath = path.join(
-        process.cwd(),
-        'data',
-        service,
-        'frontpage',
-        'index.json',
-      );
+      const dataFilePath = constructDataFilePath('frontpage', service);
 
       sendDataFile(res, dataFilePath, next);
     })
