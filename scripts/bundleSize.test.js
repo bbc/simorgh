@@ -15,6 +15,25 @@ jest.mock('../src/app/lib/config/services/loadableConfig', () => ({
 }));
 jest.mock('child_process');
 
+const createExecSyncImplementation = (service1Size, service2Size) => {
+  return filePath => {
+    let size = 0;
+    if (filePath.includes('service1')) {
+      size = service1Size;
+    }
+    if (filePath.includes('service2')) {
+      size = service2Size;
+    }
+    if (filePath.includes('main-*.js')) {
+      size = '20000';
+    }
+    if (filePath.includes('vendor-*.js')) {
+      size = '350000';
+    }
+    return size;
+  };
+};
+
 describe('bundleSize', () => {
   const originalConsoleLog = global.console.log;
   const originalConsoleError = global.console.error;
@@ -48,13 +67,9 @@ describe('bundleSize', () => {
 
   describe('when all service bundles are within the defined limits', () => {
     beforeEach(() => {
-      execSync.mockImplementation(filePath => {
-        if (filePath.includes('service1')) return '560000';
-        if (filePath.includes('service2')) return '570000';
-        if (filePath.includes('main-*.js')) return '20000';
-        if (filePath.includes('vendor-*.js')) return '350000';
-        return 0;
-      });
+      execSync.mockImplementation(
+        createExecSyncImplementation('560000', '570000'),
+      );
     });
 
     it('should use ora to show loading and success states', () => {
@@ -89,13 +104,9 @@ describe('bundleSize', () => {
 
   describe('when one or more of the service bundles are too small', () => {
     beforeEach(() => {
-      execSync.mockImplementation(filePath => {
-        if (filePath.includes('service1')) return '2000';
-        if (filePath.includes('service2')) return '570000';
-        if (filePath.includes('main-*.js')) return '20000';
-        if (filePath.includes('vendor-*.js')) return '350000';
-        return 0;
-      });
+      execSync.mockImplementation(
+        createExecSyncImplementation('2000', '570000'),
+      );
     });
 
     it('should use ora to show loading and failure states', () => {
@@ -140,13 +151,9 @@ describe('bundleSize', () => {
 
   describe('when one or more of the service bundles are too large', () => {
     beforeEach(() => {
-      execSync.mockImplementation(filePath => {
-        if (filePath.includes('service1')) return '560000';
-        if (filePath.includes('service2')) return '580000';
-        if (filePath.includes('main-*.js')) return '20000';
-        if (filePath.includes('vendor-*.js')) return '350000';
-        return 0;
-      });
+      execSync.mockImplementation(
+        createExecSyncImplementation('560000', '580000'),
+      );
     });
 
     it('should use ora to show loading and failure states', () => {
