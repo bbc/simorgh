@@ -4,6 +4,15 @@ import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
 import MediaIndicator from './MediaIndicator';
 
 const item = {
+  summary: 'The summary',
+  timestamp: 1563266297329,
+  indexImage: {
+    path: '/cpsprodpb/0A06/production/image1.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Image Alt text 1',
+    copyrightHolder: 'Image provider 1',
+  },
   headlines: {
     headline: 'A video item',
   },
@@ -22,17 +31,12 @@ const item = {
 };
 
 const nonMediaItem = {
+  ...item,
   cpsType: '🤔',
 };
 
 const noDurationItem = {
-  headlines: {
-    headline: 'A video item',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  cpsType: 'MAP',
+  ...item,
   media: {
     format: 'video',
     versions: [{}],
@@ -40,23 +44,12 @@ const noDurationItem = {
 };
 
 const noMediaObject = {
-  headlines: {
-    headline: 'A video item',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  cpsType: 'MAP',
+  ...item,
+  media: undefined,
 };
 
 const noMediaFormat = {
-  headlines: {
-    headline: 'A video item',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  cpsType: 'MAP',
+  ...item,
   media: {
     versions: [
       {
