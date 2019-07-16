@@ -81,9 +81,9 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
   });
 
   it('should include article metadata in the LinkedData', () => {
-    const script = cy.get('script[type="application/ld+json"]');
-    script.should('contain', 'mainEntityOfPage');
-    script.should('contain', 'author');
-    script.should('contain', 'headline');
+    cy.get('script[type="application/ld+json"]')
+      .should('contain', 'mainEntityOfPage')
+      .and('contain', 'author')
+      .and('contain', 'headline');
   });
 });
