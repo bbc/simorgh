@@ -70,7 +70,10 @@
     "type": "git",
     "url": "git+https://github.com/bbc/simorgh.git"
   },
-  "keywords": ["BBC", "Article"],
+  "keywords": [
+    "BBC",
+    "Article"
+  ],
   "author": "BBC",
   "license": "Apache-2.0",
   "bugs": {
@@ -124,6 +127,7 @@
     "react-router-dom": "^5.0.1",
     "styled-components": "^4.3.2",
     "uuid": "^3.3.2",
+    "webpack-cli": "^3.3.5",
     "winston": "^3.1.0"
   },
   "devDependencies": {
@@ -191,19 +195,24 @@
     "wait-on": "^3.3.0",
     "webpack": "^4.35.3",
     "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.1.5",
     "webpack-node-externals": "^1.7.2",
     "yaml-js": "^0.2.3"
   },
   "spec": {
-    "executable": ["./bake-scripts/*"],
+    "executable": [
+      "./bake-scripts/*"
+    ],
     "post": [
       "mkdir -p /etc/bake-scripts/",
       "cp -R -af /usr/lib/simorgh/bake-scripts/* /etc/bake-scripts"
     ],
     "prune": false,
-    "requires": ["td-agent", "cloudteam-td-agent-setup", "dial-agent"]
+    "requires": [
+      "td-agent",
+      "cloudteam-td-agent-setup",
+      "dial-agent"
+    ]
   }
 }
