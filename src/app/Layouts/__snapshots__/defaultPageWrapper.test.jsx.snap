@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultPageWrapper should render with children 1`] = `
-<DialContextProvider>
+<DialContextProvider
+  dials={
+    Object {
+      "audiovideo": false,
+      "mpulse": false,
+    }
+  }
+>
   <ServiceContextProvider
     service="news"
   >

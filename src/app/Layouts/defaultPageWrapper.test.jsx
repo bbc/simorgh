@@ -32,6 +32,10 @@ describe('defaultPageWrapper', () => {
     service: 'news',
     isAmp: true,
     pageType: 'article',
+    dials: {
+      mpulse: false,
+      audiovideo: false,
+    },
   };
 
   shouldShallowMatchSnapshot(
@@ -58,6 +62,11 @@ describe('defaultPageWrapper', () => {
           service: 'news',
           isAmp: true,
           pageType,
+          children: <h2>Child element</h2>,
+          dials: {
+            mpulse: false,
+            audiovideo: false,
+          },
         };
 
         render(<DefaultPageWrapper {...fixture} />);
