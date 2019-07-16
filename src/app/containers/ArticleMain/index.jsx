@@ -13,6 +13,7 @@ import audioVideo from '../AudioVideo';
 import AudioVideoHead from '../../components/AudioVideoHead';
 import { RequestContext } from '../../contexts/RequestContext';
 import generateAVSettings from '../../lib/utilities/audioVideo/generateAVSettings';
+import chartbeat from '../Chartbeat';
 
 const componentsToRender = {
   headline: headings,
@@ -20,6 +21,7 @@ const componentsToRender = {
   text,
   image,
   timestamp,
+  chartbeat,
 };
 
 const avEnabledComment = (
@@ -41,11 +43,18 @@ const ArticleMain = ({ articleData }) => {
     block => block.type === 'audio' || block.type === 'video',
   );
   const hasAV = audioVideoBlocks.length > 0;
-  const { audiovideo: audioVideoEnabled } = useContext(DialContext);
+  const {
+    audiovideo: audioVideoEnabled,
+    chartbeat: chartbeatEnabled,
+  } = useContext(DialContext);
 
   if (audioVideoEnabled) {
     componentsToRender.audio = audioVideo;
     componentsToRender.video = audioVideo;
+  }
+
+  if (chartbeatEnabled) {
+    componentsToRender.chartbeat = chartbeat;
   }
 
   return (
