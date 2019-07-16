@@ -2,10 +2,7 @@ import React, { Fragment } from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
-import { withKnobs } from '@storybook/addon-knobs';
-import { dirDecorator } from '@bbc/psammead-storybook-helpers';
 import { createGlobalStyle } from 'styled-components';
-import GlobalStyle from '../src/app/lib/globalStyles';
 
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
 
@@ -20,12 +17,10 @@ const styles = Object.keys(fontFaces).reduce(
 
 const GlobalStyles = createGlobalStyle`${styles}`;
 
-addDecorator(withKnobs);
-addDecorator(dirDecorator);
 addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
   <Fragment>
-    <GlobalStyle />
+    <GlobalStyles />
     {story()}
   </Fragment>
   /* eslint-enable react/jsx-filename-extension */

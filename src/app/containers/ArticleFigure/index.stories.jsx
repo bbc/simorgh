@@ -1,4 +1,6 @@
 import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
+import { dirDecorator } from '@bbc/psammead-storybook-helpers';
 import {
   FigureImage,
   FigureAmpImage,
@@ -17,6 +19,8 @@ import {
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('ArticleFigure', module)
+  .addDecorator(withKnobs)
+  .addDecorator(dirDecorator)
   .add('with a caption', () => FigureImageWithCaption)
   .add('without a caption', () => FigureImage)
   .add('with non-BBC copyright', () => FigureImageWithCopyright)
