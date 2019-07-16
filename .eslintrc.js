@@ -3,6 +3,7 @@ module.exports = {
     'airbnb',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:cypress/recommended',
   ],
   env: {
     es6: true,
@@ -18,7 +19,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['prettier', 'json', 'jsx-a11y', 'react-hooks'],
+  plugins: ['prettier', 'json', 'jsx-a11y', 'react-hooks', 'cypress'],
   rules: {
     'react/jsx-one-expression-per-line': 'off',
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
