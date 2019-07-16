@@ -114,9 +114,9 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include mainEntityOfPage in the LinkedData', () => {
-    cy.get('script[type="application/ld+json"]').should(
-      'contain',
-      'mainEntityOfPage',
-    );
+    cy.get('script[type="application/ld+json"]')
+      .should('contain', 'mainEntityOfPage')
+      .and('contain', 'author')
+      .and('contain', 'headline');
   });
 });
