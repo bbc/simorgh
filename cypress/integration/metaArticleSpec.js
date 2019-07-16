@@ -44,7 +44,6 @@ Object.keys(services)
 
       it('should load a maximum of two Reith font files', () => {
         const fontFamiliesArray = [];
-        console.log(`${services[service].font}`);
         cy.get('*')
           .each(element => {
             const fontFamily = Cypress.$(element).css('font-family');
