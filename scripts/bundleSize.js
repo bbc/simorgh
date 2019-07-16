@@ -1,80 +1,35 @@
 #! /usr/bin/env node
 
-/* eslint-disable no-console */
-
 const ora = require('ora');
 const { execSync } = require('child_process');
 const chalk = require('chalk');
+
+const services = Object.keys(
+  require('../src/app/lib/config/services/loadableConfig'),
+);
 
 // Size limit for all bundles used by each service (K)
 // Keep these +/- 5K and update frequently!
 const MIN = 605;
 const MAX = 625;
 
-const services = [
-  'afaanoromoo',
-  'afrique',
-  'amharic',
-  'arabic',
-  'azeri',
-  'bengali',
-  'burmese',
-  'cymrufyw',
-  'gahuza',
-  'gujarati',
-  'hausa',
-  'hindi',
-  'igbo',
-  'indonesia',
-  'japanese',
-  'korean',
-  'kyrgyz',
-  'marathi',
-  'mundo',
-  'naidheachdan',
-  'nepali',
-  'news',
-  'pashto',
-  'persian',
-  'pidgin',
-  'portuguese',
-  'punjabi',
-  'russian',
-  'serbian',
-  'sinhala',
-  'somali',
-  'swahili',
-  'tamil',
-  'telugu',
-  'thai',
-  'tigrinya',
-  'turkce',
-  'ukchina',
-  'ukrainian',
-  'urdu',
-  'uzbek',
-  'vietnamese',
-  'yoruba',
-  'zhongwen',
-];
-
-function getBundleSize(filePattern) {
+const getBundleSize = filePattern => {
   const size = execSync(`cat ${filePattern} | wc -c | tr -d ' '`, {
     encoding: 'utf8',
   });
 
   return Math.round(parseInt(size, 10) / 1000);
-}
+};
 
-function getServiceBundleSize(service) {
+const getServiceBundleSize = service => {
   return getBundleSize(`build/public/static/js/{main,vendor,${service}}-*.js`);
-}
+};
 
-function capitaliseFirstLetter(string) {
+const capitaliseFirstLetter = string => {
   return string.charAt(0).toUpperCase() + string.slice(1);
-}
+};
 
-function createConsoleError(service, size, adjective) {
+const createConsoleError = (service, size, adjective) => {
   return [
     chalk.red('Bundle size for'),
     chalk.red.bold(capitaliseFirstLetter(service)),
@@ -82,9 +37,9 @@ function createConsoleError(service, size, adjective) {
     chalk.red.bold(`${size} kB.`),
     chalk.red("Please update thresholds in './scripts/bundleSize.js'"),
   ].join(' ');
-}
+};
 
-function mapSizeToError(service, size) {
+const mapSizeToError = (service, size) => {
   if (size < MIN) {
     return createConsoleError(service, size, 'small');
   }
@@ -92,9 +47,9 @@ function mapSizeToError(service, size) {
     return createConsoleError(service, size, 'large');
   }
   return undefined;
-}
+};
 
-console.log('');
+console.log(''); // eslint-disable-line no-console
 const spinner = ora({
   text: 'Analysing bundles...',
   color: 'magenta',
@@ -139,23 +94,22 @@ const bundlesToLog = [
   },
   {
     name: `Smallest bundle`,
-    size: smallestBundle.size,
-    service: smallestBundle.service,
+    ...smallestBundle,
   },
   {
     name: `Largest bundle`,
-    size: largestBundle.size,
-    service: largestBundle.service,
+    ...largestBundle,
   },
   { name: 'Average bundle', size: Math.round(totalSize / services.length) },
 ];
 
 const maxSizeDigits = 5;
-function formatSize(size) {
+const formatSize = size => {
   return `${' '.repeat(maxSizeDigits - size.toString().length)} ${size} kB  `;
-}
+};
 
-function logBundle({ name, size, service }) {
+const logBundle = ({ name, size, service }) => {
+  // eslint-disable-next-line no-console
   return console.log(
     [
       chalk.green(formatSize(size)),
@@ -163,11 +117,10 @@ function logBundle({ name, size, service }) {
       service ? `- ${capitaliseFirstLetter(service)}` : '',
     ].join(' '),
   );
-}
+};
 
-console.log('');
-console.log('Bundle size summary:');
-console.log();
+console.log('\nBundle size summary:'); // eslint-disable-line no-console
+console.log(); // eslint-disable-line no-console
 bundlesToLog.forEach(bundleData => {
   logBundle(bundleData);
 });
