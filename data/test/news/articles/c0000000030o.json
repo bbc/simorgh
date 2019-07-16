@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0000000030o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000030o"
+    },
+    "type": "article",
+    "createdBy": "",
+    "created": 1514808060000,
+    "firstPublished": 1514808060000,
+    "lastPublished": 1514811600000,
+    "lastUpdated": 1514811600000,
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "category": "news",
+      "genre": null
+    },
+    "tags": {},
+    "version": "v0.3.2",
+    "blockTypes": ["headline", "text", "paragraph", "fragment"]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a test asset for an IDT2 block",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a test asset for an IDT2 block",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "idt2",
+          "model": {
+            "uuid": "ce58ec89-e7b1-4f34-8699-7a6d62b8fff9",
+            "href": "https://smallprox.vj.test.tools.bbc.co.uk/idt2/ce58ec89-e7b1-4f34-8699-7a6d62b8fff9/image/350",
+            "width": 700,
+            "height": 766,
+            "altText": "Quantity of Birds. .  .",
+            "caption": "On mobile apps tap the graphic to view full-screen. Images will open in gallery mode.",
+            "copyrightHolder": "Source: Jim",
+            "published": 1547807908339,
+            "blocks": [
+              {
+                "type": "image",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 700,
+                        "height": 766,
+                        "locator": "https://smallprox.vj.test.tools.bbc.co.uk/idt2/ce58ec89-e7b1-4f34-8699-7a6d62b8fff9/image/$width",
+                        "originCode": "idt2",
+                        "copyrightHolder": "Source: Jim"
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Quantity of Birds. .  .",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Quantity of Birds. .  .",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Aliquam faucibus pulvinar condimentum. Duis sit amet arcu sit amet lectus maximus dignissim. Quisque ut vulputate lorem.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "id": "urn:bbc:ares::article:c0000000001o",
+    "headlines": {
+      "seoHeadline": "Curabitur risus lorem vestibulum quis magna at vulputate vehicula nibh",
+      "promoHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0000000001o"
+    },
+    "summary": "Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+    "timestamp": 1514811600000
+  }
+}
