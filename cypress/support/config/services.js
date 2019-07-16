@@ -1,13 +1,13 @@
 export default {
   igbo: {
-    fontFamily: undefined,
+    font: undefined,
     pageTypes: {
       articles: undefined,
       frontPage: '/igbo',
     },
   },
   news: {
-    fontFamily: 'Reith',
+    font: 'Reith',
     pageTypes: {
       articles: {
         asset:
@@ -17,7 +17,7 @@ export default {
     },
   },
   persian: {
-    fontFamily: 'Nassim',
+    font: 'Nassim',
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
@@ -29,14 +29,14 @@ export default {
     },
   },
   pidgin: {
-    fontFamily: undefined,
+    font: undefined,
     pageTypes: {
       articles: undefined,
       frontPage: '/pidgin',
     },
   },
   yoruba: {
-    fontFamily: undefined,
+    font: undefined,
     pageTypes: {
       articles: undefined,
       frontPage: '/yoruba',
