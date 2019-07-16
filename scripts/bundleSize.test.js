@@ -17,20 +17,11 @@ jest.mock('child_process');
 
 const createExecSyncImplementation = (service1Size, service2Size) => {
   return filePath => {
-    let size = 0;
-    if (filePath.includes('service1')) {
-      size = service1Size;
-    }
-    if (filePath.includes('service2')) {
-      size = service2Size;
-    }
-    if (filePath.includes('main-*.js')) {
-      size = '20000';
-    }
-    if (filePath.includes('vendor-*.js')) {
-      size = '350000';
-    }
-    return size;
+    if (filePath.includes('service1')) return service1Size;
+    if (filePath.includes('service2')) return service2Size;
+    if (filePath.includes('main-*.js')) return '20000';
+    if (filePath.includes('vendor-*.js')) return '350000';
+    return 0;
   };
 };
 
