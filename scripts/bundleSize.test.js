@@ -49,8 +49,8 @@ describe('bundleSize', () => {
   describe('when all service bundles are within the defined limits', () => {
     beforeEach(() => {
       execSync.mockImplementation(filePath => {
-        if (filePath.includes('service1')) return '610000';
-        if (filePath.includes('service2')) return '620000';
+        if (filePath.includes('service1')) return '560000';
+        if (filePath.includes('service2')) return '570000';
         if (filePath.includes('main-*.js')) return '20000';
         if (filePath.includes('vendor-*.js')) return '350000';
         return 0;
@@ -79,9 +79,9 @@ describe('bundleSize', () => {
           ['\nBundle size summary:'],
           ['    20 kB   Main bundle '],
           ['   350 kB   Vendor bundle '],
-          ['   610 kB   Smallest bundle - Service1'],
-          ['   620 kB   Largest bundle - Service2'],
-          ['   615 kB   Average bundle '],
+          ['   560 kB   Smallest bundle - Service1'],
+          ['   570 kB   Largest bundle - Service2'],
+          ['   565 kB   Average bundle '],
         ]),
       );
     });
@@ -91,7 +91,7 @@ describe('bundleSize', () => {
     beforeEach(() => {
       execSync.mockImplementation(filePath => {
         if (filePath.includes('service1')) return '2000';
-        if (filePath.includes('service2')) return '620000';
+        if (filePath.includes('service2')) return '570000';
         if (filePath.includes('main-*.js')) return '20000';
         if (filePath.includes('vendor-*.js')) return '350000';
         return 0;
@@ -131,8 +131,8 @@ describe('bundleSize', () => {
           ['    20 kB   Main bundle '],
           ['   350 kB   Vendor bundle '],
           ['     2 kB   Smallest bundle - Service1'],
-          ['   620 kB   Largest bundle - Service2'],
-          ['   311 kB   Average bundle '],
+          ['   570 kB   Largest bundle - Service2'],
+          ['   286 kB   Average bundle '],
         ]),
       );
     });
@@ -141,8 +141,8 @@ describe('bundleSize', () => {
   describe('when one or more of the service bundles are too large', () => {
     beforeEach(() => {
       execSync.mockImplementation(filePath => {
-        if (filePath.includes('service1')) return '610000';
-        if (filePath.includes('service2')) return '630000';
+        if (filePath.includes('service1')) return '560000';
+        if (filePath.includes('service2')) return '580000';
         if (filePath.includes('main-*.js')) return '20000';
         if (filePath.includes('vendor-*.js')) return '350000';
         return 0;
@@ -167,7 +167,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for Service2 is too large at 630 kB. Please update thresholds in './scripts/bundleSize.js'",
+        "Bundle size for Service2 is too large at 580 kB. Please update thresholds in './scripts/bundleSize.js'",
       );
     });
 
@@ -181,9 +181,9 @@ describe('bundleSize', () => {
           ['\nBundle size summary:'],
           ['    20 kB   Main bundle '],
           ['   350 kB   Vendor bundle '],
-          ['   610 kB   Smallest bundle - Service1'],
-          ['   630 kB   Largest bundle - Service2'],
-          ['   620 kB   Average bundle '],
+          ['   560 kB   Smallest bundle - Service1'],
+          ['   580 kB   Largest bundle - Service2'],
+          ['   570 kB   Average bundle '],
         ]),
       );
     });

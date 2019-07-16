@@ -10,8 +10,8 @@ const services = Object.keys(
 
 // Size limit for all bundles used by each service (K)
 // Keep these +/- 5K and update frequently!
-const MIN = 605;
-const MAX = 625;
+const MIN = 557;
+const MAX = 576;
 
 const getBundleSize = filePattern => {
   const size = execSync(`cat ${filePattern} | wc -c | tr -d ' '`, {
