@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c2nr6xqmnewo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c2nr6xqmnewo"
+    },
+    "type": "article",
+    "createdBy": "Hausa",
+    "language": "ha",
+    "lastUpdated": 1562936833135,
+    "firstPublished": 1562936829639,
+    "lastPublished": 1562936829639,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ha",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Dalilan da suka sa Najeriya ta doke Afirka ta Kudu",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Dalilan da suka sa Najeriya ta doke Afirka ta Kudu",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tawagar kwallon kafa ta Najeriya ta kai wasan kusa da na karshe a gasar Cin Kofin nahiyar Afirka da ake yi a Masar, bayan da ta doke Afirka ta Kudu 2-1 a ranar Laraba.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tawagar kwallon kafa ta Najeriya ta kai wasan kusa da na karshe a gasar Cin Kofin nahiyar Afirka da ake yi a Masar, bayan da ta doke Afirka ta Kudu 2-1 a ranar Laraba.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Najeriya ta kai wannan matakin duk da kasa halartar wasannin 2015 da aka yi a Equatorial Guinea da wanda aka yi a Gabon a 2017.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Najeriya ta kai wannan matakin duk da kasa halartar wasannin 2015 da aka yi a Equatorial Guinea da wanda aka yi a Gabon a 2017.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Super Eagles ta samu karfin gwiwar zuwa karawar Quarter Finals, bayan da ta fitar da mai rike da kofin Kamaru, ita kuwa Afirka ta Kudu mai masaukin baki ta fitar a wasannin.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Super Eagles ta samu karfin gwiwar zuwa karawar Quarter Finals, bayan da ta fitar da mai rike da kofin Kamaru, ita kuwa Afirka ta Kudu mai masaukin baki ta fitar a wasannin.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Dalilan da suka sa Najeriya ta doke Afirka ta Kudu"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c2nr6xqmnewo"
+    },
+    "summary": "",
+    "timestamp": 1562936829639,
+    "id": "urn:bbc:ares::article:c2nr6xqmnewo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Hausa",
+      "uri": "/hausa",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c3qxeqm7ldjo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3qxeqm7ldjo"
+    },
+    "type": "article",
+    "createdBy": "Thai",
+    "language": "th",
+    "lastUpdated": 1562942950145,
+    "firstPublished": 1562942948180,
+    "lastPublished": 1562942948180,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "th",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "inline"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ปริศนาที่มีมานานของวงการฟิสิกส์ดาราศาสตร์ ซึ่งว่าด้วยกำเนิดของหลุมดำมวลยิ่งยวดอายุเก่าแก่ที่ก่อตัวหลังยุคแรกเริ่มของจักรวาลไม่นานนั้น เพิ่งได้รับคำอธิบายที่ให้ความกระจ่างเพิ่มขึ้นในอีกขั้นหนึ่งแล้ว",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ปริศนาที่มีมานานของวงการฟิสิกส์ดาราศาสตร์ ซึ่งว่าด้วยกำเนิดของหลุมดำมวลยิ่งยวดอายุเก่าแก่ที่ก่อตัวหลังยุคแรกเริ่มของจักรวาลไม่นานนั้น เพิ่งได้รับคำอธิบายที่ให้ความกระจ่างเพิ่มขึ้นในอีกขั้นหนึ่งแล้ว",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ศาสตราจารย์ศานตนุ ภสุ และศาสตราจารย์อาร์ปัน ดาส จากมหาวิทยาลัยเวสเทิร์นของสหรัฐฯ ตีพิมพ์รายงานที่อธิบายถึงปรากฎการณ์ดังกล่าวลงในวารสาร The Astrophysical Journal Letters โดยชี้ว่าหลุมดำชนิดนี้เกิดและโตขึ้นอย่างรวดเร็วเหลือเชื่อด้วยเงื่อนไขพิเศษ คือไม่ได้ผ่านขั้นตอนการระเบิดของดาวฤกษ์หรือซูเปอร์โนวา (Supernova) ในแบบเดียวกับหลุมดำโดยทั่วไป",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ศาสตราจารย์ศานตนุ ภสุ และศาสตราจารย์อาร์ปัน ดาส จากมหาวิทยาลัยเวสเทิร์นของสหรัฐฯ ตีพิมพ์รายงานที่อธิบายถึงปรากฎการณ์ดังกล่าวลงในวารสาร ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "inline",
+                      "model": {
+                        "text": "The Astrophysical Journal Letters",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "The Astrophysical Journal Letters",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "language": "en-gb"
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " โดยชี้ว่าหลุมดำชนิดนี้เกิดและโตขึ้นอย่างรวดเร็วเหลือเชื่อด้วยเงื่อนไขพิเศษ คือไม่ได้ผ่านขั้นตอนการระเบิดของดาวฤกษ์หรือซูเปอร์โนวา (",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "inline",
+                      "model": {
+                        "text": "Supernova",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Supernova",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "language": "en-gb"
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ") ในแบบเดียวกับหลุมดำโดยทั่วไป",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3qxeqm7ldjo"
+    },
+    "summary": "",
+    "timestamp": 1562942948180,
+    "id": "urn:bbc:ares::article:c3qxeqm7ldjo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Thai",
+      "uri": "/thai",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

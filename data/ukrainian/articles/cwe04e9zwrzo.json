@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cwe04e9zwrzo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo"
+    },
+    "type": "article",
+    "createdBy": "Ukrainian",
+    "language": "uk",
+    "lastUpdated": 1562941970733,
+    "firstPublished": 1562941967871,
+    "lastPublished": 1562941967871,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "uk",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Українка пробилася у фінал юніорського Вімблдону",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Українка пробилася у фінал юніорського Вімблдону",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Українська тенісистка Дарія Снігур вийшла у фінал юніорського Вімблдону.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Українська тенісистка Дарія Снігур вийшла у фінал юніорського Вімблдону.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "У півфіналі 17-річна українка здолала Емму Наварро зі США.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "У півфіналі 17-річна українка здолала Емму Наварро зі США.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "На це їй знадобилося 45 хвилин. Поєдинок завершився з рахунком 6:3, 6:0.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "На це їй знадобилося 45 хвилин. Поєдинок завершився з рахунком 6:3, 6:0.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "У чвертьфіналі українка здолала 16-річну Поліну Кудерметову з Росії з рахунком 6:2, 6:4.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "У чвертьфіналі українка здолала 16-річну Поліну Кудерметову з Росії з рахунком 6:2, 6:4.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Українка пробилася у фінал юніорського Вімблдону"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo"
+    },
+    "summary": "",
+    "timestamp": 1562941967871,
+    "id": "urn:bbc:ares::article:cwe04e9zwrzo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Ukrainian",
+      "uri": "/ukrainian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
