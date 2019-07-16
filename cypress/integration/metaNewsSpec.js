@@ -113,10 +113,10 @@ describe('Article Meta Tests', () => {
     );
   });
 
-  it('should include article metadata in the LinkedData', () => {
-    const script = cy.get('script[type="application/ld+json"]');
-    script.should('contain', 'mainEntityOfPage');
-    script.should('contain', 'author');
-    script.should('contain', 'headline');
+  it('should include mainEntityOfPage in the LinkedData', () => {
+    cy.get('script[type="application/ld+json"]')
+      .should('contain', 'mainEntityOfPage')
+      .and('contain', 'author')
+      .and('contain', 'headline');
   });
 });
