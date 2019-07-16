@@ -199,11 +199,11 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-infrastructure/latest',
+          job: 'simorgh-test-cd/latest',
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'live'],
+            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
           ],
           propagate: true,
           wait: true
