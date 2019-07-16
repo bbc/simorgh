@@ -154,16 +154,6 @@ server
       });
     },
   )
-  .get(articleManifestRegexPath, async ({ params }, res) => {
-    const { service } = params;
-    const manifestPath = `${__dirname}/public/${service}/manifest.json`;
-    res.sendFile(manifestPath, {}, error => {
-      if (error) {
-        console.log(error); // eslint-disable-line no-console
-        res.status(500).send('Unable to find manifest.');
-      }
-    });
-  })
   .get(
     [articleRegexPath, frontpageRegexPath],
     async ({ url, headers }, res) => {
