@@ -16,8 +16,8 @@ import {
 const renderCopyright = copyright =>
   copyright && <Copyright>{copyright}</Copyright>;
 
-const renderCaption = (block, type) =>
-  block && <Caption block={block} type={type} />;
+const renderCaption = (block, type, service) =>
+  block && <Caption block={block} type={type} service={service} />;
 
 const ArticleFigure = ({
   height,
@@ -32,6 +32,7 @@ const ArticleFigure = ({
   type,
   srcset,
   showCopyright,
+  service,
 }) => {
   const imageSpan = {
     default: '6',
@@ -83,7 +84,7 @@ const ArticleFigure = ({
             group5: '10',
           }}
         >
-          {renderCaption(captionBlock, type)}
+          {renderCaption(captionBlock, type, service)}
         </ChildWrapper>
       </ParentWrapper>
     </Figure>
@@ -103,6 +104,7 @@ ArticleFigure.propTypes = {
   srcset: string,
   width: number.isRequired,
   showCopyright: bool,
+  service: string.isRequired,
 };
 
 ArticleFigure.defaultProps = {

@@ -166,6 +166,7 @@ const generateFixtureData = ({
         width={width}
         type={type}
         lazyLoad={lazyLoad}
+        service={serviceContextStubNews.service}
         showCopyright
       />
     </RequestContextProvider>
