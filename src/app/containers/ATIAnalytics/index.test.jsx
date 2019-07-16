@@ -14,14 +14,11 @@ import * as frontpageatiparams from './FrontPageAtiParams';
 const ContextWrap = ({ pageType, platform, children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
-      isUK
-      platform={platform}
-      origin="https://www.test.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      isAmp={platform === 'amp'}
       pageType={pageType}
       service="news"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o.page"
-      articleData={{}}
     >
       {children}
     </RequestContextProvider>
@@ -37,8 +34,8 @@ ContextWrap.propTypes = {
 const mockData = {};
 const mockAtiQueryParams = 'key1=value1&key2=value2';
 
-describe('Page View Analytics Container', () => {
-  describe('pageType=article', () => {
+describe('ATI Analytics Container', () => {
+  describe('pageType article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;

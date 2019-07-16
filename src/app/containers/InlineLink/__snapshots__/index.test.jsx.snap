@@ -9,22 +9,18 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 }
 
 .c0:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c0:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c0:focus,
 .c0:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
 }
 
 <a
-  aria-label="این لینک هست ،لینک خارجی"
+  aria-label="این لینک هست، لینک خارجی"
   className="c0"
   href="https://www.example.com/"
 >
@@ -41,15 +37,11 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 }
 
 .c0:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c0:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c0:focus,
 .c0:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
@@ -73,15 +65,11 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
 }
 
 .c0:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c0:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c0:focus,
 .c0:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
@@ -107,15 +95,11 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 }
 
 .c0:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c0:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c0:focus,
 .c0:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
@@ -139,15 +123,11 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 }
 
 .c0:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c0:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c0:focus,
 .c0:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;

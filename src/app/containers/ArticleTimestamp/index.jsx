@@ -12,7 +12,12 @@ import {
 } from './helpers';
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
-  const { script, datetimeLocale } = useContext(ServiceContext);
+  const {
+    articleTimestampPrefix,
+    datetimeLocale,
+    script,
+    service,
+  } = useContext(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
     return null;
@@ -34,14 +39,22 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     timestamp: lastPublished,
     format: formatType({ lastPublished, firstPublished }),
     isRelative: isLastRelative(lastPublished),
-    prefix: 'Updated',
+    prefix: articleTimestampPrefix,
   };
 
   return (
     <PopOutGridItemMedium>
-      <Timestamp {...timestampProps} {...firstPublishedProps} />
+      <Timestamp
+        {...timestampProps}
+        {...firstPublishedProps}
+        service={service}
+      />
       {firstPublished !== lastPublished && (
-        <Timestamp {...timestampProps} {...lastPublishedProps} />
+        <Timestamp
+          {...timestampProps}
+          {...lastPublishedProps}
+          service={service}
+        />
       )}
     </PopOutGridItemMedium>
   );

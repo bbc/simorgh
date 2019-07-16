@@ -1,7 +1,7 @@
 import React from 'react';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '../../models/propTypes/image';
-import Figure from '../Figure';
+import ArticleFigure from '../ArticleFigure';
 import {
   GridItemConstrainedLargeNoMargin,
   GridItemConstrainedMedium,
@@ -78,7 +78,7 @@ const ImageContainer = ({ blocks, position }) => {
         group3: '0px',
       }}
     >
-      <Figure
+      <ArticleFigure
         alt={altText}
         captionBlock={captionBlock}
         copyright={copyright}
@@ -89,6 +89,7 @@ const ImageContainer = ({ blocks, position }) => {
         srcset={srcSet}
         showCopyright
         lazyLoad={lazyLoad}
+        fade
         type="image"
       />
     </Wrapper>

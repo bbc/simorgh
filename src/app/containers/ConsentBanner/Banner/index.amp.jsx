@@ -1,28 +1,19 @@
 import React, { useContext } from 'react';
-import { arrayOf, bool, shape, string } from 'prop-types';
-import * as AmpHelpers from 'react-amphtml/helpers';
+import { bool, string } from 'prop-types';
+import { ConsentBanner } from '@bbc/psammead-consent-banner';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import { ConsentBanner } from '../../../components/ConsentBanner';
 import BannerText from './Text';
 
 const Accept = (message, onClick) => (
-  <AmpHelpers.Action events={onClick}>
-    {props => (
-      <button {...props} type="button">
-        {message}
-      </button>
-    )}
-  </AmpHelpers.Action>
+  <button type="button" on={onClick}>
+    {message}
+  </button>
 );
 
 const Reject = (message, href, onClick) => (
-  <AmpHelpers.Action events={onClick}>
-    {props => (
-      <a {...props} href={href}>
-        {message}
-      </a>
-    )}
-  </AmpHelpers.Action>
+  <a href={href} on={onClick}>
+    {message}
+  </a>
 );
 
 const AmpConsentBannerContainer = ({
@@ -32,7 +23,7 @@ const AmpConsentBannerContainer = ({
   promptId,
   hidden,
 }) => {
-  const { translations } = useContext(ServiceContext);
+  const { translations, script, service } = useContext(ServiceContext);
   const consentBannerConfig = translations.consentBanner[type];
 
   return (
@@ -47,14 +38,16 @@ const AmpConsentBannerContainer = ({
         rejectAction,
       )}
       hidden={hidden}
+      script={script}
+      service={service}
     />
   );
 };
 
 AmpConsentBannerContainer.propTypes = {
   type: string.isRequired,
-  acceptAction: shape({ tap: arrayOf(string) }).isRequired,
-  rejectAction: shape({ tap: arrayOf(string) }).isRequired,
+  acceptAction: string.isRequired,
+  rejectAction: string.isRequired,
   promptId: string.isRequired,
   hidden: bool,
 };

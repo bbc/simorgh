@@ -2,9 +2,9 @@
 
 These are a set of data samples which represent possible input to Simorgh from upstream systems (and ultimately from a CMS). They cover a number of scenarios, most of which are made up with random Lorem Ipsum or real text.
 
-Scenarios are divided into 'test' and 'prod' - those in prod are based on real articles that were published on the BBC News website, and are considered safe content to use in the production environment.
-
 Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
+
+The assets sequentially numbered are for local testing, those which aren't are also available either on the test or live environments.
 
 <!--prettier-ignore-->
 | Scenario | Metadata | Content | Tagging | Notes |
@@ -38,14 +38,15 @@ Unless otherwise specified, metadata is Home: News, Category: News, Genre: none
 | 27       | | Headline, Image (caption), Text (6 pars, internal link), Image (caption), Image (caption), Text (2 pars), Image (caption), Text (3 pars), Image (caption), Text (3 pars) | 4 tags, 4 topics (event, person, 2 places) | Prod and Test |
 | 28       | Home: Persian | Headline, Image, Text (5 pars), Image (wide), Text (3 pars), Image (wide, caption), Text (3 pars) | One tag | Prod and Test |
 | 29       | Home: News | Headline (Image), Subheadline (Video), Text (1 par), Subheadline (Image), Text (1 par)| | |
+| 30       | Home: News | Headline, Text (1 para), Subheadline, Video (landscape) | No tags | Test |
+| 31       | Home: News | Headline, Text (1 para), Subheadline, Video (portrait) | No tags | Test |
+| 32       | Home: News | Headline, Subheadline, Video, Subheadline, Audio | No tags | Test |
+| 33       | Home: News | Headline, Text (1 para), Subheadline, Video, Subheadline, Video, Subheadline, Video, Subheadline, Video | No tags | Test |
+| 34       | Home: News | Headline, Subheadline, Video, Subheadline, Video, Subheadline, Video, Subheadline, Video, Subheadline, Audio, Subheadline, Audio, Subheadline, Audio | No tags | Test |
 
-## Video test assets
+## Audio/Video test assets
 
-All these are included in article cmejqde986vo on the Test environment
-
-|      PID | Availability  |
-| -------: | ------------- |
-| p01k6msm | International |
-| p01kdbwr | International |
-| p01kdbns | UK            |
-| p01kdbpz | Ex-UK         |
+| ID | Description |
+| -----------: | ------------- |
+| c3wmq4d1y3wo | TEST asset containing multiple AV scenarios |
+| cd4117egk3go | PROD asset containing one live environment video |

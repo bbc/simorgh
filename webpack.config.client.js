@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
+const { DuplicatesPlugin } = require('inspectpack/plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
@@ -23,13 +24,13 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
       ? [
-          `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
+          `webpack-dev-server/client?http://localhost.bbc.com:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
           './src/client',
         ]
       : ['./src/poly', './src/client'],
     devServer: {
-      host: 'localhost',
+      host: 'localhost.bbc.com',
       port: webpackDevServerPort,
       historyApiFallback: true,
       hot: true,
@@ -50,7 +51,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
-        ? `http://localhost:${webpackDevServerPort}/`
+        ? `http://localhost.bbc.com:${webpackDevServerPort}/`
         : prodPublicPath,
     },
     optimization: {
@@ -86,6 +87,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           from: 'public',
         },
       ]),
+      new DuplicatesPlugin({
+        // Emit compilation warning or error? (Default: `false`)
+        emitErrors: true,
+        // Display full duplicates information? (Default: `false`)
+        verbose: true,
+      }),
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
@@ -111,11 +118,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         },
       ),
       /*
-       * The webpack.ContextReplacementPlugin allows us to load only
-       * the specific locales we require into our code. By using this
-       * plugin we can reference `moment/locale/en.js` in the files
-       * we need it, without importing it in every file or importing
-       * every locale.
+       * Exclude all moment locales so they can be included within service bundles
        */
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,

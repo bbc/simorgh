@@ -2,14 +2,12 @@
 
 exports[`ArticleMain should render a news article correctly 1`] = `
 <RequestContextProvider
-  env="local"
+  bbcOrigin="https://www.test.bbc.co.uk"
   id="c0000000000o"
-  isUK={true}
-  origin="https://www.test.bbc.co.uk"
+  isAmp={false}
   pageType="article"
-  platform="canonical"
-  statsDestination="NEWS_PS_TEST"
-  statsPageIdentifier="news.articles.c0000000000o.page"
+  previousPath={null}
+  service="news"
 >
   <ArticleMain
     articleData={
@@ -150,21 +148,18 @@ exports[`ArticleMain should render a news article correctly 1`] = `
         },
       }
     }
-    service="news"
   />
 </RequestContextProvider>
 `;
 
 exports[`ArticleMain should render a persian article correctly 1`] = `
 <RequestContextProvider
-  env="local"
+  bbcOrigin="https://www.test.bbc.co.uk"
   id="c0000000000o"
-  isUK={true}
-  origin="https://www.test.bbc.co.uk"
+  isAmp={false}
   pageType="article"
-  platform="canonical"
-  statsDestination="NEWS_PS_TEST"
-  statsPageIdentifier="news.articles.c0000000000o.page"
+  previousPath={null}
+  service="persian"
 >
   <ArticleMain
     articleData={
@@ -262,7 +257,6 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
         },
       }
     }
-    service="persian"
   />
 </RequestContextProvider>
 `;

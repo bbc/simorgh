@@ -5,9 +5,11 @@ import '@bbc/psammead-locales/moment/ig';
 
 const igbo = {
   product: 'BBC News',
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
+  isoLang: 'ig',
   datetimeLocale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',
@@ -27,37 +29,37 @@ const igbo = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Akụkọ',
-    currentPage: 'Current page',
+    currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
     error: {
       404: {
         statusCode: '404',
-        title: 'Page cannot be found',
+        title: 'Ahụghị ibe akwụkwọ a',
         message:
-          "Sorry, we're unable to bring you the page you're looking for. Please try:",
+          'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ. Nwalie ọzọ:',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'Tulee akara URL ahụ ọzọ',
+          "Kpatụ ọdụmbị 'Refresh' dị na braụza gị aka",
+          'Jiri BBC "Search Bar" chọọ ibe akwụkwọ',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News homepage.',
-        callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionFirst: "Maọbụ, biko gaa n'obi ",
+        callToActionLinkText: 'BBC News Ìgbò',
+        callToActionLast: '.',
+        callToActionLinkUrl: 'https://www.bbc.com/igbo',
       },
       500: {
         statusCode: '500',
-        title: 'Internal server error',
+        title: 'Mperi',
         message:
-          "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
+          'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ. Gbalịa ọzọ:',
         solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
+          'Kpatụ ọdụmbi Refresh dị na braụza gị aka',
+          'Ga alọghachị azụ ma e mechaa',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News homepage.',
-        callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionFirst: "Maọbụ, biko gaa n'obi ",
+        callToActionLinkText: 'BBC News Ìgbò',
+        callToActionLast: '.',
+        callToActionLinkUrl: 'https://www.bbc.com/igbo',
       },
     },
     consentBanner: {
@@ -84,7 +86,7 @@ const igbo = {
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Ka anyị mara ma i kwernyere na iwu ndị a',
+        title: "Ka anyị mara ma i kwenyere n'iwu ndị a",
         description: {
           uk: {
             first: 'Anyị na-eji ',

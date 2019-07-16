@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
-import { atiBaseUrl } from '../atiUrl';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 
 const CanonicalATIAnalytics = ({ pageviewParams }) => {
-  const [atiPageViewUrl] = useState(atiBaseUrl + pageviewParams);
+  const [atiPageViewUrl] = useState(
+    process.env.SIMORGH_ATI_BASE_URL + pageviewParams,
+  );
 
   useEffect(() => {
     sendBeacon(atiPageViewUrl);
@@ -12,7 +13,16 @@ const CanonicalATIAnalytics = ({ pageviewParams }) => {
 
   return (
     <noscript>
-      <img height="1px" width="1px" alt="" src={atiPageViewUrl} />
+      <img
+        height="1px"
+        width="1px"
+        alt=""
+        // This should probably have been a styled component. But the author is
+        // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
+        // tests (you can't predict the class names chosen by styled-components)
+        style={{ position: 'absolute' }}
+        src={atiPageViewUrl}
+      />
     </noscript>
   );
 };

@@ -1,19 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ServiceContext should have a brand name for default 1`] = `
-<span>
-  Default Brand Name
-</span>
-`;
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for afaanoromoo 1`] = `"<span>BBC News Afaan Oromoo</span>"`;
 
-exports[`ServiceContext should have a brand name for news 1`] = `
-<span>
-  BBC News
-</span>
-`;
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for afrique 1`] = `"<span>BBC News Afrique</span>"`;
 
-exports[`ServiceContext should have a brand name for persian 1`] = `
-<span>
-  BBC News فارسی
-</span>
-`;
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for amharic 1`] = `"<span>BBC News አማርኛ</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for arabic 1`] = `"<span>BBC News Arabic</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for azeri 1`] = `"<span>BBC News Azərbaycanca</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for bengali 1`] = `"<span>BBC News বাংলা</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for burmese 1`] = `"<span>BBC News မြန်မာ</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for cymrufyw 1`] = `"<span>BBC Cymru Fyw</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for gahuza 1`] = `"<span>BBC News Gahuza</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for gujarati 1`] = `"<span>BBC News ગુજરાતી</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for hausa 1`] = `"<span>BBC News Hausa</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for hindi 1`] = `"<span>BBC News हिंदी</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for igbo 1`] = `"<span>BBC News Ìgbò</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for indonesia 1`] = `"<span>BBC News Indonesia</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for japanese 1`] = `"<span>BBCニュース</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for korean 1`] = `"<span>BBC News 코리아</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for kyrgyz 1`] = `"<span>BBC News Кыргыз КызMATы</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for marathi 1`] = `"<span>BBC News मराठी</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for mundo 1`] = `"<span>BBC News Mundo</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for naidheachdan 1`] = `"<span>Naidheachdan a' BhBC</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for nepali 1`] = `"<span>BBC News नेपाली</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for news 1`] = `"<span>BBC News</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for pashto 1`] = `"<span>BBC News پښتو</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for persian 1`] = `"<span>BBC News فارسی</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for pidgin 1`] = `"<span>BBC News Pidgin</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for portuguese 1`] = `"<span>BBC News Brasil</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for punjabi 1`] = `"<span>BBC News ਖ਼ਬਰਾਂ</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for russian 1`] = `"<span>BBC News Русская служба</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for serbian 1`] = `"<span>BBC News na srpskom</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for sinhala 1`] = `"<span>BBC News සිංහල</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for somali 1`] = `"<span>BBC News Somali</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for swahili 1`] = `"<span>BBC News Swahili</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for tamil 1`] = `"<span>BBC News தமிழ்</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for telugu 1`] = `"<span>BBC News తెలుగు</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for thai 1`] = `"<span>BBC News บีบีซีไทย</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for tigrinya 1`] = `"<span>BBC News ትግርኛ</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for turkce 1`] = `"<span>BBC News Türkçe</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for ukchina 1`] = `"<span>BBC News 中文</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for ukrainian 1`] = `"<span>BBC News Україна</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for urdu 1`] = `"<span>BBC News اردو</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for uzbek 1`] = `"<span>BBC News O'zbek</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for vietnamese 1`] = `"<span>BBC News Tiếng Việt</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for yoruba 1`] = `"<span>BBC News Yorùbá</span>"`;
+
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for zhongwen 1`] = `"<span>BBC News 中文</span>"`;

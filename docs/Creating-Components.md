@@ -2,7 +2,7 @@
 There are a lot of moving parts to Simorgh. We use the [Presentational & Container pattern](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) for our components, which we build in a few stages.
 
 ## Part 1: Create the presentational component
-Run the storybook (`npm run storybook`) and visit http://localhost:9001.
+Run the storybook (`npm run storybook`) and visit http://localhost.bbc.com:9001.
 
 Add your component in `src/app/components/[Component Name]/`. You will need:
 
@@ -99,12 +99,12 @@ You'll also need to define the block subtype itself:
 The schema check currently only happens on local data. Eventually, we hope to run the schema validator at runtime.
 
 ### Update some local fixture data
-Pick a JSON file under `data/test/news/articles/[id].json`, and:
+Pick a JSON file under `data/news/articles/[id].json`, and:
 
 1) add an example of your block somewhere in the `content.model.blocks` array.
 2) add your new component to the `blockTypes` array.
 
-Run `npm run dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
+Run `npm run dev` and you should see your component at your article of choice, eg http://localhost.bbc.com:7080/news/articles/c0000000001o
 
 ### Create the container
 We've added our _component_, which should be kept as simple as possible. Now we need to create our _container_, which contains the business logic for mapping Optimo block data to the React parameters our component needs.

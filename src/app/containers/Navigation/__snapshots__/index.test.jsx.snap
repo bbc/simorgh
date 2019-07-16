@@ -146,12 +146,13 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       },
     }
   }
+  service="igbo"
   skipLinkText="Wụga n’ọdịnaya"
 >
   <NavigationUl>
     <NavigationLi
       active={true}
-      currentPageText="Current page"
+      currentPageText="Peegi ị nọ ugbua"
       dir="ltr"
       script={
         Object {
@@ -297,13 +298,14 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           },
         }
       }
+      service="igbo"
       url="/igbo"
     >
       Akụkọ
     </NavigationLi>
     <NavigationLi
       active={false}
-      currentPageText="Current page"
+      currentPageText="Peegi ị nọ ugbua"
       dir="ltr"
       script={
         Object {
@@ -449,13 +451,14 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           },
         }
       }
+      service="igbo"
       url="/igbo/egwuregwu"
     >
       Egwuregwu
     </NavigationLi>
     <NavigationLi
       active={false}
-      currentPageText="Current page"
+      currentPageText="Peegi ị nọ ugbua"
       dir="ltr"
       script={
         Object {
@@ -601,13 +604,14 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           },
         }
       }
+      service="igbo"
       url="/igbo/media/video"
     >
       Ihe nkiri
     </NavigationLi>
     <NavigationLi
       active={false}
-      currentPageText="Current page"
+      currentPageText="Peegi ị nọ ugbua"
       dir="ltr"
       script={
         Object {
@@ -753,6 +757,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           },
         }
       }
+      service="igbo"
       url="/igbo/popular/read"
     >
       Nke ka ewuewu

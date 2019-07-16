@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
+import { DialContext } from '../../contexts/DialContext';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -6,8 +7,12 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
-import { GhostWrapper } from '../../lib/styledGrid';
+import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
+import audioVideo from '../AudioVideo';
+import AudioVideoHead from '../../components/AudioVideoHead';
+import { RequestContext } from '../../contexts/RequestContext';
+import generateAVSettings from '../../lib/utilities/audioVideo/generateAVSettings';
 
 const componentsToRender = {
   headline: headings,
@@ -17,18 +22,52 @@ const componentsToRender = {
   timestamp,
 };
 
+const avEnabledComment = (
+  // eslint-disable-next-line react/no-danger
+  <div dangerouslySetInnerHTML={{ __html: '<!-- av-enabled -->' }} />
+);
+
 const ArticleMain = ({ articleData }) => {
+  const {
+    env,
+    platform,
+    statsDestination,
+    statsPageIdentifier,
+  } = React.useContext(RequestContext);
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
+
+  const audioVideoBlocks = blocks.filter(
+    block => block.type === 'audio' || block.type === 'video',
+  );
+  const hasAV = audioVideoBlocks.length > 0;
+  const { audiovideo: audioVideoEnabled } = useContext(DialContext);
+
+  if (audioVideoEnabled) {
+    componentsToRender.audio = audioVideo;
+    componentsToRender.video = audioVideo;
+  }
 
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
+      {audioVideoEnabled && hasAV && platform === 'canonical' ? (
+        <AudioVideoHead
+          audioVideoAssets={generateAVSettings({
+            audioVideoBlocks,
+            env,
+            platform,
+            statsDestination,
+            statsPageIdentifier,
+          })}
+        />
+      ) : null}
       <main role="main">
-        <GhostWrapper>
+        {audioVideoEnabled && avEnabledComment}
+        <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        </GhostWrapper>
+        </GhostGrid>
       </main>
     </Fragment>
   );

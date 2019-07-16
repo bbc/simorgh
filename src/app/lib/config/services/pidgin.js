@@ -5,9 +5,11 @@ import '@bbc/psammead-locales/moment/pcm';
 
 const pidgin = {
   product: 'BBC News',
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
+  isoLang: null,
   datetimeLocale: 'pcm',
   service: 'pidgin',
   serviceName: 'Pidgin',
@@ -27,37 +29,37 @@ const pidgin = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Home',
-    currentPage: 'Current page',
+    currentPage: 'Page where you dey',
     skipLinkText: 'Waka go wetin de inside',
     error: {
       404: {
         statusCode: '404',
-        title: 'Page cannot be found',
+        title: 'Dem no see page',
         message:
-          "Sorry, we're unable to bring you the page you're looking for. Please try:",
+          'Sorry, we no go bring you di page you dey look for. Abeg try:',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'Check di url again',
+          'Press di refresh button for your browser',
+          'Search for dis page using di BBC search bar',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News homepage.',
-        callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionFirst: 'Or, abeg visit di ',
+        callToActionLinkText: 'BBC News Pidgin',
+        callToActionLast: ' homepage.',
+        callToActionLinkUrl: 'https://www.bbc.com/pidgin',
       },
       500: {
         statusCode: '500',
-        title: 'Internal server error',
+        title: 'Mistake',
         message:
-          "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
+          'Sorry, we no dey available for now to bring you di page you dey look for. Abeg try:',
         solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
+          'Press di refresh button for your browser',
+          'To come back again afta now',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News homepage.',
-        callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionFirst: 'Or, abeg visit di ',
+        callToActionLinkText: 'BBC News Pidgin',
+        callToActionLast: ' homepage.',
+        callToActionLinkUrl: 'https://www.bbc.com/pidgin',
       },
     },
     consentBanner: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from './ArticleAtiParams';
-import * as atiUrl from './atiUrl';
+import * as atiPageViewParams from './atiUrl';
 import * as commonTestUtils from '../../lib/analyticsUtils';
 import * as testUtils from '../../lib/analyticsUtils/article';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -39,12 +39,12 @@ describe('ArticleAtiParams', () => {
     atiAnalyticsAppName: 'news',
   };
   const requestContextStub = {
-    isUK: true,
-    origin: 'https://www.bbc.co.uk',
+    bbcOrigin: 'https://www.test.bbc.co.uk',
+    id: 'c0000000000o',
+    isAmp: false,
     pageType: 'article',
-    platform: 'canonical',
-    statsDestination: 'NEWS_PS_TEST',
-    statsPageIdentifier: 'news.articles.c0000000000o.page',
+    previousPath: '/previous-path',
+    service: 'news',
   };
 
   describe('atiPageViewParams is called ', () => {
@@ -54,12 +54,12 @@ describe('ArticleAtiParams', () => {
 
     it('should call atiPageViewParams with the params from the Contexts', () => {
       const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiUrl.atiPageViewParams = mock;
+      atiPageViewParams.default = mock;
 
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 
-      expect(atiUrl.atiPageViewParams).toHaveBeenCalledTimes(1);
-      expect(atiUrl.atiPageViewParams).toHaveBeenCalledWith({
+      expect(mock).toHaveBeenCalledTimes(1);
+      expect(mock).toHaveBeenCalledWith({
         appName: 'news',
         contentId: 'urn:bbc:optimo:c0000000000o',
         contentType: 'article',
@@ -74,6 +74,8 @@ describe('ArticleAtiParams', () => {
         statsDestination: 'NEWS_PS_TEST',
         timePublished: '2000-01-01T00:00:00.000Z',
         timeUpdated: '2001-01-01T00:00:00.000Z',
+        previousPath: '/previous-path',
+        origin: 'https://www.test.bbc.co.uk',
       });
     });
 

@@ -5,9 +5,11 @@ import 'moment/locale/yo';
 
 const yoruba = {
   product: 'BBC News',
+  articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
+  isoLang: 'yo',
   datetimeLocale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',
@@ -27,37 +29,37 @@ const yoruba = {
   twitterSite: '@BBCNews', // to be updated
   translations: {
     home: 'Ìròyìn',
-    currentPage: 'Current page',
+    currentPage: 'Ojú ewé to wà yìí',
     skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
     error: {
       404: {
         statusCode: '404',
-        title: 'Page cannot be found',
+        title: 'A kò rí ojú ewé náà',
         message:
-          "Sorry, we're unable to bring you the page you're looking for. Please try:",
+          'Ẹ má bínú, a kò le è mú ojú ewé tí ẹ̀ ń wá, wá fún yín. Ẹ tún tiraka lẹẹkan sí i.',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'Ẹ tún ṣe àyẹ̀wò ojú òpó URL yìí lẹ́ẹ̀kan sí i',
+          'Ẹ tẹ bọ́tíní tí yóò tún ojú ewé yìí gbé wá (Refresh) lẹ́ẹ̀kan sí i',
+          'Ẹ má a wá ojú ewé yìí nípa lílo bọ́tìnì BBC tó ń ṣe àwárí nǹkan (BBC Search bar).',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News homepage.',
-        callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionFirst: 'Lọ́nà míràn, ẹ le è kàn sí ojú òpó ìròyìn ',
+        callToActionLinkText: 'BBC News Yorùbá',
+        callToActionLast: '.',
+        callToActionLinkUrl: 'https://www.bbc.com/yoruba',
       },
       500: {
         statusCode: '500',
-        title: 'Internal server error',
+        title: 'Àṣìṣe láti ojú ìtàkùn àgbáyé wa',
         message:
-          "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
+          'Ẹ má bínú, a kò le è mú ojú ewé tí ẹ̀ ń wá, wá fún yín. Ẹ tún tiraka lẹẹkan sí i.',
         solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
+          'Ẹ tẹ bọ́tíní tí yóò tún ojú ewé yìí gbé wá (Refresh) lẹ́ẹ̀kan sí i',
+          'A tún ń padà bọ̀',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News homepage.',
-        callToActionLast: '',
-        callToActionLinkUrl: 'https://www.bbc.com/news',
+        callToActionFirst: 'Lọ́nà míràn, ẹ le è kàn sí ojú òpó ìròyìn ',
+        callToActionLinkText: 'BBC News Yorùbá',
+        callToActionLast: '.',
+        callToActionLinkUrl: 'https://www.bbc.com/yoruba',
       },
     },
     consentBanner: {

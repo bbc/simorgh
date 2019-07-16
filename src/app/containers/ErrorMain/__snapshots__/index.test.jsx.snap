@@ -9,15 +9,11 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 .c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c5:focus,
 .c5:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
@@ -27,7 +23,6 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -163,17 +158,10 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c1 {
-    padding: 0 auto;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
-    padding: 0 auto;
   }
 }
 
@@ -264,15 +252,11 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 .c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c5:focus,
 .c5:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
@@ -282,7 +266,6 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -418,17 +401,10 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c1 {
-    padding: 0 auto;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
-    padding: 0 auto;
   }
 }
 
@@ -469,41 +445,41 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
         >
           ۴۰۴
         </span>
-        این صفحه یافت نشد
+        این صفحه پیدا نشد
       </h1>
       <p
         className="c4"
       >
-        متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:
+        متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:
       </p>
       <ul>
         <li
           className="c4"
         >
-          لینک را چک کنید
+          آدرس صفحه مورد نظر را دوباره بررسی کنید
         </li>
         <li
           className="c4"
         >
-          صفحه را ریفرش کنید
+          با مرورگر خود صفحه را ریفرش (refresh) کنید
         </li>
         <li
           className="c4"
         >
-          با استفاده از نوار جستجوی بی بی سی برای این صفحه جستجو کنید
+          در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید
         </li>
       </ul>
       <p
         className="c4"
       >
-        روش دیگر، لطفآ به 
+        برای یافتن اطلاعات مورد نظر به 
         <a
           className="c5"
           href="https://www.bbc.com/persian"
         >
           صفحه اصلی بی بی سی فارسی
         </a>
-         بازدید کنید
+         بروید
       </p>
     </div>
   </div>
@@ -519,15 +495,11 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 .c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c5:focus,
 .c5:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
@@ -537,7 +509,6 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -673,17 +644,10 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c1 {
-    padding: 0 auto;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
-    padding: 0 auto;
   }
 }
 
@@ -769,15 +733,11 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 .c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c5:focus,
 .c5:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
@@ -787,7 +747,6 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -923,17 +882,10 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c1 {
-    padding: 0 auto;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
-    padding: 0 auto;
   }
 }
 
@@ -974,23 +926,23 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
         >
           ۵۰۰
         </span>
-        مشکلی پیش آمده است
+        خطا در سرور داخلی
       </h1>
       <p
         className="c4"
       >
-        متاسفانه به دلیلی این صفحه در دسترس نمی‌باشد. لطفآ این رو امتحان کنید:
+        متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:
       </p>
       <ul>
         <li
           className="c4"
         >
-          صفحه را ریفرش کنید
+          با مرورگر خود صفحه را ریفرش (refresh) کنید
         </li>
         <li
           className="c4"
         >
-          بعدا برگردید
+          بعدا دوباره امتحان کنید
         </li>
       </ul>
       <p
@@ -1019,15 +971,11 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 .c5:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
-}
-
+.c5:focus,
 .c5:hover {
   color: #B80000;
   border-bottom: 2px solid #B80000;
@@ -1037,7 +985,6 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #3F3F42;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -1173,17 +1120,10 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c1 {
-    padding: 0 auto;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c1 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
-    padding: 0 auto;
   }
 }
 

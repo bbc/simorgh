@@ -31,13 +31,11 @@ describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text in the UK',
     <RequestContextProvider
-      isUK
-      origin="https://www.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
+      isAmp={false}
       pageType="article"
-      platform="canonical"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      service="news"
     >
       <BannerText {...bannerMessaging} />
     </RequestContextProvider>,
@@ -46,13 +44,11 @@ describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text outside the UK',
     <RequestContextProvider
-      isUK={false}
-      origin="https://www.bbc.com"
+      bbcOrigin="https://www.test.bbc.com"
       id="c0000000000o"
+      isAmp={false}
       pageType="article"
-      platform="canonical"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      service="news"
     >
       <BannerText {...bannerMessaging} />
     </RequestContextProvider>,
@@ -61,13 +57,11 @@ describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text with a link in the UK',
     <RequestContextProvider
-      isUK
-      origin="https://www.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
+      isAmp={false}
       pageType="article"
-      platform="canonical"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      service="news"
     >
       <BannerText {...bannerWithLinkMessaging} />
     </RequestContextProvider>,
@@ -76,13 +70,11 @@ describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text with a link outside the UK',
     <RequestContextProvider
-      isUK={false}
-      origin="https://www.bbc.com"
+      bbcOrigin="https://www.test.bbc.com"
       id="c0000000000o"
+      isAmp={false}
       pageType="article"
-      platform="canonical"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      service="news"
     >
       <BannerText {...bannerWithLinkMessaging} />
     </RequestContextProvider>,
