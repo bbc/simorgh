@@ -10,7 +10,7 @@ import { template, templateStyles } from './app/lib/joinUsTemplate';
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
 
-if (matchRoutes(routes, window.location.pathname)) {
+if (matchRoutes(routes, window.location.pathname).length > 0) {
   Loadable.preloadReady().then(() => {
     hydrate(<ClientApp data={data} routes={routes} />, root);
   });
