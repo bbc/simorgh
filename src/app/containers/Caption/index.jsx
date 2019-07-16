@@ -36,7 +36,6 @@ const renderParagraph = paragraphBlock => {
   );
 };
 
-
 const renderCaption = (paragraphBlocks, offscreenText, script, service) => (
   <Caption script={script} service={service}>
     {offscreenText ? (
