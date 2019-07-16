@@ -50,6 +50,8 @@ exports[`FooterContainer should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c5 {
@@ -180,7 +182,7 @@ exports[`FooterContainer should render correctly 1`] = `
     >
       <a
         className="c3"
-        href="/undefined"
+        href="/news"
       />
     </div>
   </div>

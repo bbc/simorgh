@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cgn6emk3jm8o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o"
+    },
+    "type": "article",
+    "createdBy": "Somali",
+    "language": "so",
+    "lastUpdated": 1562936496574,
+    "firstPublished": 1562936492234,
+    "lastPublished": 1562936492234,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "so",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Gabadh qaadatay go'aan Soomaalida qurbaha ku yaryihiin, kuna liibaantay",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Gabadh qaadatay go'aan Soomaalida qurbaha ku yaryihiin, kuna liibaantay",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Faaduma Cabdiraxmaan Khalif waa gabadh Soomaaliyeed waxay qaxootinimo ku gashay dalka Canada 1988-dii.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Faaduma Cabdiraxmaan Khalif waa gabadh Soomaaliyeed waxay qaxootinimo ku gashay dalka Canada 1988-dii.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Waxay go'aan ku gaartay inay wax barato, waxayna ugu danbayn qaadatay afar shahaado oo kala duwan sida danbi-baarista, la talinta iyo kalkaaliso caafimaad.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Waxay go'aan ku gaartay inay wax barato, waxayna ugu danbayn qaadatay afar shahaado oo kala duwan sida danbi-baarista, la talinta iyo kalkaaliso caafimaad.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Hadda waxay maamule ka tahay laanta ugu wayn ee adeegga caafimaadka bixisa ee dowlad goboleedka Alberta.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Hadda waxay maamule ka tahay laanta ugu wayn ee adeegga caafimaadka bixisa ee dowlad goboleedka Alberta.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Faadumo oo BBC-da la hadashay ayaa sheegtay waxa ku dhiirageliyey dadaalka intaas la eg.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Faadumo oo BBC-da la hadashay ayaa sheegtay waxa ku dhiirageliyey dadaalka intaas la eg.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Gabadh qaadatay go'aan Soomaalida qurbaha ku yaryihiin, kuna liibaantay"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o"
+    },
+    "summary": "",
+    "timestamp": 1562936492234,
+    "id": "urn:bbc:ares::article:cgn6emk3jm8o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Somali",
+      "uri": "/somali",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -79,4 +79,11 @@ describeForLocalAndTest('Persian Article Meta Tests', () => {
       `/persian/articles/${services.persian.pageTypes.articles.asset}.amp`,
     );
   });
+
+  it('should include article metadata in the LinkedData', () => {
+    cy.get('script[type="application/ld+json"]')
+      .should('contain', 'mainEntityOfPage')
+      .and('contain', 'author')
+      .and('contain', 'headline');
+  });
 });
