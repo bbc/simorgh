@@ -10,13 +10,7 @@ jest.mock('react-router-dom');
 
 jest.mock('./app/containers/App');
 
-jest.mock('./app/routes', () => ({
-  default: [],
-}));
-
-jest.mock('./app/routes', () => ({
-  default: [],
-}));
+jest.mock('./app/routes', () => [{ path: '/foobar/articles/:id' }]);
 
 jest.mock('react-loadable', () => ({
   preloadReady: () => Promise.resolve(),
@@ -29,11 +23,15 @@ document.getElementById = jest.fn().mockReturnValue(mockRootElement);
 
 const windowLocation = window.location;
 const pathname = '/foobar/articles/c0000000001o';
+const unknownPathName = '/search?foo=bar';
 
 describe('Client', () => {
   beforeAll(() => {
     setWindowValue('SIMORGH_DATA', 'someData');
-    setWindowValue('location', { pathname });
+  });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
   });
 
   afterAll(() => {
@@ -42,11 +40,31 @@ describe('Client', () => {
   });
 
   it('should hydrate client once routes are ready', async () => {
-    await import('./client');
+    setWindowValue('location', { pathname });
 
-    expect(reactDom.hydrate).toHaveBeenCalledWith(
-      <ClientApp routes={routes} data={window.SIMORGH_DATA} />,
-      mockRootElement,
-    );
+    await new Promise(async resolve => {
+      jest.isolateModules(async () => {
+        await import('./client');
+
+        expect(reactDom.hydrate).toHaveBeenCalledWith(
+          <ClientApp routes={routes} data={window.SIMORGH_DATA} />,
+          mockRootElement,
+        );
+        resolve();
+      });
+    });
+  });
+
+  it('should not hydrate client if no routes match', async () => {
+    setWindowValue('location', { pathname: unknownPathName });
+
+    await new Promise(async resolve => {
+      jest.isolateModules(async () => {
+        await import('./client');
+
+        expect(reactDom.hydrate).not.toHaveBeenCalled();
+        resolve();
+      });
+    });
   });
 });
