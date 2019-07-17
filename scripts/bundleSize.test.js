@@ -18,17 +18,19 @@ jest.mock('../src/app/lib/config/services/loadableConfig', () => ({
 jest.mock('child_process');
 
 const setUpExecSyncMock = (service1Size, service2Size) => {
-  const filePatternToSizeMap = {
-    service1: service1Size,
-    service2: service2Size,
-    'main-*.js': '20000',
-    'vendor-*.js': '350000',
-  };
-  execSync.mockImplementation(filePath => {
-    const filePattern = Object.keys(filePatternToSizeMap).find(key =>
-      filePath.includes(key),
-    );
-    return filePatternToSizeMap[filePattern];
+  beforeEach(() => {
+    const filePatternToSizeMap = {
+      service1: service1Size,
+      service2: service2Size,
+      'main-*.js': '20000',
+      'vendor-*.js': '350000',
+    };
+    execSync.mockImplementation(filePath => {
+      const filePattern = Object.keys(filePatternToSizeMap).find(key =>
+        filePath.includes(key),
+      );
+      return filePatternToSizeMap[filePattern];
+    });
   });
 };
 
@@ -64,9 +66,7 @@ describe('bundleSize', () => {
   });
 
   describe('when all service bundles are within the defined limits', () => {
-    beforeEach(() => {
-      setUpExecSyncMock('560000', '570000');
-    });
+    setUpExecSyncMock('560000', '570000');
 
     it('should use ora to show loading and success states', () => {
       jest.isolateModules(() => {
@@ -99,9 +99,7 @@ describe('bundleSize', () => {
   });
 
   describe('when one or more of the service bundles are too small', () => {
-    beforeEach(() => {
-      setUpExecSyncMock('2000', '570000');
-    });
+    setUpExecSyncMock('2000', '570000');
 
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
@@ -144,9 +142,7 @@ describe('bundleSize', () => {
   });
 
   describe('when one or more of the service bundles are too large', () => {
-    beforeEach(() => {
-      setUpExecSyncMock('560000', '580000');
-    });
+    setUpExecSyncMock('560000', '580000');
 
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
