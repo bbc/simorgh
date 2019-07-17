@@ -39,6 +39,12 @@ class LoggerStream {
   }
 }
 
+const constructDataFilePath = (pageType, service, id) => {
+  const dataPath = pageType === 'frontpage' ? 'index.json' : `${id}.json`;
+
+  return path.join(process.cwd(), 'data', service, pageType, dataPath);
+};
+
 const server = express();
 
 /*
@@ -97,26 +103,14 @@ if (process.env.APP_ENV === 'local') {
     .get(articleDataRegexPath, async ({ params }, res, next) => {
       const { service, id } = params;
 
-      const dataFilePath = path.join(
-        process.cwd(),
-        'data',
-        service,
-        'articles',
-        `${id}.json`,
-      );
+      const dataFilePath = constructDataFilePath('articles', service, id);
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(frontpageDataRegexPath, async ({ params }, res, next) => {
       const { service } = params;
 
-      const dataFilePath = path.join(
-        process.cwd(),
-        'data',
-        service,
-        'frontpage',
-        'index.json',
-      );
+      const dataFilePath = constructDataFilePath('frontpage', service);
 
       sendDataFile(res, dataFilePath, next);
     })
