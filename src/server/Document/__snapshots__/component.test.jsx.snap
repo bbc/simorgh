@@ -30,9 +30,6 @@ exports[`Document Component should render AMP version correctly 1`] = `
     <script
       type="application/ld+json"
     />
-    <ChartbeatAnalyticsBeacon
-      isAmp={true}
-    />
     <React.Fragment>
       <style
         amp-boilerplate=""
@@ -121,15 +118,6 @@ exports[`Document Component should render correctly 1`] = `
     >
       <MPulseBeaconContainer />
     </DialContextProvider>
-    <ChartbeatAnalyticsBeacon
-      isAmp={false}
-    />
-    <React.Fragment>
-      <script
-        async={true}
-        src="//static.chartbeat.com/js/chartbeat_mab.js"
-      />
-    </React.Fragment>
   </head>
   <body>
     <div
