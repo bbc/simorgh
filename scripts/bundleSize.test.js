@@ -87,7 +87,7 @@ describe('bundleSize', () => {
 
       expect(global.console.log.mock.calls).toEqual(
         expect.arrayContaining([
-          ['\nBundle size summary:'],
+          ['\nBundle size summary:\n'],
           ['    20 kB   Main bundle '],
           ['   350 kB   Vendor bundle '],
           ['   560 kB   Smallest bundle - Service1'],
@@ -130,7 +130,7 @@ describe('bundleSize', () => {
 
       expect(global.console.log.mock.calls).toEqual(
         expect.arrayContaining([
-          ['\nBundle size summary:'],
+          ['\nBundle size summary:\n'],
           ['    20 kB   Main bundle '],
           ['   350 kB   Vendor bundle '],
           ['     2 kB   Smallest bundle - Service1'],
@@ -173,7 +173,7 @@ describe('bundleSize', () => {
 
       expect(global.console.log.mock.calls).toEqual(
         expect.arrayContaining([
-          ['\nBundle size summary:'],
+          ['\nBundle size summary:\n'],
           ['    20 kB   Main bundle '],
           ['   350 kB   Vendor bundle '],
           ['   560 kB   Smallest bundle - Service1'],

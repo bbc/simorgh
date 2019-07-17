@@ -121,8 +121,7 @@ const logBundle = ({ name, size, service }) => {
   );
 };
 
-console.log('\nBundle size summary:'); // eslint-disable-line no-console
-console.log(); // eslint-disable-line no-console
+console.log('\nBundle size summary:\n'); // eslint-disable-line no-console
 bundlesToLog.forEach(bundleData => {
   logBundle(bundleData);
 });
