@@ -68,7 +68,9 @@ const errors = services
 
     if (!smallestBundle || size < smallestBundle.size) {
       smallestBundle = { service, size };
-    } else if (!largestBundle || size > largestBundle.size) {
+    }
+
+    if (!largestBundle || size > largestBundle.size) {
       largestBundle = { service, size };
     }
 
