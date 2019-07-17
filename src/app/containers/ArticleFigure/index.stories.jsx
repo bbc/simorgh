@@ -25,7 +25,7 @@ storiesOf('ArticleFigure', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .add('story', ({ service }) => {
-  /* eslint-disable no-unused-expressions */
+    /* eslint-disable no-unused-expressions */
     <ServiceContextProvider service={service}>
       <FigureContainer />
     </ServiceContextProvider>;
