@@ -26,5 +26,6 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'import/no-extraneous-dependencies': ['off', {'devDependencies': ['/.storybook/**', '**/stories.jsx', '/src/testHelpers/**', '/dataValidator/**']}],
-  },
+    'import/no-unresolved': ['error', { ignore: [/MomentIncludeTimezone(\.*)/] }]
+  }
 };

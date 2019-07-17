@@ -132,7 +132,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
        * for time zones with names matching this value.
        */
       new MomentTimezoneDataPlugin({
-        matchZones: 'Europe/London',
+        matchZones: [],
       }),
     ],
   };
