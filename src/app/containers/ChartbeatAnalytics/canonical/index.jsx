@@ -24,7 +24,6 @@ const CanonicalChartbeatBeacon = ({
           _sf_async_config.idSync = {
            bbc_hid: "${cookie}"
           };
-          console.log('running');
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
