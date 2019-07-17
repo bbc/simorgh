@@ -130,6 +130,6 @@ Object.keys(services)
           .should('contain', 'mainEntityOfPage')
           .and('contain', 'author')
           .and('contain', 'headline');
+      });
     });
   });
-});
