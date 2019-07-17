@@ -48,7 +48,7 @@
     "lighthouse": "npm run lighthouse:article && npm run lighthouse:frontpage",
     "lighthouse:article": "lighthouse http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po --chrome-flags=\"--no-sandbox --headless --disable-gpu\" --output json --output html --output-path simorgh --config-path scripts/lighthouseConfig.js && node scripts/lighthouseBudget.js run",
     "lighthouse:frontpage": "lighthouse http://localhost.bbc.com:7080/igbo --chrome-flags=\"--no-sandbox --headless --disable-gpu\" --output json --output html --output-path simorgh --config-path scripts/lighthouseConfig.js && node scripts/lighthouseBudget.js run",
-    "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
+    "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** --fix && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --env=jsdom --colors ./puppeteer",
     "test:size": "./scripts/bundleSize.sh",
