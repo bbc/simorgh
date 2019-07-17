@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cz216x22106o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o"
+    },
+    "type": "article",
+    "createdBy": "Afrique",
+    "language": "fr",
+    "lastUpdated": 1562936298204,
+    "firstPublished": 1562936294950,
+    "lastPublished": 1562936294950,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "fr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "William Troost-Ekong a qualifié le Nigeria pour les demi-finales de la Coupe d'Afrique des Nations, après une victoire 2-1 contre l'Afrique du Sud au Caire.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "William Troost-Ekong a qualifié le Nigeria pour les demi-finales de la Coupe d'Afrique des Nations, après une victoire 2-1 contre l'Afrique du Sud au Caire.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Le jeune attaquant Samuel Chukwueze a donné l'avantage aux Super Eagles en première période au stade international du Caire.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Le jeune attaquant Samuel Chukwueze a donné l'avantage aux Super Eagles en première période au stade international du Caire.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Après une première mi-temps difficile, les Nigérians se sont montrés bien plus tranchants après la pause, Peter Etebo faisant trembler la barre transversale sur un superbe coup franc de 25 mètres destiné à la lucarne, mais repoussé par Ronwen Williams, du bout des doigts.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Après une première mi-temps difficile, les Nigérians se sont montrés bien plus tranchants après la pause, Peter Etebo faisant trembler la barre transversale sur un superbe coup franc de 25 mètres destiné à la lucarne, mais repoussé par Ronwen Williams, du bout des doigts.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o"
+    },
+    "summary": "",
+    "timestamp": 1562936294950,
+    "id": "urn:bbc:ares::article:cz216x22106o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Afrique",
+      "uri": "/afrique",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
