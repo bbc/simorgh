@@ -1,6 +1,6 @@
 import uuid from 'uuid';
+import compose from 'ramda/src/compose';
 import deepGet from '../../deepGet';
-import compose from '../../compose';
 
 let mapIdsToBlocks;
 

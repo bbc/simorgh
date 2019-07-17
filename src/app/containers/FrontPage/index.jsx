@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape } from 'prop-types';
-import compose from '../../lib/utilities/compose';
+import compose from 'ramda/src/compose';
 import frontPagePropTypes from '../../models/propTypes/frontPage';
 import FrontPageMain from '../FrontPageMain';
 
