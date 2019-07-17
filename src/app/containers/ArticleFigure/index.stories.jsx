@@ -1,3 +1,4 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { dirDecorator } from '@bbc/psammead-storybook-helpers';
@@ -16,11 +17,18 @@ import {
   FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
   FigureLazyLoadImage,
 } from './fixtureData';
+import FigureContainer from '.'
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('ArticleFigure', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
+  .add('story', ({ service }) => {
+    <ServiceContextProvider service={service}>
+      <FigureContainer />
+    </ServiceContextProvider>
+  })
   .add('with a caption', () => FigureImageWithCaption)
   .add('without a caption', () => FigureImage)
   .add('with non-BBC copyright', () => FigureImageWithCopyright)

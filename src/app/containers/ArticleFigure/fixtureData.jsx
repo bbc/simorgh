@@ -147,7 +147,6 @@ const generateFixtureData = ({
   lazyLoad,
   platform,
   type,
-  service
 }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
@@ -167,7 +166,6 @@ const generateFixtureData = ({
         width={width}
         type={type}
         lazyLoad={lazyLoad}
-        service={service}
         showCopyright
       />
     </RequestContextProvider>

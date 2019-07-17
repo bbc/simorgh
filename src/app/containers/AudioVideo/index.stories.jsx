@@ -1,3 +1,4 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line
 import { withKnobs } from '@storybook/addon-knobs';
 import { dirDecorator } from '@bbc/psammead-storybook-helpers';
@@ -11,11 +12,18 @@ import {
   VideoClipUkWithGuidance,
   VideoClipGlobalWithoutCaption,
 } from './fixtureData';
+import AudioVideoContainer from '.'
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 storiesOf('Audio Video Container', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
+  .add('story', ({ service }) => {
+    <ServiceContextProvider service={service}>
+      <AudioVideoContainer />
+    </ServiceContextProvider>
+  })
   .add('video, clip, global, with guidance, with caption', () =>
     VideoClipGlobalWithCaption({ platform: 'canonical' }),
   )
