@@ -10,8 +10,10 @@ jest.mock('chalk', () => ({
   yellow: a => a,
 }));
 jest.mock('../src/app/lib/config/services/loadableConfig', () => ({
-  service1: {},
-  service2: {},
+  default: {
+    service1: {},
+    service2: {},
+  },
 }));
 jest.mock('child_process');
 

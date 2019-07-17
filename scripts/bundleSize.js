@@ -5,7 +5,7 @@ const { execSync } = require('child_process');
 const chalk = require('chalk');
 
 const services = Object.keys(
-  require('../src/app/lib/config/services/loadableConfig'),
+  require('../src/app/lib/config/services/loadableConfig').default,
 );
 
 // Size limit for all bundles used by each service (K)

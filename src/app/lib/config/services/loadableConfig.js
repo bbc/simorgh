@@ -2,7 +2,7 @@
  * This config is used by `createLoadableContext`
  * to dynamically load each service's config.
  */
-module.exports = {
+const loadableConfig = {
   afaanoromoo: {
     loader: () =>
       import(/* webpackChunkName: 'afaanoromoo' */ './afaanoromoo.js'),
@@ -184,3 +184,5 @@ module.exports = {
     webpack: () => [require.resolveWeak('./zhongwen.js')],
   },
 };
+
+export default loadableConfig;
