@@ -20,6 +20,7 @@ import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import getDials from './getDials';
+import logResponseTime from './utilities/logResponseTime';
 
 const morgan = require('morgan');
 
@@ -64,6 +65,13 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   });
+
+/*
+ * Prod only logging - response time
+ */
+if (process.env.APP_ENV !== 'local') {
+  server.use(logResponseTime);
+}
 
 /*
  * Local env routes - fixture data
