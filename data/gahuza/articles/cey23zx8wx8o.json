@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cey23zx8wx8o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o"
+    },
+    "type": "article",
+    "createdBy": "Gahuza",
+    "language": "rw",
+    "lastUpdated": 1562936361356,
+    "firstPublished": 1562936358638,
+    "lastPublished": 1562936358638,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "rw",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Kapiteni wa Arsenal yanze kujyana nayo muri Amerika kwitegura shampiyona",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Kapiteni wa Arsenal yanze kujyana nayo muri Amerika kwitegura shampiyona",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Kapiteni wa Arsenal Laurent Koscielny yanze kujyana n'iyi kipe muri Leta Zunze Ubumwe z'Amerika mu mikino yo kwitegura shampiyona itaha.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Kapiteni wa Arsenal Laurent Koscielny yanze kujyana n'iyi kipe muri Leta Zunze Ubumwe z'Amerika mu mikino yo kwitegura shampiyona itaha.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Myugariro Koscielny w'imyaka 33 y'amavuko, kontaro ye izarangira mu mwaka utaha w'imikino wa 2019-2020 ndetse bivugwa ko ari kwifuzwa n'amakipe y'iwabo mu Bufaransa nka Bordeaux, Rennes na Lyon.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Myugariro Koscielny w'imyaka 33 y'amavuko, kontaro ye izarangira mu mwaka utaha w'imikino wa 2019-2020 ndetse bivugwa ko ari kwifuzwa n'amakipe y'iwabo mu Bufaransa nka Bordeaux, Rennes na Lyon.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ubuyobozi bwa Arsenal bwagize buti: \"Tubabajwe cyane n'ibikorwa bya Laurent, binyuranyije n'amabwiriza yacu asobanutse neza\".",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ubuyobozi bwa Arsenal bwagize buti: \"Tubabajwe cyane n'ibikorwa bya Laurent, binyuranyije n'amabwiriza yacu asobanutse neza\".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Kapiteni wa Arsenal yanze kujyana nayo muri Amerika kwitegura shampiyona"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o"
+    },
+    "summary": "",
+    "timestamp": 1562936358638,
+    "id": "urn:bbc:ares::article:cey23zx8wx8o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Gahuza",
+      "uri": "/gahuza",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:clw06m0nj8qo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:clw06m0nj8qo"
+    },
+    "type": "article",
+    "createdBy": "Yoruba",
+    "language": "yo",
+    "lastUpdated": 1562936995573,
+    "firstPublished": 1562936993391,
+    "lastPublished": 1562936993391,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "yo",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Yoruba"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "AFCON 2019: Àmì ayò tí Nàíjíríà àti South Afrika gbá rèé",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "AFCON 2019: Àmì ayò tí Nàíjíríà àti South Afrika gbá rèé",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ikọ agbabọọlu orileede Naijiria Super Eagles ti gbewuro soju ikọ Bafana Bafana ti South Africa lati tẹsiwaju ninu idije Afcon 2019 to n waye ni Egypt.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ikọ agbabọọlu orileede Naijiria Super Eagles ti gbewuro soju ikọ Bafana Bafana ti South Africa lati tẹsiwaju ninu idije Afcon 2019 to n waye ni Egypt.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Samuel Chukwueze lo kọkọ gba bọọlu wọnu awọn South Africa ni iṣẹju kẹtadinlọgbọn ifẹswọnsẹ naa ki South Africa to da goolu pada ni iṣẹju karundinlọgọrin.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Samuel Chukwueze lo kọkọ gba bọọlu wọnu awọn South Africa ni iṣẹju kẹtadinlọgbọn ifẹswọnsẹ naa ki South Africa to da goolu pada ni iṣẹju karundinlọgọrin.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bongani Zungu lo fi ori kan bọọlu sawọn Naijiria.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bongani Zungu lo fi ori kan bọọlu sawọn Naijiria.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "AFCON 2019: Àmì ayò tí Nàíjíríà àti South Afrika gbá rèé"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:clw06m0nj8qo"
+    },
+    "summary": "",
+    "timestamp": 1562936993391,
+    "id": "urn:bbc:ares::article:clw06m0nj8qo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Yoruba",
+      "uri": "/yoruba",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

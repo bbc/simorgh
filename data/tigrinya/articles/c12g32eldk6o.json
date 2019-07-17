@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c12g32eldk6o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c12g32eldk6o"
+    },
+    "type": "article",
+    "createdBy": "Tigrinya",
+    "language": "ti",
+    "lastUpdated": 1562942997653,
+    "firstPublished": 1562942994618,
+    "lastPublished": 1562942994618,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ti",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\""
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c12g32eldk6o"
+    },
+    "summary": "",
+    "timestamp": 1562942994618,
+    "id": "urn:bbc:ares::article:c12g32eldk6o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Tigrinya",
+      "uri": "/tigrinya",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
