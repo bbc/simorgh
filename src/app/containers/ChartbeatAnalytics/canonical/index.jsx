@@ -1,42 +1,56 @@
 import React from 'react';
-import {
+import { string, bool, number } from 'prop-types';
+import Helmet from 'react-helmet';
+
+const CanonicalChartbeatBeacon = ({
+  domain,
+  type,
+  sections,
+  cookie,
   chartbeatUID,
   useCanonical,
-  getSylphidCookie,
-} from '../../../lib/analyticsUtils/chartbeat';
-
-const domain = 'test.bbc.co.uk';
-
-const inlinedScriptSnippet = () => `
- (function() {
- var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
- _sf_async_config.uid = ${chartbeatUID};
- _sf_async_config.domain = "${domain}"; 
- _sf_async_config.flickerControl = false;
- _sf_async_config.useCanonical = ${useCanonical};
- _sf_async_config.useCanonicalDomain = ${useCanonical};
- _sf_async_config.sections = '';
- _sf_async_config.idSync = {
-  bbc_hid: ${getSylphidCookie()}
- };
- function loadChartbeat() {
-  var e = document.createElement('script');
-  var n = document.getElementsByTagName('script')[0];
-  e.type = 'text/javascript';
-  e.async = true;
-  e.src = '//static.chartbeat.com/js/chartbeat.js';
-  n.parentNode.insertBefore(e, n);
- }
- loadChartbeat();
- })();
- `;
-
-/* eslint-disable react/no-danger */
-const CanonicalChartbeatBeacon = () => (
-  <script
-    type="text/javascript"
-    dangerouslySetInnerHTML={{ __html: inlinedScriptSnippet() }}
-  />
+}) => (
+  <Helmet>
+    <script type="text/javascript">
+      {`
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = ${chartbeatUID};
+          _sf_async_config.domain = "${domain}";
+          _sf_async_config.useCanonical = ${useCanonical};
+          _sf_async_config.useCanonicalDomain = ${useCanonical};
+          _sf_async_config.contentType = "${type}";
+          _sf_async_config.sections = "${sections}";
+          _sf_async_config.idSync = {
+           bbc_hid: "${cookie}"
+          };
+          console.log('running');
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = '//static.chartbeat.com/js/chartbeat.js';
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      `}
+    </script>
+  </Helmet>
 );
+
+CanonicalChartbeatBeacon.propTypes = {
+  domain: string.isRequired,
+  type: string.isRequired,
+  sections: string.isRequired,
+  cookie: string,
+  chartbeatUID: number.isRequired,
+  useCanonical: bool.isRequired,
+};
+
+CanonicalChartbeatBeacon.defaultProps = {
+  cookie: null,
+};
 
 export default CanonicalChartbeatBeacon;
