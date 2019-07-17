@@ -30,6 +30,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -273,6 +274,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -516,6 +518,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -754,6 +757,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -992,6 +996,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
