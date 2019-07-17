@@ -62,9 +62,7 @@
                             "type": "fragment",
                             "model": {
                               "text": "فوتبال",
-                              "attributes": [
-                                "italic"
-                              ]
+                              "attributes": ["italic"]
                             }
                           },
                           {
@@ -141,9 +139,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "حقوقی",
-                        "attributes": [
-                          "bold"
-                        ]
+                        "attributes": ["bold"]
                       }
                     },
                     {
@@ -157,9 +153,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "جایزه‌ها",
-                        "attributes": [
-                          "italic"
-                        ]
+                        "attributes": ["italic"]
                       }
                     },
                     {
@@ -175,13 +169,22 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": " English paragraph to be added here when functionality promoted to Optimo test",
+                  "text": "\n202AEnglish paragraph to be added here when functionality promoted to Optimo test\n202C",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "type": "inline",
                       "model": {
-                        "text": " English paragraph to be added here when functionality promoted to Optimo test",
-                        "attributes": []
+                        "text": "English paragraph to be added here when functionality promoted to Optimo test",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "English paragraph to be added here when functionality promoted to Optimo test",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "language": "en-gb"
                       }
                     }
                   ]
@@ -249,9 +252,7 @@
                                   "type": "fragment",
                                   "model": {
                                     "text": "جهانی",
-                                    "attributes": [
-                                      "italic"
-                                    ]
+                                    "attributes": ["italic"]
                                   }
                                 },
                                 {
@@ -292,9 +293,7 @@
                         "versions": [
                           {
                             "versionId": "p01m7d09",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 127,
                             "durationISO8601": "PT2M7S",
                             "warnings": {
@@ -422,9 +421,7 @@
                         "versions": [
                           {
                             "versionId": "p01mt129",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 10,
                             "durationISO8601": "PT10S",
                             "warnings": {},
@@ -516,9 +513,7 @@
                             "type": "fragment",
                             "model": {
                               "text": "جایزه",
-                              "attributes": [
-                                "italic"
-                              ]
+                              "attributes": ["italic"]
                             }
                           },
                           {
