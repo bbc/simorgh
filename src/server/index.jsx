@@ -20,7 +20,6 @@ import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import getDials from './getDials';
-import serviceOverrides from './serviceOverrides';
 
 const morgan = require('morgan');
 
@@ -40,10 +39,9 @@ class LoggerStream {
 }
 
 const constructDataFilePath = (pageType, service, id) => {
-  const serviceName = serviceOverrides[service] || service;
   const dataPath = pageType === 'frontpage' ? 'index.json' : `${id}.json`;
 
-  return path.join(process.cwd(), 'data', serviceName, pageType, dataPath);
+  return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
 
 const server = express();
