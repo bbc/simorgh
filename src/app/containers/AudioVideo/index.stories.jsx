@@ -12,7 +12,7 @@ import {
   VideoClipUkWithGuidance,
   VideoClipGlobalWithoutCaption,
 } from './fixtureData';
-import AudioVideoContainer from '.'
+import AudioVideoContainer from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
@@ -20,9 +20,10 @@ storiesOf('Audio Video Container', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .add('story', ({ service }) => {
+  /* eslint-disable no-unused-expressions */
     <ServiceContextProvider service={service}>
       <AudioVideoContainer />
-    </ServiceContextProvider>
+    </ServiceContextProvider>;
   })
   .add('video, clip, global, with guidance, with caption', () =>
     VideoClipGlobalWithCaption({ platform: 'canonical' }),

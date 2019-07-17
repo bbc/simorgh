@@ -17,7 +17,7 @@ import {
   FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
   FigureLazyLoadImage,
 } from './fixtureData';
-import FigureContainer from '.'
+import FigureContainer from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
@@ -25,9 +25,10 @@ storiesOf('ArticleFigure', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .add('story', ({ service }) => {
+  /* eslint-disable no-unused-expressions */
     <ServiceContextProvider service={service}>
       <FigureContainer />
-    </ServiceContextProvider>
+    </ServiceContextProvider>;
   })
   .add('with a caption', () => FigureImageWithCaption)
   .add('without a caption', () => FigureImage)
