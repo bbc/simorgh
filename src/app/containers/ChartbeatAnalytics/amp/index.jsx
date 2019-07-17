@@ -1,20 +1,14 @@
 import React from 'react';
-import {
-  chartbeatUID,
-  getSylphidCookie,
-} from '../../../lib/analyticsUtils/chartbeat';
+import { string, number } from 'prop-types';
 
-const domain = 'test.bbc.co.uk';
-
-const chartbeatAmpConfigOptions = () => ({
+const chartbeatAmpConfigOptions = options => ({
   vars: {
-    uid: chartbeatUID,
-    sections: 'section 1, section 2',
-    canonicalPath: 'canonicalPath',
-    domain,
-    contentType: 'some kind of type',
+    uid: options.chartbeatUID,
+    sections: options.sections,
+    domain: options.domain,
+    contentType: options.type,
     idSync: {
-      bbc_hid: getSylphidCookie(),
+      bbc_hid: options.cookie,
     },
   },
 });
@@ -28,10 +22,36 @@ const JsonInlinedScript = data => (
   />
 );
 
-const AmpChartbeatBeacon = () => (
+const AmpChartbeatBeacon = ({
+  domain,
+  type,
+  sections,
+  cookie,
+  chartbeatUID,
+}) => (
   <amp-analytics type="chartbeat">
-    {JsonInlinedScript(chartbeatAmpConfigOptions())}
+    {JsonInlinedScript(
+      chartbeatAmpConfigOptions({
+        domain,
+        type,
+        sections,
+        cookie,
+        chartbeatUID,
+      }),
+    )}
   </amp-analytics>
 );
+
+AmpChartbeatBeacon.propTypes = {
+  domain: string.isRequired,
+  type: string.isRequired,
+  sections: string.isRequired,
+  cookie: string,
+  chartbeatUID: number.isRequired,
+};
+
+AmpChartbeatBeacon.defaultProps = {
+  cookie: null,
+};
 
 export default AmpChartbeatBeacon;
