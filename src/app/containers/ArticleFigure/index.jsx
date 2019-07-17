@@ -32,7 +32,6 @@ const ArticleFigure = ({
   type,
   srcset,
   showCopyright,
-  service,
 }) => {
   const imageSpan = {
     default: '6',
@@ -84,7 +83,7 @@ const ArticleFigure = ({
             group5: '10',
           }}
         >
-          {renderCaption(captionBlock, type, service)}
+          {renderCaption(captionBlock, type)}
         </ChildWrapper>
       </ParentWrapper>
     </Figure>
@@ -104,7 +103,6 @@ ArticleFigure.propTypes = {
   srcset: string,
   width: number.isRequired,
   showCopyright: bool,
-  service: string.isRequired,
 };
 
 ArticleFigure.defaultProps = {

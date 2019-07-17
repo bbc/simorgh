@@ -11,7 +11,7 @@ function loadStories() {
 }
 
 const styles = Object.keys(fontFaces).reduce(
-  (faces, acc) => fontFaces[faces] + acc,
+  (fontStyles, face) => fontFaces[face] + fontStyles,
   '',
 );
 
