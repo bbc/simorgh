@@ -7,7 +7,6 @@ import ResourceHints from '../../app/components/ResourceHints';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
 import MPulseBeacon from '../../app/containers/MPulseBeacon';
 import { DialContextProvider } from '../../app/contexts/DialContext';
-import ChartbeatAnalyticsBeacon from '../../app/containers/ChartbeatAnalytics';
 
 /* eslint-disable react/prop-types */
 const Document = ({
@@ -58,7 +57,6 @@ const Document = ({
             <MPulseBeacon />
           </DialContextProvider>
         )}
-        {<ChartbeatAnalyticsBeacon isAmp={isAmp} />}
         {isAmp && (
           <Fragment>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
@@ -85,11 +83,6 @@ const Document = ({
               custom-element="amp-analytics"
               src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
             />
-          </Fragment>
-        )}
-        {scriptsAllowed && (
-          <Fragment>
-            <script async src="//static.chartbeat.com/js/chartbeat_mab.js" />
           </Fragment>
         )}
       </head>
