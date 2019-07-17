@@ -23,10 +23,6 @@ const ShortHeadline = styled(Headline)`
   padding: 2.5rem 0 2.5rem 0;
 `;
 
-const StyledParagraph = styled(Paragraph)`
-  font-family: ${GEL_FF_REITH_SANS};
-`;
-
 const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
   padding-bottom: 4rem;
 `;
@@ -41,6 +37,7 @@ const ErrorPage = ({
   callToActionLinkUrl,
   callToActionLast,
   script,
+  service,
 }) => (
   <main role="main">
     <GhostGrid>
@@ -49,21 +46,28 @@ const ErrorPage = ({
           <StatusCode script={script}>{statusCode}</StatusCode>
           {title}
         </ShortHeadline>
-        <StyledParagraph script={script}>{message}</StyledParagraph>
+        <Paragraph script={script} service={service}>
+          {message}
+        </Paragraph>
         <ul>
           {solutions.map(text => (
-            <StyledParagraph script={script} as="li" key={idSanitiser(text)}>
+            <Paragraph
+              script={script}
+              service={service}
+              as="li"
+              key={idSanitiser(text)}
+            >
               {text}
-            </StyledParagraph>
+            </Paragraph>
           ))}
         </ul>
-        <StyledParagraph script={script}>
+        <Paragraph script={script} service={service}>
           {callToActionFirst}
           <InlineLink href={callToActionLinkUrl}>
             {callToActionLinkText}
           </InlineLink>
           {callToActionLast}
-        </StyledParagraph>
+        </Paragraph>
       </LongGridItemConstrainedMedium>
     </GhostGrid>
   </main>
@@ -79,6 +83,7 @@ ErrorPage.propTypes = {
   callToActionLinkUrl: string.isRequired,
   callToActionLast: string,
   script: shape(scriptPropType).isRequired,
+  service: string.isRequired,
 };
 
 ErrorPage.defaultProps = {
