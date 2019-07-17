@@ -1,10 +1,10 @@
 import { arrayOf, bool, shape, string, number } from 'prop-types';
-import metadataPropTypes from '../frontPageMetadata';
+import { cpsMetadataPropTypes } from '../metadata';
 import groupsPropTypes from '../frontPageGroup';
 import relatedContentPropTypes from '../frontPageRelatedContent';
 
 export const frontPageDataPropTypes = {
-  metadata: shape(metadataPropTypes).isRequired,
+  metadata: shape(cpsMetadataPropTypes).isRequired,
   content: shape({
     groups: arrayOf(shape(groupsPropTypes)).isRequired,
   }).isRequired,

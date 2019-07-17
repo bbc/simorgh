@@ -1,10 +1,10 @@
 import { bool, shape, string, number } from 'prop-types';
-import { optimoPropTypes } from '../metadata';
+import { optimoMetadataPropTypes } from '../metadata';
 import { optimoPromoPropTypes } from '../promo';
 import mainContentPropTypes from '../mainContent';
 
 export const articleDataPropTypes = shape({
-  metadata: shape(optimoPropTypes).isRequired,
+  metadata: shape(optimoMetadataPropTypes).isRequired,
   content: shape({
     model: shape(mainContentPropTypes),
   }).isRequired,

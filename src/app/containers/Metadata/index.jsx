@@ -4,7 +4,10 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
-import { optimoPropTypes, cpsPropTypes } from '../../models/propTypes/metadata';
+import {
+  optimoMetadataPropTypes,
+  cpsMetadataPropTypes,
+} from '../../models/propTypes/metadata';
 import {
   optimoPromoPropTypes,
   cpsPromoPropTypes,
@@ -212,7 +215,10 @@ const MetadataContainer = ({ metadata, promo }) => {
 };
 
 MetadataContainer.propTypes = {
-  metadata: oneOfType([shape(cpsPropTypes), shape(optimoPropTypes)]).isRequired,
+  metadata: oneOfType([
+    shape(cpsMetadataPropTypes),
+    shape(optimoMetadataPropTypes),
+  ]).isRequired,
   promo: oneOfType([shape(cpsPromoPropTypes), shape(optimoPromoPropTypes)])
     .isRequired,
 };
