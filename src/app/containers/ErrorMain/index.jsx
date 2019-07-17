@@ -37,6 +37,7 @@ const ErrorMain = ({ status }) => {
     locale,
     themeColor,
     translations,
+    service,
   } = useContext(ServiceContext);
   const messaging = translations.error[status] || translations.error[500];
 
@@ -49,7 +50,7 @@ const ErrorMain = ({ status }) => {
         messaging={messaging}
         themeColor={themeColor}
       />
-      <ErrorPageComponent {...messaging} script={script} />
+      <ErrorPageComponent {...messaging} script={script} service={service} />
     </Fragment>
   );
 };
