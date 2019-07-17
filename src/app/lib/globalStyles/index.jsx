@@ -19,6 +19,12 @@ const GlobalStyleComponent = createGlobalStyle`
       box-sizing: inherit;
     }
 
+    i {
+      [lang=fa] & {
+        font-style: normal;
+      }
+    }
+
     ${({ fonts }) => fonts && createFontStyles(fonts)}
   `;
 
