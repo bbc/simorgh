@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0e8weny66ko",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0e8weny66ko"
+    },
+    "type": "article",
+    "createdBy": "Ukchina",
+    "language": "zh-hans",
+    "lastUpdated": 1562943212602,
+    "firstPublished": 1562943210269,
+    "lastPublished": 1562943210269,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "zh-hans",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "歷史：英國近代的五位知名華人",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "歷史：英國近代的五位知名華人",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "華人世界每談及英中關係話題，想到的往往不是19世紀的鴉片戰爭、香港殖民地，便是21世紀的經貿交流和留學潮。",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "華人世界每談及英中關係話題，想到的往往不是19世紀的鴉片戰爭、香港殖民地，便是21世紀的經貿交流和留學潮。",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "其實，在過去三百年的近現代史上，英中交流遠遠不止上述這些地緣政治大格局。從人與人的交流層面講，誰是第一位抵達英國的中國人？誰是第一個在英國作畫或著書的中國人？這些在英中交流歷史上創造了眾多第一的華人，他們因何而來，又有何事蹟？歷史紛繁複雜，許多故事也許並不為大眾所知……",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "其實，在過去三百年的近現代史上，英中交流遠遠不止上述這些地緣政治大格局。從人與人的交流層面講，誰是第一位抵達英國的中國人？誰是第一個在英國作畫或著書的中國人？這些在英中交流歷史上創造了眾多第一的華人，他們因何而來，又有何事蹟？歷史紛繁複雜，許多故事也許並不為大眾所知……",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "历史：英国近代的五位知名华人"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0e8weny66ko"
+    },
+    "summary": "",
+    "timestamp": 1562943210269,
+    "id": "urn:bbc:ares::article:c0e8weny66ko",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Ukchina",
+      "uri": "/ukchina",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
