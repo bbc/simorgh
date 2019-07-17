@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cdy81y9ml65o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cdy81y9ml65o"
+    },
+    "type": "article",
+    "createdBy": "Uzbek",
+    "language": "uz-latn",
+    "lastUpdated": 1562942152020,
+    "firstPublished": 1562942148973,
+    "lastPublished": 1562942148973,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "uz-latn",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Orol dengizining qurishi insoniyat tarixidagi dunyoning eng yirik ekologik fojialaridan biri boʻldi. Sahroga aylangan dengiz tubidagi tuzlar, qum-chang va zaharli oʻgʻitlar insonlarhayoti va tabiatni xavf ostiga qoʻygan.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Orol dengizining qurishi insoniyat tarixidagi dunyoning eng yirik ekologik fojialaridan biri boʻldi. Sahroga aylangan dengiz tubidagi tuzlar, qum-chang va zaharli oʻgʻitlar insonlarhayoti va tabiatni xavf ostiga qoʻygan.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ammo bugun Oʻzbekiston dunyoda misli koʻrilmagan tajribaga qoʻl urmoqda: dengiz oʻrnidagi sahroni oʻrmonga aylantirmoqchi.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ammo bugun Oʻzbekiston dunyoda misli koʻrilmagan tajribaga qoʻl urmoqda: dengiz oʻrnidagi sahroni oʻrmonga aylantirmoqchi.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bu Qoraqalpogʻistonda hayotni asrab qola oladimi?",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bu Qoraqalpogʻistonda hayotni asrab qola oladimi?",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cdy81y9ml65o"
+    },
+    "summary": "",
+    "timestamp": 1562942148973,
+    "id": "urn:bbc:ares::article:cdy81y9ml65o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Uzbek",
+      "uri": "/uzbek",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

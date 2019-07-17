@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c693w95w0mko",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c693w95w0mko"
+    },
+    "type": "article",
+    "createdBy": "Japanese",
+    "language": "ja",
+    "lastUpdated": 1562943053395,
+    "firstPublished": 1562943050727,
+    "lastPublished": 1562943050727,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ja",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "10日までアゼルバイジャンの首都バクーで行われていた第43回世界遺産委員会では、新たに29カ所が世界遺産に登録された。",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "10日までアゼルバイジャンの首都バクーで行われていた第43回世界遺産委員会では、新たに29カ所が世界遺産に登録された。",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "その中からいくつかの場所を写真で紹介する。",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "その中からいくつかの場所を写真で紹介する。",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c693w95w0mko"
+    },
+    "summary": "",
+    "timestamp": 1562943050727,
+    "id": "urn:bbc:ares::article:c693w95w0mko",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Japanese",
+      "uri": "/japanese",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
