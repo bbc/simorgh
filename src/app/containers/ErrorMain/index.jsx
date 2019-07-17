@@ -8,11 +8,11 @@ import ErrorPageComponent from '../../components/ErrorPage';
  * MVP Metadata for the error
  * This will be refactored out in https://github.com/bbc/simorgh/issues/1350
  */
-const ErrorMetadata = ({ dir, locale, messaging, brandName, themeColor }) => {
+const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
   const { title } = messaging;
 
   return (
-    <Helmet htmlAttributes={{ lang: locale, dir }}>
+    <Helmet htmlAttributes={{ lang, dir }}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noindex,nofollow" />
@@ -30,14 +30,9 @@ const ErrorMetadata = ({ dir, locale, messaging, brandName, themeColor }) => {
 };
 
 const ErrorMain = ({ status }) => {
-  const {
-    dir,
-    script,
-    brandName,
-    locale,
-    themeColor,
-    translations,
-  } = useContext(ServiceContext);
+  const { dir, script, brandName, lang, themeColor, translations } = useContext(
+    ServiceContext,
+  );
   const messaging = translations.error[status] || translations.error[500];
 
   return (
@@ -45,7 +40,7 @@ const ErrorMain = ({ status }) => {
       <ErrorMetadata
         brandName={brandName}
         dir={dir}
-        locale={locale}
+        lang={lang}
         messaging={messaging}
         themeColor={themeColor}
       />
@@ -60,7 +55,7 @@ ErrorMain.propTypes = {
 
 ErrorMetadata.propTypes = {
   dir: oneOf(['rtl', 'ltr']).isRequired,
-  locale: string.isRequired,
+  lang: string.isRequired,
   messaging: shape({ title: string.isRequired }).isRequired,
   brandName: string.isRequired,
   themeColor: string.isRequired,

@@ -19,14 +19,6 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   border-bottom: 2px solid #B80000;
 }
 
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -53,23 +45,18 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   padding: 2.5rem 0 2.5rem 0;
 }
 
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
 .c1 {
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -143,6 +130,20 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -262,14 +263,6 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   border-bottom: 2px solid #B80000;
 }
 
-.c4 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -296,23 +289,18 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   padding: 2.5rem 0 2.5rem 0;
 }
 
+.c4 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
 .c1 {
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -386,6 +374,20 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -505,14 +507,6 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   border-bottom: 2px solid #B80000;
 }
 
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -539,23 +533,18 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   padding: 2.5rem 0 2.5rem 0;
 }
 
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
 .c1 {
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -629,6 +618,20 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -743,14 +746,6 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   border-bottom: 2px solid #B80000;
 }
 
-.c4 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -777,23 +772,18 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   padding: 2.5rem 0 2.5rem 0;
 }
 
+.c4 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
 .c1 {
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -867,6 +857,20 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -981,14 +985,6 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   border-bottom: 2px solid #B80000;
 }
 
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -1015,23 +1011,18 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   padding: 2.5rem 0 2.5rem 0;
 }
 
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+}
+
 .c1 {
   grid-column: 1 / span 6;
   padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -1105,6 +1096,20 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
