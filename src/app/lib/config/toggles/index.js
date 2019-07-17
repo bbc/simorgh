@@ -6,12 +6,18 @@ const toggles = {
     audioVideo: {
       enabled: true,
     },
+    chartbeat: {
+      enabled: false,
+    },
   },
   live: {
     mpulse: {
       enabled: false,
     },
     audioVideo: {
+      enabled: false,
+    },
+    chartbeat: {
       enabled: false,
     },
   },
