@@ -126,8 +126,9 @@ Object.keys(services)
       });
 
       it('should include mainEntityOfPage in the LinkedData', () => {
-        const script = cy.get('script[type="application/ld+json"]');
-        script.should('contain', 'mainEntityOfPage');
-      });
+        cy.get('script[type="application/ld+json"]')
+          .should('contain', 'mainEntityOfPage')
+          .and('contain', 'author')
+          .and('contain', 'headline');
     });
   });
