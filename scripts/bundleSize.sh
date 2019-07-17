@@ -2,10 +2,10 @@
 
 # Size limit for all bundles used by each service (K)
 # Keep these +/- 5K and update frequently!
-min=605
-max=623
+min=557
+max=576
 
-services=( "news" "persian" "igbo" "yoruba" "pidgin" )
+services=( "afaanoromoo" "afrique" "amharic" "arabic" "azeri" "bengali" "burmese" "cymrufyw" "gahuza" "gujarati" "hausa" "hindi" "igbo" "indonesia" "japanese" "korean" "kyrgyz" "marathi" "mundo" "naidheachdan" "nepali" "news" "pashto" "persian" "pidgin" "portuguese" "punjabi" "russian" "serbian" "sinhala" "somali" "swahili" "tamil" "telugu" "thai" "tigrinya" "turkce" "ukchina" "ukrainian" "urdu" "uzbek" "vietnamese" "yoruba" "zhongwen" )
 failure=false
 
 for service in ${services[@]}

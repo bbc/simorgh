@@ -188,33 +188,8 @@ export const errorTitle = service => {
   );
 };
 
-export const hasNoscriptImgAtiUrlWithWSBucket = bucketId => {
-  getElement('noscript')
-    .eq(0)
-    .should(
-      'contain',
-      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${bucketId}`,
-    );
-};
-
-export const hasNoscriptImgAtiUrl = analyticsBucketId => {
-  getElement('noscript')
-    .eq(0)
-    .should(
-      'contain',
-      `<img height="1px" width="1px" alt="" src="https://a1.api.bbc.co.uk/hit.xiti?s=${analyticsBucketId}`,
-    );
-};
-
-export const hasAmpAnalyticsAtiUrl = analyticsBucketId => {
-  getElement('amp-analytics script[type="application/json"]')
-    .eq(0)
-    .should('contain', 'https://a1.api.bbc.co.uk/hit.xiti?')
-    .should('contain', `s=${analyticsBucketId}`);
-};
-
 export const hasHtmlLangDirAttributes = ({ lang, dir }) => {
-  const html = cy.get('html');
-  html.should('have.attr', 'lang', lang);
-  html.should('have.attr', 'dir', dir);
+  cy.get('html')
+    .should('have.attr', 'lang', lang)
+    .and('have.attr', 'dir', dir);
 };

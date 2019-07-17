@@ -63,7 +63,7 @@ const LinkedData = ({
     mainEntityOfPage,
   };
 
-  if (type === 'article') {
+  if (type === 'Article') {
     const articleSpecificSchema = {
       headline: seoHeadline,
       datePublished: firstPublished,
