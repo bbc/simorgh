@@ -35,12 +35,6 @@ test('compose can be seeded with multiple arguments', () => {
   ).toBe(9);
 });
 
-test('compose returns the identity function if given no arguments', () => {
-  expect(compose()(1, 2)).toBe(1);
-  expect(compose()(3)).toBe(3);
-  expect(compose()()).toBe(undefined);
-});
-
 test('compose returns the first function if given only one', () => {
   const fn = x => x * x;
   expect(compose(fn)(3)).toBe(fn(3));
