@@ -13,6 +13,7 @@ import audioVideo from '../AudioVideo';
 import AudioVideoHead from '../../components/AudioVideoHead';
 import { RequestContext } from '../../contexts/RequestContext';
 import generateAVSettings from '../../lib/utilities/audioVideo/generateAVSettings';
+import removeItalicAttribute from './helpers/removeItalicAttribute';
 
 const componentsToRender = {
   headline: headings,
@@ -48,6 +49,11 @@ const ArticleMain = ({ articleData }) => {
     componentsToRender.video = audioVideo;
   }
 
+  const filteredBlocks =
+    articleData.metadata.language === 'fa'
+      ? removeItalicAttribute(blocks)
+      : blocks;
+
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
@@ -66,7 +72,10 @@ const ArticleMain = ({ articleData }) => {
       <main role="main">
         {audioVideoEnabled && avEnabledComment}
         <GhostGrid>
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          <Blocks
+            blocks={filteredBlocks}
+            componentsToRender={componentsToRender}
+          />
         </GhostGrid>
       </main>
     </Fragment>
