@@ -78,7 +78,7 @@ Object.keys(config)
           .eq(2)
           .should('be.visible')
           .should('to.have.descendants', 'img')
-          .should('not.to.have.descendants', 'figcaption')
+          .should('to.have.descendants', 'figcaption')
 
           // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
           // cleared during hydration. React won't render noscript tags on the client so if they
