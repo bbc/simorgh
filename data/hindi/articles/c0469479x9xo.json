@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c0469479x9xo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0469479x9xo"
+    },
+    "type": "article",
+    "createdBy": "Hindi",
+    "language": "hi",
+    "lastUpdated": 1562942213629,
+    "firstPublished": 1562942209748,
+    "lastPublished": 1562942209748,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "hi",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "क्रिकेट विश्व कप अपने अंतिम पड़ाव पर पहुंच गया है. खिताबी जंग के लिए आखिरी दो टीमों का नाम तय हो चुका है.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "क्रिकेट विश्व कप अपने अंतिम पड़ाव पर पहुंच गया है. खिताबी जंग के लिए आखिरी दो टीमों का नाम तय हो चुका है.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "मेज़बान इंग्लैंड और न्यूज़ीलैंड की टीमें रविवार को लॉर्ड्स के मैदान में विश्वकप फ़ाइनल खेलेंगी.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "मेज़बान इंग्लैंड और न्यूज़ीलैंड की टीमें रविवार को लॉर्ड्स के मैदान में विश्वकप फ़ाइनल खेलेंगी.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "पहले सेमीफ़ाइनल में न्यूज़ीलैंड ने भारत को मात दी. वहीं गुरुवार को खेले गए दूसरे सेमीफ़ाइनल मैच में इंग्लैंड ने ऑस्ट्रेलिया पर आसान जीत दर्ज की.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "पहले सेमीफ़ाइनल में न्यूज़ीलैंड ने भारत को मात दी. वहीं गुरुवार को खेले गए दूसरे सेमीफ़ाइनल मैच में इंग्लैंड ने ऑस्ट्रेलिया पर आसान जीत दर्ज की.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "फिलहाल इंग्लैंड और न्यूज़ीलैंड के समर्थक अपनी-अपनी टीमों के फ़ाइनल में पहुंचने का जश्न मना रहे हैं.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "फिलहाल इंग्लैंड और न्यूज़ीलैंड के समर्थक अपनी-अपनी टीमों के फ़ाइनल में पहुंचने का जश्न मना रहे हैं.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "लेकिन इंग्लैंड से कोसों दूर पाकिस्तान में भी इन दोनों टीमों के फ़ाइनल में पहुंचने पर खुशी मनाई जा रही है.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "लेकिन इंग्लैंड से कोसों दूर पाकिस्तान में भी इन दोनों टीमों के फ़ाइनल में पहुंचने पर खुशी मनाई जा रही है.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c0469479x9xo"
+    },
+    "summary": "",
+    "timestamp": 1562942209748,
+    "id": "urn:bbc:ares::article:c0469479x9xo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cwl08rd38l6o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o"
+    },
+    "type": "article",
+    "createdBy": "Pidgin",
+    "language": "pcm",
+    "lastUpdated": 1562936408762,
+    "firstPublished": 1562936404940,
+    "lastPublished": 1562936404940,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "pcm",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Anglophone crisis: ECW $2.7m push for schools to reopen for Cameroon English speaking region",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Anglophone crisis: ECW $2.7m push for schools to reopen for Cameroon English speaking region",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Education Cannot Wait, ECW international NGO don donate 2.7 US dollars for support education, for 18,386 pikin dem for Anglophone regions for taim weh debate di go up and down if pikin dem fit go school.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Education Cannot Wait, ECW international NGO don donate 2.7 US dollars for support education, for 18,386 pikin dem for Anglophone regions for taim weh debate di go up and down if pikin dem fit go school.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Wit crisis for Anglophone regions for three years now, pipo don run go oda areas, schools and pikin turn target, plenti schools close , about 670,000 pikin dem komot for school.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Wit crisis for Anglophone regions for three years now, pipo don run go oda areas, schools and pikin turn target, plenti schools close , about 670,000 pikin dem komot for school.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Plan Cameroon go put dis ECW project for ground for 12 moons and deh di di target pikin dem weh deh bi don di go school and de wan weh deh go start school.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Plan Cameroon go put dis ECW project for ground for 12 moons and deh di di target pikin dem weh deh bi don di go school and de wan weh deh go start school.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Director for ECW, Yasmine Sherif say, \"E no bi correct make pikin dem komot for school remain for back as de crisis don stop plenti pikin dia future.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Director for ECW, Yasmine Sherif say, \"E no bi correct make pikin dem komot for school remain for back as de crisis don stop plenti pikin dia future.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Anglophone crisis: ECW $2.7m push for schools to reopen for Cameroon English speaking region"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o"
+    },
+    "summary": "",
+    "timestamp": 1562936404940,
+    "id": "urn:bbc:ares::article:cwl08rd38l6o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Pidgin",
+      "uri": "/pidgin",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

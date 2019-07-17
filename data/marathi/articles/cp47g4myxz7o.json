@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cp47g4myxz7o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cp47g4myxz7o"
+    },
+    "type": "article",
+    "createdBy": "Marathi",
+    "language": "mr",
+    "lastUpdated": 1562942291965,
+    "firstPublished": 1562942287715,
+    "lastPublished": 1562942287715,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "mr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "चंद्रावर माणूस पहिल्यांदा उतरला आणि असं करणारा अमेरिका पहिला देश ठरला, त्याला जवळपास 50 वर्षं झाली आहेत.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "चंद्रावर माणूस पहिल्यांदा उतरला आणि असं करणारा अमेरिका पहिला देश ठरला, त्याला जवळपास 50 वर्षं झाली आहेत.",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "अमेरिका आणि जगाच्या इतिहासातच अपोलो 11 मोहिमेचं यश, हा मोठा क्षण होता. पण तेव्हा नक्की काय घडलं? आणि ते इतकं महत्त्वाचं का आहे?",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "अमेरिका आणि जगाच्या इतिहासातच अपोलो 11 मोहिमेचं यश, हा मोठा क्षण होता. पण तेव्हा नक्की काय घडलं? आणि ते इतकं महत्त्वाचं का आहे?",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "1957मध्ये तेव्हाच्या सोव्हिएत युनियने स्पुटनिक उपग्रह लाँच केला. त्यानंतर अमेरिका आणि सोव्हिएत युनियनमध्ये अंतराळात जाण्याची स्पर्धा सुरू झाली.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "1957मध्ये तेव्हाच्या सोव्हिएत युनियने स्पुटनिक उपग्रह लाँच केला. त्यानंतर अमेरिका आणि सोव्हिएत युनियनमध्ये अंतराळात जाण्याची स्पर्धा सुरू झाली.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "1961 मध्ये जॉन एफ. केनेडी अमेरिकेचे अध्यक्ष झाले आणि अनेक अमेरिकन नागरिकांना असं वाटलं की शीतयुद्धातल्या त्यांच्या या प्रतिस्पर्ध्याच्या समोर या तंत्रज्ञानाच्या स्पर्धेत अमेरिका मागे पडणार.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "1961 मध्ये जॉन एफ. केनेडी अमेरिकेचे अध्यक्ष झाले आणि अनेक अमेरिकन नागरिकांना असं वाटलं की शीतयुद्धातल्या त्यांच्या या प्रतिस्पर्ध्याच्या समोर या तंत्रज्ञानाच्या स्पर्धेत अमेरिका मागे पडणार.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "त्याच वर्षी सोव्हिएत युनियन पहिल्यांदा मानवाला अंतराळात पाठवलं.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "त्याच वर्षी सोव्हिएत युनियन पहिल्यांदा मानवाला अंतराळात पाठवलं.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cp47g4myxz7o"
+    },
+    "summary": "",
+    "timestamp": 1562942287715,
+    "id": "urn:bbc:ares::article:cp47g4myxz7o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Marathi",
+      "uri": "/marathi",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

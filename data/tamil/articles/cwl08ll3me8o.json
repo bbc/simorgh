@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cwl08ll3me8o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cwl08ll3me8o"
+    },
+    "type": "article",
+    "createdBy": "Tamil",
+    "language": "ta",
+    "lastUpdated": 1562942573769,
+    "firstPublished": 1562942569172,
+    "lastPublished": 1562942569172,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ta",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "‘தல’ தோனி மற்றும் இறுதி ஓவர்கள் - என்றும் மாறாத காதல் கதை",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "‘தல’ தோனி மற்றும் இறுதி ஓவர்கள் - என்றும் மாறாத காதல் கதை",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "2011 உலகக்கோப்பை இறுதிப்போட்டியில், இலங்கை பந்துவீச்சாளர் குலசேகரா வீசிய பந்தை இந்திய அணியின் கேப்டன் மகேந்திர சிங் தோனி சிக்ஸர் அடிக்க, மும்பை வாங்கடே மைதானம் மட்டுமல்லாமல் இந்தியாவே ஆரவாரத்தில் அதிர்ந்தது",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "2011 உலகக்கோப்பை இறுதிப்போட்டியில், இலங்கை பந்துவீச்சாளர் குலசேகரா வீசிய பந்தை இந்திய அணியின் கேப்டன் மகேந்திர சிங் தோனி சிக்ஸர் அடிக்க, மும்பை வாங்கடே மைதானம் மட்டுமல்லாமல் இந்தியாவே ஆரவாரத்தில் அதிர்ந்தது",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "இந்தியா 28 ஆண்டுகளுக்கு பிறகு உலகக்கோப்பையை வெல்ல காரணமாக அமைந்த அந்த சிக்ஸர் ஆட்டத்தின் இறுதி ஓவருக்கு முந்தைய ஓவரில் அடிக்கப்பட்டது.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "இந்தியா 28 ஆண்டுகளுக்கு பிறகு உலகக்கோப்பையை வெல்ல காரணமாக அமைந்த அந்த சிக்ஸர் ஆட்டத்தின் இறுதி ஓவருக்கு முந்தைய ஓவரில் அடிக்கப்பட்டது.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "இந்த சிக்ஸரை அடித்த தோனி, இதேபோல் எண்ணற்ற போட்டிகளில் இறுதி ஓவர்களில் அதகளம் நடத்தியவர்தான்.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "இந்த சிக்ஸரை அடித்த தோனி, இதேபோல் எண்ணற்ற போட்டிகளில் இறுதி ஓவர்களில் அதகளம் நடத்தியவர்தான்.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "மேற்கிந்திய தீவுகள் அணிக்கு எதிராக வியாழக்கிழமை மான்செஸ்டர் நகரில் நடந்த போட்டியில் முதலில் பேட்டிங் செய்த இந்தியா ரன்கள் குவிக்க தடுமாறியது.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "மேற்கிந்திய தீவுகள் அணிக்கு எதிராக வியாழக்கிழமை மான்செஸ்டர் நகரில் நடந்த போட்டியில் முதலில் பேட்டிங் செய்த இந்தியா ரன்கள் குவிக்க தடுமாறியது.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "‘தல’ தோனி மற்றும் இறுதி ஓவர்கள் - என்றும் மாறாத காதல் கதை"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cwl08ll3me8o"
+    },
+    "summary": "",
+    "timestamp": 1562942569172,
+    "id": "urn:bbc:ares::article:cwl08ll3me8o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Tamil",
+      "uri": "/tamil",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
