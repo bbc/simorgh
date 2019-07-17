@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c06p32z9x2mo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo"
+    },
+    "type": "article",
+    "createdBy": "Cymrufyw",
+    "language": "cy",
+    "lastUpdated": 1563022053853,
+    "firstPublished": 1563022049359,
+    "lastPublished": 1563022049359,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "cy",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Tour de France: Geraint Thomas yn codi i'r pumed safle",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Tour de France: Geraint Thomas yn codi i'r pumed safle",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Mae Geraint Thomas wedi codi i'r pumed safle yn y Tour de France ar ôl gorffen cymal mynyddig cyntaf ras eleni yn gryf mewn diweddglo dramatig.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Mae Geraint Thomas wedi codi i'r pumed safle yn y Tour de France ar ôl gorffen cymal mynyddig cyntaf ras eleni yn gryf mewn diweddglo dramatig.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Daeth enillydd y llynedd yn bedwerydd ar ran Tîm Ineos yn y chweched cymal ddydd Iau - cymal a gafodd ei ennill gan Dylan Teuns.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Daeth enillydd y llynedd yn bedwerydd ar ran Tîm Ineos yn y chweched cymal ddydd Iau - cymal a gafodd ei ennill gan Dylan Teuns.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Mae Thomas bellach 49 eiliad y tu ôl i arweinydd newydd y ras, Guilio Ciccone.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Mae Thomas bellach 49 eiliad y tu ôl i arweinydd newydd y ras, Guilio Ciccone.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Dechreuodd Thomas y cymal yn y seithfed safle, 45 eiliad y tu ôl i Julian Alaphillippe sydd bellach wedi llithro i'r ail safle yn y tabl.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Dechreuodd Thomas y cymal yn y seithfed safle, 45 eiliad y tu ôl i Julian Alaphillippe sydd bellach wedi llithro i'r ail safle yn y tabl.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Wedi ymdrech arwrol fe lwyddodd y Cymro i groesi'r llinell derfyn ddwy eiliad o flaen Alaphillipe a'i gyd-Ffrancwr, Thibaut Pinot.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Wedi ymdrech arwrol fe lwyddodd y Cymro i groesi'r llinell derfyn ddwy eiliad o flaen Alaphillipe a'i gyd-Ffrancwr, Thibaut Pinot.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Dywedodd Thomas fod \"angen bod yn amyneddgar\" i ymdopi â'r llethr serth ar ddiwedd y cymal yn La Planche des Belles Filles.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Dywedodd Thomas fod \"angen bod yn amyneddgar\" i ymdopi â'r llethr serth ar ddiwedd y cymal yn La Planche des Belles Filles.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Roedd Alaphillipe wedi codi gêr tua'r diwedd mewn ymgais i gadw gafael ar y crys melyn, ond dywedodd y Cymro bod ganddo'r \"hyder i adael iddo fynd\" a mynd ati i'w basio gyda 350 medr i fynd.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Roedd Alaphillipe wedi codi gêr tua'r diwedd mewn ymgais i gadw gafael ar y crys melyn, ond dywedodd y Cymro bod ganddo'r \"hyder i adael iddo fynd\" a mynd ati i'w basio gyda 350 medr i fynd.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Tour de France: Geraint Thomas yn codi i'r pumed safle"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo"
+    },
+    "summary": "",
+    "timestamp": 1563022049359,
+    "id": "urn:bbc:ares::article:c06p32z9x2mo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Cymrufyw",
+      "uri": "/cymrufyw",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

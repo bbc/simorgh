@@ -16,7 +16,7 @@ const hasNoscriptImgAtiUrl = (atiUrl, analyticsBucketId) => {
     .eq(0)
     .should(
       'contain',
-      `<img height="1px" width="1px" alt="" src="${atiUrl}s=${analyticsBucketId}`,
+      `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}s=${analyticsBucketId}`,
     );
 };
 

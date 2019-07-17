@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:czjqge2jwn2o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o"
+    },
+    "type": "article",
+    "createdBy": "Swahili",
+    "language": "sw",
+    "lastUpdated": 1562936575299,
+    "firstPublished": 1562936569893,
+    "lastPublished": 1562936569893,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "sw",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Afon 2019: Nigeria na Senegal zatinga nusu fainali baada ya kuzilaza Afrika Kusini na Benin",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Afon 2019: Nigeria na Senegal zatinga nusu fainali baada ya kuzilaza Afrika Kusini na Benin",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "William Troost-Ekong alifunga goli la dakika za mwisho na kuisaidia Nigeria kutinga nusu fainali ya kombe la mataifa ya Afrika dhidi ya Afrika Kusini.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "William Troost-Ekong alifunga goli la dakika za mwisho na kuisaidia Nigeria kutinga nusu fainali ya kombe la mataifa ya Afrika dhidi ya Afrika Kusini.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Samuel Chukwueze alifunga goli la kwanza la Nigeria baada ya kupata krosi nzuri kutoka kwka Alexi Iwobi kabla ya kufunga baada ya jaribio la pili.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Samuel Chukwueze alifunga goli la kwanza la Nigeria baada ya kupata krosi nzuri kutoka kwka Alexi Iwobi kabla ya kufunga baada ya jaribio la pili.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Hatahivyo Bongani Zungu alisawazisha kupitia kichwa kilichodaiwa kuwa cha kuotea kabla ya refa wa Video VAR kusema kwamba mpira huo ulikuwa umemgonga mchezaji wa Nigeria kabla ya kumfikia.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Hatahivyo Bongani Zungu alisawazisha kupitia kichwa kilichodaiwa kuwa cha kuotea kabla ya refa wa Video VAR kusema kwamba mpira huo ulikuwa umemgonga mchezaji wa Nigeria kabla ya kumfikia.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Afon 2019: Nigeria na Senegal zatinga nusu fainali baada ya kuzilaza Afrika Kusini na Benin"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o"
+    },
+    "summary": "",
+    "timestamp": 1562936569893,
+    "id": "urn:bbc:ares::article:czjqge2jwn2o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Swahili",
+      "uri": "/swahili",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

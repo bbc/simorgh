@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c3xd4x9prgyo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3xd4x9prgyo"
+    },
+    "type": "article",
+    "createdBy": "Zhongwen",
+    "language": "zh-hans",
+    "lastUpdated": 1562943154400,
+    "firstPublished": 1562943152251,
+    "lastPublished": 1562943152251,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "zh-hans",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "这一次，电影里不会再有唱段，也不会再有会说话的龙，故事里的反派也不再是匈奴的军队，而变成了一个女巫……但是，不管怎样，《花木兰》终于要重登上银幕了。",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "这一次，电影里不会再有唱段，也不会再有会说话的龙，故事里的反派也不再是匈奴的军队，而变成了一个女巫……但是，不管怎样，《花木兰》终于要重登上银幕了。",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "本周，迪士尼（Disney）发布了真人版电影的初版预告片，宣告这部1998年经典动画的重制作品即将问世。中国古代女子女扮男装代父从军上战场的传奇故事，将再次与观众见面。",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "本周，迪士尼（Disney）发布了真人版电影的初版预告片，宣告这部1998年经典动画的重制作品即将问世。中国古代女子女扮男装代父从军上战场的传奇故事，将再次与观众见面。",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "迪士尼在21世纪已经重拍过一系列来自该公司1990年代的经典作品，包括《灰姑娘》、《美女与野兽》和《阿拉丁》等。",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "迪士尼在21世纪已经重拍过一系列来自该公司1990年代的经典作品，包括《灰姑娘》、《美女与野兽》和《阿拉丁》等。",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "20多年前，动画版的《花木兰》却在故事发源地中国遭遇惨败；这一次，迪士尼想尽了一切办法要以新版的女英雄传奇征服中国观众。",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "20多年前，动画版的《花木兰》却在故事发源地中国遭遇惨败；这一次，迪士尼想尽了一切办法要以新版的女英雄传奇征服中国观众。",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3xd4x9prgyo"
+    },
+    "summary": "",
+    "timestamp": 1562943152251,
+    "id": "urn:bbc:ares::article:c3xd4x9prgyo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Zhongwen",
+      "uri": "/zhongwen",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
