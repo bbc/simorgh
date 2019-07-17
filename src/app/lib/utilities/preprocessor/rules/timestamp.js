@@ -1,5 +1,5 @@
 /* eslint-disable no-use-before-define */
-import deepClone from '../../deepClone';
+import deepClone from 'ramda/src/clone';
 import deepGet from '../../deepGet';
 
 const augmentWithTimestamp = jsonRaw => {
