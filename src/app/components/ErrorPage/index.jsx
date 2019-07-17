@@ -23,6 +23,10 @@ const ShortHeadline = styled(Headline)`
   padding: 2.5rem 0 2.5rem 0;
 `;
 
+const StyledParagraph = styled(Paragraph)`
+  font-family: ${GEL_FF_REITH_SANS};
+`;
+
 const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
   padding-bottom: 4rem;
 `;
@@ -45,21 +49,21 @@ const ErrorPage = ({
           <StatusCode script={script}>{statusCode}</StatusCode>
           {title}
         </ShortHeadline>
-        <Paragraph script={script}>{message}</Paragraph>
+        <StyledParagraph script={script}>{message}</StyledParagraph>
         <ul>
           {solutions.map(text => (
-            <Paragraph script={script} as="li" key={idSanitiser(text)}>
+            <StyledParagraph script={script} as="li" key={idSanitiser(text)}>
               {text}
-            </Paragraph>
+            </StyledParagraph>
           ))}
         </ul>
-        <Paragraph script={script}>
+        <StyledParagraph script={script}>
           {callToActionFirst}
           <InlineLink href={callToActionLinkUrl}>
             {callToActionLinkText}
           </InlineLink>
           {callToActionLast}
-        </Paragraph>
+        </StyledParagraph>
       </LongGridItemConstrainedMedium>
     </GhostGrid>
   </main>
