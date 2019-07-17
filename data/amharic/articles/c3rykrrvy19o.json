@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c3rykrrvy19o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o"
+    },
+    "type": "article",
+    "createdBy": "Amharic",
+    "language": "am",
+    "lastUpdated": 1562942685780,
+    "firstPublished": 1562942682443,
+    "lastPublished": 1562942682443,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "am",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o"
+    },
+    "summary": "",
+    "timestamp": 1562942682443,
+    "id": "urn:bbc:ares::article:c3rykrrvy19o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Amharic",
+      "uri": "/amharic",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

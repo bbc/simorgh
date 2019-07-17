@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cr2d32lwww2o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cr2d32lwww2o"
+    },
+    "type": "article",
+    "createdBy": "Turkce",
+    "language": "tr",
+    "lastUpdated": 1562941714433,
+    "firstPublished": 1562941712069,
+    "lastPublished": 1562941712069,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "tr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "BBC Genel Müdürü Tony Hall: Dünya 1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "BBC Genel Müdürü Tony Hall: Dünya 1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "BBC Genel Müdürü Tony Hall, Londra'daki Küresel Medya Özgürlüğü Konferansı'nda yaptığı konuşmada, dünyanın \"1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya oduğunu\" söyledi.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "BBC Genel Müdürü Tony Hall, Londra'daki Küresel Medya Özgürlüğü Konferansı'nda yaptığı konuşmada, dünyanın \"1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya oduğunu\" söyledi.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tony Hall, \"Hakikate saldırı, demokrasiye saldırıdır\" dedi.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tony Hall, \"Hakikate saldırı, demokrasiye saldırıdır\" dedi.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Hall, sahte haberlerin yayılmasını, 2. Dünya Savaşı'na giden süreçte Nazilerin başvurduğu propaganda yöntemlerine benzetti, \"Haberde doğruluğa inanan herkes durumu tersine çevirmek için birlikte çalışmalı\" diye konuştu.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Hall, sahte haberlerin yayılmasını, 2. Dünya Savaşı'na giden süreçte Nazilerin başvurduğu propaganda yöntemlerine benzetti, \"Haberde doğruluğa inanan herkes durumu tersine çevirmek için birlikte çalışmalı\" diye konuştu.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "BBC Genel Müdürü Tony Hall: Dünya 1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cr2d32lwww2o"
+    },
+    "summary": "",
+    "timestamp": 1562941712069,
+    "id": "urn:bbc:ares::article:cr2d32lwww2o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Turkce",
+      "uri": "/turkce",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
