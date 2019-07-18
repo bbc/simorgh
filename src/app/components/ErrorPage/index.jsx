@@ -37,6 +37,7 @@ const ErrorPage = ({
   callToActionLinkUrl,
   callToActionLast,
   script,
+  service,
 }) => (
   <main role="main">
     <GhostGrid>
@@ -45,15 +46,22 @@ const ErrorPage = ({
           <StatusCode script={script}>{statusCode}</StatusCode>
           {title}
         </ShortHeadline>
-        <Paragraph script={script}>{message}</Paragraph>
+        <Paragraph script={script} service={service}>
+          {message}
+        </Paragraph>
         <ul>
           {solutions.map(text => (
-            <Paragraph script={script} as="li" key={idSanitiser(text)}>
+            <Paragraph
+              script={script}
+              service={service}
+              as="li"
+              key={idSanitiser(text)}
+            >
               {text}
             </Paragraph>
           ))}
         </ul>
-        <Paragraph script={script}>
+        <Paragraph script={script} service={service}>
           {callToActionFirst}
           <InlineLink href={callToActionLinkUrl}>
             {callToActionLinkText}
@@ -75,6 +83,7 @@ ErrorPage.propTypes = {
   callToActionLinkUrl: string.isRequired,
   callToActionLast: string,
   script: shape(scriptPropType).isRequired,
+  service: string.isRequired,
 };
 
 ErrorPage.defaultProps = {
