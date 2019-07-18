@@ -199,7 +199,7 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-test-cd/latest',
+          job: 'simorgh-infra-sandbox-test-cd/sandbox-580-split-CD-test-and-CD-live',
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
