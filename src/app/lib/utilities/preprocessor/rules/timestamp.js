@@ -1,12 +1,12 @@
 /* eslint-disable no-use-before-define */
-import deepClone from '../../deepClone';
-import deepGet from '../../deepGet';
+import deepClone from 'ramda/src/clone';
+import pathOr from 'ramda/src/pathOr';
 
 const augmentWithTimestamp = jsonRaw => {
   // safely get deeply nested JSON values
-  const firstPublished = deepGet(['metadata', 'firstPublished'], jsonRaw);
-  const lastPublished = deepGet(['metadata', 'lastPublished'], jsonRaw);
-  const hasBlocks = deepGet(['content', 'model', 'blocks'], jsonRaw);
+  const firstPublished = pathOr(null, ['metadata', 'firstPublished'], jsonRaw);
+  const lastPublished = pathOr(null, ['metadata', 'lastPublished'], jsonRaw);
+  const hasBlocks = pathOr(null, ['content', 'model', 'blocks'], jsonRaw);
   const canRenderTimestamp = firstPublished && lastPublished && hasBlocks;
 
   if (canRenderTimestamp) {

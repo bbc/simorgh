@@ -1,8 +1,8 @@
-import deepGet from '../../deepGet';
-import deepClone from '../../deepClone';
+import deepClone from 'ramda/src/clone';
+import pathOr from 'ramda/src/pathOr';
 
 const insertBlockPositioning = ({ model }, positionArr = []) => {
-  if (!deepGet(['blocks'], model)) {
+  if (!pathOr(null, ['blocks'], model)) {
     return model;
   }
 
@@ -27,9 +27,9 @@ const insertBlockPositioning = ({ model }, positionArr = []) => {
  */
 const applyBlockPositioning = obj => {
   const json = deepClone(obj);
-  const content = deepGet(['content'], obj);
+  const content = pathOr(null, ['content'], obj);
 
-  if (deepGet(['model'], content)) {
+  if (pathOr(null, ['model'], content)) {
     const withBlockPositioning = insertBlockPositioning(content);
 
     json.content.model = withBlockPositioning;
