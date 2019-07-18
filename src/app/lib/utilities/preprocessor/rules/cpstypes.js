@@ -1,9 +1,9 @@
-import deepGet from '../../deepGet';
+import pathOr from 'ramda/src/pathOr';
 
 const whitelist = ['STY', 'MAP'];
 
 const filterUnknownCpsTypes = data => {
-  const groups = deepGet(['content', 'groups'], data);
+  const groups = pathOr(null, ['content', 'groups'], data);
 
   if (!groups) {
     return data;

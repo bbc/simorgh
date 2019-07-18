@@ -1,9 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import deepGet from '../../lib/utilities/deepGet';
+import pathOr from 'ramda/src/pathOr';
 import Canonical from './Canonical';
 import Caption from '../Caption';
-import videoMetadata from './audioVideoMetadata';
+import videoMetadata from './metadata';
 import {
   NestedGridParentLarge,
   NestedGridParentSmall,
@@ -56,14 +56,20 @@ const AudioVideoContainer = ({ blocks }) => {
 
   const metadata = videoMetadata(aresMediaBlock);
   const captionBlock = filterForBlockType(blocks, 'caption');
-  const nestedModel = deepGet(['model', 'blocks', 0, 'model'], aresMediaBlock);
-  const pid = deepGet(['id'], nestedModel);
+  const nestedModel = pathOr(
+    null,
+    ['model', 'blocks', 0, 'model'],
+    aresMediaBlock,
+  );
+  const pid = pathOr(null, ['id'], nestedModel);
   const kind =
-    deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
+    pathOr(null, ['format'], nestedModel) === 'audio_video'
+      ? 'programme'
+      : 'audio';
 
   const type = kind === 'audio' ? kind : 'video';
 
-  const orientation = deepGet(['versions', 0, 'types', 0], nestedModel);
+  const orientation = pathOr(null, ['versions', 0, 'types', 0], nestedModel);
 
   const {
     ParentWrapper,
