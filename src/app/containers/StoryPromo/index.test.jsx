@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import deepClone from 'ramda/src/clone';
+
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import deepClone from '../../lib/utilities/deepClone';
+
 import StoryPromo from '.';
 
 const completeItem = {

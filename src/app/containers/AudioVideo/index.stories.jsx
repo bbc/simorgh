@@ -11,7 +11,7 @@ import {
   VideoClipGlobalWithCaption,
   VideoClipUkWithGuidance,
   VideoClipGlobalWithoutCaption,
-} from './fixtureData';
+} from './helpers/fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
