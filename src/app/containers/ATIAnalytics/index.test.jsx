@@ -8,8 +8,8 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
-import * as articleatiparams from './ArticleAtiParams';
-import * as frontpageatiparams from './FrontPageAtiParams';
+import * as articleatiparams from './params/article';
+import * as frontpageatiparams from './params/frontpage';
 
 const ContextWrap = ({ pageType, platform, children }) => (
   <ServiceContextProvider service="news">

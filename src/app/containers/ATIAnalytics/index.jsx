@@ -3,9 +3,8 @@ import { oneOfType } from 'prop-types';
 import { RequestContext } from '../../contexts/RequestContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
-import ArticleAtiParams from './ArticleAtiParams';
-import FrontPageAtiParams from './FrontPageAtiParams';
-
+import ArticleAtiParams from './params/article';
+import FrontPageAtiParams from './params/frontpage';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 
 const ATIAnalytics = ({ data }) => {
