@@ -113,6 +113,7 @@ const igbo = {
     },
     media: {
       audio: 'Ọdịyo',
+      photogallery: 'Image gallery',
       video: 'Vidio',
     },
   },
