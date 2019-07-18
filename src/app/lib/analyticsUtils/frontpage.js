@@ -1,7 +1,7 @@
-import deepGet from '../utilities/deepGet';
+import pathOr from 'ramda/src/pathOr';
 
 export const getPageIdentifier = frontpageData =>
-  deepGet(['metadata', 'analyticsLabels', 'counterName'], frontpageData) ||
+  pathOr(null, ['metadata', 'analyticsLabels', 'counterName'], frontpageData) ||
   'unknown.page';
 
 const guidRegex =
@@ -11,7 +11,7 @@ const curieRegex = new RegExp(
 );
 
 export const getContentId = frontpageData => {
-  const curie = deepGet(['metadata', 'locators', 'curie'], frontpageData);
+  const curie = pathOr(null, ['metadata', 'locators', 'curie'], frontpageData);
 
   if (!curie) {
     return null;
@@ -27,7 +27,7 @@ export const getContentId = frontpageData => {
 };
 
 export const getLanguage = frontpageData =>
-  deepGet(['metadata', 'language'], frontpageData);
+  pathOr(null, ['metadata', 'language'], frontpageData);
 
 // This formatting of the page title is implemented independently of
 // the actual page title in the metadata component. Ideally these would
@@ -35,6 +35,6 @@ export const getLanguage = frontpageData =>
 // into the default page wrapper because that component does not have
 // access to the page data.
 export const getPageTitle = (frontpageData, brandName) => {
-  const title = deepGet(['metadata', 'title'], frontpageData);
+  const title = pathOr(null, ['metadata', 'title'], frontpageData);
   return title && `${title} - ${brandName}`;
 };
