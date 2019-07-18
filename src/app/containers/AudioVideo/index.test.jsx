@@ -12,7 +12,7 @@ import {
   AudioClipGlobalGuidanceWithCaption,
   AudioClipUk,
   AudioClipNonUk,
-} from './fixtureData';
+} from './helpers/fixtureData';
 import AudioVideoContainer from '.';
 import { videoClipGlobalGuidanceBlock } from './helpers/fixtures';
 import * as gridComponents from '../../lib/styledGrid';
