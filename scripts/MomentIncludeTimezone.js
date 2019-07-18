@@ -41,7 +41,7 @@ function MomentIncludeTimezone(options = {}) {
   const zoneFileMap = {};
 
   zones.forEach(zone => {
-    const zoneName = zone.split('|')[0].replace('/', '_');
+    const zoneName = zone.split('|')[0];
     const zoneFilePath = path.join(
       cacheDir,
       `${cacheVersion}-${hash(zone)}.js`,

@@ -3,7 +3,7 @@ import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import * as fonts from '@bbc/psammead-styles/fonts';
 import 'moment/locale/en-gb';
-import 'MomentIncludeTimezone/Europe_London';
+import 'MomentIncludeTimezone/Europe/London';
 
 const news = {
   lang: 'en-GB',
@@ -24,7 +24,7 @@ const news = {
   imageCopyrightOffscreenText: 'Image source, ',
   locale: 'en_GB',
   datetimeLocale: 'en-gb',
-  timezone: 'Asia_Tehran',
+  timezone: 'Europe/London',
   service: 'news',
   serviceName: 'News',
   themeColor: `${C_POSTBOX}`,
