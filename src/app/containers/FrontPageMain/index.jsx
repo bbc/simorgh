@@ -3,10 +3,7 @@ import React, { Fragment, useContext } from 'react';
 import { shape } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
-import {
-  GridWithPadding,
-  GridItemConstrainedLarge,
-} from '../../lib/styledGrid';
+import { Grid, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
@@ -39,7 +36,7 @@ const FrontPageMain = ({ frontPageData }) => {
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <GridWithPadding>
+        <Grid>
           <GridItemConstrainedLarge>
             {groups.map((group, index) => (
               <FrontPageSection
@@ -49,7 +46,7 @@ const FrontPageMain = ({ frontPageData }) => {
               />
             ))}
           </GridItemConstrainedLarge>
-        </GridWithPadding>
+        </Grid>
       </main>
     </Fragment>
   );

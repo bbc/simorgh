@@ -6,11 +6,11 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 <main
   role="main"
 >
-  <ForwardRef(GhostGridWithPadding)>
+  <ForwardRef(GhostGrid)>
     <ForwardRef(GridItemConstrainedMedium)
       gridColumnStart={6}
       gridSpan={10}
     />
-  </ForwardRef(GhostGridWithPadding)>
+  </ForwardRef(GhostGrid)>
 </main>
 `;

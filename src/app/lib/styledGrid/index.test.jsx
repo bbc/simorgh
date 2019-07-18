@@ -2,9 +2,7 @@ import React from 'react';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import {
   Grid,
-  GridWithPadding,
   GhostGrid,
-  GhostGridWithPadding,
   GridItemConstrainedSmall,
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
@@ -19,14 +17,8 @@ describe('Styled Grid items', () => {
   describe('Grid', () => {
     shouldMatchSnapshot('should render correctly', <Grid />);
   });
-  describe('GridWithPadding', () => {
-    shouldMatchSnapshot('should render correctly', <GridWithPadding />);
-  });
   describe('GhostGrid', () => {
     shouldMatchSnapshot('should render correctly', <GhostGrid />);
-  });
-  describe('GhostGridWithPadding', () => {
-    shouldMatchSnapshot('should render correctly', <GhostGridWithPadding />);
   });
 
   describe('GridItemConstrainedSmall', () => {

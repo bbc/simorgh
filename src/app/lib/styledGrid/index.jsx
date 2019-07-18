@@ -20,19 +20,12 @@ import {
 
 export const Grid = styled.div`
   ${layoutGridWrapper};
-`;
-
-export const GridWithPadding = styled.div`
-  ${layoutGridWrapper};
   padding-bottom: ${GEL_SPACING_QUAD};
 `;
 
 export const GhostGrid = styled.div`
   ${layoutGridWrapper};
   background: ${C_GHOST};
-`;
-
-export const GhostGridWithPadding = styled(GhostGrid)`
   padding-bottom: ${GEL_SPACING_QUAD};
 `;
 

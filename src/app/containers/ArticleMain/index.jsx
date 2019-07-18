@@ -7,7 +7,7 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
-import { GhostGridWithPadding } from '../../lib/styledGrid';
+import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import audioVideo from '../AudioVideo';
 import AudioVideoHead from '../../components/AudioVideoHead';
@@ -65,9 +65,9 @@ const ArticleMain = ({ articleData }) => {
       ) : null}
       <main role="main">
         {audioVideoEnabled && avEnabledComment}
-        <GhostGridWithPadding>
+        <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        </GhostGridWithPadding>
+        </GhostGrid>
       </main>
     </Fragment>
   );

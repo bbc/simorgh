@@ -7,10 +7,7 @@ import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { getParagon, GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
-import {
-  GhostGridWithPadding,
-  GridItemConstrainedMedium,
-} from '../../lib/styledGrid';
+import { GhostGrid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const StatusCode = styled.span`
@@ -42,7 +39,7 @@ const ErrorPage = ({
   script,
 }) => (
   <main role="main">
-    <GhostGridWithPadding>
+    <GhostGrid>
       <LongGridItemConstrainedMedium>
         <ShortHeadline script={script}>
           <StatusCode script={script}>{statusCode}</StatusCode>
@@ -64,7 +61,7 @@ const ErrorPage = ({
           {callToActionLast}
         </Paragraph>
       </LongGridItemConstrainedMedium>
-    </GhostGridWithPadding>
+    </GhostGrid>
   </main>
 );
 
