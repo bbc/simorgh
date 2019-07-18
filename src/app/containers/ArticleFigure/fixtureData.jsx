@@ -147,6 +147,7 @@ const generateFixtureData = ({
   lazyLoad,
   platform,
   type,
+  service,
 }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
@@ -154,7 +155,7 @@ const generateFixtureData = ({
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pageType="article"
-      service="news"
+      service={service || 'news'}
     >
       <FigureContainer
         alt={imageAlt}
@@ -180,6 +181,7 @@ generateFixtureData.propTypes = {
   type: string,
   height: number,
   width: number,
+  service: string,
 };
 
 generateFixtureData.defaultProps = {
@@ -190,6 +192,7 @@ generateFixtureData.defaultProps = {
   type: '',
   height: imageHeight,
   width: imageWidth,
+  service: 'news',
 };
 
 export const FigureImage = generateFixtureData({ platform: 'canonical' });
@@ -207,11 +210,13 @@ export const FigureLazyLoadImage = generateFixtureData({
 
 export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
-export const FigureImageWithCaption = generateFixtureData({
-  caption: captionBlock('Figure Image With Caption'),
-  platform: 'canonical',
-  type: 'image',
-});
+export const FigureImageWithCaption = service =>
+  generateFixtureData({
+    caption: captionBlock('Figure Image With Caption'),
+    platform: 'canonical',
+    type: 'image',
+    service,
+  });
 
 export const FigureAmpImageWithCaption = generateFixtureData({
   caption: captionBlock('Figure Amp Image with Caption'),

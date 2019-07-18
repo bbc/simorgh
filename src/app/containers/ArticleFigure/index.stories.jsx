@@ -17,17 +17,12 @@ import {
   FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
   FigureLazyLoadImage,
 } from './fixtureData';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('ArticleFigure', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
-  .add('with a caption', ({ service }) => (
-    <ServiceContextProvider service={service}>
-      {FigureImageWithCaption}
-    </ServiceContextProvider>
-  ))
+  .add('with a caption', ({ service }) => FigureImageWithCaption(service))
   .add('without a caption', () => FigureImage)
   .add('with non-BBC copyright', () => FigureImageWithCopyright)
   .add(
