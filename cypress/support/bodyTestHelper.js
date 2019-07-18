@@ -1,4 +1,6 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
+import testData from '../../src/app/lib/config/services';
+
 
 export const getElement = element => cy.get(element);
 
@@ -159,32 +161,32 @@ export const visibleImageWithCaption = figure => {
   figure.should('to.have.descendants', 'figcaption');
 };
 
-export const errorMessage = service => {
+export const errorMessage = serviceConfig => {
   getElement('h1 span').should(
     'contain',
-    `${service.translations.error[404].statusCode}`,
+    `${serviceConfig.translations.error[404].statusCode}`,
   );
   getElement('h1').should(
     'contain',
-    `${service.translations.error[404].title}`,
+    `${serviceConfig.translations.error[404].title}`,
   );
 };
 
-export const errorPageInlineLink = service => {
+export const errorPageInlineLink = serviceConfig => {
   getElement('main p')
     .eq(1)
     .within(() => {
       getElement('a').should(
         'have.attr',
         'href',
-        `${service.translations.error[404].callToActionLinkUrl}`,
+        `${serviceConfig.translations.error[404].callToActionLinkUrl}`,
       );
     });
 };
 
-export const errorTitle = service => {
+export const errorTitle = serviceConfig => {
   renderedTitle(
-    `${service.translations.error[404].title} - ${service.brandName}`,
+    `${serviceConfig.translations.error[404].title} - ${serviceConfig.brandName}`,
   );
 };
 

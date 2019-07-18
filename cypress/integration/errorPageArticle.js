@@ -5,17 +5,21 @@ import {
   hasHtmlLangDirAttributes,
 } from '../support/bodyTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
-import news from '../../src/app/lib/config/services/news';
+import testData from '../../src/app/lib/config/services';
+import services from '../support/config/services';
 
 // This is duplicated between this file and errorPagePersian.js.
 // This is because both these files will be consolidated into 1 file in a later PR.
 const nonExistentAsset = 'cxvxrj8tvppo';
+const serviceHasNonExistentArticle = service =>
+  services[service].pageTypes.nonExistentarticle !== undefined;
 
 // It is safe to test only that a 404 is returned on all environments
+
 describe('Test we get a 404', () => {
   it('should return a 404 error code', () => {
     cy.request({
-      url: `/news/articles/${nonExistentAsset}`,
+      url: `/${service}/articles/${nonExistentAsset}`,
       failOnStatusCode: false,
     }).then(({ status }) => {
       expect(status).to.eq(404);
@@ -25,43 +29,51 @@ describe('Test we get a 404', () => {
 
 // These must only ever be run locally as otherwise you're testing
 // the mozart page not the response from this application.
-describeForLocalOnly('Local Article Error Page Tests', () => {
+Object.keys(services)
+  .filter(serviceHasNonExistentArticle)
+  .forEach(service => {
+describe(`${service} Article Error Page Tests`, () => {
   // eslint-disable-next-line no-undef
-  before(() => {
-    cy.visit(`/news/articles/${nonExistentAsset}`, {
+  beforeEach(() => {
+    cy.visit(`/${service}/articles/${nonExistentAsset}`, {
       failOnStatusCode: false,
     });
   });
 
   it('should return a 404 error code', () => {
     cy.testResponseCodeAndType(
-      `/news/articles/${nonExistentAsset}`,
+      `/${service}/articles/${nonExistentAsset.asset}`,
       404,
       'text/html',
     );
   });
 
   it('should have the correct lang & dir attributes', () => {
-    hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
+    hasHtmlLangDirAttributes({
+          lang: `${testData[service].locale}`,
+          dir: `${testData[service].dir}`,
+    });
   });
 
   it('should display a relevant error message on screen', () => {
-    cy.visit(`/news/articles/${nonExistentAsset}`, {
+    cy.visit(`/${service}/articles/${nonExistentAsset}`, {
       failOnStatusCode: false,
     });
-    errorMessage(news);
+    errorMessage(testData[service]);
 
-    cy.visit(`/news/articles/${nonExistentAsset}`, {
+    cy.visit(`/${service}/articles/${nonExistentAsset}`, {
       failOnStatusCode: false,
     });
-    errorMessage(news);
+    errorMessage(testData[service]);
   });
 
   it('should have an inline link on the page that is linked to the home page', () => {
-    errorPageInlineLink(news);
+    errorPageInlineLink(testData[service]);
   });
 
   it('should have a relevant error title in the head', () => {
-    errorTitle(news);
+    errorTitle(testData[service]);
   });
 });
+});
+
