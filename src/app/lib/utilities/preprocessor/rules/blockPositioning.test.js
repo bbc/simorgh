@@ -1,4 +1,4 @@
-import deepClone from '../../deepClone';
+import deepClone from 'ramda/src/clone';
 import applyBlockPositioning from './blockPositioning';
 
 const standardObject = {

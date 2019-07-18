@@ -1,6 +1,6 @@
+import pathOr from 'ramda/src/pathOr';
 import mediatorURL from './mediatorUrl';
 import filterForBlockType from '../blockHandlers';
-import deepGet from '../deepGet';
 
 const mediaPlayerSettings = ({
   aresMediaBlocks,
@@ -16,16 +16,18 @@ const mediaPlayerSettings = ({
     aresMediaBlocks,
     'aresMediaMetadata',
   );
-  const pid = deepGet(['model', 'id'], aresMediaMetadata);
-  const nestedModel = deepGet(['model'], aresMediaMetadata);
+  const pid = pathOr(null, ['model', 'id'], aresMediaMetadata);
+  const nestedModel = pathOr(null, ['model'], aresMediaMetadata);
   const kind =
-    deepGet(['format'], nestedModel) === 'audio_video' ? 'programme' : 'audio';
-  const subType = deepGet(['subType'], nestedModel);
-  const title = deepGet(['title'], nestedModel);
-  const version = deepGet(['versions', 0], nestedModel);
-  const duration = deepGet(['duration'], version);
-  const versionID = deepGet(['versionId'], version);
-  const guidance = deepGet(['warnings', 'short'], version);
+    pathOr(null, ['format'], nestedModel) === 'audio_video'
+      ? 'programme'
+      : 'audio';
+  const subType = pathOr(null, ['subType'], nestedModel);
+  const title = pathOr(null, ['title'], nestedModel);
+  const version = pathOr(null, ['versions', 0], nestedModel);
+  const duration = pathOr(null, ['duration'], version);
+  const versionID = pathOr(null, ['versionId'], version);
+  const guidance = pathOr(null, ['warnings', 'short'], version);
   const statsObject = { destination: statsDestination };
   if (subType === 'clip') {
     statsObject.clipPID = pid;
@@ -34,9 +36,9 @@ const mediaPlayerSettings = ({
   }
 
   const aresMediaImage = filterForBlockType(aresMediaBlocks, 'image');
-  const imageBlocks = deepGet(['model', 'blocks'], aresMediaImage);
+  const imageBlocks = pathOr(null, ['model', 'blocks'], aresMediaImage);
   const rawImageBlock = filterForBlockType(imageBlocks, 'rawImage');
-  const holdingImageUrl = deepGet(['model', 'locator'], rawImageBlock);
+  const holdingImageUrl = pathOr(null, ['model', 'locator'], rawImageBlock);
 
   const settings = {
     appName: 'news',
