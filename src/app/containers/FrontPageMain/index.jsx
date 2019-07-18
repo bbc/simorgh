@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { shape } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { Grid, GridItemConstrainedLarge } from '../../lib/styledGrid';
@@ -53,7 +52,7 @@ const FrontPageMain = ({ frontPageData }) => {
 };
 
 FrontPageMain.propTypes = {
-  frontPageData: shape(frontPageDataPropTypes).isRequired,
+  frontPageData: frontPageDataPropTypes.isRequired,
 };
 
 export default FrontPageMain;

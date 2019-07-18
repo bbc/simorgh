@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOfType, shape } from 'prop-types';
+import { oneOfType } from 'prop-types';
 import { RequestContext } from '../../contexts/RequestContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
@@ -32,7 +32,6 @@ const ATIAnalytics = ({ data }) => {
 };
 
 ATIAnalytics.propTypes = {
-  data: oneOfType([articleDataPropTypes, shape(frontPageDataPropTypes)])
-    .isRequired,
+  data: oneOfType([articleDataPropTypes, frontPageDataPropTypes]).isRequired,
 };
 export default ATIAnalytics;
