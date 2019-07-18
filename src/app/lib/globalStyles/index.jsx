@@ -22,9 +22,11 @@ const GlobalStyleComponent = createGlobalStyle`
     ${({ fonts }) => fonts && createFontStyles(fonts)}
   `;
 
-const GlobalStyle = () => {
-  const { fonts } = useContext(ServiceContext);
-  return <GlobalStyleComponent fonts={fonts} />;
+// eslint-disable-next-line react/prop-types
+const GlobalStyle = ({ fonts }) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const styleFonts = fonts || useContext(ServiceContext);
+  return <GlobalStyleComponent fonts={styleFonts} />;
 };
 
 export default GlobalStyle;
