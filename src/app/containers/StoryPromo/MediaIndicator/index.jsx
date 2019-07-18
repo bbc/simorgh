@@ -2,23 +2,23 @@ import React from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
+import pathOr from 'ramda/src/pathOr';
 import { storyItem } from '../../../models/propTypes/storyItem';
-import deepGet from '../../../lib/utilities/deepGet';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
 const MediaIndicator = ({ item, topStory, service }) => {
-  const isMedia = deepGet(['cpsType'], item) === 'MAP';
-  const hasMediaInfo = deepGet(['media'], item);
+  const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
+  const hasMediaInfo = pathOr(null, ['media'], item);
 
   // Only build a media indicator if this is a media item.
   if (!isMedia || !hasMediaInfo) {
     return null;
   }
 
-  const type = deepGet(['media', 'format'], item);
+  const type = pathOr(null, ['media', 'format'], item);
 
   // Always gets the first version. Smarter logic may be needed in the future.
-  const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
+  const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
 
   if (rawDuration) {
     const duration = moment.duration(rawDuration, 'seconds');

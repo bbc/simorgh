@@ -1,12 +1,12 @@
 import uuid from 'uuid';
-import deepGet from '../../deepGet';
-import compose from '../../compose';
+import compose from 'ramda/src/compose';
+import pathOr from 'ramda/src/pathOr';
 
 let mapIdsToBlocks;
 
-const getJsonContent = jsonRaw => deepGet(['content'], jsonRaw);
+const getJsonContent = jsonRaw => pathOr(null, ['content'], jsonRaw);
 
-const getBlocks = block => deepGet(['model', 'blocks'], block);
+const getBlocks = block => pathOr(null, ['model', 'blocks'], block);
 
 const addIdsToBlock = block => {
   const blockWithId = { ...block, id: uuid() };

@@ -1,7 +1,7 @@
-import deepGet from '../../../lib/utilities/deepGet';
+import pathOr from 'ramda/src/pathOr';
 
 const audioVideoMetadata = blocks => {
-  const aresMediaBlocks = deepGet(['model', 'blocks'], blocks);
+  const aresMediaBlocks = pathOr(null, ['model', 'blocks'], blocks);
   const listContent = [];
   const metadata = {
     video: {
@@ -18,16 +18,20 @@ const audioVideoMetadata = blocks => {
   );
 
   aresMetaDataBlocks.forEach(block => {
-    const format = deepGet(['model', 'format'], block);
+    const format = pathOr(null, ['model', 'format'], block);
     const type = format === 'audio' ? 'AudioObject' : 'VideoObject';
 
     listContent.push({
       '@type': type,
-      name: deepGet(['model', 'title'], block),
-      description: deepGet(['model', 'synopses', 'short'], block),
-      duration: deepGet(['model', 'versions', [0], 'duration'], block),
-      thumbnailUrl: `https://${deepGet(['model', 'imageUrl'], block)}`,
-      uploadDate: deepGet(['model', 'versions', [0], 'availableFrom'], block),
+      name: pathOr(null, ['model', 'title'], block),
+      description: pathOr(null, ['model', 'synopses', 'short'], block),
+      duration: pathOr(null, ['model', 'versions', [0], 'duration'], block),
+      thumbnailUrl: `https://${pathOr(null, ['model', 'imageUrl'], block)}`,
+      uploadDate: pathOr(
+        null,
+        ['model', 'versions', [0], 'availableFrom'],
+        block,
+      ),
     });
   });
 

@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape } from 'prop-types';
-
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import deepGet from '../../../lib/utilities/deepGet';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import { storyItem } from '../../../models/propTypes/storyItem';
 
@@ -14,8 +12,8 @@ const LinkContents = ({ item }) => {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
 
-  const isMedia = deepGet(['cpsType'], item) === 'MAP';
-  const headlines = deepGet(['headlines'], item);
+  const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
+  const headlines = pathOr(null, ['headlines'], item);
   const { headline, overtyped } = headlines;
   const content = overtyped || headline;
 
@@ -23,10 +21,10 @@ const LinkContents = ({ item }) => {
     return content;
   }
 
-  const type = deepGet(['media', 'format'], item);
+  const type = pathOr(null, ['media', 'format'], item);
 
   // Always gets the first version. Smarter logic may be needed in the future.
-  const rawDuration = deepGet(['media', 'versions', 0, 'duration'], item);
+  const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
 
   // hilariously, this works. according to moment, null seconds == 0 seconds!
   const duration = moment.duration(rawDuration, 'seconds');

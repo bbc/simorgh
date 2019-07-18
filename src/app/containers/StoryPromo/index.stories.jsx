@@ -1,22 +1,26 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoContainer from '.';
 import fixture from '../../../../data/pidgin/frontpage';
-import deepGet from '../../lib/utilities/deepGet';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 const mediaFixture = type =>
-  deepGet(['content', 'groups'], fixture)
-    .flatMap(group => deepGet(['items'], group))
+  pathOr(null, ['content', 'groups'], fixture)
+    .flatMap(group => pathOr(null, ['items'], group))
     .find(
       item =>
-        deepGet(['cpsType'], item) === 'MAP' &&
-        deepGet(['media', 'format'], item) === type,
+        pathOr(null, ['cpsType'], item) === 'MAP' &&
+        pathOr(null, ['media', 'format'], item) === type,
     );
 
-const firstFixture = deepGet(['content', 'groups', '0', 'items', '0'], fixture);
+const firstFixture = pathOr(
+  null,
+  ['content', 'groups', '0', 'items', '0'],
+  fixture,
+);
 const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
 

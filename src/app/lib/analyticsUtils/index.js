@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie';
+import pathOr from 'ramda/src/pathOr';
 import onClient from '../utilities/onClient';
-import deepGet from '../utilities/deepGet';
 
 export const getDestination = statsDestination => {
   const destinationIDs = {
@@ -151,7 +151,7 @@ const getISODate = unixTimestamp => {
 };
 
 export const getPublishedDatetime = (attribute, data) => {
-  const publishedDatetime = deepGet(['metadata', attribute], data);
+  const publishedDatetime = pathOr(null, ['metadata', attribute], data);
 
   return publishedDatetime && isValidDateTime(publishedDatetime)
     ? getISODate(publishedDatetime)

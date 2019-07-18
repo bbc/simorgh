@@ -1,14 +1,14 @@
 import React from 'react';
 import { shape, element, string } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
 import articlePropTypes from '../../../models/propTypes/article';
 import ErrorMain from '../../ErrorMain';
-import deepGet from '../../../lib/utilities/deepGet';
 import getPassportHome from '../../../lib/utilities/getPassportHome';
 
 // checks for data, status, setting default status if not found
 const constructRenderObject = data => ({
-  status: deepGet(['status'], data) || 500,
-  pageData: deepGet(['pageData'], data),
+  status: pathOr(null, ['status'], data) || 500,
+  pageData: pathOr(null, ['pageData'], data),
 });
 
 const isValidPassportHome = (passportHome, service) =>

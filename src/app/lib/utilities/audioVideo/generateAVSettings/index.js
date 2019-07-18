@@ -1,5 +1,5 @@
+import pathOr from 'ramda/src/pathOr';
 import mediaPlayerSettings from '../mediaPlayerSettings';
-import deepGet from '../../deepGet';
 import filterForBlockType from '../../blockHandlers';
 
 const generateAVSettings = ({
@@ -13,14 +13,18 @@ const generateAVSettings = ({
     // that is needed for ids on the media player placeholder divs
     // and aresMediaBlocksArray to generate the mediaPlayerSettings
     // object which needs to be passed to AudioVideoHead
-    const toplevelblock = deepGet(['model', 'blocks'], avBlock);
+    const toplevelblock = pathOr(null, ['model', 'blocks'], avBlock);
     const aresMediaBlock = filterForBlockType(toplevelblock, 'aresMedia');
-    const aresMediaBlocksArray = deepGet(['model', 'blocks'], aresMediaBlock);
+    const aresMediaBlocksArray = pathOr(
+      null,
+      ['model', 'blocks'],
+      aresMediaBlock,
+    );
     const aresMediaMetadata = filterForBlockType(
       aresMediaBlocksArray,
       'aresMediaMetadata',
     );
-    const pid = deepGet(['model', 'id'], aresMediaMetadata);
+    const pid = pathOr(null, ['model', 'id'], aresMediaMetadata);
 
     return {
       id: pid,
