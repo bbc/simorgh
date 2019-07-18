@@ -89,7 +89,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.5.4",
     "@bbc/gel-foundations": "3.0.3",
-    "@bbc/psammead-assets": "^1.0.6",
+    "@bbc/psammead-assets": "^1.1.1",
     "@bbc/psammead-brand": "^4.1.12",
     "@bbc/psammead-caption": "^2.0.3",
     "@bbc/psammead-consent-banner": "^2.0.1",
