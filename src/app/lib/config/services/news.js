@@ -5,7 +5,7 @@ import * as fonts from '@bbc/psammead-styles/fonts';
 import 'moment/locale/en-gb';
 import moment from 'moment-timezone';
 
-moment.tz.add(Moment_Timezone_Asia_Tehran); // eslint-disable-line no-undef
+moment.tz.add(Moment_Timezone_Asia_Tehran);
 
 const news = {
   lang: 'en-GB',
@@ -26,7 +26,7 @@ const news = {
   imageCopyrightOffscreenText: 'Image source, ',
   locale: 'en_GB',
   datetimeLocale: 'en-gb',
-  timezone: 'Asia_Tehran',
+  timezone: 'Asia/Tehran',
   service: 'news',
   serviceName: 'News',
   themeColor: `${C_POSTBOX}`,
