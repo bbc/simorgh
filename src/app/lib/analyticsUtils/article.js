@@ -1,7 +1,7 @@
-import deepGet from '../utilities/deepGet';
+import pathOr from 'ramda/src/pathOr';
 
 const getOptimoUrn = articleData =>
-  deepGet(['metadata', 'locators', 'optimoUrn'], articleData);
+  pathOr(null, ['metadata', 'locators', 'optimoUrn'], articleData);
 
 export const getContentId = articleData => {
   const optimoUrn = getOptimoUrn(articleData);
@@ -23,13 +23,13 @@ export const getPageIdentifier = (service, articleData) => {
 };
 
 export const getLanguage = articleData =>
-  deepGet(['metadata', 'passport', 'language'], articleData);
+  pathOr(null, ['metadata', 'passport', 'language'], articleData);
 
 export const getPromoHeadline = articleData =>
-  deepGet(['promo', 'headlines', 'seoHeadline'], articleData);
+  pathOr(null, ['promo', 'headlines', 'seoHeadline'], articleData);
 
 export const getThingAttributes = (attribute, articleData) => {
-  const things = deepGet(['metadata', 'tags', 'about'], articleData);
+  const things = pathOr(null, ['metadata', 'tags', 'about'], articleData);
 
   if (things) {
     const attributes = [];

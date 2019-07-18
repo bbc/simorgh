@@ -1,5 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import { shape, oneOfType } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import Metadata from '../../components/Metadata';
@@ -12,7 +13,6 @@ import {
   optimoPromoPropTypes,
   cpsPromoPropTypes,
 } from '../../models/propTypes/promo';
-import deepGet from '../../lib/utilities/deepGet';
 import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];
@@ -38,13 +38,13 @@ const allTags = tags => {
 
 const getTitle = promo =>
   promo.subType === 'IDX'
-    ? deepGet(['name'], promo)
-    : deepGet(['headlines', 'seoHeadline'], promo);
+    ? pathOr(null, ['name'], promo)
+    : pathOr(null, ['headlines', 'seoHeadline'], promo);
 
 const getDescription = (metadata, promo) =>
-  deepGet(['summary'], promo) ||
-  deepGet(['headlines', 'seoHeadline'], promo) ||
-  deepGet(['summary'], metadata);
+  pathOr(null, ['summary'], promo) ||
+  pathOr(null, ['headlines', 'seoHeadline'], promo) ||
+  pathOr(null, ['summary'], metadata);
 
 const getLink = (origin, service, id, pageType, linkType = '') => {
   // according to https://github.com/bbc/simorgh/pull/1945, canonical links should use .com
@@ -175,8 +175,8 @@ const MetadataContainer = ({ metadata, promo }) => {
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
         seoHeadline={getTitle(promo)}
-        type={deepGet([pageType, 'schemaOrg'], pageTypeMetadata)}
-        about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
+        type={pathOr(null, [pageType, 'schemaOrg'], pageTypeMetadata)}
+        about={aboutTagsContent(pathOr(null, ['tags', 'about'], metadata))}
       />
       <Metadata
         isAmp={isAmp}
@@ -184,7 +184,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         ampLink={ampLink}
         appleTouchIcon={appleTouchIcon}
         articleAuthor={articleAuthor}
-        articleSection={deepGet(['passport', 'genre'], metadata)}
+        articleSection={pathOr(null, ['passport', 'genre'], metadata)}
         brandName={brandName}
         canonicalLink={canonicalLink}
         defaultImage={defaultImage}
@@ -194,8 +194,8 @@ const MetadataContainer = ({ metadata, promo }) => {
         facebookAdmin={100004154058350}
         facebookAppID={1609039196070050}
         lang={
-          deepGet(['passport', 'language'], metadata) ||
-          deepGet(['language'], metadata)
+          pathOr(null, ['passport', 'language'], metadata) ||
+          pathOr(null, ['language'], metadata)
         }
         locale={locale}
         metaTags={allTags(metadata.tags)}
@@ -205,7 +205,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         title={getTitle(promo)}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
-        type={deepGet([pageType, 'openGraph'], pageTypeMetadata)}
+        type={pathOr(null, [pageType, 'openGraph'], pageTypeMetadata)}
         service={service}
         showArticleTags={pageType === 'article'}
         iconSizes={iconSizes}
