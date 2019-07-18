@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import Canonical from './Canonical';
 import Caption from '../Caption';
-import videoMetadata from './audioVideoMetadata';
+import videoMetadata from './metadata';
 import {
   NestedGridParentLarge,
   NestedGridParentSmall,
