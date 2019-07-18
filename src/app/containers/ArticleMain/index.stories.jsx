@@ -11,7 +11,7 @@ import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 // the service selector will be constrained to services that have article fixtures:
 const availableFixtures = {
   news: articleDataNews,
-  persian: articleDataPersian
+  persian: articleDataPersian,
 };
 
 storiesOf('Article Main', module)
