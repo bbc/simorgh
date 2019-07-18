@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { any, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
-import deepGet from '../../lib/utilities/deepGet';
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
@@ -30,7 +30,7 @@ const chooseOffscreenText = (
 };
 const renderParagraph = paragraphBlock => {
   return (
-    <p key={deepGet(['0', 'id'], paragraphBlock)}>
+    <p key={pathOr(null, ['0', 'id'], paragraphBlock)}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
     </p>
   );
@@ -42,7 +42,7 @@ const renderCaption = (paragraphBlocks, offscreenText, script, service) => (
       <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
     ) : null}
     {paragraphBlocks.map(block => {
-      const paragraphBlock = deepGet(['model', 'blocks'], block);
+      const paragraphBlock = pathOr(null, ['model', 'blocks'], block);
       return renderParagraph(paragraphBlock);
     })}
   </Caption>
@@ -65,7 +65,8 @@ const CaptionContainer = ({ block, type }) => {
     defaultCaptionOffscreenText,
   );
 
-  const paragraphBlocks = deepGet(
+  const paragraphBlocks = pathOr(
+    null,
     ['model', 'blocks', 0, 'model', 'blocks'],
     block,
   );

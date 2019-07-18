@@ -6,11 +6,11 @@ import StoryPromoComponent, {
   Link,
 } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
+import pathOr from 'ramda/src/pathOr';
 import { storyItem } from '../../models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
-import deepGet from '../../lib/utilities/deepGet';
 import createSrcset from '../Image/helpers/srcSet';
 import getOriginCode from './imageSrcHelpers/originCode';
 import getLocator from './imageSrcHelpers/locator';
@@ -53,10 +53,10 @@ StoryPromoImage.propTypes = {
 
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const { script, datetimeLocale, service } = useContext(ServiceContext);
-  const headline = deepGet(['headlines', 'headline'], item);
-  const url = deepGet(['locators', 'assetUri'], item);
-  const summary = deepGet(['summary'], item);
-  const timestamp = deepGet(['timestamp'], item);
+  const headline = pathOr(null, ['headlines', 'headline'], item);
+  const url = pathOr(null, ['locators', 'assetUri'], item);
+  const summary = pathOr(null, ['summary'], item);
+  const timestamp = pathOr(null, ['timestamp'], item);
 
   if (!headline || !url) {
     return null;
@@ -90,7 +90,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
     </Fragment>
   );
 
-  const imageValues = deepGet(['indexImage'], item);
+  const imageValues = pathOr(null, ['indexImage'], item);
   const Image = (
     <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );

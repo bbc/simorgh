@@ -8,7 +8,7 @@ import {
   VideoClipGlobalWithCaption,
   VideoClipUkWithGuidance,
   VideoClipGlobalWithoutCaption,
-} from './fixtureData';
+} from './helpers/fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('Audio Video Container', module)
