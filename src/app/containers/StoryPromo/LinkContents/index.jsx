@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import moment from 'moment-timezone';
+// import moment from 'moment-timezone';
 import { shape } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import formatDuration from '../../../lib/utilities/formatDuration';
+import { offscreenDuration } from '../../../lib/utilities/formatDuration';
 import { storyItem } from '../../../models/propTypes/storyItem';
 
 const LinkContents = ({ item }) => {
@@ -27,8 +27,8 @@ const LinkContents = ({ item }) => {
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
 
   // hilariously, this works. according to moment, null seconds == 0 seconds!
-  const duration = moment.duration(rawDuration, 'seconds');
-  const durationString = formatDuration(duration);
+  // const duration = moment.duration(rawDuration, 'seconds');
+  const durationString = offscreenDuration(rawDuration);
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.

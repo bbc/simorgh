@@ -20,4 +20,20 @@ const formatDuration = duration => {
   return out;
 };
 
+export const offscreenDuration = duration => {
+  const secondsTranslation = 'seconds';
+  const minutesTranslation = 'minutes';
+
+  if (duration < 60) {
+    return `${duration} ${secondsTranslation}`;
+  }
+
+  const minutes = Math.floor(duration / 60);
+  const seconds = duration % 60;
+
+  const descriptiveDuration = `${minutes} ${minutesTranslation} ${seconds} ${secondsTranslation}`;
+
+  return descriptiveDuration;
+};
+
 export default formatDuration;
