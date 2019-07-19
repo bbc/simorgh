@@ -144,7 +144,7 @@ const generateFixtureData = ({
   type,
   service,
 }) => (
-  <ServiceContextProvider service={service}>
+  <ServiceContextProvider service={service || 'news'}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
@@ -214,11 +214,13 @@ export const FigureImageWithCaption = service =>
     service,
   });
 
-export const FigureAmpImageWithCaption = generateFixtureData({
-  caption: captionBlock('Figure Amp Image with Caption'),
-  platform: 'amp',
-  type: 'image',
-});
+export const FigureAmpImageWithCaption = service =>
+  generateFixtureData({
+    caption: captionBlock('Figure Amp Image with Caption'),
+    platform: 'amp',
+    type: 'image',
+    service,
+  });
 
 export const FigureImageWithCopyright = generateFixtureData({
   copyright: copyrightText,

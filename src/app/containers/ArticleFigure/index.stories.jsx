@@ -39,8 +39,10 @@ storiesOf('ArticleFigure', module)
   .add('with a lazyloaded image', () => FigureLazyLoadImage);
 
 storiesOf('ArticleFigure - AMP', module)
+  .addDecorator(withKnobs)
+  .addDecorator(dirDecorator)
   .addDecorator(AmpDecorator)
-  .add('with a caption', () => FigureAmpImageWithCaption)
+  .add('with a caption', ({ service }) => FigureAmpImageWithCaption(service))
   .add('without a caption', () => FigureAmpImage)
   .add('with non-BBC copyright', () => FigureAmpImageWithCopyright)
   .add(
