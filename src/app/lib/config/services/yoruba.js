@@ -115,6 +115,20 @@ const yoruba = {
       audio: 'Orin',
       video: 'Fidio',
     },
+    durations: {
+      seconds: {
+        singular: 'second',
+        plural: 'seconds',
+      },
+      minutes: {
+        singular: 'minute',
+        plural: 'minutes',
+      },
+      hours: {
+        singular: 'hour',
+        plural: 'hours',
+      },
+    },
   },
   navigation: [
     {
