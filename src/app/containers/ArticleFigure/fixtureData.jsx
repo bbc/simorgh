@@ -1,7 +1,7 @@
 import React from 'react';
 import { any, bool, string, number, objectOf } from 'prop-types';
 import FigureContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { blockContainingText } from '../../models/blocks';
 
@@ -134,11 +134,6 @@ const captionBlockWithLink = createCaptionBlock([paragraphBlockWithInlineLink]);
 
 const copyrightText = 'Getty Images';
 
-const serviceContextStubNews = {
-  imageCaptionOffscreenText: 'Image caption, ',
-  service: 'news',
-};
-
 const generateFixtureData = ({
   height,
   width,
@@ -149,13 +144,13 @@ const generateFixtureData = ({
   type,
   service,
 }) => (
-  <ServiceContext.Provider value={serviceContextStubNews}>
+  <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pageType="article"
-      service={service || 'news'}
+      service="news"
     >
       <FigureContainer
         alt={imageAlt}
@@ -170,7 +165,7 @@ const generateFixtureData = ({
         showCopyright
       />
     </RequestContextProvider>
-  </ServiceContext.Provider>
+  </ServiceContextProvider>
 );
 
 generateFixtureData.propTypes = {
@@ -196,6 +191,7 @@ generateFixtureData.defaultProps = {
 };
 
 export const FigureImage = generateFixtureData({ platform: 'canonical' });
+
 export const FigureImageWithNestedGrid = (width, height) =>
   generateFixtureData({
     platform: 'canonical',

@@ -253,7 +253,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   width: 100%;
 }
 
-.c7 {
+.c5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -279,25 +279,22 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   left: 0;
 }
 
-.c6 {
+.c7 {
   color: #6E6E73;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
 
-.c6 > p {
+.c7 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c6 > p:last-child {
+.c7 > p:last-child {
   padding-bottom: 0;
 }
 
-.c6 i {
+.c7 i {
   font-style: normal;
 }
 
@@ -320,13 +317,13 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c7 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c7 {
     padding: 0.5rem 0 0;
   }
 }
@@ -356,25 +353,25 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 @media (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 10;
   }
 }
@@ -417,6 +414,11 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
           role="text"
         >
           <span
+            className="c5"
+          >
+            Default image copyright text, 
+          </span>
+          <span
             lang="en-GB"
           >
             Getty Images
@@ -425,15 +427,15 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
     >
       <figcaption
-        className="c6"
+        className="c7"
       >
         <span
-          className="c7"
+          className="c5"
         >
-          Image caption, 
+          Default image caption prefix, 
         </span>
         <p>
           Figure Amp Image with Copyright and Caption
@@ -465,9 +467,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 .c5 {
   color: #6E6E73;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -607,7 +606,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
         <span
           className="c6"
         >
-          Image caption, 
+          Default image caption prefix, 
         </span>
         <p>
           Figure Amp Image with Caption
@@ -639,9 +638,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 .c5 {
   color: #6E6E73;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -799,7 +795,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
         <span
           className="c6"
         >
-          Image caption, 
+          Default image caption prefix, 
         </span>
         <p>
           This is a caption 
@@ -823,6 +819,18 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
+}
+
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .c4 {
@@ -882,25 +890,25 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 10;
   }
 }
@@ -943,6 +951,11 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
           role="text"
         >
           <span
+            className="c5"
+          >
+            Default image copyright text, 
+          </span>
+          <span
             lang="en-GB"
           >
             Getty Images
@@ -951,7 +964,7 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
     />
   </div>
 </figure>
@@ -1365,7 +1378,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1391,25 +1404,22 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   left: 0;
 }
 
-.c7 {
+.c8 {
   color: #6E6E73;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
 
-.c7 > p {
+.c8 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c7 > p:last-child {
+.c8 > p:last-child {
   padding-bottom: 0;
 }
 
-.c7 i {
+.c8 i {
   font-style: normal;
 }
 
@@ -1438,13 +1448,13 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c8 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c7 {
+  .c8 {
     padding: 0.5rem 0 0;
   }
 }
@@ -1474,25 +1484,25 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 10;
   }
 }
@@ -1535,6 +1545,11 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
           role="text"
         >
           <span
+            className="c6"
+          >
+            Default image copyright text, 
+          </span>
+          <span
             lang="en-GB"
           >
             Getty Images
@@ -1543,15 +1558,15 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <figcaption
-        className="c7"
+        className="c8"
       >
         <span
-          className="c8"
+          className="c6"
         >
-          Image caption, 
+          Default image caption prefix, 
         </span>
         <p>
           Figure Image with Copyright and Caption
@@ -1585,9 +1600,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 .c6 {
   color: #6E6E73;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
 }
@@ -1751,7 +1763,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
         <span
           className="c7"
         >
-          Image caption, 
+          Default image caption prefix, 
         </span>
         <p>
           This is a caption 
@@ -1775,6 +1787,18 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
+}
+
+.c6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .c5 {
@@ -1840,25 +1864,25 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 10;
   }
 }
@@ -1901,6 +1925,11 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
           role="text"
         >
           <span
+            className="c6"
+          >
+            Default image copyright text, 
+          </span>
+          <span
             lang="en-GB"
           >
             Getty Images
@@ -1909,7 +1938,7 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     />
   </div>
 </figure>
