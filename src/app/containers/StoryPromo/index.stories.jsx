@@ -24,8 +24,6 @@ const firstFixture = pathOr(
 const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
 
-audioFixture.media.versions[0].duration = 60;
-
 const getStoryPromo = platform => item => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
