@@ -116,12 +116,18 @@ const igbo = {
       video: 'Vidio',
     },
     durations: {
-      second: 'keji',
-      minute: 'iṣẹju',
-      hour: 'wakati',
-      seconds: 'aaya',
-      minutes: 'iṣẹju',
-      hours: 'awọn wakati',
+      seconds: {
+        singular: 'keji',
+        plural: 'aaya',
+      },
+      minutes: {
+        singular: 'iṣẹju',
+        plural: 'iṣẹju',
+      },
+      hours: {
+        singular: 'wakati',
+        plural: 'awọn wakati',
+      },
     },
   },
   navigation: [

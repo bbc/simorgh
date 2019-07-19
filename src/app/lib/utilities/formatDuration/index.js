@@ -18,48 +18,24 @@ const formatDuration = duration => {
   return out;
 };
 
-const getTranslation = (number, type, translations) => {
-  const secondsTranslation = translations.seconds;
-  const secondTranslation = translations.second;
-  const minutesTranslation = translations.minutes;
-  const minuteTranslation = translations.minute;
-  const hoursTranslation = translations.hours;
-  const hourTranslation = translations.hour;
+const getFormattedString = durationInfo => {
+  const array = [];
 
-  if (type === 'hours') {
-    return `${number} ${number > 1 ? hoursTranslation : hourTranslation}`;
+  durationInfo.forEach(innerArray => {
+    array.push(`${innerArray[0]} ${innerArray[1][innerArray[2]]}`);
+  });
+
+  if (array.length === 1) {
+    return array[0];
   }
 
-  if (type === 'minutes') {
-    return `${number} ${number > 1 ? minutesTranslation : minuteTranslation}`;
-  }
-
-  return `${number} ${number > 1 ? secondsTranslation : secondTranslation}`;
+  return array.length === 2
+    ? `${array[0]} ${array[1]}`
+    : `${array[0]} ${array[1]} ${array[2]}`;
 };
 
-const getFormattedString = (
-  translations,
-  seconds,
-  minutes = '',
-  hours = '',
-) => {
-  if (!minutes && !hours) {
-    return `${getTranslation(seconds, 'seconds', translations)}`;
-  }
-
-  if (!hours) {
-    return `${getTranslation(
-      minutes,
-      'minutes',
-      translations,
-    )} ${getTranslation(seconds, 'seconds', translations)}`;
-  }
-
-  return `${getTranslation(hours, 'hours', translations)} ${getTranslation(
-    minutes,
-    'minutes',
-    translations,
-  )} ${getTranslation(seconds, 'seconds', translations)} `;
+const getSingularOrPlural = duration => {
+  return duration > 1 ? 'plural' : 'singular';
 };
 
 export const offscreenDuration = (duration, translations) => {
@@ -69,7 +45,11 @@ export const offscreenDuration = (duration, translations) => {
 
   // less than a minute
   if (duration < 60) {
-    return getFormattedString(translations, duration);
+    const durationObj = [
+      [duration, translations.seconds, getSingularOrPlural(duration)],
+    ];
+
+    return getFormattedString(durationObj);
   }
 
   // more than an hour
@@ -78,14 +58,25 @@ export const offscreenDuration = (duration, translations) => {
     minutes = Math.floor((duration % 3600) / 60);
     seconds = Math.floor(duration % 60);
 
-    return getFormattedString(translations, seconds, minutes, hours);
+    const durationObj = [
+      [hours, translations.hours, getSingularOrPlural(hours)],
+      [minutes, translations.minutes, getSingularOrPlural(minutes)],
+      [seconds, translations.seconds, getSingularOrPlural(seconds)],
+    ];
+
+    return getFormattedString(durationObj);
   }
 
   // minutes and seconds
   minutes = Math.floor(duration / 60);
   seconds = duration % 60;
 
-  return getFormattedString(translations, seconds, minutes);
+  const durationObj = [
+    [minutes, translations.minutes, getSingularOrPlural(minutes)],
+    [seconds, translations.seconds, getSingularOrPlural(seconds)],
+  ];
+
+  return getFormattedString(durationObj);
 };
 
 export default formatDuration;

@@ -116,12 +116,18 @@ const pidgin = {
       video: 'Video',
     },
     durations: {
-      second: 'sekunda',
-      minute: 'minuta',
-      hour: 'godzina',
-      seconds: 'sekundy',
-      minutes: 'minuty',
-      hours: 'godziny',
+      seconds: {
+        singular: 'sekunda',
+        plural: 'sekund',
+      },
+      minutes: {
+        singular: 'minuta',
+        plural: 'minut',
+      },
+      hours: {
+        singular: 'godzina',
+        plural: 'godzin',
+      },
     },
   },
   navigation: [
