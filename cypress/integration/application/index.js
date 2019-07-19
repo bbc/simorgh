@@ -1,19 +1,31 @@
 import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
-describe('Service worker files', () => {
-  ['news'].forEach(cy.testArticleServiceWorker200s);
+describe.only('Service worker files', () => {
+  it('runs', () => {
+    cy.testArticleServiceWorker200s('news');
+  });
 });
 
 describeForLocalOnly('Local Env - Service worker files', () => {
-  ['persian'].forEach(cy.testArticleServiceWorker200s);
-  ['igbo', 'pidgin', 'yoruba'].forEach(cy.testFrontpageServiceWorker200s);
+  it('runs', () => {
+    cy.testArticleServiceWorker200s('cheese');
+    cy.testFrontpageServiceWorker200s('igbo');
+    cy.testFrontpageServiceWorker200s('pidgin');
+    cy.testFrontpageServiceWorker200s('yoruba');
+  });
 });
 
 describe('Manifest.json files', () => {
-  ['news'].forEach(cy.testManifest200s);
+  it('runs', () => {
+    cy.testManifest200s('news');
+  });
 });
 
 describeForLocalOnly('Local Env - Manifest.json files', () => {
-  ['persian'].forEach(cy.testManifest200s);
-  ['igbo', 'pidgin', 'yoruba'].forEach(cy.testManifestServicePaths);
+  it('runs', () => {
+    cy.testManifest200s('persian');
+    cy.testManifestServicePaths('igbo');
+    cy.testManifestServicePaths('pidgin');
+    cy.testManifestServicePaths('yoruba');
+  });
 });
