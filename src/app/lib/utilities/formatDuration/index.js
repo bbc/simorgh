@@ -1,5 +1,3 @@
-/* eslint-disable prefer-template */
-
 const lpad = s => s.toString().padStart(2, '0');
 
 // the duration argument should be a moment duration!
@@ -9,10 +7,10 @@ const formatDuration = duration => {
   let out = '';
 
   if (isOverAnHour) {
-    out += Math.floor(duration.asHours()) + ':';
-    out += lpad(duration.minutes()) + ':';
+    out += `${Math.floor(duration.asHours())}:`;
+    out += `${lpad(duration.minutes())}:`;
   } else {
-    out += duration.minutes() + ':';
+    out += `${duration.minutes()}:`;
   }
 
   out += lpad(duration.seconds());
@@ -20,20 +18,74 @@ const formatDuration = duration => {
   return out;
 };
 
-export const offscreenDuration = duration => {
-  const secondsTranslation = 'seconds';
-  const minutesTranslation = 'minutes';
+const getTranslation = (number, type, translations) => {
+  const secondsTranslation = translations.seconds;
+  const secondTranslation = translations.second;
+  const minutesTranslation = translations.minutes;
+  const minuteTranslation = translations.minute;
+  const hoursTranslation = translations.hours;
+  const hourTranslation = translations.hour;
 
-  if (duration < 60) {
-    return `${duration} ${secondsTranslation}`;
+  if (type === 'hours') {
+    return `${number} ${number > 1 ? hoursTranslation : hourTranslation}`;
   }
 
-  const minutes = Math.floor(duration / 60);
-  const seconds = duration % 60;
+  if (type === 'minutes') {
+    return `${number} ${number > 1 ? minutesTranslation : minuteTranslation}`;
+  }
 
-  const descriptiveDuration = `${minutes} ${minutesTranslation} ${seconds} ${secondsTranslation}`;
+  return `${number} ${number > 1 ? secondsTranslation : secondTranslation}`;
+};
 
-  return descriptiveDuration;
+const getFormattedString = (
+  translations,
+  seconds,
+  minutes = '',
+  hours = '',
+) => {
+  if (!minutes && !hours) {
+    return `${getTranslation(seconds, 'seconds', translations)}`;
+  }
+
+  if (!hours) {
+    return `${getTranslation(
+      minutes,
+      'minutes',
+      translations,
+    )} ${getTranslation(seconds, 'seconds', translations)}`;
+  }
+
+  return `${getTranslation(hours, 'hours', translations)} ${getTranslation(
+    minutes,
+    'minutes',
+    translations,
+  )} ${getTranslation(seconds, 'seconds', translations)} `;
+};
+
+export const offscreenDuration = (duration, translations) => {
+  let hours = '';
+  let minutes = '';
+  let seconds = '';
+
+  // less than a minute
+  if (duration < 60) {
+    return getFormattedString(translations, duration);
+  }
+
+  // more than an hour
+  if (duration >= 3600) {
+    hours = Math.floor(duration / 3600);
+    minutes = Math.floor((duration % 3600) / 60);
+    seconds = Math.floor(duration % 60);
+
+    return getFormattedString(translations, seconds, minutes, hours);
+  }
+
+  // minutes and seconds
+  minutes = Math.floor(duration / 60);
+  seconds = duration % 60;
+
+  return getFormattedString(translations, seconds, minutes);
 };
 
 export default formatDuration;

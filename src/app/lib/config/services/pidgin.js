@@ -115,6 +115,14 @@ const pidgin = {
       audio: 'Audio',
       video: 'Video',
     },
+    durations: {
+      second: 'sekunda',
+      minute: 'minuta',
+      hour: 'godzina',
+      seconds: 'sekundy',
+      minutes: 'minuty',
+      hours: 'godziny',
+    },
   },
   navigation: [
     {

@@ -115,6 +115,14 @@ const igbo = {
       audio: 'Ọdịyo',
       video: 'Vidio',
     },
+    durations: {
+      second: 'keji',
+      minute: 'iṣẹju',
+      hour: 'wakati',
+      seconds: 'aaya',
+      minutes: 'iṣẹju',
+      hours: 'awọn wakati',
+    },
   },
   navigation: [
     {

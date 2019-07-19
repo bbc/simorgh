@@ -10,6 +10,7 @@ import { storyItem } from '../../../models/propTypes/storyItem';
 const LinkContents = ({ item }) => {
   const {
     translations: { media: mediaTranslations },
+    translations: { durations: durationTranslations },
   } = useContext(ServiceContext);
 
   const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
@@ -28,7 +29,7 @@ const LinkContents = ({ item }) => {
 
   // hilariously, this works. according to moment, null seconds == 0 seconds!
   // const duration = moment.duration(rawDuration, 'seconds');
-  const durationString = offscreenDuration(rawDuration);
+  const durationString = offscreenDuration(rawDuration, durationTranslations);
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
