@@ -35,7 +35,7 @@ const getFormattedString = durationInfo => {
 };
 
 const getSingularOrPlural = duration => {
-  return duration > 1 ? 'plural' : 'singular';
+  return duration === 1 ? 'singular' : 'plural';
 };
 
 export const offscreenDuration = (duration, translations) => {
