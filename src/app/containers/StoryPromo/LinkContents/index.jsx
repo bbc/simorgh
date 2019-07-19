@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-// import moment from 'moment-timezone';
 import { shape } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
@@ -9,8 +8,7 @@ import { storyItem } from '../../../models/propTypes/storyItem';
 
 const LinkContents = ({ item }) => {
   const {
-    translations: { media: mediaTranslations },
-    translations: { durations: durationTranslations },
+    translations: { media: mediaTranslations, durations: durationTranslations },
   } = useContext(ServiceContext);
 
   const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
@@ -27,8 +25,6 @@ const LinkContents = ({ item }) => {
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
 
-  // hilariously, this works. according to moment, null seconds == 0 seconds!
-  // const duration = moment.duration(rawDuration, 'seconds');
   const durationString = offscreenDuration(rawDuration, durationTranslations);
 
   return (
