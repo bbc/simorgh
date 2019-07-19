@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cerj3rk9mmyo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cerj3rk9mmyo"
+    },
+    "type": "article",
+    "createdBy": "Brasil",
+    "language": "pt-br",
+    "lastUpdated": 1562941530320,
+    "firstPublished": 1562941526269,
+    "lastPublished": 1562941526269,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "pt-br",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Homófonos: O que são e qual a sua relevância em inglês?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Homófonos: O que são e qual a sua relevância em inglês?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Para incorporar as nuances da língua estrangeira, o aluno tem que se desligar das regras de seu próprio idioma, evitando cair nas inúmeras armadilhas que cada língua apresenta, como por exemplo os falsos cognatos - aquelas palavras que por similaridade gráfica, fonética, ou ambas, com vocábulos de seu próprio idioma, sugerem ser algo que na verdade não são.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Para incorporar as nuances da língua estrangeira, o aluno tem que se desligar das regras de seu próprio idioma, evitando cair nas inúmeras armadilhas que cada língua apresenta, como por exemplo os falsos cognatos - aquelas palavras que por similaridade gráfica, fonética, ou ambas, com vocábulos de seu próprio idioma, sugerem ser algo que na verdade não são.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Um bom exemplo é a palavra inglesa actually que quer dizer realmente em português e não atualmente como a grafia sugere.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Um bom exemplo é a palavra inglesa ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "actually",
+                        "attributes": [
+                          "italic"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " que quer dizer ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "realmente",
+                        "attributes": [
+                          "italic"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " em português e não ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "atualmente",
+                        "attributes": [
+                          "italic"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " como a grafia sugere.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Nessa linha de grande dificuldade linguística estão os homófonos, palavras pronunciadas da mesma forma, porém com sentido e grafia diferentes - são um dos grandes obstáculos a quem tenta aprender uma nova língua.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nessa linha de grande dificuldade linguística estão os homófonos, palavras pronunciadas da mesma forma, porém com sentido e grafia diferentes - são um dos grandes obstáculos a quem tenta aprender uma nova língua.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Homófonos: O que são e qual a sua relevância em inglês?"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cerj3rk9mmyo"
+    },
+    "summary": "",
+    "timestamp": 1562941526269,
+    "id": "urn:bbc:ares::article:cerj3rk9mmyo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Brasil",
+      "uri": "/brasil",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -136,6 +136,7 @@ const copyrightText = 'Getty Images';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
+  service: 'news',
 };
 
 const generateFixtureData = ({

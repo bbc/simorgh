@@ -2,12 +2,11 @@ import React, { useContext } from 'react';
 import { any, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
-import deepGet from '../../lib/utilities/deepGet';
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
-import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const componentsToRender = { fragment: Fragment, urlLink: InlineLink };
 
@@ -31,19 +30,19 @@ const chooseOffscreenText = (
 };
 const renderParagraph = paragraphBlock => {
   return (
-    <p key={idSanitiser(deepGet([0, 'model', 'text'], paragraphBlock))}>
+    <p key={pathOr(null, ['0', 'id'], paragraphBlock)}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
     </p>
   );
 };
 
-const renderCaption = (paragraphBlocks, offscreenText, script) => (
-  <Caption script={script}>
+const renderCaption = (paragraphBlocks, offscreenText, script, service) => (
+  <Caption script={script} service={service}>
     {offscreenText ? (
       <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
     ) : null}
     {paragraphBlocks.map(block => {
-      const paragraphBlock = deepGet(['model', 'blocks'], block);
+      const paragraphBlock = pathOr(null, ['model', 'blocks'], block);
       return renderParagraph(paragraphBlock);
     })}
   </Caption>
@@ -52,6 +51,7 @@ const renderCaption = (paragraphBlocks, offscreenText, script) => (
 const CaptionContainer = ({ block, type }) => {
   const {
     script,
+    service,
     imageCaptionOffscreenText,
     videoCaptionOffscreenText,
     defaultCaptionOffscreenText,
@@ -65,12 +65,13 @@ const CaptionContainer = ({ block, type }) => {
     defaultCaptionOffscreenText,
   );
 
-  const paragraphBlocks = deepGet(
+  const paragraphBlocks = pathOr(
+    null,
     ['model', 'blocks', 0, 'model', 'blocks'],
     block,
   );
 
-  return renderCaption(paragraphBlocks, offscreenText, script);
+  return renderCaption(paragraphBlocks, offscreenText, script, service);
 };
 
 CaptionContainer.propTypes = {

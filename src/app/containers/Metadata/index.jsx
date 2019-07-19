@@ -1,15 +1,26 @@
 import React, { Fragment, useContext } from 'react';
 import { shape } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import metadataPropTypes from '../../models/propTypes/metadata';
 import promoPropTypes from '../../models/propTypes/promo';
-import deepGet from '../../lib/utilities/deepGet';
 import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];
+
+const pageTypeMetadata = {
+  article: {
+    schemaOrg: 'Article',
+    openGraph: 'article',
+  },
+  frontPage: {
+    schemaOrg: 'WebPage',
+    openGraph: 'website',
+  },
+};
 
 /* An array of each thingLabel from tags.about & tags.mention */
 const allTags = tags => {
@@ -21,20 +32,20 @@ const allTags = tags => {
 
 const getTitle = promo =>
   promo.subType === 'IDX'
-    ? deepGet(['name'], promo)
-    : deepGet(['headlines', 'seoHeadline'], promo);
+    ? pathOr(null, ['name'], promo)
+    : pathOr(null, ['headlines', 'seoHeadline'], promo);
 
 const getDescription = (metadata, promo) =>
-  deepGet(['summary'], promo) ||
-  deepGet(['headlines', 'seoHeadline'], promo) ||
-  deepGet(['summary'], metadata);
+  pathOr(null, ['summary'], promo) ||
+  pathOr(null, ['headlines', 'seoHeadline'], promo) ||
+  pathOr(null, ['summary'], metadata);
 
-const getLink = (origin, service, id, assetType, linkType = '') => {
+const getLink = (origin, service, id, pageType, linkType = '') => {
   // according to https://github.com/bbc/simorgh/pull/1945, canonical links should use .com
   const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
 
   let link =
-    assetType === 'article'
+    pageType === 'article'
       ? `${linkOrigin}/${service}/articles/${id}`
       : `${linkOrigin}/${service}`;
 
@@ -45,8 +56,8 @@ const getLink = (origin, service, id, assetType, linkType = '') => {
   return link;
 };
 
-const getTimeTags = (timeTag, assetType) => {
-  if (assetType !== 'article') {
+const getTimeTags = (timeTag, pageType) => {
+  if (pageType !== 'article') {
     return null;
   }
 
@@ -67,7 +78,7 @@ const getAppleTouchUrl = service => {
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
-  const { origin, platform } = useContext(RequestContext);
+  const { origin, pageType, platform } = useContext(RequestContext);
   const {
     service,
     brandName,
@@ -76,6 +87,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     defaultImageAltText,
     dir,
     locale,
+    isoLang,
     themeColor,
     twitterCreator,
     twitterSite,
@@ -89,15 +101,14 @@ const MetadataContainer = ({ metadata, promo }) => {
   }
 
   const id = aresArticleId.split(':').pop();
-  const assetType = metadata.type;
 
-  const timeFirstPublished = getTimeTags(metadata.firstPublished, assetType);
-  const timeLastPublished = getTimeTags(metadata.lastPublished, assetType);
+  const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
+  const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
 
-  const canonicalLink = getLink(origin, service, id, assetType, 'canonical');
+  const canonicalLink = getLink(origin, service, id, pageType, 'canonical');
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
-  const ampLink = getLink(origin, service, id, assetType, 'amp');
+  const ampLink = getLink(origin, service, id, pageType, 'amp');
   const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
   const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const appleTouchIcon = getAppleTouchUrl(service);
@@ -120,8 +131,17 @@ const MetadataContainer = ({ metadata, promo }) => {
     },
   ];
 
+  const alternateLinksWsSites = [
+    {
+      href: canonicalLink,
+      hrefLang: isoLang,
+    },
+  ];
+
   if (ENGLISH_SERVICES.includes(service)) {
     alternateLinks = alternateLinksEnglishSites;
+  } else if (isoLang) {
+    alternateLinks = alternateLinksWsSites;
   }
 
   const iconSizes = {
@@ -149,8 +169,8 @@ const MetadataContainer = ({ metadata, promo }) => {
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
         seoHeadline={getTitle(promo)}
-        type={assetType}
-        about={aboutTagsContent(deepGet(['tags', 'about'], metadata))}
+        type={pathOr(null, [pageType, 'schemaOrg'], pageTypeMetadata)}
+        about={aboutTagsContent(pathOr(null, ['tags', 'about'], metadata))}
       />
       <Metadata
         isAmp={isAmp}
@@ -158,7 +178,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         ampLink={ampLink}
         appleTouchIcon={appleTouchIcon}
         articleAuthor={articleAuthor}
-        articleSection={deepGet(['passport', 'genre'], metadata)}
+        articleSection={pathOr(null, ['passport', 'genre'], metadata)}
         brandName={brandName}
         canonicalLink={canonicalLink}
         defaultImage={defaultImage}
@@ -168,8 +188,8 @@ const MetadataContainer = ({ metadata, promo }) => {
         facebookAdmin={100004154058350}
         facebookAppID={1609039196070050}
         lang={
-          deepGet(['passport', 'language'], metadata) ||
-          deepGet(['language'], metadata)
+          pathOr(null, ['passport', 'language'], metadata) ||
+          pathOr(null, ['language'], metadata)
         }
         locale={locale}
         metaTags={allTags(metadata.tags)}
@@ -179,9 +199,9 @@ const MetadataContainer = ({ metadata, promo }) => {
         title={getTitle(promo)}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
-        type={assetType}
+        type={pathOr(null, [pageType, 'openGraph'], pageTypeMetadata)}
         service={service}
-        showArticleTags={assetType === 'article'}
+        showArticleTags={pageType === 'article'}
         iconSizes={iconSizes}
       />
     </Fragment>

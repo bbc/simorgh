@@ -1,10 +1,6 @@
 import envConfig from '../support/config/envs';
 import services from '../support/config/services';
-import {
-  getElement,
-  getSecondElement,
-  hasHtmlLangDirAttributes,
-} from '../support/bodyTestHelper';
+import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -58,10 +54,10 @@ describe('Article Meta Tests', () => {
 
     resources.forEach(resource => {
       const selector = `head link[href="${resource}"]`;
-      const firstElement = getElement(selector);
-      firstElement.should('have.attr', 'rel', 'preconnect');
-      const secondElement = getSecondElement(selector);
-      secondElement.should('have.attr', 'rel', 'dns-prefetch');
+      cy.get(selector).should('have.attr', 'rel', 'preconnect');
+      cy.get(selector)
+        .eq(1)
+        .should('have.attr', 'rel', 'dns-prefetch');
     });
   });
 
@@ -114,7 +110,9 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include mainEntityOfPage in the LinkedData', () => {
-    const script = cy.get('script[type="application/ld+json"]');
-    script.should('contain', 'mainEntityOfPage');
+    cy.get('script[type="application/ld+json"]')
+      .should('contain', 'mainEntityOfPage')
+      .and('contain', 'author')
+      .and('contain', 'headline');
   });
 });

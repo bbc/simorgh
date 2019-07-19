@@ -262,6 +262,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c4 {
@@ -279,8 +280,9 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 .c6 {
-  color: #757575;
+  color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
@@ -458,11 +460,13 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c5 {
-  color: #757575;
+  color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
@@ -630,11 +634,13 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c5 {
-  color: #757575;
+  color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
@@ -654,25 +660,21 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 .c7 {
-  color: #B80000;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c7:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
 .c7:focus,
 .c7:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c3 {
@@ -1372,6 +1374,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c5 {
@@ -1389,8 +1392,9 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 .c7 {
-  color: #757575;
+  color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
@@ -1574,11 +1578,13 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c6 {
-  color: #757575;
+  color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
@@ -1752,11 +1758,13 @@ exports[`ArticleFigure should render an image with caption text with inline link
   overflow: hidden;
   position: absolute;
   width: 1px;
+  margin: 0;
 }
 
 .c6 {
-  color: #757575;
+  color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
   font-style: italic;
   padding: 0.5rem 0.5rem 0;
   width: 100%;
@@ -1776,25 +1784,21 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 .c8 {
-  color: #B80000;
+  color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c8:visited {
-  color: #757575;
-  border-bottom: 1px solid #757575;
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
 }
 
 .c8:focus,
 .c8:hover {
-  background-color: #B80000;
+  color: #B80000;
   border-bottom: 2px solid #B80000;
-  color: #FFFFFF;
-  margin: 0 -2px;
-  padding: 0 2px;
-  white-space: pre-wrap;
 }
 
 .c3 {

@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie';
+import pathOr from 'ramda/src/pathOr';
 import onClient from '../utilities/onClient';
-import deepGet from '../utilities/deepGet';
 
 export const getDestination = statsDestination => {
   const destinationIDs = {
@@ -120,13 +120,13 @@ export const getHref = platform => {
   return null;
 };
 
-export const getReferrer = platform => {
+export const getReferrer = (platform, origin, previousPath) => {
   if (platform === 'amp') {
     return `\${documentReferrer}`;
   }
 
-  if (onClient() && document.referrer) {
-    return document.referrer;
+  if (onClient() && (document.referrer || previousPath)) {
+    return previousPath ? `${origin}${previousPath}` : document.referrer;
   }
 
   return null;
@@ -151,7 +151,7 @@ const getISODate = unixTimestamp => {
 };
 
 export const getPublishedDatetime = (attribute, data) => {
-  const publishedDatetime = deepGet(['metadata', attribute], data);
+  const publishedDatetime = pathOr(null, ['metadata', attribute], data);
 
   return publishedDatetime && isValidDateTime(publishedDatetime)
     ? getISODate(publishedDatetime)

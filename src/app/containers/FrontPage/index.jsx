@@ -1,9 +1,10 @@
 import React from 'react';
 import { shape } from 'prop-types';
-import compose from '../../lib/utilities/compose';
+import compose from 'ramda/src/compose';
 import frontPagePropTypes from '../../models/propTypes/frontPage';
 import FrontPageMain from '../FrontPageMain';
 
+import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withLoading from '../PageHandlers/withLoading';
 import withError from '../PageHandlers/withError';
@@ -22,6 +23,7 @@ FrontPageContainer.defaultProps = {
 };
 
 const EnhancedFrontPageContainer = compose(
+  withContexts,
   withPageWrapper,
   withLoading,
   withError,

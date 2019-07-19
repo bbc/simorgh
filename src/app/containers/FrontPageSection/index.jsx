@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
 import { storyItem } from '../../models/propTypes/storyItem';
 import idSanitiser from '../../lib/utilities/idSanitiser';
-import deepGet from '../../lib/utilities/deepGet';
 
 const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
   const topStory = sectionNumber === 0 && storyNumber === 0;
@@ -28,8 +28,8 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
-  const strapline = deepGet(['strapline', 'name'], group);
-  const items = deepGet(['items'], group);
+  const strapline = pathOr(null, ['strapline', 'name'], group);
+  const items = pathOr(null, ['items'], group);
   const isFirstSection = sectionNumber === 0;
 
   // The current implementation of SectionLabel *requires* a strapline to be

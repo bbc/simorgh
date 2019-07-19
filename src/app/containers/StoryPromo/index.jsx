@@ -6,11 +6,11 @@ import StoryPromoComponent, {
   Link,
 } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
+import pathOr from 'ramda/src/pathOr';
 import { storyItem } from '../../models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
-import deepGet from '../../lib/utilities/deepGet';
 import createSrcset from '../Image/helpers/srcSet';
 import getOriginCode from './imageSrcHelpers/originCode';
 import getLocator from './imageSrcHelpers/locator';
@@ -52,11 +52,11 @@ StoryPromoImage.propTypes = {
 };
 
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
-  const { script, datetimeLocale } = useContext(ServiceContext);
-  const headline = deepGet(['headlines', 'headline'], item);
-  const url = deepGet(['locators', 'assetUri'], item);
-  const summary = deepGet(['summary'], item);
-  const timestamp = deepGet(['timestamp'], item);
+  const { script, datetimeLocale, service } = useContext(ServiceContext);
+  const headline = pathOr(null, ['headlines', 'headline'], item);
+  const url = pathOr(null, ['locators', 'assetUri'], item);
+  const summary = pathOr(null, ['summary'], item);
+  const timestamp = pathOr(null, ['timestamp'], item);
 
   if (!headline || !url) {
     return null;
@@ -65,14 +65,14 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const Info = (
     <Fragment>
       {headline && (
-        <Headline script={script} topStory={topStory}>
+        <Headline script={script} service={service} topStory={topStory}>
           <Link href={url}>
             <LinkContents item={item} />
           </Link>
         </Headline>
       )}
       {summary && (
-        <Summary script={script} topStory={topStory}>
+        <Summary script={script} service={service} topStory={topStory}>
           {summary}
         </Summary>
       )}
@@ -84,12 +84,13 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           format="D MMMM YYYY"
           script={script}
           padding={false}
+          service={service}
         />
       )}
     </Fragment>
   );
 
-  const imageValues = deepGet(['indexImage'], item);
+  const imageValues = pathOr(null, ['indexImage'], item);
   const Image = (
     <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );
@@ -98,7 +99,9 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
     <StoryPromoComponent
       image={Image}
       info={Info}
-      mediaIndicator={<MediaIndicator item={item} />}
+      mediaIndicator={
+        <MediaIndicator item={item} topStory={topStory} service={service} />
+      }
       topStory={topStory}
     />
   );

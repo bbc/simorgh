@@ -20,6 +20,7 @@ const contextStub = {
     copyrightText:
       'BBC. The BBC is not responsible for the content of external sites.',
   },
+  service: 'news',
 };
 
 describe(`FooterContainer`, () => {
