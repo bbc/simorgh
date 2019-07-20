@@ -1,6 +1,6 @@
 import ora from 'ora';
 import chalk from 'chalk';
-import { execSync } from 'child_process';
+import { readdirSync, statSync } from 'fs';
 
 jest.mock('ora');
 jest.mock('chalk', () => ({
@@ -15,21 +15,30 @@ jest.mock('../src/app/lib/config/services/loadableConfig', () => ({
     service2: {},
   },
 }));
-jest.mock('child_process');
+jest.mock('fs');
 
-const setUpExecSyncMock = (service1Size, service2Size) => {
+const setUpExecSyncMock = (service1FileSize, service2FileSize) => {
   beforeEach(() => {
+    readdirSync.mockReturnValue([
+      'main-12345.js',
+      'vendor-11111.js',
+      'vendor-22222.js',
+      'vendor-33333.js',
+      'vendor-44444.js',
+      'service1-12345.js',
+      'service2-12345.js',
+    ]);
     const filePatternToSizeMap = {
-      service1: service1Size,
-      service2: service2Size,
-      'main-*.js': '20000',
-      'vendor-*.js': '350000',
+      service1: service1FileSize,
+      service2: service2FileSize,
+      main: 20000,
+      vendor: 100000,
     };
-    execSync.mockImplementation(filePath => {
+    statSync.mockImplementation(filePath => {
       const filePattern = Object.keys(filePatternToSizeMap).find(key =>
         filePath.includes(key),
       );
-      return filePatternToSizeMap[filePattern];
+      return { size: filePatternToSizeMap[filePattern] };
     });
   });
 };
@@ -66,7 +75,7 @@ describe('bundleSize', () => {
   });
 
   describe('when all service bundles are within the defined limits', () => {
-    setUpExecSyncMock('560000', '570000');
+    setUpExecSyncMock(140000, 150000);
 
     it('should use ora to show loading and success states', () => {
       jest.isolateModules(() => {
@@ -89,7 +98,7 @@ describe('bundleSize', () => {
         expect.arrayContaining([
           ['\nBundle size summary:\n'],
           ['    20 kB   Main bundle '],
-          ['   350 kB   Vendor bundle '],
+          ['   400 kB   Vendor bundle '],
           ['   560 kB   Smallest bundle - Service1'],
           ['   570 kB   Largest bundle - Service2'],
           ['   565 kB   Average bundle '],
@@ -99,7 +108,7 @@ describe('bundleSize', () => {
   });
 
   describe('when one or more of the service bundles are too small', () => {
-    setUpExecSyncMock('2000', '570000');
+    setUpExecSyncMock(2000, 150000);
 
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
@@ -119,7 +128,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for Service1 is too small at 2 kB. Please update thresholds in './scripts/bundleSize.js'",
+        "Bundle size for Service1 is too small at 422 kB. Please update thresholds in './scripts/bundleSize.js'",
       );
     });
 
@@ -132,17 +141,17 @@ describe('bundleSize', () => {
         expect.arrayContaining([
           ['\nBundle size summary:\n'],
           ['    20 kB   Main bundle '],
-          ['   350 kB   Vendor bundle '],
-          ['     2 kB   Smallest bundle - Service1'],
+          ['   400 kB   Vendor bundle '],
+          ['   422 kB   Smallest bundle - Service1'],
           ['   570 kB   Largest bundle - Service2'],
-          ['   286 kB   Average bundle '],
+          ['   496 kB   Average bundle '],
         ]),
       );
     });
   });
 
   describe('when one or more of the service bundles are too large', () => {
-    setUpExecSyncMock('560000', '580000');
+    setUpExecSyncMock(140000, 160000);
 
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
@@ -175,7 +184,7 @@ describe('bundleSize', () => {
         expect.arrayContaining([
           ['\nBundle size summary:\n'],
           ['    20 kB   Main bundle '],
-          ['   350 kB   Vendor bundle '],
+          ['   400 kB   Vendor bundle '],
           ['   560 kB   Smallest bundle - Service1'],
           ['   580 kB   Largest bundle - Service2'],
           ['   570 kB   Average bundle '],
