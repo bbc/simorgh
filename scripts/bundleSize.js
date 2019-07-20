@@ -1,43 +1,47 @@
 #! /usr/bin/env node
 
 const ora = require('ora');
-const { execSync } = require('child_process');
+const fs = require('fs');
 const chalk = require('chalk');
 
 const services = Object.keys(
   require('../src/app/lib/config/services/loadableConfig').default,
 );
-
 // Size limit for all bundles used by each service (K)
 // Keep these +/- 5K and update frequently!
 const MIN = 557;
 const MAX = 576;
 
-const getBundleSize = filePattern => {
-  const size = execSync(`cat ${filePattern} | wc -c | tr -d ' '`, {
-    encoding: 'utf8',
-  });
+const jsFiles = fs
+  .readdirSync('build/public/static/js')
+  .filter(fileName => fileName.endsWith('.js'));
 
-  return Math.round(parseInt(size, 10) / 1000);
+const getFileSize = filePath => fs.statSync(filePath).size;
+const getTotalSizeOfFilesBeginningWith = string => {
+  const sizeInBytes = jsFiles
+    .filter(fileName => fileName.startsWith(string))
+    .map(fileName => getFileSize(`build/public/static/js/${fileName}`))
+    .reduce((totalKB, fileSizeInKB) => totalKB + fileSizeInKB, 0);
+  return Math.round(sizeInBytes / 1000);
 };
 
-const getServiceBundleSize = service => {
-  return getBundleSize(`build/public/static/js/{main,vendor,${service}}-*.js`);
-};
+const mainBundleSize = getTotalSizeOfFilesBeginningWith('main');
+const vendorBundleSize = getTotalSizeOfFilesBeginningWith('vendor');
 
-const capitaliseFirstLetter = string => {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-};
+const getServiceBundleSize = service =>
+  mainBundleSize + vendorBundleSize + getTotalSizeOfFilesBeginningWith(service);
 
-const createConsoleError = (service, size, adjective) => {
-  return [
+const capitaliseFirstLetter = string =>
+  string.charAt(0).toUpperCase() + string.slice(1);
+
+const createConsoleError = (service, size, adjective) =>
+  [
     chalk.red('Bundle size for'),
     chalk.red.bold(capitaliseFirstLetter(service)),
     chalk.red(`is too ${adjective} at`),
     chalk.red.bold(`${size} kB.`),
     chalk.red("Please update thresholds in './scripts/bundleSize.js'"),
   ].join(' ');
-};
 
 const mapSizeToError = (service, size) => {
   if (size < MIN) {
@@ -88,11 +92,11 @@ if (errors.length) {
 const bundlesToLog = [
   {
     name: 'Main bundle',
-    size: getBundleSize('build/public/static/js/main-*.js'),
+    size: mainBundleSize,
   },
   {
     name: 'Vendor bundle',
-    size: getBundleSize('build/public/static/js/vendor-*.js'),
+    size: vendorBundleSize,
   },
   {
     name: `Smallest bundle`,
@@ -106,20 +110,18 @@ const bundlesToLog = [
 ];
 
 const maxSizeDigits = 5;
-const formatSize = size => {
-  return `${' '.repeat(maxSizeDigits - size.toString().length)} ${size} kB  `;
-};
+const formatSize = size =>
+  `${' '.repeat(maxSizeDigits - size.toString().length)} ${size} kB  `;
 
-const logBundle = ({ name, size, service }) => {
+const logBundle = ({ name, size, service }) =>
   // eslint-disable-next-line no-console
-  return console.log(
+  console.log(
     [
       chalk.green(formatSize(size)),
       name,
       service ? `- ${capitaliseFirstLetter(service)}` : '',
     ].join(' '),
   );
-};
 
 console.log('\nBundle size summary:\n'); // eslint-disable-line no-console
 bundlesToLog.forEach(bundleData => {
