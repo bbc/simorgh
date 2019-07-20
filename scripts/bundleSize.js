@@ -9,8 +9,8 @@ const services = Object.keys(
 );
 // Size limit for all bundles used by each service (K)
 // Keep these +/- 5K and update frequently!
-const MIN = 557;
-const MAX = 576;
+const MIN = 564;
+const MAX = 582;
 
 const jsFiles = fs
   .readdirSync('build/public/static/js')

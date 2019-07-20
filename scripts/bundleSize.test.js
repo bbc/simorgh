@@ -75,7 +75,7 @@ describe('bundleSize', () => {
   });
 
   describe('when all service bundles are within the defined limits', () => {
-    setUpExecSyncMock(140000, 150000);
+    setUpExecSyncMock(145000, 150000);
 
     it('should use ora to show loading and success states', () => {
       jest.isolateModules(() => {
@@ -99,9 +99,9 @@ describe('bundleSize', () => {
           ['\nBundle size summary:\n'],
           ['    20 kB   Main bundle '],
           ['   400 kB   Vendor bundle '],
-          ['   560 kB   Smallest bundle - Service1'],
+          ['   565 kB   Smallest bundle - Service1'],
           ['   570 kB   Largest bundle - Service2'],
-          ['   565 kB   Average bundle '],
+          ['   568 kB   Average bundle '],
         ]),
       );
     });
@@ -151,7 +151,7 @@ describe('bundleSize', () => {
   });
 
   describe('when one or more of the service bundles are too large', () => {
-    setUpExecSyncMock(140000, 160000);
+    setUpExecSyncMock(145000, 165000);
 
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
@@ -171,7 +171,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for Service2 is too large at 580 kB. Please update thresholds in './scripts/bundleSize.js'",
+        "Bundle size for Service2 is too large at 585 kB. Please update thresholds in './scripts/bundleSize.js'",
       );
     });
 
@@ -185,9 +185,9 @@ describe('bundleSize', () => {
           ['\nBundle size summary:\n'],
           ['    20 kB   Main bundle '],
           ['   400 kB   Vendor bundle '],
-          ['   560 kB   Smallest bundle - Service1'],
-          ['   580 kB   Largest bundle - Service2'],
-          ['   570 kB   Average bundle '],
+          ['   565 kB   Smallest bundle - Service1'],
+          ['   585 kB   Largest bundle - Service2'],
+          ['   575 kB   Average bundle '],
         ]),
       );
     });
