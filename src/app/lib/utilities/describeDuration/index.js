@@ -1,6 +1,4 @@
-import moment from 'moment';
-
-const defaultDurationLabels = {
+const defaultTranslations = {
   s: '{x} second',
   ss: '{x} seconds',
   m: '{x} minute',
@@ -19,10 +17,9 @@ const humanize = (labels, key, num) => {
   return '';
 };
 
-const describeDuration = duration => {
-  const localeData = moment.localeData();
+const describeDuration = (duration, translations) => {
   // eslint-disable-next-line no-underscore-dangle
-  const labels = localeData._durationLabels || defaultDurationLabels;
+  const labels = translations || defaultTranslations;
 
   const hrs = humanize(labels, 'h', duration.hours());
   const mins = humanize(labels, 'm', duration.minutes());
