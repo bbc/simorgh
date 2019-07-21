@@ -201,7 +201,6 @@ pipeline {
         build(
           job: 'simorgh-infra-sandbox-test-cd/sandbox-580-split-CD-test-and-CD-live',
           parameters: [
-            [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
           ],
