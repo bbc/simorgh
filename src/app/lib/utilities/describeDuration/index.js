@@ -18,7 +18,7 @@ const humanize = (labels, key, num) => {
 };
 
 const describeDuration = (duration, translations = defaultTranslations) => {
-  const hrs = humanize(translations, 'h', duration.hours());
+  const hrs = humanize(translations, 'h', Math.floor(duration.asHours()));
   const mins = humanize(translations, 'm', duration.minutes());
   const sec = humanize(translations, 's', duration.seconds());
 
