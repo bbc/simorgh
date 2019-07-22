@@ -4,6 +4,8 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 .c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
+  margin: 0 -0.125rem;
+  padding: 0 0.125rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -15,8 +17,9 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 
 .c5:focus,
 .c5:hover {
-  color: #B80000;
+  background-color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #FFFFFF;
 }
 
 .c4 {
@@ -243,6 +246,8 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
 .c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
+  margin: 0 -0.125rem;
+  padding: 0 0.125rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -254,8 +259,9 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
 
 .c5:focus,
 .c5:hover {
-  color: #B80000;
+  background-color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #FFFFFF;
 }
 
 .c4 {
