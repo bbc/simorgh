@@ -1,6 +1,14 @@
-import { arrayOf, number, shape, string } from 'prop-types';
+import {
+  any,
+  arrayOf,
+  boolean,
+  number,
+  objectOf,
+  shape,
+  string,
+} from 'prop-types';
 
-const metadataPropTypes = {
+export const optimoMetadataPropTypes = {
   id: string.isRequired,
   type: string.isRequired,
   createdBy: string,
@@ -9,7 +17,7 @@ const metadataPropTypes = {
   lastPublished: number.isRequired,
   lastUpdated: number.isRequired,
   locators: shape({
-    optimoUrn: string,
+    optimoUrn: string.isRequired,
   }),
   passport: shape({
     language: string.isRequired,
@@ -35,4 +43,30 @@ const metadataPropTypes = {
   blockTypes: arrayOf(string),
 };
 
-export default metadataPropTypes;
+export const cpsMetadataPropTypes = {
+  id: string.isRequired,
+  locators: shape({
+    assetUri: string,
+    cpsUrn: string,
+    curie: string,
+  }),
+  type: string.isRequired,
+  createdBy: string.isRequired,
+  language: string.isRequired,
+  lastUpdated: number.isRequired,
+  firstPublished: number.isRequired,
+  lastPublished: number.isRequired,
+  options: shape({
+    allowAdvertising: boolean,
+  }),
+  analyticsLabels: shape({
+    counterName: string.isRequired,
+    cps_asset_id: string.isRequired,
+    cps_asset_type: string.isRequired,
+  }),
+  tags: objectOf(any),
+  version: string.isRequired,
+  blockTypes: arrayOf(string),
+  title: string.isRequired,
+  summary: string.isRequired,
+};
