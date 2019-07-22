@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, oneOf, shape, string, number } from 'prop-types';
 import { getIconLinks, iconAssetUrl } from './helpers/iconLinks';
+import propTypeCheck from './propTypesCheck';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -154,7 +155,8 @@ Metadata.propTypes = {
   ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
-  articleAuthor: string,
+  articleAuthor: (props, propName) =>
+    propTypeCheck(props, propName, 'Metadata', string.isRequired),
   articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
@@ -166,10 +168,13 @@ Metadata.propTypes = {
   facebookAppID: number.isRequired,
   lang: string.isRequired,
   locale: string.isRequired,
-  metaTags: arrayOf(string),
+  metaTags: (props, propName) =>
+    propTypeCheck(props, propName, 'Metadata', arrayOf(string)),
   themeColor: string.isRequired,
-  timeFirstPublished: string,
-  timeLastPublished: string,
+  timeFirstPublished: (props, propName) =>
+    propTypeCheck(props, propName, 'Metadata', string.isRequired),
+  timeLastPublished: (props, propName) =>
+    propTypeCheck(props, propName, 'Metadata', string.isRequired),
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
@@ -185,11 +190,14 @@ Metadata.propTypes = {
 Metadata.defaultProps = {
   alternateLinks: [],
   articleSection: null,
+  iconSizes: null,
+
+  // the default props below are only added to stop eslint from complaining
+  // because we're using custom propType rules for these props
   articleAuthor: null,
   metaTags: [],
   timeFirstPublished: null,
   timeLastPublished: null,
-  iconSizes: null,
 };
 
 export default Metadata;
