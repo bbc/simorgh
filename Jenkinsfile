@@ -118,9 +118,9 @@ pipeline {
       }
     }
     stage ('Build, Test & Package') {
-      // when {
-      //   expression { env.BRANCH_NAME == 'latest' }
-      // }
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       parallel {
         stage ('Test Development') {
           agent {
@@ -188,9 +188,9 @@ pipeline {
       }
     }
     stage ('Run Pipeline') {
-      // when {
-      //   expression { env.BRANCH_NAME == 'latest' }
-      // }
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       options {
         // Do not perform the SCM step
         skipDefaultCheckout true
@@ -199,7 +199,7 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-infra-sandbox-test-cd/sandbox-580-split-CD-test-and-CD-live',
+          job: 'simorgh-infrastructure-test/latest',
           parameters: [
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
