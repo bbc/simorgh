@@ -13,7 +13,7 @@
     "passport": {
       "language": "en-gb",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/persian",
-      "category": "persian",
+      "category": "news",
       "genre": null
     },
     "tags": {
