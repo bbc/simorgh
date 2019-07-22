@@ -9,7 +9,7 @@ import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
-import ChartBeatAnalytics from '../ChartbeatAnalytics';
+import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import audioVideo from '../AudioVideo';
 import AudioVideoHead from '../../components/AudioVideoHead';
 import { RequestContext } from '../../contexts/RequestContext';
