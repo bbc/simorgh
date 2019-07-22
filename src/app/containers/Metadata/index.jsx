@@ -1,12 +1,18 @@
 import React, { Fragment, useContext } from 'react';
-import { shape } from 'prop-types';
+import { shape, oneOfType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
-import metadataPropTypes from '../../models/propTypes/metadata';
-import promoPropTypes from '../../models/propTypes/promo';
+import {
+  optimoMetadataPropTypes,
+  cpsMetadataPropTypes,
+} from '../../models/propTypes/metadata';
+import {
+  optimoPromoPropTypes,
+  cpsPromoPropTypes,
+} from '../../models/propTypes/promo';
 import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];
@@ -209,8 +215,12 @@ const MetadataContainer = ({ metadata, promo }) => {
 };
 
 MetadataContainer.propTypes = {
-  metadata: shape(metadataPropTypes).isRequired,
-  promo: shape(promoPropTypes).isRequired,
+  metadata: oneOfType([
+    shape(cpsMetadataPropTypes),
+    shape(optimoMetadataPropTypes),
+  ]).isRequired,
+  promo: oneOfType([shape(cpsPromoPropTypes), shape(optimoPromoPropTypes)])
+    .isRequired,
 };
 
 export default MetadataContainer;
