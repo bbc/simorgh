@@ -1,6 +1,7 @@
 import config from '../../../src/app/lib/config/services';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
-describe('Application', () => {
+describeForLocalOnly('Application', () => {
   Object.keys(config).forEach(service => {
     if (service === 'default') {
       return;
