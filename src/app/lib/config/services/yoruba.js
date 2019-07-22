@@ -113,6 +113,7 @@ const yoruba = {
     },
     media: {
       audio: 'Orin',
+      photogallery: 'Àtẹ Àwòrán',
       video: 'Fidio',
     },
   },

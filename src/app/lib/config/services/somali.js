@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'Maqal',
+      photogallery: 'Sawirro',
       video: 'Muuqaal',
     },
   },

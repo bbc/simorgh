@@ -113,6 +113,7 @@ const pidgin = {
     },
     media: {
       audio: 'Audio',
+      photogallery: 'Image gallery',
       video: 'Video',
     },
   },

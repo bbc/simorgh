@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'Sauti',
+      photogallery: 'Picha',
       video: 'Video',
     },
   },
