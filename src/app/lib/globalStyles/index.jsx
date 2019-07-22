@@ -24,9 +24,8 @@ const GlobalStyleComponent = createGlobalStyle`
 
 // eslint-disable-next-line react/prop-types
 const GlobalStyle = ({ fonts }) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const styleFonts = fonts || useContext(ServiceContext).fonts;
-  return <GlobalStyleComponent fonts={styleFonts} />;
+  const styleFonts = useContext(ServiceContext).fonts;
+  return <GlobalStyleComponent fonts={fonts || styleFonts} />;
 };
 
 export default GlobalStyle;
