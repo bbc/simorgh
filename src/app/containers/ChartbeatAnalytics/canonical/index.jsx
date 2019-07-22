@@ -11,7 +11,7 @@ const CanonicalChartbeatBeacon = ({
   useCanonical,
 }) => (
   <Helmet>
-    <script type="text/javascript">
+    <script async type="text/javascript">
       {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
