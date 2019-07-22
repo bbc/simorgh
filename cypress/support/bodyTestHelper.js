@@ -1,5 +1,4 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
-import testData from '../../src/app/lib/config/services';
 
 export const shouldContainText = (element, text) => {
   element.should('contain', text);
@@ -154,15 +153,19 @@ export const visibleImageWithCaption = figure => {
   figure.should('to.have.descendants', 'figcaption');
 };
 
-export const errorMessage = service => {
+export const errorMessage = serviceConfig => {
   cy.get('h1 span').should(
     'contain',
     `${serviceConfig.translations.error[404].statusCode}`,
+    // eslint-disable-next-line no-undef
   );
-  cy.get('h1').should('contain', `${service.translations.error[404].title}`);
+  cy.get('h1').should(
+    'contain',
+    `${serviceConfig.translations.error[404].title}`,
+  );
 };
 
-export const errorPageInlineLink = service => {
+export const errorPageInlineLink = serviceConfig => {
   cy.get('main p')
     .eq(1)
     .within(() => {
