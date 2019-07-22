@@ -29,7 +29,7 @@ const ChartbeatAnalytics = () => {
     chartbeatUID,
   };
 
-  const beacon =
+  return
     platform === 'amp' ? (
       <AmpChartbeatsBeacon {...commonProps} />
     ) : (
