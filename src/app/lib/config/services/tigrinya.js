@@ -111,6 +111,7 @@ const service = {
     },
     media: {
       audio: 'ድምፂ',
+      photogallery: 'ማህደረ-ምስሊ',
       video: 'ቪድዮ',
     },
   },
