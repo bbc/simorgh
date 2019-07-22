@@ -367,7 +367,7 @@
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Some bold text content that is acting as a placeholder so that we can test an ",
+                        "text": "Some italic text content that is acting as a placeholder so that we can test an ",
                         "attributes": ["italic"]
                       }
                     },
@@ -459,7 +459,7 @@
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Some bold text content that is ",
+                        "text": "Some italic text content that is ",
                         "attributes": ["italic"]
                       }
                     },
