@@ -15,8 +15,8 @@ export default {
           Cypress.env('APP_ENV') === 'live' ? 'c5ll353v7y9o' : 'c6v11qzyv8po',
       },
       nonExistentarticle:
-        Cypress.env('APP_ENV') === 'live' 
-          ? undefined 
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
           : {
               asset: 'cxvxrj8tvppo',
             },
@@ -33,10 +33,10 @@ export default {
               asset: 'c4vlle3q337o',
             },
       nonExistentarticle:
-        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test' 
-          ? undefined 
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
           : {
-            asset: 'cxvxrj8tvppo',
+              asset: 'cxvxrj8tvppo',
             },
       frontPage: undefined,
     },

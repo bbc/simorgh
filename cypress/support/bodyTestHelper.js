@@ -1,7 +1,6 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import testData from '../../src/app/lib/config/services';
 
-
 export const shouldContainText = (element, text) => {
   element.should('contain', text);
 };
