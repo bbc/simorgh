@@ -1,9 +1,5 @@
 import services from '../support/config/services';
-import {
-  checkFooterLinks,
-  getElement,
-  shouldContainText,
-} from '../support/bodyTestHelper';
+import { checkFooterLinks } from '../support/bodyTestHelper';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
@@ -11,12 +7,13 @@ describe('Footer Tests', () => {
     cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
   });
   it('should render the BBC News branding', () => {
-    const newsBrandingLink = getElement('footer a').eq(0);
-    shouldContainText(newsBrandingLink, 'BBC News');
+    cy.get('footer a')
+      .eq(0)
+      .should('contain', 'BBC News');
   });
 
   it('should have working links', () => {
-    getElement('footer ul').within(() => {
+    cy.get('footer ul').within(() => {
       checkFooterLinks('0', '/news/help-41670342');
       checkFooterLinks('1', '/terms');
       checkFooterLinks('2', '/aboutthebbc/');
@@ -28,15 +25,13 @@ describe('Footer Tests', () => {
   });
 
   it('should contain copyright text', () => {
-    const footerCopyrightArea = getElement('footer p');
-    footerCopyrightArea.should(
+    cy.get('footer p').should(
       'contain',
       `© ${new Date().getFullYear()} BBC. The BBC is not responsible for the content of external sites. `,
     );
   });
   it('should contain a link in the copyright text', () => {
-    const footerCopyrightArea = getElement('footer p');
-    footerCopyrightArea
+    cy.get('footer p')
       .children('a')
       .should('have.attr', 'href')
       .and('contain', '/help/web/links');
