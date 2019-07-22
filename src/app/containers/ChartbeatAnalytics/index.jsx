@@ -35,7 +35,6 @@ const ChartbeatAnalytics = () => {
     ) : (
       <CanonicalChartbeatsBeacon {...commonProps} useCanonical={useCanonical} />
     );
-  return beacon;
 };
 
 export default ChartbeatAnalytics;
