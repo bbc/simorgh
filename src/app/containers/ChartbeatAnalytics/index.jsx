@@ -29,12 +29,11 @@ const ChartbeatAnalytics = () => {
     chartbeatUID,
   };
 
-  return
-    platform === 'amp' ? (
-      <AmpChartbeatsBeacon {...commonProps} />
-    ) : (
-      <CanonicalChartbeatsBeacon {...commonProps} useCanonical={useCanonical} />
-    );
+  return platform === 'amp' ? (
+    <AmpChartbeatsBeacon {...commonProps} />
+  ) : (
+    <CanonicalChartbeatsBeacon {...commonProps} useCanonical={useCanonical} />
+  );
 };
 
 export default ChartbeatAnalytics;

@@ -52,7 +52,7 @@ const ArticleMain = ({ articleData }) => {
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
-      <ChartBeatAnalytics />
+      <ChartbeatAnalytics />
       <MetadataContainer metadata={metadata} promo={promo} />
       {audioVideoEnabled && hasAV && platform === 'canonical' ? (
         <AudioVideoHead
