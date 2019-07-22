@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'Amajwi',
+      photogallery: "Urukurikirane rw'amasamu",
       video: 'Video',
     },
   },

@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'ድምጽ',
+      photogallery: 'የምስል ቋት',
       video: 'ተንቀሳቃሽ ምስል',
     },
   },
