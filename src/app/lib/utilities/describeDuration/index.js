@@ -17,13 +17,10 @@ const humanize = (labels, key, num) => {
   return '';
 };
 
-const describeDuration = (duration, translations) => {
-  // eslint-disable-next-line no-underscore-dangle
-  const labels = translations || defaultTranslations;
-
-  const hrs = humanize(labels, 'h', duration.hours());
-  const mins = humanize(labels, 'm', duration.minutes());
-  const sec = humanize(labels, 's', duration.seconds());
+const describeDuration = (duration, translations = defaultTranslations) => {
+  const hrs = humanize(translations, 'h', duration.hours());
+  const mins = humanize(translations, 'm', duration.minutes());
+  const sec = humanize(translations, 's', duration.seconds());
 
   const out = hrs + mins + sec;
   return out.trim();
