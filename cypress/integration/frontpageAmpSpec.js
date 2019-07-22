@@ -1,5 +1,4 @@
 import services from '../support/config/services';
-import { getElement } from '../support/bodyTestHelper';
 import { checkCanonicalURL } from '../support/metaTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
@@ -43,53 +42,57 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
   });
 
   xit('should have AMP attribute', () => {
-    getElement('html').should('have.attr', 'amp');
+    cy.get('html').should('have.attr', 'amp');
   });
 
   it('should load the AMP framework', () => {
     // .eq(1) gets the amp <script> as:
     // the first loaded is a Cypress <script>
-    const ampScript = getElement('head script').eq(2);
-    ampScript.should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
+    cy.get('head script')
+      .eq(2)
+      .should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
 
-    const ampGeoScript = getElement('head script').eq(3);
-    ampGeoScript.should(
-      'have.attr',
-      'src',
-      'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
-    );
+    cy.get('head script')
+      .eq(3)
+      .should(
+        'have.attr',
+        'src',
+        'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
+      );
 
-    const ampConsentScript = getElement('head script').eq(4);
-    ampConsentScript.should(
-      'have.attr',
-      'src',
-      'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
-    );
+    cy.get('head script')
+      .eq(4)
+      .should(
+        'have.attr',
+        'src',
+        'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
+      );
   });
 
   it('should load the AMP body scripts', () => {
-    const ampGeoScript = getElement('body script').eq(0);
-    ampGeoScript.should('have.attr', 'type', 'application/json');
-
-    const ampConsentScript = getElement('body script').eq(1);
-    ampConsentScript.should('have.attr', 'type', 'application/json');
+    cy.get('body script')
+      .eq(0)
+      .should('have.attr', 'type', 'application/json');
+    cy.get('body script')
+      .eq(1)
+      .should('have.attr', 'type', 'application/json');
   });
 
   it('should have any correct amp scripts in the body and the head', () => {
-    getElement('body script')
+    cy.get('body script')
       .its('length')
       .should('be', 2); // 1 for amp-geo + 1 for amp-consent
-    getElement('head script')
+    cy.get('head script')
       .its('length')
       .should('be', 4); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 that Cypress injects into the head
   });
 
   it('should contain an amp-img', () => {
-    const storyPromo = getElement('li');
-    storyPromo.should('be.visible');
-    storyPromo.within(() => {
-      getElement('amp-img').should('be.visible');
-    });
+    cy.get('li')
+      .should('be.visible')
+      .within(() => {
+        cy.get('amp-img').should('be.visible');
+      });
   });
 
   xit('should include the canonical URL', () => {
@@ -103,6 +106,6 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   xit('should not have an AMP attribute on the main article', () => {
     cy.visit(`${services.igbo.pageTypes.frontPage}`);
-    getElement('html').should('not.have.attr', 'amp');
+    cy.get('html').should('not.have.attr', 'amp');
   });
 });
