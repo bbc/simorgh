@@ -47,7 +47,7 @@ Object.keys(services)
 
       it('should have the correct lang & dir attributes', () => {
         hasHtmlLangDirAttributes({
-          lang: `${testData[service].locale}`,
+          lang: `${testData[service].lang}`,
           dir: `${testData[service].dir}`,
         });
       });
