@@ -83,7 +83,7 @@ Object.keys(services)
         'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
         `${testData[service].defaultImage}`,
         `${testData[service].defaultImageAltText}`,
-        `${testData[service].lang}`,
+        `${testData[service].locale}`,
         `${testData[service].defaultImageAltText}`,
         "Meghan's bouquet laid on tomb of unknown warrior",
         'article',
