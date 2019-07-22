@@ -59,12 +59,12 @@ module.exports = (shell = {}) => {
             },
           ],
         },
-        {
-          test: /\.(js|jsx|mjs)$/,
-          include: [resolvePath('node_modules/@bbc')],
-          use: [
-            IS_PROD
-              ? {
+        IS_PROD
+          ? {
+              test: /\.(js|jsx|mjs)$/,
+              include: [resolvePath('node_modules/@bbc')],
+              use: [
+                {
                   loader: 'babel-loader',
                   options: {
                     presets: [],
@@ -78,10 +78,10 @@ module.exports = (shell = {}) => {
                       ],
                     ],
                   },
-                }
-              : {},
-          ],
-        },
+                },
+              ],
+            }
+          : {},
       ],
     },
     // Bundle sizes are monitored by `./scripts/bundleSize.sh`
