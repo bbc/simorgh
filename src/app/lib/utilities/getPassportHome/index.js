@@ -1,7 +1,11 @@
-import deepGet from '../deepGet';
+import pathOr from 'ramda/src/pathOr';
 
 const getPassportHome = pageData => {
-  const homeServiceUrl = deepGet(['metadata', 'passport', 'home'], pageData);
+  const homeServiceUrl = pathOr(
+    null,
+    ['metadata', 'passport', 'home'],
+    pageData,
+  );
   return pageData && homeServiceUrl
     ? homeServiceUrl
         .split('/')

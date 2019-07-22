@@ -42,7 +42,7 @@ describeForLocalOnly('Local Article Error Page Tests', () => {
   });
 
   it('should have the correct lang & dir attributes', () => {
-    hasHtmlLangDirAttributes({ lang: 'en_GB', dir: 'ltr' });
+    hasHtmlLangDirAttributes({ lang: 'en-GB', dir: 'ltr' });
   });
 
   it('should display a relevant error message on screen', () => {

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with pageWrapper should render correctly 1`] = `
+Array [
+  .c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #B80000;
+  height: 3.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c2 {
+  display: inline-block;
+  width: 100%;
+  max-width: NaNrem;
+  min-width: NaNrem;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    height: 5rem;
+    padding: 0 1rem;
+  }
+}
+
+<header
+    role="banner"
+  >
+    <div
+      className="c0"
+    >
+      <div
+        className="c1"
+      >
+        <a
+          className="c2"
+          href="/default"
+        />
+      </div>
+    </div>
+  </header>,
+  <h1>
+    Holla
+  </h1>,
+]
+`;
