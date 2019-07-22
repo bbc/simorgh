@@ -1,6 +1,7 @@
 import { node, number } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_5_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import {
@@ -19,11 +20,13 @@ import {
 
 export const Grid = styled.div`
   ${layoutGridWrapper};
+  padding-bottom: ${GEL_SPACING_QUAD};
 `;
 
 export const GhostGrid = styled.div`
   ${layoutGridWrapper};
   background: ${C_GHOST};
+  padding-bottom: ${GEL_SPACING_QUAD};
 `;
 
 export const GridItemConstrainedSmall = styled.div`
