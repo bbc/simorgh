@@ -101,7 +101,7 @@
     "@bbc/psammead-inline-link": "^1.1.10",
     "@bbc/psammead-locales": "^1.0.1",
     "@bbc/psammead-media-indicator": "^2.0.2",
-    "@bbc/psammead-navigation": "^2.0.1",
+    "@bbc/psammead-navigation": "^2.1.0",
     "@bbc/psammead-paragraph": "^2.0.5",
     "@bbc/psammead-section-label": "^1.0.8",
     "@bbc/psammead-sitewide-links": "^2.0.3",
