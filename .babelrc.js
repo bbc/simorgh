@@ -16,6 +16,13 @@ if (process.env.NODE_ENV === 'test') {
   plugins.push('dynamic-import-node');
 }
 
+if (process.env.NODE_ENV === 'production') {
+  plugins.push(["transform-react-remove-prop-types", {
+    mode: 'remove',
+    removeImport: true
+  }]);
+}
+
 module.exports = {
   presets: [
     [

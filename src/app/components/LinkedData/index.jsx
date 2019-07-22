@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { arrayOf, string, shape } from 'prop-types';
+import propTypeCheck from '../Metadata/propTypesCheck';
 
 const LinkedData = ({
   brandName,
@@ -87,8 +88,10 @@ LinkedData.propTypes = {
   canonicalLink: string.isRequired,
   type: string.isRequired,
   seoHeadline: string.isRequired,
-  firstPublished: string,
-  lastUpdated: string,
+  firstPublished: (props, propName) =>
+    propTypeCheck(props, propName, 'LinkedData', string.isRequired),
+  lastUpdated: (props, propName) =>
+    propTypeCheck(props, propName, 'LinkedData', string.isRequired),
   publishingPrinciples: string.isRequired,
   noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
@@ -104,6 +107,9 @@ LinkedData.propTypes = {
 
 LinkedData.defaultProps = {
   about: undefined,
+
+  // custom propType checks used
+  // eslint doesn't recognise that props are required
   firstPublished: undefined,
   lastUpdated: undefined,
 };
