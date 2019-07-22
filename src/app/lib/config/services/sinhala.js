@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'හඬපට',
+      photogallery: 'සේයා රූ ගැලරිය',
       video: 'වීඩියෝ',
     },
   },

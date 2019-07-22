@@ -111,6 +111,7 @@ const service = {
     },
     media: {
       audio: '音频',
+      photogallery: '图辑',
       video: '视频',
     },
   },
