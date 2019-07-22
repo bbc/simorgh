@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'ਔਡੀਓ',
+      photogallery: 'ਚਿੱਤਰ ਗੈਲਰੀ',
       video: 'ਵੀਡੀਓ',
     },
   },
