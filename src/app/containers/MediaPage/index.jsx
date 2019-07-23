@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, { Fragment } from 'react';
+import { string, shape } from 'prop-types';
 
 const MediaPageContainer = ({ service, match }) => (
   <Fragment>
@@ -17,5 +18,15 @@ const MediaPageContainer = ({ service, match }) => (
     </ul>
   </Fragment>
 );
+
+MediaPageContainer.propTypes = {
+  service: string,
+  match: shape({
+    params: shape({
+      serviceId: string,
+      mediaId: string
+    })
+  })
+}
 
 export default MediaPageContainer;
