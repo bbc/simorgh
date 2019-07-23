@@ -27,3 +27,13 @@ describeForLocalOnly('Application', () => {
     });
   });
 });
+
+describe('Application', () => {
+  it('should return a 200 status code for the news service worker', () => {
+    cy.testResponseCodeAndType(
+      '/news/articles/sw.js',
+      200,
+      'application/javascript',
+    );
+  });
+});
