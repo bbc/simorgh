@@ -10,10 +10,9 @@ import withLoading from '../PageHandlers/withLoading';
 import withError from '../PageHandlers/withError';
 import withData from '../PageHandlers/withData';
 
-const FrontPageContainer = ({ pageData }) => {
-  console.log(`friont page`);
-  return <FrontPageMain frontPageData={pageData} />;
-};
+const FrontPageContainer = ({ pageData }) => (
+  <FrontPageMain frontPageData={pageData} />
+);
 
 FrontPageContainer.propTypes = {
   pageData: shape(frontPagePropTypes),
