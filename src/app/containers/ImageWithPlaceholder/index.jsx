@@ -28,13 +28,21 @@ const ImageWithPlaceholder = ({
   lazyLoad,
   ratio,
   src,
+  sizes,
   srcset,
   width,
 }) => {
   const { platform } = useContext(RequestContext);
 
   const imageToRender = (
-    <Image alt={alt} src={src} width={width} srcset={srcset} fade={fade} />
+    <Image
+      alt={alt}
+      src={src}
+      sizes={sizes}
+      width={width}
+      srcset={srcset}
+      fade={fade}
+    />
   );
 
   return (
@@ -66,6 +74,7 @@ ImageWithPlaceholder.propTypes = {
   ratio: number.isRequired,
   src: string.isRequired,
   srcset: string,
+  sizes: string,
   width: number.isRequired,
 };
 
@@ -76,6 +85,7 @@ ImageWithPlaceholder.defaultProps = {
   fade: false,
   lazyLoad: false,
   srcset: null,
+  sizes: null,
 };
 
 export default ImageWithPlaceholder;
