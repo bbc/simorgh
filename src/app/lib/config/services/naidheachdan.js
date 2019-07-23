@@ -113,6 +113,7 @@ const service = {
     },
     media: {
       audio: 'Fuaim',
+      photogallery: 'Gailearaidh dhealbhan',
       video: 'Bhidio',
     },
   },

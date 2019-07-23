@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'ઑડિયો',
+      photogallery: 'છબી ગૅલેરી',
       video: 'વીડિયો',
     },
   },

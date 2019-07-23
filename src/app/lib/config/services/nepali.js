@@ -113,6 +113,7 @@ const service = {
     },
     media: {
       audio: 'अडियो',
+      photogallery: 'तस्वीर ग्यालरी',
       video: 'भिडियो',
     },
   },
