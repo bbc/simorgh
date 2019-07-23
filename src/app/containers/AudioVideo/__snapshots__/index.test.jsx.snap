@@ -345,6 +345,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -789,6 +790,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -1265,6 +1267,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -1709,6 +1712,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -2153,6 +2157,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -2629,6 +2634,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -3073,6 +3079,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -3517,6 +3524,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -3993,6 +4001,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -4471,6 +4480,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -4921,6 +4931,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -5426,6 +5437,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -5931,6 +5943,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -6375,6 +6388,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -6851,6 +6865,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },
@@ -7329,6 +7344,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
         },
         "media": Object {
           "audio": "Audio",
+          "photogallery": "Image gallery",
           "video": "Video",
         },
       },

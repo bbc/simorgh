@@ -116,6 +116,7 @@ const news = {
     },
     media: {
       audio: 'Audio',
+      photogallery: 'Image gallery',
       video: 'Video',
     },
   },

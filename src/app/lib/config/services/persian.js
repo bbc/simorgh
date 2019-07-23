@@ -120,6 +120,7 @@ const persian = {
     },
     media: {
       audio: 'صدا',
+      photogallery: 'عکس',
       video: 'ویدیو',
     },
   },

@@ -53,9 +53,9 @@ const ErrorPage = ({
           {solutions.map(text => (
             <Paragraph
               script={script}
+              service={service}
               as="li"
               key={idSanitiser(text)}
-              service={service}
             >
               {text}
             </Paragraph>
