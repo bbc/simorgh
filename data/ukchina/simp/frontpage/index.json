@@ -1,0 +1,3485 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::index:ukchina/simp/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/ukchina/simp/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/front_page",
+      "curie": "http://www.bbc.co.uk/asset/42868823-bcc9-e9a1-e050-380a4e8044fe/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "ukchina-v6",
+    "language": "zh-Hans",
+    "lastUpdated": 1563741366306,
+    "firstPublished": 1480677256,
+    "lastPublished": 1563741356,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "ukchinasimp.page",
+      "cps_asset_id": "38161060",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [
+      "top-story",
+      "secondary-top-story",
+      "special-reports",
+      "av-stories-now",
+      "single-section-digest",
+      "feature-main",
+      "featured-site-top-stories"
+    ],
+    "title": "主页",
+    "summary": "BBC 英伦网汇集了BBC精选文章，以趣味和知识性的角度向全球华文读者提供关于商业职场、生涯发展、文化艺术、自然环境、未来科技和趋势、旅游探索等不同主题的深度内容。"
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "top-story",
+        "title": "Top story",
+        "maxRelatedLinks": 4,
+        "items": [
+          {
+            "headlines": {
+              "headline": "切尔诺贝利核灾给大自然带来的意想不到好处"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-49037362",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-49037362"
+            },
+            "summary": "切尔诺贝利核事故灾难造成了悲剧性的损失，缩短了人们的寿命，但是相比之下，大自然生命力的起死回生令人震惊。",
+            "timestamp": 1563740633,
+            "byline": {
+              "name": "斯图尔特·汤普森",
+              "title": "（Stuart Thompson）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107934505",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C56F/production/_107934505_p07fp3mp.jpg",
+              "path": "/cpsprodpb/C56F/production/_107934505_p07fp3mp.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "荒废",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "注意力缺陷多动症：女孩患者为何经常被忽视？"
+                },
+                "locators": {
+                  "assetUri": "/ukchina/simp/vert-fut-48964645",
+                  "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-fut-48964645"
+                },
+                "summary": "“注意力缺陷多动症”是一种神经发育失调症，但患有ADHD的女孩经常很难获得确诊，她们经历的艰辛可能影响一辈子。",
+                "timestamp": 1562936198,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48964645",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "男性的角色：如何当个好爸爸"
+                },
+                "locators": {
+                  "assetUri": "/ukchina/simp/vert-fut-48922739",
+                  "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-fut-48922739"
+                },
+                "summary": "过去的研究常常会忽视父亲的角色。新的研究表明，父亲照看孩子，能对其行为、幸福感、乃至认知技能方面起到重要作用。",
+                "timestamp": 1562683423,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48922739",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-49037362",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Top story - UKChina"
+        },
+        "semanticGroupName": "Top story"
+      },
+      {
+        "type": "secondary-top-story",
+        "title": "More top stories",
+        "items": [
+          {
+            "headlines": {
+              "headline": "葬礼派对：生前办后事为何越来越流行"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/49066695",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49066695"
+            },
+            "summary": "越来越多人选择在自己仍活着的时候，把亲朋好友聚集在一起给自己举行葬礼“送终”，这样做有什么意义呢？",
+            "timestamp": 1563737524,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107947014",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A072/production/_107947014_92cda94d-a025-4a05-bb11-66d1ac6b3711.jpg",
+              "path": "/cpsprodpb/A072/production/_107947014_92cda94d-a025-4a05-bb11-66d1ac6b3711.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "参加自己葬礼",
+              "copyrightHolder": "SIAN BUTCHER"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/49066695",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "旅游计划：去台湾玩的5个理由"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-tra-49007946",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-tra-49007946"
+            },
+            "summary": "去台湾玩还需要理由吗？台湾有山有水，自然景观丰富多样，人情味浓厚，还有吃不完的美食和放松身心灵的温泉。",
+            "timestamp": 1563552098,
+            "byline": {
+              "name": "约书亚·塞缪尔·布朗",
+              "title": "（Joshua Samuel Brown）",
+              "persons": [
+                {
+                  "name": "Amanda Ruggeri",
+                  "function": "BBC Travel"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107949716",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F162/production/_107949716_gettyimages-486958485.jpg",
+              "path": "/cpsprodpb/F162/production/_107949716_gettyimages-486958485.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "爬山",
+              "caption": "（Credit: Getty Images）",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-49007946",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美食争议：最老牌的美国热狗是哪一家？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-tra-49031648",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-tra-49031648"
+            },
+            "summary": "用面包夹着法兰克福香肠的热狗是典型的美国食物，在体育场和户外烧烤时都吃得到，但热狗最初的起源你知道吗？",
+            "timestamp": 1563464612,
+            "byline": {
+              "name": "茱莉娅·哈蒙德",
+              "title": "（Julia Hammond）",
+              "persons": [
+                {
+                  "name": "Amanda Ruggeri",
+                  "function": "BBC Travel"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107928170",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1C0E/production/_107928170_p07fqj0w-1.jpg",
+              "path": "/cpsprodpb/1C0E/production/_107928170_p07fqj0w-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "热狗",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-49031648",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "More top stories"
+      },
+      {
+        "type": "special-reports",
+        "title": "Verticals",
+        "items": [
+          {
+            "headlines": {
+              "headline": "美国奇人奇事：他为什么与世隔绝30年？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/49037355",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49037355"
+            },
+            "summary": "那年，他只身走进缅因州的森林，从此近30年不曾与外界进行过任何交流。在社交媒体盛行的今天，这真是惊人之举。",
+            "timestamp": 1563462790,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107927617",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/117F8/production/_107927617_gettyimages-1018485378-1.jpg",
+              "path": "/cpsprodpb/117F8/production/_107927617_gettyimages-1018485378-1.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "缅因州的森林",
+              "caption": "缅因州的森林",
+              "copyrightHolder": "Andrew Lichtenstein"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/49037355",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑：毕加索——战争绘画的终极大师"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-cul-49003434",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-cul-49003434"
+            },
+            "summary": "毕加索作品《格尔尼卡》是展现战争冲突的名画之一，最近在巴黎的艺术展览上，我们还能看到更多毕加索的战争主题作品。",
+            "timestamp": 1563366236,
+            "byline": {
+              "name": "凯莉·格罗威尔",
+              "title": "（Kelly Grovier）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107896734",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/AAF9/production/_107896734_p07dn7q5.jpg",
+              "path": "/cpsprodpb/AAF9/production/_107896734_p07dn7q5.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "毕加索作品《格尔尼卡》",
+              "copyrightHolder": "RMN-Grand Palais, Musée national Picasso-Paris/Mat"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-cul-49003434",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "艾伦·图灵：从同性恋“罪人”到英镑纸币新面孔"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/49007953",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49007953"
+            },
+            "summary": "他被誉为人工智能之父、更是英国人心目中的民族英雄：破解纳粹德国密码的数学奇才，但生前却是个同性恋“罪人”。",
+            "timestamp": 1563362493,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107898921",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/32BD/production/_107898921_4efe8b72-6e02-4d69-b41e-31c05e92eb0c.jpg",
+              "path": "/cpsprodpb/32BD/production/_107898921_4efe8b72-6e02-4d69-b41e-31c05e92eb0c.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "英国最新宣布的50英镑纸币设计图",
+              "caption": "图灵在众多候选人中获胜，成为英国50英镑新纸币上的名人。",
+              "copyrightHolder": "Bank of England"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/49007953",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "阿波罗登月50周年：太空探索大飞跃前前后后"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/49003551",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49003551"
+            },
+            "summary": "阿波罗11号成功让人类登陆月球是美国和世界历史的重要一刻，当时究竟发生了什么？为什么这一刻如此重要？",
+            "timestamp": 1563283769,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107807631",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3566/production/_107807631_79ab055d-47b5-4568-b597-f5548a9e7245.jpg",
+              "path": "/cpsprodpb/3566/production/_107807631_79ab055d-47b5-4568-b597-f5548a9e7245.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "US astronaut on Moon",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/49003551",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "迪士尼重拍版提醒我们都有过怎样的童年"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/49003427",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49003427"
+            },
+            "summary": "《狮子王》是最近又一套从动画片走向真人版的迪士尼经典，这些重拍版本证明，技术可以更新换代，情怀却能历久弥新。",
+            "timestamp": 1563273758,
+            "byline": {
+              "name": "伊姆兰·拉曼-琼斯（Imran Rahman-Jones）",
+              "title": "BBC《新闻节拍》（Newsbeat）记者",
+              "persons": [
+                {
+                  "name": "Imran Rahman-Jones",
+                  "function": "Newsbeat reporter"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106433411",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2CA9/production/_106433411_disney_lionking_2.jpg",
+              "path": "/cpsprodpb/2CA9/production/_106433411_disney_lionking_2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A still from The Lion King",
+              "caption": "迪士尼在今年再现了《狮子王》的经典场面。",
+              "copyrightHolder": "Disney"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/49003427",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "阿波罗登月50周年：和火箭相关的五个数字"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48999576",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48999576"
+            },
+            "summary": "为了把宇航员送上月球，美国宇航局必须建造有史以来最强大的火箭。这就是土星5号的由来。",
+            "timestamp": 1563246943,
+            "byline": {
+              "name": "理查德·霍林汉姆 ",
+              "title": "Richard Hollingham",
+              "persons": [
+                {
+                  "name": "রুখসানা",
+                  "function": ""
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Summary",
+                "categoryName": "Summary"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107893552",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/63C3/production/_107893552_4.jpg",
+              "path": "/cpsprodpb/63C3/production/_107893552_4.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "。",
+              "caption": "土星5号高达111米（366英尺），重达2950吨。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48999576",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑： 记录越南原住民族的脸谱"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-tra-48964652",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-tra-48964652"
+            },
+            "summary": "过去八年，来自法国的旅行摄影师雷哈恩一直在进行一个宏大的项目，拍摄越南54个获得官方承认的原住民族的人物肖像。",
+            "timestamp": 1563048171,
+            "byline": {
+              "name": "格雷姆·格林",
+              "title": "（Graeme Green）",
+              "persons": [
+                {
+                  "name": "Amanda Ruggeri",
+                  "function": "BBC Travel"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107851636",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F87F/production/_107851636_p07crsx8.jpg",
+              "path": "/cpsprodpb/F87F/production/_107851636_p07crsx8.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "展览",
+              "copyrightHolder": "Réhahn"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48964652",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "T恤上的标语，在表明你是哪种人"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48964650",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48964650"
+            },
+            "summary": "你在全世界任何地方都能看到印着标语的T恤，这可能是表达立场最方便快捷的方式，但衣服上的标语如何体现你的人格？",
+            "timestamp": 1563046857,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107851270",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1C2F/production/_107851270_3a.gettyimages-1152907390.jpg",
+              "path": "/cpsprodpb/1C2F/production/_107851270_3a.gettyimages-1152907390.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A woman with a banner against bullfighting, while wearing a shirt where you can read \"I do not eat animals\" - she's marching at a demonstration in Pamplona (N Spain) against animal cruelty on the occasion of the festivities of San Fermin.",
+              "caption": "这条标语上写的是：“我不吃动物”。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48964650",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "注意力缺陷多动症：女孩患者为何经常被忽视？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48964645",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48964645"
+            },
+            "summary": "“注意力缺陷多动症”是一种神经发育失调症，但患有ADHD的女孩经常很难获得确诊，她们经历的艰辛可能影响一辈子。",
+            "timestamp": 1562936198,
+            "byline": {
+              "name": "凯莉·奥克斯",
+              "title": "（Kelly Oakes）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107848781",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4960/production/_107848781_p07brtd7.jpg",
+              "path": "/cpsprodpb/4960/production/_107848781_p07brtd7.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "女孩",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48964645",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "健康与癌症：含糖饮料会致癌吗？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48951972",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48951972"
+            },
+            "summary": "法国科学家称，饮用果汁、汽水等含糖饮料可能会增加患癌症的风险，但这项研究没有确凿证据证明含糖饮料一定会致癌。",
+            "timestamp": 1562929325,
+            "byline": {
+              "name": "詹姆斯·加拉格尔（James Gallagher）",
+              "title": "BBC健康与科学记者",
+              "persons": [
+                {
+                  "name": "Abdujalil Abdurasulov",
+                  "function": "BBC News Almata"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107831780",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2209/production/_107831780_gettyimages-961736622.jpg",
+              "path": "/cpsprodpb/2209/production/_107831780_gettyimages-961736622.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Drinking OJ",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48951972",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "我们能否预先发现撞击地球的小行星？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-earth-48951963",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-earth-48951963"
+            },
+            "summary": "天文学家们希望通过望远镜能发现更严重、有可能致命的陨石撞击，并在事先发出警告。但他们怎么做到这一点？",
+            "timestamp": 1562844820,
+            "byline": {
+              "name": "克里斯·巴拉纽克",
+              "title": "（Chris Baraniuk）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107834924",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A7BF/production/_107834924_2fpw11c20e61000.jpg",
+              "path": "/cpsprodpb/A7BF/production/_107834924_2fpw11c20e61000.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "撞击",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-earth-48951963",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英国官方统计：华人是各族裔中收入最高的群体"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48942557",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48942557"
+            },
+            "summary": "英国官方的首次有关统计称，华裔和印度族裔的平均收入高于英国白人员工，但有关统计没有考虑教育和职业及地区因素。",
+            "timestamp": 1562842113,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107804987",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1345C/production/_107804987_gettyimages-531413660-1.jpg",
+              "path": "/cpsprodpb/1345C/production/_107804987_gettyimages-531413660-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "female workers in suits",
+              "caption": "英国华人受教育程度较高，多从事专业性工作，这是收入比较其它族裔雇员相对较高的一个原因。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48942557",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英国挂牌纪念的第三位华人：“哑行者”蒋彝"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48942556",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48942556"
+            },
+            "summary": "英国挂牌纪念的名人故居很多，但有华人名字的只有3处。继孙中山和老舍故居之后，蒋彝故居也在牛津挂牌。",
+            "timestamp": 1562844204,
+            "byline": {
+              "name": "保罗·法兰奇",
+              "title": "（Paul French）",
+              "persons": [
+                {
+                  "name": "서명진",
+                  "function": "BBC 코리아"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107822860",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1AA6/production/_107822860_chiang-yee-plague.gif",
+              "path": "/cpsprodpb/1AA6/production/_107822860_chiang-yee-plague.gif",
+              "height": 549,
+              "width": 976,
+              "altText": "蒋彝故居的蓝色纪念牌",
+              "caption": "牛津郡某公寓前旅英中国艺术家蒋彝故居的蓝色纪念牌",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48942556",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "迪士尼重拍的《花木兰》和21年前有何不同"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48942555",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48942555"
+            },
+            "summary": "没有了唱段，也没有会说话的神龙木须，但是迪士尼再次借经典民间传说改编的电影，能重新赢得中国观众吗？",
+            "timestamp": 1562843456,
+            "byline": {
+              "name": "陈炜斯（Yvette Tan）、陈淑琳（Heather Chen）",
+              "title": "BBC记者",
+              "persons": [
+                {
+                  "name": "Yvette Tan & Heather Chen",
+                  "function": "BBC News"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107792541",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/38C1/production/_107792541_68477db8-b999-47f0-b6dc-c9d802fb64b8.jpg",
+              "path": "/cpsprodpb/38C1/production/_107792541_68477db8-b999-47f0-b6dc-c9d802fb64b8.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Liu Yifei",
+              "caption": "新版《花木兰》剑指中国市场。",
+              "copyrightHolder": "Disney"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48942555",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "唱歌真能改善人们的身心健康吗？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48942554",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48942554"
+            },
+            "summary": "你喜欢听音乐，喜欢唱歌吗？如果是，那恭喜你享有唱歌的多种好处。如果不喜欢，或许看了这篇文章后你会改变想法。",
+            "timestamp": 1562772908,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107438479",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17CCB/production/_107438479_singing5.jpg",
+              "path": "/cpsprodpb/17CCB/production/_107438479_singing5.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "儿童合唱",
+              "caption": "儿童合唱",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48942554",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英中交流300年：英国历史上的五位知名华人"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48942553",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48942553"
+            },
+            "summary": "谁是第一位抵达英国的华人？英国国王接见的第一个华人是谁？英中交流史上创造众多第一的华人，因何而来，又有何事迹？",
+            "timestamp": 1562772757,
+            "byline": {
+              "name": "胥一凝 ",
+              "title": "BBC英伦网特约撰稿人",
+              "persons": [
+                {
+                  "name": "서명진",
+                  "function": "BBC 코리아"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107794114",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A0BD/production/_107794114_shen.gif",
+              "path": "/cpsprodpb/A0BD/production/_107794114_shen.gif",
+              "height": 360,
+              "width": 640,
+              "altText": "沈福宗：英国国王接见的第一位华人",
+              "caption": "沈福宗：英国国王接见的第一位华人",
+              "copyrightHolder": "Royal Collection Trust"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48942553",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "阿波罗计划中和食物相关的一组数字"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48937203",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48937203"
+            },
+            "summary": "宇航员升空前的早餐吃的牛排分量是多重？每天摄入的热量上限是多少？他们能喝酒和吃水果吗？",
+            "timestamp": 1562753828,
+            "byline": {
+              "name": "理查德·霍林汉姆",
+              "title": "（Richard Hollingham）",
+              "persons": [
+                {
+                  "name": "রুখসানা",
+                  "function": ""
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107818951",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3E6D/production/_107818951_5.jpg",
+              "path": "/cpsprodpb/3E6D/production/_107818951_5.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "。",
+              "caption": "美国航空航天局计算，登月宇航员每天需要2800卡路里。",
+              "copyrightHolder": "Credit: Nasa"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48937203",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "华裔女孩心声：父母管得太严让我难堪和孤独"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48928147",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48928147"
+            },
+            "summary": "这是一个澳大利亚华裔女孩的故事。父母在她成长过程中的过度保护和强势介入，让她写了一封求救信……",
+            "timestamp": 1562771068,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107735386",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10B01/production/_107735386_bbb844f0-1c2d-4f39-b7c6-fd227a02b75d.jpg",
+              "path": "/cpsprodpb/10B01/production/_107735386_bbb844f0-1c2d-4f39-b7c6-fd227a02b75d.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "我只能跟女孩子交朋友",
+              "caption": "我只能跟女孩子交朋友",
+              "copyrightHolder": "Katie Horwich/BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48928147",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑：700年历史的耶路撒冷温泉浴场"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-tra-48924305",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-tra-48924305"
+            },
+            "summary": "藏身于耶路撒冷街巷下的艾恩哈曼始建于1336年前后，20世纪中期破败失修，经过多年精心修复，浴场重新开门迎客。",
+            "timestamp": 1562685378,
+            "byline": {
+              "name": "萨拉·托特·斯图布",
+              "title": "（Sara Toth Stub）",
+              "persons": [
+                {
+                  "name": "Amanda Ruggeri",
+                  "function": "BBC Travel"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107809640",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1252/production/_107809640_p07bplw4.jpg",
+              "path": "/cpsprodpb/1252/production/_107809640_p07bplw4.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "（Credit: Sara Toth Stub）",
+              "copyrightHolder": "Sara Toth Stub"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48924305",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "男性的角色：如何当个好爸爸"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48922739",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48922739"
+            },
+            "summary": "过去的研究常常会忽视父亲的角色。新的研究表明，父亲照看孩子，能对其行为、幸福感、乃至认知技能方面起到重要作用。",
+            "timestamp": 1562683423,
+            "byline": {
+              "name": "索菲·哈达赫",
+              "title": "（Sophie Hardach）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107804793",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9B3C/production/_107804793_p07cf27b.jpg",
+              "path": "/cpsprodpb/9B3C/production/_107804793_p07cf27b.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "亲子",
+              "copyrightHolder": "Gabriele Galimberti"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48922739",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "BBC精选",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.co.uk/ukchina/simp/horizon",
+            "desktop": "http://www.bbc.co.uk/ukchina/simp/horizon",
+            "mobile": "http://www.bbc.co.uk/ukchina/simp/horizon",
+            "enhancedmobile": "http://www.bbc.co.uk/ukchina/simp/horizon"
+          }
+        },
+        "semanticGroupName": "Special reports 1"
+      },
+      {
+        "type": "av-stories-now",
+        "title": "Watch/Listen",
+        "items": [
+          {
+            "headlines": {
+              "headline": "图辑：世界遗产名录新添地方令人叹为观止"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48922738",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48922738"
+            },
+            "summary": "《世界遗产名录》更新，添了不少新地方，加上刚入选的良渚文化遗址，中国成为世界遗产最多的国家。",
+            "timestamp": 1562673290,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107773056",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FE0D/production/_107773056_4dcb0a1c-ddfb-461d-a025-e5c55d154282.jpg",
+              "path": "/cpsprodpb/FE0D/production/_107773056_4dcb0a1c-ddfb-461d-a025-e5c55d154282.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "老挝北部的石缸平原，因石缸阵闻名，与英国巨石阵遥相呼应",
+              "caption": "老挝北部的石缸平原，因石缸阵闻名，与英国巨石阵遥相呼应",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48922738",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑：英国伦敦2019骄傲大游行 纪念抗争50年"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48884284",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48884284"
+            },
+            "summary": "2019年骄傲大游行在英国首都伦敦有超过百万人走上街头，见证LGBT（同性恋、双性恋和跨性别者）争取权益。",
+            "timestamp": 1562439480,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107772669",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17973/production/_107772669_mediaitem107772668.jpg",
+              "path": "/cpsprodpb/17973/production/_107772669_mediaitem107772668.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "2019年伦敦骄傲大游行",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48884284",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑：到地球上的“类火星地貌”体验“红色星球”"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-earth-48871118",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-earth-48871118"
+            },
+            "summary": "在地球上哪里可以找到类似火星的地表，想象体验火星的生活？欧洲航天局提供了一份“地球上的类火星地貌目录”。",
+            "timestamp": 1562339842,
+            "byline": {
+              "name": "理查德·格雷",
+              "title": "（Richard Gray）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107747245",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D402/production/_107747245_2fphp1c20e61000.jpg",
+              "path": "/cpsprodpb/D402/production/_107747245_2fphp1c20e61000.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "地貌",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-earth-48871118",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑：盘点20世纪的10座“梦之屋”"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-cul-48856513",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-cul-48856513"
+            },
+            "summary": "新出版的《房屋：绝妙生活》一书探寻了全球几处最令人惊叹的住所，从现代主义的沙漠之屋到尽揽绝世美景的峭壁房子。",
+            "timestamp": 1562239751,
+            "byline": {
+              "name": "艾迪·马伦",
+              "title": "（Eddie Mullan）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107731363",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8DD9/production/_107731363_p0791hcn.jpg",
+              "path": "/cpsprodpb/8DD9/production/_107731363_p0791hcn.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "建筑",
+              "copyrightHolder": "Sergio Pirrone"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-cul-48856513",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "图辑视频",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/ukchina/simp/media/video",
+            "desktop": "http://www.bbc.com/ukchina/simp/media/video",
+            "mobile": "http://www.bbc.com/ukchina/simp/media/video",
+            "enhancedmobile": "http://www.bbc.com/ukchina/simp/media/video"
+          }
+        },
+        "semanticGroupName": "Watch/Listen"
+      },
+      {
+        "type": "single-section-digest",
+        "title": "Section 2",
+        "items": [
+          {
+            "headlines": {
+              "headline": "西西里岛的开心果为什么需要警察昼夜守护"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48928146",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48928146"
+            },
+            "summary": "意大利西西里岛的开心果收获季将至，国家警察开始昼夜守护，严防盗贼觊觎这一珍贵的“綠色的金子”。",
+            "timestamp": 1562769313,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107803811",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2E36/production/_107803811_tv054735449.jpg",
+              "path": "/cpsprodpb/2E36/production/_107803811_tv054735449.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "开心果",
+              "copyrightHolder": " GERARD JULIEN / AFP)GERARD JULIEN/AFP/Getty Image"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48928146",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "女足世界杯历史上最“政治化”的冠军球队"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48922735",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48922735"
+            },
+            "summary": "美国队成功卫冕，也由此包揽了女足世界杯史上半数的冠军；但是在这个夏天的法国，她们令全世界瞩目的事情远不止如此。",
+            "timestamp": 1562671531,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107804789",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/181B4/production/_107804789_055157037-1.jpg",
+              "path": "/cpsprodpb/181B4/production/_107804789_055157037-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "梅根·拉皮诺",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48922735",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "为什么女子足球中的出柜球员比男足多"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48882745",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48882745"
+            },
+            "summary": "2019年女足世界杯，公开同性恋身份的参赛球员数量到达新高；相比之下，男子足球却没有现役球员出柜的先例。",
+            "timestamp": 1562330289,
+            "byline": {
+              "name": "费尔南多·杜阿特（Fernando Duarte）",
+              "title": "BBC国际部记者",
+              "persons": [
+                {
+                  "name": "Fernando Duarte",
+                  "function": "BBC World Service"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107709678",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1568A/production/_107709678_gettyimages-966131264.jpg",
+              "path": "/cpsprodpb/1568A/production/_107709678_gettyimages-966131264.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Merel Van Dongen (left) and Ana Romero",
+              "caption": "荷兰队球员梅蕾尔·范东根（Merel Van Dongen，云当根，左）和西班牙队球员安娜·罗梅罗（Ana Romero，罗美露）是情侣，而她们对此也直言不讳。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48882745",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "亚洲国家不收“洋垃圾” 全球废料大国自食其果"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48873192",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48873192"
+            },
+            "summary": "垃圾处理对于西方国家的人似乎并不特别在意，垃圾处理不了，打包送到海外，“洋垃圾”是一宗国际大生意。",
+            "timestamp": 1562325831,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107747922",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/59BE/production/_107747922_1b419d0f-7c71-4416-a948-3cf41294adf2.jpg",
+              "path": "/cpsprodpb/59BE/production/_107747922_1b419d0f-7c71-4416-a948-3cf41294adf2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "美国垃圾焚烧厂",
+              "caption": "美国的大货车在焚烧炉外卸垃圾。美国垃圾送不到海外，只好就地焚烧。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48873192",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "英伦风采",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.com/ukchina/simp/cool_britannia",
+            "desktop": "http://www.bbc.com/ukchina/simp/cool_britannia",
+            "mobile": "http://www.bbc.com/ukchina/simp/cool_britannia",
+            "enhancedmobile": "http://www.bbc.com/ukchina/simp/cool_britannia"
+          }
+        },
+        "semanticGroupName": "Section 2"
+      },
+      {
+        "type": "feature-main",
+        "title": "Features",
+        "items": [
+          {
+            "headlines": {
+              "headline": "黑猩猩集体看电影：“这也是社交现象”"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/49031645",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49031645"
+            },
+            "summary": "一起看影片之后感觉彼此更亲近，不仅是人类才有的现象，黑猩猩也会这样，显示人类这种行为有着深厚的进化论根基。",
+            "timestamp": 1563447823,
+            "byline": {
+              "name": "肖恩·考格兰（Sean Coughlan）",
+              "title": "BBC家庭及教育事务记者",
+              "persons": [
+                {
+                  "name": "Sean Coughlan",
+                  "function": "BBC News family and education correspondent",
+                  "url": "/news/correspondents/seancoughlan",
+                  "correspondentId": "seancoughlan",
+                  "correspondentImage": {
+                    "height": 200,
+                    "width": 200,
+                    "href": "http://c.files.bbci.co.uk/12EB0/production/_106188477_component_correspondent_promo_desktp_tablet_0004_seancoughlan.png",
+                    "originCode": "cpsprodpb",
+                    "altText": "Sean Coughlan",
+                    "copyrightHolder": "BBC",
+                    "allowSyndication": true
+                  }
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107899601",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/29CB/production/_107899601_chimp1.jpg",
+              "path": "/cpsprodpb/29CB/production/_107899601_chimp1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Chimp",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/49031645",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "家家有本难念的经：夫妻间如何避免为钱不和"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/49017596",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49017596"
+            },
+            "summary": "俗话说，金钱不是万能的但没有钱是万万不能的。虽然夫妻和亲友之间谈钱伤感情，但搞不定财务问题会导致种种矛盾。",
+            "timestamp": 1563360378,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107348147",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/121C8/production/_107348147_0a.gettyimages-874045510.jpg",
+              "path": "/cpsprodpb/121C8/production/_107348147_0a.gettyimages-874045510.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "硬币",
+              "caption": "金钱经常是夫妻和家人争吵的焦点",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/49017596",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "气候变化影响下 哪些食物和饮料可能会消失？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/49003426",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49003426"
+            },
+            "summary": "因为气温和天气的变化，农作物可能难以生长，鱼类和动物也许会死亡。未来有哪些食物将从你的餐桌上消失？为什么？",
+            "timestamp": 1563271167,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Summary",
+                "categoryName": "Summary"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "95286721",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/31E0/production/_95286721_8f5db043-a04d-4017-a85a-a44c4fe2f312.jpg",
+              "path": "/cpsprodpb/31E0/production/_95286721_8f5db043-a04d-4017-a85a-a44c4fe2f312.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "（图片来源: iStock）",
+              "copyrightHolder": "iStock"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/49003426",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "特别推荐"
+        },
+        "semanticGroupName": "Features"
+      },
+      {
+        "type": "single-section-digest",
+        "title": "Section 3",
+        "items": [
+          {
+            "headlines": {
+              "headline": "职场健康：上班族的工作午餐应该怎么吃才好？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48964649",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48964649"
+            },
+            "summary": "你平常上班时都怎么解决午餐？在办公桌前速战速决，还是跟同事、朋友一起外出用餐？上班族的午餐如何影响健康？",
+            "timestamp": 1563044645,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107849182",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6E22/production/_107849182_d84b7f61-755d-4c9b-811e-064f18764a51.jpg",
+              "path": "/cpsprodpb/6E22/production/_107849182_d84b7f61-755d-4c9b-811e-064f18764a51.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "饭盒",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48964649",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英国新研究：女性卵巢癌可能与阴道细菌有关"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48951971",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48951971"
+            },
+            "summary": "英国伦敦大学学院的研究人员发现，人体细菌群和微生物群对健康有着重要的影响，包括女性患卵巢癌风险的高低。",
+            "timestamp": 1562928030,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107821709",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16258/production/_107821709_38caed1a-8d8a-4346-bcb5-9d05ad938e61.jpg",
+              "path": "/cpsprodpb/16258/production/_107821709_38caed1a-8d8a-4346-bcb5-9d05ad938e61.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "阴道微生物",
+              "caption": "阴道微生物",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48951971",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "每周头条"
+        },
+        "semanticGroupName": "Section 3"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "Interactivity",
+        "items": [
+          {
+            "headlines": {
+              "headline": "婚姻与感情不忠的讨论：何为婚内出轨"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48905078",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48905078"
+            },
+            "summary": "美化伴侣形象也许是一种本能，但或许我们不该给伴侣太多信任。",
+            "timestamp": 1562569978,
+            "byline": {
+              "name": "威廉·帕克",
+              "title": "（William Park） ",
+              "persons": [
+                {
+                  "name": "서명진",
+                  "function": "BBC 코리아"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107785442",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5F8A/production/_107785442_p07f3l9q.jpg",
+              "path": "/cpsprodpb/5F8A/production/_107785442_p07f3l9q.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "约70%的人曾经有过出轨行为",
+              "caption": "约70%的人曾经有过出轨行为。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48905078",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "瓦拉纳西：印度教徒等待死亡的圣城"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-tra-48882752",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-tra-48882752"
+            },
+            "summary": "对印度教徒来说，恒河边的瓦拉纳西是世上最神圣的城市之一，城裡有多间“救赎之家”，为来这里等死的人提供最后住所。",
+            "timestamp": 1562444756,
+            "byline": {
+              "name": "罗米塔·萨鲁亚",
+              "title": "（Romita Saluja）",
+              "persons": [
+                {
+                  "name": "Amanda Ruggeri",
+                  "function": "BBC Travel"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107776764",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B6AF/production/_107776764_gettyimages-833572476.jpg",
+              "path": "/cpsprodpb/B6AF/production/_107776764_gettyimages-833572476.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "瓦拉纳西",
+              "caption": "印度北部的瓦拉纳西被印度教徒视为世界上最神圣的城市之一（Credit: Richard Bradley/Alamy）",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48882752",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "要如何造出能存在一万年的东西？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48882748",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48882748"
+            },
+            "summary": "建造寿命能达一万年的机器，要参考过去和现在的经验，了解文物是怎么被保存下来的，要用什么材料打造，又该放到哪里？",
+            "timestamp": 1562444750,
+            "byline": {
+              "name": "亚历山大·罗斯",
+              "title": "（Alexander Rose）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107764830",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0F06/production/_107764830_p07cswmb.jpg",
+              "path": "/cpsprodpb/0F06/production/_107764830_p07cswmb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "泰姬陵",
+              "caption": "泰姬陵的墙上有许多财宝，能够轻易取下，这有利于保护建筑本身不被掠夺者破坏（Credit: Getty Images）",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48882748",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "阅读是否真能改善一个人的心理健康"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-cul-48871111",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-cul-48871111"
+            },
+            "summary": "英国多位作家认为，读书，特别是读虚构的小说和故事，是帮助人们度过艰难时期的良药，具有治疗心灵的作用。",
+            "timestamp": 1562334253,
+            "byline": {
+              "name": "休·蒙哥马利",
+              "title": "（Hugh Montgomery）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107747242",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5ED2/production/_107747242_gettyimages-536917468.jpg",
+              "path": "/cpsprodpb/5ED2/production/_107747242_gettyimages-536917468.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "读书",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-cul-48871111",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "北极永冻层解冻释放出的有毒物质"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48856517",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48856517"
+            },
+            "summary": "北极变暖，永冻层正在解冻，并暴露出隐藏的秘密，大量的温室气体，炭疽病，有毒的汞甚至是核废料都有可能被释放出来。",
+            "timestamp": 1562243128,
+            "byline": {
+              "name": "蒂姆·斯梅德利",
+              "title": "（Tim Smedley）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107731367",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12A19/production/_107731367_gettyimages-956954918.jpg",
+              "path": "/cpsprodpb/12A19/production/_107731367_gettyimages-956954918.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "北极",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48856517",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑：登月50年给地球人带来的八大变化"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48857965",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48857965"
+            },
+            "summary": "美国宇航局阿波罗登月计划不但是世界科技史上的一大里程碑，也给地球人的日常生活带来不少改变。",
+            "timestamp": 1562234937,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105413503",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7743/production/_105413503_gettyimages-90739699.jpg",
+              "path": "/cpsprodpb/7743/production/_105413503_gettyimages-90739699.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "宇航员巴兹·奥尔德林1969年在月球",
+              "caption": "阿姆斯特朗在月球上迈出一小步所代表的人类迈出的一大步，具体体现在人们日常生活中的很多改变",
+              "copyrightHolder": "Getty Images"
+            },
+            "imageThumbnail": {
+              "id": "105489252",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/62D2/production/_105489252_gettyimages-89064136-1.jpg",
+              "path": "/cpsprodpb/62D2/production/_105489252_gettyimages-89064136-1.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Space suit worn by Alan Shepard, commander of the Apollo 14 mission to the Moon",
+              "caption": "Technology used in the space suits gave birth to more durable sport shoes",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48857965",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "寻访历史：罗马人真的到了苏格兰吗？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-tra-48839685",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-tra-48839685"
+            },
+            "summary": "哈德良长城或许历史更悠久、规模更大、更坚固也更有名，但却不是罗马帝国的终极边界，罗马人真正的疆界在哪里？",
+            "timestamp": 1562157825,
+            "byline": {
+              "name": "柯尔斯顿·亨顿",
+              "title": "（Kirsten Henton）",
+              "persons": [
+                {
+                  "name": "Amanda Ruggeri",
+                  "function": "BBC Travel"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107718921",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/32B5/production/_107718921_gettyimages-452261959.jpg",
+              "path": "/cpsprodpb/32B5/production/_107718921_gettyimages-452261959.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "罗马人",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48839685",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "勤劳的河狸：拯救地球的大自然工程师"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-cul-48839680",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-cul-48839680"
+            },
+            "summary": "河狸最典型的行为是修筑堤坝来打造池塘和湿地，以获得住处和食物，无意中也为其他生物创造了大量的栖息地。",
+            "timestamp": 1562154501,
+            "byline": {
+              "name": "安迪·弗莱尔斯",
+              "title": "（Andy Fryers）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107710727",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11BFD/production/_107710727_p079zv5m.jpg",
+              "path": "/cpsprodpb/11BFD/production/_107710727_p079zv5m.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "河狸",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-cul-48839680",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "女人“胖错地方”增加罹患心脏病风险"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48839679",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48839679"
+            },
+            "summary": "你知道“苹果形”身材和“梨形”身材的区别吗？研究发现，“苹果形”身材的女性罹患心血管疾病的风险比较高。",
+            "timestamp": 1562146749,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107660059",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1731E/production/_107660059_89a7d3b8-3040-489e-baab-78ea0d9dbcb1.jpg",
+              "path": "/cpsprodpb/1731E/production/_107660059_89a7d3b8-3040-489e-baab-78ea0d9dbcb1.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "腹部脂肪",
+              "caption": "腹部脂肪对健康不利",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48839679",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑：征服珠穆朗玛峰的科索沃女人"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-tra-48814710",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-tra-48814710"
+            },
+            "summary": "科索沃登山运动员穆拉出生于一片饱受战争蹂躏的国家，但她突破界限，一次又一次地登上山顶，为女性带来鼓舞和启发。",
+            "timestamp": 1562077850,
+            "byline": {
+              "name": "狄波拉·胡索（Deborah Huso）",
+              "title": "亚力克山大·马纳西耶夫（Aleksandar Manasiev）",
+              "persons": [
+                {
+                  "name": "Amanda Ruggeri",
+                  "function": "BBC Travel"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107643270",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1C42/production/_107643270_p07930wr.jpg",
+              "path": "/cpsprodpb/1C42/production/_107643270_p07930wr.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "穆拉",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48814710",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "为什么有些人记不住自己的梦？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48806368",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48806368"
+            },
+            "summary": "我们可能会觉得自己睡醒前正在做梦，但醒来之后却想不起梦境的细节，科学家表示，记不住自己的梦可能对健康还有好处。",
+            "timestamp": 1562074472,
+            "byline": {
+              "name": "斯蒂芬·道林",
+              "title": "（Stephen Dowling）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107582206",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/EB44/production/_107582206_p079dg4j.jpg",
+              "path": "/cpsprodpb/EB44/production/_107582206_p079dg4j.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "梦境",
+              "copyrightHolder": "Emmanuel Lafont"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48806368",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "过度疲劳可致命 不可不知的自测症状"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48839019",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48839019"
+            },
+            "summary": "过度疲劳不仅负面影响人类健康，而且已经被世界卫生组织定性为“疾病”。如何界定自己自己有没有这种病呢？",
+            "timestamp": 1562068811,
+            "byline": {
+              "name": "西瓦尼·寇霍克",
+              "title": "（Shivaani Kohok）",
+              "persons": [
+                {
+                  "name": "Shivaani Kohok",
+                  "function": "BBC World Service"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107710721",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/319D/production/_107710721_gettyimages-151042282_1024.jpg",
+              "path": "/cpsprodpb/319D/production/_107710721_gettyimages-151042282_1024.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "疲劳",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48839019",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "清洁与卫生有什么不同？ 专家提醒八大重点"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48839018",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48839018"
+            },
+            "summary": "英国专家表示， 让公众知道清洁与卫生的区别非常重要，你可能以为自己家里很清洁，但那并不代表没有居家卫生问题。",
+            "timestamp": 1562059989,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107656757",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/127F5/production/_107656757_gettyimages-831711760.jpg",
+              "path": "/cpsprodpb/127F5/production/_107656757_gettyimages-831711760.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Cleaning kitchen surfaces",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48839018",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美食归属权争议再起 荷兰人“偷走”非洲食品？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-tra-48804482",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-tra-48804482"
+            },
+            "summary": "2000多年来，苔麸都是埃塞俄比亚人的主食，但荷兰一家食品公司宣称拥有苔麸的专利权，并以“超级食物”的名义销售。",
+            "timestamp": 1561835872,
+            "byline": {
+              "name": "安格拉·苏琳",
+              "title": "（Angela Saurine）",
+              "persons": [
+                {
+                  "name": "Amanda Ruggeri",
+                  "function": "BBC Travel"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107581335",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D046/production/_107581335_gettyimages-149519212.jpg",
+              "path": "/cpsprodpb/D046/production/_107581335_gettyimages-149519212.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "苔麸",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48804482",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "图辑：“少即是多”的北欧最具代表性设计"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-cul-48804477",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-cul-48804477"
+            },
+            "summary": "极简主义是一种二十世纪中叶的经典风格，如今正在重回潮流。北欧一些设计公司正在复刻一些极简风格的经典设计。",
+            "timestamp": 1561831608,
+            "byline": {
+              "name": "克莱尔·道迪",
+              "title": "（Clare Dowdy）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107580751",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3D5C/production/_107580751_p0762f9l.jpg",
+              "path": "/cpsprodpb/3D5C/production/_107580751_p0762f9l.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "（Credit: Iittala）",
+              "copyrightHolder": "Iittala"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-cul-48804477",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "世界很大谁不想看看 如何当一个好游客？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48804468",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48804468"
+            },
+            "summary": "“你的奢侈之旅，我的日常之苦”！居民们对游客发出的抱怨之声，你可曾听见？没有人有权利去任何想去的地方。",
+            "timestamp": 1561827422,
+            "byline": {
+              "name": "布赖恩·鲁夫金（Bryan Lufkin）",
+              "title": "BBC记者",
+              "persons": [
+                {
+                  "name": "রুখসানা",
+                  "function": ""
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107532523",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7F0B/production/_107532523_stonehengegettyimages-593275870.jpg",
+              "path": "/cpsprodpb/7F0B/production/_107532523_stonehengegettyimages-593275870.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "在巨石阵自拍的游客",
+              "caption": "如果你喜欢看神秘的巨石，夏至日可能就不是到巨石阵（Stonehenge）旅游的最佳时候。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48804468",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "俄罗斯为何无法复制中国的防火墙？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48787310",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48787310"
+            },
+            "summary": "审查网络内容，决定哪些封锁哪些开放，中国在这方面最为成功，俄国也希望能设立网络边境，但其做法与中国不同。",
+            "timestamp": 1561728757,
+            "byline": {
+              "name": "莎莉·阿迪",
+              "title": "（Sally Adee）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107564224",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A506/production/_107564224_p07965lb.jpg",
+              "path": "/cpsprodpb/A506/production/_107564224_p07965lb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "信息",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48787310",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "威尼斯双年展：惨遭海难的移民沉船是艺术吗？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-cul-48787307",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-cul-48787307"
+            },
+            "summary": "如果说艺术的目的是为了引起人们的强烈反应，那么在威尼斯双年展上展出的一艘失事船只就做到了这一点。",
+            "timestamp": 1561724916,
+            "byline": {
+              "name": "凯利·格罗威尔",
+              "title": "（Kelly Grovier）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107561007",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11180/production/_107561007_p079rm9d.jpg",
+              "path": "/cpsprodpb/11180/production/_107561007_p079rm9d.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "沉船",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-cul-48787307",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "世界杯足球赛：女足比男足占优势的五个方面"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48792914",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48792914"
+            },
+            "summary": "国际足联女子足球世界杯赛事，女足相对于男足来说很多方面无法并论，但在另外一些方面却占了优势。",
+            "timestamp": 1561721649,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+                "categoryName": "Fact Check"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107531592",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7349/production/_107531592_gettyimages-1150938423.jpg",
+              "path": "/cpsprodpb/7349/production/_107531592_gettyimages-1150938423.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "England fans cheering during a World Cup match",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48792914",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "欧洲热浪：BBC记者分享各国避暑小贴士"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48792910",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48792910"
+            },
+            "summary": "欧洲近日热浪滚滚。专家称随着全球气候变暖， 高温和热浪天气将会变成常态。面对炎炎烈日你该如何应对？",
+            "timestamp": 1561717080,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107564477",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12E86/production/_107564477_54fca988-6f71-4ca3-8fb6-2485f321fa04.jpg",
+              "path": "/cpsprodpb/12E86/production/_107564477_54fca988-6f71-4ca3-8fb6-2485f321fa04.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "巴黎热浪",
+              "caption": "巴黎热浪滚滚，埃菲尔铁塔前的喷泉大受人们的欢迎。",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48792910",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "福冈：日本最具创新力的城市"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48773560",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48773560"
+            },
+            "summary": "位于日本九州的福冈，虽然比不上首都东京受到关注，但福冈正在成为日本的“硅谷”——为初创企业提供成长的沃土。",
+            "timestamp": 1561644756,
+            "byline": {
+              "name": "艾德·根特",
+              "title": "（Edd Gent）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107545287",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/131AE/production/_107545287_p078m43k.jpg",
+              "path": "/cpsprodpb/131AE/production/_107545287_p078m43k.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "福冈",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48773560",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "从摇篮到摇篮：我们的零废弃未来"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-earth-48772283",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-earth-48772283"
+            },
+            "summary": "在自然界中，没有“废弃物”这种东西，所有的东西都会被大自然回收再用，“从摇篮到摇篮”就是这个理念核心。",
+            "timestamp": 1561636801,
+            "byline": {
+              "name": "佐伊·科米尔",
+              "title": "（Zoe Cormier）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107545284",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/BC7E/production/_107545284_2fnuf1c20e61000.jpg",
+              "path": "/cpsprodpb/BC7E/production/_107545284_2fnuf1c20e61000.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "回收",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-earth-48772283",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "机器人如何“抢走2000万工人的饭碗”"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48787306",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48787306"
+            },
+            "summary": "机器人取代人工已成现实，但坏消息的另一面是机器淘在汰旧工作的同时也在创造新工作，问题是你能胜任新的工作吗？",
+            "timestamp": 1561641256,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107560756",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/100AA/production/_107560756_a9187b21-1181-4058-be43-982ef2857695.jpg",
+              "path": "/cpsprodpb/100AA/production/_107560756_a9187b21-1181-4058-be43-982ef2857695.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "日本机器人服务生",
+              "caption": "服务业的工作也正受到冲击",
+              "copyrightHolder": "REUTERS/Issei Kato"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48787306",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "男性避孕药：英国试验避孕药膏 一抹解忧愁？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48787305",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48787305"
+            },
+            "summary": "研究人员希望这一男性新型避孕药膏最终可以成为女性避孕药丸的一种替代产品，让人们可以放心地长期使用。",
+            "timestamp": 1561632408,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107548386",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10B20/production/_107548386_ffab6bdf-fcdb-4728-9796-f323191834bf.jpg",
+              "path": "/cpsprodpb/10B20/production/_107548386_ffab6bdf-fcdb-4728-9796-f323191834bf.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "詹姆斯和戴安娜",
+              "caption": "詹姆斯·奥瓦尔斯和女友戴安娜·巴德斯利",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48787305",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "发现鲜味的人：鲜味究竟是什么味"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-48739832",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-48739832"
+            },
+            "summary": "100多年前日本人池田菊苗发现鲜味，这在当时并没有立即获得全球的认可，但如今科学家都承认，鲜味是真实存在的。",
+            "timestamp": 1561558029,
+            "byline": {
+              "name": "维罗尼克·格林伍德",
+              "title": "（Veronique Greenwood）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107509684",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/BE32/production/_107509684_p0786yn0.jpg",
+              "path": "/cpsprodpb/BE32/production/_107509684_p0786yn0.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "香菇",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48739832",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "你能想象出20年后看电影是什么感觉？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-cul-48722547",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-cul-48722547"
+            },
+            "summary": "快速发展的科技赋予电影未来无限的潜能，尤其是增强现实技术与虚拟现实和云技术的结合，让看电影未来成为一种体验。",
+            "timestamp": 1561553472,
+            "byline": {
+              "name": "卢克·巴克马斯特",
+              "title": "（Luke Buckmaster）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107509491",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4C22/production/_107509491_p078l109.jpg",
+              "path": "/cpsprodpb/4C22/production/_107509491_p078l109.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "虚拟实境",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-cul-48722547",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "酥油茶与防弹咖啡：一个鲜为人知的故事"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48772282",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48772282"
+            },
+            "summary": "亚斯普雷曾是美国硅谷的一名技术主管，但一次西藏之旅却给他创造出防弹咖啡的灵感，从此改变了他的人生。",
+            "timestamp": 1561549872,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107520431",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/345A/production/_107520431_b5dd20ff-6b3b-490d-833a-8017a9ce4af1.jpg",
+              "path": "/cpsprodpb/345A/production/_107520431_b5dd20ff-6b3b-490d-833a-8017a9ce4af1.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "防弹咖啡",
+              "caption": "防弹咖啡",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48772282",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美食美味科学：探索舌尖上的甜酸苦辣"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/48772278",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/48772278"
+            },
+            "summary": "萝卜白菜各有所爱，有人能吃酸、有人不怕辣。这一切的背后都有其科学道理在里面，其实并不简单。",
+            "timestamp": 1561545474,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107490205",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C421/production/_107490205_699ef1b9-bc8b-45c4-8fe7-901f716a9f2f.jpg",
+              "path": "/cpsprodpb/C421/production/_107490205_699ef1b9-bc8b-45c4-8fe7-901f716a9f2f.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "巧克力蛋糕",
+              "caption": "巧克力蛋糕受大多数人的青睐",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "主页",
+              "uri": "/ukchina/simp/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/48772278",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Interactivity"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "主页",
+    "uri": "/ukchina/simp/front_page",
+    "id": "urn:bbc:ares::index:ukchina/simp/front_page/desktop/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "主页",
+      "uri": "/ukchina/simp/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC英伦网",
+      "uri": "/ukchina/simp",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

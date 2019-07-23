@@ -1,0 +1,2449 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::index:zhongwen/trad/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/zhongwen/trad/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/front_page",
+      "curie": "http://www.bbc.co.uk/asset/426d2030-e2dc-5202-e050-380a4e80578e/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "zhongwen-traditional-v6",
+    "language": "zh-Hant",
+    "lastUpdated": 1563903814582,
+    "firstPublished": 1480430064,
+    "lastPublished": 1563903805,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "zhongwentrad.page",
+      "cps_asset_id": "38142263",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [
+      "top-story",
+      "secondary-top-story",
+      "other-top-stories",
+      "special-reports",
+      "also-in-news",
+      "section-digest",
+      "feature-main",
+      "podcast-promotion",
+      "featured-site-top-stories",
+      "useful-links",
+      "responsive-cluster"
+    ],
+    "title": "主頁",
+    "summary": "BBC中文網是面向全球華人並每日更新的新聞資訊網站，提供客觀及時和凖確的內容以及對新聞故事的深入分析和評論。我們也提供繁體版臉書。"
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "top-story",
+        "title": "Top story",
+        "maxRelatedLinks": 4,
+        "items": [
+          {
+            "headlines": {
+              "headline": "鮑里斯·約翰遜：從記者到首相的新聞人物"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/uk-49086056",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/uk-49086056"
+            },
+            "summary": "約翰遜是英國政壇鮮見的特色人物：反正統、破規矩、不修篇幅，且花絮不斷。一頭雜亂金髮也是出名的個性標誌。",
+            "timestamp": 1563879899,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107985943",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/888E/production/_107985943_johnson-index-reuters-1.jpg",
+              "path": "/cpsprodpb/888E/production/_107985943_johnson-index-reuters-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Boris Johnson",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "section": {
+              "subType": "IDX",
+              "name": "英國動態",
+              "uri": "/zhongwen/trad/uk",
+              "type": "simple"
+            },
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "從中國女婿到「金毛怪咖」 誰會成為英國首相"
+                },
+                "locators": {
+                  "assetUri": "/zhongwen/trad/uk-48588861",
+                  "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/trad/uk-48588861"
+                },
+                "summary": "英國首相角逐從提名到確認，遴選過程將在七月底完成。BBC中文用五張圖帶您了解這場黨魁之爭。",
+                "timestamp": 1560199893,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:zhongwen/trad/uk-48588861",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "英國脫歐 撥開亂局看真相 無協議變數有多大"
+                },
+                "locators": {
+                  "assetUri": "/zhongwen/trad/uk-48664473",
+                  "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/trad/uk-48664473"
+                },
+                "summary": "在中美貿易戰、香港大遊行和美伊緊張關係的同時，英國的脫歐進展如何？下一任首相選得怎樣？",
+                "timestamp": 1560805580,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:zhongwen/trad/uk-48664473",
+                "type": "cps"
+              }
+            ],
+            "overtypedSummary": " 他歷來就是英國政壇上難得見到的特色人物，常有各種反正統、破規矩的言行，花絮不斷。一頭金色亂髮是他舉世聞名的個人標誌。",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/uk-49086056",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Top story - Zhongwen"
+        },
+        "semanticGroupName": "Top story"
+      },
+      {
+        "type": "secondary-top-story",
+        "title": "More top stories",
+        "maxRelatedLinks": 0,
+        "items": [
+          {
+            "headlines": {
+              "headline": "中國前總理天安門鎮壓「強硬派」李鵬去世"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49084536",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49084536"
+            },
+            "summary": "中國前國務院總理李鵬於2019年7月22日去世，終年91歲。",
+            "timestamp": 1563883838,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107985960",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1B2E/production/_107985960_gettyimages-183974981.jpg",
+              "path": "/cpsprodpb/1B2E/production/_107985960_gettyimages-183974981.jpg",
+              "height": 548,
+              "width": 975,
+              "altText": "。",
+              "caption": "李鵬與八九學運學生領袖王丹。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49084536",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "大陸網民「出征」臉書反對香港暴力，爭購元朗蛋卷"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49082046",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49082046"
+            },
+            "summary": "香港上周末出現抗議者衝擊中聯辦以及不明白衣人士攻擊市民事件，一些新聞過濾後傳到大陸後，一群大陸網民發起「出征臉書」反暴力行動，並且熱購元朗蛋卷。",
+            "timestamp": 1563874809,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107983541",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/38CA/production/_107983541_gettyimages-1156983338.jpg",
+              "path": "/cpsprodpb/38CA/production/_107983541_gettyimages-1156983338.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "遊行結束後數名示威者到西環中聯辦附近，向中聯辦牌匾扔雞蛋，塗污國徽",
+              "caption": "遊行結束後數名示威者到西環中聯辦附近，向中聯辦牌匾扔雞蛋，塗污國徽",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49082046",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "《廣場協議》見證者的忠告：中美打破僵局甚至需要主權讓步"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49056173",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49056173"
+            },
+            "summary": "日美貿易戰和廣場協議親歷者行天豐雄接受BBC中文專訪表示：要美國放棄高消費或中國放棄依賴出口和投資，都很困難……",
+            "timestamp": 1563872882,
+            "byline": {
+              "name": "川江",
+              "title": "BBC中文記者 ",
+              "persons": [
+                {
+                  "name": "Dan Egan",
+                  "function": ""
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107955214",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A127/production/_107955214_2aa381c6-6ec0-403b-a1e7-12b6fef952ae.jpg",
+              "path": "/cpsprodpb/A127/production/_107955214_2aa381c6-6ec0-403b-a1e7-12b6fef952ae.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Toyoo Gyohten",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49056173",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "香港疑似黑社會暴打市民 引發國際媒體關注"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49077273",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49077273"
+            },
+            "summary": "香港發生疑似黑社會人員襲擊示威者暴力事件，導致40多人受傷。外界質疑警方不作為，甚至縱容黑社會暴力行為。",
+            "timestamp": 1563829472,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107980194",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/BFD4/production/_107980194_mediaitem107980192.jpg",
+              "path": "/cpsprodpb/BFD4/production/_107980194_mediaitem107980192.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "gang",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49077273",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "傅滿洲重返銀屏？漫威新片讓中國網民上火"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49080126",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49080126"
+            },
+            "summary": "漫威公布了華人英雄電影《上氣》（Shang-Chi）陣容，卻在中國社交媒體掀起了一場有關\"辱華\"的爭議。",
+            "timestamp": 1563860709,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107981461",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4022/production/_107981461_gettyimages-467335503.jpg",
+              "path": "/cpsprodpb/4022/production/_107981461_gettyimages-467335503.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "香港影星梁朝偉將在漫威電影《上氣》飾演滿大人。",
+              "caption": "香港影星梁朝偉將在漫威電影《上氣》飾演滿大人。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49080126",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "中國加大金融業開放能否將美國拉回談判桌"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/business-49070972",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/business-49070972"
+            },
+            "summary": "繼採購美國農產品之後，中方開始放開部分金融市場，但這些舉措似乎很難短期內幫助突破中美談判僵局。",
+            "timestamp": 1563851602,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107981521",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/30E6/production/_107981521_gettyimages-909961832.jpg",
+              "path": "/cpsprodpb/30E6/production/_107981521_gettyimages-909961832.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "RMB and USD cash",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/business-49070972",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "More top stories"
+      },
+      {
+        "type": "other-top-stories",
+        "title": "Top stories overflow",
+        "items": [
+          {
+            "headlines": {
+              "headline": "香港特首記者會：拒定性元朗事件「暴動」"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49069602",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49069602"
+            },
+            "summary": "香港特首林鄭稱，將依法追究21日攻擊中聯辦大樓示威者的責任，並拒絶定性21日夜間元朗的暴力襲擊是「暴動」。",
+            "timestamp": 1563874363,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107969641",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3968/production/_107969641_gettyimages-1157177565.jpg",
+              "path": "/cpsprodpb/3968/production/_107969641_gettyimages-1157177565.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": ",",
+              "caption": "香港特首林鄭月娥7月22日下午見記者。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49069602",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "香港反《逃犯條例》7.21抗議活動時間線"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49065555",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49065555"
+            },
+            "summary": "民陣周日（21日）發起遊行要求港府撤回《逃犯條例》，以及設立獨立委員會調查警民衝突。",
+            "timestamp": 1563787613,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107966005",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C392/production/_107966005_whatsappimage2019-07-21at9.50.07pm.png",
+              "path": "/cpsprodpb/C392/production/_107966005_whatsappimage2019-07-21at9.50.07pm.png",
+              "height": 549,
+              "width": 976,
+              "altText": "上環示威現場，警方仍在加速推進，現場一片騷動",
+              "caption": "上環示威現場，警方仍在加速推進，現場一片騷動",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49065555",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英國百年情報老店——政府通訊總部前世今生"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/uk-49018370",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/uk-49018370"
+            },
+            "summary": "成立於1919年的英國政府通訊總部（GCHQ）在百年大慶之際，也面臨前所未有的挑戰。",
+            "timestamp": 1563713452,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107915424",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A5D3/production/_107915424_52d9e21d-d39b-4270-a267-fc47591b60bb.jpg",
+              "path": "/cpsprodpb/A5D3/production/_107915424_52d9e21d-d39b-4270-a267-fc47591b60bb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "英國政府通訊總部",
+              "caption": "成立於1919年的英國政府通訊總部負責情報、安全和網絡安全。",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "英國動態",
+              "uri": "/zhongwen/trad/uk",
+              "type": "simple"
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/uk-49018370",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "伊朗扣押「英國」油輪事件發酵 解決方案絶非直截了當"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49063934",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49063934"
+            },
+            "summary": "伊朗扣押一艘懸掛英國國旗的油輪。英國警告伊朗要面對後果。海灣局勢愈發錯綜複雜。",
+            "timestamp": 1563747179,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107963951",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3E40/production/_107963951_ab429bce-a8fd-4ceb-8b66-96f84dc4e766.jpg",
+              "path": "/cpsprodpb/3E40/production/_107963951_ab429bce-a8fd-4ceb-8b66-96f84dc4e766.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "\"斯坦納帝國號\"（Stena Impero）",
+              "caption": "\"斯坦納帝國號\"（Stena Impero）雖然懸掛英國國旗，但由瑞典公司所有。",
+              "copyrightHolder": "PA Media"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49063934",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "圖輯：香港示威抗議繼續 大規模警民衝突"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49065935",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49065935"
+            },
+            "summary": "香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。",
+            "timestamp": 1563730802,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "PGL",
+            "indexImage": {
+              "id": "107966164",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B456/production/_107966164_hk_gas_7_getty.jpg",
+              "path": "/cpsprodpb/B456/production/_107966164_hk_gas_7_getty.jpg",
+              "height": 749,
+              "width": 1331,
+              "altText": "香港抗議",
+              "caption": "香港連續第七個周末出現抗議示威",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49065935",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "香港「反送中」7.21遊行直擊：示威者與警方對峙，遭多輪催淚彈驅逐",
+              "overtyped": "香港「反送中」7.21遊行直播回放：示威者與警方對峙，遭多輪催淚彈驅逐"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/live/chinese-news-49055243",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/live/chinese-news-49055243"
+            },
+            "summary": "示威者短暫聚集中聯辦門前後，撤到上環與警方對峙。警方發射多輪催淚後，發出開槍警告。據香港電台報道，元朗地鐵站內今晚爆發衝突，一批身著白衣、戴口罩的人士涉嫌襲擊市民，數人受傷。",
+            "timestamp": 1563690780,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "LIV",
+            "indexImage": {
+              "id": "107962389",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/18016/production/_107962389_teargas2.jpg",
+              "path": "/cpsprodpb/18016/production/_107962389_teargas2.jpg",
+              "height": 900,
+              "width": 1600,
+              "altText": ".",
+              "copyrightHolder": "BBC中文"
+            },
+            "commentary": {
+              "order": "descending",
+              "assetUUID": "904737370BA86147986B7B42C80D3C0C",
+              "channels": {
+                "enhancedmobile": "bbc.cps.asset.49062055_EnhancedMobile",
+                "desktop": "bbc.cps.asset.49062055_HighWeb",
+                "highweb": "bbc.cps.asset.49062055_HighWeb",
+                "mobile": "bbc.cps.asset.49062055_EnhancedMobile"
+              }
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/live/chinese-news-49055243",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Top stories overflow"
+      },
+      {
+        "type": "special-reports",
+        "title": "Special reports 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "香港元朗白衣人暴襲記者平民引眾怒，警方否認縱容勾結「黑社會」",
+              "overtyped": "香港白衣人暴襲記者平民引眾怒，警方否認縱容勾結「黑社會」"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49070742",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49070742"
+            },
+            "summary": "民主派政黨指責，「警方恍如與黑社會協調好一樣」，強烈譴責特區政府和警方的不作為。香港學者沈旭暉和梁啟智形容這是「恐怖襲擊」。",
+            "timestamp": 1563790949,
+            "byline": {
+              "name": "林祖偉",
+              "title": "BBC中文",
+              "persons": [
+                {
+                  "name": "Abdujalil Abdurasulov",
+                  "function": "BBC News Almata"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107970780",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2203/production/_107970780_hi055443578.jpg",
+              "path": "/cpsprodpb/2203/production/_107970780_hi055443578.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "CLASH",
+              "copyrightHolder": "REUTERS "
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49070742",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "必看"
+        },
+        "semanticGroupName": "Special reports 1"
+      },
+      {
+        "type": "also-in-news",
+        "title": "Also in the news",
+        "items": [
+          {
+            "headlines": {
+              "headline": "中港「水貨客」折射出的中國改革壓力"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49031065",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49031065"
+            },
+            "summary": "在深港邊界穿梭的「水貨客」難以禁絶，究其原因是兩地不同稅製造成的商品價格差。而稅制差異又深刻揭示了當前中國經濟面臨的改革壓力。",
+            "timestamp": 1563484454,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107926259",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1741E/production/_107926259_gettyimages-1155423690.jpg",
+              "path": "/cpsprodpb/1741E/production/_107926259_gettyimages-1155423690.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "反水客遊行",
+              "caption": "「水貨客」對深港邊境居民造成滋擾，引發民怨。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49031065",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "章瑩穎案：兇手克里斯滕森被判終身監禁"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49038516",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49038516"
+            },
+            "summary": "在中國訪問學者章瑩穎失蹤兩年後，殺害章的兇手布倫特·克里斯滕森被判終身監禁、不得保釋。",
+            "timestamp": 1563513796,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107523463",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8E50/production/_107523463__96788905_070317-wls-brendt-christensen-booking-img.jpg",
+              "path": "/cpsprodpb/8E50/production/_107523463__96788905_070317-wls-brendt-christensen-booking-img.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "克里斯滕森",
+              "copyrightHolder": "Police handout"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49038516",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "「反送中」7.21抗議：黑衣抗議者塗鴉中聯辦 元朗白衣人暴襲市民記者",
+              "overtyped": "香港 7.21抗議：黑衣抗議者塗鴉中聯辦 元朗白衣人暴襲市民記者"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49065855",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49065855"
+            },
+            "summary": "遊行結束後一群示威者到西環中聯辦附近，向中聯辦招牌扔雞蛋。晚上，示威者與警方在上環爆發衝突，警方發射多枚催淚彈清場。",
+            "timestamp": 1563732698,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107966207",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1127A/production/_107966207_whatsappimage2019-07-21at10.32.37pm.jpg",
+              "path": "/cpsprodpb/1127A/production/_107966207_whatsappimage2019-07-21at10.32.37pm.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "1",
+              "copyrightHolder": "BBC Chinese"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "  ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49065855",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美國對南海中越對峙和中菲撞船表態"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49064424",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49064424"
+            },
+            "summary": "越南抗議中國海洋調查船活動，美國指責中國阻撓他國獲取南海資源，美國對台軍售後，中美在南海相互指責升溫。",
+            "timestamp": 1563746571,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107963444",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/AD94/production/_107963444_16aaffd5-dbfa-4c95-8135-1d37f560a4ea.jpg",
+              "path": "/cpsprodpb/AD94/production/_107963444_16aaffd5-dbfa-4c95-8135-1d37f560a4ea.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "\"海洋地質8號\"",
+              "caption": "「海洋地質8號」是兩年前才下水的6785噸新型勘探船。這是一艘裝備了最先技術的全海域地質調查和海洋油氣調查船。",
+              "copyrightHolder": "xinhua"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49064424",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "香港逃犯條例：企業報告表示「反送中」抗議影響銷售額"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49045962",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49045962"
+            },
+            "summary": "奢侈品品牌公布香港反送中抗議影響其營銷的報告、並表示因為近日的政治動蕩，導致銷售額下降，旅遊業也將受到影響。",
+            "timestamp": 1563572060,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
+                "categoryName": "Review"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107943371",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/43B6/production/_107943371_hi055298306.jpg",
+              "path": "/cpsprodpb/43B6/production/_107943371_hi055298306.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "protest",
+              "caption": "7月14日香港民眾與警方在購物商場起嚴重肢肢體衝突。",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49045962",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "京阿尼火災：全球粉絲痛心不已 應援捐款接連不斷",
+              "overtyped": "京阿尼火災：全球粉絲痛心不已 捐款接連不斷"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49043192",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49043192"
+            },
+            "summary": "日本著名動畫工作室「京都動畫」 （京阿尼）作品聚焦不同群體與社會的各個方面，擁有眾多華人粉絲，在全世界也十分有影響力。",
+            "timestamp": 1563521101,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107927464",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B588/production/_107927464_kgf1e4.jpg",
+              "path": "/cpsprodpb/B588/production/_107927464_kgf1e4.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A still image shows two teenagers standing on a bridge over a koi pond, with the girl looking hopefully upward, while the boy is turned slightly away",
+              "caption": "KyoAni's 2016 film A Silent Voice was well-received critically",
+              "copyrightHolder": "Alamy"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "  ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49043192",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "中美外交官推特罵戰再起，中國外交愈趨「戰狼化」？",
+              "overtyped": "中美推特罵戰再起，北京外交趨「戰狼化」？"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49012321",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49012321"
+            },
+            "summary": "中國外交官趙立堅與前美國外交官賴斯在推特上掀起罵戰，互相指責對方「可恥與無知」。中國外交官近來在國際媒體和社交媒體上愈趨活躍，溝通效果卻見仁見智。",
+            "timestamp": 1563325459,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107907030",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0BFE/production/_107907030_gettyimages-828901238.jpg",
+              "path": "/cpsprodpb/0BFE/production/_107907030_gettyimages-828901238.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "推特",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49012321",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "「撐警大會」前夕 香港警方查獲大批爆炸物"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49057445",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49057445"
+            },
+            "summary": "香港警方稱爆炸物為TATP烈性炸藥，並稱這是他們所偵獲的最大規模的TATP製品。此外，警方還表示發現了其他的武器和抗議傳單。",
+            "timestamp": 1563629882,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107954496",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10F45/production/_107954496_mediaitem107954495.jpg",
+              "path": "/cpsprodpb/10F45/production/_107954496_mediaitem107954495.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Anti-extradition bill protesters, file image",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49057445",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "中國崛起和中美貿易戰：全球化逼近新拐點？"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49034305",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49034305"
+            },
+            "summary": "中國加入經濟全球化後國家實力迅猛增長，現在成為全球化的主要倡導者，但這種全球化因其自身矛盾可能已經接近拐點。",
+            "timestamp": 1563484189,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "104560182",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6DCA/production/_104560182_mediaitem104560181.jpg",
+              "path": "/cpsprodpb/6DCA/production/_104560182_mediaitem104560181.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "毛線織成的地球",
+              "caption": "二戰後建立的世界格局和國際秩序快散架了？",
+              "copyrightHolder": "Nadia Akingbule"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49034305",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "新聞時事 趨勢動態"
+        },
+        "semanticGroupName": "Also in the news"
+      },
+      {
+        "type": "section-digest",
+        "title": "Verticals",
+        "items": [
+          {
+            "headlines": {
+              "headline": "中英合作標誌性項目「死亡」 兩國黃金十年壯志難酬",
+              "overtyped": "中英合作標誌性項目死亡  兩國黃金十年壯志難酬"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-48962055",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-48962055"
+            },
+            "summary": "老牌工業基地謝菲爾德與一家中國公司簽訂10億英鎊的長期投資協議三年後，該市宣佈這個協議已經「死亡」。",
+            "timestamp": 1563239962,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107846723",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7FFC/production/_107846723_gettyimages-493417544.jpg",
+              "path": "/cpsprodpb/7FFC/production/_107846723_gettyimages-493417544.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "揮舞著的中英兩國國旗",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "　",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-48962055",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "香港警察的自白：不願夾在示威者與政府中間"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-48999586",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-48999586"
+            },
+            "summary": "前線警員對BBC中文說，外界不應該美化示威者，但政治問題應該政治解決。",
+            "timestamp": 1563252240,
+            "byline": {
+              "name": "林祖偉",
+              "title": "BBC中文 ",
+              "persons": [
+                {
+                  "name": "Dan Egan",
+                  "function": ""
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107893980",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/22EB/production/_107893980_gettyimages-1155799013.jpg",
+              "path": "/cpsprodpb/22EB/production/_107893980_gettyimages-1155799013.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "前線警員刻意隱藏自己身份執法引發爭議。",
+              "caption": "前線警員刻意隱藏自己身份執法引發爭議。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-48999586",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "眾議院遣責特朗普言論攻擊女議員，對他有實質影響嗎？",
+              "overtyped": "特朗普和女議員「小分隊」開戰  她們怎麼反擊"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49000016",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49000016"
+            },
+            "summary": "美國總統在社交網絡上叫四名民主黨女性少數族裔議員「回老家」，眾議院已通過動議遣責，但他會為此付出的政治代價嗎？",
+            "timestamp": 1563339289,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107906658",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14E9C/production/_107906658_055337500.jpg",
+              "path": "/cpsprodpb/14E9C/production/_107906658_055337500.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "特朗普",
+              "copyrightHolder": "Getty Images"
+            },
+            "imageThumbnail": {
+              "id": "107884286",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/10A98/production/_107884286_tweet.jpg",
+              "path": "/cpsprodpb/10A98/production/_107884286_tweet.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Person on laptop with President Trump's photo on it and Twitter log in background",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49000016",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "趨紅陰影下的香港電視台「反送中」報道抗議差異背後"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49001797",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49001797"
+            },
+            "summary": "香港電視廣播有限公司是近期在反送中運動成為示威者針對的目標。在抗議現場，經常發生示威者包圍TVB記者及採訪車的情況。",
+            "timestamp": 1563310917,
+            "byline": {
+              "name": "林祖偉 李翰文",
+              "title": "BBC中文記者",
+              "persons": [
+                {
+                  "name": "Jeff Li",
+                  "function": "BBC Monitoring"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107897824",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A77F/production/_107897824_hi054718046-afp.jpg",
+              "path": "/cpsprodpb/A77F/production/_107897824_hi054718046-afp.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "香港傳媒在這次《逃犯條例》條例修訂的爭議中扮演了重要角色。",
+              "caption": "香港傳媒在這次《逃犯條例》條例修訂的爭議中扮演了重要角色。",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49001797",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "中國經濟增長近30年最低 如何解讀貿易戰衝擊力"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-48993132",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-48993132"
+            },
+            "summary": "中國今年第二季度的經濟雖然仍有6.2%的增長，遠超所有西方發達國家，卻牽動世界的敏感神經。",
+            "timestamp": 1563225473,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107879813",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7C99/production/_107879813_gettyimages-916019102.jpg",
+              "path": "/cpsprodpb/7C99/production/_107879813_gettyimages-916019102.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A woman selects dried longan at a supermarket in Fuyang, in eastern China's Anhui province on February 9, 2018.",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-48993132",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "在香港懷孕的外籍幫傭 留下來的路有多難"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-48995755",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-48995755"
+            },
+            "summary": "在香港越來越依賴外傭時，如何面對外傭懷孕，已經成為香港的重要議題，也挑戰著社會的公平正義。",
+            "timestamp": 1563329929,
+            "byline": {
+              "name": "呂嘉鴻 李宗憲",
+              "title": "BBC中文",
+              "persons": [
+                {
+                  "name": "서명진",
+                  "function": "BBC 코리아"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
+                "categoryName": "Review"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107907540",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11DA/production/_107907540_dsc_5480.jpg",
+              "path": "/cpsprodpb/11DA/production/_107907540_dsc_5480.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": ".",
+              "caption": "香港目前約有34萬名外傭在港工作。",
+              "copyrightHolder": "Julia Broad Photography"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-48995755",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "阿波羅登月50週年：和火箭相關的五個數字"
+            },
+            "locators": {
+              "assetUri": "/ukchina/trad/vert-fut-48999576",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/vert-fut-48999576"
+            },
+            "summary": "為了把宇航員送上月球，美國宇航局必須建造有史以來最強大的火箭。這就是土星5號的由來。",
+            "timestamp": 1563246943,
+            "byline": {
+              "name": "理查德·霍林漢姆 ",
+              "title": "Richard Hollingham",
+              "persons": [
+                {
+                  "name": "রুখসানা",
+                  "function": ""
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Summary",
+                "categoryName": "Summary"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107893552",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/63C3/production/_107893552_4.jpg",
+              "path": "/cpsprodpb/63C3/production/_107893552_4.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "。",
+              "caption": "土星5號高達111米（366英尺），重達2950噸。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "site": {
+              "subType": "site",
+              "name": "BBC英倫網",
+              "uri": "/ukchina/trad",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/trad/vert-fut-48999576",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "極右翼亞文化生態圈揭秘之二：歐洲極右翼運動骨幹",
+              "overtyped": "極右翼亞文化生態圈揭秘之二：歐洲運動骨幹"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-48965255",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-48965255"
+            },
+            "summary": "一個橫跨網絡和現實世界的極右翼亞文化系統已成型，安全當局卻剛開始注意到它。",
+            "timestamp": 1563225636,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107851730",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0E83/production/_107851730_2sellner---gordon-blurred.jpg",
+              "path": "/cpsprodpb/0E83/production/_107851730_2sellner---gordon-blurred.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "馬丁·塞爾納說自己不是種族主義分子，而是民族主義者",
+              "caption": "馬丁·塞爾納說自己不是種族主義分子，而是民族主義者",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-48965255",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英國議員：盡快定奪華為問題 無關親華或反華"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49045672",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49045672"
+            },
+            "summary": "英國國會議員建議新首相要盡快對華為問題作決定，說這是個地緣戰略決定，不能讓它危及「五眼」情報聯盟的合作。",
+            "timestamp": 1563571658,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107943045",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D312/production/_107943045_a9030246-ece9-4c71-82d7-665d6db8b08f.jpg",
+              "path": "/cpsprodpb/D312/production/_107943045_a9030246-ece9-4c71-82d7-665d6db8b08f.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "英國國會",
+              "caption": "英國國會議員建議新首相要盡快對華為問題作決定，並說推遲做出決定會\"損害英國的對外關係\"",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49045672",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "知識資訊 觀點角度"
+        },
+        "semanticGroupName": "Verticals"
+      },
+      {
+        "type": "feature-main",
+        "title": "Features",
+        "items": [
+          {
+            "headlines": {
+              "headline": "逃犯條例風波中 香港明星的不同選擇"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49008166",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49008166"
+            },
+            "summary": "何韻詩出現在支持示威的前線，譚詠麟梁家輝撐警，一些香港藝人沒有發表意見，他們都難逃政治標籤。",
+            "timestamp": 1563397232,
+            "byline": {
+              "name": "雲昇",
+              "title": "BBC中文記者",
+              "persons": [
+                {
+                  "name": ". .",
+                  "function": "BBC News"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107907610",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0686/production/_107907610_gettyimages-1154572333.jpg",
+              "path": "/cpsprodpb/0686/production/_107907610_gettyimages-1154572333.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "何韻詩在聯合國",
+              "caption": "香港歌手何韻詩是「反送中」示威中曝光度最高的藝人。在7月8日聯合國人權理事會會議上，她以香港歌手兼民主活動人士身份出席併發言。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49008166",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "谷歌中國版搜索計劃「蜻蜓」終止 又疑被中國軍方滲透",
+              "overtyped": "谷歌中國版搜索計劃終止 又疑被中國軍方滲透"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/business-49031775",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/business-49031775"
+            },
+            "summary": "在中國內容審查政策下，外國科技巨頭要想進入中國市場通常需要作出妥協。",
+            "timestamp": 1563484772,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "104857289",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17FE3/production/_104857289_china-google1.jpg",
+              "path": "/cpsprodpb/17FE3/production/_104857289_china-google1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "China, Google, Project Dragonfly",
+              "caption": "去年谷歌計劃在中國推出\"和諧版\"搜索服務的消息引來爭議。",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/business-49031775",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "從9·11到特朗普 辛普森家庭如何預見未來"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49070722",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49070722"
+            },
+            "summary": "《辛普森一家》作者成功預測9·11和特朗普當選，是純屬巧合，還是該劇的創作人員們真的有預見未來的神奇能力？",
+            "timestamp": 1563789106,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107932092",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/715F/production/_107932092_trumpsimpsons2.jpg",
+              "path": "/cpsprodpb/715F/production/_107932092_trumpsimpsons2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "The Simpsons",
+              "caption": "早在特朗普在2016年當選為美國總統的16年前，該動畫片就已經作出了成功的預言。",
+              "copyrightHolder": "20th Century Fox"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49070722",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "連體嬰兒分離手術：一對巴基斯坦「頭聯胎」姐妹的生命之戰",
+              "overtyped": "連體嬰分離手術：一對「頭聯胎」姐妹的生命之戰"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49068012",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49068012"
+            },
+            "summary": "在英國一所醫院裏，BBC全程獨家見證了莎法和瑪瓦的突破性分離手術。",
+            "timestamp": 1563855237,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107968181",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/470A/production/_107968181_sequence-03-still001-1920x1080.jpg",
+              "path": "/cpsprodpb/470A/production/_107968181_sequence-03-still001-1920x1080.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "莎法與瑪瓦",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49068012",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英國華為5G抉擇舉棋不定，待美國禁令影響「明朗化」"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/uk-49079313",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/uk-49079313"
+            },
+            "summary": "英國政府在有關華為是否被排除在5G建設之外的決定上仍然舉棋不定。",
+            "timestamp": 1563832210,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107976737",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12027/production/_107976737_mediaitem107976736.jpg",
+              "path": "/cpsprodpb/12027/production/_107976737_mediaitem107976736.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Huawei logo",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "英國動態",
+              "uri": "/zhongwen/trad/uk",
+              "type": "simple"
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/uk-49079313",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美國奇人奇事：他為何從20歲起與世隔絶30年？",
+              "overtyped": "美國奇人奇事：20歲的他為何選擇隱居30年"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49022073",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49022073"
+            },
+            "summary": "那年，他隻身走進緬因州的森林，從此近30年不曾與外界進行過任何交流。在社交媒體盛行的今天，這真是驚人之舉。",
+            "timestamp": 1563452306,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107917601",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/29AF/production/_107917601_50300618-880f-414d-8332-cdbc609020f4.jpg",
+              "path": "/cpsprodpb/29AF/production/_107917601_50300618-880f-414d-8332-cdbc609020f4.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "奈特",
+              "caption": "林中隱士奈特",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49022073",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "FaceApp爆紅引發的個人隱私憂慮"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49037435",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49037435"
+            },
+            "summary": "社交媒體上掀起「FaceApp老臉挑戰」的風潮，有美國議員呼籲進行調查。",
+            "timestamp": 1563522568,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107915436",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F7DB/production/_107915436_faceapp2.jpg",
+              "path": "/cpsprodpb/F7DB/production/_107915436_faceapp2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "FaceApp screenshots",
+              "caption": "社群媒體上掀起\"FaceApp老臉挑戰\"的風潮，卻因為資安疑慮，有美國政客呼籲有關單位進行調查。",
+              "copyrightHolder": "FaceApp"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49037435",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "極右翼亞文化生態圈揭秘之三：喬裝滲透的神秘女子",
+              "overtyped": "極右翼亞文化生態圈揭秘：喬裝滲透的神秘女"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-48965275",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-48965275"
+            },
+            "summary": "一個橫跨網絡和現實世界的極右翼亞文化系統亦已成型，而安全部門卻剛開始注意到它。",
+            "timestamp": 1563454614,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107849392",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/72D2/production/_107849392_julia_ebner_pdc5194.jpg",
+              "path": "/cpsprodpb/72D2/production/_107849392_julia_ebner_pdc5194.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Julia Ebner",
+              "caption": "Julia Ebner",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-48965275",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "中國ASMR播主：我想用聲音照顧孤獨的人"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/chinese-news-49013221",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49013221"
+            },
+            "summary": "來自中國重慶的「MT」是中國最有影響力的ASMR播主之一。她對BBC說，很多人在現代社會都會感覺到孤獨，ASMR可以用聲音給人一種照顧的感覺。",
+            "timestamp": 1563528219,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07h8yfj",
+              "subType": "clip",
+              "format": "video",
+              "title": "中国ASMR播主：我想用声音照顾孤独的人",
+              "synopses": {
+                "short": "中国ASMR播主：我想用声音照顾孤独的人",
+                "long": "被称为“ASMR”（中文俗称“颅内高潮”）的视频在中国收获了越来越多年轻人的欢迎。它利用很多奇特的声音，据称可让部分人感到刺激和减压。 \n来自中国重庆的“MT”便是中国最有影响力的ASMR播主之一。她对BBC说，很多人在现代社会都会感觉到孤独，ASMR可以用声音给人一种照顾的感觉。 \n视频制作：汪宜青",
+                "medium": "来自中国重庆的“MT”便是中国最有影响力的ASMR播主之一。她对BBC说，很多人在现代社会都会感觉到孤独，ASMR可以用声音给人一种照顾的感觉。"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07h8yh4.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "中國ASMR播主：我想用聲音照顧孤獨的人",
+              "versions": [
+                {
+                  "versionId": "p07h8yfl",
+                  "types": ["Original"],
+                  "duration": 179,
+                  "durationISO8601": "PT2M59S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1563517152
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107907750",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/168A/production/_107907750_p07h284d.jpg",
+              "path": "/cpsprodpb/168A/production/_107907750_p07h284d.jpg",
+              "height": 575,
+              "width": 1024,
+              "altText": "來自中國重慶的「MT」便是中國最有影響力的ASMR播主之一。她對BBC說，很多人在現代社會都會感覺到孤獨，ASMR可以用聲音給人一種照顧的感覺。",
+              "copyrightHolder": "被稱為「ASMR」（中文俗稱「顱內高潮」）的視頻在中國收獲了越來越多年輕人的歡迎。它利用很多奇特的聲"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49013221",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "阿波羅登月50週年：太空探索大飛躍前前後後"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/science-49001866",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/science-49001866"
+            },
+            "summary": "阿波羅11號成功讓人類登陸月球是美國和世界歷史的重要一刻，當時究竟發生了什麼？為什麼這一刻如此重要？",
+            "timestamp": 1563272046,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107807631",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3566/production/_107807631_79ab055d-47b5-4568-b597-f5548a9e7245.jpg",
+              "path": "/cpsprodpb/3566/production/_107807631_79ab055d-47b5-4568-b597-f5548a9e7245.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "US astronaut on Moon",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/science-49001866",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "離開「996」工作制，他帶著相機踏上環球旅程",
+              "overtyped": "離開「996」工作制，他帶著相機環球旅行"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49038515",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49038515"
+            },
+            "summary": "前互聯網公司高管單曉蕾帶著相機與500顆棒棒糖踏上旅程，他的足跡遍布全球，包括遊客罕至的伊朗鄉村。行前朋友們擔心他身陷險境，他卻在伊朗發現最美的風景與人心。",
+            "timestamp": 1563623011,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07h82bb",
+              "subType": "clip",
+              "format": "video",
+              "title": "离开“996”工作制，他带着相机踏上环球旅程",
+              "synopses": {
+                "short": "环球旅行摄影师：钱比以前赚得少，但我快乐得多",
+                "long": "自由摄影师单晓蕾带着500颗棒棒糖踏上旅程，他的足迹遍布全球，包括游客罕至的伊朗乡村。行前朋友们担心他身陷险境，他却在伊朗发现最美的风景与人心。\n \n曾是互联网公司高管的单晓蕾，离开了比“996”工作制更严苛的高薪厚职，转而用相机镜头记录世界各地的人生百态，也在新的生活方式中找回了真实的自己。\n \n“现在赚得钱比以前少得多，但我比原来快乐得多。”\n \n采访/剪辑：冯兆音，山姆·法尔扎内（Sam Farzaneh） 拍摄：汪宜青",
+                "medium": "前互联网公司高管单晓蕾带着相机与500颗棒棒糖踏上旅程，他的足迹遍布全球，包括游客罕至的伊朗乡村。行前朋友们担心他身陷险境，他却在伊朗发现最美的风景与人心。"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07hbfqq.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "環球旅行攝影師：錢比以前賺得少，但我快樂得多",
+              "versions": [
+                {
+                  "versionId": "p07h82bd",
+                  "types": ["Original"],
+                  "duration": 153,
+                  "durationISO8601": "PT2M33S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1563544582
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107938254",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B0E3/production/_107938254_p07hbfqq.jpg",
+              "path": "/cpsprodpb/B0E3/production/_107938254_p07hbfqq.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "前互聯網公司高管單曉蕾帶著相機與500顆棒棒糖踏上旅程，他的足跡遍布全球，包括遊客罕至的伊朗鄉村。行前朋友們擔心他身陷險境，他卻在伊朗發現最美的風景與人心。",
+              "copyrightHolder": "自由攝影師單曉蕾帶著500顆棒棒糖踏上旅程，他的足跡遍布全球，包括遊客罕至的伊朗鄉村。行前朋友們擔心"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49038515",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "默克爾65歲生日：顫抖的鐵娘子震撼著德國"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-49013122",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-49013122"
+            },
+            "summary": "在圍繞默克爾健康狀況的各種猜測不絶之際，7月17日（周三），這位德國總理迎來了自己的65歲生日。",
+            "timestamp": 1563359141,
+            "byline": {
+              "name": "麥吉尼斯(Damien McGuinness）",
+              "title": "BBC記者 發自柏林",
+              "persons": [
+                {
+                  "name": "Aarabu Ahmad Sultan",
+                  "function": "Srinagar"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107903974",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/BB3A/production/_107903974_055226850-1.jpg",
+              "path": "/cpsprodpb/BB3A/production/_107903974_055226850-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Angela Merkel with Danish Prime Minister Mette Frederiksen on 11 July",
+              "caption": "默克爾現在的一舉一動都被公眾密切關注，公眾試圖發現更多關於她健康狀況的細節。",
+              "copyrightHolder": "EPA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-49013122",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Features"
+      },
+      {
+        "type": "podcast-promotion",
+        "title": "Podcasts",
+        "items": [
+          {
+            "name": "「時事一周」（粵語）",
+            "summary": "最新節目播客- 時事一周 2013-03--05",
+            "uri": "http://www.bbc.com/zhongwen/trad/institutional-38228429",
+            "contentType": "Podcast",
+            "assetTypeCode": "PRO",
+            "timestamp": 1481007686,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "播客精選",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.co.uk/zhongwen/trad/indepth/cluster_podcasts.shtml",
+            "desktop": "http://www.bbc.co.uk/zhongwen/trad/indepth/cluster_podcasts.shtml",
+            "mobile": "http://www.bbc.co.uk/zhongwen/trad/indepth/cluster_podcasts.shtml",
+            "enhancedmobile": "http://www.bbc.co.uk/zhongwen/trad/indepth/cluster_podcasts.shtml"
+          }
+        },
+        "semanticGroupName": "Podcasts"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "BBC Academy",
+        "items": [
+          {
+            "name": "廣播",
+            "summary": "在當今的數碼時代，廣播仍然擁有龐大的聽眾群。但是，要繼續吸引聽眾，我們需要哪些必備的技能呢？",
+            "indexImage": {
+              "id": "107637481",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4829/production/_107637481_capture.jpg",
+              "path": "/cpsprodpb/4829/production/_107637481_capture.jpg",
+              "height": 425,
+              "width": 756,
+              "altText": "廣播",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/radio-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1561787622,
+            "type": "link"
+          },
+          {
+            "name": "英漢金融市場詞匯",
+            "summary": "有關金融市場的英文詞匯繁多，而且中港台之間差異甚大。 BBC為你編撰詳盡對照表，方便使用。",
+            "indexImage": {
+              "id": "107785438",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14602/production/_107785438_capture.jpg",
+              "path": "/cpsprodpb/14602/production/_107785438_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "英漢金融市場詞匯",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/economic-vocabulary-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1562558808,
+            "type": "link"
+          },
+          {
+            "name": "工作環境",
+            "summary": "新聞工作需要健全的工作環境，同事間的關係以及對記者身心健康的關注，都很重要。",
+            "indexImage": {
+              "id": "107555919",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16733/production/_107555919_capture.jpg",
+              "path": "/cpsprodpb/16733/production/_107555919_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "工作環境",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/working-in-media-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1561604747,
+            "type": "link"
+          },
+          {
+            "name": "如果有效使用電視媒介傳送信息",
+            "summary": "如果能夠有效使用電視這種媒介，就可以用聲音和圖像傳送大量的信息。",
+            "indexImage": {
+              "id": "107496635",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D1A5/production/_107496635_capture.jpg",
+              "path": "/cpsprodpb/D1A5/production/_107496635_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "如果有效使用電視媒介傳送信息",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/television-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1561174967,
+            "type": "link"
+          },
+          {
+            "name": "拍紀錄片遇到難題怎麼辦",
+            "summary": "在拍攝現場遇到意外情況時，優秀的製片人會怎麼做？如何讓你的報道引人入勝？",
+            "indexImage": {
+              "id": "107009944",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/AFBE/production/_107009944_capture.jpg",
+              "path": "/cpsprodpb/AFBE/production/_107009944_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "紀錄片",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/articles/art20190412093506146",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1558147433,
+            "type": "link"
+          },
+          {
+            "name": "數字新聞",
+            "summary": "新聞的製作和消費日益數碼化，您擁有足夠的知識和工具來適應這一趨勢嗎？",
+            "indexImage": {
+              "id": "106645299",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/183B6/production/_106645299_capture.jpg",
+              "path": "/cpsprodpb/183B6/production/_106645299_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "數字新聞",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/digital-journalism-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1556590614,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "BBC學院",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.co.uk/academy/zh-hans",
+            "desktop": "http://www.bbc.co.uk/academy/zh-hans",
+            "mobile": "http://www.bbc.co.uk/academy/zh-hans",
+            "enhancedmobile": "http://www.bbc.co.uk/academy/zh-hans"
+          }
+        },
+        "semanticGroupName": "College of journalism"
+      },
+      {
+        "type": "section-digest",
+        "title": "Showcase 5",
+        "items": [
+          {
+            "name": "代理服務器和翻牆軟件",
+            "summary": "如你在登錄BBC中文網時遭遇困難，請試用代理服務器。",
+            "indexImage": {
+              "id": "92846937",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/120EC/production/_92846937_b35e5cf4-b7ed-4c79-b556-7d4aaa020e63.jpg",
+              "path": "/cpsprodpb/120EC/production/_92846937_b35e5cf4-b7ed-4c79-b556-7d4aaa020e63.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Screen",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.com/zhongwen/trad/institutional/2013/02/130215_proxy_notice.shtml",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1481007769,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "瀏覽協助"
+        },
+        "semanticGroupName": "Showcase 5"
+      },
+      {
+        "type": "useful-links",
+        "title": "Useful links",
+        "items": [
+          {
+            "headlines": {
+              "headline": "BBC中文合作伙伴"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/institutional-39504015",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/institutional-39504015"
+            },
+            "summary": "BBC中文希望世界各地伙伴合作，將BBC中文豐富的多媒體內容推廣到合作伙伴相應平台，供更多網友享用。",
+            "timestamp": 1491392730,
+            "cpsType": "STY",
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:zhongwen/trad/institutional-39504015",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Useful links"
+      },
+      {
+        "type": "responsive-cluster",
+        "title": "bottom slot",
+        "items": [
+          {
+            "headlines": {
+              "headline": "中資與英國最大旅行社談判7.5億英鎊收購協議"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/world-48965235",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/world-48965235"
+            },
+            "summary": "英國最大旅行社運營商托馬斯·庫克集團陷入財務困境，正與有關銀行和其最大的股東中資復星國際談判。",
+            "timestamp": 1562969523,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                },
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107845863",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8FF6/production/_107845863_da1pzzu4.jpg",
+              "path": "/cpsprodpb/8FF6/production/_107845863_da1pzzu4.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Thomas Cook plane",
+              "caption": "目前的托馬斯庫克集團是倫敦上市公司，旗下業務廣泛，涵蓋酒店、航空、旅行社等，是全球最大組團及配套旅遊公司。",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/trad/world-48965235",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Cluster 1"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "主頁",
+    "uri": "/zhongwen/trad/front_page",
+    "id": "urn:bbc:ares::index:zhongwen/trad/front_page/desktop/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "主頁",
+      "uri": "/zhongwen/trad/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC 中文網",
+      "uri": "/zhongwen/trad",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
