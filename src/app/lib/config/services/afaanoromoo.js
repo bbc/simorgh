@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'Sagalee',
+      photogallery: 'Kuusaa Fakkii',
       video: 'Viidiyoo',
     },
   },
