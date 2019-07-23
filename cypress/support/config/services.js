@@ -14,12 +14,9 @@ export default {
         asset:
           Cypress.env('APP_ENV') === 'live' ? 'c5ll353v7y9o' : 'c6v11qzyv8po',
       },
-      nonExistentarticle:
-        Cypress.env('APP_ENV') === 'live'
-          ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+      nonExistentarticle: {
+        asset: 'cxvxrj8tvppo',
+      },
       frontPage: undefined,
     },
   },
