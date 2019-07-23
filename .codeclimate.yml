@@ -3,8 +3,8 @@ engines:
     enabled: true
     exclude_patterns:
       - 'src/**/*.test.{jsx,js}'
+      - 'cypress/{integration,support}/*.js'
 exclude_patterns:
   - '**/node_modules/'
-  - 'cypress/{integration,support}/*.js'
   - 'src/app/lib/config/'
   - 'src/app/**/fixtures.js'
