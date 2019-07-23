@@ -2,7 +2,7 @@ engines:
   duplication:
     enabled: true
     exclude_patterns:
-      - '**/*.test.{js,jsx}'
+      - '**/*.test.js'
       - 'cypress/{integration,support}/*.js'
 exclude_patterns:
   - '**/node_modules/'
