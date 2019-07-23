@@ -1,6 +1,7 @@
 exclude_patterns:
   - '**/node_modules/'
   - 'cypress/{integration,support}/*.js'
-  - '*.test.{jsx,js}'
+  - '**.test.js'
+  - '**.test.jsx'
   - 'src/app/lib/config/'
   - 'src/app/**/fixtures.js'
