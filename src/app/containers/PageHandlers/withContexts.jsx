@@ -19,7 +19,6 @@ const WithContexts = Component => {
       previousPath,
       dials,
     } = props;
-    console.log(`service variant: ${serviceVariant}`);
     return (
       <ToggleContextProvider>
         <DialContextProvider dials={dials}>

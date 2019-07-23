@@ -14,6 +14,7 @@ const renderDocument = async ({
   isAmp,
   routes,
   service,
+  serviceVariant,
   url,
 }) => {
   const sheet = new ServerStyleSheet();
@@ -32,7 +33,7 @@ const renderDocument = async ({
     ),
   );
 
-  const assets = getAssetsArray(service);
+  const assets = getAssetsArray(service, serviceVariant);
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(

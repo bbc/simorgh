@@ -119,8 +119,17 @@ const loadableConfig = {
     webpack: () => [require.resolveWeak('./russian.js')],
   },
   serbian: {
-    loader: () => import(/* webpackChunkName: 'serbian' */ './serbian.js'),
-    webpack: () => [require.resolveWeak('./serbian.js')],
+    variants: true,
+    lat: {
+      loader: () =>
+        import(/* webpackChunkName: 'serbian_lat' */ './serbian_lat.js'),
+      webpack: () => [require.resolveWeak('./serbian_lat.js')],
+    },
+    cyr: {
+      loader: () =>
+        import(/* webpackChunkName: 'serbian_cyr' */ './serbian_cyr.js'),
+      webpack: () => [require.resolveWeak('./serbian_cyr.js')],
+    },
   },
   sinhala: {
     loader: () => import(/* webpackChunkName: 'sinhala' */ './sinhala.js'),

@@ -21,15 +21,27 @@ export const ServiceContext = React.createContext(defaultService);
 const loadableContexts = {};
 
 Object.keys(services).forEach(service => {
-  loadableContexts[service] = createLoadableContext(
-    ServiceContext,
-    services[service],
-  );
+  if (services[service].variants) {
+    const serviceObj = services[service];
+    Object.keys(serviceObj).forEach(variant => {
+      if (serviceObj[variant] instanceof Object) {
+        loadableContexts[`${service}_${variant}`] = createLoadableContext(
+          ServiceContext,
+          serviceObj[variant],
+        );
+      }
+    });
+  } else {
+    loadableContexts[service] = createLoadableContext(
+      ServiceContext,
+      services[service],
+    );
+  }
 });
 
 export const ServiceContextProvider = ({ children, service, variant }) => {
   const LoadableServiceContextProvider = variant
-    ? loadableContexts[service][variant]
+    ? loadableContexts[`${service}_${variant}`]
     : loadableContexts[service];
 
   if (!LoadableServiceContextProvider) {

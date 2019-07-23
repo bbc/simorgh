@@ -1,7 +1,6 @@
 import { matchRoutes } from 'react-router-config';
 
 const getRouteProps = (routes, url) => {
-  console.log(url);
   let variantPath = null;
   const matchedRoutes = matchRoutes(routes, url);
 

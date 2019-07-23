@@ -6,8 +6,11 @@ const assetRegex = type => {
   return new RegExp(`\\/static\\/js\\/${type}-\\w+\\.\\w+\\.js$`);
 };
 
-const assetsFilter = (assets, service) => {
-  const serviceAssets = assets.filter(asset => assetRegex(service).test(asset));
+const assetsFilter = (assets, service, serviceVariant) => {
+  const serviceName = serviceVariant ? `${service}_${serviceVariant}` : service;
+  const serviceAssets = assets.filter(asset =>
+    assetRegex(serviceName).test(asset),
+  );
   const vendorAssets = assets.filter(asset => assetRegex('vendor').test(asset));
   const mainAssets = assets.filter(asset => assetRegex('main').test(asset));
 

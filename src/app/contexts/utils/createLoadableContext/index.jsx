@@ -11,5 +11,4 @@ const createLoadableContext = (Context, loadableConfig) =>
       );
     },
   });
-
 export default createLoadableContext;
