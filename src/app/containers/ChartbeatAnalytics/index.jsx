@@ -17,21 +17,23 @@ const ChartbeatAnalytics = () => {
   const { service } = useContext(ServiceContext);
   const { env, platform, pageType } = useContext(RequestContext);
   const { enabled } = useToggle('chartbeatAnalytics');
-  const domain =
-    env === 'test' || env === 'local' ? getDomain('test') : getDomain(service);
-
-  const sections = buildSections(service, pageType);
-  const cookie = getSylphidCookie();
-  const type = getType(pageType);
-  const commonProps = {
-    domain,
-    type,
-    sections,
-    cookie,
-    chartbeatUID,
-  };
 
   if (enabled) {
+    const domain =
+      env === 'test' || env === 'local'
+        ? getDomain('test')
+        : getDomain(service);
+
+    const sections = buildSections(service, pageType);
+    const cookie = getSylphidCookie();
+    const type = getType(pageType);
+    const commonProps = {
+      domain,
+      type,
+      sections,
+      cookie,
+      chartbeatUID,
+    };
     return platform === 'amp' ? (
       <AmpChartbeatsBeacon {...commonProps} />
     ) : (

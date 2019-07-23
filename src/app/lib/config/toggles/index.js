@@ -17,7 +17,7 @@ const toggles = {
     audioVideo: {
       enabled: false,
     },
-    chartbeat: {
+    chartbeatAnalytics: {
       enabled: false,
     },
   },
