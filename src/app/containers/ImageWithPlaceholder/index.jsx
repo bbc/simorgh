@@ -34,16 +34,8 @@ const ImageWithPlaceholder = ({
 }) => {
   const { platform } = useContext(RequestContext);
 
-  const imageToRender = (
-    <Image
-      alt={alt}
-      src={src}
-      sizes={sizes}
-      width={width}
-      srcset={srcset}
-      fade={fade}
-    />
-  );
+  const imageProps = { alt, src, sizes, width, srcset, fade };
+  const imageToRender = <Image {...imageProps} />;
 
   return (
     <ImagePlaceholder ratio={ratio}>
