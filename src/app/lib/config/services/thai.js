@@ -111,6 +111,7 @@ const service = {
     },
     media: {
       audio: 'เสียง',
+      photogallery: 'แกลเลอรีภาพ',
       video: 'วิดีโอ',
     },
   },
