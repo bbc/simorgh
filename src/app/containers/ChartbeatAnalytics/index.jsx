@@ -18,29 +18,27 @@ const ChartbeatAnalytics = () => {
   const { env, platform, pageType } = useContext(RequestContext);
   const { enabled } = useToggle('chartbeatAnalytics');
 
-  if (enabled) {
-    const domain =
-      env !== 'live'
-        ? getDomain('test')
-        : getDomain(service);
-
-    const sections = buildSections(service, pageType);
-    const cookie = getSylphidCookie();
-    const type = getType(pageType);
-    const commonProps = {
-      domain,
-      type,
-      sections,
-      cookie,
-      chartbeatUID,
-    };
-    return platform === 'amp' ? (
-      <AmpChartbeatsBeacon {...commonProps} />
-    ) : (
-      <CanonicalChartbeatsBeacon {...commonProps} useCanonical={useCanonical} />
-    );
+  if (!enabled) {
+    return null;
   }
-  return null;
+
+  const domain = env !== 'live' ? getDomain('test') : getDomain(service);
+
+  const sections = buildSections(service, pageType);
+  const cookie = getSylphidCookie();
+  const type = getType(pageType);
+  const commonProps = {
+    domain,
+    type,
+    sections,
+    cookie,
+    chartbeatUID,
+  };
+  return platform === 'amp' ? (
+    <AmpChartbeatsBeacon {...commonProps} />
+  ) : (
+    <CanonicalChartbeatsBeacon {...commonProps} useCanonical={useCanonical} />
+  );
 };
 
 export default ChartbeatAnalytics;
