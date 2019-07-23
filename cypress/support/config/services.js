@@ -1,7 +1,10 @@
 export default {
   afaanoromoo: {
     font: undefined,
-    pageTypes: { articles: undefined, frontPage: undefined },
+    pageTypes: {
+      articles: undefined,
+      frontPage: undefined,
+    },
   },
   afrique: {
     font: undefined,
@@ -54,10 +57,6 @@ export default {
       frontPage: '/igbo',
     },
   },
-  index: {
-    font: undefined,
-    pageTypes: { articles: undefined, frontPage: undefined },
-  },
   indonesia: {
     font: undefined,
     pageTypes: { articles: undefined, frontPage: undefined },
@@ -71,10 +70,6 @@ export default {
     pageTypes: { articles: undefined, frontPage: undefined },
   },
   kyrgyz: {
-    font: undefined,
-    pageTypes: { articles: undefined, frontPage: undefined },
-  },
-  loadableConfig: {
     font: undefined,
     pageTypes: { articles: undefined, frontPage: undefined },
   },
