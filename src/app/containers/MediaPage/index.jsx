@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Fragment } from 'react';
 import { string, shape } from 'prop-types';
 
@@ -20,13 +19,13 @@ const MediaPageContainer = ({ service, match }) => (
 );
 
 MediaPageContainer.propTypes = {
-  service: string,
+  service: string.isRequired,
   match: shape({
     params: shape({
       serviceId: string,
-      mediaId: string
-    })
-  })
-}
+      mediaId: string,
+    }),
+  }).isRequired,
+};
 
 export default MediaPageContainer;
