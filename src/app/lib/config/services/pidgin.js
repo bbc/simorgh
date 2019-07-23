@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/pcm';
 
 const pidgin = {
+  lang: 'pcm',
   product: 'BBC News',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-pidgin',

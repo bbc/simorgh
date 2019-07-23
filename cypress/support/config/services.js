@@ -3,7 +3,12 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
-      nonExistentarticle: undefined,
+      nonExistentarticle:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: '/igbo',
     },
   },
@@ -42,7 +47,12 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
-      nonExistentarticle: undefined,
+      nonExistentarticle:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: '/pidgin',
     },
   },
@@ -50,7 +60,12 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
-      nonExistentarticle: undefined,
+      nonExistentarticle:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: '/yoruba',
     },
   },

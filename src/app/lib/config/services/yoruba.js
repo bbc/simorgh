@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import 'moment/locale/yo';
 
 const yoruba = {
+  lang: 'yo',
   product: 'BBC News',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-yoruba',
