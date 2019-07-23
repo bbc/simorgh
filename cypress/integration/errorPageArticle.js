@@ -7,7 +7,6 @@ import {
 import testData from '../../src/app/lib/config/services';
 import services from '../support/config/services';
 
-// This is duplicated between this file and errorPagePersian.js.
 const nonExistentAsset = 'cxvxrj8tvppo';
 const serviceHasNonExistentArticle = service =>
   services[service].pageTypes.nonExistentarticle !== undefined;
