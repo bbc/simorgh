@@ -20,7 +20,7 @@ const ChartbeatAnalytics = () => {
 
   if (enabled) {
     const domain =
-      env === 'test' || env === 'local'
+      env !== 'live'
         ? getDomain('test')
         : getDomain(service);
 
