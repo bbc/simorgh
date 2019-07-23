@@ -111,6 +111,7 @@ const service = {
     },
     media: {
       audio: 'تسجيل صوتي',
+      photogallery: 'بالصور',
       video: 'فيديو',
     },
   },
