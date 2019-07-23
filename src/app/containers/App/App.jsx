@@ -44,7 +44,6 @@ export const App = ({
         id: nextId,
         isAmp: nextIsAmp,
         route,
-        match,
       } = getRouteProps(routes, location.pathname);
 
       setState({
@@ -76,7 +75,7 @@ export const App = ({
       };
       fetchData();
     }
-  }, [routes, location.pathname]);
+  }, [routes, location.pathname, service, serviceVariant]);
 
   const previousLocationPath = usePrevious(location.pathname);
 

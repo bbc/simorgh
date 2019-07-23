@@ -15,6 +15,8 @@ const getRouteProps = (routes, url) => {
     variantPath = variant.slice(1);
   }
 
+  console.log(`path: ${variantPath}`);
+
   const isAmp = amp ? true : false; // eslint-disable-line no-unneeded-ternary
 
   return { isAmp, service, id, serviceVariant: variantPath, route, match };

@@ -12,6 +12,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
   >
     <ServiceContextProvider
       service="news"
+      variant={null}
     >
       <RequestContextProvider
         bbcOrigin="https://www.bbc.com"
@@ -34,6 +35,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
           pageType="article"
           previousPath={null}
           service="news"
+          serviceVariant={null}
         />
       </RequestContextProvider>
     </ServiceContextProvider>

@@ -1,3 +1,5 @@
+/* eslint camelcase: [2, {properties: "never"}] */
+
 /*
   Do not import this file into the primary application.
   This file is intended for use by tests only where needed. 
@@ -34,7 +36,8 @@ import pidgin from './pidgin';
 import portuguese from './portuguese';
 import punjabi from './punjabi';
 import russian from './russian';
-import serbian from './serbian';
+import serbian_lat from './serbian_lat';
+import serbian_cyr from './serbian_cyr';
 import sinhala from './sinhala';
 import somali from './somali';
 import swahili from './swahili';
@@ -43,13 +46,15 @@ import telugu from './telugu';
 import thai from './thai';
 import tigrinya from './tigrinya';
 import turkce from './turkce';
-import ukchina from './ukchina';
+import ukchina_simp from './ukchina_simp';
+import ukchina_trad from './ukchina_trad';
 import ukrainian from './ukrainian';
 import urdu from './urdu';
 import uzbek from './uzbek';
 import vietnamese from './vietnamese';
 import yoruba from './yoruba';
-import zhongwen from './zhongwen';
+import zhongwen_simp from './zhongwen_simp';
+import zhongwen_trad from './zhongwen_trad';
 
 export default {
   default: defaultConfig,
@@ -82,7 +87,8 @@ export default {
   portuguese,
   punjabi,
   russian,
-  serbian,
+  serbian_lat,
+  serbian_cyr,
   sinhala,
   somali,
   swahili,
@@ -91,11 +97,13 @@ export default {
   thai,
   tigrinya,
   turkce,
-  ukchina,
+  ukchina_simp,
+  ukchina_trad,
   ukrainian,
   urdu,
   uzbek,
   vietnamese,
   yoruba,
-  zhongwen,
+  zhongwen_simp,
+  zhongwen_trad,
 };

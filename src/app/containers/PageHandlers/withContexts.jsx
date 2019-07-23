@@ -46,6 +46,7 @@ const WithContexts = Component => {
     pageType: string.isRequired,
     previousPath: string,
     service: string.isRequired,
+    serviceVariant: string,
     dials: objectOf(bool).isRequired,
   };
 
@@ -53,6 +54,7 @@ const WithContexts = Component => {
     bbcOrigin: null,
     id: null,
     previousPath: null,
+    serviceVariant: null,
   };
 
   return WithContextsContainer;

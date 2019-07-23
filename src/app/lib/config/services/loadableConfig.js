@@ -164,8 +164,17 @@ const loadableConfig = {
     webpack: () => [require.resolveWeak('./turkce.js')],
   },
   ukchina: {
-    loader: () => import(/* webpackChunkName: 'ukchina' */ './ukchina.js'),
-    webpack: () => [require.resolveWeak('./ukchina.js')],
+    variants: true,
+    simp: {
+      loader: () =>
+        import(/* webpackChunkName: 'ukchina_simp' */ './ukchina_simp.js'),
+      webpack: () => [require.resolveWeak('./ukchina_simp.js')],
+    },
+    trad: {
+      loader: () =>
+        import(/* webpackChunkName: 'ukchina_trad' */ './ukchina_trad.js'),
+      webpack: () => [require.resolveWeak('./ukchina_trad.js')],
+    },
   },
   ukrainian: {
     loader: () => import(/* webpackChunkName: 'ukrainian' */ './ukrainian.js'),
@@ -189,8 +198,17 @@ const loadableConfig = {
     webpack: () => [require.resolveWeak('./yoruba.js')],
   },
   zhongwen: {
-    loader: () => import(/* webpackChunkName: 'zhongwen' */ './zhongwen.js'),
-    webpack: () => [require.resolveWeak('./zhongwen.js')],
+    variants: true,
+    simp: {
+      loader: () =>
+        import(/* webpackChunkName: 'zhongwen_simp' */ './zhongwen_simp.js'),
+      webpack: () => [require.resolveWeak('./zhongwen_simp.js')],
+    },
+    trad: {
+      loader: () =>
+        import(/* webpackChunkName: 'zhongwen_trad' */ './zhongwen_trad.js'),
+      webpack: () => [require.resolveWeak('./zhongwen_trad.js')],
+    },
   },
 };
 

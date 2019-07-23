@@ -52,6 +52,7 @@ describe('App', () => {
       loading: false,
       pageType: 'article',
       service: 'news',
+      serviceVariant: null,
       previousPath: null,
     });
     expect(wrapper).toMatchSnapshot();
@@ -104,6 +105,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'news',
+              serviceVariant: null,
               previousPath: 'pathnameOne',
             },
           );
@@ -120,6 +122,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'news',
+              serviceVariant: null,
               previousPath: 'pathnameOne',
             },
           );
@@ -139,7 +142,7 @@ describe('App', () => {
 
           expect.assertions(3);
 
-          expect(route.getInitialData).toHaveBeenCalledWith(match.params);
+          expect(route.getInitialData).toHaveBeenCalledWith('news', null);
 
           // start data fetch and set loading to true
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
@@ -154,6 +157,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'news',
+              serviceVariant: null,
               previousPath: 'pathnameThree',
             },
           );
@@ -171,6 +175,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'news',
+              serviceVariant: null,
               previousPath: 'pathnameThree',
             },
           );

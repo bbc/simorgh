@@ -39,6 +39,7 @@ describe('getRouteProps', () => {
           route: 'data',
         },
         service: 'news',
+        serviceVariant: null,
       });
     });
   });
@@ -66,6 +67,7 @@ describe('getRouteProps', () => {
           route: 'data',
         },
         service: 'news',
+        serviceVariant: null,
       });
     });
   });

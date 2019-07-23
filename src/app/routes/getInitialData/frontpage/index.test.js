@@ -45,7 +45,7 @@ describe('getFrontpageInitialData', () => {
   });
 
   it('fetches data and returns expected object', async () => {
-    const response = await getFrontpageInitialData(defaultContext);
+    const response = await getFrontpageInitialData(defaultServiceParam);
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.getBaseUrl.com/news.json',
@@ -64,7 +64,7 @@ describe('getFrontpageInitialData', () => {
     });
 
     it('returns isAmp as true', async () => {
-      const response = await getFrontpageInitialData(defaultContext);
+      const response = await getFrontpageInitialData(defaultServiceParam);
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.getBaseUrl.com/news.json',
@@ -84,7 +84,7 @@ describe('getFrontpageInitialData', () => {
     });
 
     it('fetches data from SIMORGH_BASE_URL enviroment variable origin', async () => {
-      const response = await getFrontpageInitialData(defaultContext);
+      const response = await getFrontpageInitialData(defaultServiceParam);
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.SIMORGH_BASE_URL.com/news.json',

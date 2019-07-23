@@ -16,8 +16,6 @@ const getFrontpageInitialData = async (service, variant) => {
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
 
-  console.log(`service Var: ${JSON.stringify(variant)}`);
-
   const serviceUrl = variant ? `${service}/${variant}` : service;
   const url = `${baseUrl}/${serviceUrl}.json`;
 

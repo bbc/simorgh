@@ -20,9 +20,7 @@ describe('ServiceContextProvider', () => {
 
     require('./index'); // eslint-disable-line global-require
 
-    expect(createLoadableContext).toHaveBeenCalledTimes(
-      Object.keys(services).length,
-    );
+    expect(createLoadableContext).toHaveBeenCalledTimes(47);
   });
 
   describe('should load hydrated service context', () => {
@@ -30,10 +28,21 @@ describe('ServiceContextProvider', () => {
       jest.unmock('../utils/createLoadableContext');
     });
 
+    const variantServices = {
+      serbian: 'lat',
+      ukchina: 'simp',
+      zhongwen: 'trad',
+    };
+
     Object.keys(services).forEach(service =>
       it(`should have a brand name for ${service}`, async () => {
         // eslint-disable-next-line global-require
         const { ServiceContext, ServiceContextProvider } = require('./index');
+        let variant = null;
+
+        if (variantServices[service]) {
+          variant = variantServices[service];
+        }
 
         const Component = () => {
           const { brandName } = useContext(ServiceContext);
@@ -42,7 +51,7 @@ describe('ServiceContextProvider', () => {
         };
 
         const { container } = render(
-          <ServiceContextProvider service={service}>
+          <ServiceContextProvider service={service} variant={variant}>
             <Component />
           </ServiceContextProvider>,
         );

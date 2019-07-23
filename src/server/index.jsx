@@ -101,14 +101,9 @@ if (process.env.APP_ENV === 'local') {
       }),
     )
     .get(articleDataRegexPath, async ({ params }, res, next) => {
-      const { service, id, variant } = params;
+      const { service, id } = params;
 
-      const dataFilePath = constructDataFilePath(
-        'articles',
-        service,
-        variant,
-        id,
-      );
+      const dataFilePath = constructDataFilePath('articles', service, id);
 
       sendDataFile(res, dataFilePath, next);
     })
@@ -159,7 +154,7 @@ server
     [articleRegexPath, frontpageRegexPath],
     async ({ url, headers }, res) => {
       try {
-        const { service, isAmp, route, serviceVariant, match } = getRouteProps(
+        const { service, isAmp, route, serviceVariant } = getRouteProps(
           routes,
           url,
         );
