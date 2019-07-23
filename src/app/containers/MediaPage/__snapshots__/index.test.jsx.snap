@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrontPageMain snapshots should match scaffold snapshot 1`] = `
+<React.Fragment>
+  <h1>
+    Media Page
+  </h1>
+  <ul>
+    <li>
+      <strong>
+        Service
+      </strong>
+      : 
+      amharic
+    </li>
+    <li>
+      <strong>
+        Brand
+      </strong>
+      : 
+      bbc_amharic_radio
+    </li>
+    <li>
+      <strong>
+        MediaId
+      </strong>
+      : 
+      liveradio
+    </li>
+  </ul>
+</React.Fragment>
+`;

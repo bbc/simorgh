@@ -1,8 +1,8 @@
 /* eslint-disable */
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const MediaPageContainer = ({ service, match }) => (
-  <React.Fragment>
+  <Fragment>
     <h1>Media Page</h1>
     <ul>
       <li>
@@ -15,7 +15,7 @@ const MediaPageContainer = ({ service, match }) => (
         <strong>MediaId</strong>: {match.params.mediaId}
       </li>
     </ul>
-  </React.Fragment>
+  </Fragment>
 );
 
 export default MediaPageContainer;
