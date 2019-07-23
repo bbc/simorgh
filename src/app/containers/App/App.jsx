@@ -14,6 +14,7 @@ export const App = ({
 }) => {
   const {
     service,
+    serviceVariant,
     isAmp,
     id,
     route: { pageType },
@@ -22,6 +23,7 @@ export const App = ({
   const [state, setState] = useState({
     data: initialData,
     service,
+    serviceVariant,
     id,
     isAmp,
     pageType,
@@ -38,6 +40,7 @@ export const App = ({
       // Only update on subsequent page renders
       const {
         service: nextService,
+        serviceVariant: nextServiceVariant,
         id: nextId,
         isAmp: nextIsAmp,
         route,
@@ -47,6 +50,7 @@ export const App = ({
       setState({
         data: null,
         service: nextService,
+        serviceVariant: nextServiceVariant,
         id: nextId,
         isAmp: nextIsAmp,
         pageType: route.pageType,
@@ -56,7 +60,7 @@ export const App = ({
 
       const fetchData = async () => {
         try {
-          const newData = await route.getInitialData(match.params);
+          const newData = await route.getInitialData(service, serviceVariant);
           setState(prevState => ({
             ...prevState,
             data: newData,

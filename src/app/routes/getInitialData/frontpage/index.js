@@ -11,12 +11,15 @@ const preprocessorRules = [
   applySquashTopstories,
 ];
 
-const getFrontpageInitialData = async ({ service }) => {
+const getFrontpageInitialData = async (service, variant) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
 
-  const url = `${baseUrl}/${service}.json`;
+  console.log(`service Var: ${JSON.stringify(variant)}`);
+
+  const serviceUrl = variant ? `${service}/${variant}` : service;
+  const url = `${baseUrl}/${serviceUrl}.json`;
 
   return fetchData({ url, preprocessorRules });
 };

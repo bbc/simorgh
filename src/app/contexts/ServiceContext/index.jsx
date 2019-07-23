@@ -27,8 +27,10 @@ Object.keys(services).forEach(service => {
   );
 });
 
-export const ServiceContextProvider = ({ children, service }) => {
-  const LoadableServiceContextProvider = loadableContexts[service];
+export const ServiceContextProvider = ({ children, service, variant }) => {
+  const LoadableServiceContextProvider = variant
+    ? loadableContexts[service][variant]
+    : loadableContexts[service];
 
   if (!LoadableServiceContextProvider) {
     return null;
@@ -42,8 +44,10 @@ export const ServiceContextProvider = ({ children, service }) => {
 ServiceContextProvider.propTypes = {
   children: node.isRequired,
   service: string,
+  variant: string,
 };
 
 ServiceContextProvider.defaultProps = {
   service: 'default',
+  variant: null,
 };

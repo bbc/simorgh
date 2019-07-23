@@ -1,6 +1,8 @@
 import { matchRoutes } from 'react-router-config';
 
 const getRouteProps = (routes, url) => {
+  console.log(url);
+  let variantPath = null;
   const matchedRoutes = matchRoutes(routes, url);
 
   if (matchedRoutes.length <= 0) {
@@ -8,11 +10,15 @@ const getRouteProps = (routes, url) => {
   }
 
   const { route, match } = matchedRoutes[0];
-  const { amp, id, service } = match.params;
+  const { amp, id, service, variant } = match.params;
+
+  if (variant) {
+    variantPath = variant.slice(1);
+  }
 
   const isAmp = amp ? true : false; // eslint-disable-line no-unneeded-ternary
 
-  return { isAmp, service, id, route, match };
+  return { isAmp, service, id, serviceVariant: variantPath, route, match };
 };
 
 export default getRouteProps;

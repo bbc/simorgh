@@ -101,16 +101,23 @@ if (process.env.APP_ENV === 'local') {
       }),
     )
     .get(articleDataRegexPath, async ({ params }, res, next) => {
-      const { service, id } = params;
+      const { service, id, variant } = params;
 
-      const dataFilePath = constructDataFilePath('articles', service, id);
+      const dataFilePath = constructDataFilePath(
+        'articles',
+        service,
+        variant,
+        id,
+      );
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(frontpageDataRegexPath, async ({ params }, res, next) => {
-      const { service } = params;
+      const { service, variant } = params;
 
-      const dataFilePath = constructDataFilePath('frontpage', service);
+      const servicePath = variant ? `${service}${variant}` : service;
+
+      const dataFilePath = constructDataFilePath('frontpage', servicePath);
 
       sendDataFile(res, dataFilePath, next);
     })
@@ -152,8 +159,12 @@ server
     [articleRegexPath, frontpageRegexPath],
     async ({ url, headers }, res) => {
       try {
-        const { service, isAmp, route, match } = getRouteProps(routes, url);
-        const data = await route.getInitialData(match.params);
+        const { service, isAmp, route, serviceVariant, match } = getRouteProps(
+          routes,
+          url,
+        );
+
+        const data = await route.getInitialData(service, serviceVariant);
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
 
@@ -173,6 +184,7 @@ server
             isAmp,
             routes,
             service,
+            serviceVariant,
             url,
           }),
         );

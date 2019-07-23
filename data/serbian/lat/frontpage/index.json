@@ -1,0 +1,1425 @@
+{
+    "metadata": {
+        "id": "urn:bbc:ares::index:serbian/lat/front_page/desktop/domestic",
+        "locators": {
+            "assetUri": "/serbian/lat/front_page",
+            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/front_page",
+            "curie": "http://www.bbc.co.uk/asset/631e99d6-c1c4-73b7-e050-17ac8045512f/desktop/domestic"
+        },
+        "type": "IDX",
+        "createdBy": "serbian-v6",
+        "language": "sr-Latn",
+        "lastUpdated": 1563446239335,
+        "firstPublished": 1516370981,
+        "lastPublished": 1563446230,
+        "options": {
+            "allowAdvertising": true
+        },
+        "analyticsLabels": {
+            "counterName": "serbianlat.page",
+            "cps_asset_id": "42745681",
+            "cps_asset_type": "idx"
+        },
+        "tags": {},
+        "version": "v1.0.10",
+        "blockTypes": [
+            "responsive-top-stories",
+            "responsive-cluster",
+            "responsive-must-see",
+            "responsive-inspire",
+            "responsive-in-depth",
+            "featured-site-top-stories",
+            "useful-links"
+        ],
+        "title": "Početna strana",
+        "summary": "BBC na srpskom nudi ekskluzivan sadržaj - analitičko, istraživačko i nepristrasno izveštavanje u tekstovima i video prilozima prilagođenim i društvenim mrežama."
+    },
+    "content": {
+        "groups": [
+            {
+                "type": "responsive-top-stories",
+                "title": "Top Stories",
+                "maxRelatedLinks": 2,
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Skoro dva miliona predmeta čeka presudu u Srbiji"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-49015566",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-49015566"
+                        },
+                        "summary": "Na kraju prošle godine bilo nerešeno 1,7 miliona sudskih predmeta, a skoro 200.000 traju duže od decenije, podaci su Vrhovnog kasacionog suda.",
+                        "timestamp": 1563428989,
+                        "byline": {
+                            "name": "Nataša Anđelković",
+                            "title": "BBC novinarka",
+                            "persons": [
+                                {
+                                    "name": "Nataša Anđelković",
+                                    "function": "BBC novinarka"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                                "categoryName": "Explainer"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3739461b000e9dabfa",
+                                    "campaignName": "WS - Give me perspective"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107919142",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/5E7F/production/_107919142_img_20190717_185840.jpg",
+                            "path": "/cpsprodpb/5E7F/production/_107919142_img_20190717_185840.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Palata pravde u Beogradu",
+                            "caption": "Palata pravde u Beogradu",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "standard",
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Nije kašnjenje nego „produžetak radova”"
+                                },
+                                "locators": {
+                                    "assetUri": "/serbian/lat/srbija-46228013",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/srbija-46228013"
+                                },
+                                "summary": "Umesto u februaru naredne godine, beogradska Palata pravde biće gotova najranije u septembru 2019.",
+                                "timestamp": 1542351476,
+                                "cpsType": "MAP",
+                                "id": "urn:bbc:ares::asset:serbian/lat/srbija-46228013",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "„Tijanin zakon“: Treba li Srbija da uvede doživotnu robiju"
+                                },
+                                "locators": {
+                                    "assetUri": "/serbian/lat/srbija-48273670",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/srbija-48273670"
+                                },
+                                "summary": "Pored pitanja humanosti i poštovanja međunarodnih konvencija, najava izmena Krivičnog zakona otvorila je i brojna druga pitanja - opremljenosti i kvaliteta tretmana u zatvorima.",
+                                "timestamp": 1557940038,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:serbian/lat/srbija-48273670",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-49015566",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "UV zračenje: Šta je crveni meteoalarm"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-49018554",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-49018554"
+                        },
+                        "summary": "Indeks ultraljubičastog zračenja ovih dana je vrlo visok i u crvenoj boji. Šta to znači?",
+                        "timestamp": 1563430456,
+                        "byline": {
+                            "name": "Katarina Stevanović",
+                            "title": "BBC novinarka",
+                            "persons": [
+                                {
+                                    "name": "Katarina Stevanović",
+                                    "function": "BBC novinarka"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                                "categoryName": "Explainer"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e2939461b000e9dabf8",
+                                    "campaignName": "WS - Educate me"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "102679459",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/17509/production/_102679459_gettyimages-93685077.jpg",
+                            "path": "/cpsprodpb/17509/production/_102679459_gettyimages-93685077.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Žena sa kožom koja se ljušti",
+                            "caption": "Pažljivo na suncu",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "standard",
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Šta sve (ne) izaziva rak"
+                                },
+                                "locators": {
+                                    "assetUri": "/serbian/lat/svet-43919535",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/svet-43919535"
+                                },
+                                "summary": "Voda iz plastičnih boca i mikrotalasne rerne su među lažnim uzrocima raka u koje ljudi veruju.",
+                                "timestamp": 1524819407,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:serbian/lat/svet-43919535",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Pet saveta za „preživljavanje\" reda na Vimbldonu"
+                                },
+                                "locators": {
+                                    "assetUri": "/serbian/lat/svet-48856088",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/svet-48856088"
+                                },
+                                "summary": "Kao da ste na muzičkom festivalu. Doduše, muzika se ne čuje, ali tu su vam drugari. Možete da otvorite pivo i odigrate partiju malog fudbala.",
+                                "timestamp": 1562172436,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:serbian/lat/svet-48856088",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-49018554",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Kako je novi izgled Tvitera zbunio i naljutio korisnike"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-49028255",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-49028255"
+                        },
+                        "summary": "Društvena mreža Tviter je redizajnirana, a korisnici nisu zadovoljni izmenama vizuelnog identiteta.",
+                        "timestamp": 1563444948,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3e39461b000e9dabfb",
+                                    "campaignName": "WS - Keep me on trend"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "105234592",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/7367/production/_105234592_031352263-1.jpg",
+                            "path": "/cpsprodpb/7367/production/_105234592_031352263-1.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "logo tvitera",
+                            "caption": "Tviteraši nisu oduševljeni",
+                            "copyrightHolder": "Reuters"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "standard",
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Bore su danas u modi"
+                                },
+                                "locators": {
+                                    "assetUri": "/serbian/lat/srbija-49017871",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/srbija-49017871"
+                                },
+                                "summary": "Aplikacija Fejsap postoji od 2017. godine, ali sada je ponovo u centru pažnje. Ljudi masovno šeruju fotografije na kojima izgledaju kao stari ljudi, pa se postavlja pitanje zašto uopšte neko želi da zna kako će izgledati kad ostari?",
+                                "timestamp": 1563362738,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:serbian/lat/srbija-49017871",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Tviter: Neki privatni tvitovi bili su javni"
+                                },
+                                "locators": {
+                                    "assetUri": "/serbian/lat/svet-46921572",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/svet-46921572"
+                                },
+                                "summary": "Tvitovi svih koji su ažurirali imejl adresu povezanu sa nalogom između novembra 2014. i januara 2019. možda su bili javni.",
+                                "timestamp": 1547892996,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:serbian/lat/svet-46921572",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-49028255",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Odbačena tužba protiv Kevina Spejsija"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/svet-49028256",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/svet-49028256"
+                        },
+                        "summary": "Tužilac je izjavio da je tužba odbačena, jer momak koji je tužio glumca nije želeo da svedoči o telefonu koji je nestao, a koji je mogao da pomogne u procesu suđenja.",
+                        "timestamp": 1563431252,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e4739461b000e9dabfc",
+                                    "campaignName": "WS - Update me"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107921843",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/87FC/production/_107921843_c17464a5-2744-42fb-8c57-cd6887aeba01.jpg",
+                            "path": "/cpsprodpb/87FC/production/_107921843_c17464a5-2744-42fb-8c57-cd6887aeba01.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "US actor Kevin Spacey attends the Milan Fashion Week in Italy in 2016",
+                            "copyrightHolder": "EPA"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "prominence": "standard",
+                        "relatedItems": [
+                            {
+                                "headlines": {
+                                    "headline": "Polanski tužio Akademiju za dodelu Oskara"
+                                },
+                                "locators": {
+                                    "assetUri": "/serbian/lat/svet-48021254",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/svet-48021254"
+                                },
+                                "summary": "Reditelj priznao da je imao odnose sa maloletnicom 1997. godine, zbog čega je prošle godine izbačen iz Akademije.",
+                                "timestamp": 1556026356,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:serbian/lat/svet-48021254",
+                                "type": "cps"
+                            },
+                            {
+                                "headlines": {
+                                    "headline": "Teške ispovesti: Majkl Džekson nas je zlostavljao kad smo bili mali"
+                                },
+                                "locators": {
+                                    "assetUri": "/serbian/lat/svet-47413118",
+                                    "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/svet-47413118"
+                                },
+                                "summary": "Dvojica muškaraca su ispričali za BBC da ih je slavni pevač seksualno zlostavljao kad im je bilo sedam i deset godina.",
+                                "timestamp": 1551457761,
+                                "cpsType": "STY",
+                                "id": "urn:bbc:ares::asset:serbian/lat/svet-47413118",
+                                "type": "cps"
+                            }
+                        ],
+                        "id": "urn:bbc:ares::asset:serbian/lat/svet-49028256",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Najvažnije"
+                },
+                "semanticGroupName": "Top Stories"
+            },
+            {
+                "type": "responsive-cluster",
+                "title": "Cluster 1",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Kako su Sovjeti tri puta stigli na Mesec pre Amerikanaca"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/svet-49007456",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/svet-49007456"
+                        },
+                        "summary": "Lansirana deset godina pre Apola 11, sonda bez ljudske Luna 2 postala je prva svemirska letelica koja je stigla na Mesec. Ona je dovela do otkrića koja su omogućila sletanje ljudi.",
+                        "timestamp": 1563392057,
+                        "byline": {
+                            "name": "Fernando Duarte",
+                            "title": "BBC Svetski servis",
+                            "persons": [
+                                {
+                                    "name": "Fernando Duarte",
+                                    "function": "BBC World Service"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3739461b000e9dabfa",
+                                    "campaignName": "WS - Give me perspective"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107832762",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/6863/production/_107832762_gettyimages-170980848.jpg",
+                            "path": "/cpsprodpb/6863/production/_107832762_gettyimages-170980848.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Alexei Leonov during his 1965 spacewalk",
+                            "caption": "Sovjetski kosmonaut Aleksej Leonov je napravio prvi kroak u svemiru",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/svet-49007456",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Zašto se u Srbiji i dalje raspravlja o Draži Mihailoviću"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-49015794",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-49015794"
+                        },
+                        "summary": "I sedam desecenija kasnije, rasprave o četnicima i partizanima dele srpsko društvo.",
+                        "timestamp": 1563374502,
+                        "byline": {
+                            "name": "Marija Janković",
+                            "title": "BBC novinarka",
+                            "persons": [
+                                {
+                                    "name": "Marija Janković",
+                                    "function": "BBC novinarka"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                                "categoryName": "Analysis"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3739461b000e9dabfa",
+                                    "campaignName": "WS - Give me perspective"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107910394",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/C095/production/_107910394_67219691_643552779462236_5436463667908444160_n.jpg",
+                            "path": "/cpsprodpb/C095/production/_107910394_67219691_643552779462236_5436463667908444160_n.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Pomen Draži Mihajloviću, 17. jul",
+                            "caption": "Uniforme su kažu nasledili od „đedova\"",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-49015794",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Da li makedonska tužiteljka strada zbog estrade"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/balkan-49008326",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/balkan-49008326"
+                        },
+                        "summary": "Hapšenje zvezde rijaliti programa u Severnoj Makedoniji zbog reketiranja moglo bi da ima mnogo šire posledice po već krhki pravosudni sistem.",
+                        "timestamp": 1563342215,
+                        "byline": {
+                            "name": "Aleksandar  Miladinović",
+                            "title": "BBC novinar ",
+                            "persons": [
+                                {
+                                    "name": "Aleksandar Miladinović",
+                                    "function": "BBC novinar"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                                "categoryName": "Explainer"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3739461b000e9dabfa",
+                                    "campaignName": "WS - Give me perspective"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107903531",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/34DA/production/_107903531_gettyimages-610532444.jpg",
+                            "path": "/cpsprodpb/34DA/production/_107903531_gettyimages-610532444.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Skoplje, 2016. godine",
+                            "caption": "Od heroine do razočaranja - ime Katice Janeve bilo je deo parola na protestima protiv vlasti VMRO-DPMNE",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/balkan-49008326",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Srbija, Francuska i sporazum o stripovima - o čemu se radi"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/49011256",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/49011256"
+                        },
+                        "summary": "Šta podrazumeva sporazum o stripu i koje koristi autori imaju od toga?",
+                        "timestamp": 1563342605,
+                        "byline": {
+                            "name": "Uroš Dimitrijević",
+                            "title": "BBC novinar",
+                            "persons": [
+                                {
+                                    "name": "Uroš Dimitrijević",
+                                    "function": "BBC novinar"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3739461b000e9dabfa",
+                                    "campaignName": "WS - Give me perspective"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "103041678",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/1563E/production/_103041678_img_7765.jpg",
+                            "path": "/cpsprodpb/1563E/production/_103041678_img_7765.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Strip",
+                            "caption": "Šta podrazumeva sporazum o stripu i koje koristi autori imaju od toga?",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/49011256",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "U toku"
+                },
+                "semanticGroupName": "Cluster 1"
+            },
+            {
+                "type": "responsive-must-see",
+                "title": "Section 1",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Bore su danas u modi"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-49017871",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-49017871"
+                        },
+                        "summary": "Aplikacija Fejsap postoji od 2017. godine, ali sada je ponovo u centru pažnje. Ljudi masovno šeruju fotografije na kojima izgledaju kao stari ljudi, pa se postavlja pitanje zašto uopšte neko želi da zna kako će izgledati kad ostari?",
+                        "timestamp": 1563362738,
+                        "byline": {
+                            "name": "Tijana Dušej Ristev",
+                            "title": "BBC novinarka",
+                            "persons": [
+                                {
+                                    "name": "Tijana Dušej Ristev",
+                                    "function": "BBC novinarka"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3e39461b000e9dabfb",
+                                    "campaignName": "WS - Keep me on trend"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107912568",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/151F9/production/_107912568_gocaprva.jpg",
+                            "path": "/cpsprodpb/151F9/production/_107912568_gocaprva.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "fejsap",
+                            "caption": "Ostarite uz pomoć Fejsapa za par minuta",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-49017871",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Kako je dojenje u avionu „poljuljalo“ Tviter"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/svet-49022167",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/svet-49022167"
+                        },
+                        "summary": "Holandska aviokompanija KLM je zatražila da se majke pokriju tokom dojenja, reagujući na žalbe putnika.",
+                        "timestamp": 1563389356,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e4739461b000e9dabfc",
+                                    "campaignName": "WS - Update me"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107919031",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/3323/production/_107919031_breastfeeding-aeroplane.jpg",
+                            "path": "/cpsprodpb/3323/production/_107919031_breastfeeding-aeroplane.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "A woman breastfeeds her baby on an aeroplane",
+                            "copyrightHolder": "iStock / Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/svet-49022167",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Ilon Mask otkriva planove za moždano hakovanje"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/svet-49022163",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/svet-49022163"
+                        },
+                        "summary": "Start-ap kompanija Neuralink planira da započne testiranje ljudskih kompjuterskih interfejsa na ljudima.",
+                        "timestamp": 1563382894,
+                        "byline": {
+                            "name": "Džejn Vejkfild",
+                            "title": "Reporterka u oblasti tehnologije",
+                            "persons": [
+                                {
+                                    "name": "Jane Wakefield",
+                                    "function": "Technology reporter"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e4739461b000e9dabfc",
+                                    "campaignName": "WS - Update me"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "95350927",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/11CC9/production/_95350927_mediaitem95350881.jpg",
+                            "path": "/cpsprodpb/11CC9/production/_95350927_mediaitem95350881.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Elon Musk",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/svet-49022163",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Saznanja "
+                },
+                "semanticGroupName": "Section 1"
+            },
+            {
+                "type": "responsive-inspire",
+                "title": "Section 2",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Bliski susret sa džinovskom meduzom"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/svet-49025676",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/svet-49025676"
+                        },
+                        "summary": "Sigurno vam ne bi bilo svejedno da na moru „sretnete“ meduzu koja je vaše veličine.",
+                        "timestamp": 1563427376,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e1739461b000e9dabf6",
+                                    "campaignName": "WS - CS"
+                                },
+                                {
+                                    "campaignId": "5a988e2939461b000e9dabf8",
+                                    "campaignName": "WS - Educate me"
+                                }
+                            ]
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p07h4dqz",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Џиновска медуза",
+                            "synopses": {
+                                "short": "Џиновска медуза пронађена близу југозападне обале Енглеске"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07h4g1j.jpg",
+                            "embedding": true,
+                            "advertising": false,
+                            "caption": "Džinovska meduza pronađena blizu jugozapadne obale Engleske",
+                            "versions": [
+                                {
+                                    "versionId": "p07h4dr8",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 32,
+                                    "durationISO8601": "PT32S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    },
+                                    "availableFrom": 1563387781
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "107919145",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/D3AF/production/_107919145_p07h4g1j.jpg",
+                            "path": "/cpsprodpb/D3AF/production/_107919145_p07h4g1j.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Džinovska meduza",
+                            "caption": "Džinovska meduza",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/svet-49025676",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Upoznajte najstariju obožavateljku Fiće"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/svet-49015809",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/svet-49015809"
+                        },
+                        "summary": "Ima 87 godina i iz Fiće ne izlazi poslednjih 50. Ona je Branka Đurković i najstarija je ljubiteljka čuvenog automobila.",
+                        "timestamp": 1563364650,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3139461b000e9dabf9",
+                                    "campaignName": "WS - Divert me"
+                                }
+                            ]
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p07h2xng",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Упознајте најстарију обожаватељку Фиће",
+                            "synopses": {
+                                "short": "Има 87 година и из Фиће не излази последњих 50."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07h2yrg.jpg",
+                            "embedding": true,
+                            "advertising": false,
+                            "caption": "Ima 87 godina i iz Fiće ne izlazi poslednjih 50.",
+                            "versions": [
+                                {
+                                    "versionId": "p07h2xnk",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 89,
+                                    "durationISO8601": "PT1M29S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    },
+                                    "availableFrom": 1563360128
+                                }
+                            ]
+                        },
+                        "indexImage": {
+                            "id": "107910887",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/133D1/production/_107910887_p07h2yrg.jpg",
+                            "path": "/cpsprodpb/133D1/production/_107910887_p07h2yrg.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Baka i fića nekad i sad",
+                            "caption": "Baka i Fića",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/svet-49015809",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Kako su izgledale kuće pre 9.000 godina"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/svet-49003659",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/svet-49003659"
+                        },
+                        "summary": "Oruđe, nakit, figure, semena i razne druge stvari otkrivene su u blizini Jerusalima.",
+                        "timestamp": 1563385897,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e2939461b000e9dabf8",
+                                    "campaignName": "WS - Educate me"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107896561",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/40B9/production/_107896561_israel5.jpg",
+                            "path": "/cpsprodpb/40B9/production/_107896561_israel5.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Figurine of an ox",
+                            "copyrightHolder": "Israel Antiquities Authority"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/svet-49003659",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Zanimljivo"
+                },
+                "semanticGroupName": "Section 2"
+            },
+            {
+                "type": "responsive-in-depth",
+                "title": "Section 3",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Finale „iza scene“: Kako je Novak utišao Vimbldon – znam, bio sam tamo"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-48987350",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-48987350"
+                        },
+                        "summary": "„Kako se uopšte piše tekst u ovakvom stanju“, prva je stvar koja mi je pala na pamet posle meča.",
+                        "timestamp": 1563175134,
+                        "byline": {
+                            "name": "Slobodan Maričić",
+                            "title": "BBC novinar ",
+                            "persons": [
+                                {
+                                    "name": "Slobodan Maričić",
+                                    "function": "BBC novinar"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3139461b000e9dabf9",
+                                    "campaignName": "WS - Divert me"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107881319",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/164B6/production/_107881319_djoko_kiss_getty2.jpg",
+                            "path": "/cpsprodpb/164B6/production/_107881319_djoko_kiss_getty2.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Novak Djokovic celebrates winning the Wimbledon men's singles title",
+                            "copyrightHolder": "Getty Images"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-48987350",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Srbin koji je poslao čoveka na Mesec"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-48854910",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-48854910"
+                        },
+                        "summary": "Milojko Vučelić, američki inženjer srpskog porekla, bio je član ne samo uspešne misije „Apolo 11\" - prvog sletanja na Mesec, već i dramatične „Apolo 13\" kada je spasio astronaute.",
+                        "timestamp": 1562666314,
+                        "byline": {
+                            "name": "Nataša Anđelković",
+                            "title": "BBC novinarka",
+                            "persons": [
+                                {
+                                    "name": "Nataša Anđelković",
+                                    "function": "BBC novinarka"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                                "categoryName": "Explainer"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e2939461b000e9dabf8",
+                                    "campaignName": "WS - Educate me"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107742162",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/660C/production/_107742162_srpskiapolo7.jpg",
+                            "path": "/cpsprodpb/660C/production/_107742162_srpskiapolo7.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Srpski Apolo tim - skrinšot videa \"Vi ste svet\"",
+                            "caption": "Srpski Apolo tim - (sleva na desno): Slavoljub Sem Vujić, Pavle Duić, Danilo Bojić, Milojko Majk Vučelić, Miloš Šurtbatović, Piter Galović i David Vujić",
+                            "copyrightHolder": "Američka ambasada"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-48854910",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Džedaji iz Niša pomažu deci bez roditelja"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-48939978",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-48939978"
+                        },
+                        "summary": "Ko su ljubitelji Ratova zvezda koji organizuju kamp za decu bez roditelja?",
+                        "timestamp": 1562931081,
+                        "byline": {
+                            "name": "Uroš Dimitrijević",
+                            "title": "BBC novinar",
+                            "persons": [
+                                {
+                                    "name": "Uroš Dimitrijević",
+                                    "function": "BBC novinar"
+                                }
+                            ]
+                        },
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e2139461b000e9dabf7",
+                                    "campaignName": "WS - Inspire me"
+                                }
+                            ]
+                        },
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "107822123",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/7D7A/production/_107822123_17966126_1428715603839485_7072304780625772673_o.jpg",
+                            "path": "/cpsprodpb/7D7A/production/_107822123_17966126_1428715603839485_7072304780625772673_o.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Niški džedaji",
+                            "caption": "Niški džedaji",
+                            "copyrightHolder": "Džedajski pokret"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-48939978",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Ako ste propustili"
+                },
+                "semanticGroupName": "Section 3"
+            },
+            {
+                "type": "featured-site-top-stories",
+                "title": "Sport",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Aerodrom koji još čeka putnike"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-48874091",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-48874091"
+                        },
+                        "summary": "Vodimo vas na svečano otvoreni aerodrom u Kraljevu na koji veliki avioni još ne sleću.",
+                        "timestamp": 1562581095,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3739461b000e9dabfa",
+                                    "campaignName": "WS - Give me perspective"
+                                }
+                            ]
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p07g0fmk",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Аеродром који чека путнике",
+                            "synopses": {
+                                "short": "Недељу дана после свечаног отварања, ББЦ на српском води вас на краљевачки аеродром."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gb0qg.jpg",
+                            "embedding": true,
+                            "advertising": false,
+                            "caption": "Nedelju dana posle svečanog otvaranja, BBC na srpskom vodi vas na kraljevački aerodrom.",
+                            "versions": [
+                                {
+                                    "versionId": "p07gb0ms",
+                                    "types": [
+                                        "Editorial"
+                                    ],
+                                    "duration": 126,
+                                    "durationISO8601": "PT2M6S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    },
+                                    "availableFrom": 1562252057
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "107749721",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/31FA/production/_107749721_p07g0h02.jpg",
+                            "path": "/cpsprodpb/31FA/production/_107749721_p07g0h02.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "-",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-48874091",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Prva izložba u Beogradu koju i slepi ljudi mogu da dožive"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-48943632",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-48943632"
+                        },
+                        "summary": "Kako približiti dela vizuelnog stvaralaštva osobi koja ne vidi?",
+                        "timestamp": 1562933626,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e2139461b000e9dabf7",
+                                    "campaignName": "WS - Inspire me"
+                                }
+                            ]
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p07gjd67",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "umetnost za slepe",
+                            "synopses": {
+                                "short": "umetnost za slepe"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gjj7q.jpg",
+                            "embedding": true,
+                            "advertising": false,
+                            "caption": "umetnost za slepe",
+                            "versions": [
+                                {
+                                    "versionId": "p07gjd6h",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 140,
+                                    "durationISO8601": "PT2M20S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    },
+                                    "availableFrom": 1562775094
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "107826198",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/15C4A/production/_107826198_p07gjj7q.jpg",
+                            "path": "/cpsprodpb/15C4A/production/_107826198_p07gjj7q.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "umetnost za slepe",
+                            "caption": "Izložba „U dodiru sa\" u Muzeju savremene umetnosti",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-48943632",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Hrvatska plaža kao umetničko platno"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/balkan-48924835",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/balkan-48924835"
+                        },
+                        "summary": "Od oseke do plime - toliko traje umetnost koju stvara Nikola Faler na delti Neretve kod Opuzena.",
+                        "timestamp": 1562675909,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                "categoryName": "News"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e1739461b000e9dabf6",
+                                    "campaignName": "WS - CS"
+                                },
+                                {
+                                    "campaignId": "5a988e2139461b000e9dabf7",
+                                    "campaignName": "WS - Inspire me"
+                                }
+                            ]
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p07gdvb0",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Hrvatska plaža kao umetničko platno",
+                            "synopses": {
+                                "short": "Biser Jadrana: Hrvatska plaža kao umetničko platno"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gdw2k.jpg",
+                            "embedding": true,
+                            "advertising": false,
+                            "caption": "Biser Jadrana: Hrvatska plaža kao umetničko platno",
+                            "versions": [
+                                {
+                                    "versionId": "p07gdvb2",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 67,
+                                    "durationISO8601": "PT1M7S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    },
+                                    "availableFrom": 1562672427
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "107805530",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/0DDE/production/_107805530_p07gdw2k.jpg",
+                            "path": "/cpsprodpb/0DDE/production/_107805530_p07gdw2k.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Mandala Pesak",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/balkan-48924835",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "headline": "Neuronauka za decu: Učenje o mozgu treba da počne na vreme"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/srbija-48563772",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-48563772"
+                        },
+                        "summary": "Da li vaše misli mogu da pomere ruke druge osobe?",
+                        "timestamp": 1562753195,
+                        "passport": {
+                            "category": {
+                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                                "categoryName": "Feature"
+                            },
+                            "campaigns": [
+                                {
+                                    "campaignId": "5a988e3e39461b000e9dabfb",
+                                    "campaignName": "WS - Keep me on trend"
+                                }
+                            ]
+                        },
+                        "cpsType": "MAP",
+                        "media": {
+                            "id": "p07ckzkq",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Неуронаука за децу",
+                            "synopses": {
+                                "short": "Београдски основци су учествовали у неуронаучним експериментима"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07ckzwn.jpg",
+                            "embedding": true,
+                            "advertising": false,
+                            "caption": "Beogradski osnovci su učestvovali u neuronaučnim eksperimentima",
+                            "versions": [
+                                {
+                                    "versionId": "p07ckzks",
+                                    "types": [
+                                        "Original"
+                                    ],
+                                    "duration": 103,
+                                    "durationISO8601": "PT1M43S",
+                                    "warnings": {},
+                                    "availableTerritories": {
+                                        "uk": true,
+                                        "nonUk": true
+                                    },
+                                    "availableFrom": 1559935832
+                                }
+                            ],
+                            "imageCopyright": "BBC"
+                        },
+                        "indexImage": {
+                            "id": "107297287",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/131C7/production/_107297287_p07ckzwn.jpg",
+                            "path": "/cpsprodpb/131C7/production/_107297287_p07ckzwn.jpg",
+                            "height": 576,
+                            "width": 1024,
+                            "altText": "Neuronauka za decu",
+                            "copyrightHolder": "BBC"
+                        },
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "id": "urn:bbc:ares::asset:serbian/lat/srbija-48563772",
+                        "type": "cps"
+                    }
+                ],
+                "strapline": {
+                    "name": "Najgledanije"
+                },
+                "semanticGroupName": "Sport"
+            },
+            {
+                "type": "useful-links",
+                "title": "Useful links",
+                "items": [
+                    {
+                        "headlines": {
+                            "headline": "Kontaktirajte BBC News na srpskom",
+                            "overtyped": "Kontaktirajte nas"
+                        },
+                        "locators": {
+                            "assetUri": "/serbian/lat/institutional-43543431",
+                            "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/institutional-43543431"
+                        },
+                        "summary": "Kontaktirajte BBC News na srpskom",
+                        "timestamp": 1522063228,
+                        "cpsType": "STY",
+                        "options": {
+                            "isBreakingNews": false,
+                            "isFactCheck": false
+                        },
+                        "overtypedSummary": "Kontaktirajte nas",
+                        "id": "urn:bbc:ares::asset:serbian/lat/institutional-43543431",
+                        "type": "cps"
+                    }
+                ],
+                "semanticGroupName": "Useful links"
+            }
+        ]
+    },
+    "promo": {
+        "subType": "IDX",
+        "name": "Početna strana",
+        "uri": "/serbian/lat/front_page",
+        "id": "urn:bbc:ares::index:serbian/lat/front_page/desktop/domestic",
+        "type": "simple"
+    },
+    "relatedContent": {
+        "section": {
+            "subType": "index",
+            "name": "Početna strana",
+            "uri": "/serbian/lat/front_page",
+            "type": "simple"
+        },
+        "site": {
+            "subType": "site",
+            "name": "BBC News na srpskom",
+            "uri": "/serbian/lat",
+            "type": "simple"
+        },
+        "groups": []
+    }
+}

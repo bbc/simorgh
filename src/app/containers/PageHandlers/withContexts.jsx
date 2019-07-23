@@ -13,15 +13,17 @@ const WithContexts = Component => {
       bbcOrigin,
       id,
       service,
+      serviceVariant,
       isAmp,
       pageType,
       previousPath,
       dials,
     } = props;
+    console.log(`service variant: ${serviceVariant}`);
     return (
       <ToggleContextProvider>
         <DialContextProvider dials={dials}>
-          <ServiceContextProvider service={service}>
+          <ServiceContextProvider service={service} variant={serviceVariant}>
             <RequestContextProvider
               bbcOrigin={bbcOrigin}
               id={id}
