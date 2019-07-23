@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import styledNormalize from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
+import { string } from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const createFontStyles = fonts =>
@@ -22,10 +23,17 @@ const GlobalStyleComponent = createGlobalStyle`
     ${({ fonts }) => fonts && createFontStyles(fonts)}
   `;
 
-// eslint-disable-next-line react/prop-types
 const GlobalStyle = ({ fonts }) => {
   const styleFonts = useContext(ServiceContext).fonts;
   return <GlobalStyleComponent fonts={fonts || styleFonts} />;
+};
+
+GlobalStyle.propTypes = {
+  fonts: string,
+};
+
+GlobalStyle.defaultProps = {
+  fonts: '',
 };
 
 export default GlobalStyle;
