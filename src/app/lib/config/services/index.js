@@ -36,8 +36,8 @@ import pidgin from './pidgin';
 import portuguese from './portuguese';
 import punjabi from './punjabi';
 import russian from './russian';
-import serbian_lat from './serbian_lat';
-import serbian_cyr from './serbian_cyr';
+import serbianLat from './serbian_lat';
+import serbianCyr from './serbian_cyr';
 import sinhala from './sinhala';
 import somali from './somali';
 import swahili from './swahili';
@@ -46,15 +46,15 @@ import telugu from './telugu';
 import thai from './thai';
 import tigrinya from './tigrinya';
 import turkce from './turkce';
-import ukchina_simp from './ukchina_simp';
-import ukchina_trad from './ukchina_trad';
+import ukchinaSimp from './ukchina_simp';
+import ukchinaTrad from './ukchina_trad';
 import ukrainian from './ukrainian';
 import urdu from './urdu';
 import uzbek from './uzbek';
 import vietnamese from './vietnamese';
 import yoruba from './yoruba';
-import zhongwen_simp from './zhongwen_simp';
-import zhongwen_trad from './zhongwen_trad';
+import zhongwenSimp from './zhongwen_simp';
+import zhongwenTrad from './zhongwen_trad';
 
 export default {
   default: defaultConfig,
@@ -87,8 +87,8 @@ export default {
   portuguese,
   punjabi,
   russian,
-  serbian_lat,
-  serbian_cyr,
+  serbianLat,
+  serbianCyr,
   sinhala,
   somali,
   swahili,
@@ -97,13 +97,13 @@ export default {
   thai,
   tigrinya,
   turkce,
-  ukchina_simp,
-  ukchina_trad,
+  ukchinaSimp,
+  ukchinaTrad,
   ukrainian,
   urdu,
   uzbek,
   vietnamese,
   yoruba,
-  zhongwen_simp,
-  zhongwen_trad,
+  zhongwenSimp,
+  zhongwenTrad,
 };
