@@ -47,7 +47,7 @@ module.exports = (shell = {}) => {
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
         {
           test: /\.(js|jsx|mjs)$/,
-          include: /src/,
+          include: [resolvePath('src')],
           use: [
             {
               loader: 'babel-loader',
@@ -59,6 +59,29 @@ module.exports = (shell = {}) => {
             },
           ],
         },
+        IS_PROD
+          ? {
+              test: /\.(js|jsx|mjs)$/,
+              include: [resolvePath('node_modules/@bbc')],
+              use: [
+                {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: [],
+                    plugins: [
+                      [
+                        'transform-react-remove-prop-types',
+                        {
+                          mode: 'remove',
+                          removeImport: true,
+                        },
+                      ],
+                    ],
+                  },
+                },
+              ],
+            }
+          : {},
       ],
     },
     // Bundle sizes are monitored by `./scripts/bundleSize.sh`
