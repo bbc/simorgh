@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import styledNormalize from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
-import { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const createFontStyles = fonts =>
@@ -29,11 +29,11 @@ const GlobalStyle = ({ fonts }) => {
 };
 
 GlobalStyle.propTypes = {
-  fonts: string,
+  fonts: PropTypes.arrayOf(PropTypes.string),
 };
 
 GlobalStyle.defaultProps = {
-  fonts: '',
+  fonts: [''],
 };
 
 export default GlobalStyle;

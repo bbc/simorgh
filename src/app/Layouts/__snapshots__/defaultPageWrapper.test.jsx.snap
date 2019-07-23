@@ -3,7 +3,11 @@
 exports[`defaultPageWrapper should render default page wrapper with children 1`] = `
 <React.Fragment>
   <GlobalStyle
-    fonts=""
+    fonts={
+      Array [
+        "",
+      ]
+    }
   />
   <ServiceWorkerContainer />
   <ManifestContainer />
