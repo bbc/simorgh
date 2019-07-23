@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'आडियो',
+      photogallery: 'तस्वीरें',
       video: 'वीडियो',
     },
   },

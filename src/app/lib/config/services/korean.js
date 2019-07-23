@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: '오디오',
+      photogallery: '이미지 갤러리',
       video: '비디오',
     },
   },
