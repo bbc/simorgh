@@ -11,6 +11,7 @@ import {
   articleDataRegexPath,
   articleManifestRegexPath,
   articleSwRegexPath,
+  errorPageRegexPath,
   frontpageRegexPath,
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
@@ -149,7 +150,7 @@ server
     },
   )
   .get(
-    [articleRegexPath, frontpageRegexPath],
+    [errorPageRegexPath, articleRegexPath, frontpageRegexPath],
     async ({ url, headers }, res) => {
       try {
         const { service, isAmp, route, match } = getRouteProps(routes, url);

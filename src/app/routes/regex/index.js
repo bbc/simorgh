@@ -3,6 +3,7 @@ import services from '../../lib/config/services/loadableConfig';
 const serviceRegex = Object.keys(services).join('|');
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
+const errorRegex = '404|500';
 
 export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):amp(${ampRegex})?`;
 
@@ -11,6 +12,8 @@ export const articleDataRegexPath = `${articleRegexPath}.json`;
 export const articleSwRegexPath = `/:service(${serviceRegex})/articles/sw.js`;
 
 export const articleManifestRegexPath = `/:service(${serviceRegex})/articles/manifest.json`;
+
+export const errorPageRegexPath = `/:service(${serviceRegex})/:errorCode(${errorRegex}):amp(${ampRegex})?`;
 
 export const frontpageRegexPath = `/:service(${serviceRegex}):amp(${ampRegex})?`;
 

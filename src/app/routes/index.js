@@ -1,10 +1,23 @@
 import Article from '../containers/Article';
+import ErrorPage from '../components/ErrorPage';
 import FrontPage from '../containers/FrontPage';
 import getArticleInitialData from './getInitialData/article';
+import getErrorInitialData from './getInitialData/errorpage';
 import getFrontpageInitialData from './getInitialData/frontpage';
-import { articleRegexPath, frontpageRegexPath } from './regex';
+import {
+  articleRegexPath,
+  errorPageRegexPath,
+  frontpageRegexPath,
+} from './regex';
 
 const routes = [
+  {
+    path: errorPageRegexPath,
+    exact: true,
+    component: ErrorPage,
+    getInitialData: getErrorInitialData,
+    pageType: 'errorPage',
+  },
   {
     path: articleRegexPath,
     exact: true,
