@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'ఆడియో',
+      photogallery: 'చిత్రశాల',
       video: 'వీడియో',
     },
   },
