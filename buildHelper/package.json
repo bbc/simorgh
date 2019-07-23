@@ -5,12 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "khoa": "echo \"Khoa-time\" "
-
+    "khoa": "echo \"Khoa-time\" ",
+    "install:build": "npm install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "webpack": "^4.37.0"
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5",
+    "webpack-merge": "^4.1.5",
+    "webpack-node-externals": "^1.7.2",
+    "terser-webpack-plugin": "^1.3.0",
+    "moment-timezone-data-webpack-plugin": "^1.1.0",
+    "inspectpack": "^4.2.1",
+    "compression-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "brotli-webpack-plugin": "^1.0.0",
+    "assets-webpack-plugin": "^3.9.8"
   }
 }
