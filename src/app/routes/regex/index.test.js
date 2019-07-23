@@ -73,15 +73,30 @@ describe('articleDataRegexPath', () => {
 });
 
 describe('frontpageRegexPath', () => {
-  const validRoutes = ['/news', '/persian', '/news.amp', '/persian.amp'];
+  const validRoutes = [
+    '/news',
+    '/persian',
+    '/news.amp',
+    '/persian.amp',
+    '/serbian/lat',
+    '/serbian/lat.amp',
+    '/serbian/cyr',
+    '/ukchina/simp',
+    '/ukchina/trad',
+  ];
   shouldMatchValidRoutes(validRoutes, frontpageRegexPath);
 
-  const invalidRoutes = ['/news/home', '/persian/c5jje4ejkqvo.amp', '/iplayer'];
+  const invalidRoutes = [
+    '/news/home',
+    '/persian/c5jje4ejkqvo.amp',
+    '/iplayer',
+    '/serbian/foo',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageRegexPath);
 });
 
 describe('frontpageDataRegexPath', () => {
-  const validRoutes = ['/news.json', '/persian.json'];
+  const validRoutes = ['/news.json', '/persian.json', '/serbian/lat.json'];
   shouldMatchValidRoutes(validRoutes, frontpageDataRegexPath);
 
   const invalidRoutes = ['/news/data.json', '/iplayer.json'];
