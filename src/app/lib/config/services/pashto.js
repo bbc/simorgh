@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'غږ',
+      photogallery: 'د عکسونو البوم',
       video: 'ویډیو',
     },
   },
