@@ -1,4 +1,4 @@
-version: "2"
+version: '2'
 plugins:
   duplication:
     enabled: true
@@ -6,11 +6,10 @@ plugins:
       languages:
       - javascript
     exclude_patterns:
-      - "src/**/*.stories.jsx"
-      - "src/**/*.test.js"
-      - "src/**/*.test.jsx"
-      - "cypress/{integration,support}/*.js"
+      # the line below should work but doesn't it removes all js and jsx code coverage
+      # - 'src/**/*.{test,stories}.{js,jsx}'
+      - 'cypress/{integration,support}/*.js'
 exclude_patterns:
-  - "**/node_modules/"
-  - "src/app/lib/config/"
-  - "src/app/**/fixtures.js"
+  - '**/node_modules/'
+  - 'src/app/lib/config/'
+  - 'src/app/**/fixtures.js'
