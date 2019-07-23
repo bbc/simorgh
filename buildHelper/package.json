@@ -1,0 +1,16 @@
+{
+  "name": "buildhelper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "khoa": "echo \"Khoa-time\" "
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.37.0"
+  }
+}
