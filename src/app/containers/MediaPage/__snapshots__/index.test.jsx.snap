@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FrontPageMain snapshots should match scaffold snapshot 1`] = `
-<React.Fragment>
+Array [
   <h1>
     Media Page
-  </h1>
+  </h1>,
   <ul>
     <li>
       <strong>
@@ -27,6 +27,6 @@ exports[`FrontPageMain snapshots should match scaffold snapshot 1`] = `
       : 
       liveradio
     </li>
-  </ul>
-</React.Fragment>
+  </ul>,
+]
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import MediaPage from '.';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const scaffoldProps = {
   service: 'amharic',
@@ -14,7 +14,7 @@ const scaffoldProps = {
 
 describe('FrontPageMain', () => {
   describe('snapshots', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should match scaffold snapshot',
       <MediaPage {...scaffoldProps} />,
     );
