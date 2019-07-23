@@ -1,7 +1,8 @@
-engines:
+version: "2"
+plugins:
   duplication:
     enabled: true
-    exclude_patterns:
+    # exclude_patterns:
       # - "src/**/*.stories.jsx"
       # - "src/**/*.test.js"
       # - "src/**/*.test.jsx"
