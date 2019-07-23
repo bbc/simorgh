@@ -2,11 +2,11 @@ version: "2"
 plugins:
   duplication:
     enabled: true
-    # exclude_patterns:
+    exclude_patterns:
       # - "src/**/*.stories.jsx"
       # - "src/**/*.test.js"
       # - "src/**/*.test.jsx"
-      # - "cypress/{integration,support}/*.js"
+      - "cypress/{integration,support}/*.js"
 exclude_patterns:
   - "**/node_modules/"
   - "src/app/lib/config/"
