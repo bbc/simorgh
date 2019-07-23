@@ -8,11 +8,11 @@ const getRouteProps = (routes, url) => {
   }
 
   const { route, match } = matchedRoutes[0];
-  const { amp, id, service } = match.params;
+  const { amp, errorCode, id, service } = match.params;
 
   const isAmp = amp ? true : false; // eslint-disable-line no-unneeded-ternary
 
-  return { isAmp, service, id, route, match };
+  return { isAmp, errorCode, service, id, route, match };
 };
 
 export default getRouteProps;

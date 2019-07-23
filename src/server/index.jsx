@@ -153,7 +153,10 @@ server
     [errorPageRegexPath, articleRegexPath, frontpageRegexPath],
     async ({ url, headers }, res) => {
       try {
-        const { service, isAmp, route, match } = getRouteProps(routes, url);
+        const { service, errorCode, isAmp, route, match } = getRouteProps(
+          routes,
+          url,
+        );
         const data = await route.getInitialData(match.params);
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
