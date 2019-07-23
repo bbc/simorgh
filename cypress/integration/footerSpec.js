@@ -1,5 +1,4 @@
 import services from '../support/config/services';
-import { checkFooterLinks } from '../support/bodyTestHelper';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
@@ -14,13 +13,13 @@ describe('Footer Tests', () => {
 
   it('should have working links', () => {
     cy.get('footer ul').within(() => {
-      checkFooterLinks('0', '/news/help-41670342');
-      checkFooterLinks('1', '/terms');
-      checkFooterLinks('2', '/aboutthebbc/');
-      checkFooterLinks('3', '/privacy/');
-      checkFooterLinks('4', '/usingthebbc/cookies/');
-      checkFooterLinks('5', '/accessibility/');
-      checkFooterLinks('6', '/contact/');
+      cy.checkFooterLinks('0', '/news/help-41670342');
+      cy.checkFooterLinks('1', '/terms');
+      cy.checkFooterLinks('2', '/aboutthebbc/');
+      cy.checkFooterLinks('3', '/privacy/');
+      cy.checkFooterLinks('4', '/usingthebbc/cookies/');
+      cy.checkFooterLinks('5', '/accessibility/');
+      cy.checkFooterLinks('6', '/contact/');
     });
   });
 

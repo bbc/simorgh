@@ -73,13 +73,6 @@ export const copyrightDataWindow = () => {
   });
 };
 
-export const checkFooterLinks = (position, url) => {
-  cy.get('a')
-    .eq(position)
-    .should('have.attr', 'href')
-    .and('contain', url);
-};
-
 export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
   cy.get(link).click();
   cy.url().should('contain', url);

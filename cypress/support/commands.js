@@ -1,3 +1,5 @@
+import './commands/pageTestFragment/footer';
+
 // Overwriting Cypress Commands should very rarely be done.
 Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
   cy.request({ url, failOnStatusCode: false }).then(({ headers }) => {
