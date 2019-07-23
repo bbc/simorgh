@@ -13,13 +13,13 @@ describe('Footer Tests', () => {
 
   it('should have working links', () => {
     cy.get('footer ul').within(() => {
-      cy.checkFooterLinks('0', '/news/help-41670342');
-      cy.checkFooterLinks('1', '/terms');
-      cy.checkFooterLinks('2', '/aboutthebbc/');
-      cy.checkFooterLinks('3', '/privacy/');
-      cy.checkFooterLinks('4', '/usingthebbc/cookies/');
-      cy.checkFooterLinks('5', '/accessibility/');
-      cy.checkFooterLinks('6', '/contact/');
+      cy.checkLinks('0', '/news/help-41670342');
+      cy.checkLinks('1', '/terms');
+      cy.checkLinks('2', '/aboutthebbc/');
+      cy.checkLinks('3', '/privacy/');
+      cy.checkLinks('4', '/usingthebbc/cookies/');
+      cy.checkLinks('5', '/accessibility/');
+      cy.checkLinks('6', '/contact/');
     });
   });
 

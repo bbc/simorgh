@@ -1,5 +1,3 @@
-import './commands/pageTestFragment/footer';
-
 // Overwriting Cypress Commands should very rarely be done.
 Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
   cy.request({ url, failOnStatusCode: false }).then(({ headers }) => {
@@ -22,4 +20,11 @@ Cypress.Commands.add('testResponseCodeAndType', (path, responseCode, type) => {
       expect(headers).not.to.have.property('x-mfa');
     },
   );
+});
+
+Cypress.Commands.add('checkLinks', (position, url) => {
+  cy.get('a')
+    .eq(position)
+    .should('have.attr', 'href')
+    .and('contain', url);
 });
