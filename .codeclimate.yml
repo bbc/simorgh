@@ -5,6 +5,6 @@ engines:
       - "src/**/*.{stories,test).{js,jsx}"
       - "cypress/{integration,support}/*.js"
 exclude_patterns:
-  - "**/node_modules/""
-  - "src/app/lib/config/""
+  - "**/node_modules/"
+  - "src/app/lib/config/"
   - "src/app/**/fixtures.js"
