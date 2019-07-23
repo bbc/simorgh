@@ -15,6 +15,16 @@ describeForLocalOnly('Application', () => {
       );
     });
   });
+});
+
+describe('Application', () => {
+  it('should return a 200 status code for the news service worker', () => {
+    cy.testResponseCodeAndType(
+      '/news/articles/sw.js',
+      200,
+      'application/javascript',
+    );
+  });
 
   // Once all manifest are done this should be move into the object forEach above
   ['igbo', 'news/articles', 'pidgin', 'yoruba'].forEach(service => {
@@ -25,15 +35,5 @@ describeForLocalOnly('Application', () => {
         'application/json',
       );
     });
-  });
-});
-
-describe('Application', () => {
-  it('should return a 200 status code for the news service worker', () => {
-    cy.testResponseCodeAndType(
-      '/news/articles/sw.js',
-      200,
-      'application/javascript',
-    );
   });
 });
