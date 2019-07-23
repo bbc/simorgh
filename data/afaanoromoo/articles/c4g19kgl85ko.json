@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko"
+    },
+    "type": "article",
+    "createdBy": "Afaanoromoo",
+    "language": "om",
+    "lastUpdated": 1562936158365,
+    "firstPublished": 1562936153914,
+    "lastPublished": 1562936153914,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "om",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Waancaa Afriikaa 2019: Dirreen alatti eenyutu mo'ata?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Waancaa Afriikaa 2019: Dirreen alatti eenyutu mo'ata?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Falmiin Waancaan Afriikaa kan 2019 itti fufeera. Gareen 24's shaampiyoonaa tahuuf carraaqaa jiru. Mee altokko dirree kubbaarraa bahuun gaaffii ''Kubbaa miilaan alatti gosa biraatiin eenyuutu Waancaa kaasa?'' jedhu haa gaafannu. Taphni nuti akkasiin midhaassine kun biyyoota Afriikaa gama saffisa intarneetii, hanga umrii jireenyaa, malaammaltummaa fi kanneen biroon walfalmisiisa.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Falmiin Waancaan Afriikaa kan 2019 itti fufeera. Gareen 24's shaampiyoonaa tahuuf carraaqaa jiru. Mee altokko dirree kubbaarraa bahuun gaaffii ''Kubbaa miilaan alatti gosa biraatiin eenyuutu Waancaa kaasa?'' jedhu haa gaafannu. Taphni nuti akkasiin midhaassine kun biyyoota Afriikaa gama saffisa intarneetii, hanga umrii jireenyaa, malaammaltummaa fi kanneen biroon walfalmisiisa.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Waancaa Afriikaa 2019: Dirreen alatti eenyutu mo'ata?"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko"
+    },
+    "summary": "",
+    "timestamp": 1562936153914,
+    "id": "urn:bbc:ares::article:c4g19kgl85ko",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Afaanoromoo",
+      "uri": "/afaanoromoo",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

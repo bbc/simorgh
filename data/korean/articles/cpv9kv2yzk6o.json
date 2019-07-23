@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cpv9kv2yzk6o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cpv9kv2yzk6o"
+    },
+    "type": "article",
+    "createdBy": "Korean",
+    "language": "ko",
+    "lastUpdated": 1562943104678,
+    "firstPublished": 1562943102250,
+    "lastPublished": 1562943102250,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ko",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Korean"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "다이슨 창업주 제임스 다이슨이 싱가포르에서 가장 크고 비싼 펜트하우스로 알려진 아파트를 구입했다.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "다이슨 창업주 제임스 다이슨이 싱가포르에서 가장 크고 비싼 펜트하우스로 알려진 아파트를 구입했다.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "진공청소기로 유명한 다이슨이 본사를 영국에서 싱가포르로 옮긴 후 이루어진 부동산 구입이다.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "진공청소기로 유명한 다이슨이 본사를 영국에서 싱가포르로 옮긴 후 이루어진 부동산 구입이다.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "브렉시트의 지지자로서 영국이 아무런 합의안 없이 유럽연합을 떠나더라도 아무런 차이가 없을 거라고 말했던 다이슨은 회사의 본사 이전으로 위선적이라는 비난을 받았다.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "브렉시트의 지지자로서 영국이 아무런 합의안 없이 유럽연합을 떠나더라도 아무런 차이가 없을 거라고 말했던 다이슨은 회사의 본사 이전으로 위선적이라는 비난을 받았다.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "문제의 부동산은 싱가포르의 업무 지구 한가운데에 위치해 있으며 총 3층으로 다섯 개의 침실이 있다.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "문제의 부동산은 싱가포르의 업무 지구 한가운데에 위치해 있으며 총 3층으로 다섯 개의 침실이 있다.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cpv9kv2yzk6o"
+    },
+    "summary": "",
+    "timestamp": 1562943102250,
+    "id": "urn:bbc:ares::article:cpv9kv2yzk6o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Korean",
+      "uri": "/korean",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

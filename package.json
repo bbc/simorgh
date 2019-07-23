@@ -63,7 +63,7 @@
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
       "pre-commit": "npm run test:lint",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit && apache2-license-checker"
+      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit -- --changedSince=latest && apache2-license-checker"
     }
   },
   "repository": {
@@ -114,6 +114,7 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "brotli-webpack-plugin": "^1.0.0",
     "compression": "^1.7.3",
     "compression-webpack-plugin": "^3.0.0",
@@ -135,6 +136,7 @@
     "path-to-regexp": "^3.0.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "prop-types": "^15.6.2",
+    "ramda": "^0.26.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
@@ -145,6 +147,7 @@
     "speculate": "^2.0.0",
     "styled-components": "^4.3.2",
     "styled-normalize": "^8.0.3",
+    "terser-webpack-plugin": "^1.3.0",
     "uuid": "^3.3.2",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5",
@@ -159,6 +162,7 @@
     "@storybook/react": "^5.1.9",
     "@storybook/theming": "^5.1.9",
     "@testing-library/react": "^8.0.1",
+    "@testing-library/react-hooks": "^1.1.0",
     "amphtml-validator": "^1.0.23",
     "audit-ci": "^2.1.0",
     "babel-eslint": "^10.0.2",
@@ -173,6 +177,7 @@
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-cypress": "^2.6.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-json": "^1.2.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",

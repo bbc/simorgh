@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c5k08pqnzexo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c5k08pqnzexo"
+    },
+    "type": "article",
+    "createdBy": "Azeri",
+    "language": "az",
+    "lastUpdated": 1562936695783,
+    "firstPublished": 1562936692555,
+    "lastPublished": 1562936692555,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "az",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Ən yaxşı it şəkli: dünyada ən sevimli kimdir?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Ən yaxşı it şəkli: dünyada ən sevimli kimdir?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bu həftə Britaniya Kinologiya Assosiasiyası hər il keçirilən \"Dog Photographer of the Year\" müsabiqəsinin yekunlarını açıqlayıb.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bu həftə Britaniya Kinologiya Assosiasiyası hər il keçirilən \"Dog Photographer of the Year\" müsabiqəsinin yekunlarını açıqlayıb.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Qalibləri artıq mükafatlandırıblar. Müsabiqədə iştirak edən ev heyvanlarının sosial şəbəkələrdə paylaşılan şəkillərini sizə təqdim edirik.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Qalibləri artıq mükafatlandırıblar. Müsabiqədə iştirak edən ev heyvanlarının sosial şəbəkələrdə paylaşılan şəkillərini sizə təqdim edirik.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "2006-cı ildən etibarən Britaniyanın \"Kennel Club\" qurumu fotoqraflara bir neçə nominasiyada mükafat təqdim edir - \"Köməkçi itlər\", \"İtlər iş başında\", \"Balaca itləri sevirəm\" (yeniyetmə fotoqraflar üçün), \"İnsanın ən yaxın dostu\", \"Yaşlı köpəklər\", \"Portret\", \"Küçüklər\", \"Küçə itləri\" və \"Gənc fotoqraf\" (öz ev heyvanlarının şəklini çəkən uşaqlar üçün).",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "2006-cı ildən etibarən Britaniyanın \"Kennel Club\" qurumu fotoqraflara bir neçə nominasiyada mükafat təqdim edir - \"Köməkçi itlər\", \"İtlər iş başında\", \"Balaca itləri sevirəm\" (yeniyetmə fotoqraflar üçün), \"İnsanın ən yaxın dostu\", \"Yaşlı köpəklər\", \"Portret\", \"Küçüklər\", \"Küçə itləri\" və \"Gənc fotoqraf\" (öz ev heyvanlarının şəklini çəkən uşaqlar üçün).",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Müsabiqəyə dünyanın hər yerindən şəkillər qəbul edilir: \"Kennel Club\"-un mətbuat xidməti BBC-yə bildirib ki, bu il assosiasiyaya 70 ölkədən 7 min şəkil daxil olub.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Müsabiqəyə dünyanın hər yerindən şəkillər qəbul edilir: \"Kennel Club\"-un mətbuat xidməti BBC-yə bildirib ki, bu il assosiasiyaya 70 ölkədən 7 min şəkil daxil olub.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Ən yaxşı it şəkli: dünyada ən sevimli kimdir?"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c5k08pqnzexo"
+    },
+    "summary": "",
+    "timestamp": 1562936692555,
+    "id": "urn:bbc:ares::article:c5k08pqnzexo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Azeri",
+      "uri": "/azeri",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
