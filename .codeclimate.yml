@@ -6,9 +6,9 @@ plugins:
       languages:
       - javascript
     exclude_patterns:
-      # the line below should work but doesn't it removes all js and jsx code coverage
-      # - 'src/**/*.{test,stories}.{js,jsx}'
       - 'cypress/{integration,support}/*.js'
+      # The line below should work but doesn't it removes all js and jsx quality checking
+      # - 'src/**/*.{test,stories}.{js,jsx}'
 exclude_patterns:
   - '**/node_modules/'
   - 'src/app/lib/config/'
