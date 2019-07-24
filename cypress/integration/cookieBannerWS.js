@@ -8,7 +8,19 @@ Object.keys(services).forEach(index => {
   const service = index;
 
   // This should be unhacked when this file is consolidated with other cookie testing files.
-  if (service === 'news' || service === 'default') {
+  if (
+    // Not WS
+    service === 'news' ||
+    service === 'cymrufyw' ||
+    service === 'naidheachdan' ||
+    // Not on test.bbc.com yet
+    service === 'serbian' ||
+    service === 'telugu' ||
+    service === 'ukchina' ||
+    service === 'zhongwen' ||
+    // Not a service
+    service === 'default'
+  ) {
     return;
   }
 
@@ -18,7 +30,7 @@ Object.keys(services).forEach(index => {
         worldServiceCookieBannerTranslations(
           `${serviceConfig.translations.consentBanner.privacy.title}`,
           `${serviceConfig.translations.consentBanner.cookie.title}`,
-          `/${service}/articles/c0000000000o`,
+          `/${service}`,
           `${serviceConfig.translations.consentBanner.privacy.accept}`,
           `${serviceConfig.translations.consentBanner.cookie.accept}`,
         );
@@ -30,7 +42,7 @@ Object.keys(services).forEach(index => {
         worldServiceCookieBannerTranslations(
           `${serviceConfig.translations.consentBanner.privacy.title}`,
           `${serviceConfig.translations.consentBanner.cookie.title}`,
-          `/${service}/articles/c0000000000o.amp`,
+          `/${service}`,
           `${serviceConfig.translations.consentBanner.privacy.accept}`,
           `${serviceConfig.translations.consentBanner.cookie.accept}`,
         );
