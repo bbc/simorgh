@@ -18,7 +18,7 @@ const hasAmpChartbeatConfigUid = chartbeatUID => {
     .should('contain', `${chartbeatUID}`);
 };
 
-describeForLocalAndTest('Chartbeats Analytics for News Article', () => {
+describeForLocalAndTest('Chartbeat Analytics for News Article', () => {
   describe('Canonical page', () => {
     before(() => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
@@ -38,7 +38,7 @@ describeForLocalAndTest('Chartbeats Analytics for News Article', () => {
   });
 });
 
-describeForLocalAndTest('Chartbeats Analytics for Persian Articles', () => {
+describeForLocalAndTest('Chartbeat Analytics for Persian Articles', () => {
   describe('Canonical page', () => {
     before(() => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);

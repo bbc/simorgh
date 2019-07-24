@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import useToggle from '../Toggle/useToggle';
-import AmpChartbeatsBeacon from './amp';
-import CanonicalChartbeatsBeacon from './canonical';
+import AmpChartbeatBeacon from './amp';
+import CanonicalChartbeatBeacon from './canonical';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import {
@@ -35,9 +35,9 @@ const ChartbeatAnalytics = () => {
     chartbeatUID,
   };
   return platform === 'amp' ? (
-    <AmpChartbeatsBeacon {...commonProps} />
+    <AmpChartbeatBeacon {...commonProps} />
   ) : (
-    <CanonicalChartbeatsBeacon {...commonProps} useCanonical={useCanonical} />
+    <CanonicalChartbeatBeacon {...commonProps} useCanonical={useCanonical} />
   );
 };
 
