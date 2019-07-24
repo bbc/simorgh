@@ -1,17 +1,10 @@
 import services from '../../lib/config/services/loadableConfig';
 import { servicesWithRadio, servicesWithTv } from '../config';
+import buildMediaRoutes from '../buildMediaRoutes';
 
-const mediaIdRegex = '[a-z0-9]+';
 const serviceRegex = Object.keys(services).join('|');
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
-
-const buildMediaRoutes = servicesWithMedia =>
-  Object.keys(servicesWithMedia).map(service => {
-    return `/:service(${service})/:serviceId(${servicesWithMedia[service].join(
-      '|',
-    )})/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
-  });
 
 export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):amp(${ampRegex})?`;
 
