@@ -1,7 +1,12 @@
 import getIchefUrl from './ichefUrl';
 
-const createSrcset = (originCode, locator, originalImageWidth) => {
-  const resolutions = [240, 320, 480, 624, 800];
+const createSrcset = (
+  originCode,
+  locator,
+  originalImageWidth,
+  imageResolutions = null,
+) => {
+  const resolutions = imageResolutions || [240, 320, 480, 624, 800];
 
   if (originCode === 'pips') {
     return null;
