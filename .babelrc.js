@@ -7,6 +7,7 @@ var plugins = [
     {
       ssr: true, // avoid checksum mismatches (different class generation between client & server)
       fileName: false, // prevent filename forming part of class name (duplication)
+      pure: true, // aides dead code elimination
     },
   ],
 ];

@@ -153,6 +153,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         },
       }
     }
+    service="news"
     visuallyHidden={true}
   >
     Top Stories
@@ -367,6 +368,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
         },
       }
     }
+    service="news"
     visuallyHidden={true}
   >
     Top Stories
@@ -551,6 +553,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         },
       }
     }
+    service="news"
     visuallyHidden={false}
   >
     Top Stories
