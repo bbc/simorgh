@@ -360,7 +360,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
           <span
             className="c12"
           >
-            , 3:12
+            , 3 minutes 12 seconds
           </span>
         </span>
       </a>
@@ -755,7 +755,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           <span
             className="c13"
           >
-            , 3:12
+            , 3 minutes 12 seconds
           </span>
         </span>
       </a>
@@ -2440,7 +2440,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
           <span
             className="c12"
           >
-            , 1:33:20
+            , 1 hour 33 minutes 20 seconds
           </span>
         </span>
       </a>
@@ -2832,7 +2832,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           <span
             className="c13"
           >
-            , 1:33:20
+            , 1 hour 33 minutes 20 seconds
           </span>
         </span>
       </a>
