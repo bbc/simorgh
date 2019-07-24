@@ -2,10 +2,10 @@ import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import { describeForLocalAndTest } from '../support/limitEnvRuns';
 
-const hasScriptWithChartbeatSrc = charbeatSource => {
+const hasScriptWithChartbeatSrc = chartbeatSource => {
   cy.get(`script`)
     .eq(0)
-    .should('have.attr', 'src', `${charbeatSource}`);
+    .should('have.attr', 'src', `${chartbeatSource}`);
 };
 
 const hasGlobalChartbeatConfig = () => {
@@ -24,7 +24,7 @@ describeForLocalAndTest('Chartbeat Analytics for News Article', () => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
     });
     it('should have a script with src value set to chartbeat source', () => {
-      hasScriptWithChartbeatSrc(envConfig.charbeatSource);
+      hasScriptWithChartbeatSrc(envConfig.chartbeatSource);
     });
     it('should have chartbeat config set to window object', () => {
       hasGlobalChartbeatConfig();
@@ -44,7 +44,7 @@ describeForLocalAndTest('Chartbeat Analytics for Persian Articles', () => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
     });
     it('should have a script with src value set to chartbeat source', () => {
-      hasScriptWithChartbeatSrc(envConfig.charbeatSource);
+      hasScriptWithChartbeatSrc(envConfig.chartbeatSource);
     });
     it('should have chartbeat config set to window object', () => {
       hasGlobalChartbeatConfig();
