@@ -4,7 +4,11 @@ import MediaPage from '../containers/MediaPage';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
 import getMediaPageInitialData from './getInitialData/mediapage';
-import { articleRegexPath, frontpageRegexPath, mediaRegexPath } from './regex';
+import {
+  articleRegexPath,
+  frontpageRegexPath,
+  mediaRadioRegexArray,
+} from './regex';
 
 const routes = [
   {
@@ -22,7 +26,7 @@ const routes = [
     pageType: 'frontPage',
   },
   {
-    path: mediaRegexPath,
+    path: mediaRadioRegexArray,
     exact: true,
     component: MediaPage,
     getInitialData: getMediaPageInitialData,
