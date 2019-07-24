@@ -201,8 +201,7 @@ pipeline {
         build(
           job: 'simorgh-infrastructure-test/latest',
           parameters: [
-            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'test'],
+            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME]
           ],
           propagate: true,
           wait: true
