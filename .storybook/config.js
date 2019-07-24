@@ -1,3 +1,4 @@
+import 'storybook-chromatic';
 import React, { Fragment } from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
