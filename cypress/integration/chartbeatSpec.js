@@ -1,6 +1,8 @@
-import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import { describeForLocalAndTest } from '../support/limitEnvRuns';
+
+const source = '//static.chartbeat.com/js/chartbeat.js';
+const UID = 50924;
 
 const hasScriptWithChartbeatSrc = chartbeatSource => {
   cy.get(`script`)
@@ -24,7 +26,7 @@ describeForLocalAndTest('Chartbeat Analytics for News Article', () => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
     });
     it('should have a script with src value set to chartbeat source', () => {
-      hasScriptWithChartbeatSrc(envConfig.chartbeatSource);
+      hasScriptWithChartbeatSrc(source);
     });
     it('should have chartbeat config set to window object', () => {
       hasGlobalChartbeatConfig();
@@ -33,7 +35,7 @@ describeForLocalAndTest('Chartbeat Analytics for News Article', () => {
   describe('AMP page', () => {
     it('should have chartbeat config UID', () => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
-      hasAmpChartbeatConfigUid(envConfig.chartbeatUID);
+      hasAmpChartbeatConfigUid(UID);
     });
   });
 });
@@ -44,7 +46,7 @@ describeForLocalAndTest('Chartbeat Analytics for Persian Articles', () => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
     });
     it('should have a script with src value set to chartbeat source', () => {
-      hasScriptWithChartbeatSrc(envConfig.chartbeatSource);
+      hasScriptWithChartbeatSrc(source);
     });
     it('should have chartbeat config set to window object', () => {
       hasGlobalChartbeatConfig();
@@ -55,7 +57,7 @@ describeForLocalAndTest('Chartbeat Analytics for Persian Articles', () => {
       cy.visit(
         `/persian/articles/${services.persian.pageTypes.articles.asset}.amp`,
       );
-      hasAmpChartbeatConfigUid(envConfig.chartbeatUID);
+      hasAmpChartbeatConfigUid(UID);
     });
   });
 });
