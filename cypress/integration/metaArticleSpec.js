@@ -63,32 +63,38 @@ Object.keys(services)
         });
       });
 
-      cy.facebookMeta(
-        '100004154058350',
-        '1609039196070050',
-        `${testData[service].articleAuthor}`,
-      );
+      it('should have the correct facebook metadata', () => {
+        cy.facebookMeta(
+          '100004154058350',
+          '1609039196070050',
+          `${testData[service].articleAuthor}`,
+        );
+      });
 
-      cy.openGraphMeta(
-        'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-        `${testData[service].defaultImage}`,
-        `${testData[service].defaultImageAltText}`,
-        `${testData[service].locale}`,
-        `${testData[service].defaultImageAltText}`,
-        "Meghan's bouquet laid on tomb of unknown warrior",
-        'article',
-        `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
-      );
+      it('should have the correct open graph metadata', () => {
+        cy.openGraphMeta(
+          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+          `${testData[service].defaultImage}`,
+          `${testData[service].defaultImageAltText}`,
+          `${testData[service].locale}`,
+          `${testData[service].defaultImageAltText}`,
+          "Meghan's bouquet laid on tomb of unknown warrior",
+          'article',
+          `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
+        );
+      });
 
-      cy.twitterMeta(
-        'summary_large_image',
-        `${testData[service].twitterCreator}`,
-        'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-        `${testData[service].defaultImageAltText}`,
-        `${testData[service].defaultImage}`,
-        `${testData[service].twitterSite}`,
-        "Meghan's bouquet laid on tomb of unknown warrior",
-      );
+      it('should have the correct twitter metadata', () => {
+        cy.twitterMeta(
+          'summary_large_image',
+          `${testData[service].twitterCreator}`,
+          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+          `${testData[service].defaultImageAltText}`,
+          `${testData[service].defaultImage}`,
+          `${testData[service].twitterSite}`,
+          "Meghan's bouquet laid on tomb of unknown warrior",
+        );
+      });
 
       it('should include metadata that matches the JSON data', () => {
         cy.metadataAssertion();

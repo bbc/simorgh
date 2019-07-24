@@ -51,32 +51,37 @@ describe('Article Meta Tests', () => {
     });
   });
 
-  cy.facebookMeta(
-    '100004154058350',
-    '1609039196070050',
-    'https://www.facebook.com/bbcnews',
-  );
+  it('should have the correct facebook metadata', () => {
+    cy.facebookMeta(
+      '100004154058350',
+      '1609039196070050',
+      'https://www.facebook.com/bbcnews',
+    );
+  });
 
-  cy.openGraphMeta(
-    'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-    'BBC News',
-    'en_GB',
-    'BBC News',
-    "Meghan's bouquet laid on tomb of unknown warrior",
-    'article',
-    `https://www.bbc.com/news/articles/${services.news.pageTypes.articles.asset}`,
-  );
-
-  cy.twitterMeta(
-    'summary_large_image',
-    '@BBCNews',
-    'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-    'BBC News',
-    'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-    '@BBCNews',
-    "Meghan's bouquet laid on tomb of unknown warrior",
-  );
+  it('should have the correct open graph metadata', () => {
+    cy.openGraphMeta(
+      'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+      'BBC News',
+      'en_GB',
+      'BBC News',
+      "Meghan's bouquet laid on tomb of unknown warrior",
+      'article',
+      `https://www.bbc.com/news/articles/${services.news.pageTypes.articles.asset}`,
+    );
+  });
+  it('should have the correct twitter metadata', () => {
+    cy.twitterMeta(
+      'summary_large_image',
+      '@BBCNews',
+      'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+      'BBC News',
+      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+      '@BBCNews',
+      "Meghan's bouquet laid on tomb of unknown warrior",
+    );
+  });
 
   it('should include metadata that matches the JSON data', () => {
     cy.metadataAssertion();
