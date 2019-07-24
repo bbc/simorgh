@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterContainer should render correctly 1`] = `
-.c12 {
+.c11 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -10,7 +10,7 @@ exports[`FooterContainer should render correctly 1`] = `
   display: block;
 }
 
-.c15 {
+.c14 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -19,13 +19,13 @@ exports[`FooterContainer should render correctly 1`] = `
   display: inline;
 }
 
-.c11:hover .c13,
-.c11:focus .c13 {
+.c10:hover .c12,
+.c10:focus .c12 {
   padding-bottom: 2px;
   border-bottom: 2px solid #FFFFFF;
 }
 
-.c9 {
+.c8 {
   border-bottom: 1px solid #3F3F42;
   display: grid;
   grid-auto-flow: column;
@@ -34,18 +34,18 @@ exports[`FooterContainer should render correctly 1`] = `
   padding: 0 0 0.5rem;
 }
 
-.c9 > li:first-child {
+.c8 > li:first-child {
   border-bottom: 1px solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   grid-column: 1/-1;
 }
 
-.c10 {
+.c9 {
   min-width: 50%;
 }
 
-.c7 {
+.c6 {
   background-color: #222222;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -54,18 +54,18 @@ exports[`FooterContainer should render correctly 1`] = `
   font-style: normal;
 }
 
-.c8 {
+.c7 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c14 {
+.c13 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.c6 {
+.c5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -77,12 +77,12 @@ exports[`FooterContainer should render correctly 1`] = `
   margin: 0;
 }
 
-.c2 {
+.c1 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c1 {
+.c0 {
   background-color: #B80000;
   height: 3.5rem;
   width: 100%;
@@ -90,14 +90,14 @@ exports[`FooterContainer should render correctly 1`] = `
   border-top: 0.0625rem solid transparent;
 }
 
-.c4 {
+.c3 {
   display: inline-block;
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
 }
 
-.c5 {
+.c4 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -109,25 +109,21 @@ exports[`FooterContainer should render correctly 1`] = `
   min-width: 6.9979rem;
 }
 
-.c3:hover .c5,
-.c3:focus .c5 {
+.c2:hover .c4,
+.c2:focus .c4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c0 {
-  padding-top: 2rem;
-}
-
 @media (max-width:14.9375rem) {
-  .c9 {
+  .c8 {
     grid-auto-flow: row;
   }
 }
 
 @media (min-width:15rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c8 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat( 1,auto );
@@ -135,7 +131,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c9 {
+  .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat( 1,auto );
@@ -143,7 +139,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c9 {
+  .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat( 1,auto );
@@ -151,7 +147,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c9 {
+  .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat( 1,auto );
@@ -159,78 +155,77 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @supports not (display:grid) {
-  .c9 > li:first-child {
+  .c8 > li:first-child {
     width: 100%;
   }
 }
 
 @supports not (display:grid) {
-  .c10 {
+  .c9 {
     display: inline-block;
   }
 }
 
 @media (max-width:25rem) {
-  .c7 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c7 {
+  .c6 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
+  .c6 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c6 {
     font-size: 0.8125rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c1 {
+  .c0 {
     height: 5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c5 {
+  .c4 {
     padding-top: 1.75rem;
     padding-bottom: 1.5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),print {
-  .c5 {
+  .c4 {
     fill: windowText;
   }
 }
 
 <footer
-  className="c0"
   role="contentinfo"
 >
   <div
-    className="c1"
+    className="c0"
   >
     <div
-      className="c2"
+      className="c1"
     >
       <a
-        className="c3 c4"
+        className="c2 c3"
         href="/news"
       >
         <svg
           aria-hidden="true"
-          className="c5"
+          className="c4"
           focusable="false"
           height={24}
           viewBox="0 0 167.95 24"
@@ -251,7 +246,7 @@ exports[`FooterContainer should render correctly 1`] = `
           </g>
         </svg>
         <span
-          className="c6"
+          className="c5"
         >
           BBC News
         </span>
@@ -259,25 +254,25 @@ exports[`FooterContainer should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="c7"
+    className="c6"
   >
     <div
-      className="c8"
+      className="c7"
     >
       <ul
-        className="c9"
+        className="c8"
         role="list"
       >
         <li
-          className="c10"
+          className="c9"
           role="listitem"
         >
           <a
-            className="c11 c12"
+            className="c10 c11"
             href="https://www.bbc.com/yoruba/institutional-48528718"
           >
             <span
-              className="c13"
+              className="c12"
             >
               Why you can trust the BBC
             </span>
@@ -285,15 +280,15 @@ exports[`FooterContainer should render correctly 1`] = `
         </li>
       </ul>
       <p
-        className="c14"
+        className="c13"
       >
         © 3000 BBC. The BBC is not responsible for the content of external sites. 
         <a
-          className="c11 c15"
+          className="c10 c14"
           href="https://www.bbc.co.uk/help/web/links/"
         >
           <span
-            className="c13"
+            className="c12"
           >
             Read about our approach to external linking.
           </span>

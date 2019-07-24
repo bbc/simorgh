@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import * as brandSVGs from '@bbc/psammead-assets/svgs';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const service = {
   lang: `tr-TR`,
@@ -112,10 +112,11 @@ const service = {
     },
     media: {
       audio: 'Dinleyin',
+      photogallery: 'Fotoğraf',
       video: 'İzleyin',
     },
   },
-  brandSVG: brandSVGs.turkce || brandSVGs.news,
+  brandSVG,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

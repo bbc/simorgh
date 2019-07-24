@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { shape } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import { Grid, GridItemConstrainedLarge } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
-import deepGet from '../../lib/utilities/deepGet';
 import ATIAnalytics from '../ATIAnalytics';
 
 const FrontPageMain = ({ frontPageData }) => {
@@ -16,7 +15,7 @@ const FrontPageMain = ({ frontPageData }) => {
   );
   const { home } = translations;
 
-  const groups = deepGet(['content', 'groups'], frontPageData);
+  const groups = pathOr(null, ['content', 'groups'], frontPageData);
   const { metadata, promo } = frontPageData;
 
   // eslint-disable-next-line jsx-a11y/aria-role
@@ -53,7 +52,7 @@ const FrontPageMain = ({ frontPageData }) => {
 };
 
 FrontPageMain.propTypes = {
-  frontPageData: shape(frontPageDataPropTypes).isRequired,
+  frontPageData: frontPageDataPropTypes.isRequired,
 };
 
 export default FrontPageMain;

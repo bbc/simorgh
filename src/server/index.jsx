@@ -15,11 +15,13 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
+  mediaRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import getDials from './getDials';
+import logResponseTime from './utilities/logResponseTime';
 
 const morgan = require('morgan');
 
@@ -37,6 +39,12 @@ class LoggerStream {
     logger.info(message.substring(0, message.lastIndexOf('\n')));
   }
 }
+
+const constructDataFilePath = (pageType, service, id) => {
+  const dataPath = pageType === 'frontpage' ? 'index.json' : `${id}.json`;
+
+  return path.join(process.cwd(), 'data', service, pageType, dataPath);
+};
 
 const server = express();
 
@@ -58,6 +66,13 @@ server
   .get('/status', (req, res) => {
     res.sendStatus(200);
   });
+
+/*
+ * Prod only logging - response time
+ */
+if (process.env.APP_ENV !== 'local') {
+  server.use(logResponseTime);
+}
 
 /*
  * Local env routes - fixture data
@@ -89,26 +104,14 @@ if (process.env.APP_ENV === 'local') {
     .get(articleDataRegexPath, async ({ params }, res, next) => {
       const { service, id } = params;
 
-      const dataFilePath = path.join(
-        process.cwd(),
-        'data',
-        service,
-        'articles',
-        `${id}.json`,
-      );
+      const dataFilePath = constructDataFilePath('articles', service, id);
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(frontpageDataRegexPath, async ({ params }, res, next) => {
       const { service } = params;
 
-      const dataFilePath = path.join(
-        process.cwd(),
-        'data',
-        service,
-        'frontpage',
-        'index.json',
-      );
+      const dataFilePath = constructDataFilePath('frontpage', service);
 
       sendDataFile(res, dataFilePath, next);
     })
@@ -146,18 +149,8 @@ server
       });
     },
   )
-  .get(articleManifestRegexPath, async ({ params }, res) => {
-    const { service } = params;
-    const manifestPath = `${__dirname}/public/${service}/manifest.json`;
-    res.sendFile(manifestPath, {}, error => {
-      if (error) {
-        console.log(error); // eslint-disable-line no-console
-        res.status(500).send('Unable to find manifest.');
-      }
-    });
-  })
   .get(
-    [articleRegexPath, frontpageRegexPath],
+    [articleRegexPath, frontpageRegexPath, mediaRegexPath],
     async ({ url, headers }, res) => {
       try {
         const { service, isAmp, route, match } = getRouteProps(routes, url);

@@ -1,4 +1,4 @@
-import deepGet from '../../deepGet';
+import pathOr from 'ramda/src/pathOr';
 
 const squashKeys = [
   'responsive-top-stories',
@@ -9,7 +9,7 @@ const squashKeys = [
 
 const squashTopStories = jsonRaw => {
   const json = jsonRaw;
-  let groups = deepGet(['content', 'groups'], json);
+  let groups = pathOr(null, ['content', 'groups'], json);
   let collectedItems = [];
   let collectedStrapline;
 
@@ -21,7 +21,7 @@ const squashTopStories = jsonRaw => {
       if (squashKeys.includes(group.type)) {
         collectedItems = collectedItems.concat(group.items);
 
-        const foundStapline = deepGet(['strapline', 'name'], group);
+        const foundStapline = pathOr(null, ['strapline', 'name'], group);
 
         // collect the first found strapline name
         if (!collectedStrapline && foundStapline) {

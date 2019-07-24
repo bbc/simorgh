@@ -16,7 +16,6 @@ developmentTests:
 
 productionTests:
 	npm run build && xvfb-run npm run test:prod:ci;
-	npm run audit:ci
 
 buildStorybook:
 	npm run build:storybook;

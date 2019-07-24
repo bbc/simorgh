@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import * as brandSVGs from '@bbc/psammead-assets/svgs';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const service = {
   lang: `ko-KO`,
@@ -112,10 +112,11 @@ const service = {
     },
     media: {
       audio: '오디오',
+      photogallery: '이미지 갤러리',
       video: '비디오',
     },
   },
-  brandSVG: brandSVGs.korean || brandSVGs.news,
+  brandSVG,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

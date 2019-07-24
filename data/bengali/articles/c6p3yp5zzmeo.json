@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c6p3yp5zzmeo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo"
+    },
+    "type": "article",
+    "createdBy": "Bengali",
+    "language": "bn",
+    "lastUpdated": 1562942416450,
+    "firstPublished": 1562942411695,
+    "lastPublished": 1562942411695,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "bn",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "এবারের বিশ্বকাপ ক্রিকেটে ম্যান অফ দা টুর্নামেন্ট কে হতে যাচ্ছেন- এমন প্রশ্ন এখন থেকেই আলোচিত হচ্ছে ক্রিকেট অঙ্গনে। উঠে আসছে নানা ক্রিকেটারের নাম।",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "এবারের বিশ্বকাপ ক্রিকেটে ম্যান অফ দা টুর্নামেন্ট কে হতে যাচ্ছেন- এমন প্রশ্ন এখন থেকেই আলোচিত হচ্ছে ক্রিকেট অঙ্গনে। উঠে আসছে নানা ক্রিকেটারের নাম।",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "সর্বোচ্চ রান সংগ্রহকারীদের তালিকায় আছেন অস্ট্রেলিয়ার ডেভিড ওয়ার্নার, ভারতের রোহিত শর্মা, বাংলাদেশের সাকিব আল হাসান।",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "সর্বোচ্চ রান সংগ্রহকারীদের তালিকায় আছেন অস্ট্রেলিয়ার ডেভিড ওয়ার্নার, ভারতের রোহিত শর্মা, বাংলাদেশের সাকিব আল হাসান।",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "সর্বোচ্চ উইকেট শিকারীর তালিকায় অস্ট্রেলিয়ার মিচেল স্টার্ক, বাংলাদেশের মুস্তাফিজুর রহমান, ভারতের জসপ্রিত বুমরাহ ও নিউজিল্যান্ডের লকি ফার্গুসন।",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "সর্বোচ্চ উইকেট শিকারীর তালিকায় অস্ট্রেলিয়ার মিচেল স্টার্ক, বাংলাদেশের মুস্তাফিজুর রহমান, ভারতের জসপ্রিত বুমরাহ ও নিউজিল্যান্ডের লকি ফার্গুসন।",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ব্যাটিং এভারেজে এক নম্বরে আছেন নিউজিল্যান্ডের কেইন উইলিয়ামসন, যিনি একাই দলকে অনেকটা টেনে তুলেছেন ফাইনালে।",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ব্যাটিং এভারেজে এক নম্বরে আছেন নিউজিল্যান্ডের কেইন উইলিয়ামসন, যিনি একাই দলকে অনেকটা টেনে তুলেছেন ফাইনালে।",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo"
+    },
+    "summary": "",
+    "timestamp": 1562942411695,
+    "id": "urn:bbc:ares::article:c6p3yp5zzmeo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Bengali",
+      "uri": "/bengali",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import * as brandSVGs from '@bbc/psammead-assets/svgs';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const service = {
   lang: `pa-IN`,
@@ -112,10 +112,11 @@ const service = {
     },
     media: {
       audio: 'ਔਡੀਓ',
+      photogallery: 'ਚਿੱਤਰ ਗੈਲਰੀ',
       video: 'ਵੀਡੀਓ',
     },
   },
-  brandSVG: brandSVGs.punjabi || brandSVGs.news,
+  brandSVG,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
