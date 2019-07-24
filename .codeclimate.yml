@@ -1,6 +1,15 @@
+version: '2'
+plugins:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+    exclude_patterns:
+      - 'cypress/{integration,support}/*.js'
+      # The line below should work but doesn't it removes all js and jsx quality checking
+      # - 'src/**/*.{test,stories}.{js,jsx}'
 exclude_patterns:
   - '**/node_modules/'
-  - 'cypress/{integration,support}/*.js'
-  - 'src/**/*.test.{jsx,js}'
   - 'src/app/lib/config/'
   - 'src/app/**/fixtures.js'
