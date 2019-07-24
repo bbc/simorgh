@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install:build": "npm install"
+    "install:build": "npm install webpack-cli && npm install"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +16,6 @@
     "inspectpack": "^4.2.1",
     "terser-webpack-plugin": "^1.3.0",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5",
     "webpack-merge": "^4.1.5",
     "webpack-node-externals": "^1.7.2"
   }
