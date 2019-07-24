@@ -186,4 +186,4 @@ Cypress.Commands.add('twitterMeta', (
     //   title,
     // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
   });
-};
+});
