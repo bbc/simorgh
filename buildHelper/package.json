@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install:build": "npm install"
+    "install:build": "npm install webpack-cli && npm install"
   },
   "author": "",
   "license": "ISC",
