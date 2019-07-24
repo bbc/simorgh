@@ -1,5 +1,5 @@
 import services from '../../lib/config/services/loadableConfig';
-import { servicesWithRadio, servicesWithTv } from '../config';
+import servicesWithRadioOrTv from '../config';
 import buildMediaRoutes from '../buildMediaRoutes';
 
 const serviceRegex = Object.keys(services).join('|');
@@ -22,6 +22,6 @@ export const frontpageManifestRegexPath = `/:service(${serviceRegex})/manifest.j
 
 export const frontpageSwRegexPath = `/:service(${serviceRegex})/sw.js`;
 
-export const mediaRadioRegexArray = buildMediaRoutes(servicesWithRadio);
-
-export const mediaTvRegexArray = buildMediaRoutes(servicesWithTv);
+export const mediaRadioAndTvRegexPathsArray = buildMediaRoutes(
+  servicesWithRadioOrTv,
+);

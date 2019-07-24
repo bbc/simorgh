@@ -7,7 +7,7 @@ import getMediaPageInitialData from './getInitialData/mediapage';
 import {
   articleRegexPath,
   frontpageRegexPath,
-  mediaRadioRegexArray,
+  mediaRadioAndTvRegexPathsArray,
 } from './regex';
 
 const routes = [
@@ -26,7 +26,7 @@ const routes = [
     pageType: 'frontPage',
   },
   {
-    path: mediaRadioRegexArray,
+    path: mediaRadioAndTvRegexPathsArray,
     exact: true,
     component: MediaPage,
     getInitialData: getMediaPageInitialData,
