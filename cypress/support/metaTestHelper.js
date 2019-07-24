@@ -11,9 +11,3 @@ export const assertCookieExpiryDate = (cookieName, timestamp) => {
     );
   });
 };
-
-export const retrieve404BodyResponse = (url, bodyResponse) => {
-  cy.request({ url, failOnStatusCode: false })
-    .its('body')
-    .should('include', bodyResponse);
-};
