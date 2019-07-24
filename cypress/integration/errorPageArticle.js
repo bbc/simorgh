@@ -9,7 +9,6 @@ import testData from '../../src/app/lib/config/services';
 import services from '../support/config/services';
 
 const nonExistentAsset = 'cxvxrj8tvppo';
-
 const serviceHasNonExistentArticle = service =>
   path(['pageTypes', 'articles', 'nonExistent'], services[service]);
 
