@@ -88,10 +88,7 @@ export default {
     pageTypes: {
       articles: {
         asset: undefined,
-        nonExistent:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : 'cxvxrj8tvppo',
+        nonExistent: 'cxvxrj8tvppo',
       },
       frontPage: {
         asset: '/igbo',

@@ -1,4 +1,3 @@
-import path from 'ramda/src/path';
 import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import testData from '../../src/app/lib/config/services';
@@ -15,7 +14,8 @@ import {
 } from '../support/metaTestHelper';
 
 const serviceHasArticlePageType = service =>
-  path(['pageTypes', 'articles', 'asset'], services[service]);
+  services[service].pageTypes.articles !== undefined &&
+  services[service].pageTypes.articles.asset !== undefined;
 
 Object.keys(services)
   .filter(serviceHasArticlePageType)

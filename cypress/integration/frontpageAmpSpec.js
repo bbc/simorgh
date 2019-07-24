@@ -101,7 +101,9 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
       ? 'https://www.bbc.com'
       : origin;
 
-    checkCanonicalURL(`${canonicalOrigin}${services.igbo.pageTypes.frontPage.asset}`);
+    checkCanonicalURL(
+      `${canonicalOrigin}${services.igbo.pageTypes.frontPage.asset}`,
+    );
   });
 
   xit('should not have an AMP attribute on the main article', () => {
