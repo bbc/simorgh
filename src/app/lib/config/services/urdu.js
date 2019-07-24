@@ -1,5 +1,5 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { arabic } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const service = {
@@ -21,7 +21,7 @@ const service = {
   locale: `ur`,
   datetimeLocale: `ur`,
   service: 'urdu',
-  serviceName: 'News اردو',
+  serviceName: 'Urdu',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcurdu',
   twitterSite: '@bbcurdu',
@@ -50,10 +50,10 @@ const service = {
       500: {
         statusCode: '500',
         title: 'اندرونی سرور کی خرابی',
-        message: 'ہم معذرت خواہ ہیں کہ آپ جو صفحہ تلاش کر رہے ہیں وہ دستیاب نہیں۔ یہ کوشش کر کے دیکھیں:',
+        message: 
+          'ہم معذرت خواہ ہیں کہ آپ جو صفحہ تلاش کر رہے ہیں وہ دستیاب نہیں۔ یہ کوشش کر کے دیکھیں:',
         solutions: [
-          'اپنے براؤزر کو ریفریش کریں',
-          'کچھ دیر بعد کوشش کیجیے',
+          'اپنے براؤزر کو ریفریش کریں','کچھ دیر بعد کوشش کیجیے',
         ],
         callToActionFirst: ' متبادل کے طور پر بی بی سی نیوز',
         callToActionLinkText: '.کے ہوم پیچ پر جائیں اردو',
