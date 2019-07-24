@@ -6,6 +6,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import {
   chartbeatUID,
+  chartbeatSource,
   useCanonical,
   getSylphidCookie,
   getDomain,
@@ -34,10 +35,15 @@ const ChartbeatAnalytics = () => {
     cookie,
     chartbeatUID,
   };
+
   return platform === 'amp' ? (
     <AmpChartbeatBeacon {...commonProps} />
   ) : (
-    <CanonicalChartbeatBeacon {...commonProps} useCanonical={useCanonical} />
+    <CanonicalChartbeatBeacon
+      {...commonProps}
+      useCanonical={useCanonical}
+      chartbeatSource={chartbeatSource}
+    />
   );
 };
 

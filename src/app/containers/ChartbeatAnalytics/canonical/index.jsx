@@ -9,6 +9,7 @@ const CanonicalChartbeatBeacon = ({
   cookie,
   chartbeatUID,
   useCanonical,
+  chartbeatSource,
 }) => (
   <Helmet>
     <script async type="text/javascript">
@@ -29,7 +30,7 @@ const CanonicalChartbeatBeacon = ({
            var n = document.getElementsByTagName('script')[0];
            e.type = 'text/javascript';
            e.async = true;
-           e.src = '//static.chartbeat.com/js/chartbeat.js';
+           e.src = "${chartbeatSource}";
            n.parentNode.insertBefore(e, n);
           }
           loadChartbeat();
@@ -46,6 +47,7 @@ CanonicalChartbeatBeacon.propTypes = {
   cookie: string,
   chartbeatUID: number.isRequired,
   useCanonical: bool.isRequired,
+  chartbeatSource: string.isRequired,
 };
 
 CanonicalChartbeatBeacon.defaultProps = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../../testHelpers';
+import renderer from 'react-test-renderer';
 import CanonicalChartbeatAnalytics from '.';
 
 describe('CanonicalChartbeatAnalytics', () => {
@@ -9,9 +9,13 @@ describe('CanonicalChartbeatAnalytics', () => {
     sections: 'section1 section2',
     cookie: 'cookie',
     chartbeatUID: 1111,
+    chartbeatSource: '//chartbeat.js',
   };
-  shouldMatchSnapshot(
-    'should return script snippet',
-    <CanonicalChartbeatAnalytics {...props} />,
-  );
+  it('should return the helmet wrapper with the script snippet', () => {
+    const tree = renderer
+      .create(<CanonicalChartbeatAnalytics {...props} />)
+      .toTree();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

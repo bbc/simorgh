@@ -29,11 +29,11 @@ ContextWrap.propTypes = {
   platform: string.isRequired,
 };
 
-describe('Charbeats Analytics Contaiiner', () => {
+describe('Charbeats Analytics Container', () => {
   it('should call CanonicalCharbeatsBeacon when platform is canonical, and toggle enabled for chartbeat for local', () => {
     const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+    const { chartbeatSource } = testUtils;
     canonical.default = mockCanonical;
-
     testUtils.getDomain = jest
       .fn()
       .mockImplementation(service => `${service}-domain`);
@@ -66,6 +66,7 @@ describe('Charbeats Analytics Contaiiner', () => {
         sections: 'secction1 section2',
         type: 'article',
         useCanonical: true,
+        chartbeatSource,
       },
       {},
     );
