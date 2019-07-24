@@ -2,13 +2,7 @@ import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import testData from '../../src/app/lib/config/services';
 import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
-import {
-  checkAmpHTML,
-  checkCanonicalURL,
-  metadataAssertionAMP,
-  openGraphMeta,
-  twitterMeta,
-} from '../support/metaTestHelper';
+import { checkAmpHTML, checkCanonicalURL } from '../support/metaTestHelper';
 
 const serviceHasArticlePageType = service =>
   services[service].pageTypes.articles !== undefined;
@@ -76,7 +70,7 @@ Object.keys(services)
         `${testData[service].articleAuthor}`,
       );
 
-      openGraphMeta(
+      cy.openGraphMeta(
         'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
         `${testData[service].defaultImage}`,
         `${testData[service].defaultImageAltText}`,
@@ -87,7 +81,7 @@ Object.keys(services)
         `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
       );
 
-      twitterMeta(
+      cy.twitterMeta(
         'summary_large_image',
         `${testData[service].twitterCreator}`,
         'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
@@ -113,7 +107,7 @@ Object.keys(services)
       });
 
       it('should include metadata in the head on AMP pages', () => {
-        metadataAssertionAMP(
+        cy.metadataAssertionAMP(
           `/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
         );
       });

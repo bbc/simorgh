@@ -1,0 +1,189 @@
+Cypress.Commands.add('retrieveMetaDataContent', (metaDataTag, content) => {
+  cy.get(metaDataTag).should('have.attr', 'content', content);
+});
+
+Cypress.Commands.add('facebookMeta', (fbAdmins, appID, articleAuthor) => {
+  cy.get('head meta[name="fb:admins"]').should(
+    'have.attr',
+    'content',
+    fbAdmins,
+  );
+  cy.get('head meta[name="fb:app_id"]').should('have.attr', 'content', appID);
+  cy.get('head meta[name="article:author"]').should(
+    'have.attr',
+    'content',
+    articleAuthor,
+  );
+});
+
+Cypress.Commands.add('metadataAssertion', () => {
+  cy.window().then(win => {
+    cy.get('head meta[name="description"]').should(
+      'have.attr',
+      'content',
+      win.SIMORGH_DATA.pageData.promo.summary ||
+        win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+    );
+    cy.get('head meta[name="og:title"]').should(
+      'have.attr',
+      'content',
+      win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+    );
+    cy.get('head meta[name="og:type"]').should(
+      'have.attr',
+      'content',
+      win.SIMORGH_DATA.pageData.metadata,
+    );
+    cy.get('head meta[name="article:published_time"]').should(
+      'have.attr',
+      'content',
+      new Date(win.SIMORGH_DATA.pageData.metadata.firstPublished).toISOString(),
+    );
+    cy.get('head meta[name="article:modified_time"]').should(
+      'have.attr',
+      'content',
+      new Date(win.SIMORGH_DATA.pageData.metadata.lastPublished).toISOString(),
+    );
+    cy.get('html').should(
+      'have.attr',
+      'lang',
+      win.SIMORGH_DATA.pageData.metadata.passport,
+    );
+  });
+});
+
+Cypress.Commands.add('metadataAssertionAMP', AMPURL => {
+  // This will only work if you visit the matching canonical
+  // url prior to running this.
+  // AMP overrides the Window data in window.SIMORGH_DATA. In order to get
+  // around this we visit the canonical page first to retrieve
+  // window.SIMORGH_DATA and use this to compare against the metadata
+  // served in the head of an AMP page.
+
+  cy.window().then(win => {
+    cy.visit(AMPURL);
+    cy.get('head meta[name="description"]').should(
+      'have.attr',
+      'content',
+      win.SIMORGH_DATA.pageData.promo.summary ||
+        win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+    );
+    cy.get('head meta[name="og:title"]').should(
+      'have.attr',
+      'content',
+      win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+    );
+    cy.get('head meta[name="og:type"]').should(
+      'have.attr',
+      'content',
+      win.SIMORGH_DATA.pageData.metadata,
+    );
+    cy.get('head meta[name="article:published_time"]').should(
+      'have.attr',
+      'content',
+      new Date(win.SIMORGH_DATA.pageData.metadata.firstPublished).toISOString(),
+    );
+    cy.get('head meta[name="article:modified_time"]').should(
+      'have.attr',
+      'content',
+      new Date(win.SIMORGH_DATA.pageData.metadata.lastPublished).toISOString(),
+    );
+    cy.get('html').should(
+      'have.attr',
+      'lang',
+      win.SIMORGH_DATA.pageData.metadata.passport,
+    );
+  });
+});
+
+Cypress.Commands.add('openGraphMeta', (
+  description, // eslint-disable-line no-unused-vars
+  imageUrl,
+  altText,
+  locale,
+  siteName,
+  title, // eslint-disable-line no-unused-vars
+  type,
+  url,
+) => {
+  it('should have OpenGraph meta data', () => {
+    // cy.get('head meta[name="og:description"]').should('have.attr', 'content', description); // !!! Remove eslint-disabling comment above when un-commenting this test.
+    cy.get('head meta[name="og:image"]').should(
+      'have.attr',
+      'content',
+      imageUrl,
+    );
+    cy.get('head meta[name="og:image:alt"]').should(
+      'have.attr',
+      'content',
+      altText,
+    );
+    cy.retrieveMetaDataContent('head meta[name="og:locale"]', locale);
+    cy.get('head meta[name="og:locale"]').should(
+      'have.attr',
+      'content',
+      locale,
+    );
+    cy.retrieveMetaDataContent('head meta[name="og:site_name"]', siteName);
+    cy.get('head meta[name="og:site_name"]').should(
+      'have.attr',
+      'content',
+      siteName,
+    );
+    // cy.get('head meta[name="og:title"]').should('have.attr', 'content', title); // !!! Remove eslint-disabling comment above when un-commenting this test.
+    cy.get('head meta[name="og:type"]').should('have.attr', 'content', type);
+    cy.get('head meta[name="og:url"]').should('have.attr', 'content', url);
+  });
+});
+
+Cypress.Commands.add('twitterMeta', (
+  card,
+  creator,
+  description, // eslint-disable-line no-unused-vars
+  imageAlt,
+  imageSrc,
+  site,
+  title, // eslint-disable-line no-unused-vars
+) => {
+  it('should have Twitter meta data', () => {
+    cy.get('head meta[name="twitter:card"]').should(
+      'have.attr',
+      'content',
+      card,
+    );
+    cy.retrieveMetaDataContent('head meta[name="twitter:creator"]', creator);
+    cy.get('head meta[name="twitter:creator"]').should(
+      'have.attr',
+      'content',
+      creator,
+    );
+    // cy.get('head meta[name="twitter:description"]').should(
+    //   'have.attr',
+    //   'content',
+    //   description,
+    // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
+    cy.retrieveMetaDataContent('head meta[name="twitter:image:alt"]', imageAlt);
+    cy.get('head meta[name="twitter:image:alt"]').should(
+      'have.attr',
+      'content',
+      imageAlt,
+    );
+    cy.retrieveMetaDataContent('head meta[name="twitter:image:src"]', imageSrc);
+    cy.get('head meta[name="twitter:image:src"]').should(
+      'have.attr',
+      'content',
+      imageSrc,
+    );
+    cy.retrieveMetaDataContent('head meta[name="twitter:site"]', site);
+    cy.get('head meta[name="twitter:site"]').should(
+      'have.attr',
+      'content',
+      site,
+    );
+    // cy.get('head meta[name="twitter:title"]').should(
+    //   'have.attr',
+    //   'content',
+    //   title,
+    // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
+  });
+};

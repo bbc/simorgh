@@ -1,13 +1,7 @@
 import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
-import {
-  checkAmpHTML,
-  checkCanonicalURL,
-  metadataAssertionAMP,
-  openGraphMeta,
-  twitterMeta,
-} from '../support/metaTestHelper';
+import { checkAmpHTML, checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
@@ -64,7 +58,7 @@ describe('Article Meta Tests', () => {
     'https://www.facebook.com/bbcnews',
   );
 
-  openGraphMeta(
+  cy.openGraphMeta(
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
     'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
     'BBC News',
@@ -75,7 +69,7 @@ describe('Article Meta Tests', () => {
     `https://www.bbc.com/news/articles/${services.news.pageTypes.articles.asset}`,
   );
 
-  twitterMeta(
+  cy.twitterMeta(
     'summary_large_image',
     '@BBCNews',
     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
@@ -101,7 +95,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include metadata in the head on AMP pages', () => {
-    metadataAssertionAMP(
+    cy.metadataAssertionAMP(
       `/news/articles/${services.news.pageTypes.articles.asset}.amp`,
     );
   });
