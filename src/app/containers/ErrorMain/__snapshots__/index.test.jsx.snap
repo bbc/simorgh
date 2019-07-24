@@ -33,6 +33,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -269,7 +270,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans serif;
+  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   padding-bottom: 1.5rem;
@@ -279,6 +280,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -525,6 +527,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -756,7 +759,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans serif;
+  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   padding-bottom: 1.5rem;
@@ -766,6 +769,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -1007,6 +1011,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
+  padding-bottom: 2rem;
 }
 
 .c3 {

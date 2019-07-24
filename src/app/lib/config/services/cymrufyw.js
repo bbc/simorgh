@@ -113,6 +113,7 @@ const service = {
     },
     media: {
       audio: 'Sain',
+      photogallery: 'Oriel luniau',
       video: 'Fideo',
     },
   },

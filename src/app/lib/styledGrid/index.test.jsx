@@ -14,6 +14,9 @@ import {
 } from '.';
 
 describe('Styled Grid items', () => {
+  describe('Grid', () => {
+    shouldMatchSnapshot('should render correctly', <Grid />);
+  });
   describe('GhostGrid', () => {
     shouldMatchSnapshot('should render correctly', <GhostGrid />);
   });

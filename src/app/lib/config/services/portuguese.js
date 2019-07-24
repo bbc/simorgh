@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'Audio',
+      photogallery: 'Galeria de Fotos',
       video: 'Vídeo',
     },
   },
