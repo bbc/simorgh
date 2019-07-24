@@ -9,7 +9,7 @@
     "bbcA11y": "wait-on -t 20000 http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po && bbc-a11y",
     "build:ci": "export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live",
     "build:helper": "npm install ./buildHelper && npm explore ./buildHelper -- npm run install:build",
-    "build": "rm -rf build && cp envConfig/local.env .env && npm run webpack:prod && npm run test:size",
+    "build": "npm run build:helper && rm -rf build && cp envConfig/local.env .env && npm run webpack:prod && npm run test:size",
     "build:storybook": "build-storybook -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && npm run webpack:prod",
     "build:live": "cp envConfig/live.env .env && npm run webpack:prod",
