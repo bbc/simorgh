@@ -5,7 +5,7 @@ import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 const service = {
   lang: 'ar',
   product: 'BBC News',
-  articleAuthor: 'http://www.facebook.com/bbcnews',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'جدّد في',
   atiAnalyticsAppName: 'news-arabic',
   brandName: 'BBC News عربي',
