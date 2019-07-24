@@ -1,3 +1,4 @@
+import path from 'ramda/src/path';
 import config from '../support/config/services';
 import {
   copyrightDataWindow,
@@ -9,7 +10,7 @@ import {
 } from '../support/bodyTestHelper';
 
 const serviceHasArticlePageType = service =>
-  config[service].pageTypes.articles !== undefined;
+  path(['pageTypes', 'articles', 'asset'], config[service]);
 
 Object.keys(config)
   .filter(serviceHasArticlePageType)

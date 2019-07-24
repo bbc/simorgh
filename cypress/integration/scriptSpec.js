@@ -1,9 +1,10 @@
+import path from 'ramda/src/path';
 import config from '../support/config/services';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 Object.keys(config).forEach(service => {
   Object.keys(config[service].pageTypes)
-    .filter(pageType => config[service].pageTypes[pageType] !== undefined)
+    .filter(pageType => path(['pageTypes', pageType, 'asset'], config[service]))
     .forEach(pageType => {
       describeForLocalOnly(`Script src - ${service} ${pageType}`, () => {
         beforeEach(() => {

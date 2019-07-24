@@ -9,13 +9,13 @@ import { describeForLocalOnly } from '../support/limitEnvRuns';
 describeForLocalOnly('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`${services.igbo.pageTypes.frontPage}.amp`);
+    cy.visit(`${services.igbo.pageTypes.frontPage.asset}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
       cy.testResponseCodeAndType(
-        `${services.igbo.pageTypes.frontPage}.amp`,
+        `${services.igbo.pageTypes.frontPage.asset}.amp`,
         200,
         'text/html',
       );
@@ -24,17 +24,17 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   it('should error gracefully', () => {
     cy.testResponseCodeAndType(
-      `${services.igbo.pageTypes.frontPage}.cake`,
+      `${services.igbo.pageTypes.frontPage.asset}.cake`,
       404,
       'text/html',
     );
     cy.testResponseCodeAndType(
-      `/amp${services.igbo.pageTypes.frontPage}`,
+      `/amp${services.igbo.pageTypes.frontPage.asset}`,
       404,
       'text/html',
     );
     cy.testResponseCodeAndType(
-      `${services.igbo.pageTypes.frontPage}/amp`,
+      `${services.igbo.pageTypes.frontPage.asset}/amp`,
       404,
       'text/html',
     );
@@ -101,11 +101,11 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
       ? 'https://www.bbc.com'
       : origin;
 
-    checkCanonicalURL(`${canonicalOrigin}${services.igbo.pageTypes.frontPage}`);
+    checkCanonicalURL(`${canonicalOrigin}${services.igbo.pageTypes.frontPage.asset}`);
   });
 
   xit('should not have an AMP attribute on the main article', () => {
-    cy.visit(`${services.igbo.pageTypes.frontPage}`);
+    cy.visit(`${services.igbo.pageTypes.frontPage.asset}`);
     cy.get('html').should('not.have.attr', 'amp');
   });
 });
