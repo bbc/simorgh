@@ -1,4 +1,3 @@
-import path from 'ramda/src/path';
 import {
   errorMessage,
   errorPageInlineLink,
@@ -10,7 +9,8 @@ import services from '../support/config/services';
 
 const nonExistentAsset = 'cxvxrj8tvppo';
 const serviceHasNonExistentArticle = service =>
-  path(['pageTypes', 'articles', 'nonExistent'], services[service]);
+  services[service].pageTypes.articles !== undefined &&
+  services[service].pageTypes.articles.nonExistent !== undefined;
 
 // These must only ever be run locally as otherwise you're testing
 // the mozart page not the response from this application.

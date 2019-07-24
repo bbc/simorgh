@@ -1,5 +1,4 @@
 import puppeteer from 'puppeteer';
-import path from 'ramda/src/path';
 
 global.Cypress = { env: () => 'local' };
 
@@ -34,14 +33,14 @@ describe('Js bundle requests', () => {
           config[service].pageTypes[pageType].asset !== undefined,
       )
       .forEach(pageType => {
-        const assetPath =
+        const path =
           pageType === 'frontPage'
             ? `/${service}`
             : `/${service}/articles/${config[service].pageTypes.articles.asset}`;
 
         describe(service, () => {
           beforeEach(async () => {
-            await page.goto(`http://localhost:7080${assetPath}`, {
+            await page.goto(`http://localhost:7080${path}`, {
               waitUntil: 'networkidle2',
             });
           });
