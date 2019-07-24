@@ -12,18 +12,6 @@ export const assertCookieExpiryDate = (cookieName, timestamp) => {
   });
 };
 
-export const retrieveMetaDataContent = (metaDataTag, content) => {
-  cy.get(metaDataTag).should('have.attr', 'content', content);
-};
-
-export const facebookMeta = (fbAdmins, appID, articleAuthor) => {
-  it('should have Facebook meta data', () => {
-    retrieveMetaDataContent('head meta[name="fb:admins"]', fbAdmins);
-    retrieveMetaDataContent('head meta[name="fb:app_id"]', appID);
-    retrieveMetaDataContent('head meta[name="article:author"]', articleAuthor);
-  });
-};
-
 export const openGraphMeta = (
   description, // eslint-disable-line no-unused-vars
   imageUrl,
@@ -35,14 +23,14 @@ export const openGraphMeta = (
   url,
 ) => {
   it('should have OpenGraph meta data', () => {
-    // retrieveMetaDataContent('head meta[name="og:description"]', description); // !!! Remove eslint-disabling comment above when un-commenting this test.
-    retrieveMetaDataContent('head meta[name="og:image"]', imageUrl);
-    retrieveMetaDataContent('head meta[name="og:image:alt"]', altText);
-    retrieveMetaDataContent('head meta[name="og:locale"]', locale);
-    retrieveMetaDataContent('head meta[name="og:site_name"]', siteName);
-    // retrieveMetaDataContent('head meta[name="og:title"]', title); // !!! Remove eslint-disabling comment above when un-commenting this test.
-    retrieveMetaDataContent('head meta[name="og:type"]', type);
-    retrieveMetaDataContent('head meta[name="og:url"]', url);
+    // cy.retrieveMetaDataContent('head meta[name="og:description"]', description); // !!! Remove eslint-disabling comment above when un-commenting this test.
+    cy.retrieveMetaDataContent('head meta[name="og:image"]', imageUrl);
+    cy.retrieveMetaDataContent('head meta[name="og:image:alt"]', altText);
+    cy.retrieveMetaDataContent('head meta[name="og:locale"]', locale);
+    cy.retrieveMetaDataContent('head meta[name="og:site_name"]', siteName);
+    // cy.retrieveMetaDataContent('head meta[name="og:title"]', title); // !!! Remove eslint-disabling comment above when un-commenting this test.
+    cy.retrieveMetaDataContent('head meta[name="og:type"]', type);
+    cy.retrieveMetaDataContent('head meta[name="og:url"]', url);
   });
 };
 
@@ -56,16 +44,16 @@ export const twitterMeta = (
   title, // eslint-disable-line no-unused-vars
 ) => {
   it('should have Twitter meta data', () => {
-    retrieveMetaDataContent('head meta[name="twitter:card"]', card);
-    retrieveMetaDataContent('head meta[name="twitter:creator"]', creator);
-    // retrieveMetaDataContent(
+    cy.retrieveMetaDataContent('head meta[name="twitter:card"]', card);
+    cy.retrieveMetaDataContent('head meta[name="twitter:creator"]', creator);
+    // cy.retrieveMetaDataContent(
     //   'head meta[name="twitter:description"]',
     //   description,
     // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
-    retrieveMetaDataContent('head meta[name="twitter:image:alt"]', imageAlt);
-    retrieveMetaDataContent('head meta[name="twitter:image:src"]', imageSrc);
-    retrieveMetaDataContent('head meta[name="twitter:site"]', site);
-    // retrieveMetaDataContent('head meta[name="twitter:title"]', title); // !!! Remove eslint-disabling comment above when un-commenting this test.
+    cy.retrieveMetaDataContent('head meta[name="twitter:image:alt"]', imageAlt);
+    cy.retrieveMetaDataContent('head meta[name="twitter:image:src"]', imageSrc);
+    cy.retrieveMetaDataContent('head meta[name="twitter:site"]', site);
+    // cy.retrieveMetaDataContent('head meta[name="twitter:title"]', title); // !!! Remove eslint-disabling comment above when un-commenting this test.
   });
 };
 
@@ -91,24 +79,18 @@ export const checkDataMatchesMetadata = data => {
   const firstPublished = new Date(data.metadata.firstPublished).toISOString();
   const lastPublished = new Date(data.metadata.lastPublished).toISOString();
 
-  retrieveMetaDataContent('head meta[name="description"]', description);
-  retrieveMetaDataContent('head meta[name="og:title"]', title);
-  retrieveMetaDataContent('head meta[name="og:type"]', type);
-  retrieveMetaDataContent(
+  cy.retrieveMetaDataContent('head meta[name="description"]', description);
+  cy.retrieveMetaDataContent('head meta[name="og:title"]', title);
+  cy.retrieveMetaDataContent('head meta[name="og:type"]', type);
+  cy.retrieveMetaDataContent(
     'head meta[name="article:published_time"]',
     firstPublished,
   );
-  retrieveMetaDataContent(
+  cy.retrieveMetaDataContent(
     'head meta[name="article:modified_time"]',
     lastPublished,
   );
   cy.get('html').should('have.attr', 'lang', language);
-};
-export const metadataAssertion = () => {
-  cy.window().then(win => {
-    const windowData = win.SIMORGH_DATA.pageData;
-    checkDataMatchesMetadata(windowData);
-  });
 };
 
 // This will only work if you visit the matching canonical

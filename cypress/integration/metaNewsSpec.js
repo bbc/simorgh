@@ -4,11 +4,8 @@ import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 import {
   checkAmpHTML,
   checkCanonicalURL,
-  facebookMeta,
-  metadataAssertion,
   metadataAssertionAMP,
   openGraphMeta,
-  retrieveMetaDataContent,
   twitterMeta,
 } from '../support/metaTestHelper';
 
@@ -23,7 +20,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
+    cy.retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
   });
 
   it('should load a maximum of two Reith font files', () => {
@@ -61,7 +58,7 @@ describe('Article Meta Tests', () => {
     });
   });
 
-  facebookMeta(
+  cy.facebookMeta(
     '100004154058350',
     '1609039196070050',
     'https://www.facebook.com/bbcnews',
@@ -89,7 +86,7 @@ describe('Article Meta Tests', () => {
   );
 
   it('should include metadata that matches the JSON data', () => {
-    metadataAssertion();
+    cy.metadataAssertion();
   });
 
   it('should include the canonical URL & ampHTML', () => {
