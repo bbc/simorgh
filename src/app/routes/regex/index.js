@@ -1,16 +1,17 @@
 import services from '../../lib/config/services/loadableConfig';
+import { servicesWithRadio, servicesWithTv } from '../config';
 
+const mediaIdRegex = '[a-z0-9]+';
 const serviceRegex = Object.keys(services).join('|');
 const idRegex = 'c[a-zA-Z0-9]{10}o';
-const serviceIdRegex = [
-  'bbc_amharic_radio',
-  'bbc_oromo_radio',
-  'bbc_indonesian_radio',
-  'bbc_korean_radio',
-  'bbc_tigrinya_radio',
-].join('|');
-const mediaIdRegex = 'liveradio';
 const ampRegex = '.amp';
+
+const buildMediaRoutes = servicesWithMedia =>
+  Object.keys(servicesWithMedia).map(service => {
+    return `/:service(${service})/:serviceId(${servicesWithMedia[service].join(
+      '|',
+    )})/:mediaId(${mediaIdRegex})`;
+  });
 
 export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):amp(${ampRegex})?`;
 
@@ -28,4 +29,6 @@ export const frontpageManifestRegexPath = `/:service(${serviceRegex})/manifest.j
 
 export const frontpageSwRegexPath = `/:service(${serviceRegex})/sw.js`;
 
-export const mediaRegexPath = `/:service(${serviceRegex})/:serviceId(${serviceIdRegex})/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
+export const mediaRadioRegexArray = buildMediaRoutes(servicesWithRadio);
+
+export const mediaTvRegexArray = buildMediaRoutes(servicesWithTv);
