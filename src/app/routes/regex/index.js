@@ -10,7 +10,7 @@ const buildMediaRoutes = servicesWithMedia =>
   Object.keys(servicesWithMedia).map(service => {
     return `/:service(${service})/:serviceId(${servicesWithMedia[service].join(
       '|',
-    )})/:mediaId(${mediaIdRegex})`;
+    )})/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
   });
 
 export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):amp(${ampRegex})?`;
