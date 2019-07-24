@@ -33,7 +33,7 @@ GlobalStyle.propTypes = {
 };
 
 GlobalStyle.defaultProps = {
-  fonts: [],
+  fonts: null,
 };
 
 export default GlobalStyle;
