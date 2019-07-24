@@ -94,8 +94,7 @@ pipeline {
             }
           }
           steps {
-            // runDevelopmentTests()
-            sh 'ls'
+            runDevelopmentTests()
           }
         }
 
@@ -107,8 +106,7 @@ pipeline {
             }
           }
           steps {
-            // runProductionTests()
-            sh 'ls'
+            runProductionTests()
           }
         }  
       }
@@ -121,9 +119,9 @@ pipeline {
       }
     }
     stage ('Build, Test & Package') {
-      // when {
-      //   expression { env.BRANCH_NAME == 'latest' }
-      // }
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       parallel {
         stage ('Test Development') {
           agent {
@@ -133,8 +131,7 @@ pipeline {
             }
           }
           steps {
-            // runDevelopmentTests()
-            sh 'ls'
+            runDevelopmentTests()
           }
         }
         stage ('Test Production and Zip Production') {
@@ -146,8 +143,7 @@ pipeline {
           }
           steps {
             // Testing
-            // runProductionTests()
-            sh 'ls'
+            runProductionTests()
 
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
@@ -176,12 +172,11 @@ pipeline {
             }
           }
           steps {
-            // sh "rm -f storybook.zip"
-            // sh 'make install'
-            // sh 'make buildStorybook'
-            // zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            // stash name: 'simorgh_storybook', includes: storybookDist
-            sh 'ls'
+            sh "rm -f storybook.zip"
+            sh 'make install'
+            sh 'make buildStorybook'
+            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+            stash name: 'simorgh_storybook', includes: storybookDist
           }
         }    
       }
@@ -194,9 +189,9 @@ pipeline {
       }
     }
     stage ('Run Pipeline') {
-      // when {
-      //   expression { env.BRANCH_NAME == 'latest' }
-      // }
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       options {
         // Do not perform the SCM step
         skipDefaultCheckout true
@@ -205,7 +200,7 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-infra-sandbox/sandbox-add-live-OOH-deployment-guide',
+          job: 'simorgh-infrastructure/latest',
           parameters: [
             [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
             [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
