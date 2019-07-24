@@ -1,7 +1,6 @@
 import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
-import { checkAmpHTML, checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('Article Meta Tests', () => {
   // eslint-disable-next-line no-undef
@@ -86,10 +85,10 @@ describe('Article Meta Tests', () => {
   it('should include the canonical URL & ampHTML', () => {
     const currentOrigin = window.location.origin;
     const canonicalOrigin = 'https://www.bbc.com';
-    checkCanonicalURL(
+    cy.checkCanonicalURL(
       `${canonicalOrigin}/news/articles/${services.news.pageTypes.articles.asset}`,
     );
-    checkAmpHTML(
+    cy.checkAmpHTML(
       `${currentOrigin}/news/articles/${services.news.pageTypes.articles.asset}.amp`,
     );
   });

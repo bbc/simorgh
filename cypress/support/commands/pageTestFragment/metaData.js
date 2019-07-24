@@ -187,3 +187,11 @@ Cypress.Commands.add('twitterMeta', (
     // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
   });
 });
+
+Cypress.Commands.add('checkCanonicalURL', URL => {
+  cy.get('head link[rel="canonical"]').should('have.attr', 'href', URL);
+});
+
+Cypress.Commands.add('checkAmpHTML', amphtml => {
+  cy.get('head link[rel="amphtml"]').should('have.attr', 'href', amphtml);
+});

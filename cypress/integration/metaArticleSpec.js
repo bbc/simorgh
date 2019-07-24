@@ -2,7 +2,6 @@ import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import testData from '../../src/app/lib/config/services';
 import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
-import { checkAmpHTML, checkCanonicalURL } from '../support/metaTestHelper';
 
 const serviceHasArticlePageType = service =>
   services[service].pageTypes.articles !== undefined;
@@ -98,10 +97,10 @@ Object.keys(services)
       it('should include the canonical URL & ampHTML', () => {
         const currentOrigin = window.location.origin;
         const canonicalOrigin = 'https://www.bbc.com';
-        checkCanonicalURL(
+        cy.checkCanonicalURL(
           `${canonicalOrigin}/${service}/articles/${services[service].pageTypes.articles.asset}`,
         );
-        checkAmpHTML(
+        cy.checkAmpHTML(
           `${currentOrigin}/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
         );
       });

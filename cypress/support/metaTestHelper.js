@@ -12,14 +12,6 @@ export const assertCookieExpiryDate = (cookieName, timestamp) => {
   });
 };
 
-export const checkCanonicalURL = URL => {
-  cy.get('head link[rel="canonical"]').should('have.attr', 'href', URL);
-};
-
-export const checkAmpHTML = amphtml => {
-  cy.get('head link[rel="amphtml"]').should('have.attr', 'href', amphtml);
-};
-
 export const retrieve404BodyResponse = (url, bodyResponse) => {
   cy.request({ url, failOnStatusCode: false })
     .its('body')
