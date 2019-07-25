@@ -14,9 +14,9 @@ import {
 } from './fixtures';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
-const generateFixtureData = ({ platform, blocks }) => {
+const generateFixtureData = ({ platform, blocks, service }) => {
   return (
-    <ServiceContextProvider service="news">
+    <ServiceContextProvider service={service || 'news'}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
@@ -33,11 +33,13 @@ const generateFixtureData = ({ platform, blocks }) => {
 generateFixtureData.propTypes = {
   platform: PropTypes.string,
   blocks: PropTypes.arrayOf(PropTypes.any),
+  service: PropTypes.string,
 };
 
 generateFixtureData.defaultProps = {
   platform: 'canonical',
   blocks: '',
+  service: 'news',
 };
 
 export const NoData = ({ platform }) =>
@@ -49,13 +51,14 @@ export const NoAresMedia = ({ platform }) =>
     blocks: [captionBlock('No Ares Media')],
   });
 
-export const VideoClipGlobalWithCaption = ({ platform }) =>
+export const VideoClipGlobalWithCaption = ({ platform, service }) =>
   generateFixtureData({
     platform,
     blocks: [
       videoClipGlobalGuidanceBlock,
       captionBlock('Video Clip Global with Caption'),
     ],
+    service,
   });
 
 export const VideoClipGlobalWithoutCaption = ({ platform }) =>
