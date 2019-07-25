@@ -7,7 +7,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   />
   <ServiceWorkerContainer />
   <ManifestContainer />
-  <ConsentBanner />
   <HeaderContainer />
   <h2>
     Child element
