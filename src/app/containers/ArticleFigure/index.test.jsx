@@ -61,12 +61,12 @@ describe('ArticleFigure', () => {
 
   shouldMatchSnapshot(
     'should render an image with caption text',
-    FigureImageWithCaption,
+    FigureImageWithCaption('news'),
   );
 
   shouldMatchSnapshot(
     'should render an AMP image with caption text',
-    FigureAmpImageWithCaption,
+    FigureAmpImageWithCaption('news'),
   );
 
   shouldMatchSnapshot(
