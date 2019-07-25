@@ -39,7 +39,8 @@ moment.relativeTimeThreshold('h', 24);
 moment.relativeTimeThreshold('d', 30);
 moment.relativeTimeThreshold('M', 12);
 
-const THIS_DATE = 946826177000;
+// Sunday, 2 January 2000 15:16:17 GMT+00:00
+const A_DATE = 946826177000;
 
 const MONDAY = 1563796800000;
 const TUESDAY = 1563883200000;
