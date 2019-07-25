@@ -38,6 +38,7 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
       alt={imageValues.altText}
       ratio={ratio}
       src={src}
+      fallback={false}
       {...imageValues}
       lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
