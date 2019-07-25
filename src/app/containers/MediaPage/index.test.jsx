@@ -2,7 +2,7 @@ import React from 'react';
 import MediaPage from '.';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 
-const scaffoldProps = {
+const liveRadioScaffoldProps = {
   service: 'amharic',
   match: {
     params: {
@@ -12,11 +12,15 @@ const scaffoldProps = {
   },
 };
 
-describe('FrontPageMain', () => {
+describe('Media Page', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should match scaffold snapshot',
-      <MediaPage {...scaffoldProps} />,
+      <MediaPage {...liveRadioScaffoldProps} />,
     );
   });
 });
+
+export default {
+  liveRadioScaffoldProps,
+};
