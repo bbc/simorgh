@@ -1,6 +1,6 @@
 import React from 'react';
 import compose from 'ramda/src/compose';
-import MediaPageMain from '../MediaPageMain';
+import LiveRadioPage from '../LiveRadioPage';
 
 import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
@@ -8,12 +8,9 @@ import withError from '../PageHandlers/withError';
 import withLoading from '../PageHandlers/withLoading';
 import withData from '../PageHandlers/withData';
 
-const MediaContainer = (props) => {
-    console.log('MediaProps', props)
-    return (
-        <MediaPageMain {...props} />
-      );
-}
+const MediaContainer = props => {
+  return <LiveRadioPage {...props} />;
+};
 
 const EnhancedMediaContainer = compose(
   withContexts,
@@ -24,5 +21,3 @@ const EnhancedMediaContainer = compose(
 )(MediaContainer);
 
 export default EnhancedMediaContainer;
-
-// export default MediaContainer;
