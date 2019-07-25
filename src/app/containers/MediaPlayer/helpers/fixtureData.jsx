@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AudioVideoContainer from '../index';
+import MediaPlayerContainer from '../index';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import {
   captionBlock,
@@ -24,7 +24,7 @@ const generateFixtureData = ({ platform, blocks }) => {
         pageType="article"
         service="news"
       >
-        <AudioVideoContainer blocks={blocks} />
+        <MediaPlayerContainer blocks={blocks} />
       </RequestContextProvider>
     </ServiceContextProvider>
   );

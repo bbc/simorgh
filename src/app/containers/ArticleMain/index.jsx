@@ -8,13 +8,13 @@ import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
-import audioVideo from '../AudioVideo';
+import mediaPlayer from '../MediaPlayer';
 
 const componentsToRender = {
   headline: headings,
   subheadline: headings,
-  audio: audioVideo,
-  video: audioVideo,
+  audio: mediaPlayer,
+  video: mediaPlayer,
   text,
   image,
   timestamp,

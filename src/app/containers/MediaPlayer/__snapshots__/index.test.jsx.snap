@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] = `
+exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] = `
 <Context.Provider
   value={
     Object {
@@ -363,7 +363,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -435,7 +435,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip UK only 1`] =
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Audio data amp - should render audio clip global with guidance and caption 1`] = `
+exports[`MediaPlayer with Audio data amp - should render audio clip global with guidance and caption 1`] = `
 <Context.Provider
   value={
     Object {
@@ -798,7 +798,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -902,7 +902,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1`] = `
+exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 1`] = `
 <Context.Provider
   value={
     Object {
@@ -1265,7 +1265,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -1337,7 +1337,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip non-UK only 1
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Audio data canonical - should render audio clip UK only 1`] = `
+exports[`MediaPlayer with Audio data canonical - should render audio clip UK only 1`] = `
 <Context.Provider
   value={
     Object {
@@ -1700,7 +1700,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -1772,7 +1772,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip UK only
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Audio data canonical - should render audio clip global with guidance and caption 1`] = `
+exports[`MediaPlayer with Audio data canonical - should render audio clip global with guidance and caption 1`] = `
 <Context.Provider
   value={
     Object {
@@ -2135,7 +2135,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -2239,7 +2239,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Audio data canonical - should render audio clip non-UK only 1`] = `
+exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK only 1`] = `
 <Context.Provider
   value={
     Object {
@@ -2602,7 +2602,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -2674,7 +2674,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip non-UK 
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data amp - should render portrait video with global visibility 1`] = `
+exports[`MediaPlayer with Video data amp - should render portrait video with global visibility 1`] = `
 <Context.Provider
   value={
     Object {
@@ -3037,7 +3037,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -3109,7 +3109,7 @@ exports[`AudioVideo with Video data amp - should render portrait video with glob
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data amp - should render the video without a caption 1`] = `
+exports[`MediaPlayer with Video data amp - should render the video without a caption 1`] = `
 <Context.Provider
   value={
     Object {
@@ -3472,7 +3472,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -3576,7 +3576,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data amp - should render the video without a caption 2`] = `
+exports[`MediaPlayer with Video data amp - should render the video without a caption 2`] = `
 <Context.Provider
   value={
     Object {
@@ -3939,7 +3939,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -4045,7 +4045,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data amp - should render the video without a caption 3`] = `
+exports[`MediaPlayer with Video data amp - should render the video without a caption 3`] = `
 <Context.Provider
   value={
     Object {
@@ -4408,7 +4408,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -4486,7 +4486,7 @@ Stephen Richardson has told the BBC he blames himself for the loss of his limb."
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data and a caption amp - should render the video and caption 1`] = `
+exports[`MediaPlayer with Video data and a caption amp - should render the video and caption 1`] = `
 <Context.Provider
   value={
     Object {
@@ -4849,7 +4849,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -4982,7 +4982,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data and a caption canonical - should render the video and caption 1`] = `
+exports[`MediaPlayer with Video data and a caption canonical - should render the video and caption 1`] = `
 <Context.Provider
   value={
     Object {
@@ -5345,7 +5345,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -5478,7 +5478,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data canonical - should render portrait video with global visibility 1`] = `
+exports[`MediaPlayer with Video data canonical - should render portrait video with global visibility 1`] = `
 <Context.Provider
   value={
     Object {
@@ -5841,7 +5841,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -5913,7 +5913,7 @@ exports[`AudioVideo with Video data canonical - should render portrait video wit
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data canonical - should render the video without a caption 1`] = `
+exports[`MediaPlayer with Video data canonical - should render the video without a caption 1`] = `
 <Context.Provider
   value={
     Object {
@@ -6276,7 +6276,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -6380,7 +6380,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data canonical - should render the video without a caption 2`] = `
+exports[`MediaPlayer with Video data canonical - should render the video without a caption 2`] = `
 <Context.Provider
   value={
     Object {
@@ -6743,7 +6743,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
@@ -6849,7 +6849,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
 </Context.Provider>
 `;
 
-exports[`AudioVideo with Video data canonical - should render the video without a caption 3`] = `
+exports[`MediaPlayer with Video data canonical - should render the video without a caption 3`] = `
 <Context.Provider
   value={
     Object {
@@ -7212,7 +7212,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
     previousPath={null}
     service="news"
   >
-    <AudioVideoContainer
+    <MediaPlayerContainer
       blocks={
         Array [
           Object {
