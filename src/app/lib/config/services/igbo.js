@@ -116,6 +116,10 @@ const igbo = {
       audio: 'Ọdịyo',
       photogallery: 'Image gallery',
       video: 'Vidio',
+      bbc_igbo_radio: {
+        title: 'Placeholder title',
+        subtitle: 'Placeholder subtitle',
+      },
     },
   },
   navigation: [

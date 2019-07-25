@@ -114,6 +114,15 @@ const service = {
       audio: 'Audio',
       photogallery: 'En images',
       video: 'Video',
+      bbc_afrique_radio: {
+        title: 'BBC Afrique Radio',
+        subtitle: 'Infos, musique et sports',
+      },
+      bbc_afrique_tv: {
+        title: 'Cash Éco',
+        subtitle:
+          'Cash éco vous propose chaque jour un résumé de l’actualité économique et financière.',
+      },
     },
   },
   brandSVG,
