@@ -7,7 +7,6 @@ import {
 import testData from '../../src/app/lib/config/services';
 import services from '../support/config/services';
 
-const nonExistentAsset = 'cxvxrj8tvppo';
 const serviceHasNonExistentArticle = service =>
   services[service].pageTypes.nonExistentarticle !== undefined;
 
@@ -16,28 +15,20 @@ const serviceHasNonExistentArticle = service =>
 Object.keys(services)
   .filter(serviceHasNonExistentArticle)
   .forEach(service => {
-    describe('Test we get a 404', () => {
-      it('should return a 404 error code', () => {
-        cy.request({
-          url: `/${service}/articles/${nonExistentAsset}`,
-          failOnStatusCode: false,
-        }).then(({ status }) => {
-          expect(status).to.eq(404);
-        });
-      });
-    });
-
     describe(`${service} Article Error Page Tests`, () => {
       // eslint-disable-next-line no-undef
-      beforeEach(() => {
-        cy.visit(`/${service}/articles/${nonExistentAsset}`, {
-          failOnStatusCode: false,
-        });
+      before(() => {
+        cy.visit(
+          `/${service}/articles/${services[service].pageTypes.nonExistentarticle.asset}`,
+          {
+            failOnStatusCode: false,
+          },
+        );
       });
 
       it('should return a 404 error code', () => {
         cy.testResponseCodeAndType(
-          `/${service}/articles/${nonExistentAsset.asset}`,
+          `/${service}/articles/${services[service].pageTypes.nonExistentarticle.asset}`,
           404,
           'text/html',
         );
@@ -51,14 +42,6 @@ Object.keys(services)
       });
 
       it('should display a relevant error message on screen', () => {
-        cy.visit(`/${service}/articles/${nonExistentAsset}`, {
-          failOnStatusCode: false,
-        });
-        errorMessage(testData[service]);
-
-        cy.visit(`/${service}/articles/${nonExistentAsset}`, {
-          failOnStatusCode: false,
-        });
         errorMessage(testData[service]);
       });
 
