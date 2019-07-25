@@ -7,8 +7,14 @@ exports[`Fragment with an unknown attribute should ignore the attribute 1`] = `
 `;
 
 exports[`Fragment with bold and italic attributes should render text wrapped in bold and italic DOM elements 1`] = `
+.c0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 <i
-  className=""
+  className="c0"
 >
   <b>
     This is some text with bold and italic attributes
@@ -22,9 +28,29 @@ exports[`Fragment with bold attributes should render text wrapped in a bold DOM 
 </b>
 `;
 
-exports[`Fragment with italic attributes should render text wrapped in an italic DOM element 1`] = `
+exports[`Fragment with italic attributes in Farsi should render text wrapped in an italic DOM element 1`] = `
+.c0 {
+  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 <i
-  className=""
+  className="c0"
+>
+  This is some text with italic attributes
+</i>
+`;
+
+exports[`Fragment with italic attributes should render text wrapped in an italic DOM element 1`] = `
+.c0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+<i
+  className="c0"
 >
   This is some text with italic attributes
 </i>
