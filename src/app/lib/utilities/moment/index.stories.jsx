@@ -14,6 +14,8 @@ import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
 import '../../config/services/index';
 
 const locales = [
+  // some other locales (eg. Russian) have multiple levels of pluralisation (ie. one, some, many) which might require
+  // adding more examples to the table below.
   { name: 'Gujarati', locale: 'gu' },
   { name: 'Igbo', locale: 'ig' },
   { name: 'Indonesian', locale: 'id' },
@@ -136,41 +138,29 @@ const funcs = [
 
   { what: '1 second in the past', func: locale => moment().locale(locale).subtract(1, 'seconds').fromNow() },
   { what: '5 seconds in the past', func: locale => moment().locale(locale).subtract(5, 'seconds').fromNow() },
-  { what: '10 seconds in the past', func: locale => moment().locale(locale).subtract(10, 'seconds').fromNow() },
   { what: '1 minute in the past', func: locale => moment().locale(locale).subtract(1, 'minutes').fromNow() },
   { what: '5 minutes in the past', func: locale => moment().locale(locale).subtract(5, 'minutes').fromNow() },
-  { what: '10 minutes in the past', func: locale => moment().locale(locale).subtract(10, 'minutes').fromNow() },
   { what: '1 hour in the past', func: locale => moment().locale(locale).subtract(1, 'hours').fromNow() },
   { what: '5 hours in the past', func: locale => moment().locale(locale).subtract(5, 'hours').fromNow() },
-  { what: '10 hours in the past', func: locale => moment().locale(locale).subtract(10, 'hours').fromNow() },
   { what: '1 day in the past', func: locale => moment().locale(locale).subtract(1, 'days').fromNow() },
   { what: '5 days in the past', func: locale => moment().locale(locale).subtract(5, 'days').fromNow() },
-  { what: '10 days in the past', func: locale => moment().locale(locale).subtract(10, 'days').fromNow() },
   { what: '1 month in the past', func: locale => moment().locale(locale).subtract(1, 'months').fromNow() },
   { what: '5 months in the past', func: locale => moment().locale(locale).subtract(5, 'months').fromNow() },
-  { what: '10 months in the past', func: locale => moment().locale(locale).subtract(10, 'months').fromNow() },
   { what: '1 year in the past', func: locale => moment().locale(locale).subtract(1, 'years').fromNow() },
   { what: '5 years in the past', func: locale => moment().locale(locale).subtract(5, 'years').fromNow() },
-  { what: '10 years in the past', func: locale => moment().locale(locale).subtract(10, 'years').fromNow() },
 
   { what: '1 second in the future', func: locale => moment().locale(locale).add(1, 'seconds').fromNow() },
   { what: '5 seconds in the future', func: locale => moment().locale(locale).add(5, 'seconds').fromNow() },
-  { what: '10 seconds in the future', func: locale => moment().locale(locale).add(10, 'seconds').fromNow() },
   { what: '1 minute in the future', func: locale => moment().locale(locale).add(1, 'minutes').fromNow() },
   { what: '5 minutes in the future', func: locale => moment().locale(locale).add(5, 'minutes').fromNow() },
-  { what: '10 minutes in the future', func: locale => moment().locale(locale).add(10, 'minutes').fromNow() },
   { what: '1 hour in the future', func: locale => moment().locale(locale).add(1, 'hours').fromNow() },
   { what: '5 hours in the future', func: locale => moment().locale(locale).add(5, 'hours').fromNow() },
-  { what: '10 hours in the future', func: locale => moment().locale(locale).add(10, 'hours').fromNow() },
   { what: '1 day in the future', func: locale => moment().locale(locale).add(1, 'days').fromNow() },
   { what: '5 days in the future', func: locale => moment().locale(locale).add(5, 'days').fromNow() },
-  { what: '10 days in the future', func: locale => moment().locale(locale).add(10, 'days').fromNow() },
   { what: '1 month in the future', func: locale => moment().locale(locale).add(1, 'months').fromNow() },
   { what: '5 months in the future', func: locale => moment().locale(locale).add(5, 'months').fromNow() },
-  { what: '10 months in the future', func: locale => moment().locale(locale).add(10, 'months').fromNow() },
   { what: '1 year in the future', func: locale => moment().locale(locale).add(1, 'years').fromNow() },
   { what: '5 years in the future', func: locale => moment().locale(locale).add(5, 'years').fromNow() },
-  { what: '10 years in the future', func: locale => moment().locale(locale).add(10, 'years').fromNow() },
 ];
 /* eslint-enable prettier/prettier */
 
