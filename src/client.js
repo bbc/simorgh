@@ -13,7 +13,8 @@ const root = document.getElementById('root');
 // Only hydrate the client if we're on a known route
 // When on an unknown route, the SSR will be discarded and the user will only
 // see a blank screen. This should never happen on BBC domains, but web page
-// archival/caching sites such as
+// archival/caching sites such as Google webcache and web.archive.org, among
+// others.
 if (matchRoutes(routes, window.location.pathname).length > 0) {
   Loadable.preloadReady().then(() => {
     hydrate(<ClientApp data={data} routes={routes} />, root);
