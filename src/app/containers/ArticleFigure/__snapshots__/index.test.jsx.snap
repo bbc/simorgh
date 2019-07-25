@@ -253,7 +253,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   width: 100%;
 }
 
-.c7 {
+.c5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -279,7 +279,9 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   left: 0;
 }
 
-.c6 {
+.c7 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -288,16 +290,16 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   width: 100%;
 }
 
-.c6 > p {
+.c7 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c6 > p:last-child {
+.c7 > p:last-child {
   padding-bottom: 0;
 }
 
-.c6 i {
+.c7 i {
   font-style: normal;
 }
 
@@ -319,14 +321,28 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   grid-column-gap: 1rem;
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c7 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c7 {
     padding: 0.5rem 0 0;
   }
 }
@@ -356,25 +372,25 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 @media (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 10;
   }
 }
@@ -417,21 +433,22 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
           role="text"
         >
           <span
-            lang="en-GB"
+            className="c5"
           >
-            Getty Images
+            Image source, 
           </span>
+          Getty Images
         </p>
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
     >
       <figcaption
-        className="c6"
+        className="c7"
       >
         <span
-          className="c7"
+          className="c5"
         >
           Image caption, 
         </span>
@@ -464,6 +481,8 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 }
 
 .c5 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -501,6 +520,20 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 .c1 {
   display: grid;
   grid-column-gap: 1rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
@@ -638,6 +671,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 .c5 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -693,6 +728,20 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 .c1 {
   display: grid;
   grid-column-gap: 1rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
@@ -825,6 +874,18 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
   width: 100%;
 }
 
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c4 {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -882,25 +943,25 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c6 {
     grid-column: 1 / span 10;
   }
 }
@@ -943,15 +1004,16 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
           role="text"
         >
           <span
-            lang="en-GB"
+            className="c5"
           >
-            Getty Images
+            Image source, 
           </span>
+          Getty Images
         </p>
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
     />
   </div>
 </figure>
@@ -1365,7 +1427,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1391,7 +1453,9 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   left: 0;
 }
 
-.c7 {
+.c8 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1400,16 +1464,16 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   width: 100%;
 }
 
-.c7 > p {
+.c8 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c7 > p:last-child {
+.c8 > p:last-child {
   padding-bottom: 0;
 }
 
-.c7 i {
+.c8 i {
   font-style: normal;
 }
 
@@ -1437,14 +1501,28 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   grid-column-gap: 1rem;
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c8 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c7 {
+  .c8 {
     padding: 0.5rem 0 0;
   }
 }
@@ -1474,25 +1552,25 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 10;
   }
 }
@@ -1535,21 +1613,22 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
           role="text"
         >
           <span
-            lang="en-GB"
+            className="c6"
           >
-            Getty Images
+            Image source, 
           </span>
+          Getty Images
         </p>
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <figcaption
-        className="c7"
+        className="c8"
       >
         <span
-          className="c8"
+          className="c6"
         >
           Image caption, 
         </span>
@@ -1582,6 +1661,8 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 }
 
 .c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1625,6 +1706,20 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 .c1 {
   display: grid;
   grid-column-gap: 1rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
@@ -1762,6 +1857,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 .c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #6E6E73;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1823,6 +1920,20 @@ exports[`ArticleFigure should render an image with caption text with inline link
 .c1 {
   display: grid;
   grid-column-gap: 1rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
@@ -1955,6 +2066,18 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   width: 100%;
 }
 
+.c6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c5 {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -2018,25 +2141,25 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c7 {
     grid-column: 1 / span 10;
   }
 }
@@ -2079,15 +2202,16 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
           role="text"
         >
           <span
-            lang="en-GB"
+            className="c6"
           >
-            Getty Images
+            Image source, 
           </span>
+          Getty Images
         </p>
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     />
   </div>
 </figure>
