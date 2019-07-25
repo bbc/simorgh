@@ -896,6 +896,7 @@ exports[`AudioVideo with Audio data amp - should render audio clip global with g
                         "model": Object {
                           "blocks": Array [
                             Object {
+                              "id": 0,
                               "model": Object {
                                 "attributes": Array [],
                                 "text": "Audio Clip Global Guidance with Caption",
@@ -2263,6 +2264,7 @@ exports[`AudioVideo with Audio data canonical - should render audio clip global 
                         "model": Object {
                           "blocks": Array [
                             Object {
+                              "id": 0,
                               "model": Object {
                                 "attributes": Array [],
                                 "text": "Audio Clip Global Guidance with Caption",
@@ -3622,6 +3624,7 @@ exports[`AudioVideo with Video data amp - should render the video without a capt
                                     "model": Object {
                                       "blocks": Array [
                                         Object {
+                                          "id": 0,
                                           "model": Object {
                                             "attributes": Array [],
                                             "text": "Ants",
@@ -5029,6 +5032,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
                                     "model": Object {
                                       "blocks": Array [
                                         Object {
+                                          "id": 0,
                                           "model": Object {
                                             "attributes": Array [],
                                             "text": "Ants",
@@ -5066,6 +5070,7 @@ exports[`AudioVideo with Video data and a caption amp - should render the video 
                         "model": Object {
                           "blocks": Array [
                             Object {
+                              "id": 0,
                               "model": Object {
                                 "attributes": Array [],
                                 "text": "Video Clip Global with Caption",
@@ -5535,6 +5540,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
                                     "model": Object {
                                       "blocks": Array [
                                         Object {
+                                          "id": 0,
                                           "model": Object {
                                             "attributes": Array [],
                                             "text": "Ants",
@@ -5572,6 +5578,7 @@ exports[`AudioVideo with Video data and a caption canonical - should render the 
                         "model": Object {
                           "blocks": Array [
                             Object {
+                              "id": 0,
                               "model": Object {
                                 "attributes": Array [],
                                 "text": "Video Clip Global with Caption",
@@ -6486,6 +6493,7 @@ exports[`AudioVideo with Video data canonical - should render the video without 
                                     "model": Object {
                                       "blocks": Array [
                                         Object {
+                                          "id": 0,
                                           "model": Object {
                                             "attributes": Array [],
                                             "text": "Ants",
