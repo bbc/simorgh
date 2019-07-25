@@ -16,7 +16,7 @@ Object.keys(services)
   .filter(serviceHasNonExistentArticle)
   .forEach(service => {
     describe(`${service} Article Error Page Tests`, () => {
-      // eslint-disable-next-line no-undef
+      //  eslint-disable-next-line no-undef
       before(() => {
         cy.visit(
           `/${service}/articles/${services[service].pageTypes.errorPage404.asset}`,
