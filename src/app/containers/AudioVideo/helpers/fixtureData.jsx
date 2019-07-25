@@ -16,7 +16,7 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import generateAVSettings from '../../../lib/utilities/audioVideo/generateAVSettings';
 import AudioVideoHead from '../../../components/AudioVideoHead';
 
-const generateFixtureData = ({ platform, blocks, type }) => {
+const generateFixtureData = ({ platform, blocks, type, service }) => {
   const avBlock = {
     model: {
       blocks,
@@ -26,7 +26,7 @@ const generateFixtureData = ({ platform, blocks, type }) => {
   const audioVideoBlocks =
     type === 'audio' || type === 'video' ? [avBlock] : [];
   return (
-    <ServiceContextProvider service="news">
+    <ServiceContextProvider service={service || 'news'}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
@@ -53,11 +53,13 @@ generateFixtureData.propTypes = {
   platform: PropTypes.string,
   blocks: PropTypes.arrayOf(PropTypes.any),
   type: PropTypes.string.isRequired,
+  service: PropTypes.string,
 };
 
 generateFixtureData.defaultProps = {
   platform: 'canonical',
   blocks: '',
+  service: 'news',
 };
 
 export const NoData = ({ platform }) =>
@@ -70,7 +72,7 @@ export const NoAresMedia = ({ platform }) =>
     type: null,
   });
 
-export const VideoClipGlobalWithCaption = ({ platform }) =>
+export const VideoClipGlobalWithCaption = ({ platform, service }) =>
   generateFixtureData({
     platform,
     blocks: [
@@ -78,6 +80,7 @@ export const VideoClipGlobalWithCaption = ({ platform }) =>
       captionBlock('Video Clip Global with Caption'),
     ],
     type: 'video',
+    service,
   });
 
 export const VideoClipGlobalWithoutCaption = ({ platform }) =>
