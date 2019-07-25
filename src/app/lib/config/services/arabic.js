@@ -13,7 +13,7 @@ const service = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
   defaultImageAltText: 'BBC News عربي',
   dir: 'rtl',
-  externalLinkText: 'خارجي ،',
+  externalLinkText: '، خارجي',
   imageCaptionOffscreenText: '،التعليق على الصورة',
   videoCaptionOffscreenText: '،التعليق على الفيديو',
   audioCaptionOffscreenText: '،التعليق على التسجيل السماعي',
