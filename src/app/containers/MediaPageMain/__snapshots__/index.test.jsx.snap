@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Live Radio Page snapshots should match scaffold snapshot 1`] = `
+exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
 .c2 {
   color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -103,43 +103,47 @@ exports[`Live Radio Page snapshots should match scaffold snapshot 1`] = `
   }
 }
 
-<div
-  className="c0"
+<main
+  role="main"
 >
   <div
-    className="c1"
+    className="c0"
   >
-    <h1
-      className="c2"
+    <div
+      className="c1"
     >
-      Default Brand Name
-       - Live Radio
-    </h1>
-    <ul>
-      <li>
-        <strong>
-          Service
-        </strong>
-        : 
-        amharic
-      </li>
-      <li>
-        <strong>
-          Brand
-        </strong>
-        : 
-        bbc_amharic_radio
-      </li>
-      <li>
-        <strong>
-          MediaId
-        </strong>
-        : 
-        liveradio
-      </li>
-    </ul>
+      <h1
+        className="c2"
+      >
+        Default Brand Name
+         - Live Radio
+      </h1>
+      <ul>
+        <li>
+          <strong>
+            Service
+          </strong>
+          : 
+          amharic
+        </li>
+        <li>
+          <strong>
+            Brand
+          </strong>
+          : 
+          bbc_amharic_radio
+        </li>
+        <li>
+          <strong>
+            MediaId
+          </strong>
+          : 
+          liveradio
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
+</main>
 `;
 
 exports[`Media Page snapshots should match scaffold snapshot 1`] = `

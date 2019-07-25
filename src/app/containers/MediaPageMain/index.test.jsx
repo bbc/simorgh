@@ -1,15 +1,15 @@
 import React from 'react';
-import LiveRadioPage from '.';
+import MediaPageMain from '.';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import sampleProps from '../MediaPage/index.test';
 
 const { liveRadioScaffoldProps } = sampleProps;
 
-describe('Live Radio Page', () => {
+describe('Media Page Main', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should match scaffold snapshot',
-      <LiveRadioPage {...liveRadioScaffoldProps} />,
+      <MediaPageMain {...liveRadioScaffoldProps} />,
     );
   });
 });
