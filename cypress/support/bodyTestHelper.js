@@ -80,12 +80,6 @@ export const checkFooterLinks = (position, url) => {
     .and('contain', url);
 };
 
-export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
-  cy.get(link).click();
-  cy.url().should('contain', url);
-  cy.get('header a').should('contain', 'BBC News');
-};
-
 export const renderedTitle = title => {
   cy.title().should('eq', title);
 };
