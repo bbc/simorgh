@@ -22,9 +22,6 @@ def runDevelopmentTests(){
 def runProductionTests(){
   sh 'make install'
   sh 'make productionTests'
-  sh 'npm prune --production'
-  sh 'ls -a node_modules'
-
 }
 
 def getCommitInfo = {
