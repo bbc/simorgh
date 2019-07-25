@@ -69,11 +69,8 @@ Cypress.Commands.add('metadataAssertionAMP', AMPURL => {
   // served in the head of an AMP page.
   cy.window().then(win => {
     const data = win;
-    console.log(data, 'this is win   ', win);
     cy.visit(AMPURL);
     cy.get('head').within(() => {
-      console.log('double win', win);
-      console.log('double data', data);
       cy.get('meta[name="description"]').should(
         'have.attr',
         'content',
