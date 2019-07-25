@@ -3,6 +3,7 @@ none:
 
 install:
 	npm --version; node --version;
+	rm -rf node_modules
 	npm ci;
 
 installProd:
