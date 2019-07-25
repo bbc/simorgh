@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
-import Canonical from './Canonical';
 import Caption from '../Caption';
 import videoMetadata from './metadata';
 import {
@@ -68,7 +67,6 @@ const AudioVideoContainer = ({ blocks }) => {
       : 'audio';
 
   const type = kind === 'audio' ? kind : 'video';
-
   const orientation = pathOr(null, ['versions', 0, 'types', 0], nestedModel);
 
   const {
@@ -92,9 +90,12 @@ const AudioVideoContainer = ({ blocks }) => {
       ) : null}
       <ParentWrapper>
         <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
-          {platform === 'canonical' ? (
-            <Canonical id={pid} blocks={blocks} portrait={portrait} />
-          ) : null}
+          <ul>
+            <li>PID: {pid}</li>
+            <li>Orientation: {orientation}</li>
+            <li>Platform: {platform}</li>
+            <li>Portrait? {String(portrait)}</li>
+          </ul>
         </ChildWrapper>
         <ChildWrapper
           gridColumnStart={1}

@@ -13,18 +13,8 @@ import {
   audioClipUkOnlyBlock,
 } from './fixtures';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import generateAVSettings from '../../../lib/utilities/audioVideo/generateAVSettings';
-import AudioVideoHead from '../../../components/AudioVideoHead';
 
-const generateFixtureData = ({ platform, blocks, type }) => {
-  const avBlock = {
-    model: {
-      blocks,
-    },
-    type,
-  };
-  const audioVideoBlocks =
-    type === 'audio' || type === 'video' ? [avBlock] : [];
+const generateFixtureData = ({ platform, blocks }) => {
   return (
     <ServiceContextProvider service="news">
       <RequestContextProvider
@@ -34,15 +24,6 @@ const generateFixtureData = ({ platform, blocks, type }) => {
         pageType="article"
         service="news"
       >
-        <AudioVideoHead
-          audioVideoAssets={generateAVSettings({
-            audioVideoBlocks,
-            env: 'local',
-            platform: 'canonical',
-            statsDestination: 'NEWS_PS_TEST',
-            statsPageIdentifier: 'news.articles.c0000000031o.page',
-          })}
-        />
         <AudioVideoContainer blocks={blocks} />
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -52,7 +33,6 @@ const generateFixtureData = ({ platform, blocks, type }) => {
 generateFixtureData.propTypes = {
   platform: PropTypes.string,
   blocks: PropTypes.arrayOf(PropTypes.any),
-  type: PropTypes.string.isRequired,
 };
 
 generateFixtureData.defaultProps = {
@@ -61,13 +41,12 @@ generateFixtureData.defaultProps = {
 };
 
 export const NoData = ({ platform }) =>
-  generateFixtureData({ platform, blocks: null, type: null });
+  generateFixtureData({ platform, blocks: null });
 
 export const NoAresMedia = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [captionBlock('No Ares Media')],
-    type: null,
   });
 
 export const VideoClipGlobalWithCaption = ({ platform }) =>
@@ -77,35 +56,30 @@ export const VideoClipGlobalWithCaption = ({ platform }) =>
       videoClipGlobalGuidanceBlock,
       captionBlock('Video Clip Global with Caption'),
     ],
-    type: 'video',
   });
 
 export const VideoClipGlobalWithoutCaption = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [videoClipGlobalGuidanceBlock],
-    type: 'video',
   });
 
 export const VideoClipGlobalPortrait = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [videoClipGlobalPortraitBlock],
-    type: 'video',
   });
 
 export const VideoClipUkWithGuidance = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [videoClipUkGuidanceBlock],
-    type: 'video',
   });
 
 export const VideoClipNonUk = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [videoClipNonUkBlock],
-    type: 'video',
   });
 
 export const AudioClipGlobalGuidanceWithCaption = ({ platform }) =>
@@ -115,19 +89,16 @@ export const AudioClipGlobalGuidanceWithCaption = ({ platform }) =>
       audioClipGlobalGuidanceBlock,
       captionBlock('Audio Clip Global Guidance with Caption'),
     ],
-    type: 'audio',
   });
 
 export const AudioClipUk = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [audioClipUkOnlyBlock],
-    type: 'audio',
   });
 
 export const AudioClipNonUk = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [audioClipNonUkBlock],
-    type: 'audio',
   });
