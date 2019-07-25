@@ -4,12 +4,8 @@ import {
   firstHeadlineDataWindow,
   firstParagraphDataWindow,
   firstSubheadlineDataWindow,
-  getElement,
   placeholderImageLoaded,
   renderedTitle,
-  visibleImageNoCaption,
-  visibleImageWithCaption,
-  shouldContainText,
 } from '../support/bodyTestHelper';
 
 const serviceHasArticlePageType = service =>
@@ -34,11 +30,10 @@ Object.keys(config)
         cy.window().then(win => {
           if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
             const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
-            const timeStamp = Cypress.moment(lastPublished).format(
+            const timestamp = Cypress.moment(lastPublished).format(
               'D MMMM YYYY',
             );
-            const time = getElement('time');
-            shouldContainText(time, timeStamp);
+            cy.get('time').should('contain', timestamp);
           }
         });
       });
@@ -56,42 +51,44 @@ Object.keys(config)
       });
 
       it('should have a placeholder image', () => {
-        placeholderImageLoaded(getElement('figure div div div').eq(0));
+        placeholderImageLoaded(cy.get('figure div div div').eq(0));
       });
 
       it('should have a visible image without a caption, and also not be lazyloaded', () => {
-        const firstFigure = getElement('figure').eq(0);
-
-        visibleImageNoCaption(firstFigure);
-        firstFigure.within(() => getElement('noscript').should('not.exist'));
+        cy.get('figure')
+          .eq(0)
+          .should('be.visible')
+          .should('to.have.descendants', 'img')
+          .should('not.to.have.descendants', 'figcaption')
+          .within(() => cy.get('noscript').should('not.exist'));
       });
 
       it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
-        const imageHasNotLoaded = getElement('figure').eq(2);
+        cy.get('figure')
+          .eq(2)
+          .within(() => {
+            cy.get('div div div div').should(
+              'have.class',
+              'lazyload-placeholder',
+            );
+          })
+          .scrollIntoView();
 
-        imageHasNotLoaded.within(() => {
-          const lazyLoadPlaceholder = getElement('div div div div');
-          lazyLoadPlaceholder.should('have.class', 'lazyload-placeholder');
-        });
+        cy.get('figure')
+          .eq(2)
+          .should('be.visible')
+          .should('to.have.descendants', 'img')
+          .should('to.have.descendants', 'figcaption')
 
-        imageHasNotLoaded.scrollIntoView();
-
-        const imageHasLoaded = getElement('figure').eq(2);
-
-        visibleImageWithCaption(imageHasLoaded);
-
-        // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
-        // cleared during hydration. React won't render noscript tags on the client so if they
-        // get cleared during hydration, the following render wont re-add them.
-        // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
-        // https://github.com/bbc/simorgh/pull/1872 for more infomation.
-        imageHasLoaded.within(() => {
-          const noscriptImg = getElement('noscript');
-          noscriptImg.contains('<img ');
-
-          const ImageContainer = getElement('div div');
-          ImageContainer.should('not.have.class', 'lazyload-placeholder');
-        });
+          // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
+          // cleared during hydration. React won't render noscript tags on the client so if they
+          // get cleared during hydration, the following render wont re-add them.
+          // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
+          // https://github.com/bbc/simorgh/pull/1872 for more infomation.
+          .within(() => {
+            cy.get('noscript').contains('<img ');
+            cy.get('div div').should('not.have.class', 'lazyload-placeholder');
+          });
       });
 
       it('should have an image copyright label with styling', () => {
@@ -112,16 +109,18 @@ Object.keys(config)
       it('should have an inline link', () => {
         cy.window().then(win => {
           if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-            getElement('main a');
+            cy.get('main a');
           }
         });
       });
 
       // it('should have a working first inline link', () => {
-      //   clickInlineLinkAndTestPageHasHTML(
-      //     'main a',
-      //     `/news/articles/${services.news.pageTypes.articles.asset}`,
+      //   cy.get('main a').click();
+      //   cy.url().should(
+      //     'contain',
+      //     `/news/articles/${config.news.pageTypes.articles.asset}`,
       //   );
+      //   cy.get('header a').should('contain', 'BBC News');
       // });
 
       // This test is commented out because we are unable to run it on TEST as it requires a cert in order to work.

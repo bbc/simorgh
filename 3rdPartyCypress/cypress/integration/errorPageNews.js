@@ -10,7 +10,7 @@ describe('Test the mozart 404 page', () => {
   });
 
   it('should have the correct lang & dir attributes', () => {
-    cy.get('html').should('have.attr', 'lang', 'en_GB');
+    cy.get('html').should('have.attr', 'lang', 'en-GB');
   });
 
   it('should display a relevant error message on screen', () => {

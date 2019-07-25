@@ -113,6 +113,7 @@ const service = {
     },
     media: {
       audio: 'အသံ',
+      photogallery: 'ဓာတ်ပုံများ',
       video: 'ဗီဒီယို',
     },
   },
