@@ -25,7 +25,10 @@ Object.keys(services).forEach(index => {
         it('should have a visible banner', () => {
           cy.get('header')
             .should('have.lengthOf', 1)
-            .find('a')
+            .find('div[class^="Banner"]')
+            .children()
+            .should('have.lengthOf', 1)
+            .children()
             .should('have.attr', 'href', serviceConfig.pageTypes.frontPage)
             .find('svg')
             .should('be.visible');
