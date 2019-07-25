@@ -1,20 +1,23 @@
-Cypress.Commands.add('retrieveMetaDataContent', (metaDataTag, content) => {
+Cypress.Commands.add('checkMetadataContent', (metaDataTag, content) => {
   cy.get(metaDataTag).should('have.attr', 'content', content);
 });
 
-Cypress.Commands.add('facebookMeta', (fbAdmins, appID, articleAuthor) => {
-  cy.get('head meta[name="fb:admins"]').should(
-    'have.attr',
-    'content',
-    fbAdmins,
-  );
-  cy.get('head meta[name="fb:app_id"]').should('have.attr', 'content', appID);
-  cy.get('head meta[name="article:author"]').should(
-    'have.attr',
-    'content',
-    articleAuthor,
-  );
-});
+Cypress.Commands.add(
+  'checkFacebookMetadata',
+  (fbAdmins, appID, articleAuthor) => {
+    cy.get('head meta[name="fb:admins"]').should(
+      'have.attr',
+      'content',
+      fbAdmins,
+    );
+    cy.get('head meta[name="fb:app_id"]').should('have.attr', 'content', appID);
+    cy.get('head meta[name="article:author"]').should(
+      'have.attr',
+      'content',
+      articleAuthor,
+    );
+  },
+);
 
 Cypress.Commands.add('metadataAssertion', () => {
   cy.window().then(win => {
@@ -118,13 +121,13 @@ Cypress.Commands.add('openGraphMeta', (
       'content',
       altText,
     );
-    cy.retrieveMetaDataContent('head meta[name="og:locale"]', locale);
+    cy.checkMetadataContent('head meta[name="og:locale"]', locale);
     cy.get('head meta[name="og:locale"]').should(
       'have.attr',
       'content',
       locale,
     );
-    cy.retrieveMetaDataContent('head meta[name="og:site_name"]', siteName);
+    cy.checkMetadataContent('head meta[name="og:site_name"]', siteName);
     cy.get('head meta[name="og:site_name"]').should(
       'have.attr',
       'content',
@@ -151,7 +154,7 @@ Cypress.Commands.add('twitterMeta', (
       'content',
       card,
     );
-    cy.retrieveMetaDataContent('head meta[name="twitter:creator"]', creator);
+    cy.checkMetadataContent('head meta[name="twitter:creator"]', creator);
     cy.get('head meta[name="twitter:creator"]').should(
       'have.attr',
       'content',
@@ -162,19 +165,19 @@ Cypress.Commands.add('twitterMeta', (
     //   'content',
     //   description,
     // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
-    cy.retrieveMetaDataContent('head meta[name="twitter:image:alt"]', imageAlt);
+    cy.checkMetadataContent('head meta[name="twitter:image:alt"]', imageAlt);
     cy.get('head meta[name="twitter:image:alt"]').should(
       'have.attr',
       'content',
       imageAlt,
     );
-    cy.retrieveMetaDataContent('head meta[name="twitter:image:src"]', imageSrc);
+    cy.checkMetadataContent('head meta[name="twitter:image:src"]', imageSrc);
     cy.get('head meta[name="twitter:image:src"]').should(
       'have.attr',
       'content',
       imageSrc,
     );
-    cy.retrieveMetaDataContent('head meta[name="twitter:site"]', site);
+    cy.checkMetadataContent('head meta[name="twitter:site"]', site);
     cy.get('head meta[name="twitter:site"]').should(
       'have.attr',
       'content',

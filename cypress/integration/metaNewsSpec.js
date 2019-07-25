@@ -13,7 +13,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have a nofollow meta tag', () => {
-    cy.retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
+    cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
   });
 
   it('should load a maximum of two Reith font files', () => {
@@ -52,7 +52,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have the correct facebook metadata', () => {
-    cy.facebookMeta(
+    cy.checkFacebookMetadata(
       '100004154058350',
       '1609039196070050',
       'https://www.facebook.com/bbcnews',
@@ -88,13 +88,11 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include the canonical URL & ampHTML', () => {
-    const currentOrigin = window.location.origin;
-    const canonicalOrigin = 'https://www.bbc.com';
     cy.checkCanonicalURL(
-      `${canonicalOrigin}/news/articles/${services.news.pageTypes.articles.asset}`,
+      `https://www.bbc.com/news/articles/${services.news.pageTypes.articles.asset}`,
     );
     cy.checkAmpHTML(
-      `${currentOrigin}/news/articles/${services.news.pageTypes.articles.asset}.amp`,
+      `${window.location.origin}/news/articles/${services.news.pageTypes.articles.asset}.amp`,
     );
   });
 
