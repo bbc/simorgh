@@ -27,7 +27,11 @@ describe('Js bundle requests', () => {
 
   Object.keys(config).forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => config[service].pageTypes[pageType] !== undefined)
+      .filter(
+        pageType =>
+          config[service].pageTypes !== 'errorPage404' &&
+          config[service].pageTypes[pageType] !== undefined,
+      )
       .forEach(pageType => {
         const path =
           pageType === 'frontPage'
