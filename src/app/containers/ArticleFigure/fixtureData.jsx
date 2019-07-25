@@ -1,7 +1,7 @@
 import React from 'react';
 import { any, bool, string, number, objectOf } from 'prop-types';
 import FigureContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { blockContainingText } from '../../models/blocks';
 
@@ -134,11 +134,6 @@ const captionBlockWithLink = createCaptionBlock([paragraphBlockWithInlineLink]);
 
 const copyrightText = 'Getty Images';
 
-const serviceContextStubNews = {
-  imageCaptionOffscreenText: 'Image caption, ',
-  service: 'news',
-};
-
 const generateFixtureData = ({
   height,
   width,
@@ -147,8 +142,9 @@ const generateFixtureData = ({
   lazyLoad,
   platform,
   type,
+  service,
 }) => (
-  <ServiceContext.Provider value={serviceContextStubNews}>
+  <ServiceContextProvider service={service || 'news'}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
@@ -169,7 +165,7 @@ const generateFixtureData = ({
         showCopyright
       />
     </RequestContextProvider>
-  </ServiceContext.Provider>
+  </ServiceContextProvider>
 );
 
 generateFixtureData.propTypes = {
@@ -180,6 +176,7 @@ generateFixtureData.propTypes = {
   type: string,
   height: number,
   width: number,
+  service: string,
 };
 
 generateFixtureData.defaultProps = {
@@ -190,9 +187,11 @@ generateFixtureData.defaultProps = {
   type: '',
   height: imageHeight,
   width: imageWidth,
+  service: 'news',
 };
 
 export const FigureImage = generateFixtureData({ platform: 'canonical' });
+
 export const FigureImageWithNestedGrid = (width, height) =>
   generateFixtureData({
     platform: 'canonical',
@@ -207,17 +206,21 @@ export const FigureLazyLoadImage = generateFixtureData({
 
 export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
 
-export const FigureImageWithCaption = generateFixtureData({
-  caption: captionBlock('Figure Image With Caption'),
-  platform: 'canonical',
-  type: 'image',
-});
+export const FigureImageWithCaption = service =>
+  generateFixtureData({
+    caption: captionBlock('Figure Image With Caption'),
+    platform: 'canonical',
+    type: 'image',
+    service,
+  });
 
-export const FigureAmpImageWithCaption = generateFixtureData({
-  caption: captionBlock('Figure Amp Image with Caption'),
-  platform: 'amp',
-  type: 'image',
-});
+export const FigureAmpImageWithCaption = service =>
+  generateFixtureData({
+    caption: captionBlock('Figure Amp Image with Caption'),
+    platform: 'amp',
+    type: 'image',
+    service,
+  });
 
 export const FigureImageWithCopyright = generateFixtureData({
   copyright: copyrightText,
