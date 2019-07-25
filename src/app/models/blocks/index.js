@@ -13,6 +13,7 @@ export const singleTextBlock = text => ({
           text,
           blocks: [
             {
+              id: 0,
               type: 'fragment',
               model: {
                 text,
