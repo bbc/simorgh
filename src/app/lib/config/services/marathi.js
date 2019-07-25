@@ -114,6 +114,11 @@ const service = {
       audio: 'ऑडिओ',
       photogallery: 'प्रतिमा गॅलरी',
       video: 'व्हिडिओ',
+      bbc_marathi_tv: {
+        title: 'BBC विश्व',
+        subtitle:
+          'मराठीतल्या पहिल्या डिजिटल बुलेटिनमध्ये पाहा देश-विदेशातल्या ताज्या बातम्या.',
+      },
     },
   },
   brandSVG,
