@@ -8,7 +8,7 @@ import testData from '../../src/app/lib/config/services';
 import services from '../support/config/services';
 
 const serviceHasNonExistentArticle = service =>
-  services[service].pageTypes.nonExistentarticle !== undefined;
+  services[service].pageTypes.errorPage404 !== undefined;
 
 // These must only ever be run locally as otherwise you're testing
 // the mozart page not the response from this application.
@@ -19,7 +19,7 @@ Object.keys(services)
       // eslint-disable-next-line no-undef
       before(() => {
         cy.visit(
-          `/${service}/articles/${services[service].pageTypes.nonExistentarticle.asset}`,
+          `/${service}/articles/${services[service].pageTypes.errorPage404.asset}`,
           {
             failOnStatusCode: false,
           },
@@ -28,7 +28,7 @@ Object.keys(services)
 
       it('should return a 404 error code', () => {
         cy.testResponseCodeAndType(
-          `/${service}/articles/${services[service].pageTypes.nonExistentarticle.asset}`,
+          `/${service}/articles/${services[service].pageTypes.errorPage404.asset}`,
           404,
           'text/html',
         );
