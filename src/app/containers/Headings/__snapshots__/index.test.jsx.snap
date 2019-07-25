@@ -328,7 +328,9 @@ exports[`Headings with rich text headline with italic text should render h1 with
     className="c1"
     id={null}
   >
-    <i>
+    <i
+      className=""
+    >
       All is italic
     </i>
   </h1>
@@ -387,7 +389,9 @@ exports[`Headings with rich text should render headline with bold & italic text 
     className="c1"
     id={null}
   >
-    <i>
+    <i
+      className=""
+    >
       <b>
         All is bold and italic
       </b>
@@ -449,7 +453,9 @@ exports[`Headings with rich text should render headline with italic & bold text 
     id={null}
   >
     <b>
-      <i>
+      <i
+        className=""
+      >
         All is italic and bold
       </i>
     </b>
@@ -510,7 +516,9 @@ exports[`Headings with rich text with different attributes should render headlin
     id={null}
   >
     This is 
-    <i>
+    <i
+      className=""
+    >
       very
     </i>
      important

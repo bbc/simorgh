@@ -102,7 +102,9 @@ exports[`ParagraphContainer should render correctly 1`] = `
       <b>
          for the 
       </b>
-      <i>
+      <i
+        className=""
+      >
          link!
       </i>
     </a>

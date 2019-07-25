@@ -7,7 +7,9 @@ exports[`Fragment with an unknown attribute should ignore the attribute 1`] = `
 `;
 
 exports[`Fragment with bold and italic attributes should render text wrapped in bold and italic DOM elements 1`] = `
-<i>
+<i
+  className=""
+>
   <b>
     This is some text with bold and italic attributes
   </b>
@@ -21,7 +23,9 @@ exports[`Fragment with bold attributes should render text wrapped in a bold DOM 
 `;
 
 exports[`Fragment with italic attributes should render text wrapped in an italic DOM element 1`] = `
-<i>
+<i
+  className=""
+>
   This is some text with italic attributes
 </i>
 `;
