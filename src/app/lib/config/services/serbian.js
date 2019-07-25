@@ -152,7 +152,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC nije odgovoran za sadržaj sajtova sa spoljnih linkova',
+    copyrightText:
+      'BBC. BBC nije odgovoran za sadržaj sajtova sa spoljnih linkova',
   },
   fonts: [],
 };

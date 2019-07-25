@@ -152,7 +152,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC ташқи интернет саҳифалар учун масъул эмас',
+    copyrightText: 'BBC. BBC ташқи интернет саҳифалар учун масъул эмас',
   },
   fonts: [],
 };
