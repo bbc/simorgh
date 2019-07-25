@@ -23,6 +23,7 @@ describe('AudioVideoHead', () => {
       locale: { lang: 'en-GB' },
       subtitles: { defaultOn: true, enabled: true },
     },
+    mediaPlayerSettings: 'mockMediaPlayerSettings',
   };
 
   const audio = {
@@ -45,6 +46,7 @@ describe('AudioVideoHead', () => {
       locale: { lang: 'en-GB' },
       subtitles: { defaultOn: true, enabled: true },
     },
+    mediaPlayerSettings: 'mockMediaPlayerSettings',
   };
 
   shouldMatchSnapshot(
