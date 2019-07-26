@@ -219,7 +219,7 @@ export default {
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
-              asset: 'thsiwill404',
+              asset: 'cxvxrj8tvppo',
             },
       frontPage: '/pidgin',
     },
@@ -368,7 +368,7 @@ export default {
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
-              asset: 'thsiwill404',
+              asset: 'cxvxrj8tvppo',
             },
       frontPage: '/yoruba',
     },
