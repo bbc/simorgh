@@ -1,10 +1,6 @@
 import config from '../support/config/services';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
-const host = 'http://localhost.bbc.com:7080';
-
-const isJsBundle = url => url.includes(host);
-
 Object.keys(config).forEach(service => {
   Object.keys(config[service].pageTypes)
     .filter(pageType => config[service].pageTypes[pageType] !== undefined)
@@ -19,17 +15,14 @@ Object.keys(config).forEach(service => {
         });
 
         it('should only have expected bundle script tags', () => {
-          cy.get('script[src]').each($p => {
-            if (isJsBundle($p.attr('src'))) {
-              return expect($p.attr('src')).to.match(
-                new RegExp(
-                  `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
-                  'g',
-                ),
-              );
-            }
-            return false;
-          });
+          cy.get('script[src]').each($p =>
+            expect($p.attr('src')).to.match(
+              new RegExp(
+                `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
+                'g',
+              ),
+            ),
+          );
         });
 
         it('should have 1 bundle for its service', () => {
