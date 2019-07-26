@@ -34,7 +34,6 @@ const ChartbeatAnalytics = () => {
     cookie,
     chartbeatUID,
   };
-
   return platform === 'amp' ? (
     <AmpChartbeatBeacon {...commonProps} />
   ) : (
