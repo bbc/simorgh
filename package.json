@@ -106,7 +106,7 @@
     "@bbc/psammead-paragraph": "^2.1.0",
     "@bbc/psammead-section-label": "^2.1.0",
     "@bbc/psammead-sitewide-links": "^2.1.0",
-    "@bbc/psammead-story-promo": "^2.1.0",
+    "@bbc/psammead-story-promo": "^2.2.1",
     "@bbc/psammead-story-promo-list": "^1.1.0",
     "@bbc/psammead-styles": "^1.1.5",
     "@bbc/psammead-timestamp-container": "^2.1.0",
