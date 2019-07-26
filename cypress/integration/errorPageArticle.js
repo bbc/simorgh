@@ -42,15 +42,33 @@ Object.keys(services)
       });
 
       it('should display a relevant error message on screen', () => {
-        errorMessage(testData[service]);
+        cy.get('h1 span').should(
+          'contain',
+          `${testData[service].translations.error[404].statusCode}`,
+          // eslint-disable-next-line no-undef
+        );
+        cy.get('h1').should(
+          'contain',
+          `${testData[service].translations.error[404].title}`,
+        );
       });
 
       it('should have an inline link on the page that is linked to the home page', () => {
-        errorPageInlineLink(testData[service]);
+        cy.get('main p')
+          .eq(1)
+          .within(() => {
+            cy.get('a').should(
+              'have.attr',
+              'href',
+              `${testData[service].translations.error[404].callToActionLinkUrl}`,
+            );
+          });
       });
 
       it('should have a relevant error title in the head', () => {
-        errorTitle(testData[service]);
+        renderedTitle(
+          `${testData[service].translations.error[404].title} - ${testData[service].brandName}`,
+        );
       });
     });
   });
