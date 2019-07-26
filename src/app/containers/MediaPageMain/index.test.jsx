@@ -1,6 +1,7 @@
 import React from 'react';
 import MediaPageMain from '.';
 import { shouldMatchSnapshot } from '../../../testHelpers';
+import amharicConfig from '../../lib/config/services/amharic';
 
 const liveRadioScaffoldProps = {
   service: 'amharic',
@@ -11,6 +12,17 @@ const liveRadioScaffoldProps = {
     },
   },
 };
+
+jest.mock('react', () => {
+  const original = jest.requireActual('react');
+  return {
+    ...original,
+    useContext: jest.fn(),
+  };
+});
+
+const { useContext } = jest.requireMock('react');
+useContext.mockReturnValue(amharicConfig);
 
 describe('Media Page Main', () => {
   describe('snapshots', () => {
