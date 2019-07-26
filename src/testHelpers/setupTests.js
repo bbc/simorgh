@@ -8,7 +8,7 @@ const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'), 'gi');
 const { error } = console;
 
 let reactErrorsCountPerTestSuite = 0;
-const reactErrorsLimitPerTestSuite = 3;
+const reactErrorsLimitPerTestSuite = 3; // The goal is to have zero React errors per suite so keep fixing errors and lowering this limit
 
 // eslint-disable-next-line no-console
 console.error = (message, ...rest) => {
