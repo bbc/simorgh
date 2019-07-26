@@ -8,6 +8,7 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
+  mediaRadioAndTvRegexPathsArray,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -15,9 +16,9 @@ jest.mock('../../lib/config/services', () => ({
   persian: {},
 }));
 
-const matchRoute = (route, regex) => {
+const matchRoute = (route, pathValue) => {
   const match = matchPath(route, {
-    path: regex,
+    path: pathValue,
     exact: true,
     strict: true,
   });
@@ -25,15 +26,15 @@ const matchRoute = (route, regex) => {
   return match ? match.isExact : false;
 };
 
-const shouldMatchValidRoutes = (routes, regex) => {
+const shouldMatchValidRoutes = (routes, pathValue) => {
   it.each(routes)('should match valid route %s', route => {
-    expect(matchRoute(route, regex)).toBe(true);
+    expect(matchRoute(route, pathValue)).toBe(true);
   });
 };
 
-const shouldNotMatchInvalidRoutes = (routes, regex) => {
+const shouldNotMatchInvalidRoutes = (routes, pathValue) => {
   it.each(routes)('should not match invalid route %s', route => {
-    expect(matchRoute(route, regex)).toBe(false);
+    expect(matchRoute(route, pathValue)).toBe(false);
   });
 };
 
@@ -121,4 +122,57 @@ describe('frontpageManifestRegexPath', () => {
 
   const invalidRoutes = ['/foobar/manifest.json', '/foobar/manifest'];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageManifestRegexPath);
+});
+
+jest.mock('../config', () => ({
+  gujarati: ['bbc_gujarati_tv'],
+  hausa: ['bbc_hausa_radio', 'bbc_afrique_tv'],
+  indonesia: ['bbc_indonesian_radio'],
+  marathi: ['bbc_marathi_tv'],
+  persian: ['bbc_persian_radio', 'bbc_dari_radio', 'bbc_persian_tv'],
+}));
+
+describe('mediaRadioAndTvRegexPathsArray', () => {
+  describe('should return an array of regexs for the radio config', () => {
+    const validRoutes = [
+      '/hausa/bbc_hausa_radio/liveradio',
+      '/indonesia/bbc_indonesian_radio/w34rfd4k',
+      '/persian/bbc_persian_radio/abcd1234',
+      '/persian/bbc_dari_radio/liveradio',
+      '/hausa/bbc_hausa_radio/liveradio.amp',
+      '/hausa/bbc_hausa_radio/abcd1234.amp',
+    ];
+    shouldMatchValidRoutes(validRoutes, mediaRadioAndTvRegexPathsArray);
+
+    const invalidRoutes = [
+      '/hausa/bbc_persian_radio/liveradio',
+      '/persian/bbc_hausa_radio/abcd1234.amp',
+      '/hausa/bbc_hausa_radio/',
+      '/hausa/bbc_hausa_radio/.amp',
+      '/foobar/bbc_hausa_radio/liveradio',
+      '/persian/foobar/liveradio',
+      '/persian/foobar/liveradio.amp',
+    ];
+    shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
+  });
+
+  describe('should return an array of regexs for the tv config', () => {
+    const validRoutes = [
+      '/marathi/bbc_marathi_tv/livetv',
+      '/marathi/bbc_marathi_tv/w34rfd4k',
+      '/gujarati/bbc_gujarati_tv/abcd1234',
+      '/persian/bbc_persian_tv/abcd1234.amp',
+    ];
+    shouldMatchValidRoutes(validRoutes, mediaRadioAndTvRegexPathsArray);
+
+    const invalidRoutes = [
+      '/persian/bbc_marathi_tv/livetv',
+      '/gujarati/bbc_burmese_tv/abcd1234',
+      '/gujarati/bbc_burmese_tv/abcd1234.amp',
+      '/marathi/bbc_marathi_tv/',
+      '/marathi/bbc_marathi_tv/.amp',
+      '/blah/bbc_hausa_radio/livetv',
+    ];
+    shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
+  });
 });
