@@ -9,7 +9,6 @@ import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
-import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import audioVideo from '../AudioVideo';
 import AudioVideoHead from '../../components/AudioVideoHead';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -52,7 +51,6 @@ const ArticleMain = ({ articleData }) => {
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
-      <ChartbeatAnalytics />
       <MetadataContainer metadata={metadata} promo={promo} />
       {audioVideoEnabled && hasAV && platform === 'canonical' ? (
         <AudioVideoHead
