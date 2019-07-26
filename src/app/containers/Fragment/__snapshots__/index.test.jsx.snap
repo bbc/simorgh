@@ -11,6 +11,8 @@ exports[`Fragment with bold and italic attributes should render text wrapped in 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 <i
@@ -33,6 +35,8 @@ exports[`Fragment with italic attributes in Farsi should render text wrapped in 
   font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 <i
@@ -47,6 +51,8 @@ exports[`Fragment with italic attributes should render text wrapped in an italic
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 <i
