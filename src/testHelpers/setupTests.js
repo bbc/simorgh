@@ -7,26 +7,19 @@ const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'), 'gi');
 
 const { error } = console;
 
-const FAIL_TESTS_ON_REACT_WARNINGS = false;
+let reactErrorsCountPerTestSuite = 0;
+const reactErrorsLimitPerTestSuite = 3;
 
 // eslint-disable-next-line no-console
 console.error = (message, ...rest) => {
   if (REACT_ERRORS_REGEX.test(message)) {
-    if (FAIL_TESTS_ON_REACT_WARNINGS) {
+    reactErrorsCountPerTestSuite += 1;
+
+    if (reactErrorsCountPerTestSuite > reactErrorsLimitPerTestSuite) {
       throw new Error(
         [
           chalk.red.bold(
-            'Test failed because React warnings were detected. Please fix the following:',
-          ),
-          chalk.red(message),
-        ].join('\n'),
-      );
-    } else {
-      // eslint-disable-next-line no-console
-      console.log(
-        [
-          chalk.red.bold(
-            `IMPORTANT! Soon this test will not pass because React warnings were detected. Please don't add any more tests containing React warnings`,
+            'Test failed because too many React warnings were detected. Please fix the following:',
           ),
           chalk.red(message),
         ].join('\n'),
