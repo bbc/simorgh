@@ -34,7 +34,7 @@
     "test:accessibility": "npm run killApp && npm run build && run-p --race start bbcA11y",
     "test:ampValidate": "npm run killApp && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:ampValidate:ci": "npm run build -- --hide-modules --colors && run-p --race start amp:validate",
-    "test:chromatic": "chromatic test run  --build-script-name build:storybook",
+    "test:chromatic": "chromatic test run  --build-script-name build:storybook --exit-zero-on-changes",
     "test:dependencies": "npx dependency-check ./package.json",
     "test:prod:ci": "npm run start & npm install --no-save cypress@latest bbc-a11y@latest lighthouse@latest npm-run-all@latest puppeteer@latest && run-p cypress bbcA11y lighthouse test:puppeteer",
     "test:prod:travis": "CYPRESS_SKIP_EU=true npm run test:prod:ci",
