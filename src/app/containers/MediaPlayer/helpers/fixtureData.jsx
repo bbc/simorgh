@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AudioVideoContainer from '../index';
+import MediaPlayerContainer from '../index';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import {
   captionBlock,
@@ -13,18 +13,9 @@ import {
   audioClipUkOnlyBlock,
 } from './fixtures';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import generateAVSettings from '../../../lib/utilities/audioVideo/generateAVSettings';
-import AudioVideoHead from '../../../components/AudioVideoHead';
+import { ToggleContextProvider } from '../../../contexts/ToggleContext';
 
-const generateFixtureData = ({ platform, blocks, type, service }) => {
-  const avBlock = {
-    model: {
-      blocks,
-    },
-    type,
-  };
-  const audioVideoBlocks =
-    type === 'audio' || type === 'video' ? [avBlock] : [];
+const generateFixtureData = ({ platform, blocks, service }) => {
   return (
     <ServiceContextProvider service={service || 'news'}>
       <RequestContextProvider
@@ -34,16 +25,9 @@ const generateFixtureData = ({ platform, blocks, type, service }) => {
         pageType="article"
         service="news"
       >
-        <AudioVideoHead
-          audioVideoAssets={generateAVSettings({
-            audioVideoBlocks,
-            env: 'local',
-            platform: 'canonical',
-            statsDestination: 'NEWS_PS_TEST',
-            statsPageIdentifier: 'news.articles.c0000000031o.page',
-          })}
-        />
-        <AudioVideoContainer blocks={blocks} />
+        <ToggleContextProvider>
+          <MediaPlayerContainer blocks={blocks} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
   );
@@ -52,7 +36,6 @@ const generateFixtureData = ({ platform, blocks, type, service }) => {
 generateFixtureData.propTypes = {
   platform: PropTypes.string,
   blocks: PropTypes.arrayOf(PropTypes.any),
-  type: PropTypes.string.isRequired,
   service: PropTypes.string,
 };
 
@@ -63,13 +46,12 @@ generateFixtureData.defaultProps = {
 };
 
 export const NoData = ({ platform }) =>
-  generateFixtureData({ platform, blocks: null, type: null });
+  generateFixtureData({ platform, blocks: null });
 
 export const NoAresMedia = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [captionBlock('No Ares Media')],
-    type: null,
   });
 
 export const VideoClipGlobalWithCaption = ({ platform, service }) =>
@@ -79,7 +61,6 @@ export const VideoClipGlobalWithCaption = ({ platform, service }) =>
       videoClipGlobalGuidanceBlock,
       captionBlock('Video Clip Global with Caption'),
     ],
-    type: 'video',
     service,
   });
 
@@ -87,28 +68,24 @@ export const VideoClipGlobalWithoutCaption = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [videoClipGlobalGuidanceBlock],
-    type: 'video',
   });
 
 export const VideoClipGlobalPortrait = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [videoClipGlobalPortraitBlock],
-    type: 'video',
   });
 
 export const VideoClipUkWithGuidance = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [videoClipUkGuidanceBlock],
-    type: 'video',
   });
 
 export const VideoClipNonUk = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [videoClipNonUkBlock],
-    type: 'video',
   });
 
 export const AudioClipGlobalGuidanceWithCaption = ({ platform }) =>
@@ -118,19 +95,16 @@ export const AudioClipGlobalGuidanceWithCaption = ({ platform }) =>
       audioClipGlobalGuidanceBlock,
       captionBlock('Audio Clip Global Guidance with Caption'),
     ],
-    type: 'audio',
   });
 
 export const AudioClipUk = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [audioClipUkOnlyBlock],
-    type: 'audio',
   });
 
 export const AudioClipNonUk = ({ platform }) =>
   generateFixtureData({
     platform,
     blocks: [audioClipNonUkBlock],
-    type: 'audio',
   });
