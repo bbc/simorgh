@@ -76,7 +76,7 @@ describe('Charbeats Analytics Container', () => {
     expect(testUtils.buildSections).toHaveBeenCalledTimes(1);
     expect(tree).toMatchSnapshot();
   });
-  it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on test', () => {
+  it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on local', () => {
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
     amp.default = mockAmp;
 
@@ -93,7 +93,11 @@ describe('Charbeats Analytics Container', () => {
 
     const tree = renderer
       .create(
-        <ContextWrap platform="amp" pageType="article" origin="test.bbc.com">
+        <ContextWrap
+          platform="amp"
+          pageType="article"
+          origin="localhost.bbc.com"
+        >
           <ChartBeatAnalytics />
         </ContextWrap>,
       )
@@ -113,6 +117,16 @@ describe('Charbeats Analytics Container', () => {
     expect(testUtils.getSylphidCookie).toHaveBeenCalledTimes(1);
     expect(testUtils.getType).toHaveBeenCalledTimes(1);
     expect(testUtils.buildSections).toHaveBeenCalledTimes(1);
+    expect(tree).toMatchSnapshot();
+  });
+  it('should return null when toggle is disbaled on test', () => {
+    const tree = renderer
+      .create(
+        <ContextWrap platform="amp" pageType="article" origin="test.bbc.com">
+          <ChartBeatAnalytics />
+        </ContextWrap>,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
   it('should return null when toggle is disbaled for live', () => {

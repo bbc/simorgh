@@ -7,7 +7,7 @@ const toggles = {
       enabled: true,
     },
     chartbeatAnalytics: {
-      enabled: true,
+      enabled: false,
     },
   },
   live: {
@@ -19,6 +19,17 @@ const toggles = {
     },
     chartbeatAnalytics: {
       enabled: false,
+    },
+  },
+  local: {
+    mpulse: {
+      enabled: false,
+    },
+    audioVideo: {
+      enabled: true,
+    },
+    chartbeatAnalytics: {
+      enabled: true,
     },
   },
 };

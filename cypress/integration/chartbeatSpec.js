@@ -1,5 +1,5 @@
 import services from '../support/config/services';
-import { describeForLocalAndTest } from '../support/limitEnvRuns';
+import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 const source = '//static.chartbeat.com/js/chartbeat.js';
 const UID = 50924;
@@ -20,7 +20,7 @@ const hasAmpChartbeatConfigUid = chartbeatUID => {
     .should('contain', `${chartbeatUID}`);
 };
 
-describeForLocalAndTest('Chartbeat Analytics for News Article', () => {
+describeForLocalOnly('Chartbeat Analytics for News Article', () => {
   describe('Canonical page', () => {
     before(() => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
@@ -40,7 +40,7 @@ describeForLocalAndTest('Chartbeat Analytics for News Article', () => {
   });
 });
 
-describeForLocalAndTest('Chartbeat Analytics for Persian Articles', () => {
+describeForLocalOnly('Chartbeat Analytics for Persian Articles', () => {
   describe('Canonical page', () => {
     before(() => {
       cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
