@@ -47,8 +47,18 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
 };
 
 StoryPromoImage.propTypes = {
-  lazyLoad: bool.isRequired,
-  imageValues: shape(storyItem.indexImage).isRequired,
+  lazyLoad: bool,
+  imageValues: storyItem.indexImage,
+};
+
+StoryPromoImage.defaultProps = {
+  lazyLoad: false,
+  imageValues: shape({
+    path: '',
+    altText: '',
+    height: '',
+    width: '',
+  }),
 };
 
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {

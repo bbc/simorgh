@@ -3,6 +3,7 @@ import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 import pathOr from 'ramda/src/pathOr';
+import pick from 'ramda/src/pick';
 import { storyItem } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
@@ -39,7 +40,7 @@ const MediaIndicator = ({ item, topStory, service }) => {
 };
 
 MediaIndicator.propTypes = {
-  item: shape(storyItem).isRequired,
+  item: shape(pick(['cpsType', 'media'], storyItem)).isRequired,
   topStory: bool,
   service: string.isRequired,
 };

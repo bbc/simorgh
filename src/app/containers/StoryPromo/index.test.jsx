@@ -111,8 +111,8 @@ const fixtures = {
 };
 
 // eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service, platform, ...props }) => (
-  <ServiceContextProvider service={service || 'igbo'}>
+const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
+  <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"

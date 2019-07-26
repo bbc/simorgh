@@ -3,6 +3,7 @@ import moment from 'moment-timezone';
 import { shape } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
+import pick from 'ramda/src/pick';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import { storyItem } from '../../../models/propTypes/storyItem';
@@ -45,7 +46,7 @@ const LinkContents = ({ item }) => {
 };
 
 LinkContents.propTypes = {
-  item: shape(storyItem).isRequired,
+  item: shape(pick(['cpsType', 'headlines', 'media'], storyItem)).isRequired,
 };
 
 export default LinkContents;
