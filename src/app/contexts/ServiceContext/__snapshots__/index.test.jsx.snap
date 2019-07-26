@@ -6,7 +6,7 @@ exports[`ServiceContextProvider should load hydrated service context should have
 
 exports[`ServiceContextProvider should load hydrated service context should have a brand name for amharic 1`] = `"<span>BBC News አማርኛ</span>"`;
 
-exports[`ServiceContextProvider should load hydrated service context should have a brand name for arabic 1`] = `"<span>BBC News Arabic</span>"`;
+exports[`ServiceContextProvider should load hydrated service context should have a brand name for arabic 1`] = `"<span>BBC News عربي</span>"`;
 
 exports[`ServiceContextProvider should load hydrated service context should have a brand name for azeri 1`] = `"<span>BBC News Azərbaycanca</span>"`;
 
