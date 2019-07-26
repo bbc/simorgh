@@ -18,6 +18,7 @@ import {
 } from '../../models/propTypes';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
+import useToggle from '../Toggle/useToggle';
 
 const selectWrappers = orientation => {
   const wrapperSpan = {
@@ -42,6 +43,11 @@ const selectWrappers = orientation => {
 
 const MediaPlayerContainer = ({ blocks }) => {
   const { platform } = React.useContext(RequestContext);
+  const { enabled } = useToggle('mediaPlayer');
+
+  if (!enabled) {
+    return null;
+  }
 
   if (!blocks) {
     return null;
