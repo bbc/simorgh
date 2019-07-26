@@ -2,7 +2,7 @@ import { arrayOf, string, bool, shape } from 'prop-types';
 import { textBlockPropTypes } from '../text';
 import { imageBlockPropTypes } from '../image';
 
-const audioVideoBlockPropTypes = shape({
+const mediaPlayerBlockPropTypes = shape({
   locator: string,
   blocks: arrayOf(
     shape({
@@ -17,4 +17,4 @@ const audioVideoBlockPropTypes = shape({
   ),
 });
 
-export default audioVideoBlockPropTypes;
+export default mediaPlayerBlockPropTypes;

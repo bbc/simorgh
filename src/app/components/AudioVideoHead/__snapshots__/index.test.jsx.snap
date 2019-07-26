@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`AudioVideoHead should place audio mediaPlayer settings on page 1`] = `null`;
-
-exports[`AudioVideoHead should place multiple mediaPlayer settings on page 1`] = `null`;
-
-exports[`AudioVideoHead should place video mediaPlayer settings on page 1`] = `null`;
