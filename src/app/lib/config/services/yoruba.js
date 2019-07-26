@@ -115,6 +115,10 @@ const yoruba = {
       audio: 'Orin',
       photogallery: 'Àtẹ Àwòrán',
       video: 'Fidio',
+      bbc_yoruba_radio: {
+        title: 'Placeholder title',
+        subtitle: 'Placeholder subtitle',
+      },
     },
   },
   navigation: [
