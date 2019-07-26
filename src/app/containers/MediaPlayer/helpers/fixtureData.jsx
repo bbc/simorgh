@@ -13,6 +13,7 @@ import {
   audioClipUkOnlyBlock,
 } from './fixtures';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ToggleContextProvider } from '../../../contexts/ToggleContext';
 
 const generateFixtureData = ({ platform, blocks, service }) => {
   return (
@@ -24,7 +25,9 @@ const generateFixtureData = ({ platform, blocks, service }) => {
         pageType="article"
         service="news"
       >
-        <MediaPlayerContainer blocks={blocks} />
+        <ToggleContextProvider>
+          <MediaPlayerContainer blocks={blocks} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
   );

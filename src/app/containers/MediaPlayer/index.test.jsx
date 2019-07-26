@@ -17,6 +17,7 @@ import MediaPlayerContainer from '.';
 import { videoClipGlobalGuidanceBlock } from './helpers/fixtures';
 import * as gridComponents from '../../lib/styledGrid';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 
 describe('MediaPlayer', () => {
   describe('with no data', () => {
@@ -39,7 +40,9 @@ describe('MediaPlayer', () => {
 
       renderer.create(
         <RequestContextProvider isAmp>
-          <MediaPlayerContainer blocks={[videoClipGlobalGuidanceBlock]} />
+          <ToggleContextProvider>
+            <MediaPlayerContainer blocks={[videoClipGlobalGuidanceBlock]} />
+          </ToggleContextProvider>
         </RequestContextProvider>,
       );
 
