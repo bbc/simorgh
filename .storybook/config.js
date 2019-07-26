@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
+import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyle from '../src/app/lib/globalStyles';
 
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
@@ -12,7 +13,7 @@ function loadStories() {
 addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
   <Fragment>
-    <GlobalStyle />
+    <GlobalStyle fonts={Object.values(fontFaces)} />
     {story()}
   </Fragment>
   /* eslint-enable react/jsx-filename-extension */
