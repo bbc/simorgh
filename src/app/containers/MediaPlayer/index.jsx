@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
-import Canonical from './Canonical';
 import Caption from '../Caption';
 import videoMetadata from './metadata';
 import {
@@ -14,11 +13,12 @@ import {
 } from '../../lib/styledGrid';
 
 import {
-  audioVideoPropTypes,
+  mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
+import useToggle from '../Toggle/useToggle';
 
 const selectWrappers = orientation => {
   const wrapperSpan = {
@@ -41,8 +41,13 @@ const selectWrappers = orientation => {
   return { ParentWrapper, ChildWrapper, Container, wrapperSpan, portrait };
 };
 
-const AudioVideoContainer = ({ blocks }) => {
+const MediaPlayerContainer = ({ blocks }) => {
   const { platform } = React.useContext(RequestContext);
+  const { enabled } = useToggle('mediaPlayer');
+
+  if (!enabled) {
+    return null;
+  }
 
   if (!blocks) {
     return null;
@@ -68,7 +73,6 @@ const AudioVideoContainer = ({ blocks }) => {
       : 'audio';
 
   const type = kind === 'audio' ? kind : 'video';
-
   const orientation = pathOr(null, ['versions', 0, 'types', 0], nestedModel);
 
   const {
@@ -92,9 +96,12 @@ const AudioVideoContainer = ({ blocks }) => {
       ) : null}
       <ParentWrapper>
         <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
-          {platform === 'canonical' ? (
-            <Canonical id={pid} blocks={blocks} portrait={portrait} />
-          ) : null}
+          <ul>
+            <li>PID: {pid}</li>
+            <li>Orientation: {orientation}</li>
+            <li>Platform: {platform}</li>
+            <li>Portrait? {String(portrait)}</li>
+          </ul>
         </ChildWrapper>
         <ChildWrapper
           gridColumnStart={1}
@@ -112,8 +119,8 @@ const AudioVideoContainer = ({ blocks }) => {
   );
 };
 
-AudioVideoContainer.propTypes = audioVideoPropTypes;
+MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
 
-AudioVideoContainer.defaultProps = emptyBlockArrayDefaultProps;
+MediaPlayerContainer.defaultProps = emptyBlockArrayDefaultProps;
 
-export default AudioVideoContainer;
+export default MediaPlayerContainer;
