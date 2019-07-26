@@ -14,10 +14,10 @@ import {
 } from '../../lib/styledGrid';
 
 const renderCopyright = copyright =>
-  copyright ? <Copyright>{copyright}</Copyright> : null;
+  copyright && <Copyright>{copyright}</Copyright>;
 
-const renderCaption = (block, type) =>
-  block ? <Caption block={block} type={type} /> : null;
+const renderCaption = (block, type, service) =>
+  block && <Caption block={block} type={type} service={service} />;
 
 const ArticleFigure = ({
   height,
