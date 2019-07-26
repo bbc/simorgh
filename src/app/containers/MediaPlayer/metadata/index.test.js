@@ -1,4 +1,4 @@
-import audioVideoMetadata from '.';
+import mediaPlayerMetadata from '.';
 import {
   noAresMediaMetadata,
   multipleAresMetadata,
@@ -6,9 +6,9 @@ import {
   audioClipGlobalGuidanceBlock,
 } from '../helpers/fixtures';
 
-describe('audioVideoMetadata', () => {
+describe('mediaPlayerMetadata', () => {
   it('returns correct video metadata', () => {
-    const metadata = audioVideoMetadata(videoClipGlobalGuidanceBlock);
+    const metadata = mediaPlayerMetadata(videoClipGlobalGuidanceBlock);
     const output = {
       video: {
         '@list': [
@@ -29,7 +29,7 @@ describe('audioVideoMetadata', () => {
   });
 
   it('returns correct audio metadata', () => {
-    const metadata = audioVideoMetadata(audioClipGlobalGuidanceBlock);
+    const metadata = mediaPlayerMetadata(audioClipGlobalGuidanceBlock);
     const output = {
       video: {
         '@list': [
@@ -49,17 +49,17 @@ describe('audioVideoMetadata', () => {
   });
 
   it('handles aresMediaMetadata type not being present', () => {
-    const metadata = audioVideoMetadata(noAresMediaMetadata);
+    const metadata = mediaPlayerMetadata(noAresMediaMetadata);
     expect(metadata).toEqual(null);
   });
 
   it('handles empty input', () => {
-    const metadata = audioVideoMetadata([]);
+    const metadata = mediaPlayerMetadata([]);
     expect(metadata).toEqual(null);
   });
 
   it('handles multiple aresMediaMetadata types being present.', () => {
-    const metadata = audioVideoMetadata(multipleAresMetadata);
+    const metadata = mediaPlayerMetadata(multipleAresMetadata);
     const output = {
       video: {
         '@list': [

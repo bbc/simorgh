@@ -1,4 +1,6 @@
 import { storiesOf } from '@storybook/react'; // eslint-disable-line
+import { withKnobs } from '@storybook/addon-knobs';
+import { dirDecorator } from '@bbc/psammead-storybook-helpers';
 import {
   AudioClipGlobalGuidanceWithCaption,
   AudioClipNonUk,
@@ -12,8 +14,10 @@ import {
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('Audio Video Container', module)
-  .add('video, clip, global, with guidance, with caption', () =>
-    VideoClipGlobalWithCaption({ platform: 'canonical' }),
+  .addDecorator(withKnobs)
+  .addDecorator(dirDecorator)
+  .add('video, clip, global, with guidance, with caption', ({ service }) =>
+    VideoClipGlobalWithCaption(service),
   )
   .add('video, clip, global, with guidance, without caption', () =>
     VideoClipGlobalWithoutCaption({ platform: 'canonical' }),
@@ -38,9 +42,11 @@ storiesOf('Audio Video Container', module)
   );
 
 storiesOf('Audio Video Container - AMP', module)
+  .addDecorator(withKnobs)
+  .addDecorator(dirDecorator)
   .addDecorator(AmpDecorator)
-  .add('video, clip, global, with guidance, with caption', () =>
-    VideoClipGlobalWithCaption({ platform: 'amp' }),
+  .add('video, clip, global, with guidance, with caption', ({ service }) =>
+    VideoClipGlobalWithCaption({ platform: 'amp', service }),
   )
   .add('video, clip, global, with guidance, without caption', () =>
     VideoClipGlobalWithoutCaption({ platform: 'amp' }),

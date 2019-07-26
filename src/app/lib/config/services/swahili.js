@@ -114,6 +114,16 @@ const service = {
       audio: 'Sauti',
       photogallery: 'Picha',
       video: 'Video',
+      bbc_swahili_radio: {
+        title: 'BBC Swahili Radio',
+        subtitle:
+          'Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia.',
+      },
+      bbc_swahili_tv: {
+        title: 'Mitikasi Leo',
+        subtitle:
+          'Mitikasi Leo ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku.',
+      },
     },
   },
   brandSVG,
