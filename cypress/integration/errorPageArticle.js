@@ -1,14 +1,26 @@
 import {
-  errorMessage,
-  errorPageInlineLink,
-  errorTitle,
   hasHtmlLangDirAttributes,
+  renderedTitle,
 } from '../support/bodyTestHelper';
 import testData from '../../src/app/lib/config/services';
 import services from '../support/config/services';
 
 const serviceHasNonExistentArticle = service =>
   services[service].pageTypes.errorPage404 !== undefined;
+
+Object.keys(services)
+  .filter(serviceHasNonExistentArticle)
+  .forEach(service => {
+    describe(`${service} Test we get a 404`, () => {
+      it('should return a 404 error code', () => {
+        cy.testResponseCodeAndType(
+          `/${service}/articles/${services[service].pageTypes.errorPage404.asset}`,
+          404,
+          'text/html',
+        );
+      });
+    });
+  });
 
 // These must only ever be run locally as otherwise you're testing
 // the mozart page not the response from this application.
@@ -23,14 +35,6 @@ Object.keys(services)
           {
             failOnStatusCode: false,
           },
-        );
-      });
-
-      it('should return a 404 error code', () => {
-        cy.testResponseCodeAndType(
-          `/${service}/articles/${services[service].pageTypes.errorPage404.asset}`,
-          404,
-          'text/html',
         );
       });
 
