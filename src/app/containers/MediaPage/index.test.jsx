@@ -20,7 +20,3 @@ describe('Media Page', () => {
     );
   });
 });
-
-export default {
-  liveRadioScaffoldProps,
-};
