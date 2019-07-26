@@ -9,7 +9,6 @@ import timestamp from '../ArticleTimestamp';
 import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import mediaPlayer from '../MediaPlayer';
-import ChartbeatAnalytics from '../ChartbeatAnalytics';
 
 const componentsToRender = {
   headline: headings,
@@ -28,7 +27,6 @@ const ArticleMain = ({ articleData }) => {
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
-      <ChartbeatAnalytics />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostGrid>
