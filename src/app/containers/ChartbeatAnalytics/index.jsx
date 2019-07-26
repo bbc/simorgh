@@ -24,7 +24,6 @@ const ChartbeatAnalytics = () => {
   }
 
   const domain = env !== 'live' ? getDomain('test') : getDomain(service);
-
   const sections = buildSections(service, pageType);
   const cookie = getSylphidCookie();
   const type = getType(pageType);
