@@ -6,6 +6,8 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 const italic = styled.i`
   ${({ service }) => getSansItalic(service)}
+  font-family: inherit;
+  font-weight: inherit;
 `;
 
 const bold = ({ children }) => <b>{children}</b>;
