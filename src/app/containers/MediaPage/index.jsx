@@ -1,31 +1,23 @@
-import React, { Fragment } from 'react';
-import { string, shape } from 'prop-types';
+import React from 'react';
+import compose from 'ramda/src/compose';
+import MediaPageMain from '../MediaPageMain';
 
-const MediaPageContainer = ({ service, match }) => (
-  <Fragment>
-    <h1>Media Page</h1>
-    <ul>
-      <li>
-        <strong>Service</strong>: {service}
-      </li>
-      <li>
-        <strong>Brand</strong>: {match.params.serviceId}
-      </li>
-      <li>
-        <strong>MediaId</strong>: {match.params.mediaId}
-      </li>
-    </ul>
-  </Fragment>
-);
+import withContexts from '../PageHandlers/withContexts';
+import withPageWrapper from '../PageHandlers/withPageWrapper';
+import withError from '../PageHandlers/withError';
+import withLoading from '../PageHandlers/withLoading';
+import withData from '../PageHandlers/withData';
 
-MediaPageContainer.propTypes = {
-  service: string.isRequired,
-  match: shape({
-    params: shape({
-      serviceId: string,
-      mediaId: string,
-    }),
-  }).isRequired,
+const MediaContainer = props => {
+  return <MediaPageMain {...props} />;
 };
 
-export default MediaPageContainer;
+const EnhancedMediaContainer = compose(
+  withContexts,
+  withPageWrapper,
+  withLoading,
+  withError,
+  withData,
+)(MediaContainer);
+
+export default EnhancedMediaContainer;
