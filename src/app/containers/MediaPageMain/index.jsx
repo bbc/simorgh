@@ -1,30 +1,38 @@
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { string, shape } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
+import Paragraph from '@bbc/psammead-paragraph';
+import pathOr from 'ramda/src/pathOr';
 
 import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const MediaPageMain = props => {
   const { service, match } = props;
-  const { brandName, script } = useContext(ServiceContext);
+  const { serviceId, mediaId } = match.params;
+  const { script, translations } = useContext(ServiceContext);
+
+  const { title, subtitle } = pathOr(null, ['media', serviceId], translations);
 
   return (
     <main role="main">
       <Grid>
         <GridItemConstrainedMedium>
           <Headline script={script} service={service}>
-            {brandName} - Live Radio
+            {title}
           </Headline>
+          <Paragraph script={script} service={service}>
+            {subtitle}
+          </Paragraph>
           <ul>
             <li>
               <strong>Service</strong>: {service}
             </li>
             <li>
-              <strong>Brand</strong>: {match.params.serviceId}
+              <strong>Brand</strong>: {serviceId}
             </li>
             <li>
-              <strong>MediaId</strong>: {match.params.mediaId}
+              <strong>MediaId</strong>: {mediaId}
             </li>
           </ul>
         </GridItemConstrainedMedium>
