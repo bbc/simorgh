@@ -1,5 +1,5 @@
 import React from 'react';
-import MediaPage from '.';
+import MediaPageMain from '.';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const liveRadioScaffoldProps = {
@@ -12,11 +12,11 @@ const liveRadioScaffoldProps = {
   },
 };
 
-describe('Media Page', () => {
+describe('Media Page Main', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should match scaffold snapshot',
-      <MediaPage {...liveRadioScaffoldProps} />,
+      <MediaPageMain {...liveRadioScaffoldProps} />,
     );
   });
 });
