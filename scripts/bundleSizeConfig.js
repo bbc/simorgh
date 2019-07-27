@@ -4,5 +4,5 @@ module.exports = {
   MIN_SIZE: 509,
   MAX_SIZE: 510,
   // Minimum number of service bundles that should be analysed
-  MIN_SERVICES: 45,
+  MIN_SERVICES: 44,
 };
