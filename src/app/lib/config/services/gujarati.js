@@ -112,7 +112,13 @@ const service = {
     },
     media: {
       audio: 'ઑડિયો',
+      photogallery: 'છબી ગૅલેરી',
       video: 'વીડિયો',
+      bbc_gujarati_tv: {
+        title: 'સમાચાર',
+        subtitle:
+          'આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.',
+      },
     },
   },
   brandSVG,

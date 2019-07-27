@@ -112,7 +112,13 @@ const service = {
     },
     media: {
       audio: 'Аудіо',
+      photogallery: 'Фотогалерея',
       video: 'Відео',
+      bbc_ukrainian_tv: {
+        title: 'Випуск новин',
+        subtitle:
+          'ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua',
+      },
     },
   },
   brandSVG,

@@ -112,7 +112,13 @@ const service = {
     },
     media: {
       audio: 'ఆడియో',
+      photogallery: 'చిత్రశాల',
       video: 'వీడియో',
+      bbc_telugu_tv: {
+        title: 'ప్రపంచం',
+        subtitle:
+          'తాజా అంతర్జాతీయ జాతీయ వార్తా విశేషాలు, విశ్లేషణ కోసం బీబీసి ప్రపంచం చూస్తూ ఉండండి.',
+      },
     },
   },
   brandSVG,

@@ -73,19 +73,6 @@ export const copyrightDataWindow = () => {
   });
 };
 
-export const checkFooterLinks = (position, url) => {
-  cy.get('a')
-    .eq(position)
-    .should('have.attr', 'href')
-    .and('contain', url);
-};
-
-export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
-  cy.get(link).click();
-  cy.url().should('contain', url);
-  cy.get('header a').should('contain', 'BBC News');
-};
-
 export const renderedTitle = title => {
   cy.title().should('eq', title);
 };
