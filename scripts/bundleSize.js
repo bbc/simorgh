@@ -4,10 +4,7 @@ const ora = require('ora');
 const fs = require('fs');
 const chalk = require('chalk');
 
-// Size limit for all bundles used by each service (K)
-// Keep these +/- 5K and update frequently!
-const MIN = 564;
-const MAX = 582;
+const { MIN, MAX } = require('./bundleSizeConfig');
 
 const jsFiles = fs
   .readdirSync('build/public/static/js')
@@ -18,7 +15,7 @@ const services = jsFiles
     fileName => !(fileName.startsWith('main') || fileName.startsWith('vendor')),
   )
   .map(fileName => {
-    const matches = fileName.match(/([a-z]+)-\w+.\w+.js/);
+    const matches = fileName.match(/(\w+)-\w+.\w+.js/);
     if (Array.isArray(matches) && matches.length >= 2) {
       return matches[1];
     }

@@ -16,6 +16,10 @@ jest.mock('../src/app/lib/config/services/loadableConfig', () => ({
   },
 }));
 jest.mock('fs');
+jest.mock('./bundleSizeConfig', () => ({
+  MIN: 564,
+  MAX: 582,
+}));
 
 const setUpExecSyncMock = (service1FileSize, service2FileSize) => {
   beforeEach(() => {
@@ -25,8 +29,8 @@ const setUpExecSyncMock = (service1FileSize, service2FileSize) => {
       'vendor-22222.js',
       'vendor-33333.js',
       'vendor-44444.js',
-      'service1-12345.js',
-      'service2-12345.js',
+      'service1-12345.12345.js',
+      'service2-12345.12345.js',
     ]);
     const filePatternToSizeMap = {
       service1: service1FileSize,
