@@ -36,9 +36,8 @@ const setUpFSMocks = (
       'vendor-44444.js',
       'service1-12345.12345.js',
     ];
-    if (!shouldExcludeService2) {
+    if (!shouldExcludeService2)
       bundles = bundles.concat('service2-12345.12345.js');
-    }
     readdirSync.mockReturnValue(bundles);
 
     const filePatternToSizeMap = {
