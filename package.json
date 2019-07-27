@@ -51,7 +51,7 @@
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --env=jsdom --colors ./puppeteer",
-    "test:size": "babel-node ./scripts/bundleSize.js",
+    "test:size": "node ./scripts/bundleSize.js",
     "test:unit": "jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\"",
     "snyk": "snyk test",
     "updateSnapshots": "npm run test:unit -- -u",
@@ -157,7 +157,6 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "@babel/node": "^7.5.0",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@bbc/psammead-storybook-helpers": "^3.3.1",
     "@storybook/addon-knobs": "^5.1.9",

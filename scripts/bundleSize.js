@@ -4,9 +4,6 @@ const ora = require('ora');
 const fs = require('fs');
 const chalk = require('chalk');
 
-const services = Object.keys(
-  require('../src/app/lib/config/services/loadableConfig').default,
-);
 // Size limit for all bundles used by each service (K)
 // Keep these +/- 5K and update frequently!
 const MIN = 564;
@@ -15,6 +12,20 @@ const MAX = 582;
 const jsFiles = fs
   .readdirSync('build/public/static/js')
   .filter(fileName => fileName.endsWith('.js'));
+
+const services = jsFiles
+  .filter(
+    fileName => !(fileName.startsWith('main') || fileName.startsWith('vendor')),
+  )
+  .map(fileName => {
+    const matches = fileName.match(/([a-z]+)-\w+.\w+.js/);
+    if (Array.isArray(matches) && matches.length >= 2) {
+      return matches[1];
+    }
+    throw new Error(
+      `Unexpectedly formatted filename in "build/public/static/js": ${fileName}`,
+    );
+  });
 
 const getFileSize = filePath => fs.statSync(filePath).size;
 const getTotalSizeOfFilesBeginningWith = string => {
