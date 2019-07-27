@@ -17,21 +17,30 @@ jest.mock('../src/app/lib/config/services/loadableConfig', () => ({
 }));
 jest.mock('fs');
 jest.mock('./bundleSizeConfig', () => ({
-  MIN: 564,
-  MAX: 582,
+  MIN_SIZE: 564,
+  MAX_SIZE: 582,
+  MIN_SERVICES: 2,
 }));
 
-const setUpExecSyncMock = (service1FileSize, service2FileSize) => {
+const setUpFSMocks = (
+  service1FileSize,
+  service2FileSize,
+  shouldExcludeService2,
+) => {
   beforeEach(() => {
-    readdirSync.mockReturnValue([
+    let bundles = [
       'main-12345.js',
       'vendor-11111.js',
       'vendor-22222.js',
       'vendor-33333.js',
       'vendor-44444.js',
       'service1-12345.12345.js',
-      'service2-12345.12345.js',
-    ]);
+    ];
+    if (!shouldExcludeService2) {
+      bundles = bundles.concat('service2-12345.12345.js');
+    }
+    readdirSync.mockReturnValue(bundles);
+
     const filePatternToSizeMap = {
       service1: service1FileSize,
       service2: service2FileSize,
@@ -79,11 +88,27 @@ describe('bundleSize', () => {
   });
 
   describe('when all service bundles are within the defined limits', () => {
-    setUpExecSyncMock(145000, 150000);
+    setUpFSMocks(145000, 150000);
+
+    it('should not throw an error', () => {
+      let didThrow = false;
+      jest.isolateModules(() => {
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          didThrow = true;
+        }
+      });
+      expect(didThrow).toBe(false);
+    });
 
     it('should use ora to show loading and success states', () => {
       jest.isolateModules(() => {
-        require('./bundleSize'); // eslint-disable-line global-require
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          // silence error
+        }
       });
 
       expect(ora).toHaveBeenCalledWith(
@@ -95,7 +120,11 @@ describe('bundleSize', () => {
 
     it('should log a summary of bundle sizes', () => {
       jest.isolateModules(() => {
-        require('./bundleSize'); // eslint-disable-line global-require
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          // silence error
+        }
       });
 
       expect(global.console.log.mock.calls).toEqual(
@@ -112,11 +141,27 @@ describe('bundleSize', () => {
   });
 
   describe('when one or more of the service bundles are too small', () => {
-    setUpExecSyncMock(2000, 150000);
+    setUpFSMocks(2000, 150000);
+
+    it('should throw an error', () => {
+      let didThrow = false;
+      jest.isolateModules(() => {
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          didThrow = true;
+        }
+      });
+      expect(didThrow).toBe(true);
+    });
 
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
-        require('./bundleSize'); // eslint-disable-line global-require
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          // silence error
+        }
       });
 
       expect(ora).toHaveBeenCalledWith(
@@ -128,38 +173,41 @@ describe('bundleSize', () => {
 
     it('should log an error telling dev how to update thresholds', () => {
       jest.isolateModules(() => {
-        require('./bundleSize'); // eslint-disable-line global-require
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          // silence error
+        }
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
         "Bundle size for Service1 is too small at 422 kB. Please update thresholds in './scripts/bundleSize.js'",
       );
     });
-
-    it('should log a summary of bundle sizes', () => {
-      jest.isolateModules(() => {
-        require('./bundleSize'); // eslint-disable-line global-require
-      });
-
-      expect(global.console.log.mock.calls).toEqual(
-        expect.arrayContaining([
-          ['\nBundle size summary:\n'],
-          ['    20 kB   Main bundle '],
-          ['   400 kB   Vendor bundle '],
-          ['   422 kB   Smallest bundle - Service1'],
-          ['   570 kB   Largest bundle - Service2'],
-          ['   496 kB   Average bundle '],
-        ]),
-      );
-    });
   });
 
   describe('when one or more of the service bundles are too large', () => {
-    setUpExecSyncMock(145000, 165000);
+    setUpFSMocks(145000, 165000);
+
+    it('should throw an error', () => {
+      let didThrow = false;
+      jest.isolateModules(() => {
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          didThrow = true;
+        }
+      });
+      expect(didThrow).toBe(true);
+    });
 
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
-        require('./bundleSize'); // eslint-disable-line global-require
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          // silence error
+        }
       });
 
       expect(ora).toHaveBeenCalledWith(
@@ -171,28 +219,49 @@ describe('bundleSize', () => {
 
     it('should log an error telling dev how to update thresholds', () => {
       jest.isolateModules(() => {
-        require('./bundleSize'); // eslint-disable-line global-require
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          // silence error
+        }
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
         "Bundle size for Service2 is too large at 585 kB. Please update thresholds in './scripts/bundleSize.js'",
       );
     });
+  });
 
-    it('should log a summary of bundle sizes', () => {
+  describe('when there are less service bundles than MIN_SERVICES', () => {
+    setUpFSMocks(145000, 150000, true);
+
+    it('should throw an error', () => {
+      let didThrow = false;
       jest.isolateModules(() => {
-        require('./bundleSize'); // eslint-disable-line global-require
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          didThrow = true;
+        }
+      });
+      expect(didThrow).toBe(true);
+    });
+
+    it('should use ora to show loading and failure states', () => {
+      jest.isolateModules(() => {
+        try {
+          require('./bundleSize'); // eslint-disable-line global-require
+        } catch (e) {
+          // silence error
+        }
       });
 
-      expect(global.console.log.mock.calls).toEqual(
-        expect.arrayContaining([
-          ['\nBundle size summary:\n'],
-          ['    20 kB   Main bundle '],
-          ['   400 kB   Vendor bundle '],
-          ['   565 kB   Smallest bundle - Service1'],
-          ['   585 kB   Largest bundle - Service2'],
-          ['   575 kB   Average bundle '],
-        ]),
+      expect(ora).toHaveBeenCalledWith(
+        expect.objectContaining({ text: 'Analysing bundles...' }),
+      );
+      expect(start).toHaveBeenCalled();
+      expect(fail).toHaveBeenCalledWith(
+        'Service bundles appear to be missing. Found 1 but expecting 2',
       );
     });
   });

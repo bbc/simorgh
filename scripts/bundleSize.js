@@ -4,7 +4,7 @@ const ora = require('ora');
 const fs = require('fs');
 const chalk = require('chalk');
 
-const { MIN, MAX } = require('./bundleSizeConfig');
+const { MIN_SIZE, MAX_SIZE, MIN_SERVICES } = require('./bundleSizeConfig');
 
 const jsFiles = fs
   .readdirSync('build/public/static/js')
@@ -52,10 +52,10 @@ const createConsoleError = (service, size, adjective) =>
   ].join(' ');
 
 const mapSizeToError = (service, size) => {
-  if (size < MIN) {
+  if (size < MIN_SIZE) {
     return createConsoleError(service, size, 'small');
   }
-  if (size > MAX) {
+  if (size > MAX_SIZE) {
     return createConsoleError(service, size, 'large');
   }
   return undefined;
@@ -69,6 +69,7 @@ const spinner = ora({
 spinner.start();
 
 let totalSize = 0;
+let numberOfServices = 0;
 let smallestBundle;
 let largestBundle;
 
@@ -77,6 +78,7 @@ const errors = services
     const size = getServiceBundleSize(service);
 
     totalSize += size;
+    numberOfServices += 1;
 
     if (!smallestBundle || size < smallestBundle.size) {
       smallestBundle = { service, size };
@@ -90,9 +92,15 @@ const errors = services
   })
   .filter(item => !!item);
 
-if (errors.length) {
+if (numberOfServices < MIN_SERVICES) {
+  spinner.fail(
+    `Service bundles appear to be missing. Found ${numberOfServices} but expecting ${MIN_SERVICES}`,
+  );
+  throw new Error();
+} else if (errors.length) {
   spinner.fail('Issues with service bundles: ');
   errors.forEach(err => console.error(err)); // eslint-disable-line no-console
+  throw new Error();
 } else {
   spinner.succeed('All bundle sizes are good!');
 }
