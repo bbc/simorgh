@@ -5,7 +5,6 @@ exports[`withContexts HOC should return all context providers 1`] = `
   <DialContextProvider
     dials={
       Object {
-        "audiovideo": true,
         "mpulse": false,
       }
     }
@@ -25,7 +24,6 @@ exports[`withContexts HOC should return all context providers 1`] = `
           bbcOrigin="https://www.bbc.com"
           dials={
             Object {
-              "audiovideo": true,
               "mpulse": false,
             }
           }

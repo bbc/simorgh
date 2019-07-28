@@ -4,6 +4,7 @@ const getMediaPageInitialData = ({ service }) => {
   return Promise.resolve({
     status: 200,
     service,
+    pageData: {},
   });
 };
 
