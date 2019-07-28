@@ -8,7 +8,7 @@ import { shouldMatchSnapshot, isNull } from '../../../testHelpers';
 import blocksSingleFragment from './testHelpers';
 
 const HeadingsContainerWithContext = data => (
-  <ServiceContext.Provider value={{ script: latin }}>
+  <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
     <HeadingsContainer {...data} />
   </ServiceContext.Provider>
 );

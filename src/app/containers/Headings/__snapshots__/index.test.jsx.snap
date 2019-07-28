@@ -5,6 +5,9 @@ exports[`Headings with headline data should render correctly 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
 }
@@ -76,6 +79,9 @@ exports[`Headings with plain text headline should render h1 containing correct t
   font-size: 1.75rem;
   line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
 }
@@ -507,6 +513,9 @@ exports[`Headings with subheadline data should render correctly 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 1.5rem 0;
 }
