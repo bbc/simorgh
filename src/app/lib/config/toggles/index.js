@@ -25,7 +25,7 @@ const toggles = {
     mpulse: {
       enabled: false,
     },
-    audioVideo: {
+    mediaPlayer: {
       enabled: true,
     },
     chartbeatAnalytics: {
