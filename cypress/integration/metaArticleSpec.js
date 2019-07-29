@@ -72,7 +72,7 @@ Object.keys(services)
       });
 
       it('should have the correct open graph metadata', () => {
-        cy.openGraphMeta(
+        cy.checkOpenGraphMetadata(
           'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
           `${testData[service].defaultImage}`,
           `${testData[service].defaultImageAltText}`,
@@ -85,7 +85,7 @@ Object.keys(services)
       });
 
       it('should have the correct twitter metadata', () => {
-        cy.twitterMeta(
+        cy.checkTwitterMetadata(
           'summary_large_image',
           `${testData[service].twitterCreator}`,
           'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
@@ -97,7 +97,7 @@ Object.keys(services)
       });
 
       it('should include metadata that matches the JSON data', () => {
-        cy.metadataAssertion();
+        cy.checkArticleMetadata();
       });
 
       it('should include the canonical URL & ampHTML', () => {
@@ -111,7 +111,7 @@ Object.keys(services)
 
       it('should include metadata in the head on AMP pages', () => {
         cy.window().then(win => {
-          cy.metadataAssertionAMP(
+          cy.checkAMPArticleMetadata(
             `/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
             win.SIMORGH_DATA,
           );

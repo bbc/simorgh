@@ -60,7 +60,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have the correct open graph metadata', () => {
-    cy.openGraphMeta(
+    cy.checkOpenGraphMeta(
       'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
       'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
       'BBC News',
@@ -72,7 +72,7 @@ describe('Article Meta Tests', () => {
     );
   });
   it('should have the correct twitter metadata', () => {
-    cy.twitterMeta(
+    cy.checkTwitterMetadata(
       'summary_large_image',
       '@BBCNews',
       'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
@@ -84,7 +84,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include metadata that matches the JSON data', () => {
-    cy.metadataAssertion();
+    cy.checkArticleMetadata();
   });
 
   it('should include the canonical URL & ampHTML', () => {
@@ -98,7 +98,7 @@ describe('Article Meta Tests', () => {
 
   it('should include metadata in the head on AMP pages', () => {
     cy.window().then(win => {
-      cy.metadataAssertionAMP(
+      cy.checkAMPArticleMetadata(
         `/news/articles/${services.news.pageTypes.articles.asset}.amp`,
         win.SIMORGH_DATA,
       );

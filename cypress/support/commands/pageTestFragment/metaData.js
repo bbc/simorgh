@@ -17,7 +17,7 @@ Cypress.Commands.add(
   },
 );
 
-Cypress.Commands.add('metadataAssertion', () => {
+Cypress.Commands.add('checkArticleMetadata', () => {
   cy.window().then(win => {
     cy.get('head').within(() => {
       cy.get('meta[name="description"]').should(
@@ -60,7 +60,7 @@ Cypress.Commands.add('metadataAssertion', () => {
   });
 });
 
-Cypress.Commands.add('metadataAssertionAMP', (AMPURL, win) => {
+Cypress.Commands.add('checkAMPArticleMetadata', (AMPURL, win) => {
   // This will only work if you visit the matching canonical
   // url prior to running this.
   // AMP overrides the Window data in window.SIMORGH_DATA. In order to get
@@ -103,7 +103,7 @@ Cypress.Commands.add('metadataAssertionAMP', (AMPURL, win) => {
   );
 });
 
-Cypress.Commands.add('openGraphMeta', (
+Cypress.Commands.add('checkOpenGraphMetadata', (
   description, // eslint-disable-line no-unused-vars
   imageUrl,
   altText,
@@ -138,7 +138,7 @@ Cypress.Commands.add('openGraphMeta', (
   });
 });
 
-Cypress.Commands.add('twitterMeta', (
+Cypress.Commands.add('checkTwitterMetadata', (
   card,
   creator,
   description, // eslint-disable-line no-unused-vars
