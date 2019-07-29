@@ -115,10 +115,12 @@ Object.keys(config)
       });
 
       // it('should have a working first inline link', () => {
-      //   clickInlineLinkAndTestPageHasHTML(
-      //     'main a',
-      //     `/news/articles/${services.news.pageTypes.articles.asset}`,
+      //   cy.get('main a').click();
+      //   cy.url().should(
+      //     'contain',
+      //     `/news/articles/${config.news.pageTypes.articles.asset}`,
       //   );
+      //   cy.get('header a').should('contain', 'BBC News');
       // });
 
       // This test is commented out because we are unable to run it on TEST as it requires a cert in order to work.

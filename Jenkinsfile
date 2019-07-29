@@ -200,11 +200,9 @@ pipeline {
       steps {
         unstash 'simorgh'
         build(
-          job: 'simorgh-infrastructure/latest',
+          job: 'simorgh-infrastructure-test/latest',
           parameters: [
-            [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME],
-            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-            [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: 'live'],
+            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME]
             booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
           ],
           propagate: true,

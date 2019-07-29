@@ -12,7 +12,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
     An overtyped headline for a media item
   </span>
   <ForwardRef(VisuallyHiddenText)>
-    , 11:06
+    , 11 minutes 6 seconds
   </ForwardRef(VisuallyHiddenText)>
 </span>
 `;
@@ -29,7 +29,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
     An overtyped headline for a media item
   </span>
   <ForwardRef(VisuallyHiddenText)>
-    , 11:06
+    , 11 minutes 6 seconds
   </ForwardRef(VisuallyHiddenText)>
 </span>
 `;
