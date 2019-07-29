@@ -202,7 +202,7 @@ pipeline {
         build(
           job: 'simorgh-infrastructure-test/latest',
           parameters: [
-            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME]
+            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
             booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
           ],
           propagate: true,
