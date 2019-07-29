@@ -3,7 +3,7 @@ const toggles = {
     mpulse: {
       enabled: false,
     },
-    audioVideo: {
+    mediaPlayer: {
       enabled: true,
     },
   },
@@ -11,7 +11,7 @@ const toggles = {
     mpulse: {
       enabled: false,
     },
-    audioVideo: {
+    mediaPlayer: {
       enabled: false,
     },
   },
