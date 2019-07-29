@@ -3,7 +3,7 @@ const toggles = {
     mpulse: {
       enabled: false,
     },
-    audioVideo: {
+    mediaPlayer: {
       enabled: true,
     },
     chartbeatAnalytics: {
@@ -14,7 +14,7 @@ const toggles = {
     mpulse: {
       enabled: false,
     },
-    audioVideo: {
+    mediaPlayer: {
       enabled: false,
     },
     chartbeatAnalytics: {

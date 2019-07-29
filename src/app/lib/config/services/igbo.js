@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
 
 const igbo = {
+  lang: 'ig',
   product: 'BBC News',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',

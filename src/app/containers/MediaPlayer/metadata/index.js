@@ -1,6 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 
-const audioVideoMetadata = blocks => {
+const mediaPlayerMetadata = blocks => {
   const aresMediaBlocks = pathOr(null, ['model', 'blocks'], blocks);
   const listContent = [];
   const metadata = {
@@ -38,4 +38,4 @@ const audioVideoMetadata = blocks => {
   return listContent.length > 0 ? metadata : null;
 };
 
-export default audioVideoMetadata;
+export default mediaPlayerMetadata;
