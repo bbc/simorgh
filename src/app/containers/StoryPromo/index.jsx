@@ -59,6 +59,10 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   let timestamp = pathOr(null, ['timestamp'], item);
 
   if (new Date(timestamp).getFullYear() < 1980) {
+    // if the date is before 1980, our timestamp was probably in seconds.
+    // this fixes an ares bug - ARES-758 on JIRA.
+    // if you come across this in the future, please check if it's no longer needed
+    // if so, delete this!
     timestamp *= 1000;
   }
 
