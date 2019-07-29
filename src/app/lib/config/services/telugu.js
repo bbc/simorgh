@@ -157,7 +157,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'బయటి ఇంటర్నెట్ సైట్‌లలోని కంటెంట్‌కు BBC బాధ్యత వహించదు',
+    copyrightText:
+      'BBC. బయటి ఇంటర్నెట్ సైట్‌లలోని కంటెంట్‌కు BBC బాధ్యత వహించదు',
   },
   fonts: [],
 };
