@@ -1,11 +1,10 @@
 import config from '../support/config/services';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 Object.keys(config).forEach(service => {
   Object.keys(config[service].pageTypes)
     .filter(pageType => config[service].pageTypes[pageType] !== undefined)
     .forEach(pageType => {
-      describeForLocalOnly(`Script src - ${service} ${pageType}`, () => {
+      describe(`Script src - ${service} ${pageType}`, () => {
         beforeEach(() => {
           cy.visit(
             pageType === 'frontPage'

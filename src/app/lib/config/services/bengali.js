@@ -157,7 +157,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'ইন্টারনেটে অন্যান্য সাইটের জন্য বিবিসি দায়বদ্ধ নয়',
+    copyrightText: 'বিবিসি। ইন্টারনেটে অন্যান্য সাইটের জন্য বিবিসি দায়বদ্ধ নয়',
   },
   fonts: [],
 };
