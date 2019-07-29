@@ -43,7 +43,7 @@ Object.keys(config)
       });
 
       it('should have a placeholder image', () => {
-        placeholderImageLoaded(cy.get('figure div div div').eq(0));
+        cy.placeholderImageLoaded(cy.get('figure div div div').eq(0));
       });
 
       it('should have a visible image without a caption, and also not be lazyloaded', () => {
