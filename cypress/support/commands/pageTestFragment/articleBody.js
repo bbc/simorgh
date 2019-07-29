@@ -1,4 +1,3 @@
-import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import { getBlockByType, getBlockData } from '../../bodyTestHelper';
 
 Cypress.Commands.add('firstHeadlineDataWindow', () => {
@@ -6,7 +5,7 @@ Cypress.Commands.add('firstHeadlineDataWindow', () => {
     const headlineData = getBlockData('headline', win);
     cy.get('h1').should(
       'contain',
-      headlineData.model.blocks[0].model.blocks[0].model,
+      headlineData.model.blocks[0].model.blocks[0].model.text,
     );
   });
 });
@@ -16,7 +15,7 @@ Cypress.Commands.add('firstSubheadlineDataWindow', () => {
     const subheadingData = getBlockData('subheadline', win);
     cy.get('h2').should(
       'contain',
-      subheadingData.model.blocks[0].model.blocks[0].model,
+      subheadingData.model.blocks[0].model.blocks[0].model.text,
     );
   });
 });
@@ -47,15 +46,6 @@ Cypress.Commands.add('copyrightDataWindow', () => {
 
 Cypress.Commands.add('renderedTitle', title => {
   cy.title().should('eq', title);
-});
-
-Cypress.Commands.add('placeholderImageLoaded', placeholderImage => {
-  placeholderImage.should(el => {
-    expect(el).to.have.css(
-      'background-image',
-      `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
-    );
-  });
 });
 
 Cypress.Commands.add(

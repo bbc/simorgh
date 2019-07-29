@@ -1,3 +1,4 @@
+import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../support/config/services';
 
 const serviceHasArticlePageType = service =>
@@ -14,7 +15,7 @@ Object.keys(config)
         );
       });
 
-      it('should render an H1, which contains/displays a styled headline', () => {
+      it('should render a H1, which contains/displays a styled headline', () => {
         cy.firstHeadlineDataWindow();
       });
 
@@ -43,7 +44,14 @@ Object.keys(config)
       });
 
       it('should have a placeholder image', () => {
-        cy.placeholderImageLoaded(cy.get('figure div div div').eq(0));
+        cy.get('figure div div div')
+          .eq(0)
+          .should(el => {
+            expect(el).to.have.css(
+              'background-image',
+              `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
+            );
+          });
       });
 
       it('should have a visible image without a caption, and also not be lazyloaded', () => {
