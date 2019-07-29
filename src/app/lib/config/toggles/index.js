@@ -7,7 +7,7 @@ const toggles = {
       enabled: true,
     },
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
   },
   live: {
