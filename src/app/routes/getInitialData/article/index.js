@@ -5,12 +5,14 @@ import applyTimestampRules from '../../../lib/utilities/preprocessor/rules/times
 import addIdsToBlocks from '../../../lib/utilities/preprocessor/rules/addIdsToBlocks';
 import applyBlockPositioning from '../../../lib/utilities/preprocessor/rules/blockPositioning';
 
-const getArticleInitialData = async ({ id, service }) => {
+const getArticleInitialData = async ({ service, id, variant }) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
 
-  const url = `${baseUrl}/${service}/articles/${id}.json`;
+  const url = variant
+    ? `${baseUrl}/${service}/articles/${id}${variant}.json`
+    : `${baseUrl}/${service}/articles/${id}.json`;
 
   return fetchData({
     url,

@@ -7,7 +7,7 @@ const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 
-export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):amp(${ampRegex})?`;
+export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
 export const articleDataRegexPath = `${articleRegexPath}.json`;
 

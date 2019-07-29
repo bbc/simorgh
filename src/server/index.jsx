@@ -40,10 +40,8 @@ class LoggerStream {
   }
 }
 
-const constructDataFilePath = (pageType, service, id) => {
-  const dataPath = pageType === 'frontpage' ? 'index.json' : `${id}.json`;
-
-  return path.join(process.cwd(), 'data', service, pageType, dataPath);
+const constructDataFilePath = dataPath => {
+  return path.join(process.cwd(), 'data', dataPath);
 };
 
 const server = express();
@@ -102,18 +100,24 @@ if (process.env.APP_ENV === 'local') {
       }),
     )
     .get(articleDataRegexPath, async ({ params }, res, next) => {
-      const { service, id } = params;
+      const { service, id, variant } = params;
 
-      const dataFilePath = constructDataFilePath('articles', service, id);
+      const dataPath = variant
+        ? `${service}/articles/${id}${variant}.json`
+        : `${service}/articles/${id}.json`;
+
+      const dataFilePath = constructDataFilePath(dataPath);
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(frontpageDataRegexPath, async ({ params }, res, next) => {
       const { service, variant } = params;
 
-      const servicePath = variant ? `${service}${variant}` : service;
+      const dataPath = variant
+        ? `${service}${variant}/frontpage/index.json`
+        : `${service}/frontpage/index.json`;
 
-      const dataFilePath = constructDataFilePath('frontpage', servicePath);
+      const dataFilePath = constructDataFilePath(dataPath);
 
       sendDataFile(res, dataFilePath, next);
     })
@@ -155,12 +159,12 @@ server
     [articleRegexPath, frontpageRegexPath, ...mediaRadioAndTvRegexPathsArray],
     async ({ url, headers }, res) => {
       try {
-        const { service, isAmp, route, serviceVariant } = getRouteProps(
+        const { service, isAmp, route, serviceVariant, match } = getRouteProps(
           routes,
           url,
         );
 
-        const data = await route.getInitialData(service, serviceVariant);
+        const data = await route.getInitialData(match.params);
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
 
