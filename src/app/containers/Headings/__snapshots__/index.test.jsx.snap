@@ -150,13 +150,32 @@ exports[`Headings with plain text headline should render h1 containing correct t
 
 exports[`Headings with plain text subheadline should render h2 containing correct text 1`] = `
 .c1 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 1.5rem 0;
 }
 
 .c0 {
   grid-column: 1 / span 6;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -219,9 +238,28 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 
 exports[`Headings with rich text headline with bold text should render h1 with <b> tag 1`] = `
 .c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -276,9 +314,28 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 
 exports[`Headings with rich text headline with italic text should render h1 with <i> tag 1`] = `
 .c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -333,9 +390,28 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 exports[`Headings with rich text should render headline with bold & italic text should render h1 with <i><b> tags 1`] = `
 .c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -392,9 +468,28 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 exports[`Headings with rich text should render headline with italic & bold text should render h1 with <b><i> tags 1`] = `
 .c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -451,9 +546,28 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 exports[`Headings with rich text with different attributes should render headline with only middle of text italic should render correctly 1`] = `
 .c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width:37.5rem) {

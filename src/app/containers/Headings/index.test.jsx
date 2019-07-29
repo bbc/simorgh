@@ -88,7 +88,7 @@ describe('Headings', () => {
       );
 
       it('should not have an id', () => {
-        const headlineHeading = render(<HeadingsContainer {...data} />);
+        const headlineHeading = render(HeadingsContainerWithContext(data));
         expect(getId(headlineHeading)).toBe(undefined);
       });
     });
@@ -101,11 +101,11 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h2 containing correct text',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
 
       it('should have an id of sanitised text', () => {
-        const subheadlineHeading = render(<HeadingsContainer {...data} />);
+        const subheadlineHeading = render(HeadingsContainerWithContext(data));
         expect(getId(subheadlineHeading)).toBe('Plain-subheadline');
       });
     });
@@ -120,7 +120,7 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h1 with <i> tag',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
     });
 
@@ -132,7 +132,7 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h1 with <b> tag',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
     });
 
@@ -147,7 +147,7 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h1 with <i><b> tags',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
     });
 
@@ -162,7 +162,7 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h1 with <b><i> tags',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
     });
 
@@ -175,7 +175,7 @@ describe('Headings', () => {
 
         shouldMatchSnapshot(
           'should render correctly',
-          <HeadingsContainer {...data} />,
+          HeadingsContainerWithContext(data),
         );
       });
     });

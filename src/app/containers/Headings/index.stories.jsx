@@ -10,7 +10,7 @@ const headline = blocksSingleFragment('This is a headline.', []);
 const subheadline = blocksSingleFragment('This is a subheadline.', []);
 
 const headingsContainerWithContext = (type, blocks) => (
-  <ServiceContext.Provider value={{ script: latin }}>
+  <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
     <HeadingsContainer type={type} blocks={blocks} />
   </ServiceContext.Provider>
 );
