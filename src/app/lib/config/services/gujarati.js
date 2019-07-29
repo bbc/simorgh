@@ -112,7 +112,13 @@ const service = {
     },
     media: {
       audio: 'ઑડિયો',
+      photogallery: 'છબી ગૅલેરી',
       video: 'વીડિયો',
+      bbc_gujarati_tv: {
+        title: 'સમાચાર',
+        subtitle:
+          'આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.',
+      },
     },
   },
   brandSVG,
@@ -151,7 +157,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
+    copyrightText: 'BBC. એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
   },
   fonts: [],
 };

@@ -112,7 +112,17 @@ const service = {
     },
     media: {
       audio: 'Аудио',
+      photogallery: 'Фотогалерея',
       video: 'Видео',
+      bbc_uzbek_radio: {
+        title: 'BBC Uzbek Radio Dasturi',
+        subtitle: 'O’zbekiston, mintaqa va dunyo yangiliklari O’zbek tilida',
+      },
+      bbc_uzbek_tv: {
+        title: 'Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur',
+        subtitle:
+          'Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi',
+      },
     },
   },
   brandSVG,
@@ -151,7 +161,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC ташқи интернет саҳифалар учун масъул эмас',
+    copyrightText: 'BBC. BBC ташқи интернет саҳифалар учун масъул эмас',
   },
   fonts: [],
 };

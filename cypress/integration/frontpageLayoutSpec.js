@@ -1,5 +1,4 @@
 import services from '../support/config/services';
-import { el } from '../support/frontpageElements';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 Object.keys(services).forEach(index => {
@@ -24,9 +23,12 @@ Object.keys(services).forEach(index => {
 
       describe('header tests', () => {
         it('should have a visible banner', () => {
-          cy.get(el.header)
+          cy.get('header')
             .should('have.lengthOf', 1)
-            .find('a')
+            .find('div[class^="Banner"]')
+            .children()
+            .should('have.lengthOf', 1)
+            .children()
             .should('have.attr', 'href', serviceConfig.pageTypes.frontPage)
             .find('svg')
             .should('be.visible');
@@ -45,7 +47,7 @@ Object.keys(services).forEach(index => {
 
       describe('section tests', () => {
         it('should be labelled by a visible section label', () => {
-          cy.get(el.section)
+          cy.get('section')
             .should('have.length.of.at.least', 1)
             .should('be.visible')
             .each($section => {
@@ -56,7 +58,7 @@ Object.keys(services).forEach(index => {
         });
 
         it('should contain at least one story promo', () => {
-          cy.get(el.section).within(() => {
+          cy.get('section').within(() => {
             cy.get('img')
               .should('have.length.of.at.least', 1)
               .should('be.visible');

@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'Audio',
+      photogallery: 'Fotos',
       video: 'Video',
     },
   },
@@ -152,7 +153,7 @@ const service = {
       },
     ],
     copyrightText:
-      'El contenido de las páginas externas no es responsabilidad de la BBC.',
+      'BBC. El contenido de las páginas externas no es responsabilidad de la BBC.',
   },
   fonts: [],
 };

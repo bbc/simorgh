@@ -1,0 +1,2324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CanonicalChartbeatAnalytics should return the helmet wrapper with the script snippet 1`] = `
+Object {
+  "instance": null,
+  "nodeType": "component",
+  "props": Object {
+    "chartbeatSource": "//chartbeat.js",
+    "chartbeatUID": 1111,
+    "cookie": "cookie",
+    "domain": "test-domain",
+    "sections": "section1 section2",
+    "type": "article",
+  },
+  "rendered": Object {
+    "instance": HelmetWrapper {
+      "_reactInternalFiber": FiberNode {
+        "_debugHookTypes": null,
+        "_debugID": 5,
+        "_debugIsCurrentlyTiming": false,
+        "_debugOwner": FiberNode {
+          "_debugHookTypes": null,
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "alternate": null,
+          "child": [Circular],
+          "childExpirationTime": 0,
+          "contextDependencies": null,
+          "effectTag": 1,
+          "elementType": [Function],
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "chartbeatSource": "//chartbeat.js",
+            "chartbeatUID": 1111,
+            "cookie": "cookie",
+            "domain": "test-domain",
+            "sections": "section1 section2",
+            "type": "article",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "chartbeatSource": "//chartbeat.js",
+            "chartbeatUID": 1111,
+            "cookie": "cookie",
+            "domain": "test-domain",
+            "sections": "section1 section2",
+            "type": "article",
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugHookTypes": null,
+            "_debugID": 2,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": FiberNode {
+              "_debugHookTypes": null,
+              "_debugID": 2,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": [Circular],
+              "child": null,
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 0,
+              "elementType": null,
+              "expirationTime": 1073741823,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": Object {
+                  "children": Array [],
+                  "createNodeMock": [Function],
+                  "tag": "CONTAINER",
+                },
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <CanonicalChartbeatBeacon
+                      chartbeatSource="//chartbeat.js"
+                      chartbeatUID={1111}
+                      cookie="cookie"
+                      domain="test-domain"
+                      sections="section1 section2"
+                      type="article"
+                    />,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <CanonicalChartbeatBeacon
+                      chartbeatSource="//chartbeat.js"
+                      chartbeatUID={1111}
+                      cookie="cookie"
+                      domain="test-domain"
+                      sections="section1 section2"
+                      type="article"
+                    />,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 0,
+            "elementType": null,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <CanonicalChartbeatBeacon
+                chartbeatSource="//chartbeat.js"
+                chartbeatUID={1111}
+                cookie="cookie"
+                domain="test-domain"
+                sections="section1 section2"
+                type="article"
+              />,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": Object {
+                "children": Array [],
+                "createNodeMock": [Function],
+                "tag": "CONTAINER",
+              },
+              "context": Object {},
+              "current": [Circular],
+              "didError": false,
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "expirationTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextExpirationTimeToWorkOn": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "pingCache": null,
+              "timeoutHandle": -1,
+            },
+            "tag": 3,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <CanonicalChartbeatBeacon
+                  chartbeatSource="//chartbeat.js"
+                  chartbeatUID={1111}
+                  cookie="cookie"
+                  domain="test-domain"
+                  sections="section1 section2"
+                  type="article"
+                />,
+              },
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "sibling": null,
+          "stateNode": null,
+          "tag": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_debugSource": null,
+        "alternate": null,
+        "child": FiberNode {
+          "_debugHookTypes": null,
+          "_debugID": 6,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": [Circular],
+          "_debugSource": null,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugHookTypes": null,
+            "_debugID": 7,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": null,
+            "alternate": null,
+            "child": null,
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 1,
+            "elementType": [Function],
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "defer": true,
+              "encodeSpecialCharacters": true,
+              "script": Array [
+                Object {
+                  "async": true,
+                  "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                  "type": "text/javascript",
+                },
+              ],
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "defer": true,
+              "encodeSpecialCharacters": true,
+              "script": Array [
+                Object {
+                  "async": true,
+                  "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                  "type": "text/javascript",
+                },
+              ],
+            },
+            "ref": null,
+            "return": [Circular],
+            "sibling": null,
+            "stateNode": null,
+            "tag": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "childExpirationTime": 0,
+          "contextDependencies": null,
+          "effectTag": 1,
+          "elementType": [Function],
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "defer": true,
+            "encodeSpecialCharacters": true,
+            "script": Array [
+              Object {
+                "async": true,
+                "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                "type": "text/javascript",
+              },
+            ],
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "defer": true,
+            "encodeSpecialCharacters": true,
+            "script": Array [
+              Object {
+                "async": true,
+                "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                "type": "text/javascript",
+              },
+            ],
+          },
+          "ref": null,
+          "return": [Circular],
+          "sibling": null,
+          "stateNode": SideEffect {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "defer": true,
+              "encodeSpecialCharacters": true,
+              "script": Array [
+                Object {
+                  "async": true,
+                  "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                  "type": "text/javascript",
+                },
+              ],
+            },
+            "refs": Object {},
+            "state": null,
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 1,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "childExpirationTime": 0,
+        "contextDependencies": null,
+        "effectTag": 1,
+        "elementType": [Function],
+        "expirationTime": 0,
+        "firstEffect": null,
+        "index": 0,
+        "key": null,
+        "lastEffect": null,
+        "memoizedProps": Object {
+          "children": <script
+            async={true}
+            type="text/javascript"
+          >
+            
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+          </script>,
+          "defer": true,
+          "encodeSpecialCharacters": true,
+        },
+        "memoizedState": null,
+        "mode": 0,
+        "nextEffect": null,
+        "pendingProps": Object {
+          "children": <script
+            async={true}
+            type="text/javascript"
+          >
+            
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+          </script>,
+          "defer": true,
+          "encodeSpecialCharacters": true,
+        },
+        "ref": null,
+        "return": FiberNode {
+          "_debugHookTypes": null,
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "alternate": null,
+          "child": [Circular],
+          "childExpirationTime": 0,
+          "contextDependencies": null,
+          "effectTag": 1,
+          "elementType": [Function],
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "chartbeatSource": "//chartbeat.js",
+            "chartbeatUID": 1111,
+            "cookie": "cookie",
+            "domain": "test-domain",
+            "sections": "section1 section2",
+            "type": "article",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "chartbeatSource": "//chartbeat.js",
+            "chartbeatUID": 1111,
+            "cookie": "cookie",
+            "domain": "test-domain",
+            "sections": "section1 section2",
+            "type": "article",
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugHookTypes": null,
+            "_debugID": 2,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "alternate": FiberNode {
+              "_debugHookTypes": null,
+              "_debugID": 2,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": [Circular],
+              "child": null,
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 0,
+              "elementType": null,
+              "expirationTime": 1073741823,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": Object {
+                  "children": Array [],
+                  "createNodeMock": [Function],
+                  "tag": "CONTAINER",
+                },
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <CanonicalChartbeatBeacon
+                      chartbeatSource="//chartbeat.js"
+                      chartbeatUID={1111}
+                      cookie="cookie"
+                      domain="test-domain"
+                      sections="section1 section2"
+                      type="article"
+                    />,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <CanonicalChartbeatBeacon
+                      chartbeatSource="//chartbeat.js"
+                      chartbeatUID={1111}
+                      cookie="cookie"
+                      domain="test-domain"
+                      sections="section1 section2"
+                      type="article"
+                    />,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 0,
+            "elementType": null,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <CanonicalChartbeatBeacon
+                chartbeatSource="//chartbeat.js"
+                chartbeatUID={1111}
+                cookie="cookie"
+                domain="test-domain"
+                sections="section1 section2"
+                type="article"
+              />,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": Object {
+                "children": Array [],
+                "createNodeMock": [Function],
+                "tag": "CONTAINER",
+              },
+              "context": Object {},
+              "current": [Circular],
+              "didError": false,
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "expirationTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextExpirationTimeToWorkOn": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "pingCache": null,
+              "timeoutHandle": -1,
+            },
+            "tag": 3,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <CanonicalChartbeatBeacon
+                  chartbeatSource="//chartbeat.js"
+                  chartbeatUID={1111}
+                  cookie="cookie"
+                  domain="test-domain"
+                  sections="section1 section2"
+                  type="article"
+                />,
+              },
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "sibling": null,
+          "stateNode": null,
+          "tag": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "sibling": null,
+        "stateNode": [Circular],
+        "tag": 1,
+        "type": [Function],
+        "updateQueue": null,
+      },
+      "_reactInternalInstance": Object {},
+      "context": Object {},
+      "props": Object {
+        "children": <script
+          async={true}
+          type="text/javascript"
+        >
+          
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+        </script>,
+        "defer": true,
+        "encodeSpecialCharacters": true,
+      },
+      "refs": Object {},
+      "state": null,
+      "updater": Object {
+        "enqueueForceUpdate": [Function],
+        "enqueueReplaceState": [Function],
+        "enqueueSetState": [Function],
+        "isMounted": [Function],
+      },
+    },
+    "nodeType": "component",
+    "props": Object {
+      "children": <script
+        async={true}
+        type="text/javascript"
+      >
+        
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+      </script>,
+      "defer": true,
+      "encodeSpecialCharacters": true,
+    },
+    "rendered": Object {
+      "instance": SideEffect {
+        "_reactInternalFiber": FiberNode {
+          "_debugHookTypes": null,
+          "_debugID": 6,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": FiberNode {
+            "_debugHookTypes": null,
+            "_debugID": 5,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": FiberNode {
+              "_debugHookTypes": null,
+              "_debugID": 4,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": null,
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 1,
+              "elementType": [Function],
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "chartbeatSource": "//chartbeat.js",
+                "chartbeatUID": 1111,
+                "cookie": "cookie",
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "type": "article",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "chartbeatSource": "//chartbeat.js",
+                "chartbeatUID": 1111,
+                "cookie": "cookie",
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "type": "article",
+              },
+              "ref": null,
+              "return": FiberNode {
+                "_debugHookTypes": null,
+                "_debugID": 2,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": FiberNode {
+                  "_debugHookTypes": null,
+                  "_debugID": 2,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": null,
+                  "_debugSource": null,
+                  "alternate": [Circular],
+                  "child": null,
+                  "childExpirationTime": 0,
+                  "contextDependencies": null,
+                  "effectTag": 0,
+                  "elementType": null,
+                  "expirationTime": 1073741823,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": null,
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": null,
+                  "ref": null,
+                  "return": null,
+                  "sibling": null,
+                  "stateNode": Object {
+                    "containerInfo": Object {
+                      "children": Array [],
+                      "createNodeMock": [Function],
+                      "tag": "CONTAINER",
+                    },
+                    "context": Object {},
+                    "current": [Circular],
+                    "didError": false,
+                    "earliestPendingTime": 0,
+                    "earliestSuspendedTime": 0,
+                    "expirationTime": 0,
+                    "finishedWork": null,
+                    "firstBatch": null,
+                    "hydrate": false,
+                    "latestPendingTime": 0,
+                    "latestPingedTime": 0,
+                    "latestSuspendedTime": 0,
+                    "nextExpirationTimeToWorkOn": 0,
+                    "nextScheduledRoot": null,
+                    "pendingChildren": null,
+                    "pendingCommitExpirationTime": 0,
+                    "pendingContext": null,
+                    "pingCache": null,
+                    "timeoutHandle": -1,
+                  },
+                  "tag": 3,
+                  "type": null,
+                  "updateQueue": Object {
+                    "baseState": null,
+                    "firstCapturedEffect": null,
+                    "firstCapturedUpdate": null,
+                    "firstEffect": null,
+                    "firstUpdate": Object {
+                      "callback": null,
+                      "expirationTime": 1073741823,
+                      "next": null,
+                      "nextEffect": null,
+                      "payload": Object {
+                        "element": <CanonicalChartbeatBeacon
+                          chartbeatSource="//chartbeat.js"
+                          chartbeatUID={1111}
+                          cookie="cookie"
+                          domain="test-domain"
+                          sections="section1 section2"
+                          type="article"
+                        />,
+                      },
+                      "tag": 0,
+                    },
+                    "lastCapturedEffect": null,
+                    "lastCapturedUpdate": null,
+                    "lastEffect": null,
+                    "lastUpdate": Object {
+                      "callback": null,
+                      "expirationTime": 1073741823,
+                      "next": null,
+                      "nextEffect": null,
+                      "payload": Object {
+                        "element": <CanonicalChartbeatBeacon
+                          chartbeatSource="//chartbeat.js"
+                          chartbeatUID={1111}
+                          cookie="cookie"
+                          domain="test-domain"
+                          sections="section1 section2"
+                          type="article"
+                        />,
+                      },
+                      "tag": 0,
+                    },
+                  },
+                },
+                "child": [Circular],
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": null,
+                "expirationTime": 0,
+                "firstEffect": [Circular],
+                "index": 0,
+                "key": null,
+                "lastEffect": [Circular],
+                "memoizedProps": null,
+                "memoizedState": Object {
+                  "element": <CanonicalChartbeatBeacon
+                    chartbeatSource="//chartbeat.js"
+                    chartbeatUID={1111}
+                    cookie="cookie"
+                    domain="test-domain"
+                    sections="section1 section2"
+                    type="article"
+                  />,
+                },
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": Object {
+                    "children": Array [],
+                    "createNodeMock": [Function],
+                    "tag": "CONTAINER",
+                  },
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pingCache": null,
+                  "timeoutHandle": -1,
+                },
+                "tag": 3,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": Object {
+                    "element": <CanonicalChartbeatBeacon
+                      chartbeatSource="//chartbeat.js"
+                      chartbeatUID={1111}
+                      cookie="cookie"
+                      domain="test-domain"
+                      sections="section1 section2"
+                      type="article"
+                    />,
+                  },
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": null,
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": null,
+                },
+              },
+              "sibling": null,
+              "stateNode": null,
+              "tag": 0,
+              "type": [Function],
+              "updateQueue": null,
+            },
+            "_debugSource": null,
+            "alternate": null,
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 1,
+            "elementType": [Function],
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": <script
+                async={true}
+                type="text/javascript"
+              >
+                
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+              </script>,
+              "defer": true,
+              "encodeSpecialCharacters": true,
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": <script
+                async={true}
+                type="text/javascript"
+              >
+                
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+              </script>,
+              "defer": true,
+              "encodeSpecialCharacters": true,
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugHookTypes": null,
+              "_debugID": 4,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": null,
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 1,
+              "elementType": [Function],
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "chartbeatSource": "//chartbeat.js",
+                "chartbeatUID": 1111,
+                "cookie": "cookie",
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "type": "article",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "chartbeatSource": "//chartbeat.js",
+                "chartbeatUID": 1111,
+                "cookie": "cookie",
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "type": "article",
+              },
+              "ref": null,
+              "return": FiberNode {
+                "_debugHookTypes": null,
+                "_debugID": 2,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": FiberNode {
+                  "_debugHookTypes": null,
+                  "_debugID": 2,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": null,
+                  "_debugSource": null,
+                  "alternate": [Circular],
+                  "child": null,
+                  "childExpirationTime": 0,
+                  "contextDependencies": null,
+                  "effectTag": 0,
+                  "elementType": null,
+                  "expirationTime": 1073741823,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": null,
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": null,
+                  "ref": null,
+                  "return": null,
+                  "sibling": null,
+                  "stateNode": Object {
+                    "containerInfo": Object {
+                      "children": Array [],
+                      "createNodeMock": [Function],
+                      "tag": "CONTAINER",
+                    },
+                    "context": Object {},
+                    "current": [Circular],
+                    "didError": false,
+                    "earliestPendingTime": 0,
+                    "earliestSuspendedTime": 0,
+                    "expirationTime": 0,
+                    "finishedWork": null,
+                    "firstBatch": null,
+                    "hydrate": false,
+                    "latestPendingTime": 0,
+                    "latestPingedTime": 0,
+                    "latestSuspendedTime": 0,
+                    "nextExpirationTimeToWorkOn": 0,
+                    "nextScheduledRoot": null,
+                    "pendingChildren": null,
+                    "pendingCommitExpirationTime": 0,
+                    "pendingContext": null,
+                    "pingCache": null,
+                    "timeoutHandle": -1,
+                  },
+                  "tag": 3,
+                  "type": null,
+                  "updateQueue": Object {
+                    "baseState": null,
+                    "firstCapturedEffect": null,
+                    "firstCapturedUpdate": null,
+                    "firstEffect": null,
+                    "firstUpdate": Object {
+                      "callback": null,
+                      "expirationTime": 1073741823,
+                      "next": null,
+                      "nextEffect": null,
+                      "payload": Object {
+                        "element": <CanonicalChartbeatBeacon
+                          chartbeatSource="//chartbeat.js"
+                          chartbeatUID={1111}
+                          cookie="cookie"
+                          domain="test-domain"
+                          sections="section1 section2"
+                          type="article"
+                        />,
+                      },
+                      "tag": 0,
+                    },
+                    "lastCapturedEffect": null,
+                    "lastCapturedUpdate": null,
+                    "lastEffect": null,
+                    "lastUpdate": Object {
+                      "callback": null,
+                      "expirationTime": 1073741823,
+                      "next": null,
+                      "nextEffect": null,
+                      "payload": Object {
+                        "element": <CanonicalChartbeatBeacon
+                          chartbeatSource="//chartbeat.js"
+                          chartbeatUID={1111}
+                          cookie="cookie"
+                          domain="test-domain"
+                          sections="section1 section2"
+                          type="article"
+                        />,
+                      },
+                      "tag": 0,
+                    },
+                  },
+                },
+                "child": [Circular],
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": null,
+                "expirationTime": 0,
+                "firstEffect": [Circular],
+                "index": 0,
+                "key": null,
+                "lastEffect": [Circular],
+                "memoizedProps": null,
+                "memoizedState": Object {
+                  "element": <CanonicalChartbeatBeacon
+                    chartbeatSource="//chartbeat.js"
+                    chartbeatUID={1111}
+                    cookie="cookie"
+                    domain="test-domain"
+                    sections="section1 section2"
+                    type="article"
+                  />,
+                },
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": Object {
+                    "children": Array [],
+                    "createNodeMock": [Function],
+                    "tag": "CONTAINER",
+                  },
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pingCache": null,
+                  "timeoutHandle": -1,
+                },
+                "tag": 3,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": Object {
+                    "element": <CanonicalChartbeatBeacon
+                      chartbeatSource="//chartbeat.js"
+                      chartbeatUID={1111}
+                      cookie="cookie"
+                      domain="test-domain"
+                      sections="section1 section2"
+                      type="article"
+                    />,
+                  },
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": null,
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": null,
+                },
+              },
+              "sibling": null,
+              "stateNode": null,
+              "tag": 0,
+              "type": [Function],
+              "updateQueue": null,
+            },
+            "sibling": null,
+            "stateNode": HelmetWrapper {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "children": <script
+                  async={true}
+                  type="text/javascript"
+                >
+                  
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+                </script>,
+                "defer": true,
+                "encodeSpecialCharacters": true,
+              },
+              "refs": Object {},
+              "state": null,
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 1,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "_debugSource": null,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugHookTypes": null,
+            "_debugID": 7,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": null,
+            "alternate": null,
+            "child": null,
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 1,
+            "elementType": [Function],
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "defer": true,
+              "encodeSpecialCharacters": true,
+              "script": Array [
+                Object {
+                  "async": true,
+                  "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                  "type": "text/javascript",
+                },
+              ],
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "defer": true,
+              "encodeSpecialCharacters": true,
+              "script": Array [
+                Object {
+                  "async": true,
+                  "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                  "type": "text/javascript",
+                },
+              ],
+            },
+            "ref": null,
+            "return": [Circular],
+            "sibling": null,
+            "stateNode": null,
+            "tag": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "childExpirationTime": 0,
+          "contextDependencies": null,
+          "effectTag": 1,
+          "elementType": [Function],
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "defer": true,
+            "encodeSpecialCharacters": true,
+            "script": Array [
+              Object {
+                "async": true,
+                "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                "type": "text/javascript",
+              },
+            ],
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "defer": true,
+            "encodeSpecialCharacters": true,
+            "script": Array [
+              Object {
+                "async": true,
+                "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+                "type": "text/javascript",
+              },
+            ],
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugHookTypes": null,
+            "_debugID": 5,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": FiberNode {
+              "_debugHookTypes": null,
+              "_debugID": 4,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": null,
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 1,
+              "elementType": [Function],
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "chartbeatSource": "//chartbeat.js",
+                "chartbeatUID": 1111,
+                "cookie": "cookie",
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "type": "article",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "chartbeatSource": "//chartbeat.js",
+                "chartbeatUID": 1111,
+                "cookie": "cookie",
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "type": "article",
+              },
+              "ref": null,
+              "return": FiberNode {
+                "_debugHookTypes": null,
+                "_debugID": 2,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": FiberNode {
+                  "_debugHookTypes": null,
+                  "_debugID": 2,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": null,
+                  "_debugSource": null,
+                  "alternate": [Circular],
+                  "child": null,
+                  "childExpirationTime": 0,
+                  "contextDependencies": null,
+                  "effectTag": 0,
+                  "elementType": null,
+                  "expirationTime": 1073741823,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": null,
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": null,
+                  "ref": null,
+                  "return": null,
+                  "sibling": null,
+                  "stateNode": Object {
+                    "containerInfo": Object {
+                      "children": Array [],
+                      "createNodeMock": [Function],
+                      "tag": "CONTAINER",
+                    },
+                    "context": Object {},
+                    "current": [Circular],
+                    "didError": false,
+                    "earliestPendingTime": 0,
+                    "earliestSuspendedTime": 0,
+                    "expirationTime": 0,
+                    "finishedWork": null,
+                    "firstBatch": null,
+                    "hydrate": false,
+                    "latestPendingTime": 0,
+                    "latestPingedTime": 0,
+                    "latestSuspendedTime": 0,
+                    "nextExpirationTimeToWorkOn": 0,
+                    "nextScheduledRoot": null,
+                    "pendingChildren": null,
+                    "pendingCommitExpirationTime": 0,
+                    "pendingContext": null,
+                    "pingCache": null,
+                    "timeoutHandle": -1,
+                  },
+                  "tag": 3,
+                  "type": null,
+                  "updateQueue": Object {
+                    "baseState": null,
+                    "firstCapturedEffect": null,
+                    "firstCapturedUpdate": null,
+                    "firstEffect": null,
+                    "firstUpdate": Object {
+                      "callback": null,
+                      "expirationTime": 1073741823,
+                      "next": null,
+                      "nextEffect": null,
+                      "payload": Object {
+                        "element": <CanonicalChartbeatBeacon
+                          chartbeatSource="//chartbeat.js"
+                          chartbeatUID={1111}
+                          cookie="cookie"
+                          domain="test-domain"
+                          sections="section1 section2"
+                          type="article"
+                        />,
+                      },
+                      "tag": 0,
+                    },
+                    "lastCapturedEffect": null,
+                    "lastCapturedUpdate": null,
+                    "lastEffect": null,
+                    "lastUpdate": Object {
+                      "callback": null,
+                      "expirationTime": 1073741823,
+                      "next": null,
+                      "nextEffect": null,
+                      "payload": Object {
+                        "element": <CanonicalChartbeatBeacon
+                          chartbeatSource="//chartbeat.js"
+                          chartbeatUID={1111}
+                          cookie="cookie"
+                          domain="test-domain"
+                          sections="section1 section2"
+                          type="article"
+                        />,
+                      },
+                      "tag": 0,
+                    },
+                  },
+                },
+                "child": [Circular],
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": null,
+                "expirationTime": 0,
+                "firstEffect": [Circular],
+                "index": 0,
+                "key": null,
+                "lastEffect": [Circular],
+                "memoizedProps": null,
+                "memoizedState": Object {
+                  "element": <CanonicalChartbeatBeacon
+                    chartbeatSource="//chartbeat.js"
+                    chartbeatUID={1111}
+                    cookie="cookie"
+                    domain="test-domain"
+                    sections="section1 section2"
+                    type="article"
+                  />,
+                },
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": Object {
+                    "children": Array [],
+                    "createNodeMock": [Function],
+                    "tag": "CONTAINER",
+                  },
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pingCache": null,
+                  "timeoutHandle": -1,
+                },
+                "tag": 3,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": Object {
+                    "element": <CanonicalChartbeatBeacon
+                      chartbeatSource="//chartbeat.js"
+                      chartbeatUID={1111}
+                      cookie="cookie"
+                      domain="test-domain"
+                      sections="section1 section2"
+                      type="article"
+                    />,
+                  },
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": null,
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": null,
+                },
+              },
+              "sibling": null,
+              "stateNode": null,
+              "tag": 0,
+              "type": [Function],
+              "updateQueue": null,
+            },
+            "_debugSource": null,
+            "alternate": null,
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 1,
+            "elementType": [Function],
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": <script
+                async={true}
+                type="text/javascript"
+              >
+                
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+              </script>,
+              "defer": true,
+              "encodeSpecialCharacters": true,
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": <script
+                async={true}
+                type="text/javascript"
+              >
+                
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+              </script>,
+              "defer": true,
+              "encodeSpecialCharacters": true,
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugHookTypes": null,
+              "_debugID": 4,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": null,
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 1,
+              "elementType": [Function],
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "chartbeatSource": "//chartbeat.js",
+                "chartbeatUID": 1111,
+                "cookie": "cookie",
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "type": "article",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "chartbeatSource": "//chartbeat.js",
+                "chartbeatUID": 1111,
+                "cookie": "cookie",
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "type": "article",
+              },
+              "ref": null,
+              "return": FiberNode {
+                "_debugHookTypes": null,
+                "_debugID": 2,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": FiberNode {
+                  "_debugHookTypes": null,
+                  "_debugID": 2,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": null,
+                  "_debugSource": null,
+                  "alternate": [Circular],
+                  "child": null,
+                  "childExpirationTime": 0,
+                  "contextDependencies": null,
+                  "effectTag": 0,
+                  "elementType": null,
+                  "expirationTime": 1073741823,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": null,
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": null,
+                  "ref": null,
+                  "return": null,
+                  "sibling": null,
+                  "stateNode": Object {
+                    "containerInfo": Object {
+                      "children": Array [],
+                      "createNodeMock": [Function],
+                      "tag": "CONTAINER",
+                    },
+                    "context": Object {},
+                    "current": [Circular],
+                    "didError": false,
+                    "earliestPendingTime": 0,
+                    "earliestSuspendedTime": 0,
+                    "expirationTime": 0,
+                    "finishedWork": null,
+                    "firstBatch": null,
+                    "hydrate": false,
+                    "latestPendingTime": 0,
+                    "latestPingedTime": 0,
+                    "latestSuspendedTime": 0,
+                    "nextExpirationTimeToWorkOn": 0,
+                    "nextScheduledRoot": null,
+                    "pendingChildren": null,
+                    "pendingCommitExpirationTime": 0,
+                    "pendingContext": null,
+                    "pingCache": null,
+                    "timeoutHandle": -1,
+                  },
+                  "tag": 3,
+                  "type": null,
+                  "updateQueue": Object {
+                    "baseState": null,
+                    "firstCapturedEffect": null,
+                    "firstCapturedUpdate": null,
+                    "firstEffect": null,
+                    "firstUpdate": Object {
+                      "callback": null,
+                      "expirationTime": 1073741823,
+                      "next": null,
+                      "nextEffect": null,
+                      "payload": Object {
+                        "element": <CanonicalChartbeatBeacon
+                          chartbeatSource="//chartbeat.js"
+                          chartbeatUID={1111}
+                          cookie="cookie"
+                          domain="test-domain"
+                          sections="section1 section2"
+                          type="article"
+                        />,
+                      },
+                      "tag": 0,
+                    },
+                    "lastCapturedEffect": null,
+                    "lastCapturedUpdate": null,
+                    "lastEffect": null,
+                    "lastUpdate": Object {
+                      "callback": null,
+                      "expirationTime": 1073741823,
+                      "next": null,
+                      "nextEffect": null,
+                      "payload": Object {
+                        "element": <CanonicalChartbeatBeacon
+                          chartbeatSource="//chartbeat.js"
+                          chartbeatUID={1111}
+                          cookie="cookie"
+                          domain="test-domain"
+                          sections="section1 section2"
+                          type="article"
+                        />,
+                      },
+                      "tag": 0,
+                    },
+                  },
+                },
+                "child": [Circular],
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": null,
+                "expirationTime": 0,
+                "firstEffect": [Circular],
+                "index": 0,
+                "key": null,
+                "lastEffect": [Circular],
+                "memoizedProps": null,
+                "memoizedState": Object {
+                  "element": <CanonicalChartbeatBeacon
+                    chartbeatSource="//chartbeat.js"
+                    chartbeatUID={1111}
+                    cookie="cookie"
+                    domain="test-domain"
+                    sections="section1 section2"
+                    type="article"
+                  />,
+                },
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": Object {
+                    "children": Array [],
+                    "createNodeMock": [Function],
+                    "tag": "CONTAINER",
+                  },
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pingCache": null,
+                  "timeoutHandle": -1,
+                },
+                "tag": 3,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": Object {
+                    "element": <CanonicalChartbeatBeacon
+                      chartbeatSource="//chartbeat.js"
+                      chartbeatUID={1111}
+                      cookie="cookie"
+                      domain="test-domain"
+                      sections="section1 section2"
+                      type="article"
+                    />,
+                  },
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": null,
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": null,
+                },
+              },
+              "sibling": null,
+              "stateNode": null,
+              "tag": 0,
+              "type": [Function],
+              "updateQueue": null,
+            },
+            "sibling": null,
+            "stateNode": HelmetWrapper {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "children": <script
+                  async={true}
+                  type="text/javascript"
+                >
+                  
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = "test-domain";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = "article";
+          _sf_async_config.sections = "section1 section2";
+          _sf_async_config.idSync = {
+           bbc_hid: "cookie"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = "//chartbeat.js";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      
+                </script>,
+                "defer": true,
+                "encodeSpecialCharacters": true,
+              },
+              "refs": Object {},
+              "state": null,
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 1,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "sibling": null,
+          "stateNode": [Circular],
+          "tag": 1,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_reactInternalInstance": Object {},
+        "context": Object {},
+        "props": Object {
+          "defer": true,
+          "encodeSpecialCharacters": true,
+          "script": Array [
+            Object {
+              "async": true,
+              "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+              "type": "text/javascript",
+            },
+          ],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+        },
+      },
+      "nodeType": "component",
+      "props": Object {
+        "defer": true,
+        "encodeSpecialCharacters": true,
+        "script": Array [
+          Object {
+            "async": true,
+            "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+            "type": "text/javascript",
+          },
+        ],
+      },
+      "rendered": Object {
+        "instance": null,
+        "nodeType": "component",
+        "props": Object {
+          "defer": true,
+          "encodeSpecialCharacters": true,
+          "script": Array [
+            Object {
+              "async": true,
+              "innerHTML": "
+        (function(){
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 1111;
+          _sf_async_config.domain = \\"test-domain\\";
+          _sf_async_config.useCanonical = undefined;
+          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.sections = \\"section1 section2\\";
+          _sf_async_config.idSync = {
+           bbc_hid: \\"cookie\\"
+          };
+          function loadChartbeat() {
+           var e = document.createElement('script');
+           var n = document.getElementsByTagName('script')[0];
+           e.type = 'text/javascript';
+           e.async = true;
+           e.src = \\"//chartbeat.js\\";
+           n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      ",
+              "type": "text/javascript",
+            },
+          ],
+        },
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  "type": [Function],
+}
+`;

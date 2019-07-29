@@ -112,7 +112,12 @@ const service = {
     },
     media: {
       audio: 'ድምጽ',
+      photogallery: 'የምስል ቋት',
       video: 'ተንቀሳቃሽ ምስል',
+      bbc_amharic_radio: {
+        title: 'ያድምጡ',
+        subtitle: 'ዝግጅቶቻችንን',
+      },
     },
   },
   brandSVG,
@@ -151,7 +156,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
+    copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
   },
   fonts: [],
 };

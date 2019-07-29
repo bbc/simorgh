@@ -15,6 +15,7 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
+  mediaRadioAndTvRegexPathsArray,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
@@ -149,7 +150,7 @@ server
     },
   )
   .get(
-    [articleRegexPath, frontpageRegexPath],
+    [articleRegexPath, frontpageRegexPath, ...mediaRadioAndTvRegexPathsArray],
     async ({ url, headers }, res) => {
       try {
         const { service, isAmp, route, match } = getRouteProps(routes, url);
