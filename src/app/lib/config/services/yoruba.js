@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import 'moment/locale/yo';
+import 'drew-testing-123/tz/Europe/London';
 
 const yoruba = {
   lang: 'yo',

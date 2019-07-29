@@ -2,6 +2,7 @@
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
+const MomentTimezoneInclude = require('drew-testing-123');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
@@ -42,6 +43,7 @@ module.exports = (shell = {}) => {
       __filename: true,
       __dirname: true,
     },
+    plugins: [new MomentTimezoneInclude({ startYear: 1990, endYear: 2025 })],
     module: {
       rules: [
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS

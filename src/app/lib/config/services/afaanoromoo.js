@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import 'drew-testing-123/tz/Europe/London';
 
 const service = {
   lang: `om-ET`,
