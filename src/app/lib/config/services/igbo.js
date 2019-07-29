@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
 
 const igbo = {
+  lang: 'ig',
   product: 'BBC News',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',
@@ -113,7 +114,12 @@ const igbo = {
     },
     media: {
       audio: 'Ọdịyo',
+      photogallery: 'Image gallery',
       video: 'Vidio',
+      bbc_igbo_radio: {
+        title: 'Placeholder title',
+        subtitle: 'Placeholder subtitle',
+      },
     },
   },
   navigation: [

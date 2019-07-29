@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape } from 'prop-types';
-import compose from '../../lib/utilities/compose';
+import compose from 'ramda/src/compose';
 import articlePropTypes from '../../models/propTypes/article';
 import ArticleMain from '../ArticleMain';
 

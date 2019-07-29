@@ -1,9 +1,5 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 
-export const getElement = element => cy.get(element);
-
-export const getSecondElement = element => cy.get(element).eq(1);
-
 export const shouldContainText = (element, text) => {
   element.should('contain', text);
 };
@@ -15,7 +11,7 @@ export const shouldContainStyles = (element, css, styling) => {
 };
 
 export const shouldMatchReturnedData = (data, element) => {
-  getElement(element).should('contain', data);
+  cy.get(element).should('contain', data);
 };
 
 export const getBlockByType = (blocks, blockType) => {
@@ -57,9 +53,8 @@ export const firstParagraphDataWindow = () => {
   cy.window().then(win => {
     const paragraphData = getBlockData('text', win);
     const { text } = paragraphData.model.blocks[0].model;
-    const paragraphExample = getElement('p');
 
-    shouldContainText(paragraphExample, text);
+    cy.get('p').should('contain', text);
   });
 };
 
@@ -71,25 +66,11 @@ export const copyrightDataWindow = () => {
       'rawImage',
     );
     const { copyrightHolder } = rawImageblock.model;
-    const copyrightLabel = getElement('figure p').eq(0);
 
-    shouldContainText(copyrightLabel, copyrightHolder);
+    cy.get('figure p')
+      .eq(0)
+      .should('contain', copyrightHolder);
   });
-};
-
-export const checkFooterLinks = (position, url) => {
-  cy.get('a')
-    .eq(position)
-    .should('have.attr', 'href')
-    .and('contain', url);
-};
-
-export const clickInlineLinkAndTestPageHasHTML = (link, url) => {
-  getElement(link).click();
-  cy.url().should('contain', url);
-  const anchorElement = getElement('header a');
-
-  shouldContainText(anchorElement, 'BBC News');
 };
 
 export const renderedTitle = title => {
@@ -157,35 +138,6 @@ export const visibleImageNoCaption = figure => {
 export const visibleImageWithCaption = figure => {
   figureVisibility(figure);
   figure.should('to.have.descendants', 'figcaption');
-};
-
-export const errorMessage = service => {
-  getElement('h1 span').should(
-    'contain',
-    `${service.translations.error[404].statusCode}`,
-  );
-  getElement('h1').should(
-    'contain',
-    `${service.translations.error[404].title}`,
-  );
-};
-
-export const errorPageInlineLink = service => {
-  getElement('main p')
-    .eq(1)
-    .within(() => {
-      getElement('a').should(
-        'have.attr',
-        'href',
-        `${service.translations.error[404].callToActionLinkUrl}`,
-      );
-    });
-};
-
-export const errorTitle = service => {
-  renderedTitle(
-    `${service.translations.error[404].title} - ${service.brandName}`,
-  );
 };
 
 export const hasHtmlLangDirAttributes = ({ lang, dir }) => {

@@ -1,5 +1,3 @@
-import { getElement } from './bodyTestHelper';
-
 export const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
@@ -15,8 +13,7 @@ export const assertCookieExpiryDate = (cookieName, timestamp) => {
 };
 
 export const retrieveMetaDataContent = (metaDataTag, content) => {
-  const metaElement = getElement(metaDataTag);
-  metaElement.should('have.attr', 'content', content);
+  cy.get(metaDataTag).should('have.attr', 'content', content);
 };
 
 export const facebookMeta = (fbAdmins, appID, articleAuthor) => {
@@ -73,13 +70,11 @@ export const twitterMeta = (
 };
 
 export const checkCanonicalURL = URL => {
-  const canonical = getElement('head link[rel="canonical"]');
-  canonical.should('have.attr', 'href', URL);
+  cy.get('head link[rel="canonical"]').should('have.attr', 'href', URL);
 };
 
 export const checkAmpHTML = amphtml => {
-  const ampHtml = getElement('head link[rel="amphtml"]');
-  ampHtml.should('have.attr', 'href', amphtml);
+  cy.get('head link[rel="amphtml"]').should('have.attr', 'href', amphtml);
 };
 
 export const retrieve404BodyResponse = (url, bodyResponse) => {
@@ -107,7 +102,7 @@ export const checkDataMatchesMetadata = data => {
     'head meta[name="article:modified_time"]',
     lastPublished,
   );
-  getElement('html').should('have.attr', 'lang', language);
+  cy.get('html').should('have.attr', 'lang', language);
 };
 export const metadataAssertion = () => {
   cy.window().then(win => {

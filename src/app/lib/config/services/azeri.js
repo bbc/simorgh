@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'Audio',
+      photogallery: 'Fotoqalereya',
       video: 'Video',
     },
   },
@@ -151,7 +152,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC kənar saytların məzmunu üçün məsuliyyət daşımır',
+    copyrightText: 'BBC. BBC kənar saytların məzmunu üçün məsuliyyət daşımır',
   },
   fonts: [],
 };

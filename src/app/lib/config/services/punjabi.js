@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'ਔਡੀਓ',
+      photogallery: 'ਚਿੱਤਰ ਗੈਲਰੀ',
       video: 'ਵੀਡੀਓ',
     },
   },
@@ -151,7 +152,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC ਬਾਹਰੀ ਇੰਟਰਨੈੱਟ ਸਾਈਟਾਂ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
+    copyrightText:
+      'BBC. BBC ਬਾਹਰੀ ਇੰਟਰਨੈੱਟ ਸਾਈਟਾਂ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
   },
   fonts: [],
 };

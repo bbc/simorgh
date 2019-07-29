@@ -1,6 +1,6 @@
 import { number, shape, string } from 'prop-types';
 
-const promoPropTypes = {
+export const optimoPromoPropTypes = {
   id: string.isRequired,
   headlines: shape({
     seoHeadline: string.isRequired,
@@ -13,4 +13,10 @@ const promoPropTypes = {
   timestamp: number,
 };
 
-export default promoPropTypes;
+export const cpsPromoPropTypes = {
+  id: string,
+  name: string.isRequired,
+  subType: string,
+  type: string,
+  uri: string,
+};

@@ -4,6 +4,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import 'moment/locale/yo';
 
 const yoruba = {
+  lang: 'yo',
   product: 'BBC News',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-yoruba',
@@ -113,7 +114,12 @@ const yoruba = {
     },
     media: {
       audio: 'Orin',
+      photogallery: 'Àtẹ Àwòrán',
       video: 'Fidio',
+      bbc_yoruba_radio: {
+        title: 'Placeholder title',
+        subtitle: 'Placeholder subtitle',
+      },
     },
   },
   navigation: [

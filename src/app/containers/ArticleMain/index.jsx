@@ -1,5 +1,4 @@
-import React, { Fragment, useContext } from 'react';
-import { DialContext } from '../../contexts/DialContext';
+import React, { Fragment } from 'react';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -9,62 +8,29 @@ import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
-import audioVideo from '../AudioVideo';
-import AudioVideoHead from '../../components/AudioVideoHead';
-import { RequestContext } from '../../contexts/RequestContext';
-import generateAVSettings from '../../lib/utilities/audioVideo/generateAVSettings';
+import ChartbeatAnalytics from '../ChartbeatAnalytics';
+import mediaPlayer from '../MediaPlayer';
 
 const componentsToRender = {
   headline: headings,
   subheadline: headings,
+  audio: mediaPlayer,
+  video: mediaPlayer,
   text,
   image,
   timestamp,
 };
 
-const avEnabledComment = (
-  // eslint-disable-next-line react/no-danger
-  <div dangerouslySetInnerHTML={{ __html: '<!-- av-enabled -->' }} />
-);
-
 const ArticleMain = ({ articleData }) => {
-  const {
-    env,
-    platform,
-    statsDestination,
-    statsPageIdentifier,
-  } = React.useContext(RequestContext);
   const { content, metadata, promo } = articleData;
   const { blocks } = content.model;
-
-  const audioVideoBlocks = blocks.filter(
-    block => block.type === 'audio' || block.type === 'video',
-  );
-  const hasAV = audioVideoBlocks.length > 0;
-  const { audiovideo: audioVideoEnabled } = useContext(DialContext);
-
-  if (audioVideoEnabled) {
-    componentsToRender.audio = audioVideo;
-    componentsToRender.video = audioVideo;
-  }
 
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
+      <ChartbeatAnalytics />
       <MetadataContainer metadata={metadata} promo={promo} />
-      {audioVideoEnabled && hasAV && platform === 'canonical' ? (
-        <AudioVideoHead
-          audioVideoAssets={generateAVSettings({
-            audioVideoBlocks,
-            env,
-            platform,
-            statsDestination,
-            statsPageIdentifier,
-          })}
-        />
-      ) : null}
       <main role="main">
-        {audioVideoEnabled && avEnabledComment}
         <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostGrid>

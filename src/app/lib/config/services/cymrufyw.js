@@ -113,6 +113,7 @@ const service = {
     },
     media: {
       audio: 'Sain',
+      photogallery: 'Oriel luniau',
       video: 'Fideo',
     },
   },
@@ -152,7 +153,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: "Dyw'r BBC ddim yn gyfrifol am safleoedd rhyngrwyd allanol.",
+    copyrightText:
+      "BBC. Dyw'r BBC ddim yn gyfrifol am safleoedd rhyngrwyd allanol.",
   },
   fonts: [],
 };

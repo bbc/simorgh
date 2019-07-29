@@ -1,8 +1,8 @@
-import deepGet from '../../deepGet';
+import pathOr from 'ramda/src/pathOr';
 
 const filterEmptyGroupItems = jsonRaw => {
   const json = jsonRaw;
-  let groups = deepGet(['content', 'groups'], json);
+  let groups = pathOr(null, ['content', 'groups'], json);
   if (!groups) {
     return jsonRaw;
   }

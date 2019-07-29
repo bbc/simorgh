@@ -49,10 +49,14 @@ This process is repeated for each block within an article, ultimately rendering 
 
 Each render is passed through a set of HOC's to enhance the page, these HOC's are;
 
+- withContexts
 - withPageWrapper
 - withLoading
 - withError
 - withData
+
+### withContexts
+The withContexts HOC is a wrapper that provides access to the different context providers available in the application. Any child component inside of these context providers has access to the context data via the useContexts hook.
 
 ### withPageWrapper
 
