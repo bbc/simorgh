@@ -8,19 +8,10 @@ Object.keys(services).forEach(index => {
   const service = index;
 
   // This should be unhacked when this file is consolidated with other cookie testing files.
-  if (
-    // Not WS
-    service === 'news' ||
-    service === 'cymrufyw' ||
-    service === 'naidheachdan' ||
-    // Not on test.bbc.com yet
-    service === 'serbian' ||
-    service === 'telugu' ||
-    service === 'ukchina' ||
-    service === 'zhongwen' ||
-    // Not a service
-    service === 'default'
-  ) {
+  const skippedServices = ['news', 'cymrufyw', 'naidheachdan']; // Not WS
+  skippedServices.push('serbian', 'telugu', 'ukchina', 'zhongwen'); // Not on test.bbc.com yet
+  skippedServices.push('default'); // Not a service
+  if (skippedServices.includes(service)) {
     return;
   }
 
