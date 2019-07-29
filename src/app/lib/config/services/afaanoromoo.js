@@ -156,7 +156,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: "Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
+    copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
   },
   fonts: [],
 };
