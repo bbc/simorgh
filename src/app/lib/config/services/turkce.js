@@ -153,7 +153,7 @@ const service = {
       },
     ],
     copyrightText:
-      'BBC, diğer internet sayfalarının içeriğinden sorumlu değildir',
+      'BBC. BBC, diğer internet sayfalarının içeriğinden sorumlu değildir',
   },
   fonts: [],
 };
