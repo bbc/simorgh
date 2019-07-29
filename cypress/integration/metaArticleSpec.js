@@ -110,9 +110,12 @@ Object.keys(services)
       });
 
       it('should include metadata in the head on AMP pages', () => {
-        cy.metadataAssertionAMP(
-          `/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
-        );
+        cy.window().then(win => {
+          cy.metadataAssertionAMP(
+            `/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
+            win.SIMORGH_DATA,
+          );
+        });
       });
 
       it('should include mainEntityOfPage in the LinkedData', () => {

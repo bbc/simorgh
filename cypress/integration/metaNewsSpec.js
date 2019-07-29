@@ -97,9 +97,12 @@ describe('Article Meta Tests', () => {
   });
 
   it('should include metadata in the head on AMP pages', () => {
-    cy.metadataAssertionAMP(
-      `/news/articles/${services.news.pageTypes.articles.asset}.amp`,
-    );
+    cy.window().then(win => {
+      cy.metadataAssertionAMP(
+        `/news/articles/${services.news.pageTypes.articles.asset}.amp`,
+        win.SIMORGH_DATA,
+      );
+    });
   });
 
   it('should include mainEntityOfPage in the LinkedData', () => {
