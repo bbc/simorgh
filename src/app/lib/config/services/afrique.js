@@ -161,7 +161,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: "La BBC n'est pas responsable du contenu de sites externes",
+    copyrightText:
+      "BBC. La BBC n'est pas responsable du contenu de sites externes",
   },
   fonts: [],
 };

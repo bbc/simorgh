@@ -151,7 +151,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
+    copyrightText:
+      'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
   },
   fonts: [],
 };
