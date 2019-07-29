@@ -154,7 +154,7 @@ const service = {
       },
     ],
     copyrightText:
-      "Chan eil uallach air a' BhBC son na tha air làraichean-lìn eile",
+      "BhBC. Chan eil uallach air a' BhBC son na tha air làraichean-lìn eile",
   },
   fonts: [],
 };
