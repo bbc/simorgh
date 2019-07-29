@@ -56,7 +56,11 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const headline = pathOr(null, ['headlines', 'headline'], item);
   const url = pathOr(null, ['locators', 'assetUri'], item);
   const summary = pathOr(null, ['summary'], item);
-  const timestamp = pathOr(null, ['timestamp'], item);
+  let timestamp = pathOr(null, ['timestamp'], item);
+
+  if (new Date(timestamp).getFullYear() < 1980) {
+    timestamp *= 1000;
+  }
 
   if (!headline || !url) {
     return null;
@@ -79,7 +83,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
       {timestamp && (
         <Timestamp
           locale={datetimeLocale}
-          timestamp={timestamp * 1000}
+          timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
           script={script}
