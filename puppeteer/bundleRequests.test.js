@@ -29,10 +29,18 @@ describe('Js bundle requests', () => {
     Object.keys(config[service].pageTypes)
       .filter(pageType => config[service].pageTypes[pageType] !== undefined)
       .forEach(pageType => {
-        const path =
-          pageType === 'frontPage'
-            ? `/${service}`
-            : `/${service}/articles/${config[service].pageTypes.articles.asset}`;
+        let path;
+
+        switch (pageType) {
+          case 'frontPage':
+            path = config[service].pageTypes.frontPage;
+            break;
+          case 'articles':
+            path = `/${service}/articles/${config[service].pageTypes.articles.asset}`;
+            break;
+          default:
+            return;
+        }
 
         describe(service, () => {
           beforeEach(async () => {
