@@ -1,6 +1,10 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NASSIM_PERSIAN_REGULAR,
+  F_NASSIM_PERSIAN_BOLD,
+} from '@bbc/psammead-styles/fonts';
 
 const service = {
   lang: 'ar',
@@ -162,7 +166,7 @@ const service = {
     ],
     copyrightText: 'بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
   },
-  fonts: [],
+  fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };
 
 export default service;

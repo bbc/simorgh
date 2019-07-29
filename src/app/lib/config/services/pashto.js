@@ -1,6 +1,10 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NASSIM_PERSIAN_REGULAR,
+  F_NASSIM_PERSIAN_BOLD,
+} from '@bbc/psammead-styles/fonts';
 
 const service = {
   lang: 'ps',
@@ -160,7 +164,7 @@ const service = {
     ],
     copyrightText: 'بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده.',
   },
-  fonts: [],
+  fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };
 
 export default service;
