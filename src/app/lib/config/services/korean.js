@@ -156,7 +156,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC는 외부 인터넷 사이트의 내용에 대한 책임이 없습니다.',
+    copyrightText:
+      'BBC. BBC는 외부 인터넷 사이트의 내용에 대한 책임이 없습니다.',
   },
   fonts: [],
 };
