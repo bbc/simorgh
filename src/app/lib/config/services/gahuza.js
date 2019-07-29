@@ -112,7 +112,13 @@ const service = {
     },
     media: {
       audio: 'Amajwi',
+      photogallery: "Urukurikirane rw'amasamu",
       video: 'Video',
+      bbc_gahuza_radio: {
+        title: 'Radio BBC Gahuza',
+        subtitle:
+          'Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.',
+      },
     },
   },
   brandSVG,
@@ -151,7 +157,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC ntibazwa ibivuye mu mguga zitari izayo',
+    copyrightText: 'BBC. BBC ntibazwa ibivuye mu mguga zitari izayo',
   },
   fonts: [],
 };

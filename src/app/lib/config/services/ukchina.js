@@ -111,6 +111,7 @@ const service = {
     },
     media: {
       audio: '音频',
+      photogallery: '图辑',
       video: '视频',
     },
   },
@@ -150,7 +151,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC不为BBC以外的网站的内容负责',
+    copyrightText: 'BBC。BBC不为BBC以外的网站的内容负责',
   },
   fonts: [],
 };

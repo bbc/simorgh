@@ -111,6 +111,7 @@ const service = {
     },
     media: {
       audio: 'เสียง',
+      photogallery: 'แกลเลอรีภาพ',
       video: 'วิดีโอ',
     },
   },
@@ -150,7 +151,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาจากเว็บไซต์ภายนอก',
+    copyrightText: 'บีบีซีบีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาจากเว็บไซต์ภายนอก',
   },
   fonts: [],
 };

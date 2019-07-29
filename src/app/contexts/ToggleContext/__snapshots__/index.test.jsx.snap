@@ -2,6 +2,6 @@
 
 exports[`ToggleContext should provide a toggles object 1`] = `
 <span>
-  {"toggleState":{"test":{"mpulse":{"enabled":false},"audioVideo":{"enabled":true}},"live":{"mpulse":{"enabled":false},"audioVideo":{"enabled":false}}}}
+  {"toggleState":{"test":{"mpulse":{"enabled":false},"mediaPlayer":{"enabled":true},"chartbeatAnalytics":{"enabled":true}},"live":{"mpulse":{"enabled":false},"mediaPlayer":{"enabled":false},"chartbeatAnalytics":{"enabled":false}}}}
 </span>
 `;

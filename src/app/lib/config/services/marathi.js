@@ -112,7 +112,13 @@ const service = {
     },
     media: {
       audio: 'ऑडिओ',
+      photogallery: 'प्रतिमा गॅलरी',
       video: 'व्हिडिओ',
+      bbc_marathi_tv: {
+        title: 'BBC विश्व',
+        subtitle:
+          'मराठीतल्या पहिल्या डिजिटल बुलेटिनमध्ये पाहा देश-विदेशातल्या ताज्या बातम्या.',
+      },
     },
   },
   brandSVG,
@@ -151,7 +157,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही',
+    copyrightText:
+      'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही',
   },
   fonts: [],
 };

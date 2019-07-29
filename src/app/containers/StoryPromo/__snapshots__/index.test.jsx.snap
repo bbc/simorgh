@@ -22,7 +22,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -33,7 +33,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -81,7 +81,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -124,7 +124,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -360,7 +360,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
           <span
             className="c12"
           >
-            , 3:12
+            , 3 minutes 12 seconds
           </span>
         </span>
       </a>
@@ -402,7 +402,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -413,7 +413,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -461,7 +461,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -510,7 +510,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -755,7 +755,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           <span
             className="c13"
           >
-            , 3:12
+            , 3 minutes 12 seconds
           </span>
         </span>
       </a>
@@ -797,7 +797,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -808,7 +808,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -856,7 +856,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -899,7 +899,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -1161,7 +1161,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -1172,7 +1172,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -1220,7 +1220,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -1269,7 +1269,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -1540,7 +1540,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -1551,7 +1551,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -1599,7 +1599,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -1815,7 +1815,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -1826,7 +1826,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -1874,7 +1874,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -2105,7 +2105,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -2116,7 +2116,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -2164,7 +2164,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -2207,7 +2207,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -2440,7 +2440,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
           <span
             className="c12"
           >
-            , 1:33:20
+            , 1 hour 33 minutes 20 seconds
           </span>
         </span>
       </a>
@@ -2482,7 +2482,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -2493,7 +2493,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   color: #3F3F42;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -2541,7 +2541,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   line-height: 1.125rem;
   color: #6E6E73;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -2590,7 +2590,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans serif;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
@@ -2832,7 +2832,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           <span
             className="c13"
           >
-            , 1:33:20
+            , 1 hour 33 minutes 20 seconds
           </span>
         </span>
       </a>

@@ -8,6 +8,10 @@ let browser;
 let page;
 let requests = [];
 
+const host = 'http://localhost:7080';
+
+const isJsBundle = url => url.includes(host);
+
 describe('Js bundle requests', () => {
   beforeEach(async () => {
     browser = await puppeteer.launch({
@@ -29,14 +33,22 @@ describe('Js bundle requests', () => {
     Object.keys(config[service].pageTypes)
       .filter(pageType => config[service].pageTypes[pageType] !== undefined)
       .forEach(pageType => {
-        const path =
-          pageType === 'frontPage'
-            ? `/${service}`
-            : `/${service}/articles/${config[service].pageTypes.articles.asset}`;
+        let path;
+
+        switch (pageType) {
+          case 'frontPage':
+            path = config[service].pageTypes.frontPage;
+            break;
+          case 'articles':
+            path = `/${service}/articles/${config[service].pageTypes.articles.asset}`;
+            break;
+          default:
+            return;
+        }
 
         describe(service, () => {
           beforeEach(async () => {
-            await page.goto(`http://localhost:7080${path}`, {
+            await page.goto(`${host}${path}`, {
               waitUntil: 'networkidle2',
             });
           });
@@ -44,6 +56,7 @@ describe('Js bundle requests', () => {
           it('only loads expected js bundles', async () => {
             requests
               .filter(url => url.endsWith('.js'))
+              .filter(isJsBundle)
               .forEach(url => {
                 expect(url).toMatch(
                   new RegExp(
