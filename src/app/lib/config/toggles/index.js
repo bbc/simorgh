@@ -21,17 +21,6 @@ const toggles = {
       enabled: false,
     },
   },
-  local: {
-    mpulse: {
-      enabled: false,
-    },
-    mediaPlayer: {
-      enabled: true,
-    },
-    chartbeatAnalytics: {
-      enabled: true,
-    },
-  },
 };
 
 export default toggles;
