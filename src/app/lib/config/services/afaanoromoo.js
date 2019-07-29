@@ -118,6 +118,10 @@ const service = {
         title: 'Dhaggeeffadhaa',
         subtitle: 'Sagantaawwan keenya',
       },
+      bbc_afaanoromoo_radio: {
+        title: 'Dhaggeeffadhaa',
+        subtitle: 'Sagantaawwan keenya',
+      },
     },
   },
   brandSVG,
