@@ -100,6 +100,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
+        // eslint-disable-next-line no-constant-condition
         Cypress.env('APP_ENV') === 'live' || 'test'
           ? undefined
           : {
@@ -216,6 +217,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
+        // eslint-disable-next-line no-constant-condition
         Cypress.env('APP_ENV') === 'live' || 'test'
           ? undefined
           : {
@@ -365,6 +367,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
+        // eslint-disable-next-line no-constant-condition
         Cypress.env('APP_ENV') === 'live' || 'test'
           ? undefined
           : {
