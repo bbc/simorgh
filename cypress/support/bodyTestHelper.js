@@ -73,13 +73,6 @@ export const copyrightDataWindow = () => {
   });
 };
 
-export const checkFooterLinks = (position, url) => {
-  cy.get('a')
-    .eq(position)
-    .should('have.attr', 'href')
-    .and('contain', url);
-};
-
 export const renderedTitle = title => {
   cy.title().should('eq', title);
 };
@@ -145,32 +138,6 @@ export const visibleImageNoCaption = figure => {
 export const visibleImageWithCaption = figure => {
   figureVisibility(figure);
   figure.should('to.have.descendants', 'figcaption');
-};
-
-export const errorMessage = service => {
-  cy.get('h1 span').should(
-    'contain',
-    `${service.translations.error[404].statusCode}`,
-  );
-  cy.get('h1').should('contain', `${service.translations.error[404].title}`);
-};
-
-export const errorPageInlineLink = service => {
-  cy.get('main p')
-    .eq(1)
-    .within(() => {
-      cy.get('a').should(
-        'have.attr',
-        'href',
-        `${service.translations.error[404].callToActionLinkUrl}`,
-      );
-    });
-};
-
-export const errorTitle = service => {
-  renderedTitle(
-    `${service.translations.error[404].title} - ${service.brandName}`,
-  );
 };
 
 export const hasHtmlLangDirAttributes = ({ lang, dir }) => {

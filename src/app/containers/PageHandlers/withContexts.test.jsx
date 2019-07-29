@@ -26,7 +26,7 @@ getStatsPageIdentifier.mockImplementation(
   () => 'news.articles.c0000000000o.page',
 );
 
-const dials = { mpulse: false, audiovideo: true };
+const dials = { mpulse: false };
 
 describe('withContexts HOC', () => {
   const Component = () => <h1>All the contexts!!</h1>;
