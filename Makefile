@@ -6,10 +6,6 @@ install:
 	rm -rf node_modules
 	npm ci;
 
-installProd:
-	rm -rf node_modules
-	npm ci --only=production
-
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
