@@ -157,7 +157,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC ntibazwa ibivuye mu mguga zitari izayo',
+    copyrightText: 'BBC. BBC ntibazwa ibivuye mu mguga zitari izayo',
   },
   fonts: [],
 };

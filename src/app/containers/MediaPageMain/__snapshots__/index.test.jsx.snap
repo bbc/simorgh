@@ -2,11 +2,21 @@
 
 exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
 .c2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
   color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0;
   font-weight: 500;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 .c0 {
@@ -18,9 +28,37 @@ exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
   grid-column: 1 / span 6;
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c2 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -115,9 +153,13 @@ exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
       <h1
         className="c2"
       >
-        Default Brand Name
-         - Live Radio
+        ያድምጡ
       </h1>
+      <p
+        className="c3"
+      >
+        ዝግጅቶቻችንን
+      </p>
       <ul>
         <li>
           <strong>

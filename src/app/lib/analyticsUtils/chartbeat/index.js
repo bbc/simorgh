@@ -5,6 +5,7 @@ const ID_COOKIE = 'ckns_sylphid';
 
 export const chartbeatUID = 50924;
 export const useCanonical = true;
+export const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
 
 const buildSectionArr = (service, value, type) => [
   `${service} - ${value}`,
