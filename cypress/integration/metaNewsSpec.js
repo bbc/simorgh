@@ -1,6 +1,5 @@
 import envConfig from '../support/config/envs';
 import services from '../support/config/services';
-import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 import {
   checkAmpHTML,
   checkCanonicalURL,
@@ -19,7 +18,7 @@ describe('Article Meta Tests', () => {
   });
 
   it('should have the correct lang & dir attributes', () => {
-    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
+    cy.hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should have a nofollow meta tag', () => {

@@ -1,4 +1,3 @@
-import { worldServiceCookieBannerTranslations } from '../support/bodyTestHelper';
 import describeForEuOnly from '../support/describeForEuOnly';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 import services from '../../src/app/lib/config/services';
@@ -17,7 +16,7 @@ Object.keys(services).forEach(index => {
   describeForLocalOnly('World Service Cookie banner Translations', () => {
     describe('Canonical', () => {
       it(`should load the relevant translations for ${service}`, () => {
-        worldServiceCookieBannerTranslations(
+        cy.worldServiceCookieBannerTranslations(
           `${serviceConfig.translations.consentBanner.privacy.title}`,
           `${serviceConfig.translations.consentBanner.cookie.title}`,
           `/${service}/articles/c0000000000o`,
@@ -29,7 +28,7 @@ Object.keys(services).forEach(index => {
 
     describeForEuOnly('AMP', () => {
       it(`should load the relevant translations for ${service}`, () => {
-        worldServiceCookieBannerTranslations(
+        cy.worldServiceCookieBannerTranslations(
           `${serviceConfig.translations.consentBanner.privacy.title}`,
           `${serviceConfig.translations.consentBanner.cookie.title}`,
           `/${service}/articles/c0000000000o.amp`,
