@@ -164,7 +164,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
+    copyrightText: 'بي بي سي. بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
   },
   fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };

@@ -157,7 +157,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
+    copyrightText: 'BBC. એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
   },
   fonts: [],
 };
