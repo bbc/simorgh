@@ -6,12 +6,18 @@ const toggles = {
     mediaPlayer: {
       enabled: true,
     },
+    chartbeatAnalytics: {
+      enabled: true,
+    },
   },
   live: {
     mpulse: {
       enabled: false,
     },
     mediaPlayer: {
+      enabled: false,
+    },
+    chartbeatAnalytics: {
       enabled: false,
     },
   },
