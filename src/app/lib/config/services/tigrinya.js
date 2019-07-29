@@ -155,7 +155,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
+    copyrightText: 'ቢቢሲ. ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
   },
   fonts: [],
 };

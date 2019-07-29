@@ -152,7 +152,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC không chịu trách nhiệm nội dung các trang bên ngoài',
+    copyrightText:
+      'BBC. BBC không chịu trách nhiệm nội dung các trang bên ngoài',
   },
   fonts: [],
 };
