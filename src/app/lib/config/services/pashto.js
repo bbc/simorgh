@@ -162,7 +162,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده.',
+    copyrightText: 'بی بی سی. بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده',
   },
   fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };

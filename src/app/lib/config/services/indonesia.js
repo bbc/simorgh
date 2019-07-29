@@ -157,7 +157,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC tidak bertanggung jawab atas konten internet luar',
+    copyrightText: 'BBC. BBC tidak bertanggung jawab atas konten internet luar',
   },
   fonts: [],
 };
