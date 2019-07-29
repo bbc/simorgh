@@ -118,6 +118,10 @@ const service = {
         title: 'Dhaggeeffadhaa',
         subtitle: 'Sagantaawwan keenya',
       },
+      bbc_afaanoromoo_radio: {
+        title: 'Dhaggeeffadhaa',
+        subtitle: 'Sagantaawwan keenya',
+      },
     },
   },
   brandSVG,
@@ -156,7 +160,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: "Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
+    copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
   },
   fonts: [],
 };
