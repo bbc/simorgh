@@ -109,3 +109,138 @@ exports[`ParagraphContainer should render correctly 1`] = `
   </p>
 </div>
 `;
+
+exports[`ParagraphContainer should render correctly with inline block 1`] = `
+.c1 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c3 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c3:focus,
+.c3:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c2 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    <b>
+      This is some text.
+    </b>
+    <div
+      className="c0"
+    >
+      <span
+        className="c2"
+        lang="fa"
+      >
+        <a
+          aria-label="چیسربرگرundefined"
+          className="c3"
+          href="https://google.com"
+        >
+          چیسربرگر
+        </a>
+      </span>
+    </div>
+  </p>
+</div>
+`;
