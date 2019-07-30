@@ -100,7 +100,6 @@ pipeline {
             }
           }
         }
-
         stage ('Test Production') {
           agent {
             docker {
@@ -122,12 +121,22 @@ pipeline {
           steps {
             sh "rm -f static.zip"
             sh 'make install'
-            sh 'make build'
+
+            // Test
+            sh 'npm run build:test'
             sh 'rm -rf staticAssets && mkdir staticAssets'
             sh "cp -R build/. staticAssets"
             sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
-            zip archive: true, dir: 'staticAssets', glob: '', zipFile: staticAssetsDist
-            stash name: 'staticAssets', includes: staticAssetsDist
+            zip archive: true, dir: 'staticAssetsTEST', glob: '', zipFile: 'staticTEST.zip'
+            stash name: 'staticAssetsTEST', includes: 'staticTEST.zip'
+
+            // Live
+            sh 'rm -rf build && rm-rf staticAssets && mkdir staticAssets'
+            sh 'npm run build:live'
+            sh "cp -R build/. staticAssets"
+            sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
+            zip archive: true, dir: 'staticAssetsLIVE', glob: '', zipFile: 'staticLIVE.zip'
+            stash name: 'staticAssetsLIVE', includes: 'staticLIVE.zip'
           }
         }   
       }
