@@ -59,7 +59,7 @@ describe('Charbeats Analytics Container', () => {
           pageType="article"
           origin="localhost.bbc.com"
         >
-          <ChartBeatAnalytics data={mockData} />
+          <ChartbeatAnalytics data={mockData} />
         </ContextWrap>,
       )
       .toJSON();
