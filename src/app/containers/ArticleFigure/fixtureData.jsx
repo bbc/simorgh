@@ -134,7 +134,7 @@ const captionBlockWithLink = createCaptionBlock([paragraphBlockWithInlineLink]);
 
 const copyrightText = 'Getty Images';
 
-const generateFixtureData = ({
+const GenerateFixtureData = ({
   height,
   width,
   caption,
@@ -168,7 +168,7 @@ const generateFixtureData = ({
   </ServiceContextProvider>
 );
 
-generateFixtureData.propTypes = {
+GenerateFixtureData.propTypes = {
   caption: objectOf(any),
   copyright: string,
   lazyLoad: bool,
@@ -179,7 +179,7 @@ generateFixtureData.propTypes = {
   service: string,
 };
 
-generateFixtureData.defaultProps = {
+GenerateFixtureData.defaultProps = {
   caption: null,
   copyright: null,
   lazyLoad: false,
@@ -190,103 +190,90 @@ generateFixtureData.defaultProps = {
   service: 'news',
 };
 
-export const FigureImage = generateFixtureData({
-  platform: 'canonical',
-  width: imageWidth,
-});
+export const FigureImage = <GenerateFixtureData platform="canonical" />;
 
-export const FigureImageWithNestedGrid = (width, height) =>
-  generateFixtureData({
-    platform: 'canonical',
-    width,
-    height,
-  });
-
-export const FigureLazyLoadImage = generateFixtureData({
-  platform: 'canonical',
-  lazyLoad: true,
-  width: imageWidth,
-});
-
-export const FigureAmpImage = generateFixtureData({
-  platform: 'amp',
-  width: imageWidth,
-});
-
-export const FigureImageWithCaption = service =>
-  generateFixtureData({
-    caption: captionBlock('Figure Image With Caption'),
-    platform: 'canonical',
-    type: 'image',
-    service,
-    width: imageWidth,
-  });
-
-export const FigureAmpImageWithCaption = service =>
-  generateFixtureData({
-    caption: captionBlock('Figure Amp Image with Caption'),
-    platform: 'amp',
-    type: 'image',
-    service,
-  });
-
-export const FigureImageWithCopyright = generateFixtureData({
-  copyright: copyrightText,
-  platform: 'canonical',
-  width: imageWidth,
-});
-
-export const FigureAmpImageWithCopyright = generateFixtureData({
-  copyright: copyrightText,
-  platform: 'amp',
-  width: imageWidth,
-});
-
-export const FigureImageWithCopyrightAndCaption = generateFixtureData({
-  caption: captionBlock('Figure Image with Copyright and Caption'),
-  copyright: copyrightText,
-  platform: 'canonical',
-  type: 'image',
-  width: imageWidth,
-});
-
-export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
-  caption: captionBlock('Figure Amp Image with Copyright and Caption'),
-  copyright: copyrightText,
-  platform: 'amp',
-  type: 'image',
-  width: imageWidth,
-});
-
-export const FigureImageWithCaptionContainingLink = generateFixtureData({
-  caption: captionBlockWithLink,
-  platform: 'canonical',
-  type: 'image',
-  width: imageWidth,
-});
-
-export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
-  caption: captionBlockWithLink,
-  platform: 'amp',
-  type: 'image',
-  width: imageWidth,
-});
-
-export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
-  {
-    caption: captionBlockWithMultipleParagraphsAndLink,
-    platform: 'canonical',
-    type: 'image',
-    width: imageWidth,
-  },
+export const FigureImageWithNestedGrid = (width, height) => (
+  <GenerateFixtureData platform="canonical" width={width} height={height} />
 );
 
-export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
-  {
-    caption: captionBlockWithMultipleParagraphsAndLink,
-    platform: 'amp',
-    type: 'image',
+export const FigureLazyLoadImage = (
+  <GenerateFixtureData platform="canonical" lazyLoad />
+);
 
-    width: imageWidth,
-  },
+export const FigureAmpImage = <GenerateFixtureData platform="amp" />;
+
+export const FigureImageWithCaption = service => (
+  <GenerateFixtureData
+    platform="canonical"
+    type="image"
+    caption={captionBlock('Figure Image With Caption')}
+    service={service} // is this necessary?
+  />
+);
+
+export const FigureAmpImageWithCaption = service => (
+  <GenerateFixtureData
+    platform="amp"
+    type="image"
+    caption={captionBlock('Figure Amp Image with Caption')}
+    service={service} // is this necessary?
+  />
+);
+
+export const FigureImageWithCopyright = (
+  <GenerateFixtureData platform="canonical" copyright={copyrightText} />
+);
+
+export const FigureAmpImageWithCopyright = (
+  <GenerateFixtureData platform="amp" copyright={copyrightText} />
+);
+
+export const FigureImageWithCopyrightAndCaption = (
+  <GenerateFixtureData
+    platform="canonical"
+    type="image"
+    copyright={copyrightText}
+    caption={captionBlock('Figure Image with Copyright and Caption')}
+  />
+);
+
+export const FigureAmpImageWithCopyrightAndCaption = (
+  <GenerateFixtureData
+    platform="amp"
+    type="image"
+    caption={captionBlock('Figure Amp Image with Copyright and Caption')}
+    copyright={copyrightText}
+  />
+);
+
+export const FigureImageWithCaptionContainingLink = (
+  <GenerateFixtureData
+    platform="canonical"
+    type="image"
+    caption={captionBlockWithLink}
+  />
+);
+
+export const FigureAmpImageWithCaptionContainingLink = (
+  <GenerateFixtureData
+    platform="amp"
+    type="image"
+    caption={captionBlockWithLink}
+  />
+);
+
+export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = (
+  <GenerateFixtureData
+    platform="canonical"
+    type="image"
+    caption={captionBlockWithMultipleParagraphsAndLink}
+  />
+);
+
+export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = (
+  <GenerateFixtureData
+    platform="amp"
+    type="image"
+    caption={captionBlockWithMultipleParagraphsAndLink}
+  />
 );
