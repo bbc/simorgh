@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "id": "urn:bbc:ares::asset:indonesia/bbc_indonesian_radio/liveradio",
+        "id": "urn:bbc:ares::asset:amharic/bbc_amharic_radio/liveradio",
         "tags": {}
     },
     "content": {
@@ -21,8 +21,8 @@
     },
     "promo": {
         "subType": "IDX",
-        "name": "TODO: Indonesia Live Radio",
-        "uri": "/indonesia/bbc_indonesian_radio/liveradio",
+        "name": "TODO: Amharic Live Radio",
+        "uri": "/amharic/bbc_amharic_radio/liveradio",
         "id": "TODO",
         "type": "simple"
     }

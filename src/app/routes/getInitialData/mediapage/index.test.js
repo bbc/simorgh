@@ -20,7 +20,18 @@ jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => mockData);
 
 describe('getMediaPageInitialData', () => {
-  it('returns a promise', async () => {
+  it('remaps bbc_oromo_radio', async () => {
+    await getMediaPageInitialData({
+      service: 'afaanoromo',
+      serviceId: 'bbc_oromo_radio',
+      mediaId: 'liveradio',
+    });
+    expect(fetchData).toBeCalledWith({
+      url: `${getBaseUrlMockOrigin}/afaanoromo/bbc_afaanoromo_radio/liveradio.json`,
+    });
+  });
+
+  it('returns expected pageData', async () => {
     expect(await getMediaPageInitialData({ service: 'amharic' })).toEqual(
       mockData,
     );
