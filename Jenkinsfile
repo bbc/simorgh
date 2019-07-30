@@ -131,7 +131,7 @@ pipeline {
             stash name: 'staticAssetsTEST', includes: 'staticTEST.zip'
 
             // Live
-            sh 'rm -rf build && rm-rf staticAssets && mkdir staticAssets'
+            sh 'rm -rf build && rm -rf staticAssets && mkdir staticAssets'
             sh 'npm run build:live'
             sh "cp -R build/. staticAssets"
             sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
