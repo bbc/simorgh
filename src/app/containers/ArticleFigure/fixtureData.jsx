@@ -192,7 +192,6 @@ generateFixtureData.defaultProps = {
 
 export const FigureImage = generateFixtureData({
   platform: 'canonical',
-  height: imageHeight,
   width: imageWidth,
 });
 
@@ -206,13 +205,11 @@ export const FigureImageWithNestedGrid = (width, height) =>
 export const FigureLazyLoadImage = generateFixtureData({
   platform: 'canonical',
   lazyLoad: true,
-  height: imageHeight,
   width: imageWidth,
 });
 
 export const FigureAmpImage = generateFixtureData({
   platform: 'amp',
-  height: imageHeight,
   width: imageWidth,
 });
 
@@ -222,6 +219,7 @@ export const FigureImageWithCaption = service =>
     platform: 'canonical',
     type: 'image',
     service,
+    width: imageWidth,
   });
 
 export const FigureAmpImageWithCaption = service =>
@@ -235,14 +233,12 @@ export const FigureAmpImageWithCaption = service =>
 export const FigureImageWithCopyright = generateFixtureData({
   copyright: copyrightText,
   platform: 'canonical',
-  height: imageHeight,
   width: imageWidth,
 });
 
 export const FigureAmpImageWithCopyright = generateFixtureData({
   copyright: copyrightText,
   platform: 'amp',
-  height: imageHeight,
   width: imageWidth,
 });
 
@@ -251,7 +247,6 @@ export const FigureImageWithCopyrightAndCaption = generateFixtureData({
   copyright: copyrightText,
   platform: 'canonical',
   type: 'image',
-  height: imageHeight,
   width: imageWidth,
 });
 
@@ -260,7 +255,6 @@ export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
   copyright: copyrightText,
   platform: 'amp',
   type: 'image',
-  height: imageHeight,
   width: imageWidth,
 });
 
@@ -268,7 +262,6 @@ export const FigureImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
   platform: 'canonical',
   type: 'image',
-  height: imageHeight,
   width: imageWidth,
 });
 
@@ -276,7 +269,6 @@ export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
   caption: captionBlockWithLink,
   platform: 'amp',
   type: 'image',
-  height: imageHeight,
   width: imageWidth,
 });
 
@@ -285,7 +277,7 @@ export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generat
     caption: captionBlockWithMultipleParagraphsAndLink,
     platform: 'canonical',
     type: 'image',
-    height: imageHeight,
+
     width: imageWidth,
   },
 );
@@ -295,7 +287,7 @@ export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = gene
     caption: captionBlockWithMultipleParagraphsAndLink,
     platform: 'amp',
     type: 'image',
-    height: imageHeight,
+
     width: imageWidth,
   },
 );
