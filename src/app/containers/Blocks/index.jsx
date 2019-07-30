@@ -20,7 +20,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     return (
       <Block
-        key={id ? id : uuid()}
+        key={id || uuid()}
         position={position}
         type={type}
         typeOfPreviousBlock={typeOfPreviousBlock}
