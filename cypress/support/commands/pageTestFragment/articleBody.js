@@ -49,7 +49,7 @@ Cypress.Commands.add('renderedTitle', title => {
 });
 
 Cypress.Commands.add(
-  'worldServiceCookieBannerTranslations ',
+  'worldServiceCookieBannerTranslations',
   (
     privacyStatement,
     performanceStatement,
