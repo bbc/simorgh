@@ -38,6 +38,7 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
       alt={imageValues.altText}
       ratio={ratio}
       src={src}
+      fallback={false}
       {...imageValues}
       lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
@@ -56,7 +57,15 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const headline = pathOr(null, ['headlines', 'headline'], item);
   const url = pathOr(null, ['locators', 'assetUri'], item);
   const summary = pathOr(null, ['summary'], item);
-  const timestamp = pathOr(null, ['timestamp'], item);
+  let timestamp = pathOr(null, ['timestamp'], item);
+
+  if (new Date(timestamp).getFullYear() < 1980) {
+    // if the date is before 1980, our timestamp was probably in seconds.
+    // this fixes an ares bug - ARES-758 on JIRA.
+    // if you come across this in the future, please check if it's no longer needed
+    // if so, delete this!
+    timestamp *= 1000;
+  }
 
   if (!headline || !url) {
     return null;
@@ -79,7 +88,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
       {timestamp && (
         <Timestamp
           locale={datetimeLocale}
-          timestamp={timestamp * 1000}
+          timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
           script={script}
