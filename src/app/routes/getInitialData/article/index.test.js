@@ -48,6 +48,7 @@ const getArticleInitialData = require('.').default;
 
 const defaultIdParam = 'c0000000001o';
 const defaultServiceParam = 'news';
+const defaultVariantParam = '';
 let defaultContext;
 
 describe('getArticleInitialData', () => {
@@ -55,6 +56,7 @@ describe('getArticleInitialData', () => {
     defaultContext = {
       id: defaultIdParam,
       service: defaultServiceParam,
+      variant: defaultVariantParam,
     };
 
     jest.clearAllMocks();
@@ -84,6 +86,28 @@ describe('getArticleInitialData', () => {
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o.json',
+        preprocessorRules,
+      });
+
+      expect(response).toEqual({
+        pageData: 'foo',
+        status: 123,
+      });
+    });
+  });
+
+  describe('When requesting a service variant', () => {
+    beforeEach(() => {
+      defaultContext.service = 'serbian';
+      defaultContext.variant = '/lat';
+    });
+
+    it('fetches data from SIMORGH_BASE_URL enviroment variable origin', async () => {
+      const response = await getArticleInitialData(defaultContext);
+
+      expect(fetchData).toHaveBeenCalledWith({
+        url:
+          'https://www.SIMORGH_BASE_URL.com/serbian/articles/c0000000001o/lat.json',
         preprocessorRules,
       });
 

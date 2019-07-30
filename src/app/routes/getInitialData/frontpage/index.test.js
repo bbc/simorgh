@@ -32,6 +32,7 @@ const getFrontpageInitialData = require('.').default;
 
 const defaultServiceParam = 'news';
 const defaultAmpParam = '';
+const defaultVariantParam = '';
 let defaultContext;
 
 describe('getFrontpageInitialData', () => {
@@ -39,13 +40,14 @@ describe('getFrontpageInitialData', () => {
     defaultContext = {
       service: defaultServiceParam,
       amp: defaultAmpParam,
+      variant: defaultVariantParam,
     };
 
     jest.clearAllMocks();
   });
 
   it('fetches data and returns expected object', async () => {
-    const response = await getFrontpageInitialData(defaultServiceParam);
+    const response = await getFrontpageInitialData(defaultContext);
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.getBaseUrl.com/news.json',
@@ -64,7 +66,7 @@ describe('getFrontpageInitialData', () => {
     });
 
     it('returns isAmp as true', async () => {
-      const response = await getFrontpageInitialData(defaultServiceParam);
+      const response = await getFrontpageInitialData(defaultContext);
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.getBaseUrl.com/news.json',
@@ -84,10 +86,31 @@ describe('getFrontpageInitialData', () => {
     });
 
     it('fetches data from SIMORGH_BASE_URL enviroment variable origin', async () => {
-      const response = await getFrontpageInitialData(defaultServiceParam);
+      const response = await getFrontpageInitialData(defaultContext);
 
       expect(fetchData).toHaveBeenCalledWith({
         url: 'https://www.SIMORGH_BASE_URL.com/news.json',
+        preprocessorRules,
+      });
+
+      expect(response).toEqual({
+        pageData: 'foo',
+        status: 123,
+      });
+    });
+  });
+
+  describe('When requesting a service variant', () => {
+    beforeEach(() => {
+      defaultContext.service = 'serbian';
+      defaultContext.variant = '/lat';
+    });
+
+    it('fetches data from SIMORGH_BASE_URL enviroment variable origin', async () => {
+      const response = await getFrontpageInitialData(defaultContext);
+
+      expect(fetchData).toHaveBeenCalledWith({
+        url: 'https://www.SIMORGH_BASE_URL.com/serbian/lat.json',
         preprocessorRules,
       });
 
