@@ -11,7 +11,7 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-storiesOf('InlineLink', module)
+storiesOf('Containers|InlineLink', module)
   .add('internal link', () => (
     <InlineLinkContainer
       locator="https://www.bbc.com/news"

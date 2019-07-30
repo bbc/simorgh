@@ -78,6 +78,7 @@ pipeline {
   }
   parameters {
     string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
+    booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
   stages {
     stage ('Build and Test') {
@@ -93,7 +94,9 @@ pipeline {
             }
           }
           steps {
-            runDevelopmentTests()
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              runDevelopmentTests()
+            }
           }
         }
 
@@ -201,7 +204,8 @@ pipeline {
         build(
           job: 'simorgh-infrastructure-test/latest',
           parameters: [
-            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME]
+            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
+            booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
           ],
           propagate: true,
           wait: true
