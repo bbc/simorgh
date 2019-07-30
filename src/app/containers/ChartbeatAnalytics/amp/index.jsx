@@ -1,27 +1,17 @@
 import React from 'react';
 import { string, number, bool } from 'prop-types';
 
-const chartbeatAmpConfigOptions = options => {
-  const vars = {
+const chartbeatAmpConfigOptions = options => ({
+  vars: {
     uid: options.chartbeatUID,
     title: options.title,
     sections: options.sections,
     domain: options.domain,
     contentType: options.type,
-  };
-
-  if (options.hasReferrer) {
-    vars.virtualReferrer = options.referrer;
-  }
-
-  if (options.hasCookie) {
-    vars.idSync = {
-      bbc_hid: options.cookie,
-    };
-  }
-
-  return { vars };
-};
+    ...(options.hasReferrer && { virtualReferrer: options.referrer }),
+    ...(options.hasCookie && { idSync: { bbc_hid: options.cookie } }),
+  },
+});
 
 const JsonInlinedScript = data => (
   <script
