@@ -122,7 +122,7 @@
     "copy-webpack-plugin": "^5.0.3",
     "core-js": "^3.1.4",
     "dotenv": "^8.0.0",
-    "drew-testing-123": "^1.0.19",
+    "drew-testing-123": "^1.0.20",
     "es6-promise": "^4.2.8",
     "express": "^4.17.1",
     "express-static-gzip": "^1.1.3",
