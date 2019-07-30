@@ -9,6 +9,11 @@ exports[`ParagraphContainer should render correctly 1`] = `
   margin: 0;
 }
 
+.c3 {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
 .c2 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -102,7 +107,9 @@ exports[`ParagraphContainer should render correctly 1`] = `
       <b>
          for the 
       </b>
-      <i>
+      <i
+        className="c3"
+      >
          link!
       </i>
     </a>
