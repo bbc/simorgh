@@ -17,7 +17,6 @@ if (process.env.NODE_ENV === 'production') {
   // eslint-disable-next-line no-console
   console.log(template, ...templateStyles);
 }
-console.log(process.env, 'env');
 
 if (module.hot) {
   module.hot.accept();
