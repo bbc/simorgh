@@ -7,7 +7,7 @@ const WithMemo = Component => {
   });
 
   const WithMemoContainer = props => {
-    const { history, location, match, route, ...useful } = props;
+    const { history, location, match, route, staticContext, ...useful } = props;
     return <ComponentMemo {...useful} />;
   };
 
