@@ -7,7 +7,7 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 import services from '../../lib/config/services';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
-storiesOf('Header Container', module)
+storiesOf('Containers|Header', module)
   .addDecorator(withKnobs)
   .add(
     'default',
