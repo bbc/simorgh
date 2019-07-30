@@ -9,5 +9,7 @@ const getEnv = origin => {
 
   return 'live';
 };
+export const isLocal =
+  process && process.env && process.env.APP_ENV === 'local';
 
 export default getEnv;
