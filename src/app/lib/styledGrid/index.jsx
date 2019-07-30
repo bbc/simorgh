@@ -133,8 +133,8 @@ PopOutGridItemMedium.propTypes = {
 };
 
 PopOutGridItemMedium.defaultProps = {
-  gridColumnStart: 3,
-  gridSpan: 3,
+  gridColumnStart: 2,
+  gridSpan: 4,
 };
 
 GridItemConstrainedMedium.defaultProps = {

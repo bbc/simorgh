@@ -34,6 +34,11 @@ describe('ImageWithPlaceholder', () => {
     <LazyLoadImageWithPlaceholder />,
   );
 
+  shouldMatchSnapshot(
+    'should not provide non-js fallback',
+    <LazyLoadImageWithPlaceholder fallback={false} />,
+  );
+
   shouldMatchSnapshot('should render an image', <ImageWithPlaceholder />);
 
   shouldMatchSnapshot(
