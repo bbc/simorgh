@@ -160,6 +160,8 @@
   "devDependencies": {
     "@bbc/apache2-license-checker": "^1.1.4",
     "@bbc/psammead-storybook-helpers": "^3.3.1",
+    "@bbc/babel-preset-env-custom": "git+ssh://git@github.com/bbc/news-vj-tools-prototype-preset-env-custom.git#simorgh-poc",
+    "@bbc/news-vj-tools-prototype-core-js-checks": "git+ssh://git@github.com/bbc/news-vj-tools-prototype-core-js-checks.git",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@storybook/theming": "^5.1.9",
@@ -203,6 +205,7 @@
     "stylelint-processor-styled-components": "^1.8.0",
     "supertest": "^4.0.2",
     "swagger-cli": "^2.3.0",
+    "terser": "^4.1.2",
     "wait-on": "^3.3.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-dev-server": "^3.7.2",

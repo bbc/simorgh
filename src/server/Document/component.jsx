@@ -3,10 +3,12 @@ import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
+import Terser from 'terser';
 import ResourceHints from '../../app/components/ResourceHints';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
 import MPulseBeacon from '../../app/containers/MPulseBeacon';
 import { DialContextProvider } from '../../app/contexts/DialContext';
+import progressiveEnhancement from './ProgressiveEnhancement/progressiveEnhancement';
 
 /* eslint-disable react/prop-types */
 const Document = ({
@@ -29,15 +31,14 @@ const Document = ({
   const scripts = (
     <Fragment>
       <IfAboveIE9>
-        {assets.map(asset => (
+        {
+          /* eslint-disable react/no-danger */
           <script
-            crossOrigin="anonymous"
-            key={asset}
-            type="text/javascript"
-            src={asset}
-            defer
+            dangerouslySetInnerHTML={{
+              __html: Terser.minify(progressiveEnhancement(assets)).code,
+            }}
           />
-        ))}
+        }
       </IfAboveIE9>
     </Fragment>
   );

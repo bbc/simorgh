@@ -1,5 +1,5 @@
 import cookieOvenUrl from './cookieOvenUrl';
-import 'isomorphic-fetch';
+// import 'isomorphic-fetch';
 
 const cookieOvenFetch = async (cookie, value, logger) => {
   if (window.location && window.location.origin) {

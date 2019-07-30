@@ -6,6 +6,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const { DuplicatesPlugin } = require('inspectpack/plugin');
+const memStore = require('@bbc/babel-preset-env-custom/lib/polyfills/corejs3/mem-storage');
+const fs = require('fs');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
@@ -29,7 +31,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           'webpack/hot/only-dev-server',
           './src/client',
         ]
-      : ['./src/poly', './src/client'],
+      : ['./src/client'],
     devServer: {
       host: 'localhost.bbc.com',
       port: webpackDevServerPort,
@@ -134,6 +136,32 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       new MomentTimezoneDataPlugin({
         matchZones: 'Europe/London',
       }),
+      // Output list of browser feature checks required by project:
+      {
+        apply: compiler => {
+          // after compile:
+          compiler.hooks.afterEmit.tap('AfterEmitPlugin', () => {
+            // additional feature checks for React:
+            const additionalFeatureChecks = [
+              'es.map',
+              'es.set',
+              'fetch',
+              'es.symbol',
+              'es.object.assign',
+            ];
+            const coreJsFeatureChecks = memStore.get();
+            if (coreJsFeatureChecks) {
+              fs.writeFileSync(
+                './build/list-feature-checks.json',
+                JSON.stringify([
+                  ...coreJsFeatureChecks,
+                  ...additionalFeatureChecks,
+                ]),
+              );
+            }
+          });
+        },
+      },
     ],
   };
 

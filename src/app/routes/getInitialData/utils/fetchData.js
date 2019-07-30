@@ -1,16 +1,31 @@
-import 'isomorphic-fetch';
+// import 'isomorphic-fetch';
 import nodeLogger from '../../../lib/logger.node';
 import preprocess from '../../../lib/utilities/preprocessor';
 
 const logger = nodeLogger(__filename);
 const upstreamStatusCodesToPropagate = [200, 404];
 
+let isoFetch;
+
+const isFetchSupported = () => {
+  return typeof window !== 'undefined' && 'fetch' in window;
+};
+
 const fetchData = async ({ url, preprocessorRules }) => {
   let pageData;
   let status;
 
   try {
-    const response = await fetch(url);
+    if (!isoFetch) {
+      if (isFetchSupported) {
+        const isomorphicFetch = await import('isomorphic-fetch');
+        isoFetch = isomorphicFetch.default;
+      } else {
+        isoFetch = window.fetch;
+      }
+    }
+
+    const response = await isoFetch(url);
 
     status = response.status; // eslint-disable-line prefer-destructuring
 

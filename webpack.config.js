@@ -6,6 +6,9 @@ const path = require('path');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
+// Babel config:
+const babelRc = require('./.babelrc');
+
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
   const IS_PROD = process.env.NODE_ENV === 'production';
@@ -29,65 +32,67 @@ module.exports = (shell = {}) => {
         entrypoints: false,
       };
 
-  const baseConfig = {
-    mode: IS_PROD ? 'production' : 'development',
-    devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
-    resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
-    devServer: {
+  const baseConfig = app => {
+    return {
+      mode: IS_PROD ? 'production' : 'development',
+      devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
+      resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
+      devServer: {
+        stats,
+      },
       stats,
-    },
-    stats,
-    node: {
-      // tell Webpack to provide a polyfill for this functionality.
-      __filename: true,
-      __dirname: true,
-    },
-    module: {
-      rules: [
-        // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
-        {
-          test: /\.(js|jsx|mjs)$/,
-          include: [resolvePath('src')],
-          use: [
-            {
-              loader: 'babel-loader',
-              options: {
-                babelrc: true,
-                cacheDirectory: true,
-                presets: [],
-              },
-            },
-          ],
-        },
-        IS_PROD
-          ? {
-              test: /\.(js|jsx|mjs)$/,
-              include: [resolvePath('node_modules/@bbc')],
-              use: [
-                {
-                  loader: 'babel-loader',
-                  options: {
-                    presets: [],
-                    plugins: [
-                      [
-                        'transform-react-remove-prop-types',
-                        {
-                          mode: 'remove',
-                          removeImport: true,
-                        },
-                      ],
-                    ],
-                  },
+      node: {
+        // tell Webpack to provide a polyfill for this functionality.
+        __filename: true,
+        __dirname: true,
+      },
+      module: {
+        rules: [
+          // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
+          {
+            test: /\.(js|jsx|mjs)$/,
+            include: [resolvePath('src')],
+            use: [
+              {
+                loader: 'babel-loader',
+                options: {
+                  babelrc: false,
+                  cacheDirectory: app !== 'client', // only use Babel caching for server
+                  ...babelRc(app),
                 },
-              ],
-            }
-          : {},
-      ],
-    },
-    // Bundle sizes are monitored by `./scripts/bundleSize.sh`
-    performance: {
-      hints: false,
-    },
+              },
+            ],
+          },
+          IS_PROD
+            ? {
+                test: /\.(js|jsx|mjs)$/,
+                include: [resolvePath('node_modules/@bbc')],
+                use: [
+                  {
+                    loader: 'babel-loader',
+                    options: {
+                      presets: [],
+                      plugins: [
+                        [
+                          'transform-react-remove-prop-types',
+                          {
+                            mode: 'remove',
+                            removeImport: true,
+                          },
+                        ],
+                      ],
+                    },
+                  },
+                ],
+              }
+            : {},
+        ],
+      },
+      // Bundle sizes are monitored by `./scripts/bundleSize.sh`
+      performance: {
+        hints: false,
+      },
+    };
   };
 
   const mergeIntoBaseConfig = app => {
@@ -97,7 +102,7 @@ module.exports = (shell = {}) => {
       IS_CI,
       START_DEV_SERVER,
     });
-    return merge(baseConfig, specialisedConfig);
+    return merge(baseConfig(app), specialisedConfig);
   };
 
   // if we've passed env.config, just compile that one file
