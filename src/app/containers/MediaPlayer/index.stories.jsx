@@ -13,7 +13,7 @@ import {
 } from './helpers/fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-storiesOf('Audio Video Container', module)
+storiesOf('Containers|Audio Video/Canonical', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .add('video, clip, global, with guidance, with caption', ({ service }) =>
@@ -41,7 +41,7 @@ storiesOf('Audio Video Container', module)
     AudioClipNonUk({ platform: 'canonical' }),
   );
 
-storiesOf('Audio Video Container - AMP', module)
+storiesOf('Containers|Audio Video/AMP', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .addDecorator(AmpDecorator)

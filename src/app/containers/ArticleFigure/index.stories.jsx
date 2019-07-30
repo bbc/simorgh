@@ -18,7 +18,7 @@ import {
 } from './fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-storiesOf('ArticleFigure', module)
+storiesOf('Containers|Article/Article Figure/Canonical', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .add('with a caption', ({ service }) => FigureImageWithCaption(service))
@@ -38,7 +38,7 @@ storiesOf('ArticleFigure', module)
   )
   .add('with a lazyloaded image', () => FigureLazyLoadImage);
 
-storiesOf('ArticleFigure - AMP', module)
+storiesOf('Containers|Article/Article Figure/AMP', module)
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .addDecorator(AmpDecorator)
