@@ -127,7 +127,7 @@ pipeline {
             sh 'rm -rf staticAssets && mkdir staticAssets'
             sh "cp -R build/. staticAssets"
             sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
-            zip archive: true, dir: 'staticAssetsTEST', glob: '', zipFile: 'staticTEST.zip'
+            zip archive: true, dir: 'staticAssets', glob: '', zipFile: 'staticTEST.zip'
             stash name: 'staticAssetsTEST', includes: 'staticTEST.zip'
 
             // Live
@@ -135,7 +135,7 @@ pipeline {
             sh 'npm run build:live'
             sh "cp -R build/. staticAssets"
             sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
-            zip archive: true, dir: 'staticAssetsLIVE', glob: '', zipFile: 'staticLIVE.zip'
+            zip archive: true, dir: 'staticAssets', glob: '', zipFile: 'staticLIVE.zip'
             stash name: 'staticAssetsLIVE', includes: 'staticLIVE.zip'
           }
         }   
