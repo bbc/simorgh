@@ -13,6 +13,7 @@ def messageColor = 'danger'
 def stageName = ""
 def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
+def staticAssetsDist = 'static.zip'
 
 def runDevelopmentTests(){
   sh 'make install'
@@ -180,7 +181,25 @@ pipeline {
             zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
             stash name: 'simorgh_storybook', includes: storybookDist
           }
-        }    
+        }  
+        stage ('Build Static Assets') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh "rm -f static.zip"
+            sh 'make install'
+            sh 'make build'
+            sh 'rm -rf staticAssets && mkdir staticAssets'
+            sh "cp -R build/. staticAssets"
+            sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
+            zip archive: true, dir: 'staticAssets', glob: '', zipFile: staticAssetsDist
+            stash name: 'staticAssets', includes: staticAssetsDist
+          }
+        }   
       }
       post {
         always {
