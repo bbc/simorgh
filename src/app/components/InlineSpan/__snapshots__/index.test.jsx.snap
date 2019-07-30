@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Inline should render a correctly 1`] = `
+exports[`Inline english inline span in persian service article 1`] = `
 .c0 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   color: #3F3F42;
   font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -14,15 +14,15 @@ exports[`Inline should render a correctly 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
-    font-size: 1rem;
-    line-height: 1.375rem;
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c0 {
-    font-size: 1rem;
-    line-height: 1.375rem;
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -33,10 +33,10 @@ exports[`Inline should render a correctly 1`] = `
 </span>
 `;
 
-exports[`Inline should render correctly with persian content 1`] = `
+exports[`Inline persian inline span in english service article 1`] = `
 .c0 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -47,15 +47,15 @@ exports[`Inline should render correctly with persian content 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c0 {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
