@@ -45,6 +45,9 @@
     "sha.js@*": {
       "reason": "Licensed under MIT; https://github.com/crypto-browserify/sha.js#license-mit"
     },
+    "storybook-chromatic@*": {
+      "reason:": "Used only in dev-dependencies and with the explicit approval of the company ChromaticQA"
+    },
     "store2@*": {
       "reason": "Licensed under MIT; https://github.com/nbubna/store/blob/master/LICENSE-MIT"
     },
