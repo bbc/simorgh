@@ -18,7 +18,7 @@ const toggles = {
       enabled: false,
     },
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
   },
 };
