@@ -111,7 +111,25 @@ pipeline {
           steps {
             runProductionTests()
           }
-        }  
+        }
+        stage ('Build Static Assets') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh "rm -f static.zip"
+            sh 'make install'
+            sh 'make build'
+            sh 'rm -rf staticAssets && mkdir staticAssets'
+            sh "cp -R build/. staticAssets"
+            sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
+            zip archive: true, dir: 'staticAssets', glob: '', zipFile: staticAssetsDist
+            stash name: 'staticAssets', includes: staticAssetsDist
+          }
+        }   
       }
       post {
         always {
