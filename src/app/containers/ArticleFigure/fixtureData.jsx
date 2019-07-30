@@ -207,7 +207,7 @@ export const FigureImageWithCaption = service => (
     platform="canonical"
     type="image"
     caption={captionBlock('Figure Image With Caption')}
-    service={service} // is this necessary?
+    service={service}
   />
 );
 
@@ -216,7 +216,7 @@ export const FigureAmpImageWithCaption = service => (
     platform="amp"
     type="image"
     caption={captionBlock('Figure Amp Image with Caption')}
-    service={service} // is this necessary?
+    service={service}
   />
 );
 
