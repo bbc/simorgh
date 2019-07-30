@@ -162,7 +162,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC ba tada alhaki game da shafukan da ba nata ba',
+    copyrightText: 'BBC. BBC ba tada alhaki game da shafukan da ba nata ba',
   },
   fonts: [],
 };

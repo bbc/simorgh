@@ -163,7 +163,7 @@ const service = {
       },
     ],
     copyrightText:
-      'BBC haina haihusiki vyovyote na taarifa za mitandao ya kujitegemea',
+      'BBC. BBC haina haihusiki vyovyote na taarifa za mitandao ya kujitegemea',
   },
   fonts: [],
 };

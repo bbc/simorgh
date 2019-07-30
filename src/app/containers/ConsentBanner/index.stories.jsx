@@ -23,10 +23,10 @@ const getConsentBanner = platform => (
   </ServiceContextProvider>
 );
 
-storiesOf('ConsentBanner Container', module)
+storiesOf('Containers|Consent Banner/', module)
   .addDecorator(AmpDecorator)
   .add('amp', () => getConsentBanner('amp'));
 
-storiesOf('ConsentBanner Container', module).add('canonical', () =>
+storiesOf('Containers|Consent Banner/', module).add('canonical', () =>
   getConsentBanner('canonical'),
 );
