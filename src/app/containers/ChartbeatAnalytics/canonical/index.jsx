@@ -10,6 +10,10 @@ const CanonicalChartbeatBeacon = ({
   chartbeatUID,
   useCanonical,
   chartbeatSource,
+  hasCookie,
+  title,
+  referrer,
+  hasReferrer,
 }) => (
   <Helmet>
     <script async type="text/javascript">
@@ -20,11 +24,18 @@ const CanonicalChartbeatBeacon = ({
           _sf_async_config.domain = "${domain}";
           _sf_async_config.useCanonical = ${useCanonical};
           _sf_async_config.useCanonicalDomain = ${useCanonical};
-          _sf_async_config.contentType = "${type}";
+          _sf_async_config.title = "${title}";
+          _sf_async_config.type = "${type}";
           _sf_async_config.sections = "${sections}";
-          _sf_async_config.idSync = {
-           bbc_hid: "${cookie}"
-          };
+          if (${hasReferrer}) {
+            _sf_async_config.virtualReferrer = "${referrer}";
+          }
+          if (${hasCookie}) {
+            console.log('yes', '${cookie}');
+            _sf_async_config.idSync = {
+              bbc_hid: "${cookie}"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -48,10 +59,15 @@ CanonicalChartbeatBeacon.propTypes = {
   chartbeatUID: number.isRequired,
   useCanonical: bool.isRequired,
   chartbeatSource: string.isRequired,
+  hasCookie: bool.isRequired,
+  hasReferrer: bool.isRequired,
+  title: string.isRequired,
+  referrer: string,
 };
 
 CanonicalChartbeatBeacon.defaultProps = {
   cookie: null,
+  referrer: null,
 };
 
 export default CanonicalChartbeatBeacon;
