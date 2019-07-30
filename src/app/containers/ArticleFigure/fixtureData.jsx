@@ -277,7 +277,6 @@ export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generat
     caption: captionBlockWithMultipleParagraphsAndLink,
     platform: 'canonical',
     type: 'image',
-
     width: imageWidth,
   },
 );

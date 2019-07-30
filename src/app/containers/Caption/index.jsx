@@ -3,6 +3,7 @@ import { any, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
 import pathOr from 'ramda/src/pathOr';
+import uuid from 'uuid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
@@ -30,7 +31,7 @@ const chooseOffscreenText = (
 };
 const renderParagraph = paragraphBlock => {
   return (
-    <p key={pathOr(null, ['0', 'id'], paragraphBlock)}>
+    <p key={pathOr(uuid(), ['0', 'id'], paragraphBlock)}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
     </p>
   );
