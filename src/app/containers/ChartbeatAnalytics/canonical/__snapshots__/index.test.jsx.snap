@@ -9,6 +9,7 @@ Object {
     "chartbeatUID": 1111,
     "cookie": "cookie",
     "domain": "test-domain",
+    "referrer": null,
     "sections": "section1 section2",
     "type": "article",
   },
@@ -40,6 +41,7 @@ Object {
             "chartbeatUID": 1111,
             "cookie": "cookie",
             "domain": "test-domain",
+            "referrer": null,
             "sections": "section1 section2",
             "type": "article",
           },
@@ -51,6 +53,7 @@ Object {
             "chartbeatUID": 1111,
             "cookie": "cookie",
             "domain": "test-domain",
+            "referrer": null,
             "sections": "section1 section2",
             "type": "article",
           },
@@ -130,6 +133,7 @@ Object {
                       chartbeatUID={1111}
                       cookie="cookie"
                       domain="test-domain"
+                      referrer={null}
                       sections="section1 section2"
                       type="article"
                     />,
@@ -150,6 +154,7 @@ Object {
                       chartbeatUID={1111}
                       cookie="cookie"
                       domain="test-domain"
+                      referrer={null}
                       sections="section1 section2"
                       type="article"
                     />,
@@ -175,6 +180,7 @@ Object {
                 chartbeatUID={1111}
                 cookie="cookie"
                 domain="test-domain"
+                referrer={null}
                 sections="section1 section2"
                 type="article"
               />,
@@ -220,6 +226,7 @@ Object {
                   chartbeatUID={1111}
                   cookie="cookie"
                   domain="test-domain"
+                  referrer={null}
                   sections="section1 section2"
                   type="article"
                 />,
@@ -279,11 +286,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -315,11 +329,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -365,11 +386,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -401,11 +429,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -441,11 +476,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -495,11 +537,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -530,11 +579,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -573,6 +629,7 @@ Object {
             "chartbeatUID": 1111,
             "cookie": "cookie",
             "domain": "test-domain",
+            "referrer": null,
             "sections": "section1 section2",
             "type": "article",
           },
@@ -584,6 +641,7 @@ Object {
             "chartbeatUID": 1111,
             "cookie": "cookie",
             "domain": "test-domain",
+            "referrer": null,
             "sections": "section1 section2",
             "type": "article",
           },
@@ -663,6 +721,7 @@ Object {
                       chartbeatUID={1111}
                       cookie="cookie"
                       domain="test-domain"
+                      referrer={null}
                       sections="section1 section2"
                       type="article"
                     />,
@@ -683,6 +742,7 @@ Object {
                       chartbeatUID={1111}
                       cookie="cookie"
                       domain="test-domain"
+                      referrer={null}
                       sections="section1 section2"
                       type="article"
                     />,
@@ -708,6 +768,7 @@ Object {
                 chartbeatUID={1111}
                 cookie="cookie"
                 domain="test-domain"
+                referrer={null}
                 sections="section1 section2"
                 type="article"
               />,
@@ -753,6 +814,7 @@ Object {
                   chartbeatUID={1111}
                   cookie="cookie"
                   domain="test-domain"
+                  referrer={null}
                   sections="section1 section2"
                   type="article"
                 />,
@@ -793,11 +855,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -835,11 +904,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -887,6 +963,7 @@ Object {
                 "chartbeatUID": 1111,
                 "cookie": "cookie",
                 "domain": "test-domain",
+                "referrer": null,
                 "sections": "section1 section2",
                 "type": "article",
               },
@@ -898,6 +975,7 @@ Object {
                 "chartbeatUID": 1111,
                 "cookie": "cookie",
                 "domain": "test-domain",
+                "referrer": null,
                 "sections": "section1 section2",
                 "type": "article",
               },
@@ -977,6 +1055,7 @@ Object {
                           chartbeatUID={1111}
                           cookie="cookie"
                           domain="test-domain"
+                          referrer={null}
                           sections="section1 section2"
                           type="article"
                         />,
@@ -997,6 +1076,7 @@ Object {
                           chartbeatUID={1111}
                           cookie="cookie"
                           domain="test-domain"
+                          referrer={null}
                           sections="section1 section2"
                           type="article"
                         />,
@@ -1022,6 +1102,7 @@ Object {
                     chartbeatUID={1111}
                     cookie="cookie"
                     domain="test-domain"
+                    referrer={null}
                     sections="section1 section2"
                     type="article"
                   />,
@@ -1067,6 +1148,7 @@ Object {
                       chartbeatUID={1111}
                       cookie="cookie"
                       domain="test-domain"
+                      referrer={null}
                       sections="section1 section2"
                       type="article"
                     />,
@@ -1111,11 +1193,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1146,11 +1235,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1189,6 +1285,7 @@ Object {
                 "chartbeatUID": 1111,
                 "cookie": "cookie",
                 "domain": "test-domain",
+                "referrer": null,
                 "sections": "section1 section2",
                 "type": "article",
               },
@@ -1200,6 +1297,7 @@ Object {
                 "chartbeatUID": 1111,
                 "cookie": "cookie",
                 "domain": "test-domain",
+                "referrer": null,
                 "sections": "section1 section2",
                 "type": "article",
               },
@@ -1279,6 +1377,7 @@ Object {
                           chartbeatUID={1111}
                           cookie="cookie"
                           domain="test-domain"
+                          referrer={null}
                           sections="section1 section2"
                           type="article"
                         />,
@@ -1299,6 +1398,7 @@ Object {
                           chartbeatUID={1111}
                           cookie="cookie"
                           domain="test-domain"
+                          referrer={null}
                           sections="section1 section2"
                           type="article"
                         />,
@@ -1324,6 +1424,7 @@ Object {
                     chartbeatUID={1111}
                     cookie="cookie"
                     domain="test-domain"
+                    referrer={null}
                     sections="section1 section2"
                     type="article"
                   />,
@@ -1369,6 +1470,7 @@ Object {
                       chartbeatUID={1111}
                       cookie="cookie"
                       domain="test-domain"
+                      referrer={null}
                       sections="section1 section2"
                       type="article"
                     />,
@@ -1406,11 +1508,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1471,11 +1580,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1507,11 +1623,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1557,11 +1680,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1593,11 +1723,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1640,6 +1777,7 @@ Object {
                 "chartbeatUID": 1111,
                 "cookie": "cookie",
                 "domain": "test-domain",
+                "referrer": null,
                 "sections": "section1 section2",
                 "type": "article",
               },
@@ -1651,6 +1789,7 @@ Object {
                 "chartbeatUID": 1111,
                 "cookie": "cookie",
                 "domain": "test-domain",
+                "referrer": null,
                 "sections": "section1 section2",
                 "type": "article",
               },
@@ -1730,6 +1869,7 @@ Object {
                           chartbeatUID={1111}
                           cookie="cookie"
                           domain="test-domain"
+                          referrer={null}
                           sections="section1 section2"
                           type="article"
                         />,
@@ -1750,6 +1890,7 @@ Object {
                           chartbeatUID={1111}
                           cookie="cookie"
                           domain="test-domain"
+                          referrer={null}
                           sections="section1 section2"
                           type="article"
                         />,
@@ -1775,6 +1916,7 @@ Object {
                     chartbeatUID={1111}
                     cookie="cookie"
                     domain="test-domain"
+                    referrer={null}
                     sections="section1 section2"
                     type="article"
                   />,
@@ -1820,6 +1962,7 @@ Object {
                       chartbeatUID={1111}
                       cookie="cookie"
                       domain="test-domain"
+                      referrer={null}
                       sections="section1 section2"
                       type="article"
                     />,
@@ -1864,11 +2007,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1899,11 +2049,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1942,6 +2099,7 @@ Object {
                 "chartbeatUID": 1111,
                 "cookie": "cookie",
                 "domain": "test-domain",
+                "referrer": null,
                 "sections": "section1 section2",
                 "type": "article",
               },
@@ -1953,6 +2111,7 @@ Object {
                 "chartbeatUID": 1111,
                 "cookie": "cookie",
                 "domain": "test-domain",
+                "referrer": null,
                 "sections": "section1 section2",
                 "type": "article",
               },
@@ -2032,6 +2191,7 @@ Object {
                           chartbeatUID={1111}
                           cookie="cookie"
                           domain="test-domain"
+                          referrer={null}
                           sections="section1 section2"
                           type="article"
                         />,
@@ -2052,6 +2212,7 @@ Object {
                           chartbeatUID={1111}
                           cookie="cookie"
                           domain="test-domain"
+                          referrer={null}
                           sections="section1 section2"
                           type="article"
                         />,
@@ -2077,6 +2238,7 @@ Object {
                     chartbeatUID={1111}
                     cookie="cookie"
                     domain="test-domain"
+                    referrer={null}
                     sections="section1 section2"
                     type="article"
                   />,
@@ -2122,6 +2284,7 @@ Object {
                       chartbeatUID={1111}
                       cookie="cookie"
                       domain="test-domain"
+                      referrer={null}
                       sections="section1 section2"
                       type="article"
                     />,
@@ -2159,11 +2322,18 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = "article";
+          _sf_async_config.title = "undefined";
+          _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          _sf_async_config.idSync = {
-           bbc_hid: "cookie"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = "null";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: "cookie"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -2213,11 +2383,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -2256,11 +2433,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -2292,11 +2476,18 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.contentType = \\"article\\";
+          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config.idSync = {
-           bbc_hid: \\"cookie\\"
-          };
+          if (undefined) {
+            _sf_async_config.virtualReferrer = \\"null\\";
+          }
+          if (undefined) {
+            console.log('yes', 'cookie');
+            _sf_async_config.idSync = {
+              bbc_hid: \\"cookie\\"
+             };
+          }
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];

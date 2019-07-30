@@ -6,6 +6,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import ChartBeatAnalytics from '.';
 import * as testUtils from '../../lib/analyticsUtils/chartbeat';
+import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
 
@@ -29,10 +30,16 @@ ContextWrap.propTypes = {
   platform: string.isRequired,
 };
 
+const mockData = {};
+
 describe('Charbeats Analytics Container', () => {
   it('should call CanonicalCharbeatsBeacon when platform is canonical, and toggle enabled for chartbeat for local', () => {
     const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
     const { chartbeatSource } = testUtils;
+    utils.getReferrer = jest.fn().mockImplementation(() => '/some-path');
+    testUtils.getTitle = jest
+      .fn()
+      .mockImplementation(() => 'This is an article');
     canonical.default = mockCanonical;
     testUtils.getDomain = jest
       .fn()
@@ -52,7 +59,7 @@ describe('Charbeats Analytics Container', () => {
           pageType="article"
           origin="localhost.bbc.com"
         >
-          <ChartBeatAnalytics />
+          <ChartBeatAnalytics data={mockData} />
         </ContextWrap>,
       )
       .toJSON();
@@ -67,6 +74,10 @@ describe('Charbeats Analytics Container', () => {
         type: 'article',
         useCanonical: true,
         chartbeatSource,
+        hasCookie: true,
+        hasReferrer: true,
+        referrer: '/some-path',
+        title: 'This is an article',
       },
       {},
     );
@@ -74,12 +85,17 @@ describe('Charbeats Analytics Container', () => {
     expect(testUtils.getSylphidCookie).toHaveBeenCalledTimes(1);
     expect(testUtils.getType).toHaveBeenCalledTimes(1);
     expect(testUtils.buildSections).toHaveBeenCalledTimes(1);
+    expect(testUtils.getTitle).toHaveBeenCalledTimes(1);
+    expect(utils.getReferrer).toHaveBeenCalledTimes(1);
     expect(tree).toMatchSnapshot();
   });
   it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on test', () => {
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
     amp.default = mockAmp;
-
+    utils.getReferrer = jest.fn().mockImplementation(() => '/some-path');
+    testUtils.getTitle = jest
+      .fn()
+      .mockImplementation(() => 'This is an article');
     testUtils.getDomain = jest
       .fn()
       .mockImplementation(service => `${service}-domain`);
@@ -94,7 +110,7 @@ describe('Charbeats Analytics Container', () => {
     const tree = renderer
       .create(
         <ContextWrap platform="amp" pageType="article" origin="test.bbc.com">
-          <ChartBeatAnalytics />
+          <ChartBeatAnalytics data={mockData} />
         </ContextWrap>,
       )
       .toJSON();
@@ -106,6 +122,10 @@ describe('Charbeats Analytics Container', () => {
         domain: 'test-domain',
         sections: 'secction1 section2',
         type: 'article',
+        hasCookie: true,
+        hasReferrer: true,
+        referrer: '/some-path',
+        title: 'This is an article',
       },
       {},
     );
@@ -113,13 +133,15 @@ describe('Charbeats Analytics Container', () => {
     expect(testUtils.getSylphidCookie).toHaveBeenCalledTimes(1);
     expect(testUtils.getType).toHaveBeenCalledTimes(1);
     expect(testUtils.buildSections).toHaveBeenCalledTimes(1);
+    expect(testUtils.getTitle).toHaveBeenCalledTimes(1);
+    expect(utils.getReferrer).toHaveBeenCalledTimes(1);
     expect(tree).toMatchSnapshot();
   });
   it('should return null when toggle is disbaled for live', () => {
     const tree = renderer
       .create(
         <ContextWrap platform="canonical" pageType="article" origin="bbc.com">
-          <ChartBeatAnalytics />
+          <ChartBeatAnalytics data={mockData} />
         </ContextWrap>,
       )
       .toJSON();

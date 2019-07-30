@@ -19,14 +19,20 @@ describe('AmpChartbeatAnalytics', () => {
       sections: 'section1 section2',
       cookie: 'cookie',
       chartbeatUID: 1111,
+      hasCookie: true,
+      hasReferrer: true,
+      referrer: '/some-path',
+      title: 'This is an article',
     };
 
     const expectedValue = {
       vars: {
         uid: props.chartbeatUID,
+        title: props.title,
         sections: props.sections,
         domain: props.domain,
         contentType: props.type,
+        virtualReferrer: props.referrer,
         idSync: {
           bbc_hid: props.cookie,
         },
