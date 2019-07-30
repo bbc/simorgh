@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Nepali",
-  "short_name": "BBC News Nepali",
+  "name": "BBC News नेपाली",
+  "short_name": "BBC News नेपाली",
   "Scope": "/nepali/",
   "background_color": "#b80000",
   "display": "standalone",

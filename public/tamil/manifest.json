@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Tamil",
-  "short_name": "BBC News Tamil",
+  "name": "BBC News தமிழ்",
+  "short_name": "BBC News தமிழ்",
   "Scope": "/tamil/",
   "background_color": "#b80000",
   "display": "standalone",

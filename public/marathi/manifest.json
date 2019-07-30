@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Marathi",
-  "short_name": "BBC News Marathi",
+  "name": "BBC News मराठी",
+  "short_name": "BBC News मराठी",
   "Scope": "/marathi/",
   "background_color": "#b80000",
   "display": "standalone",

@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Ukrainian",
-  "short_name": "BBC News Ukrainian",
+  "name": "BBC News Україна",
+  "short_name": "BBC News Україна",
   "Scope": "/ukrainian/",
   "background_color": "#b80000",
   "display": "standalone",

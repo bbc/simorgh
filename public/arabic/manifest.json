@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Arabic",
-  "short_name": "BBC News Arabic",
+  "name": "BBC News عربي",
+  "short_name": "BBC News عربي",
   "Scope": "/arabic/",
   "background_color": "#b80000",
   "display": "standalone",

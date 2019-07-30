@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Urdu",
-  "short_name": "BBC News Urdu",
+  "name": "BBC News اردو",
+  "short_name": "BBC News اردو",
   "Scope": "/urdu/",
   "background_color": "#b80000",
   "display": "standalone",

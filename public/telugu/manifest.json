@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Telugu",
-  "short_name": "BBC News Telugu",
+  "name": "BBC News తెలుగు",
+  "short_name": "BBC News తెలుగు",
   "Scope": "/telugu/",
   "background_color": "#b80000",
   "display": "standalone",

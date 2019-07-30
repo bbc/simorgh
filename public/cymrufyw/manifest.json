@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Cymrufyw",
-  "short_name": "BBC News Cymrufyw",
+  "name": "BBC Cymru Fyw",
+  "short_name": "BBC Cymru Fyw",
   "Scope": "/cymrufyw/",
   "background_color": "#b80000",
   "display": "standalone",

@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Thai",
-  "short_name": "BBC News Thai",
+  "name": "BBC News บีบีซีไทย",
+  "short_name": "BBC News บีบีซีไทย",
   "Scope": "/thai/",
   "background_color": "#b80000",
   "display": "standalone",

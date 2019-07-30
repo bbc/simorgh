@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Korean",
-  "short_name": "BBC News Korean",
+  "name": "BBC News 코리아",
+  "short_name": "BBC News 코리아",
   "Scope": "/korean/",
   "background_color": "#b80000",
   "display": "standalone",

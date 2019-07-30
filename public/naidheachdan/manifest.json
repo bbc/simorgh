@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Naidheachdan",
-  "short_name": "BBC News Naidheachdan",
+  "name": "Naidheachdan a' BhBC",
+  "short_name": "Naidheachdan a' BhBC",
   "Scope": "/naidheachdan/",
   "background_color": "#b80000",
   "display": "standalone",

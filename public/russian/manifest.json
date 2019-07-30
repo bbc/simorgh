@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Russian",
-  "short_name": "BBC News Russian",
+  "name": "BBC News Русская служба",
+  "short_name": "BBC News Русская служба",
   "Scope": "/russian/",
   "background_color": "#b80000",
   "display": "standalone",

@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Azeri",
-  "short_name": "BBC News Azeri",
+  "name": "BBC News Azərbaycanca",
+  "short_name": "BBC News Azərbaycanca",
   "Scope": "/azeri/",
   "background_color": "#b80000",
   "display": "standalone",

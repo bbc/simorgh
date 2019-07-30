@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Sinhala",
-  "short_name": "BBC News Sinhala",
+  "name": "BBC News සිංහල",
+  "short_name": "BBC News සිංහල",
   "Scope": "/sinhala/",
   "background_color": "#b80000",
   "display": "standalone",
