@@ -10,7 +10,6 @@ import withError from '../PageHandlers/withError';
 import withLoading from '../PageHandlers/withLoading';
 import withData from '../PageHandlers/withData';
 import withMemo from '../PageHandlers/withMemo';
-import withProps from '../PageHandlers/withProps';
 
 const ArticleContainer = ({ pageData }) => (
   <ArticleMain articleData={pageData} />
