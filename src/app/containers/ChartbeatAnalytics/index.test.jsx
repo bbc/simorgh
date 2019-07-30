@@ -110,7 +110,7 @@ describe('Charbeats Analytics Container', () => {
     const tree = renderer
       .create(
         <ContextWrap platform="amp" pageType="article" origin="test.bbc.com">
-          <ChartBeatAnalytics data={mockData} />
+          <ChartbeatAnalytics data={mockData} />
         </ContextWrap>,
       )
       .toJSON();
