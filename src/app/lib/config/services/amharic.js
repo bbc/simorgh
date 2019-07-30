@@ -156,7 +156,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
+    copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
   },
   fonts: [],
 };
