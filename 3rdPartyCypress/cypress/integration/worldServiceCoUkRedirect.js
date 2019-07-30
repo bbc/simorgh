@@ -1,24 +1,21 @@
 import services from '../../../src/app/lib/config/services';
 
-Object.keys(services).forEach(index => {
-  const service = index;
-
+Object.keys(services).forEach(service => {
   const notWSServices = ['news', 'cymrufyw', 'naidheachdan', 'default']; // Not WS
 
   if (notWSServices.includes(service)) {
     return;
   }
-  describe('WS Redirects:', () => {
-    it(`all routes should redirect for ${service}`, () => {
+  describe('WS Redirects', () => {
+    it(`should redirect *bbc.com/${service}`, () => {
       const urlsTotest = [
         `https://www.bbc.co.uk/${service}`,
-        `https://www.bbc.co.uk/${service}/articles/a00000000o`,
-        `http://www.bbc.co.uk/${service}/articles/a00000000o`,
-        `https://www.bbc.co.uk/${service}/articles/a00000000o.amp`,
-        `http://www.bbc.co.uk/${service}/articles/a00000000o.amp`,
+        `https://www.bbc.co.uk/${service}/articles/a0000000000o`,
+        `https://www.bbc.co.uk/${service}/articles/a0000000000o.amp`,
       ];
 
       urlsTotest.forEach(urlToTest => {
+        const slashLoc = urlToTest.indexOf('/', 8);
         cy.request({
           url: urlToTest,
           followRedirect: false,
@@ -30,7 +27,7 @@ Object.keys(services).forEach(index => {
           );
           // expect second slice to equal whatever came in
           expect(resp.redirectedToUrl.substring(20)).to.eq(
-            urlToTest.substring(22),
+            urlToTest.substring(slashLoc + 1),
           );
         });
       });
