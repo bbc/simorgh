@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import ChartBeatAnalytics from '.';
+import ChartbeatAnalytics from '.';
 import * as testUtils from '../../lib/analyticsUtils/chartbeat';
 import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
