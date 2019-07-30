@@ -4,7 +4,7 @@ import NavigationContainer from '.';
 import services from '../../lib/config/services';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
-const stories = storiesOf('Navigation', module);
+const stories = storiesOf('Containers|Navigation', module);
 
 Object.keys(services)
   .filter(service => services[service].navigation)
