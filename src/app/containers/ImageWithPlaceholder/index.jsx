@@ -7,13 +7,13 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
-const renderImage = (imageToRender, lazyLoad) =>
+const renderImage = (imageToRender, lazyLoad, fallback) =>
   lazyLoad ? (
     <Fragment>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
-      <noscript>{imageToRender}</noscript>
+      {fallback && <noscript>{imageToRender}</noscript>}
     </Fragment>
   ) : (
     imageToRender
@@ -25,6 +25,7 @@ const ImageWithPlaceholder = ({
   copyright,
   fade,
   height,
+  fallback, // only has an effect when lazyLoad == true
   lazyLoad,
   ratio,
   src,
@@ -49,7 +50,7 @@ const ImageWithPlaceholder = ({
           width={width}
         />
       ) : (
-        renderImage(imageToRender, lazyLoad)
+        renderImage(imageToRender, lazyLoad, fallback)
       )}
       {children}
     </ImagePlaceholder>
@@ -62,6 +63,7 @@ ImageWithPlaceholder.propTypes = {
   children: node,
   height: number,
   fade: bool,
+  fallback: bool,
   lazyLoad: bool,
   ratio: number.isRequired,
   src: string.isRequired,
@@ -74,6 +76,7 @@ ImageWithPlaceholder.defaultProps = {
   children: null,
   height: null,
   fade: false,
+  fallback: true,
   lazyLoad: false,
   srcset: null,
 };

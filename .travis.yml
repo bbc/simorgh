@@ -10,6 +10,8 @@ cache:
     - ~/.cache/Cypress
 env:
   - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
+before_install:
+  - sudo apt-get install -y libgconf-2-4
 jobs:
   include:
     - stage: test
