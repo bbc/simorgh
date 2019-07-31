@@ -210,7 +210,13 @@ exports[`FooterContainer should render correctly 1`] = `
       <p
         className="c10"
       >
-        © 3000 BBC. The BBC is not responsible for the content of external sites. 
+        <span
+          lang="en-GB"
+        >
+          ©
+           
+        </span>
+        3000 BBC. The BBC is not responsible for the content of external sites.
         <a
           className="c7 c11"
           href="https://www.bbc.co.uk/help/web/links/"
