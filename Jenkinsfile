@@ -67,6 +67,25 @@ def notifySlack(messageParameters) {
   )
 }
 
+def envStringGen(env){
+  if (env == "live"){
+    return "live";
+  }else if (env == "test"){
+    return "test";
+  }
+
+  return "test";
+}
+
+def buildStaticAssets(env, tag) {
+  sh "npm run build:$env"
+  sh 'rm -rf staticAssets && mkdir staticAssets'
+  sh "cp -R build/. staticAssets"
+  sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
+  zip archive: true, dir: 'staticAssets', glob: '', zipFile: "static${tag}.zip"
+  stash name: "staticAssets${tag}", includes: "static${tag}.zip"
+}
+
 pipeline {
   agent any
   options {
@@ -122,21 +141,8 @@ pipeline {
             sh "rm -f static.zip"
             sh 'make install'
 
-            // Test
-            sh 'npm run build:test'
-            sh 'rm -rf staticAssets && mkdir staticAssets'
-            sh "cp -R build/. staticAssets"
-            sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
-            zip archive: true, dir: 'staticAssets', glob: '', zipFile: 'staticTEST.zip'
-            stash name: 'staticAssetsTEST', includes: 'staticTEST.zip'
-
-            // Live
-            sh 'rm -rf build && rm -rf staticAssets && mkdir staticAssets'
-            sh 'npm run build:live'
-            sh "cp -R build/. staticAssets"
-            sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
-            zip archive: true, dir: 'staticAssets', glob: '', zipFile: 'staticLIVE.zip'
-            stash name: 'staticAssetsLIVE', includes: 'staticLIVE.zip'
+            buildStaticAssets(envStringGen("test"), "TEST")
+            buildStaticAssets(envStringGen("live"), "LIVE")
           }
         }   
       }
