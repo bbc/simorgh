@@ -62,7 +62,7 @@ storiesOf('Containers|InlineLink', module)
     <ServiceContextProvider service="persian">
       <InlineLinkContainer
         locator="https://www.example.com/"
-        blocks={[fragmentBlock('این لینک هست', [''])]}
+        blocks={[fragmentBlock('این لینک هست', [])]}
         isExternal
       />
     </ServiceContextProvider>
