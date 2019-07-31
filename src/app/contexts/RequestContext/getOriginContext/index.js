@@ -5,7 +5,7 @@ const getOriginContext = bbcOrigin => {
   if (bbcOrigin) {
     origin = bbcOrigin;
   } else if (process && process.env && process.env.APP_ENV === 'local') {
-    origin = 'http://localhost.bbc.com:7080';
+    origin = process.env.SIMORGH_BASE_URL;
   } else if (
     typeof window !== 'undefined' &&
     window.location &&
