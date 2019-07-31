@@ -67,16 +67,6 @@ def notifySlack(messageParameters) {
   )
 }
 
-def envStringGen(env){
-  if (env == "live"){
-    return "live";
-  }else if (env == "test"){
-    return "test";
-  }
-
-  return "test";
-}
-
 def buildStaticAssets(env, tag) {
   sh 'rm -rf build && rm -rf staticAssets && mkdir staticAssets'
   sh "rm -f static${tag}.zip"
@@ -213,8 +203,8 @@ pipeline {
           steps {
             sh 'make install'
 
-            buildStaticAssets(envStringGen("test"), "TEST")
-            buildStaticAssets(envStringGen("live"), "LIVE")
+            buildStaticAssets("test", "TEST")
+            buildStaticAssets("live", "LIVE")
           }
         }
       }
