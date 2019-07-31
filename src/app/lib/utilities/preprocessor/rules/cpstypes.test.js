@@ -16,9 +16,9 @@ describe('cpsTypes rules', () => {
               },
               {
                 headlines: {
-                  headline: 'Who wants to see a PGL anyway',
+                  headline: 'Who wants to see a LIV anyway',
                 },
-                cpsType: 'PGL',
+                cpsType: 'LIV',
               },
             ],
           },
@@ -141,6 +141,12 @@ describe('cpsTypes rules', () => {
           },
           {
             items: [
+              {
+                headlines: {
+                  headline: 'Group 2 - PGL',
+                },
+                cpsType: 'PGL',
+              },
               {
                 headlines: {
                   headline: 'Group 2 - MAP',
