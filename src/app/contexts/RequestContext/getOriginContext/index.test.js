@@ -64,8 +64,8 @@ describe('getOriginContext - localhost', () => {
       description: 'should return test if local & undefined bbcOrigin',
       bbcOrigin: undefined,
       expected: {
-        isUK: true,
-        origin: 'https://www.test.bbc.co.uk',
+        isUK: false,
+        origin: 'http://localhost.bbc.com:7080',
       },
     },
     {

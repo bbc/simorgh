@@ -5,9 +5,7 @@ const getOriginContext = bbcOrigin => {
   if (bbcOrigin) {
     origin = bbcOrigin;
   } else if (process && process.env && process.env.APP_ENV === 'local') {
-    // For local dev, set origin to Test
-    // Ensures analytics are sent to Test bucket
-    origin = 'https://www.test.bbc.co.uk';
+    origin = 'http://localhost.bbc.com:7080';
   } else if (
     typeof window !== 'undefined' &&
     window.location &&

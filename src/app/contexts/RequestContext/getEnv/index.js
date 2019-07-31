@@ -1,8 +1,5 @@
 const getEnv = origin => {
-  if (
-    origin.includes('local') ||
-    (process && process.env && process.env.APP_ENV === 'local')
-  ) {
+  if (origin.includes('local')) {
     return 'local';
   }
 
