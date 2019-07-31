@@ -3,7 +3,7 @@ import { bool, node, oneOf, string } from 'prop-types';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
-import getEnv, { isLocal } from './getEnv';
+import getEnv from './getEnv';
 
 export const RequestContext = React.createContext('default');
 
@@ -17,7 +17,7 @@ export const RequestContextProvider = ({
   previousPath,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
-  const env = isLocal ? 'local' : getEnv(origin);
+  const env = getEnv(origin);
   const platform = isAmp ? 'amp' : 'canonical';
   const statsDestination = getStatsDestination({
     isUK,
