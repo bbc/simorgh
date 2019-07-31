@@ -1,27 +1,13 @@
-// file containing list of polyfills should only be read at run time, not bundled:
-const fs = require('fs');
-
-const readCoreJsOutputFile = () => {
-  try {
-    const filePath = `${fs.realpathSync(
-      process.cwd(),
-    )}/build/list-feature-checks.json`;
-    return JSON.parse(fs.readFileSync(filePath), 'utf8');
-  } catch (e) {
-    return [];
-  }
-};
-
 // Outputs Object as a string, including functions:
 // (functions code is not wrapped in quotes)
-const convertObjectToString = object => {
-  let objectString = '{';
+const convertObjectToStringArray = object => {
+  let arrayString = '[';
   Object.keys(object).forEach(property => {
-    objectString += `"${property}": ${object[property].toString()},`;
+    arrayString += `${object[property].toString()},`;
   });
-  objectString += '}';
+  arrayString += ']';
 
-  return objectString;
+  return arrayString;
 };
 
 const filterPolyfillChecks = (
@@ -47,4 +33,7 @@ const filterPolyfillChecks = (
   return polyfillsObject;
 };
 
-export { readCoreJsOutputFile, convertObjectToString, filterPolyfillChecks };
+module.exports = {
+  convertObjectToStringArray,
+  filterPolyfillChecks,
+};

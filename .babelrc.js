@@ -25,6 +25,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = (app) => {
+  const isApi = () => {
+    return typeof app === 'object' && typeof app.cache === 'function';
+  };
+  if (isApi()) {
+    app.cache(false);
+  }
+
   return {
     presets: [
       [
@@ -63,6 +70,5 @@ module.exports = (app) => {
         sourceType: 'script',
       },
     ],
-    ignore: ['src/server/Document/ProgressiveEnhancement/browserFeatureChecksOverrides.js'],
   };
 };

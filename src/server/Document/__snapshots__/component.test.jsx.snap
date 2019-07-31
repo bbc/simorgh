@@ -138,10 +138,11 @@ exports[`Document Component should render correctly 1`] = `
     <React.Fragment>
       <IfAboveIE9>
         <script
-          crossOrigin="anonymous"
-          defer={true}
-          src="http://example.com/file.js"
-          type="text/javascript"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "console.log([\\"http://example.com/file.js\\"]);",
+            }
+          }
         />
       </IfAboveIE9>
     </React.Fragment>

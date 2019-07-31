@@ -1,3 +1,4 @@
+import 'isomorphic-fetch';
 import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';

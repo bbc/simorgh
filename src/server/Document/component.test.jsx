@@ -2,6 +2,11 @@ import React from 'react';
 import { shallowRender } from '../../testHelpers';
 import DocumentComponent from './component';
 
+jest.mock(
+  './loadProgressiveEnhancement',
+  () => '(function(assets){console.log(assets)})("{{assets}}")',
+);
+
 describe('Document Component', () => {
   const assets = ['http://example.com/file.js'];
   const data = { test: 'data' };

@@ -8,7 +8,11 @@ import ResourceHints from '../../app/components/ResourceHints';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
 import MPulseBeacon from '../../app/containers/MPulseBeacon';
 import { DialContextProvider } from '../../app/contexts/DialContext';
-import progressiveEnhancement from './ProgressiveEnhancement/progressiveEnhancement';
+import progressiveEnhancementString from './loadProgressiveEnhancement';
+
+const minifiedProgressiveEnhancement = Terser.minify(
+  progressiveEnhancementString,
+).code;
 
 /* eslint-disable react/prop-types */
 const Document = ({
@@ -35,7 +39,10 @@ const Document = ({
           /* eslint-disable react/no-danger */
           <script
             dangerouslySetInnerHTML={{
-              __html: Terser.minify(progressiveEnhancement(assets)).code,
+              __html: minifiedProgressiveEnhancement.replace(
+                '"{{assets}}"',
+                JSON.stringify(assets),
+              ),
             }}
           />
         }
