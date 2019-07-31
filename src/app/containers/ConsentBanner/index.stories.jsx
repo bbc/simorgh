@@ -5,14 +5,16 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ConsentBanner from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-const getConsentBanner = platform => (
+const getConsentBanner = (platform) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       platform={platform}
       isUK
+      isAmp={platform === 'amp'}
       origin="https://www.bbc.co.uk"
       pageType="article"
       id="c0000000000o"
+      service="news"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
     >
