@@ -11,6 +11,7 @@ const chartbeatAmpConfigOptions = options => ({
     ...(options.hasReferrer && { virtualReferrer: options.referrer }),
     ...(options.hasCookie && { idSync: { bbc_hid: options.cookie } }),
   },
+  triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
 });
 
 const JsonInlinedScript = data => (

@@ -37,6 +37,46 @@ describe('AmpChartbeatAnalytics', () => {
           bbc_hid: props.cookie,
         },
       },
+      triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
+    };
+    act(() => {
+      ReactDOM.render(<AmpChartbeatAnalytics {...props} />, container);
+    });
+
+    expect(container.querySelectorAll('amp-analytics').length).toEqual(1);
+    expect(
+      container.querySelectorAll(
+        'amp-analytics script[type="application/json"]',
+      ).length,
+    ).toEqual(1);
+    expect(
+      container.querySelector('amp-analytics script[type="application/json"]')
+        .innerHTML,
+    ).toMatch(JSON.stringify(expectedValue));
+  });
+
+  it('renders with with appropriate props without referrer or cookie', () => {
+    const props = {
+      domain: 'test-domain',
+      type: 'article',
+      sections: 'section1 section2',
+      cookie: null,
+      chartbeatUID: 1111,
+      hasCookie: false,
+      hasReferrer: false,
+      referrer: null,
+      title: 'This is an article',
+    };
+
+    const expectedValue = {
+      vars: {
+        uid: props.chartbeatUID,
+        title: props.title,
+        sections: props.sections,
+        domain: props.domain,
+        contentType: props.type,
+      },
+      triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
     };
     act(() => {
       ReactDOM.render(<AmpChartbeatAnalytics {...props} />, container);

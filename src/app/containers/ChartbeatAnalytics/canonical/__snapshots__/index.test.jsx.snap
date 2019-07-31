@@ -20,7 +20,9 @@ Object {
         "_debugID": 5,
         "_debugIsCurrentlyTiming": false,
         "_debugOwner": FiberNode {
-          "_debugHookTypes": null,
+          "_debugHookTypes": Array [
+            "useEffect",
+          ],
           "_debugID": 4,
           "_debugIsCurrentlyTiming": false,
           "_debugOwner": null,
@@ -29,7 +31,7 @@ Object {
           "child": [Circular],
           "childExpirationTime": 0,
           "contextDependencies": null,
-          "effectTag": 1,
+          "effectTag": 517,
           "elementType": [Function],
           "expirationTime": 0,
           "firstEffect": null,
@@ -45,7 +47,19 @@ Object {
             "sections": "section1 section2",
             "type": "article",
           },
-          "memoizedState": null,
+          "memoizedState": Object {
+            "baseState": null,
+            "baseUpdate": null,
+            "memoizedState": Object {
+              "create": [Function],
+              "deps": null,
+              "destroy": undefined,
+              "next": [Circular],
+              "tag": 192,
+            },
+            "next": null,
+            "queue": null,
+          },
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
@@ -245,7 +259,15 @@ Object {
           "stateNode": null,
           "tag": 0,
           "type": [Function],
-          "updateQueue": null,
+          "updateQueue": Object {
+            "lastEffect": Object {
+              "create": [Function],
+              "deps": null,
+              "destroy": undefined,
+              "next": [Circular],
+              "tag": 192,
+            },
+          },
         },
         "_debugSource": null,
         "alternate": null,
@@ -293,7 +315,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -336,7 +357,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -393,7 +413,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -436,7 +455,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -483,7 +501,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -544,7 +561,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -586,7 +602,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -608,7 +623,9 @@ Object {
         },
         "ref": null,
         "return": FiberNode {
-          "_debugHookTypes": null,
+          "_debugHookTypes": Array [
+            "useEffect",
+          ],
           "_debugID": 4,
           "_debugIsCurrentlyTiming": false,
           "_debugOwner": null,
@@ -617,7 +634,7 @@ Object {
           "child": [Circular],
           "childExpirationTime": 0,
           "contextDependencies": null,
-          "effectTag": 1,
+          "effectTag": 517,
           "elementType": [Function],
           "expirationTime": 0,
           "firstEffect": null,
@@ -633,7 +650,19 @@ Object {
             "sections": "section1 section2",
             "type": "article",
           },
-          "memoizedState": null,
+          "memoizedState": Object {
+            "baseState": null,
+            "baseUpdate": null,
+            "memoizedState": Object {
+              "create": [Function],
+              "deps": null,
+              "destroy": undefined,
+              "next": [Circular],
+              "tag": 192,
+            },
+            "next": null,
+            "queue": null,
+          },
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
@@ -833,7 +862,15 @@ Object {
           "stateNode": null,
           "tag": 0,
           "type": [Function],
-          "updateQueue": null,
+          "updateQueue": Object {
+            "lastEffect": Object {
+              "create": [Function],
+              "deps": null,
+              "destroy": undefined,
+              "next": [Circular],
+              "tag": 192,
+            },
+          },
         },
         "sibling": null,
         "stateNode": [Circular],
@@ -862,7 +899,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -911,7 +947,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -942,7 +977,9 @@ Object {
             "_debugID": 5,
             "_debugIsCurrentlyTiming": false,
             "_debugOwner": FiberNode {
-              "_debugHookTypes": null,
+              "_debugHookTypes": Array [
+                "useEffect",
+              ],
               "_debugID": 4,
               "_debugIsCurrentlyTiming": false,
               "_debugOwner": null,
@@ -951,7 +988,7 @@ Object {
               "child": [Circular],
               "childExpirationTime": 0,
               "contextDependencies": null,
-              "effectTag": 1,
+              "effectTag": 517,
               "elementType": [Function],
               "expirationTime": 0,
               "firstEffect": null,
@@ -967,7 +1004,19 @@ Object {
                 "sections": "section1 section2",
                 "type": "article",
               },
-              "memoizedState": null,
+              "memoizedState": Object {
+                "baseState": null,
+                "baseUpdate": null,
+                "memoizedState": Object {
+                  "create": [Function],
+                  "deps": null,
+                  "destroy": undefined,
+                  "next": [Circular],
+                  "tag": 192,
+                },
+                "next": null,
+                "queue": null,
+              },
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
@@ -1167,7 +1216,15 @@ Object {
               "stateNode": null,
               "tag": 0,
               "type": [Function],
-              "updateQueue": null,
+              "updateQueue": Object {
+                "lastEffect": Object {
+                  "create": [Function],
+                  "deps": null,
+                  "destroy": undefined,
+                  "next": [Circular],
+                  "tag": 192,
+                },
+              },
             },
             "_debugSource": null,
             "alternate": null,
@@ -1200,7 +1257,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -1242,7 +1298,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -1264,7 +1319,9 @@ Object {
             },
             "ref": null,
             "return": FiberNode {
-              "_debugHookTypes": null,
+              "_debugHookTypes": Array [
+                "useEffect",
+              ],
               "_debugID": 4,
               "_debugIsCurrentlyTiming": false,
               "_debugOwner": null,
@@ -1273,7 +1330,7 @@ Object {
               "child": [Circular],
               "childExpirationTime": 0,
               "contextDependencies": null,
-              "effectTag": 1,
+              "effectTag": 517,
               "elementType": [Function],
               "expirationTime": 0,
               "firstEffect": null,
@@ -1289,7 +1346,19 @@ Object {
                 "sections": "section1 section2",
                 "type": "article",
               },
-              "memoizedState": null,
+              "memoizedState": Object {
+                "baseState": null,
+                "baseUpdate": null,
+                "memoizedState": Object {
+                  "create": [Function],
+                  "deps": null,
+                  "destroy": undefined,
+                  "next": [Circular],
+                  "tag": 192,
+                },
+                "next": null,
+                "queue": null,
+              },
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
@@ -1489,7 +1558,15 @@ Object {
               "stateNode": null,
               "tag": 0,
               "type": [Function],
-              "updateQueue": null,
+              "updateQueue": Object {
+                "lastEffect": Object {
+                  "create": [Function],
+                  "deps": null,
+                  "destroy": undefined,
+                  "next": [Circular],
+                  "tag": 192,
+                },
+              },
             },
             "sibling": null,
             "stateNode": HelmetWrapper {
@@ -1515,7 +1592,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -1587,7 +1663,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -1630,7 +1705,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -1687,7 +1761,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -1730,7 +1803,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -1756,7 +1828,9 @@ Object {
             "_debugID": 5,
             "_debugIsCurrentlyTiming": false,
             "_debugOwner": FiberNode {
-              "_debugHookTypes": null,
+              "_debugHookTypes": Array [
+                "useEffect",
+              ],
               "_debugID": 4,
               "_debugIsCurrentlyTiming": false,
               "_debugOwner": null,
@@ -1765,7 +1839,7 @@ Object {
               "child": [Circular],
               "childExpirationTime": 0,
               "contextDependencies": null,
-              "effectTag": 1,
+              "effectTag": 517,
               "elementType": [Function],
               "expirationTime": 0,
               "firstEffect": null,
@@ -1781,7 +1855,19 @@ Object {
                 "sections": "section1 section2",
                 "type": "article",
               },
-              "memoizedState": null,
+              "memoizedState": Object {
+                "baseState": null,
+                "baseUpdate": null,
+                "memoizedState": Object {
+                  "create": [Function],
+                  "deps": null,
+                  "destroy": undefined,
+                  "next": [Circular],
+                  "tag": 192,
+                },
+                "next": null,
+                "queue": null,
+              },
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
@@ -1981,7 +2067,15 @@ Object {
               "stateNode": null,
               "tag": 0,
               "type": [Function],
-              "updateQueue": null,
+              "updateQueue": Object {
+                "lastEffect": Object {
+                  "create": [Function],
+                  "deps": null,
+                  "destroy": undefined,
+                  "next": [Circular],
+                  "tag": 192,
+                },
+              },
             },
             "_debugSource": null,
             "alternate": null,
@@ -2014,7 +2108,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -2056,7 +2149,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -2078,7 +2170,9 @@ Object {
             },
             "ref": null,
             "return": FiberNode {
-              "_debugHookTypes": null,
+              "_debugHookTypes": Array [
+                "useEffect",
+              ],
               "_debugID": 4,
               "_debugIsCurrentlyTiming": false,
               "_debugOwner": null,
@@ -2087,7 +2181,7 @@ Object {
               "child": [Circular],
               "childExpirationTime": 0,
               "contextDependencies": null,
-              "effectTag": 1,
+              "effectTag": 517,
               "elementType": [Function],
               "expirationTime": 0,
               "firstEffect": null,
@@ -2103,7 +2197,19 @@ Object {
                 "sections": "section1 section2",
                 "type": "article",
               },
-              "memoizedState": null,
+              "memoizedState": Object {
+                "baseState": null,
+                "baseUpdate": null,
+                "memoizedState": Object {
+                  "create": [Function],
+                  "deps": null,
+                  "destroy": undefined,
+                  "next": [Circular],
+                  "tag": 192,
+                },
+                "next": null,
+                "queue": null,
+              },
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
@@ -2303,7 +2409,15 @@ Object {
               "stateNode": null,
               "tag": 0,
               "type": [Function],
-              "updateQueue": null,
+              "updateQueue": Object {
+                "lastEffect": Object {
+                  "create": [Function],
+                  "deps": null,
+                  "destroy": undefined,
+                  "next": [Circular],
+                  "tag": 192,
+                },
+              },
             },
             "sibling": null,
             "stateNode": HelmetWrapper {
@@ -2329,7 +2443,6 @@ Object {
             _sf_async_config.virtualReferrer = "null";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: "cookie"
              };
@@ -2390,7 +2503,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -2440,7 +2552,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };
@@ -2483,7 +2594,6 @@ Object {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
           if (undefined) {
-            console.log('yes', 'cookie');
             _sf_async_config.idSync = {
               bbc_hid: \\"cookie\\"
              };

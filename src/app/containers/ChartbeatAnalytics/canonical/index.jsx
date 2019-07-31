@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { string, bool, number } from 'prop-types';
 import Helmet from 'react-helmet';
 
@@ -14,10 +14,26 @@ const CanonicalChartbeatBeacon = ({
   title,
   referrer,
   hasReferrer,
-}) => (
-  <Helmet>
-    <script async type="text/javascript">
-      {`
+}) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.pSUPERFLY) {
+      window.pSUPERFLY.virtualPage({
+        uid: chartbeatUID,
+        domain,
+        useCanonical,
+        useCanonicalDomain: useCanonical,
+        title,
+        type,
+        sections,
+        ...(hasReferrer && { virtualReferrer: referrer }),
+        ...(hasCookie && { idSync: { bbc_hid: cookie } }),
+      });
+    }
+  });
+  return (
+    <Helmet>
+      <script async type="text/javascript">
+        {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = ${chartbeatUID};
@@ -46,9 +62,10 @@ const CanonicalChartbeatBeacon = ({
           loadChartbeat();
         })();
       `}
-    </script>
-  </Helmet>
-);
+      </script>
+    </Helmet>
+  );
+};
 
 CanonicalChartbeatBeacon.propTypes = {
   domain: string.isRequired,
