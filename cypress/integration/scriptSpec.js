@@ -10,11 +10,25 @@ Object.keys(config).forEach(service => {
     .forEach(pageType => {
       describe(`Script src - ${service} ${pageType}`, () => {
         beforeEach(() => {
-          cy.visit(
-            pageType === 'frontPage'
-              ? `/${service}`
-              : `/${service}/articles/${config[service].pageTypes.articles.asset}`,
-          );
+          switch (pageType) {
+            case 'frontPage':
+              cy.visit(`/${service}`);
+              break;
+            case 'articles':
+              cy.visit(
+                `/${service}/articles/${config[service].pageTypes.articles.asset}`,
+              );
+              break;
+            case 'errorPage404':
+              cy.visit(
+                `/${service}/articles/${config[service].pageTypes[pageType].asset}`,
+                {
+                  failOnStatusCode: false,
+                },
+              );
+              break;
+            default:
+          }
         });
 
         it('should only have expected bundle script tags', () => {

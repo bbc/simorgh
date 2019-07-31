@@ -6,7 +6,7 @@ plugins:
       languages:
       - javascript
     exclude_patterns:
-      - 'cypress/{integration,support}/*.js'
+      - 'cypress/{integration,support}/**/*.js'
       # The line below should work but doesn't it removes all js and jsx quality checking
       # - 'src/**/*.{test,stories}.{js,jsx}'
 exclude_patterns:
