@@ -78,6 +78,9 @@ def envStringGen(env){
 }
 
 def buildStaticAssets(env, tag) {
+  sh 'rm -rf build && rm -rf staticAssets && mkdir staticAssets'
+  sh "rm -f static${tag}"
+
   sh "npm run build:$env"
   sh 'rm -rf staticAssets && mkdir staticAssets'
   sh "cp -R build/. staticAssets"
@@ -143,6 +146,7 @@ pipeline {
 
             buildStaticAssets(envStringGen("test"), "TEST")
             buildStaticAssets(envStringGen("live"), "LIVE")
+
           }
         }   
       }
