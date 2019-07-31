@@ -225,22 +225,18 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
     <b>
       This is some text.
     </b>
-    <div
-      className="c0"
+    <span
+      className="c2"
+      lang="fa"
     >
-      <span
-        className="c2"
-        lang="fa"
+      <a
+        aria-label="چیسربرگرundefined"
+        className="c3"
+        href="https://google.com"
       >
-        <a
-          aria-label="چیسربرگرundefined"
-          className="c3"
-          href="https://google.com"
-        >
-          چیسربرگر
-        </a>
-      </span>
-    </div>
+        چیسربرگر
+      </a>
+    </span>
   </p>
 </div>
 `;
