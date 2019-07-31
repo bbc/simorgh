@@ -6,7 +6,7 @@ import services from '../../lib/config/services';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import BrandContainer from '.';
 
-storiesOf('Brand Container', module)
+storiesOf('Containers|Brand', module)
   .addDecorator(withKnobs)
   .add(
     'default',
