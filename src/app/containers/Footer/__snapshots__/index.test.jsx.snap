@@ -19,16 +19,14 @@ exports[`FooterContainer should render correctly 1`] = `
   display: inline;
 }
 
-.c10:hover .c12,
-.c10:focus .c12 {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #FFFFFF;
+.c7:hover .c9,
+.c7:focus .c9 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c8 {
   border-bottom: 1px solid #3F3F42;
-  display: grid;
-  grid-auto-flow: column;
   list-style-type: none;
   margin: 0;
   padding: 0 0 0.5rem;
@@ -116,6 +114,13 @@ exports[`FooterContainer should render correctly 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: grid;
+    grid-auto-flow: column;
+  }
+}
+
 @media (max-width:14.9375rem) {
   .c8 {
     grid-auto-flow: row;
@@ -153,15 +158,14 @@ exports[`FooterContainer should render correctly 1`] = `
     grid-template-rows: repeat( 1,auto );
   }
 }
-
-@supports not (display:grid) {
-  .c8 > li:first-child {
+@supports not (grid-template-columns:fit-content(200px)) {
+  .c5 > li:first-child {
     width: 100%;
   }
 }
 
-@supports not (display:grid) {
-  .c9 {
+@supports not (grid-template-columns:fit-content(200px)) {
+  .c6 {
     display: inline-block;
   }
 }
@@ -286,7 +290,7 @@ exports[`FooterContainer should render correctly 1`] = `
           lang="en-GB"
         >
           ©
-           
+
         </span>
         3000 BBC. The BBC is not responsible for the content of external sites.
         <a
