@@ -3,6 +3,46 @@ import describeForEuOnly from '../support/describeForEuOnly';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 import services from '../../src/app/lib/config/services';
 
+const serviceVariantMapping = {
+  serbianLat: {
+    service: 'serbian',
+    variant: 'lat',
+  },
+  serbianCyr: {
+    service: 'serbian',
+    variant: 'cyr',
+  },
+  zhongwenSimp: {
+    service: 'zhongwen',
+    variant: 'simp',
+  },
+  zhongwenTrad: {
+    service: 'zhongwen',
+    variant: 'trad',
+  },
+  ukchinaSimp: {
+    service: 'ukchina',
+    variant: 'simp',
+  },
+  ukchinaTrad: {
+    service: 'ukchina',
+    variant: 'trad',
+  },
+};
+
+const createRequestUrl = (service, isAmp = false) => {
+  const serviceVariant = serviceVariantMapping[service];
+  if (serviceVariant) {
+    return isAmp
+      ? `/${serviceVariant.service}/articles/c0000000000o/${serviceVariant.variant}.amp`
+      : `/${serviceVariant.service}/articles/c0000000000o/${serviceVariant.variant}`;
+  }
+
+  return isAmp
+    ? `/${service}/articles/c0000000000o.amp`
+    : `/${service}/articles/c0000000000o`;
+};
+
 Object.keys(services).forEach(index => {
   const serviceConfig = services[index];
   const service = index;
@@ -20,7 +60,7 @@ Object.keys(services).forEach(index => {
         worldServiceCookieBannerTranslations(
           `${serviceConfig.translations.consentBanner.privacy.title}`,
           `${serviceConfig.translations.consentBanner.cookie.title}`,
-          `/${service}/articles/c0000000000o`,
+          createRequestUrl(service),
           `${serviceConfig.translations.consentBanner.privacy.accept}`,
           `${serviceConfig.translations.consentBanner.cookie.accept}`,
         );
@@ -32,7 +72,7 @@ Object.keys(services).forEach(index => {
         worldServiceCookieBannerTranslations(
           `${serviceConfig.translations.consentBanner.privacy.title}`,
           `${serviceConfig.translations.consentBanner.cookie.title}`,
-          `/${service}/articles/c0000000000o.amp`,
+          createRequestUrl(service, true),
           `${serviceConfig.translations.consentBanner.privacy.accept}`,
           `${serviceConfig.translations.consentBanner.cookie.accept}`,
         );
