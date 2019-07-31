@@ -31,7 +31,6 @@ const CanonicalChartbeatBeacon = ({
             _sf_async_config.virtualReferrer = "${referrer}";
           }
           if (${hasCookie}) {
-            console.log('yes', '${cookie}');
             _sf_async_config.idSync = {
               bbc_hid: "${cookie}"
              };
