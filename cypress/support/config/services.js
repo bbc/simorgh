@@ -100,7 +100,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
@@ -216,7 +216,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
@@ -365,7 +365,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
