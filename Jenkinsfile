@@ -79,7 +79,7 @@ def envStringGen(env){
 
 def buildStaticAssets(env, tag) {
   sh 'rm -rf build && rm -rf staticAssets && mkdir staticAssets'
-  sh "rm -f static${tag}"
+  sh "rm -f static${tag}.zip"
 
   sh "npm run build:$env"
   sh 'rm -rf staticAssets && mkdir staticAssets'
@@ -132,23 +132,7 @@ pipeline {
           steps {
             runProductionTests()
           }
-        }
-        stage ('Build Static Assets') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh "rm -f static.zip"
-            sh 'make install'
-
-            buildStaticAssets(envStringGen("test"), "TEST")
-            buildStaticAssets(envStringGen("live"), "LIVE")
-
-          }
-        }   
+        }  
       }
       post {
         always {
@@ -227,16 +211,12 @@ pipeline {
             }
           }
           steps {
-            sh "rm -f static.zip"
             sh 'make install'
-            sh 'make build'
-            sh 'rm -rf staticAssets && mkdir staticAssets'
-            sh "cp -R build/. staticAssets"
-            sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
-            zip archive: true, dir: 'staticAssets', glob: '', zipFile: staticAssetsDist
-            stash name: 'staticAssets', includes: staticAssetsDist
+
+            buildStaticAssets(envStringGen("test"), "TEST")
+            buildStaticAssets(envStringGen("live"), "LIVE")
           }
-        }   
+        }
       }
       post {
         always {
