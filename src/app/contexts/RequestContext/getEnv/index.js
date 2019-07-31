@@ -1,8 +1,8 @@
-export const isLocal =
-  process && process.env && process.env.APP_ENV === 'local';
-
 const getEnv = origin => {
-  if (isLocal || origin.includes('local')) {
+  if (
+    origin.includes('local') ||
+    (process && process.env && process.env.APP_ENV === 'local')
+  ) {
     return 'local';
   }
 

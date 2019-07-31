@@ -1,12 +1,10 @@
-import { isLocal } from '../getEnv';
-
 const getOriginContext = bbcOrigin => {
   let origin = 'https://www.bbc.co.uk';
   let isUK = true;
 
   if (bbcOrigin) {
     origin = bbcOrigin;
-  } else if (isLocal) {
+  } else if (process && process.env && process.env.APP_ENV === 'local') {
     // For local dev, set origin to Test
     // Ensures analytics are sent to Test bucket
     origin = 'https://www.test.bbc.co.uk';
@@ -17,6 +15,7 @@ const getOriginContext = bbcOrigin => {
   ) {
     origin = window.location.origin; // eslint-disable-line prefer-destructuring
   }
+
   if (origin.includes('.com')) {
     isUK = false;
   }
