@@ -4,7 +4,7 @@ import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import InlineSpan from '../../components/InlineSpan';
-import inlineBlockPropTypes from '../../models/propTypes/inline';
+import { inlineBlockPropTypes } from '../../models/propTypes/inline';
 
 const componentsToRender = { fragment, urlLink: InlineLink };
 
