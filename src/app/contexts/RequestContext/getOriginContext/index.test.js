@@ -57,6 +57,7 @@ describe('getOriginContext - localhost', () => {
 
   beforeEach(() => {
     process.env.APP_ENV = 'local';
+    process.env.SIMORGH_BASE_URL = 'http://localhost.bbc.com:7080';
   });
 
   const localScenarios = [
