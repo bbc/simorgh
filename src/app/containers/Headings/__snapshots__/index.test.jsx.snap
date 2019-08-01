@@ -324,6 +324,14 @@ exports[`Headings with rich text headline with italic text should render h1 with
   padding: 2rem 0;
 }
 
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -336,11 +344,6 @@ exports[`Headings with rich text headline with italic text should render h1 with
     font-size: 2.75rem;
     line-height: 3rem;
   }
-}
-
-.c2 {
-  font-family: inherit;
-  font-weight: inherit;
 }
 
 @media (min-width:37.5rem) {
@@ -407,6 +410,14 @@ exports[`Headings with rich text should render headline with bold & italic text 
   padding: 2rem 0;
 }
 
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -419,11 +430,6 @@ exports[`Headings with rich text should render headline with bold & italic text 
     font-size: 2.75rem;
     line-height: 3rem;
   }
-}
-
-.c2 {
-  font-family: inherit;
-  font-weight: inherit;
 }
 
 @media (min-width:37.5rem) {
@@ -492,6 +498,14 @@ exports[`Headings with rich text should render headline with italic & bold text 
   padding: 2rem 0;
 }
 
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -504,11 +518,6 @@ exports[`Headings with rich text should render headline with italic & bold text 
     font-size: 2.75rem;
     line-height: 3rem;
   }
-}
-
-.c2 {
-  font-family: inherit;
-  font-weight: inherit;
 }
 
 @media (min-width:37.5rem) {
@@ -577,6 +586,14 @@ exports[`Headings with rich text with different attributes should render headlin
   padding: 2rem 0;
 }
 
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -589,11 +606,6 @@ exports[`Headings with rich text with different attributes should render headlin
     font-size: 2.75rem;
     line-height: 3rem;
   }
-}
-
-.c2 {
-  font-family: inherit;
-  font-weight: inherit;
 }
 
 @media (min-width:37.5rem) {
