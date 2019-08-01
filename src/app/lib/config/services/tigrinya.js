@@ -111,7 +111,12 @@ const service = {
     },
     media: {
       audio: 'ድምፂ',
+      photogallery: 'ማህደረ-ምስሊ',
       video: 'ቪድዮ',
+      bbc_tigrinya_radio: {
+        title: 'ስምዑ',
+        subtitle: 'መደባትና',
+      },
     },
   },
   brandSVG,
@@ -150,7 +155,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
+    copyrightText: 'ቢቢሲ. ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
   },
   fonts: [],
 };

@@ -25,7 +25,7 @@ StoryPromoComponent.propTypes = {
 };
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
-  const { script } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
   const strapline = pathOr(null, ['strapline', 'name'], group);
@@ -55,6 +55,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         labelId={sectionLabelId}
         bar={bar}
         visuallyHidden={isFirstSection}
+        service={service}
       >
         {group.strapline.name}
       </SectionLabel>

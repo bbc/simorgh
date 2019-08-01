@@ -112,6 +112,7 @@ const service = {
     },
     media: {
       audio: 'Dinleyin',
+      photogallery: 'Fotoğraf',
       video: 'İzleyin',
     },
   },
@@ -152,7 +153,7 @@ const service = {
       },
     ],
     copyrightText:
-      'BBC, diğer internet sayfalarının içeriğinden sorumlu değildir',
+      'BBC. BBC, diğer internet sayfalarının içeriğinden sorumlu değildir',
   },
   fonts: [],
 };

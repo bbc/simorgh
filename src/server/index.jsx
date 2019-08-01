@@ -15,6 +15,8 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
+  mediaRadioAndTvRegexPathsArray,
+  mediaDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
@@ -114,6 +116,19 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
+    .get(mediaDataRegexPath, async ({ params }, res, next) => {
+      const { service, serviceId, mediaId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        serviceId,
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.
@@ -149,7 +164,7 @@ server
     },
   )
   .get(
-    [articleRegexPath, frontpageRegexPath],
+    [articleRegexPath, frontpageRegexPath, ...mediaRadioAndTvRegexPathsArray],
     async ({ url, headers }, res) => {
       try {
         const { service, isAmp, route, match } = getRouteProps(routes, url);

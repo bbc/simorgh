@@ -112,7 +112,18 @@ const service = {
     },
     media: {
       audio: 'Sauti',
+      photogallery: 'Hotuna',
       video: 'Bidiyo',
+      bbc_hausa_radio: {
+        title: 'BBC Hausa Rediyo',
+        subtitle:
+          "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+      },
+      bbc_hausa_tv: {
+        title: 'Labaran Talabijin',
+        subtitle:
+          "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
+      },
     },
   },
   brandSVG,
@@ -151,7 +162,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC ba tada alhaki game da shafukan da ba nata ba',
+    copyrightText: 'BBC. BBC ba tada alhaki game da shafukan da ba nata ba',
   },
   fonts: [],
 };

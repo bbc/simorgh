@@ -1,117 +1,117 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { arabic } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const service = {
-  lang: `ur-IN`,
-  articleAuthor: `https://www.facebook.com/bbcurdu`,
-  articleTimestampPrefix: 'Updated',
+  lang: 'ur',
+  product: 'BBC News',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
+  articleTimestampPrefix: 'اپ ڈیٹ کی گئی',
   atiAnalyticsAppName: 'news-urdu',
   brandName: 'BBC News اردو',
-  product: 'BBC News اردو',
+  serviceLocalizedName: 'اردو',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
   defaultImageAltText: 'BBC News اردو',
-  dir: `ltr`,
-  externalLinkText: ', external',
-  imageCaptionOffscreenText: 'Image caption, ',
-  videoCaptionOffscreenText: 'Video caption, ',
-  audioCaptionOffscreenText: 'Audio caption',
-  defaultCaptionOffscreenText: 'Caption, ',
-  imageCopyrightOffscreenText: 'Image source, ',
-  locale: `ur-IN`,
-  datetimeLocale: `ur-IN`.toLowerCase(),
+  dir: 'rtl',
+  externalLinkText: '، بیرونی مواد',
+  imageCaptionOffscreenText: '،تصویر کا کیپشن',
+  videoCaptionOffscreenText: '،ویڈیو کیپشن',
+  audioCaptionOffscreenText: '،آڈیو کیپشن',
+  defaultCaptionOffscreenText: '،کیپشن',
+  imageCopyrightOffscreenText: '،تصویر کا ذریعہ',
+  locale: 'ur',
+  datetimeLocale: 'ur',
   service: 'urdu',
-  serviceName: 'News اردو',
+  serviceName: 'Urdu',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcurdu',
   twitterSite: '@bbcurdu',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  script: arabic,
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
         statusCode: '404',
-        title: '404 - صفہ دستیاب نہیں',
+        title: 'صفحہ دستیاب نہیں',
         message:
-          'ہو سکتا ہے آپ نے ویب سائٹ کا پتہ غلط درج کیا ہو۔ برائے مہربانی پتہ اور املا کی غلطیاں ٹھیک کریں',
+          'ہم معذرت خواہ ہیں کہ آپ جو صفحہ تلاش کر رہے ہیں وہ دستیاب نہیں۔ یہ کوشش کر کے دیکھیں:',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'یو آر ایل دوبارہ چیک کریں',
+          'اپنے براؤزر کو ریفریش کریں',
+          'بی بی سی کی سرچ بار کی مدد سے اس صفحے کی تلاش جاری',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'بی بی سی صفحۂ اول',
+        callToActionFirst: 'متبادل کے طور پر بی بی سی نیوز ',
+        callToActionLinkText: 'کے ہوم پیچ پر جائیں اردو.',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/urdu',
       },
       500: {
         statusCode: '500',
-        title: '500 - ایرر',
-        message: 'اس صفحے پر ایرر تھا۔ برائے مہربانی صفحہ ریفریش کیجیے',
-        solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
-        ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'بی بی سی صفحۂ اول',
+        title: 'اندرونی سرور کی خرابی',
+        message:
+          'ہم معذرت خواہ ہیں کہ آپ جو صفحہ تلاش کر رہے ہیں وہ دستیاب نہیں۔ یہ کوشش کر کے دیکھیں:',
+        solutions: ['اپنے براؤزر کو ریفریش کریں', 'کچھ دیر بعد کوشش کیجیے'],
+        callToActionFirst: 'متبادل کے طور پر بی بی سی نیوز ',
+        callToActionLinkText: 'کے ہوم پیچ پر جائیں اردو.',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/urdu',
       },
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: 'ہم نے اپنی پرائیویسی اور کوکیز پالیسی اپ ڈیٹ کر دی ہے',
         description: {
           uk: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              '.ہم نے اپنی پرائیویسی اور کوکیز پالیسیوں میں کچھ اہم تبدیلیاں کی ہیں اور ہم چاہتے ہیں کہ ان کا آپ اور آپ کے ڈیٹا کے لیے کیا مطلب ہے',
             linkText: null,
             last: null,
             linkUrl: null,
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              '.ہم نے اپنی پرائیویسی اور کوکیز پالیسیوں میں کچھ اہم تبدیلیاں کی ہیں اور ہم چاہتے ہیں کہ ان کا آپ اور آپ کے ڈیٹا کے لیے کیا مطلب ہے',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
-        accept: 'OK',
-        reject: "Find out what's changed",
+        accept: 'اوکے',
+        reject: 'جانیے کہ تبدیلیاں کیا ہیں',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'بتائیے کہ آپ کوکیز کے بارے میں متفق ہیں',
         description: {
           uk: {
-            first: 'We use ',
-            linkText: 'cookies',
+            first: 'ہم آپ کو بہترین آن لائن تجربہ دینے کے لیے ',
+            linkText: 'کوکیز',
             last:
-              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              ' استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
-            linkText: 'cookies',
+            first: 'ہم اور ہمارے پارٹنر ٹیکنالوجی جیسے کہ ',
+            linkText: 'کوکیز',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              ' استعمال کرتے ہوئے براؤزنگ ڈیٹا جمع کرتے ہیں تاکہ آپ کو بہترین آن لائن تجربہ دے سکیں اور مواد اور اشتہارات کو آپ کے لیے مخصوص بنا سکیں۔ ہمیں بتائیے کہ آپ کو اس پر کوئی اعتراض تو نہیں۔',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: 'میں متفق ہوں',
+        reject: 'نہیں، مجھے سیٹنگز میں لے جائیں',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
     },
     media: {
       audio: 'آڈیو',
+      photogallery: 'تصاویری گیلری',
       video: 'ویڈیو',
     },
   },
@@ -124,7 +124,7 @@ const service = {
     links: [
       {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
       },
       {
         href: 'https://www.bbc.com/terms',
@@ -151,7 +151,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
+    copyrightText:
+      'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
   },
   fonts: [],
 };
