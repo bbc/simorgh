@@ -114,6 +114,11 @@ const service = {
       audio: 'ఆడియో',
       photogallery: 'చిత్రశాల',
       video: 'వీడియో',
+      bbc_telugu_tv: {
+        title: 'ప్రపంచం',
+        subtitle:
+          'తాజా అంతర్జాతీయ జాతీయ వార్తా విశేషాలు, విశ్లేషణ కోసం బీబీసి ప్రపంచం చూస్తూ ఉండండి.',
+      },
     },
   },
   brandSVG,
@@ -152,7 +157,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'బయటి ఇంటర్నెట్ సైట్‌లలోని కంటెంట్‌కు BBC బాధ్యత వహించదు',
+    copyrightText:
+      'BBC. బయటి ఇంటర్నెట్ సైట్‌లలోని కంటెంట్‌కు BBC బాధ్యత వహించదు',
   },
   fonts: [],
 };

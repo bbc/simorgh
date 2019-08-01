@@ -113,6 +113,11 @@ const service = {
       audio: '音频',
       photogallery: '图辑',
       video: '视频',
+      bbc_cantonese_radio: {
+        title: 'BBC时事一周',
+        subtitle:
+          'BBC中文部提供的国际新闻、分析和资讯、时事和专题内容。可收听或浏览香港电台FM电台广播及网站',
+      },
     },
   },
   brandSVG,
@@ -151,7 +156,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC不为BBC以外的网站的内容负责',
+    copyrightText: 'BBC。BBC不为BBC以外的网站的内容负责',
   },
   fonts: [],
 };

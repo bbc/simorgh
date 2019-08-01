@@ -151,7 +151,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC不为BBC以外的网站的内容负责',
+    copyrightText: 'BBC。BBC不为BBC以外的网站的内容负责',
   },
   fonts: [],
 };

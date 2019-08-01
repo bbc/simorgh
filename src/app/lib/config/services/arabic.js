@@ -1,110 +1,114 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { arabic } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const service = {
-  lang: `ar-SA`,
-  articleAuthor: `http://www.facebook.com/bbcarabic`,
-  articleTimestampPrefix: 'Updated',
+  lang: 'ar',
+  product: 'BBC News',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
+  articleTimestampPrefix: 'جدّد في',
   atiAnalyticsAppName: 'news-arabic',
-  brandName: 'BBC News Arabic',
-  product: 'BBC News Arabic',
+  brandName: 'BBC News عربي',
+  serviceLocalizedName: 'عربي',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
-  defaultImageAltText: 'BBC News Arabic',
-  dir: `ltr`,
-  externalLinkText: ', external',
-  imageCaptionOffscreenText: 'Image caption, ',
-  videoCaptionOffscreenText: 'Video caption, ',
-  audioCaptionOffscreenText: 'Audio caption',
-  defaultCaptionOffscreenText: 'Caption, ',
-  imageCopyrightOffscreenText: 'Image source, ',
-  locale: `ar-SA`,
-  datetimeLocale: `ar-SA`.toLowerCase(),
+  defaultImageAltText: 'BBC News عربي',
+  dir: 'rtl',
+  externalLinkText: '، خارجي',
+  imageCaptionOffscreenText: '،التعليق على الصورة',
+  videoCaptionOffscreenText: '،التعليق على الفيديو',
+  audioCaptionOffscreenText: '،التعليق على التسجيل السماعي',
+  defaultCaptionOffscreenText: '،التعليق',
+  imageCopyrightOffscreenText: '،مصدر الصورة',
+  locale: 'ar',
+  datetimeLocale: 'ar',
   service: 'arabic',
-  serviceName: 'News Arabic',
+  serviceName: 'Arabic',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCArabic',
   twitterSite: '@BBCArabic',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  script: arabic,
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
         statusCode: '404',
-        title: '404 الصفحة غير موجودة',
-        message: 'نرجو التأكد من اسم الموقع',
+        title: 'لم يتسن العثور على الصفحة',
+        message:
+          'آسفون، لم نتمكن من العثور على الصفحة التي تطلبها. الرجاء حاول:',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'أن تتأكد من عنوان الصفحة (url)',
+          'أن تنقر زر التجديد (refresh) في برنامج التصفح الذي تستخدمه',
+          'أن تبحث عن هذه الصفحة باستخدام خانة البحث الخاصة ببي بي سي',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'الصفحة الرئيسية لأخبار بي بي سي',
+        callToActionFirst: 'كبديل، يرجى زيارة ',
+        callToActionLinkText: 'الصفحة الرئيسية عربي لأخبار بي بي سي',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/arabic',
       },
       500: {
         statusCode: '500',
-        title: '500 خطأ',
-        message: 'خطأ، حمل الصفحة من جديد',
+        title: 'خلل داخلي في الخادم',
+        message:
+          'آسفون، لم نتمكن من العثور على الصفحة التي تطلبها. الرجاء حاول:',
         solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
+          'أن تنقر زر التجديد (refresh) في برنامج التصفح الذي تستخدمه',
+          'أن تكرر الطلب بعد فترة',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'الصفحة الرئيسية لأخبار بي بي سي',
+        callToActionFirst: 'كبديل، يرجى زيارة ',
+        callToActionLinkText: 'الصفحة الرئيسية عربي لأخبار بي بي سي',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/arabic',
       },
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title:
+          'لقد حدّثنا تعليماتنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الإرتباط (الكوكيز)',
         description: {
           uk: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'لقد أدخلنا تغييرات مهمة لتعليماتنا المتعلقة بالخصوصية وللشروط الخاصة بملفات الإرتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
             linkText: null,
             last: null,
             linkUrl: null,
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'لقد أدخلنا تغييرات مهمة لتعليماتنا المتعلقة بالخصوصية وللشروط الخاصة بملفات الإرتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
-        accept: 'OK',
-        reject: "Find out what's changed",
+        accept: 'موافق',
+        reject: 'إطلع على التغييرات',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'أخبرنا عما إذا كنت توافق على تحميل الكوكيز',
         description: {
           uk: {
-            first: 'We use ',
-            linkText: 'cookies',
+            first: 'نستخدم ',
+            linkText: 'ملفات ارتباط (كوكيز)',
             last:
-              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              '  لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الكوكيز.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
-            linkText: 'cookies',
+            first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
+            linkText: 'الكوكيز',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولاضفاء مسحة شخصية للمحتوى والاعلانات الموجهة إليك. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: 'نعم، موافق',
+        reject: 'كلا، أعدني إلى الإعدادات',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
@@ -113,6 +117,11 @@ const service = {
       audio: 'تسجيل صوتي',
       photogallery: 'بالصور',
       video: 'فيديو',
+      bbc_arabic_radio: {
+        title: 'إذاعة بي بي سي العربية',
+        subtitle:
+          'خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي',
+      },
     },
   },
   brandSVG,
@@ -124,7 +133,7 @@ const service = {
     links: [
       {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
       },
       {
         href: 'https://www.bbc.com/terms',
@@ -151,7 +160,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
+    copyrightText: 'بي بي سي. بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
   },
   fonts: [],
 };

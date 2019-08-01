@@ -3,6 +3,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -10,6 +11,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -17,6 +19,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -24,6 +27,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -31,6 +35,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -38,6 +43,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -45,6 +51,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -52,6 +59,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -59,6 +67,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -66,6 +75,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -73,6 +83,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -80,6 +91,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -87,6 +99,12 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: '/igbo',
     },
   },
@@ -94,6 +112,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -101,6 +120,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -108,6 +128,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -115,6 +136,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -122,6 +144,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -129,6 +152,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -136,6 +160,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -143,6 +168,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -153,6 +179,12 @@ export default {
         asset:
           Cypress.env('APP_ENV') === 'live' ? 'c5ll353v7y9o' : 'c6v11qzyv8po',
       },
+      errorPage404:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: undefined,
     },
   },
@@ -160,6 +192,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -172,6 +205,12 @@ export default {
           : {
               asset: 'c4vlle3q337o',
             },
+      errorPage404:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: undefined,
     },
   },
@@ -179,6 +218,12 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: '/pidgin',
     },
   },
@@ -186,6 +231,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -193,6 +239,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -200,6 +247,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -207,6 +255,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -214,6 +263,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -221,6 +271,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -228,6 +279,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -235,6 +287,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -242,6 +295,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -249,6 +303,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -256,6 +311,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -263,6 +319,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -270,6 +327,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -277,6 +335,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -284,6 +343,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -291,6 +351,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -298,6 +359,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },
@@ -305,6 +367,12 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: '/yoruba',
     },
   },
@@ -312,6 +380,7 @@ export default {
     font: undefined,
     pageTypes: {
       articles: undefined,
+      errorPage404: undefined,
       frontPage: undefined,
     },
   },

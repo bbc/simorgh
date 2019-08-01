@@ -1,0 +1,740 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Page snapshots should match scaffold snapshot 1`] = `
+Array [
+  .c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #B80000;
+  height: 3.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
+}
+
+.c4 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
+}
+
+.c2:hover .c4,
+.c2:focus .c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    height: 5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c4 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c4 {
+    fill: windowText;
+  }
+}
+
+<header
+    role="banner"
+  >
+    <div
+      className="c0"
+    >
+      <div
+        className="c1"
+      >
+        <a
+          className="c2 c3"
+          href="/amharic"
+        >
+          <svg
+            aria-hidden="true"
+            className="c4"
+            focusable="false"
+            height={24}
+            viewBox="0 0 167.95 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fillRule="evenodd"
+            >
+              <path
+                d="M84.32,0V24H58.82V0ZM79.26,16l-.41.25a11.91,11.91,0,0,1-6.07,1.85c-4.18,0-6.93-2.49-6.94-6.09s2.88-6.13,6.83-6.14a12,12,0,0,1,6,1.71l.4.22V4.6l-.17-.07A16.54,16.54,0,0,0,72.7,3.14a10.56,10.56,0,0,0-7.19,2.57,8.68,8.68,0,0,0-2.85,6.54A8.46,8.46,0,0,0,65,17.93a10,10,0,0,0,7.5,2.94h0a14,14,0,0,0,6.56-1.5l.15-.07Z M54.94,0V24H29.43V0ZM48.88,15.91a4.62,4.62,0,0,0-3.77-4.47,4.25,4.25,0,0,0,1.49-1.19,3.75,3.75,0,0,0,.72-2.34,4.17,4.17,0,0,0-1.39-3.13,6.33,6.33,0,0,0-4.36-1.41H36.12V20.65H42.5a7.18,7.18,0,0,0,4.9-1.53A4.27,4.27,0,0,0,48.88,15.91Z M45.7,15.57A2,2,0,0,1,45,17.16a4.22,4.22,0,0,1-2.85.79H39.22V13.23H42a4.89,4.89,0,0,1,2.82.68A1.93,1.93,0,0,1,45.7,15.57Z M43.32,9.92a2,2,0,0,0,.82-1.79,1.82,1.82,0,0,0-.58-1.43,3.33,3.33,0,0,0-2.26-.63H39.22v4.47h1.43A4.62,4.62,0,0,0,43.32,9.92Z M25.55,0V24H0V0ZM19.49,15.91a4.62,4.62,0,0,0-3.77-4.47,4.24,4.24,0,0,0,1.49-1.19,3.75,3.75,0,0,0,.72-2.34,4.18,4.18,0,0,0-1.39-3.13,6.33,6.33,0,0,0-4.36-1.41H6.74V20.65h6.38A7.18,7.18,0,0,0,18,19.12,4.27,4.27,0,0,0,19.49,15.91Z M13.93,9.92a2,2,0,0,0,.82-1.79,1.82,1.82,0,0,0-.58-1.43,3.33,3.33,0,0,0-2.26-.63H9.83v4.47h1.43A4.62,4.62,0,0,0,13.93,9.92Z M15.47,13.91a4.89,4.89,0,0,0-2.82-.68H9.83V18h2.94a4.23,4.23,0,0,0,2.85-.79,2,2,0,0,0,.69-1.59A1.93,1.93,0,0,0,15.47,13.91Z"
+              />
+              <path
+                d="M111,3.36h2.36V20.7h-2.13L99.66,7.35V20.7H97.33V3.36h2L111,16.83Z"
+              />
+              <path
+                d="m117.86 3.36h9.83v2.21h-7.35v5.29h7.1v2.22h-7.1v5.39h7.58v2.21h-10.06z M154.18,3.36h2.48l-7,17.41h-.55l-5.67-14.1-5.73,14.1h-.53l-7-17.41h2.5l4.78,12,4.81-12h2.35l4.83,12Z M163.38,13.43l-1.89-1.15A8.57,8.57,0,0,1,159,10.16a4,4,0,0,1-.75-2.41,4.26,4.26,0,0,1,1.42-3.33,5.31,5.31,0,0,1,3.69-1.28,7,7,0,0,1,4,1.22V7.17a5.74,5.74,0,0,0-4-1.8,3.34,3.34,0,0,0-2,.56,1.71,1.71,0,0,0-.78,1.44,2.22,2.22,0,0,0,.58,1.46,7.25,7.25,0,0,0,1.85,1.43l1.9,1.12Q168,13.28,168,16.21a4.42,4.42,0,0,1-1.4,3.39A5.11,5.11,0,0,1,163,20.9a7.63,7.63,0,0,1-4.68-1.58V16.17a5.84,5.84,0,0,0,4.65,2.55,2.93,2.93,0,0,0,1.94-.65,2,2,0,0,0,.78-1.63Q165.67,14.85,163.38,13.43Z"
+              />
+            </g>
+          </svg>
+          <span
+            className="c5"
+          >
+            BBC News አማርኛ
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>,
+  .c4 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c5 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c5:focus,
+.c5:hover {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.c3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.c2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 2rem 0;
+  font-weight: 500;
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+<main
+    role="main"
+  >
+    <div
+      className="c0"
+    >
+      <div
+        className="c1"
+      >
+        <h1
+          className="c2"
+        >
+          <span
+            className="c3"
+          >
+            500
+          </span>
+          500 - ስህተት
+        </h1>
+        <p
+          className="c4"
+        >
+          ስህተት ተፈጥሯል ፡ እባክዎን ገጽዎን ያድሱ
+        </p>
+        <ul>
+          <li
+            className="c4"
+          >
+            Hitting the refresh button in your browser
+          </li>
+          <li
+            className="c4"
+          >
+            Coming back again later
+          </li>
+        </ul>
+        <p
+          className="c4"
+        >
+          Alternatively, please visit the 
+          <a
+            className="c5"
+            href="https://www.bbc.com/amharic"
+          >
+            የቢቢሲ ዜና መነሻ ገጽ
+          </a>
+          
+        </p>
+      </div>
+    </div>
+  </main>,
+  .c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #B80000;
+  height: 3.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-top: 0.0625rem solid transparent;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
+}
+
+.c4 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
+}
+
+.c2:hover .c4,
+.c2:focus .c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c11 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.c14 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline;
+}
+
+.c10:hover .c12,
+.c10:focus .c12 {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.c8 {
+  border-bottom: 1px solid #3F3F42;
+  display: grid;
+  grid-auto-flow: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+}
+
+.c8 > li:first-child {
+  border-bottom: 1px solid #3F3F42;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  grid-column: 1/-1;
+}
+
+.c9 {
+  min-width: 50%;
+}
+
+.c6 {
+  background-color: #222222;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.c7 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c13 {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    height: 5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c4 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c4 {
+    fill: windowText;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c8 {
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width:15rem) and (max-width:37.4375rem) {
+  .c8 {
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat( 4,auto );
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c8 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat( 3,auto );
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c8 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat( 3,auto );
+  }
+}
+
+@media (min-width:80rem) {
+  .c8 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat( 3,auto );
+  }
+}
+
+@supports not (display:grid) {
+  .c8 > li:first-child {
+    width: 100%;
+  }
+}
+
+@supports not (display:grid) {
+  .c9 {
+    display: inline-block;
+  }
+}
+
+@media (max-width:25rem) {
+  .c6 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.8125rem;
+  }
+}
+
+<footer
+    role="contentinfo"
+  >
+    <div
+      className="c0"
+    >
+      <div
+        className="c1"
+      >
+        <a
+          className="c2 c3"
+          href="/amharic"
+        >
+          <svg
+            aria-hidden="true"
+            className="c4"
+            focusable="false"
+            height={24}
+            viewBox="0 0 167.95 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fillRule="evenodd"
+            >
+              <path
+                d="M84.32,0V24H58.82V0ZM79.26,16l-.41.25a11.91,11.91,0,0,1-6.07,1.85c-4.18,0-6.93-2.49-6.94-6.09s2.88-6.13,6.83-6.14a12,12,0,0,1,6,1.71l.4.22V4.6l-.17-.07A16.54,16.54,0,0,0,72.7,3.14a10.56,10.56,0,0,0-7.19,2.57,8.68,8.68,0,0,0-2.85,6.54A8.46,8.46,0,0,0,65,17.93a10,10,0,0,0,7.5,2.94h0a14,14,0,0,0,6.56-1.5l.15-.07Z M54.94,0V24H29.43V0ZM48.88,15.91a4.62,4.62,0,0,0-3.77-4.47,4.25,4.25,0,0,0,1.49-1.19,3.75,3.75,0,0,0,.72-2.34,4.17,4.17,0,0,0-1.39-3.13,6.33,6.33,0,0,0-4.36-1.41H36.12V20.65H42.5a7.18,7.18,0,0,0,4.9-1.53A4.27,4.27,0,0,0,48.88,15.91Z M45.7,15.57A2,2,0,0,1,45,17.16a4.22,4.22,0,0,1-2.85.79H39.22V13.23H42a4.89,4.89,0,0,1,2.82.68A1.93,1.93,0,0,1,45.7,15.57Z M43.32,9.92a2,2,0,0,0,.82-1.79,1.82,1.82,0,0,0-.58-1.43,3.33,3.33,0,0,0-2.26-.63H39.22v4.47h1.43A4.62,4.62,0,0,0,43.32,9.92Z M25.55,0V24H0V0ZM19.49,15.91a4.62,4.62,0,0,0-3.77-4.47,4.24,4.24,0,0,0,1.49-1.19,3.75,3.75,0,0,0,.72-2.34,4.18,4.18,0,0,0-1.39-3.13,6.33,6.33,0,0,0-4.36-1.41H6.74V20.65h6.38A7.18,7.18,0,0,0,18,19.12,4.27,4.27,0,0,0,19.49,15.91Z M13.93,9.92a2,2,0,0,0,.82-1.79,1.82,1.82,0,0,0-.58-1.43,3.33,3.33,0,0,0-2.26-.63H9.83v4.47h1.43A4.62,4.62,0,0,0,13.93,9.92Z M15.47,13.91a4.89,4.89,0,0,0-2.82-.68H9.83V18h2.94a4.23,4.23,0,0,0,2.85-.79,2,2,0,0,0,.69-1.59A1.93,1.93,0,0,0,15.47,13.91Z"
+              />
+              <path
+                d="M111,3.36h2.36V20.7h-2.13L99.66,7.35V20.7H97.33V3.36h2L111,16.83Z"
+              />
+              <path
+                d="m117.86 3.36h9.83v2.21h-7.35v5.29h7.1v2.22h-7.1v5.39h7.58v2.21h-10.06z M154.18,3.36h2.48l-7,17.41h-.55l-5.67-14.1-5.73,14.1h-.53l-7-17.41h2.5l4.78,12,4.81-12h2.35l4.83,12Z M163.38,13.43l-1.89-1.15A8.57,8.57,0,0,1,159,10.16a4,4,0,0,1-.75-2.41,4.26,4.26,0,0,1,1.42-3.33,5.31,5.31,0,0,1,3.69-1.28,7,7,0,0,1,4,1.22V7.17a5.74,5.74,0,0,0-4-1.8,3.34,3.34,0,0,0-2,.56,1.71,1.71,0,0,0-.78,1.44,2.22,2.22,0,0,0,.58,1.46,7.25,7.25,0,0,0,1.85,1.43l1.9,1.12Q168,13.28,168,16.21a4.42,4.42,0,0,1-1.4,3.39A5.11,5.11,0,0,1,163,20.9a7.63,7.63,0,0,1-4.68-1.58V16.17a5.84,5.84,0,0,0,4.65,2.55,2.93,2.93,0,0,0,1.94-.65,2,2,0,0,0,.78-1.63Q165.67,14.85,163.38,13.43Z"
+              />
+            </g>
+          </svg>
+          <span
+            className="c5"
+          >
+            BBC News አማርኛ
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <div
+        className="c7"
+      >
+        <ul
+          className="c8"
+          role="list"
+        >
+          <li
+            className="c9"
+            role="listitem"
+          >
+            <a
+              className="c10 c11"
+              href="https://www.bbc.com/news/help-41670342"
+            >
+              <span
+                className="c12"
+              >
+                Why you can trust the BBC
+              </span>
+            </a>
+          </li>
+          <li
+            className="c9"
+            role="listitem"
+          >
+            <a
+              className="c10 c11"
+              href="https://www.bbc.com/terms"
+            >
+              <span
+                className="c12"
+              >
+                Terms of Use
+              </span>
+            </a>
+          </li>
+          <li
+            className="c9"
+            role="listitem"
+          >
+            <a
+              className="c10 c11"
+              href="https://www.bbc.co.uk/aboutthebbc/"
+            >
+              <span
+                className="c12"
+              >
+                About the BBC
+              </span>
+            </a>
+          </li>
+          <li
+            className="c9"
+            role="listitem"
+          >
+            <a
+              className="c10 c11"
+              href="https://www.bbc.com/privacy/"
+            >
+              <span
+                className="c12"
+              >
+                Privacy Policy
+              </span>
+            </a>
+          </li>
+          <li
+            className="c9"
+            role="listitem"
+          >
+            <a
+              className="c10 c11"
+              href="https://www.bbc.com/usingthebbc/cookies/"
+            >
+              <span
+                className="c12"
+              >
+                Cookies
+              </span>
+            </a>
+          </li>
+          <li
+            className="c9"
+            role="listitem"
+          >
+            <a
+              className="c10 c11"
+              href="https://www.bbc.com/accessibility/"
+            >
+              <span
+                className="c12"
+              >
+                Accessibility Help
+              </span>
+            </a>
+          </li>
+          <li
+            className="c9"
+            role="listitem"
+          >
+            <a
+              className="c10 c11"
+              href="https://www.bbc.com/contact/"
+            >
+              <span
+                className="c12"
+              >
+                Contact the BBC
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p
+          className="c13"
+        >
+          © 2019 ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም 
+          <a
+            className="c10 c14"
+            href="https://www.bbc.co.uk/help/web/links/"
+          >
+            <span
+              className="c12"
+            >
+              Read about our approach to external linking.
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>,
+]
+`;
