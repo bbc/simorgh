@@ -15,6 +15,7 @@ Object {
     "sections": "section1 section2",
     "title": "This is an article",
     "type": "article",
+    "useCanonical": true,
   },
   "rendered": Object {
     "instance": HelmetWrapper {
@@ -52,6 +53,7 @@ Object {
             "sections": "section1 section2",
             "title": "This is an article",
             "type": "article",
+            "useCanonical": true,
           },
           "memoizedState": Object {
             "baseState": null,
@@ -79,6 +81,7 @@ Object {
             "sections": "section1 section2",
             "title": "This is an article",
             "type": "article",
+            "useCanonical": true,
           },
           "ref": null,
           "return": FiberNode {
@@ -162,6 +165,7 @@ Object {
                       sections="section1 section2"
                       title="This is an article"
                       type="article"
+                      useCanonical={true}
                     />,
                   },
                   "tag": 0,
@@ -186,6 +190,7 @@ Object {
                       sections="section1 section2"
                       title="This is an article"
                       type="article"
+                      useCanonical={true}
                     />,
                   },
                   "tag": 0,
@@ -215,6 +220,7 @@ Object {
                 sections="section1 section2"
                 title="This is an article"
                 type="article"
+                useCanonical={true}
               />,
             },
             "mode": 0,
@@ -264,6 +270,7 @@ Object {
                   sections="section1 section2"
                   title="This is an article"
                   type="article"
+                  useCanonical={true}
                 />,
               },
               "firstCapturedEffect": null,
@@ -327,19 +334,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -369,19 +370,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -425,19 +420,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -467,19 +456,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -513,19 +496,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -573,19 +550,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -614,19 +585,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -673,6 +638,7 @@ Object {
             "sections": "section1 section2",
             "title": "This is an article",
             "type": "article",
+            "useCanonical": true,
           },
           "memoizedState": Object {
             "baseState": null,
@@ -700,6 +666,7 @@ Object {
             "sections": "section1 section2",
             "title": "This is an article",
             "type": "article",
+            "useCanonical": true,
           },
           "ref": null,
           "return": FiberNode {
@@ -783,6 +750,7 @@ Object {
                       sections="section1 section2"
                       title="This is an article"
                       type="article"
+                      useCanonical={true}
                     />,
                   },
                   "tag": 0,
@@ -807,6 +775,7 @@ Object {
                       sections="section1 section2"
                       title="This is an article"
                       type="article"
+                      useCanonical={true}
                     />,
                   },
                   "tag": 0,
@@ -836,6 +805,7 @@ Object {
                 sections="section1 section2"
                 title="This is an article"
                 type="article"
+                useCanonical={true}
               />,
             },
             "mode": 0,
@@ -885,6 +855,7 @@ Object {
                   sections="section1 section2"
                   title="This is an article"
                   type="article"
+                  useCanonical={true}
                 />,
               },
               "firstCapturedEffect": null,
@@ -929,19 +900,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -977,19 +942,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1045,6 +1004,7 @@ Object {
                 "sections": "section1 section2",
                 "title": "This is an article",
                 "type": "article",
+                "useCanonical": true,
               },
               "memoizedState": Object {
                 "baseState": null,
@@ -1072,6 +1032,7 @@ Object {
                 "sections": "section1 section2",
                 "title": "This is an article",
                 "type": "article",
+                "useCanonical": true,
               },
               "ref": null,
               "return": FiberNode {
@@ -1155,6 +1116,7 @@ Object {
                           sections="section1 section2"
                           title="This is an article"
                           type="article"
+                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1179,6 +1141,7 @@ Object {
                           sections="section1 section2"
                           title="This is an article"
                           type="article"
+                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1208,6 +1171,7 @@ Object {
                     sections="section1 section2"
                     title="This is an article"
                     type="article"
+                    useCanonical={true}
                   />,
                 },
                 "mode": 0,
@@ -1257,6 +1221,7 @@ Object {
                       sections="section1 section2"
                       title="This is an article"
                       type="article"
+                      useCanonical={true}
                     />,
                   },
                   "firstCapturedEffect": null,
@@ -1305,19 +1270,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1346,19 +1305,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1405,6 +1358,7 @@ Object {
                 "sections": "section1 section2",
                 "title": "This is an article",
                 "type": "article",
+                "useCanonical": true,
               },
               "memoizedState": Object {
                 "baseState": null,
@@ -1432,6 +1386,7 @@ Object {
                 "sections": "section1 section2",
                 "title": "This is an article",
                 "type": "article",
+                "useCanonical": true,
               },
               "ref": null,
               "return": FiberNode {
@@ -1515,6 +1470,7 @@ Object {
                           sections="section1 section2"
                           title="This is an article"
                           type="article"
+                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1539,6 +1495,7 @@ Object {
                           sections="section1 section2"
                           title="This is an article"
                           type="article"
+                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1568,6 +1525,7 @@ Object {
                     sections="section1 section2"
                     title="This is an article"
                     type="article"
+                    useCanonical={true}
                   />,
                 },
                 "mode": 0,
@@ -1617,6 +1575,7 @@ Object {
                       sections="section1 section2"
                       title="This is an article"
                       type="article"
+                      useCanonical={true}
                     />,
                   },
                   "firstCapturedEffect": null,
@@ -1658,19 +1617,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1729,19 +1682,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1771,19 +1718,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1827,19 +1768,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1869,19 +1804,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -1932,6 +1861,7 @@ Object {
                 "sections": "section1 section2",
                 "title": "This is an article",
                 "type": "article",
+                "useCanonical": true,
               },
               "memoizedState": Object {
                 "baseState": null,
@@ -1959,6 +1889,7 @@ Object {
                 "sections": "section1 section2",
                 "title": "This is an article",
                 "type": "article",
+                "useCanonical": true,
               },
               "ref": null,
               "return": FiberNode {
@@ -2042,6 +1973,7 @@ Object {
                           sections="section1 section2"
                           title="This is an article"
                           type="article"
+                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -2066,6 +1998,7 @@ Object {
                           sections="section1 section2"
                           title="This is an article"
                           type="article"
+                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -2095,6 +2028,7 @@ Object {
                     sections="section1 section2"
                     title="This is an article"
                     type="article"
+                    useCanonical={true}
                   />,
                 },
                 "mode": 0,
@@ -2144,6 +2078,7 @@ Object {
                       sections="section1 section2"
                       title="This is an article"
                       type="article"
+                      useCanonical={true}
                     />,
                   },
                   "firstCapturedEffect": null,
@@ -2192,19 +2127,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -2233,19 +2162,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -2292,6 +2215,7 @@ Object {
                 "sections": "section1 section2",
                 "title": "This is an article",
                 "type": "article",
+                "useCanonical": true,
               },
               "memoizedState": Object {
                 "baseState": null,
@@ -2319,6 +2243,7 @@ Object {
                 "sections": "section1 section2",
                 "title": "This is an article",
                 "type": "article",
+                "useCanonical": true,
               },
               "ref": null,
               "return": FiberNode {
@@ -2402,6 +2327,7 @@ Object {
                           sections="section1 section2"
                           title="This is an article"
                           type="article"
+                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -2426,6 +2352,7 @@ Object {
                           sections="section1 section2"
                           title="This is an article"
                           type="article"
+                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -2455,6 +2382,7 @@ Object {
                     sections="section1 section2"
                     title="This is an article"
                     type="article"
+                    useCanonical={true}
                   />,
                 },
                 "mode": 0,
@@ -2504,6 +2432,7 @@ Object {
                       sections="section1 section2"
                       title="This is an article"
                       type="article"
+                      useCanonical={true}
                     />,
                   },
                   "firstCapturedEffect": null,
@@ -2545,19 +2474,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (false) {
-            _sf_async_config.virtualReferrer = "null";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: "null"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -2605,19 +2528,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -2654,19 +2571,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
@@ -2696,19 +2607,13 @@ Object {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           _sf_async_config.uid = 1111;
           _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = undefined;
-          _sf_async_config.useCanonicalDomain = undefined;
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
           _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (false) {
-            _sf_async_config.virtualReferrer = \\"null\\";
-          }
-          if (false) {
-            _sf_async_config.idSync = {
-              bbc_hid: \\"null\\"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, {});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];

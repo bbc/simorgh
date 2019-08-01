@@ -22,7 +22,6 @@ const CanonicalChartbeatBeacon = ({
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.pSUPERFLY) {
-      console.log('something');
       window.pSUPERFLY.virtualPage({
         uid: chartbeatUID,
         domain,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, string, shape } from 'prop-types';
 import renderer from 'react-test-renderer';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -25,7 +25,7 @@ const mockToggleState = {
 
 const mockToggleDispatch = jest.fn();
 
-const ContextWrap = ({ pageType, platform, origin, children }) => (
+const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     pageType={pageType}
@@ -35,7 +35,7 @@ const ContextWrap = ({ pageType, platform, origin, children }) => (
     <ServiceContextProvider service="news">
       <ToggleContext.Provider
         value={{
-          toggleState: mockToggleState,
+          toggleState,
           toggleDispatch: mockToggleDispatch,
         }}
       >
@@ -50,6 +50,11 @@ ContextWrap.propTypes = {
   pageType: string.isRequired,
   origin: string.isRequired,
   platform: string.isRequired,
+  toggleState: shape,
+};
+
+ContextWrap.defaultProps = {
+  toggleState: mockToggleState,
 };
 
 const mockData = {};
@@ -129,9 +134,22 @@ describe('Charbeats Analytics Container', () => {
       .fn()
       .mockImplementation(() => 'secction1 section2');
 
+    const toggleState = {
+      live: {
+        chartbeatAnalytics: {
+          enabled: true,
+        },
+      },
+    };
+
     const tree = renderer
       .create(
-        <ContextWrap platform="amp" pageType="article" origin="test.bbc.com">
+        <ContextWrap
+          platform="amp"
+          pageType="article"
+          origin="bbc.com"
+          toggleState={toggleState}
+        >
           <ChartbeatAnalytics data={mockData} />
         </ContextWrap>,
       )
@@ -141,7 +159,7 @@ describe('Charbeats Analytics Container', () => {
       {
         chartbeatUID: 50924,
         cookie: 'cookie',
-        domain: 'test-domain',
+        domain: 'news-domain',
         sections: 'secction1 section2',
         type: 'article',
         hasCookie: true,

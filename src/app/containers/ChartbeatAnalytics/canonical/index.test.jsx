@@ -19,6 +19,7 @@ describe('CanonicalChartbeatAnalytics', () => {
     hasCookie: false,
     hasReferrer: false,
     referrer: null,
+    useCanonical: true,
     title: 'This is an article',
   };
   it('should return the helmet wrapper with the script snippet', () => {
