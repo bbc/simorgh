@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
+import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const igbo = {
   lang: 'ig',

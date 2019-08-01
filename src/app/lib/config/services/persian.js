@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import 'moment/locale/fa';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const persian = {
   lang: 'fa',
@@ -184,6 +185,7 @@ const persian = {
       'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default persian;

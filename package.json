@@ -91,6 +91,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.5.5",
     "@bbc/gel-foundations": "3.1.0",
+    "@bbc/moment-timezone-include": "^1.0.0",
     "@bbc/psammead-assets": "^1.1.1",
     "@bbc/psammead-brand": "^4.2.0",
     "@bbc/psammead-caption": "^2.1.0",

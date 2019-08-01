@@ -2,6 +2,7 @@
 const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
+const MomentTimezoneInclude = require('@bbc/moment-timezone-include');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
@@ -42,6 +43,14 @@ module.exports = (shell = {}) => {
       __filename: true,
       __dirname: true,
     },
+    /**
+     * Remove all default timezone data and allow importing it via import
+     * '@bbc/moment-timezone-include/tz/Europe/London'. Restrict data
+     * between 2010 (earliest articles using ATI, so likely earliest timestamps
+     * we will find via most read) and 2025 which is soon enough to save space,
+     * but long enough that we dont need to worry about forgetting it.
+     */
+    plugins: [new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 })],
     module: {
       rules: [
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
