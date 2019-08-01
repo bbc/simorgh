@@ -3,7 +3,25 @@ import React from 'react';
 import { shouldShallowMatchSnapshot, isNull } from '../../../../testHelpers';
 import MediaIndicator from '.';
 
-const item = {
+const audioItem = {
+  headlines: {
+    headline: 'An audio item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'MAP',
+  media: {
+    format: 'audio',
+    versions: [
+      {
+        duration: 59,
+      },
+    ],
+  },
+};
+
+const videoItem = {
   headlines: {
     headline: 'A video item',
   },
@@ -19,6 +37,16 @@ const item = {
       },
     ],
   },
+};
+
+const photogalleryItem = {
+  headlines: {
+    headline: 'A photo gallery item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'PGL',
 };
 
 const nonMediaItem = {
@@ -68,8 +96,18 @@ const noMediaFormat = {
 
 describe('Story Promo Media Indicator', () => {
   shouldShallowMatchSnapshot(
-    'should render correctly',
-    <MediaIndicator item={item} service="news" />,
+    'should render an audio item correctly',
+    <MediaIndicator item={audioItem} service="news" />,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render a video item correctly',
+    <MediaIndicator item={videoItem} service="news" />,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render a photo gallery item correctly',
+    <MediaIndicator item={photogalleryItem} service="news" />,
   );
 
   shouldShallowMatchSnapshot(
