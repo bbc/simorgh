@@ -5,15 +5,20 @@ describeForLocalOnly('Application', () => {
   Object.keys(config)
     .filter(service => service !== 'default')
     .forEach(service => {
-      if (service === 'default') {
-        return;
-      }
       // All services test sws
       it(`should return a 200 status code for ${service}'s service worker`, () => {
         cy.testResponseCodeAndType(
           `/${service}/sw.js`,
           200,
           'application/javascript',
+        );
+      });
+
+      it(`should return a 200 status code for ${service} manifest file`, () => {
+        cy.testResponseCodeAndType(
+          `/${service}/manifest.json`,
+          200,
+          'application/json',
         );
       });
     });
