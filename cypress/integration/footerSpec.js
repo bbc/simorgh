@@ -29,7 +29,7 @@ describe('Footer Tests', () => {
       `${new Date().getFullYear()} BBC. The BBC is not responsible for the content of external sites.`,
     );
   });
-  it('copyright symbol should have language attribute', () => {
+  it('footer should contain copyright symbol', () => {
     cy.get('footer span').should('contain', '©');
   });
   it('should contain a link in the copyright text', () => {
