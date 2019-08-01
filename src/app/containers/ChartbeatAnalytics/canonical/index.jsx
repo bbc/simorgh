@@ -15,8 +15,14 @@ const CanonicalChartbeatBeacon = ({
   referrer,
   hasReferrer,
 }) => {
+  const optionalConfigValues = {
+    ...(hasReferrer && { virtualReferrer: referrer }),
+    ...(hasCookie && { idSync: { bbc_hid: cookie } }),
+  };
+
   useEffect(() => {
     if (typeof window !== 'undefined' && window.pSUPERFLY) {
+      console.log('something');
       window.pSUPERFLY.virtualPage({
         uid: chartbeatUID,
         domain,
@@ -25,8 +31,7 @@ const CanonicalChartbeatBeacon = ({
         title,
         type,
         sections,
-        ...(hasReferrer && { virtualReferrer: referrer }),
-        ...(hasCookie && { idSync: { bbc_hid: cookie } }),
+        ...optionalConfigValues,
       });
     }
   });
@@ -43,14 +48,10 @@ const CanonicalChartbeatBeacon = ({
           _sf_async_config.title = "${title}";
           _sf_async_config.type = "${type}";
           _sf_async_config.sections = "${sections}";
-          if (${hasReferrer}) {
-            _sf_async_config.virtualReferrer = "${referrer}";
-          }
-          if (${hasCookie}) {
-            _sf_async_config.idSync = {
-              bbc_hid: "${cookie}"
-             };
-          }
+          _sf_async_config = Object.assign(_sf_async_config, ${JSON.stringify(
+            optionalConfigValues,
+          )});
+
           function loadChartbeat() {
            var e = document.createElement('script');
            var n = document.getElementsByTagName('script')[0];
