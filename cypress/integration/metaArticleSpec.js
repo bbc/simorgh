@@ -1,7 +1,6 @@
 import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import testData from '../../src/app/lib/config/services';
-import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 
 const serviceHasArticlePageType = service =>
   services[service].pageTypes.articles !== undefined;
@@ -18,7 +17,7 @@ Object.keys(services)
       });
 
       it('should have the correct lang & dir attributes', () => {
-        hasHtmlLangDirAttributes({
+        cy.hasHtmlLangDirAttributes({
           lang: `${testData[service].datetimeLocale}`,
           dir: `${testData[service].dir}`,
         });

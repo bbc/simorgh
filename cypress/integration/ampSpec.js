@@ -1,5 +1,4 @@
 import services from '../support/config/services';
-import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -40,7 +39,7 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should have lang and dir attributes', () => {
-    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
+    cy.hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should load the AMP framework', () => {
