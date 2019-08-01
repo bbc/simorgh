@@ -3,11 +3,8 @@ none:
 
 install:
 	npm --version; node --version;
-	npm ci;
-
-installProd:
 	rm -rf node_modules
-	npm ci --only=production
+	npm ci;
 
 developmentTests:
 	npx apache2-license-checker;
