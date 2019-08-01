@@ -14,7 +14,7 @@ const availableFixtures = {
   persian: articleDataPersian,
 };
 
-storiesOf('Article Main', module)
+storiesOf('Containers|Article/Article Main', module)
   .addDecorator(withKnobs)
   .add(
     'default',

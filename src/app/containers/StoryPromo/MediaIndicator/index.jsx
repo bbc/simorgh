@@ -7,15 +7,16 @@ import { storyItem } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
 const MediaIndicator = ({ item, topStory, service }) => {
+  const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
   const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
   const hasMediaInfo = pathOr(null, ['media'], item);
 
-  // Only build a media indicator if this is a media item.
-  if (!isMedia || !hasMediaInfo) {
+  // Only build a media indicator if this is a photo gallery or media item
+  if (!isPGL && (!isMedia || !hasMediaInfo)) {
     return null;
   }
 
-  const type = pathOr(null, ['media', 'format'], item);
+  const type = isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
