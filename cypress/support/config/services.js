@@ -100,7 +100,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
@@ -179,9 +179,12 @@ export default {
         asset:
           Cypress.env('APP_ENV') === 'live' ? 'c5ll353v7y9o' : 'c6v11qzyv8po',
       },
-      errorPage404: {
-        asset: 'cxvxrj8tvppo',
-      },
+      errorPage404:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cxvxrj8tvppo',
+            },
       frontPage: undefined,
     },
   },
@@ -216,7 +219,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
@@ -365,7 +368,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
