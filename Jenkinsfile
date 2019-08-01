@@ -13,6 +13,7 @@ def messageColor = 'danger'
 def stageName = ""
 def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
+def staticAssetsDist = 'static.zip'
 
 def runDevelopmentTests(){
   sh 'make install'
@@ -67,6 +68,18 @@ def notifySlack(messageParameters) {
   )
 }
 
+def buildStaticAssets(env, tag) {
+  sh 'rm -rf build && rm -rf staticAssets && mkdir staticAssets'
+  sh "rm -f static${tag}.zip"
+
+  sh "npm run build:$env"
+  sh 'rm -rf staticAssets && mkdir staticAssets'
+  sh "cp -R build/. staticAssets"
+  sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
+  zip archive: true, dir: 'staticAssets', glob: '', zipFile: "static${tag}.zip"
+  stash name: "staticAssets${tag}", includes: "static${tag}.zip"
+}
+
 pipeline {
   agent any
   options {
@@ -100,7 +113,6 @@ pipeline {
             }
           }
         }
-
         stage ('Test Production') {
           agent {
             docker {
@@ -180,6 +192,20 @@ pipeline {
             sh 'make buildStorybook'
             zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
             stash name: 'simorgh_storybook', includes: storybookDist
+          }
+        }
+        stage ('Build Static Assets') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make install'
+
+            buildStaticAssets("test", "TEST")
+            buildStaticAssets("live", "LIVE")
           }
         }
       }
