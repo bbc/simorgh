@@ -114,6 +114,16 @@ const service = {
       audio: 'Maqal',
       photogallery: 'Sawirro',
       video: 'Muuqaal',
+      bbc_somali_radio: {
+        title: 'Raadiyaha BBC Soomaali',
+        subtitle:
+          'Wararka iyo xaaladda taagan ee dunida oo dhan, faallo, muusig, madadaallo iyo cayaaro.',
+      },
+      bbc_somali_tv: {
+        title: 'Caawa Iyo Caalamka',
+        subtitle:
+          'Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka',
+      },
     },
   },
   brandSVG,
@@ -153,7 +163,7 @@ const service = {
       },
     ],
     copyrightText:
-      "BBC-du mas'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda",
+      "BBC. BBC-du mas'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda",
   },
   fonts: [],
 };

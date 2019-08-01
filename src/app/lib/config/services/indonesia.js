@@ -114,6 +114,11 @@ const service = {
       audio: 'Audio',
       photogallery: 'Galeri Foto',
       video: 'Video',
+      bbc_indonesian_radio: {
+        title: 'BBC Indonesia Radio',
+        subtitle:
+          'Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.',
+      },
     },
   },
   brandSVG,
@@ -152,7 +157,7 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC tidak bertanggung jawab atas konten internet luar',
+    copyrightText: 'BBC. BBC tidak bertanggung jawab atas konten internet luar',
   },
   fonts: [],
 };

@@ -2,10 +2,11 @@
 
 exports[`defaultPageWrapper should render default page wrapper with children 1`] = `
 <React.Fragment>
-  <GlobalStyle />
+  <GlobalStyle
+    fonts={null}
+  />
   <ServiceWorkerContainer />
   <ManifestContainer />
-  <ConsentBanner />
   <HeaderContainer />
   <h2>
     Child element

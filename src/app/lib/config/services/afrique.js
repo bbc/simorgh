@@ -114,6 +114,15 @@ const service = {
       audio: 'Audio',
       photogallery: 'En images',
       video: 'Video',
+      bbc_afrique_radio: {
+        title: 'BBC Afrique Radio',
+        subtitle: 'Infos, musique et sports',
+      },
+      bbc_afrique_tv: {
+        title: 'Cash Éco',
+        subtitle:
+          'Cash éco vous propose chaque jour un résumé de l’actualité économique et financière.',
+      },
     },
   },
   brandSVG,
@@ -152,7 +161,8 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: "La BBC n'est pas responsable du contenu de sites externes",
+    copyrightText:
+      "BBC. La BBC n'est pas responsable du contenu de sites externes",
   },
   fonts: [],
 };
