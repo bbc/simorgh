@@ -18,7 +18,7 @@ import getLocator from './imageSrcHelpers/locator';
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
 
-const StoryPromoImage = ({ imageValues, lazyLoad }) => {
+const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
     return null;
   }
@@ -28,8 +28,11 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   const ratio = (height / width) * 100;
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
-  const srcset = createSrcset(originCode, locator, width);
-
+  const imageResolutions = [70, 95, 144, 183, 240, 320, 480, 624];
+  const srcset = createSrcset(originCode, locator, width, imageResolutions);
+  const sizes = topStory
+    ? '(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px'
+    : '(max-width: 1008px) 33vw, 237px';
   const DEFAULT_IMAGE_RES = 660;
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
@@ -43,12 +46,14 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
       lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
       srcset={srcset}
+      sizes={sizes}
     />
   );
 };
 
 StoryPromoImage.propTypes = {
   lazyLoad: bool.isRequired,
+  topStory: bool.isRequired,
   imageValues: shape(storyItem.indexImage).isRequired,
 };
 
@@ -101,7 +106,11 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
 
   const imageValues = pathOr(null, ['indexImage'], item);
   const Image = (
-    <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
+    <StoryPromoImage
+      topStory={topStory}
+      lazyLoad={lazyLoadImage}
+      imageValues={imageValues}
+    />
   );
 
   return (
