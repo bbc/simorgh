@@ -7,10 +7,13 @@ Object {
   "props": Object {
     "chartbeatSource": "//chartbeat.js",
     "chartbeatUID": 1111,
-    "cookie": "cookie",
+    "cookie": null,
     "domain": "test-domain",
+    "hasCookie": false,
+    "hasReferrer": false,
     "referrer": null,
     "sections": "section1 section2",
+    "title": "This is an article",
     "type": "article",
   },
   "rendered": Object {
@@ -41,10 +44,13 @@ Object {
           "memoizedProps": Object {
             "chartbeatSource": "//chartbeat.js",
             "chartbeatUID": 1111,
-            "cookie": "cookie",
+            "cookie": null,
             "domain": "test-domain",
+            "hasCookie": false,
+            "hasReferrer": false,
             "referrer": null,
             "sections": "section1 section2",
+            "title": "This is an article",
             "type": "article",
           },
           "memoizedState": Object {
@@ -65,10 +71,13 @@ Object {
           "pendingProps": Object {
             "chartbeatSource": "//chartbeat.js",
             "chartbeatUID": 1111,
-            "cookie": "cookie",
+            "cookie": null,
             "domain": "test-domain",
+            "hasCookie": false,
+            "hasReferrer": false,
             "referrer": null,
             "sections": "section1 section2",
+            "title": "This is an article",
             "type": "article",
           },
           "ref": null,
@@ -145,10 +154,13 @@ Object {
                     "element": <CanonicalChartbeatBeacon
                       chartbeatSource="//chartbeat.js"
                       chartbeatUID={1111}
-                      cookie="cookie"
+                      cookie={null}
                       domain="test-domain"
+                      hasCookie={false}
+                      hasReferrer={false}
                       referrer={null}
                       sections="section1 section2"
+                      title="This is an article"
                       type="article"
                     />,
                   },
@@ -166,10 +178,13 @@ Object {
                     "element": <CanonicalChartbeatBeacon
                       chartbeatSource="//chartbeat.js"
                       chartbeatUID={1111}
-                      cookie="cookie"
+                      cookie={null}
                       domain="test-domain"
+                      hasCookie={false}
+                      hasReferrer={false}
                       referrer={null}
                       sections="section1 section2"
+                      title="This is an article"
                       type="article"
                     />,
                   },
@@ -192,10 +207,13 @@ Object {
               "element": <CanonicalChartbeatBeacon
                 chartbeatSource="//chartbeat.js"
                 chartbeatUID={1111}
-                cookie="cookie"
+                cookie={null}
                 domain="test-domain"
+                hasCookie={false}
+                hasReferrer={false}
                 referrer={null}
                 sections="section1 section2"
+                title="This is an article"
                 type="article"
               />,
             },
@@ -238,10 +256,13 @@ Object {
                 "element": <CanonicalChartbeatBeacon
                   chartbeatSource="//chartbeat.js"
                   chartbeatUID={1111}
-                  cookie="cookie"
+                  cookie={null}
                   domain="test-domain"
+                  hasCookie={false}
+                  hasReferrer={false}
                   referrer={null}
                   sections="section1 section2"
+                  title="This is an article"
                   type="article"
                 />,
               },
@@ -308,15 +329,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -350,15 +371,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -406,15 +427,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -448,15 +469,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -494,15 +515,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -554,15 +575,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -595,15 +616,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -644,10 +665,13 @@ Object {
           "memoizedProps": Object {
             "chartbeatSource": "//chartbeat.js",
             "chartbeatUID": 1111,
-            "cookie": "cookie",
+            "cookie": null,
             "domain": "test-domain",
+            "hasCookie": false,
+            "hasReferrer": false,
             "referrer": null,
             "sections": "section1 section2",
+            "title": "This is an article",
             "type": "article",
           },
           "memoizedState": Object {
@@ -668,10 +692,13 @@ Object {
           "pendingProps": Object {
             "chartbeatSource": "//chartbeat.js",
             "chartbeatUID": 1111,
-            "cookie": "cookie",
+            "cookie": null,
             "domain": "test-domain",
+            "hasCookie": false,
+            "hasReferrer": false,
             "referrer": null,
             "sections": "section1 section2",
+            "title": "This is an article",
             "type": "article",
           },
           "ref": null,
@@ -748,10 +775,13 @@ Object {
                     "element": <CanonicalChartbeatBeacon
                       chartbeatSource="//chartbeat.js"
                       chartbeatUID={1111}
-                      cookie="cookie"
+                      cookie={null}
                       domain="test-domain"
+                      hasCookie={false}
+                      hasReferrer={false}
                       referrer={null}
                       sections="section1 section2"
+                      title="This is an article"
                       type="article"
                     />,
                   },
@@ -769,10 +799,13 @@ Object {
                     "element": <CanonicalChartbeatBeacon
                       chartbeatSource="//chartbeat.js"
                       chartbeatUID={1111}
-                      cookie="cookie"
+                      cookie={null}
                       domain="test-domain"
+                      hasCookie={false}
+                      hasReferrer={false}
                       referrer={null}
                       sections="section1 section2"
+                      title="This is an article"
                       type="article"
                     />,
                   },
@@ -795,10 +828,13 @@ Object {
               "element": <CanonicalChartbeatBeacon
                 chartbeatSource="//chartbeat.js"
                 chartbeatUID={1111}
-                cookie="cookie"
+                cookie={null}
                 domain="test-domain"
+                hasCookie={false}
+                hasReferrer={false}
                 referrer={null}
                 sections="section1 section2"
+                title="This is an article"
                 type="article"
               />,
             },
@@ -841,10 +877,13 @@ Object {
                 "element": <CanonicalChartbeatBeacon
                   chartbeatSource="//chartbeat.js"
                   chartbeatUID={1111}
-                  cookie="cookie"
+                  cookie={null}
                   domain="test-domain"
+                  hasCookie={false}
+                  hasReferrer={false}
                   referrer={null}
                   sections="section1 section2"
+                  title="This is an article"
                   type="article"
                 />,
               },
@@ -892,15 +931,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -940,15 +979,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -998,10 +1037,13 @@ Object {
               "memoizedProps": Object {
                 "chartbeatSource": "//chartbeat.js",
                 "chartbeatUID": 1111,
-                "cookie": "cookie",
+                "cookie": null,
                 "domain": "test-domain",
+                "hasCookie": false,
+                "hasReferrer": false,
                 "referrer": null,
                 "sections": "section1 section2",
+                "title": "This is an article",
                 "type": "article",
               },
               "memoizedState": Object {
@@ -1022,10 +1064,13 @@ Object {
               "pendingProps": Object {
                 "chartbeatSource": "//chartbeat.js",
                 "chartbeatUID": 1111,
-                "cookie": "cookie",
+                "cookie": null,
                 "domain": "test-domain",
+                "hasCookie": false,
+                "hasReferrer": false,
                 "referrer": null,
                 "sections": "section1 section2",
+                "title": "This is an article",
                 "type": "article",
               },
               "ref": null,
@@ -1102,10 +1147,13 @@ Object {
                         "element": <CanonicalChartbeatBeacon
                           chartbeatSource="//chartbeat.js"
                           chartbeatUID={1111}
-                          cookie="cookie"
+                          cookie={null}
                           domain="test-domain"
+                          hasCookie={false}
+                          hasReferrer={false}
                           referrer={null}
                           sections="section1 section2"
+                          title="This is an article"
                           type="article"
                         />,
                       },
@@ -1123,10 +1171,13 @@ Object {
                         "element": <CanonicalChartbeatBeacon
                           chartbeatSource="//chartbeat.js"
                           chartbeatUID={1111}
-                          cookie="cookie"
+                          cookie={null}
                           domain="test-domain"
+                          hasCookie={false}
+                          hasReferrer={false}
                           referrer={null}
                           sections="section1 section2"
+                          title="This is an article"
                           type="article"
                         />,
                       },
@@ -1149,10 +1200,13 @@ Object {
                   "element": <CanonicalChartbeatBeacon
                     chartbeatSource="//chartbeat.js"
                     chartbeatUID={1111}
-                    cookie="cookie"
+                    cookie={null}
                     domain="test-domain"
+                    hasCookie={false}
+                    hasReferrer={false}
                     referrer={null}
                     sections="section1 section2"
+                    title="This is an article"
                     type="article"
                   />,
                 },
@@ -1195,10 +1249,13 @@ Object {
                     "element": <CanonicalChartbeatBeacon
                       chartbeatSource="//chartbeat.js"
                       chartbeatUID={1111}
-                      cookie="cookie"
+                      cookie={null}
                       domain="test-domain"
+                      hasCookie={false}
+                      hasReferrer={false}
                       referrer={null}
                       sections="section1 section2"
+                      title="This is an article"
                       type="article"
                     />,
                   },
@@ -1250,15 +1307,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -1291,15 +1348,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -1340,10 +1397,13 @@ Object {
               "memoizedProps": Object {
                 "chartbeatSource": "//chartbeat.js",
                 "chartbeatUID": 1111,
-                "cookie": "cookie",
+                "cookie": null,
                 "domain": "test-domain",
+                "hasCookie": false,
+                "hasReferrer": false,
                 "referrer": null,
                 "sections": "section1 section2",
+                "title": "This is an article",
                 "type": "article",
               },
               "memoizedState": Object {
@@ -1364,10 +1424,13 @@ Object {
               "pendingProps": Object {
                 "chartbeatSource": "//chartbeat.js",
                 "chartbeatUID": 1111,
-                "cookie": "cookie",
+                "cookie": null,
                 "domain": "test-domain",
+                "hasCookie": false,
+                "hasReferrer": false,
                 "referrer": null,
                 "sections": "section1 section2",
+                "title": "This is an article",
                 "type": "article",
               },
               "ref": null,
@@ -1444,10 +1507,13 @@ Object {
                         "element": <CanonicalChartbeatBeacon
                           chartbeatSource="//chartbeat.js"
                           chartbeatUID={1111}
-                          cookie="cookie"
+                          cookie={null}
                           domain="test-domain"
+                          hasCookie={false}
+                          hasReferrer={false}
                           referrer={null}
                           sections="section1 section2"
+                          title="This is an article"
                           type="article"
                         />,
                       },
@@ -1465,10 +1531,13 @@ Object {
                         "element": <CanonicalChartbeatBeacon
                           chartbeatSource="//chartbeat.js"
                           chartbeatUID={1111}
-                          cookie="cookie"
+                          cookie={null}
                           domain="test-domain"
+                          hasCookie={false}
+                          hasReferrer={false}
                           referrer={null}
                           sections="section1 section2"
+                          title="This is an article"
                           type="article"
                         />,
                       },
@@ -1491,10 +1560,13 @@ Object {
                   "element": <CanonicalChartbeatBeacon
                     chartbeatSource="//chartbeat.js"
                     chartbeatUID={1111}
-                    cookie="cookie"
+                    cookie={null}
                     domain="test-domain"
+                    hasCookie={false}
+                    hasReferrer={false}
                     referrer={null}
                     sections="section1 section2"
+                    title="This is an article"
                     type="article"
                   />,
                 },
@@ -1537,10 +1609,13 @@ Object {
                     "element": <CanonicalChartbeatBeacon
                       chartbeatSource="//chartbeat.js"
                       chartbeatUID={1111}
-                      cookie="cookie"
+                      cookie={null}
                       domain="test-domain"
+                      hasCookie={false}
+                      hasReferrer={false}
                       referrer={null}
                       sections="section1 section2"
+                      title="This is an article"
                       type="article"
                     />,
                   },
@@ -1585,15 +1660,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -1656,15 +1731,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -1698,15 +1773,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -1754,15 +1829,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -1796,15 +1871,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -1849,10 +1924,13 @@ Object {
               "memoizedProps": Object {
                 "chartbeatSource": "//chartbeat.js",
                 "chartbeatUID": 1111,
-                "cookie": "cookie",
+                "cookie": null,
                 "domain": "test-domain",
+                "hasCookie": false,
+                "hasReferrer": false,
                 "referrer": null,
                 "sections": "section1 section2",
+                "title": "This is an article",
                 "type": "article",
               },
               "memoizedState": Object {
@@ -1873,10 +1951,13 @@ Object {
               "pendingProps": Object {
                 "chartbeatSource": "//chartbeat.js",
                 "chartbeatUID": 1111,
-                "cookie": "cookie",
+                "cookie": null,
                 "domain": "test-domain",
+                "hasCookie": false,
+                "hasReferrer": false,
                 "referrer": null,
                 "sections": "section1 section2",
+                "title": "This is an article",
                 "type": "article",
               },
               "ref": null,
@@ -1953,10 +2034,13 @@ Object {
                         "element": <CanonicalChartbeatBeacon
                           chartbeatSource="//chartbeat.js"
                           chartbeatUID={1111}
-                          cookie="cookie"
+                          cookie={null}
                           domain="test-domain"
+                          hasCookie={false}
+                          hasReferrer={false}
                           referrer={null}
                           sections="section1 section2"
+                          title="This is an article"
                           type="article"
                         />,
                       },
@@ -1974,10 +2058,13 @@ Object {
                         "element": <CanonicalChartbeatBeacon
                           chartbeatSource="//chartbeat.js"
                           chartbeatUID={1111}
-                          cookie="cookie"
+                          cookie={null}
                           domain="test-domain"
+                          hasCookie={false}
+                          hasReferrer={false}
                           referrer={null}
                           sections="section1 section2"
+                          title="This is an article"
                           type="article"
                         />,
                       },
@@ -2000,10 +2087,13 @@ Object {
                   "element": <CanonicalChartbeatBeacon
                     chartbeatSource="//chartbeat.js"
                     chartbeatUID={1111}
-                    cookie="cookie"
+                    cookie={null}
                     domain="test-domain"
+                    hasCookie={false}
+                    hasReferrer={false}
                     referrer={null}
                     sections="section1 section2"
+                    title="This is an article"
                     type="article"
                   />,
                 },
@@ -2046,10 +2136,13 @@ Object {
                     "element": <CanonicalChartbeatBeacon
                       chartbeatSource="//chartbeat.js"
                       chartbeatUID={1111}
-                      cookie="cookie"
+                      cookie={null}
                       domain="test-domain"
+                      hasCookie={false}
+                      hasReferrer={false}
                       referrer={null}
                       sections="section1 section2"
+                      title="This is an article"
                       type="article"
                     />,
                   },
@@ -2101,15 +2194,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -2142,15 +2235,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -2191,10 +2284,13 @@ Object {
               "memoizedProps": Object {
                 "chartbeatSource": "//chartbeat.js",
                 "chartbeatUID": 1111,
-                "cookie": "cookie",
+                "cookie": null,
                 "domain": "test-domain",
+                "hasCookie": false,
+                "hasReferrer": false,
                 "referrer": null,
                 "sections": "section1 section2",
+                "title": "This is an article",
                 "type": "article",
               },
               "memoizedState": Object {
@@ -2215,10 +2311,13 @@ Object {
               "pendingProps": Object {
                 "chartbeatSource": "//chartbeat.js",
                 "chartbeatUID": 1111,
-                "cookie": "cookie",
+                "cookie": null,
                 "domain": "test-domain",
+                "hasCookie": false,
+                "hasReferrer": false,
                 "referrer": null,
                 "sections": "section1 section2",
+                "title": "This is an article",
                 "type": "article",
               },
               "ref": null,
@@ -2295,10 +2394,13 @@ Object {
                         "element": <CanonicalChartbeatBeacon
                           chartbeatSource="//chartbeat.js"
                           chartbeatUID={1111}
-                          cookie="cookie"
+                          cookie={null}
                           domain="test-domain"
+                          hasCookie={false}
+                          hasReferrer={false}
                           referrer={null}
                           sections="section1 section2"
+                          title="This is an article"
                           type="article"
                         />,
                       },
@@ -2316,10 +2418,13 @@ Object {
                         "element": <CanonicalChartbeatBeacon
                           chartbeatSource="//chartbeat.js"
                           chartbeatUID={1111}
-                          cookie="cookie"
+                          cookie={null}
                           domain="test-domain"
+                          hasCookie={false}
+                          hasReferrer={false}
                           referrer={null}
                           sections="section1 section2"
+                          title="This is an article"
                           type="article"
                         />,
                       },
@@ -2342,10 +2447,13 @@ Object {
                   "element": <CanonicalChartbeatBeacon
                     chartbeatSource="//chartbeat.js"
                     chartbeatUID={1111}
-                    cookie="cookie"
+                    cookie={null}
                     domain="test-domain"
+                    hasCookie={false}
+                    hasReferrer={false}
                     referrer={null}
                     sections="section1 section2"
+                    title="This is an article"
                     type="article"
                   />,
                 },
@@ -2388,10 +2496,13 @@ Object {
                     "element": <CanonicalChartbeatBeacon
                       chartbeatSource="//chartbeat.js"
                       chartbeatUID={1111}
-                      cookie="cookie"
+                      cookie={null}
                       domain="test-domain"
+                      hasCookie={false}
+                      hasReferrer={false}
                       referrer={null}
                       sections="section1 section2"
+                      title="This is an article"
                       type="article"
                     />,
                   },
@@ -2436,15 +2547,15 @@ Object {
           _sf_async_config.domain = "test-domain";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = "undefined";
+          _sf_async_config.title = "This is an article";
           _sf_async_config.type = "article";
           _sf_async_config.sections = "section1 section2";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = "null";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: "cookie"
+              bbc_hid: "null"
              };
           }
           function loadChartbeat() {
@@ -2496,15 +2607,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -2545,15 +2656,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
@@ -2587,15 +2698,15 @@ Object {
           _sf_async_config.domain = \\"test-domain\\";
           _sf_async_config.useCanonical = undefined;
           _sf_async_config.useCanonicalDomain = undefined;
-          _sf_async_config.title = \\"undefined\\";
+          _sf_async_config.title = \\"This is an article\\";
           _sf_async_config.type = \\"article\\";
           _sf_async_config.sections = \\"section1 section2\\";
-          if (undefined) {
+          if (false) {
             _sf_async_config.virtualReferrer = \\"null\\";
           }
-          if (undefined) {
+          if (false) {
             _sf_async_config.idSync = {
-              bbc_hid: \\"cookie\\"
+              bbc_hid: \\"null\\"
              };
           }
           function loadChartbeat() {
