@@ -34,8 +34,8 @@ const createRequestUrl = (service, isAmp = false) => {
   const serviceVariant = serviceVariantMapping[service];
   if (serviceVariant) {
     return isAmp
-      ? `/${serviceVariant.service}.amp`
-      : `/${serviceVariant.service}`;
+      ? `/${serviceVariant.service}/${serviceVariant.variant}.amp`
+      : `/${serviceVariant.service}/${serviceVariant.variant}`;
   }
 
   return isAmp ? `/${service}.amp` : `/${service}`;
