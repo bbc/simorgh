@@ -155,6 +155,7 @@ const service = {
       'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
   },
   fonts: [],
+  timezone: 'Asia/Karachi',
 };
 
 export default service;

@@ -156,6 +156,7 @@ const service = {
       'BBC. BBC ਬਾਹਰੀ ਇੰਟਰਨੈੱਟ ਸਾਈਟਾਂ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

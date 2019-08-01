@@ -160,6 +160,7 @@ const service = {
     copyrightText: 'BBC. એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

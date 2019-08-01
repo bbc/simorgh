@@ -167,6 +167,7 @@ const yoruba = {
     copyrightText:
       'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
   },
+  timezone: 'Africa/Lagos',
 };
 
 export default yoruba;

@@ -155,6 +155,7 @@ const service = {
     copyrightText: 'BBC。BBCは外部サイトの内容に責任を負いません',
   },
   fonts: [],
+  timezone: 'Aisa/Tokyo',
 };
 
 export default service;

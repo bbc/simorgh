@@ -189,6 +189,7 @@ const pidgin = {
     ],
     copyrightText: 'BBC. De external site no concern BBC.',
   },
+  timezone: 'Africa/Lagos',
 };
 
 export default pidgin;

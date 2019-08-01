@@ -166,6 +166,7 @@ const service = {
       'बीबीसी। बीबीसी बाहरी इंटरनेट साइट की सामग्री के लिए ज़िम्मेदार नहीं है',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

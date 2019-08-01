@@ -155,6 +155,7 @@ const service = {
     copyrightText: 'BBC. BBC kənar saytların məzmunu üçün məsuliyyət daşımır',
   },
   fonts: [],
+  timezone: 'Asia/baku',
 };
 
 export default service;

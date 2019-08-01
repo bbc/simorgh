@@ -170,6 +170,7 @@ const igbo = {
     copyrightText:
       'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
   },
+  timezone: 'Africa/Lagos',
 };
 
 export default igbo;

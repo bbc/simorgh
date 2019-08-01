@@ -159,6 +159,7 @@ const service = {
     copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
   },
   fonts: [],
+  timezone: 'Africa/Addis_Ababa',
 };
 
 export default service;

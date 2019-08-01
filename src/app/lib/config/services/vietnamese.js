@@ -156,6 +156,7 @@ const service = {
       'BBC. BBC không chịu trách nhiệm nội dung các trang bên ngoài',
   },
   fonts: [],
+  timezone: 'Asia/Ho_Chi_Minh',
 };
 
 export default service;

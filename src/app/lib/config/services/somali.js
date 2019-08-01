@@ -166,6 +166,7 @@ const service = {
       "BBC. BBC-du mas'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda",
   },
   fonts: [],
+  timezone: 'Africa/Mogadishu',
 };
 
 export default service;

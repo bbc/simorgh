@@ -161,6 +161,7 @@ const service = {
       'BBC. బయటి ఇంటర్నెట్ సైట్‌లలోని కంటెంట్‌కు BBC బాధ్యత వహించదు',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

@@ -158,6 +158,7 @@ const service = {
     copyrightText: 'ቢቢሲ. ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
   },
   fonts: [],
+  timezone: 'Africa/Addis_Ababa',
 };
 
 export default service;

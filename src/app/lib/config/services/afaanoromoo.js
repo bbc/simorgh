@@ -163,6 +163,7 @@ const service = {
     copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
   },
   fonts: [],
+  timezone: 'Africa/Addis_Ababa',
 };
 
 export default service;

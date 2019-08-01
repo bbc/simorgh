@@ -162,6 +162,7 @@ const service = {
       'बीबीसी। बाहिरी वेबसाइटहरुको सामग्रीका लागि बीबीसी जिम्मेवार छैन।',
   },
   fonts: [],
+  timezone: 'Asia/Kathmandu',
 };
 
 export default service;

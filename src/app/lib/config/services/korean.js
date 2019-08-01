@@ -160,6 +160,7 @@ const service = {
       'BBC. BBC는 외부 인터넷 사이트의 내용에 대한 책임이 없습니다.',
   },
   fonts: [],
+  timezone: 'Asia/Seoul',
 };
 
 export default service;

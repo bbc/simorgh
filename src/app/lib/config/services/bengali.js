@@ -160,6 +160,7 @@ const service = {
     copyrightText: 'বিবিসি। ইন্টারনেটে অন্যান্য সাইটের জন্য বিবিসি দায়বদ্ধ নয়',
   },
   fonts: [],
+  timezone: 'Asia/Dhaka',
 };
 
 export default service;

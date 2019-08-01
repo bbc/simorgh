@@ -154,6 +154,7 @@ const service = {
     copyrightText: 'บีบีซีบีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาจากเว็บไซต์ภายนอก',
   },
   fonts: [],
+  timezone: 'Asia/Bangkok',
 };
 
 export default service;

@@ -160,6 +160,7 @@ const service = {
     copyrightText: 'BBC. BBC tidak bertanggung jawab atas konten internet luar',
   },
   fonts: [],
+  timezone: 'Asia/Jakarta',
 };
 
 export default service;
