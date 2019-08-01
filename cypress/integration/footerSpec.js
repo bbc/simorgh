@@ -26,8 +26,11 @@ describe('Footer Tests', () => {
   it('should contain copyright text', () => {
     cy.get('footer p').should(
       'contain',
-      `© ${new Date().getFullYear()} BBC. The BBC is not responsible for the content of external sites. `,
+      `${new Date().getFullYear()} BBC. The BBC is not responsible for the content of external sites.`,
     );
+  });
+  it('copyright symbol should have language attribute', () => {
+    cy.get('footer span').should('contain', '©');
   });
   it('should contain a link in the copyright text', () => {
     cy.get('footer p')
