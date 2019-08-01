@@ -134,7 +134,6 @@
     "js-cookie": "^2.2.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
-    "moment-timezone-data-webpack-plugin": "^1.1.0",
     "morgan": "^1.9.1",
     "path-to-regexp": "^3.0.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
