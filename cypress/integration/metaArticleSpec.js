@@ -27,25 +27,6 @@ Object.keys(services)
         cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
       });
 
-      it('should load a maximum of two Reith font files', () => {
-        const fontFamiliesArray = [];
-        cy.get('*')
-          .each(element => {
-            const fontFamily = Cypress.$(element).css('font-family');
-            if (
-              fontFamily &&
-              !fontFamiliesArray.includes(fontFamily) &&
-              fontFamily.startsWith(`${services[service].font}`)
-            ) {
-              fontFamiliesArray.push(fontFamily);
-            }
-          })
-          .then(() => {
-            expect(fontFamiliesArray.length).to.be.lessThan(3);
-            expect(fontFamiliesArray.length).to.be.greaterThan(0);
-          });
-      });
-
       it('should have resource hints', () => {
         const resources = [
           envConfig.assetOrigin,
