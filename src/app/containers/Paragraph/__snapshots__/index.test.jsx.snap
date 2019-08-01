@@ -13,6 +13,9 @@ exports[`ParagraphContainer should render correctly 1`] = `
 }
 
 .c3 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
   font-family: inherit;
   font-weight: inherit;
 }

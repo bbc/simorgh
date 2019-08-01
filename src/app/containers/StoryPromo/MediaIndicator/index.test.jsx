@@ -3,16 +3,25 @@ import React from 'react';
 import { shouldShallowMatchSnapshot, isNull } from '../../../../testHelpers';
 import MediaIndicator from '.';
 
-const item = {
-  summary: 'The summary',
-  timestamp: 1563266297329,
-  indexImage: {
-    path: '/cpsprodpb/0A06/production/image1.jpg',
-    height: 1152,
-    width: 2048,
-    altText: 'Image Alt text 1',
-    copyrightHolder: 'Image provider 1',
+const audioItem = {
+  headlines: {
+    headline: 'An audio item',
   },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'MAP',
+  media: {
+    format: 'audio',
+    versions: [
+      {
+        duration: 59,
+      },
+    ],
+  },
+};
+
+const videoItem = {
   headlines: {
     headline: 'A video item',
   },
@@ -30,13 +39,28 @@ const item = {
   },
 };
 
+const photogalleryItem = {
+  headlines: {
+    headline: 'A photo gallery item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'PGL',
+};
+
 const nonMediaItem = {
-  ...item,
   cpsType: '🤔',
 };
 
 const noDurationItem = {
-  ...item,
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'MAP',
   media: {
     format: 'video',
     versions: [{}],
@@ -44,12 +68,23 @@ const noDurationItem = {
 };
 
 const noMediaObject = {
-  ...item,
-  media: undefined,
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'MAP',
 };
 
 const noMediaFormat = {
-  ...item,
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'MAP',
   media: {
     versions: [
       {
@@ -61,8 +96,18 @@ const noMediaFormat = {
 
 describe('Story Promo Media Indicator', () => {
   shouldShallowMatchSnapshot(
-    'should render correctly',
-    <MediaIndicator item={item} service="news" />,
+    'should render an audio item correctly',
+    <MediaIndicator item={audioItem} service="news" />,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render a video item correctly',
+    <MediaIndicator item={videoItem} service="news" />,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render a photo gallery item correctly',
+    <MediaIndicator item={photogalleryItem} service="news" />,
   );
 
   shouldShallowMatchSnapshot(
