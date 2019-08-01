@@ -6,13 +6,12 @@ We are particularly looking for help with our [open issues](https://github.com/b
 
 ## Documentation index
 Please familiarise yourself with our:
+- [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
-- [Contributing guidlines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
+- [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
 
 ## Getting started
-
-Please familiarise yourself with our primary [README](https://github.com/bbc/simorgh/blob/latest/README.md) and our [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md).
 
 Before starting a pull request, firstly search through [existing issues](https://github.com/bbc/simorgh/issues). Please also ensure to branch from latest, we only review PRs that are as small as they can be; which we do to maximise productivity.
 
