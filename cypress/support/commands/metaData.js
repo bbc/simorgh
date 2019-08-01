@@ -17,49 +17,6 @@ Cypress.Commands.add(
   },
 );
 
-Cypress.Commands.add('checkAMPArticleMetadata', (AMPURL, win) => {
-  // This will only work if you visit the matching canonical
-  // url prior to running this.
-  // AMP overrides the Window data in window.SIMORGH_DATA. In order to get
-  // around this we visit the canonical page first to retrieve
-  // window.SIMORGH_DATA and use this to compare against the metadata
-  // served in the head of an AMP page.
-  cy.visit(AMPURL);
-  cy.get('head').within(() => {
-    cy.get('meta[name="description"]').should(
-      'have.attr',
-      'content',
-      win.pageData.promo.summary || win.pageData.promo.headlines.seoHeadline,
-    );
-    cy.get('meta[name="og:title"]').should(
-      'have.attr',
-      'content',
-      win.pageData.promo.headlines.seoHeadline,
-    );
-    cy.get('meta[name="og:type"]').should(
-      'have.attr',
-      'content',
-      win.pageData.metadata.type,
-    );
-    cy.get('meta[name="article:published_time"]').should(
-      'have.attr',
-      'content',
-      new Date(win.pageData.metadata.firstPublished).toISOString(),
-    );
-    cy.get('meta[name="article:modified_time"]').should(
-      'have.attr',
-      'content',
-      new Date(win.pageData.metadata.lastPublished).toISOString(),
-    );
-  });
-
-  cy.get('html').should(
-    'have.attr',
-    'lang',
-    win.pageData.metadata.passport.language,
-  );
-});
-
 Cypress.Commands.add('checkOpenGraphMetadata', (
   description, // eslint-disable-line no-unused-vars
   imageUrl,
