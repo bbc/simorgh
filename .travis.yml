@@ -29,7 +29,7 @@ jobs:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
-      install: npm ci --only=prod
+      install: npm ci
       addons:
         chrome: stable
       script:
