@@ -62,7 +62,7 @@ describe('readScenario helper', () => {
     testReadScenario(fileNames, expectedCalls);
   });
 
-  it('should ignore files that are no json format', () => {
+  it('should ignore files that are not in json format', () => {
     const fileNames = ['schema.yaml'];
 
     readFiles(fileNames);
