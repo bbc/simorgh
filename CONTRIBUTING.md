@@ -112,4 +112,10 @@ As part of our deployment & pipeline work, we have created a handy script to cop
 
 If on the other hand you are adding new files to the root directory of simorgh, and these files are necessary for production, you have to manually add the copy commands for the relevant files to the `/script/jenkinsProductionFiles.sh`.
 
-_This script is temporary and will most likely be refactored later on_
+### `.env` is showing in my `git status`
+
+The `.env` file should not be commited as it is often overwritten by the values in `envConfig/` at build time. There is a `postshrinkwrap` command which runs after an `npm install` so should be run during setup of the application. 
+
+If the `.env` file is appearing in your `git status` it means it is now longer being assumed as unchanged, to fix this run:
+```
+git update-index --assume-unchanged .env
