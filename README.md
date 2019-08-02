@@ -41,7 +41,7 @@ The local state is now updated, setting `loading` to `true` and `data` to `null`
 
 During this time the App container has finished fetching the JSON payload for the onward journey and the state is updated again. Loading is now set to false and data is set to the returned JSON data.
 
-The routes container is rendered again, this time loading is set to false so the `withData` HOC can run some validation against the JSON payload then return either an error components of the original page container e.g. ArticleContainer passing in the JSON data with the pageData prop.
+The routes container is rendered again, this time loading is set to false so the `withData` HOC can run some validation against the JSON payload and return either an error component or the original page container e.g. ArticleContainer passing in the JSON data with the pageData prop.
 
 ### Rendering a Page
 
