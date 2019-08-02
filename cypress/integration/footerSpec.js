@@ -1,6 +1,9 @@
 import services from '../support/config/services';
 
 describe('Footer Tests', () => {
+  const copyrightText = `${new Date().getFullYear()} BBC. The BBC is not responsible for the content of external sites.`;
+  const copyrightSymbol = '©';
+
   // eslint-disable-next-line no-undef
   before(() => {
     cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
@@ -24,13 +27,15 @@ describe('Footer Tests', () => {
   });
 
   it('should contain copyright text', () => {
-    cy.get('footer p').should(
-      'contain',
-      `${new Date().getFullYear()} BBC. The BBC is not responsible for the content of external sites.`,
-    );
+    cy.get('footer p').should('contain', copyrightText);
   });
   it('footer should contain copyright symbol', () => {
-    cy.get('footer span').should('contain', '©');
+    cy.get('footer span').should('contain', copyrightSymbol);
+  });
+  it('footer should contain copyright symbol', () => {
+    cy.get('footer p')
+      .last()
+      .should('contain', `${copyrightSymbol} ${copyrightText}`);
   });
   it('should contain a link in the copyright text', () => {
     cy.get('footer p')
