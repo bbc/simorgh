@@ -102,6 +102,10 @@ To run these on your forked version follow these steps.
 
 **Note**: The code coverage, CC_TEST_REPORTER_ID, is defined in [.travis.yml](.travis.yml#L3). As such, you don't need to obtain the CC_TEST_REPORTER_ID from CodeClimate and configure it in the repository settings in Travis CI. This is because, the [.travis.yml](.travis.yml#L3) takes precedence over the value configured in repository settings. See the [Travis CI public variables guide](https://docs.travis-ci.com/user/environment-variables/#defining-public-variables-in-travisyml) for more details.
 
+### Fixture data
+
+We have a lot of [sample data feeds](https://github.com/bbc/simorgh/tree/49a74f2c3b1df0fb1adb6b8bb7fff51ddce55dda/data). These are categorised in directories under this primary directory. Finding useful examples within these folder can be done by searching for the asset (page type) and block types (e.g. paragraph, media etc.) you're looking for. 
+
 ### Merging a Pull Request
 
 There is a [guide](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/MERGE_PROCESS.md) for BBC staff which documents the manual process that should be followed before merging a PR. Please note: The guide links through to our CI endpoints and therefore is hosted in a private repository.
