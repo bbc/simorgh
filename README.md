@@ -53,7 +53,7 @@ This process is repeated for each block within an article, ultimately rendering 
 
 ### A Page Render Lifecycle
 
-Each render is passed through a set of HOC's to enhance the page, these HOC's are;
+Each render is passed through a set of HOC's (Higher Order Components) to enhance the page, these HOC's are;
 
 - withContexts
 - withPageWrapper
