@@ -1,17 +1,6 @@
 import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import testData from '../../src/app/lib/config/services';
-import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
-import {
-  checkAmpHTML,
-  checkCanonicalURL,
-  facebookMeta,
-  metadataAssertion,
-  metadataAssertionAMP,
-  openGraphMeta,
-  retrieveMetaDataContent,
-  twitterMeta,
-} from '../support/metaTestHelper';
 
 const serviceHasArticlePageType = service =>
   services[service].pageTypes.articles !== undefined;
@@ -28,33 +17,14 @@ Object.keys(services)
       });
 
       it('should have the correct lang & dir attributes', () => {
-        hasHtmlLangDirAttributes({
+        cy.hasHtmlLangDirAttributes({
           lang: `${testData[service].datetimeLocale}`,
           dir: `${testData[service].dir}`,
         });
       });
 
       it('should have a nofollow meta tag', () => {
-        retrieveMetaDataContent('head meta[name="robots"]', 'noodp,noydir');
-      });
-
-      it('should load a maximum of two Reith font files', () => {
-        const fontFamiliesArray = [];
-        cy.get('*')
-          .each(element => {
-            const fontFamily = Cypress.$(element).css('font-family');
-            if (
-              fontFamily &&
-              !fontFamiliesArray.includes(fontFamily) &&
-              fontFamily.startsWith(`${services[service].font}`)
-            ) {
-              fontFamiliesArray.push(fontFamily);
-            }
-          })
-          .then(() => {
-            expect(fontFamiliesArray.length).to.be.lessThan(3);
-            expect(fontFamiliesArray.length).to.be.greaterThan(0);
-          });
+        cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
       });
 
       it('should have resource hints', () => {
@@ -73,52 +43,133 @@ Object.keys(services)
         });
       });
 
-      facebookMeta(
-        '100004154058350',
-        '1609039196070050',
-        `${testData[service].articleAuthor}`,
-      );
+      it('should have the correct facebook metadata', () => {
+        cy.checkFacebookMetadata(
+          '100004154058350',
+          '1609039196070050',
+          `${testData[service].articleAuthor}`,
+        );
+      });
 
-      openGraphMeta(
-        'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-        `${testData[service].defaultImage}`,
-        `${testData[service].defaultImageAltText}`,
-        `${testData[service].locale}`,
-        `${testData[service].defaultImageAltText}`,
-        "Meghan's bouquet laid on tomb of unknown warrior",
-        'article',
-        `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
-      );
+      it('should have the correct open graph metadata', () => {
+        cy.checkOpenGraphMetadata(
+          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+          `${testData[service].defaultImage}`,
+          `${testData[service].defaultImageAltText}`,
+          `${testData[service].locale}`,
+          `${testData[service].defaultImageAltText}`,
+          "Meghan's bouquet laid on tomb of unknown warrior",
+          'article',
+          `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
+        );
+      });
 
-      twitterMeta(
-        'summary_large_image',
-        `${testData[service].twitterCreator}`,
-        'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-        `${testData[service].defaultImageAltText}`,
-        `${testData[service].defaultImage}`,
-        `${testData[service].twitterSite}`,
-        "Meghan's bouquet laid on tomb of unknown warrior",
-      );
+      it('should have the correct twitter metadata', () => {
+        cy.checkTwitterMetadata(
+          'summary_large_image',
+          `${testData[service].twitterCreator}`,
+          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+          `${testData[service].defaultImageAltText}`,
+          `${testData[service].defaultImage}`,
+          `${testData[service].twitterSite}`,
+          "Meghan's bouquet laid on tomb of unknown warrior",
+        );
+      });
 
       it('should include metadata that matches the JSON data', () => {
-        metadataAssertion();
+        cy.window().then(win => {
+          cy.get('head').within(() => {
+            cy.get('meta[name="description"]').should(
+              'have.attr',
+              'content',
+              win.SIMORGH_DATA.pageData.promo.summary ||
+                win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+            );
+            cy.get('meta[name="og:title"]').should(
+              'have.attr',
+              'content',
+              win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+            );
+            cy.get('meta[name="og:type"]').should(
+              'have.attr',
+              'content',
+              win.SIMORGH_DATA.pageData.metadata.type,
+            );
+            cy.get('meta[name="article:published_time"]').should(
+              'have.attr',
+              'content',
+              new Date(
+                win.SIMORGH_DATA.pageData.metadata.firstPublished,
+              ).toISOString(),
+            );
+            cy.get('meta[name="article:modified_time"]').should(
+              'have.attr',
+              'content',
+              new Date(
+                win.SIMORGH_DATA.pageData.metadata.lastPublished,
+              ).toISOString(),
+            );
+          });
+
+          cy.get('html').should(
+            'have.attr',
+            'lang',
+            win.SIMORGH_DATA.pageData.metadata.passport.language,
+          );
+        });
       });
 
       it('should include the canonical URL & ampHTML', () => {
-        const currentOrigin = window.location.origin;
-        const canonicalOrigin = 'https://www.bbc.com';
-        checkCanonicalURL(
-          `${canonicalOrigin}/${service}/articles/${services[service].pageTypes.articles.asset}`,
+        cy.checkCanonicalURL(
+          `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
         );
-        checkAmpHTML(
-          `${currentOrigin}/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
+        cy.checkAmpHTML(
+          `${window.location.origin}/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
         );
       });
 
       it('should include metadata in the head on AMP pages', () => {
-        metadataAssertionAMP(
-          `/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
-        );
+        cy.window().then(win => {
+          cy.visit(
+            `/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
+          );
+          cy.get('meta[name="description"]').should(
+            'have.attr',
+            'content',
+            win.SIMORGH_DATA.pageData.promo.summary ||
+              win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+          );
+          cy.get('meta[name="og:title"]').should(
+            'have.attr',
+            'content',
+            win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+          );
+          cy.get('meta[name="og:type"]').should(
+            'have.attr',
+            'content',
+            win.SIMORGH_DATA.pageData.metadata.type,
+          );
+          cy.get('meta[name="article:published_time"]').should(
+            'have.attr',
+            'content',
+            new Date(
+              win.SIMORGH_DATA.pageData.metadata.firstPublished,
+            ).toISOString(),
+          );
+          cy.get('meta[name="article:modified_time"]').should(
+            'have.attr',
+            'content',
+            new Date(
+              win.SIMORGH_DATA.pageData.metadata.lastPublished,
+            ).toISOString(),
+          );
+
+          cy.get('html').should(
+            'have.attr',
+            'lang',
+            win.SIMORGH_DATA.pageData.metadata.passport.language,
+          );
+        });
       });
 
       it('should include mainEntityOfPage in the LinkedData', () => {
