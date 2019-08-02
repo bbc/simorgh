@@ -13,15 +13,16 @@ const LinkContents = ({ item }) => {
   } = useContext(ServiceContext);
 
   const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
+  const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
   const headlines = pathOr(null, ['headlines'], item);
   const { headline, overtyped } = headlines;
   const content = overtyped || headline;
 
-  if (!isMedia) {
+  if (!isPGL && !isMedia) {
     return content;
   }
 
-  const type = pathOr(null, ['media', 'format'], item);
+  const type = isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
