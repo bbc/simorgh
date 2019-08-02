@@ -1,12 +1,12 @@
-# Contributor Covenant Code of Conduct
-
-## Documentation index
+### Documentation index
 Please familiarise yourself with our:
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md) (you are here)
 - [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
+
+# Contributor Covenant Code of Conduct (CoC)
 
 ## Our Pledge
 
