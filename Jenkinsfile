@@ -162,7 +162,6 @@ pipeline {
             // Testing
             runProductionTests()
 
-
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
 
