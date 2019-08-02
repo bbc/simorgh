@@ -1,6 +1,4 @@
 import services from '../support/config/services';
-import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
-import { checkCanonicalURL } from '../support/metaTestHelper';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
@@ -41,7 +39,7 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should have lang and dir attributes', () => {
-    hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
+    cy.hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
   });
 
   it('should load the AMP framework', () => {
@@ -106,7 +104,7 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should include the canonical URL', () => {
     const canonicalOrigin = 'https://www.bbc.com';
-    checkCanonicalURL(
+    cy.checkCanonicalURL(
       `${canonicalOrigin}/news/articles/${services.news.pageTypes.articles.asset}`,
     );
   });
