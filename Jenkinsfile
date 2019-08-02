@@ -158,7 +158,9 @@ pipeline {
           }
           steps {
             // Testing
-            runProductionTests()
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              runProductionTests()
+            }
 
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
