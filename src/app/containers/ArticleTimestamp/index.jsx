@@ -28,6 +28,8 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     dateTimeFormat: formatDateNumeric,
     script,
     locale: datetimeLocale,
+    service,
+    timezone,
   };
 
   const firstPublishedProps = {
@@ -45,19 +47,9 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
 
   return (
     <PopOutGridItemMedium>
-      <Timestamp
-        {...timestampProps}
-        {...firstPublishedProps}
-        service={service}
-        timezone={timezone}
-      />
+      <Timestamp {...timestampProps} {...firstPublishedProps} />
       {firstPublished !== lastPublished && (
-        <Timestamp
-          {...timestampProps}
-          {...lastPublishedProps}
-          service={service}
-          timezone={timezone}
-        />
+        <Timestamp {...timestampProps} {...lastPublishedProps} />
       )}
     </PopOutGridItemMedium>
   );

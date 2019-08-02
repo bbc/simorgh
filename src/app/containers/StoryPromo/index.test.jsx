@@ -247,5 +247,25 @@ describe('StoryPromo Container', () => {
         expect(container.getElementsByTagName('img').length).toEqual(0);
       });
     });
+
+    describe('With different timezones', () => {
+      beforeEach(() => {
+        item.timestamp = 1565380800000;
+      });
+
+      it('should show the correct local date', () => {
+        const { container: newsContainer } = render(
+          <WrappedStoryPromo item={item} service="news" />,
+        );
+        const time = newsContainer.querySelector('time').textContent;
+        expect(time).toEqual('9 August 2019');
+
+        const { container: bengaliContainer } = render(
+          <WrappedStoryPromo item={item} service="bengali" />,
+        );
+        const bengaliTime = bengaliContainer.querySelector('time').textContent;
+        expect(bengaliTime).toEqual('১০ আগস্ট ২০১৯');
+      });
+    });
   });
 });
