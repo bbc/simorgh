@@ -33,7 +33,7 @@ Now that the raw HTML has been downloaded, the client-side JS file kicks in and 
 
 #### Onward Journeys - Client Side Render (CSR)
 
-Now that the SPA is bootstrapped on the users device, onward journeys to further Simorgh pages are captured by react-router and rendered on entirely on the client.
+Now that the SPA is bootstrapped on the users device, onward journeys to further Simorgh pages are captured by react-router and rendered entirely on the client.
 
 Clicking on an onward journey triggers the `useEffect` hook in the main App container as the URL path has changed. This effect uses `getRouteProps` again to match the new path against a react-router route, gaining access to the; service and isAmp props, the react container to render and the `getInitialData` function.
 
