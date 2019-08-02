@@ -1,7 +1,3 @@
-import {
-  hasHtmlLangDirAttributes,
-  renderedTitle,
-} from '../support/bodyTestHelper';
 import testData from '../../src/app/lib/config/services';
 import services from '../support/config/services';
 
@@ -39,7 +35,7 @@ Object.keys(services)
       });
 
       it('should have the correct lang & dir attributes', () => {
-        hasHtmlLangDirAttributes({
+        cy.hasHtmlLangDirAttributes({
           lang: `${testData[service].lang}`,
           dir: `${testData[service].dir}`,
         });
@@ -70,7 +66,7 @@ Object.keys(services)
       });
 
       it('should have a relevant error title in the head', () => {
-        renderedTitle(
+        cy.renderedTitle(
           `${testData[service].translations.error[404].title} - ${testData[service].brandName}`,
         );
       });
