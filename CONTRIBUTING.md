@@ -104,7 +104,63 @@ To run these on your forked version follow these steps.
 
 ### Fixture data
 
-We have a lot of [sample data feeds](https://github.com/bbc/simorgh/tree/49a74f2c3b1df0fb1adb6b8bb7fff51ddce55dda/data). These are categorised in directories under this primary directory. Finding useful examples within these folder can be done by searching for the asset (page type) and block types (e.g. paragraph, media etc.) you're looking for. 
+We have a lot of [sample data feeds](https://github.com/bbc/simorgh/tree/49a74f2c3b1df0fb1adb6b8bb7fff51ddce55dda/data). These are categorised in directories under this primary directory. Finding useful examples within these folder can be done by searching for the asset (page type) and block types (e.g. paragraph, media etc.) you're looking for.
+
+#### Update local fixture data
+Pick a JSON file under `data/news/articles/[id].json`, and:
+
+1) add an example of your block somewhere in the `content.model.blocks` array.
+2) add your new component to the `blockTypes` array.
+
+Run `npm run dev` and you should see your component at your article of choice, eg http://localhost.bbc.com:7080/news/articles/c0000000001o
+
+#### Update the schema
+data/schema.yaml describes the Article API definition for web. We need to make it aware of our new component.
+
+Your component is more than likely a new 'block' in the data feed, so you'll need to add it to the array of which blocks the application should validate:
+
+```yaml
+    blocks:
+      type: object
+      items:
+        oneOf:
+          - $ref: '#/components/schemas/altText'
+          ... etc ...
+          - $ref: '#/components/schemas/[your component name]'
+      minItems: 2
+```
+
+You'll also need to define the block subtype itself:
+
+```yaml
+    blockquote:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - blockquote
+          type: string
+```
+
+The schema check currently only happens on local data.
+
+### Create the container
+We've added our _component_, which should be kept as simple as possible. Now we need to create our _container_, which contains the business logic for mapping Optimo block data to the React parameters our component needs.
+
+Add a new folder under `src/app/containers/[Component Name]/`. You will need:
+
+* index.jsx - describes the mapping of Optimo block data to React parameters
+* index.test.jsx - creates "snapshots" of the component with the various different rendered outputs for the business logic in the container
+
+This step is quite complicated, so copy and paste from a similar example and tweak the code to your requirements.
 
 ### Merging a Pull Request
 
