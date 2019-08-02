@@ -8,4 +8,4 @@
 package.json    @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
 .travis.yml     @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
 Jenkinsfile     @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
-**/*CODEOWNERS* @benjaminhobbs @jamesdonoh
+**/*CODEOWNERS* @bbc/simorgh-admins
