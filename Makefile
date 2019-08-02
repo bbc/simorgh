@@ -9,7 +9,6 @@ install:
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
-	xvfb-run npm run test:e2e:storybook:ci;
 	npm run test:chromatic
 
 productionTests:
