@@ -85,7 +85,7 @@
     "@bbc/psammead-copyright": "^1.1.0",
     "@bbc/psammead-figure": "^1.1.0",
     "@bbc/psammead-headings": "^2.1.0",
-    "@bbc/psammead-image": "^1.1.0",
+    "@bbc/psammead-image": "^1.1.1",
     "@bbc/psammead-image-placeholder": "^1.1.0",
     "@bbc/psammead-inline-link": "^1.1.10",
     "@bbc/psammead-locales": "^1.1.0",
