@@ -163,10 +163,8 @@ Array [
   font-size: 1.75rem;
   line-height: 2rem;
   color: #3F3F42;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0;
-  font-weight: 500;
   padding: 2.5rem 0 2.5rem 0;
 }
 
@@ -424,14 +422,12 @@ Array [
 
 .c10:hover .c12,
 .c10:focus .c12 {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #FFFFFF;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c8 {
   border-bottom: 1px solid #3F3F42;
-  display: grid;
-  grid-auto-flow: column;
   list-style-type: none;
   margin: 0;
   padding: 0 0 0.5rem;
@@ -485,6 +481,13 @@ Array [
   }
 }
 
+@supports (grid-template-columns:fit-content(200px)) {
+  .c8 {
+    display: grid;
+    grid-auto-flow: column;
+  }
+}
+
 @media (max-width:14.9375rem) {
   .c8 {
     grid-auto-flow: row;
@@ -523,13 +526,13 @@ Array [
   }
 }
 
-@supports not (display:grid) {
+@supports not (grid-template-columns:fit-content(200px)) {
   .c8 > li:first-child {
     width: 100%;
   }
 }
 
-@supports not (display:grid) {
+@supports not (grid-template-columns:fit-content(200px)) {
   .c9 {
     display: inline-block;
   }
