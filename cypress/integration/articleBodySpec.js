@@ -1,12 +1,5 @@
+import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../support/config/services';
-import {
-  copyrightDataWindow,
-  firstHeadlineDataWindow,
-  firstParagraphDataWindow,
-  firstSubheadlineDataWindow,
-  placeholderImageLoaded,
-  renderedTitle,
-} from '../support/bodyTestHelper';
 
 const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;
@@ -22,8 +15,8 @@ Object.keys(config)
         );
       });
 
-      it('should render an H1, which contains/displays a styled headline', () => {
-        firstHeadlineDataWindow();
+      it('should render a H1, which contains/displays a styled headline', () => {
+        cy.firstHeadlineDataWindow();
       });
 
       it('should render a formatted timestamp', () => {
@@ -41,17 +34,24 @@ Object.keys(config)
       it('should render an H2, which contains/displays a styled subheading', () => {
         cy.window().then(win => {
           if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-            firstSubheadlineDataWindow();
+            cy.firstSubheadlineDataWindow();
           }
         });
       });
 
       it('should render a paragraph, which contains/displays styled text', () => {
-        firstParagraphDataWindow();
+        cy.firstParagraphDataWindow();
       });
 
       it('should have a placeholder image', () => {
-        placeholderImageLoaded(cy.get('figure div div div').eq(0));
+        cy.get('figure div div div')
+          .eq(0)
+          .should(el => {
+            expect(el).to.have.css(
+              'background-image',
+              `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
+            );
+          });
       });
 
       it('should have a visible image without a caption, and also not be lazyloaded', () => {
@@ -92,16 +92,16 @@ Object.keys(config)
       });
 
       it('should have an image copyright label with styling', () => {
-        copyrightDataWindow();
+        cy.copyrightDataWindow();
       });
 
       it('should render a title', () => {
         cy.window().then(win => {
           const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
           if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-            renderedTitle(`${seoHeadline} - BBC News`);
+            cy.renderedTitle(`${seoHeadline} - BBC News`);
           } else {
-            renderedTitle(`${seoHeadline} - BBC News فارسی`);
+            cy.renderedTitle(`${seoHeadline} - BBC News فارسی`);
           }
         });
       });
