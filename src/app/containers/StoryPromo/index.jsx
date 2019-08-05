@@ -17,7 +17,7 @@ import getLocator from './imageSrcHelpers/locator';
 
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
-import { isTenHoursAgoOrLess } from '../ArticleTimestamp/helpers';
+import isTenHoursAgo from '../../lib/utilities/isTenHoursAgo';
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -100,7 +100,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           script={script}
           padding={false}
           service={service}
-          isRelative={isTenHoursAgoOrLess(timestamp)}
+          isRelative={isTenHoursAgo(timestamp)}
         />
       )}
     </Fragment>
