@@ -4,6 +4,7 @@ import InlineLinkContainer from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
+  id: 1,
   type: 'fragment',
   model: {
     text,
