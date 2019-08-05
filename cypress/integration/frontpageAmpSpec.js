@@ -1,5 +1,4 @@
 import services from '../support/config/services';
-import { checkCanonicalURL } from '../support/metaTestHelper';
 import { describeForLocalOnly } from '../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.
@@ -101,7 +100,9 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
       ? 'https://www.bbc.com'
       : origin;
 
-    checkCanonicalURL(`${canonicalOrigin}${services.igbo.pageTypes.frontPage}`);
+    cy.checkCanonicalURL(
+      `${canonicalOrigin}${services.igbo.pageTypes.frontPage}`,
+    );
   });
 
   xit('should not have an AMP attribute on the main article', () => {
