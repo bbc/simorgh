@@ -8,7 +8,7 @@ let browser;
 let page;
 let requests = [];
 
-const host = 'http://localhost:7080';
+const host = 'http://localhost.bbc.com:7080';
 
 const isJsBundle = url => url.includes(host);
 
