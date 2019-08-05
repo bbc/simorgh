@@ -81,7 +81,7 @@
     "@bbc/psammead-assets": "^1.1.1",
     "@bbc/psammead-brand": "^4.2.0",
     "@bbc/psammead-caption": "^2.1.0",
-    "@bbc/psammead-consent-banner": "^2.1.0",
+    "@bbc/psammead-consent-banner": "^2.1.2",
     "@bbc/psammead-copyright": "^1.1.0",
     "@bbc/psammead-figure": "^1.1.0",
     "@bbc/psammead-headings": "^2.1.0",
