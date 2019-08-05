@@ -18,7 +18,7 @@ import getLocator from './imageSrcHelpers/locator';
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
 
-const StoryPromoImage = ({ imageValues, lazyLoad }) => {
+const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
     return null;
   }
@@ -28,8 +28,11 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
   const ratio = (height / width) * 100;
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
-  const srcset = createSrcset(originCode, locator, width);
-
+  const imageResolutions = [70, 95, 144, 183, 240, 320, 480, 624];
+  const srcset = createSrcset(originCode, locator, width, imageResolutions);
+  const sizes = topStory
+    ? '(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px'
+    : '(max-width: 1008px) 33vw, 237px';
   const DEFAULT_IMAGE_RES = 660;
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
@@ -38,16 +41,19 @@ const StoryPromoImage = ({ imageValues, lazyLoad }) => {
       alt={imageValues.altText}
       ratio={ratio}
       src={src}
+      fallback={false}
       {...imageValues}
       lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
       srcset={srcset}
+      sizes={sizes}
     />
   );
 };
 
 StoryPromoImage.propTypes = {
   lazyLoad: bool.isRequired,
+  topStory: bool.isRequired,
   imageValues: shape(storyItem.indexImage).isRequired,
 };
 
@@ -56,7 +62,15 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const headline = pathOr(null, ['headlines', 'headline'], item);
   const url = pathOr(null, ['locators', 'assetUri'], item);
   const summary = pathOr(null, ['summary'], item);
-  const timestamp = pathOr(null, ['timestamp'], item);
+  let timestamp = pathOr(null, ['timestamp'], item);
+
+  if (new Date(timestamp).getFullYear() < 1980) {
+    // if the date is before 1980, our timestamp was probably in seconds.
+    // this fixes an ares bug - ARES-758 on JIRA.
+    // if you come across this in the future, please check if it's no longer needed
+    // if so, delete this!
+    timestamp *= 1000;
+  }
 
   if (!headline || !url) {
     return null;
@@ -79,7 +93,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
       {timestamp && (
         <Timestamp
           locale={datetimeLocale}
-          timestamp={timestamp * 1000}
+          timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
           script={script}
@@ -92,7 +106,11 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
 
   const imageValues = pathOr(null, ['indexImage'], item);
   const Image = (
-    <StoryPromoImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
+    <StoryPromoImage
+      topStory={topStory}
+      lazyLoad={lazyLoadImage}
+      imageValues={imageValues}
+    />
   );
 
   return (

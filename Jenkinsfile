@@ -13,6 +13,7 @@ def messageColor = 'danger'
 def stageName = ""
 def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
+def staticAssetsDist = 'static.zip'
 
 def runDevelopmentTests(){
   sh 'make install'
@@ -20,8 +21,9 @@ def runDevelopmentTests(){
 }
 
 def runProductionTests(){
-  sh 'make installProd'
+  sh 'make install'
   sh 'make productionTests'
+  sh 'npm prune --production'
 }
 
 def getCommitInfo = {
@@ -60,10 +62,22 @@ def notifySlack(messageParameters) {
   )
 
   slackSend(
-    channel: messageParameters.slackChannel, 
+    channel: messageParameters.slackChannel,
     color: messageParameters.colour,
     message: message
   )
+}
+
+def buildStaticAssets(env, tag) {
+  sh 'rm -rf build && rm -rf staticAssets && mkdir staticAssets'
+  sh "rm -f static${tag}.zip"
+
+  sh "npm run build:$env"
+  sh 'rm -rf staticAssets && mkdir staticAssets'
+  sh "cp -R build/. staticAssets"
+  sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
+  zip archive: true, dir: 'staticAssets', glob: '', zipFile: "static${tag}.zip"
+  stash name: "staticAssets${tag}", includes: "static${tag}.zip"
 }
 
 pipeline {
@@ -94,10 +108,11 @@ pipeline {
             }
           }
           steps {
-            runDevelopmentTests()
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              runDevelopmentTests()
+            }
           }
         }
-
         stage ('Test Production') {
           agent {
             docker {
@@ -108,7 +123,7 @@ pipeline {
           steps {
             runProductionTests()
           }
-        }  
+        }
       }
       post {
         always {
@@ -131,7 +146,9 @@ pipeline {
             }
           }
           steps {
-            runDevelopmentTests()
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              runDevelopmentTests()
+            }
           }
         }
         stage ('Test Production and Zip Production') {
@@ -151,7 +168,7 @@ pipeline {
             script {
               // Get Simorgh commit information
               getCommitInfo()
-              
+
               // Set build tag information
               buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
             }
@@ -178,7 +195,21 @@ pipeline {
             zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
             stash name: 'simorgh_storybook', includes: storybookDist
           }
-        }    
+        }
+        stage ('Build Static Assets') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh 'make install'
+
+            buildStaticAssets("test", "TEST")
+            buildStaticAssets("live", "LIVE")
+          }
+        }
       }
       post {
         always {
