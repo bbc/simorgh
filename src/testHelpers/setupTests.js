@@ -1,8 +1,13 @@
 import chalk from 'chalk';
 
 const REACT_FAILED_PROP_TYPE = 'Failed prop type';
+const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
 const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
-const REACT_ERRORS = [REACT_FAILED_PROP_TYPE, REACT_DUPLICATE_KEYS];
+const REACT_ERRORS = [
+  REACT_FAILED_PROP_TYPE,
+  REACT_NO_KEYS,
+  REACT_DUPLICATE_KEYS,
+];
 const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'), 'gi');
 
 const { error } = console;
