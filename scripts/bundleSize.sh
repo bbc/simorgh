@@ -1,9 +1,13 @@
 #!/bin/bash
 
-# Size limit for all bundles used by each service (K)
-# Keep these +/- 5K and update frequently!
-min=497
-max=517
+# Size limit for all bundles used by each service (K) - update frequently!
+
+# If updating:
+# - The min value should be 5K less than the smallest service bundle and max should be 5K greater than the largest bundle
+# - Bundle sizes can be viewed by running a production build
+min=494
+max=522
+
 
 services=( "afaanoromoo" "afrique" "amharic" "arabic" "azeri" "bengali" "burmese" "cymrufyw" "gahuza" "gujarati" "hausa" "hindi" "igbo" "indonesia" "japanese" "korean" "kyrgyz" "marathi" "mundo" "naidheachdan" "nepali" "news" "pashto" "persian" "pidgin" "portuguese" "punjabi" "russian" "serbian" "sinhala" "somali" "swahili" "tamil" "telugu" "thai" "tigrinya" "turkce" "ukchina" "ukrainian" "urdu" "uzbek" "vietnamese" "yoruba" "zhongwen" )
 failure=false
