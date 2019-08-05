@@ -36,6 +36,7 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   const DEFAULT_IMAGE_RES = 660;
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
+  console.error('test this error');
   return (
     <ImageWithPlaceholder
       alt={imageValues.altText}
