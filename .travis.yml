@@ -25,7 +25,6 @@ jobs:
       script:
         - npm run test
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-        - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
