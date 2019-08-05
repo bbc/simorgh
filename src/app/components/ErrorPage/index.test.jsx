@@ -18,11 +18,11 @@ describe('ErrorMain', () => {
 
   shouldMatchSnapshot(
     'should correctly render for an error page for News',
-    <ErrorMain {...messaging} script={latin} />,
+    <ErrorMain {...messaging} script={latin} service="news" />,
   );
 
   shouldMatchSnapshot(
     'should correctly render for an error page for Persian',
-    <ErrorMain {...messaging} script={arabic} />,
+    <ErrorMain {...messaging} script={arabic} service="persian" />,
   );
 });
