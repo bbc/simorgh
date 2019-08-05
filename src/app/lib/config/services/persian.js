@@ -1,6 +1,10 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
+import {
+  F_NASSIM_PERSIAN_REGULAR,
+  F_NASSIM_PERSIAN_BOLD,
+} from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
 
 const persian = {
@@ -183,7 +187,7 @@ const persian = {
     copyrightText:
       'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
   },
-  fonts: [],
+  fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };
 
 export default persian;
