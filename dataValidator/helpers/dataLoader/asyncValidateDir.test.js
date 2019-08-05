@@ -32,7 +32,6 @@ describe('asyncValidateDir helper', () => {
 
   it('should call readScenario for every file in the /data directory', async () => {
     const readScenarioSpy = jest.spyOn(readScenario, 'readScenario');
-
     await expectMethodToBeCalledTimes(247, readScenarioSpy);
   });
 

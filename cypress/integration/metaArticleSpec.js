@@ -23,7 +23,7 @@ Object.keys(services)
         });
       });
 
-      it('should have a nofollow meta tag', () => {
+      it('should have a correct robot meta tag', () => {
         cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
       });
 
