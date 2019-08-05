@@ -8,7 +8,7 @@ const REACT_ERRORS = [
   REACT_NO_KEYS,
   REACT_DUPLICATE_KEYS,
 ];
-const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'), 'gi');
+const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
 
 const { error } = console;
 
