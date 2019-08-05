@@ -34,6 +34,7 @@ jobs:
       script:
         - npm run build
         - xvfb-run -a npm run test:prod:travis
+        - npm prune --production
     - stage: test
       if: branch = latest AND type = push
       name: 'Test third party dependencies'
