@@ -12,33 +12,30 @@ describe('AmpChartbeatAnalytics', () => {
     document.body.appendChild(container);
   });
 
-  it('renders with with appropriate props', () => {
-    const props = {
+  it('renders with appropriate props', () => {
+    const config = {
       domain: 'test-domain',
       type: 'article',
       sections: 'section1 section2',
-      cookie: 'cookie',
       chartbeatUID: 1111,
       referrer: '/some-path',
       title: 'This is an article',
+      idSync: {
+        bbc_hid: 'cookie',
+      },
     };
 
     const expectedValue = {
       vars: {
-        uid: props.chartbeatUID,
-        title: props.title,
-        sections: props.sections,
-        domain: props.domain,
-        contentType: props.type,
-        virtualReferrer: props.referrer,
-        idSync: {
-          bbc_hid: props.cookie,
-        },
+        ...config,
       },
       triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
     };
     act(() => {
-      ReactDOM.render(<AmpChartbeatAnalytics {...props} />, container);
+      ReactDOM.render(
+        <AmpChartbeatAnalytics chartbeatConfig={config} />,
+        container,
+      );
     });
 
     expect(container.querySelectorAll('amp-analytics').length).toEqual(1);
@@ -54,11 +51,10 @@ describe('AmpChartbeatAnalytics', () => {
   });
 
   it('renders with with appropriate props without referrer or cookie', () => {
-    const props = {
+    const config = {
       domain: 'test-domain',
       type: 'article',
       sections: 'section1 section2',
-      cookie: null,
       chartbeatUID: 1111,
       referrer: null,
       title: 'This is an article',
@@ -66,16 +62,15 @@ describe('AmpChartbeatAnalytics', () => {
 
     const expectedValue = {
       vars: {
-        uid: props.chartbeatUID,
-        title: props.title,
-        sections: props.sections,
-        domain: props.domain,
-        contentType: props.type,
+        ...config,
       },
       triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
     };
     act(() => {
-      ReactDOM.render(<AmpChartbeatAnalytics {...props} />, container);
+      ReactDOM.render(
+        <AmpChartbeatAnalytics chartbeatConfig={config} />,
+        container,
+      );
     });
 
     expect(container.querySelectorAll('amp-analytics').length).toEqual(1);

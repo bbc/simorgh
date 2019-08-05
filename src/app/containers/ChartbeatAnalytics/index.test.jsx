@@ -91,18 +91,24 @@ describe('Charbeats Analytics Container', () => {
       )
       .toJSON();
 
+    const expectedConfig = {
+      uid: 50924,
+      domain: 'test-domain',
+      idSync: {
+        bbc_hid: 'cookie',
+      },
+      sections: 'secction1 section2',
+      title: 'This is an article',
+      type: 'article',
+      useCanonical: true,
+      virtualReferrer: '/some-path',
+    };
+
     expect(mockCanonical).toHaveBeenCalledTimes(1);
     expect(mockCanonical).toHaveBeenCalledWith(
       {
-        chartbeatUID: 50924,
-        cookie: 'cookie',
-        domain: 'test-domain',
-        sections: 'secction1 section2',
-        type: 'article',
-        useCanonical: true,
+        chartbeatConfig: expectedConfig,
         chartbeatSource,
-        referrer: '/some-path',
-        title: 'This is an article',
       },
       {},
     );
@@ -152,16 +158,21 @@ describe('Charbeats Analytics Container', () => {
         </ContextWrap>,
       )
       .toJSON();
+    const expectedConfig = {
+      uid: 50924,
+      idSync: {
+        bbc_hid: 'cookie',
+      },
+      domain: 'news-domain',
+      sections: 'secction1 section2',
+      contentType: 'article',
+      virtualReferrer: '/some-path',
+      title: 'This is an article',
+    };
     expect(mockAmp).toHaveBeenCalledTimes(1);
     expect(mockAmp).toHaveBeenCalledWith(
       {
-        chartbeatUID: 50924,
-        cookie: 'cookie',
-        domain: 'news-domain',
-        sections: 'secction1 section2',
-        type: 'article',
-        referrer: '/some-path',
-        title: 'This is an article',
+        chartbeatConfig: expectedConfig,
       },
       {},
     );

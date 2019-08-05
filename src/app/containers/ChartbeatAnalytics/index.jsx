@@ -36,21 +36,25 @@ const ChartbeatAnalytics = ({ data }) => {
   const sections = buildSections(service, pageType);
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const commonProps = {
+
+  const isAmp = platform === 'amp';
+  const config = {
     domain,
-    type,
     sections,
-    cookie,
-    chartbeatUID,
+    uid: chartbeatUID,
     title,
-    referrer,
+    ...(isAmp && { contentType: type }),
+    ...(!isAmp && { type }),
+    ...(!isAmp && { type }),
+    ...(!isAmp && { useCanonical }),
+    ...(!!referrer && { virtualReferrer: referrer }),
+    ...(!!cookie && { idSync: { bbc_hid: cookie } }),
   };
-  return platform === 'amp' ? (
-    <AmpChartbeatBeacon {...commonProps} />
+  return isAmp ? (
+    <AmpChartbeatBeacon chartbeatConfig={config} />
   ) : (
     <CanonicalChartbeatBeacon
-      {...commonProps}
-      useCanonical={useCanonical}
+      chartbeatConfig={config}
       chartbeatSource={chartbeatSource}
     />
   );

@@ -1,42 +1,31 @@
 import React, { useEffect } from 'react';
-import { string, bool, number } from 'prop-types';
+import { string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
 
-const CanonicalChartbeatBeacon = ({
-  domain,
-  type,
-  sections,
-  cookie,
-  chartbeatUID,
-  useCanonical,
-  chartbeatSource,
-  title,
-  referrer,
-}) => {
-  const chartbeatConfig = {
-    uid: chartbeatUID,
-    domain,
-    useCanonical,
-    useCanonicalDomain: useCanonical,
-    title,
-    type,
-    sections,
-    ...(!!referrer && { virtualReferrer: referrer }),
-    ...(!!cookie && { idSync: { bbc_hid: cookie } }),
-  };
-
+const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
   useEffect(() => {
     if (typeof window !== 'undefined' && window.pSUPERFLY) {
+      /*
+        This function is always called to update config values on page changes 
+        https://chartbeat.zendesk.com/hc/en-us/articles/210271287-Handling-virtual-page-changes
+      */
       window.pSUPERFLY.virtualPage(chartbeatConfig);
     }
-  });
+  }, [chartbeatConfig]);
+
   return (
     <Helmet>
       <script async type="text/javascript">
         {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, ${JSON.stringify(
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, ${JSON.stringify(
             chartbeatConfig,
           )});
         })();
@@ -48,20 +37,8 @@ const CanonicalChartbeatBeacon = ({
 };
 
 CanonicalChartbeatBeacon.propTypes = {
-  domain: string.isRequired,
-  type: string.isRequired,
-  sections: string.isRequired,
-  cookie: string,
-  chartbeatUID: number.isRequired,
-  useCanonical: bool.isRequired,
+  chartbeatConfig: shape({}).isRequired,
   chartbeatSource: string.isRequired,
-  title: string.isRequired,
-  referrer: string,
-};
-
-CanonicalChartbeatBeacon.defaultProps = {
-  cookie: null,
-  referrer: null,
 };
 
 export default CanonicalChartbeatBeacon;

@@ -5,17 +5,16 @@ Object {
   "instance": null,
   "nodeType": "component",
   "props": Object {
+    "chartbeatConfig": Object {
+      "chartbeatUID": 1111,
+      "domain": "test-domain",
+      "sections": "section1 section2",
+      "title": "This is an article",
+      "type": "article",
+      "useCanonical": true,
+      "virtualReferrer": null,
+    },
     "chartbeatSource": "//chartbeat.js",
-    "chartbeatUID": 1111,
-    "cookie": null,
-    "domain": "test-domain",
-    "hasCookie": false,
-    "hasReferrer": false,
-    "referrer": null,
-    "sections": "section1 section2",
-    "title": "This is an article",
-    "type": "article",
-    "useCanonical": true,
   },
   "rendered": Object {
     "instance": HelmetWrapper {
@@ -43,24 +42,33 @@ Object {
           "key": null,
           "lastEffect": null,
           "memoizedProps": Object {
+            "chartbeatConfig": Object {
+              "chartbeatUID": 1111,
+              "domain": "test-domain",
+              "sections": "section1 section2",
+              "title": "This is an article",
+              "type": "article",
+              "useCanonical": true,
+              "virtualReferrer": null,
+            },
             "chartbeatSource": "//chartbeat.js",
-            "chartbeatUID": 1111,
-            "cookie": null,
-            "domain": "test-domain",
-            "hasCookie": false,
-            "hasReferrer": false,
-            "referrer": null,
-            "sections": "section1 section2",
-            "title": "This is an article",
-            "type": "article",
-            "useCanonical": true,
           },
           "memoizedState": Object {
             "baseState": null,
             "baseUpdate": null,
             "memoizedState": Object {
               "create": [Function],
-              "deps": null,
+              "deps": Array [
+                Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
+              ],
               "destroy": undefined,
               "next": [Circular],
               "tag": 192,
@@ -71,17 +79,16 @@ Object {
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
+            "chartbeatConfig": Object {
+              "chartbeatUID": 1111,
+              "domain": "test-domain",
+              "sections": "section1 section2",
+              "title": "This is an article",
+              "type": "article",
+              "useCanonical": true,
+              "virtualReferrer": null,
+            },
             "chartbeatSource": "//chartbeat.js",
-            "chartbeatUID": 1111,
-            "cookie": null,
-            "domain": "test-domain",
-            "hasCookie": false,
-            "hasReferrer": false,
-            "referrer": null,
-            "sections": "section1 section2",
-            "title": "This is an article",
-            "type": "article",
-            "useCanonical": true,
           },
           "ref": null,
           "return": FiberNode {
@@ -155,17 +162,18 @@ Object {
                   "nextEffect": null,
                   "payload": Object {
                     "element": <CanonicalChartbeatBeacon
+                      chartbeatConfig={
+                        Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        }
+                      }
                       chartbeatSource="//chartbeat.js"
-                      chartbeatUID={1111}
-                      cookie={null}
-                      domain="test-domain"
-                      hasCookie={false}
-                      hasReferrer={false}
-                      referrer={null}
-                      sections="section1 section2"
-                      title="This is an article"
-                      type="article"
-                      useCanonical={true}
                     />,
                   },
                   "tag": 0,
@@ -180,17 +188,18 @@ Object {
                   "nextEffect": null,
                   "payload": Object {
                     "element": <CanonicalChartbeatBeacon
+                      chartbeatConfig={
+                        Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        }
+                      }
                       chartbeatSource="//chartbeat.js"
-                      chartbeatUID={1111}
-                      cookie={null}
-                      domain="test-domain"
-                      hasCookie={false}
-                      hasReferrer={false}
-                      referrer={null}
-                      sections="section1 section2"
-                      title="This is an article"
-                      type="article"
-                      useCanonical={true}
                     />,
                   },
                   "tag": 0,
@@ -210,17 +219,18 @@ Object {
             "memoizedProps": null,
             "memoizedState": Object {
               "element": <CanonicalChartbeatBeacon
+                chartbeatConfig={
+                  Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  }
+                }
                 chartbeatSource="//chartbeat.js"
-                chartbeatUID={1111}
-                cookie={null}
-                domain="test-domain"
-                hasCookie={false}
-                hasReferrer={false}
-                referrer={null}
-                sections="section1 section2"
-                title="This is an article"
-                type="article"
-                useCanonical={true}
               />,
             },
             "mode": 0,
@@ -260,17 +270,18 @@ Object {
             "updateQueue": Object {
               "baseState": Object {
                 "element": <CanonicalChartbeatBeacon
+                  chartbeatConfig={
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    }
+                  }
                   chartbeatSource="//chartbeat.js"
-                  chartbeatUID={1111}
-                  cookie={null}
-                  domain="test-domain"
-                  hasCookie={false}
-                  hasReferrer={false}
-                  referrer={null}
-                  sections="section1 section2"
-                  title="This is an article"
-                  type="article"
-                  useCanonical={true}
                 />,
               },
               "firstCapturedEffect": null,
@@ -290,7 +301,17 @@ Object {
           "updateQueue": Object {
             "lastEffect": Object {
               "create": [Function],
-              "deps": null,
+              "deps": Array [
+                Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
+              ],
               "destroy": undefined,
               "next": [Circular],
               "tag": 192,
@@ -332,7 +353,13 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -356,7 +383,13 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -394,7 +427,13 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                 "type": "text/javascript",
@@ -418,7 +457,13 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                 "type": "text/javascript",
@@ -446,7 +491,13 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -489,7 +540,13 @@ Object {
               
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
             </script>,
@@ -514,7 +571,13 @@ Object {
               
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
             </script>,
@@ -548,24 +611,33 @@ Object {
           "key": null,
           "lastEffect": null,
           "memoizedProps": Object {
+            "chartbeatConfig": Object {
+              "chartbeatUID": 1111,
+              "domain": "test-domain",
+              "sections": "section1 section2",
+              "title": "This is an article",
+              "type": "article",
+              "useCanonical": true,
+              "virtualReferrer": null,
+            },
             "chartbeatSource": "//chartbeat.js",
-            "chartbeatUID": 1111,
-            "cookie": null,
-            "domain": "test-domain",
-            "hasCookie": false,
-            "hasReferrer": false,
-            "referrer": null,
-            "sections": "section1 section2",
-            "title": "This is an article",
-            "type": "article",
-            "useCanonical": true,
           },
           "memoizedState": Object {
             "baseState": null,
             "baseUpdate": null,
             "memoizedState": Object {
               "create": [Function],
-              "deps": null,
+              "deps": Array [
+                Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
+              ],
               "destroy": undefined,
               "next": [Circular],
               "tag": 192,
@@ -576,17 +648,16 @@ Object {
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
+            "chartbeatConfig": Object {
+              "chartbeatUID": 1111,
+              "domain": "test-domain",
+              "sections": "section1 section2",
+              "title": "This is an article",
+              "type": "article",
+              "useCanonical": true,
+              "virtualReferrer": null,
+            },
             "chartbeatSource": "//chartbeat.js",
-            "chartbeatUID": 1111,
-            "cookie": null,
-            "domain": "test-domain",
-            "hasCookie": false,
-            "hasReferrer": false,
-            "referrer": null,
-            "sections": "section1 section2",
-            "title": "This is an article",
-            "type": "article",
-            "useCanonical": true,
           },
           "ref": null,
           "return": FiberNode {
@@ -660,17 +731,18 @@ Object {
                   "nextEffect": null,
                   "payload": Object {
                     "element": <CanonicalChartbeatBeacon
+                      chartbeatConfig={
+                        Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        }
+                      }
                       chartbeatSource="//chartbeat.js"
-                      chartbeatUID={1111}
-                      cookie={null}
-                      domain="test-domain"
-                      hasCookie={false}
-                      hasReferrer={false}
-                      referrer={null}
-                      sections="section1 section2"
-                      title="This is an article"
-                      type="article"
-                      useCanonical={true}
                     />,
                   },
                   "tag": 0,
@@ -685,17 +757,18 @@ Object {
                   "nextEffect": null,
                   "payload": Object {
                     "element": <CanonicalChartbeatBeacon
+                      chartbeatConfig={
+                        Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        }
+                      }
                       chartbeatSource="//chartbeat.js"
-                      chartbeatUID={1111}
-                      cookie={null}
-                      domain="test-domain"
-                      hasCookie={false}
-                      hasReferrer={false}
-                      referrer={null}
-                      sections="section1 section2"
-                      title="This is an article"
-                      type="article"
-                      useCanonical={true}
                     />,
                   },
                   "tag": 0,
@@ -715,17 +788,18 @@ Object {
             "memoizedProps": null,
             "memoizedState": Object {
               "element": <CanonicalChartbeatBeacon
+                chartbeatConfig={
+                  Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  }
+                }
                 chartbeatSource="//chartbeat.js"
-                chartbeatUID={1111}
-                cookie={null}
-                domain="test-domain"
-                hasCookie={false}
-                hasReferrer={false}
-                referrer={null}
-                sections="section1 section2"
-                title="This is an article"
-                type="article"
-                useCanonical={true}
               />,
             },
             "mode": 0,
@@ -765,17 +839,18 @@ Object {
             "updateQueue": Object {
               "baseState": Object {
                 "element": <CanonicalChartbeatBeacon
+                  chartbeatConfig={
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    }
+                  }
                   chartbeatSource="//chartbeat.js"
-                  chartbeatUID={1111}
-                  cookie={null}
-                  domain="test-domain"
-                  hasCookie={false}
-                  hasReferrer={false}
-                  referrer={null}
-                  sections="section1 section2"
-                  title="This is an article"
-                  type="article"
-                  useCanonical={true}
                 />,
               },
               "firstCapturedEffect": null,
@@ -795,7 +870,17 @@ Object {
           "updateQueue": Object {
             "lastEffect": Object {
               "create": [Function],
-              "deps": null,
+              "deps": Array [
+                Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
+              ],
               "destroy": undefined,
               "next": [Circular],
               "tag": 192,
@@ -819,7 +904,13 @@ Object {
             
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
           </script>,
@@ -851,7 +942,13 @@ Object {
           
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
         </script>,
@@ -894,24 +991,33 @@ Object {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
+                "chartbeatConfig": Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
                 "chartbeatSource": "//chartbeat.js",
-                "chartbeatUID": 1111,
-                "cookie": null,
-                "domain": "test-domain",
-                "hasCookie": false,
-                "hasReferrer": false,
-                "referrer": null,
-                "sections": "section1 section2",
-                "title": "This is an article",
-                "type": "article",
-                "useCanonical": true,
               },
               "memoizedState": Object {
                 "baseState": null,
                 "baseUpdate": null,
                 "memoizedState": Object {
                   "create": [Function],
-                  "deps": null,
+                  "deps": Array [
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  ],
                   "destroy": undefined,
                   "next": [Circular],
                   "tag": 192,
@@ -922,17 +1028,16 @@ Object {
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
+                "chartbeatConfig": Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
                 "chartbeatSource": "//chartbeat.js",
-                "chartbeatUID": 1111,
-                "cookie": null,
-                "domain": "test-domain",
-                "hasCookie": false,
-                "hasReferrer": false,
-                "referrer": null,
-                "sections": "section1 section2",
-                "title": "This is an article",
-                "type": "article",
-                "useCanonical": true,
               },
               "ref": null,
               "return": FiberNode {
@@ -1006,17 +1111,18 @@ Object {
                       "nextEffect": null,
                       "payload": Object {
                         "element": <CanonicalChartbeatBeacon
+                          chartbeatConfig={
+                            Object {
+                              "chartbeatUID": 1111,
+                              "domain": "test-domain",
+                              "sections": "section1 section2",
+                              "title": "This is an article",
+                              "type": "article",
+                              "useCanonical": true,
+                              "virtualReferrer": null,
+                            }
+                          }
                           chartbeatSource="//chartbeat.js"
-                          chartbeatUID={1111}
-                          cookie={null}
-                          domain="test-domain"
-                          hasCookie={false}
-                          hasReferrer={false}
-                          referrer={null}
-                          sections="section1 section2"
-                          title="This is an article"
-                          type="article"
-                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1031,17 +1137,18 @@ Object {
                       "nextEffect": null,
                       "payload": Object {
                         "element": <CanonicalChartbeatBeacon
+                          chartbeatConfig={
+                            Object {
+                              "chartbeatUID": 1111,
+                              "domain": "test-domain",
+                              "sections": "section1 section2",
+                              "title": "This is an article",
+                              "type": "article",
+                              "useCanonical": true,
+                              "virtualReferrer": null,
+                            }
+                          }
                           chartbeatSource="//chartbeat.js"
-                          chartbeatUID={1111}
-                          cookie={null}
-                          domain="test-domain"
-                          hasCookie={false}
-                          hasReferrer={false}
-                          referrer={null}
-                          sections="section1 section2"
-                          title="This is an article"
-                          type="article"
-                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1061,17 +1168,18 @@ Object {
                 "memoizedProps": null,
                 "memoizedState": Object {
                   "element": <CanonicalChartbeatBeacon
+                    chartbeatConfig={
+                      Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      }
+                    }
                     chartbeatSource="//chartbeat.js"
-                    chartbeatUID={1111}
-                    cookie={null}
-                    domain="test-domain"
-                    hasCookie={false}
-                    hasReferrer={false}
-                    referrer={null}
-                    sections="section1 section2"
-                    title="This is an article"
-                    type="article"
-                    useCanonical={true}
                   />,
                 },
                 "mode": 0,
@@ -1111,17 +1219,18 @@ Object {
                 "updateQueue": Object {
                   "baseState": Object {
                     "element": <CanonicalChartbeatBeacon
+                      chartbeatConfig={
+                        Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        }
+                      }
                       chartbeatSource="//chartbeat.js"
-                      chartbeatUID={1111}
-                      cookie={null}
-                      domain="test-domain"
-                      hasCookie={false}
-                      hasReferrer={false}
-                      referrer={null}
-                      sections="section1 section2"
-                      title="This is an article"
-                      type="article"
-                      useCanonical={true}
                     />,
                   },
                   "firstCapturedEffect": null,
@@ -1141,7 +1250,17 @@ Object {
               "updateQueue": Object {
                 "lastEffect": Object {
                   "create": [Function],
-                  "deps": null,
+                  "deps": Array [
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  ],
                   "destroy": undefined,
                   "next": [Circular],
                   "tag": 192,
@@ -1169,7 +1288,13 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                 </script>,
@@ -1194,7 +1319,13 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                 </script>,
@@ -1228,24 +1359,33 @@ Object {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
+                "chartbeatConfig": Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
                 "chartbeatSource": "//chartbeat.js",
-                "chartbeatUID": 1111,
-                "cookie": null,
-                "domain": "test-domain",
-                "hasCookie": false,
-                "hasReferrer": false,
-                "referrer": null,
-                "sections": "section1 section2",
-                "title": "This is an article",
-                "type": "article",
-                "useCanonical": true,
               },
               "memoizedState": Object {
                 "baseState": null,
                 "baseUpdate": null,
                 "memoizedState": Object {
                   "create": [Function],
-                  "deps": null,
+                  "deps": Array [
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  ],
                   "destroy": undefined,
                   "next": [Circular],
                   "tag": 192,
@@ -1256,17 +1396,16 @@ Object {
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
+                "chartbeatConfig": Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
                 "chartbeatSource": "//chartbeat.js",
-                "chartbeatUID": 1111,
-                "cookie": null,
-                "domain": "test-domain",
-                "hasCookie": false,
-                "hasReferrer": false,
-                "referrer": null,
-                "sections": "section1 section2",
-                "title": "This is an article",
-                "type": "article",
-                "useCanonical": true,
               },
               "ref": null,
               "return": FiberNode {
@@ -1340,17 +1479,18 @@ Object {
                       "nextEffect": null,
                       "payload": Object {
                         "element": <CanonicalChartbeatBeacon
+                          chartbeatConfig={
+                            Object {
+                              "chartbeatUID": 1111,
+                              "domain": "test-domain",
+                              "sections": "section1 section2",
+                              "title": "This is an article",
+                              "type": "article",
+                              "useCanonical": true,
+                              "virtualReferrer": null,
+                            }
+                          }
                           chartbeatSource="//chartbeat.js"
-                          chartbeatUID={1111}
-                          cookie={null}
-                          domain="test-domain"
-                          hasCookie={false}
-                          hasReferrer={false}
-                          referrer={null}
-                          sections="section1 section2"
-                          title="This is an article"
-                          type="article"
-                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1365,17 +1505,18 @@ Object {
                       "nextEffect": null,
                       "payload": Object {
                         "element": <CanonicalChartbeatBeacon
+                          chartbeatConfig={
+                            Object {
+                              "chartbeatUID": 1111,
+                              "domain": "test-domain",
+                              "sections": "section1 section2",
+                              "title": "This is an article",
+                              "type": "article",
+                              "useCanonical": true,
+                              "virtualReferrer": null,
+                            }
+                          }
                           chartbeatSource="//chartbeat.js"
-                          chartbeatUID={1111}
-                          cookie={null}
-                          domain="test-domain"
-                          hasCookie={false}
-                          hasReferrer={false}
-                          referrer={null}
-                          sections="section1 section2"
-                          title="This is an article"
-                          type="article"
-                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1395,17 +1536,18 @@ Object {
                 "memoizedProps": null,
                 "memoizedState": Object {
                   "element": <CanonicalChartbeatBeacon
+                    chartbeatConfig={
+                      Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      }
+                    }
                     chartbeatSource="//chartbeat.js"
-                    chartbeatUID={1111}
-                    cookie={null}
-                    domain="test-domain"
-                    hasCookie={false}
-                    hasReferrer={false}
-                    referrer={null}
-                    sections="section1 section2"
-                    title="This is an article"
-                    type="article"
-                    useCanonical={true}
                   />,
                 },
                 "mode": 0,
@@ -1445,17 +1587,18 @@ Object {
                 "updateQueue": Object {
                   "baseState": Object {
                     "element": <CanonicalChartbeatBeacon
+                      chartbeatConfig={
+                        Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        }
+                      }
                       chartbeatSource="//chartbeat.js"
-                      chartbeatUID={1111}
-                      cookie={null}
-                      domain="test-domain"
-                      hasCookie={false}
-                      hasReferrer={false}
-                      referrer={null}
-                      sections="section1 section2"
-                      title="This is an article"
-                      type="article"
-                      useCanonical={true}
                     />,
                   },
                   "firstCapturedEffect": null,
@@ -1475,7 +1618,17 @@ Object {
               "updateQueue": Object {
                 "lastEffect": Object {
                   "create": [Function],
-                  "deps": null,
+                  "deps": Array [
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  ],
                   "destroy": undefined,
                   "next": [Circular],
                   "tag": 192,
@@ -1496,7 +1649,13 @@ Object {
                     
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                   </script>,
@@ -1550,7 +1709,13 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -1574,7 +1739,13 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -1612,7 +1783,13 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                 "type": "text/javascript",
@@ -1636,7 +1813,13 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                 "type": "text/javascript",
@@ -1673,24 +1856,33 @@ Object {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
+                "chartbeatConfig": Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
                 "chartbeatSource": "//chartbeat.js",
-                "chartbeatUID": 1111,
-                "cookie": null,
-                "domain": "test-domain",
-                "hasCookie": false,
-                "hasReferrer": false,
-                "referrer": null,
-                "sections": "section1 section2",
-                "title": "This is an article",
-                "type": "article",
-                "useCanonical": true,
               },
               "memoizedState": Object {
                 "baseState": null,
                 "baseUpdate": null,
                 "memoizedState": Object {
                   "create": [Function],
-                  "deps": null,
+                  "deps": Array [
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  ],
                   "destroy": undefined,
                   "next": [Circular],
                   "tag": 192,
@@ -1701,17 +1893,16 @@ Object {
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
+                "chartbeatConfig": Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
                 "chartbeatSource": "//chartbeat.js",
-                "chartbeatUID": 1111,
-                "cookie": null,
-                "domain": "test-domain",
-                "hasCookie": false,
-                "hasReferrer": false,
-                "referrer": null,
-                "sections": "section1 section2",
-                "title": "This is an article",
-                "type": "article",
-                "useCanonical": true,
               },
               "ref": null,
               "return": FiberNode {
@@ -1785,17 +1976,18 @@ Object {
                       "nextEffect": null,
                       "payload": Object {
                         "element": <CanonicalChartbeatBeacon
+                          chartbeatConfig={
+                            Object {
+                              "chartbeatUID": 1111,
+                              "domain": "test-domain",
+                              "sections": "section1 section2",
+                              "title": "This is an article",
+                              "type": "article",
+                              "useCanonical": true,
+                              "virtualReferrer": null,
+                            }
+                          }
                           chartbeatSource="//chartbeat.js"
-                          chartbeatUID={1111}
-                          cookie={null}
-                          domain="test-domain"
-                          hasCookie={false}
-                          hasReferrer={false}
-                          referrer={null}
-                          sections="section1 section2"
-                          title="This is an article"
-                          type="article"
-                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1810,17 +2002,18 @@ Object {
                       "nextEffect": null,
                       "payload": Object {
                         "element": <CanonicalChartbeatBeacon
+                          chartbeatConfig={
+                            Object {
+                              "chartbeatUID": 1111,
+                              "domain": "test-domain",
+                              "sections": "section1 section2",
+                              "title": "This is an article",
+                              "type": "article",
+                              "useCanonical": true,
+                              "virtualReferrer": null,
+                            }
+                          }
                           chartbeatSource="//chartbeat.js"
-                          chartbeatUID={1111}
-                          cookie={null}
-                          domain="test-domain"
-                          hasCookie={false}
-                          hasReferrer={false}
-                          referrer={null}
-                          sections="section1 section2"
-                          title="This is an article"
-                          type="article"
-                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -1840,17 +2033,18 @@ Object {
                 "memoizedProps": null,
                 "memoizedState": Object {
                   "element": <CanonicalChartbeatBeacon
+                    chartbeatConfig={
+                      Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      }
+                    }
                     chartbeatSource="//chartbeat.js"
-                    chartbeatUID={1111}
-                    cookie={null}
-                    domain="test-domain"
-                    hasCookie={false}
-                    hasReferrer={false}
-                    referrer={null}
-                    sections="section1 section2"
-                    title="This is an article"
-                    type="article"
-                    useCanonical={true}
                   />,
                 },
                 "mode": 0,
@@ -1890,17 +2084,18 @@ Object {
                 "updateQueue": Object {
                   "baseState": Object {
                     "element": <CanonicalChartbeatBeacon
+                      chartbeatConfig={
+                        Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        }
+                      }
                       chartbeatSource="//chartbeat.js"
-                      chartbeatUID={1111}
-                      cookie={null}
-                      domain="test-domain"
-                      hasCookie={false}
-                      hasReferrer={false}
-                      referrer={null}
-                      sections="section1 section2"
-                      title="This is an article"
-                      type="article"
-                      useCanonical={true}
                     />,
                   },
                   "firstCapturedEffect": null,
@@ -1920,7 +2115,17 @@ Object {
               "updateQueue": Object {
                 "lastEffect": Object {
                   "create": [Function],
-                  "deps": null,
+                  "deps": Array [
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  ],
                   "destroy": undefined,
                   "next": [Circular],
                   "tag": 192,
@@ -1948,7 +2153,13 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                 </script>,
@@ -1973,7 +2184,13 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                 </script>,
@@ -2007,24 +2224,33 @@ Object {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
+                "chartbeatConfig": Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
                 "chartbeatSource": "//chartbeat.js",
-                "chartbeatUID": 1111,
-                "cookie": null,
-                "domain": "test-domain",
-                "hasCookie": false,
-                "hasReferrer": false,
-                "referrer": null,
-                "sections": "section1 section2",
-                "title": "This is an article",
-                "type": "article",
-                "useCanonical": true,
               },
               "memoizedState": Object {
                 "baseState": null,
                 "baseUpdate": null,
                 "memoizedState": Object {
                   "create": [Function],
-                  "deps": null,
+                  "deps": Array [
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  ],
                   "destroy": undefined,
                   "next": [Circular],
                   "tag": 192,
@@ -2035,17 +2261,16 @@ Object {
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
+                "chartbeatConfig": Object {
+                  "chartbeatUID": 1111,
+                  "domain": "test-domain",
+                  "sections": "section1 section2",
+                  "title": "This is an article",
+                  "type": "article",
+                  "useCanonical": true,
+                  "virtualReferrer": null,
+                },
                 "chartbeatSource": "//chartbeat.js",
-                "chartbeatUID": 1111,
-                "cookie": null,
-                "domain": "test-domain",
-                "hasCookie": false,
-                "hasReferrer": false,
-                "referrer": null,
-                "sections": "section1 section2",
-                "title": "This is an article",
-                "type": "article",
-                "useCanonical": true,
               },
               "ref": null,
               "return": FiberNode {
@@ -2119,17 +2344,18 @@ Object {
                       "nextEffect": null,
                       "payload": Object {
                         "element": <CanonicalChartbeatBeacon
+                          chartbeatConfig={
+                            Object {
+                              "chartbeatUID": 1111,
+                              "domain": "test-domain",
+                              "sections": "section1 section2",
+                              "title": "This is an article",
+                              "type": "article",
+                              "useCanonical": true,
+                              "virtualReferrer": null,
+                            }
+                          }
                           chartbeatSource="//chartbeat.js"
-                          chartbeatUID={1111}
-                          cookie={null}
-                          domain="test-domain"
-                          hasCookie={false}
-                          hasReferrer={false}
-                          referrer={null}
-                          sections="section1 section2"
-                          title="This is an article"
-                          type="article"
-                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -2144,17 +2370,18 @@ Object {
                       "nextEffect": null,
                       "payload": Object {
                         "element": <CanonicalChartbeatBeacon
+                          chartbeatConfig={
+                            Object {
+                              "chartbeatUID": 1111,
+                              "domain": "test-domain",
+                              "sections": "section1 section2",
+                              "title": "This is an article",
+                              "type": "article",
+                              "useCanonical": true,
+                              "virtualReferrer": null,
+                            }
+                          }
                           chartbeatSource="//chartbeat.js"
-                          chartbeatUID={1111}
-                          cookie={null}
-                          domain="test-domain"
-                          hasCookie={false}
-                          hasReferrer={false}
-                          referrer={null}
-                          sections="section1 section2"
-                          title="This is an article"
-                          type="article"
-                          useCanonical={true}
                         />,
                       },
                       "tag": 0,
@@ -2174,17 +2401,18 @@ Object {
                 "memoizedProps": null,
                 "memoizedState": Object {
                   "element": <CanonicalChartbeatBeacon
+                    chartbeatConfig={
+                      Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      }
+                    }
                     chartbeatSource="//chartbeat.js"
-                    chartbeatUID={1111}
-                    cookie={null}
-                    domain="test-domain"
-                    hasCookie={false}
-                    hasReferrer={false}
-                    referrer={null}
-                    sections="section1 section2"
-                    title="This is an article"
-                    type="article"
-                    useCanonical={true}
                   />,
                 },
                 "mode": 0,
@@ -2224,17 +2452,18 @@ Object {
                 "updateQueue": Object {
                   "baseState": Object {
                     "element": <CanonicalChartbeatBeacon
+                      chartbeatConfig={
+                        Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        }
+                      }
                       chartbeatSource="//chartbeat.js"
-                      chartbeatUID={1111}
-                      cookie={null}
-                      domain="test-domain"
-                      hasCookie={false}
-                      hasReferrer={false}
-                      referrer={null}
-                      sections="section1 section2"
-                      title="This is an article"
-                      type="article"
-                      useCanonical={true}
                     />,
                   },
                   "firstCapturedEffect": null,
@@ -2254,7 +2483,17 @@ Object {
               "updateQueue": Object {
                 "lastEffect": Object {
                   "create": [Function],
-                  "deps": null,
+                  "deps": Array [
+                    Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  ],
                   "destroy": undefined,
                   "next": [Circular],
                   "tag": 192,
@@ -2275,7 +2514,13 @@ Object {
                     
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                   </script>,
@@ -2318,7 +2563,13 @@ Object {
               "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
               "type": "text/javascript",
@@ -2349,7 +2600,13 @@ Object {
             "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
             "type": "text/javascript",
@@ -2373,7 +2630,13 @@ Object {
               "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
+          function merge(obj, src) {
+            for (var key in src) {
+                if (src.hasOwnProperty(key)) obj[key] = src[key];
+            }
+            return obj;
+          }
+          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
               "type": "text/javascript",
