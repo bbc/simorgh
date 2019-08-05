@@ -1,6 +1,6 @@
 import isTenHoursAgo from '.';
 
-describe('isTenHoursAgoOrLess', () => {
+describe('isTenHoursAgo', () => {
   it('should return true if 10 hours ago or less', () => {
     const currentTime = Date.now();
     const threeHoursAgo = currentTime - 60 * 60 * 1000 * 3;
