@@ -12,7 +12,7 @@ const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const imageWidth = 640;
 const imageRatio = 56.25;
-const captionBlock = text => blockContainingText('caption', text, uuid());
+const captionBlock = text => blockContainingText('caption', text);
 
 const createCaptionBlock = arrayOfBlocks => {
   const captionBlockSkeleton = {
@@ -40,7 +40,7 @@ const paragraphBlockWithInlineLink = {
     text: 'This is a caption containing an inline link.',
     blocks: [
       {
-        id: uuid(),
+        id: 1,
         type: 'fragment',
         model: {
           text: 'This is a caption ',
@@ -48,7 +48,7 @@ const paragraphBlockWithInlineLink = {
         },
       },
       {
-        id: uuid(),
+        id: 2,
         type: 'urlLink',
         model: {
           text: 'containing an inline link',
@@ -56,7 +56,7 @@ const paragraphBlockWithInlineLink = {
           isExternal: false,
           blocks: [
             {
-              id: uuid(),
+              id: 22,
               type: 'fragment',
               model: {
                 text: 'containing an inline link',
@@ -67,7 +67,7 @@ const paragraphBlockWithInlineLink = {
         },
       },
       {
-        id: uuid(),
+        id: 3,
         type: 'fragment',
         model: {
           text: '.',
@@ -84,7 +84,7 @@ const paragraphBlockWithBoldAndItalics = {
     text: 'This is a second paragraph with italics and bold and bold italics',
     blocks: [
       {
-        id: uuid(),
+        id: 4,
         type: 'fragment',
         model: {
           text: 'This is a second paragraph with ',
@@ -92,7 +92,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
-        id: uuid(),
+        id: 5,
         type: 'fragment',
         model: {
           text: 'italics',
@@ -100,7 +100,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
-        id: uuid(),
+        id: 6,
         type: 'fragment',
         model: {
           text: ' and ',
@@ -108,7 +108,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
-        id: uuid(),
+        id: 7,
         type: 'fragment',
         model: {
           text: 'bold',
@@ -116,7 +116,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
-        id: uuid(),
+        id: 8,
         type: 'fragment',
         model: {
           text: ' and ',
@@ -124,7 +124,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
-        id: uuid(),
+        id: 9,
         type: 'fragment',
         model: {
           text: 'bold italics',
@@ -138,7 +138,7 @@ const paragraphBlockWithBoldAndItalics = {
 const captionBlockWithMultipleParagraphsAndLink = createCaptionBlock([
   paragraphBlockWithInlineLink,
   paragraphBlockWithBoldAndItalics,
-  paragraphBlockWithInlineLink,
+  captionBlock('One of mutiple captions within a paragraph'),
 ]);
 
 const captionBlockWithLink = createCaptionBlock([paragraphBlockWithInlineLink]);
