@@ -41,6 +41,7 @@ exports[`withData HOC with valid articles data should return the passed in compo
                           "model": Object {
                             "blocks": Array [
                               Object {
+                                "id": null,
                                 "model": Object {
                                   "attributes": Array [],
                                   "text": "Article Headline",
@@ -67,6 +68,7 @@ exports[`withData HOC with valid articles data should return the passed in compo
                     "model": Object {
                       "blocks": Array [
                         Object {
+                          "id": null,
                           "model": Object {
                             "attributes": Array [],
                             "text": "A paragraph.",

@@ -3,7 +3,7 @@ export const imageType = 'image';
 export const videoType = 'video';
 export const rawImageType = 'rawImage';
 
-export const singleTextBlock = (text, id) => ({
+export const singleTextBlock = (text, id = null) => ({
   type: 'text',
   model: {
     blocks: [
