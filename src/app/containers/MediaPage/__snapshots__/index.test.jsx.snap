@@ -163,8 +163,10 @@ Array [
   font-size: 1.75rem;
   line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0;
+  font-weight: 500;
   padding: 2.5rem 0 2.5rem 0;
 }
 

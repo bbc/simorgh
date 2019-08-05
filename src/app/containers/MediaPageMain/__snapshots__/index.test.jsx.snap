@@ -5,8 +5,10 @@ exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 2rem 0;
+  font-weight: 500;
 }
 
 .c3 {
