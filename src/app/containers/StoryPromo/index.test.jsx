@@ -80,6 +80,25 @@ const videoItem = {
   },
 };
 
+const liveItem = {
+  headlines: {
+    headline: 'A live item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  summary: 'Summary text',
+  timestamp: 1556795033,
+  indexImage: {
+    path: '/cpsprodpb/0A06/production/image.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Image Alt text',
+    copyrightHolder: 'Image provider',
+  },
+  cpsType: 'LIV',
+};
+
 const audioItemNoDuration = {
   headlines: {
     headline: 'An audio item',
@@ -107,6 +126,7 @@ const fixtures = {
   standard: completeItem,
   video: videoItem,
   audio: audioItem,
+  live: liveItem,
   'audio with no duration': audioItemNoDuration,
 };
 
