@@ -5,9 +5,7 @@ const source = '//static.chartbeat.com/js/chartbeat.js';
 const UID = 50924;
 
 const hasScriptWithChartbeatSrc = chartbeatSource => {
-  cy.get(`script`)
-    .eq(0)
-    .should('have.attr', 'src', `${chartbeatSource}`);
+  cy.get(`script[src="${chartbeatSource}"]`).should('exist');
 };
 
 const hasGlobalChartbeatConfig = () => {
