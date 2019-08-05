@@ -146,7 +146,9 @@ pipeline {
             }
           }
           steps {
-            runDevelopmentTests()
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              runDevelopmentTests()
+            }
           }
         }
         stage ('Test Production and Zip Production') {
