@@ -1,7 +1,6 @@
 import envConfig from '../support/config/envs';
 import services from '../support/config/services';
 import testData from '../../src/app/lib/config/services';
-import { hasHtmlLangDirAttributes } from '../support/bodyTestHelper';
 
 const serviceHasArticlePageType = service =>
   services[service].pageTypes.articles !== undefined;
@@ -18,33 +17,14 @@ Object.keys(services)
       });
 
       it('should have the correct lang & dir attributes', () => {
-        hasHtmlLangDirAttributes({
+        cy.hasHtmlLangDirAttributes({
           lang: `${testData[service].datetimeLocale}`,
           dir: `${testData[service].dir}`,
         });
       });
 
-      it('should have a nofollow meta tag', () => {
+      it('should have a correct robot meta tag', () => {
         cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
-      });
-
-      it('should load a maximum of two Reith font files', () => {
-        const fontFamiliesArray = [];
-        cy.get('*')
-          .each(element => {
-            const fontFamily = Cypress.$(element).css('font-family');
-            if (
-              fontFamily &&
-              !fontFamiliesArray.includes(fontFamily) &&
-              fontFamily.startsWith(`${services[service].font}`)
-            ) {
-              fontFamiliesArray.push(fontFamily);
-            }
-          })
-          .then(() => {
-            expect(fontFamiliesArray.length).to.be.lessThan(3);
-            expect(fontFamiliesArray.length).to.be.greaterThan(0);
-          });
       });
 
       it('should have resource hints', () => {
