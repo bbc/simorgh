@@ -158,7 +158,7 @@
     "chalk": "^2.4.1",
     "chrome-launcher": "^0.10.5",
     "compression-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.0.3",
+    "copy-webpack-plugin": "^5.0.4",
     "cypress": "3.4.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
