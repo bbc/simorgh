@@ -332,26 +332,14 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                  "type": "text/javascript",
+                },
+                Object {
+                  "async": true,
+                  "src": "//chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -368,26 +356,14 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                  "type": "text/javascript",
+                },
+                Object {
+                  "async": true,
+                  "src": "//chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -418,26 +394,14 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                "type": "text/javascript",
+              },
+              Object {
+                "async": true,
+                "src": "//chartbeat.js",
                 "type": "text/javascript",
               },
             ],
@@ -454,26 +418,14 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                "type": "text/javascript",
+              },
+              Object {
+                "async": true,
+                "src": "//chartbeat.js",
                 "type": "text/javascript",
               },
             ],
@@ -494,26 +446,14 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                  "type": "text/javascript",
+                },
+                Object {
+                  "async": true,
+                  "src": "//chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -541,34 +481,24 @@ Object {
         "key": null,
         "lastEffect": null,
         "memoizedProps": Object {
-          "children": <script
-            async={true}
-            type="text/javascript"
-          >
-            
+          "children": Array [
+            <script
+              async={true}
+              type="text/javascript"
+            >
+              
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-          </script>,
+            </script>,
+            <script
+              async={true}
+              src="//chartbeat.js"
+              type="text/javascript"
+            />,
+          ],
           "defer": true,
           "encodeSpecialCharacters": true,
         },
@@ -576,34 +506,24 @@ Object {
         "mode": 0,
         "nextEffect": null,
         "pendingProps": Object {
-          "children": <script
-            async={true}
-            type="text/javascript"
-          >
-            
+          "children": Array [
+            <script
+              async={true}
+              type="text/javascript"
+            >
+              
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-          </script>,
+            </script>,
+            <script
+              async={true}
+              src="//chartbeat.js"
+              type="text/javascript"
+            />,
+          ],
           "defer": true,
           "encodeSpecialCharacters": true,
         },
@@ -891,34 +811,24 @@ Object {
       "_reactInternalInstance": Object {},
       "context": Object {},
       "props": Object {
-        "children": <script
-          async={true}
-          type="text/javascript"
-        >
-          
+        "children": Array [
+          <script
+            async={true}
+            type="text/javascript"
+          >
+            
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-        </script>,
+          </script>,
+          <script
+            async={true}
+            src="//chartbeat.js"
+            type="text/javascript"
+          />,
+        ],
         "defer": true,
         "encodeSpecialCharacters": true,
       },
@@ -933,34 +843,24 @@ Object {
     },
     "nodeType": "component",
     "props": Object {
-      "children": <script
-        async={true}
-        type="text/javascript"
-      >
-        
+      "children": Array [
+        <script
+          async={true}
+          type="text/javascript"
+        >
+          
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-      </script>,
+        </script>,
+        <script
+          async={true}
+          src="//chartbeat.js"
+          type="text/javascript"
+        />,
+      ],
       "defer": true,
       "encodeSpecialCharacters": true,
     },
@@ -1261,34 +1161,24 @@ Object {
             "key": null,
             "lastEffect": null,
             "memoizedProps": Object {
-              "children": <script
-                async={true}
-                type="text/javascript"
-              >
-                
+              "children": Array [
+                <script
+                  async={true}
+                  type="text/javascript"
+                >
+                  
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-              </script>,
+                </script>,
+                <script
+                  async={true}
+                  src="//chartbeat.js"
+                  type="text/javascript"
+                />,
+              ],
               "defer": true,
               "encodeSpecialCharacters": true,
             },
@@ -1296,34 +1186,24 @@ Object {
             "mode": 0,
             "nextEffect": null,
             "pendingProps": Object {
-              "children": <script
-                async={true}
-                type="text/javascript"
-              >
-                
+              "children": Array [
+                <script
+                  async={true}
+                  type="text/javascript"
+                >
+                  
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-              </script>,
+                </script>,
+                <script
+                  async={true}
+                  src="//chartbeat.js"
+                  type="text/javascript"
+                />,
+              ],
               "defer": true,
               "encodeSpecialCharacters": true,
             },
@@ -1608,34 +1488,24 @@ Object {
               "_reactInternalInstance": Object {},
               "context": Object {},
               "props": Object {
-                "children": <script
-                  async={true}
-                  type="text/javascript"
-                >
-                  
+                "children": Array [
+                  <script
+                    async={true}
+                    type="text/javascript"
+                  >
+                    
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-                </script>,
+                  </script>,
+                  <script
+                    async={true}
+                    src="//chartbeat.js"
+                    type="text/javascript"
+                  />,
+                ],
                 "defer": true,
                 "encodeSpecialCharacters": true,
               },
@@ -1680,26 +1550,14 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                  "type": "text/javascript",
+                },
+                Object {
+                  "async": true,
+                  "src": "//chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -1716,26 +1574,14 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                  "type": "text/javascript",
+                },
+                Object {
+                  "async": true,
+                  "src": "//chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -1766,26 +1612,14 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                "type": "text/javascript",
+              },
+              Object {
+                "async": true,
+                "src": "//chartbeat.js",
                 "type": "text/javascript",
               },
             ],
@@ -1802,26 +1636,14 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+                "type": "text/javascript",
+              },
+              Object {
+                "async": true,
+                "src": "//chartbeat.js",
                 "type": "text/javascript",
               },
             ],
@@ -2118,34 +1940,24 @@ Object {
             "key": null,
             "lastEffect": null,
             "memoizedProps": Object {
-              "children": <script
-                async={true}
-                type="text/javascript"
-              >
-                
+              "children": Array [
+                <script
+                  async={true}
+                  type="text/javascript"
+                >
+                  
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-              </script>,
+                </script>,
+                <script
+                  async={true}
+                  src="//chartbeat.js"
+                  type="text/javascript"
+                />,
+              ],
               "defer": true,
               "encodeSpecialCharacters": true,
             },
@@ -2153,34 +1965,24 @@ Object {
             "mode": 0,
             "nextEffect": null,
             "pendingProps": Object {
-              "children": <script
-                async={true}
-                type="text/javascript"
-              >
-                
+              "children": Array [
+                <script
+                  async={true}
+                  type="text/javascript"
+                >
+                  
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-              </script>,
+                </script>,
+                <script
+                  async={true}
+                  src="//chartbeat.js"
+                  type="text/javascript"
+                />,
+              ],
               "defer": true,
               "encodeSpecialCharacters": true,
             },
@@ -2465,34 +2267,24 @@ Object {
               "_reactInternalInstance": Object {},
               "context": Object {},
               "props": Object {
-                "children": <script
-                  async={true}
-                  type="text/javascript"
-                >
-                  
+                "children": Array [
+                  <script
+                    async={true}
+                    type="text/javascript"
+                  >
+                    
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = "test-domain";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = "This is an article";
-          _sf_async_config.type = "article";
-          _sf_async_config.sections = "section1 section2";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "//chartbeat.js";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {"uid":1111,"domain":"test-domain","useCanonical":true,"useCanonicalDomain":true,"title":"This is an article","type":"article","sections":"section1 section2"});
         })();
       
-                </script>,
+                  </script>,
+                  <script
+                    async={true}
+                    src="//chartbeat.js"
+                    type="text/javascript"
+                  />,
+                ],
                 "defer": true,
                 "encodeSpecialCharacters": true,
               },
@@ -2526,26 +2318,14 @@ Object {
               "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+              "type": "text/javascript",
+            },
+            Object {
+              "async": true,
+              "src": "//chartbeat.js",
               "type": "text/javascript",
             },
           ],
@@ -2569,26 +2349,14 @@ Object {
             "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+            "type": "text/javascript",
+          },
+          Object {
+            "async": true,
+            "src": "//chartbeat.js",
             "type": "text/javascript",
           },
         ],
@@ -2605,26 +2373,14 @@ Object {
               "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = 1111;
-          _sf_async_config.domain = \\"test-domain\\";
-          _sf_async_config.useCanonical = true;
-          _sf_async_config.useCanonicalDomain = true;
-          _sf_async_config.title = \\"This is an article\\";
-          _sf_async_config.type = \\"article\\";
-          _sf_async_config.sections = \\"section1 section2\\";
-          _sf_async_config = Object.assign(_sf_async_config, {});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = \\"//chartbeat.js\\";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
+          _sf_async_config = Object.assign(_sf_async_config, {\\"uid\\":1111,\\"domain\\":\\"test-domain\\",\\"useCanonical\\":true,\\"useCanonicalDomain\\":true,\\"title\\":\\"This is an article\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\"});
         })();
       ",
+              "type": "text/javascript",
+            },
+            Object {
+              "async": true,
+              "src": "//chartbeat.js",
               "type": "text/javascript",
             },
           ],

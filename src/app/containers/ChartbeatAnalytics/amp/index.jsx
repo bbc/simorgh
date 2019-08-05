@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, bool } from 'prop-types';
+import { string, number } from 'prop-types';
 
 const chartbeatAmpConfigOptions = options => ({
   vars: {
@@ -8,8 +8,8 @@ const chartbeatAmpConfigOptions = options => ({
     sections: options.sections,
     domain: options.domain,
     contentType: options.type,
-    ...(options.hasReferrer && { virtualReferrer: options.referrer }),
-    ...(options.hasCookie && { idSync: { bbc_hid: options.cookie } }),
+    ...(!!options.referrer && { virtualReferrer: options.referrer }),
+    ...(!!options.cookie && { idSync: { bbc_hid: options.cookie } }),
   },
   triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
 });
@@ -28,10 +28,8 @@ const AmpChartbeatBeacon = ({
   sections,
   cookie,
   chartbeatUID,
-  hasCookie,
   title,
   referrer,
-  hasReferrer,
 }) => (
   <amp-analytics type="chartbeat">
     {JsonInlinedScript(
@@ -41,10 +39,8 @@ const AmpChartbeatBeacon = ({
         sections,
         cookie,
         chartbeatUID,
-        hasCookie,
         title,
         referrer,
-        hasReferrer,
       }),
     )}
   </amp-analytics>
@@ -56,9 +52,7 @@ AmpChartbeatBeacon.propTypes = {
   sections: string.isRequired,
   cookie: string,
   chartbeatUID: number.isRequired,
-  hasCookie: bool.isRequired,
   title: string.isRequired,
-  hasReferrer: bool.isRequired,
   referrer: string,
 };
 

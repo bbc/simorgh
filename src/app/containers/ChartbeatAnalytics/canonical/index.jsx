@@ -10,28 +10,24 @@ const CanonicalChartbeatBeacon = ({
   chartbeatUID,
   useCanonical,
   chartbeatSource,
-  hasCookie,
   title,
   referrer,
-  hasReferrer,
 }) => {
-  const optionalConfigValues = {
-    ...(hasReferrer && { virtualReferrer: referrer }),
-    ...(hasCookie && { idSync: { bbc_hid: cookie } }),
+  const chartbeatConfig = {
+    uid: chartbeatUID,
+    domain,
+    useCanonical,
+    useCanonicalDomain: useCanonical,
+    title,
+    type,
+    sections,
+    ...(!!referrer && { virtualReferrer: referrer }),
+    ...(!!cookie && { idSync: { bbc_hid: cookie } }),
   };
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.pSUPERFLY) {
-      window.pSUPERFLY.virtualPage({
-        uid: chartbeatUID,
-        domain,
-        useCanonical,
-        useCanonicalDomain: useCanonical,
-        title,
-        type,
-        sections,
-        ...optionalConfigValues,
-      });
+      window.pSUPERFLY.virtualPage(chartbeatConfig);
     }
   });
   return (
@@ -40,29 +36,13 @@ const CanonicalChartbeatBeacon = ({
         {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = ${chartbeatUID};
-          _sf_async_config.domain = "${domain}";
-          _sf_async_config.useCanonical = ${useCanonical};
-          _sf_async_config.useCanonicalDomain = ${useCanonical};
-          _sf_async_config.title = "${title}";
-          _sf_async_config.type = "${type}";
-          _sf_async_config.sections = "${sections}";
           _sf_async_config = Object.assign(_sf_async_config, ${JSON.stringify(
-            optionalConfigValues,
+            chartbeatConfig,
           )});
-
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "${chartbeatSource}";
-           n.parentNode.insertBefore(e, n);
-          }
-          loadChartbeat();
         })();
       `}
       </script>
+      <script async type="text/javascript" src={chartbeatSource} />
     </Helmet>
   );
 };
@@ -75,8 +55,6 @@ CanonicalChartbeatBeacon.propTypes = {
   chartbeatUID: number.isRequired,
   useCanonical: bool.isRequired,
   chartbeatSource: string.isRequired,
-  hasCookie: bool.isRequired,
-  hasReferrer: bool.isRequired,
   title: string.isRequired,
   referrer: string,
 };

@@ -19,8 +19,6 @@ describe('AmpChartbeatAnalytics', () => {
       sections: 'section1 section2',
       cookie: 'cookie',
       chartbeatUID: 1111,
-      hasCookie: true,
-      hasReferrer: true,
       referrer: '/some-path',
       title: 'This is an article',
     };
@@ -62,8 +60,6 @@ describe('AmpChartbeatAnalytics', () => {
       sections: 'section1 section2',
       cookie: null,
       chartbeatUID: 1111,
-      hasCookie: false,
-      hasReferrer: false,
       referrer: null,
       title: 'This is an article',
     };

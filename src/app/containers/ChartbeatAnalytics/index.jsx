@@ -36,8 +36,6 @@ const ChartbeatAnalytics = ({ data }) => {
   const sections = buildSections(service, pageType);
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const hasCookie = !!cookie;
-  const hasReferrer = !!referrer;
   const commonProps = {
     domain,
     type,
@@ -45,9 +43,7 @@ const ChartbeatAnalytics = ({ data }) => {
     cookie,
     chartbeatUID,
     title,
-    hasCookie,
     referrer,
-    hasReferrer,
   };
   return platform === 'amp' ? (
     <AmpChartbeatBeacon {...commonProps} />
