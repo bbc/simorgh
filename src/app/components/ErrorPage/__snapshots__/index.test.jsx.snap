@@ -51,9 +51,10 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   line-height: 2rem;
   color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
-  font-weight: 500;
   padding: 2.5rem 0 2.5rem 0;
 }
 
@@ -292,10 +293,11 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
-  font-weight: 500;
   padding: 2.5rem 0 2.5rem 0;
 }
 
