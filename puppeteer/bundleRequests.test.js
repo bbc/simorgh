@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import { localBaseUrl } from '../src/testHelpers/config';
 
 global.Cypress = { env: () => 'local' };
 
@@ -8,9 +9,7 @@ let browser;
 let page;
 let requests = [];
 
-const host = 'http://localhost.bbc.com:7080';
-
-const isJsBundle = url => url.includes(host);
+const isJsBundle = url => url.includes(localBaseUrl);
 
 describe('Js bundle requests', () => {
   beforeEach(async () => {
@@ -48,7 +47,7 @@ describe('Js bundle requests', () => {
 
         describe(service, () => {
           beforeEach(async () => {
-            await page.goto(`${host}${path}`, {
+            await page.goto(`${localBaseUrl}${path}`, {
               waitUntil: 'networkidle2',
             });
           });
