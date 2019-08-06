@@ -45,7 +45,6 @@ const ChartbeatAnalytics = ({ data }) => {
     title,
     ...(isAmp && { contentType: type }),
     ...(!isAmp && { type }),
-    ...(!isAmp && { type }),
     ...(!isAmp && { useCanonical }),
     ...(!!referrer && { virtualReferrer: referrer }),
     ...(!!cookie && { idSync: { bbc_hid: cookie } }),
