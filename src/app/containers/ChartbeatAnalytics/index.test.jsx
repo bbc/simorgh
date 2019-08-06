@@ -10,7 +10,7 @@ import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
 
-const defualtToggleState = {
+const defaultToggleState = {
   test: {
     chartbeatAnalytics: {
       enabled: true,
