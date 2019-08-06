@@ -9,7 +9,7 @@ Object.keys(config).forEach(service => {
     .filter(pageType => config[service].pageTypes[pageType] !== undefined)
     .forEach(pageType => {
       describe(`Script src - ${service} ${pageType}`, () => {
-        beforeEach(() => {
+        before(() => {
           switch (pageType) {
             case 'frontPage':
               cy.visit(`/${service}`);
