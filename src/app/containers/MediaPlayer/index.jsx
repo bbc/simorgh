@@ -1,16 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
+import styled from 'styled-components';
 import Caption from '../Caption';
+import Canonical from './Canonical';
 import videoMetadata from './metadata';
-import {
-  NestedGridParentLarge,
-  NestedGridParentSmall,
-  NestedGridItemChildSmall,
-  NestedGridItemChildLarge,
-  GridItemConstrainedLargeNoMargin,
-  GridItemConstrainedSmall,
-} from '../../lib/styledGrid';
+import mediaPlayerWrappers from './helpers/wrappers';
 
 import {
   mediaPlayerPropTypes,
@@ -20,26 +15,12 @@ import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { RequestContext } from '../../contexts/RequestContext';
 import useToggle from '../Toggle/useToggle';
 
-const selectWrappers = orientation => {
-  const wrapperSpan = {
-    default: '6',
-    group5: '12',
-  };
-  let ParentWrapper = NestedGridParentLarge;
-  let ChildWrapper = NestedGridItemChildLarge;
-  let Container = GridItemConstrainedLargeNoMargin;
-  let portrait = false;
-
-  if (orientation === 'Portrait') {
-    ParentWrapper = NestedGridParentSmall;
-    ChildWrapper = NestedGridItemChildSmall;
-    Container = GridItemConstrainedSmall;
-    wrapperSpan.default = '4';
-    portrait = true;
-  }
-
-  return { ParentWrapper, ChildWrapper, Container, wrapperSpan, portrait };
-};
+const StyledContainer = styled.div`
+  padding-top: ${({ orientation }) =>
+    orientation === 'Portrait' ? '177.78%' : '56.25%'};
+  position: relative;
+  overflow: hidden;
+`;
 
 const MediaPlayerContainer = ({ blocks }) => {
   const { platform } = React.useContext(RequestContext);
@@ -74,6 +55,7 @@ const MediaPlayerContainer = ({ blocks }) => {
 
   const type = kind === 'audio' ? kind : 'video';
   const orientation = pathOr(null, ['versions', 0, 'types', 0], nestedModel);
+  const versionId = pathOr(null, ['versions', 0, 'versionId'], nestedModel);
 
   const {
     ParentWrapper,
@@ -81,7 +63,7 @@ const MediaPlayerContainer = ({ blocks }) => {
     Container,
     wrapperSpan,
     portrait,
-  } = selectWrappers(orientation);
+  } = mediaPlayerWrappers(orientation);
 
   return (
     <Container>
@@ -96,6 +78,9 @@ const MediaPlayerContainer = ({ blocks }) => {
       ) : null}
       <ParentWrapper>
         <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
+          <StyledContainer>
+            <Canonical />
+          </StyledContainer>
           <ul>
             <li>PID: {pid}</li>
             <li>Orientation: {orientation}</li>
