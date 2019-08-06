@@ -7,10 +7,10 @@ Object.keys(config).forEach(index => {
   const service = index;
 
   // This should be unhacked when this file is consolidated with other cookie testing files.
-  const skippedconfig = ['news', 'cymrufyw', 'naidheachdan']; // Not WS
-  skippedconfig.push('serbian', 'telugu', 'ukchina', 'zhongwen'); // Not on test.bbc.com yet
-  skippedconfig.push('default'); // Not a service
-  if (skippedconfig.includes(service)) {
+  const skippedServices = ['news', 'cymrufyw', 'naidheachdan']; // Not WS
+  skippedServices.push('serbian', 'telugu', 'ukchina', 'zhongwen'); // Not on test.bbc.com yet
+  skippedServices.push('default'); // Not a service
+  if (skippedServices.includes(service)) {
     return;
   }
 
