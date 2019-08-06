@@ -1,4 +1,3 @@
-import { worldServiceCookieBannerTranslations } from '../support/bodyTestHelper';
 import describeForEuOnly from '../support/describeForEuOnly';
 import describeForLocalAndTest from '../support/limitEnvRuns';
 import services from '../../src/app/lib/config/services';
