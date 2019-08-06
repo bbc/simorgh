@@ -10,7 +10,7 @@ import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
 
-const mockToggleState = {
+const defualtToggleState = {
   test: {
     chartbeatAnalytics: {
       enabled: true,
@@ -54,7 +54,7 @@ ContextWrap.propTypes = {
 };
 
 ContextWrap.defaultProps = {
-  toggleState: mockToggleState,
+  toggleState: defualtToggleState,
 };
 
 const mockData = {};
@@ -120,7 +120,7 @@ describe('Charbeats Analytics Container', () => {
     expect(utils.getReferrer).toHaveBeenCalledTimes(1);
     expect(tree).toMatchSnapshot();
   });
-  it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on test', () => {
+  it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
     amp.default = mockAmp;
     utils.getReferrer = jest.fn().mockImplementation(() => '/some-path');
