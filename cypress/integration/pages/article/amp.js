@@ -65,6 +65,7 @@ Object.keys(config)
         );
       });
 
+      // TODO - Refactor or review this. Can it be a puppeteer test?
       it('should load the AMP framework', () => {
         // .eq(2) gets the amp <script> as:
         // the first loaded is a Cypress <script>
