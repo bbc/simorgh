@@ -52,7 +52,7 @@ RequestContextProvider.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
-  pageType: oneOf(['article', 'frontPage', 'media']).isRequired,
+  pageType: oneOf(['article', 'frontPage', 'media', 'error']).isRequired,
   service: string.isRequired,
   previousPath: string,
 };

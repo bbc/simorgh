@@ -1,6 +1,7 @@
 import Article from '../containers/Article';
 import FrontPage from '../containers/FrontPage';
 import MediaPage from '../containers/MediaPage';
+import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
 import getMediaPageInitialData from './getInitialData/mediapage';
@@ -31,6 +32,11 @@ const routes = [
     component: MediaPage,
     getInitialData: getMediaPageInitialData,
     pageType: 'media',
+  },
+  {
+    component: ErrorPage,
+    getInitialData: () => Promise.resolve({ status: 404 }),
+    pageType: 'error',
   },
 ];
 
