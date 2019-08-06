@@ -4,10 +4,12 @@ export const videoType = 'video';
 export const rawImageType = 'rawImage';
 
 export const singleTextBlock = (text, id = null) => ({
+  id,
   type: 'text',
   model: {
     blocks: [
       {
+        id,
         type: 'paragraph',
         model: {
           text,
@@ -32,6 +34,7 @@ export const textBlock = (text, id) => ({
 });
 
 export const blockContainingText = (type, text, id = null) => ({
+  id,
   type,
   model: textBlock(text, id),
 });
