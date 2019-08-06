@@ -1,16 +1,11 @@
 import moment from 'moment-timezone';
 import { formatDate, formatDateAndTime } from './timeFormats';
-
-export const isTenHoursAgoOrLess = milliseconds => {
-  const now = Date.now();
-  return now - milliseconds <= 10 * 60 * 60 * 1000;
-};
+import isTenHoursAgo from '../../lib/utilities/isTenHoursAgo';
 
 export const isFirstRelative = (lastPublished, firstPublished) =>
-  lastPublished === firstPublished && isTenHoursAgoOrLess(firstPublished);
+  lastPublished === firstPublished && isTenHoursAgo(firstPublished);
 
-export const isLastRelative = lastPublished =>
-  isTenHoursAgoOrLess(lastPublished);
+export const isLastRelative = lastPublished => isTenHoursAgo(lastPublished);
 
 export const isSameDay = (dayToCompare, timestamp) => {
   const day = moment(dayToCompare);
