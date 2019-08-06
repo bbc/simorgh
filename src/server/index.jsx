@@ -148,9 +148,7 @@ if (process.env.APP_ENV === 'local') {
 
 server
   .get([articleSwRegexPath, frontpageSwRegexPath], (req, res) => {
-    console.log(`getting service worker`);
     const swPath = `${__dirname}/public/sw.js`;
-    console.log(__dirname);
     res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(error);

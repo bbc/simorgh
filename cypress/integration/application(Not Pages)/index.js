@@ -30,8 +30,7 @@ const serviceVariantMapping = {
 
 const createRequestUrl = service => {
   const serviceVariant = serviceVariantMapping[service];
-  if (serviceVariant)
-    return `/${serviceVariant.service}/${serviceVariant.variant}`;
+  if (serviceVariant) return `/${serviceVariant.service}`;
 
   return `/${service}`;
 };
@@ -51,7 +50,7 @@ describeForLocalOnly('Application', () => {
 
       it(`should return a 200 status code for ${service} manifest file`, () => {
         cy.testResponseCodeAndType(
-          `/${service}/manifest.json`,
+          `/${createRequestUrl(service)}/manifest.json`,
           200,
           'application/json',
         );
