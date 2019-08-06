@@ -1,7 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
 
 const service = {
   lang: `pt-BR`,
@@ -157,7 +157,7 @@ const service = {
       'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
   },
   fonts: [],
-  timezone: 'Europe/London',
+  timezone: 'America/Sao_Paulo',
 };
 
 export default service;
