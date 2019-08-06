@@ -36,7 +36,6 @@ const ChartbeatAnalytics = ({ data }) => {
   const sections = buildSections(service, pageType);
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-
   const isAmp = platform === 'amp';
   const config = {
     domain,
