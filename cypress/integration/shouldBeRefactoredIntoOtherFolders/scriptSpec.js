@@ -7,7 +7,7 @@ const isJsBundle = url => url.includes(host);
 Object.keys(config).forEach(service => {
   Object.keys(config[service].pageTypes)
     .filter(pageType => config[service].pageTypes[pageType] !== undefined)
-    .filter(pageType => pageType !== 'errorPage404') //TODO, make me redundant
+    .filter(pageType => pageType !== 'errorPage404') // TODO, make me redundant
     .forEach(pageType => {
       describe(`Script src - ${service} ${pageType}`, () => {
         before(() => {

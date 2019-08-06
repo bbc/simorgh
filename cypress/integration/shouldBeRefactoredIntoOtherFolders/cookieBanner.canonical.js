@@ -2,7 +2,7 @@ import {
   assertCookieValue,
   assertCookieExpiryDate,
 } from '../../support/metaTestHelper';
-import services from '../../support/config/services';
+import config from '../../support/config/services';
 
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");
@@ -24,7 +24,7 @@ const assertCookieValues = cookies => {
 };
 
 const visitArticle = () => {
-  cy.visit(services.news.pageTypes.articles);
+  cy.visit(config.news.pageTypes.articles);
 };
 
 describe('Canonical Cookie Banner Tests', () => {
@@ -82,7 +82,7 @@ describe('Canonical Cookie Banner Tests', () => {
       .contains('No, take me to settings')
       .click();
 
-    cy.visit(services.news.pageTypes.articles);
+    cy.visit(config.news.pageTypes.articles);
 
     assertCookieValues({
       ckns_explicit: '1',

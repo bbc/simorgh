@@ -1,9 +1,9 @@
-import services from '../../../support/config/services';
+import config from '../../../support/config/services';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(services.news.pageTypes.articles);
+    cy.visit(config.news.pageTypes.articles);
   });
   it('should render the BBC News branding', () => {
     cy.get('footer a')

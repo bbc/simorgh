@@ -1,5 +1,5 @@
 import envConfig from '../../support/config/envs';
-import services from '../../support/config/services';
+import config from '../../support/config/services';
 import {
   describeForLocalOnly,
   describeForLocalAndTest,
@@ -30,13 +30,13 @@ const hasAmpAnalyticsAtiUrl = (atiUrl, analyticsBucketId) => {
 describe('Article ATI for News', () => {
   describe('Canonical page', () => {
     it('should have a noscript tag with an 1px image with the ati url', () => {
-      cy.visit(services.news.pageTypes.articles);
+      cy.visit(config.news.pageTypes.articles);
       hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
     });
   });
   describe('AMP page', () => {
     it('should have an amp-analytics tag with the ati url', () => {
-      cy.visit(`${services.news.pageTypes.articles}.amp`);
+      cy.visit(`${config.news.pageTypes.articles}.amp`);
       hasAmpAnalyticsAtiUrl(envConfig.atiUrl, '');
     });
   });
@@ -45,13 +45,13 @@ describe('Article ATI for News', () => {
 describeForLocalOnly('ATI for Persian', () => {
   describe('Canonical page', () => {
     it('should have a noscript tag with an 1px image with the ati url', () => {
-      cy.visit(services.persian.pageTypes.articles);
+      cy.visit(config.persian.pageTypes.articles);
       hasNoscriptImgAtiUrl(envConfig.atiUrl, envConfig.atiAnalyticsWSBucket);
     });
   });
   describe('AMP page', () => {
     it('should have an amp-analytics tag with the ati url', () => {
-      cy.visit(`${services.persian.pageTypes.articles}.amp`);
+      cy.visit(`${config.persian.pageTypes.articles}.amp`);
       hasAmpAnalyticsAtiUrl(envConfig.atiUrl, envConfig.atiAnalyticsWSBucket);
     });
   });
