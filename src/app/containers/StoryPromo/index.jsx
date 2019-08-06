@@ -59,21 +59,21 @@ StoryPromoImage.propTypes = {
   imageValues: shape(storyItem.indexImage).isRequired,
 };
 
-const LiveComponent = ({ linkcontents, service, dir }) => (
+const LiveComponent = ({ headline, service, dir }) => (
   // eslint-disable-next-line jsx-a11y/aria-role
   <span role="text">
     <LiveLabel service={service} dir={dir}>
       LIVE
     </LiveLabel>
     <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
-    {linkcontents}
+    {headline}
   </span>
 );
 
 LiveComponent.propTypes = {
   service: string.isRequired,
   dir: string.isRequired,
-  linkcontents: element.isRequired,
+  headline: element.isRequired,
 };
 
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
@@ -106,7 +106,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
             {isLive ? (
               <LiveComponent
                 service={service}
-                linkcontents={linkcontents}
+                headline={linkcontents}
                 dir={dir}
               />
             ) : (
