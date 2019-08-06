@@ -48,7 +48,6 @@ const ChartbeatAnalytics = ({ data }) => {
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };
 
-
   return isAmp ? (
     <AmpChartbeatBeacon chartbeatConfig={config} />
   ) : (
