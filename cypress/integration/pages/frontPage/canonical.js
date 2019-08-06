@@ -88,6 +88,16 @@ Object.keys(config)
           });
         });
 
+        describe('Scripts', () => {
+          it('should only have expected bundle script tags', () => {
+            cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
+          });
+
+          it('should have 1 bundle for its service', () => {
+            cy.hasOneServiceBundle(service);
+          });
+        });
+
         describe('footer tests', () => {
           it('should have a visible footer', () => {
             cy.get('footer')

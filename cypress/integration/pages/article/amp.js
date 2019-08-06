@@ -62,6 +62,13 @@ Object.keys(config)
         });
       });
 
+      describe('Chartbeat', () => {
+        it('should have chartbeat config UID', () => {
+          cy.visit(`${config.news.pageTypes.articles}.amp`);
+          cy.hasAmpChartbeatConfigUid();
+        });
+      });
+
       it('should have AMP attribute', () => {
         cy.get('html').should('have.attr', 'amp');
       });

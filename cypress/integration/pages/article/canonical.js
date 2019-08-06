@@ -187,6 +187,25 @@ Object.keys(config)
         });
       });
 
+      describe('Chartbeat', () => {
+        it('should have a script with src value set to chartbeat source', () => {
+          cy.hasScriptWithChartbeatSrc();
+        });
+        it('should have chartbeat config set to window object', () => {
+          cy.hasGlobalChartbeatConfig();
+        });
+      });
+
+      describe('Scripts', () => {
+        it('should only have expected bundle script tags', () => {
+          cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
+        });
+
+        it('should have 1 bundle for its service', () => {
+          cy.hasOneServiceBundle(service);
+        });
+      });
+
       describe(`Article Body`, () => {
         it('should render the BBC News branding', () => {
           cy.get('header a').should(
