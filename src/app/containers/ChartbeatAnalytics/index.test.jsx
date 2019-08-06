@@ -54,7 +54,7 @@ ContextWrap.propTypes = {
 };
 
 ContextWrap.defaultProps = {
-  toggleState: defualtToggleState,
+  toggleState: defaultToggleState,
 };
 
 const mockData = {};
