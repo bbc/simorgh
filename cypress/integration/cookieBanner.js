@@ -1,5 +1,5 @@
 import describeForEuOnly from '../support/describeForEuOnly';
-import describeForLocalAndTest from '../support/limitEnvRuns';
+import { describeForLocalAndTest } from '../support/limitEnvRuns';
 import services from '../../src/app/lib/config/services';
 import newsServices from '../support/config/services';
 import {
