@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getRouteProps no matched route should return an empty object 1`] = `[TypeError: (0 , _routeFallbackParams.fallbackServiceParam) is not a function]`;
