@@ -48,6 +48,7 @@ const ChartbeatAnalytics = ({ data }) => {
     ...(referrer && { virtualReferrer: referrer }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };
+
   return isAmp ? (
     <AmpChartbeatBeacon chartbeatConfig={config} />
   ) : (
