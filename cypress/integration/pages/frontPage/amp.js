@@ -7,7 +7,6 @@ Object.keys(config)
   .filter(serviceHasFrontPage)
   .forEach(service => {
     describe(`Frontpage AMP tests for ${service}`, () => {
-      // eslint-disable-next-line no-undef
       before(() => {
         cy.visit(`${config[service].pageTypes.frontPage}.amp`);
       });

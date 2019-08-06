@@ -7,13 +7,11 @@ Object.keys(config)
   .filter(serviceHasFrontPage)
   .forEach(service => {
     describe(`Frontpage Canonical tests for ${service}`, () => {
-      // eslint-disable-next-line no-undef
       before(() => {
         cy.visit(config[service].pageTypes.frontPage);
       });
 
       describe('checks the components are present', () => {
-        // eslint-disable-next-line no-undef
         before(() => {
           cy.viewport(1008, 768);
         });
