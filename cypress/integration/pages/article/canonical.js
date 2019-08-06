@@ -144,8 +144,12 @@ Object.keys(config)
         it('should render the BBC News branding', () => {
           cy.get('footer a')
             .eq(0)
-            .should('contain', 'BBC News');
-          // TODO - Assert `, igbo`
+            .should(
+              'contain',
+              testData[service].serviceLocalizedName !== undefined
+                ? `BBC News, ${testData[service].serviceLocalizedName}`
+                : 'BBC News',
+            );
         });
 
         it('should have working links', () => {
@@ -174,8 +178,12 @@ Object.keys(config)
 
       describe(`Article Body`, () => {
         it('should render the BBC News branding', () => {
-          cy.get('header a').should('contain', 'BBC News');
-          // TODO - Assert `, igbo`
+          cy.get('header a').should(
+            'contain',
+            testData[service].serviceLocalizedName !== undefined
+              ? `BBC News, ${testData[service].serviceLocalizedName}`
+              : 'BBC News',
+          );
         });
 
         it('should render a H1, which contains/displays a styled headline', () => {
