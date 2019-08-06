@@ -7,28 +7,11 @@ const isJsBundle = url => url.includes(host);
 Object.keys(config).forEach(service => {
   Object.keys(config[service].pageTypes)
     .filter(pageType => config[service].pageTypes[pageType] !== undefined)
+    .filter(pageType => pageType !== 'errorPage404') //TODO, make me redundant
     .forEach(pageType => {
       describe(`Script src - ${service} ${pageType}`, () => {
         before(() => {
-          switch (pageType) {
-            case 'frontPage':
-              cy.visit(`/${service}`);
-              break;
-            case 'articles':
-              cy.visit(
-                `/${service}/articles/${config[service].pageTypes.articles.asset}`,
-              );
-              break;
-            case 'errorPage404':
-              cy.visit(
-                `/${service}/articles/${config[service].pageTypes[pageType].asset}`,
-                {
-                  failOnStatusCode: false,
-                },
-              );
-              break;
-            default:
-          }
+          cy.visit(config[service].pageTypes[pageType]);
         });
 
         it('should only have expected bundle script tags', () => {

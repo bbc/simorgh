@@ -10,7 +10,7 @@ Object.keys(services)
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
         cy.testResponseCodeAndType(
-          `/${service}/articles/${services[service].pageTypes.errorPage404.asset}`,
+          services[service].pageTypes.errorPage404,
           404,
           'text/html',
         );
@@ -27,7 +27,7 @@ Object.keys(services)
       //  eslint-disable-next-line no-undef
       before(() => {
         cy.visit(
-          `/${service}/articles/${services[service].pageTypes.errorPage404.asset}`,
+          services[service].pageTypes.errorPage404,
           {
             failOnStatusCode: false,
           },

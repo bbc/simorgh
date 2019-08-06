@@ -11,9 +11,7 @@ Object.keys(services)
     describe(`${service} Article Meta Tests`, () => {
       // eslint-disable-next-line no-undef
       before(() => {
-        cy.visit(
-          `/${service}/articles/${services[service].pageTypes.articles.asset}`,
-        );
+        cy.visit(services[service].pageTypes.articles);
       });
 
       it('should have the correct lang & dir attributes', () => {
@@ -60,7 +58,7 @@ Object.keys(services)
           `${testData[service].defaultImageAltText}`,
           "Meghan's bouquet laid on tomb of unknown warrior",
           'article',
-          `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
+          `https://www.bbc.com${services[service].pageTypes.articles}`,
         );
       });
 
@@ -121,18 +119,16 @@ Object.keys(services)
 
       it('should include the canonical URL & ampHTML', () => {
         cy.checkCanonicalURL(
-          `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
+          `https://www.bbc.com${services[service].pageTypes.articles}`,
         );
         cy.checkAmpHTML(
-          `${window.location.origin}/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
+          `${window.location.origin}${services[service].pageTypes.articles}.amp`,
         );
       });
 
       it('should include metadata in the head on AMP pages', () => {
         cy.window().then(win => {
-          cy.visit(
-            `/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
-          );
+          cy.visit(`${services[service].pageTypes.articles}.amp`);
           cy.get('meta[name="description"]').should(
             'have.attr',
             'content',

@@ -3,7 +3,7 @@ import services from '../../../support/config/services';
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
+    cy.visit(services.news.pageTypes.articles);
   });
   it('should render the BBC News branding', () => {
     cy.get('footer a')

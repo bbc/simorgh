@@ -24,7 +24,7 @@ const assertCookieValues = cookies => {
 };
 
 const visitArticle = () => {
-  cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
+  cy.visit(services.news.pageTypes.articles);
 };
 
 describe('Canonical Cookie Banner Tests', () => {
@@ -82,7 +82,7 @@ describe('Canonical Cookie Banner Tests', () => {
       .contains('No, take me to settings')
       .click();
 
-    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
+    cy.visit(services.news.pageTypes.articles);
 
     assertCookieValues({
       ckns_explicit: '1',
