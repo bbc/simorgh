@@ -1,4 +1,5 @@
 import config from '../../../support/config/services';
+import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/app/lib/config/services';
 
 const serviceHasArticlePageType = service =>
@@ -48,6 +49,17 @@ Object.keys(config)
             );
           },
         );
+      });
+
+      describe('ATI', () => {
+        it('should have an amp-analytics tag with the ati url', () => {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        });
       });
 
       it('should have AMP attribute', () => {

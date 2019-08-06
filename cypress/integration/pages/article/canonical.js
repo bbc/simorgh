@@ -176,6 +176,17 @@ Object.keys(config)
         });
       });
 
+      describe('ATI', () => {
+        it('should have a noscript tag with an 1px image with the ati url', () => {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        });
+      });
+
       describe(`Article Body`, () => {
         it('should render the BBC News branding', () => {
           cy.get('header a').should(
