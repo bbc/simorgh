@@ -1,14 +1,32 @@
-describe('Static Articles data', () => {
-  it('should return a 200 status code', () => {
-    cy.request({
-      url: `https://www.bbc.com/igbo.json`,
-      failOnStatusCode: false,
-    }).then(({ status, headers }) => {
-      expect(status).to.eq(200);
-      expect(headers['content-type']).to.include('application/json');
-      // Always ensure we're not seeing the Mozart fallback
-      expect(headers).not.to.have.property('x-mfa');
-        },
-        );
+describe('Data endpoints 200 and return JSON', () => {
+  it('should pass for front pages', () => {
+    cy.testResponseCodeAndType(
+      'https://www.bbc.com/igbo.json',
+      200,
+      'application/json',
+    );
+    cy.testResponseCodeAndType(
+      'https://www.bbc.com/pidgin.json',
+      200,
+      'application/json',
+    );
+
+    cy.testResponseCodeAndType(
+      'https://www.bbc.com/yoruba.json',
+      200,
+      'application/json',
+    );
+  });
+  it('should pass for articles', () => {
+    cy.testResponseCodeAndType(
+      'https://www.bbc.com/news/articles/c5ll353v7y9o.json',
+      200,
+      'application/json',
+    );
+    cy.testResponseCodeAndType(
+      'https://www.bbc.com/persian/articles/c7eel0lmr4do.json',
+      200,
+      'application/json',
+    );
   });
 });
