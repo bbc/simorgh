@@ -183,6 +183,7 @@ describe('Server', () => {
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
                 localBaseUrl,
+                'https://logws1363.ati-host.net?',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
@@ -308,6 +309,7 @@ describe('Server', () => {
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
                 localBaseUrl,
+                'https://logws1363.ati-host.net?',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}

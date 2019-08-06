@@ -84,10 +84,12 @@ describe('getAssetsArray', () => {
       ];
       process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
         'http://some.statichost.net';
+      process.env.SIMORGH_ATI_BASE_URL = 'http://some.ati.static.host.net';
       const { getAssetOrigins } = require('./index.js');
       expect(getAssetOrigins()).toEqual([
         ...defaultOrigins,
         'http://some.statichost.net',
+        'http://some.ati.static.host.net',
       ]);
     });
   });
