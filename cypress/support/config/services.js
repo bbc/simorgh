@@ -24,11 +24,18 @@ export default {
     },
   },
   arabic: {
-    font: undefined,
+    font: 'Nassim',
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
-      frontPage: undefined,
+        articles:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'c69dvq19k63o',
+            },
+      errorPage404: {
+        asset: 'c69d1239k63o',
+      },
+      frontPage: '/arabic',
     },
   },
   azeri: {
@@ -100,7 +107,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+        Cypress.env('APP_ENV') === 'live' || 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
@@ -179,21 +186,25 @@ export default {
         asset:
           Cypress.env('APP_ENV') === 'live' ? 'c5ll353v7y9o' : 'c6v11qzyv8po',
       },
-      errorPage404:
-        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-          ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+      errorPage404: {
+        asset: 'cxvxrj8tvppo',
+      },
       frontPage: undefined,
     },
   },
   pashto: {
-    font: undefined,
+    font: 'Nassim',
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
-      frontPage: undefined,
+        articles:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cng0e8v85eko',
+            },
+      errorPage404: {
+        asset: 'c69d1239k63o',
+      },
+      frontPage: '/pashto',
     },
   },
   persian: {
@@ -219,7 +230,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+        Cypress.env('APP_ENV') === 'live' || 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
@@ -340,11 +351,18 @@ export default {
     },
   },
   urdu: {
-    font: undefined,
+    font: 'Nassim',
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
-      frontPage: undefined,
+        articles:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : {
+              asset: 'cx621klkm1ro',
+            },
+      errorPage404: {
+        asset: 'c69d1239k63o',
+      },
+      frontPage: '/urdu',
     },
   },
   uzbek: {
@@ -368,7 +386,7 @@ export default {
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+        Cypress.env('APP_ENV') === 'live' || 'test'
           ? undefined
           : {
               asset: 'cxvxrj8tvppo',
