@@ -17,6 +17,8 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
       id="c0000000000o"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
+      pageType="frontPage"
+      service="news"
     >
       <FigureContainer {...otherProps} />
     </RequestContextProvider>
