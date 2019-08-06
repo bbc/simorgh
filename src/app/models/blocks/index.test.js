@@ -11,11 +11,13 @@ import {
 } from '.';
 
 const testModel = {
+  id: 'blockBase',
   type: 'testingType',
   model: 'TheModel',
 };
 
 const rawBlock = type => ({
+  id: 'blockBase',
   type,
   model: testModel,
 });
@@ -23,19 +25,23 @@ const rawBlock = type => ({
 describe('Block Containing Text', () => {
   test('generates the appropriate block json', () => {
     const testJson = {
+      id: 'blockContainingText',
       type: 'TheType',
       model: {
         blocks: [
           {
+            id: '92749127',
             type: 'text',
             model: {
               blocks: [
                 {
+                  id: '92083087',
                   type: 'paragraph',
                   model: {
                     text: 'hello',
                     blocks: [
                       {
+                        id: '12498792',
                         type: 'fragment',
                         model: {
                           text: 'hello',
@@ -72,6 +78,7 @@ describe('Standard block abstractions', () => {
   });
   test('stdArrayModelBlock generates the model in blocks in a model json structure', () => {
     const composite = {
+      id: 'blockBase',
       type: 'test',
       model: {
         blocks: [testModel],
@@ -113,6 +120,7 @@ describe('Raw Block Tests', () => {
 describe('High order blocks', () => {
   test('Image block builder generates the image block containing the standard array block', () => {
     const composite = {
+      id: 'blockBase',
       type: 'image',
       model: {
         blocks: [testModel],
@@ -125,6 +133,7 @@ describe('High order blocks', () => {
 
   test('Video block builder generates the video block containging a model of a block array with at least two models', () => {
     const testJson = {
+      id: 'blockBase',
       type: 'video',
       model: {
         blocks: [testModel, testModel],

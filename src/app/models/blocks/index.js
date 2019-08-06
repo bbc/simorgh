@@ -2,17 +2,19 @@ export const rawVideoType = 'rawVideo';
 export const imageType = 'image';
 export const videoType = 'video';
 export const rawImageType = 'rawImage';
-
 export const singleTextBlock = text => ({
+  id: '92749127',
   type: 'text',
   model: {
     blocks: [
       {
+        id: '92083087',
         type: 'paragraph',
         model: {
           text,
           blocks: [
             {
+              id: '12498792',
               type: 'fragment',
               model: {
                 text,
@@ -31,11 +33,13 @@ export const textBlock = text => ({
 });
 
 export const blockContainingText = (type, text) => ({
+  id: 'blockContainingText',
   type,
   model: textBlock(text),
 });
 
 export const blockBase = (blockType, blockModel) => ({
+  id: 'blockBase',
   type: blockType,
   model: blockModel,
 });

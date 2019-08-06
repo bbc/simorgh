@@ -4,6 +4,7 @@ import Blocks from './index';
 import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
 const unknownTestBlock = {
+  id: '1728930',
   type: 'test',
   model: {
     blocks: [
@@ -17,10 +18,12 @@ const unknownTestBlock = {
 };
 
 const parentBlockNotAllowed = {
+  id: '0213098',
   type: 'image',
   model: {
     blocks: [
       {
+        id: '2130329',
         type: 'rawImage',
         model: {
           width: 640,

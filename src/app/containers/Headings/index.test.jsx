@@ -17,15 +17,18 @@ const getId = enzymeWrapper => enzymeWrapper[0].children[0].attribs.id;
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {
+    id: '0923803',
     type: 'text',
     model: {
       blocks: [
         {
+          id: '1239084',
           type: 'paragraph',
           model: {
             text: text1 + text2Italic + text3,
             blocks: [
               {
+                id: '0032312',
                 type: 'fragment',
                 model: {
                   text: text1,
@@ -33,6 +36,7 @@ const textItalicFragmentPart = (text1, text2Italic, text3) => [
                 },
               },
               {
+                id: '2397081',
                 type: 'fragment',
                 model: {
                   text: text2Italic,
@@ -40,6 +44,7 @@ const textItalicFragmentPart = (text1, text2Italic, text3) => [
                 },
               },
               {
+                id: '9083213',
                 type: 'fragment',
                 model: {
                   text: text3,
@@ -69,7 +74,7 @@ const template = (title, text, type) => {
 
 describe('Headings', () => {
   describe('with no data', () => {
-    isNull('should not render anything', HeadingsContainerWithContext);
+    isNull('should not render anything', HeadingsContainerWithContext());
   });
 
   template('with headline data', 'This is a headline!', 'headline');

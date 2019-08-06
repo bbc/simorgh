@@ -6,12 +6,15 @@ Array [
     blocks={
       Array [
         Object {
+          "id": "92749127",
           "model": Object {
             "blocks": Array [
               Object {
+                "id": "92083087",
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": "12498792",
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a headline!",
@@ -35,12 +38,15 @@ Array [
     blocks={
       Array [
         Object {
+          "id": "92749127",
           "model": Object {
             "blocks": Array [
               Object {
+                "id": "92083087",
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": "12498792",
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a subheadline!",
@@ -65,9 +71,11 @@ Array [
     blocks={
       Array [
         Object {
+          "id": "92083087",
           "model": Object {
             "blocks": Array [
               Object {
+                "id": "12498792",
                 "model": Object {
                   "attributes": Array [],
                   "text": "This is some text content!",
@@ -93,12 +101,15 @@ Array [
     blocks={
       Array [
         Object {
+          "id": "92749127",
           "model": Object {
             "blocks": Array [
               Object {
+                "id": "92083087",
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": "12498792",
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a headline!",
@@ -122,12 +133,15 @@ Array [
     blocks={
       Array [
         Object {
+          "id": "92749127",
           "model": Object {
             "blocks": Array [
               Object {
+                "id": "92083087",
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": "12498792",
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a subheadline!",
@@ -152,9 +166,11 @@ Array [
     blocks={
       Array [
         Object {
+          "id": "92083087",
           "model": Object {
             "blocks": Array [
               Object {
+                "id": "12498792",
                 "model": Object {
                   "attributes": Array [],
                   "text": "This is some text content!",
