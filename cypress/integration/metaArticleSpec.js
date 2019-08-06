@@ -10,7 +10,7 @@ Object.keys(services)
   .forEach(service => {
     describe(`${service} Article Meta Tests`, () => {
       // eslint-disable-next-line no-undef
-      beforeEach(() => {
+      before(() => {
         cy.visit(
           `/${service}/articles/${services[service].pageTypes.articles.asset}`,
         );
