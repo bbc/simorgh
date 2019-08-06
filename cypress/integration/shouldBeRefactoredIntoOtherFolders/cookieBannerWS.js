@@ -1,6 +1,6 @@
-import describeForEuOnly from '../support/describeForEuOnly';
-import { describeForLocalAndTest } from '../support/limitEnvRuns';
-import services from '../../src/app/lib/config/services';
+import describeForEuOnly from '../../support/describeForEuOnly';
+import { describeForLocalAndTest } from '../../support/limitEnvRuns';
+import services from '../../../src/app/lib/config/services';
 
 Object.keys(services).forEach(index => {
   const serviceConfig = services[index];

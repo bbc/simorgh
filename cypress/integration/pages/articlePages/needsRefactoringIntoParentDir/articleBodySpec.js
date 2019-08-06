@@ -1,5 +1,5 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
-import config from '../support/config/services';
+import config from '../../../../support/config/services';
 
 const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;

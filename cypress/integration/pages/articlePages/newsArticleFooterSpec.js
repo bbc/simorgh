@@ -1,4 +1,4 @@
-import services from '../support/config/services';
+import services from '../../../support/config/services';
 
 describe('Footer Tests', () => {
   // eslint-disable-next-line no-undef

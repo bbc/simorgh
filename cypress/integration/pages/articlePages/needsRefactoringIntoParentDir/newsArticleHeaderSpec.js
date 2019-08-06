@@ -1,4 +1,4 @@
-import services from '../support/config/services';
+import services from '../../../../support/config/services';
 
 describe('Header Tests', () => {
   // eslint-disable-next-line no-undef
