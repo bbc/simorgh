@@ -36,6 +36,7 @@ describe('Block Containing Text', () => {
                     text: 'hello',
                     blocks: [
                       {
+                        id: 0,
                         type: 'fragment',
                         model: {
                           text: 'hello',

@@ -74,6 +74,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
                     "model": Object {
                       "blocks": Array [
                         Object {
+                          "id": 0,
                           "model": Object {
                             "attributes": Array [],
                             "text": "Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme",
