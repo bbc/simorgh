@@ -43,7 +43,7 @@ const visitPage = (service, pageType) => {
 };
 
 Object.keys(config)
-  .filter(service => service === 'pidgin')
+  .filter(service => service === 'news')
   .forEach(service => {
     Object.keys(config[service].pageTypes)
       .filter(
