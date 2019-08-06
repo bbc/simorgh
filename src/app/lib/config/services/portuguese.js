@@ -157,7 +157,7 @@ const service = {
       'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
   },
   fonts: [],
-  timezone: 'Europe/London',
+  timezone: 'America/Sao_Paulo',
 };
 
 export default service;
