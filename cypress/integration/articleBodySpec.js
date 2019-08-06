@@ -9,7 +9,7 @@ Object.keys(config)
   .forEach(service => {
     describe(`${service} Article Body Tests`, () => {
       // eslint-disable-next-line no-undef
-      beforeEach(() => {
+      before(() => {
         cy.visit(
           `/${service}/articles/${config[service].pageTypes.articles.asset}`,
         );
