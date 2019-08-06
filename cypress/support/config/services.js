@@ -199,12 +199,16 @@ export default {
   persian: {
     font: 'Nassim',
     pageTypes: {
-      articles:
-        Cypress.env('APP_ENV') === 'live'
-          ? undefined
-          : {
-              asset: 'c4vlle3q337o',
-            },
+      articles: {
+        asset:
+          Cypress.env('APP_ENV') === 'live' ? 'c7eel0lmr4do' : 'c4vlle3q337o',
+      },
+      // articles:
+      //   Cypress.env('APP_ENV') === 'live'
+      //     ? undefined
+      //     : {
+      //         asset: 'c4vlle3q337o',
+      //       },
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
