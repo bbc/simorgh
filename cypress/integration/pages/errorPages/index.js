@@ -1,11 +1,12 @@
-import testData from '../../../src/app/lib/config/services';
-import config from '../../support/config/services';
+import testData from '../../../../src/app/lib/config/services';
+import config from '../../../support/config/services';
 
-const serviceHasNonExistentArticle = service =>
+// Do not change the config to enable these on test or live, those error pages are cached versions of what we see locally.
+const serviceHasErrorPage = service =>
   config[service].pageTypes.errorPage404 !== undefined;
 
 Object.keys(config)
-  .filter(serviceHasNonExistentArticle)
+  .filter(serviceHasErrorPage)
   .forEach(service => {
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
@@ -16,15 +17,8 @@ Object.keys(config)
         );
       });
     });
-  });
 
-// These must only ever be run locally as otherwise you're testing
-// the mozart page not the response from this application.
-Object.keys(config)
-  .filter(serviceHasNonExistentArticle)
-  .forEach(service => {
     describe(`${service} Article Error Page Tests`, () => {
-      //  eslint-disable-next-line no-undef
       before(() => {
         cy.visit(config[service].pageTypes.errorPage404, {
           failOnStatusCode: false,
@@ -42,7 +36,6 @@ Object.keys(config)
         cy.get('h1 span').should(
           'contain',
           `${testData[service].translations.error[404].statusCode}`,
-          // eslint-disable-next-line no-undef
         );
         cy.get('h1').should(
           'contain',
