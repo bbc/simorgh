@@ -30,6 +30,7 @@ const ChartbeatAnalytics = ({ data }) => {
   if (!enabled) {
     return null;
   }
+
   const referrer = getReferrer(platform, origin, previousPath);
   const title = getTitle(pageType, data, brandName);
   const domain = env !== 'live' ? getDomain('test') : getDomain(service);
