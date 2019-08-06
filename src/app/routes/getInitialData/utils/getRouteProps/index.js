@@ -1,6 +1,6 @@
 import { matchRoutes } from 'react-router-config';
 import pathOr from 'ramda/src/pathOr';
-import services from '../../../lib/config/services/loadableConfig';
+import services from '../../../../lib/config/services/loadableConfig';
 
 const guessAmp = url => {
   return url.includes('.amp') || url.includes('/amp');

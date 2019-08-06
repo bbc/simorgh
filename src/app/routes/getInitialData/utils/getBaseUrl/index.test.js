@@ -1,4 +1,4 @@
-import getBaseUrl from './getBaseUrl';
+import getBaseUrl from '.';
 
 describe('Client', () => {
   const logicMap = [
