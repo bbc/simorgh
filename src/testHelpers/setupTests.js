@@ -13,7 +13,7 @@ const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
 const { error } = console;
 
 let reactErrorsCountPerTestSuite = 0;
-const reactErrorsLimitPerTestSuite = 3; // The goal is to have zero React errors per suite so keep fixing errors and lowering this limit
+const reactErrorsLimitPerTestSuite = 6; // The goal is to have zero React errors per suite so keep fixing errors and lowering this limit
 
 // eslint-disable-next-line no-console
 console.error = (message, ...rest) => {
