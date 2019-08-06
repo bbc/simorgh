@@ -177,7 +177,7 @@ describe('StoryPromo Container', () => {
     });
 
     it('should render relative time if timestamp < 10 hours', () => {
-      const oneMinuteAgo = Math.floor(Date.now() / 1000) - 60;
+      const oneMinuteAgo = Math.floor(Date.now()) - 60 * 1000;
       const newItem = {
         ...item,
         timestamp: oneMinuteAgo,
