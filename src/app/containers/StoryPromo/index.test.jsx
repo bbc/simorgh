@@ -278,21 +278,30 @@ describe('StoryPromo Container', () => {
 
     describe('With different timezones', () => {
       beforeEach(() => {
-        item.timestamp = 1565380800000;
+        item.timestamp = 1565035200000;
       });
 
       it('should show the correct local date', () => {
         const { container: newsContainer } = render(
           <WrappedStoryPromo item={item} service="news" />,
         );
-        const time = newsContainer.querySelector('time').textContent;
-        expect(time).toEqual('9 August 2019');
+        const {
+          textContent: newsTime,
+          dateTime: newsDate,
+        } = newsContainer.querySelector('time');
+
+        expect(newsTime).toEqual('5 August 2019');
+        expect(newsDate).toEqual('2019-08-05');
 
         const { container: bengaliContainer } = render(
           <WrappedStoryPromo item={item} service="bengali" />,
         );
-        const bengaliTime = bengaliContainer.querySelector('time').textContent;
-        expect(bengaliTime).toEqual('১০ আগস্ট ২০১৯');
+        const {
+          textContent: bengaliTime,
+          dateTime: bengaliDate,
+        } = bengaliContainer.querySelector('time');
+        expect(bengaliTime).toEqual('৬ আগস্ট ২০১৯');
+        expect(bengaliDate).toEqual('2019-08-06');
       });
     });
   });
