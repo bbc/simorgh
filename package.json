@@ -34,7 +34,7 @@
     "test:ampValidate:ci": "npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:chromatic": "true # Temporarily disabled due to axois vuln",
     "test:dependencies": "npx dependency-check@3.4.1 ./package.json",
-    "test:prod:ci": "npm run start & npm install --no-save cypress@latest bbc-a11y@latest lighthouse@latest npm-run-all@latest puppeteer@latest && run-p cypress npm run test:puppeteer && run-p bbcA11y lighthouse",
+    "test:prod:ci": "npm run start & npm install --no-save cypress@latest bbc-a11y@latest lighthouse@latest npm-run-all@latest puppeteer@latest && run-p cypress test:puppeteer && run-p bbcA11y lighthouse",
     "test:prod:travis": "CYPRESS_SKIP_EU=true npm run test:prod:ci",
     "test:e2e": "npm run killApp && npm run build && run-p --race start cypress",
     "test:e2e:local_env": "CYPRESS_APP_ENV=local npm run test:e2e",
