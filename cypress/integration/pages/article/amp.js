@@ -1,5 +1,5 @@
 import config from '../../../support/config/services';
-import testData from '../../../../src/app/lib/config/services';
+import appConfig from '../../../../src/app/lib/config/services';
 
 const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;
@@ -59,7 +59,7 @@ Object.keys(config)
           ({ body }) => {
             cy.hasHtmlLangDirAttributes({
               lang: body.metadata.passport.language,
-              dir: testData[service].dir,
+              dir: appConfig[service].dir,
             });
           },
         );
