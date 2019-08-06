@@ -32,7 +32,7 @@ Object.keys(services).forEach(index => {
         cy.worldServiceCookieBannerTranslations(
           `${serviceConfig.translations.consentBanner.privacy.title}`,
           `${serviceConfig.translations.consentBanner.cookie.title}`,
-          `/${service}`,
+          `/${service}.amp`,
           `${serviceConfig.translations.consentBanner.privacy.accept}`,
           `${serviceConfig.translations.consentBanner.cookie.accept}`,
         );
