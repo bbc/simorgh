@@ -1,9 +1,9 @@
 import describeForEuOnly from '../../support/describeForEuOnly';
 import { describeForLocalAndTest } from '../../support/limitEnvRuns';
-import services from '../../../src/app/lib/config/services';
+import config from '../../../src/app/lib/config/services';
 
-Object.keys(services).forEach(index => {
-  const serviceConfig = services[index];
+Object.keys(config).forEach(index => {
+  const serviceConfig = config[index];
   const service = index;
 
   // This should be unhacked when this file is consolidated with other cookie testing files.

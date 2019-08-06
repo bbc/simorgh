@@ -10,9 +10,7 @@ Object.keys(config)
     describe(`${service} Article Body Tests`, () => {
       // eslint-disable-next-line no-undef
       before(() => {
-        cy.visit(
-          `/${service}/articles/${config[service].pageTypes.articles.asset}`,
-        );
+        cy.visit(config[service].pageTypes.articles);
       });
 
       it('should render a H1, which contains/displays a styled headline', () => {
@@ -118,7 +116,7 @@ Object.keys(config)
       //   cy.get('main a').click();
       //   cy.url().should(
       //     'contain',
-      //     `/news/articles/${config.news.pageTypes.articles.asset}`,
+      //     `/news/articles/${config.news.pageTypes.articles}`,
       //   );
       //   cy.get('header a').should('contain', 'BBC News');
       // });

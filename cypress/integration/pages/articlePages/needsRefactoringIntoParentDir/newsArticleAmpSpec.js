@@ -1,15 +1,15 @@
-import services from '../../../../support/config/services';
+import config from '../../../../support/config/services';
 
 describe('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}.amp`);
+    cy.visit(`${config.news.pageTypes.articles}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
       cy.testResponseCodeAndType(
-        `/news/articles/${services.news.pageTypes.articles.asset}.amp`,
+        `${config.news.pageTypes.articles}.amp`,
         200,
         'text/html',
       );
@@ -18,17 +18,13 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should error gracefully', () => {
     cy.testResponseCodeAndType(
-      `/news/articles/${services.news.pageTypes.articles.asset}.cake`,
+      `${config.news.pageTypes.articles.asset}.cake`,
       404,
       'text/html',
     );
+    cy.testResponseCodeAndType(`/news/lol/c1234567890o.amp`, 404, 'text/html');
     cy.testResponseCodeAndType(
-      `/news/lol/${services.news.pageTypes.articles.asset}.amp`,
-      404,
-      'text/html',
-    );
-    cy.testResponseCodeAndType(
-      `/cake/articles/${services.news.pageTypes.articles.asset}.amp`,
+      `/cake/articles/c1234567890o.amp`,
       404,
       'text/html',
     );
@@ -104,13 +100,11 @@ describe('AMP Tests on a .amp page', () => {
 
   it('should include the canonical URL', () => {
     const canonicalOrigin = 'https://www.bbc.com';
-    cy.checkCanonicalURL(
-      `${canonicalOrigin}/news/articles/${services.news.pageTypes.articles.asset}`,
-    );
+    cy.checkCanonicalURL(`${canonicalOrigin}${config.news.pageTypes.articles}`);
   });
 
   it('should not have an AMP attribute on the main article', () => {
-    cy.visit(`/news/articles/${services.news.pageTypes.articles.asset}`);
+    cy.visit(config.news.pageTypes.articles);
     cy.get('html').should('not.have.attr', 'amp');
   });
 });

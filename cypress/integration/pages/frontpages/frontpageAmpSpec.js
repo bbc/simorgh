@@ -1,4 +1,4 @@
-import services from '../../../support/config/services';
+import config from '../../../support/config/services';
 import { describeForLocalOnly } from '../../../support/limitEnvRuns';
 
 // TODO Enable all disabled tests below once bbc/simorgh#1906 has been merged.
@@ -8,13 +8,13 @@ import { describeForLocalOnly } from '../../../support/limitEnvRuns';
 describeForLocalOnly('AMP Tests on a .amp page', () => {
   // eslint-disable-next-line no-undef
   before(() => {
-    cy.visit(`${services.igbo.pageTypes.frontPage}.amp`);
+    cy.visit(`${config.igbo.pageTypes.frontPage}.amp`);
   });
 
   describe('AMP Status', () => {
     it('should return a 200 response', () => {
       cy.testResponseCodeAndType(
-        `${services.igbo.pageTypes.frontPage}.amp`,
+        `${config.igbo.pageTypes.frontPage}.amp`,
         200,
         'text/html',
       );
@@ -23,17 +23,17 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
 
   it('should error gracefully', () => {
     cy.testResponseCodeAndType(
-      `${services.igbo.pageTypes.frontPage}.cake`,
+      `${config.igbo.pageTypes.frontPage}.cake`,
       404,
       'text/html',
     );
     cy.testResponseCodeAndType(
-      `/amp${services.igbo.pageTypes.frontPage}`,
+      `/amp${config.igbo.pageTypes.frontPage}`,
       404,
       'text/html',
     );
     cy.testResponseCodeAndType(
-      `${services.igbo.pageTypes.frontPage}/amp`,
+      `${config.igbo.pageTypes.frontPage}/amp`,
       404,
       'text/html',
     );
@@ -101,12 +101,12 @@ describeForLocalOnly('AMP Tests on a .amp page', () => {
       : origin;
 
     cy.checkCanonicalURL(
-      `${canonicalOrigin}${services.igbo.pageTypes.frontPage}`,
+      `${canonicalOrigin}${config.igbo.pageTypes.frontPage}`,
     );
   });
 
   xit('should not have an AMP attribute on the main article', () => {
-    cy.visit(`${services.igbo.pageTypes.frontPage}`);
+    cy.visit(`${config.igbo.pageTypes.frontPage}`);
     cy.get('html').should('not.have.attr', 'amp');
   });
 });
