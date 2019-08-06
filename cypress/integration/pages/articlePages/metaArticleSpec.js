@@ -1,19 +1,17 @@
-import envConfig from '../support/config/envs';
-import services from '../support/config/services';
-import testData from '../../src/app/lib/config/services';
+import envConfig from '../../../support/config/envs';
+import config from '../../../support/config/services';
+import testData from '../../../../src/app/lib/config/services';
 
 const serviceHasArticlePageType = service =>
-  services[service].pageTypes.articles !== undefined;
+  config[service].pageTypes.articles !== undefined;
 
-Object.keys(services)
+Object.keys(config)
   .filter(serviceHasArticlePageType)
   .forEach(service => {
     describe(`${service} Article Meta Tests`, () => {
       // eslint-disable-next-line no-undef
-      beforeEach(() => {
-        cy.visit(
-          `/${service}/articles/${services[service].pageTypes.articles.asset}`,
-        );
+      before(() => {
+        cy.visit(config[service].pageTypes.articles);
       });
 
       it('should have the correct lang & dir attributes', () => {
@@ -60,7 +58,7 @@ Object.keys(services)
           `${testData[service].defaultImageAltText}`,
           "Meghan's bouquet laid on tomb of unknown warrior",
           'article',
-          `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
+          `https://www.bbc.com${config[service].pageTypes.articles}`,
         );
       });
 
@@ -121,18 +119,16 @@ Object.keys(services)
 
       it('should include the canonical URL & ampHTML', () => {
         cy.checkCanonicalURL(
-          `https://www.bbc.com/${service}/articles/${services[service].pageTypes.articles.asset}`,
+          `https://www.bbc.com${config[service].pageTypes.articles}`,
         );
         cy.checkAmpHTML(
-          `${window.location.origin}/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
+          `${window.location.origin}${config[service].pageTypes.articles}.amp`,
         );
       });
 
       it('should include metadata in the head on AMP pages', () => {
         cy.window().then(win => {
-          cy.visit(
-            `/${service}/articles/${services[service].pageTypes.articles.asset}.amp`,
-          );
+          cy.visit(`${config[service].pageTypes.articles}.amp`);
           cy.get('meta[name="description"]').should(
             'have.attr',
             'content',

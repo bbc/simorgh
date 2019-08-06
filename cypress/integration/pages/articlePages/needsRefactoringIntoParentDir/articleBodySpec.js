@@ -1,5 +1,5 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
-import config from '../support/config/services';
+import config from '../../../../support/config/services';
 
 const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;
@@ -9,10 +9,8 @@ Object.keys(config)
   .forEach(service => {
     describe(`${service} Article Body Tests`, () => {
       // eslint-disable-next-line no-undef
-      beforeEach(() => {
-        cy.visit(
-          `/${service}/articles/${config[service].pageTypes.articles.asset}`,
-        );
+      before(() => {
+        cy.visit(config[service].pageTypes.articles);
       });
 
       it('should render a H1, which contains/displays a styled headline', () => {
@@ -118,7 +116,7 @@ Object.keys(config)
       //   cy.get('main a').click();
       //   cy.url().should(
       //     'contain',
-      //     `/news/articles/${config.news.pageTypes.articles.asset}`,
+      //     `/news/articles/${config.news.pageTypes.articles}`,
       //   );
       //   cy.get('header a').should('contain', 'BBC News');
       // });

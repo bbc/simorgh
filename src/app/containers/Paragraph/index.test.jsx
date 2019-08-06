@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import ParagraphContainer from '.';
@@ -6,6 +7,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
+  id: uuid(),
   model: {
     text,
     attributes,
@@ -14,6 +16,7 @@ const fragmentBlock = (text, attributes = []) => ({
 
 const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
   type: 'urlLink',
+  id: uuid(),
   model: {
     text,
     locator,
@@ -60,7 +63,7 @@ const blocksWithInline = [
 ];
 
 const ParagraphContainerWithContext = blocks => (
-  <ServiceContext.Provider value={{ script: latin }}>
+  <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
     <ParagraphContainer blocks={blocks} />
   </ServiceContext.Provider>
 );
