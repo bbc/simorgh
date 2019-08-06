@@ -49,36 +49,6 @@ Object.keys(config)
           },
         );
       });
-    });
-
-    describe('AMP Tests on a .amp page', () => {
-      describe('AMP Status', () => {
-        it('should return a 200 response', () => {
-          cy.testResponseCodeAndType(
-            `${config.news.pageTypes.articles}.amp`,
-            200,
-            'text/html',
-          );
-        });
-      });
-
-      it('should error gracefully', () => {
-        cy.testResponseCodeAndType(
-          `${config.news.pageTypes.articles.asset}.cake`,
-          404,
-          'text/html',
-        );
-        cy.testResponseCodeAndType(
-          `/news/lol/c1234567890o.amp`,
-          404,
-          'text/html',
-        );
-        cy.testResponseCodeAndType(
-          `/cake/articles/c1234567890o.amp`,
-          404,
-          'text/html',
-        );
-      });
 
       it('should have AMP attribute', () => {
         cy.get('html').should('have.attr', 'amp');
@@ -156,15 +126,9 @@ Object.keys(config)
       });
 
       it('should include the canonical URL', () => {
-        const canonicalOrigin = 'https://www.bbc.com';
         cy.checkCanonicalURL(
-          `${canonicalOrigin}${config[service].pageTypes.articles}`,
+          `https://www.bbc.com${config[service].pageTypes.articles}`,
         );
-      });
-
-      it('should not have an AMP attribute on the main article', () => {
-        cy.visit(config.news.pageTypes.articles);
-        cy.get('html').should('not.have.attr', 'amp');
       });
     });
   });

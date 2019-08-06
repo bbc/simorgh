@@ -23,6 +23,10 @@ Object.keys(config)
           });
         });
 
+        it('should not have an AMP attribute on the main article', () => {
+          cy.get('html').should('not.have.attr', 'amp');
+        });
+
         it('should have a correct robot meta tag', () => {
           cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
         });
