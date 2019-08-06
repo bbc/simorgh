@@ -36,6 +36,7 @@ const getAssetOrigins = () => {
     IMAGES_ORIGIN,
     FONTS_ORIGIN,
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    process.env.SIMORGH_ATI_BASE_URL,
   ];
 
   return assetOrigins;
