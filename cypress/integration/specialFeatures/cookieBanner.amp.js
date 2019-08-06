@@ -1,60 +1,84 @@
 import config from '../../support/config/services';
+import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
-const getPrivacyBanner = () =>
-  cy.contains("We've updated our Privacy and Cookies Policy");
+const getPrivacyBanner = service =>
+  cy.contains(appConfig[service].translations.consentBanner.privacy.title);
 
-const getCookieBanner = () => cy.contains('Let us know you agree to cookies');
+const getCookieBanner = service =>
+  cy.contains(appConfig[service].translations.consentBanner.cookie.title);
 
-describeForEuOnly('Amp Cookie Banner Test', () => {
-  beforeEach(() => {
-    cy.visit(`${config.news.pageTypes.articles}.amp`);
-  });
+const getPrivacyAccept = service =>
+  cy.contains(appConfig[service].translations.consentBanner.privacy.accept);
 
-  it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
-    getPrivacyBanner().should('be.visible');
-    getCookieBanner().should('not.be.visible');
+const getCookieAccept = service =>
+  cy.contains(appConfig[service].translations.consentBanner.cookie.accept);
 
-    cy.contains('OK').click();
+const getCookieReject = service =>
+  cy.contains(appConfig[service].translations.consentBanner.cookie.reject);
 
-    getCookieBanner().should('be.visible');
-    getPrivacyBanner().should('not.be.visible');
+Object.keys(config).forEach(service => {
+  Object.keys(config[service].pageTypes)
+    .filter(
+      pageType =>
+        config[service].pageTypes[pageType] !== undefined &&
+        pageType !== 'errorPage404',
+    )
+    .forEach(pageType => {
+      describeForEuOnly(
+        `Amp Cookie Banner Test for ${service} ${pageType}`,
+        () => {
+          beforeEach(() => {
+            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+          });
 
-    cy.contains('Yes, I agree').click();
+          it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
+            getPrivacyBanner(service).should('be.visible');
+            getCookieBanner(service).should('not.be.visible');
 
-    getCookieBanner().should('not.be.visible');
-    getPrivacyBanner().should('not.be.visible');
-  });
+            getPrivacyAccept(service).click();
 
-  it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
-    cy.contains('OK').click();
+            getCookieBanner(service).should('be.visible');
+            getPrivacyBanner(service).should('not.be.visible');
 
-    cy.visit(`${config.news.pageTypes.articles}.amp`);
+            getCookieAccept(service).click();
 
-    getPrivacyBanner().should('be.visible');
-    getCookieBanner().should('not.be.visible');
-  });
+            getCookieBanner(service).should('not.be.visible');
+            getPrivacyBanner(service).should('not.be.visible');
+          });
 
-  it('should not show privacy & cookie banners once both accepted, on reload', () => {
-    cy.contains('OK').click();
-    cy.contains('Yes, I agree').click();
+          it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
+            getPrivacyAccept(service).click();
 
-    cy.visit(`${config.news.pageTypes.articles}.amp`);
+            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
 
-    getPrivacyBanner().should('not.be.visible');
-    getCookieBanner().should('not.be.visible');
-  });
+            getPrivacyBanner(service).should('be.visible');
+            getCookieBanner(service).should('not.be.visible');
+          });
 
-  it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
-    getPrivacyBanner().should('be.visible');
-    getCookieBanner().should('not.be.visible');
+          it('should not show privacy & cookie banners once both accepted, on reload', () => {
+            getPrivacyAccept(service).click();
+            getCookieAccept(service).click();
 
-    cy.contains('OK').click();
-    cy.contains('No, take me to settings').click();
+            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
 
-    cy.visit(`${config.news.pageTypes.articles}.amp`);
+            getPrivacyBanner(service).should('not.be.visible');
+            getCookieBanner(service).should('not.be.visible');
+          });
 
-    getPrivacyBanner().should('not.be.visible');
-    getCookieBanner().should('not.be.visible');
-  });
+          it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
+            getPrivacyBanner(service).should('be.visible');
+            getCookieBanner(service).should('not.be.visible');
+
+            getPrivacyAccept(service).click();
+            getCookieReject(service).click();
+
+            cy.visit(`${config.news.pageTypes.articles}.amp`);
+
+            getPrivacyBanner(service).should('not.be.visible');
+            getCookieBanner(service).should('not.be.visible');
+          });
+        },
+      );
+    });
 });
