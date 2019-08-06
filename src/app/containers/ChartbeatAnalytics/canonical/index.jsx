@@ -19,15 +19,10 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
         {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = ${JSON.stringify(chartbeatConfig)};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, ${JSON.stringify(
-            chartbeatConfig,
-          )});
         })();
       `}
       </script>

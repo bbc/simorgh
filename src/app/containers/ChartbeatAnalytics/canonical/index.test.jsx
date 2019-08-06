@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-import { act } from 'react-dom/test-utils';
 import CanonicalChartbeatAnalytics from '.';
 
 describe('CanonicalChartbeatAnalytics', () => {
@@ -39,19 +38,27 @@ describe('CanonicalChartbeatAnalytics', () => {
       />,
     );
 
-    act(() => {
-      wrapper.setProps({
-        chartbeatConfig: {
-          domain: 'test-domain',
-          type: 'article',
-          sections: 'section1 section2',
-          chartbeatUID: 1111,
-          useCanonical: true,
-          virtualReferrer: '/some-path',
-          title: 'This is another article',
-        },
-      });
-      expect(global.pSUPERFLY.virtualPage).toHaveBeenCalled();
+    wrapper.setProps({
+      chartbeatConfig: {
+        domain: 'test-domain',
+        type: 'article',
+        sections: 'section1 section2',
+        chartbeatUID: 1111,
+        useCanonical: true,
+        virtualReferrer: '/some-path',
+        title: 'This is another article',
+      },
+    });
+    wrapper.mount();
+    expect(global.pSUPERFLY.virtualPage).toHaveBeenCalled();
+    expect(global.pSUPERFLY.virtualPage).toHaveBeenCalledWith({
+      domain: 'test-domain',
+      type: 'article',
+      sections: 'section1 section2',
+      chartbeatUID: 1111,
+      useCanonical: true,
+      virtualReferrer: '/some-path',
+      title: 'This is another article',
     });
   });
 });

@@ -353,13 +353,10 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -383,13 +380,10 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -427,13 +421,10 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                 "type": "text/javascript",
@@ -457,13 +448,10 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                 "type": "text/javascript",
@@ -491,13 +479,10 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -540,13 +525,10 @@ Object {
               
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
             </script>,
@@ -571,13 +553,10 @@ Object {
               
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
             </script>,
@@ -904,13 +883,10 @@ Object {
             
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
           </script>,
@@ -942,13 +918,10 @@ Object {
           
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
         </script>,
@@ -1288,13 +1261,10 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                 </script>,
@@ -1319,13 +1289,10 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                 </script>,
@@ -1649,13 +1616,10 @@ Object {
                     
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                   </script>,
@@ -1709,13 +1673,10 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -1739,13 +1700,10 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                   "type": "text/javascript",
@@ -1783,13 +1741,10 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                 "type": "text/javascript",
@@ -1813,13 +1768,10 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
                 "type": "text/javascript",
@@ -2153,13 +2105,10 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                 </script>,
@@ -2184,13 +2133,10 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                 </script>,
@@ -2514,13 +2460,10 @@ Object {
                     
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"});
         })();
       
                   </script>,
@@ -2563,13 +2506,10 @@ Object {
               "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
               "type": "text/javascript",
@@ -2600,13 +2540,10 @@ Object {
             "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
             "type": "text/javascript",
@@ -2630,13 +2567,10 @@ Object {
               "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          function merge(obj, src) {
-            for (var key in src) {
-                if (src.hasOwnProperty(key)) obj[key] = src[key];
-            }
-            return obj;
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          _sf_async_config = merge(_sf_async_config, {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"});
         })();
       ",
               "type": "text/javascript",
