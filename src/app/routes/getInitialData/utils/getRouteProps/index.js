@@ -5,15 +5,15 @@ import { fallbackAmpParam, fallbackServiceParam } from './routeFallbackParams';
 const getRouteProps = (routes, url) => {
   const matchedRoutes = matchRoutes(routes, url);
 
-  const amp = pathOr(null, [0, 'match', 'params', 'amp'], matchedRoutes);
+  const amp = pathOr(undefined, [0, 'match', 'params', 'amp'], matchedRoutes);
   const service = pathOr(
-    null,
+    undefined,
     [0, 'match', 'params', 'service'],
     matchedRoutes,
   );
-  const id = pathOr(null, [0, 'match', 'params', 'id'], matchedRoutes);
-  const route = pathOr(null, [0, 'route'], matchedRoutes);
-  const match = pathOr(null, [0, 'match'], matchedRoutes);
+  const id = pathOr(undefined, [0, 'match', 'params', 'id'], matchedRoutes);
+  const route = pathOr(undefined, [0, 'route'], matchedRoutes);
+  const match = pathOr(undefined, [0, 'match'], matchedRoutes);
 
   return {
     isAmp: amp ? !!amp : fallbackAmpParam(url),

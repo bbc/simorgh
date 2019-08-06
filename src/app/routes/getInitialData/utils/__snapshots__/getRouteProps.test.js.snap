@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`getRouteProps no matched route should return an empty object 1`] = `[Error: No route was found for fake url.]`;
