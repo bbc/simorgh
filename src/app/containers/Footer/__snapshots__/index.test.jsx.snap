@@ -21,12 +21,14 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .c7:hover .c9,
 .c7:focus .c9 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #FFFFFF;
 }
 
 .c5 {
   border-bottom: 1px solid #3F3F42;
+  display: grid;
+  grid-auto-flow: column;
   list-style-type: none;
   margin: 0;
   padding: 0 0 0.5rem;
@@ -83,13 +85,6 @@ exports[`FooterContainer should render correctly 1`] = `
   min-width: NaNrem;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: grid;
-    grid-auto-flow: column;
-  }
-}
-
 @media (max-width:14.9375rem) {
   .c5 {
     grid-auto-flow: row;
@@ -128,13 +123,13 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-@supports not (grid-template-columns:fit-content(200px)) {
+@supports not (display:grid) {
   .c5 > li:first-child {
     width: 100%;
   }
 }
 
-@supports not (grid-template-columns:fit-content(200px)) {
+@supports not (display:grid) {
   .c6 {
     display: inline-block;
   }
