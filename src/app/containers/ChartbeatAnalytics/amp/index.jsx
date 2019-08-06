@@ -1,10 +1,8 @@
 import React from 'react';
-import { shape } from 'prop-types';
+import { shape, string, number } from 'prop-types';
 
 const chartbeatAmpConfigOptions = options => ({
-  vars: {
-    ...options,
-  },
+  vars: options,
   triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
 });
 
@@ -23,7 +21,17 @@ const AmpChartbeatBeacon = ({ chartbeatConfig }) => (
 );
 
 AmpChartbeatBeacon.propTypes = {
-  chartbeatConfig: shape({}).isRequired,
+  chartbeatConfig: shape({
+    domain: string.isRequired,
+    sections: string.isRequired,
+    uid: number.isRequired,
+    title: string.isRequired,
+    contentType: string.isRequired,
+    virtualReferrer: string,
+    idSync: shape({
+      bbc_hid: string,
+    }),
+  }).isRequired,
 };
 
 export default AmpChartbeatBeacon;

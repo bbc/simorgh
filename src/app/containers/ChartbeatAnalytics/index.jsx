@@ -7,6 +7,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
+import { getReferrer } from '../../lib/analyticsUtils';
 import {
   chartbeatUID,
   chartbeatSource,
@@ -18,14 +19,12 @@ import {
   getTitle,
 } from '../../lib/analyticsUtils/chartbeat';
 
-import { getReferrer } from '../../lib/analyticsUtils';
-
 const ChartbeatAnalytics = ({ data }) => {
   const { service, brandName } = useContext(ServiceContext);
+  const { enabled } = useToggle('chartbeatAnalytics');
   const { env, platform, pageType, previousPath, origin } = useContext(
     RequestContext,
   );
-  const { enabled } = useToggle('chartbeatAnalytics');
 
   if (!enabled) {
     return null;
@@ -44,10 +43,9 @@ const ChartbeatAnalytics = ({ data }) => {
     uid: chartbeatUID,
     title,
     ...(isAmp && { contentType: type }),
-    ...(!isAmp && { type }),
-    ...(!isAmp && { useCanonical }),
-    ...(!!referrer && { virtualReferrer: referrer }),
-    ...(!!cookie && { idSync: { bbc_hid: cookie } }),
+    ...(!isAmp && { type, useCanonical }),
+    ...(referrer && { virtualReferrer: referrer }),
+    ...(cookie && { idSync: { bbc_hid: cookie } }),
   };
   return isAmp ? (
     <AmpChartbeatBeacon chartbeatConfig={config} />
