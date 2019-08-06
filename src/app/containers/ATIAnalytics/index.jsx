@@ -7,17 +7,20 @@ import ArticleAtiParams from './params/article';
 import FrontPageAtiParams from './params/frontpage';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
+import FrontPageAtiEventTracker from './event/frontpage';
 
 const ATIAnalytics = ({ data }) => {
   const { pageType, platform } = React.useContext(RequestContext);
 
   let pageviewParams = '';
+
   switch (pageType) {
     case 'article':
       pageviewParams = ArticleAtiParams(data);
       break;
     case 'frontPage':
       pageviewParams = FrontPageAtiParams(data);
+      FrontPageAtiEventTracker(data);
       break;
     default:
       return null;
