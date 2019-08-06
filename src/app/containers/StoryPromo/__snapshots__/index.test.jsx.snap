@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StoryPromo Container assertion tests With different timezones should show the correct local date 1`] = `"৬ আগস্ট ২০১৯"`;
-
 exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 .c0 {
   position: relative;
