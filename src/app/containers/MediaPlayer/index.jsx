@@ -26,11 +26,7 @@ const MediaPlayerContainer = ({ blocks }) => {
   const { platform } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
 
-  if (!enabled) {
-    return null;
-  }
-
-  if (!blocks) {
+  if (!enabled || !blocks) {
     return null;
   }
 
@@ -47,7 +43,7 @@ const MediaPlayerContainer = ({ blocks }) => {
     ['model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
-  const pid = pathOr(null, ['id'], nestedModel);
+
   const kind =
     pathOr(null, ['format'], nestedModel) === 'audio_video'
       ? 'programme'
@@ -62,7 +58,6 @@ const MediaPlayerContainer = ({ blocks }) => {
     ChildWrapper,
     Container,
     wrapperSpan,
-    portrait,
   } = mediaPlayerWrappers(orientation);
 
   return (
@@ -79,16 +74,10 @@ const MediaPlayerContainer = ({ blocks }) => {
       <ParentWrapper>
         <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
           <StyledContainer>
-            <Canonical />
+            <Canonical vpid={versionId} />
           </StyledContainer>
-          <ul>
-            <li>PID: {pid}</li>
-            <li>Orientation: {orientation}</li>
-            <li>Platform: {platform}</li>
-            <li>Portrait? {String(portrait)}</li>
-          </ul>
         </ChildWrapper>
-        <ChildWrapper
+        {/* <ChildWrapper
           gridColumnStart={1}
           gridSpan={{
             default: '6',
@@ -98,7 +87,7 @@ const MediaPlayerContainer = ({ blocks }) => {
           }}
         >
           {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
-        </ChildWrapper>
+        </ChildWrapper> */}
       </ParentWrapper>
     </Container>
   );

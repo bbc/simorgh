@@ -24,21 +24,21 @@ const StyledIframe = styled.iframe`
   overflow: hidden;
 `;
 
-const MediaPlayer = () => (
+const MediaPlayer = ({ vpid }) => (
   <StyledIframe
     title="Media Player"
-    src="https://www.test.bbc.co.uk/ws/av-embeds/c3wmq4d1y3wo/p01k6msp?morph_env=test"
+    src={`http://localhost.bbc.com:8080/ws/av-embeds/c3wmq4d1y3wo/${vpid}?morph_env=test`}
     scrolling="no"
     allowFullScreen
   />
 );
 
-const Canonical = () => {
+const Canonical = ({ vpid }) => {
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
   const handlePlaceholderClick = () => setShowMediaPlayer(true);
 
   return showMediaPlayer ? (
-    <MediaPlayer />
+    <MediaPlayer vpid={vpid} />
   ) : (
     <StyledPlaceholder onClick={handlePlaceholderClick}>
       <Image alt="Image Alt" src={IMG_SRC} />

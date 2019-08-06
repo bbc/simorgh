@@ -9,7 +9,7 @@ import {
 
 const mediaPlayerWrappers = orientation => {
   const wrapperSpan = {
-    default: '6',
+    default: '12',
     group5: '12',
   };
   let ParentWrapper = NestedGridParentLarge;
