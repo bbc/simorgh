@@ -1,11 +1,8 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../support/config/services';
 
-const serviceHasArticlePageType = service =>
-  config[service].pageTypes.articles !== undefined;
-
 Object.keys(config)
-  .filter(serviceHasArticlePageType)
+  .filter(service => config[service].pageTypes.articles !== undefined)
   .forEach(service => {
     describe(`${service} Article Body Tests`, () => {
       // eslint-disable-next-line no-undef
@@ -22,11 +19,12 @@ Object.keys(config)
       it('should render a formatted timestamp', () => {
         cy.window().then(win => {
           if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-            const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
-            const timestamp = Cypress.moment(lastPublished).format(
-              'D MMMM YYYY',
+            cy.get('time').should(
+              'contain',
+              Cypress.moment(
+                win.SIMORGH_DATA.pageData.metadata.lastPublished,
+              ).format('D MMMM YYYY'),
             );
-            cy.get('time').should('contain', timestamp);
           }
         });
       });
@@ -97,11 +95,14 @@ Object.keys(config)
 
       it('should render a title', () => {
         cy.window().then(win => {
-          const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
           if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-            cy.renderedTitle(`${seoHeadline} - BBC News`);
+            cy.renderedTitle(
+              `${win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline} - BBC News`,
+            );
           } else {
-            cy.renderedTitle(`${seoHeadline} - BBC News فارسی`);
+            cy.renderedTitle(
+              `${win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline} - BBC News فارسی`,
+            );
           }
         });
       });
