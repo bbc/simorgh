@@ -1,4 +1,5 @@
 import config from '../../../support/config/services';
+import testData from '../../../../src/app/lib/config/services';
 
 const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;
@@ -6,61 +7,51 @@ const serviceHasArticlePageType = service =>
 Object.keys(config)
   .filter(serviceHasArticlePageType)
   .forEach(service => {
-    describe(`Article - Canonical - ${service}`, () => {
-      // eslint-disable-next-line no-undef
+    describe(`Article - Amp - ${service}`, () => {
       before(() => {
-        cy.visit(config[service].pageTypes.articles);
+        cy.visit(`${config[service].pageTypes.articles}.amp`);
       });
 
-      it('should include metadata in the head on AMP pages', () => {
-        cy.window().then(win => {
-          cy.visit(`${config[service].pageTypes.articles}.amp`);
-          cy.get('meta[name="description"]').should(
-            'have.attr',
-            'content',
-            win.SIMORGH_DATA.pageData.promo.summary ||
-              win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
-          );
-          cy.get('meta[name="og:title"]').should(
-            'have.attr',
-            'content',
-            win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
-          );
-          cy.get('meta[name="og:type"]').should(
-            'have.attr',
-            'content',
-            win.SIMORGH_DATA.pageData.metadata.type,
-          );
-          cy.get('meta[name="article:published_time"]').should(
-            'have.attr',
-            'content',
-            new Date(
-              win.SIMORGH_DATA.pageData.metadata.firstPublished,
-            ).toISOString(),
-          );
-          cy.get('meta[name="article:modified_time"]').should(
-            'have.attr',
-            'content',
-            new Date(
-              win.SIMORGH_DATA.pageData.metadata.lastPublished,
-            ).toISOString(),
-          );
+      it('Metadata', () => {
+        cy.request(`${config[service].pageTypes.articles}.json`).then(
+          ({ body }) => {
+            cy.get('meta[name="description"]').should(
+              'have.attr',
+              'content',
+              body.promo.summary || body.promo.headlines.seoHeadline,
+            );
+            cy.get('meta[name="og:title"]').should(
+              'have.attr',
+              'content',
+              body.promo.headlines.seoHeadline,
+            );
+            cy.get('meta[name="og:type"]').should(
+              'have.attr',
+              'content',
+              body.metadata.type,
+            );
+            cy.get('meta[name="article:published_time"]').should(
+              'have.attr',
+              'content',
+              new Date(body.metadata.firstPublished).toISOString(),
+            );
+            cy.get('meta[name="article:modified_time"]').should(
+              'have.attr',
+              'content',
+              new Date(body.metadata.lastPublished).toISOString(),
+            );
 
-          cy.get('html').should(
-            'have.attr',
-            'lang',
-            win.SIMORGH_DATA.pageData.metadata.passport.language,
-          );
-        });
+            cy.get('html').should(
+              'have.attr',
+              'lang',
+              body.metadata.passport.language,
+            );
+          },
+        );
       });
     });
 
     describe('AMP Tests on a .amp page', () => {
-      // eslint-disable-next-line no-undef
-      before(() => {
-        cy.visit(`${config.news.pageTypes.articles}.amp`);
-      });
-
       describe('AMP Status', () => {
         it('should return a 200 response', () => {
           cy.testResponseCodeAndType(
@@ -77,7 +68,11 @@ Object.keys(config)
           404,
           'text/html',
         );
-        cy.testResponseCodeAndType(`/news/lol/c1234567890o.amp`, 404, 'text/html');
+        cy.testResponseCodeAndType(
+          `/news/lol/c1234567890o.amp`,
+          404,
+          'text/html',
+        );
         cy.testResponseCodeAndType(
           `/cake/articles/c1234567890o.amp`,
           404,
@@ -90,7 +85,14 @@ Object.keys(config)
       });
 
       it('should have lang and dir attributes', () => {
-        cy.hasHtmlLangDirAttributes({ lang: 'en-gb', dir: 'ltr' });
+        cy.request(`${config[service].pageTypes.articles}.json`).then(
+          ({ body }) => {
+            cy.hasHtmlLangDirAttributes({
+              lang: body.metadata.passport.language,
+              dir: testData[service].dir,
+            });
+          },
+        );
       });
 
       it('should load the AMP framework', () => {
@@ -155,7 +157,9 @@ Object.keys(config)
 
       it('should include the canonical URL', () => {
         const canonicalOrigin = 'https://www.bbc.com';
-        cy.checkCanonicalURL(`${canonicalOrigin}${config.news.pageTypes.articles}`);
+        cy.checkCanonicalURL(
+          `${canonicalOrigin}${config[service].pageTypes.articles}`,
+        );
       });
 
       it('should not have an AMP attribute on the main article', () => {
@@ -163,6 +167,4 @@ Object.keys(config)
         cy.get('html').should('not.have.attr', 'amp');
       });
     });
-
-    
   });
