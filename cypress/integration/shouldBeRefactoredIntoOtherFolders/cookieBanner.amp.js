@@ -1,5 +1,5 @@
-import services from '../support/config/services';
-import describeForEuOnly from '../support/describeForEuOnly';
+import services from '../../support/config/services';
+import describeForEuOnly from '../../support/describeForEuOnly';
 
 const getPrivacyBanner = () =>
   cy.contains("We've updated our Privacy and Cookies Policy");

@@ -1,5 +1,5 @@
-import testData from '../../src/app/lib/config/services';
-import services from '../support/config/services';
+import testData from '../../../src/app/lib/config/services';
+import services from '../../support/config/services';
 
 const serviceHasNonExistentArticle = service =>
   services[service].pageTypes.errorPage404 !== undefined;

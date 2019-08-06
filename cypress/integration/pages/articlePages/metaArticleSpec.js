@@ -1,6 +1,6 @@
-import envConfig from '../support/config/envs';
-import services from '../support/config/services';
-import testData from '../../src/app/lib/config/services';
+import envConfig from '../../../support/config/envs';
+import services from '../../../support/config/services';
+import testData from '../../../../src/app/lib/config/services';
 
 const serviceHasArticlePageType = service =>
   services[service].pageTypes.articles !== undefined;

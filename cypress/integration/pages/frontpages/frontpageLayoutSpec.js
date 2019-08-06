@@ -1,5 +1,5 @@
-import services from '../support/config/services';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+import services from '../../../support/config/services';
+import { describeForLocalOnly } from '../../../support/limitEnvRuns';
 
 Object.keys(services).forEach(index => {
   const serviceConfig = services[index];

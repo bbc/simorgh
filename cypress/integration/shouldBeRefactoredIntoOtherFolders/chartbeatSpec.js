@@ -1,5 +1,5 @@
-import services from '../support/config/services';
-import { describeForLocalOnly } from '../support/limitEnvRuns';
+import services from '../../support/config/services';
+import { describeForLocalOnly } from '../../support/limitEnvRuns';
 
 const source = '//static.chartbeat.com/js/chartbeat.js';
 const UID = 50924;

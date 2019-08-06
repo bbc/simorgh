@@ -1,9 +1,9 @@
-import envConfig from '../support/config/envs';
-import services from '../support/config/services';
+import envConfig from '../../support/config/envs';
+import services from '../../support/config/services';
 import {
   describeForLocalOnly,
   describeForLocalAndTest,
-} from '../support/limitEnvRuns';
+} from '../../support/limitEnvRuns';
 
 // NB: If these tests start failing unexpectedly it's a good sign that the dom is being
 // cleared during hydration. React won't render noscript tags on the client so if they

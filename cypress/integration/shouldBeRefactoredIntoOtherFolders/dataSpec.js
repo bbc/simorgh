@@ -1,4 +1,4 @@
-import services from '../support/config/services';
+import services from '../../support/config/services';
 
 describe('Static Articles data', () => {
   it('should return a 200 status code', () => {
