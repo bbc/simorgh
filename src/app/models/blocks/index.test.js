@@ -23,6 +23,7 @@ const rawBlock = type => ({
 describe('Block Containing Text', () => {
   test('generates the appropriate block json', () => {
     const testJson = {
+      id: 'testId',
       type: 'TheType',
       model: {
         blocks: [
