@@ -106,7 +106,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
             {isLive ? (
               <LiveComponent
                 service={service}
-                linkcontents={headline}
+                linkcontents={linkcontents}
                 dir={dir}
               />
             ) : (
