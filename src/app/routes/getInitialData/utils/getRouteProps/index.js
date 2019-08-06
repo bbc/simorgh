@@ -1,19 +1,6 @@
 import { matchRoutes } from 'react-router-config';
 import pathOr from 'ramda/src/pathOr';
-import services from '../../../../lib/config/services/loadableConfig';
-
-const guessAmp = url => {
-  return url.includes('.amp') || url.includes('/amp');
-};
-
-const guessService = url => {
-  const foundService = url
-    .split('/')
-    .filter(Boolean)
-    .find(part => Object.keys(services).includes(part));
-
-  return foundService || 'news';
-};
+import { fallbackAmpParam, fallbackServiceParam } from './routeFallbackParams';
 
 const getRouteProps = (routes, url) => {
   const matchedRoutes = matchRoutes(routes, url);
@@ -29,8 +16,8 @@ const getRouteProps = (routes, url) => {
   const match = pathOr(null, [0, 'match'], matchedRoutes);
 
   return {
-    isAmp: amp ? !!amp : guessAmp(url),
-    service: service || guessService(url),
+    isAmp: amp ? !!amp : fallbackAmpParam(url),
+    service: service || fallbackServiceParam(url),
     id,
     route,
     match,

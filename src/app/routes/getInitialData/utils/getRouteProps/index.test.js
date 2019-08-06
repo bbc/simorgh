@@ -1,5 +1,5 @@
 import reactRouterConfig from 'react-router-config';
-import getRouteProps from './getRouteProps';
+import getRouteProps from '.';
 
 jest.mock('react-router-config');
 
