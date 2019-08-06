@@ -103,9 +103,8 @@ describe('AMP Tests on a .amp page', () => {
   });
 
   it('should include the canonical URL', () => {
-    const canonicalOrigin = 'https://www.bbc.com';
     cy.checkCanonicalURL(
-      `${canonicalOrigin}/news/articles/${services.news.pageTypes.articles.asset}`,
+      `https://www.bbc.com/news/articles/${services.news.pageTypes.articles.asset}`,
     );
   });
 
