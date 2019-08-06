@@ -4,7 +4,7 @@ import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 
 const serviceHasArticlePageType = service =>
-  config[service].pageTypes.articles !== undefined;
+  config[service].pageTypes.articles !== undefined && service !== 'news';
 
 Object.keys(config)
   .filter(serviceHasArticlePageType)
