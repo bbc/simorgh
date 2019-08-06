@@ -126,6 +126,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -182,6 +196,34 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -194,6 +236,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -250,6 +306,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -563,6 +633,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -619,6 +703,34 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -631,6 +743,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -687,6 +813,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -1032,6 +1172,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -1088,6 +1242,34 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -1100,6 +1282,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -1156,6 +1352,20 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -1469,6 +1679,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -1525,6 +1749,34 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -1537,6 +1789,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -1593,6 +1859,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -1906,6 +2186,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -1962,6 +2256,34 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -1974,6 +2296,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -2030,6 +2366,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -2375,6 +2725,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -2431,6 +2795,34 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -2443,6 +2835,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -2499,6 +2905,20 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -2812,6 +3232,20 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -2868,6 +3302,34 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -2880,6 +3342,20 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -2936,6 +3412,20 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -3249,6 +3739,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -3305,6 +3809,34 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -3317,6 +3849,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -3373,6 +3919,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -3718,6 +4278,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -3774,6 +4348,34 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -3786,6 +4388,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -3842,6 +4458,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -4189,6 +4819,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -4245,6 +4889,34 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -4257,6 +4929,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -4313,6 +4999,20 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -4632,6 +5332,20 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -4688,6 +5402,34 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -4700,6 +5442,20 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -4756,6 +5512,20 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -5130,6 +5900,20 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -5186,6 +5970,34 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -5198,6 +6010,20 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -5254,6 +6080,20 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -5628,6 +6468,20 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -5684,6 +6538,34 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -5696,6 +6578,20 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -5752,6 +6648,20 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -6065,6 +6975,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -6121,6 +7045,34 @@ exports[`MediaPlayer with Video data canonical - should render the video without
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -6133,6 +7085,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -6189,6 +7155,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -6534,6 +7514,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -6590,6 +7584,34 @@ exports[`MediaPlayer with Video data canonical - should render the video without
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -6602,6 +7624,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -6658,6 +7694,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
@@ -7005,6 +8055,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "product": "BBC News",
       "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       "script": Object {
+        "atlas": Object {
+          "groupA": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupB": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
+          },
+          "groupD": Object {
+            "fontSize": "140",
+            "lineHeight": "148",
+          },
+        },
         "bodyCopy": Object {
           "groupA": Object {
             "fontSize": "15",
@@ -7061,6 +8125,34 @@ exports[`MediaPlayer with Video data canonical - should render the video without
             "lineHeight": "28",
           },
         },
+        "elephant": Object {
+          "groupA": Object {
+            "fontSize": "60",
+            "lineHeight": "64",
+          },
+          "groupB": Object {
+            "fontSize": "78",
+            "lineHeight": "84",
+          },
+          "groupD": Object {
+            "fontSize": "116",
+            "lineHeight": "124",
+          },
+        },
+        "foolscap": Object {
+          "groupA": Object {
+            "fontSize": "32",
+            "lineHeight": "36",
+          },
+          "groupB": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupD": Object {
+            "fontSize": "56",
+            "lineHeight": "60",
+          },
+        },
         "greatPrimer": Object {
           "groupA": Object {
             "fontSize": "18",
@@ -7073,6 +8165,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
           "groupD": Object {
             "fontSize": "20",
             "lineHeight": "24",
+          },
+        },
+        "imperial": Object {
+          "groupA": Object {
+            "fontSize": "50",
+            "lineHeight": "54",
+          },
+          "groupB": Object {
+            "fontSize": "64",
+            "lineHeight": "72",
+          },
+          "groupD": Object {
+            "fontSize": "96",
+            "lineHeight": "104",
           },
         },
         "longPrimer": Object {
@@ -7129,6 +8235,20 @@ exports[`MediaPlayer with Video data canonical - should render the video without
           "groupD": Object {
             "fontSize": "16",
             "lineHeight": "20",
+          },
+        },
+        "royal": Object {
+          "groupA": Object {
+            "fontSize": "40",
+            "lineHeight": "44",
+          },
+          "groupB": Object {
+            "fontSize": "52",
+            "lineHeight": "60",
+          },
+          "groupD": Object {
+            "fontSize": "76",
+            "lineHeight": "84",
           },
         },
         "trafalgar": Object {
