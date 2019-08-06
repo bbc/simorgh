@@ -55,9 +55,19 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
 };
 
 StoryPromoImage.propTypes = {
-  lazyLoad: bool.isRequired,
   topStory: bool.isRequired,
-  imageValues: shape(storyItem.indexImage).isRequired,
+  lazyLoad: bool,
+  imageValues: storyItem.indexImage,
+};
+
+StoryPromoImage.defaultProps = {
+  lazyLoad: false,
+  imageValues: shape({
+    path: '',
+    altText: '',
+    height: '',
+    width: '',
+  }),
 };
 
 const LiveComponent = ({ headline, service, dir }) => (

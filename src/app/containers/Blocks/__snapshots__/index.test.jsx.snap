@@ -12,6 +12,7 @@ Array [
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": 0,
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a headline!",
@@ -41,6 +42,7 @@ Array [
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": 0,
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a subheadline!",
@@ -68,6 +70,7 @@ Array [
           "model": Object {
             "blocks": Array [
               Object {
+                "id": 0,
                 "model": Object {
                   "attributes": Array [],
                   "text": "This is some text content!",
@@ -99,6 +102,7 @@ Array [
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": 0,
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a headline!",
@@ -128,6 +132,7 @@ Array [
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": 0,
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a subheadline!",
@@ -155,6 +160,7 @@ Array [
           "model": Object {
             "blocks": Array [
               Object {
+                "id": 0,
                 "model": Object {
                   "attributes": Array [],
                   "text": "This is some text content!",
