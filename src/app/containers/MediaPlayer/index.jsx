@@ -44,12 +44,6 @@ const MediaPlayerContainer = ({ blocks }) => {
     aresMediaBlock,
   );
 
-  const kind =
-    pathOr(null, ['format'], nestedModel) === 'audio_video'
-      ? 'programme'
-      : 'audio';
-
-  const type = kind === 'audio' ? kind : 'video';
   const orientation = pathOr(null, ['versions', 0, 'types', 0], nestedModel);
   const versionId = pathOr(null, ['versions', 0, 'versionId'], nestedModel);
 
@@ -77,17 +71,6 @@ const MediaPlayerContainer = ({ blocks }) => {
             <Canonical vpid={versionId} />
           </StyledContainer>
         </ChildWrapper>
-        {/* <ChildWrapper
-          gridColumnStart={1}
-          gridSpan={{
-            default: '6',
-            group3: '5',
-            group4: '5',
-            group5: '10',
-          }}
-        >
-          {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
-        </ChildWrapper> */}
       </ParentWrapper>
     </Container>
   );
