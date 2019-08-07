@@ -128,6 +128,9 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #3F3F42;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -151,9 +154,6 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 }
 
 .c2 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -171,20 +171,6 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (min-width:37.5rem) {
   .c1 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
     font-size: 1rem;
     line-height: 1.375rem;
   }

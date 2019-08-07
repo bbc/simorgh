@@ -2,25 +2,8 @@
 
 exports[`InlineContainer should render correctly 1`] = `
 .c0 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c0 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
 }
 
 <span
