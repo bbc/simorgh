@@ -1,9 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import styled from 'styled-components';
 import Canonical from './Canonical';
-import videoMetadata from './metadata';
+import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import useToggle from '../Toggle/useToggle';
@@ -35,27 +34,17 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null;
   }
 
-  const metadata = videoMetadata(aresMediaBlock);
   const nestedModel = pathOr(
     null,
     ['model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
-
   const versionId = pathOr(null, ['versions', 0, 'versionId'], nestedModel);
   const embedSource = embedUrl(env, id, versionId);
 
   return (
     <GridItemConstrainedMedium>
-      {metadata ? (
-        <Helmet>
-          {
-            <script type="application/ld+json">
-              {JSON.stringify(metadata)}
-            </script>
-          }
-        </Helmet>
-      ) : null}
+      <Metadata aresMediaBlock={aresMediaBlock} />
       <StyledContainer>
         <Canonical embedSource={embedSource} />
       </StyledContainer>
@@ -64,7 +53,6 @@ const MediaPlayerContainer = ({ blocks }) => {
 };
 
 MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
-
 MediaPlayerContainer.defaultProps = emptyBlockArrayDefaultProps;
 
 export default MediaPlayerContainer;
