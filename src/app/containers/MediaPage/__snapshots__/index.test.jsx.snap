@@ -145,8 +145,8 @@ Array [
 
 .c5:focus,
 .c5:hover {
-  border-bottom: 2px solid #B80000;
   color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c3 {
@@ -422,12 +422,14 @@ Array [
 
 .c10:hover .c12,
 .c10:focus .c12 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #FFFFFF;
 }
 
 .c8 {
   border-bottom: 1px solid #3F3F42;
+  display: grid;
+  grid-auto-flow: column;
   list-style-type: none;
   margin: 0;
   padding: 0 0 0.5rem;
@@ -481,13 +483,6 @@ Array [
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
-    display: grid;
-    grid-auto-flow: column;
-  }
-}
-
 @media (max-width:14.9375rem) {
   .c8 {
     grid-auto-flow: row;
@@ -526,13 +521,13 @@ Array [
   }
 }
 
-@supports not (grid-template-columns:fit-content(200px)) {
+@supports not (display:grid) {
   .c8 > li:first-child {
     width: 100%;
   }
 }
 
-@supports not (grid-template-columns:fit-content(200px)) {
+@supports not (display:grid) {
   .c9 {
     display: inline-block;
   }
