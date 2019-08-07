@@ -52,7 +52,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49001909"
                       },
                       "summary": "นับหนึ่ง ครม. ประยุทธ์ 2/1 พล.อ. ประยุทธ์ จันทร์โอชา นายกรัฐมนตรี นำคณะรัฐมนตรี 35 คน จากพรรคร่วมรัฐบาล 6 พรรค ถ่ายภาพหมู่ร่วมกันที่ทำเนียบรัฐบาล หลังเข้าเฝ้าฯ ถวายสัตย์ปฏิญาณตน",
-                      "timestamp": 1563281644,
+                      "timestamp": 1563281643000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -103,7 +103,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-48986979"
                               },
                               "summary": "คณะรักษาความสงบแห่งชาติ (คสช.) ที่ยึดครองอำนาจยาวนานถึง 5 ปี 55 วันนับจากรัฐประหาร 22 พ.ค. 2557 กำลังจะพ้นจากตำแหน่งไปในวันพรุ่งนี้ (16 ก.ค.)",
-                              "timestamp": 1563189199,
+                              "timestamp": 1563189198000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/thailand-48986979",
                               "type": "cps"
@@ -129,7 +129,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-49007726"
                       },
                       "summary": "เขาถูกไล่ออกจากงานและลงโทษด้วยการฉีดยาทำให้เป็นหมัน กับยังเข้ารับเคมีบำบัดและฮอร์โมนเพื่อรักษาอาการรักเพศเดียวกันที่ถือว่าเป็นโรคในยุคนั้น",
-                      "timestamp": 1563284447,
+                      "timestamp": 1563284446000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -168,7 +168,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-44982026"
                               },
                               "summary": "ภาพบนธนบัตร สิ่งสะท้อนสำนึกทางประวัติศาสตร์ อุดมการณ์ทางการเมือง และพัฒนาการทางเศรษฐกิจ",
-                              "timestamp": 1532755042,
+                              "timestamp": 1532755041000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/thailand-44982026",
                               "type": "cps"
@@ -182,7 +182,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/international-39431540"
                               },
                               "summary": "อังกฤษจะยกเลิกแบงก์ 5 ปอนด์แบบเก่า พ.ค.นี้ ด้านร้านรับแลกเงินในไทยแนะให้ลูกค้ารีบนำแบงก์ดังกล่าวมาแลกภายในสิ้นเดือน มี.ค.นี้",
-                              "timestamp": 1490782255,
+                              "timestamp": 1490782254000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/international-39431540",
                               "type": "cps"
@@ -200,7 +200,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48986540"
                       },
                       "summary": "กรมควบคุมโรคเตือนทุกคนมีโอกาสติดเชื้อไข้เลือดออก ซึ่งเป็นโรคประจำถิ่นและระบาดมากในช่วงฤดูฝน ยอมรับว่ายังมีความเข้าใจผิดบางประการที่เป็นอุปสรรคต่อการควบคุมและรักษาโรค",
-                      "timestamp": 1563253557,
+                      "timestamp": 1563253556000,
                       "byline": {
                           "name": "กุลธิดา  สามะพุทธิ",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -265,7 +265,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/48838308"
                               },
                               "summary": "สถานการณ์การระบาดของโรคไข้เลือดออกปีนี้น่าเป็นห่วง กรมควบคุมโรครายงานว่าจำนวนผู้ป่วยรอบ 6 เดือนในปีนี้สูงกว่าปี 2561 ถึงเกือบสองเท่า",
-                              "timestamp": 1562057720,
+                              "timestamp": 1562057719000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/48838308",
                               "type": "cps"
@@ -279,7 +279,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/features-46116685"
                               },
                               "summary": "เมื่อ 100 ปีที่แล้ว โลกเผชิญกับการแพร่ระบาดของไข้หวัดใหญ่สเปน ซึ่งถือเป็นการระบาดครั้งรุนแรงที่สุดครั้งหนึ่งในหน้าประวัติศาสตร์ของมนุษยชาติ",
-                              "timestamp": 1541533225,
+                              "timestamp": 1541533224000,
                               "cpsType": "MAP",
                               "id": "urn:bbc:ares::asset:thai/features-46116685",
                               "type": "cps"
@@ -297,7 +297,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48965970"
                       },
                       "summary": "ภูเขาน้ำแข็งยักษ์ กำลังหมุนและเคลื่อนตัวไปทางเหนือตามแนวคาบสมุทรแอนตาร์กติก",
-                      "timestamp": 1563279332,
+                      "timestamp": 1563279331000,
                       "byline": {
                           "name": "โจนาธาน อามอส ",
                           "title": "ผู้สื่อข่าววิทยาศาสตร์ บีบีซี ",
@@ -356,7 +356,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/international-47866841"
                               },
                               "summary": "โครงการที่ท้าทายนี้มีเป้าหมายในการเก็บข้อมูลสภาพภูมิอากาศและชั้นบรรยากาศโลกอย่างต่อเนื่อง ย้อนกลับไป 1.5 ล้านปี",
-                              "timestamp": 1554956668,
+                              "timestamp": 1554956667000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/international-47866841",
                               "type": "cps"
@@ -370,7 +370,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/international-45981090"
                               },
                               "summary": "นาซาระบุว่า ภูเขาน้ำแข็งนี้เพิ่งแยกตัวออกจากหิ้งน้ำแข็งขนาดใหญ่ได้ไม่นาน",
-                              "timestamp": 1540472860,
+                              "timestamp": 1540472859000,
                               "cpsType": "MAP",
                               "id": "urn:bbc:ares::asset:thai/international-45981090",
                               "type": "cps"
@@ -388,7 +388,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-49001306"
                       },
                       "summary": "ทุกวันนี้ยังไม่มีใครทราบว่า ซากของยาน “อีเกิล” ที่นำนีล อาร์มสตรองก้าวลงเหยียบพื้นผิวดวงจันทร์ สูญหายไปอยู่ที่ไหนกันแน่",
-                      "timestamp": 1563263302,
+                      "timestamp": 1563263301000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -431,7 +431,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/features-48990579"
                               },
                               "summary": "เครื่องดูดฝุ่นไร้สาย, เครื่องกระตุ้นหัวใจขนาดจิ๋ว, ผ้าห่มอวกาศ ฯลฯ คือส่วนหนึ่งของสิ่งประดิษฐ์ที่เป็นผลพลอยได้จากการพัฒนาเทคโนโลยีเพื่อภารกิจอะพอลโล",
-                              "timestamp": 1563187208,
+                              "timestamp": 1563187207000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/features-48990579",
                               "type": "cps"
@@ -449,7 +449,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-45469509"
                       },
                       "summary": "สเตฟาน แมนเดล เป็นนักคณิตศาสตร์มือสมัครเล่นคนแรกและคนสุดท้ายในประวัติศาสตร์ ที่ได้กำไรจากการถูกรางวัลลอตเตอรี่อย่างถล่มทลาย",
-                      "timestamp": 1536558335,
+                      "timestamp": 1536558334000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -503,7 +503,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/international-42076333"
                               },
                               "summary": "จอห์น คอลลิสันเป็นเศรษฐีตั้งแต่ก่อนเข้ามหาวิทยาลัย เขากับพี่ชายร่วมกันตั้งบริษัทชื่อสไตรพ์ซึ่งมีลูกค้าอย่างเช่น แอปเปิล",
-                              "timestamp": 1511318730,
+                              "timestamp": 1511318729000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/international-42076333",
                               "type": "cps"
@@ -521,7 +521,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48986979"
                       },
                       "summary": "คณะรักษาความสงบแห่งชาติ (คสช.) ที่ยึดครองอำนาจยาวนานถึง 5 ปี 55 วันนับจากรัฐประหาร 22 พ.ค. 2557 กำลังจะพ้นจากตำแหน่งไปในวันพรุ่งนี้ (16 ก.ค.)",
-                      "timestamp": 1563189199,
+                      "timestamp": 1563189198000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -572,7 +572,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-48950121"
                               },
                               "summary": "เปิดเหตุผล 3 ข้อที่หัวหน้าพรรคเพื่อไทยคนใหม่ต้องชื่อนายสมพงษ์ อมรวิวัฒน์",
-                              "timestamp": 1562927380,
+                              "timestamp": 1562927379000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/thailand-48950121",
                               "type": "cps"
@@ -586,7 +586,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/48964952"
                               },
                               "summary": "สำรวจนามสกุลรัฐมนตรีใน ครม.ประยุทธ์ 2/1 พบว่ามีอย่างน้อย 5 คนที่มีความเกี่ยวโยงกับภาพลักษณ์ความเป็นผู้มีอิทธิพลและเจ้าพ่อในการเมืองไทย",
-                              "timestamp": 1563104569,
+                              "timestamp": 1563104568000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/48964952",
                               "type": "cps"
@@ -604,7 +604,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48966475"
                       },
                       "summary": "ภูเขาน้ำแข็งที่ใหญ่ที่สุดในโลก ลอยหมุนไปทางเหนือตามแนวคาบสมุทรแอนตาร์กติก",
-                      "timestamp": 1563202298,
+                      "timestamp": 1563202297000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -686,7 +686,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48993320"
                       },
                       "summary": "นีล อาร์มสตรอง ทำหน้าที่ผู้บัญชาการยานอะพอลโล 11 ที่มีภารกิจในการนำยานลงจอดสำรวจดวงจันทร์",
-                      "timestamp": 1563244755,
+                      "timestamp": 1563244754000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -735,7 +735,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/features-48990579"
                               },
                               "summary": "เครื่องดูดฝุ่นไร้สาย, เครื่องกระตุ้นหัวใจขนาดจิ๋ว, ผ้าห่มอวกาศ ฯลฯ คือส่วนหนึ่งของสิ่งประดิษฐ์ที่เป็นผลพลอยได้จากการพัฒนาเทคโนโลยีเพื่อภารกิจอะพอลโล",
-                              "timestamp": 1563187208,
+                              "timestamp": 1563187207000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/features-48990579",
                               "type": "cps"
@@ -761,7 +761,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48964952"
                       },
                       "summary": "สำรวจนามสกุลรัฐมนตรีใน ครม.ประยุทธ์ 2/1 พบว่ามีอย่างน้อย 5 คนที่มีความเกี่ยวโยงกับภาพลักษณ์ความเป็นผู้มีอิทธิพลและเจ้าพ่อในการเมืองไทย",
-                      "timestamp": 1563104569,
+                      "timestamp": 1563104568000,
                       "byline": {
                           "name": "กุลธิดา  สามะพุทธิ",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -825,7 +825,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-48891697"
                               },
                               "summary": "อ่านประวัติฉบับย่อของรัฐมนตรีในโควต้าพรรคพลังประชารัฐ",
-                              "timestamp": 1562755375,
+                              "timestamp": 1562755374000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/thailand-48891697",
                               "type": "cps"
@@ -839,7 +839,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/48666064"
                               },
                               "summary": "นายสมชาย คุณปลื้ม หรือ \"กำนันเป๊าะ\" เรียกได้ว่าเป็นแบบฉบับของนักการเมืองแบบเจ้าพ่อที่เคยรุ่งเรืองใน \"ยุคประชาธิปไตยครึ่งใบ\" และอาจจะกำลังกลับมาอีกในยุคนี้",
-                              "timestamp": 1560777816,
+                              "timestamp": 1560777815000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/48666064",
                               "type": "cps"
@@ -857,7 +857,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48980938"
                       },
                       "summary": "โลกหมุนและกาแล็กซีต่าง ๆ ก็หมุน แต่มีหลักฐานที่บ่งชี้ว่าจักรวาลไม่ได้หมุนตามไปด้วย",
-                      "timestamp": 1563163984,
+                      "timestamp": 1563163983000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -907,7 +907,7 @@
                                   "cpsUrn": "urn:bbc:content:assetUri:/thai/international-48898645"
                               },
                               "summary": "ห้องปฏิบัติการแห่งชาติโอกริดจ์ของสหรัฐฯ กำลังจะเริ่มทำการทดลองเพื่อพิสูจน์ถึงการมีอยู่ของเอกภพคู่ขนาน และค้นหาช่องทางที่เปิดประตูไปสู่เอกภพดังกล่าว",
-                              "timestamp": 1562490463,
+                              "timestamp": 1562490462000,
                               "cpsType": "STY",
                               "id": "urn:bbc:ares::asset:thai/international-48898645",
                               "type": "cps"
@@ -932,7 +932,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48950003"
                       },
                       "summary": "ถอดบทเรียนการบริหารจัดการทางการเมืองในสนามเลือกตั้ง 24 มี.ค. 2562 ของพรรคเพื่อไทย ที่ทำให้ “ชนะเลือกตั้ง แต่ตั้งรัฐบาลไม่ได้”",
-                      "timestamp": 1562840160,
+                      "timestamp": 1562840159000,
                       "byline": {
                           "name": "หทัยกาญจน์  ตรีสุวรรณ",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -994,7 +994,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48919705"
                       },
                       "summary": "บีบีซีไทย 5 ปี แห่งพลังของการนำเสนอข่าวสารที่เป็นเอกลักษณ์ และเปี่ยมความรู้",
-                      "timestamp": 1562690977,
+                      "timestamp": 1562690976000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1034,7 +1034,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48898541"
                       },
                       "summary": "ผลเลือกตั้งเมื่อ 24 มี.ค. 2562 สะท้อนว่าสังคมการเมืองไทยก้าวข้าม สุเทพ-ทักษิณ ในวัย 70 ปี ไปแล้วหรือยัง",
-                      "timestamp": 1562472823,
+                      "timestamp": 1562472822000,
                       "byline": {
                           "name": "หทัยกาญจน์  ตรีสุวรรณ",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -1094,7 +1094,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48952208"
                       },
                       "summary": "\"ผมไม่ขอคอมเมนต์ในเรื่องกระบวนการทำงานของการบินไทยแต่ผมคิดว่าสิทธิเสรีภาพในการแสดงออกทางการเมืองเป็นสิทธิพื้นฐานของประชาชนในสังคมที่เป็นประชาธิปไตยทั้งหมด ไม่ควรมีใครถูกลิดรอนสิทธิเสรีภาพนี้\"",
-                      "timestamp": 1562903495,
+                      "timestamp": 1562903494000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1154,7 +1154,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48980945"
                       },
                       "summary": "การผ่าตัดย้ายเส้นประสาทสามารถมุ่งรักษากล้ามเนื้อที่เป็นอัมพาตได้โดยตรง และสามารถทำได้พร้อมกันหลายจุดในการผ่าตัดครั้งเดียว",
-                      "timestamp": 1563194774,
+                      "timestamp": 1563194773000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1228,7 +1228,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48974879"
                       },
                       "summary": "ลีลาการเต้นของ สโนว์บอล แสดงให้เห็นว่าสัตว์ในวงศ์นกแก้วมีทักษะทางสมองที่เดิมเชื่อกันว่ามีเฉพาะในมนุษย์เท่านั้น",
-                      "timestamp": 1563077213,
+                      "timestamp": 1563077212000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1306,7 +1306,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48966480"
                       },
                       "summary": "ทั้งสองชาติ มีประวัติศาสตร์ความขัดแย้งกันมายาวนานตั้งแต่ทศวรรษ 1950",
-                      "timestamp": 1563010560,
+                      "timestamp": 1563010559000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1376,7 +1376,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48938021"
                       },
                       "summary": "\"เป้าหมายของทางการจีนคือเปลี่ยนให้เด็ก ๆ เป็นชาวฮั่น\"",
-                      "timestamp": 1562818443,
+                      "timestamp": 1562818442000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1456,7 +1456,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48900814"
                       },
                       "summary": "ไฟดวงจิ๋วของหิ่งห้อยช่วยจุดประกายความคิดอันยิ่งใหญ่ให้นักวิทยาศาสตร์คนหนึ่ง",
-                      "timestamp": 1562558162,
+                      "timestamp": 1562558161000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1530,7 +1530,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48799136"
                       },
                       "summary": "เมืองมรดกโลกพัลไมราที่ได้รับความเสียหายอย่างย่อยยับจากน้ำมือของกลุ่มไอเอส กำลังได้รับการบูรณะให้กลับคืนสู่สภาพเดิมอีกครั้ง แต่งานนี้ดำเนินไปอย่างเชื่องช้า",
-                      "timestamp": 1561779116,
+                      "timestamp": 1561779115000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1600,7 +1600,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48763209"
                       },
                       "summary": "คิม (นามสมมุติ) ผู้หญิงซึ่งรอดจากการถูกข่มขืนมาได้อย่างหวุดหวิด เล่าเหตุการณ์ที่เกิดขึ้นที่ผับแห่งหนึ่งในกรุงโซลให้กับบีบีซีฟัง",
-                      "timestamp": 1561515800,
+                      "timestamp": 1561515799000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1680,7 +1680,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48759960"
                       },
                       "summary": "จากสงครามการค้า กลายเป็นสงครามเย็นด้านเทคโนโลยี 2 มหาอำนาจต้องการอะไร",
-                      "timestamp": 1561464274,
+                      "timestamp": 1561464273000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1777,7 +1777,7 @@
                       "uri": "http://www.bbc.co.uk/learningenglish/thai/home",
                       "contentType": "Text",
                       "assetTypeCode": "PRO",
-                      "timestamp": 1501172170,
+                      "timestamp": 1501172169000,
                       "type": "link"
                   }
               ],
@@ -1799,7 +1799,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48982909"
                       },
                       "summary": "ความรู้และประสบการณ์ในการก่อสร้างพีระมิดโค้ง ได้นำไปสู่การสร้างมหาพีระมิดแห่งกีซา หนึ่งในสิ่งมหัศจรรย์ของโลกยุคโบราณที่ยังคงอยู่มาจนถึงปัจจุบัน",
-                      "timestamp": 1563149876,
+                      "timestamp": 1563149875000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1839,7 +1839,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48938026"
                       },
                       "summary": "ปัจจุบันหอนาฬิกาบิ๊กเบน อยู่ระหว่างการบูรณะครั้งใหญ่ที่สุดนับแต่เคยมีมา และมีกำหนดแล้วเสร็จในปี 2021",
-                      "timestamp": 1562808571,
+                      "timestamp": 1562808570000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1890,7 +1890,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48990579"
                       },
                       "summary": "เครื่องดูดฝุ่นไร้สาย, เครื่องกระตุ้นหัวใจขนาดจิ๋ว, ผ้าห่มอวกาศ ฯลฯ คือส่วนหนึ่งของสิ่งประดิษฐ์ที่เป็นผลพลอยได้จากการพัฒนาเทคโนโลยีเพื่อภารกิจอะพอลโล",
-                      "timestamp": 1563187208,
+                      "timestamp": 1563187207000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1935,7 +1935,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48952209"
                       },
                       "summary": "บีบีซีเปิดโปงเรื่องฉาวคาวโลกีย์ในรัฐบาลอัฟกานิสถาน",
-                      "timestamp": 1563072146,
+                      "timestamp": 1563072145000,
                       "byline": {
                           "name": "โดย โยกิตา ลิมาเย",
                           "title": "บีบีซี นิวส์, คาบูล",
@@ -1985,7 +1985,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48979558"
                       },
                       "summary": "ยูทิวบ์เผย 10 อันดับมิวสิกวิดีโอที่มียอดการรับชมสูงสุดตั้งแต่ต้นปี 2019 สะท้อนความหลายทางวัฒนธรรม ภาษาและการผสมผสานของแนวดนตรี",
-                      "timestamp": 1563088061,
+                      "timestamp": 1563088060000,
                       "byline": {
                           "name": "มาร์ค ซาเวจ  ",
                           "title": "ผู้สื่อข่าวสายดนตรี บีบีซี",
@@ -2045,7 +2045,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48975448"
                       },
                       "summary": "นักวิทยาศาสตร์ยังไม่พบความสัมพันธ์ระหว่างยีนและลักษณะนิสัยเช่นนี้ในเพศชาย",
-                      "timestamp": 1563153977,
+                      "timestamp": 1563153976000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2095,7 +2095,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48965966"
                       },
                       "summary": "อุณหภูมิที่เพิ่มขึ้นจะทำให้ 1 ใน 5 ของเมืองสำคัญเหล่านี้มีสภาพภูมิอากาศแบบแปลกประหลาด ชนิดที่ไม่เคยพบเห็นที่ไหนมาก่อนในโลก",
-                      "timestamp": 1562987211,
+                      "timestamp": 1562987210000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2136,7 +2136,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48944432"
                       },
                       "summary": "ปัจจุบันมีอยู่เพียง 10 รัฐที่ยอมเปิดเสรีกัญชาในลักษณะนี้",
-                      "timestamp": 1562804073,
+                      "timestamp": 1562804072000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2186,7 +2186,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48952212"
                       },
                       "summary": "มุมมืดของโลกไซเบอร์ กำลังแผ่ขยายคืบคลานเข้าสู่พื้นที่การเมืองกระแสหลักในโลกแห่งความเป็นจริงมากขึ้นทุกขณะ",
-                      "timestamp": 1562894644,
+                      "timestamp": 1562894643000,
                       "cpsType": "STY",
                       "indexImage": {
                           "id": "107834893",
@@ -2215,7 +2215,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48900229"
                       },
                       "summary": "หลายหมู่บ้านในรัฐมหาราษฏระกลายเป็น \"หมู่บ้านผู้หญิงไร้มดลูก\"",
-                      "timestamp": 1562635999,
+                      "timestamp": 1562635998000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2255,7 +2255,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48906664"
                       },
                       "summary": "บอริส เบกเคอร์ อดีตแชมป์วิมเบิลดัน ประมูลขายถ้วยแชมป์เทนนิสของเขาในกรุงลอนดอน เพื่อนำเงินมาใช้หนี้กว่า 80 ล้านดอลลาร์สหรัฐฯ หรือราว 2.5 พันล้านบาท ทำไมอดีตนักกีฬาชื่อดังจำนวนมาก จึงสูญเสียเงินมหาศาลที่หาได้ในยุครุ่งเรืองของตัวเอง จนถึงขั้นล้มละลาย",
-                      "timestamp": 1563107097,
+                      "timestamp": 1563107096000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2311,7 +2311,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48929272"
                       },
                       "summary": "อะไรคือจุดประสงค์หลักของการลงโทษจำคุกอาชญากร ?",
-                      "timestamp": 1562723699,
+                      "timestamp": 1562723698000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2363,7 +2363,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48950376"
                       },
                       "summary": "ชิ้นส่วนกะโหลกศีรษะในถ้ำที่กรีซชี้ว่า มนุษย์อพยพออกจากถิ่นกำเนิดในทวีปแอฟริกาเร็วกว่าที่เคยคาดกันไว้นับแสนปี",
-                      "timestamp": 1562843169,
+                      "timestamp": 1562843168000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2404,7 +2404,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48914270"
                       },
                       "summary": "โรงหมักเบียร์ที่โบสถ์แห่งนี้เป็นเพียง 1 ใน 14 แห่งของโลก",
-                      "timestamp": 1562631315,
+                      "timestamp": 1562631314000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2456,7 +2456,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48900820"
                       },
                       "summary": "หลุมดำยักษ์เก่าแก่ยุคกำเนิดจักรวาล เกิดและโตขึ้นอย่างรวดเร็วจากการยุบตัวอย่างฉับพลันของกลุ่มก๊าซมวลมหาศาล",
-                      "timestamp": 1562551854,
+                      "timestamp": 1562551853000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2497,7 +2497,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48902824"
                       },
                       "summary": "สมาคมการจัดการงานบุคคลแห่งประเทศไทยเผยการสำรวจกระบวนการพิจารณารับบุคคลเข้าทำงานของบริษัทเอกชนพบว่า กว่าร้อยละ 40 หาข้อมูลเพิ่มเติมเกี่ยวกับผู้สมัครจากสิ่งที่เคยโพสต์และพฤติกรรมในโซเชียลมีเดีย",
-                      "timestamp": 1562563006,
+                      "timestamp": 1562563005000,
                       "byline": {
                           "name": "ศิริกร  เอื้อไพจิตร",
                           "title": "ผู้สื่อข่าวพิเศษ บีบีซีไทย",
@@ -2557,7 +2557,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48898645"
                       },
                       "summary": "ห้องปฏิบัติการแห่งชาติโอกริดจ์ของสหรัฐฯ กำลังจะเริ่มทำการทดลองเพื่อพิสูจน์ถึงการมีอยู่ของเอกภพคู่ขนาน และค้นหาช่องทางที่เปิดประตูไปสู่เอกภพดังกล่าว",
-                      "timestamp": 1562490463,
+                      "timestamp": 1562490462000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2609,7 +2609,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48890850"
                       },
                       "summary": "หนุ่มไทยเกิดในสหรัฐฯ เป็นคนแต่งและร้องเพลงชิพกับเดล เผยเกรงว่าเพลงจะไม่ไทยพอ",
-                      "timestamp": 1562387078,
+                      "timestamp": 1562387077000,
                       "byline": {
                           "name": "อิสสริยา  พรายทองแย้ม",
                           "title": "บรรณาธิการวางแผนข่าว ",
@@ -2671,7 +2671,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48690763"
                       },
                       "summary": "“ดีใจที่เป็นส่วนหนึ่งที่ช่วยลดโลกร้อน และผลิตข้าวคุณภาพดี ๆ ให้กับเพื่อนมนุษย์ในโลก ได้บริโภค”",
-                      "timestamp": 1562392177,
+                      "timestamp": 1562392176000,
                       "byline": {
                           "name": "ทศพล ชัยสัมฤทธิ์ผล",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -2737,7 +2737,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48900224"
                       },
                       "summary": "บีบีซีรวบรวมภาพแหล่งมรดกโลกแห่งใหม่มาให้ได้ชมกัน",
-                      "timestamp": 1562495252,
+                      "timestamp": 1562495251000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2777,7 +2777,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48887794"
                       },
                       "summary": "เมื่อหญิงสาวคนหนึ่ง เล่าเรื่องความเหงาของเธอในโลกออนไลน์ เธอได้รับข้อความสนับสนุนจากคนทั่วโลก",
-                      "timestamp": 1562414745,
+                      "timestamp": 1562414744000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2817,7 +2817,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48881845"
                       },
                       "summary": "\"ฉันไม่เคยบอกใครเลยว่าเขาทำอะไรกับฉันไว้คืนนั้น\"",
-                      "timestamp": 1562382457,
+                      "timestamp": 1562382456000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2867,7 +2867,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48872204"
                       },
                       "summary": "จิ้งจอกน้อยเดินทางได้ไกลสูงสุดถึงวันละ 155 กม.",
-                      "timestamp": 1562293285,
+                      "timestamp": 1562293284000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2919,7 +2919,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48881837"
                       },
                       "summary": "ผลสำรวจล่าสุดชี้ โลกยังมีที่ว่างใช้ปลูกป่าได้อีกเกือบ 10 ล้านตารางกิโลเมตร คิดเป็นพื้นที่เท่ากับสหรัฐอเมริกาทั้งประเทศ",
-                      "timestamp": 1562318534,
+                      "timestamp": 1562318533000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2953,7 +2953,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48852287"
                       },
                       "summary": "นักวิจัยชี้ การชุมนุมที่มีคนเข้าร่วม 3.5% ของประชากรจะประสบความสำเร็จ",
-                      "timestamp": 1562216792,
+                      "timestamp": 1562216791000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2997,7 +2997,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48847369"
                       },
                       "summary": "ปัจจุบันเชื่อว่าเจ้าหญิงฮายาประทับอยู่ในบ้านหรูใจกลางกรุงลอนดอน และเตรียมดำเนินการต่อสู้ทางกฎหมายในศาลสูง",
-                      "timestamp": 1562113505,
+                      "timestamp": 1562113504000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3047,7 +3047,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48856200"
                       },
                       "summary": "ลูกของแรงงานข้ามชาติในอุตสาหกรรมก่อสร้างในไทย เป็นหนึ่งในกลุ่มเปราะบางที่ไม่ได้รับโอกาสทางการศึกษาและขาดพื้นที่ปลอดภัยในแคมป์คนงาน",
-                      "timestamp": 1562220421,
+                      "timestamp": 1562220420000,
                       "byline": {
                           "name": "ธันยพร บัวทอง  & วิดีโอโดย พริสม์ จิตเป็นธม",
                           "title": "ผู้สื่อข่าวบีบีซีไทย ",
@@ -3107,7 +3107,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48851079"
                       },
                       "summary": "การ์ตูนมิกกี้เมาส์ตอนใหม่ดิสนีย์ตอนใหม่ล่าสุดที่มีฉากเป็นตลาดน้ำของไทย ประสบความสำเร็จในการได้ใจผู้ชมชาวไทยด้วยเพลงสั้น 13 วินาที ที่กลายเป็น \"ไวรัล\"",
-                      "timestamp": 1562160804,
+                      "timestamp": 1562160803000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3163,7 +3163,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48846762"
                       },
                       "summary": "การแอบซุกซ่อนมากับเครื่องบินโดยสารเพื่อเข้าเมืองโดยผิดกฎหมาย ทำได้อย่างไร จะต้องเผชิญกับอะไรบ้าง และเคยมีผู้รอดชีวิตจากการกระทำแบบนี้หรือไม่",
-                      "timestamp": 1562118714,
+                      "timestamp": 1562118713000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3213,7 +3213,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48838308"
                       },
                       "summary": "สถานการณ์การระบาดของโรคไข้เลือดออกปีนี้น่าเป็นห่วง กรมควบคุมโรครายงานว่าจำนวนผู้ป่วยรอบ 6 เดือนในปีนี้สูงกว่าปี 2561 ถึงเกือบสองเท่า",
-                      "timestamp": 1562057720,
+                      "timestamp": 1562057719000,
                       "byline": {
                           "name": "สมิตานัน  หยงสตาร์ ",
                           "title": "ผู้สื่อข่าวพิเศษบีบีซีไทย",
@@ -3279,7 +3279,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48822097"
                       },
                       "summary": "แอปพลิเคชั่นสนทนาที่เปิดให้ผู้ใช้ลงมติในเรื่องต่าง ๆ ได้ เป็นเครื่องมือสำคัญที่อยู่เบื้องหลังการชุมนุมประท้วงของชาวฮ่องกง",
-                      "timestamp": 1561973647,
+                      "timestamp": 1561973646000,
                       "byline": {
                           "name": "แดนนี วินเซนต์",
                           "title": "บีบีซีนิวส์ ฮ่องกง",
@@ -3339,7 +3339,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48851799"
                       },
                       "summary": "ภาพถ่ายดาวเทียมเผยให้เห็นการตัดไม้ทำลายป่าขนานใหญ่ ซึ่งจะทำให้โลกขาดแหล่งดูดซับกักเก็บคาร์บอนที่สำคัญในการต่อสู้กับภาวะโลกร้อน",
-                      "timestamp": 1562140437,
+                      "timestamp": 1562140436000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3379,7 +3379,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48818618"
                       },
                       "summary": "องค์การอนามัยโลก ให้การรับรอง \"ภาวะหมดไฟ\" อย่างเป็นทางการแล้ว แต่คุณจะรู้ได้อย่างไรว่าคุณกำลังมีอาการนี้",
-                      "timestamp": 1562030148,
+                      "timestamp": 1562030147000,
                       "byline": {
                           "name": "ชีวานี โกฮอก",
                           "title": "บีบีซี เวิลด์ เซอร์วิส ",
@@ -3445,7 +3445,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48816198"
                       },
                       "summary": "หากโลกนี้มีเพียงมิติความกว้างและความยาว ไม่มีความลึกหรือความสูง สิ่งมีชีวิตตัวแบนราบจะเกิดขึ้นได้หรือไม่ ?",
-                      "timestamp": 1561876800,
+                      "timestamp": 1561876799000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3495,7 +3495,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48826560"
                       },
                       "summary": "ในมุมมองของ ศ.ดร. ชัยวัฒน์ สถาอานันท์ นักสันติวิธี การทำร้ายร่างกาย \"จ่านิว\" การไร้ซึ่งความเห็นอกเห็นใจและการยอมรับได้ต่อความรุนแรงของคนบางกลุ่มต่อกรณีนี้ สะท้อนว่าสังคมไทยกำลังป่วยไข้",
-                      "timestamp": 1561985621,
+                      "timestamp": 1561985620000,
                       "byline": {
                           "name": "ธันยพร บัวทอง",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -3557,7 +3557,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48747537"
                       },
                       "summary": "ลองจินตนาการว่า แฮ็กเกอร์สามารถติดตั้งสปายแวร์ลงในโทรศัพท์ของคุณจากระยะไกล ทำให้พวกเขาเข้าถึงข้อมูลทุกอย่างในโทรศัพท์ได้ รวมถึงข้อความที่เข้ารหัส อาจจะถึงขั้นควบคุมไมโครโฟนและกล้องได้ด้วย เหตุการณ์นี้อาจจะไม่ใช่เรื่องที่ดูไกลเกินความเป็นจริงก็ได้",
-                      "timestamp": 1561895940,
+                      "timestamp": 1561895939000,
                       "byline": {
                           "name": "พอล เคนยอน และ โจ เคนต์ ",
                           "title": "ไฟล์ ออน 4",
@@ -3623,7 +3623,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48413530"
                       },
                       "summary": "โรคปวดหัวข้างเดียว หรือไมเกรน เป็นโรคปวดศีรษะเรื้อรังที่สร้างความทุกข์ทรมานและส่งผลกระทบต่อคุณภาพชีวิตของผู้ป่วย",
-                      "timestamp": 1558923585,
+                      "timestamp": 1558923584000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3697,7 +3697,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48772061"
                       },
                       "summary": "Gaggan ร้านอาหารอินเดียแนวใหม่ในกรุงเทพฯ ได้รับการจัดให้เป็นร้านอาหารดีที่สุดอันดับที่ 4 ของโลก และเป็นร้านอาหารแห่งเดียวในเอเชียที่มีชื่อติดโผ 10 อันดับแรกในการจัดอันดับปีนี้",
-                      "timestamp": 1561554496,
+                      "timestamp": 1561554495000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3738,7 +3738,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48809821"
                       },
                       "summary": "แม้น้ำมันเคลือบผิวหนังมนุษย์จะช่วยขจัดโอโซนที่เป็นพิษในห้องได้ แต่ก็ทำให้เกิดมลภาวะในตัวอาคาร คล้ายกับอากาศเสียในคอกหมู",
-                      "timestamp": 1561796833,
+                      "timestamp": 1561796832000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3788,7 +3788,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48782652"
                       },
                       "summary": "นักวิทยาศาสตร์จากมหาวิทยาลัยวอชิงตันของสหรัฐฯ พบว่าหนวดปลาหมึกยักษ์แต่ละหนวดซึ่งเปรียบเสมือนแขนทั้งแปดของมันนั้น สามารถทำงานได้ทั้งแบบเป็นอิสระจากกันและประสานงานร่วมกัน",
-                      "timestamp": 1561615940,
+                      "timestamp": 1561615939000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3838,7 +3838,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48769872"
                       },
                       "summary": "อดีตคนไข้ของ ดร.บาร์วิน มีบุตรที่มีดีเอ็นเอไม่ตรงกับผู้ที่ตั้งใจจะให้เป็นพ่ออยู่ราว 50-100 ราย และมี 11 รายที่มีดีเอ็นเอตรงกับนายแพทย์ผู้นี้",
-                      "timestamp": 1561542586,
+                      "timestamp": 1561542585000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3879,7 +3879,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48715711"
                       },
                       "summary": "มิ.ย. ได้รับการกำหนดให้เป็นเดือนแห่งความหลากหลายทางเพศ หรือ Pride Month ซึ่งมีจุดกำเนิดจากเหตุการณ์ความรุนแรงต่อผู้มีความหลากหลายทางเพศที่คลับเกย์แห่งหนึ่งในสหรัฐฯ เมื่อ 28 มิ.ย. 1969",
-                      "timestamp": 1561267895,
+                      "timestamp": 1561267894000,
                       "byline": {
                           "name": "ศิริกร  เอื้อไพจิตร",
                           "title": "ผู้สื่อข่าวพิเศษ บีบีซีไทย",
@@ -3949,7 +3949,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48783632"
                       },
                       "summary": "คลิปวิดีโอเผยให้เห็น นางแมร์เคิล วัย 64 ปี จับแขนตัวเองราวกับกำลังพยายามระงับอาการสั่นเทาระหว่างร่วมงานต้อนรับรัฐมนตรียุติธรรมคนใหม่ ร่วมกับประธานาธิบดีฟรังก์-วัลเทอร์ ชไตน์ไมเออร์ ในกรุงเบอร์ลิน",
-                      "timestamp": 1561635627,
+                      "timestamp": 1561635626000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4019,7 +4019,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48782645"
                       },
                       "summary": "มหาวิทยาลัยธรรมศาสตร์ซึ่งเป็นมหาวิทยาลัยที่เก่าแก่เป็นอันดับ 2 ของประเทศและมีประวัติศาสตร์ควบคู่กับการเมืองไทยมาอย่างยาวนาน มีอายุครบ 85 ปี ในวันที่ 27 มิ.ย.2562",
-                      "timestamp": 1561623351,
+                      "timestamp": 1561623350000,
                       "byline": {
                           "name": "สมิตานัน  หยงสตาร์ และ ศิริกร เอื้อไพจิตร",
                           "title": "ผู้สื่อข่าวพิเศษบีบีซีไทย",
@@ -4081,7 +4081,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48724556"
                       },
                       "summary": "แผ่นซีดีเก่าจากงานขายโละของมือสองของบ้านหลังหนึ่งเผยให้เห็นภาพหายากจากเหตุก่อการร้ายเขย่าโลกเมื่อเกือบ 18 ปีก่อน",
-                      "timestamp": 1561622771,
+                      "timestamp": 1561622770000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4121,7 +4121,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48775668"
                       },
                       "summary": "กัญชากำลังมาแรงในวงการแพทย์ แต่ผู้เชี่ยวชาญเตือนว่ายังไม่ควรรีบใช้เพื่อรักษาโรคติดเชื้อ จนกว่าจะผ่านขั้นตอนการศึกษาทดลองที่มากกว่านี้เสียก่อน",
-                      "timestamp": 1561579258,
+                      "timestamp": 1561579257000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4161,7 +4161,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48767469"
                       },
                       "summary": "ศาลรัฐธรรมนูญมีมติรับคำร้องคดี “ถือหุ้นสื่อ” ของ 32 ส.ส. ไว้พิจารณา ส่วนอีก 9 คน ศาลไม่รับคำร้อง",
-                      "timestamp": 1561545407,
+                      "timestamp": 1561545406000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4211,7 +4211,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48771048"
                       },
                       "summary": "นางแบบชื่อดังใช้ความผิดหวังจากข้อแนะนำของรัฐต่อผู้หญิงในเรื่องป้องกันการลวนลามทางเพศมาเป็นแรงผลักต่อยอดรณรงค์ทำความเข้าใจเรื่องเพศสู่กลุ่มเด็กเล็ก",
-                      "timestamp": 1561543114,
+                      "timestamp": 1561543113000,
                       "byline": {
                           "name": "ชัยยศ ยงค์เจริญชัย",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -4261,7 +4261,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48719735"
                       },
                       "summary": "นักวิทยาศาสตร์หวังว่า ข้อมูลที่ได้จากฟาร์มศพจะนำไปใช้ต่อยอดในการไขคดีฆาตกรรม และช่วยยกระดับเทคนิคทางนิติเวชศาสตร์ในการระบุอัตลักษณ์บุคคล",
-                      "timestamp": 1561507069,
+                      "timestamp": 1561507068000,
                       "byline": {
                           "name": "คาร์ลอส เซอร์ราโน (@carliserrano)",
                           "title": "บีบีซี มุนโด",
@@ -4327,7 +4327,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48755630"
                       },
                       "summary": "ฟร็อกมอร์ คอตเทจ ประกอบไปด้วยอาคาร 5 หลัง ได้รับการบูรณะให้เป็นที่ประทับหลังใหม่ของเจ้าชายแฮร์รีและพระชายา โดยทั้งคู่เพิ่งจะย้ายเข้าไปเมื่อต้นเดือน เม.ย.ที่ผ่านมา",
-                      "timestamp": 1561457330,
+                      "timestamp": 1561457329000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4367,7 +4367,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48742855"
                       },
                       "summary": "หลุมดำซึ่งเป็นสัญลักษณ์ของการทำลายล้าง อาจทำให้เกิดสิ่งมีชีวิตบนดาวเคราะห์ได้ หากโคจรอยู่ในระยะห่างที่พอเหมาะ",
-                      "timestamp": 1561369952,
+                      "timestamp": 1561369951000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4408,7 +4408,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48745315"
                       },
                       "summary": "จุลินทรีย์ในร่างกายที่เป็นประโยชน์ อาจเป็นโทษได้ในบางครั้ง โดยทำให้ยารักษาโรคที่ตกถึงท้องออกฤทธิ์ได้ไม่เต็มที่",
-                      "timestamp": 1561378869,
+                      "timestamp": 1561378868000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4448,7 +4448,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48730281"
                       },
                       "summary": "ผลการทดลองใน 40 ประเทศ สวนทางกับความเชื่อของคนส่วนใหญ่ที่มองว่าศีลธรรมยากจะเอาชนะความโลภในใจคนได้",
-                      "timestamp": 1561202803,
+                      "timestamp": 1561202802000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4489,7 +4489,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48742551"
                       },
                       "summary": "หักโหมทำงานจนดึกดื่นอาจส่งผลเสียต่อสุขภาพในระยะยาวมากกว่าที่คิด",
-                      "timestamp": 1561363703,
+                      "timestamp": 1561363702000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4539,7 +4539,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-47536631"
                       },
                       "summary": "นักวิจัยจากอ็อกซ์ฟอร์ด มาร์ติน สกูล นำเสนอผลการศึกษาเกี่ยวกับสาเหตุการเสียชีวิตของผู้คนทั่วโลก",
-                      "timestamp": 1561342854,
+                      "timestamp": 1561342853000,
                       "byline": {
                           "name": "ฮันนาห์ ริตชี ",
                           "title": "อ็อกซ์ฟอร์ด มาร์ติน สกูล ",
@@ -4589,7 +4589,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48724552"
                       },
                       "summary": "หนึ่งในทีมนักดำน้ำย้อนความทรงจำในการช่วยชีวิตเด็กชาย 12 คน และโค้ช ที่กลายเป็นข่าวโด่งดังไปทั่วโลก",
-                      "timestamp": 1561253046,
+                      "timestamp": 1561253045000,
                       "byline": {
                           "name": "โดย แมตธิว ไพรซ์ และ เซเรน โจนส์ ",
                           "title": "รายการพ็อดคาสท์ BBC Beyond Today ",
@@ -4649,7 +4649,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48891691"
                       },
                       "summary": "การที่ผู้ชายไม่สนใจจะเช็ดถูหรือซักล้างทำความสะอาดนั้นเป็นเพราะ “ถูกสังคมลงโทษ” จากการเป็นคนสกปรกน้อยกว่าผู้หญิงมาก",
-                      "timestamp": 1562402533,
+                      "timestamp": 1562402532000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -4705,7 +4705,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-46947979"
                       },
                       "summary": "เมื่อวันที่ 20 ม.ค. 2018 กลุ่มตาลีบัน ได้บุกโจมตีโรงแรมหรูกลางกรุงคาบูล ซึ่งเป็นที่พักยอดนิยมของแขกชาวต่างชาติ หนึ่งในนั้นคือ วาซิเลโอส วาซิเลโอ นักบินชาวกรีกที่รอดชีวิตได้มาได้อย่างหวุดหวิด",
-                      "timestamp": 1548296977,
+                      "timestamp": 1548296976000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4749,7 +4749,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48731098"
                       },
                       "summary": "สายตาบ้องแบ๊วของน้องหมา แท้จริงคือวิวัฒนาการที่มีมาเพื่อทำให้มนุษย์ใจละลายโดยเฉพาะ",
-                      "timestamp": 1561258734,
+                      "timestamp": 1561258733000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4799,7 +4799,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48715472"
                       },
                       "summary": "ภูริน พานิชพันธ์ หนุ่มเชียงใหม่ที่ยอมทิ้งงานในบริษัทระดับโลก อย่างไมโครซอฟต์ เพื่อทำตาม “เสียงหัวใจ” สู่การเป็นศิลปินชั้นแนวหน้า",
-                      "timestamp": 1561110530,
+                      "timestamp": 1561110529000,
                       "byline": {
                           "name": "เรื่อง-ภาพ โดย ทศพล ชัยสัมฤทธิ์ผล",
                           "title": "ผู้สื่อข่าววิดีโอ บีบีซีไทย",
@@ -4871,7 +4871,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48715713"
                       },
                       "summary": "ทีมชาติไทยตกรอบการแข่งขันฟุตบอลโลกหญิง 2019 ที่ประเทศฝรั่งเศส หลังพ่ายชิลีในเกมสุดท้าย รอบแบ่งกลุ่มช่วงเช้าวันนี้ (21 มิ.ย.) ตามเวลาไทย แม้จะตกรอบ แต่ทีม \"ชบาแก้ว\" ก็ได้รับเสียงชื่นชมจากนานาชาติถึงความใจสู้ในการแข่งขันครั้งนี้",
-                      "timestamp": 1561118994,
+                      "timestamp": 1561118993000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4927,7 +4927,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48677354"
                       },
                       "summary": "สหรัฐฯ แสงหลักฐานชิ้นใหม่กล่าวหาอิหร่านว่าโจมตีเรือบรรทุกน้ำมันสองลำเมื่อสัปดาห์ที่แล้ว แต่อิหร่านชี้ \"หลักฐานไม่มีมูล\" วิกฤตครั้งล่าสุดในอ่าวโอมานมที่กำลังตึงเครียด",
-                      "timestamp": 1560988888,
+                      "timestamp": 1560988887000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -4981,7 +4981,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48704012"
                       },
                       "summary": "ตลอดช่วงเวลาที่เป็นเด็กเมอริดิธได้รับการฉีดวัคซีนเพียงเข็มเดียว และนั่นทำให้เธอโมโหแม่มาก เมื่อโตขึ้นเมอริดิธต้องเผชิญผลพวงอย่างไรจากการไม่ได้รับวัคซีนที่จำเป็น",
-                      "timestamp": 1561022026,
+                      "timestamp": 1561022025000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -5021,7 +5021,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48592971"
                       },
                       "summary": "ความพยายามชีวิตนักฟุตบอลทีมหมูป่าอะคาเดมีที่ถ้ำหลวง-ขุนน้ำนางนอน ผ่านมาแล้วหนึ่งปี เหตุการณ์ครั้งนั้นเปลี่ยนชีวิตเด็ก ๆ และชุมชนไปอย่างไร",
-                      "timestamp": 1560848244,
+                      "timestamp": 1560848243000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -5061,7 +5061,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48694053"
                       },
                       "summary": "20 มิ.ย. เป็นวันคล้ายวันเกิดครบรอบ 65 ปี ของ รศ.นราพร จันทร์โอชา ภรรยา พล.อ.ประยุทธ์ จันทร์โอชา เธอรับบทบาทภรรยาผู้นำประเทศมาแล้ว 5 ปี และหากไม่มีอุบัติเหตุทางการเมืองให้สามีของเธอต้องลงจากอำนาจ นราพรจะต้องรับหน้าที่นี้ต่อไปอีก 4 ปี",
-                      "timestamp": 1561000593,
+                      "timestamp": 1561000592000,
                       "byline": {
                           "name": "กุลธิดา  สามะพุทธิ",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -5127,7 +5127,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48805405"
                       },
                       "summary": "ประธานาธิบดีรัสเซีย ระบุ ลัทธิเสรีนิยม ได้กลายเป็นสิ่ง \"ล้าหลัง\" ไปแล้ว",
-                      "timestamp": 1561733505,
+                      "timestamp": 1561733504000,
                       "cpsType": "STY",
                       "indexImage": {
                           "id": "107581024",
@@ -5155,7 +5155,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48509934"
                       },
                       "summary": "การเมืองแบบสวีเดนที่ถูกกำหนดด้วยแนวคิดเรื่องความมัธยัสถ์ โดย ส.ส. มีหน้าที่ทำงานรับใช้ประชาชน",
-                      "timestamp": 1559870904,
+                      "timestamp": 1559870903000,
                       "byline": {
                           "name": "คลอเดีย วอลลิน ",
                           "title": "บีบีซีนิวส์ บราซิล",
@@ -5221,7 +5221,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48668551"
                       },
                       "summary": "\"ความกังวลว่าเมืองที่ฉันเรียกว่าบ้านแห่งนี้จะเปลี่ยนไปอย่างไร มีมากกว่าความเป็นห่วงความปลอดภัยของตัวเอง\"",
-                      "timestamp": 1560822412,
+                      "timestamp": 1560822411000,
                       "byline": {
                           "name": "เฮลิเออร์ เฉิง",
                           "title": "บีบีซีนิวส์ ฮ่องกง",
@@ -5281,7 +5281,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48651868"
                       },
                       "summary": "ตัวละครเด็กหญิงลูกครึ่งไทย - อเมริกัน ของการ์ตูนแอนิเมชั่นเรื่อง แอมฟิเบีย (Amphibia) ซึ่งเตรียมฉายทางช่องดิสนีย์ในวันที่ 17 มิ.ย. นี้ เป็นฝีมือการสร้างสรรค์ของนักสร้างการ์ตูนหนุ่มลูกครึ่งไทย-อเมริกัน ที่ใช้ชีวิตอยู่ในสหรัฐฯ",
-                      "timestamp": 1560683977,
+                      "timestamp": 1560683976000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -5331,7 +5331,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48646940"
                       },
                       "summary": "จากความเชื่อเดิมที่ว่านิ้วที่ 6 หรือจำนวนนิ้วที่มากกว่านี้ไม่มีประโยชน์ แต่นักวิทยาศาสตร์พบว่านิ้วเกินช่วยให้ทำกิจกรรมต่าง ๆ ได้คล่องแคล่วขึ้น",
-                      "timestamp": 1560591219,
+                      "timestamp": 1560591218000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5372,7 +5372,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48655190"
                       },
                       "summary": "ผลการทดลองในสหรัฐฯ พบว่า เพียงเลื่อนเวลาเข้าเรียนให้ช้ากว่าเดิม 1 ชั่วโมง ก็เปลี่ยนพฤติกรรมของเด็กมัธยมได้",
-                      "timestamp": 1560729956,
+                      "timestamp": 1560729955000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5422,7 +5422,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48473198"
                       },
                       "summary": "ยูอิจิ อิชิอิ เป็นผู้ก่อตั้งบริษัทที่ให้บริการว่าจ้างคนไปแสร้งทำเป็นพ่อแม่ เพื่อนฝูง หรือญาติ ในญี่ปุ่น เขาบอกกับบีบีซีถึงความรู้สึกของการเข้าไปอยู่ครอบครัวเหล่านั้น",
-                      "timestamp": 1560594244,
+                      "timestamp": 1560594243000,
                       "byline": {
                           "name": "ฟรานซิสโก ฮิเมเนซ เด ลา ฟูเอนเต ",
                           "title": "บีบีซี นิวส์ ภาคภาษาสเปน โตเกียว ",
@@ -5486,7 +5486,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48651864"
                       },
                       "summary": "การปะทุปลดปล่อยพลังงานที่รุนแรงกว่าพายุสุริยะนับพันเท่า อาจส่งผลกระทบร้ายแรงต่อชั้นบรรยากาศโลก",
-                      "timestamp": 1560665504,
+                      "timestamp": 1560665503000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -5538,7 +5538,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48613344"
                       },
                       "summary": "2 วัน หลังโพสต์วิดีโอล้อเลียน คสช. ชายฝรั่งเศสอารมณ์ขันก็ได้เปิดบ้านต้อนรับการเยี่ยมเยียนจากผู้พิทักษ์สันติราษฎร์ไทย",
-                      "timestamp": 1560384311,
+                      "timestamp": 1560384310000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5588,7 +5588,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48638444"
                       },
                       "summary": "ความตึงเครียดในอ่าวเปอร์เซียเพิ่มสูงขึ้น หลังจากเกิดเหตุวางระเบิดเรือบรรทุกน้ำมันเป็นครั้งที่ 2 ในรอบไม่กี่สัปดาห์ โดยสหรัฐฯ กล่าวหาว่า เป็นฝีมือของอิหร่าน ด้านอิหร่านปฏิเสธ และบอกว่า เป็นฝีมือของผู้ที่ต้องการทำลายความสัมพันธ์ของอิหร่านกับประชาคมโลก",
-                      "timestamp": 1560570349,
+                      "timestamp": 1560570348000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5629,7 +5629,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48625344"
                       },
                       "summary": "สาร THC ในกระถางเผาเครื่องหอม ซึ่งพบที่สุสานใกล้เส้นทางสายไหมของจีน คือหลักฐานการใช้กัญชาเพื่อให้ออกฤทธิ์ต่อจิตประสาทอายุเก่าแก่ที่สุดในโลก",
-                      "timestamp": 1560470633,
+                      "timestamp": 1560470632000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5685,7 +5685,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48590865"
                       },
                       "summary": "เจ้าของคนปัจจุบันอ้างว่า ปัจจุบันรีสอร์ตแห่งนี้ใกล้จะบริหารจัดการอย่างยั่งยืนทั้งหมดและแทบจะไม่ผลิตก๊าซคาร์บอนให้ปลดปล่อยออกมาบนโลกใบนี้เลย",
-                      "timestamp": 1560230636,
+                      "timestamp": 1560230635000,
                       "byline": {
                           "name": "เจสสิกา บราวน์",
                           "title": "ผู้สื่อข่าวสายธุรกิจ",
@@ -5747,7 +5747,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48584027"
                       },
                       "summary": "บทบรรณาธิการของหนังสือพิมพ์วอชิงตันโพสต์ของสหรัฐฯ ระบุ รัฐบาลไทยยังไม่คู่ควรได้รับการฟื้นฟูความสัมพันธ์กับสหรัฐฯ อย่างเต็มที่ แม้จะได้รัฐบาลที่ได้ชื่อว่ามาจากการเลือกตั้งแล้ว",
-                      "timestamp": 1560175263,
+                      "timestamp": 1560175262000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5787,7 +5787,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48638438"
                       },
                       "summary": "พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทรมหาวชิราลงกรณ พระวชิรเกล้าเจ้าอยู่หัว ทรงมีพระบรมราชโองการโปรดเกล้าโปรดกระหม่อมให้สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี ทรงบังคับบัญชาหน่วยราชการในพระองค์ ข้าราชการและข้าราชบริพารในกรมกิจการในพระบรมวงศานุวงศ์",
-                      "timestamp": 1560512012,
+                      "timestamp": 1560512011000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5827,7 +5827,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48581850"
                       },
                       "summary": "คนที่นอนดึกตื่นสายจนเป็นนิสัยมักเจอกับปัญหาสุขภาพ แต่แก้ไขได้ง่าย ๆ ด้วยการปรับวงจรระบบการทำงานของร่างกายสักเล็กน้อย",
-                      "timestamp": 1560211231,
+                      "timestamp": 1560211230000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5877,7 +5877,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48636788"
                       },
                       "summary": "ผู้บริหารอย่างน้อย 3 สำนักพิมพ์ไม่ขอส่งหนังสือให้ พล.อ. ประยุทธ์ แนะนำ",
-                      "timestamp": 1560508609,
+                      "timestamp": 1560508608000,
                       "byline": {
                           "name": "ทศพล ชัยสัมฤทธิ์ผล",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -5937,7 +5937,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48581847"
                       },
                       "summary": "แรงโน้มถ่วงของโลก ดาวศุกร์ และดาวพฤหัสบดี ทำให้เกิดความปั่นป่วนในบรรยากาศของดวงอาทิตย์ ซึ่งเป็นปรากฏการณ์แบบเดียวกับที่ดวงจันทร์ทำให้เกิดน้ำขึ้นน้ำลงบนโลก",
-                      "timestamp": 1560216479,
+                      "timestamp": 1560216478000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5987,7 +5987,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48581337"
                       },
                       "summary": "ในศึกฟุตบอลหญิงชิงแชมป์โลกครั้งที่ 8 ที่ประเทศฝรั่งเศส ทีมฟุตบอลหญิงไทยสร้างประวัติศาสตร์ให้วงการฟุตบอลไทยอีกครั้ง หลังพวกเธอสามารถผ่านเข้าไปเล่นยังรอบสุดท้ายได้สำเร็จเป็นหนที่สอง",
-                      "timestamp": 1560162241,
+                      "timestamp": 1560162240000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6044,7 +6044,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-44408981"
                       },
                       "summary": "สมุดบันทึกที่แอนน์ แฟรงค์ เด็กหญิงชาวยิววัย 13 ปีตั้งชื่อว่า \"คิตตี้\" ได้กลายหนังสือสำคัญทางประวัติศาสตร์ที่ประทับใจนักอ่านชาวไทย",
-                      "timestamp": 1528715194,
+                      "timestamp": 1528715193000,
                       "byline": {
                           "name": "ฐิติพล ปัญญาลิมปนันท์",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -6098,7 +6098,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48574394"
                       },
                       "summary": "ผู้คนหลายแสนคนเดินขบวนต่อต้านร่างกฎหมายที่หลายคนเกรงว่า จะเป็นการปล่อยให้จีนใช้จัดการกับศัตรูที่อยู่ในฮ่องกง",
-                      "timestamp": 1560097656,
+                      "timestamp": 1560097655000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6138,7 +6138,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48573390"
                       },
                       "summary": "ผู้ติดตามฮือฮา หลังพบความเห็นของนายสมศักดิ์ เจียมธีรสกุล นักวิชาการที่ถูกออกหมายจับในคดี 112 ทางเฟซบุ๊ก",
-                      "timestamp": 1560082659,
+                      "timestamp": 1560082658000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6178,7 +6178,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48463470"
                       },
                       "summary": "เหตุใดประเด็นเชื้อชาติจึงทำให้ผู้กำกับละครเวทีหญิงผู้นี้หลงรักละครเวที",
-                      "timestamp": 1559964670,
+                      "timestamp": 1559964669000,
                       "byline": {
                           "name": "เรื่องและวิดีโอโดย ก้าวหน้า พงศ์พิพัฒน์",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -6232,7 +6232,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48572082"
                       },
                       "summary": "การวิจัยพบว่าระดับฮอร์โมนคอร์ติซอลหรือ “ฮอร์โมนเครียด” ในสุนัขบ้านหลายพันธุ์เปลี่ยนแปลงไปตามระดับความกลัดกลุ้มวิตกกังวลใจของคนที่เป็นเจ้าของ",
-                      "timestamp": 1560062866,
+                      "timestamp": 1560062865000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -6282,7 +6282,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44990779"
                       },
                       "summary": "ทั้งแบคทีเรีย พืชพรรณ ไปจนถึงสายฟ้าต่างก็มีส่วนในการสร้างกลิ่นสดชื่นเมื่อฝนตก",
-                      "timestamp": 1540281448,
+                      "timestamp": 1540281447000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6332,7 +6332,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48538270"
                       },
                       "summary": "หลัง พล.อ.ประยุทธ์ จันทร์โอชา ได้รับเสียงสนับสนุนจากสมาชิกรัฐสภา 500 เสียงให้เป็นนายกรัฐมนตรีอีกสมัย วลี \"โจร 500\" และ #RIPThailand ก็ท่วมท้นโลกโซเชียล",
-                      "timestamp": 1559833184,
+                      "timestamp": 1559833183000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6378,7 +6378,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48566712"
                       },
                       "summary": "8 มิถุนายน 1949 เป็นวันครบรอบ 70 ปี ของการตีพิมพ์นิยายเรื่อง 1984 ของจอร์จ ออร์เวลล์ ซึ่งแม้จะเขียนขึ้นกว่า 7 ทศวรรษแล้ว แต่เนื้อหากลับเข้ากับยุคสมัยได้ดีอย่างเหลือเชื่อ",
-                      "timestamp": 1559988076,
+                      "timestamp": 1559988075000,
                       "byline": {
                           "name": "จีน ซีตัน",
                           "title": "ผู้อำนวยการมูลนิธิออร์เวลล์",
@@ -6442,7 +6442,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48558458"
                       },
                       "summary": "วิาวทะว่า เวียดนามรุกรานกัมพูชาหรือไม่ในช่วงเขมรแดงครองอำนาจ เกิดขึ้นไม่กี่สัปดาห์ก่อนผู้นำชาติอาเซียนจะมาประชุมที่ไทย",
-                      "timestamp": 1559962463,
+                      "timestamp": 1559962462000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6482,7 +6482,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48545003"
                       },
                       "summary": "นอกจากการเจรจาการค้า ประธานาธิบดีจีนได้มอบแพนดา 2 ตัว ให้สวนสัตว์ในกรุงมอสโก ระหว่างการเยือนรัสเซีย 3 วัน",
-                      "timestamp": 1559878970,
+                      "timestamp": 1559878969000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6534,7 +6534,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48551810"
                       },
                       "summary": "กงสุลใหญ่ สถานเอกอัครราชทูตสหรัฐอเมริกาประจำประเทศไทย ชี้แจงระเบียบใหม่ที่ให้ผู้ขอวีซ่าเปิดเผยบัญชีโซเชียลมีเดีย",
-                      "timestamp": 1559902089,
+                      "timestamp": 1559902088000,
                       "byline": {
                           "name": "สมิตานัน  หยงสตาร์ ",
                           "title": "ผู้สื่อข่าวพิเศษบีบีซีไทย",
@@ -6578,7 +6578,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48524419"
                       },
                       "summary": "เหตุใดวันดีเดย์จึงมีความสำคัญและเกิดอะไรขึ้นในวันนี้เมื่อ 75 ปีก่อน",
-                      "timestamp": 1559802166,
+                      "timestamp": 1559802165000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6618,7 +6618,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48541027"
                       },
                       "summary": "ในแต่ละวันเรากิน ดื่ม และหายใจเอาชิ้นส่วนพลาสติกขนาดจิ๋วเข้าไปโดยไม่รู้ตัว ซึ่งนักวิจัยยังไม่รู้แน่ว่าจะส่งผลเสียต่อสุขภาพหรือไม่",
-                      "timestamp": 1559865762,
+                      "timestamp": 1559865761000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6658,7 +6658,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48530883"
                       },
                       "summary": "ทางการเวียดนามไม่พอใจหลังถูกพาดพิงว่า 'บุก' กัมพูชา ในข้อความที่นายลี เซียนลุง นายกรัฐมนตรีสิงคโปร์ เขียนถึงนายกรัฐมนตรีของไทย เพื่อแสดงความเสียใจต่อการอสัญกรรมของ พล.อ. เปรม ติณสูลานนท์",
-                      "timestamp": 1559780937,
+                      "timestamp": 1559780936000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6698,7 +6698,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48509932"
                       },
                       "summary": "เมื่อปี 2017 นายแฟรงก์ ทิมิส มีรายได้ 26.66 ล้านบาท แต่เสียภาษีเงินได้ไม่ถึง 1,500 บาท หลังแปลงรายได้เป็นเงินกู้",
-                      "timestamp": 1559785972,
+                      "timestamp": 1559785971000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6738,7 +6738,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48515935"
                       },
                       "summary": "ชโรดิงเงอร์เคยบอกว่า เราไม่อาจจะทราบสถานะทางควอนตัมของอนุภาคก่อนเริ่มสังเกตการณ์ได้ เหมือนแมวในกล่องปิดที่ถือว่ามีสถานะทั้งเป็นและตายอยู่ในขณะเดียวกัน",
-                      "timestamp": 1559729009,
+                      "timestamp": 1559729008000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6778,7 +6778,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48530879"
                       },
                       "summary": "ที่ประชุมร่วมรัฐสภามีมติเห็นชอบให้ พล.อ. ประยุทธ์ จันทร์โอชา เป็นนายกฯ",
-                      "timestamp": 1559754875,
+                      "timestamp": 1559754874000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6818,7 +6818,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48488942"
                       },
                       "summary": "ดาวฤกษ์ หลุมดำ หรือสสารมืด คือตัวการสร้างช่องโหว่คล้ายรูกระสุนขนาดยักษ์ในครั้งนี้ ?",
-                      "timestamp": 1559456788,
+                      "timestamp": 1559456787000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -6868,7 +6868,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48470878"
                       },
                       "summary": "“4 มิถุนายน 1989 มันคือตราบาป รัฐบาลไม่มีข้อแก้ตัวอะไรที่จะมาใช้ปกปิดบาปนี้จากประชาชนของคุณได้” นี่คือความในใจของภรรยาหม้ายที่สูญเสียสามีในเหตุนองเลือด 30 ปีก่อน",
-                      "timestamp": 1559557526,
+                      "timestamp": 1559557525000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -6924,7 +6924,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48495533"
                       },
                       "summary": "สมเด็จพระนางเจ้าสุทิดาฯ พระบรมราชินีในรัชกาลที่ 10 ทรงสำเร็จการฝึกและศึกษาตามหลักสูตรด้านการบิน ปัจจุบันทรงปฏิบัติหน้าที่ในตำแหน่งนักบินผู้ช่วย ทำการบินกับเครื่องบินพระราชพาหนะโบอิง 737",
-                      "timestamp": 1559550519,
+                      "timestamp": 1559550518000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6964,7 +6964,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48494062"
                       },
                       "summary": "\"มาเรียม\"ลูกพะยูนที่ได้รับการป้อนนมในสภาวะธรรมชาติตัวแรกของไทย ปลุกกระแสการอนุรักษ์พะยูนกลับมาเป็นที่พูดถึงอีกครั้ง",
-                      "timestamp": 1559540652,
+                      "timestamp": 1559540651000,
                       "byline": {
                           "name": "สมิตานัน หยงสตาร์",
                           "title": "ผู้สื่อข่าวพิเศษบีบีซีไทย",
@@ -7019,7 +7019,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48489936"
                       },
                       "summary": "จากรูปถ่ายหนึ่งใบสู่การสร้างภาพยนตร์ Where Hands Touch",
-                      "timestamp": 1559533242,
+                      "timestamp": 1559533241000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7053,7 +7053,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48476390"
                       },
                       "summary": "ทางครอบครัวระบุว่า ปายัล ทัดวี วัย 26 ปี จบชีวิตตัวเองลง หลังจากที่เธอเผชิญการถูกล่วงละเมิดเพราะเรื่องชนชั้นมานานหลายเดือน",
-                      "timestamp": 1559356860,
+                      "timestamp": 1559356859000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7093,7 +7093,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48482693"
                       },
                       "summary": "อสูรยักษ์ในจินตนาการตัวโตขึ้นอย่างก้าวกระโดด นับแต่ถือกำเนิดบนจอภาพยนตร์เมื่อ 65 ปีที่แล้ว",
-                      "timestamp": 1559375019,
+                      "timestamp": 1559375018000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -7153,7 +7153,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48432052"
                       },
                       "summary": "แม้การมีกล้ามโตและผมดกหนาจะช่วยให้หาคู่ได้ง่ายกว่า แต่ผลข้างเคียงของสเตียรอยด์กลับทำให้เป็นหมัน หมดโอกาสถ่ายทอดพันธุกรรมไปสู่คนรุ่นหลัง",
-                      "timestamp": 1559033035,
+                      "timestamp": 1559033034000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7193,7 +7193,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48412199"
                       },
                       "summary": "วันที่ 29 พ.ค. นี้ จะครบรอบหนึ่งศตวรรษการพิสูจน์ทฤษฎีเขย่าโลกที่เปลี่ยนแปลงรากฐานของวิทยาศาสตร์สมัยใหม่ไปอย่างสิ้นเชิง",
-                      "timestamp": 1558858228,
+                      "timestamp": 1558858227000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -7245,7 +7245,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48508187"
                       },
                       "summary": "ทารกฝาแฝดชาวจีนคู่แรกที่เกิดจากการตัดต่อยีนเพื่อให้มีภูมิต้านทานเชื้อเอชไอวีแต่แรกเกิด มีความเสี่ยงสูงที่จะมีอายุสั้นและติดเชื้อไวรัสบางชนิดได้ง่าย",
-                      "timestamp": 1559636778,
+                      "timestamp": 1559636777000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7295,7 +7295,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48473199"
                       },
                       "summary": "คำพูดยั่วเย้าล้อเลียน ไม่ได้ทำให้เด็กอ้วนอยากฮึดสู้ หรือตั้งใจลดน้ำหนักมากขึ้นแต่อย่างใด",
-                      "timestamp": 1559296268,
+                      "timestamp": 1559296267000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7335,7 +7335,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48468791"
                       },
                       "summary": "หนังสือเล่มนี้โดย จอร์จ ออร์เวลล์ ให้ข้อคิดสำหรับการดำเนินชีวิตอย่างที่นายกฯ บอกหรือเปล่า",
-                      "timestamp": 1559271700,
+                      "timestamp": 1559271699000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7379,7 +7379,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48459374"
                       },
                       "summary": "นักเรียนนักศึกษาคนไหนชอบตุกติกให้ \"มือปืนรับจ้าง\" เขียนเรียงความหรือทำรายงานส่งครูแทนตัวเอง คงจะต้องร้อน ๆ หนาว ๆ กันบ้างแล้ว",
-                      "timestamp": 1559213274,
+                      "timestamp": 1559213273000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7419,7 +7419,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48448166"
                       },
                       "summary": "อะไรคือผลกระทบจากการที่จีนอาจจำกัดปริมาณแร่หายากที่ส่งออกไปยังสหรัฐฯ",
-                      "timestamp": 1559269534,
+                      "timestamp": 1559269533000,
                       "byline": {
                           "name": "ทีมตรวจสอบความจริง และบีบีซี มอนิเตอริง",
                           "title": "บีบีซี นิวส์ ",
@@ -7470,7 +7470,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48434937"
                       },
                       "summary": "มนุษย์จะต้องทำอย่างไร หากจำเป็นต้องย้ายโลกทั้งใบเพื่อหนีการขยายตัวของดวงอาทิตย์ที่กำลังสิ้นอายุขัย",
-                      "timestamp": 1559093438,
+                      "timestamp": 1559093437000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7522,7 +7522,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-38456402"
                       },
                       "summary": "พลเอกเปรม ติณสูลานนท์ ประธานองคมนตรีและรัฐบุรุษ",
-                      "timestamp": 1482983792,
+                      "timestamp": 1482983791000,
                       "cpsType": "STY",
                       "indexImage": {
                           "id": "107130515",
@@ -7562,7 +7562,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48430428"
                       },
                       "summary": "“มาเลเซียจะไม่ยอมเป็นบ่อขยะให้กับทั้งโลก เราจะไม่ปล่อยให้ประเทศพัฒนาแล้วมารังแก”",
-                      "timestamp": 1559099307,
+                      "timestamp": 1559099306000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7618,7 +7618,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48447664"
                       },
                       "summary": "การระเบิดของดาวฤกษ์ที่สิ้นอายุขัย แผ่รังสีพลังรุนแรงมายังโลกจนชั้นบรรยากาศเกิดการเปลี่ยนแปลง ส่งผลต่อพฤติกรรมของบรรพบุรุษมนุษย์เมื่อหลายล้านปีก่อน",
-                      "timestamp": 1559127597,
+                      "timestamp": 1559127596000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7653,7 +7653,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48327452"
                       },
                       "summary": "ถ้าคุณอยากมีสุขภาพดี และช่วยรักษาโลก ลองหันมากินสาหร่ายสักถ้วย แล้วตามด้วยกระบองเพชรและธัญพืชโบราณดูบ้างไหม",
-                      "timestamp": 1559001633,
+                      "timestamp": 1559001632000,
                       "byline": {
                           "name": "พอลา มากราธ ",
                           "title": "เฮลท์ เช็ก, บีบีซี เวิลด์ เซอร์วิส ",
@@ -7717,7 +7717,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48445454"
                       },
                       "summary": "นักกฎหมายและผู้ทำงานด้านสิทธิสตรีมองต่างมุมเรื่องการเพิ่มโทษผู้ก่อคดีข่มขืนสูงสุดถึงขั้นประหารชีวิตกรณีเหยื่อถูกฆ่า อาจเป็น \"ดาบสองคม\" นำมาซึ่งการฆาตกรรมมากขึ้น",
-                      "timestamp": 1559131851,
+                      "timestamp": 1559131850000,
                       "byline": {
                           "name": "ชัยยศ ยงค์เจริญชัย",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -7767,7 +7767,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48424311"
                       },
                       "summary": "จะเป็นอย่างไรเมื่อคุณรู้สึกมีอารมณ์ทางเพศกับร่างกายตัวเองมากกว่าคู่รักของคุณ",
-                      "timestamp": 1559007553,
+                      "timestamp": 1559007552000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7817,7 +7817,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48422681"
                       },
                       "summary": "ความกระหายใคร่พิชิตยอดเขาที่สูงที่สุด ทำให้เกิด “การจราจรติดขัด” บนหลังคาโลก",
-                      "timestamp": 1558956247,
+                      "timestamp": 1558956246000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7858,7 +7858,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48424312"
                       },
                       "summary": "ที่ทำงานใครชอบเปิดแอร์จนเย็นจัด อาจจะต้องปรับอุณหภูมิกันใหม่เสียทีแล้ว",
-                      "timestamp": 1558963730,
+                      "timestamp": 1558963729000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7898,7 +7898,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48419385"
                       },
                       "summary": "เลือกตั้งซ่อม เขต 8 อนาคตใหม่ ส่ง ส.ส. หญิง เข้าสภาได้อีก 1 ที่นั่ง คาดการณ์ว่า พปชร. - ปชป. ได้ที่นั่งบัญชีรายชื่อเพิ่ม ขณะที่ ส.ส. บัญชีรายชื่อ พรรคไทยรักธรรม ต้องหลุดออกจากตำแหน่ง หลังทำหน้าที่ในสภาเพียง 2 วัน",
-                      "timestamp": 1558930553,
+                      "timestamp": 1558930552000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7948,7 +7948,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48380407"
                       },
                       "summary": "\"ฉันเคยบ้าพอสมควร การท้องทำให้ฉันสงบสติอารมณ์มากขึ้น\"",
-                      "timestamp": 1558666768,
+                      "timestamp": 1558666767000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7994,7 +7994,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48408325"
                       },
                       "summary": "นายชวน หลีกภัย ประธานสภาที่ปรึกษาพรรคประชาธิปัตย์ ได้รับการเสนอชื่อโดย ส.ส. ของพรรคพลังประชารัฐ",
-                      "timestamp": 1558790205,
+                      "timestamp": 1558790204000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8035,7 +8035,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48392981"
                       },
                       "summary": "ในหลวง ร. 10 เสด็จพระราชดำเนิน พร้อมด้วยสมเด็จพระนางเจ้าฯ พระบรมราชินี ไปทรงเปิดประชุมรัฐสภา",
-                      "timestamp": 1558686600,
+                      "timestamp": 1558686599000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8085,7 +8085,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48406583"
                       },
                       "summary": "ส.ส. พรรคอนาคตใหม่และพรรคเพื่อไทย ได้ลุกขึ้นปรบมือยาวนาน ในระหว่างที่นายธนาธร จึงรุ่งเรืองกิจ ต้องเดินออกจากห้องประชุมไป",
-                      "timestamp": 1558759897,
+                      "timestamp": 1558759896000,
                       "byline": {
                           "name": "หทัยกาญจน์  ตรีสุวรรณ",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -8145,7 +8145,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48402851"
                       },
                       "summary": "เทรีซา เมย์ ต้องจบหน้าที่ผู้นำประเทศ เพราะความขัดแย้งภายในพรรคคอนเซอร์เวทีฟ ว่าด้วยเรื่องยุโรป ชื่อเสียงของเธอไม่น่าจะได้รับการบันทึกไว้ในระดับเดียวกับ มาร์กาเร็ต แธตเชอร์ และผู้นำประเทศคนอื่น ๆ ที่ได้สร้างความเปลี่ยนแปลงสำคัญในประเทศ",
-                      "timestamp": 1558754676,
+                      "timestamp": 1558754675000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8186,7 +8186,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48385160"
                       },
                       "summary": "ในปี 2024 ซึ่งเป็นปีสุดท้ายของการดำรงตำแหน่งนายกรัฐมนตรีสมัยที่ 2 ของนายโมดี อินเดียจะเป็นประเทศที่มีประชากรมากที่สุดในโลกแซงหน้าจีน และเป็นประเทศที่มีเมืองที่มีมลพิษมากที่สุดในโลก อีกทั้งยังจะเป็นประเทศที่มีขนาดเศรษฐกิจใหญ่ที่สุดเป็นอันดับ 5 ของโลก",
-                      "timestamp": 1558656208,
+                      "timestamp": 1558656207000,
                       "byline": {
                           "name": "โดย ปริยังกา ปาธัก ",
                           "title": "ผู้สื่อข่าวบีบีซี นิวเดลี",
@@ -8252,7 +8252,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48384400"
                       },
                       "summary": "พ.ร.บ.คุ้มครองแรงงานในงานประมงประกาศใช้แล้ว มีผลคุ้มครองแรงงานภาคการประมงกว่า 600,000 คน แต่นายจ้างไม่เห็นด้วยเนื่องจากเพิ่มต้นทุนประกอบการ",
-                      "timestamp": 1558613924,
+                      "timestamp": 1558613923000,
                       "byline": {
                           "name": "นันท์ชนก วงษ์สมุทร์",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -8323,7 +8323,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48366174"
                       },
                       "summary": "\"ถึงเวลายุติสงครามการค้านี้ได้แล้ว\"",
-                      "timestamp": 1558519805,
+                      "timestamp": 1558519804000,
                       "cpsType": "STY",
                       "indexImage": {
                           "id": "107059497",
@@ -8351,7 +8351,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48376414"
                       },
                       "summary": "นายมิ่งขวัญ แสงสุวรรณ์ หัวหน้าพรรคเศรษฐกิจใหม่ ได้ยื่นหนังสือต่อนายทะเบียนพรรคการเมือง แจ้งเรื่องการลาออกจากตำแหน่งหัวหน้าพรรค",
-                      "timestamp": 1558586204,
+                      "timestamp": 1558586203000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8401,7 +8401,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48373426"
                       },
                       "summary": "\"ได้โปรด\" และ \"สามี\" คือคำที่ตัวละครหญิงใน เกม ออฟ โธรนส์ พูดมากที่สุด",
-                      "timestamp": 1558579924,
+                      "timestamp": 1558579923000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8455,7 +8455,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48346721"
                       },
                       "summary": "อาคารรัฐสภาแห่งใหม่ที่สร้างเสร็จล่าช้ากว่ากำหนดถึง 4 ปี ทำให้ ส.ส. และ ส.ว.ชุดปัจจุบันกลายเป็นฝ่ายนิติบัญญัติไร้สภา และต้องเข้าไปปฏิบัติหน้าที่ที่สำนักงานใหญ่บริษัททีโอที ซึ่งจะถูกใช้เป็นรัฐสภาชั่วคราว",
-                      "timestamp": 1558420989,
+                      "timestamp": 1558420988000,
                       "byline": {
                           "name": "กุลธิดา  สามะพุทธิ",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -8519,7 +8519,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48333280"
                       },
                       "summary": "โวโลดีมีร์ เซเลนสกี อดีตนักแสดงตลก สาบานตนเข้ารับตำแหน่ง ปธน.ยูเครน พร้อมประกาศให้มีการเลือกตั้งทั่วไปก่อนกำหนด",
-                      "timestamp": 1558352445,
+                      "timestamp": 1558352444000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8563,7 +8563,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48331979"
                       },
                       "summary": "ความเชื่อที่บอกต่อ ๆ กันมาว่า เพศหญิงชอบซุบซิบนินทามากกว่าเพศชาย ได้รับการพิสูจน์แล้วว่าไม่เป็นความจริงด้วยวิธีทดสอบทางวิทยาศาสตร์",
-                      "timestamp": 1558326210,
+                      "timestamp": 1558326209000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8613,7 +8613,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48363909"
                       },
                       "summary": "คนที่มีพื้นเพจากวงสังคมชั้นสูงและฐานะดี มักมีความมั่นใจเกินเหตุ ซึ่งก็ทำให้ประสบความสำเร็จทั้งที่ไม่ได้เก่งหรือฉลาดเท่าที่คิด",
-                      "timestamp": 1558512060,
+                      "timestamp": 1558512059000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8647,7 +8647,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48348801"
                       },
                       "summary": "ลิงโบโนโบ (Bonobo)หรือลิงชิมแปนซีแคระนั้น มีพฤติกรรมหลายอย่างที่คล้ายคลึงกับมนุษย์เราอย่างมาก",
-                      "timestamp": 1558425753,
+                      "timestamp": 1558425752000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8691,7 +8691,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48321630"
                       },
                       "summary": "พบรองเท้าที่ทำจากพลาสติกเกือบ 1 ล้านคู่ โดยส่วนใหญ่เป็นรองเท้าแตะ เกยตื้นบน \"หาดสวรรค์\" ที่สภาพธรรมชาติยังสมบูรณ์อยู่ในมหาสมุทรอินเดีย",
-                      "timestamp": 1558236260,
+                      "timestamp": 1558236259000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8737,7 +8737,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48256148"
                       },
                       "summary": "การศึกษาในสหรัฐฯ และสหราชอาณาจักร ระบุว่า ผู้คนกำลังมีเพศสัมพันธ์ลดลง โดยวัยรุ่นและผู้ชายเป็นกลุ่มที่ทำให้เกิดแนวโน้มนี้ขึ้น เพราะอะไรจึงเป็นเช่นนั้น?",
-                      "timestamp": 1558319515,
+                      "timestamp": 1558319514000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8793,7 +8793,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48325516"
                       },
                       "summary": "ข้อมูลใหม่ชี้ว่าการเดินทางผ่านรูหนอน (Wormhole) นั้นเป็นไปได้ แต่อาจเนิ่นช้าเสียเวลายิ่งกว่าวิธีเดินทางในห้วงอวกาศตามธรรมดา",
-                      "timestamp": 1558253066,
+                      "timestamp": 1558253065000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8843,7 +8843,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48319262"
                       },
                       "summary": "ผลวิจัยพบว่า หมอฝึกหัดที่ทำงานหนักจนเครียด มีดีเอ็นเอเปลี่ยนไปคล้ายกับว่าแก่ชราเร็วกว่าปกติ 6 เท่า",
-                      "timestamp": 1558168787,
+                      "timestamp": 1558168786000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8893,7 +8893,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48310363"
                       },
                       "summary": "แมวหน้าบึ้ง \"Grumpy Cat\" ที่โด่งดังทางอินเทอร์เน็ต ได้ตายลง ขณะมีอายุ 7 ขวบ",
-                      "timestamp": 1558091473,
+                      "timestamp": 1558091472000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8934,7 +8934,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48307052"
                       },
                       "summary": "ไต้หวันเป็นชาติแรกในเอเชียที่ให้การแต่งงานระหว่างคู่รักเพศเดียวกันเป็นสิ่งถูกกฎหมาย",
-                      "timestamp": 1558084304,
+                      "timestamp": 1558084303000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8975,7 +8975,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48311792"
                       },
                       "summary": "ไอ เอ็ม เพ สถาปนิกจีน-อเมริกัน ผู้ออกแบบพีระมิดแก้วหน้าลูฟวร์ เสียชีวิตในวัย 102",
-                      "timestamp": 1558092308,
+                      "timestamp": 1558092307000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9015,7 +9015,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48299727"
                       },
                       "summary": "ตามปกติ แสงเหนือ มักจะพบเห็นแค่ในภูมิภาคที่ใกล้กับขั้วโลกเหนือ แต่ในสัปดาห์นี้ พื้นที่ที่อยู่ใต้ลงมาจะมีโอกาสได้เห็นแสงเหนือด้วย เป็นผลมาจากอนุภาคจากดวงอาทิตย์ได้กระทบกับชั้นบรรยากาศโลก และมีผลต่อสนามแม่เหล็กโลก",
-                      "timestamp": 1558064007,
+                      "timestamp": 1558064006000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9071,7 +9071,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48268060"
                       },
                       "summary": "คนใช้กัญชาเพื่อการรักษาโรคต้องรู้อะไรบ้าง หลังหมดเขตยื่นแจ้งครอบครองกัญชา",
-                      "timestamp": 1558000893,
+                      "timestamp": 1558000892000,
                       "byline": {
                           "name": "ธันยพร บัวทอง",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -9135,7 +9135,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48277332"
                       },
                       "summary": "นายจุรินทร์ ลักษณวิศิษฎ์ ได้รับเลือกให้เป็นหัวหน้าพรรคประชาธิปัตย์คนที่ 8 และถือเป็นผู้นำคนที่ 3 ที่มาจากภาคใต้",
-                      "timestamp": 1557902349,
+                      "timestamp": 1557902348000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9187,7 +9187,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48307061"
                       },
                       "summary": "ผลการทดลองล่าสุดยืนยันว่า อาหารที่ผ่านการแปรรูปมากเป็นพิเศษ จะทำให้ผู้บริโภคอยากอาหารเพิ่มขึ้นและกินมากจนเกินอัตรา",
-                      "timestamp": 1558087276,
+                      "timestamp": 1558087275000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9227,7 +9227,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48292820"
                       },
                       "summary": "เป็นเวลานานกว่า 600 ปี ที่ไม่มีนักภาษาศาสตร์หรือนักคณิตศาสตร์คนใดจะถอดรหัสแปลความหมายของมันออกได้",
-                      "timestamp": 1558000735,
+                      "timestamp": 1558000734000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9268,7 +9268,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48292819"
                       },
                       "summary": "กรีนแลนด์มีอัตราการทำแท้งสูงที่สุดแห่งหนึ่งในโลก โดยกว่าครึ่งของสตรีที่ตั้งครรภ์เลือกที่จะทำแท้ง เหตุใดจึงเป็นเช่นนี้",
-                      "timestamp": 1558053373,
+                      "timestamp": 1558053372000,
                       "byline": {
                           "name": "โดย มาเรียนา โจเรกิลอร์ดา เบลตรัน ",
                           "title": "บีบีซีเวิล์ด เซอร์วิส",
@@ -9328,7 +9328,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48212553"
                       },
                       "summary": "ฮาซัน เฟซบุ๊กไลฟ์ขายอาหารทะเลตากแห้งจนสามารถสร้างยอดขายได้มากกว่า 1 ล้านบาทต่อคืน",
-                      "timestamp": 1558000291,
+                      "timestamp": 1558000290000,
                       "byline": {
                           "name": "พริสม์ จิตเป็นธม",
                           "title": "ผู้สื่อข่าววิดีโอบีบีซีไทย",
@@ -9376,7 +9376,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48285192"
                       },
                       "summary": "องค์การอนามัยโลก รวบรวมหลักฐานที่ชี้ให้เห็นว่า วิธีการใดที่ช่วยหรือไม่ช่วยลดความเสี่ยงการเกิดโรคสมองเสื่อมได้ และแนะว่าให้หลีกเลี่ยงทั้งการสูบบุหรี่ และการดื่มเครื่องดื่มแอลกอฮอล์ในปริมาณมาก",
-                      "timestamp": 1557926888,
+                      "timestamp": 1557926887000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9416,7 +9416,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48264250"
                       },
                       "summary": "ตำนานซีอุย หรือ “มนุษย์กินคน” สะเทือนขวัญ กลับมาเป็นที่สนใจของสังคมไทยอีกครั้ง เมื่อมีผู้เรียกร้องทวงสิทธิความเป็นมนุษย์ ให้นำร่างซีอุยออกจากพิพิธภัณฑ์ศิริราช",
-                      "timestamp": 1557912345,
+                      "timestamp": 1557912344000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
@@ -9472,7 +9472,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48270801"
                       },
                       "summary": "เธอปฏิบัติการอยู่ในหมู่ของเจ้าหน้าที่นาซี ขโมยความลับศัตรู บริหารเครือข่ายสายลับของฝ่ายสัมพันธมิตร และช่วยเหลือนักโทษที่หลบหนีในช่วงสงครามโลกครั้งที่ 2 ในยุโรป หนังสือ และภาพยนตร์ชีวประวัติที่กำลังจะเข้าฉายทำให้เรื่องราวที่แทบไม่มีใครรู้ของ เวอร์จิเนีย ฮอลล์ ถูกเปิดสู่สาธารณะ",
-                      "timestamp": 1557886603,
+                      "timestamp": 1557886602000,
                       "byline": {
                           "name": "อเลสซานดรา คอร์เรีย",
                           "title": "บีบีซี นิวส์ บราซิล, วินส์ตัน-ซาเล็ม (สหรัฐฯ) ",
@@ -9536,7 +9536,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48281047"
                       },
                       "summary": "นโยบายลูกคนเดียวในอดีตของรัฐบาล ทำให้สัดส่วนประชากรของจีนไม่สมดุล ชายจำนวนมากหาหญิงสาวจากต่างแดนมาเป็นคู่ครอง ทั้งแบบเปิดเผย และล่อลวง",
-                      "timestamp": 1557965837,
+                      "timestamp": 1557965836000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9588,7 +9588,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48242455"
                       },
                       "summary": "ฉันทนา ทิพย์ประชาติ ผู้กำกับหนังหญิงชาวอีสาน สร้างภาพยนตร์สะท้อนชีวิตวัยรุ่นอีสาน ที่เติบโตมากับความสนุกสนานของหน่าฮ่าน ความบันเทิงหน้าเวทีเพลงหมอลำอีสาน",
-                      "timestamp": 1557632897,
+                      "timestamp": 1557632896000,
                       "byline": {
                           "name": "ธันยพร บัวทอง",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -9648,7 +9648,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48256152"
                       },
                       "summary": "ในอินโดนีเซีย มีหลายพื้นที่ที่คุณแม่ยังสาวเดินทางออกไปทำงานในต่างประเทศกันเกือบหมด ชาวอินโดนีเซียจึงเรียกพื้นที่เหล่านี้ว่า \"หมู่บ้านไร้แม่\"",
-                      "timestamp": 1557807127,
+                      "timestamp": 1557807126000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -9698,7 +9698,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48252418"
                       },
                       "summary": "ความรุนแรงทางเพศเป็นปัญหาที่กำลังเกิดขึ้นอย่างกว้างขวางในคองโก แต่ตอนนี้มีการเคลื่อนไหวใหม่ในการจัดการกับเรื่องนี้",
-                      "timestamp": 1557797004,
+                      "timestamp": 1557797003000,
                       "byline": {
                           "name": "โดย แอรอน อคินเยมี",
                           "title": "บีบีซี แอฟริกา อาย ",
@@ -9759,7 +9759,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48258509"
                       },
                       "summary": "นี่เป็นครั้งที่ 3 แล้วที่มนุษย์เคยดำน้ำสำรวจบริเวณร่องลึกก้นมหาสมุทรแห่งนี้",
-                      "timestamp": 1557791768,
+                      "timestamp": 1557791767000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9809,7 +9809,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48224121"
                       },
                       "summary": "เหตุใดชื่อ ดร.อำพน กิตติอำพน ถึงผุดขึ้นเป็น “ว่าที่นายกรัฐมนตรีคนนอก”",
-                      "timestamp": 1557554977,
+                      "timestamp": 1557554976000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -9849,7 +9849,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48239470"
                       },
                       "summary": "ผลการศึกษาจากสหราชอาณาจักรชี้ ยาสีฟันที่ทำจากผงถ่าน ซึ่งผู้ผลิตอวดอ้างสรรพคุณว่าช่วยทำให้ฟันขาวขึ้นเป็นเพียง \"กลยุทธ์ทางการตลาด\" ซึ่งอาจเพิ่มความเสี่ยงให้เกิดปัญหาฟันผุและคราบดำบนฟัน",
-                      "timestamp": 1557629094,
+                      "timestamp": 1557629093000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9899,7 +9899,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48227308"
                       },
                       "summary": "ข่าวหนูน้อยวัยแปดเดือน เสียชีวิตจากอุบัติเหตุรถบรรทุกชนรถหัดเดินของเด็กที่ไหลลงมาบนถนนทำให้เกิดคำถามถึงความปลอดภัยในการใช้รถหัดเดินของเด็ก",
-                      "timestamp": 1557489821,
+                      "timestamp": 1557489820000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9939,7 +9939,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48206010"
                       },
                       "summary": "พ่อแม่รวยหลายคนอาจจะใช้เวลา เงิน และพลังงานมหาศาล เพื่อที่จะให้ลูกเข้ามหาวิทยาลัยดัง ๆ ได้ แต่ผลลัพธ์แทบจะจับต้องไม่ได้",
-                      "timestamp": 1557364330,
+                      "timestamp": 1557364329000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9989,7 +9989,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48230652"
                       },
                       "summary": "คณะนักวิทยาศาสตร์จากมหาวิทยาลัยเคมบริดจ์ จะศึกษาและทดสอบวิธีการ \"สุดขั้ว\" ต่าง ๆ เช่น การทำให้ขั้วโลกกลับมาเย็นยะเยือกอีกครั้ง และการดูดก๊าซคาร์บอนไดออกไซด์ ออกจากชั้นบรรยากาศโลก",
-                      "timestamp": 1557546687,
+                      "timestamp": 1557546686000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10030,7 +10030,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-47938348"
                       },
                       "summary": "เครื่องบินส่วนตัว โรงแรมห้าดาว และปาร์ตี้วีไอพี ผู้หญิงคนนี้ใช้ชีวิตไฮโซในนิวยอร์กโดยไม่มีเงินสักบาทได้อย่างไร",
-                      "timestamp": 1557493345,
+                      "timestamp": 1557493344000,
                       "byline": {
                           "name": "อเล็กซานดรา คอร์เรอา",
                           "title": "บีบีซีบราซิล",
@@ -10081,7 +10081,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48216756"
                       },
                       "summary": "รัฐบาลสามารถสั่งให้แพลตฟอร์มออนไลน์ต่าง ๆ ลบข้อมูลที่เห็นว่าเป็นเท็จซึ่งเป็น \"ปฏิปักษ์ต่อสาธารณประโยชน์\" และสั่งให้โพสต์ข้อความแก้ไขได้",
-                      "timestamp": 1557409555,
+                      "timestamp": 1557409554000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10115,7 +10115,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48214663"
                       },
                       "summary": "หลังจากการมาถึงของนักท่องเที่ยวที่เข้ามาใช้ทรัพยากรธรรมชาติอย่างไร้วินัย ทำให้สถานที่ท่องเที่ยวทางธรรมชาติหลายแหล่งเสื่อมโทรมจนต้องปิดแบบไม่มีกำหนดเพื่อฟื้นฟูระบบนิเวศ",
-                      "timestamp": 1557400422,
+                      "timestamp": 1557400421000,
                       "byline": {
                           "name": "ชัยยศ ยงค์เจริญชัย",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -10165,7 +10165,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/48213653"
                       },
                       "summary": "\"ทูลกระหม่อมหญิงอุบลรัตนราชกัญญา สิริวัฒนาพรรณวดี เป็นพระโสทรเชษฐภคินี ผู้ที่ทรงเคารพนับถือและสนิทสนมรักใคร่\"",
-                      "timestamp": 1557395869,
+                      "timestamp": 1557395868000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10221,7 +10221,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48199586"
                       },
                       "summary": "ความเข้าใจผิดถึงวิธีการป้องกันของโรคติดต่อทางเพศสัมพันธ์และการไม่รู้สถานะของตัวเองเป็นสาเหตุหลักที่ทำให้การแพร่กระจายของกามโรคครั้งใหม่รุนแรงกว่าเดิม",
-                      "timestamp": 1557370360,
+                      "timestamp": 1557370359000,
                       "byline": {
                           "name": "ชัยยศ ยงค์เจริญชัย",
                           "title": "ผู้สื่อข่าวบีบีซีไทย",
@@ -10276,7 +10276,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48202634"
                       },
                       "summary": "เจ้าชายแฮร์รี ดยุคแห่งซัสเซกซ์ และ เมแกน ดัชเชสแห่งซัสเซกซ์ นำพระโอรสองค์แรกที่เพิ่งประสูติเมื่อสองวันก่อนออกมาให้ประชาชนได้ยลโฉมกันเป็นครั้งแรก",
-                      "timestamp": 1557318536,
+                      "timestamp": 1557318535000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10316,7 +10316,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48197070"
                       },
                       "summary": "11 \"พรรคจิ๋ว\" ที่มีคะแนนเสียงต่ำกว่า 7.1 หมื่นคะแนน ได้ ส.ส. แบบบัญชีรายชื่อพรรคละ 1 คน",
-                      "timestamp": 1557315306,
+                      "timestamp": 1557315305000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10372,7 +10372,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48182876"
                       },
                       "summary": "สำนักงาน กกต. ประกาศรับรองผลการเลือกตั้ง ส.ส. แบบแบ่งเขต 349 คน",
-                      "timestamp": 1557216312,
+                      "timestamp": 1557216311000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10428,7 +10428,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48188360"
                       },
                       "summary": "10 ขั้นตอนการเป็นภรรยาที่ดี กับประเด็นผู้หญิงที่น่าสนใจเอเชียที่คุณอาจพลาดไป",
-                      "timestamp": 1557360584,
+                      "timestamp": 1557360583000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10478,7 +10478,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48190494"
                       },
                       "summary": "ทุกวันพุธ ขณะที่เพื่อนส่วนใหญ่กำลังทำงาน ทิฟฟานี ชโรเว็น อยู่ที่สนามเทนนิสเพื่อฝึกซ้อมการตีท่าแบคแฮนด์ให้ดีขึ้น",
-                      "timestamp": 1557281605,
+                      "timestamp": 1557281604000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10528,7 +10528,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48183396"
                       },
                       "summary": "ผู้โดยสารอ้างว่าเครื่องบินถูกฟ้าผ่าเพียงไม่กี่อึดใจก่อนเครื่องบินจะเกิดเพลิงลุกไหม้ ขณะที่นักบินประจำเครื่องยอมรับสายฟ้าแลบรบกวนการติดต่อสื่อสารกับหอบังคับการบิน แต่ทีมสืบสวนสาเหตุยังไม่ให้ความเห็น",
-                      "timestamp": 1557207088,
+                      "timestamp": 1557207087000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -10578,7 +10578,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/features-48188361"
                       },
                       "summary": "เว็บไซต์ราชกิจจานุเบกษา เผยแพร่ประกาศเรื่อง พระบาทสมเด็จพระเจ้าอยู่หัว พระราชทานเครื่องราชอิสริยาภรณ์ คุณพลอยไพลิน และคุณสิริกิติยา เจนเซน รวมทั้งสมาชิกในราชสกุลสวัสดิวัตน์และยุคล",
-                      "timestamp": 1557247664,
+                      "timestamp": 1557247663000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10618,7 +10618,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48177907"
                       },
                       "summary": "บีบีซีไทยประมวลเหตุการณ์ประวัติศาสตร์ พระราชพิธีบรมราชาภิเษก 4-6 พ.ค. 2562",
-                      "timestamp": 1557154198,
+                      "timestamp": 1557154197000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10668,7 +10668,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-48178882"
                       },
                       "summary": "รายงานโดยสหประชาชาติเผย สัตว์และพืช 1 ล้านสายพันธุ์กำลังเสี่ยงสูญพันธุ์เพราะมนุษย์",
-                      "timestamp": 1557195262,
+                      "timestamp": 1557195261000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10718,7 +10718,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48174937"
                       },
                       "summary": "นักวิทยาศาสตร์พบสัญญาณคลื่นความโน้มถ่วง (gravitational wave) ระลอกล่าสุด อาจชี้ได้ว่ามีเหตุการณ์หลุมดำดูดกลืนดาวนิวตรอนเกิดขึ้นในห้วงอวกาศลึก",
-                      "timestamp": 1557128047,
+                      "timestamp": 1557128046000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10768,7 +10768,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-46909166"
                       },
                       "summary": "ดยุคและดัชเชสแห่งซัสเซกซ์ ได้ยลโฉมทายาทคนแรกแล้ว",
-                      "timestamp": 1555731656,
+                      "timestamp": 1555731655000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10818,7 +10818,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-48158949"
                       },
                       "summary": "ในหลวง ร. 10 มีพระปฐมบรมราชโองการพระราชทานอารักขาแก่ประชาชนชาวไทย",
-                      "timestamp": 1556947282,
+                      "timestamp": 1556947281000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10878,7 +10878,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/institutional-37981748"
                       },
                       "summary": "คุณสามารถติดต่อบีบีซีไทยได้ทางหน้านี้",
-                      "timestamp": 1529520908,
+                      "timestamp": 1529520907000,
                       "cpsType": "STY",
                       "options": {
                           "isBreakingNews": false,
@@ -10907,7 +10907,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44458607"
                       },
                       "summary": "รัสเซียฝึกอบรมพนักงานเก็บค่าโดยสารรถไฟให้รู้จักยิ้มให้กับชาวต่างชาติ เตรียมรับนักท่องเที่ยวเดินทางมาเยือนช่วงการแข่งขันฟุตบอลโลก",
-                      "timestamp": 1528962093,
+                      "timestamp": 1528962092000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -10970,7 +10970,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44603390"
                       },
                       "summary": "‘โซจิ’ - ซึ่งหมายถึงวิธีการจัดระเบียบเพื่อส่วนรวม เป็นส่วนหนึ่งของวัฒนธรรมญี่ปุ่น มีการสอนกันในโรงเรียน และขณะนี้กำลังเป็นที่ประจักษ์ในช่วงการแข่งฟุตบอลโลกรอบสุดท้ายในรัสเซีย",
-                      "timestamp": 1529972135,
+                      "timestamp": 1529972134000,
                       "byline": {
                           "name": "เฟอร์นันโด ดูอาร์เต",
                           "title": "บีบีซี เวิลด์ เซอร์วิส ในนครเซนต์ปีเตอร์สเบิร์ก",
@@ -11033,7 +11033,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44542064"
                       },
                       "summary": "แฟนบอลทีมชาติต่าง ๆ มีปฏิกิริยาอย่างไร หลังการแข่งขันจบลง",
-                      "timestamp": 1529516681,
+                      "timestamp": 1529516680000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -11104,7 +11104,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-44558158"
                       },
                       "summary": "คนใกล้ชิดของผู้เล่นพนันฟุตบอล เล่าถึงผลกระทบทางการเงินและความสัมพันธ์ของพวกเขา",
-                      "timestamp": 1529728816,
+                      "timestamp": 1529728815000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -11155,7 +11155,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44480226"
                       },
                       "summary": "ประวัติศาสตร์บอกเราได้หรือไม่ว่าใครจะคว้าแชมป์ฟุตบอลโลกครั้งนี้ เราทำนายผลทีมที่จะชนะโดยดูรูปแบบ, แนวโน้ม และสถิติต่าง ๆ จากการแข่งขันฟุตบอลโลกในอดีต",
-                      "timestamp": 1528979733,
+                      "timestamp": 1528979732000,
                       "byline": {
                           "name": "สเตฟาน เชมลิต ",
                           "title": "บีบีซี สปอร์ต",
@@ -11205,7 +11205,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44477993"
                       },
                       "summary": "ในระดับโลกเองนั้น ฟีฟ่าก็ประสบกับภาวะที่เงินสนับสนุนจากสปอนเซอร์ลดลงไปด้วยเช่นกัน",
-                      "timestamp": 1528970453,
+                      "timestamp": 1528970452000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -11256,7 +11256,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44408977"
                       },
                       "summary": "ทีมไหนจะผ่านรอบแบ่งกลุ่ม และฝ่าฟันจนได้ครอบครองถ้วยฟุตบอลโลกปีนี้ ลองทำนายผลผ่านเกมนี้ของบีบีซี",
-                      "timestamp": 1528427158,
+                      "timestamp": 1528427157000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -11290,7 +11290,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44361709"
                       },
                       "summary": "วอลโกกราด เมืองที่ใช้เป็นสถานที่จัดการแข่งขันฟุตบอลโลกรอบสุดท้ายในรัสเซีย เคยเป็นสมรภูมิรบขนาดใหญ่ในสงครามโลกครั้งที่ 2 ปัจจุบันยังคงมีซากศพทหารอยู่ทั่วเมือง",
-                      "timestamp": 1528140322,
+                      "timestamp": 1528140321000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -11354,7 +11354,7 @@
                           "cpsUrn": "urn:bbc:content:assetUri:thai/international-44426466"
                       },
                       "summary": "รวมสถิติตัวเลขตั้งแต่ 1-10 เกี่ยวกับการแข่งขันฟุตบอลโลกรอบสุดท้ายที่น่าสนใจ",
-                      "timestamp": 1528562058,
+                      "timestamp": 1528562057000,
                       "passport": {
                           "category": {
                               "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
