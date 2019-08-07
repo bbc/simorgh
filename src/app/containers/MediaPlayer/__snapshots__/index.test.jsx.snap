@@ -873,13 +873,15 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
               "model": Object {
                 "blocks": Array [
                   Object {
+                    "id": null,
                     "model": Object {
                       "blocks": Array [
                         Object {
+                          "id": null,
                           "model": Object {
                             "blocks": Array [
                               Object {
-                                "id": 0,
+                                "id": null,
                                 "model": Object {
                                   "attributes": Array [],
                                   "text": "Audio Clip Global Guidance with Caption",
@@ -2217,13 +2219,15 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
               "model": Object {
                 "blocks": Array [
                   Object {
+                    "id": null,
                     "model": Object {
                       "blocks": Array [
                         Object {
+                          "id": null,
                           "model": Object {
                             "blocks": Array [
                               Object {
-                                "id": 0,
+                                "id": null,
                                 "model": Object {
                                   "attributes": Array [],
                                   "text": "Audio Clip Global Guidance with Caption",
@@ -3553,13 +3557,15 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
                           "model": Object {
                             "blocks": Array [
                               Object {
+                                "id": null,
                                 "model": Object {
                                   "blocks": Array [
                                     Object {
+                                      "id": null,
                                       "model": Object {
                                         "blocks": Array [
                                           Object {
-                                            "id": 0,
+                                            "id": null,
                                             "model": Object {
                                               "attributes": Array [],
                                               "text": "Ants",
@@ -4937,13 +4943,15 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
                           "model": Object {
                             "blocks": Array [
                               Object {
+                                "id": null,
                                 "model": Object {
                                   "blocks": Array [
                                     Object {
+                                      "id": null,
                                       "model": Object {
                                         "blocks": Array [
                                           Object {
-                                            "id": 0,
+                                            "id": null,
                                             "model": Object {
                                               "attributes": Array [],
                                               "text": "Ants",
@@ -4975,13 +4983,15 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
               "model": Object {
                 "blocks": Array [
                   Object {
+                    "id": null,
                     "model": Object {
                       "blocks": Array [
                         Object {
+                          "id": null,
                           "model": Object {
                             "blocks": Array [
                               Object {
-                                "id": 0,
+                                "id": null,
                                 "model": Object {
                                   "attributes": Array [],
                                   "text": "Video Clip Global with Caption",
@@ -5437,13 +5447,15 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
                           "model": Object {
                             "blocks": Array [
                               Object {
+                                "id": null,
                                 "model": Object {
                                   "blocks": Array [
                                     Object {
+                                      "id": null,
                                       "model": Object {
                                         "blocks": Array [
                                           Object {
-                                            "id": 0,
+                                            "id": null,
                                             "model": Object {
                                               "attributes": Array [],
                                               "text": "Ants",
@@ -5475,13 +5487,15 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
               "model": Object {
                 "blocks": Array [
                   Object {
+                    "id": null,
                     "model": Object {
                       "blocks": Array [
                         Object {
+                          "id": null,
                           "model": Object {
                             "blocks": Array [
                               Object {
-                                "id": 0,
+                                "id": null,
                                 "model": Object {
                                   "attributes": Array [],
                                   "text": "Video Clip Global with Caption",
@@ -6374,13 +6388,15 @@ exports[`MediaPlayer with Video data canonical - should render the video without
                           "model": Object {
                             "blocks": Array [
                               Object {
+                                "id": null,
                                 "model": Object {
                                   "blocks": Array [
                                     Object {
+                                      "id": null,
                                       "model": Object {
                                         "blocks": Array [
                                           Object {
-                                            "id": 0,
+                                            "id": null,
                                             "model": Object {
                                               "attributes": Array [],
                                               "text": "Ants",
