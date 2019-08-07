@@ -9,6 +9,7 @@ const blocksSingleFragment = (text, attributes = []) => [
             text,
             blocks: [
               {
+                id: 1,
                 type: 'fragment',
                 model: {
                   text,
