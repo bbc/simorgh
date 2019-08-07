@@ -59,6 +59,10 @@ export const resetWindowValue = (key, value) => {
   });
 };
 
+export const suppressPropWarnings = warnings => {
+  setWindowValue('expectedWarnings', warnings);
+};
+
 const mocks = {
   error: jest.fn(),
   warn: jest.fn(),
