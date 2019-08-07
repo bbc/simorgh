@@ -33,6 +33,7 @@ jobs:
         chrome: stable
       script:
         - npm run build
+        - npm prune --production
         - xvfb-run -a npm run test:prod:travis
     - stage: test
       if: branch = latest AND type = push
