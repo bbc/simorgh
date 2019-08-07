@@ -108,7 +108,7 @@
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^3.20.0",
     "isomorphic-fetch": "^2.2.1",
-    "js-cookie": "^2.2.0",
+    "js-cookie": "^2.2.1",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
     "morgan": "^1.9.1",
