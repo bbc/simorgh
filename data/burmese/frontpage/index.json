@@ -56,7 +56,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48960327"
             },
             "summary": "စစ်ရေးချုပ်သစ်ဖြစ်လာတဲ့ ဒုတိယဗိုလ်ချုပ်ကြီး မျိုးဇော်သိန်းဟာ ဒုတိယဗိုလ်ချုပ်ကြီးတွေထဲမှာ အသက်အငယ်ဆုံးဖြစ်တဲ့အတွက် တပ်မတော် ထိပ်တန်းခေါင်းဆောင်နေရာကို ရောက်လာနိုင်သူလို့ လေ့လာသူတွေက ခန့်မှန်းပြောဆိုခဲ့ကြ",
-            "timestamp": 1562928247,
+            "timestamp": 1562928246000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -109,7 +109,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48954933"
             },
             "summary": "\"တချို့ သမီးလေးအတွက် ငွေလွှဲတာ လွှဲလို့မရတော့ဘူးဆိုပြီးပြောတယ်\"",
-            "timestamp": 1562857683,
+            "timestamp": 1562857682000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -148,7 +148,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/burmese/burma-48889433"
                 },
                 "summary": "စီစီတီဗွီပုံရိပ်ကို ဗစ်တိုးရီးယားက တွေ့ချိန်မှာ အဲဒါကိုကိုပဲလို့ ကလေးက ပြောပါတယ်။ သူကိုယ်တိုင် သူ့မိဘရှေ့မှာ ပြောပါတယ်။",
-                "timestamp": 1562351572,
+                "timestamp": 1562351571000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:burmese/burma-48889433",
                 "type": "cps"
@@ -166,7 +166,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/in-depth-48956173"
             },
             "summary": "အသစ်တီထွင်တာမရှိရင်၊ အဟောင်းကို မသုံးစွဲရင် ဝေါဟာရတွေ တိမ်ကောပျောက်ကွယ်တတ်ပါတယ်။",
-            "timestamp": 1562858737,
+            "timestamp": 1562858736000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -222,7 +222,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48944161"
             },
             "summary": "အကြမ်းဖက်တိုက်ခိုက်မှုတွေကို အားပေး ပတ်သက်တဲ့သူတွေကို စင်ကာပူရဲ့ လုံခြုံရေးကို ထိပါးတဲ့သူတွေ အဖြစ်သတ်မှတ်ပြီး တင်းတင်းကြပ်ကြပ် အရေးယူဆောင်ရွက်မယ်လို့ဆို",
-            "timestamp": 1562777250,
+            "timestamp": 1562777249000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -271,7 +271,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48944954"
             },
             "summary": "မြန်မာတရားစီရင်ရေးမှာ DNA သက်သေတင်ပြတာ တွင်ကျယ်ပြီလား",
-            "timestamp": 1562783775,
+            "timestamp": 1562783774000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
@@ -310,7 +310,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/burmese/media-48943923"
                 },
                 "summary": "Wisdom Hill ကျောင်းကြီးကြပ်ရေးမှူး ဒေါ်ဥမ္မာလှိုင်ကို ဘီဘီစီ သတင်းထောက် ကိုအောင်သူရက တွေ့ဆုံမေးမြန်းထားပါတယ်။",
-                "timestamp": 1562775178,
+                "timestamp": 1562775177000,
                 "cpsType": "MAP",
                 "id": "urn:bbc:ares::asset:burmese/media-48943923",
                 "type": "cps"
@@ -324,7 +324,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/burmese/media-48930462"
                 },
                 "summary": "အဲဒီ အမှုမှာ အရေးပါတဲ့ စီစီတီဗီ မှတ်တမ်း တခု ပေါ်ထွက်လာ",
-                "timestamp": 1562692098,
+                "timestamp": 1562692097000,
                 "cpsType": "MAP",
                 "id": "urn:bbc:ares::asset:burmese/media-48930462",
                 "type": "cps"
@@ -342,7 +342,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/48960326"
             },
             "summary": "မိုးဆက်တိုက် ရွာသွန်းခဲ့ပြီး သီတင်းပတ်အနည်းငယ်အတွင်းမှာပဲ ကချင်ပြည်နယ်၊ မွန်ပြည်နယ်၊ ပဲခူးတိုင်းနဲ့ စစ်ကိုင်းတိုင်းတွေမှာ ရေဘေးဒဏ်ကြုံခဲ့ရပြီး ရေဘေးသင့်သူ ၄ ထောင်ကျော် ရှိလာနေပြီ ဖြစ်ပါတယ်။",
-            "timestamp": 1562904094,
+            "timestamp": 1562904093000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107844927",
@@ -377,7 +377,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48956503"
             },
             "summary": "ရခိုင်ပြည်နယ်မှာ ရုံးထိုင်ပြီးစစ်ဆင်ရေးကိုကွပ်ကဲနေသူ ကစထမှူသူကို ပြောင်းလဲလိုက်တာပါ။",
-            "timestamp": 1562865086,
+            "timestamp": 1562865085000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -418,7 +418,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/48949623"
             },
             "summary": "မြစ်ကြီးနားမြို့နား မြစ်ရေတက်နေတာကြောင့် ရေဘေးခိုလှုံရာသုံးနေရာစီစဉ်ထား",
-            "timestamp": 1562835991,
+            "timestamp": 1562835990000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -465,7 +465,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/world-48942311"
             },
             "summary": "အီရတ်မှာတုန်းကလို အီရန်ကို ဝိုင်းပတ်ဖို့ရာ အမေရိကန်ပြည်ထောင်စု အတွက် အခက်အခဲများစွာရှိနိုင်။",
-            "timestamp": 1562770609,
+            "timestamp": 1562770608000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -517,7 +517,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48942101"
             },
             "summary": "သက္ကမိုးညိုကို ပျဉ်းမနား မြို့နယ်ရဲတပ်ဖွဲ့မှူးက အမှုဖွင့်တာဟာ ဘဏ်စာရင်းဖွင့် တရားမဝင်အလှူခံနေမှုတွေနဲ့ ဆက်စပ်နေတယ်လို့ ရဲတပ်ဖွဲ့က တရားဝင်ထုတ်ပြန်လိုက်ပါတယ် ။",
-            "timestamp": 1562770109,
+            "timestamp": 1562770108000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -558,7 +558,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48934281"
             },
             "summary": "အခုလိုအမှုဖွင့်လဲ ကျွန်တော်ကဆက်ပြီးကူညီသွားမှာပဲ။ ရေးတာအမှန်ရေးတာ၊ သက်သေအထောက် အထားတွေမရှိပဲ မဟုတ်တာပြောတာမဟုတ်ဘူး",
-            "timestamp": 1562742277,
+            "timestamp": 1562742276000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -599,7 +599,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48926732"
             },
             "summary": "တရားရုံးက ရက် ၃၀ အတွင်း လာရောက်ဖို့ ထုတ်ပြန်ကြေညာ ချက်အမိန့်ထုတ်တာဟာ ဦးဝီရသူကို တရားခံ ပြေး အဖြစ်သတ်မှတ်ဖို့ အတွက် လုပ်ငန်းစဉ် တစ်ခုဖြစ်တယ်။",
-            "timestamp": 1562681896,
+            "timestamp": 1562681895000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -647,7 +647,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/world-48926334"
             },
             "summary": "Wisdom Hill မူကြိုကျောင်းအနီးက ကိုအောင်ကြီးရဲ့လှုပ်ရှားမှု ရုပ်သံ",
-            "timestamp": 1562691585,
+            "timestamp": 1562691584000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -699,7 +699,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/in-depth-48909217"
             },
             "summary": "တုတ်ထမ်းဓားထမ်းပြောရတဲ့ ပုဂံရာဇဝင်၊ အိန္ဒိယလို ဝတ်ကြတဲ့ မြန်မာတွေခေတ်နဲ့ အရည်းကြီးတွေ ထွန်းကားချိန်",
-            "timestamp": 1562691062,
+            "timestamp": 1562691061000,
             "byline": {
               "name": "ဘိုဘို ",
               "title": "ဘီဘီစီမြန်မာပိုင်း",
@@ -757,7 +757,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/in-depth-48909216"
             },
             "summary": "ရှမ်းလက်နက်ကိုင်ခေါင်းဆောင်က တိုင်းရင်းသား ကိစ္စမှာ စစ်တပ်နဲ့ ဒေါ်အောင်ဆန်းစုကြည် လက်ပွန်းတတီး ဖြစ်နေတယ်ဆို",
-            "timestamp": 1562593972,
+            "timestamp": 1562593971000,
             "byline": {
               "name": "စိုင်းထွန်းအောင်လွင်",
               "title": "ပြင်ပဆောင်းပါးရှင်",
@@ -823,7 +823,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-48903544"
             },
             "summary": "၂၀၁၇ခုနှစ်မှာ ကမ္ဘာ့အဆင့် သတ်မှတ်ချက် ၈၅၄ သာရှိခဲ့တဲ့ သက်ထားသူဇာဟာ ၂နှစ်အတွင်းမှာ ကမ္ဘာ့အဆင့် ၁၀၁ အထိ တက်လာခဲ့",
-            "timestamp": 1562527733,
+            "timestamp": 1562527732000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -864,7 +864,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-48901206"
             },
             "summary": "အမေရိကန်ဟာ အိမ်ရှင် ပြင်သစ်၊ အင်္ဂလန်၊ နယ်သာလန်တို့လို အသင်းကောင်းတွေကို ကျော်လာနိုင်ခဲ့ပြီး ကမ္ဘာ့ဖလား ချန်ပီယံဆုကို ကာကွယ်နိုင်ခဲ့တာပါ",
-            "timestamp": 1562520529,
+            "timestamp": 1562520528000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
@@ -906,7 +906,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-48901205"
             },
             "summary": "ဂျိုကိုဗစ်က ဗိုလ်လုပွဲအဆင့်ကို လွယ်လွယ်ကူကူ တက်ရောက်နိုင်ဖို့ အခွင့်အရေးများနေပြီး နာဒါလ်းလ်နဲ့ ဖက်ဒါရာတို့ကတော့ ဆီမီးဖိုင်နယ် အဆင့်မှာ ဆုံတွေ့ကြမှာ ဖြစ်",
-            "timestamp": 1562504742,
+            "timestamp": 1562504741000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
@@ -947,7 +947,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-48901204"
             },
             "summary": "နေမာ မပါပေမယ့် ဘရာဇီး တိုက်စစ်က အကောင်းဆုံး ပုံစံမှာရှိပြီး ဂိုးတွေ ဆက်တိုက် သွင်းနိုင်သလို ခံစစ်ပိုင်းကလည်း ပေးဂိုးမရှိ ကစားထား",
-            "timestamp": 1562500311,
+            "timestamp": 1562500310000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Summary",
@@ -998,7 +998,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48884937"
             },
             "summary": "ကိုကို ဆိုတဲ့ နာမည်လည်း မရှိဘူး သမီးလေးကလည်း ကိုကို ဆိုပြီး လာမတိုင်ဘူးလို့ ဆရာမ နှင်းနုက ပြော",
-            "timestamp": 1562350944,
+            "timestamp": 1562350943000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1057,7 +1057,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48902955"
             },
             "summary": "လူတစ်ယောက်ကို ထောင်ကျစေချင်တဲ့ စိတ်နဲ့ ဒီအမှုကို တိုင်ခဲ့တာ မဟုတ်ဘူး။ တရားလိုရှေ့နေ ဒေါ်ရွက်နုအောင်နဲ့ ဘီဘီစီ မေးမြန်းခန်း။",
-            "timestamp": 1562518687,
+            "timestamp": 1562518686000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1098,7 +1098,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48813780"
             },
             "summary": "ဆောင်းဂျုံဂီက ဆောင်းဟေဂျိုကို ကွာရှင်းဖို့ ဇွန်၂၆ ရက်က ဆိုးလ် တရားရုံးမှာ လျှောက်လွှာ တင်ခဲ့ပြီလို့ သူ့အေးဂျင့်က တရားဝင် ကြေညာလိုက်တာကို တောင်ကိုရီးယား မီဒီယာတွေမှာ ဖော်ပြခဲ့ပါတယ်။",
-            "timestamp": 1561828085,
+            "timestamp": 1561828084000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1139,7 +1139,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/in-depth-48778709"
             },
             "summary": "ဘယ်သူတွေသမ္မတ ဖြစ်နိုင်လဲ၊ ရွေးကောက်ပွဲ ဘယ်လိုနိုင်အောင် လုပ်မလဲ၊ အမေရိကန်သမ္မတတစ်ယောက်ဖြစ်လာဖို့လိုအပ်ချက်တွေအားလုံး ဒီမှာ သိသွားနိုင်ပါပြီ။",
-            "timestamp": 1561658285,
+            "timestamp": 1561658284000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1195,7 +1195,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48911386"
             },
             "summary": "တရားခံပြေးမှုနဲ့ ဒုရဲမှူး အောင်သူရက စစ်တွေခရိုင်တရားရုံးမှာ အမှုဖွင့်ထားတယ်",
-            "timestamp": 1562597630,
+            "timestamp": 1562597629000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1253,7 +1253,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/world-48926332"
             },
             "summary": "အရပ်သား သေဆုံးမှု လုံးဝမရှိရေးကို တာလီဘန်ကရော အာဖဂန်အစိုးရကပါ သဘောတူခဲ့တာဟာ အရေးကြီးတဲ့ ခြေလှမ်းသစ်တရပ်ဖြစ်။",
-            "timestamp": 1562678270,
+            "timestamp": 1562678269000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1310,7 +1310,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/in-depth-48772032"
             },
             "summary": "တပ်မတော်ကို စိတ်နဲ့တောင် မပြစ်မှားနဲ့ ဆိုခဲ့သူ၊ တပ်ထဲ နှစ်ခါဝင်ပြီး နှစ်ခါထွက်ခဲ့သလို နိုင်ငံရေးလောကကိုလည်း နှစ်ခါသုံးခါ ဝင်ခဲ့သူ",
-            "timestamp": 1561575504,
+            "timestamp": 1561575503000,
             "byline": {
               "name": "ဘိုဘို ",
               "title": "ဘီဘီစီမြန်မာပိုင်း",
@@ -1401,7 +1401,7 @@
             "uri": "http://www.bbc.com/burmese/media-43823455",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1524154278,
+            "timestamp": 1524154277000,
             "type": "link"
           },
           {
@@ -1430,7 +1430,7 @@
             "uri": "http://www.bbc.com/burmese/burma-42722701",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1516199345,
+            "timestamp": 1516199344000,
             "type": "link"
           },
           {
@@ -1461,7 +1461,7 @@
             "uri": "https://www.bbc.com/burmese/burma-46429471",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1543852373,
+            "timestamp": 1543852372000,
             "type": "link"
           },
           {
@@ -1480,7 +1480,7 @@
             "uri": "http://www.bbc.com/burmese/burma-42852154",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1517141103,
+            "timestamp": 1517141102000,
             "type": "link"
           },
           {
@@ -1511,7 +1511,7 @@
             "uri": "http://www.bbc.com/burmese/44474448",
             "contentType": "Feature",
             "assetTypeCode": "PRO",
-            "timestamp": 1528903968,
+            "timestamp": 1528903967000,
             "type": "link"
           },
           {
@@ -1542,7 +1542,7 @@
             "uri": "http://www.bbc.com/burmese/burma-44765010",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1531126979,
+            "timestamp": 1531126978000,
             "type": "link"
           },
           {
@@ -1562,7 +1562,7 @@
             "uri": "http://www.bbc.com/burmese/burma-44438849",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1528716089,
+            "timestamp": 1528716088000,
             "type": "link"
           },
           {
@@ -1581,7 +1581,7 @@
             "uri": "http://www.bbc.com/burmese/world-44154392",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1526574717,
+            "timestamp": 1526574716000,
             "type": "link"
           },
           {
@@ -1600,7 +1600,7 @@
             "uri": "http://www.bbc.com/burmese/burma-42567078",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1515083592,
+            "timestamp": 1515083591000,
             "type": "link"
           }
         ],
@@ -1636,7 +1636,7 @@
             "uri": "http://www.bbc.com/burmese/burma-42580386",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1515169771,
+            "timestamp": 1515169770000,
             "type": "link"
           }
         ],
@@ -1652,7 +1652,7 @@
             "uri": "https://www.bbc.com/burmese/media-45625862",
             "contentType": "Podcast",
             "assetTypeCode": "PRO",
-            "timestamp": 1537788091,
+            "timestamp": 1537788090000,
             "type": "link"
           },
           {
@@ -1661,7 +1661,7 @@
             "uri": "https://www.bbc.com/burmese/media-45625858",
             "contentType": "Podcast",
             "assetTypeCode": "PRO",
-            "timestamp": 1537788137,
+            "timestamp": 1537788136000,
             "type": "link"
           }
         ],
@@ -1683,7 +1683,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48741128"
             },
             "summary": "ဝန်ထမ်းအိမ်ရာမရှိတဲ့အတွက် တာဝန်ကျဆရာ၊ ဆရာမတွေအနေနဲ့ ရပ်ကွက်ထဲက နေအိမ် တွေမှာ တစ်အိမ်တစ်ယောက်စီလိုက်နေရတာမျိုးတွေလည်းရှိ",
-            "timestamp": 1561358919,
+            "timestamp": 1561358918000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1724,7 +1724,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-48642726"
             },
             "summary": "မတ္တရာ ရထားလမ်းပေါ် ခင်းထားတဲ့ ပျံကျစျေးလေး",
-            "timestamp": 1560532612,
+            "timestamp": 1560532611000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -1789,7 +1789,7 @@
             "uri": "http://www.bbc.com/burmese/bbc_burmese_tv/tv_programmes/w13xttn3?limit=4",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1475743926,
+            "timestamp": 1475743925000,
             "type": "link"
           }
         ],
@@ -1808,7 +1808,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/media-48958065"
             },
             "summary": "ပြီးခဲ့တဲ့ မေလအတွင်းက သမ္မတရဲ့အရင် အကြံပေးဟောင်းတဦးက အစိုးရ ရာထူး အတွက် လိင်ကိစ္စနဲ့ အပေးအယူ လုပ်တာမျိုးတွေ ရှိနေတယ်လို့ စွပ်စွဲခဲ့ပါတယ်။",
-            "timestamp": 1562865275,
+            "timestamp": 1562865274000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1878,7 +1878,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/media-48958063"
             },
             "summary": "ပြင်သစ်ပါလီမန်က ဂူဂယ်နဲ့ ဖေ့စ်ဘုတ်ခ် တို့လို ကမ္ဘာ့အင်တာနက် နဲ့နည်းပညာ ကုမ္ပဏီကြီးတွေကို အခွန် ၃ ရာခိုင်နှုန်း တိုးကောက်ဖို့အတွက် အတည်ပြုလိုက်ပါတယ်။",
-            "timestamp": 1562865168,
+            "timestamp": 1562865167000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1948,7 +1948,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/media-48943923"
             },
             "summary": "Wisdom Hill ကျောင်းကြီးကြပ်ရေးမှူး ဒေါ်ဥမ္မာလှိုင်ကို ဘီဘီစီ သတင်းထောက် ကိုအောင်သူရက တွေ့ဆုံမေးမြန်းထားပါတယ်။",
-            "timestamp": 1562775178,
+            "timestamp": 1562775177000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2019,7 +2019,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/media-48943921"
             },
             "summary": "အဲဒီမှတ်တမ်း ထုတ်ပြန်ခဲ့တာ တနှစ်ကြာ အပြီးမှာ ဘာတွေ ဆက်ဖြစ်နေလဲ ဆိုတာကို ရှုစားရအောင်ပါ။",
-            "timestamp": 1562774971,
+            "timestamp": 1562774970000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2089,7 +2089,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/media-48930462"
             },
             "summary": "အဲဒီ အမှုမှာ အရေးပါတဲ့ စီစီတီဗီ မှတ်တမ်း တခု ပေါ်ထွက်လာ",
-            "timestamp": 1562692098,
+            "timestamp": 1562692097000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2159,7 +2159,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/media-48888673"
             },
             "summary": "နေပြည်တော် Wisdom Hill မူကြိုကျောင်းက သက်ငယ် မုဒိမ်းမှု ပြုကျင့်ခြင်း ခံရသူရဲ့ ဆရာမ နဲ့ မေးမြန်းခန်း",
-            "timestamp": 1562343668,
+            "timestamp": 1562343667000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2255,7 +2255,7 @@
             "uri": "http://www.bbc.co.uk/academy/burmese/article/art20150127160127735",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1475738908,
+            "timestamp": 1475738907000,
             "type": "link"
           }
         ],
@@ -2281,7 +2281,7 @@
             "uri": "http://www.bbc.com/burmese/institutional-43548528",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1522081222,
+            "timestamp": 1522081221000,
             "type": "link"
           },
           {
@@ -2290,7 +2290,7 @@
             "uri": "http://www.bbc.com/burmese/institutional-43007727",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1518189641,
+            "timestamp": 1518189640000,
             "type": "link"
           },
           {
@@ -2299,7 +2299,7 @@
             "uri": "http://www.bbc.com/burmese/burma/2015/12/151209_bbc_burmese_viber.shtml",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1475738701,
+            "timestamp": 1475738700000,
             "type": "link"
           },
           {
@@ -2308,7 +2308,7 @@
             "uri": "http://www.bbc.com/burmese/institutional/2013/05/000000_bbcburmese_partners.shtml",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1475738668,
+            "timestamp": 1475738667000,
             "type": "link"
           },
           {
@@ -2317,7 +2317,7 @@
             "uri": "http://www.bbc.com/burmese/burma/2014/01/140121_shwefm_bbc.shtml",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1475738629,
+            "timestamp": 1475738628000,
             "type": "link"
           },
           {
@@ -2326,7 +2326,7 @@
             "uri": "http://www.bbc.com/burmese/burma/2013/08/130830_bbcburmese_rubyfm.shtml",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1475738596,
+            "timestamp": 1475738595000,
             "type": "link"
           },
           {
@@ -2335,7 +2335,7 @@
             "uri": "http://www.bbc.com/burmese/burma/2013/06/130602_bbcnews_mobile_blast.shtml",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1475738565,
+            "timestamp": 1475738564000,
             "type": "link"
           }
         ],
@@ -2363,7 +2363,7 @@
             "uri": "http://www.bbc.com/burmese/sport-44399933",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1529031966,
+            "timestamp": 1529031965000,
             "type": "link"
           },
           {
@@ -2375,7 +2375,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-44526628"
             },
             "summary": "အင်္ဂလန် ပွဲဦးထွက်အဖြစ် တူနီရှားနဲ့ ဗော်လ်ဂိုဂရက်မြို့ ကွင်းကြီးမှာ ကစားတော့မှာ ဖြစ်ပါတယ်။",
-            "timestamp": 1529335744,
+            "timestamp": 1529335743000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2448,7 +2448,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-44434043"
             },
             "summary": "ကမ္ဘာ့ဖလား သမိုင်းမှာတော့ စိတ်ဝင်စားစရာ အငြင်းပွားဖွယ်ရာ ဖြစ်ရပ်တွေ များစွာ ဖြစ်ခဲ့ပါတယ်။ အထင်အရှားဆုံးကတော့",
-            "timestamp": 1528666549,
+            "timestamp": 1528666548000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2510,7 +2510,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-44413978"
             },
             "summary": "ကမ္ဘာ့ဖလားဝင်ရောက် ယှဉ်ပြိုင်ကြမယ့် အသင်းတွေထဲ အာရှတိုက် ကိုယ်စားပြုအသင်းတွေ အကြောင်းကို လေ့လာကြည့်ရအောင်",
-            "timestamp": 1528471366,
+            "timestamp": 1528471365000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -2544,7 +2544,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-44386114"
             },
             "summary": "ကလိုဆေးဟာ ၂ဝဝ၂ မှာ ၅ ဂိုး၊ ၂ဝဝ၆ မှာ ၅ ဂိုး၊ ၂ဝ၁ဝ မှာ ၄ ဂိုးနဲ့ ၂ဝ၁၆ မှာ ၂ ဂိုးသွင်းခဲ့လို့ အရင်စံချိန်တင်ထားတဲ့ ဘရာဇီးလ် ဂန္ထဝင်တိုက်စစ်မှူး ရော်နယ်လ်ဒိုရဲ့ ၁၅ ဂိုးကိုကျော်ပြီး ၁၆ ဂိုးနဲ့ စံချိန်သစ် တင်နိုင်ခဲ့",
-            "timestamp": 1528288543,
+            "timestamp": 1528288542000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
@@ -2580,7 +2580,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-44386116"
             },
             "summary": "အတွေ့အကြုံနည်းတဲ့ အင်္ဂလန်နဲ့ ကစားကွက် ပုံစံကောင်း မရှိတဲ့ ဘယ်ဂျီတို့ ဗိုလ်မစွဲနိုင်",
-            "timestamp": 1528303393,
+            "timestamp": 1528303392000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
@@ -2616,7 +2616,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/sport-44386115"
             },
             "summary": "တောင်အမေရိကနဲ့ ဥရောပတိုက်တို့က အသင်းတွေသာ တစ်လှည့်စီ ဗိုလ်စွဲခဲ့",
-            "timestamp": 1528298025,
+            "timestamp": 1528298024000,
             "byline": {
               "name": " ချမ်းဟိန်း",
               "title": "ဘီဘီစီမြန်မာပိုင်း",
@@ -2671,7 +2671,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:burmese/media-44867299"
             },
             "summary": "ရန်ကုန်တိုင်း ဝန်ကြီးချုပ်နဲ့ ဘီဘီစီ သီးသန့် တွေ့ဆုံမေးမြန်း",
-            "timestamp": 1531850497,
+            "timestamp": 1531850496000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
