@@ -111,8 +111,8 @@ const fixtures = {
 };
 
 // eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service, platform, ...props }) => (
-  <ServiceContextProvider service={service || 'igbo'}>
+const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
+  <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
@@ -124,6 +124,10 @@ const WrappedStoryPromo = ({ service, platform, ...props }) => (
     </RequestContextProvider>
   </ServiceContextProvider>
 );
+
+WrappedStoryPromo.defaultProps = {
+  service: 'igbo',
+};
 
 describe('StoryPromo Container', () => {
   Object.entries(fixtures).forEach(([name, data]) => {
@@ -145,28 +149,52 @@ describe('StoryPromo Container', () => {
     });
 
     it('should render h3, a, p, time', () => {
-      const { container } = render(<WrappedStoryPromo item={item} />);
+      const igboContainer = render(<WrappedStoryPromo item={item} />).container;
+
+      expect(igboContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
+        item.headlines.headline,
+      );
+      expect(igboContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
+        item.summary,
+      );
+      expect(igboContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
+        '2 Mee 2019',
+      );
+
       const newsContainer = render(
         <WrappedStoryPromo service="news" item={item} />,
       ).container;
-      const yorubaContainer = render(
-        <WrappedStoryPromo service="yoruba" item={item} />,
-      ).container;
-
-      expect(container.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        item.headlines.headline,
-      );
-      expect(container.getElementsByTagName('p')[0].innerHTML).toEqual(
-        item.summary,
-      );
-      expect(container.getElementsByTagName('time')[0].innerHTML).toEqual(
-        '2 Mee 2019',
-      );
       expect(newsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 May 2019',
       );
+
+      const yorubaContainer = render(
+        <WrappedStoryPromo service="yoruba" item={item} />,
+      ).container;
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 Èbibi 2019',
+      );
+    });
+
+    it('should render relative time if timestamp < 10 hours', () => {
+      const oneMinuteAgo = Math.floor(Date.now() / 1000) - 60;
+      const newItem = {
+        ...item,
+        timestamp: oneMinuteAgo,
+      };
+
+      const newsContainer = render(
+        <WrappedStoryPromo service="news" item={newItem} />,
+      ).container;
+      expect(newsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
+        'a minute ago',
+      );
+
+      const yorubaContainer = render(
+        <WrappedStoryPromo service="yoruba" item={newItem} />,
+      ).container;
+      expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
+        'ìṣẹ́jú kan sẹ́yìn',
       );
     });
 
