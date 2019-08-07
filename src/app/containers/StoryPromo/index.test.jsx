@@ -111,7 +111,7 @@ const fixtures = {
 };
 
 // eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service, platform, ...props }) => (
+const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -194,7 +194,7 @@ describe('StoryPromo Container', () => {
         <WrappedStoryPromo service="yoruba" item={newItem} />,
       ).container;
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        'ìsẹjú kan kọjá',
+        'ìṣẹ́jú kan sẹ́yìn',
       );
     });
 
