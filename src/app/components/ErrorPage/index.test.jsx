@@ -13,6 +13,7 @@ describe('ErrorMain', () => {
     callToActionLinkText: 'this',
     callToActionLinkUrl: 'https://www.bbc.com',
     callToActionLast: ' thing',
+    service: 'news',
   };
 
   shouldMatchSnapshot(
