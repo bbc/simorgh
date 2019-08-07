@@ -2,6 +2,10 @@ import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
+const filterPageTypes = (pageType, service) =>
+  config[service].pageTypes[pageType] !== undefined &&
+  pageType !== 'errorPage404';
+
 const getPrivacyBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.privacy.title);
 
@@ -19,11 +23,7 @@ const getCookieReject = service =>
 
 Object.keys(config).forEach(service => {
   Object.keys(config[service].pageTypes)
-    .filter(
-      pageType =>
-        config[service].pageTypes[pageType] !== undefined &&
-        pageType !== 'errorPage404',
-    )
+    .filter(pageType => filterPageTypes(pageType, service))
     .forEach(pageType => {
       describeForEuOnly(
         `Amp Cookie Banner Test for ${service} ${pageType}`,

@@ -5,13 +5,19 @@ import {
 import appConfig from '../../../src/app/lib/config/services';
 import config from '../../support/config/services';
 
+// Limited to news for now due to time test takes to run per page.
+const filterService = service => service === 'news';
+
+const filterPageTypes = (pageType, service) =>
+  config[service].pageTypes[pageType] !== undefined &&
+  pageType !== 'errorPage404';
+
 const getPrivacyBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.privacy.title);
 const getCookieBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.cookie.title);
 const getPrivacyBannerContainer = service => getPrivacyBanner(service).parent();
 const getCookieBannerContainer = service => getCookieBanner(service).parent();
-
 const getPrivacyBannerAccept = service =>
   getPrivacyBannerContainer(service).contains(
     appConfig[service].translations.consentBanner.privacy.accept,
@@ -43,14 +49,10 @@ const visitPage = (service, pageType) => {
 };
 
 Object.keys(config)
-  .filter(service => service === 'news')
+  .filter(filterService)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(
-        pageType =>
-          config[service].pageTypes[pageType] !== undefined &&
-          pageType !== 'errorPage404',
-      )
+      .filter(pageType => filterPageTypes(pageType, service))
       .forEach(pageType => {
         describe(`Canonical Cookie Banner Test for ${service} ${pageType}`, () => {
           it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
