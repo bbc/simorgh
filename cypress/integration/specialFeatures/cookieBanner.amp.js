@@ -2,9 +2,8 @@ import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
-const filterPageTypes = (pageType, service) =>
-  config[service].pageTypes[pageType] !== undefined &&
-  pageType !== 'errorPage404';
+const filterPageTypes = (service, pageType) =>
+  config[service].pageTypes[pageType] !== undefined;
 
 const getPrivacyBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.privacy.title);
@@ -21,15 +20,21 @@ const getCookieAccept = service =>
 const getCookieReject = service =>
   cy.contains(appConfig[service].translations.consentBanner.cookie.reject);
 
+const visitPage = (service, pageType) => {
+  cy.visit(`${config[service].pageTypes[pageType]}.amp`, {
+    failOnStatusCode: !pageType.includes('error'),
+  });
+};
+
 Object.keys(config).forEach(service => {
   Object.keys(config[service].pageTypes)
-    .filter(pageType => filterPageTypes(pageType, service))
+    .filter(pageType => filterPageTypes(service, pageType))
     .forEach(pageType => {
       describeForEuOnly(
         `Amp Cookie Banner Test for ${service} ${pageType}`,
         () => {
           beforeEach(() => {
-            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+            visitPage(service, pageType);
           });
 
           it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
@@ -50,7 +55,7 @@ Object.keys(config).forEach(service => {
           it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
             getPrivacyAccept(service).click();
 
-            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+            visitPage(service, pageType);
 
             getPrivacyBanner(service).should('be.visible');
             getCookieBanner(service).should('not.be.visible');
@@ -60,7 +65,7 @@ Object.keys(config).forEach(service => {
             getPrivacyAccept(service).click();
             getCookieAccept(service).click();
 
-            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+            visitPage(service, pageType);
 
             getPrivacyBanner(service).should('not.be.visible');
             getCookieBanner(service).should('not.be.visible');
@@ -73,7 +78,7 @@ Object.keys(config).forEach(service => {
             getPrivacyAccept(service).click();
             getCookieReject(service).click();
 
-            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+            visitPage(service, pageType);
 
             getPrivacyBanner(service).should('not.be.visible');
             getCookieBanner(service).should('not.be.visible');
