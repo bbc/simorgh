@@ -73,7 +73,7 @@ Object.keys(config).forEach(service => {
             getPrivacyAccept(service).click();
             getCookieReject(service).click();
 
-            cy.visit(`${config.news.pageTypes.articles}.amp`);
+            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
 
             getPrivacyBanner(service).should('not.be.visible');
             getCookieBanner(service).should('not.be.visible');
