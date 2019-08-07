@@ -1,7 +1,7 @@
 const MORPH_SUFFIX = 'morph_env=test';
 const DOMAIN_PREFIX = {
   local: 'http://localhost.bbc.com:8080/ws/av-embeds',
-  test: 'https://www.test.bbc.com/ws/av-embeds',
+  test: 'https://www.test.bbc.co.uk/ws/av-embeds',
   live: 'https://www.bbc.com/ws/av-embeds',
 };
 
