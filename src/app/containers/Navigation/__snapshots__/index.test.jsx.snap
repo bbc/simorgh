@@ -4,20 +4,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
 <Navigation
   script={
     Object {
-      "atlas": Object {
-        "groupA": Object {
-          "fontSize": "78",
-          "lineHeight": "84",
-        },
-        "groupB": Object {
-          "fontSize": "96",
-          "lineHeight": "104",
-        },
-        "groupD": Object {
-          "fontSize": "140",
-          "lineHeight": "148",
-        },
-      },
       "bodyCopy": Object {
         "groupA": Object {
           "fontSize": "15",
@@ -74,34 +60,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           "lineHeight": "28",
         },
       },
-      "elephant": Object {
-        "groupA": Object {
-          "fontSize": "60",
-          "lineHeight": "64",
-        },
-        "groupB": Object {
-          "fontSize": "78",
-          "lineHeight": "84",
-        },
-        "groupD": Object {
-          "fontSize": "116",
-          "lineHeight": "124",
-        },
-      },
-      "foolscap": Object {
-        "groupA": Object {
-          "fontSize": "32",
-          "lineHeight": "36",
-        },
-        "groupB": Object {
-          "fontSize": "40",
-          "lineHeight": "44",
-        },
-        "groupD": Object {
-          "fontSize": "56",
-          "lineHeight": "60",
-        },
-      },
       "greatPrimer": Object {
         "groupA": Object {
           "fontSize": "18",
@@ -114,20 +72,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
         "groupD": Object {
           "fontSize": "20",
           "lineHeight": "24",
-        },
-      },
-      "imperial": Object {
-        "groupA": Object {
-          "fontSize": "50",
-          "lineHeight": "54",
-        },
-        "groupB": Object {
-          "fontSize": "64",
-          "lineHeight": "72",
-        },
-        "groupD": Object {
-          "fontSize": "96",
-          "lineHeight": "104",
         },
       },
       "longPrimer": Object {
@@ -186,20 +130,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
           "lineHeight": "20",
         },
       },
-      "royal": Object {
-        "groupA": Object {
-          "fontSize": "40",
-          "lineHeight": "44",
-        },
-        "groupB": Object {
-          "fontSize": "52",
-          "lineHeight": "60",
-        },
-        "groupD": Object {
-          "fontSize": "76",
-          "lineHeight": "84",
-        },
-      },
       "trafalgar": Object {
         "groupA": Object {
           "fontSize": "20",
@@ -226,20 +156,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       dir="ltr"
       script={
         Object {
-          "atlas": Object {
-            "groupA": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupB": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-            "groupD": Object {
-              "fontSize": "140",
-              "lineHeight": "148",
-            },
-          },
           "bodyCopy": Object {
             "groupA": Object {
               "fontSize": "15",
@@ -296,34 +212,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
               "lineHeight": "28",
             },
           },
-          "elephant": Object {
-            "groupA": Object {
-              "fontSize": "60",
-              "lineHeight": "64",
-            },
-            "groupB": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupD": Object {
-              "fontSize": "116",
-              "lineHeight": "124",
-            },
-          },
-          "foolscap": Object {
-            "groupA": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupB": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupD": Object {
-              "fontSize": "56",
-              "lineHeight": "60",
-            },
-          },
           "greatPrimer": Object {
             "groupA": Object {
               "fontSize": "18",
@@ -336,20 +224,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
             "groupD": Object {
               "fontSize": "20",
               "lineHeight": "24",
-            },
-          },
-          "imperial": Object {
-            "groupA": Object {
-              "fontSize": "50",
-              "lineHeight": "54",
-            },
-            "groupB": Object {
-              "fontSize": "64",
-              "lineHeight": "72",
-            },
-            "groupD": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
             },
           },
           "longPrimer": Object {
@@ -406,20 +280,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
             "groupD": Object {
               "fontSize": "16",
               "lineHeight": "20",
-            },
-          },
-          "royal": Object {
-            "groupA": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupB": Object {
-              "fontSize": "52",
-              "lineHeight": "60",
-            },
-            "groupD": Object {
-              "fontSize": "76",
-              "lineHeight": "84",
             },
           },
           "trafalgar": Object {
@@ -449,20 +309,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       dir="ltr"
       script={
         Object {
-          "atlas": Object {
-            "groupA": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupB": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-            "groupD": Object {
-              "fontSize": "140",
-              "lineHeight": "148",
-            },
-          },
           "bodyCopy": Object {
             "groupA": Object {
               "fontSize": "15",
@@ -519,34 +365,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
               "lineHeight": "28",
             },
           },
-          "elephant": Object {
-            "groupA": Object {
-              "fontSize": "60",
-              "lineHeight": "64",
-            },
-            "groupB": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupD": Object {
-              "fontSize": "116",
-              "lineHeight": "124",
-            },
-          },
-          "foolscap": Object {
-            "groupA": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupB": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupD": Object {
-              "fontSize": "56",
-              "lineHeight": "60",
-            },
-          },
           "greatPrimer": Object {
             "groupA": Object {
               "fontSize": "18",
@@ -559,20 +377,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
             "groupD": Object {
               "fontSize": "20",
               "lineHeight": "24",
-            },
-          },
-          "imperial": Object {
-            "groupA": Object {
-              "fontSize": "50",
-              "lineHeight": "54",
-            },
-            "groupB": Object {
-              "fontSize": "64",
-              "lineHeight": "72",
-            },
-            "groupD": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
             },
           },
           "longPrimer": Object {
@@ -629,20 +433,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
             "groupD": Object {
               "fontSize": "16",
               "lineHeight": "20",
-            },
-          },
-          "royal": Object {
-            "groupA": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupB": Object {
-              "fontSize": "52",
-              "lineHeight": "60",
-            },
-            "groupD": Object {
-              "fontSize": "76",
-              "lineHeight": "84",
             },
           },
           "trafalgar": Object {
@@ -672,20 +462,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       dir="ltr"
       script={
         Object {
-          "atlas": Object {
-            "groupA": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupB": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-            "groupD": Object {
-              "fontSize": "140",
-              "lineHeight": "148",
-            },
-          },
           "bodyCopy": Object {
             "groupA": Object {
               "fontSize": "15",
@@ -742,34 +518,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
               "lineHeight": "28",
             },
           },
-          "elephant": Object {
-            "groupA": Object {
-              "fontSize": "60",
-              "lineHeight": "64",
-            },
-            "groupB": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupD": Object {
-              "fontSize": "116",
-              "lineHeight": "124",
-            },
-          },
-          "foolscap": Object {
-            "groupA": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupB": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupD": Object {
-              "fontSize": "56",
-              "lineHeight": "60",
-            },
-          },
           "greatPrimer": Object {
             "groupA": Object {
               "fontSize": "18",
@@ -782,20 +530,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
             "groupD": Object {
               "fontSize": "20",
               "lineHeight": "24",
-            },
-          },
-          "imperial": Object {
-            "groupA": Object {
-              "fontSize": "50",
-              "lineHeight": "54",
-            },
-            "groupB": Object {
-              "fontSize": "64",
-              "lineHeight": "72",
-            },
-            "groupD": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
             },
           },
           "longPrimer": Object {
@@ -852,20 +586,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
             "groupD": Object {
               "fontSize": "16",
               "lineHeight": "20",
-            },
-          },
-          "royal": Object {
-            "groupA": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupB": Object {
-              "fontSize": "52",
-              "lineHeight": "60",
-            },
-            "groupD": Object {
-              "fontSize": "76",
-              "lineHeight": "84",
             },
           },
           "trafalgar": Object {
@@ -895,20 +615,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       dir="ltr"
       script={
         Object {
-          "atlas": Object {
-            "groupA": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupB": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-            "groupD": Object {
-              "fontSize": "140",
-              "lineHeight": "148",
-            },
-          },
           "bodyCopy": Object {
             "groupA": Object {
               "fontSize": "15",
@@ -965,34 +671,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
               "lineHeight": "28",
             },
           },
-          "elephant": Object {
-            "groupA": Object {
-              "fontSize": "60",
-              "lineHeight": "64",
-            },
-            "groupB": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupD": Object {
-              "fontSize": "116",
-              "lineHeight": "124",
-            },
-          },
-          "foolscap": Object {
-            "groupA": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupB": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupD": Object {
-              "fontSize": "56",
-              "lineHeight": "60",
-            },
-          },
           "greatPrimer": Object {
             "groupA": Object {
               "fontSize": "18",
@@ -1005,20 +683,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
             "groupD": Object {
               "fontSize": "20",
               "lineHeight": "24",
-            },
-          },
-          "imperial": Object {
-            "groupA": Object {
-              "fontSize": "50",
-              "lineHeight": "54",
-            },
-            "groupB": Object {
-              "fontSize": "64",
-              "lineHeight": "72",
-            },
-            "groupD": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
             },
           },
           "longPrimer": Object {
@@ -1075,20 +739,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
             "groupD": Object {
               "fontSize": "16",
               "lineHeight": "20",
-            },
-          },
-          "royal": Object {
-            "groupA": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupB": Object {
-              "fontSize": "52",
-              "lineHeight": "60",
-            },
-            "groupD": Object {
-              "fontSize": "76",
-              "lineHeight": "84",
             },
           },
           "trafalgar": Object {
