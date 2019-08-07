@@ -21,8 +21,9 @@ def runDevelopmentTests(){
 }
 
 def runProductionTests(){
-  sh 'make installProd'
+  sh 'make install'
   sh 'make productionTests'
+  sh 'npm prune --production'
 }
 
 def getCommitInfo = {
@@ -61,7 +62,7 @@ def notifySlack(messageParameters) {
   )
 
   slackSend(
-    channel: messageParameters.slackChannel, 
+    channel: messageParameters.slackChannel,
     color: messageParameters.colour,
     message: message
   )
@@ -122,7 +123,7 @@ pipeline {
           steps {
             runProductionTests()
           }
-        }  
+        }
       }
       post {
         always {
@@ -145,7 +146,9 @@ pipeline {
             }
           }
           steps {
-            runDevelopmentTests()
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              runDevelopmentTests()
+            }
           }
         }
         stage ('Test Production and Zip Production') {
@@ -165,7 +168,7 @@ pipeline {
             script {
               // Get Simorgh commit information
               getCommitInfo()
-              
+
               // Set build tag information
               buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
             }
@@ -192,7 +195,7 @@ pipeline {
             zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
             stash name: 'simorgh_storybook', includes: storybookDist
           }
-        }  
+        }
         stage ('Build Static Assets') {
           agent {
             docker {
