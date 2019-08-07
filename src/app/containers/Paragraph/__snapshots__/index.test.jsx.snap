@@ -149,8 +149,8 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 .c3:focus,
 .c3:hover {
-  color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 .c2 {
