@@ -6,7 +6,8 @@ const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;
 
 // Temporary limit while fixture data is incomplete
-const serviceArticleFixtureComplete = service =>
+// TODO: Remove after https://github.com/bbc/simorgh/issues/2959
+const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 
 Object.keys(config)
@@ -142,8 +143,7 @@ Object.keys(config)
       });
 
       it('should contain an amp-img', () => {
-        // TODO: Remove `if` after https://github.com/bbc/simorgh/issues/2959
-        if (serviceArticleFixtureComplete(service)) {
+        if (serviceHasFigure(service)) {
           cy.get('figure')
             .eq(0)
             .should('be.visible')
