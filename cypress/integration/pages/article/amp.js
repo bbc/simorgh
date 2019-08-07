@@ -63,10 +63,11 @@ Object.keys(config)
       });
 
       describe('Chartbeat', () => {
-        it('should have chartbeat config UID', () => {
-          cy.visit(`${config.news.pageTypes.articles}.amp`);
-          cy.hasAmpChartbeatConfigUid();
-        });
+        if (envConfig.chartbeatEnabled) {
+          it('should have chartbeat config UID', () => {
+            cy.hasAmpChartbeatConfigUid();
+          });
+        }
       });
 
       it('should have AMP attribute', () => {

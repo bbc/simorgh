@@ -188,12 +188,14 @@ Object.keys(config)
       });
 
       describe('Chartbeat', () => {
-        it('should have a script with src value set to chartbeat source', () => {
-          cy.hasScriptWithChartbeatSrc();
-        });
-        it('should have chartbeat config set to window object', () => {
-          cy.hasGlobalChartbeatConfig();
-        });
+        if (envConfig.chartbeatEnabled) {
+          it('should have a script with src value set to chartbeat source', () => {
+            cy.hasScriptWithChartbeatSrc();
+          });
+          it('should have chartbeat config set to window object', () => {
+            cy.hasGlobalChartbeatConfig();
+          });
+        }
       });
 
       describe('Scripts', () => {
