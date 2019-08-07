@@ -114,10 +114,6 @@ const service = {
       audio: '오디오',
       photogallery: '이미지 갤러리',
       video: '비디오',
-      bbc_korean_radio: {
-        title: 'BBC 코리아 라디오',
-        subtitle: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
-      },
     },
   },
   brandSVG,
