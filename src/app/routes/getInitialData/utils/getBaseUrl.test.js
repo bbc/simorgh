@@ -1,4 +1,5 @@
 import getBaseUrl from './getBaseUrl';
+import { localBaseUrl } from '../../../../testHelpers/config';
 
 describe('Client', () => {
   const logicMap = [
@@ -18,7 +19,7 @@ describe('Client', () => {
       'https://my-routing-layer.test.cookieless-domain.co.uk/',
       'https://www.test.bbc.co.uk',
     ],
-    ['http://localhost.bbc.com:7080', 'http://localhost.bbc.com:7080'],
+    [localBaseUrl, localBaseUrl],
     ['https://foobar.org', 'https://www.bbc.com'],
     ['http://foobar.org', 'https://www.bbc.com'],
     ['foobar.org', 'https://www.bbc.com'],

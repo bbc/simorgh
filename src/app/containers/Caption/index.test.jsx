@@ -33,6 +33,7 @@ const captionBlock3Paragraphs = {
               model: {
                 blocks: [
                   {
+                    id: 1,
                     model: {
                       attributes: [],
                       text: 'This is paragraph 1',
@@ -48,6 +49,7 @@ const captionBlock3Paragraphs = {
               model: {
                 blocks: [
                   {
+                    id: 2,
                     model: {
                       attributes: [],
                       text: 'This is paragraph 2',
@@ -63,6 +65,7 @@ const captionBlock3Paragraphs = {
               model: {
                 blocks: [
                   {
+                    id: 3,
                     model: {
                       attributes: [],
                       text: 'Paragraph 3',
@@ -91,24 +94,28 @@ const CaptionWithContext = (block, contextStub, type) => (
 
 shouldMatchSnapshot(
   'should render caption text with example News offscreen text',
-  CaptionWithContext(captionBlock, newsServiceContextStub),
+  CaptionWithContext(captionBlock, newsServiceContextStub, 'caption'),
 );
 
 shouldMatchSnapshot(
   'should render caption text with example Farsi offscreen text',
-  CaptionWithContext(captionBlock, persianServiceContextStub),
+  CaptionWithContext(captionBlock, persianServiceContextStub, 'caption'),
 );
 
 shouldMatchSnapshot(
   'should render caption with mutiple paragraphs',
-  CaptionWithContext(captionBlock3Paragraphs, newsServiceContextStub),
+  CaptionWithContext(
+    captionBlock3Paragraphs,
+    newsServiceContextStub,
+    'caption',
+  ),
 );
 
 describe('with offscreen text', () => {
   it('should render the default offscreen text', () => {
     const renderedWrapper = render(
       <ServiceContext.Provider value={newsServiceContextStub}>
-        <CaptionContainer block={captionBlock} />
+        <CaptionContainer block={captionBlock} type="caption" />
       </ServiceContext.Provider>,
     );
     expect(renderedWrapper.find('span').html()).toBe('Caption, ');
@@ -152,7 +159,11 @@ describe('with offscreen text', () => {
 
   it('should render figcaption with multiple paragraphs', () => {
     const renderedWrapper = render(
-      CaptionWithContext(captionBlock3Paragraphs, newsServiceContextStub),
+      CaptionWithContext(
+        captionBlock3Paragraphs,
+        newsServiceContextStub,
+        'caption',
+      ),
     );
     expect(renderedWrapper.find('figcaption p').length).toBe(3);
     expect(
