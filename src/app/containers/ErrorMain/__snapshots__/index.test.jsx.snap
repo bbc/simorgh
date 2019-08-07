@@ -298,7 +298,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -789,7 +789,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;

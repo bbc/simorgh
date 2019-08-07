@@ -50,6 +50,9 @@ exports[`ErrorMain should correctly render for an error page for Arabic 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
   padding: 2.5rem 0 2.5rem 0;
@@ -533,6 +536,9 @@ exports[`ErrorMain should correctly render for an error page for Pashto 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
   padding: 2.5rem 0 2.5rem 0;
@@ -773,7 +779,7 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -1016,6 +1022,9 @@ exports[`ErrorMain should correctly render for an error page for Urdu 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
+  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 2rem 0;
   padding: 2.5rem 0 2.5rem 0;
