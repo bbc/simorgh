@@ -16,9 +16,9 @@ describe('cpsTypes rules', () => {
               },
               {
                 headlines: {
-                  headline: 'Who wants to see a LIV anyway',
+                  headline: 'Who wants to see a OOO anyway',
                 },
-                cpsType: 'LIV',
+                cpsType: 'OOO',
               },
             ],
           },
@@ -56,6 +56,12 @@ describe('cpsTypes rules', () => {
                 },
                 cpsType: 'MAP',
               },
+              {
+                headlines: {
+                  headline: 'A very important live',
+                },
+                cpsType: 'LIV',
+              },
             ],
           },
         ],
@@ -77,6 +83,12 @@ describe('cpsTypes rules', () => {
                   headline: 'A very important map',
                 },
                 cpsType: 'MAP',
+              },
+              {
+                headlines: {
+                  headline: 'A very important live',
+                },
+                cpsType: 'LIV',
               },
             ],
           },
@@ -101,9 +113,9 @@ describe('cpsTypes rules', () => {
               },
               {
                 headlines: {
-                  headline: 'Group 1 - LIV',
+                  headline: 'Group 1 - OOO',
                 },
-                cpsType: 'LIV',
+                cpsType: 'OOO',
               },
             ],
           },
