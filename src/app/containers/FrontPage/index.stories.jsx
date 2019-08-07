@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import igboData from '../../../../data/igbo/frontpage';
 import yorubaData from '../../../../data/yoruba/frontpage';
 import pidginData from '../../../../data/pidgin/frontpage';
+
 import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/cpstypes';
 import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
@@ -14,8 +15,9 @@ const preprocessorRules = [
   filterEmptyGroupItems,
   applySquashTopstories,
 ];
+const dials = { mpulse: false };
 
-storiesOf('Front Page', module)
+storiesOf('Pages|Front Page', module)
   .add('Igbo', () => {
     const igboFrontPageData = preprocess(igboData, preprocessorRules);
 
@@ -32,6 +34,7 @@ storiesOf('Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
+        dials={dials}
       />
     );
   })
@@ -51,6 +54,7 @@ storiesOf('Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
+        dials={dials}
       />
     );
   })
@@ -70,6 +74,7 @@ storiesOf('Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
+        dials={dials}
       />
     );
   });

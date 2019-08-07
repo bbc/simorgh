@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import { localBaseUrl } from '../src/testHelpers/config';
 
 global.Cypress = { env: () => 'local' };
 
@@ -7,6 +8,8 @@ const config = require('../cypress/support/config/services').default;
 let browser;
 let page;
 let requests = [];
+
+const isJsBundle = url => url.includes(localBaseUrl);
 
 describe('Js bundle requests', () => {
   beforeEach(async () => {
@@ -29,14 +32,11 @@ describe('Js bundle requests', () => {
     Object.keys(config[service].pageTypes)
       .filter(pageType => config[service].pageTypes[pageType] !== undefined)
       .forEach(pageType => {
-        const path =
-          pageType === 'frontPage'
-            ? `/${service}`
-            : `/${service}/articles/${config[service].pageTypes.articles.asset}`;
+        const path = config[service].pageTypes[pageType];
 
         describe(service, () => {
           beforeEach(async () => {
-            await page.goto(`http://localhost:7080${path}`, {
+            await page.goto(`${localBaseUrl}${path}`, {
               waitUntil: 'networkidle2',
             });
           });
@@ -44,6 +44,7 @@ describe('Js bundle requests', () => {
           it('only loads expected js bundles', async () => {
             requests
               .filter(url => url.endsWith('.js'))
+              .filter(isJsBundle)
               .forEach(url => {
                 expect(url).toMatch(
                   new RegExp(

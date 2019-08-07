@@ -10,6 +10,8 @@ cache:
     - ~/.cache/Cypress
 env:
   - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
+before_install:
+  - sudo apt-get install -y libgconf-2-4
 jobs:
   include:
     - stage: test
@@ -23,15 +25,15 @@ jobs:
       script:
         - npm run test
         - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
-        - xvfb-run -a npm run test:e2e:storybook:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
-      install: npm ci --only=prod
+      install: npm ci
       addons:
         chrome: stable
       script:
         - npm run build
+        - npm prune --production
         - xvfb-run -a npm run test:prod:travis
     - stage: test
       if: branch = latest AND type = push

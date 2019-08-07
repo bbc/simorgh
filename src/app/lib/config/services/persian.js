@@ -1,6 +1,10 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
+import {
+  F_NASSIM_PERSIAN_REGULAR,
+  F_NASSIM_PERSIAN_BOLD,
+} from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
 
 const persian = {
@@ -30,7 +34,7 @@ const persian = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: arabic,
-  manifestPath: '/articles/manifest.json',
+  manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
     error: {
@@ -118,6 +122,21 @@ const persian = {
       audio: 'صدا',
       photogallery: 'عکس',
       video: 'ویدیو',
+      bbc_persian_radio: {
+        title: 'رادیو فارسی بی‌بی‌سی',
+        subtitle:
+          'مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.',
+      },
+      bbc_dari_radio: {
+        title: 'بی بی سی افغانستان (برنامه های دری)',
+        subtitle:
+          'بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.',
+      },
+      bbc_persian_tv: {
+        title: '۶٠ دقیقه',
+        subtitle:
+          'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
+      },
     },
   },
   brandSVG,
@@ -168,7 +187,7 @@ const persian = {
     copyrightText:
       'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
   },
-  fonts: [],
+  fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };
 
 export default persian;

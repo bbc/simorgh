@@ -57,6 +57,7 @@ describe('getOriginContext - localhost', () => {
 
   beforeEach(() => {
     process.env.APP_ENV = 'local';
+    process.env.SIMORGH_BASE_URL = 'http://localhost.bbc.com:7080';
   });
 
   const localScenarios = [
@@ -64,8 +65,8 @@ describe('getOriginContext - localhost', () => {
       description: 'should return test if local & undefined bbcOrigin',
       bbcOrigin: undefined,
       expected: {
-        isUK: true,
-        origin: 'https://www.test.bbc.co.uk',
+        isUK: false,
+        origin: 'http://localhost.bbc.com:7080',
       },
     },
     {

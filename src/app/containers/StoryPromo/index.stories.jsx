@@ -21,6 +21,9 @@ const firstFixture = pathOr(
   ['content', 'groups', '0', 'items', '0'],
   fixture,
 );
+
+firstFixture.timestamp = Date.now();
+
 const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
 
@@ -41,12 +44,12 @@ const getStoryPromo = platform => item => (
 const getCanonicalStoryPromo = getStoryPromo('canonical');
 const getAmpStoryPromo = getStoryPromo('amp');
 
-storiesOf('Story Promo', module)
+storiesOf('Containers|Story Promo/Canonical', module)
   .add('canonical', () => getCanonicalStoryPromo(firstFixture))
   .add('audio promo', () => getCanonicalStoryPromo(audioFixture))
   .add('video promo', () => getCanonicalStoryPromo(videoFixture));
 
-storiesOf('Story Promo', module)
+storiesOf('Containers|Story Promo/AMP', module)
   .addDecorator(AmpDecorator)
   .add('amp', () => getAmpStoryPromo(firstFixture))
   .add('audio promo - amp', () => getAmpStoryPromo(audioFixture))

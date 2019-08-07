@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
 
 import ArticleMain from '.';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
@@ -14,7 +16,7 @@ const availableFixtures = {
   persian: articleDataPersian,
 };
 
-storiesOf('Article Main', module)
+storiesOf('Containers|Article/Article Main', module)
   .addDecorator(withKnobs)
   .add(
     'default',
@@ -22,9 +24,17 @@ storiesOf('Article Main', module)
       null,
       ({ service }) => {
         return (
-          <ServiceContextProvider service={service}>
-            <ArticleMain articleData={availableFixtures[service]} />
-          </ServiceContextProvider>
+          <ToggleContextProvider>
+            <ServiceContextProvider service={service}>
+              <RequestContextProvider
+                isAmp={false}
+                pageType="article"
+                service={service}
+              >
+                <ArticleMain articleData={availableFixtures[service]} />
+              </RequestContextProvider>
+            </ServiceContextProvider>
+          </ToggleContextProvider>
         );
       },
       Object.keys(availableFixtures),

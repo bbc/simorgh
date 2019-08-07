@@ -15,8 +15,10 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
       isUK
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
+      service="news"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
+      pageType="frontPage"
     >
       <FigureContainer {...otherProps} />
     </RequestContextProvider>
@@ -73,9 +75,11 @@ export const AmpImageWithPlaceholder = () => {
   return <WrappedImageWithPlaceholder {...props} />;
 };
 
-export const LazyLoadImageWithPlaceholder = () => {
+// eslint-disable-next-line react/prop-types
+export const LazyLoadImageWithPlaceholder = ({ fallback }) => {
   const props = {
     ...baseFixture,
+    fallback,
     lazyLoad: true,
   };
 

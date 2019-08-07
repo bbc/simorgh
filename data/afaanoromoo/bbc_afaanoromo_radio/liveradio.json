@@ -1,0 +1,29 @@
+{
+    "metadata": {
+        "id": "urn:bbc:ares::asset:afaanoromo/bbc_afaanoromo_radio/liveradio",
+        "tags": {}
+    },
+    "content": {
+        "blocks": [
+            {
+                "id": "liveradio",
+                "type": "media",
+                "format": "audio",
+                "title": "TODO",
+                "caption": "TODO",
+                "versions": [
+                    {
+                        "versionId": "liveradio"
+                    }
+                ]
+            }
+        ]
+    },
+    "promo": {
+        "subType": "IDX",
+        "name": "TODO: Afaanoromo Live Radio",
+        "uri": "/afaanoromo/bbc_afaanoromo_radio/liveradio",
+        "id": "TODO",
+        "type": "simple"
+    }
+}

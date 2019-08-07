@@ -1,4 +1,6 @@
 import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
+import { dirDecorator } from '@bbc/psammead-storybook-helpers';
 import {
   FigureImage,
   FigureAmpImage,
@@ -16,8 +18,10 @@ import {
 } from './fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-storiesOf('ArticleFigure', module)
-  .add('with a caption', () => FigureImageWithCaption)
+storiesOf('Containers|Article/Article Figure/Canonical', module)
+  .addDecorator(withKnobs)
+  .addDecorator(dirDecorator)
+  .add('with a caption', ({ service }) => FigureImageWithCaption(service))
   .add('without a caption', () => FigureImage)
   .add('with non-BBC copyright', () => FigureImageWithCopyright)
   .add(
@@ -34,9 +38,11 @@ storiesOf('ArticleFigure', module)
   )
   .add('with a lazyloaded image', () => FigureLazyLoadImage);
 
-storiesOf('ArticleFigure - AMP', module)
+storiesOf('Containers|Article/Article Figure/AMP', module)
+  .addDecorator(withKnobs)
+  .addDecorator(dirDecorator)
   .addDecorator(AmpDecorator)
-  .add('with a caption', () => FigureAmpImageWithCaption)
+  .add('with a caption', ({ service }) => FigureAmpImageWithCaption(service))
   .add('without a caption', () => FigureAmpImage)
   .add('with non-BBC copyright', () => FigureAmpImageWithCopyright)
   .add(

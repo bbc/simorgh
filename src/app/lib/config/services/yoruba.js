@@ -1,9 +1,10 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
-import 'moment/locale/yo';
+import '@bbc/psammead-locales/moment/yo';
 
 const yoruba = {
+  lang: 'yo',
   product: 'BBC News',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-yoruba',
@@ -115,6 +116,10 @@ const yoruba = {
       audio: 'Orin',
       photogallery: 'Àtẹ Àwòrán',
       video: 'Fidio',
+      bbc_yoruba_radio: {
+        title: 'Placeholder title',
+        subtitle: 'Placeholder subtitle',
+      },
     },
   },
   navigation: [

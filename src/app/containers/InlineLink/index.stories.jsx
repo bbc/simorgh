@@ -4,6 +4,7 @@ import InlineLinkContainer from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
+  id: 1,
   type: 'fragment',
   model: {
     text,
@@ -11,7 +12,7 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-storiesOf('InlineLink', module)
+storiesOf('Containers|InlineLink', module)
   .add('internal link', () => (
     <InlineLinkContainer
       locator="https://www.bbc.com/news"
@@ -62,7 +63,7 @@ storiesOf('InlineLink', module)
     <ServiceContextProvider service="persian">
       <InlineLinkContainer
         locator="https://www.example.com/"
-        blocks={[fragmentBlock('این لینک هست', [''])]}
+        blocks={[fragmentBlock('این لینک هست', [])]}
         isExternal
       />
     </ServiceContextProvider>
