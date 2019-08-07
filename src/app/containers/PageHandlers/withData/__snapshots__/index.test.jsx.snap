@@ -32,16 +32,19 @@ exports[`withData HOC with valid articles data should return the passed in compo
         "model": Object {
           "blocks": Array [
             Object {
+              "id": 1,
               "model": Object {
                 "blocks": Array [
                   Object {
+                    "id": 1,
                     "model": Object {
                       "blocks": Array [
                         Object {
+                          "id": 1,
                           "model": Object {
                             "blocks": Array [
                               Object {
-                                "id": 0,
+                                "id": 1,
                                 "model": Object {
                                   "attributes": Array [],
                                   "text": "Article Headline",
@@ -62,13 +65,15 @@ exports[`withData HOC with valid articles data should return the passed in compo
               "type": "headline",
             },
             Object {
+              "id": 2,
               "model": Object {
                 "blocks": Array [
                   Object {
+                    "id": 2,
                     "model": Object {
                       "blocks": Array [
                         Object {
-                          "id": 0,
+                          "id": 2,
                           "model": Object {
                             "attributes": Array [],
                             "text": "A paragraph.",
