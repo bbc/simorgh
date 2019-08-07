@@ -8,7 +8,6 @@ const promptId = 'consent-prompt';
 const privacyId = 'privacy';
 const cookieId = 'cookie';
 
-
 const ampConsentData = {
   consents: {
     'user-consent': {
