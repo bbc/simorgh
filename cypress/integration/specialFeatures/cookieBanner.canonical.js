@@ -5,8 +5,7 @@ import {
 import appConfig from '../../../src/app/lib/config/services';
 import config from '../../support/config/services';
 
-// Limited to news for now due to time test takes to run per page.
-const filterService = service => service === 'news';
+const serviceFilter = service => ['news', 'persian'].includes(service);
 
 const filterPageTypes = (pageType, service) =>
   config[service].pageTypes[pageType] !== undefined;
@@ -50,7 +49,7 @@ const visitPage = (service, pageType) => {
 };
 
 Object.keys(config)
-  .filter(filterService)
+  .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
       .filter(pageType => filterPageTypes(pageType, service))

@@ -206,6 +206,12 @@ Object.keys(config)
         }
       });
 
+      describe('Consent Banners', () => {
+        it('have correct translations', () => {
+          cy.hasConsentBannerTranslations(service);
+        });
+      });
+
       describe('Scripts', () => {
         it('should only have expected bundle script tags', () => {
           cy.hasExpectedJsBundles(envConfig.assetOrigin, service);

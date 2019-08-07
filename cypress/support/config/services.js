@@ -175,7 +175,7 @@ export default {
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : '/hindi/articles/c0469479x9xo',
+          : '/hindi/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/hindi',
     },
   },
@@ -184,7 +184,9 @@ export default {
     isWorldService: true,
     pageTypes: {
       articles:
-        Cypress.env('APP_ENV') === 'live' ? undefined : '/igbo/articles/cr1lw620ygjo',
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/igbo/articles/cr1lw620ygjo',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
@@ -506,7 +508,9 @@ export default {
     isWorldService: true,
     pageTypes: {
       articles:
-        Cypress.env('APP_ENV') === 'live' ? undefined : '/thai/articles/c3qxeqm7ldjo',
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/thai/articles/c3qxeqm7ldjo',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
@@ -573,7 +577,9 @@ export default {
     isWorldService: true,
     pageTypes: {
       articles:
-        Cypress.env('APP_ENV') === 'live' ? undefined : '/urdu/articles/cx621klkm1ro',
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/urdu/articles/cx621klkm1ro',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined

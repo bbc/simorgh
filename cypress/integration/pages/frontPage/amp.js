@@ -33,6 +33,12 @@ Object.keys(config)
         });
       });
 
+      describe('Consent Banners', () => {
+        it('have correct translations', () => {
+          cy.hasConsentBannerTranslations(service);
+        });
+      });
+
       it('should have AMP attribute', () => {
         cy.get('html').should('have.attr', 'amp');
       });
