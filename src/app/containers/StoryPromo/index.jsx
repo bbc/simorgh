@@ -17,6 +17,7 @@ import getLocator from './imageSrcHelpers/locator';
 
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
+import isTenHoursAgo from '../../lib/utilities/isTenHoursAgo';
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -52,9 +53,19 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
 };
 
 StoryPromoImage.propTypes = {
-  lazyLoad: bool.isRequired,
   topStory: bool.isRequired,
-  imageValues: shape(storyItem.indexImage).isRequired,
+  lazyLoad: bool,
+  imageValues: storyItem.indexImage,
+};
+
+StoryPromoImage.defaultProps = {
+  lazyLoad: false,
+  imageValues: shape({
+    path: '',
+    altText: '',
+    height: '',
+    width: '',
+  }),
 };
 
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
@@ -99,6 +110,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           script={script}
           padding={false}
           service={service}
+          isRelative={isTenHoursAgo(timestamp)}
         />
       )}
     </Fragment>
