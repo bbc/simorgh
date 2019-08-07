@@ -1,11 +1,12 @@
 # Order is important. The last matching pattern has the most precedence.
 # Protected files
 **/*webpack*    @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
-/src/server/*   @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
+/src/server/    @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
 /src/client.js  @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
-/envConfig/*    @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
-/scripts/*      @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
+/envConfig/     @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
+/scripts/       @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
 package.json    @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
 .travis.yml     @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
 Jenkinsfile     @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
+/cypress/       @benjaminhobbs @jamesdonoh @pjlee11 @sareh @hindsc52 @dr3 @jblaut
 **/*CODEOWNERS* @bbc/simorgh-admins
