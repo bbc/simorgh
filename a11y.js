@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const getServiceNames = () => {
-  const dataDir = '/data';
+  const dataDir = 'data';
   return fs
     .readdirSync(dataDir, { withFileTypes: true })
     .filter(file => file.isDirectory())
