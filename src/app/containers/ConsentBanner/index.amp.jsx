@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AmpGeo from '@bbc/psammead-amp-geo';
 import Banner from './Banner/index.amp';
 
 const parentId = 'consent';
@@ -7,43 +8,6 @@ const promptId = 'consent-prompt';
 const privacyId = 'privacy';
 const cookieId = 'cookie';
 
-const ampGeoData = {
-  ISOCountryGroups: {
-    eu: [
-      'at',
-      'be',
-      'bg',
-      'cy',
-      'cz',
-      'de',
-      'dk',
-      'ee',
-      'es',
-      'fi',
-      'fr',
-      'gb',
-      'gr',
-      'hr',
-      'hu',
-      'ie',
-      'is',
-      'it',
-      'li',
-      'lt',
-      'lu',
-      'lv',
-      'mt',
-      'nl',
-      'no',
-      'pl',
-      'pt',
-      'ro',
-      'se',
-      'si',
-      'sl',
-    ],
-  },
-};
 
 const ampConsentData = {
   consents: {
@@ -73,7 +37,7 @@ const AmpConsentWrapper = styled.div`
 
 const Amp = () => (
   <AmpConsentWrapper>
-    <amp-geo layout="nodisplay">{jsonInlinedScript(ampGeoData)}</amp-geo>
+    <AmpGeo />
     <amp-consent id={parentId} layout="nodisplay">
       {jsonInlinedScript(ampConsentData)}
       <div id={promptId}>
