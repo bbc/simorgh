@@ -97,7 +97,7 @@
     "@bbc/psammead-sitewide-links": "^2.1.0",
     "@bbc/psammead-story-promo": "^2.2.1",
     "@bbc/psammead-story-promo-list": "^1.1.0",
-    "@bbc/psammead-styles": "^1.2.0",
+    "@bbc/psammead-styles": "^2.0.1",
     "@bbc/psammead-timestamp-container": "^2.3.2",
     "@bbc/psammead-visually-hidden-text": "^1.1.0",
     "compression": "^1.7.3",
