@@ -4,6 +4,14 @@ Overview of a Github Project: https://help.github.com/en/articles/about-project-
 
 BBC's Simorgh Project board: https://github.com/orgs/bbc/projects/20
 
+## Documentation index
+Please familiarise yourself with our:
+- [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
+- [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
+- [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
+- [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md) (you are here)
+- [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
+
 ### Overiew of each column
 
 <!-- prettier-ignore -->
@@ -14,7 +22,6 @@ BBC's Simorgh Project board: https://github.com/orgs/bbc/projects/20
 | Externally blocked | Contains issues/PRs that are blocked by an external factor. | Manually move the issue/PR when it is no longer blocked. | n/a |
 | Issues in progress | Contains issues that are in working progress. | If the PR that uses a [keyword to link the issue](https://help.github.com/en/articles/closing-issues-using-keywords) has been merged, then the cards in this column will move automatically to "Done". | PRs should not use keywords unless they definitely complete the entire issue. |
 | PR in progress | Contains cards that have been automatically added here once a PR is assigned to the project "Simorgh". | It is your responsibility to move the card to "Code Review", when you wish for it to be reviewed by others. Teams prioritise code reviews over actual development. | PRs should be created on first commit, so that the team can see what you are working on. |
-| Integration testing | Contains PRs that have finished development but require Cypress tests to be written by devs or testers. | Requires to be manually moved to "Code Review" once integration testing is complete. | [Read more about our Cypress test](https://github.com/bbc/simorgh/tree/latest/cypress) |
 | Code review | Contains PRs that are deemed ready to be reviewed by other developers. | Once 2 other developers have approved your PR, it will automatically be moved to "Ready for test", however if your PR requires "UX, A11Y, External Review", then you will have to manually move it there. | If you had paired with someone on an issue, then one participant can be the reviewer but the 2nd reviewer must be a code maintainer. |
 | UX, A11Y, External Review | Contains issues that are in progress of an accessibility swarm, UX or External review. | When the reviewing party approves the PR, the card will then have to be manually moved to "Ready for test". | [Read more about accessibility swarm](https://bbc-news.github.io/accessibility-news-and-you/accessibility-swarms) |
 | Ready for test | Contains PRs that are ready for the test engineers to test. | Once approved by a test engineer, it is their responsibility to update the PR with an approval and then the card will move to "Ready for merge". | n/a |
