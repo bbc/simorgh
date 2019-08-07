@@ -222,6 +222,7 @@
     ]
   },
   "lint-staged": {
-    "*.{js,jsx,json}": "eslint"
+    "*.{js,jsx,json}": "eslint",
+    "src/**/*.{js,jsx}": "stylelint"
   }
 }
