@@ -19,8 +19,8 @@ exports[`FooterContainer should render correctly 1`] = `
   display: inline;
 }
 
-.c7:hover .c9,
-.c7:focus .c9 {
+.c10:hover .c12,
+.c10:focus .c12 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -121,13 +121,6 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: grid;
-    grid-auto-flow: column;
-  }
-}
-
 @media (max-width:14.9375rem) {
   .c8 {
     grid-auto-flow: row;
@@ -167,21 +160,13 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @supports not (grid-template-columns:fit-content(200px)) {
-<<<<<<< HEAD
   .c8 > li:first-child {
-=======
-  .c5 > li:first-child {
->>>>>>> 7d29f5bd9fe436f0f541af700affea4c84628a46
     width: 100%;
   }
 }
 
 @supports not (grid-template-columns:fit-content(200px)) {
-<<<<<<< HEAD
   .c9 {
-=======
-  .c6 {
->>>>>>> 7d29f5bd9fe436f0f541af700affea4c84628a46
     display: inline-block;
   }
 }
@@ -306,7 +291,7 @@ exports[`FooterContainer should render correctly 1`] = `
           lang="en-GB"
         >
           ©
-
+           
         </span>
         3000 BBC. The BBC is not responsible for the content of external sites.
         <a
