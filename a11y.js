@@ -1,11 +1,17 @@
+const fs = require('fs');
+
+const getServiceNames = () => {
+  const dataDir = '/data';
+  return fs
+    .readdirSync(dataDir, { withFileTypes: true })
+    .filter(file => file.isDirectory())
+    .map(dir => dir.name);
+};
+
 const pageWidths = [320, 400, 600, 1008, 1280];
-const urls = [
-  'http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po',
-  'http://localhost.bbc.com:7080/news/articles/c0g992jmmkko',
-  'http://localhost.bbc.com:7080/igbo',
-  'http://localhost.bbc.com:7080/yoruba',
-  'http://localhost.bbc.com:7080/pidgin',
-];
+const baseUrl = 'http://localhost.bbc.com:7080/';
+const services = getServiceNames();
+const urls = services.map(service => `${baseUrl}${service}`);
 
 // Added to prevent false negatives from mPulse beacon
 // which creates iframe in document head
