@@ -2,13 +2,12 @@ import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/app/lib/config/services';
 
-const serviceHasArticlePageType = service =>
-  config[service].pageTypes.articles !== undefined;
-
-// Temporary limit while fixture data is incomplete
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
+
+const serviceHasArticlePageType = service =>
+  config[service].pageTypes.articles !== undefined;
 
 Object.keys(config)
   .filter(serviceHasArticlePageType)
