@@ -1,4 +1,5 @@
 import config from '../../../support/config/services';
+import envConfig from '../../../support/config/envs';
 
 const serviceHasFrontPage = service =>
   config[service].pageTypes.frontPage !== undefined;
@@ -73,6 +74,27 @@ Object.keys(config)
                 .should('have.length.of.at.least', 1)
                 .should('be.visible');
             });
+          });
+        });
+
+        describe('ATI', () => {
+          it('should have a noscript tag with an 1px image with the ati url', () => {
+            cy.hasNoscriptImgAtiUrl(
+              envConfig.atiUrl,
+              config[service].isWorldService
+                ? envConfig.atiAnalyticsWSBucket
+                : '',
+            );
+          });
+        });
+
+        describe('Scripts', () => {
+          it('should only have expected bundle script tags', () => {
+            cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
+          });
+
+          it('should have 1 bundle for its service', () => {
+            cy.hasOneServiceBundle(service);
           });
         });
 

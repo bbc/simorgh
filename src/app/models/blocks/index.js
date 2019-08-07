@@ -3,17 +3,19 @@ export const imageType = 'image';
 export const videoType = 'video';
 export const rawImageType = 'rawImage';
 
-export const singleTextBlock = text => ({
+export const singleTextBlock = (text, id = null) => ({
+  id,
   type: 'text',
   model: {
     blocks: [
       {
+        id,
         type: 'paragraph',
         model: {
           text,
           blocks: [
             {
-              id: 0,
+              id,
               type: 'fragment',
               model: {
                 text,
@@ -27,13 +29,14 @@ export const singleTextBlock = text => ({
   },
 });
 
-export const textBlock = text => ({
-  blocks: [singleTextBlock(text)],
+export const textBlock = (text, id) => ({
+  blocks: [singleTextBlock(text, id)],
 });
 
-export const blockContainingText = (type, text) => ({
+export const blockContainingText = (type, text, id = null) => ({
+  id,
   type,
-  model: textBlock(text),
+  model: textBlock(text, id),
 });
 
 export const blockBase = (blockType, blockModel) => ({
