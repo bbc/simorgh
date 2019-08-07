@@ -33,3 +33,17 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
   </ForwardRef(VisuallyHiddenText)>
 </span>
 `;
+
+exports[`Story Promo Link Contents should render with visually hidden text for photogallery promos 1`] = `
+<span
+  role="text"
+>
+  <ForwardRef(VisuallyHiddenText)>
+    PHOTOGALLERY
+    , 
+  </ForwardRef(VisuallyHiddenText)>
+  <span>
+    A photo gallery item
+  </span>
+</span>
+`;
