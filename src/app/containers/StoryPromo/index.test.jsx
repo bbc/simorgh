@@ -16,7 +16,7 @@ const completeItem = {
     assetUri: 'https://www.bbc.co.uk',
   },
   summary: 'Summary text',
-  timestamp: 1556795033,
+  timestamp: 1556795033000,
   indexImage: {
     path: '/cpsprodpb/0A06/production/image.jpg',
     height: 1152,
@@ -34,7 +34,7 @@ const audioItem = {
     assetUri: 'https://www.bbc.co.uk',
   },
   summary: 'Summary text',
-  timestamp: 1556795033,
+  timestamp: 1556795033000,
   indexImage: {
     path: '/cpsprodpb/0A06/production/image.jpg',
     height: 1152,
@@ -61,7 +61,7 @@ const videoItem = {
     assetUri: 'https://www.bbc.co.uk',
   },
   summary: 'Summary text',
-  timestamp: 1556795033,
+  timestamp: 1556795033000,
   indexImage: {
     path: '/cpsprodpb/0A06/production/image.jpg',
     height: 1152,
@@ -88,7 +88,7 @@ const audioItemNoDuration = {
     assetUri: 'https://www.bbc.co.uk',
   },
   summary: 'Summary text',
-  timestamp: 1556795033,
+  timestamp: 1556795033000,
   indexImage: {
     path: '/cpsprodpb/0A06/production/image.jpg',
     height: 1152,
@@ -177,7 +177,7 @@ describe('StoryPromo Container', () => {
     });
 
     it('should render relative time if timestamp < 10 hours', () => {
-      const oneMinuteAgo = Math.floor(Date.now() / 1000) - 60;
+      const oneMinuteAgo = Date.now() - 60 * 1000;
       const newItem = {
         ...item,
         timestamp: oneMinuteAgo,
@@ -194,7 +194,7 @@ describe('StoryPromo Container', () => {
         <WrappedStoryPromo service="yoruba" item={newItem} />,
       ).container;
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        'ìsẹjú kan kọjá',
+        'ìṣẹ́jú kan sẹ́yìn',
       );
     });
 
