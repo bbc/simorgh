@@ -1,6 +1,7 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/app/lib/config/services';
+import describeForEuOnly from '../../../support/describeForEuOnly';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -74,7 +75,7 @@ Object.keys(config)
         }
       });
 
-      describe('Consent Banners', () => {
+      describeForEuOnly('Consent Banners', () => {
         it('have correct translations', () => {
           cy.hasConsentBannerTranslations(service);
         });
