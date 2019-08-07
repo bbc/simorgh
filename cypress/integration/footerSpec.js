@@ -28,19 +28,11 @@ describe('Footer Tests', () => {
 
   it('should contain copyright text', () => {
     cy.get('footer p').should('contain', copyrightText);
-<<<<<<< HEAD
-  });
-  it('footer should contain copyright symbol', () => {
-    cy.get('footer span').should('contain', copyrightSymbol);
-  });
-  it('footer should contain copyright symbol', () => {
-=======
   });
   it('footer should contain copyright symbol', () => {
     cy.get('footer span').should('contain', copyrightSymbol);
   });
   it('copyright symbol appears before copyright text', () => {
->>>>>>> Test order of copyright text
     cy.get('footer p')
       .last()
       .should('contain', `${copyrightSymbol} ${copyrightText}`);
