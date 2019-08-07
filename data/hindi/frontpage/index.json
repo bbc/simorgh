@@ -55,7 +55,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/international-48964845"
             },
             "summary": "7 साल की जेल की सज़ा काट रहे पाकिस्तान के पूर्व प्रधानमंत्री नवाज़ शरीफ़ पर पाकिस्तान में राजनीति फिर गरम है.",
-            "timestamp": 1562928755,
+            "timestamp": 1562928754000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -98,7 +98,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/hindi/international-48278822"
                 },
                 "summary": "IMF छह अरब डॉलर का बेलआउट पैकेज देगा, पर निशाने पर क्यों हैं पीएम इमरान ख़ान.",
-                "timestamp": 1557953846,
+                "timestamp": 1557953845000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:hindi/international-48278822",
                 "type": "cps"
@@ -112,7 +112,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/hindi/international-48900752"
                 },
                 "summary": "वीडियो में जज ने नवाज़ शरीफ़ के ख़िलाफ़ फैसला देने के लिए कथित रूप से दबाव की बात मानी थी. जज ने वीडियो को बताया फ़र्जी.",
-                "timestamp": 1562496630,
+                "timestamp": 1562496629000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:hindi/international-48900752",
                 "type": "cps"
@@ -141,7 +141,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48959837"
             },
             "summary": "वर्ल्ड कप सेमीफ़ाइनल में भारत की हार के बाद कोच रवि शास्त्री से क्यों नहीं पूछे जाने चाहिए सवाल.",
-            "timestamp": 1562915035,
+            "timestamp": 1562915034000,
             "byline": {
               "name": "नितिन श्रीवास्तव ",
               "title": "बीबीसी संवाददाता, मैनचेस्टर से ",
@@ -192,7 +192,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48960027"
             },
             "summary": "सुप्रीम कोर्ट में बागी विधायकों की याचिका पर अगली सुनवाई मंगलवार को होगी.",
-            "timestamp": 1562923137,
+            "timestamp": 1562923136000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -233,7 +233,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/international-48949883"
             },
             "summary": "मई तक ये कहानियां या तो अनकही हो गई थीं या इनके बारे में दबी हुई आवाज़ में बात की जा रही थी. लेकिन अब मामला जोर पकड़ रहा है.",
-            "timestamp": 1562911016,
+            "timestamp": 1562911015000,
             "byline": {
               "name": "योगिता लिमये",
               "title": "बीबीसी न्यूज़ संवाददाता, क़ाबुल",
@@ -295,7 +295,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/science-48935171"
             },
             "summary": "दुनिया में कुछ लोग अपने कपड़ों को कभी नहीं धोते हैं, और वो इसकी वजह बताते हैं.",
-            "timestamp": 1562926077,
+            "timestamp": 1562926076000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -336,7 +336,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48957653"
             },
             "summary": "कर्नाटक में जारी राजनीतिक उथल-पुथल के बीच इस एक नाम को लेकर सबसे अधिक चर्चा है.",
-            "timestamp": 1562914649,
+            "timestamp": 1562914648000,
             "byline": {
               "name": "इमरान कुरैशी ",
               "title": "बीबीसी हिंदी के लिए ",
@@ -386,7 +386,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/social-48960544"
             },
             "summary": "जैसे ही पता चला कि फ़ाइनल कौन सी दो टीमें खेलेंगी, पाकिस्तान में लोगों ने चहकना शुरू कर दिया.",
-            "timestamp": 1562919328,
+            "timestamp": 1562919327000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -431,7 +431,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48955213"
             },
             "summary": "मंदिर विवाद से जुड़ी अफ़वाहों की जाँच के लिए पुरानी दिल्ली से ग्राउंड रिपोर्ट.",
-            "timestamp": 1562898417,
+            "timestamp": 1562898416000,
             "byline": {
               "name": "प्रशांत चाहल और प्रीतम रॉय",
               "title": "फ़ैक्ट चेक टीम, पुरानी दिल्ली से",
@@ -493,7 +493,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48957513"
             },
             "summary": "क्या नरेंद्र मोदी के 'कांग्रेस मुक्त भारत' का सपना ख़ुद कांग्रेस साकार कर रही है, पढ़िए कांग्रेस पर नज़र रखने वाले दो वरिष्ठ पत्रकारों का नज़रिया.",
-            "timestamp": 1562895940,
+            "timestamp": 1562895939000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -535,7 +535,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48919716"
             },
             "summary": "उत्तर प्रदेश के ग्रामीण इलाक़ों में धर्म परिवर्तन को लेकर हिन्दू संगठनों और ईसाईयों के बीच तनाव बढ़ता जा रहा है. बीबीसी की ख़ास रिपोर्ट.",
-            "timestamp": 1562843316,
+            "timestamp": 1562843315000,
             "byline": {
               "name": "ज़ुबैर अहमद ",
               "title": "बीबीसी संवाददाता, जौनपुर से लौटकर",
@@ -598,7 +598,7 @@
             "uri": "http://www.bbc.com/hindi/india-38381949",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1510914288,
+            "timestamp": 1510914287000,
             "type": "link"
           }
         ],
@@ -624,7 +624,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/international-48932851"
             },
             "summary": "इस बार राजस्थान के 'गुलाबी शहर' जयपुर को भी इस सूची में शामिल किया गया है.",
-            "timestamp": 1562743395,
+            "timestamp": 1562743394000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -668,7 +668,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/international-48878770"
             },
             "summary": "कार्गो थीम पर पाठकों ने तस्वीरें भेजी हैं. देखिए कहां कहां यातायात के कौन से साधन होते हैं इस्तेमाल.",
-            "timestamp": 1562431722,
+            "timestamp": 1562431721000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -727,7 +727,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48959407"
             },
             "summary": "भारतीय सेना ने गुरुवार को पाकिस्तान सेना को सात साल के बच्चे का शव सौंप दिया.",
-            "timestamp": 1562921278,
+            "timestamp": 1562921277000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -767,7 +767,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48960535"
             },
             "summary": "वर्ल्ड कप 2019 का सपना टूटने में टीम इंडिया की इस तिकड़ी की भूमिका और भविष्य क्या है.",
-            "timestamp": 1562906930,
+            "timestamp": 1562906929000,
             "byline": {
               "name": "जी राजारमन",
               "title": "वरिष्ठ खेल पत्रकार, बीबीसी हिंदी के लिए",
@@ -822,7 +822,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/international-48926691"
             },
             "summary": "संयुक्त अरब अमीरात में बसे कई भारतीयों को गोल्डेन वीज़ा दिया जा रहा है. क्या है ये गोल्डेन वीज़ा?",
-            "timestamp": 1562848809,
+            "timestamp": 1562848808000,
             "byline": {
               "name": "टीम बीबीसी हिन्दी",
               "title": "नई दिल्ली",
@@ -887,7 +887,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/media-48954113"
             },
             "summary": "आला सरकारी अफ़सर करते हैं नौकरी के बदले सेक्स की मांग",
-            "timestamp": 1562905445,
+            "timestamp": 1562905444000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -957,7 +957,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/media-48962655"
             },
             "summary": "सोशल मीडिया पर इस इलाक़े से जुड़ी तमाम तरह की अफ़वाहें सामने आती रहीं.",
-            "timestamp": 1562920750,
+            "timestamp": 1562920749000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1026,7 +1026,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/media-48954174"
             },
             "summary": "क्या टल गया है दोबारा बाढ़ का ख़तरा",
-            "timestamp": 1562920830,
+            "timestamp": 1562920829000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1096,7 +1096,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/media-48954119"
             },
             "summary": "आज के ज़माने में भी महिलाओं के लिए कई राहें आसान नहीं है तो ज़रा सोचिए 148 साल पहले ये कितना मुश्किल रहा होगा",
-            "timestamp": 1562913611,
+            "timestamp": 1562913610000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1166,7 +1166,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/media-48953183"
             },
             "summary": "ये मां-बाप अपने बच्चों को स्कूल नहीं भेजते बल्कि अपने बच्चों को ज़हरीले जीवों के बीच रखते हैं. ये परिवार अब तक 26 नए जीव खोज चुका है.",
-            "timestamp": 1562846207,
+            "timestamp": 1562846206000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1235,7 +1235,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/media-48948299"
             },
             "summary": "क्या प्यार में हिंसा की कोई जगह होती है? इसका जवाब दे रही है एक ऐसी औरत जो लगभग हर रोज घरेलू हिंसा झेलती है.",
-            "timestamp": 1562845434,
+            "timestamp": 1562845433000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1328,7 +1328,7 @@
             "uri": "https://www.bbc.com/hindi/sport-48609054",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1560333637,
+            "timestamp": 1560333636000,
             "type": "link"
           }
         ],
@@ -1351,7 +1351,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/science-48953933"
             },
             "summary": "ब्रिटिश मेडिकल जर्नल में प्रकाशित एक शोध के आधार पर कहा गया है कि मीठे पेय पदार्थ कैंसर की वजह हो सकते हैं.",
-            "timestamp": 1562896971,
+            "timestamp": 1562896970000,
             "byline": {
               "name": "जेम्स गैलेगर",
               "title": "स्वास्थ्य एवं विज्ञान संवाददाता, बीबीसी न्यूज़",
@@ -1402,7 +1402,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/vert-tra-48912691"
             },
             "summary": "1820 के दशक में ऑगस्टिन फ़्रेस्नेल ने एक नये तरह के लेंस का आविष्कार किया और यह कई मील दूर से ही नाविकों को रास्ता दिखाने लगा.",
-            "timestamp": 1562809658,
+            "timestamp": 1562809657000,
             "byline": {
               "name": "एड्रियन बर्नहार्ड ",
               "title": "बीबीसी ट्रैवल",
@@ -1471,7 +1471,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48946222"
             },
             "summary": "साक्षी और उनके पति का वीडियो सोशल मीडिया पर वायरल हो रहा है. साक्षी के पिता बरेली से विधायक हैं.",
-            "timestamp": 1562831722,
+            "timestamp": 1562831721000,
             "byline": {
               "name": "गुरप्रीत कौर",
               "title": "बीबीसी संवाददाता",
@@ -1544,7 +1544,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48932241"
             },
             "summary": "ट्रंप मोदी सरकार की नीतियों को लेकर ख़फ़ा हैं. एक बार फिर से ट्रंप ने भारत को चेताया.",
-            "timestamp": 1562723192,
+            "timestamp": 1562723191000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1601,7 +1601,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/entertainment-48924865"
             },
             "summary": "पिछले साल मनोरंजन की दुनिया में धमाका मचानेवाली वेब सिरीज़ सेक्रेड गेम्स का दूसरा सीज़न 15 अगस्त को आएगा.",
-            "timestamp": 1562677378,
+            "timestamp": 1562677377000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1664,7 +1664,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48950243"
             },
             "summary": "सलामी बल्लेबाज़ों की शतकीय साझेदारी की बदौलत इंग्लैंड ने ऑस्ट्रेलिया को दूसरे सेमीफ़ाइनल में 8 विकेट से हराया.",
-            "timestamp": 1562863062,
+            "timestamp": 1562863061000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1706,7 +1706,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48946394"
             },
             "summary": "सचिन तेंदुलकर, सौरभ गांगुली और वीवीएस लक्ष्मण ने विराट कोहली की कप्तानी पर कुछ सवाल खड़े किए हैं और कहा है कि ये बड़ी चूक है.",
-            "timestamp": 1562815832,
+            "timestamp": 1562815831000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1764,7 +1764,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48898841"
             },
             "summary": "असम में इस साल जापानी इंसेफ़ेलाइटिस से अब तक लगभग 50 लोगों की जान जा चुकी है.",
-            "timestamp": 1562513540,
+            "timestamp": 1562513539000,
             "byline": {
               "name": " दिलीप कुमार शर्मा",
               "title": "असम के लेंगराई चाय बागान से, बीबीसी हिंदी के लिए",
@@ -1826,7 +1826,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48901664"
             },
             "summary": "रोहित शर्मा के टर्न अराउंड की पूरी कहानी, कैसे उनके बल्ले से इतिहास बनने लगे.",
-            "timestamp": 1562506114,
+            "timestamp": 1562506113000,
             "byline": {
               "name": "प्रदीप कुमार",
               "title": "बीबीसी संवाददाता",
@@ -1887,7 +1887,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48917974"
             },
             "summary": "14 हज़ार मील का सफर, 17 देश और दो महाद्वीपों को पार करके ये परिवार सिंगापुर से इंग्लैंड पहुंचा है.",
-            "timestamp": 1562656817,
+            "timestamp": 1562656816000,
             "byline": {
               "name": "एडम विलियम्स",
               "title": "बीबीसी स्पोर्ट",
@@ -1953,7 +1953,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/international-48904548"
             },
             "summary": "पाकिस्तान में रणजीत सिंह की प्रतिमा लगने के बाद राजा दाहिर को सरकारी नायक क़रार देने की मांग ज़ोर पकड़ रही है.",
-            "timestamp": 1562565681,
+            "timestamp": 1562565680000,
             "byline": {
               "name": "रियाज़ सुहैल",
               "title": "बीबीसी संवाददाता, कराची",
@@ -2025,7 +2025,7 @@
             "uri": "https://www.bbc.com/hindi/india-47154818",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1555339710,
+            "timestamp": 1555339709000,
             "type": "link"
           }
         ],
@@ -2054,7 +2054,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48933481"
             },
             "summary": "कबीर सिंह के डायरेक्टर के 'प्रेम में थप्पड़ मारने की आज़ादी' वाले बयान पर एक ऐसी लड़की की कहानी, जिसने प्रेम में हिंसा झेली.",
-            "timestamp": 1562763739,
+            "timestamp": 1562763738000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2100,7 +2100,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/science-48917535"
             },
             "summary": "रिसर्चरों का कहना है कि दुनिया भर के शहरों में तेज़ी से बढ़ रहे जर्मन कॉकरोच पर कई तरह के कीटनाशक बेअसर हो गए हैं.",
-            "timestamp": 1562848142,
+            "timestamp": 1562848141000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2145,7 +2145,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/social-48946873"
             },
             "summary": "संजय मांजरेकर ने कहा था कि जडेजा पूर्ण क्रिकेटर नहीं है लेकिन अब उन्होंने माफ़ी मांगी है.",
-            "timestamp": 1562827062,
+            "timestamp": 1562827061000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2190,7 +2190,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/international-48907186"
             },
             "summary": "बेहतर ज़िंदगी का ख़्वाब आंखों में लेकर निकले आप्रवासियों का सफ़र कई बार मौत के साथ ख़त्म होता है.",
-            "timestamp": 1562837200,
+            "timestamp": 1562837199000,
             "byline": {
               "name": "संदीप सोनी",
               "title": "बीबीसी संवाददाता, दिल्ली",
@@ -2242,7 +2242,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48920135"
             },
             "summary": "क्या बीएसएनएल का निजीकरण होगा, या ये कर्ज़ तले डूब जाएगी? आख़िर बीएसएनएल के लिए आगे की राह क्या है?",
-            "timestamp": 1562735623,
+            "timestamp": 1562735622000,
             "byline": {
               "name": "विनीत खरे",
               "title": "बीबीसी संवाददाता, दिल्ली",
@@ -2301,7 +2301,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/social-48948293"
             },
             "summary": "भारतीय क्रिकेट टीम न्यूज़ीलैंड से हारकर वर्ल्ड कप से बाहर हो गई थी मगर उससे पहले भारत को एक ख़ूबसूरत जीत भी मिली थी.",
-            "timestamp": 1562833310,
+            "timestamp": 1562833309000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -2345,7 +2345,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48952413"
             },
             "summary": "दलित युवक से शादी करने वाली बीजेपी विधायक की बेटी ने कहा - जान को खतरा",
-            "timestamp": 1562844146,
+            "timestamp": 1562844145000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2385,7 +2385,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48946333"
             },
             "summary": "केन विलियम्सन से पूछा गया था कि अगर वो भारत के कप्तान होते तो क्या धोनी को टीम में रखते?",
-            "timestamp": 1562810843,
+            "timestamp": 1562810842000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2426,7 +2426,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48945693"
             },
             "summary": "लेकिन इसका मक़सद क्या रहा होगा क्योंकि राज्य में तो पहले से ही बीजेपी की ही सरकार है?",
-            "timestamp": 1562794437,
+            "timestamp": 1562794436000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2466,7 +2466,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48944151"
             },
             "summary": "रिकॉर्ड तोड़ पारी से मैच तो नहीं पर दिल जीत गये जडेजा और साबित किया कि वो क़िस्तों में परफॉर्म करने वाले क्रिकेटर नहीं हैं.",
-            "timestamp": 1562778588,
+            "timestamp": 1562778587000,
             "byline": {
               "name": "अभिजीत श्रीवास्तव",
               "title": "बीबीसी संवाददाता",
@@ -2520,7 +2520,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48946213"
             },
             "summary": "कर्नाटक कांग्रेस के 10 बाग़ी विधायकों की याचिका पर सुप्रीम कोर्ट में सुनवाई आज.",
-            "timestamp": 1562808889,
+            "timestamp": 1562808888000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2560,7 +2560,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48934521"
             },
             "summary": "अमरीका से दोस्ती को लेकर भारत अतीत में अनिच्छुक रहा है लेकिन बाद में जो विश्वास बना वो ट्रंप के आने के बाद फिर से धराशायी होता दिख रहा है.",
-            "timestamp": 1562744156,
+            "timestamp": 1562744155000,
             "byline": {
               "name": "टीम बीबीसी हिन्दी",
               "title": "नई दिल्ली",
@@ -2612,7 +2612,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48935061"
             },
             "summary": "सोशल मीडिया पर शेयर की जा रही तस्वीर में टीम इंडिया के हेड कोच की कुर्सी के नीचे शराब की बोतल नजर आ रही है.",
-            "timestamp": 1562749561,
+            "timestamp": 1562749560000,
             "byline": {
               "name": "फ़ैक्ट चेक टीम",
               "title": "बीबीसी न्यूज़",
@@ -2668,7 +2668,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/sport-48933487"
             },
             "summary": "उस नियम की शुरुआत कहां से हुई, जिसके लागू होते ही मैचों के नतीजे बदल जाते हैं.",
-            "timestamp": 1562746255,
+            "timestamp": 1562746254000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2740,7 +2740,7 @@
             "uri": "http://www.bbc.co.uk/academy/hi/articles/art20140402120147915",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1525943361,
+            "timestamp": 1525943360000,
             "type": "link"
           },
           {
@@ -2753,7 +2753,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-48821404"
             },
             "summary": "आकाश विजयवर्गीय ज़मानत पर जेल से बाहर. अजय चौटाला के पास जेल में फोन. अख़बारों की समीक्षा",
-            "timestamp": 1561951006,
+            "timestamp": 1561951005000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2791,7 +2791,7 @@
             "uri": "http://www.bbc.co.uk/academy/hi/articles/art20140709171042062",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1525943764,
+            "timestamp": 1525943763000,
             "type": "link"
           },
           {
@@ -2800,7 +2800,7 @@
             "uri": "http://www.bbc.co.uk/academy/hi/articles/art20160217134231893",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1525945231,
+            "timestamp": 1525945230000,
             "type": "link"
           },
           {
@@ -2809,7 +2809,7 @@
             "uri": "http://www.bbc.co.uk/academy/hi/articles/art20170407161452638",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1525943934,
+            "timestamp": 1525943933000,
             "type": "link"
           }
         ],
@@ -2839,7 +2839,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-45559999"
             },
             "summary": "तेलंगाना में एक शख़्स की उसकी गर्भवती पत्नी के सामने हत्या कर दी गई थी. पत्नी ने बताई आपबीती.",
-            "timestamp": 1537322608,
+            "timestamp": 1537322607000,
             "byline": {
               "name": "दीप्ति बथिनि",
               "title": "संवाददाता, बीबीसी तेलुगू ",
@@ -2898,7 +2898,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:hindi/india-44280843"
             },
             "summary": "कोई रेप वीडियो कैसे हो जाता है वायरल. कौन लोग हैं जो इस ख़तरनाक खेल को खेल रहे हैं.",
-            "timestamp": 1527568775,
+            "timestamp": 1527568774000,
             "byline": {
               "name": "सरोज सिंह ",
               "title": "बीबीसी संवाददाता",

@@ -56,7 +56,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48960890"
             },
             "summary": "سخنگوی وزارت خارجه ایران با اعلام اینکه در ارتباط با توقیف ابرنفتکس حامل نفت ایران، سفیر بریتانیا در تهران بار دیگر به این وزارتخانه احضار شده است. وی دولت بریتانیا را به اقدام غیرقانونی در توقیف این نفتکش متهم کرده و همچنین گفته است که مقصد نفتکش سوریه نبوده است.",
-            "timestamp": 1562918429,
+            "timestamp": 1562918428000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -109,7 +109,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/live/48951625"
             },
             "summary": "لحظه به لحظه با خبرهای جمعه ۲۱ تیر ماه ۱۳۹۸ از ایران، افغانستان، جهان، ورزش، دنیای هنر و سرگرمی ...",
-            "timestamp": 1562914506,
+            "timestamp": 1562914505000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -164,7 +164,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48961968"
             },
             "summary": "با تغییر قانون اساسی کره شمالی، مقام ریاست کشور به کیم جونگ-اون داده می‌شود که تاکنون در مقام \"رهبر عالی\" کشور تصمیم گیرنده اصلی بوده است. برخی از ناظران هدف از این تغییر را آماده کردن زمینه مساعد برای پیمان صلح بین کره شمالی و ایالات متحده دانسته‌اند.",
-            "timestamp": 1562929516,
+            "timestamp": 1562929515000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -205,7 +205,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48962827"
             },
             "summary": "ژائر بولسونارو، رئیس‌جمهوری راست افراطی برزیل از پسرش خواسته تا سفیر این کشور در آمریکا شود. ادواردو بولسونارو ۳۵ سال دارد و در حال حاضر نماینده مجلس برزیل و مشاور سیاست خارجی پدرش است.",
-            "timestamp": 1562928171,
+            "timestamp": 1562928170000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -246,7 +246,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48961645"
             },
             "summary": "وزارت دفاع ترکیه از دریافت اولین محموله سیستم دفاع هوایی اس-۴۰۰ روسیه خبر داده است. به گفته وزارت دفاع ترکیه، این محموله در اوایل امروز جمعه (۱۲ ژوئیه /۲۱ تیر) وارد پایگاهی هوایی در شمال غرب آنکارا شده است. خرید این سیستم دفاع هوایی خشم آمریکا را که از متحدان ترکیه در پیمان آتلانتیک شمالی (ناتو) است، همراه داشته است.",
-            "timestamp": 1562927701,
+            "timestamp": 1562927700000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -295,7 +295,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48961646"
             },
             "summary": "جرمی هانت، وزیر خارجه بریتانیا وعده داده اگر نخست‌وزیر شود مانع از کاهش بودجه نیروی دریایی خواهد شد. آقای هانت گفته تنش‌ها درخلیج فارس نشان می‌دهد که نیروی دریایی بریتانیا به ناوهای جنگی بیشتری نیاز دارد.",
-            "timestamp": 1562925970,
+            "timestamp": 1562925969000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -335,7 +335,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-48960925"
             },
             "summary": "مقام‌های ولایت ننگرهار در شرق افغانستان تایید کرده‌اند که در حمله انتحاری به یک مراسم عروسی در ولسوالی پچیراگام دستکم ۹ نفر کشته و ۱۲ نفر دیگر زخمی شده‌اند. به گفته آنان، عامل این حمله انتحاری یک کودک بوده است. طالبان گفته با این حمله ارتباطی نداشته است.",
-            "timestamp": 1562912227,
+            "timestamp": 1562912226000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107845630",
@@ -370,7 +370,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48960885"
             },
             "summary": "سخنگوی شورای نظامی حاکم بر سودان گفته است که نیروهای وفادار به این شورا موفق شدند تلاش گروهی از نظامیان برای کودتا را خنثی کنند. به گفته او تعدادی افسر و سرباز در ارتباط با کودتای نافرجام بازداشت شده‌اند و تحقیقات برای شناسایی \"مغز متفکر\" کودتا در جریان است.",
-            "timestamp": 1562911486,
+            "timestamp": 1562911485000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -411,7 +411,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48959543"
             },
             "summary": "کاخ سفید پا انتشار بیانیه ای اعلام کرد رهبران آمریکا و اسرائیل درباره منافع امنیتی مشترک از جمله \"تلاش برای جلوگیری از عملکرد زیان بار ایران در منطقه\" گفت و گو کرده اند. بنیامین نتانیاهو هم در توییتر نوشت از آقای ترامپ به خاطر تصمیم برای افزایش تحریم های ایران تشکر کرده است.",
-            "timestamp": 1562881998,
+            "timestamp": 1562881997000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -452,7 +452,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48959545"
             },
             "summary": "فرزندان عباس امیرانتظام در نخستین سالگرد فوت او در دادگاهی در واشنگتن از جمهوری اسلامی ایران و سپاه پاسداران انقلاب اسلامی به خاطر چند فقره اتهام از جمله حبس غیرقانونی، شکنجه و ایجاد شرایطی که موجب مرگ پدرشان شد، شکایت کرده اند.",
-            "timestamp": 1562897132,
+            "timestamp": 1562897131000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -493,7 +493,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48959544"
             },
             "summary": "خبرگزاری رویترز در گزارشی اختصاصی به نقل از دو مقام مطلع در واشنگتن از تصمیم دولت آمریکا برای عدم تحریم جواد ظریف، وزیر امور خارجه ایران در زمان حاضر خبر داده است. به گزارش خبرگزاری رویترز، دلیل خاصی برای تغییر نظر دولت آمریکا اعلام نشده است. رویترز از مایک پمپئو، وزیر امور خارجه آمریکا به عنوان یکی از مخالفان تحریم آقای ظریف نام برده است.",
-            "timestamp": 1562890280,
+            "timestamp": 1562890279000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -541,7 +541,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/tv-and-radio-48960424"
             },
             "summary": "فرزندان عباس امیرانتظام در آمریکا از جمهوری اسلامی ایران و سپاه پاسداران انقلاب اسلامی بنا بر چند فقره اتهام از جمله حبس غیرقانونی، شکنجه و ایجاد شرایطی که موجب مرگ پدرشان شد به دادگاه شکایت کرده اند.",
-            "timestamp": 1562906537,
+            "timestamp": 1562906536000,
             "cpsType": "MAP",
             "media": {
               "id": "p07gpjms",
@@ -597,7 +597,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/tv-and-radio-48960416"
             },
             "summary": "این هفته مسعود بهنود مروری دارد بر ماهنامه شبکه آفتاب، هفته نامه شنبه، دوهفته نامه فرهنگ شریف و وزن دنیا، رسانه شعر ایران.",
-            "timestamp": 1562904846,
+            "timestamp": 1562904845000,
             "cpsType": "MAP",
             "media": {
               "id": "p07gpgyg",
@@ -653,7 +653,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48956327"
             },
             "summary": "بریتانیا، برای کشتی‌هایی که با پرچم این کشور از تنگه هرمز عبور می کنند، هشدار امنیتی صادر کرده است.",
-            "timestamp": 1562861834,
+            "timestamp": 1562861833000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -723,7 +723,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48956332"
             },
             "summary": "بیست سال از حادثه کوی دانشگاه تهران می گذرد. گروهی معتقدند، محمد خاتمی رئیس جمهوری وقت در جریان آن حادثه میتوانست در تقابل با رهبر ایران عملکرد بهتری داشته باشد.",
-            "timestamp": 1562866066,
+            "timestamp": 1562866065000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -793,7 +793,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48956329"
             },
             "summary": "علی باباجان وزیر پیشین امور خارجه و اقتصاد ترکیه و از بنیانگذاران حزب حاکم بر این کشور می‌گوید قصد دارد حزب تازه‌ای راه بیندازد.",
-            "timestamp": 1562861974,
+            "timestamp": 1562861973000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -862,7 +862,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48956323"
             },
             "summary": "در بریتانیا واکنش‌ها به استعفای سفیر این کشور در آمریکا ادامه دارد.",
-            "timestamp": 1562857424,
+            "timestamp": 1562857423000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -932,7 +932,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-48954301"
             },
             "summary": "دولت افغانستان با اتهام‌ آزار جنسی علیه زنان روبرو شده است.",
-            "timestamp": 1562857215,
+            "timestamp": 1562857214000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1025,7 +1025,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48947723"
             },
             "summary": "رئیس جمهور اوکراین گفته است که محوطه اطراف چرنوبیل، محل بدترین فاجعه اتمی جهان، تبدیل به یک مکان توریستی می‌شود. در سال ۱۹۸۶ رآکتوری در نیروگاه اتمی چرنوبیل منفجر شد. به گفته سازمان ملل انفجار این رآکتور منجر به انتشار دودی از مواد رادیواکتیو در اروپا شد.",
-            "timestamp": 1562833570,
+            "timestamp": 1562833569000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1065,7 +1065,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/science-48936408"
             },
             "summary": "پژوهشگران می‌گویند که کاکایی، یک نوع مرغ دریایی در سراسر استرالیا ناقل میکروب‌های مقاوم در برابر آنتی بیوتیک هستند. دانشمندان که این تحقیق را به سفارش دانشگاه مرداک در شهر پرث استرالیا انجام داده اند متوجه شده اند که بیست درصد از کاکایی‌های نقره‌ای باکتری‌هایی مانند ای‌کولای حمل می کنند که می تواند بیماری هایی مانند عفونت های مجاری ادراری و عفونت خون و التهاب خونی ایجاد کنند.",
-            "timestamp": 1562767801,
+            "timestamp": 1562767800000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107820467",
@@ -1110,7 +1110,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/interactivity-48667220"
             },
             "summary": "کشته شدن یک توله خرس در سوادکوه بر اثر حمله با سنگ و انتشار ویدیوی آن در شبکه‌های اجتماعی بار دیگر موضوع خشونت علیه حیوانات را مطرح کرد.",
-            "timestamp": 1560785099,
+            "timestamp": 1560785098000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1185,7 +1185,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/interactivity-48655757"
             },
             "summary": "روز پنجشنبه ۲۳ خرداد ۱۳۹۸ به دو نفتکش در نزدیکی آب‌های ایران در دریای عمان حمله شد. سخنگویان دولتی ایران این حادثه را 'مشکوک' توصیف کردند.",
-            "timestamp": 1560698106,
+            "timestamp": 1560698105000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1271,7 +1271,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48748368"
             },
             "summary": "تصاویری از گله‌های آهو در میان مراتع سوخته در منطقه قراویز قصر شیرین؛ این تصاویر را مهدی از قصرشیرین برای بی‌بی‌سی فارسی فرستاده که نشان می‌دهد بخشی از زیستگاه این آهوها در اثر آتش‌سوزی ۲۵ خردادماه از بین رفته است.",
-            "timestamp": 1561391193,
+            "timestamp": 1561391192000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1341,7 +1341,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/interactivity-48648491"
             },
             "summary": "به مناسبت چهلمین سالگرد درگذشت احمد ظاهر، خواننده پرآوازه افغانستان از شما خواسته بودیم تا با آهنگی از او که مورد علاقه شماست لب‌خوانی (دابسمش) کنید و برای ما بفرستید.",
-            "timestamp": 1560611632,
+            "timestamp": 1560611631000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1405,7 +1405,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/blog-viewpoints-48964295"
             },
             "summary": "نواندیشان دینی موقعیّت دشواری در کشورهای اسلامی دارند. توده‌های متدیّنان عموماً میانه‌ای با آن‌ها و آثارشان ندارند. این به سبب رویکرد نخبه‌گرا و دگراندیشانه‌‌ نواندیشان دینی است. حکومت‌های کشورهای اسلامی نیز با نواندیشان دینی که عموماً منتقد حکومتند، سر دشمنی دارند. روشنفکران سکولار هم نواندیشان دینی را چندان به رسمیّت نمی‌شناسند.",
-            "timestamp": 1562926859,
+            "timestamp": 1562926858000,
             "byline": {
               "name": "یاسر میردامادی",
               "title": "پژوهشگر دینی",
@@ -1460,7 +1460,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/blog-viewpoints-48956844"
             },
             "summary": "دست فروشی در ایران پدیده نوظهوری نیست، اما افزایش شمار دست فروشان به خصوص در کلان شهرها در یک دهه اخیر به نحوی بوده است که بارها شهرداری و شوراهای شهر برای مقابله با آن طرح‏هایی را تصویب و به اجرا گذارده‌اند، هرچند که هیچ یک از آنان موفقیت‌آمیز نبوده است.",
-            "timestamp": 1562863653,
+            "timestamp": 1562863652000,
             "byline": {
               "name": "فریده ریحانی",
               "title": "روزنامه نگار",
@@ -1539,7 +1539,7 @@
             "uri": "http://www.bbc.com/persian/afghanistan-48596045",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1560447364,
+            "timestamp": 1560447363000,
             "type": "link"
           }
         ],
@@ -1561,7 +1561,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/arts-48875792"
             },
             "summary": "مجموعه‌ای از بهترین عکس‌های خبری که در هفته گذشته (۲۹ ژوئن - ۶ ژوئیه ) در نقاط مختلف دنیا منتشر شده‌اند.",
-            "timestamp": 1562472998,
+            "timestamp": 1562472997000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1601,7 +1601,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48892322"
             },
             "summary": "زمین لرزه ای به بزرگی ۷.۱ جمعه شب جنوب کالیفرنیا را به لرزه درآورد. مرکز زمین شناسی آمریکا گفته است که این بزرگترین زلزله در جنوب کالیفرنیا در دو دهه گذشته است.",
-            "timestamp": 1562417519,
+            "timestamp": 1562417518000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1642,7 +1642,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/arts-48885064"
             },
             "summary": "آثار هنری آماتور گروهی از زنان مهاجر و پناهنده در شهرهای لندن و ازمیر ترکیه اخیرا در نمایشگاهی در رویال آلبرت هال لندن به نمایش گذاشته شد.",
-            "timestamp": 1562646885,
+            "timestamp": 1562646884000,
             "byline": {
               "name": "ضیا شهریار",
               "title": "بی‌بی‌سی",
@@ -1693,7 +1693,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-48851525"
             },
             "summary": "اولین نمایشگاه تولیدات کشور ازبکستان در شهر مزار شریف افغانستان برگزار شد . بازرگانان ازبکستانی می‌‎گویند این نمایشگاه سه روزه با استقبال گسترده افغان‌ها روبرو شده و محصولات بسیاری از غرفه ها کاملاً فروش رفته است.",
-            "timestamp": 1562162556,
+            "timestamp": 1562162555000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1741,7 +1741,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/arts-48805060"
             },
             "summary": "مجموعه‌ای از بهترین عکس‌های خبری که در هفته گذشته ( ۲۱ - ۲۸ ژوئن ) در نقاط مختلف دنیا منتشر شده‌اند.",
-            "timestamp": 1561888382,
+            "timestamp": 1561888381000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1784,7 +1784,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48770768"
             },
             "summary": "موج گرمای کم‌سابقه‌ای اروپا را در بر گرفته و مردم کشورهای اروپایی در پی یافتن راه‌هایی برای خنگ نگه داشتن خود هستند.",
-            "timestamp": 1561540606,
+            "timestamp": 1561540605000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1842,7 +1842,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/world-48949733"
             },
             "summary": "معمای ناپدید شدن یک دختر نوجوان ایتالیایی پس از خالی بودن دو قبر در واتیکان که احتمال داده می‌شد بقایای جسد او آنجا باشد، عمیق‌تر شده است. ۳۶ سال پیش دختر ۱۵ ساله یک کارمند ارشد واتیکان پس از کلاس موسیقی‌اش در کوچه و خیابان‌های رم ناپدید شد. خانواده این دختر در این چهار دهه تلاش کرده‌اند از سرنوشت او با خبر شوند.",
-            "timestamp": 1562851627,
+            "timestamp": 1562851626000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1883,7 +1883,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/science-48947727"
             },
             "summary": "به گفته پژوهشگران فرانسوی نوشیدنی‌های حاوی قند از جمله آبمیوه و نوشیدنی‌های گازدار احتمالا خطر ابتلا به سرطان را افزایش می‌دهند. این محققان در نتیجه تحقیقی پنج ساله بر روی بیش از یکصد هزار نفر به چنین نتیجه‌ای رسیده‌اند. این تیم تحقیقاتی در دانشگاه سوربن پاریس تاثیر میزان قند خون را عامل این مسئله دانسته‌اند.",
-            "timestamp": 1562847933,
+            "timestamp": 1562847932000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1933,7 +1933,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-48962831"
             },
             "summary": "کفش‎های پاشنه بلند اگر چه امروزه برای جذاب‎تر کردن زنان - و در برخی موارد عذاب آن‎ها- به بازار ارائه می‎شوند، اما در واقع اول مردان بودند که از این نوع کفش‌ها استفاده کردند. سربازان سوار بر اسب ایران باستان، کفش‎های پاشنه بلند می‎پوشیدند تا پایشان روی رکاب ثابت بایستد.",
-            "timestamp": 1562930336,
+            "timestamp": 1562930335000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1973,7 +1973,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-48955413"
             },
             "summary": "موجی از اظهارات و اتهامات در مورد آزار و اذیت جنسی در بالاترین سطح دولت افغانستان به راه افتاده است. مقامات رسمی هر گونه خطایی را انکار می‌کنند اما تحقیق بی‌بی‌سی حاکی از شنیده‌هایی از زبان زنان، مبنی بر چنین اذیت‌وآزار‌هایی است.",
-            "timestamp": 1562862909,
+            "timestamp": 1562862908000,
             "byline": {
               "name": "یوگیتا لیمای",
               "title": "بی‌بی‌سی",
@@ -2029,7 +2029,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48954293"
             },
             "summary": "سریالی به نام گاندو در ۳۰ قسمت از پانزدهم خرداد در شبکه سه سیما در ایران پخش شد. کارگردان این سریال جواد افشاراست و نویسنده اش آرش قادری.",
-            "timestamp": 1562864142,
+            "timestamp": 1562864141000,
             "byline": {
               "name": "فرن تقی‌زاده",
               "title": "بی‌بی‌سی",
@@ -2079,7 +2079,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/arts-48956063"
             },
             "summary": "نمایشگاه عکسی از حسن سربخشیان با عنوان \"زندگی یهودیان ایرانی\" در کنیسه اورشلیم در پراگ برپا است. سربخشیان عکاسی این پروژه را از سال ۱۳۸۷ در ایران شروع کرد. هدف اولیه این بود که این عکس‌ها در قالب کتابی در ایران چاپ شود تا گوشه‌ای از زندگی یهودیان در ایران به مردم نشان داده شود.",
-            "timestamp": 1562859072,
+            "timestamp": 1562859071000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2124,7 +2124,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/sport-48941243"
             },
             "summary": "شاید بتوان به راحتی گفت که تیم ملی فعلی والیبال ایران، بهترین تیم ورزشی ملی بعد از انقلاب ایران در ۴۰ سال پیش است. تیم والیبال مردان ایران در سال های اخیر تبدیل به یکی از قدرت های ثابت والیبال جهانی شده و در روز خوبش می تواند هر حریفی را شکست دهد.",
-            "timestamp": 1562779590,
+            "timestamp": 1562779589000,
             "byline": {
               "name": "پوریا ژافره",
               "title": "بی‌بی‌سی",
@@ -2174,7 +2174,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/sport-48954299"
             },
             "summary": "برخی مسابقه برزیل و فرانسه در جام جهانی ۱۹۸۶ را بهترین مسابقه تاریخ فوتبال می‌دانند و برخی هم معتقدند مبارزه محمد علی (کلی) با جرج فورمن در زئیر بزرگ‌ترین مسابقه تاریخ بوکس است. اما شاید بتوان گفت در کم‌تر رشته‌ای مانند تنیس همه در مورد \"بزرگ‌ترین مسابقه تاریخ\" اتفاق نظر دارند: فینال ویمبلدون ۲۰۰۸ بین راجر فدرر و رافائل نادال.",
-            "timestamp": 1562857520,
+            "timestamp": 1562857519000,
             "byline": {
               "name": "علی آخوندان",
               "title": "بی‌بی‌سی",
@@ -2229,7 +2229,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-48893530"
             },
             "summary": "ما می‌خوابیم چون خوابیدن فایده‌های گوناگونی برای ذهن و بدن ما دارد. بنا بر آخرین پژوهش‌ها، هیچ سیستمی در مغز و بدن ما نیست که با خوابیدن کارکردش بهتر نشود و اگر خوب و کافی نخوابیم صدمه نبیند.",
-            "timestamp": 1562837359,
+            "timestamp": 1562837358000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -2286,7 +2286,7 @@
             "uri": "http://www.bbc.com/persian/institutional-44806019",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1559041549,
+            "timestamp": 1559041548000,
             "type": "link"
           }
         ],
@@ -2305,7 +2305,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:persian/iran-38142724"
             },
             "summary": "مجموعۀ پانصد و بیست تایی ده سال گذشته \"نامه ای از لندن\" در یک دفتر با عنوان \"خوش خبر باشی، ای کبوتر شرق\" منتشر شد",
-            "timestamp": 1480429044,
+            "timestamp": 1480429043000,
             "cpsType": "STY",
             "indexImage": {
               "id": "92714314",
@@ -2350,7 +2350,7 @@
             "uri": "http://www.bbc.co.uk/academy/fa/articles/art20130702112134442",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1490111978,
+            "timestamp": 1490111977000,
             "type": "link"
           }
         ],
@@ -2376,7 +2376,7 @@
             "uri": "http://www.bbc.com/persian/services/2012/12/121210_psiphon_windows_android",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1475042560,
+            "timestamp": 1475042559000,
             "type": "link"
           }
         ],
