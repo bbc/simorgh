@@ -39,6 +39,7 @@ const paragraphBlockWithInlineLink = {
     text: 'This is a caption containing an inline link.',
     blocks: [
       {
+        id: 1,
         type: 'fragment',
         model: {
           text: 'This is a caption ',
@@ -46,6 +47,7 @@ const paragraphBlockWithInlineLink = {
         },
       },
       {
+        id: 2,
         type: 'urlLink',
         model: {
           text: 'containing an inline link',
@@ -53,6 +55,7 @@ const paragraphBlockWithInlineLink = {
           isExternal: false,
           blocks: [
             {
+              id: 22,
               type: 'fragment',
               model: {
                 text: 'containing an inline link',
@@ -63,6 +66,7 @@ const paragraphBlockWithInlineLink = {
         },
       },
       {
+        id: 3,
         type: 'fragment',
         model: {
           text: '.',
@@ -79,6 +83,7 @@ const paragraphBlockWithBoldAndItalics = {
     text: 'This is a second paragraph with italics and bold and bold italics',
     blocks: [
       {
+        id: 4,
         type: 'fragment',
         model: {
           text: 'This is a second paragraph with ',
@@ -86,6 +91,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
+        id: 5,
         type: 'fragment',
         model: {
           text: 'italics',
@@ -93,6 +99,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
+        id: 6,
         type: 'fragment',
         model: {
           text: ' and ',
@@ -100,6 +107,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
+        id: 7,
         type: 'fragment',
         model: {
           text: 'bold',
@@ -107,6 +115,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
+        id: 8,
         type: 'fragment',
         model: {
           text: ' and ',
@@ -114,6 +123,7 @@ const paragraphBlockWithBoldAndItalics = {
         },
       },
       {
+        id: 9,
         type: 'fragment',
         model: {
           text: 'bold italics',
@@ -127,14 +137,14 @@ const paragraphBlockWithBoldAndItalics = {
 const captionBlockWithMultipleParagraphsAndLink = createCaptionBlock([
   paragraphBlockWithInlineLink,
   paragraphBlockWithBoldAndItalics,
-  paragraphBlockWithInlineLink,
+  captionBlock('One of mutiple captions within a paragraph'),
 ]);
 
 const captionBlockWithLink = createCaptionBlock([paragraphBlockWithInlineLink]);
 
 const copyrightText = 'Getty Images';
 
-const generateFixtureData = ({
+const GenerateFixtureData = ({
   height,
   width,
   caption,
@@ -168,7 +178,7 @@ const generateFixtureData = ({
   </ServiceContextProvider>
 );
 
-generateFixtureData.propTypes = {
+GenerateFixtureData.propTypes = {
   caption: objectOf(any),
   copyright: string,
   lazyLoad: bool,
@@ -179,7 +189,7 @@ generateFixtureData.propTypes = {
   service: string,
 };
 
-generateFixtureData.defaultProps = {
+GenerateFixtureData.defaultProps = {
   caption: null,
   copyright: null,
   lazyLoad: false,
@@ -190,86 +200,90 @@ generateFixtureData.defaultProps = {
   service: 'news',
 };
 
-export const FigureImage = generateFixtureData({ platform: 'canonical' });
+export const FigureImage = <GenerateFixtureData platform="canonical" />;
 
-export const FigureImageWithNestedGrid = (width, height) =>
-  generateFixtureData({
-    platform: 'canonical',
-    width,
-    height,
-  });
-
-export const FigureLazyLoadImage = generateFixtureData({
-  platform: 'canonical',
-  lazyLoad: true,
-});
-
-export const FigureAmpImage = generateFixtureData({ platform: 'amp' });
-
-export const FigureImageWithCaption = service =>
-  generateFixtureData({
-    caption: captionBlock('Figure Image With Caption'),
-    platform: 'canonical',
-    type: 'image',
-    service,
-  });
-
-export const FigureAmpImageWithCaption = service =>
-  generateFixtureData({
-    caption: captionBlock('Figure Amp Image with Caption'),
-    platform: 'amp',
-    type: 'image',
-    service,
-  });
-
-export const FigureImageWithCopyright = generateFixtureData({
-  copyright: copyrightText,
-  platform: 'canonical',
-});
-
-export const FigureAmpImageWithCopyright = generateFixtureData({
-  copyright: copyrightText,
-  platform: 'amp',
-});
-
-export const FigureImageWithCopyrightAndCaption = generateFixtureData({
-  caption: captionBlock('Figure Image with Copyright and Caption'),
-  copyright: copyrightText,
-  platform: 'canonical',
-  type: 'image',
-});
-
-export const FigureAmpImageWithCopyrightAndCaption = generateFixtureData({
-  caption: captionBlock('Figure Amp Image with Copyright and Caption'),
-  copyright: copyrightText,
-  platform: 'amp',
-  type: 'image',
-});
-
-export const FigureImageWithCaptionContainingLink = generateFixtureData({
-  caption: captionBlockWithLink,
-  platform: 'canonical',
-  type: 'image',
-});
-
-export const FigureAmpImageWithCaptionContainingLink = generateFixtureData({
-  caption: captionBlockWithLink,
-  platform: 'amp',
-  type: 'image',
-});
-
-export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
-  {
-    caption: captionBlockWithMultipleParagraphsAndLink,
-    platform: 'canonical',
-    type: 'image',
-  },
+export const FigureImageWithNestedGrid = (width, height) => (
+  <GenerateFixtureData platform="canonical" width={width} height={height} />
 );
 
-export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = generateFixtureData(
-  {
-    caption: captionBlockWithMultipleParagraphsAndLink,
-    platform: 'amp',
-    type: 'image',
-  },
+export const FigureLazyLoadImage = (
+  <GenerateFixtureData platform="canonical" lazyLoad />
+);
+
+export const FigureAmpImage = <GenerateFixtureData platform="amp" />;
+
+export const FigureImageWithCaption = service => (
+  <GenerateFixtureData
+    platform="canonical"
+    type="image"
+    caption={captionBlock('Figure Image With Caption')}
+    service={service}
+  />
+);
+
+export const FigureAmpImageWithCaption = service => (
+  <GenerateFixtureData
+    platform="amp"
+    type="image"
+    caption={captionBlock('Figure Amp Image with Caption')}
+    service={service}
+  />
+);
+
+export const FigureImageWithCopyright = (
+  <GenerateFixtureData platform="canonical" copyright={copyrightText} />
+);
+
+export const FigureAmpImageWithCopyright = (
+  <GenerateFixtureData platform="amp" copyright={copyrightText} />
+);
+
+export const FigureImageWithCopyrightAndCaption = (
+  <GenerateFixtureData
+    platform="canonical"
+    type="image"
+    copyright={copyrightText}
+    caption={captionBlock('Figure Image with Copyright and Caption')}
+  />
+);
+
+export const FigureAmpImageWithCopyrightAndCaption = (
+  <GenerateFixtureData
+    platform="amp"
+    type="image"
+    caption={captionBlock('Figure Amp Image with Copyright and Caption')}
+    copyright={copyrightText}
+  />
+);
+
+export const FigureImageWithCaptionContainingLink = (
+  <GenerateFixtureData
+    platform="canonical"
+    type="image"
+    caption={captionBlockWithLink}
+  />
+);
+
+export const FigureAmpImageWithCaptionContainingLink = (
+  <GenerateFixtureData
+    platform="amp"
+    type="image"
+    caption={captionBlockWithLink}
+  />
+);
+
+export const FigureImageWithCaptionContainingMultipleParagraphsAndLink = (
+  <GenerateFixtureData
+    platform="canonical"
+    type="image"
+    caption={captionBlockWithMultipleParagraphsAndLink}
+  />
+);
+
+export const FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink = (
+  <GenerateFixtureData
+    platform="amp"
+    type="image"
+    caption={captionBlockWithMultipleParagraphsAndLink}
+  />
 );

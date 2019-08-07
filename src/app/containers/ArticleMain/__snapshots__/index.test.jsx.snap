@@ -16,15 +16,19 @@ exports[`ArticleMain should render a news article correctly 1`] = `
           "model": Object {
             "blocks": Array [
               Object {
+                "id": 1,
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": 1,
                       "model": Object {
                         "blocks": Array [
                           Object {
+                            "id": 1,
                             "model": Object {
                               "blocks": Array [
                                 Object {
+                                  "id": 1,
                                   "model": Object {
                                     "attributes": Array [],
                                     "text": "Article Headline",
@@ -45,12 +49,15 @@ exports[`ArticleMain should render a news article correctly 1`] = `
                 "type": "headline",
               },
               Object {
+                "id": 2,
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": 2,
                       "model": Object {
                         "blocks": Array [
                           Object {
+                            "id": 2,
                             "model": Object {
                               "attributes": Array [],
                               "text": "A paragraph.",
@@ -168,15 +175,19 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
           "model": Object {
             "blocks": Array [
               Object {
+                "id": 1,
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": 1,
                       "model": Object {
                         "blocks": Array [
                           Object {
+                            "id": 1,
                             "model": Object {
                               "blocks": Array [
                                 Object {
+                                  "id": 1,
                                   "model": Object {
                                     "attributes": Array [],
                                     "text": "سرصفحه مقاله",
@@ -197,12 +208,15 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
                 "type": "headline",
               },
               Object {
+                "id": 2,
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": 2,
                       "model": Object {
                         "blocks": Array [
                           Object {
+                            "id": 2,
                             "model": Object {
                               "attributes": Array [],
                               "text": "یک پاراگراف.",
