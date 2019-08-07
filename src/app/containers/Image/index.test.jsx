@@ -1,10 +1,15 @@
 import React from 'react';
 import ImageContainer from './index';
-import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  isNull,
+  suppressPropWarnings,
+} from '../../../testHelpers';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
+    suppressPropWarnings(['blocks is not an array']);
     isNull('should return null', <ImageContainer />);
   });
 
@@ -60,6 +65,7 @@ describe('Image', () => {
     const dataWithoutAltText = blockArrayModel([rawImageBlock, null]);
 
     describe('with no rawImageBlock', () => {
+      suppressPropWarnings(['Missing required props: rawImage']);
       isNull(
         'should return null',
         <ImageContainer {...dataWithoutRawImageBlock} />,
@@ -67,6 +73,7 @@ describe('Image', () => {
     });
 
     describe('with no altTextBlock', () => {
+      suppressPropWarnings(['Cannot read property', 'of null']);
       isNull('should return null', <ImageContainer {...dataWithoutAltText} />);
     });
 
