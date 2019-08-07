@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 import path from 'path';
 import nodeLogger from '../../app/lib/logger.node';
+import { localBaseUrl } from '../../testHelpers/config';
 
 const mockLogError = jest.fn();
 
@@ -32,10 +33,10 @@ describe('getAssetsArray', () => {
       );
       const { getAssetsArray } = require('./index.js');
       expect(getAssetsArray('serviceName')).toEqual([
-        'http://localhost.bbc.com:7080/static/js/serviceName-12345.12345.js',
-        'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
-        'http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js',
-        'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
+        `${localBaseUrl}/static/js/serviceName-12345.12345.js`,
+        `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+        `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+        `${localBaseUrl}/static/js/main-12345.12345.js`,
       ]);
       expect(mockLogError).not.toHaveBeenCalled();
     });
@@ -47,9 +48,9 @@ describe('getAssetsArray', () => {
       );
       const { getAssetsArray } = require('./index.js');
       expect(getAssetsArray()).toEqual([
-        'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
-        'http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js',
-        'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
+        `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+        `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+        `${localBaseUrl}/static/js/main-12345.12345.js`,
       ]);
       expect(mockLogError).not.toHaveBeenCalled();
     });
@@ -63,9 +64,9 @@ describe('getAssetsArray', () => {
       );
       const { getAssetsArray } = require('./index.js');
       expect(getAssetsArray('serviceName')).toEqual([
-        'http://localhost.bbc.com:7080/static/js/serviceName-12345.12345.js',
-        'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
-        'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
+        `${localBaseUrl}/static/js/serviceName-12345.12345.js`,
+        `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+        `${localBaseUrl}/static/js/main-12345.12345.js`,
       ]);
       expect(mockLogError).not.toHaveBeenCalled();
     });
