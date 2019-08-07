@@ -2,18 +2,17 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import styled from 'styled-components';
-import Caption from '../Caption';
 import Canonical from './Canonical';
 import videoMetadata from './metadata';
-import mediaPlayerWrappers from './helpers/wrappers';
-
+import embedUrl from './helpers/embedUrl';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
+import useToggle from '../Toggle/useToggle';
+import { RequestContext } from '../../contexts/RequestContext';
+import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
-import { RequestContext } from '../../contexts/RequestContext';
-import useToggle from '../Toggle/useToggle';
 
 const StyledContainer = styled.div`
   padding-top: ${({ orientation }) =>
@@ -23,7 +22,7 @@ const StyledContainer = styled.div`
 `;
 
 const MediaPlayerContainer = ({ blocks }) => {
-  const { platform } = React.useContext(RequestContext);
+  const { id, platform } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
 
   if (!enabled || !blocks) {
@@ -37,25 +36,17 @@ const MediaPlayerContainer = ({ blocks }) => {
   }
 
   const metadata = videoMetadata(aresMediaBlock);
-  const captionBlock = filterForBlockType(blocks, 'caption');
   const nestedModel = pathOr(
     null,
     ['model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
 
-  const orientation = pathOr(null, ['versions', 0, 'types', 0], nestedModel);
   const versionId = pathOr(null, ['versions', 0, 'versionId'], nestedModel);
-
-  const {
-    ParentWrapper,
-    ChildWrapper,
-    Container,
-    wrapperSpan,
-  } = mediaPlayerWrappers(orientation);
+  const embedSource = embedUrl('local', id, versionId);
 
   return (
-    <Container>
+    <GridItemConstrainedMedium>
       {metadata ? (
         <Helmet>
           {
@@ -65,14 +56,10 @@ const MediaPlayerContainer = ({ blocks }) => {
           }
         </Helmet>
       ) : null}
-      <ParentWrapper>
-        <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
-          <StyledContainer>
-            <Canonical vpid={versionId} />
-          </StyledContainer>
-        </ChildWrapper>
-      </ParentWrapper>
-    </Container>
+      <StyledContainer>
+        <Canonical embedSource={embedSource} />
+      </StyledContainer>
+    </GridItemConstrainedMedium>
   );
 };
 

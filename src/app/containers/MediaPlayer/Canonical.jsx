@@ -24,21 +24,16 @@ const StyledIframe = styled.iframe`
   overflow: hidden;
 `;
 
-const MediaPlayer = ({ vpid }) => (
-  <StyledIframe
-    title="Media Player"
-    src={`http://localhost.bbc.com:8080/ws/av-embeds/c3wmq4d1y3wo/${vpid}?morph_env=test`}
-    scrolling="no"
-    allowFullScreen
-  />
+const MediaPlayer = ({ src }) => (
+  <StyledIframe title="Media Player" src={src} scrolling="no" allowFullScreen />
 );
 
-const Canonical = ({ vpid }) => {
+const Canonical = ({ embedSource }) => {
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
   const handlePlaceholderClick = () => setShowMediaPlayer(true);
 
   return showMediaPlayer ? (
-    <MediaPlayer vpid={vpid} />
+    <MediaPlayer src={embedSource} />
   ) : (
     <StyledPlaceholder onClick={handlePlaceholderClick}>
       <Image alt="Image Alt" src={IMG_SRC} />
