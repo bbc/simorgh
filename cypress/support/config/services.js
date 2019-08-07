@@ -102,9 +102,7 @@ export default {
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/igbo/articles/cxvxrj8tvppo',
       frontPage: '/igbo',
     },
   },
@@ -175,16 +173,14 @@ export default {
   news: {
     font: 'Reith',
     pageTypes: {
-      articles: {
-        asset:
-          Cypress.env('APP_ENV') === 'live' ? 'c5ll353v7y9o' : 'c6v11qzyv8po',
-      },
+      articles:
+        Cypress.env('APP_ENV') === 'live'
+          ? '/news/articles/c5ll353v7y9o'
+          : '/news/articles/c6v11qzyv8po',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/news/articles/cxvxrj8tvppo',
       frontPage: undefined,
     },
   },
@@ -199,16 +195,14 @@ export default {
   persian: {
     font: 'Nassim',
     pageTypes: {
-      articles: {
-        asset:
-          Cypress.env('APP_ENV') === 'live' ? 'c7eel0lmr4do' : 'c4vlle3q337o',
-      },
+      articles:
+        Cypress.env('APP_ENV') === 'live'
+          ? '/persian/articles/c7eel0lmr4do'
+          : '/persian/articles/c4vlle3q337o',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/persian/articles/cxvxrj8tvppo',
       frontPage: undefined,
     },
   },
@@ -219,9 +213,7 @@ export default {
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/pidgin/articles/cxvxrj8tvppo',
       frontPage: '/pidgin',
     },
   },
@@ -368,9 +360,7 @@ export default {
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/yoruba/articles/cxvxrj8tvppo',
       frontPage: '/yoruba',
     },
   },
