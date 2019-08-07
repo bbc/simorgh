@@ -82,7 +82,7 @@ stories
     ),
   )
   .add(
-    'lastPublished today > 10 hours ago and firstPublished today > 10 hours ago',
+    'lastPublished today more than 10 hours ago and firstPublished today more than 10 hours ago',
     () => (
       <WrappedArticleTimestamp
         firstPublished={twelveHoursAgo}
@@ -109,7 +109,7 @@ stories
     ),
   )
   .add(
-    'lastPublished today and > 10 hours and firstPublished before today',
+    'lastPublished today and more than 10 hours ago and firstPublished before today',
     () => (
       <WrappedArticleTimestamp
         firstPublished={threeDaysAgo}
