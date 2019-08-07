@@ -2,6 +2,7 @@ import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
+// Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
 const serviceFilter = service => ['news', 'persian'].includes(service);
 
 const filterPageTypes = (service, pageType) =>
