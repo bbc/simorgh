@@ -23,20 +23,23 @@ const rawBlock = type => ({
 describe('Block Containing Text', () => {
   test('generates the appropriate block json', () => {
     const testJson = {
+      id: 'testId',
       type: 'TheType',
       model: {
         blocks: [
           {
+            id: 'testId',
             type: 'text',
             model: {
               blocks: [
                 {
+                  id: 'testId',
                   type: 'paragraph',
                   model: {
                     text: 'hello',
                     blocks: [
                       {
-                        id: 0,
+                        id: 'testId',
                         type: 'fragment',
                         model: {
                           text: 'hello',
@@ -53,7 +56,7 @@ describe('Block Containing Text', () => {
       },
     };
 
-    const block = blockContainingText('TheType', 'hello');
+    const block = blockContainingText('TheType', 'hello', 'testId');
 
     expect(block).toEqual(testJson);
   });
