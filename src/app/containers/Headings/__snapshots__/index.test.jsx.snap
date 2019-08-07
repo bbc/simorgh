@@ -312,6 +312,356 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 </div>
 `;
 
+exports[`Headings with rich text headline with italic text should render h1 with <i> tag 1`] = `
+.c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <h1
+    className="c1"
+    id={null}
+  >
+    <i
+      className="c2"
+    >
+      All is italic
+    </i>
+  </h1>
+</div>
+`;
+
+exports[`Headings with rich text should render headline with bold & italic text should render h1 with <i><b> tags 1`] = `
+.c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <h1
+    className="c1"
+    id={null}
+  >
+    <i
+      className="c2"
+    >
+      <b>
+        All is bold and italic
+      </b>
+    </i>
+  </h1>
+</div>
+`;
+
+exports[`Headings with rich text should render headline with italic & bold text should render h1 with <b><i> tags 1`] = `
+.c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <h1
+    className="c1"
+    id={null}
+  >
+    <b>
+      <i
+        className="c2"
+      >
+        All is italic and bold
+      </i>
+    </b>
+  </h1>
+</div>
+`;
+
+exports[`Headings with rich text with different attributes should render headline with only middle of text italic should render correctly 1`] = `
+.c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  color: #3F3F42;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <h1
+    className="c1"
+    id={null}
+  >
+    This is 
+    <i
+      className="c2"
+    >
+      very
+    </i>
+     important
+  </h1>
+</div>
+`;
+
 exports[`Headings with subheadline data should render correctly 1`] = `
 .c1 {
   font-size: 1.25rem;

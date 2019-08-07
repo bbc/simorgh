@@ -25,4 +25,19 @@ describe('ErrorMain', () => {
     'should correctly render for an error page for Persian',
     <ErrorMain {...messaging} script={arabic} service="persian" />,
   );
+
+  shouldMatchSnapshot(
+    'should correctly render for an error page for Arabic',
+    <ErrorMain {...messaging} script={arabic} service="arabic" />,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render for an error page for Pashto',
+    <ErrorMain {...messaging} script={arabic} service="pashto" />,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render for an error page for Urdu',
+    <ErrorMain {...messaging} script={arabic} service="urdu" />,
+  );
 });
