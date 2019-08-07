@@ -1,12 +1,14 @@
 import React, { Fragment, useContext } from 'react';
-import { shape, bool } from 'prop-types';
+import { shape, bool, string, element } from 'prop-types';
 import StoryPromoComponent, {
   Headline,
   Summary,
   Link,
+  LiveLabel,
 } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { storyItem } from '../../models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
@@ -68,12 +70,32 @@ StoryPromoImage.defaultProps = {
   }),
 };
 
+const LiveComponent = ({ headline, service, dir }) => (
+  // eslint-disable-next-line jsx-a11y/aria-role
+  <span role="text">
+    <LiveLabel service={service} dir={dir}>
+      LIVE
+    </LiveLabel>
+    <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
+    {headline}
+  </span>
+);
+
+LiveComponent.propTypes = {
+  service: string.isRequired,
+  dir: string.isRequired,
+  headline: element.isRequired,
+};
+
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
-  const { script, datetimeLocale, service } = useContext(ServiceContext);
+  const { script, datetimeLocale, service, dir } = useContext(ServiceContext);
   const headline = pathOr(null, ['headlines', 'headline'], item);
   const url = pathOr(null, ['locators', 'assetUri'], item);
   const summary = pathOr(null, ['summary'], item);
+  const isLive = pathOr(null, ['cpsType'], item) === 'LIV';
   const timestamp = pathOr(null, ['timestamp'], item);
+
+  const linkcontents = <LinkContents item={item} />;
 
   if (!headline || !url) {
     return null;
@@ -84,7 +106,15 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
       {headline && (
         <Headline script={script} service={service} topStory={topStory}>
           <Link href={url}>
-            <LinkContents item={item} />
+            {isLive ? (
+              <LiveComponent
+                service={service}
+                headline={linkcontents}
+                dir={dir}
+              />
+            ) : (
+              linkcontents
+            )}
           </Link>
         </Headline>
       )}
