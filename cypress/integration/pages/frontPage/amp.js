@@ -1,4 +1,5 @@
 import config from '../../../support/config/services';
+import envConfig from '../../../support/config/envs';
 
 const serviceHasFrontPage = service =>
   config[service].pageTypes.frontPage !== undefined;
@@ -17,6 +18,17 @@ Object.keys(config)
             `${config[service].pageTypes.frontPage}.amp`,
             200,
             'text/html',
+          );
+        });
+      });
+
+      describe('ATI', () => {
+        it('should have an amp-analytics tag with the ati url', () => {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
           );
         });
       });
