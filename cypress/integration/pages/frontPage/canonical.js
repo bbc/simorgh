@@ -34,11 +34,16 @@ Object.keys(config)
             cy.get('html').should('not.have.attr', 'amp');
           });
 
-          it('should have one visible navigation', () => {
-            cy.get('nav')
-              .should('have.lengthOf', 1)
-              .should('be.visible');
-          });
+          const apuServices = ['arabic', 'pashto', 'urdu'];
+          // Currently, these services do not have a nav bar so this test will fail.
+          // However, all the other tests in this spec file are valid.
+          if (!apuServices.includes(service)) {
+            it('should have one visible navigation', () => {
+              cy.get('nav')
+                .should('have.lengthOf', 1)
+                .should('be.visible');
+            });
+          }
 
           it('should have a visually hidden top-level header', () => {
             cy.get('h1').should('have.length', 1);

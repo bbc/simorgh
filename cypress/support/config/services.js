@@ -27,12 +27,18 @@ export default {
     },
   },
   arabic: {
-    font: undefined,
+    font: 'Nassim',
     isWorldService: true,
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
-      frontPage: undefined,
+      articles:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/arabic/articles/c69dvq19k63o',
+      errorPage404:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/arabic/articles/c69dv123k63o',
+      frontPage: '/arabic',
     },
   },
   azeri: {
@@ -207,12 +213,18 @@ export default {
     },
   },
   pashto: {
-    font: undefined,
+    font: 'Nassim',
     isWorldService: true,
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
-      frontPage: undefined,
+      articles:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/pashto/articles/cng0e8v85eko',
+      errorPage404:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/pashto/articles/cng0e1235eko',
+      frontPage: '/pashto',
     },
   },
   persian: {
@@ -366,12 +378,18 @@ export default {
     },
   },
   urdu: {
-    font: undefined,
+    font: 'Nassim',
     isWorldService: true,
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
-      frontPage: undefined,
+      articles:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/urdu/articles/cx621klkm1ro',
+      errorPage404:
+        Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/urdu/articles/c69d1239k63o',
+      frontPage: '/urdu',
     },
   },
   uzbek: {

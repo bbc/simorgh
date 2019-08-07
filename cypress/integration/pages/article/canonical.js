@@ -257,18 +257,19 @@ Object.keys(config)
             });
         });
 
-        it('should have a visible image without a caption, and also not be lazyloaded', () => {
+        it('should have a visible image that is not lazyloaded and no noscript fallback', () => {
           cy.get('figure')
             .eq(0)
             .should('be.visible')
             .should('to.have.descendants', 'img')
-            .should('not.to.have.descendants', 'figcaption')
+
             .within(() => cy.get('noscript').should('not.exist'));
         });
 
-        it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
+        it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
           cy.get('figure')
-            .eq(2)
+            .eq(1)
+
             .within(() => {
               cy.get('div div div div').should(
                 'have.class',
@@ -277,25 +278,30 @@ Object.keys(config)
             })
             .scrollIntoView();
 
+          // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
+          // cleared during hydration. React won't render noscript tags on the client so if they
+          // get cleared during hydration, the following render wont re-add them.
+          // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
+          // https://github.com/bbc/simorgh/pull/1872 for more infomation.
           cy.get('figure')
-            .eq(2)
-            .should('be.visible')
-            .should('to.have.descendants', 'img')
-            .should('to.have.descendants', 'figcaption')
-
-            // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
-            // cleared during hydration. React won't render noscript tags on the client so if they
-            // get cleared during hydration, the following render wont re-add them.
-            // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
-            // https://github.com/bbc/simorgh/pull/1872 for more infomation.
+            .eq(1)
             .within(() => {
-              cy.get('noscript').contains('<img ');
               cy.get('div div').should(
                 'not.have.class',
                 'lazyload-placeholder',
               );
+              cy.get('noscript').contains('<img ');
             });
         });
+
+        if (service === 'news') {
+          it('should have a visible caption', () => {
+            cy.get('figure')
+              .should('be.visible')
+              .should('to.have.descendants', 'img')
+              .should('to.have.descendants', 'figcaption');
+          });
+        }
 
         it('should have an image copyright label with styling', () => {
           cy.copyrightDataWindow();
@@ -304,11 +310,9 @@ Object.keys(config)
         it('should render a title', () => {
           cy.window().then(win => {
             const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
-            if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-              cy.renderedTitle(`${seoHeadline} - BBC News`);
-            } else {
-              cy.renderedTitle(`${seoHeadline} - BBC News فارسی`);
-            }
+            cy.renderedTitle(
+              `${seoHeadline} - ${appConfig[service].brandName}`,
+            );
           });
         });
 
