@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, oneOf, shape, string, number } from 'prop-types';
-import { getIconLinks, iconAssetUrl } from './helpers/iconLinks';
+import { getIconLinks, getIconAssetUrl } from './helpers/iconLinks';
 import propTypeCheck from './propTypesCheck';
 
 const renderAmpHtml = (ampLink, isAmp) => {
@@ -117,7 +117,7 @@ const Metadata = ({
       <meta name="msapplication-TileColor" content={themeColor} />
       <meta
         name="msapplication-TileImage"
-        content={iconAssetUrl(service, '144x144')}
+        content={getIconAssetUrl(service, '144x144')}
       />
       <meta name="og:description" content={description} />
       <meta name="og:image" content={defaultImage} />
@@ -138,7 +138,7 @@ const Metadata = ({
       {getIconLinks(service, iconSizes)}
       <link
         rel="apple-touch-startup-image"
-        href={iconAssetUrl(service, '512x512')}
+        href={getIconAssetUrl(service, '512x512')}
       />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
@@ -172,9 +172,9 @@ Metadata.propTypes = {
     propTypeCheck(props, propName, 'Metadata', arrayOf(string)),
   themeColor: string.isRequired,
   timeFirstPublished: (props, propName) =>
-    propTypeCheck(props, propName, 'Metadata', string.isRequired),
+    propTypeCheck(props, propName, 'Metadata', number.isRequired),
   timeLastPublished: (props, propName) =>
-    propTypeCheck(props, propName, 'Metadata', string.isRequired),
+    propTypeCheck(props, propName, 'Metadata', number.isRequired),
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
