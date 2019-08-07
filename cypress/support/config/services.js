@@ -26,7 +26,7 @@ export default {
   arabic: {
     font: 'Nassim',
     pageTypes: {
-        articles:
+      articles:
         Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
@@ -195,7 +195,7 @@ export default {
   pashto: {
     font: 'Nassim',
     pageTypes: {
-        articles:
+      articles:
         Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
@@ -353,7 +353,7 @@ export default {
   urdu: {
     font: 'Nassim',
     pageTypes: {
-        articles:
+      articles:
         Cypress.env('APP_ENV') === 'test'
           ? undefined
           : {
