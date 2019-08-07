@@ -71,4 +71,28 @@ const tests = service => {
   });
 };
 
-iterator(filterCondition, tests);
+const canonTests = service => {
+  describe(`CANON ${service} Test we get a 404`, () => {
+    it('CANON should return a 404 error code', () => {
+      cy.testResponseCodeAndType(
+        config[service].pageTypes.errorPage404,
+        404,
+        'text/html',
+      );
+    });
+  });
+};
+
+const ampTests = service => {
+  describe(`AMP ${service} Test we get a 404`, () => {
+    it('AMP should return a 404 error code', () => {
+      cy.testResponseCodeAndType(
+        `${config[service].pageTypes.errorPage404}.amp`,
+        404,
+        'text/html',
+      );
+    });
+  });
+};
+
+iterator(filterCondition, tests, canonTests, ampTests);
