@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import Document from './Document/component';
 import getDials from './getDials';
+import { localBaseUrl } from '../testHelpers/config';
 
 jest.mock('./getDials');
 
@@ -173,15 +174,16 @@ describe('Server', () => {
             <Document
               app="<h1>Mock app</h1>"
               assets={[
-                'http://localhost.bbc.com:7080/static/js/news-12345.12345.js',
-                'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
-                'http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js',
-                'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
+                `${localBaseUrl}/static/js/news-12345.12345.js`,
+                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+                `${localBaseUrl}/static/js/main-12345.12345.js`,
               ]}
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
-                'http://localhost.bbc.com:7080',
+                localBaseUrl,
+                'https://logws1363.ati-host.net?',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
@@ -298,15 +300,16 @@ describe('Server', () => {
             <Document
               app="<h1>Mock app</h1>"
               assets={[
-                'http://localhost.bbc.com:7080/static/js/igbo-12345.12345.js',
-                'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
-                'http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js',
-                'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
+                `${localBaseUrl}/static/js/igbo-12345.12345.js`,
+                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+                `${localBaseUrl}/static/js/main-12345.12345.js`,
               ]}
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
-                'http://localhost.bbc.com:7080',
+                localBaseUrl,
+                'https://logws1363.ati-host.net?',
               ]}
               data={successDataResponse}
               helmet={{ head: 'tags' }}
