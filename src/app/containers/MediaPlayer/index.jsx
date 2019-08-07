@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
 `;
 
 const MediaPlayerContainer = ({ blocks }) => {
-  const { id, platform } = React.useContext(RequestContext);
+  const { env, id, platform } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
 
   if (!enabled || !blocks) {
@@ -43,7 +43,7 @@ const MediaPlayerContainer = ({ blocks }) => {
   );
 
   const versionId = pathOr(null, ['versions', 0, 'versionId'], nestedModel);
-  const embedSource = embedUrl('local', id, versionId);
+  const embedSource = embedUrl(env, id, versionId);
 
   return (
     <GridItemConstrainedMedium>
