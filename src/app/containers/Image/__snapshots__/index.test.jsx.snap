@@ -65,16 +65,19 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
     alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
     captionBlock={
       Object {
+        "id": null,
         "model": Object {
           "blocks": Array [
             Object {
+              "id": null,
               "model": Object {
                 "blocks": Array [
                   Object {
+                    "id": null,
                     "model": Object {
                       "blocks": Array [
                         Object {
-                          "id": 0,
+                          "id": null,
                           "model": Object {
                             "attributes": Array [],
                             "text": "Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme",
