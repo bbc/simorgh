@@ -21,8 +21,8 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .c10:hover .c12,
 .c10:focus .c12 {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #FFFFFF;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c8 {
@@ -115,7 +115,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
+  .c8 {
     display: grid;
     grid-auto-flow: column;
   }
@@ -159,13 +159,13 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-@supports not (display:grid) {
+@supports not (grid-template-columns:fit-content(200px)) {
   .c8 > li:first-child {
     width: 100%;
   }
 }
 
-@supports not (display:grid) {
+@supports not (grid-template-columns:fit-content(200px)) {
   .c9 {
     display: inline-block;
   }
@@ -287,7 +287,7 @@ exports[`FooterContainer should render correctly 1`] = `
       <p
         className="c13"
       >
-        © 3000 BBC. The BBC is not responsible for the content of external sites.
+        © 3000 BBC. The BBC is not responsible for the content of external sites. 
         <a
           className="c10 c14"
           href="https://www.bbc.co.uk/help/web/links/"
