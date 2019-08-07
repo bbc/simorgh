@@ -1,6 +1,7 @@
 export default {
   afaanoromoo: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -9,6 +10,7 @@ export default {
   },
   afrique: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -17,6 +19,7 @@ export default {
   },
   amharic: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -25,6 +28,7 @@ export default {
   },
   arabic: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -33,6 +37,7 @@ export default {
   },
   azeri: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -41,6 +46,7 @@ export default {
   },
   bengali: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -49,6 +55,7 @@ export default {
   },
   burmese: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -57,6 +64,7 @@ export default {
   },
   cymrufyw: {
     font: undefined,
+    isWorldService: false,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -65,6 +73,7 @@ export default {
   },
   gahauza: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -73,6 +82,7 @@ export default {
   },
   gujarati: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -81,6 +91,7 @@ export default {
   },
   hausa: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -89,6 +100,7 @@ export default {
   },
   hindi: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -97,19 +109,19 @@ export default {
   },
   igbo: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/igbo/articles/cxvxrj8tvppo',
       frontPage: '/igbo',
     },
   },
   indonesia: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -118,6 +130,7 @@ export default {
   },
   japanese: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -126,6 +139,7 @@ export default {
   },
   korean: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -134,6 +148,7 @@ export default {
   },
   kyrgyz: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -142,6 +157,7 @@ export default {
   },
   marathi: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -150,6 +166,7 @@ export default {
   },
   mundo: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -158,6 +175,7 @@ export default {
   },
   naidheadchan: {
     font: undefined,
+    isWorldService: false,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -166,6 +184,7 @@ export default {
   },
   nepali: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -174,19 +193,22 @@ export default {
   },
   news: {
     font: 'Reith',
+    isWorldService: false,
     pageTypes: {
-      articles: {
-        asset:
-          Cypress.env('APP_ENV') === 'live' ? 'c5ll353v7y9o' : 'c6v11qzyv8po',
-      },
-      errorPage404: {
-        asset: 'cxvxrj8tvppo',
-      },
+      articles:
+        Cypress.env('APP_ENV') === 'live'
+          ? '/news/articles/c5ll353v7y9o'
+          : '/news/articles/c6v11qzyv8po',
+      errorPage404:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/news/articles/cxvxrj8tvppo',
       frontPage: undefined,
     },
   },
   pashto: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -195,37 +217,34 @@ export default {
   },
   persian: {
     font: 'Nassim',
+    isWorldService: true,
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
           ? undefined
-          : {
-              asset: 'c4vlle3q337o',
-            },
+          : '/persian/articles/c4vlle3q337o',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/persian/articles/cxvxrj8tvppo',
       frontPage: undefined,
     },
   },
   pidgin: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/pidgin/articles/cxvxrj8tvppo',
       frontPage: '/pidgin',
     },
   },
   portuguese: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -242,6 +261,7 @@ export default {
   },
   russian: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -258,6 +278,7 @@ export default {
   },
   sinhala: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -274,6 +295,7 @@ export default {
   },
   swahili: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -282,6 +304,7 @@ export default {
   },
   tamil: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -290,6 +313,7 @@ export default {
   },
   telugu: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -298,6 +322,7 @@ export default {
   },
   thai: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -306,6 +331,7 @@ export default {
   },
   tigrinya: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -314,6 +340,7 @@ export default {
   },
   turkce: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -322,6 +349,7 @@ export default {
   },
   ukchina: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -330,6 +358,7 @@ export default {
   },
   ukranian: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -338,6 +367,7 @@ export default {
   },
   urdu: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -346,6 +376,7 @@ export default {
   },
   uzbek: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -354,6 +385,7 @@ export default {
   },
   vietnamese: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,
@@ -362,19 +394,19 @@ export default {
   },
   yoruba: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404:
-        Cypress.env('APP_ENV') === 'live' || 'test'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
-          : {
-              asset: 'cxvxrj8tvppo',
-            },
+          : '/yoruba/articles/cxvxrj8tvppo',
       frontPage: '/yoruba',
     },
   },
   zhongwen: {
     font: undefined,
+    isWorldService: true,
     pageTypes: {
       articles: undefined,
       errorPage404: undefined,

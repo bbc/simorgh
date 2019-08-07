@@ -1,0 +1,29 @@
+{
+    "metadata": {
+        "id": "urn:bbc:ares::asset:korean/bbc_korean_radio/liveradio",
+        "tags": {}
+    },
+    "content": {
+        "blocks": [
+            {
+                "id": "liveradio",
+                "type": "media",
+                "format": "audio",
+                "title": "TODO",
+                "caption": "TODO",
+                "versions": [
+                    {
+                        "versionId": "liveradio"
+                    }
+                ]
+            }
+        ]
+    },
+    "promo": {
+        "subType": "IDX",
+        "name": "TODO: Korean Live Radio",
+        "uri": "/korean/bbc_korean_radio/liveradio",
+        "id": "TODO",
+        "type": "simple"
+    }
+}

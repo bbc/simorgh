@@ -21,7 +21,7 @@ const Container = (service, bbcOrigin, platform, data, id, pageType) => {
         pageType={pageType}
         service={service}
       >
-        <MetadataContainer {...data} />
+        <MetadataContainer {...articleDataNews} {...data} />
       </RequestContextProvider>
     </ServiceContextProvider>
   );
@@ -128,9 +128,11 @@ describe('Metadata Container', () => {
         ),
       );
 
-      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
-        true,
-      );
+      expect(
+        Wrapper.containsMatchingElement(
+          <MetadataContainer {...articleDataNews} />,
+        ),
+      ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           false,
@@ -200,9 +202,11 @@ describe('Metadata Container', () => {
         ),
       );
 
-      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
-        true,
-      );
+      expect(
+        Wrapper.containsMatchingElement(
+          <MetadataContainer {...articleDataNews} />,
+        ),
+      ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           true,
@@ -272,9 +276,11 @@ describe('Metadata Container', () => {
         ),
       );
 
-      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
-        true,
-      );
+      expect(
+        Wrapper.containsMatchingElement(
+          <MetadataContainer {...articleDataPersian} />,
+        ),
+      ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           false,
@@ -320,9 +326,11 @@ describe('Metadata Container', () => {
         ),
       );
 
-      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
-        true,
-      );
+      expect(
+        Wrapper.containsMatchingElement(
+          <MetadataContainer {...articleDataPersian} />,
+        ),
+      ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           true,
@@ -368,9 +376,11 @@ describe('Metadata Container', () => {
         ),
       );
 
-      expect(Wrapper.containsMatchingElement(<MetadataContainer />)).toEqual(
-        true,
-      );
+      expect(
+        Wrapper.containsMatchingElement(
+          <MetadataContainer {...frontPageData} />,
+        ),
+      ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           false,

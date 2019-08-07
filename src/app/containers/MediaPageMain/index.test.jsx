@@ -5,6 +5,19 @@ import amharicConfig from '../../lib/config/services/amharic';
 
 const liveRadioScaffoldProps = {
   service: 'amharic',
+  pageData: {
+    metadata: {
+      id: 'bbc_amharic_radio',
+      tags: {},
+    },
+    promo: {
+      subType: 'IDX',
+      name: 'BBC Amharic Radio',
+      uri: '/amharic/bbc_amharic_radio/liveradio',
+      id: 'some-id',
+      type: 'simple',
+    },
+  },
   match: {
     params: {
       serviceId: 'bbc_amharic_radio',

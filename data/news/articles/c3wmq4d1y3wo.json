@@ -1172,7 +1172,7 @@
                         "synopses": {
                           "short": "This is a really plain green test vertical video"
                         },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxrbn.jpg",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01mxrbn.jpg",
                         "embedding": true,
                         "advertising": true,
                         "versions": [
