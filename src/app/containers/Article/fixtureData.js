@@ -34,8 +34,8 @@ const articleDataBuilder = (
   content: {
     model: {
       blocks: [
-        blockContainingText('headline', headlineText),
-        singleTextBlock(paragraphText),
+        blockContainingText('headline', headlineText, 1),
+        singleTextBlock(paragraphText, 2),
       ],
     },
   },

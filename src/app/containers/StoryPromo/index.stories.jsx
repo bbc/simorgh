@@ -21,6 +21,9 @@ const firstFixture = pathOr(
   ['content', 'groups', '0', 'items', '0'],
   fixture,
 );
+
+firstFixture.timestamp = Date.now();
+
 const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
 

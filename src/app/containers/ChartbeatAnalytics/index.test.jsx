@@ -8,6 +8,7 @@ import ChartBeatAnalytics from '.';
 import * as testUtils from '../../lib/analyticsUtils/chartbeat';
 import * as amp from './amp';
 import * as canonical from './canonical';
+import { localBaseUrl } from '../../../testHelpers/config';
 
 const ContextWrap = ({ pageType, platform, origin, children }) => (
   <RequestContextProvider
@@ -50,7 +51,7 @@ describe('Charbeats Analytics Container', () => {
         <ContextWrap
           platform="canonical"
           pageType="article"
-          origin="localhost.bbc.com"
+          origin={localBaseUrl}
         >
           <ChartBeatAnalytics />
         </ContextWrap>,
