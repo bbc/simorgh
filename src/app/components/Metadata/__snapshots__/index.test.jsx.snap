@@ -60,11 +60,11 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content={1539188371344}
+    content="1539188371344"
     name="article:modified_time"
   />
   <meta
-    content={1514811600000}
+    content="1514811600000"
     name="article:published_time"
   />
   <meta
@@ -304,11 +304,11 @@ exports[`Metadata News article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content={1539188371344}
+    content="1539188371344"
     name="article:modified_time"
   />
   <meta
-    content={1514811600000}
+    content="1514811600000"
     name="article:published_time"
   />
   <meta
@@ -530,11 +530,11 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content={1539188371344}
+    content="1539188371344"
     name="article:modified_time"
   />
   <meta
-    content={1514811600000}
+    content="1514811600000"
     name="article:published_time"
   />
   <meta
@@ -759,11 +759,11 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content={1539188371344}
+    content="1539188371344"
     name="article:modified_time"
   />
   <meta
-    content={1514811600000}
+    content="1514811600000"
     name="article:published_time"
   />
   <meta
@@ -1187,7 +1187,7 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="robots"
   />
   <meta
-    content={1539188371344}
+    content="#B80000"
     name="theme-color"
   />
   <meta
@@ -1195,7 +1195,7 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="viewport"
   />
   <title>
-    @BBCNews
+    Index title
      - 
     BBC News
   </title>
@@ -1235,11 +1235,11 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="description"
   />
   <meta
-    content={202020}
+    content={101010}
     name="fb:admins"
   />
   <meta
-    content="pcm"
+    content={202020}
     name="fb:app_id"
   />
   <meta
@@ -1247,7 +1247,7 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="mobile-web-app-capable"
   />
   <meta
-    content={1539188371344}
+    content="#B80000"
     name="msapplication-TileColor"
   />
   <meta
@@ -1267,7 +1267,7 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="og:image:alt"
   />
   <meta
-    content={Array []}
+    content="pcm"
     name="og:locale"
   />
   <meta
@@ -1275,11 +1275,11 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="og:site_name"
   />
   <meta
-    content="@BBCNews"
+    content="Index title"
     name="og:title"
   />
   <meta
-    content={false}
+    content="IDX"
     name="og:type"
   />
   <meta
@@ -1307,11 +1307,11 @@ exports[`Metadata WS Front Page should render correctly 1`] = `
     name="twitter:image:src"
   />
   <meta
-    content="IDX"
+    content="@BBCNews"
     name="twitter:site"
   />
   <meta
-    content="@BBCNews"
+    content="Index title"
     name="twitter:title"
   />
   <link
@@ -1451,11 +1451,11 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content={1539188371344}
+    content="1539188371344"
     name="article:modified_time"
   />
   <meta
-    content={1514811600000}
+    content="1514811600000"
     name="article:published_time"
   />
   <meta
