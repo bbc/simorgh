@@ -1,27 +1,27 @@
 import React from 'react';
 
-export const iconAssetUrl = (service, size) =>
+export const getIconAssetUrl = (service, size) =>
   `https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-${size}.png`;
 
 const createIconLinks = (service, iconSizes, iconType) => {
   return iconSizes.map(size => {
+    const iconAssetUrl = getIconAssetUrl(service, size);
+    const key = `${service}-${size}`;
+
     if (iconType === 'icon') {
       return (
         <link
+          key={key}
           rel="icon"
           type="image/png"
-          href={iconAssetUrl(service, size)}
+          href={iconAssetUrl}
           sizes={size}
         />
       );
     }
 
     return (
-      <link
-        rel="apple-touch-icon"
-        sizes={size}
-        href={iconAssetUrl(service, size)}
-      />
+      <link key={key} rel="apple-touch-icon" sizes={size} href={iconAssetUrl} />
     );
   });
 };
