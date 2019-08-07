@@ -47,7 +47,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48920294"
                         },
                         "summary": "김정은 위원장이 역점을 둔 '정보화'와 '과학기술' 부각도 눈에 띈다.",
-                        "timestamp": 1562922199,
+                        "timestamp": 1562922198000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -86,7 +86,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48920285"
                                 },
                                 "summary": "인판티노 회장은 지난 2월 대한축구협회에 2023년 여자 월드컵의 남북 공동개최 방안을 제시했고 대한축구협회도 이를 긍정적으로 받아들였다.",
-                                "timestamp": 1562663689,
+                                "timestamp": 1562663688000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48920285",
                                 "type": "cps"
@@ -100,7 +100,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48904606"
                                 },
                                 "summary": "최 씨는 앞서 12차례나 북한을 방문했지만, 이번에는 방북 신청을 하지 않았다고 통일부는 밝혔다.",
-                                "timestamp": 1562570313,
+                                "timestamp": 1562570312000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48904606",
                                 "type": "cps"
@@ -114,7 +114,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48865549"
                                 },
                                 "summary": "북한에 거주하고 있는 서양인 약 200명으로 추정된다.",
-                                "timestamp": 1562298123,
+                                "timestamp": 1562298122000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48865549",
                                 "type": "cps"
@@ -132,7 +132,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48960035"
                         },
                         "summary": "미국이 주도하는 유엔군사령부가 일본을 유사시 한반도에 병력을 투입할 수 있도록 추친한다는 보도를 부인했다.",
-                        "timestamp": 1562910404,
+                        "timestamp": 1562910403000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -174,7 +174,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-44365640"
                                 },
                                 "summary": "북미정상회담이 다시 정상궤도에 오르고 한국 정부가 종전선언을 추진하면서 주한미군의 존재가 다시 도마 위에 올랐다.",
-                                "timestamp": 1528187597,
+                                "timestamp": 1528187596000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-44365640",
                                 "type": "cps"
@@ -188,7 +188,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-44351577"
                                 },
                                 "summary": "군대, 평양 방문, 비무장지대, 유엔군사령부...종전에 대한 4가지 궁금증",
-                                "timestamp": 1528148684,
+                                "timestamp": 1528148683000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-44351577",
                                 "type": "cps"
@@ -206,7 +206,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48961885"
                         },
                         "summary": "\"머리가 천장에 닿고… 사람들이 날라다녔다\"",
-                        "timestamp": 1562917160,
+                        "timestamp": 1562917159000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -256,7 +256,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48741071"
                                 },
                                 "summary": "티파니 아담스는 사건 후 악몽에 시달리고 있다고 한다",
-                                "timestamp": 1561342892,
+                                "timestamp": 1561342891000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48741071",
                                 "type": "cps"
@@ -270,7 +270,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48898421"
                                 },
                                 "summary": "지난 일요일 한 남자가 런던 가든에서 숨진채 발견됐다. 케냐를 출발해 영국에 도착한 비행기의 착륙 기어에서 떨어졌다는 추정이 나왔다.",
-                                "timestamp": 1562465810,
+                                "timestamp": 1562465809000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48898421",
                                 "type": "cps"
@@ -284,7 +284,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-48904204"
                                 },
                                 "summary": "사우디의 저가항공사 플라이어딜이 보잉 대신 에어버스 기종을 선택했다.",
-                                "timestamp": 1562556816,
+                                "timestamp": 1562556815000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-48904204",
                                 "type": "cps"
@@ -302,7 +302,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48959985"
                         },
                         "summary": "\"무게가 1조t에 달하는 빙산치고는 움직임이 날렵하다\"",
-                        "timestamp": 1562900832,
+                        "timestamp": 1562900831000,
                         "byline": {
                             "name": "조나단 아모스",
                             "title": "BBC 과학 전문 기자",
@@ -374,7 +374,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-45961186"
                                 },
                                 "summary": "현재 수면 위에서 보이는 부분은 실제 빙산의 일각일 뿐이다.",
-                                "timestamp": 1540341907,
+                                "timestamp": 1540341906000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-45961186",
                                 "type": "cps"
@@ -388,7 +388,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47662827"
                                 },
                                 "summary": "세계에서 가장 높은 에베레스트 산에서 빙하가 녹으면서 많은 시신들이 발견되고 있다.",
-                                "timestamp": 1553218490,
+                                "timestamp": 1553218489000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-47662827",
                                 "type": "cps"
@@ -402,7 +402,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-45167220"
                                 },
                                 "summary": "홍수로 시장이나 집이 물에 잠기는 경우가 잦은 자카르타는 2050년이 되면 일부분이 아예 바다 속으로 가라앉게 된다.",
-                                "timestamp": 1534298461,
+                                "timestamp": 1534298460000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-45167220",
                                 "type": "cps"
@@ -420,7 +420,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48920290"
                         },
                         "summary": "안디엔 가족 모두 '부테이코'라는 호흡법을 3달 동안 연습해왔다.",
-                        "timestamp": 1562907904,
+                        "timestamp": 1562907903000,
                         "byline": {
                             "name": "아시타 나게시",
                             "title": "BBC 뉴스",
@@ -484,7 +484,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48418964"
                                 },
                                 "summary": "'게임중독'으로 학교나 회사를 빠질 수 있을까? 그럼 프로게이머는 치료를 받아야 할까?",
-                                "timestamp": 1558934910,
+                                "timestamp": 1558934909000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48418964",
                                 "type": "cps"
@@ -498,7 +498,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47823116"
                                 },
                                 "summary": "이 연구에 따르면 이스라엘의 식습관이 가장 건강했고 우즈베키스탄이 가장 좋지 않았다.",
-                                "timestamp": 1554432872,
+                                "timestamp": 1554432871000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-47823116",
                                 "type": "cps"
@@ -516,7 +516,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48959663"
                         },
                         "summary": "할키디키에 폭풍, 우박이 쏟아지면서 7명이 죽고 수십 명이 부상당했다.",
-                        "timestamp": 1562896088,
+                        "timestamp": 1562896087000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -566,7 +566,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48891638"
                                 },
                                 "summary": "평균 온도보다 섭씨 기준 14도가량 높은 기록이다.",
-                                "timestamp": 1562391282,
+                                "timestamp": 1562391281000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48891638",
                                 "type": "cps"
@@ -580,7 +580,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48767691"
                                 },
                                 "summary": "불과 며칠 전까지 37도를 넘었던 과달라하라가 순식간에 얼음 밭으로 변했다.",
-                                "timestamp": 1562055912,
+                                "timestamp": 1562055911000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48767691",
                                 "type": "cps"
@@ -594,7 +594,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48717113"
                                 },
                                 "summary": "프랑스에서는 2003년 8월 폭염으로 무려 1만 5000명에 가까운 국민이 사망한 바 있다.",
-                                "timestamp": 1561444411,
+                                "timestamp": 1561444410000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48717113",
                                 "type": "cps"
@@ -612,7 +612,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48946785"
                         },
                         "summary": "지난 3개월간 이곳 사슴 9마리가 관광객이 버린 쓰레기를 먹고 사망했다.",
-                        "timestamp": 1562896800,
+                        "timestamp": 1562896799000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -662,7 +662,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47634283"
                                 },
                                 "summary": "배에서 나온 플라스틱 봉지는 수를 셀 수 없을 정도였다.",
-                                "timestamp": 1553050935,
+                                "timestamp": 1553050934000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/news-47634283",
                                 "type": "cps"
@@ -676,7 +676,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-46492436"
                                 },
                                 "summary": "어획이 불가능해지면서 어부들의 고뇌가 깊어지고 있다.",
-                                "timestamp": 1544242009,
+                                "timestamp": 1544242008000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/news-46492436",
                                 "type": "cps"
@@ -694,7 +694,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48947796"
                         },
                         "summary": "한·미 대북 관계자 11일 독일 베를린서 만나 북핵 실무협상 논의",
-                        "timestamp": 1562834520,
+                        "timestamp": 1562834519000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -748,7 +748,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48824430"
                                 },
                                 "summary": "전문가들은 판문점 회담이 교착 상태에 빠진 북미 비핵화 협상에 돌파구를 마련했다는 데 큰 의미를 부여했다.",
-                                "timestamp": 1561969634,
+                                "timestamp": 1561969633000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48824430",
                                 "type": "cps"
@@ -762,7 +762,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47327994"
                                 },
                                 "summary": "핵무장을 시도했던 다른 나라의 사례를 살펴보면 세 가지의 예상 시나리오를 예상할 수 있다.",
-                                "timestamp": 1551071730,
+                                "timestamp": 1551071729000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/news-47327994",
                                 "type": "cps"
@@ -780,7 +780,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48946012"
                         },
                         "summary": "본사를 영국에서 싱가포르로 옮긴 후 제임스 다이슨은 640억 원 짜리 펜트하우스를 구압한 것으로 알려졌다.",
-                        "timestamp": 1562820213,
+                        "timestamp": 1562820212000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -819,7 +819,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-45204237"
                                 },
                                 "summary": "주택난을 겪는 뉴질랜드가 외국인의 부동산 매입을 규제하는 법안을 채택했다.",
-                                "timestamp": 1534395400,
+                                "timestamp": 1534395399000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-45204237",
                                 "type": "cps"
@@ -833,7 +833,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-47284856"
                                 },
                                 "summary": "집값 상승은 그리스인들에게 결코 좋은 소식이 아니었다.",
-                                "timestamp": 1550537264,
+                                "timestamp": 1550537263000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-47284856",
                                 "type": "cps"
@@ -851,7 +851,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48946353"
                         },
                         "summary": "우크라이나 대통령은 인류 역사상 최악의 원자력 참사로 기록된 체르노빌의 출입제한구역을 관광지로 만들 것이라고 말했다.",
-                        "timestamp": 1562814543,
+                        "timestamp": 1562814542000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -893,7 +893,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-45429843"
                                 },
                                 "summary": "일본 정부가 방사능 피폭을 사망 원인으로 인정한 것은 이번이 처음이다.",
-                                "timestamp": 1536201355,
+                                "timestamp": 1536201354000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-45429843",
                                 "type": "cps"
@@ -907,7 +907,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-42538243"
                                 },
                                 "summary": "한국이 원전 기술을 처음 갖게 된 시기와 세계 원전 시장의 동향 등 원전에 대해 알아야 할 것을 정리했다.",
-                                "timestamp": 1514950219,
+                                "timestamp": 1514950218000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-42538243",
                                 "type": "cps"
@@ -921,7 +921,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-47990931"
                                 },
                                 "summary": "코미디언 출신 젤렌스키는 정치풍자 드라마에서 대통령이 되는 고교 교사 역을 맡아 큰 사랑을 받았다.",
-                                "timestamp": 1555902246,
+                                "timestamp": 1555902245000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-47990931",
                                 "type": "cps"
@@ -939,7 +939,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48946453"
                         },
                         "summary": "20여 개가 넘는 국가가 유엔 인권 기구를 통해 중국 신장 내 재교육 수용소에 갇힌 위구르족 석방을 요구하는 공동성명을 냈다.",
-                        "timestamp": 1562813696,
+                        "timestamp": 1562813695000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -972,7 +972,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-45715450"
                                 },
                                 "summary": "중국이 일부 무슬림 소수민족을 박해하고 있다는 비판에 직면한 가운데, 이들 상당수가 강제 수용소에 구금된 것으로 알려졌다.",
-                                "timestamp": 1539823229,
+                                "timestamp": 1539823228000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-45715450",
                                 "type": "cps"
@@ -986,7 +986,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47193889"
                                 },
                                 "summary": "'아버지들'이라는 곡을 연주했다는 이유로 수용소에 갇힌 것으로 알려졌다.",
-                                "timestamp": 1549849208,
+                                "timestamp": 1549849207000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-47193889",
                                 "type": "cps"
@@ -1000,7 +1000,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-48891568"
                                 },
                                 "summary": "중국이 신장 위구르 자치구에서 아이들을 계획적으로 가족, 신앙, 언어로부터 격리하고 있다는 조사 결과가 나왔다.",
-                                "timestamp": 1562386352,
+                                "timestamp": 1562386351000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/international-48891568",
                                 "type": "cps"
@@ -1018,7 +1018,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48946003"
                         },
                         "summary": "차기 영국 총리 자리를 두고 경쟁하는 보리스 존슨은 대럭 대사를 적극적으로 지지하지 않아 강한 비판을 받고 있다.",
-                        "timestamp": 1562806461,
+                        "timestamp": 1562806460000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1067,7 +1067,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-48917115"
                                 },
                                 "summary": "미국 도널드 트럼프 대통령이 주미 영국대사 킴 대럭에게 \"우린 그와 더는 일하지 않겠다\"며 공격 수위를 높였다.",
-                                "timestamp": 1562649385,
+                                "timestamp": 1562649384000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-48917115",
                                 "type": "cps"
@@ -1081,7 +1081,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-48904196"
                                 },
                                 "summary": "영국 외무부는 영국 대사의 보고서가 어떻게 유출됐는지를 공식적으로 조사할 예정이다.",
-                                "timestamp": 1562549043,
+                                "timestamp": 1562549042000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-48904196",
                                 "type": "cps"
@@ -1099,7 +1099,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48936781"
                         },
                         "summary": "학교 로고를 교복에 포함할지, 하복과 동복의 구분이 필요한지에 대한 점도 웨일스 학교가 고려해야 할 사항이다.",
-                        "timestamp": 1562805900,
+                        "timestamp": 1562805899000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1143,7 +1143,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-48522601"
                                 },
                                 "summary": "멕시코의 수도 멕시코시티에서 남녀 교복의 구분을 없애는 정책을 시행한다.",
-                                "timestamp": 1559712418,
+                                "timestamp": 1559712417000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-48522601",
                                 "type": "cps"
@@ -1157,7 +1157,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47889513"
                                 },
                                 "summary": "한 벌에 평균 20~30만원이 넘는 교복 세트를 여기서는 2~3만원에 구매할 수 있다.",
-                                "timestamp": 1555026005,
+                                "timestamp": 1555026004000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/news-47889513",
                                 "type": "cps"
@@ -1175,7 +1175,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48938941"
                         },
                         "summary": "양헝쥔은 광저우 공항에서 공안에 연행됐다.",
-                        "timestamp": 1562765214,
+                        "timestamp": 1562765213000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1229,7 +1229,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-47035601"
                                 },
                                 "summary": "중국의 한 인권변호사가 4년 6개월의 징역형을 받았다.",
-                                "timestamp": 1548722154,
+                                "timestamp": 1548722153000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-47035601",
                                 "type": "cps"
@@ -1243,7 +1243,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47193889"
                                 },
                                 "summary": "'아버지들'이라는 곡을 연주했다는 이유로 수용소에 갇힌 것으로 알려졌다.",
-                                "timestamp": 1549849208,
+                                "timestamp": 1549849207000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-47193889",
                                 "type": "cps"
@@ -1261,7 +1261,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/48920288"
                         },
                         "summary": "올해 북한의 농업용수 공급량이 지난해 절반 수준에도 미치지 못하며, 모내기를 마친 벼와 옥수수 등이 피해를 입고 있다고 전했다.",
-                        "timestamp": 1562745230,
+                        "timestamp": 1562745229000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1299,7 +1299,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48196424"
                                 },
                                 "summary": "한국 정부가 북한에 대한 식량지원 계획을 공식화했다",
-                                "timestamp": 1557306120,
+                                "timestamp": 1557306119000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48196424",
                                 "type": "cps"
@@ -1313,7 +1313,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48223853"
                                 },
                                 "summary": "북한 기상관측 이래 최저 수준 강수량이 지속되고 있다.",
-                                "timestamp": 1557733820,
+                                "timestamp": 1557733819000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48223853",
                                 "type": "cps"
@@ -1327,7 +1327,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-45112712"
                                 },
                                 "summary": "북한에도 35도 이상의 고온 현상이 이어지면서 가을 작황에 상당한 피해가 예상된다.",
-                                "timestamp": 1533725673,
+                                "timestamp": 1533725672000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-45112712",
                                 "type": "cps"
@@ -1345,7 +1345,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/48920286"
                         },
                         "summary": "일본은 노동력 부족이 사회문제가 되면서 이를 충당할 로봇이 속속 등장했다.",
-                        "timestamp": 1562742317,
+                        "timestamp": 1562742316000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1420,7 +1420,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-44914548"
                                 },
                                 "summary": "스마트폰으로 조종하는 이 인공지능 로봇은 심지어 감자로 만드는 것도 가능하다.",
-                                "timestamp": 1532236062,
+                                "timestamp": 1532236061000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/news-44914548",
                                 "type": "cps"
@@ -1434,7 +1434,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/48325380"
                                 },
                                 "summary": "로봇이 모방한 인간의 글씨는 어떤 모습일까?",
-                                "timestamp": 1558247023,
+                                "timestamp": 1558247022000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/48325380",
                                 "type": "cps"
@@ -1452,7 +1452,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48932213"
                         },
                         "summary": "\"여성과 LGBTQ 공동체 그리고 표현의 자유에 대한 지지를 분명하게 드러내는 것이 중요하다고 생각했다.\"",
-                        "timestamp": 1562734397,
+                        "timestamp": 1562734396000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1490,7 +1490,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-46772993"
                                 },
                                 "summary": "사우디에서는 남성이 여성 몰래 이혼을 진행하는 '몰래 이혼'이 만연했다.",
-                                "timestamp": 1546741007,
+                                "timestamp": 1546741006000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-46772993",
                                 "type": "cps"
@@ -1504,7 +1504,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48797055"
                                 },
                                 "summary": "한 사우디 여성이 자신의 삶이 어떻게 변했는지 직접 전해왔다.",
-                                "timestamp": 1561702823,
+                                "timestamp": 1561702822000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48797055",
                                 "type": "cps"
@@ -1518,7 +1518,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-46872666"
                                 },
                                 "summary": "사우디아라비아 여성은 주요 결정을 내릴 때 남성 후견인의 허가를 받아야 한다",
-                                "timestamp": 1547518193,
+                                "timestamp": 1547518192000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/news-46872666",
                                 "type": "cps"
@@ -1536,7 +1536,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48932571"
                         },
                         "summary": "홍콩 시민들은 캐리 람의 발언을 어떻게 보고 있을까",
-                        "timestamp": 1562731295,
+                        "timestamp": 1562731294000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1594,7 +1594,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-48632304"
                                 },
                                 "summary": "홍콩에서 범죄인 인도법 개정에 반대하는 시위로 폭력 사태가 빚어지자 당국이 홍콩의 금융지구에 있는 정부 건물들을 폐쇄했다.",
-                                "timestamp": 1560490599,
+                                "timestamp": 1560490598000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-48632304",
                                 "type": "cps"
@@ -1608,7 +1608,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48783446"
                                 },
                                 "summary": "이 노래는 이미 수십년 전부터 홍콩에서 불렸다.",
-                                "timestamp": 1561706247,
+                                "timestamp": 1561706246000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/news-48783446",
                                 "type": "cps"
@@ -1622,7 +1622,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-48604377"
                                 },
                                 "summary": "홍콩이 중국으로의 범죄인 인도를 허용하는 법안의 2차 심사를 추진하면서 분노한 시민들이 다시 거리에 모여들고 있다.",
-                                "timestamp": 1560318186,
+                                "timestamp": 1560318185000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/international-48604377",
                                 "type": "cps"
@@ -1640,7 +1640,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48932002"
                         },
                         "summary": "이집트 정부가 문제의 유물이 도난당한 것이라고 경고했음에도 유물은 470만 파운드에 팔렸다.",
-                        "timestamp": 1562722606,
+                        "timestamp": 1562722605000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107805299",
@@ -1666,7 +1666,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48877999"
                                 },
                                 "summary": "이집트 정부는 앞서 도난 유물이라며 경매 취소를 요청했다.",
-                                "timestamp": 1562292236,
+                                "timestamp": 1562292235000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-48877999",
                                 "type": "cps"
@@ -1680,7 +1680,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47084084"
                                 },
                                 "summary": "투탕카멘 무덤은 관람객들로 인해 훼손된 상태였다.",
-                                "timestamp": 1548988909,
+                                "timestamp": 1548988908000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:korean/news-47084084",
                                 "type": "cps"
@@ -1694,7 +1694,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/korean/international-46601309"
                                 },
                                 "summary": "이번 발견은 최근 수십 년 간 '유일무이'한 발견으로 불린다.",
-                                "timestamp": 1545125135,
+                                "timestamp": 1545125134000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:korean/international-46601309",
                                 "type": "cps"
@@ -1722,7 +1722,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48946783"
                         },
                         "summary": "이번 판결로 유승준이 바로 한국에 들어올 수 있게 된 것은 아니다.",
-                        "timestamp": 1562822030,
+                        "timestamp": 1562822029000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1762,7 +1762,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48917975"
                         },
                         "summary": "인스타그램이 온라인 괴롭힘을 방지하기 위해, 부정적인 댓글을 감지하고 올리기 전에 경고 창을 띄우는 프로그램을 개발했다.",
-                        "timestamp": 1562642707,
+                        "timestamp": 1562642706000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1814,7 +1814,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48919115"
                         },
                         "summary": "김성준 전 SBS 앵커는 '성폭력범죄 처벌특별법' 위반 혐의로 불구속 입건됐다.",
-                        "timestamp": 1562655296,
+                        "timestamp": 1562655295000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1859,7 +1859,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48919605"
                         },
                         "summary": "다만 법안을 \"철수\"시킬 것이라는 말은 차마 하지 않았다.",
-                        "timestamp": 1562656258,
+                        "timestamp": 1562656257000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1911,7 +1911,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48906416"
                         },
                         "summary": "성차별과 인종차별이 결합하면서 이주여성들은 더 많은 폭력에 노출된다.",
-                        "timestamp": 1562573295,
+                        "timestamp": 1562573294000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1971,7 +1971,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48907426"
                         },
                         "summary": "문재인 대통령은 8일 일본의 수출 규제조치 철회를 촉구했다.",
-                        "timestamp": 1562576515,
+                        "timestamp": 1562576514000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2016,7 +2016,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48904866"
                         },
                         "summary": "시위 현수막 역시 중국 본토에서 사용하는 간체자로 쓰여졌다.",
-                        "timestamp": 1562556060,
+                        "timestamp": 1562556059000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2061,7 +2061,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/48895182"
                         },
                         "summary": "미중 간 무역전쟁으로 여겨졌던 분쟁 양상은 '기술 냉전'으로 변화하고 있다",
-                        "timestamp": 1562468505,
+                        "timestamp": 1562468504000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2154,7 +2154,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48878379"
                         },
                         "summary": "삼성전자는 지난해 2분기와 비교해서 절반 이상인 56.29% 급감할 것으로 예상했다.",
-                        "timestamp": 1562303793,
+                        "timestamp": 1562303792000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2203,7 +2203,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48891572"
                         },
                         "summary": "일본이 국제적 비난을 뒤로하고 상업 목적의 '포경(고래잡이)'을 재개했다.",
-                        "timestamp": 1562391869,
+                        "timestamp": 1562391868000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2288,7 +2288,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48863895"
                         },
                         "summary": "호주를 대신해 스웨덴 대사관 관계자들이 북한 당국 고위 관료와 3일 만나 시글리의 실종 문제를 제기했다.",
-                        "timestamp": 1562223019,
+                        "timestamp": 1562223018000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2339,7 +2339,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48872040"
                         },
                         "summary": "호주 소비자 단체는 삼성전자가 방수 휴대전화의 성능을 부풀려 광고했다고 주장했다.",
-                        "timestamp": 1562247527,
+                        "timestamp": 1562247526000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2391,7 +2391,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48850230"
                         },
                         "summary": "티베트의 달라이 라마가 여성 차별적인 발언에 대해 사과했다.",
-                        "timestamp": 1562129564,
+                        "timestamp": 1562129563000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2431,7 +2431,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48821822"
                         },
                         "summary": "이날 회담에서는 현송월 노동당 선전선동부 부부장이 의전 업무를 지휘하는 모습을 볼 수 있었다.",
-                        "timestamp": 1561972033,
+                        "timestamp": 1561972032000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2476,7 +2476,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48822071"
                         },
                         "summary": "홍콩 시위 참가자들은 디지털 발자취를 남기지 않기 위해 여러 노력을 하고 있다.",
-                        "timestamp": 1561953261,
+                        "timestamp": 1561953260000,
                         "byline": {
                             "name": "데니 빈센트 ",
                             "title": "BBC 뉴스, 홍콩 ",
@@ -2531,7 +2531,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48813340"
                         },
                         "summary": "미국 대통령들은 왜 항상 DMZ를 방문할까?",
-                        "timestamp": 1561820357,
+                        "timestamp": 1561820356000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2619,7 +2619,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48797761"
                         },
                         "summary": "트럼프 대통령은 문재인 대통령과 함께 DMZ에서 만나자고 김정은 위원장에게 깜짝 제안했다.",
-                        "timestamp": 1561773858,
+                        "timestamp": 1561773857000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2670,7 +2670,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48947794"
                         },
                         "summary": "가르쳐 주지 않았는데 음악에 맞춰 춤추는 앵무새 스노우볼",
-                        "timestamp": 1562897491,
+                        "timestamp": 1562897490000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2755,7 +2755,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48946634"
                         },
                         "summary": "미국 여자축구 대표팀은 이번 우승으로 통산 4회 월드컵 우승 기록을 세웠다.",
-                        "timestamp": 1562818032,
+                        "timestamp": 1562818031000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2835,7 +2835,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48870731"
                         },
                         "summary": "이예나 씨는 지금까지 가르친 학생만 500명이 넘는 10년차 수학 강사다",
-                        "timestamp": 1562727482,
+                        "timestamp": 1562727481000,
                         "byline": {
                             "name": "  이윤녕",
                             "title": "BBC 코리아",
@@ -2890,7 +2890,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48898421"
                         },
                         "summary": "지난 일요일 한 남자가 런던 가든에서 숨진채 발견됐다. 케냐를 출발해 영국에 도착한 비행기의 착륙 기어에서 떨어졌다는 추정이 나왔다.",
-                        "timestamp": 1562465810,
+                        "timestamp": 1562465809000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2935,7 +2935,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48891638"
                         },
                         "summary": "평균 온도보다 섭씨 기준 14도가량 높은 기록이다.",
-                        "timestamp": 1562391282,
+                        "timestamp": 1562391281000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2991,7 +2991,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48767692"
                         },
                         "summary": "미국 플로리다의 한 해변에서 어미 새가 새끼에게 담배꽁초를 물려주는 모습이 포착됐다.",
-                        "timestamp": 1562134122,
+                        "timestamp": 1562134121000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3031,7 +3031,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/48898422"
                         },
                         "summary": "사라 하인슬리는 선천적으로 양손 없이 태어났다.",
-                        "timestamp": 1562469721,
+                        "timestamp": 1562469720000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07g7qv0",
@@ -3095,7 +3095,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48878000"
                         },
                         "summary": "해양 포유류인 듀공은 보통 18개월까지 어미와 함께 지낸다.",
-                        "timestamp": 1562466040,
+                        "timestamp": 1562466039000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3175,7 +3175,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48863603"
                         },
                         "summary": "사람들은 조안나를 종종 동남아시아 결혼 이민자로 생각한다.",
-                        "timestamp": 1562221254,
+                        "timestamp": 1562221253000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3249,7 +3249,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48767693"
                         },
                         "summary": "이번 프라이드 행진은 7월 5일 '동물원의 밤'을 시작으로 3일간 진행된다.",
-                        "timestamp": 1562203847,
+                        "timestamp": 1562203846000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3290,7 +3290,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48797055"
                         },
                         "summary": "한 사우디 여성이 자신의 삶이 어떻게 변했는지 직접 전해왔다.",
-                        "timestamp": 1561702823,
+                        "timestamp": 1561702822000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3335,7 +3335,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48782047"
                         },
                         "summary": "미국 조지아주의 한 숲 속에서 아기 울음소리가 들렸다.",
-                        "timestamp": 1561776372,
+                        "timestamp": 1561776371000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3405,7 +3405,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48769218"
                         },
                         "summary": "프리다는 4개 나라에서 총 12명을 구했다.",
-                        "timestamp": 1561533096,
+                        "timestamp": 1561533095000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3446,7 +3446,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48767578"
                         },
                         "summary": "샌프란시스코에는 미국 내 전자담배 업계 1위인 쥴(Juul)의 본사가 있다.",
-                        "timestamp": 1561516388,
+                        "timestamp": 1561516387000,
                         "byline": {
                             "name": "러셀 하튼",
                             "title": "BBC 뉴스, 뉴욕",
@@ -3500,7 +3500,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48741071"
                         },
                         "summary": "티파니 아담스는 사건 후 악몽에 시달리고 있다고 한다",
-                        "timestamp": 1561342892,
+                        "timestamp": 1561342891000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3540,7 +3540,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48741092"
                         },
                         "summary": "우크라이나 정치인들도 이날 행사에 참여했다.",
-                        "timestamp": 1561345305,
+                        "timestamp": 1561345304000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3580,7 +3580,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48716024"
                         },
                         "summary": "김라경은 뛰어난 실력으로 화제가 됐지만 고등학교 진학과 함께 당장 야구를 할 수 있는 팀이 없었다.",
-                        "timestamp": 1561167548,
+                        "timestamp": 1561167547000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3658,7 +3658,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48714782"
                         },
                         "summary": "국제사회에서 '고래 감옥'이라는 질타를 받았다.",
-                        "timestamp": 1561081255,
+                        "timestamp": 1561081254000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3724,7 +3724,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48879479"
                         },
                         "summary": "수천 명의 소수민족 무슬림 어린이들이 대규모 기숙학교에서 '문화적 개조'를 받고 있다.",
-                        "timestamp": 1562386518,
+                        "timestamp": 1562386517000,
                         "byline": {
                             "name": "존 서드워스",
                             "title": "BBC 뉴스, 신장 자치구",
@@ -3775,7 +3775,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48852013"
                         },
                         "summary": "이번 여자 월드컵에는 다수의 성소수자 선수가 있다. 하지만 남자 축구에선 이러한 사례가 발견되지 않는다.",
-                        "timestamp": 1562380102,
+                        "timestamp": 1562380101000,
                         "byline": {
                             "name": "By 페르난도 두르테",
                             "title": "BBC World Service",
@@ -3845,7 +3845,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48681813"
                         },
                         "summary": "프랑스에선 국민의 3분의 1이 백신의 안전성에 동의하지 않는 것으로 나타났다.",
-                        "timestamp": 1560983580,
+                        "timestamp": 1560983579000,
                         "byline": {
                             "name": "미쉘 로버트",
                             "title": "BBC 뉴스",
@@ -3913,7 +3913,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48754793"
                         },
                         "summary": "사업가 데이브 아스프리는 버터와 오일을 넣은 커피의 유행을 일으킨 장본인이다.",
-                        "timestamp": 1561778450,
+                        "timestamp": 1561778449000,
                         "byline": {
                             "name": "앤 캐시디",
                             "title": "비즈니스 리포터",
@@ -3964,7 +3964,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48757550"
                         },
                         "summary": "일반 사람들은 흔히 먼지와 세균, 청결, 위생을 구분하지 못한다.",
-                        "timestamp": 1561512851,
+                        "timestamp": 1561512850000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4016,7 +4016,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48636845"
                         },
                         "summary": "'책, 음악, 게임 광고는 단 한개도 없었다.'",
-                        "timestamp": 1560911761,
+                        "timestamp": 1560911760000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4072,7 +4072,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48771239"
                         },
                         "summary": "우리가 흔히 '상식'이라고 여긴 민간요법이 효과가 없거나 건강을 더 악화시킬 수 있다.",
-                        "timestamp": 1561606722,
+                        "timestamp": 1561606721000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4128,7 +4128,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48717112"
                         },
                         "summary": "25일부터 음주운전 단속기준·처벌이 강화된다.",
-                        "timestamp": 1561344129,
+                        "timestamp": 1561344128000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4172,7 +4172,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48737771"
                         },
                         "summary": "집단의 일정 비율이 백신을 맞으면 놀라운 일이 생긴다.",
-                        "timestamp": 1561336979,
+                        "timestamp": 1561336978000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4258,7 +4258,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48687287"
                         },
                         "summary": "\"비행기 여행의 부끄러움\"이라는 뜻의 플뤼그스캄(flygskam)이라는 단어까지 나왔다.",
-                        "timestamp": 1561001228,
+                        "timestamp": 1561001227000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4311,7 +4311,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/international-48681825"
                         },
                         "summary": "백신은 매년 수백 만 명을 살린다. 이게 백신의 존재 이유다.",
-                        "timestamp": 1560983573,
+                        "timestamp": 1560983572000,
                         "byline": {
                             "name": "롤란드 휴",
                             "title": "BBC 뉴스",
@@ -4369,7 +4369,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48716027"
                         },
                         "summary": "유이치 이시이 대표는 부모나 친구, 친척인 척 해주는 회사의 설립자다. 그를 만나 아주 많은 가족에 속하면서 동시에 그 어디에도 속하지 않은 그 모순적 상황에 대해 들어봤다.",
-                        "timestamp": 1561177630,
+                        "timestamp": 1561177629000,
                         "byline": {
                             "name": "프란시스코 히메네스 데 라 푸엔테",
                             "title": "BBC 뉴스 문도, 도쿄",
@@ -4439,7 +4439,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48672566"
                         },
                         "summary": "학문 계획이 없는 학생들에게 수학은 얼마나 의미가 있을까?",
-                        "timestamp": 1560834649,
+                        "timestamp": 1560834648000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -4483,7 +4483,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48636838"
                         },
                         "summary": "여자가 중심이 되는 영화 제작을 위해 직접 보지도 않을 영화에 돈을 지불하는 사람들의 이야기.",
-                        "timestamp": 1560750877,
+                        "timestamp": 1560750876000,
                         "byline": {
                             "name": "라라 오웬 & 윤인경",
                             "title": "BBC",
@@ -4543,7 +4543,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48633553"
                         },
                         "summary": "아프리카돼지열병(ASF)이 중국에 이어 북한에서도 공식 확인된 가운데 한국도 긴급방역조치를 취했다.",
-                        "timestamp": 1560734699,
+                        "timestamp": 1560734698000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4583,7 +4583,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:korean/news-48634327"
                         },
                         "summary": "태영호 전 공사는 14일 서울에서 열린 '북한 종교와 신앙의 자유 국제연대' 창립 포럼에서 북한의 종교 자유를 위해 노력해야 한다고 말했다.",
-                        "timestamp": 1560503805,
+                        "timestamp": 1560503804000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
