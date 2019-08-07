@@ -9,6 +9,7 @@ import * as testUtils from '../../lib/analyticsUtils/chartbeat';
 import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
+import { localBaseUrl } from '../../../testHelpers/config';
 
 const defaultToggleState = {
   test: {
@@ -84,7 +85,7 @@ describe('Charbeats Analytics Container', () => {
         <ContextWrap
           platform="canonical"
           pageType="article"
-          origin="localhost.bbc.com"
+          origin={localBaseUrl}
         >
           <ChartbeatAnalytics data={mockData} />
         </ContextWrap>,
