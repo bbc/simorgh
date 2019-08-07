@@ -1,7 +1,12 @@
 {
     "metadata": {
         "id": "urn:bbc:ares::asset:indonesia/bbc_indonesian_radio/liveradio",
-        "tags": {}
+        "tags": {},
+        "language": "id-ID",
+        "analyticsLabels": {
+            "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page",
+            "pageTitle": "BBC Indonesia Radio - BBC News Indonesia"
+        }
     },
     "content": {
         "blocks": [

@@ -4,6 +4,7 @@ import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
 import pathOr from 'ramda/src/pathOr';
 
+import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -17,6 +18,7 @@ const MediaPageMain = props => {
 
   return (
     <Fragment>
+      <ATIAnalytics data={pageData} />
       <MetadataContainer metadata={pageData.metadata} promo={pageData.promo} />
       <main role="main">
         <Grid>

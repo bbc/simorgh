@@ -5,23 +5,23 @@ import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import ArticleAtiParams from './params/article';
 import FrontPageAtiParams from './params/frontpage';
+import MediaPageAtiParams from './params/media';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 
 const ATIAnalytics = ({ data }) => {
   const { pageType, platform } = React.useContext(RequestContext);
 
-  let pageviewParams = '';
-  switch (pageType) {
-    case 'article':
-      pageviewParams = ArticleAtiParams(data);
-      break;
-    case 'frontPage':
-      pageviewParams = FrontPageAtiParams(data);
-      break;
-    default:
-      return null;
+  const validPageTypes = ['article', 'frontPage', 'media'];
+  if (!validPageTypes.includes(pageType)) {
+    return null;
   }
+
+  const pageviewParams = {
+    article: ArticleAtiParams,
+    frontPage: FrontPageAtiParams,
+    media: MediaPageAtiParams,
+  }[pageType](data);
 
   return platform === 'amp' ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
