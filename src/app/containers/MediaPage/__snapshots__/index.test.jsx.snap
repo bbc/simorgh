@@ -145,8 +145,8 @@ Array [
 
 .c5:focus,
 .c5:hover {
-  color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 .c3 {
