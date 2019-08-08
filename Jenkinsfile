@@ -15,13 +15,13 @@ def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
 def staticAssetsDist = 'static.zip'
 
-def runDevelopmentTests(){
+def runDevelopmentChromaticTests(){
   sh 'make install'
-  sh 'make developmentTests'
+  sh 'make developmentChromaticTests'
 }
 
-def runDevelopmentChromaticTests(){
-  sh 'make developmentChromaticTests'
+def runDevelopmentTests(){
+  sh 'make developmentTests'
 }
 
 def runProductionTests(){
