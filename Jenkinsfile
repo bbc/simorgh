@@ -85,241 +85,70 @@ def buildStaticAssets(env, tag) {
   stash name: "staticAssets${tag}", includes: "static${tag}.zip"
 }
 
-pipeline {
-  agent any
-  options {
-    timeout(time: 90, unit: 'MINUTES')
-    timestamps ()
-  }
-  environment {
-    APP_DIRECTORY = "app"
-    CI = true
-  }
-  parameters {
-    string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
-    booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
-  }
-  stages {
-    stage ('Build and Test') {
-      when {
-        expression { env.BRANCH_NAME != 'latest' }
-      }
-      parallel {
-        stage ('Test Development') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-              runDevelopmentTests()
-            }
-          }
-        }
-        stage ('Chromatic Test Development') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-              runDevelopmentChromaticTests()
-            }
-          }
-        }        
-        stage ('Test Production') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            runProductionTests()
-          }
-        }
-      }
-      post {
-        always {
-          script {
-            stageName = env.STAGE_NAME
-          }
-        }
-      }
+node {
+    options {
+        timeout(time: 90, unit: 'MINUTES')
+        timestamps ()
     }
-    stage ('Build, Test & Package') {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
-      parallel {
-        stage ('Test Development') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-              runDevelopmentTests()
-            }
-          }
+    environment {
+        APP_DIRECTORY = "app"
+        CI = true
+    }
+    parameters {
+        string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
+        booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
+    }
+
+    agent {
+        docker {
+            image "${nodeImage}"
+            args '-u root -v /etc/pki:/certs'
         }
-        stage ('Test Production and Zip Production') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            // Testing
-            runProductionTests()
+    }
 
-            // Moving files necessary for production to `pack` directory.
-            sh "./scripts/jenkinsProductionFiles.sh"
-
-            script {
-              // Get Simorgh commit information
-              getCommitInfo()
-
-              // Set build tag information
-              buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
-            }
-
-            // Write commit information to build_tag.txt
-            sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
-
-            sh "rm -f ${packageName}"
-            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-            stash name: 'simorgh', includes: packageName
-          }
+    stage ('Install & Build') {
+        when {
+            expression { env.BRANCH_NAME != 'latest' }
         }
-        stage ('Build storybook dist') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh "rm -f storybook.zip"
+          
+        steps {
             sh 'make install'
-            sh 'make buildStorybook'
-            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            stash name: 'simorgh_storybook', includes: storybookDist
-          }
         }
-        stage ('Build Static Assets') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
+    }
+
+    stage ('Application Tests & Prod Zip') {
+        parallel {
+            stage ('Dev Tests') {
+                sh 'make developmentTests'
             }
-          }
-          steps {
-            sh 'make install'
 
-            buildStaticAssets("test", "TEST")
-            buildStaticAssets("live", "LIVE")
-          }
-        }
-      }
-      post {
-        always {
-          script {
-            stageName = env.STAGE_NAME
-          }
-        }
-      }
-    }
-    stage ('Run Pipeline') {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
-      options {
-        // Do not perform the SCM step
-        skipDefaultCheckout true
-      }
-      agent any
-      steps {
-        unstash 'simorgh'
-        build(
-          job: 'simorgh-infrastructure-test/latest',
-          parameters: [
-            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-            booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
-          ],
-          propagate: true,
-          wait: true
-        )
-      }
-    }
-  }
-  post {
-    always {
-      script {
-        // Get Simorgh commit information
-        getCommitInfo()
-      }
+            stage ('ChromaticQA') {
+                sh 'make developmentChromaticTests'
+            }
 
-      // Clean the workspace
-      cleanWs()
-    }
-    aborted {
-      script {
-        if(env.BRANCH_NAME == 'latest') {
-          def messageParameters = [
-            buildStatus: 'Aborted',
-            branchName: env.BRANCH_NAME,
-            colour: messageColor,
-            gitCommit: appGitCommit,
-            gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
-            stageName: stageName,
-            slackChannel: params.SLACK_CHANNEL
-          ]
-          notifySlack(messageParameters)
+            stage ('Prod Tests') {
+                sh 'make productionTests'
+            }
+
+            stage ('Zip Prod Build') {
+                // Moving files necessary for production to `pack` directory.
+                sh "./scripts/jenkinsProductionFiles.sh"
+
+                script {
+                // Get Simorgh commit information
+                getCommitInfo()
+
+                // Set build tag information
+                buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
+                }
+
+                // Write commit information to build_tag.txt
+                sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
+
+                sh "rm -f ${packageName}"
+                zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+                stash name: 'simorgh', includes: packageName
+            }
         }
-      }
     }
-    failure {
-      script {
-        if(env.BRANCH_NAME == 'latest') {
-          def messageParameters = [
-            buildStatus: 'Failed',
-            branchName: env.BRANCH_NAME,
-            colour: messageColor,
-            gitCommit: appGitCommit,
-            gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
-            stageName: stageName,
-            slackChannel: params.SLACK_CHANNEL
-          ]
-          notifySlack(messageParameters)
-        }
-      }
-    }
-    unstable {
-      script {
-        if(env.BRANCH_NAME == 'latest') {
-          def messageParameters = [
-            buildStatus: 'Unstable',
-            branchName: env.BRANCH_NAME,
-            colour: messageColor,
-            gitCommit: appGitCommit,
-            gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
-            stageName: stageName,
-            slackChannel: params.SLACK_CHANNEL
-          ]
-          notifySlack(messageParameters)
-        }
-      }
-    }
-  }
 }
