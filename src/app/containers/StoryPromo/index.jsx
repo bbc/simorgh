@@ -128,7 +128,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           locale={datetimeLocale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
-          format="D MMMM YYYY"
+          format="LL"
           script={script}
           padding={false}
           service={service}
