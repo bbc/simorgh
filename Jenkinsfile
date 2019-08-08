@@ -22,7 +22,7 @@ def runDevelopmentTests(){
 
 def runDevelopmentChromaticTests(){
   sh 'make install'
-  sh 'make developmentChromaticTests'
+  sh 'make developmentTestsChromatic'
 }
 
 def runProductionTests(){
