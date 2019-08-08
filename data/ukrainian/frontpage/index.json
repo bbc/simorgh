@@ -56,7 +56,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48962725"
             },
             "summary": "Вже за кілька десятиліть середня температура на Землі зросте на 3,5°C влітку і 4,7°C взимку, кажуть дослідники.",
-            "timestamp": 1562922635,
+            "timestamp": 1562922634000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -105,7 +105,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-47075445"
                 },
                 "summary": "Полярний вихор, який накрив велику частину Сполучених Штатів, приніс з собою рекордні морози і аномальні снігопади. У Чикаго цього тижня холодніше, ніж в Антарктиді. А як же глобальне потепління?",
-                "timestamp": 1549031530,
+                "timestamp": 1549031529000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:ukrainian/features-47075445",
                 "type": "cps"
@@ -119,7 +119,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/news-48899252"
                 },
                 "summary": "Приполярна Аляска пережила цього тижня найспекотніший день в історії спостережень - температура в Анкориджі перевищила 32ºC",
-                "timestamp": 1562481678,
+                "timestamp": 1562481677000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:ukrainian/news-48899252",
                 "type": "cps"
@@ -148,7 +148,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-48962330"
             },
             "summary": "Американського R&B співака і володаря трьох Grammy заарештували в Чикаго у справі про дитячу порнографію та перешкоджанні правосуддю, повідомляють американські ЗМІ.",
-            "timestamp": 1562927664,
+            "timestamp": 1562927663000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -189,7 +189,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48952913"
             },
             "summary": "Майже 100 фільмів, 11 світових прем'єр та 9 статуеток \"Золотий Дюк\" - таким буде кінофестиваль, який пройде в Одесі вже вдесяте. Чим ще здивує ОМКФ, що варто побачити і не пропустити, дізнавалась ВВС News Україна.",
-            "timestamp": 1562912225,
+            "timestamp": 1562912224000,
             "byline": {
               "name": "Діана Куришко",
               "title": "BBC News Україна",
@@ -250,7 +250,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48960532"
             },
             "summary": "Сина президента Жаїра Болсонару називають \"тіньовим\" міністром закордонних справ країни.",
-            "timestamp": 1562918649,
+            "timestamp": 1562918648000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -299,7 +299,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/vert-fut-48928659"
             },
             "summary": "Середній результат IQ в світі почав повільно знижуватися з 1990-тих років. Чи означає це початок деградації людського інтелекту?",
-            "timestamp": 1562917400,
+            "timestamp": 1562917399000,
             "byline": {
               "name": "Девід Робсон",
               "title": "BBC Future",
@@ -349,7 +349,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48960529"
             },
             "summary": "Напередодні ЗМІ оприлюднили інформацію про вірогідну зустріч представників прихильної до Кремля партії \"Ліга Півночі\" та російських бізнесменів.",
-            "timestamp": 1562910623,
+            "timestamp": 1562910622000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -388,7 +388,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/news-48320546"
                 },
                 "summary": "Політик, який очолює праву Партію свободи, домовлявся із, ймовірно, донькою російського олігарха про підтримку на виборах.",
-                "timestamp": 1558184926,
+                "timestamp": 1558184925000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:ukrainian/news-48320546",
                 "type": "cps"
@@ -402,7 +402,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-48423081"
                 },
                 "summary": "\"Зелена хвиля\" та частковий успіх ультраправих. Що означають результати виборів у Європарламент для всієї Європи?",
-                "timestamp": 1558957905,
+                "timestamp": 1558957904000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:ukrainian/features-48423081",
                 "type": "cps"
@@ -420,7 +420,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-48960525"
             },
             "summary": "71-річна жінка померла ще три роки тому, проте її донька нікого про це не сповістила.",
-            "timestamp": 1562906826,
+            "timestamp": 1562906825000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -459,7 +459,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-48818144"
                 },
                 "summary": "Навіщо вчені створюють \"ферми трупів\" і що вони кажуть про етичну сторону своїх досліджень?",
-                "timestamp": 1561908744,
+                "timestamp": 1561908743000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:ukrainian/features-48818144",
                 "type": "cps"
@@ -473,7 +473,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/other-news-48836508"
                 },
                 "summary": "Як повідомляє поліція, тіло ймовірно впало з відсіку шасі літака, який летів у Лондон з Найробі.",
-                "timestamp": 1562045313,
+                "timestamp": 1562045312000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:ukrainian/other-news-48836508",
                 "type": "cps"
@@ -491,7 +491,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48958927"
             },
             "summary": "Дві могили, які розкрили на Тевтонському кладовищі у Ватикані під час розслідування зникнення дівчини, виявилися порожніми.",
-            "timestamp": 1562875759,
+            "timestamp": 1562875758000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -541,7 +541,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-48947653"
                 },
                 "summary": "У четвер на територію кладовища у Ватикані прийдуть поліцейські, щоб провести ексгумацію двох могил. Передбачається, що в одній з них можуть знаходитися останки дівчинки, яка зникла 36 років тому.",
-                "timestamp": 1562839806,
+                "timestamp": 1562839805000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:ukrainian/features-48947653",
                 "type": "cps"
@@ -555,7 +555,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/news-46059998"
                 },
                 "summary": "Знайдені кістки в посольстві Ватикану можуть допомогти розкрити таємницю зникнення двох дівчат у 1980-х роках.",
-                "timestamp": 1541081602,
+                "timestamp": 1541081601000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:ukrainian/news-46059998",
                 "type": "cps"
@@ -580,7 +580,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-48954013"
             },
             "summary": "Цей какаду зі США не лише гарно відчуває ритм, а й знає 14 танцювальних рухів.",
-            "timestamp": 1562865264,
+            "timestamp": 1562865263000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -649,7 +649,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-48907503"
             },
             "summary": "Парламентські вибори наближаються, і вже зовсім скоро українцям належить зробити дуже серйозний вибір.",
-            "timestamp": 1562846039,
+            "timestamp": 1562846038000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -718,7 +718,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-48944723"
             },
             "summary": "У Москві протестували на підтримку затриманих в анексованому Криму кримських татар",
-            "timestamp": 1562780403,
+            "timestamp": 1562780402000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -786,7 +786,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-48907497"
             },
             "summary": "Яна з Василькова, відома як Jerry Heil, авторка пісні \"охрана_отмєна\", з трьох років ходила в музичну школу та вчилася в консерваторії.",
-            "timestamp": 1562683301,
+            "timestamp": 1562683300000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -867,7 +867,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48947244"
             },
             "summary": "Штормовий вітер, сильні зливи та сильний град накрили грецький півострів Халкідіки. Шість туристів загинули, десятки людей постраждали.",
-            "timestamp": 1562828255,
+            "timestamp": 1562828254000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -907,7 +907,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-48943978"
             },
             "summary": "Авіакомпанії American Airlines довелося вибачатися за інцидент, коли лікарці наказали прикритися, аби зайти на борт літака.",
-            "timestamp": 1562820628,
+            "timestamp": 1562820627000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -965,7 +965,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48924775"
             },
             "summary": "Американський історик, автор книг з історії країн Східної Європи розповідає, чому Україна потребує створення інституту російської мови, а українці обрали зміну поколінь в політиці.",
-            "timestamp": 1562736631,
+            "timestamp": 1562736630000,
             "byline": {
               "name": "Георгій Ерман",
               "title": "BBC Україна",
@@ -1022,7 +1022,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/vert-cul-48885866"
             },
             "summary": "Кінокритик BBC Culture обрав декілька фільмів, які з'являться на кіноекранах у розпал літніх канікул.",
-            "timestamp": 1562488147,
+            "timestamp": 1562488146000,
             "byline": {
               "name": "Ніколас Барбер",
               "title": "BBC Culture",
@@ -1082,7 +1082,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/vert-cul-48885872"
             },
             "summary": "Спробуйте уявити собі: одного ранку ви прокидаєтеся в світі, в якому ніхто ніколи не чув про \"Бітлз\" та їхні пісні. Окрім вас.",
-            "timestamp": 1562421207,
+            "timestamp": 1562421206000,
             "byline": {
               "name": "Карін Джеймс",
               "title": "BBC Culture",
@@ -1150,7 +1150,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48955797"
             },
             "summary": "Президент Росії Путін провів телефонну розмову з президентом України Володимиром Зеленським, повідомив речник Кремля.",
-            "timestamp": 1562862080,
+            "timestamp": 1562862079000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1200,7 +1200,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48948180"
             },
             "summary": "Згідно з опитуванням групи \"Рейтинг\", до Ради проходять п'ять партій.",
-            "timestamp": 1562835484,
+            "timestamp": 1562835483000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1269,7 +1269,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48941037"
             },
             "summary": "На першому місці в рейтингу - співачка Тейлор Свіфт. Хто після неї?",
-            "timestamp": 1562771062,
+            "timestamp": 1562771061000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1338,7 +1338,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48949387"
             },
             "summary": "Верховна Рада України включила примусову хімічну кастрацію до переліку покарань за зґвалтування неповнолітніх. Закон ще має підписати президент.",
-            "timestamp": 1562846503,
+            "timestamp": 1562846502000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1378,7 +1378,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48948174"
             },
             "summary": "Мер Харкова відновив бюст радянського маршала, повалений у червні націоналістами.",
-            "timestamp": 1562831520,
+            "timestamp": 1562831519000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1447,7 +1447,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48949390"
             },
             "summary": "Ця знахідка може змінити уявлення про те, коли сучасні люди покинули Африканський континент.",
-            "timestamp": 1562865858,
+            "timestamp": 1562865857000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1505,7 +1505,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48923438"
             },
             "summary": "Експерти наводять несподівані причини, чому у вас можуть виникнути труднощі з втратою зайвих кілограмів, а ті, хто дотримуються дієти, розповідають, що саме спрацювало для них.",
-            "timestamp": 1562904833,
+            "timestamp": 1562904832000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1562,7 +1562,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/sport-48935279"
             },
             "summary": "У півфіналі Еліна Світоліна не змогла здолати румунську тенісистку Сімону Халеп.",
-            "timestamp": 1562852414,
+            "timestamp": 1562852413000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1631,7 +1631,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/press-review-48950623"
             },
             "summary": "Яких масштабів досягла криза інституту шлюбу у світі, коли Лондон стане тропічним містом і як вдалося відновити популяцію носорогів в Танзанії - в огляді ЗМІ.",
-            "timestamp": 1562845751,
+            "timestamp": 1562845750000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
@@ -1671,7 +1671,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/press-review-48922425"
             },
             "summary": "Хто зацікавлений у скандалі довкола британського посла, чи існує антидот для \"Новачка\" і чому людям важко схуднути - в огляді іноземної преси.",
-            "timestamp": 1562669504,
+            "timestamp": 1562669503000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
@@ -1738,7 +1738,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/learningenglish-48887963"
             },
             "summary": "Lingohack - урок англійської на основі новин тижня - присвячений ролі штучного інтелекту при відборі на роботу.",
-            "timestamp": 1562341054,
+            "timestamp": 1562341053000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1835,7 +1835,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/blog-olexandr-ponomariv-48926042"
             },
             "summary": "Доктор філологічних наук Олександр Пономарів відповідає на запитання читачів.",
-            "timestamp": 1562678363,
+            "timestamp": 1562678362000,
             "byline": {
               "name": "Олександр Пономарів",
               "title": "доктор філологічних наук, професор",
@@ -1892,7 +1892,7 @@
             "uri": "https://www.bbc.com/ukrainian/features-48396796",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1562341058,
+            "timestamp": 1562341057000,
             "type": "link"
           }
         ],
@@ -1912,7 +1912,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48927762"
             },
             "summary": "Через величезну зливу затопило столицю США Вашингтон, а також прилеглі райони штатів Вірджинія та Меріленд.",
-            "timestamp": 1562686389,
+            "timestamp": 1562686388000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1962,7 +1962,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48911646"
             },
             "summary": "На вихідних на Контрактовій площі відбулось дефіле моделей пишних і худих, на візках і з вітиліго. Організатори шоу закликають приймати і любити себе такими, якими ви є.",
-            "timestamp": 1562594132,
+            "timestamp": 1562594131000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2013,7 +2013,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48901179"
             },
             "summary": "Хтось ворожить, пускаючи вінки на воду, а хтось вночі йде шукати цвіт папороті. Дивіться у фотогалереї, як відтворювали старовинні обряди у музеї національної культури і побуту Пирогово під Києвом і у селищі Слатине на Харківщині.",
-            "timestamp": 1562507677,
+            "timestamp": 1562507676000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107781593",
@@ -2054,7 +2054,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48839383"
             },
             "summary": "В Україні екранізовують роман Софії Андрухович, який став бестселером. Діти-акробати і сотні страв, дублери на кухні і пошуки антикваріату, страусине пір'я і рукавички - розповідаємо, як проходили зйомки фільму \"Віддана\".",
-            "timestamp": 1562213111,
+            "timestamp": 1562213110000,
             "byline": {
               "name": "Діана Куришко",
               "title": "BBC News Україна",
@@ -2115,7 +2115,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48857581"
             },
             "summary": "Перша леді Олена Зеленська супроводжувала президента під час закордонного візиту до Канади. Вона взяла участь у кількох офіційних заходах у вбранні від українських і скандинавських дизайнерів. Але деякі речі з її гардеробу викликали критику.",
-            "timestamp": 1562172199,
+            "timestamp": 1562172198000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2194,7 +2194,7 @@
             "uri": "http://www.bbc.com/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9?limit=4",
             "contentType": "TVBulletin",
             "assetTypeCode": "PRO",
-            "timestamp": 1520876871,
+            "timestamp": 1520876870000,
             "type": "link"
           }
         ],
@@ -2213,7 +2213,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48951703"
             },
             "summary": "Володимир Зеленський так і не отримав свого першого міністра в уряді Володимира Гройсмана - Верховна Рада не звільнила Павла Клімкіна і не призначила керівником МЗС Вадима Пристайка.",
-            "timestamp": 1562854120,
+            "timestamp": 1562854119000,
             "byline": {
               "name": "Віталій Червоненко",
               "title": "BBC News Україна",
@@ -2263,7 +2263,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48955802"
             },
             "summary": "Знаменитий лондонський дзвін почав відбивати час 11 липня 1859 року.",
-            "timestamp": 1562873367,
+            "timestamp": 1562873366000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2303,7 +2303,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48953463"
             },
             "summary": "Президент Володимир Зеленський заявив, що ініціюватиме люстрацію для всіх високопосадовців і депутатів, які обіймали посади з 2014 по 2019 рік.",
-            "timestamp": 1562848370,
+            "timestamp": 1562848369000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2355,7 +2355,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48936236"
             },
             "summary": "Парламент після майже чотирьох років розгляду схвалив новий Виборчий кодекс, який регулюватиме проведення усіх виборів України.",
-            "timestamp": 1562836296,
+            "timestamp": 1562836295000,
             "byline": {
               "name": "Віталій Червоненко, Артем Данильченко",
               "title": "BBC News Україна",
@@ -2405,7 +2405,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48934961"
             },
             "summary": "Фото домашніх тварин і з передвиборних турне, заяви з трибун і асани в йозі, офіційний стиль і дуже особисті враження - що лідери партій викладають у соцмережах, розповідає ВВС News Україна.",
-            "timestamp": 1562830159,
+            "timestamp": 1562830158000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2457,7 +2457,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48940941"
             },
             "summary": "Чи триватиме далі зміцнення гривні? Відповідають українські економісти та фінансисти.",
-            "timestamp": 1562823374,
+            "timestamp": 1562823373000,
             "byline": {
               "name": "Георгій Ерман",
               "title": "BBC News Україна",
@@ -2507,7 +2507,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48939411"
             },
             "summary": "Президент Зеленський вирішив цього року не проводити \"помпезний і точно недешевий\" військовий парад до Дня Незалежності. У відповідь частина ветеранів та активістів з команди експрезидента Порошенка оголосили намір провести у столиці свій власний парад.",
-            "timestamp": 1562766161,
+            "timestamp": 1562766160000,
             "byline": {
               "name": "В'ячеслав Шрамович",
               "title": "BBC News Україна",
@@ -2568,7 +2568,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-48933109"
             },
             "summary": "Президент Володимир Зеленський призначив нового голову Київської обласної адміністрації Михайла Бно-Айріяна.",
-            "timestamp": 1562748857,
+            "timestamp": 1562748856000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2608,7 +2608,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/vert-cap-48928652"
             },
             "summary": "Чому бути білою вороною не завжди погано? І коли нонконформістська поведінка приносить успіх?",
-            "timestamp": 1562750765,
+            "timestamp": 1562750764000,
             "byline": {
               "name": "Себ Маррей",
               "title": "BBC Capital",
@@ -2658,7 +2658,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-48927222"
             },
             "summary": "Хакери чи негативні коментарі - багато чого в соцмережах може зіпсувати довіру до вашого бренду за лічені хвилини. Як цьому зарадити?",
-            "timestamp": 1562743422,
+            "timestamp": 1562743421000,
             "byline": {
               "name": "Джессіка Боун",
               "title": "Репортер з питань бізнес-технологій",
@@ -2753,7 +2753,7 @@
             "uri": "https://www.bbc.co.uk/academy/uk/collections/digital-journalism-uk",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1557415859,
+            "timestamp": 1557415858000,
             "type": "link"
           },
           {
@@ -2782,7 +2782,7 @@
             "uri": "https://www.bbc.co.uk/academy/uk/collections/original-journalism-uk",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1559647415,
+            "timestamp": 1559647414000,
             "type": "link"
           },
           {
@@ -2801,7 +2801,7 @@
             "uri": "https://www.bbc.co.uk/academy/uk/articles/art20190524151738089",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1559904449,
+            "timestamp": 1559904448000,
             "type": "link"
           }
         ],
@@ -2826,7 +2826,7 @@
             "uri": "http://www.bbc.com/ukrainian/institutional/2013/04/130415_partners",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1479823412,
+            "timestamp": 1479823411000,
             "type": "link"
           }
         ],

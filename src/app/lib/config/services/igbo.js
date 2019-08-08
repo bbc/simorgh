@@ -6,6 +6,7 @@ import '@bbc/psammead-locales/moment/ig';
 const igbo = {
   lang: 'ig',
   product: 'BBC News',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',

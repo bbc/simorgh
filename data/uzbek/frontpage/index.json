@@ -55,7 +55,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-48963285"
             },
             "summary": "Афғонистон ҳукумати жинсий тегажоқликларга оид иддаолар манзарасида қолган. Би-би-си суҳбатлашган бир қанча аёллар иш учун ҳукуматнинг юқори мартабали мулозимлари томонидан ўзларининг жинсий таҳқирланганликларини айтишган. Аммо расмий Кобул бу даъволарни инкор қилмоқда.",
-            "timestamp": 1562928491,
+            "timestamp": 1562928490000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -88,7 +88,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/uzbek/central-asia-40601633"
                 },
                 "summary": "Афғонистонда камдан-кам эркаклар ўз аёлларини исми билан айтиб чақиришади. Ҳатто, тўй таклифномалари, қабр тошларида ҳам келин ва аёлнинг ўз исми ёзилмайди. Бу каби ҳолат шу кунларда аксарияти хотин-қизлардан иборат қатор фаолларнинг норозиликларига сабаб бўлибди...",
-                "timestamp": 1499965651,
+                "timestamp": 1499965650000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:uzbek/central-asia-40601633",
                 "type": "cps"
@@ -116,7 +116,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48963065"
             },
             "summary": "Россия президенти Владимир Путин Украина президенти Владимир Зеленский билан телефон орқали мулоқот қилган. Кремль сўзчиси Дмитрий Песковга кўра, суҳбат Украина ташаббуси асосида ташкил этилган.",
-            "timestamp": 1562922691,
+            "timestamp": 1562922690000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -166,7 +166,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48953495"
             },
             "summary": "Таниқли блогер @davletovuz гўшт нархи қимматлашаётганидан хавотир билдириб, мутасаддиларга мурожаат қилди: илтимос, бозорга аралашишдан тийилинг!",
-            "timestamp": 1562861400,
+            "timestamp": 1562861399000,
             "byline": {
               "name": "Мустақил журналист",
               "title": " .",
@@ -216,7 +216,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48950355"
             },
             "summary": "БМТ Инсон Ҳуқуқлари Кенгашидаги 20дан ортиқ давлат Хитойнинг Шинжондаги уйғурларга муомаласи танқид қилинган қўшма баёнотни имзолаган. Фаоллар Хитойни бир миллион уйғурларни маҳбусларга мўлжалланган жамлоқларда ушлаб туришда айблашади.",
-            "timestamp": 1562841153,
+            "timestamp": 1562841152000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -266,7 +266,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48950362"
             },
             "summary": "Ўзбекистонда ов ва спортга мўлжалланган ўқотар қурол ҳамда унинг ўқ-дориларини ишлаб чиқариш, таъмирлаш ва реализация қилиш фаолияти эндиликда Миллий гвардия томонидан лицензияланади. Бу ҳақда Адлия вазирлигининг \"Ҳуқуқий ахборот\" канали хабар бермоқда.",
-            "timestamp": 1562843424,
+            "timestamp": 1562843423000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -306,7 +306,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48949523"
             },
             "summary": "Ўзбекистоннинг жорий ҳукумати дин соҳасида ҳам сиёсатнинг аввалгисидек давом этиши ўзлари учун ижобий оқибатларга олиб келмаслигини жуда яхши тушунаяпти. Ўзбекистоннинг хориждаги беш \"адашган\" фуқаросини афв этиш, жиноий жавобгарликка тортмаслик қарори сиёсий экспертларнинг худди шу каби баҳоларига сабаб бўлмоқда.",
-            "timestamp": 1562841496,
+            "timestamp": 1562841495000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -346,7 +346,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48936863"
             },
             "summary": "Британия Ташқи ишлар вазири ва ҳам ҳозирда Консерваторлар партиясига раҳбарлик учун курашаётган Жереми Ҳантга кўра, \"матбуот эркинлиги фақат Ғарбнинг эмас, балки бутун инсоният учун муҳим қадриятдир\".",
-            "timestamp": 1562829515,
+            "timestamp": 1562829514000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -387,7 +387,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48922367"
             },
             "summary": "\"Қишлоғимизни сой ажратиб туради. Баҳорда сел келганда одамлар қабристонга ўтолмай қолади. Худо хоҳласа, катта одам бўлиб бойвачча бўлиб кетганимда, шу қишлоғимга битта кўприк қуриб бериш ниятим бор\", - дейди у.",
-            "timestamp": 1562767322,
+            "timestamp": 1562767321000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -439,7 +439,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48936861"
             },
             "summary": "2 июль куни ЎзА вебсайтида пайдо бўлган «Саҳналаштирилган қабул» сарлавҳали мақолада Бандлик ва меҳнат муносабатлари вазири Шерзод Кудбиев 28 июнь куни Фарғона шаҳрида сайёр оммавий қабул ташкил этгани ва бу тадбирда фуқароларни ишга жойлаш бўйича кўплаб кўзбўямачиликларга йўл қўйилгани иддао қилинади...",
-            "timestamp": 1562752747,
+            "timestamp": 1562752746000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -480,7 +480,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48937402"
             },
             "summary": "Дунёдаги энг узоқ сиёсий тутқунлардан бири деб кўрилган Самандар Қўқонов, Ўзбекистондаги суд тизими марҳум президент Каримов даврида қандай бўлган бўлса, шундайлигича қолган, деб ҳисоблайди.",
-            "timestamp": 1562846778,
+            "timestamp": 1562846777000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -534,7 +534,7 @@
             "uri": "https://www.bbc.com/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4",
             "contentType": "Video",
             "assetTypeCode": "PRO",
-            "timestamp": 1533916705,
+            "timestamp": 1533916704000,
             "type": "link"
           },
           {
@@ -547,7 +547,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-39863216"
             },
             "summary": "101 йигит Ўзбекистондан чиқиб, Европага урушга кетишди. Аммо олис ва совуқ ўлкада уларни жанда-жундага ўраб, маймунсифат махлуқлар, деб томошага қўйишди. Кўпи очлик, калтак ва совуқдан ўлди. Тирикларини Голландия марказидаги ўрмонга олиб чиқиб отишди. Бу ўзбеклар ким ва уларнинг Ўзбекистондаги яқинларини бугун топиш мумкинми?",
-            "timestamp": 1525942096,
+            "timestamp": 1525942095000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -602,7 +602,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/48807561"
             },
             "summary": "АҚШ Мичиган Университети аспиранти Кристофер Фортнинг айтишича, яқин ойларда атоқли Ўзбек адиби Абдулҳамид Сулаймон ўғли Чўлпоннинг \"Кеча ва кундуз\" романи инглиз тилида китоб ҳолида нашрдан чиқади.",
-            "timestamp": 1562322234,
+            "timestamp": 1562322233000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -649,7 +649,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48804618"
             },
             "summary": "Адлия вазири Русланбек Давлетов раҳбарлигидаги Ўзбекистон ҳукумати ҳайъати Лондонда бўлди.",
-            "timestamp": 1561747724,
+            "timestamp": 1561747723000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -690,7 +690,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48705257"
             },
             "summary": "Россиядан Ўзбекистонга ҳар йили 4 миллиард АҚШ доллари миқдорида пул юбораётган муҳожирларнинг бугунги аҳволи қандай? Ўлигимизни эмас, тиригимизда олиб кетинг, дейишмоқда улар.",
-            "timestamp": 1561029226,
+            "timestamp": 1561029225000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -732,7 +732,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-48817133"
             },
             "summary": "Хитой ҳукумати махсус қамоқ-жамлоқларига ташланган миллиондан кўп мусулмон уйғур бахтли яшаётганини айтмоқда. Пекин махсус тайёрланган бир жамлоққа журналистларни ҳам киритган. Танлаб олинган уйғурлар шод-хуррам қайта тарбия кўришаётганини айтишади. Хитойга қанчалик ишониш мумкин?",
-            "timestamp": 1561914260,
+            "timestamp": 1561914259000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
@@ -776,7 +776,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48314012"
             },
             "summary": "Ўзбекистонда атом станцияси қурилиши нақадар хавфли? Уни қуришга неччи миллиард доллар сарфланади? \"Росатом\"нинг Туркия ва Беларусдаги лойиҳаларида хабар қилинган муаммолар ҳисобга олиндими?",
-            "timestamp": 1558171790,
+            "timestamp": 1558171789000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -828,7 +828,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-47598096"
             },
             "summary": "\"Россияда Ўзбекларнинг имиджини кўтариш устида ишлашнинг вақти келди. Бу масалага Ўзбекистон ҳукумат даражасида эътибор қаратиш лозим”, - дейди Би-Би-Си Ўзбек хизмати билан суҳбатда Чингиз Айтматовнинг “Чегарасиз мулоқот” халқаро фонди раҳбари Фарҳод Устажалилов.",
-            "timestamp": 1552756946,
+            "timestamp": 1552756945000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -885,7 +885,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48940786"
             },
             "summary": "Олимларнинг ишонишича, айрим инсонларнинг ахлатида даволовчи хусусиятга эга бактериялар нисбати аъло даражада бўлади. Улар беморни осонлик билан ичак касалликларидан фориғ қилиши мумкин.",
-            "timestamp": 1562766064,
+            "timestamp": 1562766063000,
             "byline": {
               "name": "Мишел Робертс",
               "title": "Саломатлик масалалари бўйича муҳаррир, BBC News online",
@@ -935,7 +935,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48936841"
             },
             "summary": "The Economist мухбири Жоанна Лиллис аккредитациядан ўтказилди. Реппер Ники Минаж Саудияда белгиланган ижросини бекор қилди. Путин грузин журналистдан хафа эмас. Қабилавий зўравонликда аёллар ва болалар ўлдирилди. Денгиз Филиппин соҳилларига кокаин брикетларини чиқариб ташламоқда.",
-            "timestamp": 1562752735,
+            "timestamp": 1562752734000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -976,7 +976,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48929412"
             },
             "summary": "Мухолифатдаги \"Эрк\" партияси раҳбари Муҳаммад Солиҳ интернетга сиздирилган телефон сўзлашувлари ортида ўзбек махсус хизматлари турганини иддао қилди. Би-би-си билан суҳбатда у Каримовнинг ўлими ортидан ватанида \"давлат тўнтариши режалагани\" ҳақидаги даъволарни қатъиян рад этди. Расмийлар ҳозирча шарҳ бергани йўқ.",
-            "timestamp": 1562693222,
+            "timestamp": 1562693221000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1026,7 +1026,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48922366"
             },
             "summary": "Ўзбекистон Марказий сайлов комиссияси раиси Мирзо-Улуғбек Абдусаломовнинг номуносиб депутатлар парламентга сайланишида биринчи навбатда сайловчиларнинг ўзлари айбдор деб айтиши BBC Uzbek'нинг Фейсбук саҳифасида кенг норозиликка сабаб бўлди.",
-            "timestamp": 1562669873,
+            "timestamp": 1562669872000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
@@ -1078,7 +1078,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48922085"
             },
             "summary": "Муслима, ҳижобли ва ҳоким: Руқия нега сиёсатга кирди? – Руқия Исмоил Буюк Британиядаги биринчи ҳижобли ҳоким бўлади. Унинг айтишича, одамларнинг дардларига бефарқ қарай олмагани боис, сиёсатга қадам қўйган. Руқия нимани ўзгартирмоқчи?",
-            "timestamp": 1562666435,
+            "timestamp": 1562666434000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1118,7 +1118,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48922365"
             },
             "summary": "Шимолий Кореядан бошпана, Эрон бойитаётган уран, Instagram'инг сўконғичларга ҳужуми - жаҳон матбуотида кенг ёритилаётган мавзулар билан танишинг.",
-            "timestamp": 1562682074,
+            "timestamp": 1562682073000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1175,7 +1175,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48839782"
             },
             "summary": "4 июль куни \"Маҳалла\" телеканали орқали соат 20:00 да намойиши бошланган «Фикрлар чорраҳаси» кўрсатуви эфир вақти узилиб қолди. Маҳаллий блогерлар кўрсатувни зудлик билан тўхтатиш талаби \"юқоридан\" келгани ҳақида ёзишди.",
-            "timestamp": 1562595465,
+            "timestamp": 1562595464000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1226,7 +1226,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/48900583"
             },
             "summary": "Ўзбекистон Давлат экология қўмитаси ўз Фейсбук саҳифасида Тошкент шаҳрининг 4-Юнусобод кварталида чинорлар ноқонуний равишда кесилгани ва ундан атроф-муҳитга тушган зарар деярли 164 миллион сўм бўлганини хабар қилди.",
-            "timestamp": 1562501441,
+            "timestamp": 1562501440000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1284,7 +1284,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48911116"
             },
             "summary": "Ўзбекистон Бош прокуратурасининг матбуот хизмати раҳбари ишдан олиниши билан прокуратурадан маълумот олиш яна қийинлашди. Журналистлар Сурайё Раҳмонованинг ўрни аллақачон билинаётганини айтишмоқда.",
-            "timestamp": 1562587497,
+            "timestamp": 1562587496000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1336,7 +1336,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48839781"
             },
             "summary": "\"Чумчуқ отиб ўлдирадиган қурол бор, одамни ҳам қаттиқ зарарлайдигани бор. Ана шу масала қонунда белгилаб берилди\", - деб айтган Ўзбекистон Сенати Мудофаа ва хавфсизлик масалалари қўмитаси раиси Фаррух Дадахўжаев.",
-            "timestamp": 1562587695,
+            "timestamp": 1562587694000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1386,7 +1386,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48887173"
             },
             "summary": "Булар СПИД юқтириб келади, дейдими?!.. Мен касаллик орттириб келганманми? Хорижда уч ойдан ортиқ бўлиб Ватанига қайтган шахсларни 24 соат ичида мажбурий тиббий кўрикдан ўтказиш тўғрисидаги қонун лойиҳаси Ўзбекистон ичкариси ва ташқарисида қарама-қарши муносабатларга сабаб бўлмоқда.",
-            "timestamp": 1562568162,
+            "timestamp": 1562568161000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1430,7 +1430,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48839780"
             },
             "summary": "Грузиянинг Rustavi-2 телеканали ходими Георгий Габуния якшанба кунги жонли эфир пайтида ҳақоратли ва куракда турмас сўзлар қўллаган ҳолда, Россия президенти Владимир Путинга мурожаат этган. Россия томони ҳодисани \"сиёсий иғвогарлик\" дея қоралаган.",
-            "timestamp": 1562581292,
+            "timestamp": 1562581291000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1481,7 +1481,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48900582"
             },
             "summary": "Туркия матбуоти мамлакат жанубида қурилаётган Аққую атом электр станцияси бетон пойдеворида ёриқлар қайд қилингани май ойида хабар қилганди. Аммо, бу илк шундай ҳодиса эмас эди.",
-            "timestamp": 1562494193,
+            "timestamp": 1562494192000,
             "byline": {
               "name": "Дилдора Тўлаганова",
               "title": "Мустақил журналист, Туркия",
@@ -1554,7 +1554,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/39043000"
             },
             "summary": "Советлар Марказий Осиёда синаган атом қуроллари келажак авлодларга қандай таъсир қилмоқда? Би-би-си Ўзбек хизмати 40 давомида Қозоғистонда синалган юзлаб атом қуроллари маҳаллий аҳоли ирсияти ва соғлиғига қандай таъсир этгани ҳақида махсус фильм тайёрлаган.",
-            "timestamp": 1547916060,
+            "timestamp": 1547916059000,
             "cpsType": "STY",
             "indexImage": {
               "id": "94772298",
@@ -1600,7 +1600,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/38391980"
             },
             "summary": "Видео: Сўнгги вақтлар Туркияда асли келиб чиқиши собиқ иттифоқ давлатларидан бўлган бир неча шахс ўлдириб кетилди. Би-би-си ҳужжатли фильмининг биринчи қисми",
-            "timestamp": 1482480281,
+            "timestamp": 1482480280000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1669,7 +1669,7 @@
             "uri": "http://www.bbc.com/uzbek/uzbekistan-38694864",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1484922087,
+            "timestamp": 1484922086000,
             "type": "link"
           }
         ],
@@ -1691,7 +1691,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48803035"
             },
             "summary": "Ҳақназаров мақолалари ўзбек ҳукумати ичида бўлаётган гўёки ноқонуний амаллар, турли юқори даражали мулозимлар ўрталаридаги зиддият, коррупция, наркомафия, таниш-билишчилик, президент оиласидаги жанжаллар ва ҳатто буюртма қотилликларни фош қилишни мақсад қилганди.",
-            "timestamp": 1561724995,
+            "timestamp": 1561724994000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1760,7 +1760,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-48762971"
             },
             "summary": "Марказий Осиёнинг кўплаб ёшлари умрида фақат бир давлат раҳбарларини кўрганлар. Айримлар эса қайси раҳбар келиб кетганини яхши эслаб ҳам қолишмаса керак...",
-            "timestamp": 1561628210,
+            "timestamp": 1561628209000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1817,7 +1817,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48500845"
             },
             "summary": "Биз тарихда илк бор одамлардан сиз Путинга ишонасизми ёки йўқ, дея тўғридан-тўғри сўраб кўрдик. Ҳар ким, бир вақтнинг ўзида, Путинга президент, оддий инсон, раҳбар сифатида ишонч билдириши мумкин эди. Ҳар бир иштирокчи ўзи қарор қабул қилди. Натижалар ҳайратомуз, дейди ВЦИОМ бош директори Валерий Федоров.",
-            "timestamp": 1559563039,
+            "timestamp": 1559563038000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1881,7 +1881,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48817128"
             },
             "summary": "Туркиянинг энг йирик шаҳри - Истанбулдаги сайлов натижаси сўнгги чорак аср давомида сиёсий муваффақиятга эришиб келган Президент Эрдўғон учун кучли зарба бўлди. Истанбулнинг қўлдан кетиши Эрдўғон даври тугашини англатадими? Истанбулликлар нега ундан юз ўгиришди?",
-            "timestamp": 1561914432,
+            "timestamp": 1561914431000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1947,7 +1947,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-47484605"
             },
             "summary": "Туркиянинг Кўнё шаҳрига қишин-ёзин сайёҳлар оқими тўхтамайди. Аксарият бу шаҳарга фақат бир мақсад билан келади: Ҳазрат Мавлоно зиёрати... Мусулмон, насроний, яҳудийнию буддавийни ё динсизларни ҳам бирдек ўзига тортадиган хилқат - Румийнинг жозибаси нимада? Гулсевар Замон видео лавҳаси",
-            "timestamp": 1552302970,
+            "timestamp": 1552302969000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2004,7 +2004,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-47951490"
             },
             "summary": "Бугунда Ўзбекистондан ташқарида умргузаронлик қилаётган ўзбеклар сони минглаб. Улар турли сабаблар билан ватанни тарк этишган. Ҳозир Истанбулда истиқомат қилувчи Сағлам Ясса билан Гулсевар Замон учрашган.",
-            "timestamp": 1555582915,
+            "timestamp": 1555582914000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2071,7 +2071,7 @@
             "uri": "http://www.bbc.com/uzbek/institutional/cy_turfa_taqdirlar",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1468402518,
+            "timestamp": 1468402517000,
             "type": "link"
           }
         ],
@@ -2100,7 +2100,7 @@
             "uri": "http://www.bbc.com/uzbek/institutional/cy_ca_migrants_russia",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1468402626,
+            "timestamp": 1468402625000,
             "type": "link"
           }
         ],
@@ -2141,7 +2141,7 @@
             "uri": "http://www.bbc.com/uzbek/uzbekistan-42001761",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1510757091,
+            "timestamp": 1510757090000,
             "type": "link"
           }
         ],
@@ -2163,7 +2163,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-47922529"
             },
             "summary": "Ҳар йили дунё фотожурналистларининг World Press Photo танлови ташкил қилинади, шу кунларда 2018 йилнинг энг сара асарлари маълум бўлди. Би-би-си танловнинг турли йўналишларида ғолиб деб топилган фото суратлар билан таништиради.",
-            "timestamp": 1556876430,
+            "timestamp": 1556876429000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2208,7 +2208,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-45561774"
             },
             "summary": "Тузкон — Ўзбекистоннинг чодирда ҳордиқ чиқариш мумкин бўлган энг ажойиб гўшаларидан бири. У ерда қуёш ботар маҳал беқиёс шафақни томоша қилиш, тунда эса осмонга тикилиб юлдузлар учиши ва Сомон йўлидан завқ олиш мумкин.",
-            "timestamp": 1537451281,
+            "timestamp": 1537451280000,
             "byline": {
               "name": "Марат Нажибаев",
               "title": "bbcuzbek.com учун",
@@ -2258,7 +2258,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/interactive-40830269"
             },
             "summary": "Ҳар йили National Geographic саёҳатчи-фотосуратчилар танловини эълон қилади. Бу йил вулқонга урилган яшин фотосурати танлов ғолиби деб топилди.",
-            "timestamp": 1501858907,
+            "timestamp": 1501858906000,
             "cpsType": "PGL",
             "indexImage": {
               "id": "97212430",
@@ -2287,7 +2287,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/interactive-42909816"
             },
             "summary": "Бутун дунё бўйлаб инсонлар 152 йилда 1 марта юз берадиган табиат ҳодисасига гувоҳ бўлдилар.",
-            "timestamp": 1517501029,
+            "timestamp": 1517501028000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2336,7 +2336,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48906237"
             },
             "summary": "Ӯзбекистон Ҳарбий суди ҳукмига кӯра собиқ маҳбус, Сирдарё вилоятининг Ширин шаҳрида яшовчи Ӯрмонали Қурбоналиевга у қамоқда ӯтирган йиллардаги пенсия пули тӯлиқ тӯланадиган бӯлди. Бу фақат Ӯзбекистондаги эмас, дунёнинг деярли ҳамма мамлакатларидаги энг оғир жиноятлардан бири - жосусликда айбланган Қурбоналиевни оқлаш йӯлидаги навбатдаги суд ҳукмидир. Олдинроқ у бу модда бӯйича жиноят этмаганлиги исботланиб, судда оқланганди. Бунгача эса, у 3 йилу 10 кун давомида қамоқда ӯтирган эди...",
-            "timestamp": 1562656817,
+            "timestamp": 1562656816000,
             "byline": {
               "name": "Мустақил журналист",
               "title": "Ўзбекистон-Тожикистон",
@@ -2387,7 +2387,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-48883720"
             },
             "summary": "Хитой ғарбий Шинжон ҳудудида яшовчи мусулмон болаларни ўз оиласи, эътиқоди ва тилидан атайин маҳрум қилаётганини аниқлаган Би-би-си рухсати билан ўтказилган янги тадқиқот.",
-            "timestamp": 1562341068,
+            "timestamp": 1562341067000,
             "byline": {
               "name": "Жон Судворс",
               "title": "BBC News, Шинжон",
@@ -2439,7 +2439,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48839779"
             },
             "summary": "Би-би-си Ўзбек хизмати \"Навоий\" Эркин иқтисодий зонаси директори Ҳабиб Абдуллаев билан ЭИЗда жорий этилиши кутилаётган \"инглиз ҳуқуқи\", Россия Жиззахда қуришни режалаётган АЭС ва Ўзбекистондаги айрим стратегик иншоотларнинг рус ширкатлари бошқарувига ўтиши билан боғлиқ хавотирлар ҳақида суҳбатлашди.",
-            "timestamp": 1562079653,
+            "timestamp": 1562079652000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -2491,7 +2491,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48825331"
             },
             "summary": "Мутахассислар Ўзбекистондаги нашрларга сиздирилган Андижон вилояти ҳокимининг мажлисда гапирган 2,5 соатлик чиқишига турлича муносбат билдирди. Ҳоким Шуҳратбек Абдураҳмоновнинг эҳтиросли сўкинишларини бир чеккага қўйган экспертлар у кўтарган мавзулар тизимдаги камчиликларни яққол кўрсатганига эътибор қаратишган.",
-            "timestamp": 1562051686,
+            "timestamp": 1562051685000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -2531,7 +2531,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48771218"
             },
             "summary": "Охирги йилларда Ўзбекистонда \"Tizer\", \"Sitro\", «WF», «OK» каби ўзини «энергетик таъмга эга» дея тақдим этувчи турли ичимликлар пайдо бўлган. Нархи асл энергетик ичимликлардан сезиларли арзон ва таъми ҳам уларга анчайин яқин бўлган бундай маҳсулотлар одамлар орасида «энергетик ичимлик» ўлароқ оммалашиб улгурган. Аммо улар соғлик учун қанчалик зарарли?",
-            "timestamp": 1561543015,
+            "timestamp": 1561543014000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -2572,7 +2572,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48759110"
             },
             "summary": "Сўнгги йилларда ўтказилган энг йирик ижтимоий сўров натижаларига кўра, Яқин Шарқ ва Шимолий Африкада \"мен динсизман\" деб айтадиган Арабларнинг сони ортмоқда.",
-            "timestamp": 1561471509,
+            "timestamp": 1561471508000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -2622,7 +2622,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48736804"
             },
             "summary": "Танзила Норбоеванинг илк аёл сенат раиси сифатида сайланиши мана шундай фикрларни пайдо қилди. Ушбу тарихий ҳодисага фикр билдирган фаол ва журналистлар Норбоева нафақат ҳукумат учун маслаҳатчи идора бўлиб қолган сенатнинг, балки жамиятдаги аёлларнинг ҳам ўрнини эгаллашда жонбозлик кўрсатишига ишонмоқда. Лекин...",
-            "timestamp": 1561297289,
+            "timestamp": 1561297288000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -2663,7 +2663,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48137271"
             },
             "summary": "Тошкентдаги халқаро форум доирасида Би-би-си Ўзбек хизмати ва Ўзбекистон электрон оммавий ахборот воситалари миллий ассоциацияси ўртасида ҳамкорликка доир ўзаро тушуниш меморандуми имзоланди.",
-            "timestamp": 1556888854,
+            "timestamp": 1556888853000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2716,7 +2716,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48717188"
             },
             "summary": "«Мана иккинчи прокурорни лавозимидан олиб, жиноий иш очдик. Вилоят ҳокимидан $100 минг, туман ҳокимидан $50 минг пора олган,» деди Шавкат Мирзиёев.",
-            "timestamp": 1561103953,
+            "timestamp": 1561103952000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2756,7 +2756,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48663460"
             },
             "summary": "Ўзбекистон Бош прокуратураси Гулнора Каримованинг қизи Имон Каримова томонидан прокуратура келишувга амал қилмаяпти, деган иддаони жавобсиз қолдирди. Прокуратурага кўра, Каримованинг хориждаги пулларини қайтаришдаги шаффофлик таъминланади.",
-            "timestamp": 1560789773,
+            "timestamp": 1560789772000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2796,7 +2796,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-48675932"
             },
             "summary": "Юз минглаб, балки миллиондан ортиқ мусулмонлар жиноят қилмасдан ёки маҳкамага тортилмасдан Хитойдаги йирик қамоқхоналарда ушлаб турилибди. Би-би-си ғарбий Шинжон бўлгасидаги ана шундай жамлоқларга киришга изн олди.",
-            "timestamp": 1560877060,
+            "timestamp": 1560877059000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2836,7 +2836,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48616574"
             },
             "summary": "Ўзбекистон Ички ишлар вазирлиги раҳбарияти нега Ўзбекистон фуқароларининг Тошкент пропискасига оид ҳуқуқлари поймол этилаётганини тушунтириб беролмадилар.",
-            "timestamp": 1560363395,
+            "timestamp": 1560363394000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -2892,7 +2892,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48663459"
             },
             "summary": "Бош прокуратура Саид-Абдулазиз Юсупов яна бир жиноятга қўл урганига ишора қилди. Республика миқёсидаги 70 мансабдор коррупционер амалдор жазоланди. Прокуратура «Борига Барака» ўйинининг қонунийлигини текширадими? Собиқ Бош прокурор Рашитжон Қодиров суди якунлаб қолди.",
-            "timestamp": 1560784898,
+            "timestamp": 1560784897000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2932,7 +2932,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48567352"
             },
             "summary": "Марказий Осиё бўйлаб кўп саёҳат қилган британиялик собиқ журналист Софи Ибботсон Ўзбекистоннинг Буюк Британиядаги туризм элчиси этиб тайинланди.",
-            "timestamp": 1560003450,
+            "timestamp": 1560003449000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -2984,7 +2984,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48557799"
             },
             "summary": "Охирги 1 йилда Ўзбекистон ҳақида хорижий оммавий ахборот воситаларида эълон қилинган энг яхши мақола деб тан олинган Financial Times рўзномасидаги \"Ўзбекистондаги супер тез Ипак йўли\" мақоласи муаллифи Жереми Хед Ўзбекистондан бир дунё таассурот билан қайтганини, газетада эълон қилинганлари денгиздан бир томчи эканини айтади.",
-            "timestamp": 1559919814,
+            "timestamp": 1559919813000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3051,7 +3051,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48471598"
             },
             "summary": "Ўзбекистон дунёга очилишда давом этмоқда - қаърида бир неча минг йиллик тарихни ўзида яширган қишлоқлари, таъбир жоиз, бутун жаҳонга очилмоқда. Би-би-си Ўзбек Хизмати шу кунларда ЎзЭОАВМА журналистлари билан ҳамкорликда яна бир лойиҳасига якун ясади.",
-            "timestamp": 1559299734,
+            "timestamp": 1559299733000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3092,7 +3092,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48426861"
             },
             "summary": "Британиянинг AKS Services Group компанияси Ўзбекистонда етиштирилган ва қадоқланган гилосларни Лондондаги дўконларга сота бошлади. Бу Британия-Ўзбекистон иқтисодий муносабатларидаги муҳим воқеа дея баҳоланмоқда.",
-            "timestamp": 1558973340,
+            "timestamp": 1558973339000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3144,7 +3144,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-48398686"
             },
             "summary": "Ўзбекистоннинг биринчи ва охирги Давлат котиби Раҳим Ражабов марҳум Ислом Каримов даврида давлат ва халқ мулки талон-тарож қилингани, битта автомобил заводи қурилиши деб мамлакатнинг бутун-бошли оғир ва авиация саноатлари барбод қилинганини айтган.",
-            "timestamp": 1558711463,
+            "timestamp": 1558711462000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -3196,7 +3196,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48415031"
             },
             "summary": "Ўзбекистонда машина ойналарини махсус рухсатсиз қорайтириш (тонировка) ҳамда ойналарга қўшимча нарсалар ўрнатиш учун белгиланган жарима миқдори 25 баробар кўтарилди. Энди бундай қоидабузарликлар учун 5 миллион сўм (590 доллар) жарима тўланади.",
-            "timestamp": 1558887755,
+            "timestamp": 1558887754000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3237,7 +3237,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-48353521"
             },
             "summary": "Маракага кетаётгандик, бир маҳаллақўм билан йўлдош тушиб қолдик. Тўсатдан машинанинг деразасидан ўта қўланса ҳид кириб гапимизни бўлди. \"Гўнг сепишяптими,\" деб сўрайман.",
-            "timestamp": 1558440471,
+            "timestamp": 1558440470000,
             "byline": {
               "name": "Ибрат Сафо",
               "title": "Би-би-си журналисти",
@@ -3299,7 +3299,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-48327212"
             },
             "summary": "Шинжонда Хитойнинг асосий миллати бўлмиш ханлар билан қурилган никоҳдан туғилган болалар олийгоҳга киришда қўшимча балл олади. Таҳлилчилар буни мусулмон уйғурларни йўқотишдаги сўнгги чоралардан бири сифатида талқин қилмоқда.",
-            "timestamp": 1558279881,
+            "timestamp": 1558279880000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3356,7 +3356,7 @@
             "uri": "http://www.bbc.co.uk/academy/uz/articles/art20141012185848035",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1521197879,
+            "timestamp": 1521197878000,
             "type": "link"
           },
           {
@@ -3375,7 +3375,7 @@
             "uri": "http://www.bbc.co.uk/academy/uz/articles/art20170329150201618",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1521197650,
+            "timestamp": 1521197649000,
             "type": "link"
           },
           {
@@ -3394,7 +3394,7 @@
             "uri": "http://www.bbc.co.uk/academy/uz/articles/art20141014153856021",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1468397785,
+            "timestamp": 1468397784000,
             "type": "link"
           },
           {
@@ -3403,7 +3403,7 @@
             "uri": "http://www.bbc.co.uk/academy/uz/articles/art20141014155250372",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1521198020,
+            "timestamp": 1521198019000,
             "type": "link"
           }
         ],
@@ -3438,7 +3438,7 @@
             "uri": "https://www.bbc.com/uzbek/interactive-44384010",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1528901737,
+            "timestamp": 1528901736000,
             "type": "link"
           }
         ],
@@ -3461,7 +3461,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-38638964"
             },
             "summary": "Аҳолиси 32 миллионга яқинлашган Ўзбекистон учун Ҳаж зиёрати квотаси қарийб 40 фоизга оширилган. Бу йил 7200 нафар ўзбекистонлик Ҳажга бориши мумкин. Ўзбекистон нашрлари сўнгги ўзгаришни аҳоли орасида Ҳаж зиёратига боришни истовчилар кўпайгани билан изоҳлаган.",
-            "timestamp": 1484751383,
+            "timestamp": 1484751382000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3504,7 +3504,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:uzbek/media-39206743"
             },
             "summary": "Азобли танлов: ё ўлим, ё олат",
-            "timestamp": 1489055895,
+            "timestamp": 1489055894000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",

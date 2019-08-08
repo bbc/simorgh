@@ -11,7 +11,7 @@
           "locators": {
             "uri": "/news/uk-wales-45221314"
           },
-          "timestamp": 1534525113,
+          "timestamp": 1534525112000,
           "image": {
             "blockId": "786c5ff0-70a2-4788-ac4c-e05557309f09",
             "type": "image",
@@ -48,7 +48,7 @@
           "locators": {
             "uri": "/news/entertainment-arts-45213245"
           },
-          "timestamp": 1534444457,
+          "timestamp": 1534444456000,
           "image": {
             "blockId": "d368174f-5016-481c-8dfb-7f2056ccf115",
             "type": "image",
@@ -76,7 +76,7 @@
           "locators": {
             "uri": "/news/uk-44421846"
           },
-          "timestamp": 1528494923,
+          "timestamp": 1528494922000,
           "image": {
             "blockId": "b4dac8fa-4769-44d4-86a6-9ea6e178514a",
             "type": "image",
@@ -104,7 +104,7 @@
           "locators": {
             "uri": "/news/entertainment-arts-44421387"
           },
-          "timestamp": 1528489833,
+          "timestamp": 1528489832000,
           "image": {
             "blockId": "6acec345-638c-416b-a8f2-76a99e5e6bef",
             "type": "image",
@@ -132,7 +132,7 @@
           "locators": {
             "uri": "/news/uk-44421195"
           },
-          "timestamp": 1528489325,
+          "timestamp": 1528489324000,
           "image": {
             "blockId": "20774d42-536b-4ebb-9d0c-375a5cecdc8b",
             "type": "image",
@@ -160,7 +160,7 @@
           "locators": {
             "uri": "/news/uk-england-tees-44067099"
           },
-          "timestamp": 1525949524,
+          "timestamp": 1525949523000,
           "image": {
             "blockId": "552b6451-7709-40d6-aacd-44cbef5039b0",
             "type": "image",
@@ -188,7 +188,7 @@
           "locators": {
             "uri": "/news/entertainment-arts-44055099"
           },
-          "timestamp": 1525915051,
+          "timestamp": 1525915050000,
           "image": {
             "blockId": "6e61b5f2-4dbd-490a-9972-0e38b05e7197",
             "type": "image",
@@ -223,7 +223,7 @@
           "locators": {
             "uri": "/news/uk-wales-45221314"
           },
-          "timestamp": 1534525113,
+          "timestamp": 1534525112000,
           "image": {
             "blockId": "786c5ff0-70a2-4788-ac4c-e05557309f09",
             "type": "image",
@@ -251,7 +251,7 @@
           "locators": {
             "uri": "/sport/cricket/45236837"
           },
-          "timestamp": 1534682833,
+          "timestamp": 1534682832000,
           "image": {
             "blockId": "37218aa5-5258-4ea9-b522-f5b4e3da2047",
             "type": "image",
@@ -279,7 +279,7 @@
           "locators": {
             "uri": "/sport/cricket/45236832"
           },
-          "timestamp": 1534623265,
+          "timestamp": 1534623264000,
           "image": {
             "blockId": "ae8f7ffb-ab29-4a6d-8075-5516597e7364",
             "type": "image",
@@ -307,7 +307,7 @@
           "locators": {
             "uri": "/news/uk-wales-45224687"
           },
-          "timestamp": 1534547221,
+          "timestamp": 1534547220000,
           "image": {
             "blockId": "e192adec-4a82-4d35-ba95-7ce53d94e421",
             "type": "image",
@@ -335,7 +335,7 @@
           "locators": {
             "uri": "/news/uk-wales-south-west-wales-45227413"
           },
-          "timestamp": 1534543215,
+          "timestamp": 1534543214000,
           "image": {
             "blockId": "f27f866d-626f-434b-a54f-47e041d14263",
             "type": "image",
@@ -363,7 +363,7 @@
           "locators": {
             "uri": "/sport/cricket/45216803"
           },
-          "timestamp": 1534538520,
+          "timestamp": 1534538519000,
           "image": {
             "blockId": "72e0e908-6a0c-45fa-aec2-42c6b2d23585",
             "type": "image",
@@ -396,7 +396,7 @@
       "locators": {
         "uri": "/news/business-45244579"
       },
-      "timestamp": 1534755771,
+      "timestamp": 1534755770000,
       "image": {
         "blockId": "c9b6b726-b1d3-4cdc-a507-d4d9dd21d388",
         "type": "image",
@@ -424,7 +424,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "bac75030-269c-4ede-89ac-c553a37ac753",
         "type": "image",
@@ -452,7 +452,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534762438,
+      "timestamp": 1534762437000,
       "image": {
         "blockId": "1fd7ea34-1ad5-49cb-8ad0-9993bcfbdbb3",
         "type": "image",
@@ -480,7 +480,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "37de6912-b62d-4588-aae9-2cc87a515117",
         "type": "image",
@@ -508,7 +508,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "79214af0-c084-4097-a96f-1248aa60c79e",
         "type": "image",
@@ -536,7 +536,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534759236,
+      "timestamp": 1534759235000,
       "image": {
         "blockId": "8a9b7ba1-543d-4129-bc2b-a7c702daa235",
         "type": "image",
@@ -564,7 +564,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "cbbaf377-14f7-404a-9e4c-8066b5761003",
         "type": "image",
@@ -592,7 +592,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534762702,
+      "timestamp": 1534762701000,
       "image": {
         "blockId": "7d32d94f-c527-428d-b6e1-bf6a964979eb",
         "type": "image",
@@ -620,7 +620,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "9c127145-689e-4750-98c5-af3d6244e547",
         "type": "image",
@@ -648,7 +648,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534759395,
+      "timestamp": 1534759394000,
       "image": {
         "blockId": "80222ea4-9426-4f74-aaef-22fdea06eeb6",
         "type": "image",
