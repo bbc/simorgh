@@ -1,6 +1,7 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from 'styled-components';
+import Amp from './Amp';
 import Canonical from './Canonical';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
@@ -52,7 +53,7 @@ const MediaPlayerContainer = ({ blocks }) => {
       <Metadata aresMediaBlock={aresMediaBlock} />
       <StyledContainer>
         {isAmp ? (
-          <React.Fragment>{embedSource}</React.Fragment>
+          <Amp embedSource={embedSource} />
         ) : (
           <Canonical embedSource={embedSource} />
         )}
