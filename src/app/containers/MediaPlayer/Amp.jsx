@@ -18,13 +18,17 @@ const Amp = ({ embedSource }) => {
     <React.Fragment>
       <AmpHead />
       <amp-iframe
-        width="100%"
-        height="100%"
         sandbox="allow-scripts allow-same-origin"
-        layout="responsive"
+        layout="fill"
         frameborder="0"
         src={embedSource}
-      />
+      >
+        <amp-img
+          layout="fill"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          placeholder
+        />
+      </amp-iframe>
     </React.Fragment>
   );
 };
