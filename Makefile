@@ -10,7 +10,7 @@ developmentTests:
     npx apache2-license-checker;
     npm run test;
     
-developmentTestsChromatic:
+developmentChromaticTests:
     npm run test:chromatic;
 
 productionTests:
