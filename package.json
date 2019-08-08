@@ -14,6 +14,7 @@
     "build:live": "cp envConfig/live.env .env && npm run webpack:prod",
     "cypress:proxy": "export NO_PROXY=localhost,localhost.bbc.com && cypress",
     "cypress": "npm run cypress:proxy -- run",
+    "hello": "echo $1 && echo 'hey'",
     "cypress:interactive": "npm run cypress:proxy -- open",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "cypress:3rdParty:interactive": "npm run cypress:interactive -- --project ./3rdPartyCypress/.",
