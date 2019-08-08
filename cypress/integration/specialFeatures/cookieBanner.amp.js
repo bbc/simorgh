@@ -2,9 +2,11 @@ import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
-const filterPageTypes = (pageType, service) =>
-  config[service].pageTypes[pageType] !== undefined &&
-  pageType !== 'errorPage404';
+// Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
+const serviceFilter = service => ['news', 'persian'].includes(service);
+
+const filterPageTypes = (service, pageType) =>
+  config[service].pageTypes[pageType] !== undefined;
 
 const getPrivacyBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.privacy.title);
@@ -21,64 +23,72 @@ const getCookieAccept = service =>
 const getCookieReject = service =>
   cy.contains(appConfig[service].translations.consentBanner.cookie.reject);
 
-Object.keys(config).forEach(service => {
-  Object.keys(config[service].pageTypes)
-    .filter(pageType => filterPageTypes(pageType, service))
-    .forEach(pageType => {
-      describeForEuOnly(
-        `Amp Cookie Banner Test for ${service} ${pageType}`,
-        () => {
-          beforeEach(() => {
-            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
-          });
+const visitPage = (service, pageType) => {
+  cy.visit(`${config[service].pageTypes[pageType]}.amp`, {
+    failOnStatusCode: !pageType.includes('error'),
+  });
+};
 
-          it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
-            getPrivacyBanner(service).should('be.visible');
-            getCookieBanner(service).should('not.be.visible');
+Object.keys(config)
+  .filter(serviceFilter)
+  .forEach(service => {
+    Object.keys(config[service].pageTypes)
+      .filter(pageType => filterPageTypes(service, pageType))
+      .forEach(pageType => {
+        describeForEuOnly(
+          `Amp Cookie Banner Test for ${service} ${pageType}`,
+          () => {
+            beforeEach(() => {
+              visitPage(service, pageType);
+            });
 
-            getPrivacyAccept(service).click();
+            it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
+              getPrivacyBanner(service).should('be.visible');
+              getCookieBanner(service).should('not.be.visible');
 
-            getCookieBanner(service).should('be.visible');
-            getPrivacyBanner(service).should('not.be.visible');
+              getPrivacyAccept(service).click();
 
-            getCookieAccept(service).click();
+              getCookieBanner(service).should('be.visible');
+              getPrivacyBanner(service).should('not.be.visible');
 
-            getCookieBanner(service).should('not.be.visible');
-            getPrivacyBanner(service).should('not.be.visible');
-          });
+              getCookieAccept(service).click();
 
-          it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
-            getPrivacyAccept(service).click();
+              getCookieBanner(service).should('not.be.visible');
+              getPrivacyBanner(service).should('not.be.visible');
+            });
 
-            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+            it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
+              getPrivacyAccept(service).click();
 
-            getPrivacyBanner(service).should('be.visible');
-            getCookieBanner(service).should('not.be.visible');
-          });
+              visitPage(service, pageType);
 
-          it('should not show privacy & cookie banners once both accepted, on reload', () => {
-            getPrivacyAccept(service).click();
-            getCookieAccept(service).click();
+              getPrivacyBanner(service).should('be.visible');
+              getCookieBanner(service).should('not.be.visible');
+            });
 
-            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+            it('should not show privacy & cookie banners once both accepted, on reload', () => {
+              getPrivacyAccept(service).click();
+              getCookieAccept(service).click();
 
-            getPrivacyBanner(service).should('not.be.visible');
-            getCookieBanner(service).should('not.be.visible');
-          });
+              visitPage(service, pageType);
 
-          it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
-            getPrivacyBanner(service).should('be.visible');
-            getCookieBanner(service).should('not.be.visible');
+              getPrivacyBanner(service).should('not.be.visible');
+              getCookieBanner(service).should('not.be.visible');
+            });
 
-            getPrivacyAccept(service).click();
-            getCookieReject(service).click();
+            it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
+              getPrivacyBanner(service).should('be.visible');
+              getCookieBanner(service).should('not.be.visible');
 
-            cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+              getPrivacyAccept(service).click();
+              getCookieReject(service).click();
 
-            getPrivacyBanner(service).should('not.be.visible');
-            getCookieBanner(service).should('not.be.visible');
-          });
-        },
-      );
-    });
-});
+              visitPage(service, pageType);
+
+              getPrivacyBanner(service).should('not.be.visible');
+              getCookieBanner(service).should('not.be.visible');
+            });
+          },
+        );
+      });
+  });

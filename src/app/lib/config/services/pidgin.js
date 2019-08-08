@@ -6,6 +6,7 @@ import '@bbc/psammead-locales/moment/pcm';
 const pidgin = {
   lang: 'pcm',
   product: 'BBC News',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
