@@ -23,6 +23,7 @@ const Amp = ({ embedSource }) => {
         layout="fill"
         frameborder="0"
         src={embedSource}
+        allowfullscreen
       >
         <amp-img
           layout="fill"
