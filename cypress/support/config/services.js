@@ -116,7 +116,10 @@ export default {
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : '/cymrufyw/articles/c123456abcdo',
-      frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/cymrufyw',
+      frontPage:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/cymrufyw',
     },
   },
   gahuza: {
@@ -289,7 +292,7 @@ export default {
     isWorldService: false,
     pageTypes: {
       articles:
-        Cypress.env('APP_ENV') === 'live'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : '/naidheachdan/articles/c18q7nedn2ko',
       errorPage404:
@@ -297,7 +300,9 @@ export default {
           ? undefined
           : '/naidheachdan/articles/c123456abcdo',
       frontPage:
-        Cypress.env('APP_ENV') === 'live' ? undefined : '/naidheachdan',
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/naidheachdan',
     },
   },
   nepali: {
