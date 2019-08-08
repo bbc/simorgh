@@ -34,8 +34,8 @@ exports[`ParagraphContainer should render correctly 1`] = `
 
 .c2:focus,
 .c2:hover {
-  border-bottom: 2px solid #B80000;
   color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c0 {
