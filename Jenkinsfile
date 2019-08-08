@@ -21,10 +21,12 @@ def runDevelopmentTests(){
 }
 
 def runDevelopmentChromaticTests(){
+  sh 'make install'
   sh 'make developmentChromaticTests'
 }
 
 def runProductionTests(){
+  sh 'make install'
   sh 'make productionTests'
   sh 'npm prune --production'
 }
