@@ -14,7 +14,7 @@ const AmpHead = () => {
   );
 };
 
-const Amp = ({ embedSource }) => {
+const Amp = ({ embedSrc, placeholderSrc }) => {
   return (
     <React.Fragment>
       <AmpHead />
@@ -22,21 +22,18 @@ const Amp = ({ embedSource }) => {
         sandbox="allow-scripts allow-same-origin"
         layout="fill"
         frameborder="0"
-        src={embedSource}
+        src={embedSrc}
         allowfullscreen
       >
-        <amp-img
-          layout="fill"
-          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-          placeholder
-        />
+        <amp-img layout="fill" src={placeholderSrc} placeholder />
       </amp-iframe>
     </React.Fragment>
   );
 };
 
 Amp.propTypes = {
-  embedSource: string.isRequired,
+  embedSrc: string.isRequired,
+  placeholderSrc: string.isRequired,
 };
 
 export default Amp;

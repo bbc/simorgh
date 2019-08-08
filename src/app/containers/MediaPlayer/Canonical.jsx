@@ -3,9 +3,6 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 import Image from '@bbc/psammead-image';
 
-const IMG_SRC =
-  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
-
 const StyledPlaceholder = styled.div`
   cursor: pointer;
   position: absolute;
@@ -35,15 +32,15 @@ const MediaPlayer = ({ src }) => (
   />
 );
 
-const Canonical = ({ embedSource }) => {
+const Canonical = ({ embedSrc, placeholderSrc }) => {
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
   const handlePlaceholderClick = () => setShowMediaPlayer(true);
 
   return showMediaPlayer ? (
-    <MediaPlayer src={embedSource} />
+    <MediaPlayer src={embedSrc} />
   ) : (
     <StyledPlaceholder onClick={handlePlaceholderClick}>
-      <Image alt="Image Alt" src={IMG_SRC} />
+      <Image alt="Image Alt" src={placeholderSrc} />
     </StyledPlaceholder>
   );
 };
@@ -53,7 +50,8 @@ MediaPlayer.propTypes = {
 };
 
 Canonical.propTypes = {
-  embedSource: string.isRequired,
+  embedSrc: string.isRequired,
+  placeholderSrc: string.isRequired,
 };
 
 export default Canonical;

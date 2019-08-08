@@ -14,6 +14,9 @@ import {
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
 
+const IMG_SRC =
+  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
+
 const StyledContainer = styled.div`
   padding-top: ${({ orientation }) =>
     orientation === 'Portrait' ? '177.78%' : '56.25%'};
@@ -36,27 +39,31 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null;
   }
 
+  const placeholderUrl = pathOr(
+    null,
+    ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
+    aresMediaBlock,
+  );
   const versionId = pathOr(
     null,
     ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
     aresMediaBlock,
   );
 
+  console.log('placeholderUrl', placeholderUrl);
+
   if (!versionId) {
     return null; // this should be the holding image with an error overlay
   }
 
   const embedSource = embedUrl(env, id, versionId, isAmp);
+  const Player = isAmp ? Amp : Canonical;
 
   return (
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
       <StyledContainer>
-        {isAmp ? (
-          <Amp embedSource={embedSource} />
-        ) : (
-          <Canonical embedSource={embedSource} />
-        )}
+        <Player placeholderSrc={IMG_SRC} embedSrc={embedSource} />
       </StyledContainer>
     </GridItemConstrainedMedium>
   );
