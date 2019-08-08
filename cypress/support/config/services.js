@@ -50,7 +50,7 @@ export default {
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
-          ? undefined
+          ? '/arabic/articles/c8j91j2ljppo'
           : '/arabic/articles/c69dvq19k63o',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
@@ -116,7 +116,10 @@ export default {
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : '/cymrufyw/articles/c123456abcdo',
-      frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/cymrufyw',
+      frontPage:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/cymrufyw',
     },
   },
   gahuza: {
@@ -289,7 +292,7 @@ export default {
     isWorldService: false,
     pageTypes: {
       articles:
-        Cypress.env('APP_ENV') === 'live'
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : '/naidheachdan/articles/c18q7nedn2ko',
       errorPage404:
@@ -297,7 +300,9 @@ export default {
           ? undefined
           : '/naidheachdan/articles/c123456abcdo',
       frontPage:
-        Cypress.env('APP_ENV') === 'live' ? undefined : '/naidheachdan',
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/naidheachdan',
     },
   },
   nepali: {
@@ -336,7 +341,7 @@ export default {
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
-          ? undefined
+          ? '/pashto/articles/c70970g2251o'
           : '/pashto/articles/cng0e8v85eko',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
@@ -351,7 +356,7 @@ export default {
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
-          ? undefined
+          ? '/persian/articles/c7eel0lmr4do'
           : '/persian/articles/c4vlle3q337o',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
@@ -578,7 +583,7 @@ export default {
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
-          ? undefined
+          ? '/urdu/articles/c4qg7qq63y6o'
           : '/urdu/articles/cx621klkm1ro',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
