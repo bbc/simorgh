@@ -5,9 +5,14 @@ const DOMAIN_PREFIX = {
   live: 'https://www.bbc.com/ws/av-embeds',
 };
 
-const embedUrl = (env, assetId, vpid) => {
+const embedUrl = (env, assetId, vpid, amp = false) => {
   const parts = [DOMAIN_PREFIX[env], assetId];
   let suffix = vpid;
+
+  if (amp) {
+    parts.push(suffix);
+    suffix = 'amp';
+  }
 
   if (env !== 'live') {
     const suffixParts = [suffix, MORPH_SUFFIX];
@@ -15,6 +20,7 @@ const embedUrl = (env, assetId, vpid) => {
   }
 
   parts.push(suffix);
+
   return parts.join('/');
 };
 

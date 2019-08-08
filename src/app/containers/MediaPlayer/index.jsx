@@ -23,6 +23,7 @@ const StyledContainer = styled.div`
 const MediaPlayerContainer = ({ blocks }) => {
   const { env, id, platform } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
+  const isAmp = platform === 'amp';
 
   if (!enabled || !blocks) {
     return null;
@@ -34,19 +35,27 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null;
   }
 
-  const nestedModel = pathOr(
+  const versionId = pathOr(
     null,
-    ['model', 'blocks', 0, 'model'],
+    ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
     aresMediaBlock,
   );
-  const versionId = pathOr(null, ['versions', 0, 'versionId'], nestedModel);
-  const embedSource = embedUrl(env, id, versionId);
+
+  if (!versionId) {
+    return null; // this should be the holding image with an error overlay
+  }
+
+  const embedSource = embedUrl(env, id, versionId, isAmp);
 
   return (
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
       <StyledContainer>
-        <Canonical embedSource={embedSource} />
+        {isAmp ? (
+          <React.Fragment>{embedSource}</React.Fragment>
+        ) : (
+          <Canonical embedSource={embedSource} />
+        )}
       </StyledContainer>
     </GridItemConstrainedMedium>
   );
