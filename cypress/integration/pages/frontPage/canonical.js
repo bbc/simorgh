@@ -1,5 +1,6 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
+import appConfig from '../../../../src/app/lib/config/services';
 
 const serviceHasFrontPage = service =>
   config[service].pageTypes.frontPage !== undefined;
@@ -34,11 +35,13 @@ Object.keys(config)
             cy.get('html').should('not.have.attr', 'amp');
           });
 
-          it('should have one visible navigation', () => {
-            cy.get('nav')
-              .should('have.lengthOf', 1)
-              .should('be.visible');
-          });
+          if (appConfig[service].navigation) {
+            it('should have one visible navigation', () => {
+              cy.get('nav')
+                .should('have.lengthOf', 1)
+                .should('be.visible');
+            });
+          }
 
           it('should have a visually hidden top-level header', () => {
             cy.get('h1').should('have.length', 1);
@@ -85,6 +88,12 @@ Object.keys(config)
                 ? envConfig.atiAnalyticsWSBucket
                 : '',
             );
+          });
+        });
+
+        describe('Consent Banners', () => {
+          it('have correct translations', () => {
+            cy.hasConsentBannerTranslations(service);
           });
         });
 
