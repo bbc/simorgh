@@ -7,9 +7,9 @@
 # 3. Copes configuration files and other necessary files
 
 # Cleanup
-rm -r pack
-rm -r build
-rm -r node_modules
+# rm -r pack
+# rm -r build
+# rm -r node_modules
 mkdir pack
 chmod -R 755 pack
 
