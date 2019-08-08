@@ -1,37 +1,24 @@
-// import { useContext } from 'react';
-// import atiPageViewParams from '../../atiUrl';
-// import { RequestContext } from '../../../../contexts/RequestContext';
-// import { ServiceContext } from '../../../../contexts/ServiceContext';
-// import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
-// import {
-//   getContentId,
-//   getLanguage,
-//   getPageIdentifier,
-//   getPageTitle,
-// } from '../../../../lib/analyticsUtils/frontpage';
+import { useContext, useState, useEffect } from 'react';
+import { atiEventTrackParams } from '../../atiUrl';
+import { RequestContext } from '../../../../contexts/RequestContext';
 import listener from '../../../../lib/analyticsUtils/eventListener';
+import sendBeacon from '../../../../lib/analyticsUtils/sendBeacon';
 
-const FrontPageAtiEventTracker = frontpageData => {
-  // const { platform, statsDestination } = useContext(RequestContext);
-  // const { atiAnalyticsAppName, brandName, service } = useContext(
-  //   ServiceContext,
-  // );
+const FrontPageAtiEventTracker = () => {
+  const { platform, statsDestination } = useContext(RequestContext);
+  const eventInfo = listener();
 
-  return listener(frontpageData);
+  const url = atiEventTrackParams({
+    platform,
+    statsDestination,
+    eventInfo,
+  });
 
-  // return atiPageViewParams({
-  //   appName: atiAnalyticsAppName,
-  //   contentId: getContentId(frontpageData),
-  //   contentType: 'index-home',
-  //   language: getLanguage(frontpageData),
-  //   pageIdentifier: getPageIdentifier(frontpageData),
-  //   pageTitle: getPageTitle(frontpageData, brandName),
-  //   timePublished: getPublishedDatetime('firstPublished', frontpageData),
-  //   timeUpdated: getPublishedDatetime('lastPublished', frontpageData),
-  //   platform,
-  //   service,
-  //   statsDestination,
-  // });
+  const [atiPageViewUrl] = useState(process.env.SIMORGH_ATI_BASE_URL + url);
+
+  return useEffect(() => {
+    sendBeacon(atiPageViewUrl);
+  }, [atiPageViewUrl]);
 };
 
 export default FrontPageAtiEventTracker;

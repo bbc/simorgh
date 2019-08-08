@@ -4,7 +4,8 @@ import { RequestContext } from '../../contexts/RequestContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import ArticleAtiParams from './params/article';
-import { FrontPageAtiParams, FrontPageEventParams } from './params/frontpage';
+import { FrontPageAtiParams } from './params/frontpage';
+import FrontPageAtiEventTracker from './event/frontpage';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 
@@ -19,7 +20,7 @@ const ATIAnalytics = ({ data }) => {
       break;
     case 'frontPage':
       pageviewParams = FrontPageAtiParams(data);
-      FrontPageEventParams(data);
+      FrontPageAtiEventTracker(data);
       break;
     default:
       return null;

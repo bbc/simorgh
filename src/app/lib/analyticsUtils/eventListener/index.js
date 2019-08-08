@@ -1,19 +1,15 @@
 import onClient from '../../utilities/onClient';
-import sendBeacon from '../sendBeacon';
 
-const listener = data => {
+const listener = () => {
   if (onClient()) {
-    // grab elements that need listeners - nav section brand story
-    // add listeners
-    const nav1 = document.getElementById('nav-/igbo');
+    const nav1 = document.getElementById('nav-/yoruba');
 
-    nav1.addEventListener('click', e => {
+    return nav1.addEventListener('click', e => {
       e.preventDefault();
-      sendBeacon('https://logws1363.ati-host.net?clicky-click');
     });
   }
 
-  return data;
+  return 'something';
 };
 
 export default listener;

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import atiPageViewParams, { atiEventTrackParams } from '../../atiUrl';
+import { atiPageViewParams, atiEventTrackParams } from '../../atiUrl';
 import { RequestContext } from '../../../../contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
