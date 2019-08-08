@@ -21,7 +21,7 @@ def runDevelopmentTests(){
 }
 
 def runDevelopmentChromaticTests(){
-  sh 'make DevelopmentChromaticTests'
+  sh 'make developmentChromaticTests'
 }
 
 def runProductionTests(){
