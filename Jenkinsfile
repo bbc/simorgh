@@ -127,7 +127,7 @@ pipeline {
           }
           steps {
             withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-              developmentChromaticTests()
+              runDevelopmentChromaticTests()
             }
           }
         }        
