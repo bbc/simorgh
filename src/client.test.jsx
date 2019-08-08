@@ -27,7 +27,7 @@ const unknownPathName = '/search?foo=bar';
 
 describe('Client', () => {
   beforeAll(() => {
-    setWindowValue('SIMORGH_DATA', 'someData');
+    setWindowValue('SIMORGH_DATA', { pageData: 'some data', path: pathname });
   });
 
   beforeEach(() => {

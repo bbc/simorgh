@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-filename-extension  */
 import React from 'react';
-import { matchRoutes } from 'react-router-config';
 import Loadable from 'react-loadable';
 import { hydrate } from 'react-dom';
 import { ClientApp } from './app/containers/App';
@@ -15,7 +14,7 @@ const root = document.getElementById('root');
 // see a blank screen. This should never happen on BBC domains, but web page
 // archival/caching sites such as Google webcache and web.archive.org, among
 // others.
-if (matchRoutes(routes, window.location.pathname).length > 0) {
+if (window.SIMORGH_DATA.path === window.location.pathname) {
   Loadable.preloadReady().then(() => {
     hydrate(<ClientApp data={data} routes={routes} />, root);
   });

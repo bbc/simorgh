@@ -165,7 +165,7 @@ server
   )
   .get(
     [articleRegexPath, frontpageRegexPath, ...mediaRadioAndTvRegexPathsArray],
-    async ({ url, headers }, res) => {
+    async ({ url, headers, path: urlPath }, res) => {
       try {
         const { service, isAmp, route, match } = getRouteProps(routes, url);
         const data = await route.getInitialData(match.params);
@@ -180,6 +180,7 @@ server
         }
         // Preserve initial dial state in window so it is available during hydration
         data.dials = dials;
+        data.path = urlPath;
 
         res.status(status).send(
           await renderDocument({
