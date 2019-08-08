@@ -116,7 +116,10 @@ export default {
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
           ? undefined
           : '/cymrufyw/articles/c123456abcdo',
-      frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/cymrufyw',
+      frontPage:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/cymrufyw',
     },
   },
   gahuza: {
