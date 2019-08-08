@@ -5,12 +5,11 @@ import {
 import appConfig from '../../../src/app/lib/config/services';
 import config from '../../support/config/services';
 
-// Limited to news for now due to time test takes to run per page.
-const filterService = service => service === 'news';
+// Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
+const serviceFilter = service => ['news', 'persian'].includes(service);
 
 const filterPageTypes = (pageType, service) =>
-  config[service].pageTypes[pageType] !== undefined &&
-  pageType !== 'errorPage404';
+  config[service].pageTypes[pageType] !== undefined;
 
 const getPrivacyBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.privacy.title);
@@ -45,11 +44,13 @@ const assertCookieValues = cookies => {
 };
 
 const visitPage = (service, pageType) => {
-  cy.visit(config[service].pageTypes[pageType]);
+  cy.visit(config[service].pageTypes[pageType], {
+    failOnStatusCode: !pageType.includes('error'),
+  });
 };
 
 Object.keys(config)
-  .filter(filterService)
+  .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
       .filter(pageType => filterPageTypes(pageType, service))
