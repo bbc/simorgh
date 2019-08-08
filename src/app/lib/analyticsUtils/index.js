@@ -51,6 +51,7 @@ export const getProducer = service => {
     kyrgyz: '58',
     marathi: '59',
     mundo: '62',
+    naidheachdan: '79',
     nepali: '63',
     news: '64',
     pashto: '68',
@@ -75,6 +76,7 @@ export const getProducer = service => {
     uzbek: '96',
     vietnamese: '97',
     yoruba: '107',
+    zhongwen: '38',
   };
 
   return producers[service] || 0;
