@@ -15,8 +15,8 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 .c5:focus,
 .c5:hover {
-  border-bottom: 2px solid #B80000;
   color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
@@ -263,8 +263,8 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 .c5:focus,
 .c5:hover {
-  border-bottom: 2px solid #B80000;
   color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
@@ -511,8 +511,8 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 .c5:focus,
 .c5:hover {
-  border-bottom: 2px solid #B80000;
   color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
@@ -754,8 +754,8 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 .c5:focus,
 .c5:hover {
-  border-bottom: 2px solid #B80000;
   color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
@@ -997,8 +997,8 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 .c5:focus,
 .c5:hover {
-  border-bottom: 2px solid #B80000;
   color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .c4 {
