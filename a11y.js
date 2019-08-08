@@ -23,6 +23,9 @@ const frontPagesUrls = services
 
 const getArticleUrls = service => {
   const files = fs.readdirSync(`${dataDir}/${service}/articles`);
+
+  // filter out articles files which contain `0000` in their file names
+  // since most of them do not have real test data
   const articleFile = files.find(file => !file.includes('0000'));
   const article = path.basename(articleFile, path.extname(articleFile));
   return `${baseUrl}${service}/articles/${article}`;
