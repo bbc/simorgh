@@ -7,6 +7,7 @@ import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 const yoruba = {
   lang: 'yo',
   product: 'BBC News',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-yoruba',
   brandName: 'BBC News Yorùbá',

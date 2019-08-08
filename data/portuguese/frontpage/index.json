@@ -54,7 +54,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48961625"
             },
             "summary": "Na quinta, deputados barraram aumento do tempo mínimo de contribuição para trabalhadores do setor privado.",
-            "timestamp": 1565146799000,
+            "timestamp": 1562923780000,
             "byline": {
               "name": "Mariana Schreiber ",
               "title": "Da BBC News Brasil em Brasília",
@@ -105,7 +105,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/brasil-48959811"
                 },
                 "summary": "Contrários à reforma, PDT e PSB viram um terço de suas bancadas votar a favor das mudanças em aposentadorias; deputada Tábata Amaral diz que 'ser de esquerda não pode significar ser contra projeto que pode tornar o Brasil mais inclusivo'.",
-                "timestamp": 1562922840,
+                "timestamp": 1562922839000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/brasil-48959811",
                 "type": "cps"
@@ -120,7 +120,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/brasil-48931737"
                 },
                 "summary": "Ao longo dos últimos meses, setores da economia e categorias profissionais se mobilizaram para conseguir modificações na proposta da reforma da Previdência; vários conseguiram benefícios.",
-                "timestamp": 1562833200,
+                "timestamp": 1562833199000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/brasil-48931737",
                 "type": "cps"
@@ -149,7 +149,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48959005"
             },
             "summary": "Mais cedo, o presidente Jair Bolsonaro afirmou que decidiu escolher o filho para ser embaixador do Brasil nos Estados Unidos, cargo vago desde abril.",
-            "timestamp": 1562886764,
+            "timestamp": 1562886763000,
             "byline": {
               "name": "André Shalders - @andreshalders",
               "title": "Da BBC News Brasil em Brasília",
@@ -193,7 +193,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/brasil-48834185"
                 },
                 "summary": "Subcomitê da Organização das Nações Unidas para a prevenção da tortura informou que solicitou reuniões com a Missão Permanente do Brasil em Genebra para discutir um recente decreto do presidente Jair Bolsonaro, que alterou Mecanismo Nacional de Combate e Prevenção à Tortura.",
-                "timestamp": 1562016827,
+                "timestamp": 1562016826000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/brasil-48834185",
                 "type": "cps"
@@ -211,7 +211,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48949683"
             },
             "summary": "Segundo cientistas, fóssil achado em caverna nos anos 70 tem 210 mil anos, época em que Europa era ocupada por neandertais; descoberta seria evidência de migração do homem moderno da África anterior à de nossos ancestrais.",
-            "timestamp": 1562854487,
+            "timestamp": 1562854486000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -250,7 +250,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-48028683"
                 },
                 "summary": "Segundo o estudo, um dos fatores que fez nosso rosto evoluir foi a necessidade de se comunicar melhor.",
-                "timestamp": 1556292693,
+                "timestamp": 1556292692000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/internacional-48028683",
                 "type": "cps"
@@ -264,7 +264,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/curiosidades-48757500"
                 },
                 "summary": "Atualmente, existem mais de 6.500 idiomas no mundo. É possível rastrear a origem dessas línguas?",
-                "timestamp": 1561645812,
+                "timestamp": 1561645811000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/curiosidades-48757500",
                 "type": "cps"
@@ -282,7 +282,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48942881"
             },
             "summary": "Terremotos da semana passada na Califórnia, os mais intensos em 20 anos, alimentaram temores da chegada do chamado 'Big One', um tremor de magnitude 8 com potencial de deixar grande rastro de destruição e morte.",
-            "timestamp": 1562840152,
+            "timestamp": 1562840151000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -316,7 +316,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-48894615"
                 },
                 "summary": "Resultado da movimentação de duas placas tectônicas, San Andreas é uma das mais famosas falhas do planeta e traz instabilidade sísmica à Califórnia, que nos últimos dez dias registrou mais de 100 tremores na região sul - entre eles um terremoto de magnitude 7,1, o maior em 20 anos na área.",
-                "timestamp": 1562422601,
+                "timestamp": 1562422600000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/internacional-48894615",
                 "type": "cps"
@@ -334,7 +334,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48924025"
             },
             "summary": "Vazamento de e-mails confidenciais, em que embaixador Kim Darroch chama presidente americano de 'inepto', 'atrapalhado' e 'incompetente', gerou duras críticas de Trump; apesar de apoio de premiê britânica ao diplomata, este decidiu deixar o posto.",
-            "timestamp": 1562766750,
+            "timestamp": 1562766749000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -374,7 +374,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-48595422"
                 },
                 "summary": "Um novo primeiro-ministro está sendo escolhido no Reino Unido, mas apenas 0,26% do eleitorado terá a chance de votar, e metade dos candidatos não consegue deixar de falar sobre a última vez que usou drogas. Aqui contamos o que está acontecendo em uma eleição muito estranha, que decidirá como o país finalmente vai lidar com a crise do Brexit e deixar a União Europeia",
-                "timestamp": 1560372337,
+                "timestamp": 1560372336000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/internacional-48595422",
                 "type": "cps"
@@ -392,7 +392,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48928512"
             },
             "summary": "Tuíte do vereador Carlos Bolsonaro, filho do presidente Jair Bolsonaro, no último domingo reacendeu polêmica sobre efeito das mudanças climáticas; BBC News Brasil conversou com especialistas em clima.",
-            "timestamp": 1562752695,
+            "timestamp": 1562752694000,
             "byline": {
               "name": "Luis Barrucho - @luisbarrucho",
               "title": "Da BBC News Brasil em Londres ",
@@ -446,7 +446,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/geral-47080543"
                 },
                 "summary": "'Se o mundo está ficando mais quente, por que, então, está fazendo tanto frio nos EUA' perguntou presidente, que vê como exageradas as preocupações com o aumento médio de temperaturas no mundo.",
-                "timestamp": 1549020886,
+                "timestamp": 1549020885000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/geral-47080543",
                 "type": "cps"
@@ -460,7 +460,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-47831368"
                 },
                 "summary": "'As pessoas estão começando a sentir a mudança climática – está começando a ser algo que é parte de suas experiências pessoais', diz o professor Matthew Hoffmann, da Universidade de Toronto.",
-                "timestamp": 1554490036,
+                "timestamp": 1554490035000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:portuguese/internacional-47831368",
                 "type": "cps"
@@ -485,7 +485,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48880650"
             },
             "summary": "Técnicos de órgãos ambientais relatam à BBC aumento considerável no desmatamento na Floresta Amazônica desde posse do presidente Bolsonaro em janeiro.",
-            "timestamp": 1562324475,
+            "timestamp": 1562324474000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -533,7 +533,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48866400"
             },
             "summary": "Sara, de 10 anos, nasceu sem as duas mãos, mas não deixa que isso a impeça de pintar, andar de bicicleta e escrever.",
-            "timestamp": 1562227045,
+            "timestamp": 1562227044000,
             "cpsType": "MAP",
             "media": {
               "id": "p07fw59x",
@@ -615,7 +615,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48915658"
             },
             "summary": "Em entrevista à BBC News Brasil, governador paulista afirma também que reeleição 'não costuma funcionar bem' no Brasil e há 99% de chance de a Fórmula 1 não sair de SP.",
-            "timestamp": 1562691776,
+            "timestamp": 1562691775000,
             "byline": {
               "name": "Laís Alegretti - @laisalegretti",
               "title": "Da BBC News Brasil em Londres",
@@ -666,7 +666,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48907226"
             },
             "summary": "Em entrevista à BBC News Brasil, magistrado afirma que divulgação de mensagens atribuídas a Sergio Moro e Deltan Dallagnol é 'estímulo à prática criminosa de hackers' e diz que há sérias dúvidas sobre a veracidade do material.",
-            "timestamp": 1562604109,
+            "timestamp": 1562604108000,
             "byline": {
               "name": "Júlia Dias Carneiro",
               "title": "Da BBC News Brasil no Rio de Janeiro",
@@ -732,7 +732,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48877547"
             },
             "summary": "Nos últimos dias, ao menos quatro pessoas morreram nas ruas da capital paulista durante as madrugadas mais frias dos últimos três anos. 'Todo dia você ouve uma história de um companheiro que se foi'.",
-            "timestamp": 1562703282,
+            "timestamp": 1562703281000,
             "byline": {
               "name": "Felipe Souza",
               "title": "Da BBC News Brasil em São Paulo",
@@ -787,7 +787,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48888703"
             },
             "summary": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil, os homófonos são apenas uma das muitas dificuldades de se aprender uma nova língua.",
-            "timestamp": 1562669281,
+            "timestamp": 1562669280000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -832,7 +832,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48865896"
             },
             "summary": "Você moraria em um imóvel de 10 metros quadrados? Construção de microapartamentos é uma tendência em ascensão em grandes centros urbanos.",
-            "timestamp": 1562459997,
+            "timestamp": 1562459996000,
             "byline": {
               "name": "Cecilia Barría",
               "title": "BBC News Mundo",
@@ -893,7 +893,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48845254"
             },
             "summary": "Diante de tantas críticas e pressão em relação ao acordo negociado por 20 anos, governo francês tem demonstrado prudência, prometendo examinar o texto em detalhes antes de validá-lo.",
-            "timestamp": 1562493406,
+            "timestamp": 1562493405000,
             "byline": {
               "name": "Daniela Fernandes",
               "title": "De Paris para a BBC News Brasil",
@@ -960,7 +960,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48900336"
             },
             "summary": "Experimento de 1974 conhecido como 'a ponte do amor' mostrou que, quando se trata de reconhecer sentimentos, nosso cérebro às vezes se confunde.",
-            "timestamp": 1562534431,
+            "timestamp": 1562534430000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1017,7 +1017,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48914262"
             },
             "summary": "A estilista Stella McCartney diz que não devemos limpar nossas roupas se \"não for absolutamente necessário\". Ela tem razão?",
-            "timestamp": 1562618626,
+            "timestamp": 1562618625000,
             "byline": {
               "name": "Ashitha Nagesh",
               "title": "Da BBC News",
@@ -1078,7 +1078,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48903881"
             },
             "summary": "Tripulação passou apertos - literalmente - para urinar e lidar com comidas não muito atraentes servidas em tubos.",
-            "timestamp": 1562590200,
+            "timestamp": 1562590199000,
             "byline": {
               "name": "Richard Hollingham",
               "title": "para a BBC",
@@ -1149,7 +1149,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48890410"
             },
             "summary": "Causada por um vírus e altamente contagiosa, doença foi completamente erradicada em 2016 mas voltou com força em 2018 e ainda preocupa, apesar de casos terem caído neste ano.",
-            "timestamp": 1562575187,
+            "timestamp": 1562575186000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1207,7 +1207,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48928952"
             },
             "summary": "Relatórios e testemunhas apontam para uma campanha de afastamento sistemático de crianças de minoria étnica de familiares e crenças religiosas. Autoridades falam em combate a extremismo religioso.",
-            "timestamp": 1562784318,
+            "timestamp": 1562784317000,
             "byline": {
               "name": "John Sudworth ",
               "title": "BBC News, Xinjiang",
@@ -1275,7 +1275,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/aprenda-ingles-48880656"
             },
             "summary": "Aprenda inglês com reportagem sobre como inteligência artificial está revolucionando técnicas de recrutamento de grandes empresas.",
-            "timestamp": 1562339158,
+            "timestamp": 1562339157000,
             "cpsType": "MAP",
             "media": {
               "id": "48887603",
@@ -1327,7 +1327,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/48916568"
             },
             "summary": "Dirce de Assis Cavalcanti passou a vida ouvindo que era 'filha de assassino'; seu pai, Dilermando de Assis, entrou para a história como o homem que matou o escritor Euclides da Cunha, homenageado deste ano na 17ª Festa Literária Internacional de Paraty (Flip).",
-            "timestamp": 1562672758,
+            "timestamp": 1562672757000,
             "byline": {
               "name": "Júlia Dias Carneiro",
               "title": "Da BBC Brasil no Rio de Janeiro",
@@ -1389,7 +1389,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48788024"
             },
             "summary": "Mapa 'artístico' de bacias hidrográficas revela perspectiva pouco usual de uma das redes fluviais mais extensas e diversificadas do planeta; cartógrafo-artista criou mapas de 160 regiões do mundo.",
-            "timestamp": 1561978284,
+            "timestamp": 1561978283000,
             "byline": {
               "name": "Renata Moura",
               "title": "Da BBC News Brasil em Londres",
@@ -1435,7 +1435,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48823840"
             },
             "summary": "Carros e caminhões ficaram 'soterrados' em Guadalajara; também foram registradas enchentes e quedas de árvores, mas tudo indica que não houve feridos.",
-            "timestamp": 1561985477,
+            "timestamp": 1561985476000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1483,7 +1483,7 @@
             "uri": "https://www.bbc.com/portuguese/brasil-47536816",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1552383567,
+            "timestamp": 1552383566000,
             "type": "link"
           },
           {
@@ -1495,7 +1495,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48660670"
             },
             "summary": "Todos os anos, a última ponte Inca ainda em uso, no Peru, é derrubada e uma nova é erguida sobre o Rio Apurímac, na região de Cusco.",
-            "timestamp": 1560803036,
+            "timestamp": 1560803035000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1536,7 +1536,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48426013"
             },
             "summary": "Steve Biro fez registro de águia-de-cabeça-branca voando sobre rio em santuário de aves de rapina no Canadá.",
-            "timestamp": 1559053384,
+            "timestamp": 1559053383000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1578,7 +1578,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48155457"
             },
             "summary": "Confira algumas palavras que soam idênticas em português e espanhol, mas têm significados completamente diferentes.",
-            "timestamp": 1557992924,
+            "timestamp": 1557992923000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1638,7 +1638,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48945653"
             },
             "summary": "Abertas na quinta-feira, tumbas de princesas alemãs que apareciam em fotos enviadas anonimamente à família de Emanuela Orlandi, desaparecida misteriosamente nas ruas de Roma em 1983, estavam vazias.",
-            "timestamp": 1562931044,
+            "timestamp": 1562931043000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1673,7 +1673,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48959118"
             },
             "summary": "Entidade analisou níveis do herbicida glifosato em cereais matinais. Fabricante diz que consumo desses produtos é seguro.",
-            "timestamp": 1562876332,
+            "timestamp": 1562876331000,
             "cpsType": "MAP",
             "media": {
               "id": "p07gk75m",
@@ -1730,7 +1730,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48956753"
             },
             "summary": "Especialistas dizem que não há motivo para alarme, apesar do césio acumulado nos restos do naufrágio.",
-            "timestamp": 1562873762,
+            "timestamp": 1562873761000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1765,7 +1765,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48945656"
             },
             "summary": "Mulher de 37 anos disse que se sentiu envergonhada e humilhada após o pedido; American Airlines disse que pediu desculpas à passageira e reembolsou o valor da passagem.",
-            "timestamp": 1562871419,
+            "timestamp": 1562871418000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1800,7 +1800,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-cul-48436866"
             },
             "summary": "Histórias desconhecidas de extraordinárias cineastas do Oriente estão finalmente sendo reveladas. A repórter Harriet Constable foi descobrir como – e por que essa mudança está acontecendo agora",
-            "timestamp": 1562867496,
+            "timestamp": 1562867495000,
             "byline": {
               "name": "Harriet Constable",
               "title": "Da BBC Culture",
@@ -1851,7 +1851,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48916558"
             },
             "summary": "Eles comem apenas o que receberem de esmola, nunca se banham e não usam tecnologias modernas.",
-            "timestamp": 1562859177,
+            "timestamp": 1562859176000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1892,7 +1892,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48916172"
             },
             "summary": "Cinquenta anos após Neil Armstrong ter dado um 'pequeno passo para o homem, um grande passo para a humanidade', ainda há muita gente que acredita que a chegada do homem à Lua foi encenada com ajuda de técnicas do cinema.",
-            "timestamp": 1562847008,
+            "timestamp": 1562847007000,
             "byline": {
               "name": "Edison Veiga",
               "title": "De Bled para a BBC News Brasil",
@@ -1937,7 +1937,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48948143"
             },
             "summary": "Pai admite que não tomou todas as precauções para limitar o acesso à sua conta - saiba como evitar que isso aconteça.",
-            "timestamp": 1562842066,
+            "timestamp": 1562842065000,
             "byline": {
               "name": "Zoe Kleinman",
               "title": "BBC News",
@@ -1987,7 +1987,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48931224"
             },
             "summary": "Nos últimos anos, Solange Amorim fez mais de 25 cosplays, como Rita Repulsa, da franquia \"Power Rangers\" e até o Mestre dos Magos, do desenho \"Caverna do Dragão\".",
-            "timestamp": 1562795732,
+            "timestamp": 1562795731000,
             "byline": {
               "name": "Vinícius Lemos",
               "title": "De Cuiabá para BBC News Brasil",
@@ -2032,7 +2032,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-fut-48826552"
             },
             "summary": "A maioria das pessoas raramente tem a mesma ideia do que significa ser infiel e subestima a probabilidade de ocorrer algum tipo de traição.",
-            "timestamp": 1562792690,
+            "timestamp": 1562792689000,
             "byline": {
               "name": "William Park",
               "title": "BBC Future",
@@ -2083,7 +2083,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48934266"
             },
             "summary": "Quando uma jovem pediu conselhos em um fórum na internet, recebeu mensagens de apoio do mundo inteiro.",
-            "timestamp": 1562787675,
+            "timestamp": 1562787674000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2123,7 +2123,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48935135"
             },
             "summary": "Seis corredores de ultramaratona de diferentes partes do mundo compartilham suas motivações para percorrer longas distâncias.",
-            "timestamp": 1562774271,
+            "timestamp": 1562774270000,
             "byline": {
               "name": "Hannah Price e Sophie Haydock",
               "title": "BBC News",
@@ -2189,7 +2189,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:portuguese/institutional-41672312"
             },
             "summary": "Conheça as empresas que têm parcerias com a BBC Brasil e que nos ajudam a levar a um público mais amplo o nosso conteúdo.",
-            "timestamp": 1508343204,
+            "timestamp": 1508343203000,
             "cpsType": "STY",
             "options": {
               "isBreakingNews": false,

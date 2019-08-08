@@ -1,5 +1,11 @@
 import config from '../../../support/config/services';
+import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/app/lib/config/services';
+import describeForEuOnly from '../../../support/describeForEuOnly';
+
+// TODO: Remove after https://github.com/bbc/simorgh/issues/2959
+const serviceHasFigure = service =>
+  ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 
 const serviceHasArticlePageType = service =>
   config[service].pageTypes.articles !== undefined;
@@ -48,6 +54,31 @@ Object.keys(config)
             );
           },
         );
+      });
+
+      describe('ATI', () => {
+        it('should have an amp-analytics tag with the ati url', () => {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        });
+      });
+
+      describe('Chartbeat', () => {
+        if (envConfig.chartbeatEnabled) {
+          it('should have chartbeat config UID', () => {
+            cy.hasAmpChartbeatConfigUid();
+          });
+        }
+      });
+
+      describeForEuOnly('Consent Banners', () => {
+        it('have correct translations', () => {
+          cy.hasConsentBannerTranslations(service);
+        });
       });
 
       it('should have AMP attribute', () => {
@@ -118,12 +149,14 @@ Object.keys(config)
       });
 
       it('should contain an amp-img', () => {
-        cy.get('figure')
-          .eq(0)
-          .should('be.visible')
-          .within(() => {
-            cy.get('amp-img').should('be.visible');
-          });
+        if (serviceHasFigure(service)) {
+          cy.get('figure')
+            .eq(0)
+            .should('be.visible')
+            .within(() => {
+              cy.get('amp-img').should('be.visible');
+            });
+        }
       });
 
       it('should include the canonical URL', () => {

@@ -7,6 +7,7 @@ import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 const igbo = {
   lang: 'ig',
   product: 'BBC News',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',
   brandName: 'BBC News Ìgbò',
