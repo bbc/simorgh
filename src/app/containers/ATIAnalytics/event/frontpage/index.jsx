@@ -14,8 +14,7 @@ const FrontPageAtiEventTracker = eventInfo => {
     eventInfo,
   });
   console.log(eventInfo);
-  sendBeacon(`https://logws1363.ati-host.net/?${url}&type=AT`);
-  return 'something';
+  return sendBeacon(`https://logws1363.ati-host.net/?${url}&type=AT`);
 };
 
 export default FrontPageAtiEventTracker;
