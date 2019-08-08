@@ -1,4 +1,5 @@
 import onClient from '../../utilities/onClient';
+import FrontPageAtiEventTracker from '../../../containers/ATIAnalytics/event/frontpage';
 
 const listener = () => {
   if (onClient()) {
@@ -6,6 +7,7 @@ const listener = () => {
 
     return nav1.addEventListener('click', e => {
       e.preventDefault();
+      FrontPageAtiEventTracker(e);
     });
   }
 
