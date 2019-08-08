@@ -20,6 +20,11 @@ def runDevelopmentTests(){
   sh 'make developmentTests'
 }
 
+def runDevelopmentChromaticTests(){
+  sh 'make install'
+  sh 'make developmentChromaticTests'
+}
+
 def runProductionTests(){
   sh 'make install'
   sh 'make productionTests'
@@ -113,6 +118,19 @@ pipeline {
             }
           }
         }
+        stage ('Chromatic Test Development') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              developmentChromaticTests()
+            }
+          }
+        }        
         stage ('Test Production') {
           agent {
             docker {
