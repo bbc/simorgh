@@ -59,7 +59,7 @@
   "husky": {
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
-      "pre-commit": "npm run test:lint",
+      "pre-commit": "lint-staged",
       "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit -- --changedSince=latest && apache2-license-checker"
     }
   },
@@ -95,7 +95,7 @@
     "@bbc/psammead-paragraph": "^2.1.0",
     "@bbc/psammead-section-label": "^2.1.0",
     "@bbc/psammead-sitewide-links": "^3.0.0",
-    "@bbc/psammead-story-promo": "^2.2.1",
+    "@bbc/psammead-story-promo": "^2.3.0",
     "@bbc/psammead-story-promo-list": "^1.1.0",
     "@bbc/psammead-styles": "^1.2.0",
     "@bbc/psammead-timestamp-container": "^2.3.2",
@@ -132,7 +132,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/polyfill": "^7.2.5",
@@ -181,6 +181,7 @@
     "jest-fetch-mock": "^2.1.1",
     "jest-styled-components": "^6.3.3",
     "lighthouse": "^5.2.0",
+    "lint-staged": "^9.2.1",
     "moment-timezone-data-webpack-plugin": "^1.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
@@ -219,5 +220,9 @@
       "cloudteam-td-agent-setup",
       "dial-agent"
     ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,json}": "eslint",
+    "src/**/*.{js,jsx}": "stylelint"
   }
 }
