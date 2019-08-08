@@ -356,7 +356,7 @@ export default {
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
-          ? undefined
+          ? '/persian/articles/c7eel0lmr4do'
           : '/persian/articles/c4vlle3q337o',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
