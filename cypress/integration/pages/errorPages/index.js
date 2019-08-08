@@ -60,5 +60,11 @@ Object.keys(config)
           `${testData[service].translations.error[404].title} - ${testData[service].brandName}`,
         );
       });
+
+      describe('Consent Banners', () => {
+        it('have correct translations', () => {
+          cy.hasConsentBannerTranslations(service);
+        });
+      });
     });
   });
