@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { string } from 'prop-types';
 
 const AmpHead = () => {
   return (
@@ -31,6 +32,10 @@ const Amp = ({ embedSource }) => {
       </amp-iframe>
     </React.Fragment>
   );
+};
+
+Amp.propTypes = {
+  embedSource: string.isRequired,
 };
 
 export default Amp;

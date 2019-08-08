@@ -4,7 +4,7 @@ import {
   multipleAresMetadata,
   videoClipGlobalGuidanceBlock,
   audioClipGlobalGuidanceBlock,
-} from '../helpers/fixtures';
+} from '../fixtures';
 
 describe('mediaPlayerMetadata', () => {
   it('returns correct video metadata', () => {

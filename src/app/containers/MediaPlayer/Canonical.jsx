@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { string } from 'prop-types';
 import styled from 'styled-components';
 import Image from '@bbc/psammead-image';
 
@@ -40,4 +41,13 @@ const Canonical = ({ embedSource }) => {
     </StyledPlaceholder>
   );
 };
+
+MediaPlayer.propTypes = {
+  src: string.isRequired,
+};
+
+Canonical.propTypes = {
+  embedSource: string.isRequired,
+};
+
 export default Canonical;
