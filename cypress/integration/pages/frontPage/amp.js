@@ -1,5 +1,6 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
+import describeForEuOnly from '../../../support/describeForEuOnly';
 
 const serviceHasFrontPage = service =>
   config[service].pageTypes.frontPage !== undefined;
@@ -30,6 +31,12 @@ Object.keys(config)
               ? envConfig.atiAnalyticsWSBucket
               : '',
           );
+        });
+      });
+
+      describeForEuOnly('Consent Banners', () => {
+        it('have correct translations', () => {
+          cy.hasConsentBannerTranslations(service);
         });
       });
 
