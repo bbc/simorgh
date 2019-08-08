@@ -9,7 +9,6 @@ const listener = data => {
 
     nav1.addEventListener('click', e => {
       e.preventDefault();
-      console.log(e);
       sendBeacon('https://logws1363.ati-host.net?clicky-click');
     });
   }
