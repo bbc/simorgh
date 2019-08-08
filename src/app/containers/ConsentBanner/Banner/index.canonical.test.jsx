@@ -3,32 +3,40 @@ import { shouldMatchSnapshot } from '../../../../testHelpers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Banner from './index.canonical';
 
-describe('Canonical Consent Banner Container - Banner', () => {
-  shouldMatchSnapshot(
-    'should correctly render privacy banner - LTR layout',
-    <ServiceContextProvider service="news">
-      <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />
-    </ServiceContextProvider>,
-  );
+describe('Canonical Consent Banner Container', () => {
+  const privacy = ({ description, service }) =>
+    shouldMatchSnapshot(
+      description,
+      <ServiceContextProvider service={service}>
+        <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />
+      </ServiceContextProvider>,
+    );
 
-  shouldMatchSnapshot(
-    'should correctly render cookie banner - LTR layout',
-    <ServiceContextProvider service="news">
-      <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />
-    </ServiceContextProvider>,
-  );
+  privacy({
+    description: 'should correctly render privacy banner - LTR layout',
+    service: 'news',
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render privacy banner - RTL layout',
-    <ServiceContextProvider service="arabic">
-      <Banner type="privacy" onAccept={() => {}} onReject={() => {}} />
-    </ServiceContextProvider>,
-  );
+  privacy({
+    description: 'should correctly render privacy banner - RTL layout',
+    service: 'arabic',
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render cookie banner - RTL layout',
-    <ServiceContextProvider service="arabic">
-      <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />
-    </ServiceContextProvider>,
-  );
+  const cookie = ({ description, service }) =>
+    shouldMatchSnapshot(
+      description,
+      <ServiceContextProvider service={service}>
+        <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />
+      </ServiceContextProvider>,
+    );
+
+  cookie({
+    description: 'should correctly render cookie banner - LTR layout',
+    service: 'news',
+  });
+
+  cookie({
+    description: 'should correctly render cookie banner - RTL layout',
+    service: 'arabic',
+  });
 });

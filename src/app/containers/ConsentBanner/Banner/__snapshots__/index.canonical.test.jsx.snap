@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical Consent Banner Container - Banner should correctly render cookie banner - LTR layout 1`] = `
+exports[`Canonical Consent Banner Container should correctly render cookie banner - LTR layout 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -235,7 +235,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 </div>
 `;
 
-exports[`Canonical Consent Banner Container - Banner should correctly render cookie banner - RTL layout 1`] = `
+exports[`Canonical Consent Banner Container should correctly render cookie banner - RTL layout 1`] = `
 .c0 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -470,7 +470,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 </div>
 `;
 
-exports[`Canonical Consent Banner Container - Banner should correctly render privacy banner - LTR layout 1`] = `
+exports[`Canonical Consent Banner Container should correctly render privacy banner - LTR layout 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -699,7 +699,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
 </div>
 `;
 
-exports[`Canonical Consent Banner Container - Banner should correctly render privacy banner - RTL layout 1`] = `
+exports[`Canonical Consent Banner Container should correctly render privacy banner - RTL layout 1`] = `
 .c0 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
