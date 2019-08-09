@@ -1,10 +1,16 @@
 import { node, number } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import { GEL_SPACING, GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
@@ -52,7 +58,10 @@ export const GridItemConstrainedLargeWithTopMargin = styled(
   GridItemConstrainedLarge,
 )`
   margin-top: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: 0;
   }
 `;
