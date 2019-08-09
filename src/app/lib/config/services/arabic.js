@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { arabic as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const service = {
   lang: 'ar',

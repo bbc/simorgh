@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
 
 const service = {
   lang: `bn-BD`,
