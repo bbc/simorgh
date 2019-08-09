@@ -33,7 +33,7 @@ const service = {
   translations: {
     home: 'ਖ਼ਬਰਾਂ',
     currentPage: 'Current page',
-    skipLinkText: 'Skip to content',
+    skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
     error: {
       404: {
         statusCode: '404',
