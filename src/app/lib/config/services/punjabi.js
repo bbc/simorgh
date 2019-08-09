@@ -117,6 +117,28 @@ const service = {
     },
   },
   brandSVG,
+  navigation: [
+    {
+      title: 'ਖ਼ਬਰਾਂ',
+      url: '/punjabi',
+    },
+    {
+      title: 'ਵੀਡੀਓ',
+      url: '/punjabi/media/video',
+    },
+    {
+      title: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
+      url: '/punjabi/popular/read',
+    },
+    {
+      title: 'ਭਾਰਤ',
+      url: '/punjabi/india',
+    },
+    {
+      title: 'ਕੌਮਾਂਤਰੀ',
+      url: '/punjabi/international',
+    },
+  ],
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
