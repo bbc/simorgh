@@ -3,7 +3,7 @@ import FrontPageAtiEventTracker from '../../../containers/ATIAnalytics/event/fro
 
 const listener = (frontpageData, platform, statsDestination, service) => {
   if (onClient()) {
-    const navItems = document.getElementByClassName('track-nav');
+    const navItems = document.getElementsByClassName('track-nav');
 
     navItems.forEach(item => {
       item.addEventListener('click', e => {
