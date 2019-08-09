@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
 const group4ColWidth = `6.75rem`;
 /* (1008px - (2*16px margins + 7*16px gutters) / 8 columns = 108px = 6.75rem single column width */
@@ -37,15 +38,15 @@ const specifiedOrMaximum = (specified, maximum) =>
 
 const nestedGrid = css`
   display: grid;
-  grid-column-gap: 1rem;
+  grid-column-gap: ${GEL_SPACING_DBL};
 `;
 
 export const gelGridMargin = css`
   @media (max-width: 400px) {
-    padding: 0 1rem;
+    padding: 0 ${GEL_SPACING_DBL};
   }
   @media (min-width: 400px) and (max-width: 1007px) {
-    padding: 0 1rem;
+    padding: 0 ${GEL_SPACING_DBL};
   }
 `;
 
@@ -62,10 +63,10 @@ export const layoutGridWrapper = css`
   margin: 0 auto;
 
   @media (max-width: 599px) {
-    grid-column-gap: 1rem;
+    grid-column-gap: ${GEL_SPACING_DBL};
   }
   @media (min-width: 600px) {
-    grid-column-gap: 1rem;
+    grid-column-gap: ${GEL_SPACING_DBL};
   }
   @media (max-width: 1007px) {
     grid-template-columns: repeat(6, 1fr);

@@ -1,3 +1,5 @@
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+
 const news = {
   lang: 'en-GB',
   articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -325,7 +327,7 @@ const news = {
       video: 'Video',
     },
   },
-  brandSVG: 'brandSVG',
+  brandSVG,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
