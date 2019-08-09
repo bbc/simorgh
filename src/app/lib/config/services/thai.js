@@ -31,6 +31,8 @@ const service = {
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
   translations: {
+    currentPage: 'หน้าปัจจุบัน',
+    skipLinkText: 'ข้ามไปยังเนื้อหา',
     error: {
       404: {
         statusCode: '404',
@@ -116,6 +118,36 @@ const service = {
     },
   },
   brandSVG,
+  navigation: [
+    {
+      title: 'หน้าแรก',
+      url: '/thai',
+    },
+    {
+      title: 'ประเทศไทย',
+      url: '/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91',
+    },
+    {
+      title: 'ต่างประเทศ',
+      url: '/thai/international',
+    },
+    {
+      title: 'วิทยาศาสตร์',
+      url: '/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+    },
+    {
+      title: 'สุขภาพ',
+      url: '/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+    },
+    {
+      title: 'วิดีโอ',
+      url: '/thai/media/video',
+    },
+    {
+      title: 'ยอดนิยม',
+      url: '/thai/popular/read',
+    },
+  ],
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
