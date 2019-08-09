@@ -6,8 +6,11 @@ import {
   getDomain,
   buildSections,
   getType,
+  getTitle,
 } from '.';
 import onClient from '../../utilities/onClient';
+import * as articleUtils from '../article';
+import * as frontPageUtils from '../frontpage';
 
 let isOnClient = false;
 
@@ -171,5 +174,59 @@ describe('Chartbeat utilities', () => {
         });
       },
     );
+  });
+
+  describe('Chartbeat Title', () => {
+    it('should call getPromoHeadline when pageType is article', () => {
+      const pageType = 'article';
+      const pageData = {};
+
+      const mockGetPromoHeadline = jest
+        .fn()
+        .mockImplementation(() => 'This is an article title');
+      articleUtils.getPromoHeadline = mockGetPromoHeadline;
+      expect(getTitle(pageType, pageData, null)).toBe(
+        'This is an article title',
+      );
+      expect(mockGetPromoHeadline).toHaveBeenCalledTimes(1);
+    });
+
+    it('should call getPageTitle when pageType is frontPage', () => {
+      const pageType = 'frontPage';
+      const pageData = {};
+      const brandName = 'BBC News';
+
+      const mockGetPageTitle = jest
+        .fn()
+        .mockImplementation(() => 'This is a frontpage title');
+      frontPageUtils.getPageTitle = mockGetPageTitle;
+      expect(getTitle(pageType, pageData, brandName)).toBe(
+        'This is a frontpage title',
+      );
+      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
+    });
+
+    it('should call getPageTitle when pageType is index', () => {
+      const pageType = 'index';
+      const pageData = {};
+      const brandName = 'BBC News';
+
+      const mockGetPageTitle = jest
+        .fn()
+        .mockImplementation(() => 'This is an index page title');
+      frontPageUtils.getPageTitle = mockGetPageTitle;
+      expect(getTitle(pageType, pageData, brandName)).toBe(
+        'This is an index page title',
+      );
+      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
+    });
+
+    it('should default to null when no matching pageType', () => {
+      const pageType = 'some page type';
+      const pageData = {};
+      const brandName = 'BBC News';
+
+      expect(getTitle(pageType, pageData, brandName)).toBe(null);
+    });
   });
 });
