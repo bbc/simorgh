@@ -1,11 +1,7 @@
 import { node, number } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING, GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -57,7 +53,7 @@ export const GridItemConstrainedLargeWithTopMargin = styled(
 )`
   margin-top: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_DBL};
+    margin-top: 0;
   }
 `;
 
