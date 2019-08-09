@@ -34,7 +34,7 @@ jobs:
       script:
         - npm run build
         - npm prune --production
-        - xvfb-run -a npm run test:prod:travis
+        - xvfb-run -a CYPRESS_SKIP_EU=true npm run test:prod:ci
     - stage: test
       if: branch = latest AND type = push
       name: 'Test third party dependencies'

@@ -12,7 +12,10 @@ developmentTests:
 	npm run test:chromatic
 
 productionTests:
-	npm run build && xvfb-run npm run test:prod:ci;
+	npm run build && xvfb-run npm run test:ci;
 
 buildStorybook:
 	npm run build:storybook;
+
+buildCi:
+	export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live;
