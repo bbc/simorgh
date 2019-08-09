@@ -54,7 +54,7 @@ describe('ArticleAtiParams', () => {
 
     it('should call atiPageViewParams with the params from the Contexts', () => {
       const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiPageViewParams.default = mock;
+      atiPageViewParams.atiPageViewParams = mock;
 
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 
