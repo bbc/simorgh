@@ -4,7 +4,23 @@ import { render } from '@testing-library/react';
 import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
 import LinkContents from '.';
 
+const defaultProps = {
+  summary: 'A summary',
+  timestamp: 1563266297329,
+  indexImage: {
+    path: '/cpsprodpb/0A06/production/image1.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Image Alt text 1',
+    copyrightHolder: 'Image provider 1',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+};
+
 const item = {
+  ...defaultProps,
   cpsType: 'STY',
   headlines: {
     headline: 'A headline',
@@ -12,6 +28,7 @@ const item = {
 };
 
 const itemWithOvertypedHeadline = {
+  ...defaultProps,
   cpsType: 'STY',
   headlines: {
     headline: 'A headline',
@@ -20,6 +37,7 @@ const itemWithOvertypedHeadline = {
 };
 
 const mediaItem = {
+  ...defaultProps,
   cpsType: 'MAP',
   headlines: {
     headline: 'A headline for a media item',
@@ -34,6 +52,16 @@ const mediaItem = {
   },
 };
 
+const photogalleryItem = {
+  headlines: {
+    headline: 'A photo gallery item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  cpsType: 'PGL',
+};
+
 const mediaItemWithOvertyped = { ...mediaItem };
 mediaItemWithOvertyped.headlines.overtyped =
   'An overtyped headline for a media item';
@@ -43,6 +71,7 @@ const mockServiceConfig = {
     media: {
       audio: 'AUDIO',
       video: 'VIDEO',
+      photogallery: 'PHOTOGALLERY',
     },
   },
 };
@@ -89,5 +118,10 @@ describe('Story Promo Link Contents', () => {
   shouldShallowMatchSnapshot(
     'should render with visually hidden text for media with overtyped headline',
     <LinkContents item={mediaItemWithOvertyped} />,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render with visually hidden text for photogallery promos',
+    <LinkContents item={photogalleryItem} />,
   );
 });

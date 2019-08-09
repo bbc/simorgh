@@ -31,6 +31,9 @@ const service = {
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
   translations: {
+    home: 'ਖ਼ਬਰਾਂ',
+    currentPage: 'Current page',
+    skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
     error: {
       404: {
         statusCode: '404',
@@ -117,6 +120,28 @@ const service = {
     },
   },
   brandSVG,
+  navigation: [
+    {
+      title: 'ਖ਼ਬਰਾਂ',
+      url: '/punjabi',
+    },
+    {
+      title: 'ਵੀਡੀਓ',
+      url: '/punjabi/media/video',
+    },
+    {
+      title: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
+      url: '/punjabi/popular/read',
+    },
+    {
+      title: 'ਭਾਰਤ',
+      url: '/punjabi/india',
+    },
+    {
+      title: 'ਕੌਮਾਂਤਰੀ',
+      url: '/punjabi/international',
+    },
+  ],
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
