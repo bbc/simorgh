@@ -228,8 +228,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   >
     Top Stories
   </SectionLabel>
-  <StoryPromoUl>
-    <StoryPromoLi>
+  <ForwardRef(StoryPromoUl)>
+    <ForwardRef(StoryPromoLi)>
       <StoryPromoComponent
         item={
           Object {
@@ -254,8 +254,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         sectionNumber={0}
         storyNumber={0}
       />
-    </StoryPromoLi>
-    <StoryPromoLi>
+    </ForwardRef(StoryPromoLi)>
+    <ForwardRef(StoryPromoLi)>
       <StoryPromoComponent
         item={
           Object {
@@ -280,8 +280,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         sectionNumber={0}
         storyNumber={1}
       />
-    </StoryPromoLi>
-  </StoryPromoUl>
+    </ForwardRef(StoryPromoLi)>
+  </ForwardRef(StoryPromoUl)>
 </section>
 `;
 
@@ -768,8 +768,8 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   >
     Top Stories
   </SectionLabel>
-  <StoryPromoUl>
-    <StoryPromoLi>
+  <ForwardRef(StoryPromoUl)>
+    <ForwardRef(StoryPromoLi)>
       <StoryPromoComponent
         item={
           Object {
@@ -794,8 +794,8 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         sectionNumber={1}
         storyNumber={0}
       />
-    </StoryPromoLi>
-    <StoryPromoLi>
+    </ForwardRef(StoryPromoLi)>
+    <ForwardRef(StoryPromoLi)>
       <StoryPromoComponent
         item={
           Object {
@@ -820,7 +820,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         sectionNumber={1}
         storyNumber={1}
       />
-    </StoryPromoLi>
-  </StoryPromoUl>
+    </ForwardRef(StoryPromoLi)>
+  </ForwardRef(StoryPromoUl)>
 </section>
 `;

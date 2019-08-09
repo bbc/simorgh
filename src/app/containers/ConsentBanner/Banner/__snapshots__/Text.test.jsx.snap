@@ -19,7 +19,7 @@ exports[`Consent Banner Text should correctly render banner text in the UK 1`] =
 @media (min-width:37.5rem) {
   .c0 {
     margin: 0;
-    float: left;
+    float: right;
     width: 53%;
   }
 }
@@ -50,7 +50,7 @@ exports[`Consent Banner Text should correctly render banner text outside the UK 
 @media (min-width:37.5rem) {
   .c0 {
     margin: 0;
-    float: left;
+    float: right;
     width: 53%;
   }
 }
@@ -81,7 +81,7 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
 @media (min-width:37.5rem) {
   .c0 {
     margin: 0;
-    float: left;
+    float: right;
     width: 53%;
   }
 }
@@ -118,7 +118,7 @@ exports[`Consent Banner Text should correctly render banner text with a link out
 @media (min-width:37.5rem) {
   .c0 {
     margin: 0;
-    float: left;
+    float: right;
     width: 53%;
   }
 }

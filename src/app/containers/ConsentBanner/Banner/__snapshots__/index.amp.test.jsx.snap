@@ -113,9 +113,9 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 
 @media (min-width:37.5rem) {
   .c2 {
-    width: 22%;
-    margin-right: 3.5%;
     float: left;
+    margin-right: 3.5%;
+    width: 22%;
   }
 }
 
@@ -157,7 +157,7 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 @media (min-width:37.5rem) {
   .c3 {
     margin: 0;
-    float: left;
+    float: right;
     width: 53%;
   }
 }
@@ -178,14 +178,17 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
 
 <div
   className="c0"
+  dir="ltr"
   hidden={true}
   id="promptId"
 >
   <div
     className="c1"
+    dir="ltr"
   >
     <h2
       className="c2"
+      dir="ltr"
     >
       Let us know you agree to cookies
     </h2>
@@ -202,9 +205,11 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
     </p>
     <ul
       className="c4"
+      dir="ltr"
     >
       <li
         className="c5"
+        dir="ltr"
       >
         <button
           on="tap:parentId.accept"
@@ -215,6 +220,7 @@ exports[`Amp Consent Banner Container - Banner should correctly render cookie ba
       </li>
       <li
         className="c5"
+        dir="ltr"
       >
         <a
           href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
@@ -341,9 +347,9 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 
 @media (min-width:37.5rem) {
   .c2 {
-    width: 22%;
-    margin-right: 3.5%;
     float: left;
+    margin-right: 3.5%;
+    width: 22%;
   }
 }
 
@@ -385,7 +391,7 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 @media (min-width:37.5rem) {
   .c3 {
     margin: 0;
-    float: left;
+    float: right;
     width: 53%;
   }
 }
@@ -406,14 +412,17 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
 
 <div
   className="c0"
+  dir="ltr"
   hidden={true}
   id="promptId"
 >
   <div
     className="c1"
+    dir="ltr"
   >
     <h2
       className="c2"
+      dir="ltr"
     >
       We've updated our Privacy and Cookies Policy
     </h2>
@@ -424,9 +433,11 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
     </p>
     <ul
       className="c4"
+      dir="ltr"
     >
       <li
         className="c5"
+        dir="ltr"
       >
         <button
           on="tap:cookieId.show, privacyId.hide"
@@ -437,6 +448,7 @@ exports[`Amp Consent Banner Container - Banner should correctly render privacy b
       </li>
       <li
         className="c5"
+        dir="ltr"
       >
         <a
           href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
