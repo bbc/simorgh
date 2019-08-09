@@ -17,7 +17,9 @@ const FrontPageAtiEventTracker = (
     eventInfo,
   });
 
-  return sendBeacon(`https://logws1363.ati-host.net/?${url}&type=AT`);
+  // type=AT means it's an event apparently,
+  // not that you would now this from any documatation
+  return sendBeacon(`${process.env.SIMORGH_ATI_BASE_URL}${url}&type=AT`);
 };
 
 export default FrontPageAtiEventTracker;

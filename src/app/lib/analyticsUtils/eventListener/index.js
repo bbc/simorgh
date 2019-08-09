@@ -7,7 +7,7 @@ const listener = (frontpageData, platform, statsDestination, service) => {
 
     return nav1.addEventListener('click', e => {
       e.preventDefault();
-      console.log(e);
+
       FrontPageAtiEventTracker(
         frontpageData,
         platform,
