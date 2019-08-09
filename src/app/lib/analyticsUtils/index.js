@@ -157,3 +157,15 @@ export const getPublishedDatetime = (attribute, data) => {
     ? getISODate(publishedDatetime)
     : null;
 };
+
+export const getPublishingInfo = (
+  platform,
+  pageIdentifier,
+  statsDestination,
+  service,
+  eventInfo,
+) => {
+  const eventTrace = 'nav-1-Iroyin'; // will need to figure out how to get this but it's possible to get it using eventInfo.path[0].dataset, etc
+
+  return `PUB-[${service}-frontpage]-[viewed~${eventInfo.type}]-[${pageIdentifier}]-[${eventTrace}]-[${service}]-[${pageIdentifier}]-${eventInfo.type}`;
+};

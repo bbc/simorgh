@@ -10,6 +10,7 @@ import {
   getReferrer,
   isLocServeCookieSet,
   sanitise,
+  getPublishingInfo,
 } from '../../../lib/analyticsUtils';
 
 /*
@@ -152,8 +153,10 @@ export const atiPageViewParams = ({
 };
 
 export const atiEventTrackParams = ({
+  pageIdentifier,
   platform,
   statsDestination,
+  service,
   eventInfo = '',
 }) => {
   const pageViewBeaconValues = [
@@ -161,6 +164,18 @@ export const atiEventTrackParams = ({
       key: 's',
       description: 'destination',
       value: getDestination(statsDestination),
+      wrap: false,
+    },
+    {
+      key: 's2',
+      description: 'producer',
+      value: getProducer(service),
+      wrap: false,
+    },
+    {
+      key: 'p',
+      description: 'page identifier',
+      value: pageIdentifier,
       wrap: false,
     },
     {
@@ -190,7 +205,13 @@ export const atiEventTrackParams = ({
     {
       key: 'ati',
       description: 'event publisher',
-      value: `PUB-[yoruba-frontpage]-[viewed~background]-[yoruba.page]-[nav-1-Iroyin]-[/yoruba]-[yoruba.page]-${eventInfo}`,
+      value: getPublishingInfo(
+        platform,
+        pageIdentifier,
+        statsDestination,
+        service,
+        eventInfo,
+      ),
     },
   ];
 

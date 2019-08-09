@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { atiPageViewParams, atiEventTrackParams } from '../../atiUrl';
+import { atiPageViewParams } from '../../atiUrl';
 import { RequestContext } from '../../../../contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
@@ -15,7 +15,7 @@ export const FrontPageAtiParams = frontpageData => {
   const { atiAnalyticsAppName, brandName, service } = useContext(
     ServiceContext,
   );
-  console.log({ platform, statsDestination });
+
   return atiPageViewParams({
     appName: atiAnalyticsAppName,
     contentId: getContentId(frontpageData),
@@ -31,23 +31,4 @@ export const FrontPageAtiParams = frontpageData => {
   });
 };
 
-export const FrontPageEventParams = frontpageData => {
-  const { platform, statsDestination } = useContext(RequestContext);
-  const { atiAnalyticsAppName, brandName, service } = useContext(
-    ServiceContext,
-  );
-  // console.log({ platform, statsDestination });
-  return atiEventTrackParams({
-    appName: atiAnalyticsAppName,
-    contentId: getContentId(frontpageData),
-    contentType: 'index-home',
-    language: getLanguage(frontpageData),
-    pageIdentifier: getPageIdentifier(frontpageData),
-    pageTitle: getPageTitle(frontpageData, brandName),
-    timePublished: getPublishedDatetime('firstPublished', frontpageData),
-    timeUpdated: getPublishedDatetime('lastPublished', frontpageData),
-    platform,
-    service,
-    statsDestination,
-  });
-};
+export default FrontPageAtiParams;
