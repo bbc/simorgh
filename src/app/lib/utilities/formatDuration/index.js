@@ -3,7 +3,7 @@
 const lpad = s => s.toString().padStart(2, '0');
 
 // the duration argument should be a moment duration!
-const formatDuration = (duration, seperator = ':') => {
+const formatDuration = (duration, separator = ':') => {
   const isOverAnHour = duration.asHours() >= 1;
 
   let out = '';
