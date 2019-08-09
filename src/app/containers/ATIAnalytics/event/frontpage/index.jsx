@@ -17,8 +17,8 @@ const FrontPageAtiEventTracker = (
     eventInfo,
   });
 
-  // type=AT means it's an event apparently,
-  // not that you would now this from any documatation
+  // 'type=AT' means it's an event apparently,
+  // not that you would now this from any documentation
   return sendBeacon(`${process.env.SIMORGH_ATI_BASE_URL}${url}&type=AT`);
 };
 
