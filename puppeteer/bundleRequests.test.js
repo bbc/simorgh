@@ -3,7 +3,7 @@ import { localBaseUrl } from '../src/testHelpers/config';
 
 global.Cypress = { env: () => 'local' };
 
-const config = require('../cypress/support/config/services').default;
+const config = require('../cypress/support/config/services');
 
 let browser;
 let page;
