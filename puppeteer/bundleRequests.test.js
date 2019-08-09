@@ -15,6 +15,7 @@ describe('Js bundle requests', () => {
   beforeEach(async () => {
     browser = await puppeteer.launch({
       args: ['--no-sandbox'],
+      dumpio: true
     });
     page = await browser.newPage();
 
