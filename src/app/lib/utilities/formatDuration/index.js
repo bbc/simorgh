@@ -12,7 +12,7 @@ const formatDuration = (duration, separator = ':') => {
     out += Math.floor(duration.asHours()) + seperator;
     out += lpad(duration.minutes()) + separator;
   } else {
-    out += duration.minutes() + seperator;
+    out += duration.minutes() + separator;
   }
 
   out += lpad(duration.seconds());
