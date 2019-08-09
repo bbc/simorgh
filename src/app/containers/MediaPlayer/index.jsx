@@ -47,12 +47,15 @@ const MediaPlayerContainer = ({ blocks }) => {
     aresMediaBlock,
   );
 
+  if (!versionId) {
+    return null; // this should be the holding image with an error overlay
+  }
+
   const placeholderImage = src => {
     const parts = src.split('/');
     const [domain, media, imgService, width, ...extraParts] = parts;
     const definedWidth = width.replace('$width', '512');
-    const protocol = 'https://';
-    const domainWithProtocol = `${protocol}${domain}`;
+    const domainWithProtocol = `https://${domain}`;
 
     const newUrl = [
       domainWithProtocol,
@@ -64,10 +67,6 @@ const MediaPlayerContainer = ({ blocks }) => {
 
     return newUrl.join('/');
   };
-
-  if (!versionId) {
-    return null; // this should be the holding image with an error overlay
-  }
 
   const embedSource = embedUrl(env, id, versionId, isAmp);
   const placeholderSrc = placeholderImage(imageUrl);
