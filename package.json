@@ -116,7 +116,7 @@
     "path-to-regexp": "^3.0.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "ramda": "^0.26.1",
-    "react": "^16.8.6",
+    "react": "^16.9.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.6.2",
