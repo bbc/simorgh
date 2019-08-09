@@ -3,18 +3,20 @@ import FrontPageAtiEventTracker from '../../../containers/ATIAnalytics/event/fro
 
 const listener = (frontpageData, platform, statsDestination, service) => {
   if (onClient()) {
-    const nav1 = document.getElementById(`nav-/${service}`);
+    const navItems = document.getElementByClassName('track-nav');
 
-    return nav1.addEventListener('click', e => {
-      e.preventDefault();
+    navItems.forEach(item => {
+      item.addEventListener('click', e => {
+        e.preventDefault();
 
-      FrontPageAtiEventTracker(
-        frontpageData,
-        platform,
-        statsDestination,
-        service,
-        e,
-      );
+        FrontPageAtiEventTracker(
+          frontpageData,
+          platform,
+          statsDestination,
+          service,
+          e,
+        );
+      });
     });
   }
 
