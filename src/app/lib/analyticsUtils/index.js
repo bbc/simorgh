@@ -158,6 +158,16 @@ export const getPublishedDatetime = (attribute, data) => {
     : null;
 };
 
+export const getAtiUrl = data => {
+  const cleanedValues = data.filter(({ value }) => value);
+
+  const parsedAtiValues = cleanedValues.map(({ key, value, wrap }) =>
+    wrap ? `${key}=[${value}]` : `${key}=${value}`,
+  );
+
+  return parsedAtiValues.join('&');
+};
+
 export const getPublishingInfo = (
   platform,
   pageIdentifier,

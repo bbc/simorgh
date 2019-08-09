@@ -11,6 +11,7 @@ import {
   isLocServeCookieSet,
   sanitise,
   getPublishingInfo,
+  getAtiUrl,
 } from '../../../lib/analyticsUtils';
 
 /*
@@ -143,13 +144,7 @@ export const atiPageViewParams = ({
     },
   ];
 
-  const cleanedValues = pageViewBeaconValues.filter(({ value }) => value);
-
-  const parsedAtiValues = cleanedValues.map(({ key, value, wrap }) =>
-    wrap ? `${key}=[${value}]` : `${key}=${value}`,
-  );
-
-  return parsedAtiValues.join('&');
+  return getAtiUrl(pageViewBeaconValues);
 };
 
 export const atiEventTrackParams = ({
@@ -159,7 +154,7 @@ export const atiEventTrackParams = ({
   service,
   eventInfo = '',
 }) => {
-  const pageViewBeaconValues = [
+  const eventTrackingBeaconValues = [
     {
       key: 's',
       description: 'destination',
@@ -215,11 +210,5 @@ export const atiEventTrackParams = ({
     },
   ];
 
-  const cleanedValues = pageViewBeaconValues.filter(({ value }) => value);
-
-  const parsedAtiValues = cleanedValues.map(({ key, value, wrap }) =>
-    wrap ? `${key}=[${value}]` : `${key}=${value}`,
-  );
-
-  return parsedAtiValues.join('&');
+  return getAtiUrl(eventTrackingBeaconValues);
 };
