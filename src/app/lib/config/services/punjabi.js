@@ -32,8 +32,8 @@ const service = {
   swPath: '/articles/sw.js',
   translations: {
     home: 'ਖ਼ਬਰਾਂ',
-    currentPage: '',
-    skipLinkText: 'ਸਮੱਗਰੀ ਤੇ ਜਾਓ',
+    currentPage: 'Current page',
+    skipLinkText: 'Skip to content',
     error: {
       404: {
         statusCode: '404',
