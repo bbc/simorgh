@@ -59,8 +59,8 @@
   "husky": {
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
-      "pre-commit": "lint-staged",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit -- --changedSince=latest && apache2-license-checker"
+      "pre-commits": "lint-staged",
+      "pre-pushs": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit -- --changedSince=latest && apache2-license-checker"
     }
   },
   "repository": {

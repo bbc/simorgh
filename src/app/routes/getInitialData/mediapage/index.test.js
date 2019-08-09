@@ -8,7 +8,7 @@ const mockData = { service: 'amharic', status: 200, pageData: {} };
 
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
-const getBaseUrlMockOrigin = 'https://www.getBaseUrl.com';
+const getBaseUrlMockOrigin = 'http://localhost:7080';
 jest.mock('../utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
