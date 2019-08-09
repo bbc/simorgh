@@ -10,7 +10,7 @@ import {
   getPageTitle,
 } from '../../../../lib/analyticsUtils/frontpage';
 
-export const FrontPageAtiParams = frontpageData => {
+const FrontPageAtiParams = frontpageData => {
   const { platform, statsDestination } = useContext(RequestContext);
   const { atiAnalyticsAppName, brandName, service } = useContext(
     ServiceContext,

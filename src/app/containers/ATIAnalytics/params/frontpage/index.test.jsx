@@ -6,7 +6,7 @@ import * as testUtils from '../../../../lib/analyticsUtils/frontpage';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../../contexts/RequestContext';
 
-import { FrontPageAtiParams } from '.';
+import FrontPageAtiParams from '.';
 
 describe('FrontPageAtiParams', () => {
   const mockFPData = {
