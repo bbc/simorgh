@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
-import SectionLabel from '@bbc/psammead-section-label';
-import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
@@ -50,34 +48,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // the greatest possible support.
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section role="region" aria-labelledby={sectionLabelId}>
-      <SectionLabel
-        script={script}
-        labelId={sectionLabelId}
-        bar={bar}
-        visuallyHidden={isFirstSection}
-        service={service}
-      >
-        {group.strapline.name}
-      </SectionLabel>
-      {items.length > 1 ? (
-        <StoryPromoUl>
-          {items.map((item, index) => (
-            <StoryPromoLi key={item.id}>
-              <StoryPromoComponent
-                item={item}
-                sectionNumber={sectionNumber}
-                storyNumber={index}
-              />
-            </StoryPromoLi>
-          ))}
-        </StoryPromoUl>
-      ) : (
-        <StoryPromoComponent
-          item={items[0]}
-          sectionNumber={sectionNumber}
-          storyNumber={0}
-        />
-      )}
+      section
     </section>
   );
 };

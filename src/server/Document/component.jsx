@@ -1,8 +1,4 @@
 import React, { Fragment } from 'react';
-import {
-  AMP_SCRIPT,
-  AMP_NO_SCRIPT,
-} from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '../../app/components/ResourceHints';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
 import MPulseBeacon from '../../app/containers/MPulseBeacon';
@@ -19,6 +15,7 @@ const Document = ({
   isAmp,
   dials,
 }) => {
+  console.log('Document component');
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
@@ -59,9 +56,9 @@ const Document = ({
         )}
         {isAmp && (
           <Fragment>
-            <style amp-boilerplate="">{AMP_SCRIPT}</style>
+            <style amp-boilerplate=""></style>
             <noscript>
-              <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
+              <style amp-boilerplate=""></style>
             </noscript>
           </Fragment>
         )}

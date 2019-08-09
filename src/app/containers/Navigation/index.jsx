@@ -1,8 +1,4 @@
 import React, { useContext } from 'react';
-import Navigation, {
-  NavigationUl,
-  NavigationLi,
-} from '@bbc/psammead-navigation';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const NavigationContainer = () => {
@@ -16,14 +12,14 @@ const NavigationContainer = () => {
   }
 
   return (
-    <Navigation script={script} skipLinkText={skipLinkText} service={service}>
-      <NavigationUl>
-        {navigation.map((item, index) => {
+    <nav script={script} skipLinkText={skipLinkText} service={service}>
+      <ul>
+        {nav.map((item, index) => {
           const { title, url } = item;
           const active = index === 0;
 
           return (
-            <NavigationLi
+            <li
               key={title}
               url={url}
               script={script}
@@ -32,11 +28,11 @@ const NavigationContainer = () => {
               service={service}
             >
               {title}
-            </NavigationLi>
+            </li>
           );
         })}
-      </NavigationUl>
-    </Navigation>
+      </ul>
+    </nav>
   );
 };
 

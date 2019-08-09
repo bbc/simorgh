@@ -1,6 +1,5 @@
 import React from 'react';
 import { string, number, objectOf, any, bool } from 'prop-types';
-import Figure from '@bbc/psammead-figure';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
@@ -50,44 +49,7 @@ const ArticleFigure = ({
     imageSpan.default = '4';
   }
 
-  return (
-    <Figure>
-      <ParentWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          marginLeft={{
-            group3: '1em',
-          }}
-          gridSpan={imageSpan}
-        >
-          <ImageWithPlaceholder
-            ratio={ratio}
-            alt={alt}
-            copyright={copyright}
-            src={src}
-            height={height}
-            width={width}
-            lazyLoad={lazyLoad}
-            fade={fade}
-            srcset={srcset}
-          >
-            {showCopyright && renderCopyright(copyright)}
-          </ImageWithPlaceholder>
-        </ChildWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          gridSpan={{
-            default: '6',
-            group3: '5',
-            group4: '5',
-            group5: '10',
-          }}
-        >
-          {renderCaption(captionBlock, type)}
-        </ChildWrapper>
-      </ParentWrapper>
-    </Figure>
-  );
+  return <p>Figure</p>;
 };
 
 ArticleFigure.propTypes = {

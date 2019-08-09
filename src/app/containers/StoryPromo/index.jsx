@@ -1,14 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import { shape, bool, string, element } from 'prop-types';
-import StoryPromoComponent, {
-  Headline,
-  Summary,
-  Link,
-  LiveLabel,
-} from '@bbc/psammead-story-promo';
-import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { storyItem } from '../../models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 

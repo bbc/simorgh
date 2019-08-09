@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 import {
@@ -41,11 +40,7 @@ const FrontPageMain = ({ frontPageData }) => {
         <Grid>
           <GridItemConstrainedLargeWithTopMargin>
             {groups.map((group, index) => (
-              <FrontPageSection
-                key={group.title}
-                group={group}
-                sectionNumber={index}
-              />
+              <p>hi</p>
             ))}
           </GridItemConstrainedLargeWithTopMargin>
         </Grid>

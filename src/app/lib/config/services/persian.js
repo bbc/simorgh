@@ -1,12 +1,3 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
-import { arabic } from '@bbc/gel-foundations/scripts';
-import {
-  F_NASSIM_PERSIAN_REGULAR,
-  F_NASSIM_PERSIAN_BOLD,
-} from '@bbc/psammead-styles/fonts';
-import 'moment/locale/fa';
-
 const persian = {
   lang: 'fa',
   product: 'BBC News',
@@ -28,12 +19,223 @@ const persian = {
   datetimeLocale: 'fa',
   service: 'persian',
   serviceName: 'Persian',
-  themeColor: `${C_POSTBOX}`,
+  themeColor: `#B80000`,
   twitterCreator: '@bbcpersian',
   twitterSite: '@bbcpersian',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: arabic,
+  script: {
+    atlas: {
+      groupA: {
+        fontSize: '78',
+        lineHeight: '84',
+      },
+      groupB: {
+        fontSize: '96',
+        lineHeight: '104',
+      },
+      groupD: {
+        fontSize: '140',
+        lineHeight: '148',
+      },
+    },
+    elephant: {
+      groupA: {
+        fontSize: '60',
+        lineHeight: '64',
+      },
+      groupB: {
+        fontSize: '78',
+        lineHeight: '84',
+      },
+      groupD: {
+        fontSize: '116',
+        lineHeight: '124',
+      },
+    },
+    imperial: {
+      groupA: {
+        fontSize: '50',
+        lineHeight: '54',
+      },
+      groupB: {
+        fontSize: '64',
+        lineHeight: '72',
+      },
+      groupD: {
+        fontSize: '96',
+        lineHeight: '104',
+      },
+    },
+    royal: {
+      groupA: {
+        fontSize: '40',
+        lineHeight: '44',
+      },
+      groupB: {
+        fontSize: '52',
+        lineHeight: '60',
+      },
+      groupD: {
+        fontSize: '76',
+        lineHeight: '84',
+      },
+    },
+    foolscap: {
+      groupA: {
+        fontSize: '32',
+        lineHeight: '36',
+      },
+      groupB: {
+        fontSize: '40',
+        lineHeight: '44',
+      },
+      groupD: {
+        fontSize: '56',
+        lineHeight: '60',
+      },
+    },
+    canon: {
+      groupA: {
+        fontSize: '28',
+        lineHeight: '32',
+      },
+      groupB: {
+        fontSize: '32',
+        lineHeight: '36',
+      },
+      groupD: {
+        fontSize: '44',
+        lineHeight: '48',
+      },
+    },
+    trafalgar: {
+      groupA: {
+        fontSize: '20',
+        lineHeight: '24',
+      },
+      groupB: {
+        fontSize: '24',
+        lineHeight: '28',
+      },
+      groupD: {
+        fontSize: '32',
+        lineHeight: '36',
+      },
+    },
+    paragon: {
+      groupA: {
+        fontSize: '20',
+        lineHeight: '24',
+      },
+      groupB: {
+        fontSize: '22',
+        lineHeight: '26',
+      },
+      groupD: {
+        fontSize: '28',
+        lineHeight: '32',
+      },
+    },
+    doublePica: {
+      groupA: {
+        fontSize: '18',
+        lineHeight: '22',
+      },
+      groupB: {
+        fontSize: '20',
+        lineHeight: '24',
+      },
+      groupD: {
+        fontSize: '24',
+        lineHeight: '28',
+      },
+    },
+    greatPrimer: {
+      groupA: {
+        fontSize: '18',
+        lineHeight: '22',
+      },
+      groupB: {
+        fontSize: '18',
+        lineHeight: '22',
+      },
+      groupD: {
+        fontSize: '20',
+        lineHeight: '24',
+      },
+    },
+    bodyCopy: {
+      groupA: {
+        fontSize: '15',
+        lineHeight: '20',
+      },
+      groupB: {
+        fontSize: '16',
+        lineHeight: '22',
+      },
+      groupD: {
+        fontSize: '16',
+        lineHeight: '22',
+      },
+    },
+    pica: {
+      groupA: {
+        fontSize: '15',
+        lineHeight: '20',
+      },
+      groupB: {
+        fontSize: '16',
+        lineHeight: '20',
+      },
+      groupD: {
+        fontSize: '16',
+        lineHeight: '20',
+      },
+    },
+    longPrimer: {
+      groupA: {
+        fontSize: '15',
+        lineHeight: '18',
+      },
+      groupB: {
+        fontSize: '15',
+        lineHeight: '18',
+      },
+      groupD: {
+        fontSize: '14',
+        lineHeight: '18',
+      },
+    },
+    brevier: {
+      groupA: {
+        fontSize: '14',
+        lineHeight: '18',
+      },
+      groupB: {
+        fontSize: '14',
+        lineHeight: '18',
+      },
+      groupD: {
+        fontSize: '13',
+        lineHeight: '16',
+      },
+    },
+    minion: {
+      groupA: {
+        fontSize: '12',
+        lineHeight: '16',
+      },
+      groupB: {
+        fontSize: '12',
+        lineHeight: '16',
+      },
+      groupD: {
+        fontSize: '12',
+        lineHeight: '16',
+      },
+    },
+  },
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
@@ -139,7 +341,7 @@ const persian = {
       },
     },
   },
-  brandSVG,
+  brandSVG: 'brandSVG',
   footer: {
     externalLink: {
       href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
@@ -187,7 +389,7 @@ const persian = {
     copyrightText:
       'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
   },
-  fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
+  fonts: [],
 };
 
 export default persian;

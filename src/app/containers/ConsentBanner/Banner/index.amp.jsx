@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
-import { ConsentBanner } from '@bbc/psammead-consent-banner';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import BannerText from './Text';
 
@@ -26,23 +25,7 @@ const AmpConsentBannerContainer = ({
   const { dir, translations, script, service } = useContext(ServiceContext);
   const consentBannerConfig = translations.consentBanner[type];
 
-  return (
-    <ConsentBanner
-      dir={dir}
-      id={promptId}
-      title={consentBannerConfig.title}
-      text={BannerText(consentBannerConfig.description)}
-      accept={Accept(consentBannerConfig.accept, acceptAction)}
-      reject={Reject(
-        consentBannerConfig.reject,
-        consentBannerConfig.rejectUrl,
-        rejectAction,
-      )}
-      hidden={hidden}
-      script={script}
-      service={service}
-    />
-  );
+  return <p>Consent banner</p>;
 };
 
 AmpConsentBannerContainer.propTypes = {

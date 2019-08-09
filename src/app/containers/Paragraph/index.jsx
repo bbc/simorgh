@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Paragraph from '@bbc/psammead-paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
@@ -14,9 +13,9 @@ const ParagraphContainer = ({ blocks }) => {
 
   return (
     <GridItemConstrainedMedium>
-      <Paragraph script={script} service={service}>
+      <p script={script} service={service}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </Paragraph>
+      </p>
     </GridItemConstrainedMedium>
   );
 };

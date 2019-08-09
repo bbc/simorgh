@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
-import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import { storyItem } from '../../../models/propTypes/storyItem';
@@ -26,18 +25,10 @@ const MediaIndicator = ({ item, topStory, service }) => {
     const duration = moment.duration(rawDuration, 'seconds');
     const durationString = formatDuration(duration);
     const isoDuration = duration.toISOString();
-    return (
-      <MediaIndicatorComp
-        duration={durationString}
-        datetime={isoDuration}
-        type={type}
-        topStory={topStory}
-        service={service}
-      />
-    );
+    return <p>media</p>;
   }
 
-  return <MediaIndicatorComp type={type} service={service} />;
+  return <p>media</p>;
 };
 
 MediaIndicator.propTypes = {

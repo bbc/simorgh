@@ -17,7 +17,7 @@ const renderDocument = async ({
   url,
 }) => {
   const sheet = new ServerStyleSheet();
-
+  console.log('Document index');
   const app = renderToString(
     sheet.collectStyles(
       <ServerApp
@@ -35,6 +35,7 @@ const renderDocument = async ({
   const assets = getAssetsArray(service);
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins();
+  console.log('Document index 2');
   const doc = renderToStaticMarkup(
     <DocumentComponent
       assets={assets}
@@ -48,7 +49,7 @@ const renderDocument = async ({
       dials={data.dials}
     />,
   );
-
+  console.log('Document index 3');
   return `<!doctype html>${doc}`;
 };
 

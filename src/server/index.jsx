@@ -30,6 +30,8 @@ const logger = nodeLogger(__filename);
 
 const publicDirectory = 'build/public';
 
+console.log('server index');
+
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
 );
@@ -198,5 +200,7 @@ server
       }
     },
   );
+
+console.log('server index 2');
 
 export default server;

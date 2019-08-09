@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -35,14 +34,7 @@ const LinkContents = ({ item }) => {
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
-      <VisuallyHiddenText>{mediaTranslations[type]}, </VisuallyHiddenText>
-      <span>{content}</span>
-      {rawDuration && (
-        // once we have 'duration' translations, we could place those here
-        <VisuallyHiddenText>{`, ${durationString}`}</VisuallyHiddenText>
-      )}
-    </span>
+    <span role="text">hi</span>
   );
 };
 

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
-import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '../../models/propTypes';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
@@ -13,8 +12,8 @@ import {
 } from '../../lib/styledGrid';
 
 const Headings = {
-  headline: Headline,
-  subheadline: SubHeading,
+  headline: <h1 />,
+  subheadline: <h2 />,
 };
 
 const GridConstraints = {
@@ -50,9 +49,7 @@ const HeadingsContainer = ({ blocks, type }) => {
 
   return (
     <GridConstrain>
-      <Heading script={script} service={service} id={subHeadingId}>
-        {renderText()}
-      </Heading>
+      <h2>heya</h2>
     </GridConstrain>
   );
 };

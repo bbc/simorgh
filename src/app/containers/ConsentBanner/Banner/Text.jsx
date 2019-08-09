@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import { ConsentBannerText } from '@bbc/psammead-consent-banner';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
@@ -12,13 +11,7 @@ const BannerText = ({ uk, international }) => {
 
   const Link = linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
 
-  return (
-    <ConsentBannerText dir={dir} script={script}>
-      {first}
-      {Link}
-      {last}
-    </ConsentBannerText>
-  );
+  return <p>Consent banner</p>;
 };
 
 const messagingProps = {

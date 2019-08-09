@@ -8,7 +8,7 @@ import { template, templateStyles } from './app/lib/joinUsTemplate';
 
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
-
+console.log('client index');
 Loadable.preloadReady().then(() => {
   hydrate(<ClientApp data={data} routes={routes} />, root);
 });

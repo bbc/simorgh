@@ -1,19 +1,11 @@
 import React from 'react';
-import { getSansRegularItalic } from '@bbc/psammead-styles/font-styles';
 import styled from 'styled-components';
 import { string, node, arrayOf } from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const italic = styled.i`
-  ${({ service }) => getSansRegularItalic(service)}
-  font-family: inherit;
-  font-weight: inherit;
-`;
-
 const bold = ({ children }) => <b>{children}</b>;
 
 const attributeComponents = {
-  italic,
   bold,
 };
 
@@ -40,11 +32,6 @@ Fragment.propTypes = {
 
 bold.propTypes = {
   children: node.isRequired,
-};
-
-italic.propTypes = {
-  children: node.isRequired,
-  service: string.isRequired,
 };
 
 export default Fragment;

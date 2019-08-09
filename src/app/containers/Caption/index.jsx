@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import { any, arrayOf, shape, string } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import Caption from '@bbc/psammead-caption';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
@@ -37,15 +35,7 @@ const renderParagraph = paragraphBlock => {
 };
 
 const renderCaption = (paragraphBlocks, offscreenText, script, service) => (
-  <Caption script={script} service={service}>
-    {offscreenText ? (
-      <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>
-    ) : null}
-    {paragraphBlocks.map(block => {
-      const paragraphBlock = pathOr(null, ['model', 'blocks'], block);
-      return renderParagraph(paragraphBlock);
-    })}
-  </Caption>
+  <p>Caption</p>
 );
 
 const CaptionContainer = ({ block, type }) => {

@@ -1,7 +1,5 @@
 import React, { Fragment, useContext } from 'react';
 import { string, shape, object } from 'prop-types';
-import { Headline } from '@bbc/psammead-headings';
-import Paragraph from '@bbc/psammead-paragraph';
 import pathOr from 'ramda/src/pathOr';
 
 import MetadataContainer from '../Metadata';
@@ -21,12 +19,12 @@ const MediaPageMain = props => {
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
-            <Headline script={script} service={service}>
+            <h2 script={script} service={service}>
               {title}
-            </Headline>
-            <Paragraph script={script} service={service}>
+            </h2>
+            <p script={script} service={service}>
               {subtitle}
-            </Paragraph>
+            </p>
             <ul>
               <li>
                 <strong>Service</strong>: {service}
