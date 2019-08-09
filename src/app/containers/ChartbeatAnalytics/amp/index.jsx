@@ -1,16 +1,9 @@
 import React from 'react';
-import { string, number } from 'prop-types';
+import { shape, string, number } from 'prop-types';
 
 const chartbeatAmpConfigOptions = options => ({
-  vars: {
-    uid: options.chartbeatUID,
-    sections: options.sections,
-    domain: options.domain,
-    contentType: options.type,
-    idSync: {
-      bbc_hid: options.cookie,
-    },
-  },
+  vars: options,
+  triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
 });
 
 const JsonInlinedScript = data => (
@@ -21,36 +14,24 @@ const JsonInlinedScript = data => (
   />
 );
 
-const AmpChartbeatBeacon = ({
-  domain,
-  type,
-  sections,
-  cookie,
-  chartbeatUID,
-}) => (
+const AmpChartbeatBeacon = ({ chartbeatConfig }) => (
   <amp-analytics type="chartbeat">
-    {JsonInlinedScript(
-      chartbeatAmpConfigOptions({
-        domain,
-        type,
-        sections,
-        cookie,
-        chartbeatUID,
-      }),
-    )}
+    {JsonInlinedScript(chartbeatAmpConfigOptions(chartbeatConfig))}
   </amp-analytics>
 );
 
 AmpChartbeatBeacon.propTypes = {
-  domain: string.isRequired,
-  type: string.isRequired,
-  sections: string.isRequired,
-  cookie: string,
-  chartbeatUID: number.isRequired,
-};
-
-AmpChartbeatBeacon.defaultProps = {
-  cookie: null,
+  chartbeatConfig: shape({
+    domain: string.isRequired,
+    sections: string.isRequired,
+    uid: number.isRequired,
+    title: string.isRequired,
+    contentType: string.isRequired,
+    virtualReferrer: string,
+    idSync: shape({
+      bbc_hid: string,
+    }),
+  }).isRequired,
 };
 
 export default AmpChartbeatBeacon;

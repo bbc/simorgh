@@ -1,5 +1,7 @@
 import Cookie from 'js-cookie';
 import onClient from '../../utilities/onClient';
+import { getPromoHeadline } from '../article';
+import { getPageTitle } from '../frontpage';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -50,4 +52,16 @@ export const buildSections = (service, type, producer, chapter) => {
   ];
 
   return parts.join(', ');
+};
+
+export const getTitle = (pageType, pageData, brandName) => {
+  switch (pageType) {
+    case 'frontPage':
+    case 'index':
+      return getPageTitle(pageData, brandName);
+    case 'article':
+      return getPromoHeadline(pageData);
+    default:
+      return null;
+  }
 };
