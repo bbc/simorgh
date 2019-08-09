@@ -162,14 +162,16 @@ const service = {
     {
       title: 'ዜና',
       url: '/tigrinya',
-    }, {
+    },
+    {
       title: 'ቪድዮ',
       url: '/tigrinya/media/video',
-    }, {
+    },
+    {
       title: 'ኣመና ፍቱዋት',
       url: '/tigrinya/popular/read',
-    }
-  ]
+    },
+  ],
 };
 
 export default service;

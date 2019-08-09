@@ -164,17 +164,20 @@ const service = {
     {
       title: '뉴스',
       url: '/korean',
-    }, {
+    },
+    {
       title: '비디오',
       url: '/korean/media/video',
-    }, {
+    },
+    {
       title: '다운로드',
       url: '/korean/downloads',
-    }, {
+    },
+    {
       title: 'TOP 뉴스',
       url: '/korean/popular/read',
-    }
-  ]
+    },
+  ],
 };
 
 export default service;
