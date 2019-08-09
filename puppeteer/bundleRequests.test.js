@@ -14,8 +14,7 @@ const isJsBundle = url => url.includes(localBaseUrl);
 describe('Js bundle requests', () => {
   beforeEach(async () => {
     browser = await puppeteer.launch({
-      args: ['--no-sandbox'],
-      dumpio: true
+      args: ['--no-sandbox']
     });
     page = await browser.newPage();
 
@@ -39,8 +38,8 @@ describe('Js bundle requests', () => {
           beforeEach(async () => {
             await page.goto(`${localBaseUrl}${path}`, {
               waitUntil: 'networkidle2',
-            });
-          });
+            }, 10000);
+          }, 10000);
 
           it('only loads expected js bundles', async () => {
             requests
