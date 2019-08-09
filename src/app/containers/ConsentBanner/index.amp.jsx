@@ -64,12 +64,14 @@ const jsonInlinedScript = data => (
 
 // Style `amp-consent` as child due to inability to set
 // `layout` attribute on styled `amp-consent` component
+/* stylelint-disable selector-type-no-unknown */
 const AmpConsentWrapper = styled.div`
   & amp-consent {
     position: static;
     display: block;
   }
 `;
+/* stylelint-enable selector-type-no-unknown */
 
 const Amp = () => (
   <AmpConsentWrapper>
