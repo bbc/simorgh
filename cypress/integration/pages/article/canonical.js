@@ -176,6 +176,9 @@ Object.keys(config)
             }`,
           );
         });
+        it('copyright symbol should be wrapped in span', () => {
+          cy.get('footer span').should('contain', '©');
+        });
         it('should contain a link in the copyright text', () => {
           cy.get('footer p')
             .children('a')
