@@ -50,11 +50,11 @@ export default {
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
-          ? undefined
+          ? '/arabic/articles/c8j91j2ljppo'
           : '/arabic/articles/c69dvq19k63o',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-          ? undefined
+          ? '/arabic/articles/c123456abcdo'
           : '/arabic/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/arabic',
     },
@@ -341,11 +341,11 @@ export default {
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
-          ? undefined
+          ? '/pashto/articles/c70970g2251o'
           : '/pashto/articles/cng0e8v85eko',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-          ? undefined
+          ? '/pashto/articles/c123456abcdo'
           : '/pashto/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/pashto',
     },
@@ -583,11 +583,11 @@ export default {
     pageTypes: {
       articles:
         Cypress.env('APP_ENV') === 'live'
-          ? undefined
+          ? '/urdu/articles/c4qg7qq63y6o'
           : '/urdu/articles/cx621klkm1ro',
       errorPage404:
         Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-          ? undefined
+          ? '/urdu/articles/c123456abcdo'
           : '/urdu/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/urdu',
     },
