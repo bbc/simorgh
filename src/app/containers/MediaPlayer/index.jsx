@@ -14,9 +14,6 @@ import {
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
 
-const IMG_SRC =
-  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
-
 const StyledContainer = styled.div`
   padding-top: ${({ orientation }) =>
     orientation === 'Portrait' ? '177.78%' : '56.25%'};
@@ -39,7 +36,7 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null;
   }
 
-  const placeholderUrl = pathOr(
+  const imageUrl = pathOr(
     null,
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock,
@@ -50,20 +47,37 @@ const MediaPlayerContainer = ({ blocks }) => {
     aresMediaBlock,
   );
 
-  console.log('placeholderUrl', placeholderUrl);
+  const placeholderImage = src => {
+    const parts = src.split('/');
+    const [domain, media, imgService, width, ...extraParts] = parts;
+    const definedWidth = width.replace('$width', '512');
+    const protocol = 'https://';
+    const domainWithProtocol = `${protocol}${domain}`;
+
+    const newUrl = [
+      domainWithProtocol,
+      media,
+      imgService,
+      definedWidth,
+      ...extraParts,
+    ];
+
+    return newUrl.join('/');
+  };
 
   if (!versionId) {
     return null; // this should be the holding image with an error overlay
   }
 
   const embedSource = embedUrl(env, id, versionId, isAmp);
+  const placeholderSrc = placeholderImage(imageUrl);
   const Player = isAmp ? Amp : Canonical;
 
   return (
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
       <StyledContainer>
-        <Player placeholderSrc={IMG_SRC} embedSrc={embedSource} />
+        <Player placeholderSrc={placeholderSrc} embedSrc={embedSource} />
       </StyledContainer>
     </GridItemConstrainedMedium>
   );
