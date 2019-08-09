@@ -160,6 +160,21 @@ const service = {
       'BBC. BBC는 외부 인터넷 사이트의 내용에 대한 책임이 없습니다.',
   },
   fonts: [],
+  navigation: [
+    {
+      title: '뉴스',
+      url: '/korean',
+    }, {
+      title: '비디오',
+      url: '/korean/media/video',
+    }, {
+      title: '다운로드',
+      url: '/korean/downloads',
+    }, {
+      title: 'TOP 뉴스',
+      url: '/korean/popular/read',
+    }
+  ]
 };
 
 export default service;
