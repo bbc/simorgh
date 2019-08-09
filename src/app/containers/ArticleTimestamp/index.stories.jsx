@@ -7,8 +7,8 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import services from '../../lib/config/services';
 
 timemachine.config({
-  dateString: 'Tue, 01 Jan 2019 00:00:00 GMT',
-  timestamp: '1546300800',
+  dateString: 'Friday, 9 August 2019 14:04:14',
+  timestamp: 1565359454,
 });
 
 const threeHoursAgo = timestampGenerator({ hours: 3 });
@@ -30,7 +30,6 @@ const WrappedArticleTimestamp = ({ service, ...rest }) => (
 );
 
 const stories = storiesOf('Containers|Article/Article Timestamp', module);
-timemachine.reset();
 
 stories.add('default', () => (
   <WrappedArticleTimestamp
