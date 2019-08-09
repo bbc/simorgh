@@ -10,7 +10,7 @@
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:storybook": "build-storybook -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
-    "cypress": "export NO_PROXY=localhost,localhost.bbc.com && cypress --run",
+    "cypress": "export NO_PROXY=localhost,localhost.bbc.com && cypress run",
     "cypress:interactive": "export NO_PROXY=localhost,localhost.bbc.com && cypress --open",
     "cypress:3rdParty": "npm run cypress --project ./3rdPartyCypress/.",
     "cypress:3rdParty:interactive": "npm run cypress:interactive -- --project ./3rdPartyCypress/.",
