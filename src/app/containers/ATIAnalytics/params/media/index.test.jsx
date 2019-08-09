@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import * as atiPageViewParams from '../../atiUrl';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../../contexts/RequestContext';
@@ -35,7 +35,7 @@ describe('MediaAtiParams', () => {
       const mock = jest.fn().mockReturnValue('key=value&key2=value2');
       atiPageViewParams.default = mock;
 
-      renderer.create(Component(serviceContextStub, requestContextStub));
+      render(Component(serviceContextStub, requestContextStub));
 
       expect(mock).toHaveBeenCalledTimes(1);
       expect(mock).toHaveBeenCalledWith({
