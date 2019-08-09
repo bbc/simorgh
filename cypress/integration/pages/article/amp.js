@@ -164,5 +164,17 @@ Object.keys(config)
           `https://www.bbc.com${config[service].pageTypes.articles}`,
         );
       });
+
+      describe('Assert for broken links', () => {
+        it('should not contain any broken links - no 404s links', () => {
+          cy.get('footer a').each(element => {
+            const href = element.attr('href');
+            console.log(href);
+            cy.request(href).then(resp => {
+              expect(resp.status).to.not.equal(404);
+            });
+          });
+        });
+      });
     });
   });
