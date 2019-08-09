@@ -5,10 +5,9 @@ import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import ArticleAtiParams from './params/article';
 import { FrontPageAtiParams } from './params/frontpage';
-// import FrontPageAtiEventTracker from './event/frontpage';
+import EventTracker from './event';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
-import listener from '../../lib/analyticsUtils/eventListener';
 
 const ATIAnalytics = ({ data }) => {
   const { pageType, platform } = React.useContext(RequestContext);
@@ -21,8 +20,7 @@ const ATIAnalytics = ({ data }) => {
       break;
     case 'frontPage':
       pageviewParams = FrontPageAtiParams(data);
-      // FrontPageAtiEventTracker(data);
-      listener();
+      EventTracker(data);
       break;
     default:
       return null;

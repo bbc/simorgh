@@ -15,7 +15,7 @@ export const FrontPageAtiParams = frontpageData => {
   const { atiAnalyticsAppName, brandName, service } = useContext(
     ServiceContext,
   );
-
+  console.log({ platform, statsDestination });
   return atiPageViewParams({
     appName: atiAnalyticsAppName,
     contentId: getContentId(frontpageData),
@@ -36,7 +36,7 @@ export const FrontPageEventParams = frontpageData => {
   const { atiAnalyticsAppName, brandName, service } = useContext(
     ServiceContext,
   );
-
+  // console.log({ platform, statsDestination });
   return atiEventTrackParams({
     appName: atiAnalyticsAppName,
     contentId: getContentId(frontpageData),
