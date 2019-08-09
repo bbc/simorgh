@@ -18,7 +18,7 @@ const ATIAnalytics = ({ data }) => {
     media: getMediaPageAtiParams,
   };
 
-  const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType)
+  const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
   if (!isValidPageType) {
     return null;
   }
