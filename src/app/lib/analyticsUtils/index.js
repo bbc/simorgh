@@ -175,7 +175,8 @@ export const getPublishingInfo = (
   service,
   eventInfo,
 ) => {
-  const eventTrace = eventInfo.path[0].dataset.info; // will need to figure out how to get this but it's possible to get it using eventInfo.path[0].dataset, etc
+  const eventComponentInfo = eventInfo.path[0].dataset.info; // will need to figure out how to get this but it's possible to get it using eventInfo.path[0].dataset, etc
+  const screenPlacement = `X${eventInfo.clientX}xY${eventInfo.clientY}`;
 
-  return `PUB-[${service}-frontpage]-[viewed~${eventInfo.type}]-[${pageIdentifier}]-[${eventTrace}]-[${service}]-[${pageIdentifier}]-${eventInfo.type}`;
+  return `PUB-[${service}-frontpage]-[viewed~${eventInfo.type}]-[${pageIdentifier}]-[${eventComponentInfo}]-[${service}]-[${pageIdentifier}]-[${eventInfo.type}]-[${screenPlacement}]`;
 };

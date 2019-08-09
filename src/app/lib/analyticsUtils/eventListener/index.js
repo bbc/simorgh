@@ -6,15 +6,13 @@ const listener = (frontpageData, platform, statsDestination, service) => {
     const navItems = document.getElementsByClassName('track-nav');
 
     navItems.forEach(item => {
-      item.addEventListener('click', e => {
-        e.preventDefault();
-
+      item.addEventListener('click', event => {
         FrontPageAtiEventTracker(
           frontpageData,
           platform,
           statsDestination,
           service,
-          e,
+          event,
         );
       });
     });
