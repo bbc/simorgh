@@ -12,16 +12,19 @@ import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
 const ATIAnalytics = ({ data }) => {
   const { pageType, platform } = React.useContext(RequestContext);
 
-  const validPageTypes = ['article', 'frontPage', 'media'];
-  if (!validPageTypes.includes(pageType)) {
-    return null;
-  }
-
-  const pageviewParams = {
+  // The functions that converts pageData to ATI params
+  const pageTypeHandlers = {
     article: ArticleAtiParams,
     frontPage: FrontPageAtiParams,
     media: MediaPageAtiParams,
-  }[pageType](data);
+  };
+
+  // Eject if the page type is not recognised
+  if (!Object.keys(pageTypeHandlers).includes(pageType)) {
+    return null;
+  }
+
+  const pageviewParams = pageTypeHandlers[pageType](data);
 
   return platform === 'amp' ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
