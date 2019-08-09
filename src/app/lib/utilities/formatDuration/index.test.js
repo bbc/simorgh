@@ -67,7 +67,7 @@ describe('formatDuration', () => {
     expect(formatDuration(dur)).toBe('1:00:00');
   });
 
-  it('should apply the correct seperator', () => {
+  it('should apply the correct separator', () => {
     const dur = moment.duration({
       hours: 1,
     });
