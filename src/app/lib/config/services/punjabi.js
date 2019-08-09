@@ -20,7 +20,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `pa-IN`,
-  datetimeLocale: `pa-IN`.toLowerCase(),
+  datetimeLocale: `pa-in`,
   service: 'punjabi',
   serviceName: 'News ਖ਼ਬਰ',
   themeColor: `${C_POSTBOX}`,
