@@ -10,7 +10,7 @@ const formatDuration = (duration, separator = ':') => {
 
   if (isOverAnHour) {
     out += Math.floor(duration.asHours()) + seperator;
-    out += lpad(duration.minutes()) + seperator;
+    out += lpad(duration.minutes()) + separator;
   } else {
     out += duration.minutes() + seperator;
   }
