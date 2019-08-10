@@ -24,7 +24,7 @@ describe('Js bundle requests', () => {
   });
 
   afterAll(async () => {
-    browser.close();
+    await browser.close();
   });
 
   Object.keys(config).forEach(service => {
@@ -40,11 +40,11 @@ describe('Js bundle requests', () => {
             });
           });
 
-          afterAll(async () => {
+          afterAll(() => {
             requests = [];
           });
 
-          it('only loads expected js bundles', async () => {
+          it('only loads expected js bundles', () => {
             requests
               .filter(url => url.endsWith('.js'))
               .filter(isJsBundle)
@@ -58,7 +58,7 @@ describe('Js bundle requests', () => {
               });
           });
 
-          it('loads at least 1 service bundle', async () => {
+          it('loads at least 1 service bundle', () => {
             const serviceMatches = requests.filter(url =>
               url.match(
                 new RegExp(
