@@ -12,7 +12,7 @@ let requests = [];
 const isJsBundle = url => url.includes(localBaseUrl);
 
 describe('Js bundle requests', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
     browser = await puppeteer.launch({
       args: ['--no-sandbox'],
     });
@@ -23,9 +23,8 @@ describe('Js bundle requests', () => {
     });
   });
 
-  afterEach(async () => {
+  afterAll(async () => {
     browser.close();
-    requests = [];
   });
 
   Object.keys(config).forEach(service => {
@@ -35,10 +34,14 @@ describe('Js bundle requests', () => {
         const path = config[service].pageTypes[pageType];
 
         describe(service, () => {
-          beforeEach(async () => {
+          beforeAll(async () => {
             await page.goto(`${localBaseUrl}${path}`, {
               waitUntil: 'networkidle2',
             });
+          });
+
+          afterAll(async () => {
+            requests = [];
           });
 
           it('only loads expected js bundles', async () => {
