@@ -2,46 +2,27 @@ import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
-import describeForEuOnly from '../../support/describeForEuOnly';
 
 const tests = service =>
   describe(`Tests`, () => {
-    describeForEuOnly('Consent Banners', () => {
-      it('have correct translations', () => {
-        cy.hasConsentBannerTranslations(service);
+    describe(`Metadata`, () => {
+      it('should have a correct robot meta tag', () => {
+        cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
+      });
+
+      it('should include the canonical URL', () => {
+        cy.checkCanonicalURL(
+          `https://www.bbc.com${config[service].pageTypes.frontPage}`,
+        );
       });
     });
 
-    describe('footer tests', () => {
-      it('should have a visible footer', () => {
-        cy.get('footer')
-          .should('have.length', 1)
-          .should('have.attr', 'role', 'contentinfo')
-          .find('a')
-          .should('have.attr', 'href', config[service].pageTypes.frontPage)
-          .find('svg')
-          .should('be.visible');
-      });
-    });
-
-    describe('checks the components are present', () => {
+    describe('Frontpage body', () => {
       before(() => {
         cy.viewport(1008, 768);
       });
 
-      describe('header tests', () => {
-        it('should have a visible banner', () => {
-          cy.get('header')
-            .should('have.lengthOf', 1)
-            .find('div[class^="Banner"]')
-            .children()
-            .should('have.lengthOf', 1)
-            .children()
-            .should('have.attr', 'href', config[service].pageTypes.frontPage)
-            .find('svg')
-            .should('be.visible');
-        });
-
+      describe('Header', () => {
         if (appConfig[service].navigation) {
           it('should have one visible navigation', () => {
             cy.get('nav')
@@ -55,7 +36,7 @@ const tests = service =>
         });
       });
 
-      describe('section tests', () => {
+      describe('Section', () => {
         it('should be labelled by a visible section label', () => {
           cy.get('section')
             .should('have.length.of.at.least', 1)

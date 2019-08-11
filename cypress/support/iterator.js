@@ -1,6 +1,5 @@
 import config from './config/services';
-
-const alwaysTests = () => {};
+import alwaysTests from './alwaysTests';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType] !== undefined;
@@ -28,7 +27,7 @@ const iterator = (pageType, tests, canonicalOnlyTests, ampOnlyTests) => {
           });
         });
 
-        if (alwaysTests) alwaysTests(service);
+        if (alwaysTests) alwaysTests(service, pageType);
         if (tests) tests(service);
         if (ampOnlyTests) ampOnlyTests(service);
       });
