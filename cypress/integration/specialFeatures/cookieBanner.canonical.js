@@ -1,7 +1,3 @@
-import {
-  assertCookieValue,
-  assertCookieExpiryDate,
-} from '../../support/metaTestHelper';
 import appConfig from '../../../src/app/lib/config/services';
 import config from '../../support/config/services';
 
@@ -32,14 +28,14 @@ const getCookieBannerReject = service =>
 
 const ensureCookieExpiryDates = () => {
   const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
-  assertCookieExpiryDate('ckns_explicit', inOneYear);
-  assertCookieExpiryDate('ckns_policy', inOneYear);
-  assertCookieExpiryDate('ckns_privacy', inOneYear);
+  cy.assertCookieExpiryDate('ckns_explicit', inOneYear);
+  cy.assertCookieExpiryDate('ckns_policy', inOneYear);
+  cy.assertCookieExpiryDate('ckns_privacy', inOneYear);
 };
 
 const assertCookieValues = cookies => {
   Object.keys(cookies).forEach(cookie => {
-    assertCookieValue(cookie, cookies[cookie]);
+    cy.assertCookieValue(cookie, cookies[cookie]);
   });
 };
 

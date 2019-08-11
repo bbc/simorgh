@@ -1,9 +1,10 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
-import iterator from '../../../support/iterator';
-import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
-import appConfig from '../../../../src/app/lib/config/services';
-import describeForEuOnly from '../../../support/describeForEuOnly';
+import iterator from '../../support/iterator';
+import envConfig from '../../support/config/envs';
+import config from '../../support/config/services';
+import appConfig from '../../../src/app/lib/config/services';
+import describeForEuOnly from '../../support/describeForEuOnly';
+import { getBlockByType, getBlockData } from '../../support/bodyTestHelper';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -190,35 +191,58 @@ const tests = service =>
         );
       });
 
-      // it('should render a H1, which contains/displays a styled headline', () => {
-      //   cy.firstHeadlineDataWindow();
-      // });
+      it('should render a H1, which contains/displays a styled headline', () => {
+        cy.request(`${config[service].pageTypes.articles}.json`).then(
+          ({ body }) => {
+            const headlineData = getBlockData('headline', body);
+            cy.get('h1').should(
+              'contain',
+              headlineData.model.blocks[0].model.blocks[0].model.text,
+            );
+          },
+        );
+      });
 
-      // it('should render a formatted timestamp', () => {
-      //   cy.window().then(win => {
-      //     if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-      //       const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
-      //       const timestamp = Cypress.moment(lastPublished).format(
-      //         'D MMMM YYYY',
-      //       );
-      //       cy.get('time').should('contain', timestamp);
-      //     }
-      //   });
-      // });
+      it('should render a formatted timestamp', () => {
+        cy.request(`${config[service].pageTypes.articles}.json`).then(
+          ({ body }) => {
+            if (body.metadata.language === 'en-gb') {
+              const { lastPublished } = body.metadata;
+              const timestamp = Cypress.moment(lastPublished).format(
+                'D MMMM YYYY',
+              );
+              cy.get('time').should('contain', timestamp);
+            }
+          },
+        );
+      });
 
-      // it('should render an H2, which contains/displays a styled subheading', () => {
-      //   cy.window().then(win => {
-      //     if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-      //       cy.firstSubheadlineDataWindow();
-      //     }
-      //   });
-      // });
+      it('should render an H2, which contains/displays a styled subheading', () => {
+        cy.request(`${config[service].pageTypes.articles}.json`).then(
+          ({ body }) => {
+            if (body.metadata.language === 'en-gb') {
+              const subheadingData = getBlockData('subheadline', body);
+              cy.get('h2').should(
+                'contain',
+                subheadingData.model.blocks[0].model.blocks[0].model.text,
+              );
+            }
+          },
+        );
+      });
 
-      // it('should render a paragraph, which contains/displays styled text', () => {
-      //   if (serviceHasCorrectlyRenderedParagraphs(service)) {
-      //     cy.firstParagraphDataWindow();
-      //   }
-      // });
+      it('should render a paragraph, which contains/displays styled text', () => {
+        if (serviceHasCorrectlyRenderedParagraphs(service)) {
+          cy.request(`${config[service].pageTypes.articles}.json`).then(
+            ({ body }) => {
+              const paragraphData = getBlockData('text', body);
+              const { text } = paragraphData.model.blocks[0].model;
+
+              cy.get('p').should('contain', text);
+            },
+          );
+        }
+      });
 
       if (serviceHasFigure(service)) {
         it('should have a placeholder image', () => {
@@ -275,26 +299,43 @@ const tests = service =>
         }
 
         it('should have an image copyright label with styling', () => {
-          cy.copyrightDataWindow();
+          cy.request(`${config[service].pageTypes.articles}.json`).then(
+            ({ body }) => {
+              const copyrightData = getBlockData('image', body);
+              const rawImageblock = getBlockByType(
+                copyrightData.model.blocks,
+                'rawImage',
+              );
+              const { copyrightHolder } = rawImageblock.model;
+
+              cy.get('figure p')
+                .eq(0)
+                .should('contain', copyrightHolder);
+            },
+          );
         });
       }
 
-      // it('should render a title', () => {
-      //   cy.window().then(win => {
-      //     const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
-      //     cy.renderedTitle(
-      //       `${seoHeadline} - ${appConfig[service].brandName}`,
-      //     );
-      //   });
-      // });
+      it('should render a title', () => {
+        cy.request(`${config[service].pageTypes.articles}.json`).then(
+          ({ body }) => {
+            const { seoHeadline } = body.promo.headlines;
+            cy.renderedTitle(
+              `${seoHeadline} - ${appConfig[service].brandName}`,
+            );
+          },
+        );
+      });
 
-      // it('should have an inline link', () => {
-      //   cy.window().then(win => {
-      //     if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
-      //       cy.get('main a');
-      //     }
-      //   });
-      // });
+      it('should have an inline link', () => {
+        cy.request(`${config[service].pageTypes.articles}.json`).then(
+          ({ body }) => {
+            if (body.metadata.language === 'en-gb') {
+              cy.get('main a');
+            }
+          },
+        );
+      });
     });
   });
 

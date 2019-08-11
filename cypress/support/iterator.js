@@ -11,7 +11,9 @@ const iterator = (pageType, tests, canonicalOnlyTests, ampOnlyTests) => {
     .forEach(service => {
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
-          cy.visit(config[service].pageTypes[pageType]);
+          cy.visit(config[service].pageTypes[pageType], {
+            failOnStatusCode: !pageType.includes('error'),
+          });
         });
 
         if (alwaysTests) alwaysTests(service);
@@ -21,7 +23,9 @@ const iterator = (pageType, tests, canonicalOnlyTests, ampOnlyTests) => {
 
       describe(`${pageType} - ${service} - Amp`, () => {
         before(() => {
-          cy.visit(`${config[service].pageTypes[pageType]}.amp`);
+          cy.visit(`${config[service].pageTypes[pageType]}.amp`, {
+            failOnStatusCode: !pageType.includes('error'),
+          });
         });
 
         if (alwaysTests) alwaysTests(service);

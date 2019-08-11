@@ -1,6 +1,6 @@
-import iterator from '../../../support/iterator';
-import config from '../../../support/config/services';
-import appConfig from '../../../../src/app/lib/config/services';
+import iterator from '../../support/iterator';
+import config from '../../support/config/services';
+import appConfig from '../../../src/app/lib/config/services';
 
 const tests = service =>
   describe(`Tests`, () => {

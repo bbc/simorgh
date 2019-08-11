@@ -1,8 +1,8 @@
-import iterator from '../../../support/iterator';
-import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
-import appConfig from '../../../../src/app/lib/config/services';
-import describeForEuOnly from '../../../support/describeForEuOnly';
+import iterator from '../../support/iterator';
+import envConfig from '../../support/config/envs';
+import config from '../../support/config/services';
+import appConfig from '../../../src/app/lib/config/services';
+import describeForEuOnly from '../../support/describeForEuOnly';
 
 const tests = service =>
   describe(`Tests`, () => {
