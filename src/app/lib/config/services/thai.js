@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 
 const service = {
   lang: `th-TH`,
@@ -154,6 +155,7 @@ const service = {
     copyrightText: 'บีบีซีบีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาจากเว็บไซต์ภายนอก',
   },
   fonts: [],
+  timezone: 'Asia/Bangkok',
 };
 
 export default service;

@@ -348,6 +348,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -862,6 +863,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -1411,6 +1413,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -1925,6 +1928,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -2439,6 +2443,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -2988,6 +2993,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -3502,6 +3508,7 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -4016,6 +4023,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -4565,6 +4573,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -5113,6 +5122,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -5633,6 +5643,7 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -6214,6 +6225,7 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -6795,6 +6807,7 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -7309,6 +7322,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -7858,6 +7872,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
@@ -8406,6 +8421,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "serviceName": "News",
       "swPath": "/articles/sw.js",
       "themeColor": "#B80000",
+      "timezone": "Europe/London",
       "translations": Object {
         "consentBanner": Object {
           "cookie": Object {
