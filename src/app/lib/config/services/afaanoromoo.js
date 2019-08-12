@@ -129,39 +129,31 @@ const service = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'Itti dhiyaachuu keenya gara geessituu.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',
+        text: 'BBC News maaliif amanuu dandeessa',
       },
       {
-        href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        text: 'Haala itti fayyadamaa',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
-        href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Imaammata mateenyaa',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
+        text: 'Kuus-yaadannoo',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/afaanoromoo/institutional-42228538',
+        text: 'BBC qunnami',
       },
     ],
-    copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
+    copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu.",
   },
   fonts: [],
   navigation: [
