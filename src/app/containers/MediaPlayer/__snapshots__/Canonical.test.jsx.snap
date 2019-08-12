@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Player: Canonical should render a MediaPlayer component when placeholder is clicked 1`] = `
+<Canonical
+  embedSrc="http://foo.com"
+  placeholderSrc="http://bar.com"
+>
+  <MediaPlayer
+    src="http://foo.com"
+  >
+    <StyledIframe
+      allow="autoplay; fullscreen"
+      gesture="media"
+      scrolling="no"
+      src="http://foo.com"
+      title="Media Player"
+    >
+      <StyledComponent
+        allow="autoplay; fullscreen"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "StyledIframe-s82gr2-1",
+              "isStatic": true,
+              "lastClassName": "nVHgH",
+              "rules": Array [
+                "position:absolute;top:0;left:0;width:100%;height:100%;border:0;overflow:hidden;",
+              ],
+            },
+            "displayName": "StyledIframe",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "StyledIframe-s82gr2-1",
+            "target": "iframe",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        gesture="media"
+        scrolling="no"
+        src="http://foo.com"
+        title="Media Player"
+      >
+        <iframe
+          allow="autoplay; fullscreen"
+          className="StyledIframe-s82gr2-1 nVHgH"
+          scrolling="no"
+          src="http://foo.com"
+          title="Media Player"
+        />
+      </StyledComponent>
+    </StyledIframe>
+  </MediaPlayer>
+</Canonical>
+`;
+
+exports[`Media Player: Canonical should render a placeholder image 1`] = `
+<div
+  className="StyledPlaceholder-s82gr2-0 cFOMxr"
+  onClick={[Function]}
+>
+  <img
+    alt="Image Alt"
+    className="StyledImg-sc-7vx2mr-0 hIxkbt"
+    height={null}
+    sizes={null}
+    src="https://foo.bar/img"
+    srcSet={null}
+    width={null}
+  />
+</div>
+`;

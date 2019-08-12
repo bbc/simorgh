@@ -1,4 +1,4 @@
-const embedUrl = (env, assetId, vpid, amp = false) => {
+const embedUrl = (assetId, vpid, amp = false) => {
   const baseUrl = process.env.SIMORGH_EMBED_BASE_URL;
   const parts = [baseUrl, assetId, vpid];
 
