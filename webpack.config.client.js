@@ -1,7 +1,6 @@
 /* eslint-disable global-require */
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
@@ -125,14 +124,6 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/,
-      }),
-      /* moment-timezone-data-plugin allows you to specify how much
-       * and what specific timezone data you wish to bundle.
-       * matchZones: (string or array of strings) Only include data
-       * for time zones with names matching this value.
-       */
-      new MomentTimezoneDataPlugin({
-        matchZones: 'Europe/London',
       }),
     ],
   };
