@@ -321,9 +321,8 @@ Object.keys(config)
 
           it('should have an image copyright label with styling', () => {
             cy.copyrightDataWindow();
-          })
+          });
         }
-        
 
         it('should render a title', () => {
           cy.window().then(win => {
