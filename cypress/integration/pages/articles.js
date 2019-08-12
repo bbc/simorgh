@@ -1,4 +1,4 @@
-  import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
+import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
