@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import 'moment/locale/th';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 
 const service = {
@@ -20,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `th-TH`,
-  datetimeLocale: `th-TH`.toLowerCase(),
+  datetimeLocale: 'th',
   service: 'thai',
   serviceName: 'News ไทย',
   themeColor: `${C_POSTBOX}`,
