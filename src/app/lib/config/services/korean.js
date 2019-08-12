@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
 const service = {
   lang: `ko-KO`,
@@ -178,6 +179,7 @@ const service = {
       url: '/korean/popular/read',
     },
   ],
+  timezone: 'Asia/Seoul',
 };
 
 export default service;

@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 
 const service = {
   lang: `id-ID`,
@@ -210,6 +211,7 @@ const service = {
       url: '/indonesia/bahasa_inggris',
     },
   ],
+  timezone: 'Asia/Jakarta',
 };
 
 export default service;
