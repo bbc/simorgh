@@ -1,11 +1,11 @@
 import React from 'react';
-import { getSansItalic } from '@bbc/psammead-styles/font-styles';
+import { getSansRegularItalic } from '@bbc/psammead-styles/font-styles';
 import styled from 'styled-components';
 import { string, node, arrayOf } from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const italic = styled.i`
-  ${({ service }) => getSansItalic(service)}
+  ${({ service }) => getSansRegularItalic(service)}
   font-family: inherit;
   font-weight: inherit;
 `;
