@@ -6,6 +6,7 @@ import {
   F_NASSIM_PERSIAN_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const persian = {
   lang: 'fa',
@@ -187,6 +188,7 @@ const persian = {
     copyrightText:
       'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
   },
+  timezone: 'Europe/London',
   fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };
 
