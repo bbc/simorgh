@@ -140,7 +140,7 @@ describe('assetsFilter', () => {
         'http://localhost:1124/static/js/vendor-._node_modules_r.js',
         'http://localhost:1124/static/js/vendor-._node_modules_p.js',
         'http://localhost:1124/static/js/main-._m.js',
-        'http://localhost:1124/static/js/vendor-._node_modules_..js',
+        'http://localhost:1124/static/js/vendor-._node_modules_@.js',
         'http://localhost:1124/static/js/pidgin-._n.js',
         'http://localhost:1124/static/js/persian-._n.js',
         'http://localhost:1124/static/js/news-._n.js',
@@ -153,7 +153,7 @@ describe('assetsFilter', () => {
         'http://localhost:1124/static/js/vendor-._node_modules_react-dom_cjs_react-dom.development.js-61bb2bf2.js',
         'http://localhost:1124/static/js/vendor-._node_modules_r.js',
         'http://localhost:1124/static/js/vendor-._node_modules_p.js',
-        'http://localhost:1124/static/js/vendor-._node_modules_..js',
+        'http://localhost:1124/static/js/vendor-._node_modules_@.js',
         'http://localhost:1124/static/js/vendor-._node_modules_h.js',
         'http://localhost:1124/static/js/main-._m.js',
       ];
