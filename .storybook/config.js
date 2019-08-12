@@ -6,6 +6,7 @@ import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyle from '../src/app/lib/globalStyles';
 import timemachine from 'timemachine';
 
+// This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
 timemachine.config({
   dateString: 'Friday, 9 August 2019 14:04:14',
   timestamp: 1565359454,
