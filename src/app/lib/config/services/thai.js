@@ -158,7 +158,7 @@ const service = {
     links: [
       {
         href: 'https://www.bbc.com/thai/institutional-49281839',
-        text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้ ',
+        text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
       },
       {
         href: 'https://www.bbc.com/thai/institutional-38403477',
