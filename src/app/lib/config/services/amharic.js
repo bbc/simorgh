@@ -160,6 +160,24 @@ const service = {
     copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
   },
   fonts: [],
+  navigation: [
+    {
+      title: 'ዜና',
+      url: '/amharic',
+    },
+    {
+      title: 'ኢትዮጵያ',
+      url: '/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4',
+    },
+    {
+      title: 'ቪዲዮ',
+      url: '/amharic/media/video',
+    },
+    {
+      title: 'በጣም የተወደዱ',
+      url: '/amharic/popular/read',
+    },
+  ],
   timezone: 'Africa/Addis_Ababa',
 };
 
