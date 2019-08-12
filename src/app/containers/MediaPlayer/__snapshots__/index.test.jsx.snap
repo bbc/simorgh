@@ -12,7 +12,7 @@ exports[`MediaPlayer Calls the correct props Calls the AMP player when platform 
       frameborder="0"
       layout="fill"
       sandbox="allow-scripts allow-same-origin"
-      src="http://localhost.bbc.com:8080/ws/av-embeds//p01k6msp/amp?morph_env=test"
+      src="http://localhost.bbc.com:8080/ws/av-embeds/foo/p01k6msp/amp"
     >
       <amp-img
         layout="fill"

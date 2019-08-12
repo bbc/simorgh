@@ -25,6 +25,7 @@ const ContextWrapper = ({ platform, children, toggleState }) => (
     isAmp={platform === 'amp'}
     service="news"
     platform={platform}
+    id="foo"
     pageType="article"
   >
     <ToggleContext.Provider
