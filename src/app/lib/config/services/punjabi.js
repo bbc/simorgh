@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
   lang: `pa-IN`,
@@ -31,6 +32,9 @@ const service = {
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
   translations: {
+    home: 'ਖ਼ਬਰਾਂ',
+    currentPage: 'Current page',
+    skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
     error: {
       404: {
         statusCode: '404',
@@ -117,6 +121,28 @@ const service = {
     },
   },
   brandSVG,
+  navigation: [
+    {
+      title: 'ਖ਼ਬਰਾਂ',
+      url: '/punjabi',
+    },
+    {
+      title: 'ਵੀਡੀਓ',
+      url: '/punjabi/media/video',
+    },
+    {
+      title: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
+      url: '/punjabi/popular/read',
+    },
+    {
+      title: 'ਭਾਰਤ',
+      url: '/punjabi/india',
+    },
+    {
+      title: 'ਕੌਮਾਂਤਰੀ',
+      url: '/punjabi/international',
+    },
+  ],
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -156,6 +182,7 @@ const service = {
       'BBC. BBC ਬਾਹਰੀ ਇੰਟਰਨੈੱਟ ਸਾਈਟਾਂ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;
