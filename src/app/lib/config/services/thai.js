@@ -119,39 +119,32 @@ const service = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        href: 'https://www.bbc.com/thai/institutional-49281839',
+        text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้ ',
       },
       {
-        href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        href: 'https://www.bbc.com/thai/institutional-38403477',
+        text: 'เงื่อนไขการใช้เว็บไซต์',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        href: 'https://www.bbc.com/thai/institutional-38497681',
+        text: 'นโยบายความเป็นส่วนตัว',
       },
       {
-        href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: 'คุกกี้ี้',
       },
       {
-        href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/thai/institutional-37981748',
+        text: 'ติดต่อบีบีซีี',
       },
     ],
-    copyrightText: 'บีบีซีบีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาจากเว็บไซต์ภายนอก',
+    copyrightText:
+      'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.',
   },
   fonts: [],
 };
