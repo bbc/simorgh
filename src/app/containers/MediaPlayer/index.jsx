@@ -14,9 +14,11 @@ import {
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
 
+const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
+const portraitRatio = '177.78%'; // (16/9)*100 = 9:16
 const StyledContainer = styled.div`
   padding-top: ${({ orientation }) =>
-    orientation === 'Portrait' ? '177.78%' : '56.25%'};
+    orientation === 'Portrait' ? portraitRatio : landscapeRatio};
   position: relative;
   overflow: hidden;
 `;
