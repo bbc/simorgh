@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 
 const service = {
   lang: `id-ID`,
@@ -160,6 +161,57 @@ const service = {
     copyrightText: 'BBC. BBC tidak bertanggung jawab atas konten internet luar',
   },
   fonts: [],
+  navigation: [
+    {
+      title: 'Berita',
+      url: '/indonesia',
+    },
+    {
+      title: 'Dunia',
+      url: '/indonesia/dunia',
+    },
+    {
+      title: 'Indonesia',
+      url: '/indonesia/indonesia',
+    },
+    {
+      title: 'Olahraga',
+      url: '/indonesia/olahraga',
+    },
+    {
+      title: 'Majalah',
+      url: '/indonesia/majalah',
+    },
+    {
+      title: '#TrenSosial',
+      url: '/indonesia/trensosial',
+    },
+    {
+      title: 'Video',
+      url: '/indonesia/media/video',
+    },
+    {
+      title: 'Audio',
+      url: '/indonesia/media/audio',
+    },
+    {
+      title: 'Galeri',
+      url: '/indonesia/media/photogalleries',
+    },
+    {
+      title: 'Karangan khas',
+      url: '/indonesia/karangan_khas',
+    },
+    {
+      title: 'Laporan khusus',
+      url: '/indonesia/in_depth',
+    },
+    {
+      title: 'Belajar Bahasa Inggris',
+      url: '/indonesia/bahasa_inggris',
+    },
+  ],
+  timezone: 'Asia/Jakarta',
 };
 
 export default service;
