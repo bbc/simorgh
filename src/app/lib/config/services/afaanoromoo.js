@@ -115,14 +115,6 @@ const service = {
       audio: 'Sagalee',
       photogallery: 'Kuusaa Fakkii',
       video: 'Viidiyoo',
-      bbc_oromo_radio: {
-        title: 'Dhaggeeffadhaa',
-        subtitle: 'Sagantaawwan keenya',
-      },
-      bbc_afaanoromoo_radio: {
-        title: 'Dhaggeeffadhaa',
-        subtitle: 'Sagantaawwan keenya',
-      },
     },
   },
   brandSVG,

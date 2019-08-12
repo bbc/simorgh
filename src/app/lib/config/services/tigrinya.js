@@ -114,10 +114,6 @@ const service = {
       audio: 'ድምፂ',
       photogallery: 'ማህደረ-ምስሊ',
       video: 'ቪድዮ',
-      bbc_tigrinya_radio: {
-        title: 'ስምዑ',
-        subtitle: 'መደባትና',
-      },
     },
   },
   brandSVG,
