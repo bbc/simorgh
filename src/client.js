@@ -9,15 +9,22 @@ import { template, templateStyles } from './app/lib/joinUsTemplate';
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
 
-// Only hydrate the client if we're on a known route
-// When on an unknown route, the SSR will be discarded and the user will only
-// see a blank screen. This should never happen on BBC domains, but web page
-// archival/caching sites such as Google webcache and web.archive.org, among
-// others.
+// Only hydrate the client if we're on the expected path
+// When on an unknown route, the SSR would be discarded and the user would only
+// see a blank screen. Avoid this by only hydrating when the embedded page data
+// and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
   Loadable.preloadReady().then(() => {
     hydrate(<ClientApp data={data} routes={routes} />, root);
   });
+} else {
+  /* eslint-disable no-console */
+  console.log(`Simorgh refused to hydrate.`);
+  console.log(
+    `Attempted to hydrate page with path ${window.SIMORGH_DATA.path},`,
+  );
+  console.log(`but window says path is ${window.location.pathname}`);
+  /* eslint-enable no-console */
 }
 
 if (process.env.NODE_ENV === 'production') {
