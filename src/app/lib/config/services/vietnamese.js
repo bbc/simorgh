@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 
 const service = {
   lang: `vi-VN`,
@@ -156,6 +157,7 @@ const service = {
       'BBC. BBC không chịu trách nhiệm nội dung các trang bên ngoài',
   },
   fonts: [],
+  timezone: 'Asia/Ho_Chi_Minh',
 };
 
 export default service;

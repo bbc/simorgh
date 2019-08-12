@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
 const service = {
   lang: `ko-KO`,
@@ -160,6 +161,25 @@ const service = {
       'BBC. BBC는 외부 인터넷 사이트의 내용에 대한 책임이 없습니다.',
   },
   fonts: [],
+  navigation: [
+    {
+      title: '뉴스',
+      url: '/korean',
+    },
+    {
+      title: '비디오',
+      url: '/korean/media/video',
+    },
+    {
+      title: '다운로드',
+      url: '/korean/downloads',
+    },
+    {
+      title: 'TOP 뉴스',
+      url: '/korean/popular/read',
+    },
+  ],
+  timezone: 'Asia/Seoul',
 };
 
 export default service;
