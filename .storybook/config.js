@@ -4,6 +4,12 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyle from '../src/app/lib/globalStyles';
+import timemachine from 'timemachine';
+
+timemachine.config({
+  dateString: 'Friday, 9 August 2019 14:04:14',
+  timestamp: 1565359454,
+});
 
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
 

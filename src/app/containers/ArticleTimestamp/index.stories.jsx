@@ -1,15 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import timemachine from 'timemachine';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import services from '../../lib/config/services';
-
-timemachine.config({
-  dateString: 'Friday, 9 August 2019 14:04:14',
-  timestamp: 1565359454,
-});
 
 const threeHoursAgo = timestampGenerator({ hours: 3 });
 const fiveHoursAgo = timestampGenerator({ hours: 5 });
