@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 
 const service = {
   lang: `bn-BD`,
@@ -160,6 +161,7 @@ const service = {
     copyrightText: 'বিবিসি। ইন্টারনেটে অন্যান্য সাইটের জন্য বিবিসি দায়বদ্ধ নয়',
   },
   fonts: [],
+  timezone: 'Asia/Dhaka',
 };
 
 export default service;

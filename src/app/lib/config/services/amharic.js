@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { amharic as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
   lang: `am-ET`,
@@ -159,6 +160,25 @@ const service = {
     copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
   },
   fonts: [],
+  navigation: [
+    {
+      title: 'ዜና',
+      url: '/amharic',
+    },
+    {
+      title: 'ኢትዮጵያ',
+      url: '/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4',
+    },
+    {
+      title: 'ቪዲዮ',
+      url: '/amharic/media/video',
+    },
+    {
+      title: 'በጣም የተወደዱ',
+      url: '/amharic/popular/read',
+    },
+  ],
+  timezone: 'Africa/Addis_Ababa',
 };
 
 export default service;

@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { ukrainian as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: `uk-UA`,
@@ -161,6 +162,7 @@ const service = {
       'ВВС. ВВС не несе відповідальність за зміст зовнішніх інтернет-сайтів',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

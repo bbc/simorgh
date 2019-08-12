@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
   lang: `om-ET`,
@@ -163,6 +164,25 @@ const service = {
     copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
   },
   fonts: [],
+  navigation: [
+    {
+      title: 'Oduu',
+      url: '/afaanoromoo',
+    },
+    {
+      title: 'Itoophiyaa',
+      url: '/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4',
+    },
+    {
+      title: 'Viidiyoo',
+      url: '/afaanoromoo/media/video',
+    },
+    {
+      title: 'Jajjaboo',
+      url: '/afaanoromoo/popular/read',
+    },
+  ],
+  timezone: 'Africa/Addis_Ababa',
 };
 
 export default service;

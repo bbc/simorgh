@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { uzbek as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: `uz-UZ`,
@@ -164,6 +165,7 @@ const service = {
     copyrightText: 'BBC. BBC ташқи интернет саҳифалар учун масъул эмас',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;
