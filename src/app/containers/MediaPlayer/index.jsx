@@ -21,6 +21,23 @@ const StyledContainer = styled.div`
   overflow: hidden;
 `;
 
+const placeholderImage = src => {
+  const parts = src.split('/');
+  const [domain, media, imgService, width, ...extraParts] = parts;
+  const definedWidth = width.replace('$width', '512');
+  const domainWithProtocol = `https://${domain}`;
+
+  const newUrl = [
+    domainWithProtocol,
+    media,
+    imgService,
+    definedWidth,
+    ...extraParts,
+  ];
+
+  return newUrl.join('/');
+};
+
 const MediaPlayerContainer = ({ blocks }) => {
   const { env, id, platform } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
@@ -50,23 +67,6 @@ const MediaPlayerContainer = ({ blocks }) => {
   if (!versionId) {
     return null; // this should be the holding image with an error overlay
   }
-
-  const placeholderImage = src => {
-    const parts = src.split('/');
-    const [domain, media, imgService, width, ...extraParts] = parts;
-    const definedWidth = width.replace('$width', '512');
-    const domainWithProtocol = `https://${domain}`;
-
-    const newUrl = [
-      domainWithProtocol,
-      media,
-      imgService,
-      definedWidth,
-      ...extraParts,
-    ];
-
-    return newUrl.join('/');
-  };
 
   const embedSource = embedUrl(env, id, versionId, isAmp);
   const placeholderSrc = placeholderImage(imageUrl);
