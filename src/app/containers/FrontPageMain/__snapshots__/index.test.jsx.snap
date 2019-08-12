@@ -1715,7 +1715,7 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
       </React.Fragment>
     </ForwardRef(VisuallyHiddenText)>
     <ForwardRef(Grid)>
-      <ForwardRef(GridItemConstrainedLarge)>
+      <ForwardRef(GridItemConstrainedLargeWithTopMargin)>
         <FrontPageSection
           bar={true}
           group={
@@ -3331,7 +3331,7 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
           }
           sectionNumber={6}
         />
-      </ForwardRef(GridItemConstrainedLarge)>
+      </ForwardRef(GridItemConstrainedLargeWithTopMargin)>
     </ForwardRef(Grid)>
   </main>
 </React.Fragment>
