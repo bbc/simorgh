@@ -187,7 +187,7 @@
     "prettier": "^1.18.2",
     "prop-types": "^15.6.2",
     "react-test-renderer": "^16.8.6",
-    "snyk": "^1.207.2",
+    "snyk": "^1.216.0",
     "start-server-webpack-plugin": "^2.2.5",
     "storybook-chromatic": "^2.1.1",
     "stylelint": "^10.1.0",
