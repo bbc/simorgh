@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
 
 const service = {
   lang: `ne-NP`,
@@ -162,6 +163,7 @@ const service = {
       'बीबीसी। बाहिरी वेबसाइटहरुको सामग्रीका लागि बीबीसी जिम्मेवार छैन।',
   },
   fonts: [],
+  timezone: 'Asia/Kathmandu',
 };
 
 export default service;
