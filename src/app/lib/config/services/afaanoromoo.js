@@ -164,6 +164,24 @@ const service = {
     copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
   },
   fonts: [],
+  navigation: [
+    {
+      title: 'Oduu',
+      url: '/afaanoromoo',
+    },
+    {
+      title: 'Itoophiyaa',
+      url: '/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4',
+    },
+    {
+      title: 'Viidiyoo',
+      url: '/afaanoromoo/media/video',
+    },
+    {
+      title: 'Jajjaboo',
+      url: '/afaanoromoo/popular/read',
+    },
+  ],
   timezone: 'Africa/Addis_Ababa',
 };
 
