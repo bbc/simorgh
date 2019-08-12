@@ -50,3 +50,5 @@ exports[`MediaPlayer Calls the correct props Calls the canonical player when pla
 `;
 
 exports[`MediaPlayer Fails and returns early when component is toggled off 1`] = `null`;
+
+exports[`MediaPlayer Fails and returns early when there is no versionId 1`] = `null`;
