@@ -5,6 +5,9 @@ import { hydrate } from 'react-dom';
 import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
 import { template, templateStyles } from './app/lib/joinUsTemplate';
+import loggerNode from './app/lib/logger.node';
+
+const logger = loggerNode();
 
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
@@ -19,7 +22,7 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
   });
 } else {
   // eslint-disable-next-line no-console
-  console.log(`
+  logger.warn(`
     Simorgh refused to hydrate.
     It attempted to hydrate page with path ${window.SIMORGH_DATA.path},
     but window.location says path is ${window.location.pathname}
