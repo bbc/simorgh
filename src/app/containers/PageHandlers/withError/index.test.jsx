@@ -9,14 +9,14 @@ describe('withError HOC', () => {
   describe('with error', () => {
     shouldShallowMatchSnapshot(
       `should return the errorMain component`,
-      <ErrorHOC error="error handling at its best" />,
+      <ErrorHOC error />,
     );
   });
 
   describe('with no error', () => {
     shouldShallowMatchSnapshot(
       `should return the passed in component`,
-      <ErrorHOC error={null} />,
+      <ErrorHOC error={false} />,
     );
   });
 });
