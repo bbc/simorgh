@@ -59,7 +59,7 @@
   "husky": {
     "hooks": {
       "post-merge": "sh scripts/dependencyUpdateCheck.sh",
-      "pre-commit": "npm run test:lint",
+      "pre-commit": "lint-staged",
       "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit -- --changedSince=latest && apache2-license-checker"
     }
   },
@@ -79,6 +79,7 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
     "@bbc/gel-foundations": "3.1.0",
+    "@bbc/moment-timezone-include": "^1.0.0",
     "@bbc/psammead-assets": "^1.1.1",
     "@bbc/psammead-brand": "^4.2.0",
     "@bbc/psammead-caption": "^2.1.0",
@@ -181,7 +182,7 @@
     "jest-fetch-mock": "^2.1.1",
     "jest-styled-components": "^6.3.3",
     "lighthouse": "^5.2.0",
-    "moment-timezone-data-webpack-plugin": "^1.1.0",
+    "lint-staged": "^9.2.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "prop-types": "^15.6.2",
@@ -219,5 +220,9 @@
       "cloudteam-td-agent-setup",
       "dial-agent"
     ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,json}": "eslint",
+    "src/**/*.{js,jsx}": "stylelint"
   }
 }
