@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
 const service = {
   lang: `ko-KO`,
@@ -156,6 +157,7 @@ const service = {
       'BBC. BBC는 외부 인터넷 사이트의 내용에 대한 책임이 없습니다.',
   },
   fonts: [],
+  timezone: 'Asia/Seoul',
 };
 
 export default service;

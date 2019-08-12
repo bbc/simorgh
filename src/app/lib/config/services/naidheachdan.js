@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: `gd`,
@@ -157,6 +158,7 @@ const service = {
       "BhBC. Chan eil uallach air a' BhBC son na tha air làraichean-lìn eile",
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

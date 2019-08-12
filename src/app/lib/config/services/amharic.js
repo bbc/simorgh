@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
   lang: `am-ET`,
@@ -155,6 +156,7 @@ const service = {
     copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
   },
   fonts: [],
+  timezone: 'Africa/Addis_Ababa',
 };
 
 export default service;
