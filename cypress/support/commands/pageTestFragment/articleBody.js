@@ -54,8 +54,8 @@ Cypress.Commands.add('hasHtmlLangDirAttributes', ({ lang, dir }) => {
     .and('have.attr', 'dir', dir);
 });
 
-Cypress.Commands.add('getAndAssertLinks',tag => {
-  cy.get(' tag a').each(element => {
+Cypress.Commands.add('getAndAssertLinks',() => {
+  cy.get(' header a').each(element => {
     const href = element.attr('href')
     cy.request(href).then(resp => {
       expect(resp.status).to.not.equal(404);

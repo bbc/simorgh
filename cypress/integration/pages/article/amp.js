@@ -88,7 +88,7 @@ Object.keys(config)
       it('should have lang and dir attributes', () => {
         cy.request(`${config[service].pageTypes.articles}.json`).then(
           ({ body }) => {
-            cy.tmlLangDirAttributes({
+            cy.hasHtmlLangDirAttributes({
               lang: body.metadata.passport.language,
               dir: appConfig[service].dir,
             });
@@ -167,11 +167,11 @@ Object.keys(config)
 
       describe('Assert for broken links', () => {
         it('should not contain any broken header links - no 404s links', () => {
-          cy.getAndAssertLinks('header');
+          cy.getAndAssertLinks();
         });
-        it('should not contain any broken footer links - no 404s links', () => {
-          cy.getAndAssertLinks('footer');
-        });
+        // it('should not contain any broken footer links - no 404s links', () => {
+        //   cy.getAndAssertLinks('footer');
+        // });
       });
     });
   });
