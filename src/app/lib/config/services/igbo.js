@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
+import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const igbo = {
   lang: 'ig',
@@ -171,6 +172,7 @@ const igbo = {
     copyrightText:
       'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
   },
+  timezone: 'Africa/Lagos',
 };
 
 export default igbo;

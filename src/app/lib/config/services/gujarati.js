@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
   lang: `gu-IN`,
@@ -160,6 +161,7 @@ const service = {
     copyrightText: 'BBC. એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;
