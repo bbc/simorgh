@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: `cy`,
@@ -157,6 +158,7 @@ const service = {
       "BBC. Dyw'r BBC ddim yn gyfrifol am safleoedd rhyngrwyd allanol.",
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;
