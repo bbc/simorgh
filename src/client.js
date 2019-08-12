@@ -18,13 +18,12 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
     hydrate(<ClientApp data={data} routes={routes} />, root);
   });
 } else {
-  /* eslint-disable no-console */
-  console.log(`Simorgh refused to hydrate.`);
-  console.log(
-    `Attempted to hydrate page with path ${window.SIMORGH_DATA.path},`,
-  );
-  console.log(`but window says path is ${window.location.pathname}`);
-  /* eslint-enable no-console */
+  // eslint-disable-next-line no-console
+  console.log(`
+    Simorgh refused to hydrate.
+    It attempted to hydrate page with path ${window.SIMORGH_DATA.path},
+    but window.location says path is ${window.location.pathname}
+  `);
 }
 
 if (process.env.NODE_ENV === 'production') {
