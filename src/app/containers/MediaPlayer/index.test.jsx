@@ -47,6 +47,8 @@ ContextWrapper.defaultProps = {
 };
 
 describe('MediaPlayer', () => {
+  process.env.SIMORGH_EMBED_BASE_URL = 'https://foobar.com';
+
   describe('Calls the correct props', () => {
     it('Calls the canonical player when platform is canonical', () => {
       const tree = renderer.create(
