@@ -341,5 +341,23 @@ Object.keys(config)
           });
         });
       });
+      describe('Assert for broken links', () => {
+        it('should not contain any broken header links - no 404s links', () => {
+          cy.get('header a').each(element => {
+            const href = element.attr('href');
+            cy.request(href).then(resp => {
+              expect(resp.status).to.not.equal(404);
+            });
+          });
+        });
+        it('should not contain any broken footer links - no 404s links', () => {
+          cy.get('footer a').each(element => {
+            const href = element.attr('href');
+            cy.request(href).then(resp => {
+              expect(resp.status).to.not.equal(404);
+            });
+          });
+        });
+      });
     });
   });

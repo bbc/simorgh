@@ -53,3 +53,12 @@ Cypress.Commands.add('hasHtmlLangDirAttributes', ({ lang, dir }) => {
     .should('have.attr', 'lang', lang)
     .and('have.attr', 'dir', dir);
 });
+
+Cypress.Commands.add('getAndAssertLinks',tag => {
+  cy.get(' tag a').each(element => {
+    const href = element.attr('href')
+    cy.request(href).then(resp => {
+      expect(resp.status).to.not.equal(404);
+    });
+  });
+});
