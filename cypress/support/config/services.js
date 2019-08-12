@@ -12,6 +12,10 @@ export default {
           ? undefined
           : '/afaanoromoo/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/afaanoromoo',
+      liveRadio:
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
     },
   },
   afrique: {
@@ -42,6 +46,10 @@ export default {
           ? undefined
           : '/amharic/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/amharic',
+      liveRadio:
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/amharic/bbc_amharic_radio/liveradio',
     },
   },
   arabic: {
@@ -210,6 +218,10 @@ export default {
           ? undefined
           : '/indonesia/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/indonesia',
+      liveRadio:
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/indonesia/bbc_indonesian_radio/liveradio',
     },
   },
   japanese: {
@@ -240,6 +252,10 @@ export default {
           ? undefined
           : '/korean/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/korean',
+      liveRadio:
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/korean/bbc_korean_radio/liveradio',
     },
   },
   kyrgyz: {
@@ -536,6 +552,10 @@ export default {
           ? undefined
           : '/tigrinya/articles/c123456abcdo',
       frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/tigrinya',
+      liveRadio:
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/tigrinya/bbc_tigrinya_radio/liveradio',
     },
   },
   turkce: {
