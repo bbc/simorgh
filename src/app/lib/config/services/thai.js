@@ -66,49 +66,49 @@ const service = {
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: 'เราได้ปรับปรุงนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์แล้ว',
         description: {
           uk: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'เราได้แก้ไขข้อมูลที่สำคัญของนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์ และเราต้องการให้คุณทราบถึง ผลกระทบต่อตัวคุณและข้อมูลของคุณ',
             linkText: null,
             last: null,
             linkUrl: null,
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'เราได้แก้ไขข้อมูลที่สำคัญของนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์ และเราต้องการให้คุณทราบถึง ผลกระทบต่อตัวคุณและข้อมูลของคุณ',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
-        accept: 'OK',
-        reject: "Find out what's changed",
+        accept: 'ตกลง',
+        reject: 'ดูว่ามีอะไรเปลี่ยนแปลงไปบ้าง',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์',
         description: {
           uk: {
-            first: 'We use ',
-            linkText: 'cookies',
+            first: 'เราใช้',
+            linkText: ' คุกกีส์',
             last:
-              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
-            linkText: 'cookies',
+            first: 'เราและพันธมิตรใช้เทคโนโลยี อย่างเช่น ',
+            linkText: 'คุกกีส์',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              ' และข้อมูลการเข้าเว็บไซต์ต่าง ๆ ที่ถูกจัดเก็บไว้ เพื่อทำให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ และทำให้เนื้อหาและโฆษณาที่คุณได้รับตรงกับความสนใจของคุณ กรุณาแจ้งให้เราทราบว่าคุณยอมรับหรือไม่',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: 'ยอมรับ',
+        reject: 'ไม่ยอมรับ ไปที่การตั้งค่า',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
