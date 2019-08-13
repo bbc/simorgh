@@ -48,13 +48,14 @@ const WithContexts = Component => {
     previousPath: string,
     service: string.isRequired,
     dials: objectOf(bool).isRequired,
-    currentPath: string.isRequired,
+    currentPath: string,
   };
 
   WithContextsContainer.defaultProps = {
     bbcOrigin: null,
     id: null,
     previousPath: null,
+    currentPath: null,
   };
 
   return WithContextsContainer;
