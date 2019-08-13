@@ -8,7 +8,7 @@ import { getBlockByType, getBlockData } from '../../support/bodyTestHelper';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
-const serviceHasCaption = service => ['news'].includes(service);
+const serviceHasCaption = service => service !== 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
