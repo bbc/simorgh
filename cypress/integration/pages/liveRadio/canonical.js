@@ -12,135 +12,131 @@ const runTests = service => {
       cy.visit(getLiveRadioUrl(service));
     });
 
-    describe('Meta Tests', () => {
-      it('should have the correct lang & dir attributes', () => {
-        cy.window().then(win => {
-          cy.hasHtmlLangDirAttributes({
-            lang: `${win.SIMORGH_DATA.pageData.metadata.language}`,
-            dir: `${appConfig[service].dir}`,
-          });
-        });
-      });
+    // will be addressed by https://github.com/bbc/simorgh/issues/2750
+    // describe('Meta Tests', () => {
+    //   it('should have the correct lang & dir attributes', () => {
+    //     cy.window().then(win => {
+    //       cy.hasHtmlLangDirAttributes({
+    //         lang: `${win.SIMORGH_DATA.pageData.metadata.language}`,
+    //         dir: `${appConfig[service].dir}`,
+    //       });
+    //     });
+    //   });
 
-      // it('should not have an AMP attribute on the main article', () => {
-      //   cy.get('html').should('not.have.attr', 'amp');
-      // });
+    //   it('should not have an AMP attribute on the main article', () => {
+    //     cy.get('html').should('not.have.attr', 'amp');
+    //   });
 
-      it('should have a correct robot meta tag', () => {
-        cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
-      });
+    //   it('should have a correct robot meta tag', () => {
+    //     cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
+    //   });
 
-      it('should have resource hints', () => {
-        const resources = [
-          envConfig.assetOrigin,
-          'https://ichef.bbci.co.uk',
-          'https://gel.files.bbci.co.uk',
-        ];
+    //   it('should have resource hints', () => {
+    //     const resources = [
+    //       envConfig.assetOrigin,
+    //       'https://ichef.bbci.co.uk',
+    //       'https://gel.files.bbci.co.uk',
+    //     ];
 
-        resources.forEach(resource => {
-          const selector = `head link[href="${resource}"]`;
-          cy.get(selector).should('have.attr', 'rel', 'preconnect');
-          cy.get(selector)
-            .eq(1)
-            .should('have.attr', 'rel', 'dns-prefetch');
-        });
-      });
+    //     resources.forEach(resource => {
+    //       const selector = `head link[href="${resource}"]`;
+    //       cy.get(selector).should('have.attr', 'rel', 'preconnect');
+    //       cy.get(selector)
+    //         .eq(1)
+    //         .should('have.attr', 'rel', 'dns-prefetch');
+    //     });
+    //   });
 
-      // will be addressed by https://github.com/bbc/simorgh/issues/2750
-      // it('should have the correct facebook metadata', () => {
-      //   cy.checkFacebookMetadata(
-      //     '100004154058350',
-      //     '1609039196070050',
-      //     `${appConfig[service].articleAuthor}`,
-      //   );
-      // });
+    //   it('should have the correct facebook metadata', () => {
+    //     cy.checkFacebookMetadata(
+    //       '100004154058350',
+    //       '1609039196070050',
+    //       `${appConfig[service].articleAuthor}`,
+    //     );
+    //   });
 
-      // will be addressed by https://github.com/bbc/simorgh/issues/2750
-      // it('should have the correct open graph metadata', () => {
-      //   cy.checkOpenGraphMetadata(
-      //     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-      //     `${appConfig[service].defaultImage}`,
-      //     `${appConfig[service].defaultImageAltText}`,
-      //     `${appConfig[service].locale}`,
-      //     `${appConfig[service].defaultImageAltText}`,
-      //     "Meghan's bouquet laid on tomb of unknown warrior",
-      //     'article',
-      //     `https://www.bbc.com${getLiveRadioUrl(service)}`,
-      //   );
-      // });
+    //   it('should have the correct open graph metadata', () => {
+    //     cy.checkOpenGraphMetadata(
+    //       'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+    //       `${appConfig[service].defaultImage}`,
+    //       `${appConfig[service].defaultImageAltText}`,
+    //       `${appConfig[service].locale}`,
+    //       `${appConfig[service].defaultImageAltText}`,
+    //       "Meghan's bouquet laid on tomb of unknown warrior",
+    //       'article',
+    //       `https://www.bbc.com${getLiveRadioUrl(service)}`,
+    //     );
+    //   });
 
-      // will be addressed by https://github.com/bbc/simorgh/issues/2750
-      // it('should have the correct twitter metadata', () => {
-      //   cy.checkTwitterMetadata(
-      //     'summary_large_image',
-      //     `${appConfig[service].twitterCreator}`,
-      //     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-      //     `${appConfig[service].defaultImageAltText}`,
-      //     `${appConfig[service].defaultImage}`,
-      //     `${appConfig[service].twitterSite}`,
-      //     "Meghan's bouquet laid on tomb of unknown warrior",
-      //   );
-      // });
+    //   it('should have the correct twitter metadata', () => {
+    //     cy.checkTwitterMetadata(
+    //       'summary_large_image',
+    //       `${appConfig[service].twitterCreator}`,
+    //       'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+    //       `${appConfig[service].defaultImageAltText}`,
+    //       `${appConfig[service].defaultImage}`,
+    //       `${appConfig[service].twitterSite}`,
+    //       "Meghan's bouquet laid on tomb of unknown warrior",
+    //     );
+    //   });
 
-      // will be addressed by https://github.com/bbc/simorgh/issues/2750
-      // it('should include metadata that matches the JSON data', () => {
-      //   cy.window().then(win => {
-      //     cy.get('head').within(() => {
-      //       cy.get('meta[name="description"]').should(
-      //         'have.attr',
-      //         'content',
-      //         win.SIMORGH_DATA.pageData.promo.summary ||
-      //           win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
-      //       );
-      //       cy.get('meta[name="og:title"]').should(
-      //         'have.attr',
-      //         'content',
-      //         win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
-      //       );
-      //       cy.get('meta[name="og:type"]').should(
-      //         'have.attr',
-      //         'content',
-      //         win.SIMORGH_DATA.pageData.metadata.type,
-      //       );
-      //       cy.get('meta[name="article:published_time"]').should(
-      //         'have.attr',
-      //         'content',
-      //         new Date(
-      //           win.SIMORGH_DATA.pageData.metadata.firstPublished,
-      //         ).toISOString(),
-      //       );
-      //       cy.get('meta[name="article:modified_time"]').should(
-      //         'have.attr',
-      //         'content',
-      //         new Date(
-      //           win.SIMORGH_DATA.pageData.metadata.lastPublished,
-      //         ).toISOString(),
-      //       );
-      //     });
+    //   it('should include metadata that matches the JSON data', () => {
+    //     cy.window().then(win => {
+    //       cy.get('head').within(() => {
+    //         cy.get('meta[name="description"]').should(
+    //           'have.attr',
+    //           'content',
+    //           win.SIMORGH_DATA.pageData.promo.summary ||
+    //             win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+    //         );
+    //         cy.get('meta[name="og:title"]').should(
+    //           'have.attr',
+    //           'content',
+    //           win.SIMORGH_DATA.pageData.promo.headlines.seoHeadline,
+    //         );
+    //         cy.get('meta[name="og:type"]').should(
+    //           'have.attr',
+    //           'content',
+    //           win.SIMORGH_DATA.pageData.metadata.type,
+    //         );
+    //         cy.get('meta[name="article:published_time"]').should(
+    //           'have.attr',
+    //           'content',
+    //           new Date(
+    //             win.SIMORGH_DATA.pageData.metadata.firstPublished,
+    //           ).toISOString(),
+    //         );
+    //         cy.get('meta[name="article:modified_time"]').should(
+    //           'have.attr',
+    //           'content',
+    //           new Date(
+    //             win.SIMORGH_DATA.pageData.metadata.lastPublished,
+    //           ).toISOString(),
+    //         );
+    //       });
 
-      //     cy.get('html').should(
-      //       'have.attr',
-      //       'lang',
-      //       win.SIMORGH_DATA.pageData.metadata.passport.language,
-      //     );
-      //   });
-      // });
+    //       cy.get('html').should(
+    //         'have.attr',
+    //         'lang',
+    //         win.SIMORGH_DATA.pageData.metadata.passport.language,
+    //       );
+    //     });
+    //   });
 
-      // will be addressed by https://github.com/bbc/simorgh/issues/2750
-      // it('should include the canonical URL & ampHTML', () => {
-      //   cy.checkCanonicalURL(`https://www.bbc.com${getLiveRadioUrl(service)}`);
-      //   cy.checkAmpHTML(
-      //     `${window.location.origin}${getLiveRadioUrl(service)}.amp`,
-      //   );
-      // });
+    //   it('should include the canonical URL & ampHTML', () => {
+    //     cy.checkCanonicalURL(`https://www.bbc.com${getLiveRadioUrl(service)}`);
+    //     cy.checkAmpHTML(
+    //       `${window.location.origin}${getLiveRadioUrl(service)}.amp`,
+    //     );
+    //   });
 
-      // will be addressed by this https://github.com/bbc/simorgh/issues/3117
-      // it('should include mainEntityOfPage in the LinkedData', () => {
-      //   cy.get('script[type="application/ld+json"]')
-      //     .should('contain', 'mainEntityOfPage')
-      //     .and('contain', 'headline');
-      // });
-    });
+    //   // will be addressed by this https://github.com/bbc/simorgh/issues/3117
+    //   // it('should include mainEntityOfPage in the LinkedData', () => {
+    //   //   cy.get('script[type="application/ld+json"]')
+    //   //     .should('contain', 'mainEntityOfPage')
+    //   //     .and('contain', 'headline');
+    //   // });
+    // });
 
     describe('Footer Tests', () => {
       it('should render the BBC News branding', () => {
@@ -235,14 +231,11 @@ const runTests = service => {
 
       it('should render a H1, which contains/displays a styled headline', () => {
         cy.window().then(win => {
-          const { text: headlineData } = path(
-            ['pageData', 'content', 'blocks'],
+          const [{ text: headline }] = path(
+            ['SIMORGH_DATA', 'pageData', 'content', 'blocks'],
             win,
           );
-          cy.get('h1').should(
-            'contain',
-            headlineData.model.blocks[0].model.blocks[0].model.text,
-          );
+          cy.get('h1').should('contain', headline);
         });
       });
 

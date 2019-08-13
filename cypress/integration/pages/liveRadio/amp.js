@@ -11,29 +11,30 @@ const runTests = service => {
       cy.visit(`${getLiveRadioUrl(service)}.amp`);
     });
 
-    it('Metadata', () => {
-      cy.request(`${getLiveRadioUrl(service)}.json`).then(({ body }) => {
-        cy.get('meta[name="description"]').should(
-          'have.attr',
-          'content',
-          body.promo.summary || body.promo.headlines.seoHeadline,
-        );
+    // will be addressed by https://github.com/bbc/simorgh/issues/2750
+    // it('Metadata', () => {
+    //   cy.request(`${getLiveRadioUrl(service)}.json`).then(({ body }) => {
+    //     cy.get('meta[name="description"]').should(
+    //       'have.attr',
+    //       'content',
+    //       body.promo.summary || body.promo.headlines.seoHeadline,
+    //     );
 
-        cy.get('meta[name="og:title"]').should(
-          'have.attr',
-          'content',
-          body.promo.headlines.seoHeadline,
-        );
+    //     cy.get('meta[name="og:title"]').should(
+    //       'have.attr',
+    //       'content',
+    //       body.promo.headlines.seoHeadline,
+    //     );
 
-        cy.get('meta[name="og:type"]').should(
-          'have.attr',
-          'content',
-          body.metadata.type,
-        );
+    //     cy.get('meta[name="og:type"]').should(
+    //       'have.attr',
+    //       'content',
+    //       body.metadata.type,
+    //     );
 
-        cy.get('html').should('have.attr', 'lang', body.metadata.language);
-      });
-    });
+    //     cy.get('html').should('have.attr', 'lang', body.metadata.language);
+    //   });
+    // });
 
     // will be addressed by https://github.com/bbc/simorgh/pull/2971
     // describe('ATI', () => {
