@@ -2,6 +2,7 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import renderer from 'react-test-renderer';
 import { isNull } from '../../../testHelpers';
+import { articleDataNews } from '../Article/fixtureData';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
@@ -31,10 +32,13 @@ ContextWrap.propTypes = {
   platform: string.isRequired,
 };
 
-const mockData = {};
 const mockAtiQueryParams = 'key1=value1&key2=value2';
 
 describe('ATI Analytics Container', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe('pageType article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
@@ -47,19 +51,17 @@ describe('ATI Analytics Container', () => {
 
       renderer.create(
         <ContextWrap platform="canonical" pageType="article">
-          <ATIAnalytics data={mockData} />
+          <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
 
       expect(mockCanonical).toHaveBeenCalledTimes(1);
-      expect(mockCanonical).toHaveBeenCalledWith(
-        {
-          pageviewParams: mockAtiQueryParams,
-        },
-        mockData,
-      );
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams: mockAtiQueryParams,
+      });
+
       expect(mockArticleAtiParams).toHaveBeenCalledTimes(1);
-      expect(mockArticleAtiParams).toHaveBeenCalledWith(mockData);
+      expect(mockArticleAtiParams).toHaveBeenCalledWith(articleDataNews);
     });
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
@@ -73,19 +75,17 @@ describe('ATI Analytics Container', () => {
 
       renderer.create(
         <ContextWrap platform="amp" pageType="article">
-          <ATIAnalytics data={mockData} />
+          <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
 
       expect(mockAmp).toHaveBeenCalledTimes(1);
-      expect(mockAmp).toHaveBeenCalledWith(
-        {
-          pageviewParams: mockAtiQueryParams,
-        },
-        mockData,
-      );
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams: mockAtiQueryParams,
+      });
+
       expect(mockArticleAtiParams).toHaveBeenCalledTimes(1);
-      expect(mockArticleAtiParams).toHaveBeenCalledWith(mockData);
+      expect(mockArticleAtiParams).toHaveBeenCalledWith(articleDataNews);
     });
   });
 
@@ -101,19 +101,17 @@ describe('ATI Analytics Container', () => {
 
       renderer.create(
         <ContextWrap platform="canonical" pageType="frontPage">
-          <ATIAnalytics data={mockData} />
+          <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
 
       expect(mockCanonical).toHaveBeenCalledTimes(1);
-      expect(mockCanonical).toHaveBeenCalledWith(
-        {
-          pageviewParams: mockAtiQueryParams,
-        },
-        mockData,
-      );
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams: mockAtiQueryParams,
+      });
+
       expect(mockFrontPageAtiParams).toHaveBeenCalledTimes(1);
-      expect(mockFrontPageAtiParams).toHaveBeenCalledWith(mockData);
+      expect(mockFrontPageAtiParams).toHaveBeenCalledWith(articleDataNews);
     });
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
@@ -127,19 +125,17 @@ describe('ATI Analytics Container', () => {
 
       renderer.create(
         <ContextWrap platform="amp" pageType="frontPage">
-          <ATIAnalytics data={mockData} />
+          <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
 
       expect(mockAmp).toHaveBeenCalledTimes(1);
-      expect(mockAmp).toHaveBeenCalledWith(
-        {
-          pageviewParams: mockAtiQueryParams,
-        },
-        mockData,
-      );
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams: mockAtiQueryParams,
+      });
+
       expect(mockFrontPageAtiParams).toHaveBeenCalledTimes(1);
-      expect(mockFrontPageAtiParams).toHaveBeenCalledWith(mockData);
+      expect(mockFrontPageAtiParams).toHaveBeenCalledWith(articleDataNews);
     });
   });
 
@@ -147,7 +143,7 @@ describe('ATI Analytics Container', () => {
     isNull(
       'should render null',
       <ContextWrap platform="canonical" pageType="randomvalue">
-        <ATIAnalytics data={mockData} />
+        <ATIAnalytics data={articleDataNews} />
       </ContextWrap>,
     );
   });
