@@ -45,23 +45,17 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -74,15 +68,21 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -560,23 +560,17 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -589,15 +583,21 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -1110,23 +1110,17 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -1139,15 +1133,21 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -1625,23 +1625,17 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -1654,15 +1648,21 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -2140,23 +2140,17 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -2169,15 +2163,21 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -2690,23 +2690,17 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -2719,15 +2713,21 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -3205,23 +3205,17 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -3234,15 +3228,21 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -3720,23 +3720,17 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -3749,15 +3743,21 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -4270,23 +4270,17 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -4299,15 +4293,21 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -4819,23 +4819,17 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -4848,15 +4842,21 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -5340,23 +5340,17 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -5369,15 +5363,21 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -5922,23 +5922,17 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -5951,15 +5945,21 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -6504,23 +6504,17 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -6533,15 +6527,21 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -7019,23 +7019,17 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -7048,15 +7042,21 @@ exports[`MediaPlayer with Video data canonical - should render the video without
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -7569,23 +7569,17 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -7598,15 +7592,21 @@ exports[`MediaPlayer with Video data canonical - should render the video without
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
@@ -8118,23 +8118,17 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "fonts": Array [
         "
   @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-display: optional;
-  }",
-        "
-  @font-face {
-    font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
-    font-weight: 500;
-    font-style: italic;
+    font-family: \\"ReithSans\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
+    font-weight: 700;
     font-display: optional;
   }",
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
+    font-weight: 700;
+    font-style: italic;
     font-display: optional;
   }",
         "
@@ -8147,15 +8141,21 @@ exports[`MediaPlayer with Video data canonical - should render the video without
         "
   @font-face {
     font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff\\") format(\\"woff\\");
     font-display: optional;
   }",
         "
   @font-face {
-    font-family: \\"ReithSans\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff\\") format(\\"woff\\");
-    font-weight: 700;
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff\\") format(\\"woff\\");
+    font-weight: 500;
+    font-display: optional;
+  }",
+        "
+  @font-face {
+    font-family: \\"ReithSerif\\";
+    src: url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff\\") format(\\"woff\\");
+    font-weight: 500;
     font-style: italic;
     font-display: optional;
   }",
