@@ -20,35 +20,23 @@ const liveRadioFixtures = {
   korean,
   tigrinya,
   afaanoromoo,
-  amharic
+  amharic,
 };
 
-const validServices = Object.keys(liveRadioFixtures)
-.map(service => {
-    if (service === 'indonesia') return 'indonesian';
-    if (service === 'afaanoromoo') return 'afaanOromoo';
-    return service;
-});
+const validServices = Object.keys(liveRadioFixtures);
 
 const matchFixtures = service => ({
-    params: {
-        mediaId: 'liveradio',
-        serviceId: {
-            indonesia: 'bbc_indonesian_radio',
-            korean: 'bbc_korean_radio',
-            tigrinya: 'bbc_tigrinya_radio',
-            afaanoromoo: 'bbc_afaanoromoo_radio',
-            amharic: 'bbc_amharic_radio'
-        }[service]
-    }
+  params: {
+    mediaId: 'liveradio',
+    serviceId: {
+      indonesia: 'bbc_indonesian_radio',
+      korean: 'bbc_korean_radio',
+      tigrinya: 'bbc_tigrinya_radio',
+      afaanoromoo: 'bbc_afaanoromoo_radio',
+      amharic: 'bbc_amharic_radio',
+    }[service],
+  },
 });
-
-const getServiceName = service => {
-    if (service === 'indonesian') return 'indonesia';
-    if (service === 'afaanOromoo') return 'afaanoromoo';
-    if (!validServices.includes(service)) return 'indonesia';
-    return service;
-}
 
 storiesOf('Containers|Media', module)
   .addDecorator(withKnobs)
@@ -59,18 +47,23 @@ storiesOf('Containers|Media', module)
       ({ service }) => {
         return (
           <ToggleContextProvider>
-            <ServiceContextProvider service={getServiceName(service)}>
+            <ServiceContextProvider service={service}>
               <RequestContextProvider
                 isAmp={false}
                 pageType="media"
-                service={getServiceName(service)}
+                service={service}
               >
-                <MediaPageMain pageData={liveRadioFixtures[getServiceName(service)]} match={matchFixtures(getServiceName(service))} service={getServiceName(service)} />
+                <MediaPageMain
+                  pageData={liveRadioFixtures[service]}
+                  match={matchFixtures(service)}
+                  service={service}
+                />
               </RequestContextProvider>
             </ServiceContextProvider>
           </ToggleContextProvider>
         );
       },
       validServices,
+      { defaultService: 'indonesia' },
     ),
   );
