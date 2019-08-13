@@ -1,6 +1,11 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NASSIM_PASHTO_REGULAR,
+  F_NASSIM_PASHTO_BOLD,
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: 'ps',
@@ -160,7 +165,8 @@ const service = {
     ],
     copyrightText: 'بی بی سی. بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده',
   },
-  fonts: [],
+  fonts: [F_NASSIM_PASHTO_REGULAR, F_NASSIM_PASHTO_BOLD],
+  timezone: 'Europe/London',
 };
 
 export default service;

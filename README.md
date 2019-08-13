@@ -87,7 +87,7 @@ Assuming the other HOC's have returned the original Article or FrontPage contain
 
 ## Before Installation
 Please read:
-CONTRIBUTING.md
+[CONTRIBUTING.md](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
 ## Installation
 
 Install Node. [https://nodejs.org/en/](https://nodejs.org/en/). We use the version specified in `.nvmrc` and if you have a node version manager (nvm) you can run the following script to automatically change to the project supported version.

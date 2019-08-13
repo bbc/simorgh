@@ -1,7 +1,8 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
-import '@bbc/psammead-locales/moment/yo';
+import 'moment/locale/yo';
+import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const yoruba = {
   lang: 'yo',
@@ -168,6 +169,7 @@ const yoruba = {
     copyrightText:
       'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
   },
+  timezone: 'Africa/Lagos',
 };
 
 export default yoruba;
