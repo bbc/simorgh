@@ -12,14 +12,17 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const MediaPageMain = props => {
   const { pageData, service, match } = props;
   const { serviceId, mediaId } = match.params;
-  const { script, translations } = useContext(ServiceContext);
-
-  const { title, subtitle } = pathOr(null, ['media', serviceId], translations);
+  const { script } = useContext(ServiceContext);
+  const {
+    content: { title, subtitle },
+    promo,
+    metadata,
+  } = pageData;
 
   return (
     <Fragment>
       <ATIAnalytics data={pageData} />
-      <MetadataContainer metadata={pageData.metadata} promo={pageData.promo} />
+      <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
