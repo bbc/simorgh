@@ -435,6 +435,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={true}
     pageType="article"
@@ -950,6 +951,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={true}
     pageType="article"
@@ -1500,6 +1502,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={true}
     pageType="article"
@@ -2015,6 +2018,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={false}
     pageType="article"
@@ -2530,6 +2534,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={false}
     pageType="article"
@@ -3080,6 +3085,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={false}
     pageType="article"
@@ -3595,6 +3601,7 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={true}
     pageType="article"
@@ -4110,6 +4117,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={true}
     pageType="article"
@@ -4660,6 +4668,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={true}
     pageType="article"
@@ -5209,6 +5218,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={true}
     pageType="article"
@@ -5730,6 +5740,7 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={true}
     pageType="article"
@@ -6312,6 +6323,7 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={false}
     pageType="article"
@@ -6894,6 +6906,7 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={false}
     pageType="article"
@@ -7409,6 +7422,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={false}
     pageType="article"
@@ -7959,6 +7973,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={false}
     pageType="article"
@@ -8508,6 +8523,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
 >
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
+    currentPath={null}
     id="c0000000000o"
     isAmp={false}
     pageType="article"
