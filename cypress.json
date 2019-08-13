@@ -3,6 +3,7 @@
   "chromeWebSecurity": false,
   "env": {
     "APP_ENV": "local",
+    "SMOKE": true,
     "UK": false
   },
   "ignoreTestFiles": "**/integration/pages/index.js"

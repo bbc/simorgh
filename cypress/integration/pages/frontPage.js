@@ -12,7 +12,7 @@ const tests = service =>
 
       it('should include the canonical URL', () => {
         cy.checkCanonicalURL(
-          `https://www.bbc.com${config[service].pageTypes.frontPage}`,
+          `https://www.bbc.com${config[service].pageTypes.frontPage.path}`,
         );
       });
     });
@@ -105,7 +105,7 @@ const ampOnlyTests = service =>
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
         cy.testResponseCodeAndType(
-          `${config[service].pageTypes.frontPage}.amp`,
+          `${config[service].pageTypes.frontPage.path}.amp`,
           200,
           'text/html',
         );
@@ -177,7 +177,7 @@ const ampOnlyTests = service =>
 
     it('should include the canonical URL', () => {
       cy.checkCanonicalURL(
-        `https://www.bbc.com${config[service].pageTypes.frontPage}`,
+        `https://www.bbc.com${config[service].pageTypes.frontPage.path}`,
       );
     });
   });

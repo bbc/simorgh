@@ -7,7 +7,7 @@ const tests = service =>
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
         cy.testResponseCodeAndType(
-          config[service].pageTypes.errorPage404,
+          config[service].pageTypes.errorPage404.path,
           404,
           'text/html',
         );
@@ -17,7 +17,7 @@ const tests = service =>
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
         cy.testResponseCodeAndType(
-          config[service].pageTypes.errorPage404,
+          config[service].pageTypes.errorPage404.path,
           404,
           'text/html',
         );
@@ -26,7 +26,7 @@ const tests = service =>
 
     describe(`${service} Article Error Page Tests`, () => {
       before(() => {
-        cy.visit(config[service].pageTypes.errorPage404, {
+        cy.visit(config[service].pageTypes.errorPage404.path, {
           failOnStatusCode: false,
         });
       });
@@ -62,7 +62,10 @@ const tests = service =>
       });
 
       it('should have a relevant error title in the head', () => {
-        cy.title().should('eq', `${appConfig[service].translations.error[404].title} - ${appConfig[service].brandName}`);
+        cy.title().should(
+          'eq',
+          `${appConfig[service].translations.error[404].title} - ${appConfig[service].brandName}`,
+        );
       });
     });
   });
@@ -73,7 +76,7 @@ const canonicalOnlyTests = service =>
   describe(`Canonical Tests`, () => {
     it('should return a 404 error code', () => {
       cy.testResponseCodeAndType(
-        config[service].pageTypes.errorPage404,
+        config[service].pageTypes.errorPage404.path,
         404,
         'text/html',
       );
@@ -86,7 +89,7 @@ const ampOnlyTests = service =>
   describe(`Amp Tests`, () => {
     it('should return a 404 error code', () => {
       cy.testResponseCodeAndType(
-        `${config[service].pageTypes.errorPage404}.amp`,
+        `${config[service].pageTypes.errorPage404.path}.amp`,
         404,
         'text/html',
       );

@@ -21,12 +21,12 @@ const tests = service =>
 
       it('should include the canonical URL', () => {
         cy.checkCanonicalURL(
-          `https://www.bbc.com${config[service].pageTypes.articles}`,
+          `https://www.bbc.com${config[service].pageTypes.articles.path}`,
         );
       });
 
       it('should have lang and dir attributes', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             cy.hasHtmlLangDirAttributes({
               lang: body.metadata.passport.language,
@@ -53,7 +53,7 @@ const tests = service =>
           `${appConfig[service].defaultImageAltText}`,
           "Meghan's bouquet laid on tomb of unknown warrior",
           'article',
-          `https://www.bbc.com${config[service].pageTypes.articles}`,
+          `https://www.bbc.com${config[service].pageTypes.articles.path}`,
         );
       });
 
@@ -77,7 +77,7 @@ const tests = service =>
       });
 
       it('should include correct metadata', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             cy.get('meta[name="description"]').should(
               'have.attr',
@@ -116,7 +116,7 @@ const tests = service =>
 
     describe(`Article Body`, () => {
       it('should render a H1, which contains/displays a styled headline', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             const headlineData = getBlockData('headline', body);
             cy.get('h1').should(
@@ -128,7 +128,7 @@ const tests = service =>
       });
 
       it('should render a formatted timestamp', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             if (body.metadata.language === 'en-gb') {
               const { lastPublished } = body.metadata;
@@ -142,7 +142,7 @@ const tests = service =>
       });
 
       it('should render an H2, which contains/displays a styled subheading', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             if (body.metadata.language === 'en-gb') {
               const subheadingData = getBlockData('subheadline', body);
@@ -157,7 +157,7 @@ const tests = service =>
 
       it('should render a paragraph, which contains/displays styled text', () => {
         if (serviceHasCorrectlyRenderedParagraphs(service)) {
-          cy.request(`${config[service].pageTypes.articles}.json`).then(
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
             ({ body }) => {
               const paragraphData = getBlockData('text', body);
               const { text } = paragraphData.model.blocks[0].model;
@@ -223,7 +223,7 @@ const tests = service =>
         }
 
         it('should have an image copyright label with styling', () => {
-          cy.request(`${config[service].pageTypes.articles}.json`).then(
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
             ({ body }) => {
               const copyrightData = getBlockData('image', body);
               const rawImageblock = getBlockByType(
@@ -252,16 +252,19 @@ const tests = service =>
       }
 
       it('should render a title', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             const { seoHeadline } = body.promo.headlines;
-            cy.title().should('eq', `${seoHeadline} - ${appConfig[service].brandName}`);
+            cy.title().should(
+              'eq',
+              `${seoHeadline} - ${appConfig[service].brandName}`,
+            );
           },
         );
       });
 
       it('should have an inline link', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             if (body.metadata.language === 'en-gb') {
               cy.get('main a');
@@ -312,7 +315,7 @@ const canonicalOnlyTests = service =>
 
     it('should include ampHTML tag', () => {
       cy.checkAmpHTML(
-        `${window.location.origin}${config[service].pageTypes.articles}.amp`,
+        `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
       );
     });
   });
