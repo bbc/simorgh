@@ -19,8 +19,8 @@ module.exports = {
     ),
     new webpack.DefinePlugin({
       'process.env': {
-        SIMORGH_EMBED_BASE_URL: JSON.stringify(
-          process.env.SIMORGH_EMBED_BASE_URL,
+        SIMORGH_AV_EMBED_BASE_URL: JSON.stringify(
+          process.env.SIMORGH_AV_EMBED_BASE_URL,
         ),
       },
     }),

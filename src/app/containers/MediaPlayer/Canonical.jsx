@@ -24,7 +24,6 @@ const StyledIframe = styled.iframe`
 
 const MediaPlayer = ({ src }) => (
   <StyledIframe
-    title="Media Player"
     src={src}
     scrolling="no"
     allow="autoplay; fullscreen"

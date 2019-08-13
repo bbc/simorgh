@@ -1,7 +1,7 @@
 import embedUrl from './embedUrl';
 
 describe('Media Player: Embed URL', () => {
-  process.env.SIMORGH_EMBED_BASE_URL = 'https://foobar.com';
+  process.env.SIMORGH_AV_EMBED_BASE_URL = 'https://foobar.com';
 
   it('builds default URL', () => {
     const expectedUrl = 'https://foobar.com/baz/qux';

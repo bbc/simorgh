@@ -13,7 +13,6 @@ exports[`Media Player: Canonical should render a MediaPlayer component when plac
       gesture="media"
       scrolling="no"
       src="http://foo.com"
-      title="Media Player"
     >
       <StyledComponent
         allow="autoplay; fullscreen"
@@ -43,14 +42,12 @@ exports[`Media Player: Canonical should render a MediaPlayer component when plac
         gesture="media"
         scrolling="no"
         src="http://foo.com"
-        title="Media Player"
       >
         <iframe
           allow="autoplay; fullscreen"
           className="StyledIframe-s82gr2-1 nVHgH"
           scrolling="no"
           src="http://foo.com"
-          title="Media Player"
         />
       </StyledComponent>
     </StyledIframe>

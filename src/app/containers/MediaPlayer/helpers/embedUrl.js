@@ -1,5 +1,5 @@
 const embedUrl = (assetId, vpid, amp = false) => {
-  const baseUrl = process.env.SIMORGH_EMBED_BASE_URL;
+  const baseUrl = process.env.SIMORGH_AV_EMBED_BASE_URL;
   const parts = [baseUrl, assetId, vpid];
 
   if (amp) {
