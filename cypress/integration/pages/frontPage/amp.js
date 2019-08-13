@@ -1,4 +1,6 @@
 import config from '../../../support/config/services';
+import envConfig from '../../../support/config/envs';
+import describeForEuOnly from '../../../support/describeForEuOnly';
 
 const serviceHasFrontPage = service =>
   config[service].pageTypes.frontPage !== undefined;
@@ -18,6 +20,23 @@ Object.keys(config)
             200,
             'text/html',
           );
+        });
+      });
+
+      describe('ATI', () => {
+        it('should have an amp-analytics tag with the ati url', () => {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        });
+      });
+
+      describeForEuOnly('Consent Banners', () => {
+        it('have correct translations', () => {
+          cy.hasConsentBannerTranslations(service);
         });
       });
 

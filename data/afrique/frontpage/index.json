@@ -55,7 +55,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48961747"
             },
             "summary": "Au terme de plus de deux ans de discussions difficiles, le Fonds monétaire international a annoncé qu'il allait accorder 448,6 millions de dollars sur trois ans au pays d'Afrique centrale.",
-            "timestamp": 1562926727,
+            "timestamp": 1562926726000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -105,7 +105,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-48053218"
                 },
                 "summary": "Ces étudiants disent ne pas avoir reçu leurs bourses depuis deux ans. Comment survivent-ils ? Nous leurs avons posé la question au Sénégal et en Russie.",
-                "timestamp": 1557234890,
+                "timestamp": 1557234889000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-48053218",
                 "type": "cps"
@@ -119,7 +119,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-45783728"
                 },
                 "summary": "Les réactions se multiplient depuis que le gouvernement congolais a rendu public les noms de cinquante-six agents de l'Etat surpris dans différents restaurants et bars de la ville aux heures de travail.",
-                "timestamp": 1539004407,
+                "timestamp": 1539004406000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-45783728",
                 "type": "cps"
@@ -148,7 +148,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48961745"
             },
             "summary": "Le président français a fait cette déclaration à l'issue d'un débat à l'Elysée avec 400 représentants des diasporas africaines de France, auquel participait le président ghanéen Nana Akufo-Addo.",
-            "timestamp": 1562919113,
+            "timestamp": 1562919112000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -198,7 +198,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/48811981"
                 },
                 "summary": "Les dirigeants de la Communauté économique des États de l'Afrique de l'Ouest (Cédéao) ont formellement adopté le nom d'\"Eco\" pour leur projet de monnaie unique dont ils souhaitent la création dès 2020.",
-                "timestamp": 1561845484,
+                "timestamp": 1561845483000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/48811981",
                 "type": "cps"
@@ -212,7 +212,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-48704683"
                 },
                 "summary": "Au menu du prochain sommet de la Cédéao, le choix du nom de la monnaie unique de la sous-région dont la création est planifiée pour 2020. Les réactions ont été abondantes sur les réseaux sociaux.",
-                "timestamp": 1561121701,
+                "timestamp": 1561121700000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-48704683",
                 "type": "cps"
@@ -230,7 +230,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48961746"
             },
             "summary": "Une avancée qui pourrait signaler un abandon des traitements comme la chimiothérapie.",
-            "timestamp": 1562930287,
+            "timestamp": 1562930286000,
             "byline": {
               "name": "Philippa Roxby",
               "title": "Reporter Santé, BBC News",
@@ -290,7 +290,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/45508509"
                 },
                 "summary": "Il y aura 18,1 millions de nouveaux cas de cancer et 9,6 millions de personnes mourront de cette maladie, cette année, dans le monde, selon une étude du Centre international de recherche sur le cancer (CIRC).",
-                "timestamp": 1536856426,
+                "timestamp": 1536856425000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/45508509",
                 "type": "cps"
@@ -304,7 +304,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-46029494"
                 },
                 "summary": "Moses Musonga n'a jamais pensé que les hommes pouvaient avoir le cancer du sein avant qu'on ne lui en diagnostique un.",
-                "timestamp": 1540894737,
+                "timestamp": 1540894736000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-46029494",
                 "type": "cps"
@@ -322,7 +322,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/48959657"
             },
             "summary": "Selon la Minusca, mission de l'ONU pour la Paix en Centrafrique, cette tension a été déclenchée par des crimes chroniques de rackets commis par ces bandes criminelles contre les commerçants du quartier PK5.",
-            "timestamp": 1562909029,
+            "timestamp": 1562909028000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -366,7 +366,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-47661654"
                 },
                 "summary": "Les protagonistes de la crise centrafricaine sont parvenus à un nouveau consensus à Addis Abeba.",
-                "timestamp": 1553215997,
+                "timestamp": 1553215996000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-47661654",
                 "type": "cps"
@@ -380,7 +380,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-47634446"
                 },
                 "summary": "11 groupes armés sur les 14 signataires de l'accord de paix de Khartoum ont exigé mardi la démission du premier ministre Firmin Ngrébada.",
-                "timestamp": 1553048895,
+                "timestamp": 1553048894000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-47634446",
                 "type": "cps"
@@ -398,7 +398,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/48959656"
             },
             "summary": "Les autorités de Maradi précisent également qu'environ quatre passagers de la pirogue sont portés disparus.",
-            "timestamp": 1562907255,
+            "timestamp": 1562907254000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -442,7 +442,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-48418514"
                 },
                 "summary": "Le bilan provisoire a été fourni par les autorités locales dimanche.",
-                "timestamp": 1558918245,
+                "timestamp": 1558918244000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-48418514",
                 "type": "cps"
@@ -456,7 +456,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-41281980"
                 },
                 "summary": "50 morts et 47 blessés après des inondations provoquées par les pluies torrentielles au Niger.",
-                "timestamp": 1505498288,
+                "timestamp": 1505498287000,
                 "cpsType": "PGL",
                 "id": "urn:bbc:ares::asset:afrique/region-41281980",
                 "type": "cps"
@@ -474,7 +474,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/48959655"
             },
             "summary": "Le Mouvement islamique a annoncé mercredi que la police avait abattu mardi par balle deux de ses membres alors qu'ils participaient à une manifestation devant le parlement d'Abuja.",
-            "timestamp": 1562901092,
+            "timestamp": 1562901091000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -518,7 +518,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-37632131"
                 },
                 "summary": "Au moins huit personnes ont été tuées dans affrontements entre les forces de sécurité nigérianes et des musulmans chiites, à Funtua, une ville située dans le nord du Nigeria, a annoncé un témoin au service en langue haussa de la BBC.",
-                "timestamp": 1476273589,
+                "timestamp": 1476273588000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-37632131",
                 "type": "cps"
@@ -532,7 +532,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/afrique/region-48946237"
                 },
                 "summary": "Il leur est reproché de s'être \"moqués du caractère sacré de l'institution\"",
-                "timestamp": 1562809066,
+                "timestamp": 1562809065000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:afrique/region-48946237",
                 "type": "cps"
@@ -557,7 +557,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48946241"
             },
             "summary": "Un accord a été signé mercredi entre les deux pays voisins avec pour objectif de créer des projets communs de développement le long de leur frontière commune.",
-            "timestamp": 1562823237,
+            "timestamp": 1562823236000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -609,7 +609,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48946240"
             },
             "summary": "L'opposition et la société civile exigent des clarifications sur l'état de santé actuelle du président Ali Bongo.",
-            "timestamp": 1562815432,
+            "timestamp": 1562815431000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -665,7 +665,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48946237"
             },
             "summary": "Il leur est reproché de s'être \"moqués du caractère sacré de l'institution\"",
-            "timestamp": 1562809066,
+            "timestamp": 1562809065000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -717,7 +717,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48945395"
             },
             "summary": "Les Super Eagles ont arraché la victoire dans les dernières minutes du match.",
-            "timestamp": 1562793774,
+            "timestamp": 1562793773000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -795,7 +795,7 @@
             "uri": "https://www.bbc.com/afrique/48465371",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1559228394,
+            "timestamp": 1559228393000,
             "type": "link"
           }
         ],
@@ -814,7 +814,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48956493"
             },
             "summary": "Il est l'arme secrète de la Côte d'Ivoire et il rêve d'une finale avec le Sénégal.",
-            "timestamp": 1562858182,
+            "timestamp": 1562858181000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -898,7 +898,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48945033"
             },
             "summary": "Et si les concepteurs de jeux vidéo étaient aux manettes du secteur de l’éducation en Afrique? Au Cameroun, des créateurs de jeux vidéo créent déjà une petite révolution.",
-            "timestamp": 1562782133,
+            "timestamp": 1562782132000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -972,7 +972,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48841103"
             },
             "summary": "Et si l'équipe béninoise gardait jalousement une arme secrète lors de cette CAN en Égypte ?",
-            "timestamp": 1562754427,
+            "timestamp": 1562754426000,
             "cpsType": "MAP",
             "media": {
               "id": "p07gc5yj",
@@ -1041,7 +1041,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48841105"
             },
             "summary": "La Coupe d'Afrique des Nations se déroule sur de beaux terrains, à la grande joie des joueurs.",
-            "timestamp": 1562693720,
+            "timestamp": 1562693719000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1126,7 +1126,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48884341"
             },
             "summary": "Selon Alassane Ndour, ancien international sénégalais, la star de l'équipe, Sadio Mané, doit éviter de penser à son duel à distance avec Salah",
-            "timestamp": 1562346228,
+            "timestamp": 1562346227000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1210,7 +1210,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48841101"
             },
             "summary": "En plus de susciter la frénésie, les maillots de foot sont un vrai business juteux.",
-            "timestamp": 1562254937,
+            "timestamp": 1562254936000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1293,7 +1293,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48861451"
             },
             "summary": "Charbon, mère de la nuit,... ce sont les surnoms qui ont bercé l'enfance du mannequin Khoudia Diop. Elle a appris à aimer la couleur de sa peau et milite désormais contre les produits éclaircissants.",
-            "timestamp": 1562176107,
+            "timestamp": 1562176106000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1377,7 +1377,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48841098"
             },
             "summary": "Par amour pour son équipe, un sud-africain a décidé de parcourir 6 000 km en auto-stop, du Cap au Caire, afin de soutenir les Bafana Bafana pendant la CAN.",
-            "timestamp": 1562065101,
+            "timestamp": 1562065100000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1463,7 +1463,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48818666"
             },
             "summary": "Rencontre avec Kodjovi Olympio, artiste peintre autodidacte d'origine togolaise. Il s'est fait remarquer dans les rues de Los Angeles avant d'être exposé dans de grandes galeries.",
-            "timestamp": 1561902816,
+            "timestamp": 1561902815000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1549,7 +1549,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48959143"
             },
             "summary": "Les Aigles de Carthage ont battu les Baréas de Madagascar 2-0.",
-            "timestamp": 1562879343,
+            "timestamp": 1562879342000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1618,7 +1618,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48958893"
             },
             "summary": "Les Fennecs ont battu les Eléphants de Côte d'Ivoire aux tirs aux buts.",
-            "timestamp": 1562873567,
+            "timestamp": 1562873566000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1670,7 +1670,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48944943"
             },
             "summary": "Les Lions de la Teranga ont éliminé le Bénin 1-0",
-            "timestamp": 1562782771,
+            "timestamp": 1562782770000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1726,7 +1726,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48775924"
             },
             "summary": "La cohésion est l’une des valeurs qui ont aidé le Zaïre, aujourd'hui République démocratique du Congo, à remporter la CAN, selon Prince Mvukani qui avait joué cette année-là.",
-            "timestamp": 1561556463,
+            "timestamp": 1561556462000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1816,7 +1816,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48911064"
             },
             "summary": "Les Fennecs ont éliminé les Blacks Stars aux tirs au but, après un match à suspense.",
-            "timestamp": 1562624042,
+            "timestamp": 1562624041000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1868,7 +1868,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/48911063"
             },
             "summary": "Longtemps dominée, la Côte d'Ivoire a renversé le Mali (1-0) grâce à Wilfried Zaha, lundi en 8es de la CAN à Suez, pour s'offrir un choc contre l'Algérie en quarts.",
-            "timestamp": 1562611556,
+            "timestamp": 1562611555000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1920,7 +1920,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48918545"
             },
             "summary": "La Coupe d'Afrique des Nations de volley-ball Dames s'ouvre ce mardi au Caire en Egypte.",
-            "timestamp": 1562649226,
+            "timestamp": 1562649225000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1966,7 +1966,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48897499"
             },
             "summary": "L'Egypte, pays organisateur de la compétition, a été battue par l'Afrique du Sud, qui se qualifie aux quarts de finale.",
-            "timestamp": 1562447237,
+            "timestamp": 1562447236000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2018,7 +2018,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48895389"
             },
             "summary": "Cori Gauff est assurée d'intégrer le top 200 à la fin du tournoi.",
-            "timestamp": 1562429214,
+            "timestamp": 1562429213000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2078,7 +2078,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48893918"
             },
             "summary": "Le Débat BBC Afrique - Africa Radio du 06/07/2019",
-            "timestamp": 1562410861,
+            "timestamp": 1562410860000,
             "cpsType": "MAP",
             "media": {
               "id": "p07g6kgd",
@@ -2135,7 +2135,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-46562947"
             },
             "summary": "Kedjevara fête ses 10 ans de sa carrière.",
-            "timestamp": 1544878762,
+            "timestamp": 1544878761000,
             "cpsType": "MAP",
             "media": {
               "id": "p06vjsj0",
@@ -2198,7 +2198,7 @@
             "uri": "http://www.bbc.com/afrique/nos_emissions/2013/07/000000_le_journal_de_la_culture",
             "contentType": "Audio",
             "assetTypeCode": "PRO",
-            "timestamp": 1469005755,
+            "timestamp": 1469005754000,
             "type": "link"
           },
           {
@@ -2217,7 +2217,7 @@
             "uri": "http://www.bbc.com/afrique/nos_emissions/2013/07/000000_grand_reportage",
             "contentType": "Audio",
             "assetTypeCode": "PRO",
-            "timestamp": 1469005434,
+            "timestamp": 1469005433000,
             "type": "link"
           }
         ],
@@ -2265,7 +2265,7 @@
             "uri": "http://www.bbc.com/afrique/37733017",
             "contentType": "Podcast",
             "assetTypeCode": "PRO",
-            "timestamp": 1546455547,
+            "timestamp": 1546455546000,
             "type": "link"
           }
         ],
@@ -2284,7 +2284,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48828262"
             },
             "summary": "Birame Coulibaly et Maodo Ndiaye ont réalisé une première aéronautique pour des pilotes de leur pays.",
-            "timestamp": 1562002489,
+            "timestamp": 1562002488000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2336,7 +2336,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48612074"
             },
             "summary": "Le rendez-vous de la mode dans la capitale sénégalaise a permis de découvrir des créations futuristes.",
-            "timestamp": 1560347610,
+            "timestamp": 1560347609000,
             "byline": {
               "name": "By Marta Moreiras",
               "title": "Photographer, Dakar",
@@ -2396,7 +2396,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48177242"
             },
             "summary": "En images - Rendons-nous dans le quartier \"Little Sudan\", à la rencontre de ces Soudanais qui rêvent de regagner leur pays dès que \"la situation politique le permet\".",
-            "timestamp": 1557167248,
+            "timestamp": 1557167247000,
             "byline": {
               "name": "Nadir  Djennad",
               "title": "Correspondant de BBC Afrique à Paris",
@@ -2462,7 +2462,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48284352"
             },
             "summary": "Cet endroit où la plupart des artisans et vendeurs sont d'origine guinéenne, est non seulement un centre d'affaires, mais aussi d'entraide.",
-            "timestamp": 1557931730,
+            "timestamp": 1557931729000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2514,7 +2514,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-47888547"
             },
             "summary": "\"Aujourd'hui, on est en train de survivre\", déclare un gilet jaune d'origine africaine.",
-            "timestamp": 1555342201,
+            "timestamp": 1555342200000,
             "byline": {
               "name": "Nadir  Djennad",
               "title": "Correspondant ",
@@ -2580,7 +2580,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48042946"
             },
             "summary": "En images, les Maliens qui ont fui les violences dans le centre du pays pour vivre dans des camps de fortune dans la capitale.",
-            "timestamp": 1556129859,
+            "timestamp": 1556129858000,
             "byline": {
               "name": "Alou  Diawara",
               "title": "Correspondant de BBC Afrique à Bamako",
@@ -2647,7 +2647,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-47799800"
             },
             "summary": "Les algérois ont passé une partie de la nuit à fêter l'annonce de la démission de l'ex-président.",
-            "timestamp": 1554290426,
+            "timestamp": 1554290425000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2739,7 +2739,7 @@
             "uri": "http://www.bbc.com/afrique/bbc_afrique_tv/tv_programmes/w13xttmz?limit=4",
             "contentType": "TVBulletin",
             "assetTypeCode": "PRO",
-            "timestamp": 1469004827,
+            "timestamp": 1469004826000,
             "type": "link"
           }
         ],
@@ -2761,7 +2761,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48959653"
             },
             "summary": "Selon cet économiste de la Banque mondiale, la production de cacao en Côte d'Ivoire ne permet toujours pas de réduire la pauvreté dans le pays.",
-            "timestamp": 1562884788,
+            "timestamp": 1562884787000,
             "cpsType": "MAP",
             "media": {
               "id": "p07gnzdg",
@@ -2843,7 +2843,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48925275"
             },
             "summary": "En dehors des terrains de football et de la passion des supporters, la BBC a pensé que ce serait amusant de voir qui sont les champions d'Afriques dans le domaine de la corruption, de la bonne gouvernance, de l'espérance de vie.",
-            "timestamp": 1562752897,
+            "timestamp": 1562752896000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -2903,7 +2903,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48928583"
             },
             "summary": "Sans se laisser décourager par les risques potentiels pour la santé, des millions de femmes utilisent des produits éclaircissants dans l'espoir d'obtenir une peau plus claire.",
-            "timestamp": 1562703956,
+            "timestamp": 1562703955000,
             "byline": {
               "name": "Swaminathan Natarajan",
               "title": "BBC World Service",
@@ -2973,7 +2973,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48911056"
             },
             "summary": "Les experts sont divisés sur l'impact de la nouvelle monnaie dans les 15 pays de la région.",
-            "timestamp": 1562604498,
+            "timestamp": 1562604497000,
             "byline": {
               "name": "Louise Dewast",
               "title": "BBC Afrique, Dakar",
@@ -3032,7 +3032,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48883287"
             },
             "summary": "L'Ouganda est la dernière équipe à être mêlée à un différend salarial depuis le début de la compétition, après le Nigéria, le Cameroun et le Zimbabwe. Pourquoi ça revient à chaque tournoi? Explications",
-            "timestamp": 1562345625,
+            "timestamp": 1562345624000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3084,7 +3084,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48868588"
             },
             "summary": "Qui est Magid Magid et quels obstacles a-t-il surmontés pour siéger au Parlement européen ?",
-            "timestamp": 1562269496,
+            "timestamp": 1562269495000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3136,7 +3136,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48857728"
             },
             "summary": "Certains cancers courants sont maintenant plus susceptibles d'être causés par l'obésité que par le tabac, selon les mises en garde d'e Cancer Research UK.",
-            "timestamp": 1562247917,
+            "timestamp": 1562247916000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3188,7 +3188,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48853604"
             },
             "summary": "Certains parents au Kenya emportent le secret de leur séropositivité dans leur tombe, laissant leurs enfants dans l'ignorance et le désarroi.",
-            "timestamp": 1562227559,
+            "timestamp": 1562227558000,
             "byline": {
               "name": "Sheila Kimani",
               "title": "BBC, Nairobi",
@@ -3260,7 +3260,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48845492"
             },
             "summary": "Certains des créateurs des applications et de la technologie sur lesquelles nous passons tant de temps se sont fixés pour mission d'éloigner tout cela de leurs propres enfants.",
-            "timestamp": 1562235364,
+            "timestamp": 1562235363000,
             "byline": {
               "name": "Colleen Hagerty",
               "title": "BBC News, San Francisco",
@@ -3326,7 +3326,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48859552"
             },
             "summary": "La princesse Haya Bint al-Hussein, sixième épouse de l'Emir de Dubaï, fait de l'équitation depuis son enfance et a même participé aux Jeux Olympiques en 2000.",
-            "timestamp": 1562182190,
+            "timestamp": 1562182189000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3378,7 +3378,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48846182"
             },
             "summary": "Ces moustiques ont été libérés dans ce pays d’Afrique de l’ouest dans le cadre d'un programme de recherche de lutte contre le paludisme.",
-            "timestamp": 1562143843,
+            "timestamp": 1562143842000,
             "byline": {
               "name": "Kahofi Jischvi SUY",
               "title": "Journaliste",
@@ -3449,7 +3449,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48845493"
             },
             "summary": "Il est temps de se mettre au sport pour avoir une silhouette en forme de guitare.",
-            "timestamp": 1562088576,
+            "timestamp": 1562088575000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3501,7 +3501,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48826921"
             },
             "summary": "Quand est-ce que nos ancêtres ont appris à parler pour la première fois ? Et est-il possible de retracer les milliers de langues qui existent aujourd'hui jusqu'à un seul ancêtre ?",
-            "timestamp": 1562060814,
+            "timestamp": 1562060813000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3557,7 +3557,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48828261"
             },
             "summary": "Imaginez si les pirates pouvaient installer à distance sur votre téléphone des logiciels espions qui leur donnaient accès à tout - y compris aux messages cryptés - et leur permettaient même de contrôler le microphone et la caméra ? Ce n'est pas aussi tiré par les cheveux que ça en a l'air.",
-            "timestamp": 1561994527,
+            "timestamp": 1561994526000,
             "byline": {
               "name": "Paul Kenyon et Joe Kent",
               "title": "BBC News",
@@ -3627,7 +3627,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48785298"
             },
             "summary": "Toufah Jallow, une ancienne reine de beauté gambienne, affirme avoir été violée par l'ancien président gambien en 2015 alors qu'il était encore en fonction.",
-            "timestamp": 1561639266,
+            "timestamp": 1561639265000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3706,7 +3706,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48800486"
             },
             "summary": "La moitié des Marocains envisagent d'émigrer et souhaitent un changement politique immédiat (Enquête BBC).",
-            "timestamp": 1561715358,
+            "timestamp": 1561715357000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -3764,7 +3764,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48776935"
             },
             "summary": "L'opposant Jean-Pierre Bemba affirme que le président congolais Félix Tshisekedi a pris \"une direction\" qui n’a rien à voir avec celle pour laquelle ils s’étaient engagés ensemble.",
-            "timestamp": 1561562705,
+            "timestamp": 1561562704000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3837,7 +3837,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48767222"
             },
             "summary": "3 femmes disent avoir été violées et agressées sexuellement par l'ancien président gambien lorsqu'il était au pouvoir, selon une enquête de 2 ONG.",
-            "timestamp": 1561554933,
+            "timestamp": 1561554932000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3889,7 +3889,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/sports-48749028"
             },
             "summary": "Les équipes africaines sont-elles en voie de disparition ? Le souffle de la mondialisation est passé par là et n'a pas épargné la composition des sélections nationales africaines.",
-            "timestamp": 1561459323,
+            "timestamp": 1561459322000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -3945,7 +3945,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/region-48679495"
             },
             "summary": "Cette hausse frappe surtout les pays africains à faible revenu, a déclaré à la BBC un éminent spécialiste de la santé, Kalipso Chalkidou.",
-            "timestamp": 1561380463,
+            "timestamp": 1561380462000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3997,7 +3997,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48679494"
             },
             "summary": "Les vaccins aident à sauver des millions de vies, chaque année. Et c'est pourquoi ils sont importants.",
-            "timestamp": 1560936804,
+            "timestamp": 1560936803000,
             "byline": {
               "name": "Roland Hughes",
               "title": "BBC News",
@@ -4065,7 +4065,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-48691253"
             },
             "summary": "Cette baisse de confiance risque de favoriser la réapparition de maladies qui avaient quasiment disparu au 20ème siècle.",
-            "timestamp": 1560958856,
+            "timestamp": 1560958855000,
             "byline": {
               "name": "By Michelle Roberts",
               "title": "BBC News ",
@@ -4140,7 +4140,7 @@
             "uri": "http://www.bbc.co.uk/academy/fr/articles/art20170123170122490",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1485430440,
+            "timestamp": 1485430439000,
             "type": "link"
           },
           {
@@ -4159,7 +4159,7 @@
             "uri": "http://www.bbc.co.uk/academy/fr/collections/language-bitesize-fr",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1469002878,
+            "timestamp": 1469002877000,
             "type": "link"
           }
         ],
@@ -4185,7 +4185,7 @@
             "uri": "http://www.bbc.com/afrique/institutionelles/2013/07/130702_partners",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1469002575,
+            "timestamp": 1469002574000,
             "type": "link"
           }
         ],
@@ -4201,7 +4201,7 @@
             "uri": "http://www.bbc.com/afrique/bbc_afrique_radio/liveradio",
             "contentType": "Audio",
             "assetTypeCode": "PRO",
-            "timestamp": 1494004903,
+            "timestamp": 1494004902000,
             "type": "link"
           }
         ],
