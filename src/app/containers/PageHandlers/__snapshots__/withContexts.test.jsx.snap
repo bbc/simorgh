@@ -14,6 +14,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
     >
       <RequestContextProvider
         bbcOrigin="https://www.bbc.com"
+        currentPath={null}
         id="c0000000000o"
         isAmp={true}
         pageType="article"
@@ -22,6 +23,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
       >
         <Component
           bbcOrigin="https://www.bbc.com"
+          currentPath={null}
           dials={
             Object {
               "mpulse": false,
