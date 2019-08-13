@@ -7,6 +7,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] 
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -522,6 +523,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip global with 
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -1072,6 +1074,7 @@ exports[`MediaPlayer with Audio data amp - should render audio clip non-UK only 
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -1587,6 +1590,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip UK onl
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -2102,6 +2106,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip global
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -2652,6 +2657,7 @@ exports[`MediaPlayer with Audio data canonical - should render audio clip non-UK
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -3167,6 +3173,7 @@ exports[`MediaPlayer with Video data amp - should render portrait video with glo
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -3682,6 +3689,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -4232,6 +4240,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -4781,6 +4790,7 @@ exports[`MediaPlayer with Video data amp - should render the video without a cap
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -5302,6 +5312,7 @@ exports[`MediaPlayer with Video data and a caption amp - should render the video
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -5884,6 +5895,7 @@ exports[`MediaPlayer with Video data and a caption canonical - should render the
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -6466,6 +6478,7 @@ exports[`MediaPlayer with Video data canonical - should render portrait video wi
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -6981,6 +6994,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -7531,6 +7545,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
@@ -8080,6 +8095,7 @@ exports[`MediaPlayer with Video data canonical - should render the video without
       "articleAuthor": "https://www.facebook.com/bbcnews",
       "articleTimestampPrefix": "Updated",
       "atiAnalyticsAppName": "news",
+      "atiAnalyticsProducerId": "64",
       "audioCaptionOffscreenText": "Audio caption",
       "brandName": "BBC News",
       "brandSVG": Object {
