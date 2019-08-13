@@ -115,10 +115,6 @@ const service = {
       audio: 'ድምጽ',
       photogallery: 'የምስል ቋት',
       video: 'ተንቀሳቃሽ ምስል',
-      bbc_amharic_radio: {
-        title: 'ያድምጡ',
-        subtitle: 'ዝግጅቶቻችንን',
-      },
     },
   },
   brandSVG,
