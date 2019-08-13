@@ -92,7 +92,7 @@ describe('ArticleTimestamp', () => {
     isNull(
       'should return null',
       <WrappedArticleTimestamp
-        firstPublished="8640000000000001"
+        firstPublished={8640000000000001}
         lastPublished={8640000000000001}
       />,
     );
