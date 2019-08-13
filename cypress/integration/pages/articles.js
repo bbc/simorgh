@@ -225,16 +225,27 @@ const tests = service =>
         it('should have an image copyright label with styling', () => {
           cy.request(`${config[service].pageTypes.articles}.json`).then(
             ({ body }) => {
-              const copyrightData = getBlockData('image', body);
+              const copyrightData = getBlockData('image', win);
               const rawImageblock = getBlockByType(
                 copyrightData.model.blocks,
                 'rawImage',
               );
               const { copyrightHolder } = rawImageblock.model;
 
-              cy.get('figure p')
+              cy.get('figure')
                 .eq(0)
-                .should('contain', copyrightHolder);
+                .then($fig => {
+                  if ($fig.find('p').length > 0) {
+                    cy.get('figure p')
+                      .eq(0)
+                      .should('contain', copyrightHolder);
+                  } else {
+                    // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
+                    // This is why we're asserting the value. If the copyright does not appear and is not
+                    // 'BBC' then it is clear there is an error with this component.
+                    expect(copyrightHolder).to.eq('BBC');
+                  }
+                });
             },
           );
         });

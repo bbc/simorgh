@@ -86,10 +86,12 @@ const alwaysTests = service => {
       it('should contain copyright text', () => {
         cy.get('footer p').should(
           'contain',
-          `© ${new Date().getFullYear()} ${
-            appConfig[service].footer.copyrightText
-          }`,
+          appConfig[service].footer.copyrightText,
         );
+      });
+
+      it('copyright symbol should be wrapped in span', () => {
+        cy.get('footer span').should('contain', '©');
       });
 
       it('should contain a link in the copyright text', () => {
