@@ -64,7 +64,7 @@ const alwaysTests = service => {
         });
       });
 
-      it('should render the BBC News branding', () => {
+      it('should render the BBC branding', () => {
         cy.get('footer a')
           .eq(0)
           .should(
