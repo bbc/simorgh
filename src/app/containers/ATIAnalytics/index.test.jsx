@@ -142,7 +142,7 @@ describe('ATI Analytics Container', () => {
   describe('pageType neither article nor frontPage', () => {
     isNull(
       'should render null',
-      <ContextWrap platform="canonical" pageType="randomvalue">
+      <ContextWrap platform="canonical" pageType="media">
         <ATIAnalytics data={articleDataNews} />
       </ContextWrap>,
     );
