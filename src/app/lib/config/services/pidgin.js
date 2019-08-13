@@ -10,6 +10,7 @@ const pidgin = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-pidgin',
+  atiAnalyticsProducerId: '70',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
   isoLang: null,

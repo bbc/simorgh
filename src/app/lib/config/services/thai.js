@@ -9,6 +9,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/BBCThai`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-thai',
+  atiAnalyticsProducerId: '90',
   brandName: 'BBC News บีบีซีไทย',
   product: 'BBC News บีบีซีไทย',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',

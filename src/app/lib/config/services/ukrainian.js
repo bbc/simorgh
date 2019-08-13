@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `http://www.facebook.com/BBC.Ukrainian`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-ukrainian',
+  atiAnalyticsProducerId: '94',
   brandName: 'BBC News Україна',
   product: 'BBC News Україна',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',

@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/BBCBengaliService`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-bengali',
+  atiAnalyticsProducerId: '31',
   brandName: 'BBC News বাংলা',
   product: 'BBC News বাংলা',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png',

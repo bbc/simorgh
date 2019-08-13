@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbchausa?v=wall&ref=mf`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-hausa',
+  atiAnalyticsProducerId: '51',
   brandName: 'BBC News Hausa',
   product: 'BBC News Hausa',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',

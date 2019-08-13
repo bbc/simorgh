@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-uzbek',
+  atiAnalyticsProducerId: '96',
   brandName: "BBC News O'zbek",
   product: "BBC News O'zbek",
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',

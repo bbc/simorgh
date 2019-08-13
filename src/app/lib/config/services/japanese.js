@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcnewsjapan/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-japanese',
+  atiAnalyticsProducerId: '56',
   brandName: 'BBCニュース',
   product: 'BBCニュース',
   defaultImage:

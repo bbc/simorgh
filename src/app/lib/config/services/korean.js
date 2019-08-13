@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcnewskorean`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-korean',
+  atiAnalyticsProducerId: '57',
   brandName: 'BBC News 코리아',
   product: 'BBC News 코리아',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',

@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-ukchina',
+  atiAnalyticsProducerId: '93',
   brandName: 'BBC News 中文',
   product: 'BBC News 中文',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png',

@@ -13,6 +13,7 @@ const service = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'تازه',
   atiAnalyticsAppName: 'news-pashto',
+  atiAnalyticsProducerId: '68',
   brandName: 'BBC News پښتو',
   serviceLocalizedName: 'پښتو',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',

@@ -13,6 +13,7 @@ const service = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'جدّد في',
   atiAnalyticsAppName: 'news-arabic',
+  atiAnalyticsProducerId: '5',
   brandName: 'BBC News عربي',
   serviceLocalizedName: 'عربي',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',

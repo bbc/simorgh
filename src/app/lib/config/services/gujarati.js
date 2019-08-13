@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcnewsgujarati`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-gujarati',
+  atiAnalyticsProducerId: '50',
   brandName: 'BBC News ગુજરાતી',
   product: 'BBC News ગુજરાતી',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png',

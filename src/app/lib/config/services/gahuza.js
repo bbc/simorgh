@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/BBCGahuza`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-gahuza',
+  atiAnalyticsProducerId: '40',
   brandName: 'BBC News Gahuza',
   product: 'BBC News Gahuza',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',

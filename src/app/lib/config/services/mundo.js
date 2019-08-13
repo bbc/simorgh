@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcmundo`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-mundo',
+  atiAnalyticsProducerId: '62',
   brandName: 'BBC News Mundo',
   product: 'BBC News Mundo',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',

@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `http://www.facebook.com/bbcnepaliservice`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-nepali',
+  atiAnalyticsProducerId: '63',
   brandName: 'BBC News नेपाली',
   product: 'BBC News नेपाली',
   defaultImage:

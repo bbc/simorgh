@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/pages/BBC-Turkce/230299653821`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-turkce',
+  atiAnalyticsProducerId: '92',
   brandName: 'BBC News Türkçe',
   product: 'BBC News Türkçe',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png',

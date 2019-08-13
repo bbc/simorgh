@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/BBCNaidheachdan`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-naidheachdan',
+  atiAnalyticsProducerId: '79',
   brandName: "Naidheachdan a' BhBC",
   product: "Naidheachdan a' BhBC",
   defaultImage:

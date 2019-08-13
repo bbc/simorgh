@@ -13,6 +13,7 @@ const service = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'اپ ڈیٹ کی گئی',
   atiAnalyticsAppName: 'news-urdu',
+  atiAnalyticsProducerId: '95',
   brandName: 'BBC News اردو',
   serviceLocalizedName: 'اردو',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',

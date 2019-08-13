@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/pages/BBC-Swahili/160894643929209?v=wall`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-swahili',
+  atiAnalyticsProducerId: '86',
   brandName: 'BBC News Swahili',
   product: 'BBC News Swahili',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png',
