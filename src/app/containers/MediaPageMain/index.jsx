@@ -15,6 +15,8 @@ const MediaPageMain = props => {
 
   const { title, subtitle } = pathOr(null, ['media', serviceId], translations);
 
+  console.log('xxx', pageData.metadata);
+
   return (
     <Fragment>
       <MetadataContainer metadata={pageData.metadata} promo={pageData.promo} />

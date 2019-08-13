@@ -1,12 +1,12 @@
 import config from '../../../support/config/services';
-import envConfig from '../../../support/config/envs';
-import appConfig from '../../../../src/app/lib/config/services';
+// import envConfig from '../../../support/config/envs';
+// import appConfig from '../../../../src/app/lib/config/services';
 import describeForEuOnly from '../../../support/describeForEuOnly';
 import { hasLiveRadioPage } from '../../../support/serviceHasPageType';
 import { getLiveRadioUrl } from '../../../support/getPageTypeUrl';
 
 const runTests = service => {
-  describe(`Article - Amp - ${service}`, () => {
+  describe(`Live Radio - Amp - ${service}`, () => {
     before(() => {
       cy.visit(`${getLiveRadioUrl(service)}.amp`);
     });
@@ -18,43 +18,32 @@ const runTests = service => {
           'content',
           body.promo.summary || body.promo.headlines.seoHeadline,
         );
+
         cy.get('meta[name="og:title"]').should(
           'have.attr',
           'content',
           body.promo.headlines.seoHeadline,
         );
+
         cy.get('meta[name="og:type"]').should(
           'have.attr',
           'content',
           body.metadata.type,
         );
-        cy.get('meta[name="article:published_time"]').should(
-          'have.attr',
-          'content',
-          new Date(body.metadata.firstPublished).toISOString(),
-        );
-        cy.get('meta[name="article:modified_time"]').should(
-          'have.attr',
-          'content',
-          new Date(body.metadata.lastPublished).toISOString(),
-        );
 
-        cy.get('html').should(
-          'have.attr',
-          'lang',
-          body.metadata.passport.language,
-        );
+        cy.get('html').should('have.attr', 'lang', body.metadata.language);
       });
     });
 
-    describe('ATI', () => {
-      it('should have an amp-analytics tag with the ati url', () => {
-        cy.hasAmpAnalyticsAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
-      });
-    });
+    // will be addressed by https://github.com/bbc/simorgh/pull/2971
+    // describe('ATI', () => {
+    //   it('should have an amp-analytics tag with the ati url', () => {
+    //     cy.hasAmpAnalyticsAtiUrl(
+    //       envConfig.atiUrl,
+    //       config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
+    //     );
+    //   });
+    // });
 
     // TODO Chartbeat not yet implemented
     // describe('Chartbeat', () => {
@@ -75,14 +64,14 @@ const runTests = service => {
       cy.get('html').should('have.attr', 'amp');
     });
 
-    it('should have lang and dir attributes', () => {
-      cy.request(`${getLiveRadioUrl(service)}.json`).then(({ body }) => {
-        cy.hasHtmlLangDirAttributes({
-          lang: body.metadata.passport.language,
-          dir: appConfig[service].dir,
-        });
-      });
-    });
+    // it('should have lang and dir attributes', () => {
+    //   cy.request(`${getLiveRadioUrl(service)}.json`).then(({ body }) => {
+    //     cy.hasHtmlLangDirAttributes({
+    //       lang: body.metadata.passport.language,
+    //       dir: appConfig[service].dir,
+    //     });
+    //   });
+    // });
 
     // TODO - Refactor or review this. Can it be a puppeteer test?
     it('should load the AMP framework', () => {
@@ -136,9 +125,10 @@ const runTests = service => {
         .should('be', 5); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 for amp-analytics + 1 that Cypress injects into the head
     });
 
-    it('should include the canonical URL', () => {
-      cy.checkCanonicalURL(`https://www.bbc.com${getLiveRadioUrl(service)}`);
-    });
+    // will be addressed by https://github.com/bbc/simorgh/issues/2750
+    // it('should include the canonical URL', () => {
+    //   cy.checkCanonicalURL(`https://www.bbc.com${getLiveRadioUrl(service)}`);
+    // });
   });
 };
 

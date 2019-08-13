@@ -1,4 +1,5 @@
 // import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
+import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
 import servicesConfig from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
@@ -15,7 +16,7 @@ const runTests = service => {
       it('should have the correct lang & dir attributes', () => {
         cy.window().then(win => {
           cy.hasHtmlLangDirAttributes({
-            lang: `${win.SIMORGH_DATA.pageData.metadata.passport.language}`,
+            lang: `${win.SIMORGH_DATA.pageData.metadata.language}`,
             dir: `${appConfig[service].dir}`,
           });
         });
@@ -45,6 +46,7 @@ const runTests = service => {
         });
       });
 
+      // will be addressed by https://github.com/bbc/simorgh/issues/2750
       // it('should have the correct facebook metadata', () => {
       //   cy.checkFacebookMetadata(
       //     '100004154058350',
@@ -53,6 +55,7 @@ const runTests = service => {
       //   );
       // });
 
+      // will be addressed by https://github.com/bbc/simorgh/issues/2750
       // it('should have the correct open graph metadata', () => {
       //   cy.checkOpenGraphMetadata(
       //     'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
@@ -66,6 +69,7 @@ const runTests = service => {
       //   );
       // });
 
+      // will be addressed by https://github.com/bbc/simorgh/issues/2750
       // it('should have the correct twitter metadata', () => {
       //   cy.checkTwitterMetadata(
       //     'summary_large_image',
@@ -78,6 +82,7 @@ const runTests = service => {
       //   );
       // });
 
+      // will be addressed by https://github.com/bbc/simorgh/issues/2750
       // it('should include metadata that matches the JSON data', () => {
       //   cy.window().then(win => {
       //     cy.get('head').within(() => {
@@ -121,19 +126,20 @@ const runTests = service => {
       //   });
       // });
 
-      it('should include the canonical URL & ampHTML', () => {
-        cy.checkCanonicalURL(`https://www.bbc.com${getLiveRadioUrl(service)}`);
-        cy.checkAmpHTML(
-          `${window.location.origin}${getLiveRadioUrl(service)}.amp`,
-        );
-      });
+      // will be addressed by https://github.com/bbc/simorgh/issues/2750
+      // it('should include the canonical URL & ampHTML', () => {
+      //   cy.checkCanonicalURL(`https://www.bbc.com${getLiveRadioUrl(service)}`);
+      //   cy.checkAmpHTML(
+      //     `${window.location.origin}${getLiveRadioUrl(service)}.amp`,
+      //   );
+      // });
 
-      it('should include mainEntityOfPage in the LinkedData', () => {
-        cy.get('script[type="application/ld+json"]')
-          .should('contain', 'mainEntityOfPage')
-          .and('contain', 'author')
-          .and('contain', 'headline');
-      });
+      // will be addressed by this https://github.com/bbc/simorgh/issues/3117
+      // it('should include mainEntityOfPage in the LinkedData', () => {
+      //   cy.get('script[type="application/ld+json"]')
+      //     .should('contain', 'mainEntityOfPage')
+      //     .and('contain', 'headline');
+      // });
     });
 
     describe('Footer Tests', () => {
@@ -177,16 +183,17 @@ const runTests = service => {
       });
     });
 
-    describe('ATI', () => {
-      it('should have a noscript tag with an 1px image with the ati url', () => {
-        cy.hasNoscriptImgAtiUrl(
-          envConfig.atiUrl,
-          servicesConfig[service].isWorldService
-            ? envConfig.atiAnalyticsWSBucket
-            : '',
-        );
-      });
-    });
+    // will be addressed by https://github.com/bbc/simorgh/pull/2971
+    // describe('ATI', () => {
+    //   it('should have a noscript tag with an 1px image with the ati url', () => {
+    //     cy.hasNoscriptImgAtiUrl(
+    //       envConfig.atiUrl,
+    //       servicesConfig[service].isWorldService
+    //         ? envConfig.atiAnalyticsWSBucket
+    //         : '',
+    //     );
+    //   });
+    // });
 
     // TODO Chartbeat not yet implemented
     // describe('Chartbeat', () => {
@@ -227,7 +234,16 @@ const runTests = service => {
       });
 
       it('should render a H1, which contains/displays a styled headline', () => {
-        cy.firstHeadlineDataWindow();
+        cy.window().then(win => {
+          const { text: headlineData } = path(
+            ['pageData', 'content', 'blocks'],
+            win,
+          );
+          cy.get('h1').should(
+            'contain',
+            headlineData.model.blocks[0].model.blocks[0].model.text,
+          );
+        });
       });
 
       it('should render an H2, which contains/displays a styled subheading', () => {
