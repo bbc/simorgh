@@ -17,7 +17,7 @@
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "killApp": "(lsof -t -i:7080 | xargs kill)",
     "lighthouse": "lighthouse http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po --chrome-flags=\"--no-sandbox --headless --disable-gpu\" --output json --output html --output-path simorgh --config-path scripts/lighthouseConfig.js && node scripts/lighthouseBudget.js run && lighthouse http://localhost.bbc.com:7080/igbo --chrome-flags=\"--no-sandbox --headless --disable-gpu\" --output json --output html --output-path simorgh --config-path scripts/lighthouseConfig.js && node scripts/lighthouseBudget.js run",
-    "postshrinkwrap": "if test -z $CI; then \n ./scripts/packagelockHttps.sh \n fi; \n git update-index --assume-unchanged .env",
+    "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -c .storybook -h localhost.bbc.com",
     "test": "npm run test:lint && npm run test:dependencies && npm run test:unit && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
