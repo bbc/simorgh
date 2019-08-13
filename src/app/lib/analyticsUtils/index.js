@@ -30,58 +30,6 @@ export const isLocServeCookieSet = platform => {
   return null;
 };
 
-export const getProducer = service => {
-  const producers = {
-    afaanoromoo: '2',
-    afrique: '3',
-    amharic: '4',
-    arabic: '5',
-    azeri: '6',
-    bengali: '31',
-    burmese: '35',
-    cymrufyw: '100',
-    gahuza: '40',
-    gujarati: '50',
-    hausa: '51',
-    hindi: '52',
-    igbo: '53',
-    indonesia: '54',
-    japanese: '56',
-    korean: '57',
-    kyrgyz: '58',
-    marathi: '59',
-    mundo: '62',
-    naidheachdan: '79',
-    nepali: '63',
-    news: '64',
-    pashto: '68',
-    persian: '69',
-    pidgin: '70',
-    portuguese: '33',
-    punjabi: '73',
-    russian: '75',
-    serbian: '81',
-    sinhala: '82',
-    somali: '83',
-    sport: '85',
-    swahili: '86',
-    tamil: '87',
-    telugu: '89',
-    thai: '90',
-    tigrinya: '91',
-    turkce: '92',
-    ukchina: '93',
-    ukrainian: '94',
-    urdu: '95',
-    uzbek: '96',
-    vietnamese: '97',
-    yoruba: '107',
-    zhongwen: '38',
-  };
-
-  return producers[service] || 0;
-};
-
 export const getScreenInfo = platform => {
   if (platform === 'amp') {
     return `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`;

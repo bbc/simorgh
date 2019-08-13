@@ -21,7 +21,6 @@ const analyticsUtilFunctions = [
   { name: 'getCurrentTime', source: genericLabelHelpers },
   { name: 'getDeviceLanguage', source: genericLabelHelpers },
   { name: 'getHref', source: genericLabelHelpers },
-  { name: 'getProducer', source: genericLabelHelpers },
   { name: 'getReferrer', source: genericLabelHelpers },
   { name: 'isLocServeCookieSet', source: genericLabelHelpers },
   { name: 'sanitise', source: genericLabelHelpers },
@@ -95,7 +94,6 @@ describe('getThingAttributes', () => {
     const queryParamsArray = splitUrl(queryParams);
     const expectedValues = [
       's=getDestination',
-      's2=getProducer',
       'r=getScreenInfo',
       're=getBrowserViewPort',
       'hl=getCurrentTime',
