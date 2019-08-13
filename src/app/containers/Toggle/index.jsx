@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, element } from 'prop-types';
+import { string, element, elementType } from 'prop-types';
 import useToggle from './useToggle';
 
 const ToggleContainer = ({ toggleName, FallbackComponent, children }) => {
@@ -18,7 +18,7 @@ const ToggleContainer = ({ toggleName, FallbackComponent, children }) => {
 
 ToggleContainer.propTypes = {
   toggleName: string.isRequired,
-  FallbackComponent: element,
+  FallbackComponent: elementType,
   children: element.isRequired,
 };
 
