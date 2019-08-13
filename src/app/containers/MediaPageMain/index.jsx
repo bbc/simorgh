@@ -11,7 +11,9 @@ const MediaPageMain = props => {
   const { serviceId, mediaId } = match.params;
   const { script } = useContext(ServiceContext);
   const {
-    content: { title, subtitle },
+    content: {
+      blocks: [{ text: title }, { text: subtitle }],
+    },
     promo,
     metadata,
   } = pageData;
