@@ -598,8 +598,17 @@ export default {
     isWorldService: true,
     pageTypes: {
       articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/portuguese/articles/cxvxrj8tvppo',
+        smoke: false,
+      },
+      frontPage: {
+        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/portuguese',
+        smoke: false,
+      },
     },
   },
   punjabi: {
