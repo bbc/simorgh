@@ -6,7 +6,6 @@ import {
   getCurrentTime,
   getDeviceLanguage,
   getHref,
-  getProducer,
   getReferrer,
   isLocServeCookieSet,
   sanitise,
@@ -26,8 +25,8 @@ const atiPageViewParams = ({
   ldpThingLabels,
   pageIdentifier,
   pageTitle,
+  producerId,
   platform,
-  service,
   statsDestination,
   timePublished,
   timeUpdated,
@@ -44,7 +43,7 @@ const atiPageViewParams = ({
     {
       key: 's2',
       description: 'producer',
-      value: getProducer(service),
+      value: producerId,
       wrap: false,
     },
     {
