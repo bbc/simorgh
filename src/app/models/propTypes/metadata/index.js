@@ -8,7 +8,7 @@ import {
   string,
 } from 'prop-types';
 
-export const liveRadioMetadataPropTypes = {
+export const mediaMetadataPropTypes = {
   id: string.isRequired,
   tags: objectOf(any),
   language: string.isRequired,

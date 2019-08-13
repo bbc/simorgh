@@ -1,6 +1,6 @@
 import { number, shape, string } from 'prop-types';
 
-export const liveRadioPromoPropTypes = {
+export const mediaPromoPropTypes = {
   id: string,
   name: string,
   subType: string,
