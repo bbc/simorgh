@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:persian/bbc_dari_radio/liveradio",
+    "tags": {},
+    "language": "fa",
+    "analyticsLabels": {
+      "pageIdentifier": "persian.bbc_dari_radio.liveradio.page",
+      "pageTitle": "BBC Dari Radio - BBC News Persian"
+    },
+    "summary": "TODO: Dari radio summary"
+  },
+  "content": {
+    "title": "بی بی سی افغانستان (برنامه های دری)",
+    "subtitle": "بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.",
+    "blocks": [
+      {
+        "id": "liveradio",
+        "type": "media",
+        "format": "audio",
+        "title": "TODO",
+        "caption": "TODO",
+        "versions": [
+          {
+            "versionId": "liveradio"
+          }
+        ]
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "TODO: Dari Live Radio",
+    "uri": "/afaanoromo/bbc_dari_radio/liveradio",
+    "id": "TODO",
+    "type": "simple"
+  }
+}

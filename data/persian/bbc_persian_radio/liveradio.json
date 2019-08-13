@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:afaanoromo/bbc_dari_radio/liveradio",
+    "tags": {}
+  },
+  "content": {
+    "title": "رادیو فارسی بی‌بی‌سی",
+    "subtitle": "مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.",
+    "blocks": [
+      {
+        "id": "liveradio",
+        "type": "media",
+        "format": "audio",
+        "title": "TODO",
+        "caption": "TODO",
+        "versions": [
+          {
+            "versionId": "liveradio"
+          }
+        ]
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "TODO: Dari Live Radio",
+    "uri": "/afaanoromo/bbc_dari_radio/liveradio",
+    "id": "TODO",
+    "type": "simple"
+  }
+}
