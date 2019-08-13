@@ -57,11 +57,12 @@ RequestContextProvider.propTypes = {
   pageType: oneOf(['article', 'frontPage', 'media']).isRequired,
   service: string.isRequired,
   previousPath: string,
-  currentPath: string.isRequired,
+  currentPath: string,
 };
 
 RequestContextProvider.defaultProps = {
   bbcOrigin: null,
   id: null,
   previousPath: null,
+  currentPath: null,
 };
