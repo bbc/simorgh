@@ -1,7 +1,7 @@
 import React from 'react';
-import { shape, element, string } from 'prop-types';
+import { element, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
-import articlePropTypes from '../../../models/propTypes/article';
+import { dataPropType } from '../../../models/propTypes/data';
 import ErrorMain from '../../ErrorMain';
 import getPassportHome from '../../../lib/utilities/getPassportHome';
 
@@ -52,7 +52,7 @@ const WithData = Component => {
   };
 
   DataContainer.propTypes = {
-    data: shape(articlePropTypes),
+    data: dataPropType,
     service: string,
   };
 
