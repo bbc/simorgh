@@ -1,12 +1,10 @@
 import React from 'react';
-import { oneOfType } from 'prop-types';
 import { RequestContext } from '../../contexts/RequestContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import ArticleAtiParams from './params/article';
 import FrontPageAtiParams from './params/frontpage';
-import { articleDataPropTypes } from '../../models/propTypes/article';
-import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
+import { pageDataPropType } from '../../models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
   const { pageType, platform } = React.useContext(RequestContext);
@@ -31,6 +29,7 @@ const ATIAnalytics = ({ data }) => {
 };
 
 ATIAnalytics.propTypes = {
-  data: oneOfType([articleDataPropTypes, frontPageDataPropTypes]).isRequired,
+  data: pageDataPropType.isRequired,
 };
+
 export default ATIAnalytics;

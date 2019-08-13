@@ -24,7 +24,10 @@
         "markupType": "plain_text",
         "type": "heading"
       },
-      { "text": "Sagantaawwan keenya.", "type": "paragraph" },
+      {
+        "text": "Sagantaawwan keenya.",
+        "type": "paragraph"
+      },
       {
         "id": "liveradio",
         "subType": "primary",
