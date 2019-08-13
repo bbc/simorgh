@@ -1,6 +1,11 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NASSIM_URDU_REGULAR,
+  F_NASSIM_URDU_BOLD,
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 
 const service = {
   lang: 'ur',
@@ -154,7 +159,8 @@ const service = {
     copyrightText:
       'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
   },
-  fonts: [],
+  fonts: [F_NASSIM_URDU_REGULAR, F_NASSIM_URDU_BOLD],
+  timezone: 'Asia/Karachi',
 };
 
 export default service;
