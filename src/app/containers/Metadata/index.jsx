@@ -8,10 +8,12 @@ import LinkedData from '../../components/LinkedData';
 import {
   optimoMetadataPropTypes,
   cpsMetadataPropTypes,
+  liveRadioMetadataPropTypes,
 } from '../../models/propTypes/metadata';
 import {
   optimoPromoPropTypes,
   cpsPromoPropTypes,
+  liveRadioPromoPropTypes,
 } from '../../models/propTypes/promo';
 import aboutTagsContent from './linkedDataAbout';
 
@@ -23,6 +25,10 @@ const pageTypeMetadata = {
     openGraph: 'article',
   },
   frontPage: {
+    schemaOrg: 'WebPage',
+    openGraph: 'website',
+  },
+  media: {
     schemaOrg: 'WebPage',
     openGraph: 'website',
   },
@@ -218,9 +224,13 @@ MetadataContainer.propTypes = {
   metadata: oneOfType([
     shape(cpsMetadataPropTypes),
     shape(optimoMetadataPropTypes),
+    shape(liveRadioMetadataPropTypes),
   ]).isRequired,
-  promo: oneOfType([shape(cpsPromoPropTypes), shape(optimoPromoPropTypes)])
-    .isRequired,
+  promo: oneOfType([
+    shape(cpsPromoPropTypes),
+    shape(optimoPromoPropTypes),
+    shape(liveRadioPromoPropTypes),
+  ]).isRequired,
 };
 
 export default MetadataContainer;

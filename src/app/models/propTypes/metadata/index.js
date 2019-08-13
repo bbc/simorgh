@@ -8,6 +8,17 @@ import {
   string,
 } from 'prop-types';
 
+export const liveRadioMetadataPropTypes = {
+  id: string.isRequired,
+  tags: objectOf(any),
+  language: string.isRequired,
+  analyticsLabels: shape({
+    pageIdentifier: string.isRequired,
+    pageTitle: string.isRequired,
+  }),
+  summary: string.isRequired,
+};
+
 export const optimoMetadataPropTypes = {
   id: string.isRequired,
   type: string.isRequired,

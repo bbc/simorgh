@@ -1,5 +1,13 @@
 import { number, shape, string } from 'prop-types';
 
+export const liveRadioPromoPropTypes = {
+  id: string,
+  name: string,
+  subType: string,
+  type: string,
+  uri: string,
+};
+
 export const optimoPromoPropTypes = {
   id: string.isRequired,
   headlines: shape({
