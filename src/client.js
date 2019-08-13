@@ -21,7 +21,6 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
     hydrate(<ClientApp data={data} routes={routes} />, root);
   });
 } else {
-  // eslint-disable-next-line no-console
   logger.warn(`
     Simorgh refused to hydrate.
     It attempted to hydrate page with path ${window.SIMORGH_DATA.path},
