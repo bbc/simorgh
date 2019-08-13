@@ -25,7 +25,7 @@ module.exports = {
          * to its components
          */
         SIMORGH_AV_EMBED_BASE_URL: JSON.stringify(
-          process.env.SIMORGH_AV_EMBED_BASE_URL,
+          'https://www.test.bbc.co.uk/ws/av-embeds',
         ),
       },
     }),
