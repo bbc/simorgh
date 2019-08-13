@@ -14,13 +14,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
       rel="shortcut icon"
       type="image/x-icon"
     />
-    <ResourceHints
-      assetOrigins={
-        Array [
-          "http://example.com",
-        ]
-      }
-    />
+    <ResourceHints />
     <title>
       Test title
     </title>
@@ -99,13 +93,7 @@ exports[`Document Component should render correctly 1`] = `
       rel="shortcut icon"
       type="image/x-icon"
     />
-    <ResourceHints
-      assetOrigins={
-        Array [
-          "http://example.com",
-        ]
-      }
-    />
+    <ResourceHints />
     <title>
       Test title
     </title>
