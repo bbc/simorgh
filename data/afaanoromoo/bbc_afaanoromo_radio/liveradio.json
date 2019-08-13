@@ -29,7 +29,7 @@
         "id": "liveradio",
         "subType": "primary",
         "format": "audio",
-        "externalId": "bbc_afaanoromoo_radio",
+        "externalId": "bbc_oromo_radio",
         "duration": "PT0S",
         "caption": "",
         "embedding": false,
