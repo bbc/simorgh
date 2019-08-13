@@ -1,6 +1,281 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`cpsTypes rules should handle "real" data 1`] = `
+exports[`filterContent assetTypeCode rules should handle "real" data 1`] = `
+Object {
+  "content": Object {
+    "groups": Array [
+      Object {
+        "items": Array [],
+        "maxRelatedLinks": 2,
+        "semanticGroupName": "Top story",
+        "strapline": Object {
+          "name": "Bu günün xəbərləri",
+        },
+        "title": "Top story",
+        "type": "top-story",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "More top stories",
+        "title": "More top stories",
+        "type": "secondary-top-story",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Top stories overflow",
+        "title": "Top stories overflow",
+        "type": "other-top-stories",
+      },
+      Object {
+        "items": Array [
+          Object {
+            "assetTypeCode": "PRO",
+            "contentType": "Text",
+            "indexImage": Object {
+              "altText": "BBC",
+              "copyrightHolder": "BBC",
+              "height": 576,
+              "href": "http://c.files.bbci.co.uk/10708/production/_101763376_p068b6v0.jpg",
+              "id": "101763376",
+              "path": "/cpsprodpb/10708/production/_101763376_p068b6v0.jpg",
+              "subType": "index",
+              "width": 1024,
+            },
+            "indexThumbnail": Object {
+              "altText": "BBC",
+              "copyrightHolder": "BBC",
+              "height": 180,
+              "href": "http://c.files.bbci.co.uk/CBAB/production/_105193125_p068b6v0.jpg",
+              "id": "105193125",
+              "path": "/cpsprodpb/CBAB/production/_105193125_p068b6v0.jpg",
+              "subType": "index-thumbnail",
+              "width": 320,
+            },
+            "name": "Azərbaycan Xalq Cümhuriyyəti - 100 il",
+            "summary": "1918-ci il mayın 28-də Azərbaycan müstəqil xalqlar cərgəsinə qoşulur. Həmin dövrün hadisələri barədə bütün məqalə, video və fotolarımız burada.",
+            "timestamp": 1527598380000,
+            "type": "link",
+            "uri": "http://www.bbc.com/azeri/azerbaijan-44208475",
+          },
+        ],
+        "semanticGroupName": "Special reports 1",
+        "strapline": Object {
+          "links": Object {
+            "desktop": "http://www.bbc.com/azeri/azerbaijan-44208475",
+            "enhancedmobile": "http://www.bbc.com/azeri/azerbaijan-44208475",
+            "highweb": "http://www.bbc.com/azeri/azerbaijan-44208475",
+            "mobile": "http://www.bbc.com/azeri/azerbaijan-44208475",
+          },
+          "name": "ADR 100",
+          "type": "LINK",
+        },
+        "title": "Special reports 1",
+        "type": "special-reports",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Watch/Listen",
+        "strapline": Object {
+          "links": Object {
+            "desktop": "http://www.bbc.co.uk/azeri/media/video",
+            "enhancedmobile": "http://www.bbc.co.uk/azeri/media/video",
+            "highweb": "http://www.bbc.co.uk/azeri/media/video",
+            "mobile": "http://www.bbc.co.uk/azeri/media/video",
+          },
+          "name": "Video və audio",
+          "type": "LINK",
+        },
+        "title": "Watch/Listen",
+        "type": "av-stories-now",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Section 1",
+        "strapline": Object {
+          "name": "Azərbaycan və bölgə",
+        },
+        "title": "Section 1",
+        "type": "single-section-digest",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Section 2",
+        "strapline": Object {
+          "name": "Beynəlxalq",
+        },
+        "title": "Section 2",
+        "type": "single-section-digest",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Showcase 1",
+        "strapline": Object {
+          "links": Object {
+            "desktop": "http://www.bbc.com/azeri/trending",
+            "enhancedmobile": "http://www.bbc.com/azeri/trending",
+            "highweb": "http://www.bbc.com/azeri/trending",
+            "mobile": "http://www.bbc.com/azeri/trending",
+          },
+          "name": "Sosial media",
+          "type": "LINK",
+        },
+        "title": "Showcase 1",
+        "type": "section-digest",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Showcase 2",
+        "strapline": Object {
+          "links": Object {
+            "desktop": "http://www.bbc.com/azeri/other_news",
+            "enhancedmobile": "http://www.bbc.com/azeri/other_news",
+            "highweb": "http://www.bbc.com/azeri/other_news",
+            "mobile": "http://www.bbc.com/azeri/other_news",
+          },
+          "name": "Həyat",
+          "type": "LINK",
+        },
+        "title": "Showcase 2",
+        "type": "section-digest",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Showcase 3",
+        "strapline": Object {
+          "links": Object {
+            "desktop": "http://www.bbc.com/azeri/topics/football",
+            "enhancedmobile": "http://www.bbc.com/azeri/topics/football",
+            "highweb": "http://www.bbc.com/azeri/topics/football",
+            "mobile": "http://www.bbc.com/azeri/topics/football",
+          },
+          "name": "Sağlamlıq",
+          "type": "LINK",
+        },
+        "title": "Showcase 3",
+        "type": "section-digest",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Showcase 4",
+        "strapline": Object {
+          "links": Object {
+            "desktop": "http://www.bbc.com/azeri/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "enhancedmobile": "http://www.bbc.com/azeri/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "highweb": "http://www.bbc.com/azeri/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "mobile": "http://www.bbc.com/azeri/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+          },
+          "name": "Elm və texnologiya",
+          "type": "LINK",
+        },
+        "title": "Showcase 4",
+        "type": "section-digest",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Special reports 2",
+        "strapline": Object {
+          "links": Object {
+            "desktop": "http://www.bbc.com/azeri/magazine",
+            "enhancedmobile": "http://www.bbc.com/azeri/magazine",
+            "highweb": "http://www.bbc.com/azeri/magazine",
+            "mobile": "http://www.bbc.com/azeri/magazine",
+          },
+          "name": "Dərgi",
+          "type": "LINK",
+        },
+        "title": "Special reports 2",
+        "type": "special-reports",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Picture galleries",
+        "strapline": Object {
+          "links": Object {
+            "desktop": "http://www.bbc.com/azeri/media/photogalleries",
+            "enhancedmobile": "http://www.bbc.com/azeri/media/photogalleries",
+            "highweb": "http://www.bbc.com/azeri/media/photogalleries",
+            "mobile": "http://www.bbc.com/azeri/media/photogalleries",
+          },
+          "name": "Fotoqalereya",
+          "type": "LINK",
+        },
+        "title": "Picture galleries",
+        "type": "picture-gallery-stories",
+      },
+      Object {
+        "items": Array [],
+        "semanticGroupName": "Features",
+        "strapline": Object {
+          "name": "Bunları da oxuyun",
+        },
+        "title": "Features",
+        "type": "feature-main",
+      },
+    ],
+  },
+  "metadata": Object {
+    "analyticsLabels": Object {
+      "counterName": "azeri.page",
+      "cps_asset_id": "37093913",
+      "cps_asset_type": "idx",
+    },
+    "blockTypes": Array [
+      "top-story",
+      "secondary-top-story",
+      "other-top-stories",
+      "special-reports",
+      "av-stories-now",
+      "single-section-digest",
+      "section-digest",
+      "picture-gallery-stories",
+      "feature-main",
+    ],
+    "createdBy": "azeri-v6",
+    "firstPublished": 1471431886,
+    "id": "urn:bbc:ares::index:azeri/front_page/desktop/domestic",
+    "language": "az",
+    "lastPublished": 1562925487,
+    "lastUpdated": 1562925494472,
+    "locators": Object {
+      "assetUri": "/azeri/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:azeri/front_page",
+      "curie": "http://www.bbc.co.uk/asset/3a2d4038-19a9-e1e2-e050-380a4e8076f3/desktop/domestic",
+    },
+    "options": Object {
+      "allowAdvertising": true,
+    },
+    "summary": "BBC News Azərbaycanca öz səhifələrində Azərbaycan və dünyadan bu günün xəbərləri və şərhlərini təqdim edir. Visit BBC News Azeri for the latest from Azerbaijan, Armenia, Georgia.",
+    "tags": Object {},
+    "title": "Xəbərlər",
+    "type": "IDX",
+    "version": "v1.0.10",
+  },
+  "promo": Object {
+    "id": "urn:bbc:ares::index:azeri/front_page/desktop/domestic",
+    "name": "Xəbərlər",
+    "subType": "IDX",
+    "type": "simple",
+    "uri": "/azeri/front_page",
+  },
+  "relatedContent": Object {
+    "groups": Array [],
+    "section": Object {
+      "name": "Xəbərlər",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/azeri/front_page",
+    },
+    "site": Object {
+      "name": "BBC Azərbaycanca",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/azeri",
+    },
+  },
+}
+`;
+
+exports[`filterContent cpsTypes rules should handle "real" data 1`] = `
 Object {
   "content": Object {
     "groups": Array [
