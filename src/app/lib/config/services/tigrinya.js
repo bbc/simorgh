@@ -114,10 +114,6 @@ const service = {
       audio: 'ድምፂ',
       photogallery: 'ማህደረ-ምስሊ',
       video: 'ቪድዮ',
-      bbc_tigrinya_radio: {
-        title: 'ስምዑ',
-        subtitle: 'መደባትና',
-      },
     },
   },
   brandSVG,
@@ -159,6 +155,20 @@ const service = {
     copyrightText: 'ቢቢሲ. ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
   },
   fonts: [],
+  navigation: [
+    {
+      title: 'ዜና',
+      url: '/tigrinya',
+    },
+    {
+      title: 'ቪድዮ',
+      url: '/tigrinya/media/video',
+    },
+    {
+      title: 'ኣመና ፍቱዋት',
+      url: '/tigrinya/popular/read',
+    },
+  ],
   timezone: 'Africa/Addis_Ababa',
 };
 
