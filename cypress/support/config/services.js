@@ -56,14 +56,14 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/amharic/articles/c3rykrrvy19o',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/amharic/articles/c123456abcdo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/amharic',
@@ -80,14 +80,14 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? '/arabic/articles/c8j91j2ljppo'
             : '/arabic/articles/c69dvq19k63o',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/arabic/articles/c123456abcdo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/arabic',
@@ -303,9 +303,9 @@ export default {
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/igbo/articles/cxvxrj8tvppo',
-        smoke: false,
+        smoke: true,
       },
-      frontPage: { path: '/igbo', smoke: false },
+      frontPage: { path: '/igbo', smoke: true },
     },
   },
   indonesia: {
@@ -509,14 +509,14 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? '/news/articles/c5ll353v7y9o'
             : '/news/articles/c6v11qzyv8po',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/news/articles/cxvxrj8tvppo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: { path: undefined, smoke: false },
     },
@@ -554,14 +554,14 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? '/persian/articles/c7eel0lmr4do'
             : '/persian/articles/c4vlle3q337o',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/persian/articles/cxvxrj8tvppo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/persian',
@@ -585,9 +585,9 @@ export default {
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/pidgin/articles/cxvxrj8tvppo',
-        smoke: false,
+        smoke: true,
       },
-      frontPage: { path: '/pidgin', smoke: false },
+      frontPage: { path: '/pidgin', smoke: true },
     },
   },
   portuguese: {
@@ -797,11 +797,11 @@ export default {
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/thai/articles/c123456abcdo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/thai',
-        smoke: false,
+        smoke: true,
       },
     },
   },
@@ -895,14 +895,14 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? '/urdu/articles/c4qg7qq63y6o'
             : '/urdu/articles/cx621klkm1ro',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/urdu/articles/c123456abcdo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/urdu',
@@ -974,9 +974,9 @@ export default {
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/yoruba/articles/cxvxrj8tvppo',
-        smoke: false,
+        smoke: true,
       },
-      frontPage: { path: '/yoruba', smoke: false },
+      frontPage: { path: '/yoruba', smoke: true },
     },
   },
   zhongwen: {
