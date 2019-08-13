@@ -6,7 +6,7 @@
 # - The min value should be 5K less than the smallest service bundle and max should be 5K greater than the largest bundle
 # - Bundle sizes can be viewed by running a production build
 min=494
-max=522
+max=538
 
 
 services=( "afaanoromoo" "afrique" "amharic" "arabic" "azeri" "bengali" "burmese" "cymrufyw" "gahuza" "gujarati" "hausa" "hindi" "igbo" "indonesia" "japanese" "korean" "kyrgyz" "marathi" "mundo" "naidheachdan" "nepali" "news" "pashto" "persian" "pidgin" "portuguese" "punjabi" "russian" "serbian_cyr" "serbian_lat" "sinhala" "somali" "swahili" "tamil" "telugu" "thai" "tigrinya" "turkce" "ukchina_simp" "ukchina_trad" "ukrainian" "urdu" "uzbek" "vietnamese" "yoruba" "zhongwen_simp" "zhongwen_trad" )

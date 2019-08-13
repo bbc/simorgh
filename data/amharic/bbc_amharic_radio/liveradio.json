@@ -1,29 +1,31 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:amharic/bbc_amharic_radio/liveradio",
-        "tags": {}
-    },
-    "content": {
-        "blocks": [
-            {
-                "id": "liveradio",
-                "type": "media",
-                "format": "audio",
-                "title": "TODO",
-                "caption": "TODO",
-                "versions": [
-                    {
-                        "versionId": "liveradio"
-                    }
-                ]
-            }
+  "metadata": {
+    "id": "urn:bbc:ares::asset:amharic/bbc_amharic_radio/liveradio",
+    "tags": {}
+  },
+  "content": {
+    "title": "ያድምጡ",
+    "subtitle": "ዝግጅቶቻችንን",
+    "blocks": [
+      {
+        "id": "liveradio",
+        "type": "media",
+        "format": "audio",
+        "title": "TODO",
+        "caption": "TODO",
+        "versions": [
+          {
+            "versionId": "liveradio"
+          }
         ]
-    },
-    "promo": {
-        "subType": "IDX",
-        "name": "TODO: Amharic Live Radio",
-        "uri": "/amharic/bbc_amharic_radio/liveradio",
-        "id": "TODO",
-        "type": "simple"
-    }
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "TODO: Amharic Live Radio",
+    "uri": "/amharic/bbc_amharic_radio/liveradio",
+    "id": "TODO",
+    "type": "simple"
+  }
 }

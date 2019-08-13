@@ -11,7 +11,7 @@
           "locators": {
             "uri": "/sport/football/45236561"
           },
-          "timestamp": 1534622581,
+          "timestamp": 1534622580000,
           "image": {
             "blockId": "3551800c-34c0-4c2a-a055-dca1f6f6a26c",
             "type": "image",
@@ -48,7 +48,7 @@
           "locators": {
             "uri": "/news/uk-england-merseyside-44439553"
           },
-          "timestamp": 1528979008,
+          "timestamp": 1528979007000,
           "image": {
             "blockId": "0a443f44-5dba-431b-9e74-97b8a1463150",
             "type": "image",
@@ -76,7 +76,7 @@
           "locators": {
             "uri": "/news/uk-45038649"
           },
-          "timestamp": 1533168727,
+          "timestamp": 1533168726000,
           "image": {
             "blockId": "b4b97631-8dbb-4617-88d5-b6fab8304c55",
             "type": "image",
@@ -104,7 +104,7 @@
           "locators": {
             "uri": "/news/uk-england-london-44862008"
           },
-          "timestamp": 1531839355,
+          "timestamp": 1531839354000,
           "image": {
             "blockId": "de1b9a8e-9669-40e7-8bec-1212ed43b8e2",
             "type": "image",
@@ -132,7 +132,7 @@
           "locators": {
             "uri": "/news/uk-44832931"
           },
-          "timestamp": 1531575203,
+          "timestamp": 1531575202000,
           "image": {
             "blockId": "57eb1689-b34d-48a3-9aa1-7ed365718a5a",
             "type": "image",
@@ -160,7 +160,7 @@
           "locators": {
             "uri": "/news/world-europe-44793556"
           },
-          "timestamp": 1531318651,
+          "timestamp": 1531318650000,
           "image": {
             "blockId": "bd39f0c7-5041-4c8a-8325-e6ca2fbfef7c",
             "type": "image",
@@ -188,7 +188,7 @@
           "locators": {
             "uri": "/news/newsbeat-44780698"
           },
-          "timestamp": 1531267228,
+          "timestamp": 1531267227000,
           "image": {
             "blockId": "5d06b330-ea27-45c0-b12e-7172a9a17211",
             "type": "image",
@@ -223,7 +223,7 @@
           "locators": {
             "uri": "/sport/football/45236561"
           },
-          "timestamp": 1534622581,
+          "timestamp": 1534622580000,
           "image": {
             "blockId": "3551800c-34c0-4c2a-a055-dca1f6f6a26c",
             "type": "image",
@@ -251,7 +251,7 @@
           "locators": {
             "uri": "/news/uk-england-london-45205880"
           },
-          "timestamp": 1534415328,
+          "timestamp": 1534415327000,
           "image": {
             "blockId": "f5fcc942-de9c-4fa2-998d-840c3f251eee",
             "type": "image",
@@ -279,7 +279,7 @@
           "locators": {
             "uri": "/news/uk-45247289"
           },
-          "timestamp": 1534761631,
+          "timestamp": 1534761630000,
           "image": {
             "blockId": "45b4d40a-c3f1-42e1-8809-c29eb23d41b4",
             "type": "image",
@@ -307,7 +307,7 @@
           "locators": {
             "uri": "/news/uk-45236971"
           },
-          "timestamp": 1534627383,
+          "timestamp": 1534627382000,
           "image": {
             "blockId": "87e8d49b-11c1-4f8c-b452-6324f1a7697d",
             "type": "image",
@@ -335,7 +335,7 @@
           "locators": {
             "uri": "/news/uk-england-london-45249590"
           },
-          "timestamp": 1534771298,
+          "timestamp": 1534771297000,
           "image": {
             "blockId": "e6e4388c-572a-4763-81a6-966cffed73a7",
             "type": "image",
@@ -363,7 +363,7 @@
           "locators": {
             "uri": "/sport/football/45178044"
           },
-          "timestamp": 1534768975,
+          "timestamp": 1534768974000,
           "image": {
             "blockId": "e49e76d8-84f5-440a-ad54-beb2ee05a038",
             "type": "image",
@@ -398,7 +398,7 @@
           "locators": {
             "uri": "/news/uk-44258461"
           },
-          "timestamp": 1527602563,
+          "timestamp": 1527602562000,
           "image": {
             "blockId": "c4ddbb02-66b2-43e7-ada9-6c108fbe9a8e",
             "type": "image",
@@ -426,7 +426,7 @@
           "locators": {
             "uri": "/news/entertainment-arts-44936302"
           },
-          "timestamp": 1532423488,
+          "timestamp": 1532423487000,
           "image": {
             "blockId": "5433d002-1e50-4c77-a9a9-91b9908c605c",
             "type": "image",
@@ -454,7 +454,7 @@
           "locators": {
             "uri": "/news/newsbeat-44780698"
           },
-          "timestamp": 1531267228,
+          "timestamp": 1531267227000,
           "image": {
             "blockId": "22475714-3000-4eff-a520-27d654613515",
             "type": "image",
@@ -482,7 +482,7 @@
           "locators": {
             "uri": "/news/business-44777214"
           },
-          "timestamp": 1531216958,
+          "timestamp": 1531216957000,
           "image": {
             "blockId": "9ce9fd28-f96a-492d-9d83-67635379518a",
             "type": "image",
@@ -510,7 +510,7 @@
           "locators": {
             "uri": "/news/uk-44334536"
           },
-          "timestamp": 1529887731,
+          "timestamp": 1529887730000,
           "image": {
             "blockId": "84b436b0-64fc-41f2-a3e4-a60a90b4a0d9",
             "type": "image",
@@ -538,7 +538,7 @@
           "locators": {
             "uri": "/news/uk-44517402"
           },
-          "timestamp": 1529332597,
+          "timestamp": 1529332596000,
           "image": {
             "blockId": "fe92ab25-8221-43de-be77-e089b4f14dc0",
             "type": "image",
@@ -573,7 +573,7 @@
           "locators": {
             "uri": "/news/live/uk-england-hampshire-45180834"
           },
-          "timestamp": 1534744887,
+          "timestamp": 1534744886000,
           "image": {
             "blockId": "98060034-f5ef-4439-b55d-7400f13bf9a8",
             "type": "image",
@@ -601,7 +601,7 @@
           "locators": {
             "uri": "/news/uk-england-45219013"
           },
-          "timestamp": 1534552865,
+          "timestamp": 1534552864000,
           "image": {
             "blockId": "9dd4f342-c5f2-41ca-bff3-9b0619db3ed2",
             "type": "image",
@@ -629,7 +629,7 @@
           "locators": {
             "uri": "/sport/football/45153299"
           },
-          "timestamp": 1534612855,
+          "timestamp": 1534612854000,
           "image": {
             "blockId": "c12b98f4-0b5f-4b20-9a17-88a859a0f966",
             "type": "image",
@@ -657,7 +657,7 @@
           "locators": {
             "uri": "/sport/football/45152571"
           },
-          "timestamp": 1534608368,
+          "timestamp": 1534608367000,
           "image": {
             "blockId": "3e082f69-94a9-43b7-a99f-cb97242a7858",
             "type": "image",
@@ -685,7 +685,7 @@
           "locators": {
             "uri": "/news/uk-england-berkshire-45209146"
           },
-          "timestamp": 1534516643,
+          "timestamp": 1534516642000,
           "image": {
             "blockId": "a9a3d65d-dbf6-45a6-b52a-0d9b34b0c61d",
             "type": "image",
@@ -713,7 +713,7 @@
           "locators": {
             "uri": "/news/uk-england-berkshire-45207126"
           },
-          "timestamp": 1534415275,
+          "timestamp": 1534415274000,
           "image": {
             "blockId": "d4427fa5-56f0-4f00-9acb-09df0e74755b",
             "type": "image",
@@ -746,7 +746,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "eea5d023-fb45-41f3-9146-e9a5748d085c",
         "type": "image",
@@ -774,7 +774,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45248730"
       },
-      "timestamp": 1534769676,
+      "timestamp": 1534769675000,
       "image": {
         "blockId": "ec7a642b-2b3b-4294-a6be-de5e7df65958",
         "type": "image",
@@ -802,7 +802,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "14ef4adb-9d52-48f2-bcfc-a3578d3a607d",
         "type": "image",
@@ -830,7 +830,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "1d3c2563-0c13-413c-8bf7-795c72a14b95",
         "type": "image",
@@ -858,7 +858,7 @@
       "locators": {
         "uri": "/news/newsbeat-45246009"
       },
-      "timestamp": 1534759932,
+      "timestamp": 1534759931000,
       "image": {
         "blockId": "4de42780-ad41-4c0e-a2a1-249b02be48c7",
         "type": "image",
@@ -886,7 +886,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534772217,
+      "timestamp": 1534772216000,
       "image": {
         "blockId": "f22d63c4-3d44-4064-974b-e10a9d7c76c2",
         "type": "image",
@@ -914,7 +914,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534767877,
+      "timestamp": 1534767876000,
       "image": {
         "blockId": "6d49146c-8cd5-42b9-9616-aabb79b34cf3",
         "type": "image",
@@ -942,7 +942,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534764954,
+      "timestamp": 1534764953000,
       "image": {
         "blockId": "a3b2f549-25d9-42ca-89f5-165d6d26153e",
         "type": "image",
@@ -970,7 +970,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534768459,
+      "timestamp": 1534768458000,
       "image": {
         "blockId": "27173067-796c-47de-970f-b5dd0fdeef41",
         "type": "image",
@@ -998,7 +998,7 @@
       "locators": {
         "uri": "/news/entertainment-arts-45245333"
       },
-      "timestamp": 1534763852,
+      "timestamp": 1534763851000,
       "image": {
         "blockId": "42d724d4-424f-43df-8f3c-9f7b9909e20b",
         "type": "image",

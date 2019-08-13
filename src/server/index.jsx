@@ -76,17 +76,16 @@ if (process.env.APP_ENV !== 'local') {
 /*
  * Local env routes - fixture data
  */
+const sendDataFile = (res, dataFilePath, next) => {
+  res.sendFile(dataFilePath, {}, sendErr => {
+    if (sendErr) {
+      logger.error(sendErr);
+      next(sendErr);
+    }
+  });
+};
 
 if (process.env.APP_ENV === 'local') {
-  const sendDataFile = (res, dataFilePath, next) => {
-    res.sendFile(dataFilePath, {}, sendErr => {
-      if (sendErr) {
-        logger.error(sendErr);
-        next(sendErr);
-      }
-    });
-  };
-
   server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)
@@ -122,24 +121,27 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(mediaDataRegexPath, async ({ params }, res, next) => {
-      const { service, serviceId, mediaId } = params;
-
-      const dataFilePath = path.join(
-        process.cwd(),
-        'data',
-        service,
-        serviceId,
-        mediaId,
-      );
-
-      sendDataFile(res, `${dataFilePath}.json`, next);
-    })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.
       res.sendStatus(200);
     });
+}
+
+if (['local', 'test'].includes(process.env.APP_ENV)) {
+  server.get(mediaDataRegexPath, async ({ params }, res, next) => {
+    const { service, serviceId, mediaId } = params;
+
+    const dataFilePath = path.join(
+      process.cwd(),
+      'data',
+      service,
+      serviceId,
+      mediaId,
+    );
+
+    sendDataFile(res, `${dataFilePath}.json`, next);
+  });
 }
 
 /*
