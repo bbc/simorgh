@@ -56,7 +56,7 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/amharic/articles/c3rykrrvy19o',
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         path:
@@ -530,7 +530,7 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? '/pashto/articles/c70970g2251o'
             : '/pashto/articles/cng0e8v85eko',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
