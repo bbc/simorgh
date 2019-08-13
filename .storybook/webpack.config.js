@@ -19,6 +19,11 @@ module.exports = {
     ),
     new webpack.DefinePlugin({
       'process.env': {
+        /*
+         * This is needed so that we can pass the AV embed URL to Storybook
+         * as it does not immediately make process.env variables available
+         * to its components
+         */
         SIMORGH_AV_EMBED_BASE_URL: JSON.stringify(
           process.env.SIMORGH_AV_EMBED_BASE_URL,
         ),
