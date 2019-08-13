@@ -470,10 +470,13 @@ export default {
             : '/naidheachdan/articles/c123456abcdo',
         smoke: false,
       },
-      frontPage:
-        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-          ? undefined
-          : '/naidheachdan',
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/naidheachdan',
+        smoke: false,
+      },
     },
   },
   nepali: {
