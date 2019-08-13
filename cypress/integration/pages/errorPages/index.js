@@ -3,7 +3,7 @@ import config from '../../../support/config/services';
 
 // Do not change the config to enable these on test or live, those error pages are cached versions of what we see locally.
 const serviceHasErrorPage = service =>
-  config[service].pageTypes.errorPage404 !== undefined;
+  config[service].pageTypes.errorPage404.path !== undefined;
 
 Object.keys(config)
   .filter(serviceHasErrorPage)
@@ -11,7 +11,7 @@ Object.keys(config)
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
         cy.testResponseCodeAndType(
-          config[service].pageTypes.errorPage404,
+          config[service].pageTypes.errorPage404.path,
           404,
           'text/html',
         );
@@ -20,7 +20,7 @@ Object.keys(config)
 
     describe(`${service} Article Error Page Tests`, () => {
       before(() => {
-        cy.visit(config[service].pageTypes.errorPage404, {
+        cy.visit(config[service].pageTypes.errorPage404.path, {
           failOnStatusCode: false,
         });
       });
