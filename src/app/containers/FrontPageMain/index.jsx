@@ -11,6 +11,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
 import ATIAnalytics from '../ATIAnalytics';
+import ChartbeatAnalytics from '../ChartbeatAnalytics';
 
 const FrontPageMain = ({ frontPageData }) => {
   const { product, serviceLocalizedName, translations } = useContext(
@@ -33,6 +34,7 @@ const FrontPageMain = ({ frontPageData }) => {
   return (
     <Fragment>
       <ATIAnalytics data={frontPageData} />
+      <ChartbeatAnalytics data={frontPageData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">

@@ -15,6 +15,11 @@ jest.mock('react', () => {
 
 const { useContext } = jest.requireMock('react');
 
+jest.mock('../ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
 describe('FrontPageMain', () => {
   beforeEach(() => {
     useContext.mockReturnValue(igboConfig);
