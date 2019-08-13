@@ -594,8 +594,8 @@ export default {
     font: undefined,
     isWorldService: true,
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
+      articles: { path: undefined, smoke: false },
+      errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
     },
   },
@@ -649,8 +649,8 @@ export default {
   serbian: {
     font: undefined,
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
+      articles: { path: undefined, smoke: false },
+      errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
     },
   },
@@ -704,8 +704,8 @@ export default {
   sport: {
     font: undefined,
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
+      articles: { path: undefined, smoke: false },
+      errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
     },
   },
@@ -857,8 +857,8 @@ export default {
     font: undefined,
     isWorldService: true,
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
+      articles: { path: undefined, smoke: false },
+      errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
     },
   },
@@ -983,8 +983,8 @@ export default {
     font: undefined,
     isWorldService: true,
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
+      articles: { path: undefined, smoke: false },
+      errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
     },
   },

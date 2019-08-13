@@ -26,7 +26,11 @@ Object.keys(config)
               .children()
               .should('have.lengthOf', 1)
               .children()
-              .should('have.attr', 'href', config[service].pageTypes.frontPage.path)
+              .should(
+                'have.attr',
+                'href',
+                config[service].pageTypes.frontPage.path,
+              )
               .find('svg')
               .should('be.visible');
           });
@@ -113,7 +117,11 @@ Object.keys(config)
               .should('have.length', 1)
               .should('have.attr', 'role', 'contentinfo')
               .find('a')
-              .should('have.attr', 'href', config[service].pageTypes.frontPage.path)
+              .should(
+                'have.attr',
+                'href',
+                config[service].pageTypes.frontPage.path,
+              )
               .find('svg')
               .should('be.visible');
           });
