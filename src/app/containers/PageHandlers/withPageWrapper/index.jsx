@@ -1,6 +1,6 @@
 import React from 'react';
-import { string, shape } from 'prop-types';
-import articlePropTypes from '../../../models/propTypes/article';
+import { string } from 'prop-types';
+import { dataPropType } from '../../../models/propTypes/data';
 import PageWrapper from '../../../Layouts/defaultPageWrapper';
 
 const WithPageWrapper = Component => {
@@ -11,7 +11,7 @@ const WithPageWrapper = Component => {
   );
 
   PageWrapperContainer.propTypes = {
-    data: shape(articlePropTypes),
+    data: dataPropType,
     bbcOrigin: string,
   };
 
