@@ -88,7 +88,10 @@ LiveComponent.propTypes = {
 };
 
 const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
-  const { script, datetimeLocale, service, dir } = useContext(ServiceContext);
+  const { script, datetimeLocale, service, timezone, dir } = useContext(
+    ServiceContext,
+  );
+
   const headline = pathOr(null, ['headlines', 'headline'], item);
   const url = pathOr(null, ['locators', 'assetUri'], item);
   const summary = pathOr(null, ['summary'], item);
@@ -132,6 +135,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           script={script}
           padding={false}
           service={service}
+          timezone={timezone}
           isRelative={isTenHoursAgo(timestamp)}
         />
       )}
