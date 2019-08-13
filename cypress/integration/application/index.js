@@ -5,7 +5,7 @@ describe('Application', () => {
     .filter(service => service !== 'news')
     .filter(service =>
       Object.keys(config[service].pageTypes).some(
-        pageType => config[service].pageTypes[pageType] !== undefined,
+        pageType => config[service].pageTypes[pageType].path !== undefined,
       ),
     )
     .forEach(service => {
