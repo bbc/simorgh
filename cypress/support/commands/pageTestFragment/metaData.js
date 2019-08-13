@@ -1,7 +1,3 @@
-Cypress.Commands.add('renderedTitle', title => {
-  cy.title().should('eq', title);
-});
-
 Cypress.Commands.add('hasHtmlLangDirAttributes', ({ lang, dir }) => {
   cy.get('html')
     .should('have.attr', 'lang', lang)

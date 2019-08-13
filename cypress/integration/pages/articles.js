@@ -255,9 +255,7 @@ const tests = service =>
         cy.request(`${config[service].pageTypes.articles}.json`).then(
           ({ body }) => {
             const { seoHeadline } = body.promo.headlines;
-            cy.renderedTitle(
-              `${seoHeadline} - ${appConfig[service].brandName}`,
-            );
+            cy.title().should('eq', `${seoHeadline} - ${appConfig[service].brandName}`);
           },
         );
       });

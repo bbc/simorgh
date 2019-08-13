@@ -62,9 +62,7 @@ const tests = service =>
       });
 
       it('should have a relevant error title in the head', () => {
-        cy.renderedTitle(
-          `${appConfig[service].translations.error[404].title} - ${appConfig[service].brandName}`,
-        );
+        cy.title().should('eq', `${appConfig[service].translations.error[404].title} - ${appConfig[service].brandName}`);
       });
     });
   });

@@ -1,6 +1,6 @@
-import envConfig from './config/envs';
-import appConfig from '../../src/app/lib/config/services';
-import describeForEuOnly from './describeForEuOnly';
+import envConfig from '../../support/config/envs';
+import appConfig from '../../../src/app/lib/config/services';
+import describeForEuOnly from '../../support/describeForEuOnly';
 
 const alwaysTests = service => {
   describe('Always tests', () => {

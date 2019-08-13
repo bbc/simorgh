@@ -4,5 +4,6 @@
   "env": {
     "APP_ENV": "local",
     "UK": false
-  }
+  },
+  "ignoreTestFiles": "**/integration/pages/index.js"
 }

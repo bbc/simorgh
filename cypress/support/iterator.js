@@ -1,5 +1,5 @@
 import config from './config/services';
-import alwaysTests from './alwaysTests';
+import alwaysTests from '../integration/pages';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType] !== undefined;
