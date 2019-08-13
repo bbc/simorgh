@@ -5,6 +5,7 @@ import {
   F_NASSIM_URDU_REGULAR,
   F_NASSIM_URDU_BOLD,
 } from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 
 const service = {
   lang: 'ur',
@@ -159,6 +160,7 @@ const service = {
       'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
   },
   fonts: [F_NASSIM_URDU_REGULAR, F_NASSIM_URDU_BOLD],
+  timezone: 'Asia/Karachi',
 };
 
 export default service;

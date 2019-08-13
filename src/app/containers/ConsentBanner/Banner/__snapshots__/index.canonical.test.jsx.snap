@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical Consent Banner Container - Banner should correctly render cookie banner 1`] = `
+exports[`Canonical Consent Banner Container should correctly render cookie banner - LTR layout 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -157,7 +157,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 @media (min-width:37.5rem) {
   .c3 {
     margin: 0;
-    float: right;
+    float: left;
     width: 53%;
   }
 }
@@ -194,6 +194,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
     </h2>
     <p
       className="c3"
+      dir="ltr"
     >
       We and our partners use technologies, such as 
       <a
@@ -234,7 +235,242 @@ exports[`Canonical Consent Banner Container - Banner should correctly render coo
 </div>
 `;
 
-exports[`Canonical Consent Banner Container - Banner should correctly render privacy banner 1`] = `
+exports[`Canonical Consent Banner Container should correctly render cookie banner - RTL layout 1`] = `
+.c0 {
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    float: right;
+    margin-left: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    width: 18%;
+    float: left;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin: 0;
+    float: right;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+<div
+  className="c0"
+  dir="rtl"
+  hidden={null}
+  id={null}
+>
+  <div
+    className="c1"
+    dir="rtl"
+  >
+    <h2
+      className="c2"
+      dir="rtl"
+    >
+      أخبرنا عما إذا كنت توافق على تحميل الكوكيز
+    </h2>
+    <p
+      className="c3"
+      dir="rtl"
+    >
+      نستخدم نحن وشركاؤنا تقنيات مثل 
+      <a
+        href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+      >
+        الكوكيز
+      </a>
+      ، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولاضفاء مسحة شخصية للمحتوى والاعلانات الموجهة إليك. الرجاء إعلامنا إذا كنت موافقا على ذلك.
+    </p>
+    <ul
+      className="c4"
+      dir="rtl"
+    >
+      <li
+        className="c5"
+        dir="rtl"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          نعم، موافق
+        </button>
+      </li>
+      <li
+        className="c5"
+        dir="rtl"
+      >
+        <a
+          href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+          onClick={[Function]}
+        >
+          كلا، أعدني إلى الإعدادات
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Canonical Consent Banner Container should correctly render privacy banner - LTR layout 1`] = `
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -391,7 +627,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
 @media (min-width:37.5rem) {
   .c3 {
     margin: 0;
-    float: right;
+    float: left;
     width: 53%;
   }
 }
@@ -428,6 +664,7 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
     </h2>
     <p
       className="c3"
+      dir="ltr"
     >
       We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
     </p>
@@ -455,6 +692,235 @@ exports[`Canonical Consent Banner Container - Banner should correctly render pri
           onClick={[Function]}
         >
           Find out what's changed
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Canonical Consent Banner Container should correctly render privacy banner - RTL layout 1`] = `
+.c0 {
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    float: right;
+    margin-left: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    width: 18%;
+    float: left;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin: 0;
+    float: right;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+<div
+  className="c0"
+  dir="rtl"
+  hidden={null}
+  id={null}
+>
+  <div
+    className="c1"
+    dir="rtl"
+  >
+    <h2
+      className="c2"
+      dir="rtl"
+    >
+      لقد حدّثنا تعليماتنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الإرتباط (الكوكيز)
+    </h2>
+    <p
+      className="c3"
+      dir="rtl"
+    >
+      لقد أدخلنا تغييرات مهمة لتعليماتنا المتعلقة بالخصوصية وللشروط الخاصة بملفات الإرتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم
+    </p>
+    <ul
+      className="c4"
+      dir="rtl"
+    >
+      <li
+        className="c5"
+        dir="rtl"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          موافق
+        </button>
+      </li>
+      <li
+        className="c5"
+        dir="rtl"
+      >
+        <a
+          href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+          onClick={[Function]}
+        >
+          إطلع على التغييرات
         </a>
       </li>
     </ul>

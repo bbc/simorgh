@@ -1,6 +1,8 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import 'moment/locale/pa-in';
+import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
   lang: `pa-IN`,
@@ -181,6 +183,7 @@ const service = {
       'BBC. BBC ਬਾਹਰੀ ਇੰਟਰਨੈੱਟ ਸਾਈਟਾਂ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

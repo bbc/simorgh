@@ -19,13 +19,14 @@ exports[`Consent Banner Text should correctly render banner text in the UK 1`] =
 @media (min-width:37.5rem) {
   .c0 {
     margin: 0;
-    float: right;
+    float: left;
     width: 53%;
   }
 }
 
 <p
   className="c0"
+  dir="ltr"
 >
   Just some text
 </p>
@@ -50,13 +51,14 @@ exports[`Consent Banner Text should correctly render banner text outside the UK 
 @media (min-width:37.5rem) {
   .c0 {
     margin: 0;
-    float: right;
+    float: left;
     width: 53%;
   }
 }
 
 <p
   className="c0"
+  dir="ltr"
 >
   Just some international text
 </p>
@@ -81,13 +83,14 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
 @media (min-width:37.5rem) {
   .c0 {
     margin: 0;
-    float: right;
+    float: left;
     width: 53%;
   }
 }
 
 <p
   className="c0"
+  dir="ltr"
 >
   Some text 
   <a
@@ -118,13 +121,14 @@ exports[`Consent Banner Text should correctly render banner text with a link out
 @media (min-width:37.5rem) {
   .c0 {
     margin: 0;
-    float: right;
+    float: left;
     width: 53%;
   }
 }
 
 <p
   className="c0"
+  dir="ltr"
 >
   Some international text
   <a
