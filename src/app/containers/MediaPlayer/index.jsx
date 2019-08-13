@@ -1,8 +1,8 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from 'styled-components';
-import Amp from './Amp';
-import Canonical from './Canonical';
+import AmpMediaPlayer from './amp';
+import CanonicalMediaPlayer from './canonical';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
@@ -72,7 +72,7 @@ const MediaPlayerContainer = ({ blocks }) => {
 
   const embedSource = embedUrl(id, versionId, isAmp);
   const placeholderSrc = placeholderImage(imageUrl);
-  const Player = isAmp ? Amp : Canonical;
+  const Player = isAmp ? AmpMediaPlayer : CanonicalMediaPlayer;
 
   return (
     <GridItemConstrainedMedium>

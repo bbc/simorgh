@@ -14,7 +14,7 @@ const AmpHead = () => {
   );
 };
 
-const Amp = ({ embedSrc, placeholderSrc }) => {
+const AmpMediaPlayer = ({ embedSrc, placeholderSrc }) => {
   return (
     <React.Fragment>
       <AmpHead />
@@ -31,9 +31,9 @@ const Amp = ({ embedSrc, placeholderSrc }) => {
   );
 };
 
-Amp.propTypes = {
+AmpMediaPlayer.propTypes = {
   embedSrc: string.isRequired,
   placeholderSrc: string.isRequired,
 };
 
-export default Amp;
+export default AmpMediaPlayer;

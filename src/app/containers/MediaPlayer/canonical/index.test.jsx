@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-import Canonical from './Canonical';
+import CanonicalMediaPlayer from '.';
 
-describe('Media Player: Canonical', () => {
+describe('Media Player: CanonicalMediaPlayer', () => {
   it('should render a placeholder image', () => {
     const tree = renderer.create(
-      <Canonical
+      <CanonicalMediaPlayer
         embedSrc="https://foo.bar/"
         placeholderSrc="https://foo.bar/img"
       />,
@@ -17,7 +17,10 @@ describe('Media Player: Canonical', () => {
 
   it('should render a MediaPlayer component when placeholder is clicked', () => {
     const component = mount(
-      <Canonical embedSrc="http://foo.com" placeholderSrc="http://bar.com" />,
+      <CanonicalMediaPlayer
+        embedSrc="http://foo.com"
+        placeholderSrc="http://bar.com"
+      />,
     );
 
     component.simulate('click');

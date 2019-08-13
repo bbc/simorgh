@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Player: Canonical should render a MediaPlayer component when placeholder is clicked 1`] = `
-<Canonical
+exports[`Media Player: CanonicalMediaPlayer should render a MediaPlayer component when placeholder is clicked 1`] = `
+<CanonicalMediaPlayer
   embedSrc="http://foo.com"
   placeholderSrc="http://bar.com"
 >
@@ -21,9 +21,9 @@ exports[`Media Player: Canonical should render a MediaPlayer component when plac
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "StyledIframe-s82gr2-1",
+              "componentId": "StyledIframe-x885p3-1",
               "isStatic": true,
-              "lastClassName": "nVHgH",
+              "lastClassName": "edHVAK",
               "rules": Array [
                 "position:absolute;top:0;left:0;width:100%;height:100%;border:0;overflow:hidden;",
               ],
@@ -31,7 +31,7 @@ exports[`Media Player: Canonical should render a MediaPlayer component when plac
             "displayName": "StyledIframe",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "StyledIframe-s82gr2-1",
+            "styledComponentId": "StyledIframe-x885p3-1",
             "target": "iframe",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -45,19 +45,19 @@ exports[`Media Player: Canonical should render a MediaPlayer component when plac
       >
         <iframe
           allow="autoplay; fullscreen"
-          className="StyledIframe-s82gr2-1 nVHgH"
+          className="StyledIframe-x885p3-1 edHVAK"
           scrolling="no"
           src="http://foo.com"
         />
       </StyledComponent>
     </StyledIframe>
   </MediaPlayer>
-</Canonical>
+</CanonicalMediaPlayer>
 `;
 
-exports[`Media Player: Canonical should render a placeholder image 1`] = `
+exports[`Media Player: CanonicalMediaPlayer should render a placeholder image 1`] = `
 <div
-  className="StyledPlaceholder-s82gr2-0 cFOMxr"
+  className="StyledPlaceholder-x885p3-0 eSTIIj"
   onClick={[Function]}
 >
   <img

@@ -31,7 +31,7 @@ const MediaPlayer = ({ src }) => (
   />
 );
 
-const Canonical = ({ embedSrc, placeholderSrc }) => {
+const CanonicalMediaPlayer = ({ embedSrc, placeholderSrc }) => {
   const [showMediaPlayer, setShowMediaPlayer] = useState(false);
   const handlePlaceholderClick = () => setShowMediaPlayer(true);
 
@@ -48,9 +48,9 @@ MediaPlayer.propTypes = {
   src: string.isRequired,
 };
 
-Canonical.propTypes = {
+CanonicalMediaPlayer.propTypes = {
   embedSrc: string.isRequired,
   placeholderSrc: string.isRequired,
 };
 
-export default Canonical;
+export default CanonicalMediaPlayer;
