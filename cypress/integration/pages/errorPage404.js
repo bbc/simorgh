@@ -38,7 +38,7 @@ const tests = service =>
         });
       });
 
-      it('should display a relevant error message on screen', () => {
+      it(`should display a ${appConfig[service].translations.error[404].statusCode} error message on screen`, () => {
         cy.get('h1 span').should(
           'contain',
           `${appConfig[service].translations.error[404].statusCode}`,
