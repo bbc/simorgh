@@ -17,11 +17,12 @@ const Reject = (message, href, onClick) => (
 );
 
 const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
-  const { translations, script, service } = useContext(ServiceContext);
+  const { dir, translations, script, service } = useContext(ServiceContext);
   const consentBannerConfig = translations.consentBanner[type];
 
   return (
     <ConsentBanner
+      dir={dir}
       title={consentBannerConfig.title}
       text={BannerText(consentBannerConfig.description)}
       accept={Accept(consentBannerConfig.accept, onAccept)}

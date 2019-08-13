@@ -2,8 +2,6 @@ import React, { Fragment, useContext } from 'react';
 import { string, shape, object } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
-import pathOr from 'ramda/src/pathOr';
-
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -11,15 +9,16 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const MediaPageMain = props => {
   const { pageData, service, match } = props;
   const { serviceId, mediaId } = match.params;
-  const { script, translations } = useContext(ServiceContext);
-
-  const { title, subtitle } = pathOr(null, ['media', serviceId], translations);
-
-  console.log('xxx', pageData.metadata);
+  const { script } = useContext(ServiceContext);
+  const {
+    content: { title, subtitle },
+    promo,
+    metadata,
+  } = pageData;
 
   return (
     <Fragment>
-      <MetadataContainer metadata={pageData.metadata} promo={pageData.promo} />
+      <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
