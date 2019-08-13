@@ -225,7 +225,7 @@ const tests = service =>
         it('should have an image copyright label with styling', () => {
           cy.request(`${config[service].pageTypes.articles}.json`).then(
             ({ body }) => {
-              const copyrightData = getBlockData('image', win);
+              const copyrightData = getBlockData('image', body);
               const rawImageblock = getBlockByType(
                 copyrightData.model.blocks,
                 'rawImage',
