@@ -14,14 +14,11 @@ const InternalInlineLink = InlineLink.withComponent(Link);
 const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
-  console.log('AHAHHH');
   const { externalLinkText } = useContext(ServiceContext);
   const regexp = pathToRegexp(articleRegexPath, [], {
     start: false,
     end: false,
   });
-
-  console.log('heheheh', blocks);
 
   const result = regexp.exec(locator);
   // if URL matches a valid route, use a react-router link
