@@ -2,7 +2,6 @@ import React, { Fragment, useContext } from 'react';
 import { string, shape, object } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
-import pathOr from 'ramda/src/pathOr';
 
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
