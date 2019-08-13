@@ -19,7 +19,9 @@ import {
 } from '../../lib/analyticsUtils/chartbeat';
 
 const ChartbeatAnalytics = ({ data }) => {
-  const { service, brandName, articleAuthor } = useContext(ServiceContext);
+  const { service, brandName, articleAuthor, currentPath } = useContext(
+    ServiceContext,
+  );
   const { enabled } = useToggle('chartbeatAnalytics');
   const { env, platform, pageType, previousPath, origin } = useContext(
     RequestContext,
@@ -44,7 +46,7 @@ const ChartbeatAnalytics = ({ data }) => {
     title,
     authors,
     ...(isAmp && { contentType: type }),
-    ...(!isAmp && { type, useCanonical }),
+    ...(!isAmp && { type, useCanonical, path: currentPath }),
     ...(referrer && { virtualReferrer: referrer }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };
