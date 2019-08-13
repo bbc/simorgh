@@ -7,6 +7,7 @@ import {
   buildSections,
   getType,
   getTitle,
+  getAuthors,
 } from '.';
 import onClient from '../../utilities/onClient';
 import * as articleUtils from '../article';
@@ -227,6 +228,43 @@ describe('Chartbeat utilities', () => {
       const brandName = 'BBC News';
 
       expect(getTitle(pageType, pageData, brandName)).toBe(null);
+    });
+  });
+
+  describe('Chartbeat Authors', () => {
+    const getAuthorsFixtures = [
+      {
+        pageType: 'article',
+        authors: 'BBC News, BBC Persian',
+        expected: 'BBC News, BBC Persian',
+      },
+      {
+        pageType: 'article',
+        authors: null,
+        expected: 'No Author',
+      },
+      {
+        pageType: 'index',
+        authors: null,
+        expected: 'No Author',
+      },
+      {
+        pageType: 'frontpage',
+        authors: 'BBC News',
+        expected: 'No Author',
+      },
+      {
+        authors: null,
+        pageType: null,
+        expected: 'No Author',
+      },
+    ];
+
+    getAuthorsFixtures.forEach(({ authors, pageType, expected }) => {
+      const description = `should return ${expected} when pageType is ${pageType} and authors is ${authors}`;
+      it(description, () => {
+        expect(getAuthors(pageType, authors)).toBe(expected);
+      });
     });
   });
 });
