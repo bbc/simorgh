@@ -197,6 +197,7 @@
     "supertest": "^4.0.2",
     "swagger-cli": "^2.3.0",
     "terser-webpack-plugin": "^1.4.1",
+    "timemachine": "^0.3.0",
     "wait-on": "^3.3.0",
     "webpack": "^4.39.0",
     "webpack-bundle-analyzer": "^3.4.1",
