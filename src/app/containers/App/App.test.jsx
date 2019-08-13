@@ -46,6 +46,7 @@ describe('App', () => {
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
       bbcOrigin: 'https://www.bbc.co.uk',
+      currentPath: 'pathnameOne',
       data: initialData,
       error: null,
       isAmp: false,
@@ -97,6 +98,7 @@ describe('App', () => {
             [],
             {
               bbcOrigin: 'https://www.bbc.co.uk',
+              currentPath: 'pathnameThree',
               data: null,
               error: null,
               id: undefined,
@@ -114,6 +116,7 @@ describe('App', () => {
             [],
             {
               bbcOrigin: 'https://www.bbc.co.uk',
+              currentPath: 'pathnameThree',
               data: null,
               error,
               isAmp: false,
@@ -147,6 +150,7 @@ describe('App', () => {
             [],
             {
               bbcOrigin: 'https://www.bbc.co.uk',
+              currentPath: 'pathnameFour',
               data: null,
               error: null,
               id: undefined,
@@ -164,6 +168,7 @@ describe('App', () => {
             [],
             {
               bbcOrigin: 'https://www.bbc.co.uk',
+              currentPath: 'pathnameFour',
               data,
               error: null,
               id: undefined,
