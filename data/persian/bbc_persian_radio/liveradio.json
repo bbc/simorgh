@@ -1,7 +1,13 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::asset:afaanoromo/bbc_dari_radio/liveradio",
-    "tags": {}
+    "id": "urn:bbc:ares::asset:persian/bbc_persian_radio/liveradio",
+    "tags": {},
+    "language": "fa",
+    "analyticsLabels": {
+      "pageIdentifier": "persian.bbc_persian_radio.liveradio.page",
+      "pageTitle": "BBC Persian Radio - BBC News Persian"
+    },
+    "summary": "TODO: Persian radio summary"
   },
   "content": {
     "title": "رادیو فارسی بی‌بی‌سی",
@@ -23,8 +29,8 @@
   },
   "promo": {
     "subType": "IDX",
-    "name": "TODO: Dari Live Radio",
-    "uri": "/afaanoromo/bbc_dari_radio/liveradio",
+    "name": "TODO: Persian Live Radio",
+    "uri": "/persian/bbc_persian_radio/liveradio",
     "id": "TODO",
     "type": "simple"
   }
