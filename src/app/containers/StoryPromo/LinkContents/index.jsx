@@ -30,7 +30,7 @@ const LinkContents = ({ item }) => {
 
   // hilariously, this works. according to moment, null seconds == 0 seconds!
   const duration = moment.duration(rawDuration, 'seconds');
-  const durationString = formatDuration(duration, ' ');
+  const durationString = formatDuration(duration, ',');
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
