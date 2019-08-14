@@ -11,6 +11,9 @@ developmentTests:
 	npm run test;
 	npm run test:chromatic
 
+productionTests:
+	npm run build && xvfb-run npm run test:prod:ci;
+	
 localProductionTests:
 	CYPRESS_SMOKE=false npm run build && xvfb-run npm run test:prod:ci;
 
