@@ -9,7 +9,7 @@ import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
-    suppressPropWarnings(['blocks is not an array']);
+    suppressPropWarnings(['blocks', 'array']);
     isNull('should return null', <ImageContainer />);
   });
 
@@ -65,7 +65,7 @@ describe('Image', () => {
     const dataWithoutAltText = blockArrayModel([rawImageBlock, null]);
 
     describe('with no rawImageBlock', () => {
-      suppressPropWarnings(['Missing required props: rawImage']);
+      suppressPropWarnings(['Missing', 'rawImage']);
       isNull(
         'should return null',
         <ImageContainer {...dataWithoutRawImageBlock} />,
@@ -73,7 +73,7 @@ describe('Image', () => {
     });
 
     describe('with no altTextBlock', () => {
-      suppressPropWarnings(['Cannot read property', 'of null']);
+      suppressPropWarnings(['type', 'null']);
       isNull('should return null', <ImageContainer {...dataWithoutAltText} />);
     });
 
