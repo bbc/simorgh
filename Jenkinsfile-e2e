@@ -19,7 +19,8 @@ def notifySlack(messageParameters) {
 pipeline {
   agent any
   triggers {
-      cron('H 0 6-6/2 * * 1-5')
+      // Every 3 hours, between 6 & 6, Monday - Friday
+      cron('H 0 6-6/3 * * 1-5')
   }
   options {
     timeout(time: 90, unit: 'MINUTES')
