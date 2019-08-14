@@ -3,7 +3,7 @@ import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
-const alwaysTests = ({ service, pageType }) => {
+const runCommonTests = ({ service, pageType }) => {
   describe('Always tests', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
@@ -117,4 +117,4 @@ const alwaysTests = ({ service, pageType }) => {
   });
 };
 
-export default alwaysTests;
+export default runCommonTests;
