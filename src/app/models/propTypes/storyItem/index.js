@@ -18,3 +18,10 @@ export const storyItem = {
   timestamp: number,
   indexImage: shape(storyItemImage),
 };
+
+export const linkPromo = {
+  name: string.isRequired,
+  summary: string,
+  indexImage: shape(storyItemImage),
+  timestamp: number,
+};

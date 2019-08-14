@@ -16,8 +16,13 @@ const LinkContents = ({ item }) => {
   const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
   const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
   const headlines = pathOr(null, ['headlines'], item);
-  const { headline, overtyped } = headlines;
-  const content = overtyped || headline;
+  let content;
+  if (headlines === null) {
+    content = pathOr(null, ['name'], item);
+  } else {
+    const { headline, overtyped } = headlines;
+    content = overtyped || headline;
+  }
 
   if (!isPGL && !isMedia) {
     return content;

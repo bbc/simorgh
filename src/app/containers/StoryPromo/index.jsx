@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react';
-import { shape, bool, string, element } from 'prop-types';
+import { shape, bool, string, element, oneOfType } from 'prop-types';
 import StoryPromoComponent, {
   Headline,
   Summary,
@@ -9,7 +9,7 @@ import StoryPromoComponent, {
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { storyItem } from '../../models/propTypes/storyItem';
+import { storyItem, linkPromo } from '../../models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -91,16 +91,28 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const { script, datetimeLocale, service, timezone, dir } = useContext(
     ServiceContext,
   );
+  const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
+  let headline;
+  let url;
+  let summary;
+  let isLive;
+  let timestamp;
 
-  const headline = pathOr(null, ['headlines', 'headline'], item);
-  const url = pathOr(null, ['locators', 'assetUri'], item);
-  const summary = pathOr(null, ['summary'], item);
-  const isLive = pathOr(null, ['cpsType'], item) === 'LIV';
-  const timestamp = pathOr(null, ['timestamp'], item);
+  if (isAssetTypeCode !== null) {
+    headline = pathOr(null, ['name'], item);
+    summary = pathOr('sample summry', ['summary'], item);
+    timestamp = pathOr(null, ['timestamp'], item);
+  } else {
+    headline = pathOr(null, ['headlines', 'headline'], item);
+    url = pathOr(null, ['locators', 'assetUri'], item);
+    summary = pathOr(null, ['summary'], item);
+    isLive = pathOr(null, ['cpsType'], item) === 'LIV';
+    timestamp = pathOr(null, ['timestamp'], item);
+  }
 
   const linkcontents = <LinkContents item={item} />;
 
-  if (!headline || !url) {
+  if (!headline) {
     return null;
   }
 
@@ -164,7 +176,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
 };
 
 StoryPromo.propTypes = {
-  item: shape(storyItem).isRequired,
+  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   lazyLoadImage: bool,
   topStory: bool,
 };
