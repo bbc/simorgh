@@ -6,7 +6,7 @@ import describeForEuOnly from '../../support/describeForEuOnly';
 const serviceFilter = service => ['news', 'persian'].includes(service);
 
 const filterPageTypes = (service, pageType) =>
-  config[service].pageTypes[pageType] !== undefined;
+  config[service].pageTypes[pageType].path !== undefined;
 
 const getPrivacyBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.privacy.title);
@@ -24,7 +24,7 @@ const getCookieReject = service =>
   cy.contains(appConfig[service].translations.consentBanner.cookie.reject);
 
 const visitPage = (service, pageType) => {
-  cy.visit(`${config[service].pageTypes[pageType]}.amp`, {
+  cy.visit(`${config[service].pageTypes[pageType].path}.amp`, {
     failOnStatusCode: !pageType.includes('error'),
   });
 };
