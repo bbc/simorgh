@@ -1,12 +1,16 @@
 import baseUrl from '../utils/getBaseUrl';
 import onClient from '../../../lib/utilities/onClient';
 import fetchData from '../utils/fetchData';
-import filterUnknownCpsTypes from '../../../lib/utilities/preprocessor/rules/cpstypes';
+import {
+  filterUnknownCpsTypes,
+  filterUnknownAssetTypeCodes,
+} from '../../../lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '../../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../../lib/utilities/preprocessor/rules/topstories';
 
 const preprocessorRules = [
   filterUnknownCpsTypes,
+  filterUnknownAssetTypeCodes,
   filterEmptyGroupItems,
   applySquashTopstories,
 ];

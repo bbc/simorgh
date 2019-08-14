@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`assetTypeCode rules should handle "real" data 1`] = `
+exports[`filterContent assetTypeCode rules should handle "real" data 1`] = `
 Object {
   "content": Object {
     "groups": Array [
@@ -275,7 +275,7 @@ Object {
 }
 `;
 
-exports[`cpsTypes rules should handle "real" data 1`] = `
+exports[`filterContent cpsTypes rules should handle "real" data 1`] = `
 Object {
   "content": Object {
     "groups": Array [
