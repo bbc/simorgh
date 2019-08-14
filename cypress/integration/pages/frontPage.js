@@ -3,7 +3,7 @@ import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 
-const tests = ({ service }) =>
+const runTests = ({ service }) =>
   describe(`Tests`, () => {
     describe('Frontpage body', () => {
       before(() => {
@@ -60,7 +60,7 @@ const tests = ({ service }) =>
 
 // -------------------------------------------
 
-const canonicalOnlyTests = ({ service }) =>
+const runCanonicalTests = ({ service }) =>
   describe(`Canonical Tests`, () => {
     describe('ATI', () => {
       it('should have a noscript tag with an 1px image with the ati url', () => {
@@ -88,7 +88,7 @@ const canonicalOnlyTests = ({ service }) =>
 
 // -------------------------------------------
 
-const ampOnlyTests = ({ service }) =>
+const runAmpTests = ({ service }) =>
   describe(`Amp Tests`, () => {
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
@@ -164,4 +164,4 @@ const ampOnlyTests = ({ service }) =>
     });
   });
 
-iterator('frontPage', tests, canonicalOnlyTests, ampOnlyTests);
+iterator('frontPage', runTests, runCanonicalTests, runAmpTests);

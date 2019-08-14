@@ -2,7 +2,7 @@ import iterator from '../../support/iterator';
 import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 
-const tests = ({ service }) =>
+const runTests = ({ service }) =>
   describe(`Tests`, () => {
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
@@ -72,7 +72,7 @@ const tests = ({ service }) =>
 
 // -------------------------------------------
 
-const canonicalOnlyTests = ({ service }) =>
+const runCanonicalTests = ({ service }) =>
   describe(`Canonical Tests`, () => {
     it('should return a 404 error code', () => {
       cy.testResponseCodeAndType(
@@ -85,7 +85,7 @@ const canonicalOnlyTests = ({ service }) =>
 
 // -------------------------------------------
 
-const ampOnlyTests = ({ service }) =>
+const runAmpTests = ({ service }) =>
   describe(`Amp Tests`, () => {
     it('should return a 404 error code', () => {
       cy.testResponseCodeAndType(
@@ -96,4 +96,4 @@ const ampOnlyTests = ({ service }) =>
     });
   });
 
-iterator('errorPage404', tests, canonicalOnlyTests, ampOnlyTests);
+iterator('errorPage404', runTests, runCanonicalTests, runAmpTests);

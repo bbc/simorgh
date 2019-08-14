@@ -12,7 +12,7 @@ const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
-const tests = ({ service }) =>
+const runTests = ({ service }) =>
   describe(`Tests`, () => {
     describe(`Metadata`, () => {
       it('should have lang and dir attributes', () => {
@@ -236,7 +236,7 @@ const tests = ({ service }) =>
 
 // -------------------------------------------
 
-const canonicalOnlyTests = ({ service }) =>
+const runCanonicalTests = ({ service }) =>
   describe(`Canonical Tests`, () => {
     it('should not have an AMP attribute on the main article', () => {
       cy.get('html').should('not.have.attr', 'amp');
@@ -311,7 +311,7 @@ const canonicalOnlyTests = ({ service }) =>
 
 // -------------------------------------------
 
-const ampOnlyTests = ({ service }) =>
+const runAmpTests = ({ service }) =>
   describe(`Amp Tests`, () => {
     describe('ATI', () => {
       it('should have an amp-analytics tag with the ati url', () => {
@@ -398,4 +398,4 @@ const ampOnlyTests = ({ service }) =>
     });
   });
 
-iterator('articles', tests, canonicalOnlyTests, ampOnlyTests);
+iterator('articles', runTests, runCanonicalTests, runAmpTests);

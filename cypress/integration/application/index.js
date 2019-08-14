@@ -1,11 +1,14 @@
 import config from '../../support/config/services';
 
+const serviceHasPageType = (service, pageType) =>
+  config[service].pageTypes[pageType].path !== undefined;
+
 describe('Application', () => {
   Object.keys(config)
     .filter(service => service !== 'news')
     .filter(service =>
-      Object.keys(config[service].pageTypes).some(
-        pageType => config[service].pageTypes[pageType].path !== undefined,
+      Object.keys(config[service].pageTypes).some(pageType =>
+        serviceHasPageType(service, pageType),
       ),
     )
     .forEach(service => {

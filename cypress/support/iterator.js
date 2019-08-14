@@ -1,5 +1,5 @@
 import config from './config/services';
-import alwaysTests from '../integration/pages';
+import runCommonTests from '../integration/pages';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
@@ -7,7 +7,7 @@ const serviceHasPageType = (service, pageType) =>
 const smokeTest = (service, pageType) =>
   Cypress.env('SMOKE') ? config[service].pageTypes[pageType].smoke : true;
 
-const iterator = (pageType, tests, canonicalOnlyTests, ampOnlyTests) => {
+const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .filter(service => smokeTest(service, pageType))
@@ -19,9 +19,9 @@ const iterator = (pageType, tests, canonicalOnlyTests, ampOnlyTests) => {
           });
         });
 
-        if (alwaysTests) alwaysTests({ service, pageType });
-        if (tests) tests({ service, pageType });
-        if (canonicalOnlyTests) canonicalOnlyTests({ service, pageType });
+        runCommonTests({ service, pageType });
+        if (runTests) runTests({ service, pageType });
+        if (runCanonicalTests) runCanonicalTests({ service, pageType });
       });
 
       describe(`${pageType} - ${service} - Amp`, () => {
@@ -31,9 +31,9 @@ const iterator = (pageType, tests, canonicalOnlyTests, ampOnlyTests) => {
           });
         });
 
-        if (alwaysTests) alwaysTests({ service, pageType });
-        if (tests) tests({ service, pageType });
-        if (ampOnlyTests) ampOnlyTests({ service, pageType });
+        runCommonTests({ service, pageType });
+        if (runTests) runTests({ service, pageType });
+        if (runAmpTests) runAmpTests({ service, pageType });
       });
     });
 };
