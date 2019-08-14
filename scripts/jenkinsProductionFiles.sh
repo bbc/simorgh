@@ -19,6 +19,7 @@ cp -rf ./cypress ./pack/cypress
 cp -rf ./.storybook ./pack/.storybook
 cp -rf ./envConfig ./pack/envConfig
 cp -rf ./public ./pack/public
+cp -rf ./data ./pack/data # remove this when Ares has data for the liveradio media pages - https://github.com/bbc/simorgh/issues/3114
 
 # Copy the needed files in the root directory
 cp package.json ./pack
