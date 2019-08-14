@@ -9,7 +9,7 @@ import config from '../../support/config/services';
 const serviceFilter = service => ['news', 'persian'].includes(service);
 
 const filterPageTypes = (pageType, service) =>
-  config[service].pageTypes[pageType] !== undefined;
+  config[service].pageTypes[pageType].path !== undefined;
 
 const getPrivacyBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.privacy.title);
@@ -44,7 +44,7 @@ const assertCookieValues = cookies => {
 };
 
 const visitPage = (service, pageType) => {
-  cy.visit(config[service].pageTypes[pageType], {
+  cy.visit(config[service].pageTypes[pageType].path, {
     failOnStatusCode: !pageType.includes('error'),
   });
 };
