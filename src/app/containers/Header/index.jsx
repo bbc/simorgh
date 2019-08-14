@@ -7,7 +7,7 @@ import ConsentBanner from '../ConsentBanner';
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
   const borderBottom = pageType !== 'frontPage';
-  const showNavBar = ['frontPage', 'media'].includes(pageType);
+  const showNavBar = ['article', 'frontPage', 'media'].includes(pageType);
 
   return (
     <header role="banner">
