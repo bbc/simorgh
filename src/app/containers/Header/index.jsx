@@ -7,13 +7,12 @@ import ConsentBanner from '../ConsentBanner';
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
   const borderBottom = pageType !== 'frontPage';
-  const showNavBar = ['article', 'frontPage', 'media'].includes(pageType);
 
   return (
     <header role="banner">
       <ConsentBanner />
       <BrandContainer borderBottom={borderBottom} />
-      {showNavBar && <NavigationContainer />}
+      <NavigationContainer />
     </header>
   );
 };
