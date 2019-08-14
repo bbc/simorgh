@@ -39,7 +39,7 @@ node {
               },
               'Live E2Es': {
                 sh 'make liveE2Es'
-              }, failFast: true
+              }
             )
           }
         } catch (Throwable e) {
