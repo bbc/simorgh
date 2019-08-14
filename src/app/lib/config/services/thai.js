@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { thai } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
 import 'moment/locale/th';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 
