@@ -8,16 +8,26 @@ const baseUrl = 'http://localhost.bbc.com:7080';
 
 const getPageTypes = service => pathOr(null, [service, 'pageTypes'], services);
 
-const getFrontPages = pageType => pathOr(null, ['frontPage'], pageType);
+const getFrontPages = pageType => pathOr(null, ['frontPage', 'path'], pageType);
 
-const getArticles = pageType => pathOr(null, ['articles'], pageType);
+const getArticles = pageType => pathOr(null, ['articles', 'path'], pageType);
+
+const sampleList = list => {
+  const numOfService = 5;
+  const randomIndex = Math.floor(
+    Math.random() * Math.floor(list.length - numOfService),
+  );
+  return list.slice(randomIndex, randomIndex + numOfService);
+};
 
 const getUrls = () => {
   const serviceNames = Object.keys(services);
   const pageTypes = serviceNames.map(getPageTypes);
   const frontPages = pageTypes.map(getFrontPages).filter(page => !!page);
   const articles = pageTypes.map(getArticles).filter(article => !!article);
-  return [...frontPages, ...articles].map(url => `${baseUrl}${url}`);
+  return [...sampleList(frontPages), ...sampleList(articles)].map(
+    url => `${baseUrl}${url}`,
+  );
 };
 
 const urls = getUrls();
