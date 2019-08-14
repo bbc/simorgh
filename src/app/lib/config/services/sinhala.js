@@ -1,6 +1,10 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_ISKOOLA_POTA_BBC_BOLD,
+  F_ISKOOLA_POTA_BBC_REGULAR,
+} from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
@@ -161,7 +165,7 @@ const service = {
     copyrightText:
       'බීබීසී. වෙනත් අන්තර්ජාල අඩවිවල අන්තර්ගතය පිළිබඳව බීබීසීය වගකීමෙන් නොබැඳේ',
   },
-  fonts: [],
+  fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
   timezone: 'Europe/London',
 };
 

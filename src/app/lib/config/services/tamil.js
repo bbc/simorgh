@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
+import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
@@ -166,7 +167,7 @@ const service = {
     copyrightText:
       'பிபிசி. வெளியார் இணைய தளங்களில் உள்ள விஷயங்களுக்கு பிபிசி பொறுப்பாகாது',
   },
-  fonts: [],
+  fonts: [F_LATHA_BOLD, F_LATHA_REGULAR],
   timezone: 'Europe/London',
 };
 
