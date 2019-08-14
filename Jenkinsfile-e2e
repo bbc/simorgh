@@ -18,15 +18,12 @@ def notifySlack(messageParameters) {
 
 node {
   properties([pipelineTriggers([cron(cron_string)])])
-
   timeout(time: 90, unit: 'MINUTES') {
     withEnv([
       'CI=true'
     ]) {
-      cleanWs()
-
-      checkout scm
-
+      cleanWs() // Clean the workspace
+      checkout scm // Checkout from git
       docker.image("${nodeImage}").inside {
         try {
           stage ('Install & Setup') {
