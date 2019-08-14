@@ -1,12 +1,12 @@
-import path from 'ramda/src/path';
-import pipe from 'ramda/src/pipe';
+import pathSatisfies from 'ramda/src/pathSatisfies';
 import servicesConfig from '../config/services';
 
 const serviceHasPageType = pageType => service =>
-  pipe(
-    path([service, 'pageTypes', pageType, 'path']),
+  pathSatisfies(
     Boolean,
-  )(servicesConfig);
+    [service, 'pageTypes', pageType, 'path'],
+    servicesConfig,
+  );
 
 export const hasFrontPage = serviceHasPageType('frontPage');
 
