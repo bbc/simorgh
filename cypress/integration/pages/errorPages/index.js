@@ -8,13 +8,13 @@ import { getErrorPageUrl } from '../../../support/getPageTypeUrl';
 const runTests = service => {
   describe(`${service} Test we get a 404`, () => {
     it('should return a 404 error code', () => {
-      cy.testResponseCodeAndType(getErrorPageUrl, 404, 'text/html');
+      cy.testResponseCodeAndType(getErrorPageUrl(service), 404, 'text/html');
     });
   });
 
   describe(`${service} Article Error Page Tests`, () => {
     before(() => {
-      cy.visit(getErrorPageUrl, {
+      cy.visit(getErrorPageUrl(service), {
         failOnStatusCode: false,
       });
     });
