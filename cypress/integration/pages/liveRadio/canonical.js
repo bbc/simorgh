@@ -138,6 +138,36 @@ const runTests = service => {
     //   // });
     // });
 
+    describe('header tests', () => {
+      it('should have a visible banner', () => {
+        cy.get('header')
+          .should('have.lengthOf', 1)
+          .find('div[class^="Banner"]')
+          .children()
+          .should('have.lengthOf', 1)
+          .children()
+          .should('have.attr', 'href', `/${service}`)
+          .find('svg')
+          .should('be.visible');
+      });
+
+      it('should not have an AMP attribute', () => {
+        cy.get('html').should('not.have.attr', 'amp');
+      });
+
+      if (appConfig[service].navigation) {
+        it('should have one visible navigation', () => {
+          cy.get('nav')
+            .should('have.lengthOf', 1)
+            .should('be.visible');
+        });
+      }
+
+      it('should have a visually hidden top-level header', () => {
+        cy.get('h1').should('have.length', 1);
+      });
+    });
+
     describe('Footer Tests', () => {
       it('should render the BBC News branding', () => {
         cy.get('footer a')
