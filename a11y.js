@@ -3,7 +3,7 @@ const pathOr = require('ramda/src/pathOr');
 global.Cypress = { env: () => {} }; // Fake Cypress.env
 const services = require('./cypress/support/config/services');
 
-const pageWidths = [320, 400, 600, 1008, 1280];
+const pageWidths = [360]; // allPageWidths = [240, 360, 600, 1008, 1280];
 const baseUrl = 'http://localhost.bbc.com:7080';
 
 const getPageTypes = service => pathOr(null, [service, 'pageTypes'], services);
