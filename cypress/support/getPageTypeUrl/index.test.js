@@ -1,4 +1,9 @@
-import { getFrontPageUrl, getArticleUrl, getLiveRadioUrl } from '.';
+import {
+  getFrontPageUrl,
+  getArticleUrl,
+  getLiveRadioUrl,
+  getErrorPageUrl,
+} from '.';
 
 describe('getFrontPageUrl', () => {
   it('should return the front page url', () => {
@@ -18,6 +23,14 @@ describe('getLiveRadioUrl', () => {
   it('should return the live radio page url', () => {
     expect(getLiveRadioUrl('afaanoromoo')).toBe(
       '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+    );
+  });
+});
+
+describe('getErrorPageUrl', () => {
+  it('should return the error page url', () => {
+    expect(getErrorPageUrl('afaanoromoo')).toBe(
+      '/afaanoromoo/articles/c123456abcdo',
     );
   });
 });

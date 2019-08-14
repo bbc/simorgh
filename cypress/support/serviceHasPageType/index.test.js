@@ -1,4 +1,9 @@
-import { hasFrontPage, hasArticlePage, hasLiveRadioPage } from '.';
+import {
+  hasFrontPage,
+  hasArticlePage,
+  hasLiveRadioPage,
+  hasErrorPage,
+} from '.';
 
 describe('hasFrontPage', () => {
   it('should return true when a service has a front page', () => {
@@ -28,5 +33,14 @@ describe('hasLiveRadioPage', () => {
   });
   it('should return false when a service does not have a live radio page', () => {
     expect(hasLiveRadioPage('afrique')).toBe(false);
+  });
+});
+
+describe('hasErrorPage', () => {
+  it('should return true when a service has an error page', () => {
+    expect(hasErrorPage('afaanoromoo')).toBe(true);
+  });
+  it('should return false when a service does not have an error page', () => {
+    expect(hasErrorPage('dummyService')).toBe(false);
   });
 });
