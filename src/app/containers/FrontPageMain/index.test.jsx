@@ -5,7 +5,7 @@ import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
 import preprocessor from '../../lib/utilities/preprocessor';
-import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/cpstypes';
+import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/filterContentType';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
