@@ -4,6 +4,7 @@ import DocumentComponent from './component';
 
 describe('Document Component', () => {
   const assets = ['http://example.com/file.js'];
+  const assetOrigins = ['http://example.com'];
   const data = { test: 'data' };
   const dials = { dial: true };
 
@@ -39,6 +40,7 @@ describe('Document Component', () => {
     shallowRender(
       <DocumentComponent
         assets={assets}
+        assetOrigins={assetOrigins}
         app={'<h1>App!</h1>'}
         data={{ ...data }}
         helmet={helmet}
