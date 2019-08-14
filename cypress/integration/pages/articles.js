@@ -12,19 +12,9 @@ const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
-const tests = service =>
+const tests = ({ service }) =>
   describe(`Tests`, () => {
     describe(`Metadata`, () => {
-      it('should have a correct robot meta tag', () => {
-        cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
-      });
-
-      it('should include the canonical URL', () => {
-        cy.checkCanonicalURL(
-          `https://www.bbc.com${config[service].pageTypes.articles.path}`,
-        );
-      });
-
       it('should have lang and dir attributes', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
@@ -246,7 +236,7 @@ const tests = service =>
 
 // -------------------------------------------
 
-const canonicalOnlyTests = service =>
+const canonicalOnlyTests = ({ service }) =>
   describe(`Canonical Tests`, () => {
     it('should not have an AMP attribute on the main article', () => {
       cy.get('html').should('not.have.attr', 'amp');
@@ -321,7 +311,7 @@ const canonicalOnlyTests = service =>
 
 // -------------------------------------------
 
-const ampOnlyTests = service =>
+const ampOnlyTests = ({ service }) =>
   describe(`Amp Tests`, () => {
     describe('ATI', () => {
       it('should have an amp-analytics tag with the ati url', () => {

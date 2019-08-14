@@ -3,20 +3,8 @@ import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 
-const tests = service =>
+const tests = ({ service }) =>
   describe(`Tests`, () => {
-    describe(`Metadata`, () => {
-      it('should have a correct robot meta tag', () => {
-        cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
-      });
-
-      it('should include the canonical URL', () => {
-        cy.checkCanonicalURL(
-          `https://www.bbc.com${config[service].pageTypes.frontPage.path}`,
-        );
-      });
-    });
-
     describe('Frontpage body', () => {
       before(() => {
         cy.viewport(1008, 768);
@@ -72,7 +60,7 @@ const tests = service =>
 
 // -------------------------------------------
 
-const canonicalOnlyTests = service =>
+const canonicalOnlyTests = ({ service }) =>
   describe(`Canonical Tests`, () => {
     describe('ATI', () => {
       it('should have a noscript tag with an 1px image with the ati url', () => {
@@ -100,7 +88,7 @@ const canonicalOnlyTests = service =>
 
 // -------------------------------------------
 
-const ampOnlyTests = service =>
+const ampOnlyTests = ({ service }) =>
   describe(`Amp Tests`, () => {
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
@@ -173,12 +161,6 @@ const ampOnlyTests = service =>
         .within(() => {
           cy.get('amp-img').should('be.visible');
         });
-    });
-
-    it('should include the canonical URL', () => {
-      cy.checkCanonicalURL(
-        `https://www.bbc.com${config[service].pageTypes.frontPage.path}`,
-      );
     });
   });
 

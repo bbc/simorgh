@@ -1,8 +1,9 @@
+import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
-const alwaysTests = service => {
+const alwaysTests = ({ service, pageType }) => {
   describe('Always tests', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
@@ -20,6 +21,18 @@ const alwaysTests = service => {
             .should('have.attr', 'rel', 'dns-prefetch');
         });
       });
+
+      if (pageType !== 'errorPage404') {
+        it('should include the canonical URL', () => {
+          cy.checkCanonicalURL(
+            `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
+          );
+        });
+
+        it('should have a correct robot meta tag', () => {
+          cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
+        });
+      }
     });
 
     describeForEuOnly('Consent Banners', () => {

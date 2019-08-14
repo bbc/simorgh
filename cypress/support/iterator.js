@@ -19,9 +19,9 @@ const iterator = (pageType, tests, canonicalOnlyTests, ampOnlyTests) => {
           });
         });
 
-        if (alwaysTests) alwaysTests(service);
-        if (tests) tests(service);
-        if (canonicalOnlyTests) canonicalOnlyTests(service);
+        if (alwaysTests) alwaysTests({ service, pageType });
+        if (tests) tests({ service, pageType });
+        if (canonicalOnlyTests) canonicalOnlyTests({ service, pageType });
       });
 
       describe(`${pageType} - ${service} - Amp`, () => {
@@ -31,9 +31,9 @@ const iterator = (pageType, tests, canonicalOnlyTests, ampOnlyTests) => {
           });
         });
 
-        if (alwaysTests) alwaysTests(service, pageType);
-        if (tests) tests(service);
-        if (ampOnlyTests) ampOnlyTests(service);
+        if (alwaysTests) alwaysTests({ service, pageType });
+        if (tests) tests({ service, pageType });
+        if (ampOnlyTests) ampOnlyTests({ service, pageType });
       });
     });
 };
