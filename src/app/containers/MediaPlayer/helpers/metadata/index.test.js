@@ -1,14 +1,14 @@
 import mediaPlayerMetadata from '.';
 import {
-  noAresMediaMetadata,
+  missingAresMediaMetadata,
   multipleAresMetadata,
-  videoClipGlobalGuidanceBlock,
-  audioClipGlobalGuidanceBlock,
-} from '../helpers/fixtures';
+  validAresMediaVideoBlock,
+  validAresMediaAudioBlock,
+} from '../fixtures';
 
 describe('mediaPlayerMetadata', () => {
   it('returns correct video metadata', () => {
-    const metadata = mediaPlayerMetadata(videoClipGlobalGuidanceBlock);
+    const metadata = mediaPlayerMetadata(validAresMediaVideoBlock);
     const output = {
       video: {
         '@list': [
@@ -20,7 +20,7 @@ describe('mediaPlayerMetadata', () => {
             duration: 191,
             thumbnailUrl:
               'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
-            uploadDate: null,
+            uploadDate: 1540218932000,
           },
         ],
       },
@@ -29,7 +29,7 @@ describe('mediaPlayerMetadata', () => {
   });
 
   it('returns correct audio metadata', () => {
-    const metadata = mediaPlayerMetadata(audioClipGlobalGuidanceBlock);
+    const metadata = mediaPlayerMetadata(validAresMediaAudioBlock);
     const output = {
       video: {
         '@list': [
@@ -40,7 +40,7 @@ describe('mediaPlayerMetadata', () => {
             name: 'Birmingham checkout',
             thumbnailUrl:
               'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
-            uploadDate: null,
+            uploadDate: 1555067395000,
           },
         ],
       },
@@ -49,7 +49,7 @@ describe('mediaPlayerMetadata', () => {
   });
 
   it('handles aresMediaMetadata type not being present', () => {
-    const metadata = mediaPlayerMetadata(noAresMediaMetadata);
+    const metadata = mediaPlayerMetadata(missingAresMediaMetadata);
     expect(metadata).toEqual(null);
   });
 
