@@ -25,7 +25,7 @@ def runE2eTestsLive(){
 }
 
 def notifySlack(messageParameters) {
-  def message = "*${env.JOB_NAME} - ${messageParameters.buildStatus} on \"${messageParameters.branchName}\" at \"${messageParameters.stageName}\"" [build #${env.BUILD_NUMBER}] ${env.BUILD_URL}*"
+  def message = "*${env.JOB_NAME} - ${messageParameters.buildStatus} on \"${messageParameters.branchName}\" at \"${messageParameters.stageName}\" [build #${env.BUILD_NUMBER}] ${env.BUILD_URL}*"
 
   slackSend(
     channel: messageParameters.slackChannel,
