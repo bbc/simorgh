@@ -2,32 +2,34 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import FrontPageMain from '.';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import frontPageDataIgbo from '../../../../data/pidgin/frontpage';
+import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
+import preprocessor from '../../lib/utilities/preprocessor';
+import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/cpstypes';
+import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
+const processedPidgin = preprocessor(frontPageDataPidgin, [
+  filterUnknownCpsTypes,
+]);
 
-const { useContext } = jest.requireMock('react');
+const requestContextData = {
+  pageType: 'frontPage',
+};
+
+const FrontPageMainWithContext = props => (
+  <RequestContext.Provider value={requestContextData}>
+    <ServiceContext.Provider value={igboConfig}>
+      <FrontPageMain {...props} />
+    </ServiceContext.Provider>
+  </RequestContext.Provider>
+);
 
 describe('FrontPageMain', () => {
-  beforeEach(() => {
-    useContext.mockReturnValue(igboConfig);
-  });
-
-  afterEach(() => {
-    useContext.mockReset();
-  });
-
   describe('snapshots', () => {
     shouldShallowMatchSnapshot(
-      'should render an igbo frontpage correctly',
-      <FrontPageMain frontPageData={frontPageDataIgbo} />,
+      'should render a pidgin frontpage correctly',
+      <FrontPageMainWithContext frontPageData={processedPidgin} />,
     );
   });
 
@@ -36,7 +38,7 @@ describe('FrontPageMain', () => {
 
     it('should render visually hidden text as h1', () => {
       const { container } = render(
-        <FrontPageMain frontPageData={frontPageDataIgbo} />,
+        <FrontPageMainWithContext frontPageData={processedPidgin} />,
       );
       const h1 = container.querySelector('h1');
       const content = h1.getAttribute('id');
@@ -56,11 +58,11 @@ describe('FrontPageMain', () => {
 
     it('should render front page sections', () => {
       const { container } = render(
-        <FrontPageMain frontPageData={frontPageDataIgbo} />,
+        <FrontPageMainWithContext frontPageData={processedPidgin} />,
       );
       const sections = container.querySelectorAll('section');
 
-      expect(sections).toHaveLength(7);
+      expect(sections).toHaveLength(6);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
