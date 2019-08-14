@@ -26,7 +26,7 @@ export const getRelevantGroup = (data, type) => {
   newData.content.groups = newGroups;
 
   return newData;
-}
+};
 
 export const filterUnknownCpsTypes = data => {
   return getRelevantGroup(data, 'cpsType');
@@ -34,4 +34,4 @@ export const filterUnknownCpsTypes = data => {
 
 export const filterUnknownAssetTypeCodes = data => {
   return getRelevantGroup(data, 'assetTypeCode');
-}
+};
