@@ -1,4 +1,4 @@
-import propTypesLib from 'prop-types';
+import propTypesLib, { string } from 'prop-types';
 import { arrayOfSpecificBlocks } from './index';
 
 import * as getMissingRequiredProps from './getMissingRequiredProps';
@@ -11,8 +11,8 @@ const propData = {
 };
 
 const propTypes = [
-  { type: 'propOne', props: { propWouldBe: 'here' }, isRequired: false },
-  { type: 'propTwo', props: { propWouldBe: 'here' }, isRequired: true },
+  { type: 'propOne', props: { propWouldBe: string }, isRequired: false },
+  { type: 'propTwo', props: { propWouldBe: string }, isRequired: true },
 ];
 
 const checkProps = props =>
@@ -44,7 +44,7 @@ describe('arrayOfSpecificBlocks', () => {
     jest.spyOn(propTypesLib, 'checkPropTypes');
 
     const call = prop => [
-      { propWouldBe: 'here' },
+      { propWouldBe: string },
       prop,
       'prop',
       `${prop.type} - TestComponent`,
