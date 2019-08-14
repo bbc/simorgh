@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def nodeImage = "329802642264.dkr.ecr.eu-west-1.amazonaws.com/bbc-news/node-10-lts:10.16.0-1"
-def slackChannel = '#si_repo-simorgh'
+def slackChannel = '#si_repo-infra-sandbox'
 
 // Run latest every 3 hours, between 6 & 6, Monday - Friday
 def cron_string = env.BRANCH_NAME == "latest" ? "H 0 6-6/3 * * 1-5" : ""
@@ -32,13 +32,52 @@ node {
           stage ('Running E2Es across environments') {
             parallel (
               'Local Prod Tests': {
-                sh 'CYPRESS_SMOKE=false npm run build && xvfb-run -a -e /dev/stdout npm run test:prod:ci;'
+                try {
+                  sh 'make localProductionTests'
+                } catch (Throwable e) {
+                  def messageParameters = [
+                    buildStatus: 'Failed on LOCAL',
+                    branchName: env.BRANCH_NAME,
+                    colour: 'danger',
+                    emoji: '😱',
+                    slackChannel: slackChannel
+                  ]
+                  notifySlack(messageParameters)
+
+                  throw e
+                }   
               },
               'Test E2Es': {
-                sh 'make testE2Es'
+                try {
+                  sh 'make testE2Es'
+                } catch (Throwable e) {
+                  def messageParameters = [
+                    buildStatus: 'Failed on TEST',
+                    branchName: env.BRANCH_NAME,
+                    colour: 'danger',
+                    emoji: '😱',
+                    slackChannel: slackChannel
+                  ]
+                  notifySlack(messageParameters)
+
+                  throw e
+                }
               },
               'Live E2Es': {
-                sh 'make liveE2Es'
+                try {
+                  sh 'make liveE2Es'
+                } catch (Throwable e) {
+                  def messageParameters = [
+                    buildStatus: 'Failed on LIVE',
+                    branchName: env.BRANCH_NAME,
+                    colour: 'danger',
+                    emoji: '😱',
+                    slackChannel: slackChannel
+                  ]
+                  notifySlack(messageParameters)
+
+                  throw e
+                } 
               }
             )
           }
@@ -46,7 +85,7 @@ node {
           echo "The pipeline has failed with the error: ${e}"
           throw e
         } finally {
-          if (env.BRANCH_NAME == 'latest') {
+          if (env.BRANCH_NAME != 'latest') {
             switch (currentBuild.status) {
               case 'SUCCESS':
                 def messageParameters = [
@@ -54,16 +93,6 @@ node {
                   branchName: env.BRANCH_NAME,
                   colour: 'good',
                   emoji: '🤟',
-                  slackChannel: slackChannel
-                ]
-                notifySlack(messageParameters)
-                break
-              case 'FAILRE':
-                def messageParameters = [
-                  buildStatus: 'Failed',
-                  branchName: env.BRANCH_NAME,
-                  colour: 'danger',
-                  emoji: '😱',
                   slackChannel: slackChannel
                 ]
                 notifySlack(messageParameters)

@@ -13,9 +13,9 @@ developmentTests:
 
 productionTests:
 	npm run build && xvfb-run npm run test:prod:ci;
-	
+
 localProductionTests:
-	CYPRESS_SMOKE=false npm run build && xvfb-run npm run test:prod:ci;
+	CYPRESS_SMOKE=false npm run build && xvfb-run -a npm run test:prod:ci;
 
 testE2Es:
 	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
