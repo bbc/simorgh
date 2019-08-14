@@ -10,7 +10,7 @@ def slackChannel = '#si_repo-simorgh'
 def cron_string = env.BRANCH_NAME == "latest" ? "H 0 6-6/3 * * 1-5" : ""
 
 def notifySlack(messageParameters) {
-  def message = "${messageParameters.emoji} Simorgh E2Es - ${messageParameters.buildStatus} on \"${messageParameters.branchName}\" [build #${env.BUILD_NUMBER}] ${env.BUILD_URL}"
+  def message = "${messageParameters.emoji} Simorgh E2Es ${messageParameters.buildStatus} on \"${messageParameters.branchName}\" [build #${env.BUILD_NUMBER}] ${env.BUILD_URL}"
 
   slackSend(
     channel: messageParameters.slackChannel,
@@ -43,9 +43,6 @@ pipeline {
             }
           }
           steps {
-            // DELETE BELOW
-            sh 'exit 1'
-            // DELETE ABOVE
             sh 'make install'
             sh 'CYPRESS_SMOKE=false make productionTests'
           }
@@ -58,9 +55,6 @@ pipeline {
             }
           }
           steps {
-            // DELETE BELOW
-            sh 'exit 1'
-            // DELETE ABOVE
             sh 'make install'
             sh 'CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress'
           }
@@ -73,9 +67,6 @@ pipeline {
             }
           }
           steps {
-            // DELETE BELOW
-            sh 'exit 1'
-            // DELETE ABOVE
             sh 'make install'
             sh 'CYPRESS_SMOKE=false CYPRESS_APP_ENV=live npm run cypress'
           }
@@ -90,7 +81,7 @@ pipeline {
     }
     success {
       script {
-        if(env.BRANCH_NAME == 'CypressIterator-cron') {
+        if(env.BRANCH_NAME == 'latest') {
           def messageParameters = [
             buildStatus: 'Success',
             branchName: env.BRANCH_NAME,
@@ -104,7 +95,7 @@ pipeline {
     }
     aborted {
       script {
-        if(env.BRANCH_NAME == 'CypressIterator-cron') {
+        if(env.BRANCH_NAME == 'latest') {
           def messageParameters = [
             buildStatus: 'Aborted',
             branchName: env.BRANCH_NAME,
@@ -118,7 +109,7 @@ pipeline {
     }
     failure {
       script {
-        if(env.BRANCH_NAME == 'CypressIterator-cron') {
+        if(env.BRANCH_NAME == 'latest') {
           def messageParameters = [
             buildStatus: 'Failed',
             branchName: env.BRANCH_NAME,
@@ -132,7 +123,7 @@ pipeline {
     }
     unstable {
       script {
-        if(env.BRANCH_NAME == 'CypressIterator-cron') {
+        if(env.BRANCH_NAME == 'latest') {
           def messageParameters = [
             buildStatus: 'Unstable',
             branchName: env.BRANCH_NAME,
