@@ -33,7 +33,7 @@ node {
             parallel (
               'Local Prod Tests': {
                 try {
-                  sh 'make localProductionTests'
+                  sh 'CYPRESS_SMOKE=false npm run build && xvfb-run -a npm run test:prod:ci;'
                 } catch (Throwable e) {
                   def messageParameters = [
                     buildStatus: 'Failed on LOCAL',
