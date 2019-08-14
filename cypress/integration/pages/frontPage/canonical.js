@@ -3,14 +3,14 @@ import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/app/lib/config/services';
 
 const serviceHasFrontPage = service =>
-  config[service].pageTypes.frontPage !== undefined;
+  config[service].pageTypes.frontPage.path !== undefined;
 
 Object.keys(config)
   .filter(serviceHasFrontPage)
   .forEach(service => {
     describe(`Frontpage Canonical tests for ${service}`, () => {
       before(() => {
-        cy.visit(config[service].pageTypes.frontPage);
+        cy.visit(config[service].pageTypes.frontPage.path);
       });
 
       describe('checks the components are present', () => {
@@ -26,7 +26,11 @@ Object.keys(config)
               .children()
               .should('have.lengthOf', 1)
               .children()
-              .should('have.attr', 'href', config[service].pageTypes.frontPage)
+              .should(
+                'have.attr',
+                'href',
+                config[service].pageTypes.frontPage.path,
+              )
               .find('svg')
               .should('be.visible');
           });
@@ -113,7 +117,11 @@ Object.keys(config)
               .should('have.length', 1)
               .should('have.attr', 'role', 'contentinfo')
               .find('a')
-              .should('have.attr', 'href', config[service].pageTypes.frontPage)
+              .should(
+                'have.attr',
+                'href',
+                config[service].pageTypes.frontPage.path,
+              )
               .find('svg')
               .should('be.visible');
           });
