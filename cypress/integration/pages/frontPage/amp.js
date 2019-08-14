@@ -3,20 +3,20 @@ import envConfig from '../../../support/config/envs';
 import describeForEuOnly from '../../../support/describeForEuOnly';
 
 const serviceHasFrontPage = service =>
-  config[service].pageTypes.frontPage !== undefined;
+  config[service].pageTypes.frontPage.path !== undefined;
 
 Object.keys(config)
   .filter(serviceHasFrontPage)
   .forEach(service => {
     describe(`Frontpage AMP tests for ${service}`, () => {
       before(() => {
-        cy.visit(`${config[service].pageTypes.frontPage}.amp`);
+        cy.visit(`${config[service].pageTypes.frontPage.path}.amp`);
       });
 
       describe('AMP Status', () => {
         it('should return a 200 response', () => {
           cy.testResponseCodeAndType(
-            `${config[service].pageTypes.frontPage}.amp`,
+            `${config[service].pageTypes.frontPage.path}.amp`,
             200,
             'text/html',
           );
@@ -96,7 +96,7 @@ Object.keys(config)
 
       it('should include the canonical URL', () => {
         cy.checkCanonicalURL(
-          `https://www.bbc.com${config[service].pageTypes.frontPage}`,
+          `https://www.bbc.com${config[service].pageTypes.frontPage.path}`,
         );
       });
     });
