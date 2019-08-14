@@ -8,12 +8,12 @@ const buildBaseUrl = origin => {
   return `https://www.test.bbc${tld}`;
 };
 
-const embedUrl = ({ origin, assetId, vpid, amp = false }) => {
+const embedUrl = ({ origin, assetId, vpid, isAmp = false }) => {
   const avRoute = 'ws/av-embeds';
   const baseUrl = buildBaseUrl(origin);
   const parts = [baseUrl, avRoute, assetId, vpid];
 
-  if (amp) {
+  if (isAmp) {
     parts.push('amp');
   }
 

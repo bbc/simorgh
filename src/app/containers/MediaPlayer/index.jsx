@@ -75,7 +75,7 @@ const MediaPlayerContainer = ({ blocks }) => {
   const embedSource = embedUrl({
     vpid: versionId,
     assetId: id,
-    amp: isAmp,
+    isAmp,
     origin,
   });
 

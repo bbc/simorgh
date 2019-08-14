@@ -47,7 +47,7 @@ const testCases = [
     expected: `https://www.bbc.co.uk/ws/av-embeds/${assetId}/${vpid}/amp`,
     embedObject: {
       origin: 'https://www.bbc.co.uk',
-      amp: true,
+      isAmp: true,
       assetId,
       vpid,
     },
@@ -57,7 +57,7 @@ const testCases = [
     expected: `https://www.test.bbc.com/ws/av-embeds/${assetId}/${vpid}/amp`,
     embedObject: {
       origin: 'https://www.test.bbc.com',
-      amp: true,
+      isAmp: true,
       assetId,
       vpid,
     },
@@ -68,7 +68,7 @@ const testCases = [
     expected: `https://www.test.bbc.co.uk/ws/av-embeds/${assetId}/${vpid}/amp`,
     embedObject: {
       origin: 'http://localhost.bbc.co.uk:7080',
-      amp: true,
+      isAmp: true,
       assetId,
       vpid,
     },
