@@ -29,7 +29,6 @@ node {
       docker.image("${nodeImage}").inside {
         try {
           stage ('Install & Setup') {
-            error('simulated error')
             sh 'make install'
           }
           stage ('Running E2Es across environments') {
