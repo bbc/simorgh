@@ -84,7 +84,7 @@ describe('App', () => {
         it('should set state to the error', async () => {
           route.getInitialData.mockImplementation(() => Promise.reject(error));
 
-          act(() => {
+          await act(async () => {
             wrapper.setProps({ location: { pathname: 'pathnameThree' } });
           });
 
@@ -133,7 +133,9 @@ describe('App', () => {
 
           route.getInitialData.mockImplementation(() => Promise.resolve(data));
 
-          wrapper.setProps({ location: { pathname } });
+          await act(async () => {
+            wrapper.setProps({ location: { pathname } });
+          });
 
           await route.getInitialData;
 
