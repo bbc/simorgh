@@ -26,10 +26,6 @@ const pageTypeMetadata = {
     schemaOrg: 'WebPage',
     openGraph: 'website',
   },
-  liveRadio: {
-    schemaOrg: 'WebPage',
-    openGraph: 'website',
-  },
 };
 
 /* An array of each thingLabel from tags.about & tags.mention */
