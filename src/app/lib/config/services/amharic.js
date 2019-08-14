@@ -1,6 +1,10 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { amharic as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NOTO_SANS_ETHIOPIC_BOLD,
+  F_NOTO_SANS_ETHIOPIC_REGULAR,
+} from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
@@ -115,10 +119,6 @@ const service = {
       audio: 'ድምጽ',
       photogallery: 'የምስል ቋት',
       video: 'ተንቀሳቃሽ ምስል',
-      bbc_amharic_radio: {
-        title: 'ያድምጡ',
-        subtitle: 'ዝግጅቶቻችንን',
-      },
     },
   },
   brandSVG,
@@ -159,7 +159,7 @@ const service = {
     ],
     copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
   },
-  fonts: [],
+  fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
   navigation: [
     {
       title: 'ዜና',

@@ -2,12 +2,12 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import {
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,
+  F_REITH_SANS_ITALIC,
+  F_REITH_SANS_REGULAR,
+  F_REITH_SERIF_MEDIUM,
+  F_REITH_SERIF_MEDIUM_ITALIC,
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
@@ -168,12 +168,12 @@ const news = {
       'BBC. The BBC is not responsible for the content of external sites.',
   },
   fonts: [
-    F_REITH_SERIF_MEDIUM,
-    F_REITH_SERIF_MEDIUM_ITALIC,
-    F_REITH_SANS_REGULAR,
-    F_REITH_SANS_ITALIC,
     F_REITH_SANS_BOLD,
     F_REITH_SANS_BOLD_ITALIC,
+    F_REITH_SANS_ITALIC,
+    F_REITH_SANS_REGULAR,
+    F_REITH_SERIF_MEDIUM,
+    F_REITH_SERIF_MEDIUM_ITALIC,
   ],
   timezone: 'Europe/London',
 };

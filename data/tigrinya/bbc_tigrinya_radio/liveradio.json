@@ -1,29 +1,31 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:tigrinya/bbc_tigrinya_radio/liveradio",
-        "tags": {}
-    },
-    "content": {
-        "blocks": [
-            {
-                "id": "liveradio",
-                "type": "media",
-                "format": "audio",
-                "title": "TODO",
-                "caption": "TODO",
-                "versions": [
-                    {
-                        "versionId": "liveradio"
-                    }
-                ]
-            }
+  "metadata": {
+    "id": "urn:bbc:ares::asset:tigrinya/bbc_tigrinya_radio/liveradio",
+    "tags": {}
+  },
+  "content": {
+    "title": "ስምዑ",
+    "subtitle": "መደባትና",
+    "blocks": [
+      {
+        "id": "liveradio",
+        "type": "media",
+        "format": "audio",
+        "title": "TODO",
+        "caption": "TODO",
+        "versions": [
+          {
+            "versionId": "liveradio"
+          }
         ]
-    },
-    "promo": {
-        "subType": "IDX",
-        "name": "TODO: Tigrinya Live Radio",
-        "uri": "/tigrinya/bbc_tigrinya_radio/liveradio",
-        "id": "TODO",
-        "type": "simple"
-    }
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "TODO: Tigrinya Live Radio",
+    "uri": "/tigrinya/bbc_tigrinya_radio/liveradio",
+    "id": "TODO",
+    "type": "simple"
+  }
 }
