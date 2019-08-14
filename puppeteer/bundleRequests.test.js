@@ -30,9 +30,11 @@ describe('Js bundle requests', () => {
 
   Object.keys(config).forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => config[service].pageTypes[pageType] !== undefined)
+      .filter(
+        pageType => config[service].pageTypes[pageType].path !== undefined,
+      )
       .forEach(pageType => {
-        const path = config[service].pageTypes[pageType];
+        const { path } = config[service].pageTypes[pageType];
 
         describe(service, () => {
           beforeAll(async () => {
