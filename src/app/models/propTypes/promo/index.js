@@ -1,11 +1,12 @@
 import { number, shape, string } from 'prop-types';
 
 export const mediaPromoPropTypes = {
-  id: string,
-  name: string,
-  subType: string,
-  type: string,
+  name: string.isRequired,
+  summary: string.isRequired,
   uri: string,
+  contentType: string,
+  id: string,
+  type: string,
 };
 
 export const optimoPromoPropTypes = {

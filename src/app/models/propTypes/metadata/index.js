@@ -9,14 +9,21 @@ import {
 } from 'prop-types';
 
 export const mediaMetadataPropTypes = {
-  id: string.isRequired,
-  tags: objectOf(any),
-  language: string.isRequired,
   analyticsLabels: shape({
     pageIdentifier: string.isRequired,
     pageTitle: string.isRequired,
   }),
-  summary: string.isRequired,
+  blockTypes: arrayOf(string),
+  createdBy: string,
+  firstPublished: number,
+  id: string.isRequired,
+  language: string.isRequired,
+  lastPublished: number,
+  lastUpdated: number,
+  locators: objectOf(any),
+  options: objectOf(any),
+  tags: objectOf(any),
+  type: string,
 };
 
 export const optimoMetadataPropTypes = {
