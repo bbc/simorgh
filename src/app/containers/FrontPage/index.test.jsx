@@ -69,6 +69,7 @@ describe('FrontPageContainer', () => {
         <FrontPageContainer {...defaultProps} />,
       );
     });
+
     describe('Assertions', () => {
       let FrontPageComponent;
       beforeAll(() => {
@@ -104,7 +105,7 @@ describe('FrontPageContainer', () => {
 
       it('should render error page when an error occurs', () => {
         const { container } = render(
-          <FrontPageComponent {...defaultProps} error="An error Occured" />,
+          <FrontPageComponent {...defaultProps} error />,
         );
 
         const { textContent } = container.querySelector('main');
@@ -116,13 +117,14 @@ describe('FrontPageContainer', () => {
         const data = {
           pageData: igboData,
           status: 200,
+          dials: {},
         };
 
         const frontPageMainMock = jest.requireMock('../FrontPageMain');
         const { container } = render(
           <FrontPageComponent
             {...defaultProps}
-            error=""
+            error={false}
             data={data}
             service="igbo"
           />,
