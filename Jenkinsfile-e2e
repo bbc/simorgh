@@ -16,6 +16,8 @@ def notifySlack(messageParameters) {
   )
 }
 
+def stageHasFailed = false;
+
 node {
   properties([pipelineTriggers([cron(cron_string)])])
   timeout(time: 90, unit: 'MINUTES') {
@@ -44,6 +46,8 @@ node {
                   ]
                   notifySlack(messageParameters)
 
+                  stageHasFailed = true
+
                   throw e
                 }   
               },
@@ -60,6 +64,8 @@ node {
                   ]
                   notifySlack(messageParameters)
 
+                  stageHasFailed = true
+
                   throw e
                 }
               },
@@ -75,6 +81,8 @@ node {
                     slackChannel: slackChannel
                   ]
                   notifySlack(messageParameters)
+
+                  stageHasFailed = true
 
                   throw e
                 } 
@@ -118,8 +126,9 @@ node {
                 notifySlack(messageParameters)
                 break
               default:
+              if (stageHasFailed != false)
                 def messageParameters = [
-                  buildStatus: 'Unknown build state',
+                  buildStatus: 'Unknown build failure',
                   branchName: env.BRANCH_NAME,
                   colour: 'danger',
                   emoji: '😱',
