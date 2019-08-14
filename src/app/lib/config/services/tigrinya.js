@@ -1,6 +1,11 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NOTO_SANS_ETHIOPIC_BOLD,
+  F_NOTO_SANS_ETHIOPIC_REGULAR,
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
   lang: `ti-ET`,
@@ -113,10 +118,6 @@ const service = {
       audio: 'ድምፂ',
       photogallery: 'ማህደረ-ምስሊ',
       video: 'ቪድዮ',
-      bbc_tigrinya_radio: {
-        title: 'ስምዑ',
-        subtitle: 'መደባትና',
-      },
     },
   },
   brandSVG,
@@ -157,7 +158,22 @@ const service = {
     ],
     copyrightText: 'ቢቢሲ. ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
   },
-  fonts: [],
+  fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
+  navigation: [
+    {
+      title: 'ዜና',
+      url: '/tigrinya',
+    },
+    {
+      title: 'ቪድዮ',
+      url: '/tigrinya/media/video',
+    },
+    {
+      title: 'ኣመና ፍቱዋት',
+      url: '/tigrinya/popular/read',
+    },
+  ],
+  timezone: 'Africa/Addis_Ababa',
 };
 
 export default service;
