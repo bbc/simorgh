@@ -32,7 +32,7 @@ node {
           stage ('Running E2Es across environments') {
             parallel (
               'Local Prod Tests': {
-                sh 'make localProductionTests'
+                sh 'CYPRESS_SMOKE=false npm run build && xvfb-run -a -e /dev/stdout npm run test:prod:ci;'
               },
               'Test E2Es': {
                 sh 'make testE2Es'
