@@ -1,60 +1,58 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
-    "locators": {},
-    "type": "WS-LIVE",
-    "createdBy": "tigrinya",
-    "language": "id-ID",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageIdentifier": "tigrinya.bbc_tigrinya_radio.liveradio.page",
-      "pageTitle": "ስምዑ - BBC News Tigrinya"
+  "metadata" : {
+    "id" : "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
+    "locators" : { },
+    "type" : "WS-LIVE",
+    "createdBy" : "tigrinya",
+    "language" : "ti-ET",
+    "lastUpdated" : 0,
+    "firstPublished" : 0,
+    "lastPublished" : 0,
+    "options" : { },
+    "analyticsLabels" : {
+      "pageIdentifier" : "tigrinya.bbc_tigrinya_radio.liveradio.page",
+      "pageTitle" : "ስምዑ - BBC News ትግርኛ"
     },
-    "tags": {},
-    "version": "1.1.1",
-    "blockTypes": ["heading", "version", "paragraph"]
+    "tags" : { },
+    "version" : "1.1.1",
+    "blockTypes" : [ "heading", "version", "paragraph" ]
   },
-  "content": {
-    "blocks": [
-      { "text": "ስምዑ", "markupType": "plain_text", "type": "heading" },
-      { "text": "መደባትና", "type": "paragraph" },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_tigrinya_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
-      }
-    ]
+  "content" : {
+    "blocks" : [ {
+      "text" : "ስምዑ",
+      "markupType" : "plain_text",
+      "type" : "heading"
+    }, {
+      "text" : "መደባትና",
+      "type" : "paragraph"
+    }, {
+      "id" : "liveradio",
+      "subType" : "primary",
+      "format" : "audio",
+      "externalId" : "bbc_tigrinya_radio",
+      "duration" : "PT0S",
+      "caption" : "",
+      "embedding" : false,
+      "available" : true,
+      "live" : true,
+      "type" : "version"
+    } ]
   },
-  "promo": {
-    "name": "ስምዑ",
-    "summary": "መደባትና",
-    "uri": "/tigrinya/bbc_tigrinya_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
-    "type": "link",
-    "headlines": {
-      "seoHeadline": "ስምዑ",
-      "shortHeadline": "ስምዑ",
-      "headline": "ስምዑ"
-    }
+  "promo" : {
+    "name" : "ስምዑ",
+    "summary" : "መደባትና",
+    "uri" : "/tigrinya/bbc_tigrinya_radio/liveradio",
+    "contentType" : "WS-LIVE",
+    "id" : "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
+    "type" : "link"
   },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "tigrinya",
-      "uri": "/tigrinya",
-      "type": "simple"
+  "relatedContent" : {
+    "site" : {
+      "subType" : "simple",
+      "name" : "tigrinya",
+      "uri" : "/tigrinya",
+      "type" : "simple"
     },
-    "groups": []
+    "groups" : [ ]
   }
 }

@@ -1,66 +1,58 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
-    "locators": {},
-    "type": "WS-LIVE",
-    "createdBy": "indonesia",
-    "language": "id-ID",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page - BBC News Indonesia",
-      "pageTitle": "BBC Indonesia Radio"
+  "metadata" : {
+    "id" : "urn:bbc:ares::ws_live:bbc_indonesian_radio",
+    "locators" : { },
+    "type" : "WS-LIVE",
+    "createdBy" : "indonesia",
+    "language" : "id-ID",
+    "lastUpdated" : 0,
+    "firstPublished" : 0,
+    "lastPublished" : 0,
+    "options" : { },
+    "analyticsLabels" : {
+      "pageIdentifier" : "indonesia.bbc_indonesian_radio.liveradio.page",
+      "pageTitle" : "BBC Indonesia Radio - BBC News Indonesia"
     },
-    "tags": {},
-    "version": "1.1.1",
-    "blockTypes": ["heading", "version", "paragraph"]
+    "tags" : { },
+    "version" : "1.1.1",
+    "blockTypes" : [ "heading", "version", "paragraph" ]
   },
-  "content": {
-    "blocks": [
-      {
-        "text": "BBC Indonesia Radio",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_indonesian_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
-      }
-    ]
+  "content" : {
+    "blocks" : [ {
+      "text" : "BBC Indonesia Radio",
+      "markupType" : "plain_text",
+      "type" : "heading"
+    }, {
+      "text" : "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+      "type" : "paragraph"
+    }, {
+      "id" : "liveradio",
+      "subType" : "primary",
+      "format" : "audio",
+      "externalId" : "bbc_indonesian_radio",
+      "duration" : "PT0S",
+      "caption" : "",
+      "embedding" : false,
+      "available" : true,
+      "live" : true,
+      "type" : "version"
+    } ]
   },
-  "promo": {
-    "name": "bbc_indonesian_radio",
-    "summary": "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
-    "uri": "/indonesia/bbc_indonesian_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
-    "type": "link",
-    "headlines": {
-      "seoHeadline": "BBC Indonesia Radio",
-      "headline": "BBC Indonesia Radio"
-    }
+  "promo" : {
+    "name" : "BBC Indonesia Radio",
+    "summary" : "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+    "uri" : "/indonesia/bbc_indonesian_radio/liveradio",
+    "contentType" : "WS-LIVE",
+    "id" : "urn:bbc:ares::ws_live:bbc_indonesian_radio",
+    "type" : "link"
   },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "indonesia",
-      "uri": "/indonesia",
-      "type": "simple"
+  "relatedContent" : {
+    "site" : {
+      "subType" : "simple",
+      "name" : "indonesia",
+      "uri" : "/indonesia",
+      "type" : "simple"
     },
-    "groups": []
+    "groups" : [ ]
   }
 }
