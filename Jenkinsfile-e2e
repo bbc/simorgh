@@ -34,9 +34,6 @@ pipeline {
   }
   stages {
     stage ('All Env Tests') {
-      when {
-        expression { env.BRANCH_NAME != 'latest' }
-      }
       parallel {
         stage ('Local production tests') {
           agent {
@@ -93,7 +90,7 @@ pipeline {
     }
     success {
       script {
-        if(env.BRANCH_NAME == 'latest') {
+        if(env.BRANCH_NAME == 'CypressIterator-cron') {
           def messageParameters = [
             buildStatus: 'Success',
             branchName: env.BRANCH_NAME,
@@ -106,7 +103,7 @@ pipeline {
     }
     aborted {
       script {
-        if(env.BRANCH_NAME == 'latest') {
+        if(env.BRANCH_NAME == 'CypressIterator-cron') {
           def messageParameters = [
             buildStatus: 'Aborted',
             branchName: env.BRANCH_NAME,
@@ -119,7 +116,7 @@ pipeline {
     }
     failure {
       script {
-        if(env.BRANCH_NAME == 'latest') {
+        if(env.BRANCH_NAME == 'CypressIterator-cron') {
           def messageParameters = [
             buildStatus: 'Failed',
             branchName: env.BRANCH_NAME,
@@ -132,7 +129,7 @@ pipeline {
     }
     unstable {
       script {
-        if(env.BRANCH_NAME == 'latest') {
+        if(env.BRANCH_NAME == 'CypressIterator-cron') {
           def messageParameters = [
             buildStatus: 'Unstable',
             branchName: env.BRANCH_NAME,
