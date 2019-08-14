@@ -1,5 +1,5 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { thai } from '@bbc/gel-foundations/scripts';
 import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
 import 'moment/locale/th';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
@@ -29,7 +29,7 @@ const service = {
   twitterSite: '@bbc_thailand',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
+  script: thai,
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
   translations: {
