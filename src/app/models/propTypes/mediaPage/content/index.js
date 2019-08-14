@@ -1,18 +1,6 @@
-import { shape, string, arrayOf, oneOf } from 'prop-types';
+import { shape, arrayOf, oneOf } from 'prop-types';
 import aresBlockPropTypes from './aresBlock';
-
-const versionPropTypes = {
-  id: string.isRequired,
-  type: string.isRequired,
-  format: string.isRequired,
-  title: string.isRequired,
-  caption: string.isRequired,
-  versions: arrayOf(
-    shape({
-      versionId: string.isRequired,
-    }),
-  ),
-};
+import versionPropTypes from './version';
 
 const mediaPageContentPropTypes = {
   content: shape({
