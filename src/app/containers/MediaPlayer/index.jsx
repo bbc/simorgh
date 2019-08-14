@@ -70,9 +70,14 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null; // this should be the holding image with an error overlay
   }
 
-  const embedSource = embedUrl(origin, id, versionId, isAmp);
-  const placeholderSrc = placeholderImage(imageUrl);
   const Player = isAmp ? AmpMediaPlayer : CanonicalMediaPlayer;
+  const placeholderSrc = placeholderImage(imageUrl);
+  const embedSource = embedUrl({
+    vpid: versionId,
+    assetId: id,
+    amp: isAmp,
+    origin,
+  });
 
   return (
     <GridItemConstrainedMedium>
