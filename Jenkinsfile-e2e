@@ -26,7 +26,7 @@ node {
     ]) {
       cleanWs() // Clean the workspace
       checkout scm // Checkout from git
-      docker.image("${nodeImage}").inside {
+      docker.image("${nodeImage}").inside('--ipc host') {
         try {
           stage ('Install & Setup') {
             sh 'make install'
