@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
-import { oneOfType } from 'prop-types';
 import useToggle from '../Toggle/useToggle';
 import AmpChartbeatBeacon from './amp';
 import CanonicalChartbeatBeacon from './canonical';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import { articleDataPropTypes } from '../../models/propTypes/article';
-import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
+import { pageDataPropType } from '../../models/propTypes/data';
 import { getReferrer } from '../../lib/analyticsUtils';
 import {
   chartbeatUID,
@@ -59,7 +57,7 @@ const ChartbeatAnalytics = ({ data }) => {
 };
 
 ChartbeatAnalytics.propTypes = {
-  data: oneOfType([articleDataPropTypes, frontPageDataPropTypes]).isRequired,
+  data: pageDataPropType.isRequired,
 };
 
 export default ChartbeatAnalytics;

@@ -243,7 +243,7 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 </main>
 `;
 
-exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
+exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 .c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -266,7 +266,7 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   padding-bottom: 1.5rem;
@@ -293,7 +293,736 @@ exports[`ErrorMain should correctly render for an error page for Persian 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  padding: 2rem 0;
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+<main
+  role="main"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <h1
+        className="c2"
+      >
+        <span
+          className="c3"
+        >
+          StatusCode
+        </span>
+        A error has occured
+      </h1>
+      <p
+        className="c4"
+      >
+        Something happened, please try an option
+      </p>
+      <ul>
+        <li
+          className="c4"
+        >
+          Option one
+        </li>
+        <li
+          className="c4"
+        >
+          Option two
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        You can do 
+        <a
+          className="c5"
+          href="https://www.bbc.com"
+        >
+          this
+        </a>
+         thing
+      </p>
+    </div>
+  </div>
+</main>
+`;
+
+exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
+.c5 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c5:focus,
+.c5:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c4 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #3F3F42;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c3 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.c2 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  color: #3F3F42;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  padding: 2rem 0;
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+<main
+  role="main"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <h1
+        className="c2"
+      >
+        <span
+          className="c3"
+        >
+          StatusCode
+        </span>
+        A error has occured
+      </h1>
+      <p
+        className="c4"
+      >
+        Something happened, please try an option
+      </p>
+      <ul>
+        <li
+          className="c4"
+        >
+          Option one
+        </li>
+        <li
+          className="c4"
+        >
+          Option two
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        You can do 
+        <a
+          className="c5"
+          href="https://www.bbc.com"
+        >
+          this
+        </a>
+         thing
+      </p>
+    </div>
+  </div>
+</main>
+`;
+
+exports[`ErrorMain should correctly render for an error page for persian 1`] = `
+.c5 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c5:focus,
+.c5:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c4 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #3F3F42;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c3 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.c2 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  color: #3F3F42;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  padding: 2rem 0;
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+<main
+  role="main"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <h1
+        className="c2"
+      >
+        <span
+          className="c3"
+        >
+          StatusCode
+        </span>
+        A error has occured
+      </h1>
+      <p
+        className="c4"
+      >
+        Something happened, please try an option
+      </p>
+      <ul>
+        <li
+          className="c4"
+        >
+          Option one
+        </li>
+        <li
+          className="c4"
+        >
+          Option two
+        </li>
+      </ul>
+      <p
+        className="c4"
+      >
+        You can do 
+        <a
+          className="c5"
+          href="https://www.bbc.com"
+        >
+          this
+        </a>
+         thing
+      </p>
+    </div>
+  </div>
+</main>
+`;
+
+exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
+.c5 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c5:focus,
+.c5:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c4 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #3F3F42;
+  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c3 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.c2 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  color: #3F3F42;
+  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
