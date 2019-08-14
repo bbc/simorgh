@@ -1,8 +1,6 @@
 #!/usr/bin/env groovy
 
-def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
-def nodeImageVersion = "10.16.0-1"
-def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
+def nodeImage = "329802642264.dkr.ecr.eu-west-1.amazonaws.com/bbc-news/node-10-lts:10.16.0-1"
 
 def slackChannel = '#si_repo-simorgh'
 
@@ -19,119 +17,93 @@ def notifySlack(messageParameters) {
   )
 }
 
-pipeline {
-  agent any
-  triggers {
-      cron(cron_string)
-  }
-  options {
-    timeout(time: 90, unit: 'MINUTES')
-    timestamps ()
-  }
-  environment {
-    APP_DIRECTORY = "app"
-    CI = true
-  }
-  stages {
-    stage ('All Env Tests') {
-      parallel {
-        stage ('Local production tests') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh 'make install'
-            sh 'CYPRESS_SMOKE=false make productionTests'
-          }
-        }
-        stage ('Test E2Es') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh 'make install'
-            sh 'CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress'
-          }
-        }
-        stage ('Live E2Es') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh 'make install'
-            sh 'CYPRESS_SMOKE=false CYPRESS_APP_ENV=live npm run cypress'
-          }
-        }
-      }
-    }
-  }
-  post {
-    always {
-      // Clean the workspace
+node {
+  properties([pipelineTriggers([cron(cron_string)])])
+
+  timeout(time: 90, unit: 'MINUTES') {
+    withEnv([
+      'CI=true'
+    ]) {
       cleanWs()
-    }
-    success {
-      script {
-        if(env.BRANCH_NAME == 'latest') {
-          def messageParameters = [
-            buildStatus: 'Success',
-            branchName: env.BRANCH_NAME,
-            colour: 'good',
-            emoji: '🤟',
-            slackChannel: slackChannel
-          ]
-          notifySlack(messageParameters)
-        }
-      }
-    }
-    aborted {
-      script {
-        if(env.BRANCH_NAME == 'latest') {
-          def messageParameters = [
-            buildStatus: 'Aborted',
-            branchName: env.BRANCH_NAME,
-            colour: 'warning',
-            emoji: '🙀',
-            slackChannel: slackChannel
-          ]
-          notifySlack(messageParameters)
-        }
-      }
-    }
-    failure {
-      script {
-        if(env.BRANCH_NAME == 'latest') {
-          def messageParameters = [
-            buildStatus: 'Failed',
-            branchName: env.BRANCH_NAME,
-            colour: 'danger',
-            emoji: '😱',
-            slackChannel: slackChannel
-          ]
-          notifySlack(messageParameters)
-        }
-      }
-    }
-    unstable {
-      script {
-        if(env.BRANCH_NAME == 'latest') {
-          def messageParameters = [
-            buildStatus: 'Unstable',
-            branchName: env.BRANCH_NAME,
-            colour: 'danger',
-            emoji: '😱',
-            slackChannel: slackChannel
-          ]
-          notifySlack(messageParameters)
+
+      checkout scm
+
+      docker.image("${nodeImage}").inside {
+        try {
+          stage ('Install & Setup') {
+            sh 'make install'
+          }
+          stage ('Running E2Es across environments') {
+            parallel (
+              'Local Prod Tests': {
+                sh 'CYPRESS_SMOKE=false make productionTests'
+              },
+              'Test E2Es': {
+                sh 'make testE2Es'
+              },
+              'Live E2Es': {
+                sh 'make liveE2Es'
+              }, failFast: true
+            )
+          }
+        } catch (Throwable e) {
+          echo "The pipeline has failed with the error: ${e}"
+          throw e
+        } finally {
+          if (env.BRANCH_NAME == 'latest') {
+            switch (currentBuild.status) {
+              case 'SUCCESS':
+                def messageParameters = [
+                  buildStatus: 'Success',
+                  branchName: env.BRANCH_NAME,
+                  colour: 'good',
+                  emoji: '🤟',
+                  slackChannel: slackChannel
+                ]
+                notifySlack(messageParameters)
+                break
+              case 'FAILRE':
+                def messageParameters = [
+                  buildStatus: 'Failed',
+                  branchName: env.BRANCH_NAME,
+                  colour: 'danger',
+                  emoji: '😱',
+                  slackChannel: slackChannel
+                ]
+                notifySlack(messageParameters)
+                break
+              case 'UNSTABLE':
+                def messageParameters = [
+                  buildStatus: 'Unstable',
+                  branchName: env.BRANCH_NAME,
+                  colour: 'danger',
+                  emoji: '😱',
+                  slackChannel: slackChannel
+                ]
+                notifySlack(messageParameters)
+                break
+              case 'ABORTED':
+                def messageParameters = [
+                  buildStatus: 'Aborted',
+                  branchName: env.BRANCH_NAME,
+                  colour: 'warning',
+                  emoji: '🙀',
+                  slackChannel: slackChannel
+                ]
+                notifySlack(messageParameters)
+                break
+              default:
+                def messageParameters = [
+                  buildStatus: 'Unknown build state',
+                  branchName: env.BRANCH_NAME,
+                  colour: 'danger',
+                  emoji: '😱',
+                  slackChannel: slackChannel
+                ]
+                notifySlack(messageParameters)
+                break
+            }
+          }
         }
       }
     }
