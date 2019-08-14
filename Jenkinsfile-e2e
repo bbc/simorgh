@@ -71,14 +71,14 @@ pipeline {
         stage ('Live E2Es') {
           agent {
             docker {
-              // DELETE BELOW
-              sh 'exit 1'
-              // DELETE ABOVE
               image "${nodeImage}"
               args '-u root -v /etc/pki:/certs'
             }
           }
           steps {
+            // DELETE BELOW
+            sh 'exit 1'
+            // DELETE ABOVE
             sh 'make install'
             sh 'CYPRESS_SMOKE=false CYPRESS_APP_ENV=live npm run cypress'
           }
