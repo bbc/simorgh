@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "scripts": {
-    "amp:validate": "wait-on http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost.bbc.com:7080/igbo.amp",
+    "amphtml-validator:validate": "wait-on http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost.bbc.com:7080/igbo.amp",
     "bbcA11y": "wait-on -t 20000 http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po && bbc-a11y",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack && ./scripts/bundleSize.sh",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
@@ -22,7 +22,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook -h localhost.bbc.com",
     "test": "npm run test:lint && npm run test:dependencies && npm run test:unit && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:chromatic": "chromatic test run --build-script-name build:storybook || true",
-    "test:ci": "npm run start & npm install --no-save cypress@latest bbc-a11y@latest npm-run-all@latest puppeteer@latest && run-p cypress test:puppeteer && run-p bbcA11y lighthouse",
+    "test:ci": "npm run start & npm install --no-save cypress@latest bbc-a11y@latest npm-run-all@latest puppeteer@latest audit-ci@latest && run-p cypress test:puppeteer && run-p bbcA11y lighthouse && audit-ci --low",
     "test:dependencies": "npx dependency-check@3.4.1 ./package.json",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
