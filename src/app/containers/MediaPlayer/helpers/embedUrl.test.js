@@ -1,19 +1,68 @@
 import embedUrl from './embedUrl';
 
+const ASSET_ID = 'foo';
+const VPID = 'bar';
+
 describe('Media Player: Embed URL', () => {
-  process.env.SIMORGH_AV_EMBED_BASE_URL = 'https://foobar.com';
+  describe('Canonical', () => {
+    it('builds a URL for LIVE environment on .co.uk', () => {
+      const expectedUrl = `https://www.bbc.co.uk/ws/av-embeds/${ASSET_ID}/${VPID}`;
+      const result = embedUrl('https://www.bbc.co.uk', ASSET_ID, VPID);
 
-  it('builds default URL', () => {
-    const expectedUrl = 'https://foobar.com/baz/qux';
-    const result = embedUrl('baz', 'qux');
+      expect(result).toEqual(expectedUrl);
+    });
 
-    expect(result).toEqual(expectedUrl);
+    it('builds a URL for TEST environment on .com', () => {
+      const expectedUrl = `https://www.test.bbc.com/ws/av-embeds/${ASSET_ID}/${VPID}`;
+      const result = embedUrl('https://www.test.bbc.com', ASSET_ID, VPID);
+
+      expect(result).toEqual(expectedUrl);
+    });
+
+    it('builds a URL for LOCAL environment that has a base of test.bbc.co.uk', () => {
+      const expectedUrl = `https://www.test.bbc.co.uk/ws/av-embeds/${ASSET_ID}/${VPID}`;
+      const result = embedUrl(
+        'http://localhost.bbc.co.uk:7080',
+        ASSET_ID,
+        VPID,
+      );
+
+      expect(result).toEqual(expectedUrl);
+    });
+
+    it('builds a URL for LOCAL environment that has a base of test.bbc.com', () => {
+      const expectedUrl = `https://www.test.bbc.com/ws/av-embeds/${ASSET_ID}/${VPID}`;
+      const result = embedUrl('http://localhost.bbc.com:7080', ASSET_ID, VPID);
+
+      expect(result).toEqual(expectedUrl);
+    });
   });
 
-  it('builds URL with AMP set to true', () => {
-    const expectedUrl = 'https://foobar.com/baz/qux/amp';
-    const result = embedUrl('baz', 'qux', true);
+  describe('AMP', () => {
+    it('builds a URL for LIVE environment on .co.uk', () => {
+      const expectedUrl = `https://www.bbc.co.uk/ws/av-embeds/${ASSET_ID}/${VPID}/amp`;
+      const result = embedUrl('https://www.bbc.co.uk', ASSET_ID, VPID, true);
 
-    expect(result).toEqual(expectedUrl);
+      expect(result).toEqual(expectedUrl);
+    });
+
+    it('builds a URL for TEST environment on .com', () => {
+      const expectedUrl = `https://www.test.bbc.com/ws/av-embeds/${ASSET_ID}/${VPID}/amp`;
+      const result = embedUrl('https://www.test.bbc.com', ASSET_ID, VPID, true);
+
+      expect(result).toEqual(expectedUrl);
+    });
+
+    it('builds a URL for LOCAL environment that has a base of test.bbc.co.uk', () => {
+      const expectedUrl = `https://www.test.bbc.co.uk/ws/av-embeds/${ASSET_ID}/${VPID}/amp`;
+      const result = embedUrl(
+        'http://localhost.bbc.co.uk:7080',
+        ASSET_ID,
+        VPID,
+        true,
+      );
+
+      expect(result).toEqual(expectedUrl);
+    });
   });
 });
