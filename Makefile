@@ -9,7 +9,7 @@ install:
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
-	# npm run test:chromatic
+	npm run test:chromatic
 
 productionTests:
 	npm run build && xvfb-run npm run test:prod:ci;
