@@ -8,6 +8,7 @@ const FrontPageAtiEventTracker = (
   statsDestination,
   service,
   eventInfo = '',
+  componentInfo = '',
 ) => {
   const url = atiEventTrackParams({
     pageIdentifier: getPageIdentifier(data), // this will need to be updated for articles
@@ -15,6 +16,7 @@ const FrontPageAtiEventTracker = (
     platform,
     statsDestination,
     eventInfo,
+    componentInfo,
   });
 
   // 'type=AT' means it's an event apparently,

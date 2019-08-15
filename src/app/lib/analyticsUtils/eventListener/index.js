@@ -4,26 +4,37 @@ import FrontPageAtiEventTracker from '../../../containers/ATIAnalytics/event/fro
 const listener = (data, platform, statsDestination, service) => {
   if (onClient()) {
     const navItems = document.getElementsByClassName('track-nav');
+    const brandItems = document.getElementsByClassName('track-brand');
 
-    navItems.forEach(item => {
-      item.addEventListener('click', event => {
-        event.preventDefault();
+    const trackedItems = [navItems, brandItems];
+
+    trackedItems.forEach(component => {
+      component.forEach(item => {
+        item.addEventListener('click', event => {
+          event.preventDefault();
+
+          FrontPageAtiEventTracker(
+            data,
+            platform,
+            statsDestination,
+            service,
+            event,
+          );
+        });
+      });
+
+      // eslint-disable-next-line valid-typeof
+      if (typeof component !== undefined) {
         FrontPageAtiEventTracker(
           data,
           platform,
           statsDestination,
           service,
-          event,
+          '',
+          component,
         );
-      });
+      }
     });
-
-    const nav = document.getElementsByClassName('jvxHgK')[0];
-
-    // eslint-disable-next-line valid-typeof
-    if (typeof nav !== undefined) {
-      FrontPageAtiEventTracker(data, platform, statsDestination, service);
-    }
   }
 
   return null;

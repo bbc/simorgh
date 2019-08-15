@@ -166,16 +166,19 @@ export const getPublishingInfo = (
   statsDestination,
   service,
   eventInfo,
+  componentInfo,
 ) => {
   if (eventInfo !== '') {
-    const eventComponentInfo = eventInfo.path[0].dataset.info;
+    const eventComponentInfo = eventInfo.path[0].dataset.info || 'brand-top';
     const cleanCompInfo = eventComponentInfo.split('/').join('-');
     const componentName = 'navigation';
     const format = `PAR=container-${componentName}::name-CHD=${cleanCompInfo.toLowerCase()}`;
-    const url = eventInfo.srcElement.href;
+    const url = eventInfo.srcElement.href || '/';
 
     return `PUB-[${service}-${componentName}]-[${eventInfo.type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
   }
 
-  return `PUB-[${service}-navigation]`;
+  const componentName = componentInfo[0].dataset.info || 'navigation'; // because I still need to make changes to the nav comp
+
+  return `PUB-[${service}-${componentName}]`;
 };

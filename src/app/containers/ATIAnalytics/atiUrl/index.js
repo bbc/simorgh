@@ -153,6 +153,7 @@ export const atiEventTrackParams = ({
   statsDestination,
   service,
   eventInfo = '',
+  componentInfo = '',
 }) => {
   const eventTrackingBeaconValues = [
     {
@@ -206,6 +207,7 @@ export const atiEventTrackParams = ({
         statsDestination,
         service,
         eventInfo,
+        componentInfo,
       ),
     },
   ];
