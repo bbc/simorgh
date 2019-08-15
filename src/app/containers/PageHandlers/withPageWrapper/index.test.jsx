@@ -1,5 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../../../testHelpers';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import WithPageWrapper from '.';
 
 const dataProps = {
@@ -13,6 +14,8 @@ describe('with pageWrapper', () => {
   const PageWrapperHOC = WithPageWrapper(PageWrapperContainer);
   shouldMatchSnapshot(
     `should render correctly`,
-    <PageWrapperHOC {...dataProps} />,
+    <ServiceContextProvider service="news">
+      <PageWrapperHOC {...dataProps} />,
+    </ServiceContextProvider>,
   );
 });
