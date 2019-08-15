@@ -9,6 +9,8 @@ install:
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
+
+testChromatic:
 	npm run test:chromatic
 
 productionTests:

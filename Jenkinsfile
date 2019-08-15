@@ -108,9 +108,12 @@ pipeline {
             }
           }
           steps {
-            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-              runDevelopmentTests()
-            }
+            runDevelopmentTests()
+          }
+        }
+        stage ('Test Chromatic') {
+          withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+            sh 'make testChromatic'
           }
         }
         stage ('Test Production') {
