@@ -60,7 +60,12 @@ export const resetWindowValue = (key, value) => {
 };
 
 export const suppressPropWarnings = warnings => {
-  setWindowValue('expectedWarnings', warnings);
+  const { expectedWarnings } = window;
+  if (expectedWarnings && Array.isArray(expectedWarnings)) {
+    window.expectedWarnings = [...expectedWarnings, warnings];
+  } else {
+    window.expectedWarnings = [warnings];
+  }
 };
 
 const mocks = {

@@ -18,16 +18,15 @@ const reactErrorsLimitPerTestSuite = 6; // The goal is to have zero React errors
 // eslint-disable-next-line no-console
 console.error = (message, ...rest) => {
   const { expectedWarnings } = window;
-  if (expectedWarnings && typeof expectedWarnings === 'object') {
-    const warningsRegex = new RegExp(
-      [REACT_FAILED_PROP_TYPE, ...Object.values(expectedWarnings)].join('.*'),
-    );
-    if (warningsRegex.test(message)) {
-      Object.defineProperty(window, 'expectedWarnings', {
-        value: undefined,
-        writable: true,
-      });
-      return;
+  if (expectedWarnings && Array.isArray(expectedWarnings)) {
+    for (let i = 0; i < expectedWarnings.length; i += 1) {
+      const warningsRegex = new RegExp(
+        [REACT_FAILED_PROP_TYPE, ...expectedWarnings[i]].join('.*'),
+      );
+      if (warningsRegex.test(message)) {
+        window.expectedWarnings.splice(i, 1);
+        return;
+      }
     }
   }
 
