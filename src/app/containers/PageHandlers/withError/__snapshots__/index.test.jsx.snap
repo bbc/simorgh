@@ -6,4 +6,8 @@ exports[`withError HOC with error should return the errorMain component 1`] = `
 />
 `;
 
-exports[`withError HOC with no error should return the passed in component 1`] = `<Component />`;
+exports[`withError HOC with no error should return the passed in component 1`] = `
+<ErrorMain
+  status={500}
+/>
+`;
