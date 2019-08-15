@@ -167,11 +167,15 @@ export const getPublishingInfo = (
   service,
   eventInfo,
 ) => {
-  const eventComponentInfo = eventInfo.path[0].dataset.info;
-  const cleanCompInfo = eventComponentInfo.split('/').join('-');
-  const componentName = 'navigation';
-  const format = `PAR=container-${componentName}::name-CHD=${cleanCompInfo.toLowerCase()}`;
-  const url = eventInfo.srcElement.href;
+  if (eventInfo !== '') {
+    const eventComponentInfo = eventInfo.path[0].dataset.info;
+    const cleanCompInfo = eventComponentInfo.split('/').join('-');
+    const componentName = 'navigation';
+    const format = `PAR=container-${componentName}::name-CHD=${cleanCompInfo.toLowerCase()}`;
+    const url = eventInfo.srcElement.href;
 
-  return `PUB-[${service}-${componentName}]-[${eventInfo.type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
+    return `PUB-[${service}-${componentName}]-[${eventInfo.type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
+  }
+
+  return `PUB-[${service}-navigation]`;
 };

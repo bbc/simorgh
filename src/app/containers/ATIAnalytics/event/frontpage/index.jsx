@@ -7,7 +7,7 @@ const FrontPageAtiEventTracker = (
   platform,
   statsDestination,
   service,
-  eventInfo,
+  eventInfo = '',
 ) => {
   const url = atiEventTrackParams({
     pageIdentifier: getPageIdentifier(data), // this will need to be updated for articles

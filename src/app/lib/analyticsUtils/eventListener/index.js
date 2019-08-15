@@ -17,6 +17,13 @@ const listener = (data, platform, statsDestination, service) => {
         );
       });
     });
+
+    const nav = document.getElementsByClassName('jvxHgK')[0];
+
+    // eslint-disable-next-line valid-typeof
+    if (typeof nav !== undefined) {
+      FrontPageAtiEventTracker(data, platform, statsDestination, service);
+    }
   }
 
   return null;
