@@ -190,19 +190,19 @@ describe('StoryPromo Container', () => {
     let cpsContainer;
     let assetTypeCodeContainer;
 
-    afterEach(() => cleanup);
-
     beforeEach(() => {
       cpsItem = deepClone(completeItem);
-      assetTypeCodeItem = deepClone(standardLinkItem);
       cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+
+      assetTypeCodeItem = deepClone(standardLinkItem);
       assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container
+
+      
     });
 
-    it('should render h3, a, p, time', () => {
-      const cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-      const assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container;
+    afterEach(cleanup);
 
+    it('should render h3, a, p, time', () => {
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         cpsItem.headlines.headline,
       );
@@ -297,6 +297,9 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include a headline element', () => {
+        const cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        const assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container;
+
         expect(cpsContainer.getElementsByTagName('h3').length).toEqual(0);
         expect(assetTypeCodeContainer.getElementsByTagName('h3').length).toEqual(0);
       });
@@ -310,7 +313,10 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include any paragraph element', () => {
-       expect(cpsContainer.getElementsByTagName('p').length).toEqual(0);
+        const cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        const assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container;
+
+        expect(cpsContainer.getElementsByTagName('p').length).toEqual(0);
         expect(assetTypeCodeContainer.getElementsByTagName('p').length).toEqual(0);
       });
     });
@@ -322,6 +328,9 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include a time element', () => {
+        const cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        const assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container;
+
         expect(cpsContainer.getElementsByTagName('time').length).toEqual(0);
         expect(assetTypeCodeContainer.getElementsByTagName('time').length).toEqual(0);
       });
