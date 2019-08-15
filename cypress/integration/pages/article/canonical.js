@@ -1,3 +1,4 @@
+import moment from 'moment/min/moment-with-locales';
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
@@ -337,6 +338,19 @@ Object.keys(config)
           cy.window().then(win => {
             if (win.SIMORGH_DATA.pageData.metadata.language === 'en-gb') {
               cy.get('main a');
+            }
+          });
+        });
+
+        it('should have a timestamp translated with the correct locale', () => {
+          cy.window().then(win => {
+            const { datetimeLocale } = config[service];
+            if (datetimeLocale) {
+              const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
+              moment.locale(datetimeLocale);
+              const timestamp = moment(lastPublished).format('D MMMM YYYY');
+              cy.log(timestamp);
+              cy.get('time').should('contain', timestamp);
             }
           });
         });

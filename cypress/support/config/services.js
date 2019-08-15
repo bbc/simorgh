@@ -1,5 +1,6 @@
 export default {
   afaanoromoo: {
+    datetimeLocale: 'om-et',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -24,6 +25,7 @@ export default {
     },
   },
   afrique: {
+    datetimeLocale: 'fr',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -48,6 +50,7 @@ export default {
     },
   },
   amharic: {
+    datetimeLocale: 'am-et',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -72,6 +75,7 @@ export default {
     },
   },
   arabic: {
+    datetimeLocale: 'ar',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -96,6 +100,7 @@ export default {
     },
   },
   azeri: {
+    datetimeLocale: 'az-az',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -120,6 +125,7 @@ export default {
     },
   },
   bengali: {
+    datetimeLocale: 'bn-bd',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -144,6 +150,7 @@ export default {
     },
   },
   burmese: {
+    datetimeLocale: 'my-mm',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -168,6 +175,7 @@ export default {
     },
   },
   cymrufyw: {
+    datetimeLocale: 'cy',
     font: undefined,
     isWorldService: false,
     pageTypes: {
@@ -195,6 +203,7 @@ export default {
     },
   },
   gahuza: {
+    datetimeLocale: 'rw-rw',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -219,6 +228,7 @@ export default {
     },
   },
   gujarati: {
+    datetimeLocale: 'gu-in',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -243,6 +253,7 @@ export default {
     },
   },
   hausa: {
+    datetimeLocale: 'ha-gh',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -267,6 +278,7 @@ export default {
     },
   },
   hindi: {
+    datetimeLocale: 'hi-in',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -312,6 +324,7 @@ export default {
     },
   },
   indonesia: {
+    datetimeLocale: 'id-id',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -336,6 +349,7 @@ export default {
     },
   },
   japanese: {
+    datetimeLocale: 'ja-jp',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -360,6 +374,7 @@ export default {
     },
   },
   korean: {
+    datetimeLocale: 'ko-ko',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -384,6 +399,7 @@ export default {
     },
   },
   kyrgyz: {
+    datetimeLocale: 'ky-kg',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -408,6 +424,7 @@ export default {
     },
   },
   marathi: {
+    datetimeLocale: 'mr-in',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -432,6 +449,7 @@ export default {
     },
   },
   mundo: {
+    datetimeLocale: 'es-005',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -456,6 +474,7 @@ export default {
     },
   },
   naidheachdan: {
+    datetimeLocale: 'gd',
     font: undefined,
     isWorldService: false,
     pageTypes: {
@@ -483,6 +502,7 @@ export default {
     },
   },
   nepali: {
+    datetimeLocale: 'ne-np',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -507,6 +527,7 @@ export default {
     },
   },
   news: {
+    datetimeLocale: 'en-gb',
     font: 'Reith',
     isWorldService: false,
     pageTypes: {
@@ -552,6 +573,7 @@ export default {
     },
   },
   persian: {
+    datetimeLocale: 'fa',
     font: 'Nassim',
     isWorldService: true,
     pageTypes: {
@@ -597,6 +619,7 @@ export default {
     },
   },
   portuguese: {
+    datetimeLocale: 'pt-br',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -615,6 +638,7 @@ export default {
     },
   },
   punjabi: {
+    datetimeLocale: 'pa-in',
     font: undefined,
     pageTypes: {
       articles: {
@@ -638,6 +662,7 @@ export default {
     },
   },
   russian: {
+    datetimeLocale: 'ru-ru',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -662,6 +687,7 @@ export default {
     },
   },
   serbian: {
+    datetimeLocale: 'sr-Latn',
     font: undefined,
     pageTypes: {
       articles: { path: undefined, smoke: false },
@@ -670,6 +696,7 @@ export default {
     },
   },
   sinhala: {
+    datetimeLocale: 'si-lk',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -694,6 +721,7 @@ export default {
     },
   },
   somali: {
+    datetimeLocale: 'so-so',
     font: undefined,
     pageTypes: {
       articles: {
@@ -725,6 +753,7 @@ export default {
     },
   },
   swahili: {
+    datetimeLocale: 'sw-ke',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -749,6 +778,7 @@ export default {
     },
   },
   tamil: {
+    datetimeLocale: 'ta-in',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -773,6 +803,7 @@ export default {
     },
   },
   telugu: {
+    datetimeLocale: 'te-in',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -797,6 +828,7 @@ export default {
     },
   },
   thai: {
+    datetimeLocale: 'th-th',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -821,6 +853,7 @@ export default {
     },
   },
   tigrinya: {
+    datetimeLocale: 'ti-et',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -845,6 +878,7 @@ export default {
     },
   },
   turkce: {
+    datetimeLocale: 'tr-tr',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -869,6 +903,7 @@ export default {
     },
   },
   ukchina: {
+    datetimeLocale: 'zh-cn',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -878,6 +913,7 @@ export default {
     },
   },
   ukrainian: {
+    datetimeLocale: 'uk-ua',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -902,6 +938,7 @@ export default {
     },
   },
   urdu: {
+    datetimeLocale: 'ur',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -926,6 +963,7 @@ export default {
     },
   },
   uzbek: {
+    datetimeLocale: 'uz-uz',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -950,6 +988,7 @@ export default {
     },
   },
   vietnamese: {
+    datetimeLocale: 'vi-vn',
     font: undefined,
     isWorldService: true,
     pageTypes: {
@@ -995,6 +1034,7 @@ export default {
     },
   },
   zhongwen: {
+    datetimeLocale: 'zh-cn',
     font: undefined,
     isWorldService: true,
     pageTypes: {
