@@ -1,26 +1,31 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:indonesia/bbc_indonesian_radio/liveradio",
-    "tags": {}
-  },
-  "content": {
-    "title": "BBC Indonesia Radio",
-    "subtitle": "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
-    "blocks": [
-      {
-        "id": "liveradio",
-        "type": "media",
-        "format": "audio",
-        "title": "TODO",
-        "caption": "TODO",
-        "versions": [
-          {
-            "versionId": "liveradio"
-          }
+    "metadata": {
+        "id": "urn:bbc:ares::asset:indonesia/bbc_indonesian_radio/liveradio",
+        "tags": {},
+        "language": "id-ID",
+        "analyticsLabels": {
+            "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page",
+            "pageTitle": "BBC Indonesia Radio - BBC News Indonesia"
+        }
+    },
+    "content": {
+        "title": "BBC Indonesia Radio",
+        "subtitle": "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+        "blocks": [
+            {
+                "id": "liveradio",
+                "type": "media",
+                "format": "audio",
+                "title": "TODO",
+                "caption": "TODO",
+                "versions": [
+                    {
+                        "versionId": "liveradio"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  },
+      },
   "promo": {
     "subType": "IDX",
     "name": "TODO: Indonesia Live Radio",
