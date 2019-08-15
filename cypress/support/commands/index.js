@@ -1,4 +1,3 @@
-import './pageTestFragment/articleBody';
 import './pageTestFragment/metaData';
 import './pageTestFragment/analytics';
 import './pageTestFragment/scripts';
