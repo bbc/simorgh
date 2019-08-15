@@ -68,7 +68,7 @@ Cypress.Commands.add('hasHtmlLangDirAttributes', ({ lang, dir }) => {
 Cypress.Commands.add('getAndAssertLinks', () => {
   cy.get(' header a').each(element => {
     const href = element.attr('href');
-    cy.request(href).should(resp => {
+    cy.request(href).then(resp => {
       expect(resp.status).to.not.equal(404);
     });
   });
