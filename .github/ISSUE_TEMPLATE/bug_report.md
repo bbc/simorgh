@@ -36,7 +36,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Testing notes**
 
-- [ ] This is bug fix expected to need manual testing
+- [ ] This bug fix is expected to need manual testing.
 
 **Additional context**
 Add any other context about the problem here.
