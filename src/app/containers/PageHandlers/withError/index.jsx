@@ -13,7 +13,7 @@ const WithError = Component => {
   };
 
   ErrorContainer.defaultProps = {
-    error: true,
+    error: null,
   };
 
   return ErrorContainer;
