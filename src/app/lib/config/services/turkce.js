@@ -116,6 +116,9 @@ const service = {
       photogallery: 'Fotoğraf',
       video: 'İzleyin',
     },
+    durations: {
+      s: 'saniye',
+    },
   },
   brandSVG,
   footer: {

@@ -123,6 +123,9 @@ const igbo = {
         subtitle: 'Placeholder subtitle',
       },
     },
+    durations: {
+      s: 'nke abụọ',
+    },
   },
   navigation: [
     {

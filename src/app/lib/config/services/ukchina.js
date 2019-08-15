@@ -115,6 +115,9 @@ const service = {
       photogallery: '图辑',
       video: '视频',
     },
+    durations: {
+      s: '秒',
+    },
   },
   brandSVG,
   footer: {

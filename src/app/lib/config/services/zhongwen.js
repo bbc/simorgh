@@ -120,6 +120,9 @@ const service = {
           'BBC中文部提供的国际新闻、分析和资讯、时事和专题内容。可收听或浏览香港电台FM电台广播及网站',
       },
     },
+    durations: {
+      s: '秒',
+    },
   },
   brandSVG,
   footer: {

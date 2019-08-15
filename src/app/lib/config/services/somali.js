@@ -126,6 +126,9 @@ const service = {
           'Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka',
       },
     },
+    durations: {
+      s: 'sekan',
+    },
   },
   brandSVG,
   footer: {

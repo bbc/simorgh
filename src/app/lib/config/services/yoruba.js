@@ -123,6 +123,9 @@ const yoruba = {
         subtitle: 'Placeholder subtitle',
       },
     },
+    durations: {
+      s: 'keji',
+    },
   },
   navigation: [
     {

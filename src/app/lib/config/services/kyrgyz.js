@@ -125,6 +125,9 @@ const service = {
         subtitle: 'Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.',
       },
     },
+    durations: {
+      s: 'секунд',
+    },
   },
   brandSVG,
   footer: {

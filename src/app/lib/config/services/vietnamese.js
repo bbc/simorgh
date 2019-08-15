@@ -116,6 +116,9 @@ const service = {
       photogallery: 'Ảnh',
       video: 'Video',
     },
+    durations: {
+      s: 'giây',
+    },
   },
   brandSVG,
   footer: {

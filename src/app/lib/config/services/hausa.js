@@ -126,6 +126,9 @@ const service = {
           "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
       },
     },
+    durations: {
+      s: 'biyu',
+    },
   },
   brandSVG,
   footer: {

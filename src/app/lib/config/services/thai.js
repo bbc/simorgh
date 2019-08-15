@@ -118,6 +118,9 @@ const service = {
       photogallery: 'แกลเลอรีภาพ',
       video: 'วิดีโอ',
     },
+    durations: {
+      s: 'วินาที',
+    },
   },
   brandSVG,
   navigation: [

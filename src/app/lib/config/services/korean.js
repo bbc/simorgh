@@ -116,6 +116,9 @@ const service = {
       photogallery: '이미지 갤러리',
       video: '비디오',
     },
+    durations: {
+      s: '초',
+    },
   },
   brandSVG,
   footer: {

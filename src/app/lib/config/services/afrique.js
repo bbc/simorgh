@@ -125,6 +125,9 @@ const service = {
           'Cash éco vous propose chaque jour un résumé de l’actualité économique et financière.',
       },
     },
+    durations: {
+      s: 'seconde',
+    },
   },
   brandSVG,
   footer: {

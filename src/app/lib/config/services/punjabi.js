@@ -120,6 +120,9 @@ const service = {
       photogallery: 'ਚਿੱਤਰ ਗੈਲਰੀ',
       video: 'ਵੀਡੀਓ',
     },
+    durations: {
+      s: 'ਸਕਿੰਟ',
+    },
   },
   brandSVG,
   navigation: [

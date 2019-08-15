@@ -116,6 +116,9 @@ const service = {
       photogallery: 'Galerija slika',
       video: 'Video',
     },
+    durations: {
+      s: 'секунда',
+    },
   },
   brandSVG,
   footer: {

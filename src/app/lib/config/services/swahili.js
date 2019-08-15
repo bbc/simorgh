@@ -126,6 +126,9 @@ const service = {
           'Mitikasi Leo ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku.',
       },
     },
+    durations: {
+      s: 'sekunde',
+    },
   },
   brandSVG,
   footer: {

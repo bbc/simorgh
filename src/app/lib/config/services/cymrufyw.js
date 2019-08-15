@@ -117,6 +117,9 @@ const service = {
       photogallery: 'Oriel luniau',
       video: 'Fideo',
     },
+    durations: {
+      s: 'eiliad',
+    },
   },
   brandSVG,
   footer: {

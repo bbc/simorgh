@@ -117,6 +117,9 @@ const service = {
       photogallery: 'Gailearaidh dhealbhan',
       video: 'Bhidio',
     },
+    durations: {
+      s: 'diog',
+    },
   },
   brandSVG,
   footer: {

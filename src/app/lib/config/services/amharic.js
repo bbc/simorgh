@@ -116,6 +116,9 @@ const service = {
       photogallery: 'የምስል ቋት',
       video: 'ተንቀሳቃሽ ምስል',
     },
+    durations: {
+      s: 'ሰከንድ',
+    },
   },
   brandSVG,
   footer: {
