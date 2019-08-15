@@ -23,6 +23,7 @@ describe('MediaAtiParams', () => {
   };
   const serviceContextStub = {
     atiAnalyticsAppName: 'news-SERVICE',
+    atiAnalyticsProducerId: 0,
     service: 'SERVICE',
   };
 
@@ -46,6 +47,7 @@ describe('MediaAtiParams', () => {
         language: 'id-ID',
         pageIdentifier: 'indonesia.bbc_indonesian_radio.liveradio.page',
         pageTitle: 'BBC Indonesia Radio - BBC News Indonesia',
+        producerId: 0,
         platform: 'canonical',
         service: 'SERVICE',
         statsDestination: 'WS_NEWS_LANGUAGES_TEST',
