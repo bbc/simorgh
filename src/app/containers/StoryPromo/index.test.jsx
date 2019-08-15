@@ -186,18 +186,17 @@ describe('StoryPromo Container', () => {
 
   describe('assertion tests', () => {
     let cpsItem;
-    let assetTypeCodeItem;
+    let assetTypeItem;
     let cpsContainer;
-    let assetTypeCodeContainer;
+    let assetTypeContainer;
 
     beforeEach(() => {
       cpsItem = deepClone(completeItem);
       cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
 
-      assetTypeCodeItem = deepClone(standardLinkItem);
-      assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container
-
-      
+      assetTypeItem = deepClone(standardLinkItem);
+      assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
+        .container;
     });
 
     afterEach(cleanup);
@@ -213,15 +212,15 @@ describe('StoryPromo Container', () => {
         '2 Mee 2019',
       );
 
-      expect(assetTypeCodeContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        assetTypeCodeItem.name,
+      expect(assetTypeContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
+        assetTypeItem.name,
       );
-      expect(assetTypeCodeContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
-        assetTypeCodeItem.summary,
+      expect(assetTypeContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
+        assetTypeItem.summary,
       );
-      expect(assetTypeCodeContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        '7 Ọgọọst 2019',
-      );
+      expect(
+        assetTypeContainer.getElementsByTagName('time')[0].innerHTML,
+      ).toEqual('7 Ọgọọst 2019');
 
       const newsContainer = render(
         <WrappedStoryPromo service="news" item={cpsItem} />,
@@ -293,15 +292,16 @@ describe('StoryPromo Container', () => {
     describe('With no headline provided', () => {
       beforeEach(() => {
         delete cpsItem.headlines;
-        delete assetTypeCodeItem.name;
+        delete assetTypeItem.name;
       });
 
       it('should not include a headline element', () => {
-        const cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        const assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container;
+        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
+          .container;
 
         expect(cpsContainer.getElementsByTagName('h3').length).toEqual(0);
-        expect(assetTypeCodeContainer.getElementsByTagName('h3').length).toEqual(0);
+        expect(assetTypeContainer.getElementsByTagName('h3').length).toEqual(0);
       });
     });
 
@@ -309,42 +309,48 @@ describe('StoryPromo Container', () => {
       beforeEach(() => {
         delete cpsItem.summary;
         delete cpsItem.indexImage.copyrightHolder;
-        delete assetTypeCodeItem.summary;
+        delete assetTypeItem.summary;
       });
 
       it('should not include any paragraph element', () => {
-        const cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        const assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container;
+        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
+          .container;
 
         expect(cpsContainer.getElementsByTagName('p').length).toEqual(0);
-        expect(assetTypeCodeContainer.getElementsByTagName('p').length).toEqual(0);
+        expect(assetTypeContainer.getElementsByTagName('p').length).toEqual(0);
       });
     });
 
     describe('With no timestamp provided', () => {
       beforeEach(() => {
         delete cpsItem.timestamp;
-        delete assetTypeCodeItem.timestamp;
+        delete assetTypeItem.timestamp;
       });
 
       it('should not include a time element', () => {
-        const cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        const assetTypeCodeContainer = render(<WrappedStoryPromo item={assetTypeCodeItem} />).container;
+        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
+          .container;
 
         expect(cpsContainer.getElementsByTagName('time').length).toEqual(0);
-        expect(assetTypeCodeContainer.getElementsByTagName('time').length).toEqual(0);
+        expect(assetTypeContainer.getElementsByTagName('time').length).toEqual(
+          0,
+        );
       });
     });
 
     describe('With no indexImage provided', () => {
       beforeEach(() => {
         delete cpsItem.indexImage;
-        delete assetTypeCodeItem.indexImage;
+        delete assetTypeItem.indexImage;
       });
 
       it('should not include an img element', () => {
         expect(cpsContainer.getElementsByTagName('img').length).toEqual(0);
-        expect(assetTypeCodeContainer.getElementsByTagName('img').length).toEqual(0);
+        expect(assetTypeContainer.getElementsByTagName('img').length).toEqual(
+          0,
+        );
       });
     });
 
