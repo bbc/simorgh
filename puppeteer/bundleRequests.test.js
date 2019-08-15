@@ -18,6 +18,8 @@ describe('Js bundle requests', () => {
     });
     page = await browser.newPage();
 
+    jest.setTimeout(10000); // overriding the default jest timeout
+
     page.on('request', request => {
       requests.push(request.url());
     });
