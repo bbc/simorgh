@@ -8,18 +8,18 @@ const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 
 const serviceHasArticlePageType = service =>
-  config[service].pageTypes.articles !== undefined;
+  config[service].pageTypes.articles.path !== undefined;
 
 Object.keys(config)
   .filter(serviceHasArticlePageType)
   .forEach(service => {
     describe(`Article - Amp - ${service}`, () => {
       before(() => {
-        cy.visit(`${config[service].pageTypes.articles}.amp`);
+        cy.visit(`${config[service].pageTypes.articles.path}.amp`);
       });
 
       it('Metadata', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             cy.get('meta[name="description"]').should(
               'have.attr',
@@ -86,7 +86,7 @@ Object.keys(config)
       });
 
       it('should have lang and dir attributes', () => {
-        cy.request(`${config[service].pageTypes.articles}.json`).then(
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             cy.hasHtmlLangDirAttributes({
               lang: body.metadata.passport.language,
@@ -161,7 +161,7 @@ Object.keys(config)
 
       it('should include the canonical URL', () => {
         cy.checkCanonicalURL(
-          `https://www.bbc.com${config[service].pageTypes.articles}`,
+          `https://www.bbc.com${config[service].pageTypes.articles.path}`,
         );
       });
     });
