@@ -10,6 +10,10 @@ const liveRadioScaffoldProps = {
       id: 'bbc_amharic_radio',
       tags: {},
     },
+    content: {
+      title: 'ያድምጡ',
+      subtitle: 'ዝግጅቶቻችንን',
+    },
     promo: {
       subType: 'IDX',
       name: 'BBC Amharic Radio',

@@ -11,14 +11,14 @@ const serviceHasCaption = service => ['news', 'persian'].includes(service);
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const serviceHasArticlePageType = service =>
-  config[service].pageTypes.articles !== undefined;
+  config[service].pageTypes.articles.path !== undefined;
 
 Object.keys(config)
   .filter(serviceHasArticlePageType)
   .forEach(service => {
     describe(`Article - Canonical - ${service}`, () => {
       before(() => {
-        cy.visit(config[service].pageTypes.articles);
+        cy.visit(config[service].pageTypes.articles.path);
       });
 
       describe(`Meta Tests`, () => {
@@ -72,7 +72,7 @@ Object.keys(config)
             `${appConfig[service].defaultImageAltText}`,
             "Meghan's bouquet laid on tomb of unknown warrior",
             'article',
-            `https://www.bbc.com${config[service].pageTypes.articles}`,
+            `https://www.bbc.com${config[service].pageTypes.articles.path}`,
           );
         });
 
@@ -133,10 +133,10 @@ Object.keys(config)
 
         it('should include the canonical URL & ampHTML', () => {
           cy.checkCanonicalURL(
-            `https://www.bbc.com${config[service].pageTypes.articles}`,
+            `https://www.bbc.com${config[service].pageTypes.articles.path}`,
           );
           cy.checkAmpHTML(
-            `${window.location.origin}${config[service].pageTypes.articles}.amp`,
+            `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
           );
         });
 

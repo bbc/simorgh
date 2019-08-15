@@ -6,14 +6,14 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const BannerText = ({ uk, international }) => {
   const { isUK } = useContext(RequestContext);
-  const { script } = useContext(ServiceContext);
+  const { dir, script } = useContext(ServiceContext);
 
   const { first, linkText, linkUrl, last } = isUK ? uk : international;
 
   const Link = linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
 
   return (
-    <ConsentBannerText script={script}>
+    <ConsentBannerText dir={dir} script={script}>
       {first}
       {Link}
       {last}

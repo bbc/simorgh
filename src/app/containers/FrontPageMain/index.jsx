@@ -3,7 +3,10 @@ import React, { Fragment, useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
-import { Grid, GridItemConstrainedLarge } from '../../lib/styledGrid';
+import {
+  Grid,
+  GridItemConstrainedLargeWithTopMargin,
+} from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
@@ -36,7 +39,7 @@ const FrontPageMain = ({ frontPageData }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <Grid>
-          <GridItemConstrainedLarge>
+          <GridItemConstrainedLargeWithTopMargin>
             {groups.map((group, index) => (
               <FrontPageSection
                 key={group.title}
@@ -44,7 +47,7 @@ const FrontPageMain = ({ frontPageData }) => {
                 sectionNumber={index}
               />
             ))}
-          </GridItemConstrainedLarge>
+          </GridItemConstrainedLargeWithTopMargin>
         </Grid>
       </main>
     </Fragment>

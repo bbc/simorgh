@@ -1,29 +1,31 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:korean/bbc_korean_radio/liveradio",
-        "tags": {}
-    },
-    "content": {
-        "blocks": [
-            {
-                "id": "liveradio",
-                "type": "media",
-                "format": "audio",
-                "title": "TODO",
-                "caption": "TODO",
-                "versions": [
-                    {
-                        "versionId": "liveradio"
-                    }
-                ]
-            }
+  "metadata": {
+    "id": "urn:bbc:ares::asset:korean/bbc_korean_radio/liveradio",
+    "tags": {}
+  },
+  "content": {
+    "title": "BBC 코리아 라디오",
+    "subtitle": "세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다",
+    "blocks": [
+      {
+        "id": "liveradio",
+        "type": "media",
+        "format": "audio",
+        "title": "TODO",
+        "caption": "TODO",
+        "versions": [
+          {
+            "versionId": "liveradio"
+          }
         ]
-    },
-    "promo": {
-        "subType": "IDX",
-        "name": "TODO: Korean Live Radio",
-        "uri": "/korean/bbc_korean_radio/liveradio",
-        "id": "TODO",
-        "type": "simple"
-    }
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "TODO: Korean Live Radio",
+    "uri": "/korean/bbc_korean_radio/liveradio",
+    "id": "TODO",
+    "type": "simple"
+  }
 }

@@ -1,13 +1,14 @@
-import { string, arrayOf, oneOf, shape } from 'prop-types';
+import { string } from 'prop-types';
+import { blockOfTypesAndModel, blocksWithTypes } from '../general';
 import fragmentBlockPropTypes from '../fragment';
 
-const inlineBlockPropTypes = shape({
-  type: 'inline',
-  model: shape({
-    text: string.isRequired,
-    blocks: arrayOf(oneOf([fragmentBlockPropTypes])),
-    language: string.isRequired,
-  }),
-});
+export const inlineModelPropTypes = {
+  language: string.isRequired,
+  text: string.isRequired,
+  ...blocksWithTypes([fragmentBlockPropTypes]),
+};
 
-export default inlineBlockPropTypes;
+export const inlineBlockPropTypes = blockOfTypesAndModel(
+  ['inline'],
+  inlineModelPropTypes,
+);
