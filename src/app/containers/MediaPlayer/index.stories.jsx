@@ -27,7 +27,7 @@ storiesOf('Containers|Media Player/Canonical', module)
         platform="canonical"
         id="c3wmq4d1y3wo"
         pageType="article"
-        bbcOrigin="test.foo"
+        bbcOrigin="https://www.test.bbc.com"
       >
         <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
           <MediaPlayerContainer blocks={validVideoFixture} />
@@ -48,7 +48,7 @@ storiesOf('Containers|Media Player/AMP', module)
         platform="amp"
         id="c3wmq4d1y3wo"
         pageType="article"
-        bbcOrigin="test.foo"
+        bbcOrigin="https://www.test.bbc.com"
       >
         <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
           <MediaPlayerContainer blocks={validVideoFixture} />
