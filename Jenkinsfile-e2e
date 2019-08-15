@@ -1,16 +1,15 @@
 #!/usr/bin/env groovy
 
 def nodeImage = "329802642264.dkr.ecr.eu-west-1.amazonaws.com/bbc-news/node-10-lts:10.16.0-1"
-def slackChannel = '#si_repo-simorgh'
 
 // Run latest every 4 hours
 def cron_string = env.BRANCH_NAME == "latest" ? "H 0 */4 * * *" : ""
 
 def notifySlack(messageParameters) {
-  def message = "${messageParameters.emoji} Simorgh E2Es ${messageParameters.buildStatus} on \"${messageParameters.branchName}\" [build #${env.BUILD_NUMBER}] ${env.BUILD_URL}"
+  def message = "${messageParameters.emoji} Simorgh E2Es \n*Status:* ${messageParameters.buildStatus} \n*Env:* ${messageParameters.env} \n*Branch:* ${messageParameters.branch} \n*Pipeline:* ${env.BUILD_URL}"
 
   slackSend(
-    channel: messageParameters.slackChannel,
+    channel: '#si_repo-simorgh',
     color: messageParameters.colour,
     message: message
   )
@@ -38,11 +37,11 @@ node {
                   sh 'CYPRESS_SMOKE=false npm run build && xvfb-run -a npm run test:prod:ci;'
                 } catch (Throwable e) {
                   def messageParameters = [
-                    buildStatus: 'Failed on LOCAL',
-                    branchName: env.BRANCH_NAME,
+                    buildStatus: 'Failed',
+                    env: 'LOCAL',
+                    branch: env.BRANCH_NAME,
                     colour: 'danger',
                     emoji: '😱',
-                    slackChannel: slackChannel
                   ]
 
                   if (env.BRANCH_NAME == 'latest') {
@@ -58,11 +57,11 @@ node {
                   sh 'make testE2Es'
                 } catch (Throwable e) {
                   def messageParameters = [
-                    buildStatus: 'Failed on TEST',
-                    branchName: env.BRANCH_NAME,
+                    buildStatus: 'Failed',
+                    env: 'TEST',
+                    branch: env.BRANCH_NAME,
                     colour: 'danger',
                     emoji: '😱',
-                    slackChannel: slackChannel
                   ]
                   
                   if (env.BRANCH_NAME == 'latest') {
@@ -78,11 +77,11 @@ node {
                   sh 'make liveE2Es'
                 } catch (Throwable e) {
                   def messageParameters = [
-                    buildStatus: 'Failed on LIVE',
-                    branchName: env.BRANCH_NAME,
+                    buildStatus: 'Failed',
+                    env: 'LIVE',
+                    branch: env.BRANCH_NAME,
                     colour: 'danger',
                     emoji: '😱',
-                    slackChannel: slackChannel
                   ]
                   
                   if (env.BRANCH_NAME == 'latest') {
@@ -103,31 +102,31 @@ node {
             switch (currentBuild.result) {
               case 'SUCCESS':
                 def messageParameters = [
-                  buildStatus: 'Success',
-                  branchName: env.BRANCH_NAME,
+                  buildStatus: 'SUCCESS',
+                  env: 'ALL',
+                  branch: env.BRANCH_NAME,
                   colour: 'good',
-                  emoji: '🤟',
-                  slackChannel: slackChannel
+                  emoji: '🤟'
                 ]
                 notifySlack(messageParameters)
                 break
               case 'UNSTABLE':
                 def messageParameters = [
-                  buildStatus: 'Unstable',
-                  branchName: env.BRANCH_NAME,
+                  buildStatus: 'UNSTABLE',
+                  env: 'ALL',
+                  branch: env.BRANCH_NAME,
                   colour: 'danger',
                   emoji: '😱',
-                  slackChannel: slackChannel
                 ]
                 notifySlack(messageParameters)
                 break
               case 'ABORTED':
                 def messageParameters = [
-                  buildStatus: 'Aborted',
-                  branchName: env.BRANCH_NAME,
+                  buildStatus: 'ABORTED',
+                  env: 'ALL',
+                  branch: env.BRANCH_NAME,
                   colour: 'warning',
                   emoji: '🙀',
-                  slackChannel: slackChannel
                 ]
                 notifySlack(messageParameters)
                 break
@@ -135,10 +134,10 @@ node {
                 if (stageHasFailed == false) {
                   def messageParameters = [
                     buildStatus: 'Unknown build failure',
-                    branchName: env.BRANCH_NAME,
+                    env: 'ALL',
+                    branch: env.BRANCH_NAME,
                     colour: 'danger',
                     emoji: '😱',
-                    slackChannel: slackChannel
                   ]
                   notifySlack(messageParameters)
                 }
