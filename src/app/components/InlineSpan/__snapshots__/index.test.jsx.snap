@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inline english inline span in persian service article 1`] = `
+.c0 {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+<span
+  className="c0"
+>
+  This is text in a Inline.
+</span>
+`;
+
+exports[`Inline persian inline span in english service article 1`] = `
+.c0 {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+<span
+  className="c0"
+>
+  بعض محتوى النص
+</span>
+`;
