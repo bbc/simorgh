@@ -15,8 +15,7 @@ const { error } = console;
 let reactErrorsCountPerTestSuite = 0;
 const reactErrorsLimitPerTestSuite = 6; // The goal is to have zero React errors per suite so keep fixing errors and lowering this limit
 
-// eslint-disable-next-line no-console
-console.error = (message, ...rest) => {
+const didSuppressWarning = message => {
   const { expectedWarnings } = window;
   if (expectedWarnings && Array.isArray(expectedWarnings)) {
     for (let i = 0; i < expectedWarnings.length; i += 1) {
@@ -25,10 +24,16 @@ console.error = (message, ...rest) => {
       );
       if (warningsRegex.test(message)) {
         window.expectedWarnings.splice(i, 1);
-        return;
+        return true;
       }
     }
   }
+  return false;
+};
+
+// eslint-disable-next-line no-console
+console.error = (message, ...rest) => {
+  if (didSuppressWarning(message)) return;
 
   if (REACT_ERRORS_REGEX.test(message)) {
     reactErrorsCountPerTestSuite += 1;
