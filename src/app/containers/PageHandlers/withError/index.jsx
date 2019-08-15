@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, element } from 'prop-types';
+import { string, element } from 'prop-types';
 import ErrorMain from '../../ErrorMain';
 
 const WithError = Component => {
@@ -9,7 +9,7 @@ const WithError = Component => {
   };
 
   ErrorContainer.propTypes = {
-    error: bool,
+    error: string,
   };
 
   ErrorContainer.defaultProps = {
