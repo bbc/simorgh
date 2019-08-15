@@ -1,8 +1,19 @@
-const embedUrl = (assetId, vpid, amp = false) => {
-  const baseUrl = process.env.SIMORGH_AV_EMBED_BASE_URL;
-  const parts = [baseUrl, assetId, vpid];
+const buildBaseUrl = origin => {
+  if (!origin.includes('local')) {
+    return origin;
+  }
 
-  if (amp) {
+  const tld = origin.includes('.co.uk') ? '.co.uk' : '.com';
+
+  return `https://www.test.bbc${tld}`;
+};
+
+const embedUrl = ({ origin, assetId, vpid, isAmp = false }) => {
+  const avRoute = 'ws/av-embeds';
+  const baseUrl = buildBaseUrl(origin);
+  const parts = [baseUrl, avRoute, assetId, vpid];
+
+  if (isAmp) {
     parts.push('amp');
   }
 
