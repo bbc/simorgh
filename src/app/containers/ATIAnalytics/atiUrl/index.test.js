@@ -58,12 +58,14 @@ describe('getThingAttributes', () => {
       pageIdentifier: 'pageIdentifier',
       pageTitle: 'pageTitle',
       platform: 'platform',
+      producerId: 'producerId',
       timePublished: 'timePublished',
       timeUpdated: 'timeUpdated',
     });
 
     const queryParamsArray = splitUrl(queryParams);
     const expectedValues = [
+      's2=producerId',
       'p=pageIdentifier',
       'x1=[contentId]',
       'x3=[appName]',
