@@ -13,6 +13,11 @@ const processedPidgin = preprocessor(frontPageDataPidgin, [
   filterUnknownCpsTypes,
 ]);
 
+jest.mock('../ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
 const requestContextData = {
   pageType: 'frontPage',
 };
