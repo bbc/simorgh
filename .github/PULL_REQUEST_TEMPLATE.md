@@ -11,4 +11,4 @@ Resolves #NUMBER
 
 - [ ] I have assigned myself to this PR and the corresponding issues
 - [ ] Tests added for new features
-- [ ] Test engineer approval
+- [ ] This PR requires manual testing
