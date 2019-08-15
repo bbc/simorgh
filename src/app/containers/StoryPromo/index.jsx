@@ -94,25 +94,22 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
   let headline;
   let url;
-  let summary;
   let isLive;
-  let timestamp;
 
   if (isAssetTypeCode !== null) {
     headline = pathOr(null, ['name'], item);
-    summary = pathOr('sample summry', ['summary'], item);
-    timestamp = pathOr(null, ['timestamp'], item);
+    url = pathOr(null, ['uri'], item);
   } else {
     headline = pathOr(null, ['headlines', 'headline'], item);
     url = pathOr(null, ['locators', 'assetUri'], item);
-    summary = pathOr(null, ['summary'], item);
     isLive = pathOr(null, ['cpsType'], item) === 'LIV';
-    timestamp = pathOr(null, ['timestamp'], item);
   }
 
+  const summary = pathOr(null, ['summary'], item);
+  const timestamp = pathOr(null, ['timestamp'], item);
   const linkcontents = <LinkContents item={item} />;
 
-  if (!headline) {
+  if (!headline || !url) {
     return null;
   }
 

@@ -58,6 +58,8 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('canonical', () => getCanonicalStoryPromo(firstFixture))
   .add('audio promo', () => getCanonicalStoryPromo(audioFixture))
   .add('video promo', () => getCanonicalStoryPromo(videoFixture))
+
+storiesOf('Containers|Story Promo/Canonical/Link Promos', module)
   .add('standard promo', () => getCanonicalStoryPromo(standardPromo));
 
 storiesOf('Containers|Story Promo/AMP', module)
@@ -65,4 +67,6 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('amp', () => getAmpStoryPromo(firstFixture))
   .add('audio promo - amp', () => getAmpStoryPromo(audioFixture))
   .add('video promo - amp', () => getAmpStoryPromo(videoFixture))
+
+storiesOf('Containers|Story Promo/AMP/Link Promos', module)
   .add('standard promo - amp', () => getAmpStoryPromo(standardPromo));

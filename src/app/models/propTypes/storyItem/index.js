@@ -21,6 +21,7 @@ export const storyItem = {
 
 export const linkPromo = {
   name: string.isRequired,
+  url: string.isRequired,
   summary: string,
   indexImage: shape(storyItemImage),
   timestamp: number,
