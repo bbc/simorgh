@@ -14,5 +14,11 @@ developmentTests:
 productionTests:
 	npm run build && xvfb-run npm run test:prod:ci;
 
+testE2Es:
+	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
+
+liveE2Es:
+	CYPRESS_SMOKE=false CYPRESS_APP_ENV=live npm run cypress
+
 buildStorybook:
 	npm run build:storybook;
