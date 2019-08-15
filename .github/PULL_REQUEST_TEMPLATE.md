@@ -10,5 +10,5 @@ Resolves #NUMBER
 ---
 
 - [ ] I have assigned myself to this PR and the corresponding issues
-- [ ] Tests added for new features
-- [ ] Test engineer approval
+- [ ] Automated (jest and/or cypress) tests added (for new features) or updated (for existing features)
+- [ ] This PR requires manual testing
