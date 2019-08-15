@@ -1,5 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MediaPlayer Calls the correct props Calls the AMP player when platform is AMP 1`] = `
+<div
+  className="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
+>
+  <div
+    className="StyledContainer-sc-1syaafd-0 gfGyrB"
+  >
+    <amp-iframe
+      allowfullscreen={true}
+      frameborder="0"
+      layout="fill"
+      sandbox="allow-scripts allow-same-origin"
+      src="https://foobar.com/foo/p01k6msp/amp"
+    >
+      <amp-img
+        layout="fill"
+        placeholder={true}
+        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+      />
+    </amp-iframe>
+  </div>
+</div>
+`;
+
+exports[`MediaPlayer Calls the correct props Calls the canonical player when platform is canonical 1`] = `
+<div
+  className="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
+>
+  <div
+    className="StyledContainer-sc-1syaafd-0 gfGyrB"
+  >
+    <div
+      className="StyledPlaceholder-x885p3-0 eSTIIj"
+      onClick={[Function]}
+    >
+      <img
+        alt="Image Alt"
+        className="StyledImg-sc-7vx2mr-0 hIxkbt"
+        height={null}
+        sizes={null}
+        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+        srcSet={null}
+        width={null}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MediaPlayer Fails and returns early when component is toggled off 1`] = `null`;
+
+exports[`MediaPlayer Fails and returns early when there is no versionId 1`] = `null`;
+
 exports[`MediaPlayer with Audio data amp - should render audio clip UK only 1`] = `
 <Context.Provider
   value={
