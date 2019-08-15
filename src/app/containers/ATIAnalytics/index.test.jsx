@@ -139,7 +139,8 @@ describe('ATI Analytics Container', () => {
     });
   });
 
-  describe('pageType neither article nor frontPage', () => {
+  // TODO fix this once bbc/simorgh#3107 has been completed
+  describe.skip('pageType neither article nor frontPage', () => {
     isNull(
       'should render null',
       <ContextWrap platform="canonical" pageType="randomvalue">
