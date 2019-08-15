@@ -41,7 +41,7 @@ const placeholderImage = src => {
 };
 
 const MediaPlayerContainer = ({ blocks }) => {
-  const { id, platform } = React.useContext(RequestContext);
+  const { id, platform, origin } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
 
@@ -70,9 +70,14 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null; // this should be the holding image with an error overlay
   }
 
-  const embedSource = embedUrl(id, versionId, isAmp);
-  const placeholderSrc = placeholderImage(imageUrl);
   const Player = isAmp ? AmpMediaPlayer : CanonicalMediaPlayer;
+  const placeholderSrc = placeholderImage(imageUrl);
+  const embedSource = embedUrl({
+    vpid: versionId,
+    assetId: id,
+    isAmp,
+    origin,
+  });
 
   return (
     <GridItemConstrainedMedium>
