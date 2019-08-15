@@ -11,14 +11,14 @@ let requests = [];
 
 const isJsBundle = url => url.includes(localBaseUrl);
 
+jest.setTimeout(10000); // overriding the default jest timeout
+
 describe('Js bundle requests', () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({
       args: ['--no-sandbox'],
     });
     page = await browser.newPage();
-
-    jest.setTimeout(10000); // overriding the default jest timeout
 
     page.on('request', request => {
       requests.push(request.url());
