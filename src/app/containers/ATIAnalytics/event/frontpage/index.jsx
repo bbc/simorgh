@@ -3,14 +3,14 @@ import sendBeacon from '../../../../lib/analyticsUtils/sendBeacon';
 import { getPageIdentifier } from '../../../../lib/analyticsUtils/frontpage';
 
 const FrontPageAtiEventTracker = (
-  frontpageData,
+  data,
   platform,
   statsDestination,
   service,
   eventInfo,
 ) => {
   const url = atiEventTrackParams({
-    pageIdentifier: getPageIdentifier(frontpageData),
+    pageIdentifier: getPageIdentifier(data), // this will need to be updated for articles
     service,
     platform,
     statsDestination,

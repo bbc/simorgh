@@ -1,14 +1,15 @@
 import onClient from '../../utilities/onClient';
 import FrontPageAtiEventTracker from '../../../containers/ATIAnalytics/event/frontpage';
 
-const listener = (frontpageData, platform, statsDestination, service) => {
+const listener = (data, platform, statsDestination, service) => {
   if (onClient()) {
     const navItems = document.getElementsByClassName('track-nav');
 
     navItems.forEach(item => {
       item.addEventListener('click', event => {
+        event.preventDefault();
         FrontPageAtiEventTracker(
-          frontpageData,
+          data,
           platform,
           statsDestination,
           service,

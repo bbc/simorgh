@@ -167,8 +167,11 @@ export const getPublishingInfo = (
   service,
   eventInfo,
 ) => {
-  const eventComponentInfo = eventInfo.path[0].dataset.info; // will need to figure out how to get this but it's possible to get it using eventInfo.path[0].dataset, etc
-  const screenPlacement = `X${eventInfo.clientX}xY${eventInfo.clientY}`;
+  const eventComponentInfo = eventInfo.path[0].dataset.info;
+  const cleanCompInfo = eventComponentInfo.split('/').join('-');
+  const componentName = 'navigation';
+  const format = `PAR=container-${componentName}::name-CHD=${cleanCompInfo.toLowerCase()}`;
+  const url = eventInfo.srcElement.href;
 
-  return `PUB-[${service}-frontpage]-[viewed~${eventInfo.type}]-[${pageIdentifier}]-[${eventComponentInfo}]-[${service}]-[${pageIdentifier}]-[${eventInfo.type}]-[${screenPlacement}]`;
+  return `PUB-[${service}-${componentName}]-[${eventInfo.type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
 };
