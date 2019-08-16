@@ -1,3 +1,9 @@
+Cypress.Commands.add('hasHtmlLangDirAttributes', ({ lang, dir }) => {
+  cy.get('html')
+    .should('have.attr', 'lang', lang)
+    .and('have.attr', 'dir', dir);
+});
+
 Cypress.Commands.add('checkMetadataContent', (metaDataTag, content) => {
   cy.get(metaDataTag).should('have.attr', 'content', content);
 });

@@ -214,7 +214,7 @@ describe('StoryPromo Container', () => {
         <WrappedStoryPromo service="yoruba" item={newItem} />,
       ).container;
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        'ìsẹjú kan kọjá',
+        'ìṣẹ́jú kan sẹ́yìn',
       );
     });
 
