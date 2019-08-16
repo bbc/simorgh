@@ -62,6 +62,20 @@ const runCommonTests = ({ service, pageType }) => {
           .find('svg')
           .should('be.visible');
       });
+
+      if (appConfig[service].navigation) {
+        it('should have one visible navigation with a skiplink to h1', () => {
+          cy.get('nav')
+            .should('have.lengthOf', 1)
+            .should('be.visible')
+            .find('a[class^="SkipLink"]')
+            .should('have.lengthOf', 1)
+            .should('have.attr', 'href', '#content');
+          cy.get('h1')
+            .should('have.lengthOf', 1)
+            .should('have.attr', 'id', 'content');
+        });
+      }
     });
 
     describe('Footer Tests', () => {
