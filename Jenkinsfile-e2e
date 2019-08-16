@@ -98,8 +98,11 @@ node {
           echo "The pipeline has failed with the error: ${e}"
           throw e
         } finally {
+          echo "currentBuild.currentResult: ${currentBuild.currentResult}"
+          echo "currentBuild.result: ${currentBuild.result}"
+
           if (env.BRANCH_NAME == 'latest') {
-            switch (currentBuild.result) {
+            switch (currentBuild.currentResult) {
               case 'SUCCESS':
                 def messageParameters = [
                   buildStatus: 'SUCCESS',
