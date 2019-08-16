@@ -141,6 +141,7 @@ Array [
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
 }
 
 .c18:focus::after {
@@ -152,6 +153,49 @@ Array [
   border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
   border: 0.25rem solid #FFFFFF;
+}
+
+.c20 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+.c20:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c20:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c19::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .c1 {
@@ -311,6 +355,26 @@ Array [
 
 @media (max-width:24.9375rem) {
   .c18 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c20 {
     padding: 0.75rem 0.5rem;
   }
 }
@@ -605,7 +669,9 @@ Array [
         <a
           className="c15"
           href="#content"
-        />
+        >
+          Skip to content
+        </a>
         <ul
           className="c16"
           role="list"
@@ -619,7 +685,18 @@ Array [
               className="c18"
               href="/amharic"
             >
-              ዜና
+              <span
+                className="c19"
+                role="text"
+              >
+                <span
+                  className="c12"
+                >
+                  Current page
+                  , 
+                </span>
+                ዜና
+              </span>
             </a>
           </li>
           <li
@@ -628,7 +705,7 @@ Array [
             role="listitem"
           >
             <a
-              className="c18"
+              className="c20"
               href="/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
             >
               ኢትዮጵያ
@@ -640,7 +717,7 @@ Array [
             role="listitem"
           >
             <a
-              className="c18"
+              className="c20"
               href="/amharic/media/video"
             >
               ቪዲዮ
@@ -652,7 +729,7 @@ Array [
             role="listitem"
           >
             <a
-              className="c18"
+              className="c20"
               href="/amharic/popular/read"
             >
               በጣም የተወደዱ

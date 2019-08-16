@@ -11,6 +11,10 @@ const newsServiceContextStub = {
   svgHeight: 24,
   maxWidth: 280,
   minWidth: 180,
+  translations: {
+    currentPage: 'Current page',
+    skipLinkText: 'Skip to content',
+  },
 };
 
 const HeaderContainerWithContext = context => (
