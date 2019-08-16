@@ -169,12 +169,12 @@ const service = {
         text: 'นโยบายความเป็นส่วนตัว',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
-        text: 'คุกกี้ี้',
+        href: 'https://www.bbc.com/usingthebbc/cookies/',
+        text: 'Cookies',
       },
       {
         href: 'https://www.bbc.com/thai/institutional-37981748',
-        text: 'ติดต่อบีบีซีี',
+        text: 'ติดต่อบีบีซี',
       },
     ],
     copyrightText:
