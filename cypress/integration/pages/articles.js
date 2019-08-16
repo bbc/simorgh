@@ -10,6 +10,7 @@ const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
+
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const runTests = ({ service }) =>
@@ -120,16 +121,27 @@ const runTests = ({ service }) =>
       it('should render a formatted timestamp', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
+              const { language } = body.metadata.passport;
               const { lastPublished } = body.metadata;
-              const timestamp = Cypress.moment(lastPublished).format(
+              const { firstPublished } = body.metadata;
+              const { articleTimestampPrefix } = config[service];
+              const updatedTimestamp = Cypress.moment(lastPublished).locale(language).format(
                 'D MMMM YYYY',
               );
-              cy.get('time').should('contain', timestamp);
-            }
-          },
-        );
-      });
+              const firstTimestamp = Cypress.moment(firstPublished).locale(language).format(
+                'D MMMM YYYY',
+              );
+
+              cy.get('time').then(($time) => {
+                  if (lastPublished === firstPublished) {   
+                      cy.get($time).should('contain', firstTimestamp);
+                  } else {
+                    cy.get($time).eq(0).should('contain', firstTimestamp);
+                    cy.get($time).eq(1).should('contain', articleTimestampPrefix + ' ' + updatedTimestamp);
+                  }
+              })
+            });
+          });
 
       it('should render an H2, which contains/displays a styled subheading', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
