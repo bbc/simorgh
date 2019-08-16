@@ -98,6 +98,9 @@ node {
           echo "The pipeline has failed with the error: ${e}"
           throw e
         } finally {
+          echo "currentBuild.currentResult: ${currentBuild.currentResult}"
+          echo "currentBuild.result: ${currentBuild.result}"
+
           if (env.BRANCH_NAME == 'latest') {
             switch (currentBuild.currentResult) {
               case 'SUCCESS':
@@ -139,7 +142,6 @@ node {
                     colour: 'danger',
                     emoji: '😱',
                   ]
-                  echo "Build Result: ${currentBuild.currentResult}"
                   notifySlack(messageParameters)
                 }
                 break
