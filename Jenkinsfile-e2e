@@ -49,6 +49,7 @@ node {
                     stageHasFailed = true
                   }
 
+                  currentBuild.result = 'FAILURE'
                   throw e
                 }   
               },
@@ -69,6 +70,7 @@ node {
                     stageHasFailed = true
                   }
 
+                  currentBuild.result = 'FAILURE'
                   throw e
                 }
               },
@@ -89,6 +91,7 @@ node {
                     stageHasFailed = true
                   }
 
+                  currentBuild.result = 'FAILURE'
                   throw e
                 } 
               }
@@ -96,10 +99,16 @@ node {
           }
         } catch (Throwable e) {
           echo "The pipeline has failed with the error: ${e}"
+          currentBuild.result = 'FAILURE'
           throw e
         } finally {
+          def buildResult = currentBuild.result ?: 'SUCCESS'
+          
+          echo "currentBuild.currentResult: ${currentBuild.currentResult}"
+          echo "currentBuild.result: ${currentBuild.result}"
+
           if (env.BRANCH_NAME == 'latest') {
-            switch (currentBuild.result) {
+            switch (buildResult) {
               case 'SUCCESS':
                 def messageParameters = [
                   buildStatus: 'SUCCESS',
