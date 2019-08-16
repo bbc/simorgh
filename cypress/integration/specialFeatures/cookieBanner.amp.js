@@ -26,6 +26,7 @@ const getCookieReject = service =>
 const visitPage = (service, pageType) => {
   cy.visit(`${config[service].pageTypes[pageType].path}.amp`, {
     failOnStatusCode: !pageType.includes('error'),
+    timeout: 10000,
   });
 };
 
