@@ -46,10 +46,9 @@ const ChartbeatAnalytics = ({ data }) => {
     title,
     authors,
     ...(isAmp && { contentType: type }),
-    ...(!isAmp && { type, useCanonical }),
+    ...(!isAmp && { type, useCanonical, path: currentPath }),
     ...(referrer && { virtualReferrer: referrer }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
-    ...(!isAmp && currentPath && { path: currentPath }),
   };
 
   return isAmp ? (
