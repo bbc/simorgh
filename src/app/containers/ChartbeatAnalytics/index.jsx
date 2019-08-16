@@ -6,6 +6,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import { pageDataPropType } from '../../models/propTypes/data';
 import { getReferrer } from '../../lib/analyticsUtils';
+import onClient from '../../lib/utilities/onClient';
 import {
   chartbeatUID,
   chartbeatSource,
@@ -19,9 +20,7 @@ import {
 } from '../../lib/analyticsUtils/chartbeat';
 
 const ChartbeatAnalytics = ({ data }) => {
-  const { service, brandName, articleAuthor, currentPath } = useContext(
-    ServiceContext,
-  );
+  const { service, brandName, articleAuthor } = useContext(ServiceContext);
   const { enabled } = useToggle('chartbeatAnalytics');
   const { env, platform, pageType, previousPath, origin } = useContext(
     RequestContext,
@@ -39,6 +38,7 @@ const ChartbeatAnalytics = ({ data }) => {
   const type = getType(pageType);
   const isAmp = platform === 'amp';
   const authors = getAuthors(pageType, articleAuthor);
+  const currentPath = onClient() ? window.location.pathname : null;
   const config = {
     domain,
     sections,
@@ -46,9 +46,10 @@ const ChartbeatAnalytics = ({ data }) => {
     title,
     authors,
     ...(isAmp && { contentType: type }),
-    ...(!isAmp && { type, useCanonical, path: currentPath }),
+    ...(!isAmp && { type, useCanonical }),
     ...(referrer && { virtualReferrer: referrer }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
+    ...(!isAmp && currentPath && { path: currentPath }),
   };
 
   return isAmp ? (
