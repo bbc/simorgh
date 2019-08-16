@@ -278,3 +278,121 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
   </RequestContextProvider>
 </ToggleContextProvider>
 `;
+
+exports[`ArticleMain should render a pidgin article correctly (with navigation) 1`] = `
+<ToggleContextProvider>
+  <RequestContextProvider
+    bbcOrigin="https://www.test.bbc.co.uk"
+    id="c0000000000o"
+    isAmp={false}
+    pageType="article"
+    previousPath={null}
+    service="pidgin"
+  >
+    <ArticleMain
+      articleData={
+        Object {
+          "content": Object {
+            "model": Object {
+              "blocks": Array [
+                Object {
+                  "id": 1,
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "id": 1,
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "id": 1,
+                              "model": Object {
+                                "blocks": Array [
+                                  Object {
+                                    "id": 1,
+                                    "model": Object {
+                                      "attributes": Array [],
+                                      "text": "Article Headline in Pidgin",
+                                    },
+                                    "type": "fragment",
+                                  },
+                                ],
+                                "text": "Article Headline in Pidgin",
+                              },
+                              "type": "paragraph",
+                            },
+                          ],
+                        },
+                        "type": "text",
+                      },
+                    ],
+                  },
+                  "type": "headline",
+                },
+                Object {
+                  "id": 2,
+                  "model": Object {
+                    "blocks": Array [
+                      Object {
+                        "id": 2,
+                        "model": Object {
+                          "blocks": Array [
+                            Object {
+                              "id": 2,
+                              "model": Object {
+                                "attributes": Array [],
+                                "text": "A paragraph in Pidgin.",
+                              },
+                              "type": "fragment",
+                            },
+                          ],
+                          "text": "A paragraph in Pidgin.",
+                        },
+                        "type": "paragraph",
+                      },
+                    ],
+                  },
+                  "type": "text",
+                },
+              ],
+            },
+          },
+          "metadata": Object {
+            "created": 1514808060000,
+            "createdBy": "Pidgin",
+            "firstPublished": 1514808060000,
+            "id": "urn:bbc:ares::article:cwl08rd38l6o",
+            "lastPublished": 1514811600000,
+            "lastUpdated": 1514815200000,
+            "locators": Object {
+              "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o",
+            },
+            "passport": Object {
+              "category": "news",
+              "genre": null,
+              "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+              "language": "pcm",
+            },
+            "tags": Object {
+              "about": null,
+              "mentions": null,
+            },
+            "type": "article",
+          },
+          "promo": Object {
+            "headlines": Object {
+              "promoHeadline": "Article Headline for Promo in Pidgin",
+              "seoHeadline": "Article Headline for SEO in Pidgin",
+            },
+            "id": "urn:bbc:ares::article:cwl08rd38l6o",
+            "locators": Object {
+              "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o",
+            },
+            "summary": "Article summary in Pidgin",
+            "timestamp": 1514811600000,
+          },
+        }
+      }
+    />
+  </RequestContextProvider>
+</ToggleContextProvider>
+`;

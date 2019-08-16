@@ -4,7 +4,11 @@ import ArticleMain from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
+import {
+  articleDataNews,
+  articleDataPersian,
+  articleDataPidgin,
+} from '../Article/fixtureData';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
@@ -40,6 +44,13 @@ describe('ArticleMain', () => {
     'should render a persian article correctly',
     <Context service="persian">
       <ArticleMain articleData={articleDataPersian} />
+    </Context>,
+  );
+
+  shouldShallowMatchSnapshot(
+    'should render a pidgin article correctly (with navigation)',
+    <Context service="pidgin">
+      <ArticleMain articleData={articleDataPidgin} />
     </Context>,
   );
 });
