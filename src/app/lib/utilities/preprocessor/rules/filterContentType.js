@@ -2,7 +2,7 @@ import pathOr from 'ramda/src/pathOr';
 
 const whitelist = ['STY', 'MAP', 'PGL', 'LIV', 'PRO'];
 
-export const getRelevantGroup = (data, type) => {
+const filterUnknownContentTypes = data => {
   const groups = pathOr(null, ['content', 'groups'], data);
 
   if (!groups) {
@@ -15,7 +15,9 @@ export const getRelevantGroup = (data, type) => {
 
     if (Array.isArray(group.items)) {
       newGroup.items = group.items.filter(
-        item => item[type] && whitelist.includes(item[type]),
+        item =>
+          (item.assetTypeCode || item.cpsType) &&
+          whitelist.includes(item.cpsType || item.assetTypeCode),
       );
     }
 
@@ -24,14 +26,7 @@ export const getRelevantGroup = (data, type) => {
 
   const newData = data;
   newData.content.groups = newGroups;
-
   return newData;
 };
 
-export const filterUnknownCpsTypes = data => {
-  return getRelevantGroup(data, 'cpsType');
-};
-
-export const filterUnknownAssetTypeCodes = data => {
-  return getRelevantGroup(data, 'assetTypeCode');
-};
+export default filterUnknownContentTypes;
