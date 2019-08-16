@@ -108,7 +108,7 @@ node {
           echo "currentBuild.result: ${currentBuild.result}"
 
           if (env.BRANCH_NAME == 'latest') {
-            switch (currentBuild.result) {
+            switch (buildResult) {
               case 'SUCCESS':
                 def messageParameters = [
                   buildStatus: 'SUCCESS',
