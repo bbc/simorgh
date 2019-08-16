@@ -99,7 +99,7 @@ node {
           throw e
         } finally {
           if (env.BRANCH_NAME == 'latest') {
-            switch (currentBuild.result) {
+            switch (currentBuild.currentResult) {
               case 'SUCCESS':
                 def messageParameters = [
                   buildStatus: 'SUCCESS',
