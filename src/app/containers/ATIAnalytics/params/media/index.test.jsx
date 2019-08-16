@@ -40,8 +40,7 @@ describe('MediaAtiParams', () => {
       expect(mock).toHaveBeenCalledTimes(1);
       expect(mock).toHaveBeenCalledWith({
         appName: 'news-SERVICE',
-        contentId:
-          'urn:bbc:ares::asset:indonesia/bbc_indonesian_radio/liveradio',
+        contentId: 'urn:bbc:ares::ws_live:bbc_indonesian_radio',
         contentType: 'player-live',
         language: 'id-ID',
         pageIdentifier: 'indonesia.bbc_indonesian_radio.liveradio.page',
