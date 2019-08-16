@@ -9,7 +9,7 @@ const WithError = Component => {
   };
 
   ErrorContainer.propTypes = {
-    error: shape({ message: string }),
+    error: shape({ message: string.isRequired }),
   };
 
   ErrorContainer.defaultProps = {
