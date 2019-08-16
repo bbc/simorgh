@@ -4,14 +4,14 @@
     "locators": {},
     "type": "WS-LIVE",
     "createdBy": "tigrinya",
-    "language": "id-ID",
+    "language": "ti-ET",
     "lastUpdated": 0,
     "firstPublished": 0,
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
       "pageIdentifier": "tigrinya.bbc_tigrinya_radio.liveradio.page",
-      "pageTitle": "ስምዑ - BBC News Tigrinya"
+      "pageTitle": "ስምዑ - BBC News ትግርኛ"
     },
     "tags": {},
     "version": "1.1.1",
@@ -19,8 +19,15 @@
   },
   "content": {
     "blocks": [
-      { "text": "ስምዑ", "markupType": "plain_text", "type": "heading" },
-      { "text": "መደባትና", "type": "paragraph" },
+      {
+        "text": "ስምዑ",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "መደባትና",
+        "type": "paragraph"
+      },
       {
         "id": "liveradio",
         "subType": "primary",
@@ -41,12 +48,7 @@
     "uri": "/tigrinya/bbc_tigrinya_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
-    "type": "link",
-    "headlines": {
-      "seoHeadline": "ስምዑ",
-      "shortHeadline": "ስምዑ",
-      "headline": "ስምዑ"
-    }
+    "type": "link"
   },
   "relatedContent": {
     "site": {

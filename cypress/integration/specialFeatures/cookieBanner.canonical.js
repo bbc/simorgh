@@ -46,6 +46,7 @@ const assertCookieValues = cookies => {
 const visitPage = (service, pageType) => {
   cy.visit(config[service].pageTypes[pageType].path, {
     failOnStatusCode: !pageType.includes('error'),
+    timeout: 10000,
   });
 };
 

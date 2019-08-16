@@ -10,8 +10,8 @@
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
-      "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page - BBC News Indonesia",
-      "pageTitle": "BBC Indonesia Radio"
+      "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page",
+      "pageTitle": "BBC Indonesia Radio - BBC News Indonesia"
     },
     "tags": {},
     "version": "1.1.1",
@@ -43,16 +43,12 @@
     ]
   },
   "promo": {
-    "name": "bbc_indonesian_radio",
+    "name": "BBC Indonesia Radio",
     "summary": "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
     "uri": "/indonesia/bbc_indonesian_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
-    "type": "link",
-    "headlines": {
-      "seoHeadline": "BBC Indonesia Radio",
-      "headline": "BBC Indonesia Radio"
-    }
+    "type": "link"
   },
   "relatedContent": {
     "site": {

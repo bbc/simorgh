@@ -12,6 +12,8 @@ let requests = [];
 
 const isJsBundle = url => url.includes(localBaseUrl);
 
+jest.setTimeout(10000); // overriding the default jest timeout
+
 describe('Js bundle requests', () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({

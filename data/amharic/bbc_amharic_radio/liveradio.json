@@ -4,14 +4,14 @@
     "locators": {},
     "type": "WS-LIVE",
     "createdBy": "amharic",
-    "language": "id-ID",
+    "language": "am-ET",
     "lastUpdated": 0,
     "firstPublished": 0,
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
       "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page",
-      "pageTitle": "ያድምጡ - BBC News Amharic"
+      "pageTitle": "ያድምጡ - BBC News አማርኛ"
     },
     "tags": {},
     "version": "1.1.1",
@@ -19,8 +19,15 @@
   },
   "content": {
     "blocks": [
-      { "text": "ያድምጡ", "markupType": "plain_text", "type": "heading" },
-      { "text": "ዝግጅቶቻችንን", "type": "paragraph" },
+      {
+        "text": "ያድምጡ",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "ዝግጅቶቻችንን",
+        "type": "paragraph"
+      },
       {
         "id": "liveradio",
         "subType": "primary",
@@ -41,12 +48,7 @@
     "uri": "/tigrinya/bbc_tigrinya_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
-    "type": "link",
-    "headlines": {
-      "seoHeadline": "ያድምጡ",
-      "shortHeadline": "ያድምጡ",
-      "headline": "ያድምጡ"
-    }
+    "type": "link"
   },
   "relatedContent": {
     "site": {

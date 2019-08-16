@@ -4,14 +4,14 @@
     "locators": {},
     "type": "WS-LIVE",
     "createdBy": "korean",
-    "language": "id-ID",
+    "language": "ko-KO",
     "lastUpdated": 0,
     "firstPublished": 0,
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
       "pageIdentifier": "korean.bbc_korean_radio.liveradio.page",
-      "pageTitle": "BBC 코리아 라디오 - BBC News Korean"
+      "pageTitle": "BBC 코리아 라디오 - BBC News 코리아"
     },
     "tags": {},
     "version": "1.1.1",
@@ -48,12 +48,7 @@
     "uri": "/korean/bbc_korean_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_korean_radio",
-    "type": "link",
-    "headlines": {
-      "seoHeadline": "BBC 코리아 라디오",
-      "shortHeadline": "BBC 코리아 라디오",
-      "headline": "BBC 코리아 라디오"
-    }
+    "type": "link"
   },
   "relatedContent": {
     "site": {
