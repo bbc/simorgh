@@ -30,13 +30,19 @@ export const isLocServeCookieSet = platform => {
   return null;
 };
 
+// http://bbc.github.io/echo-docs/documentation/reporting-ati/#producer
 export const getProducer = service => {
   const producers = {
+    afaanoromoo: '2',
+    amharic: '4',
+    korean: '57',
     igbo: '53',
+    indonesia: '54',
     news: '64',
     persian: '69',
     pidgin: '70',
     thai: '90',
+    tigrinya: '91',
     yoruba: '107',
   };
 
