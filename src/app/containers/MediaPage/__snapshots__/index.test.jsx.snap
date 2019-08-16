@@ -2,7 +2,7 @@
 
 exports[`Media Page snapshots should match scaffold snapshot 1`] = `
 Array [
-  .c5 {
+  .c12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -14,12 +14,12 @@ Array [
   margin: 0;
 }
 
-.c1 {
+.c8 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c0 {
+.c7 {
   background-color: #B80000;
   height: 3.5rem;
   width: 100%;
@@ -27,14 +27,14 @@ Array [
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c3 {
+.c10 {
   display: inline-block;
   width: 100%;
   max-width: 13.955625000000001rem;
   min-width: 9.30375rem;
 }
 
-.c4 {
+.c11 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -46,30 +46,357 @@ Array [
   min-width: 9.30375rem;
 }
 
-.c2:hover .c4,
-.c2:focus .c4 {
+.c9:hover .c11,
+.c9:focus .c11 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
+.c13 {
+  background-color: #B80000;
+}
+
+.c14 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c15 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #ffffff;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c15:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: -3rem;
+  left: 0.5rem;
+}
+
+.c16 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.c17 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c17::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 80rem;
+  border-bottom: 0.0625rem solid #eab3b3;
+  z-index: -1;
+  left: 0;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+.c18:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c18:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c1 {
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c2 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c2::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c3 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c5 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c5 li + li {
+  padding-top: 0.5rem;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+.c4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4 a:focus,
+.c4 a:hover {
+  color: #FFFFFF;
+}
+
+.c6 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c6 button:focus,
+.c6 button:hover {
+  color: #FFFFFF;
+}
+
+.c6 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6 a:focus,
+.c6 a:hover {
+  color: #FFFFFF;
+}
+
+.c0 amp-consent {
+  position: static;
+  display: block;
+}
+
 @media (min-width:25rem) {
-  .c0 {
+  .c7 {
     height: 5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c4 {
+  .c11 {
     padding-top: 1.75rem;
     padding-bottom: 1.5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),print {
-  .c4 {
+  .c11 {
     fill: windowText;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15:focus {
+    top: -4rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15:focus {
+    left: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c18 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c1 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    float: left;
+    margin-right: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 button {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -79,16 +406,157 @@ Array [
     <div
       className="c0"
     >
+      <amp-geo
+        layout="nodisplay"
+      >
+        <script
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "{\\"ISOCountryGroups\\":{\\"eu\\":[\\"at\\",\\"be\\",\\"bg\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ie\\",\\"is\\",\\"it\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mt\\",\\"nl\\",\\"no\\",\\"pl\\",\\"pt\\",\\"ro\\",\\"se\\",\\"si\\",\\"sl\\"]}}",
+            }
+          }
+          type="application/json"
+        />
+      </amp-geo>
+      <amp-consent
+        id="consent"
+        layout="nodisplay"
+      >
+        <script
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eu\\",\\"promptUI\\":\\"consent-prompt\\"}}}",
+            }
+          }
+          type="application/json"
+        />
+        <div
+          id="consent-prompt"
+        >
+          <div
+            className="c1"
+            dir="ltr"
+            hidden={null}
+            id="privacy"
+          >
+            <div
+              className="c2"
+              dir="ltr"
+            >
+              <h2
+                className="c3"
+                dir="ltr"
+              >
+                We've updated our Privacy and Cookies Policy
+              </h2>
+              <p
+                className="c4"
+                dir="ltr"
+              >
+                We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+              </p>
+              <ul
+                className="c5"
+                dir="ltr"
+              >
+                <li
+                  className="c6"
+                  dir="ltr"
+                >
+                  <button
+                    on="tap:cookie.show, privacy.hide"
+                    type="button"
+                  >
+                    OK
+                  </button>
+                </li>
+                <li
+                  className="c6"
+                  dir="ltr"
+                >
+                  <a
+                    href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                    on="tap:cookie.show, privacy.hide"
+                  >
+                    Find out what's changed
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            className="c1"
+            dir="ltr"
+            hidden={true}
+            id="cookie"
+          >
+            <div
+              className="c2"
+              dir="ltr"
+            >
+              <h2
+                className="c3"
+                dir="ltr"
+              >
+                Let us know you agree to cookies
+              </h2>
+              <p
+                className="c4"
+                dir="ltr"
+              >
+                We use 
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+                >
+                  cookies
+                </a>
+                 to give you the best online experience. Please let us know if you agree to all of these cookies.
+              </p>
+              <ul
+                className="c5"
+                dir="ltr"
+              >
+                <li
+                  className="c6"
+                  dir="ltr"
+                >
+                  <button
+                    on="tap:consent.accept"
+                    type="button"
+                  >
+                    Yes, I agree
+                  </button>
+                </li>
+                <li
+                  className="c6"
+                  dir="ltr"
+                >
+                  <a
+                    href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                    on="tap:consent.reject"
+                  >
+                    No, take me to settings
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </amp-consent>
+    </div>
+    <div
+      className="c7"
+    >
       <div
-        className="c1"
+        className="c8"
       >
         <a
-          className="c2 c3"
+          className="c9 c10"
           href="/amharic"
         >
           <svg
             aria-hidden="true"
-            className="c4"
+            className="c11"
             focusable="false"
             height={24}
             viewBox="0 0 223.29 24"
@@ -120,13 +588,79 @@ Array [
             </g>
           </svg>
           <span
-            className="c5"
+            className="c12"
           >
             BBC News አማርኛ
           </span>
         </a>
       </div>
     </div>
+    <nav
+      className="c13"
+      role="navigation"
+    >
+      <div
+        className="c14"
+      >
+        <a
+          className="c15"
+          href="#content"
+        />
+        <ul
+          className="c16"
+          role="list"
+        >
+          <li
+            className="c17"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              className="c18"
+              href="/amharic"
+            >
+              ዜና
+            </a>
+          </li>
+          <li
+            className="c17"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              className="c18"
+              href="/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+            >
+              ኢትዮጵያ
+            </a>
+          </li>
+          <li
+            className="c17"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              className="c18"
+              href="/amharic/media/video"
+            >
+              ቪዲዮ
+            </a>
+          </li>
+          <li
+            className="c17"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              className="c18"
+              href="/amharic/popular/read"
+            >
+              በጣም የተወደዱ
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>,
   .c4 {
   font-size: 0.9375rem;
@@ -762,6 +1296,7 @@ Array [
              
           </span>
           2019 ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም
+           
           <a
             className="c10 c14"
             href="https://www.bbc.co.uk/help/web/links/"
