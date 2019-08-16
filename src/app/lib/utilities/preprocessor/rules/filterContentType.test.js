@@ -1,48 +1,98 @@
-import {
-  filterUnknownCpsTypes,
-  filterUnknownAssetTypeCodes,
-  getRelevantGroup,
-} from './filterContentType';
+import filterUnknownContentTypes from './filterContentType';
 import azeriFixtureData from '../../../../../../data/azeri/frontpage/index.json';
 import igboFixtureData from '../../../../../../data/igbo/frontpage/index.json';
 
-describe('filterContent', () => {
-  describe('getRelevantGroup', () => {
-    it('should no-op when no groups', () => {
-      const data = {
-        content: {},
-      };
+const cpsItems = [
+  {
+    headlines: {
+      headline: 'A very important story',
+    },
+    cpsType: 'STY',
+  },
+  {
+    headlines: {
+      headline: 'A very important map',
+    },
+    cpsType: 'MAP',
+  },
+  {
+    headlines: {
+      headline: 'A very important live',
+    },
+    cpsType: 'LIV',
+  },
+];
+const assetTypeCodeItems = [
+  {
+    name: 'Test assetTypeCode',
+    summary: 'This is a test',
+    indexImage: {},
+    indexThumbnail: {},
+    uri: 'http://this.is.a.test.com/',
+    contentType: 'Text',
+    assetTypeCode: 'PRO',
+    timestamp: 1527598380040,
+    type: 'link',
+  },
+];
 
-      expect(getRelevantGroup(data)).toEqual(data);
-    });
+describe('filterUnknownContentTypes', () => {
+  it('should no-op when no groups', () => {
+    const data = {
+      content: {},
+    };
 
-    it('should no-op when no items', () => {
-      const data = {
-        content: {
-          groups: [
-            {
-              items: [],
-            },
-          ],
-        },
-      };
+    expect(filterUnknownContentTypes(data)).toEqual(data);
+  });
 
-      expect(getRelevantGroup(data)).toEqual(data);
-    });
+  it('should no-op when no items', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            items: [],
+          },
+        ],
+      },
+    };
 
-    it('should no-op when items is not an array', () => {
-      const data = {
-        content: {
-          groups: [
-            {
-              items: 42,
-            },
-          ],
-        },
-      };
+    expect(filterUnknownContentTypes(data)).toEqual(data);
+  });
 
-      expect(getRelevantGroup(data)).toEqual(data);
-    });
+  it('should no-op when items is not an array', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            items: 42,
+          },
+        ],
+      },
+    };
+
+    expect(filterUnknownContentTypes(data)).toEqual(data);
+  });
+
+  it('should handle both CPS and AssetTypeCode types', () => {
+    const data = {
+      content: {
+        groups: [
+          {
+            items: cpsItems + assetTypeCodeItems,
+          },
+        ],
+      },
+    };
+    const expected = {
+      content: {
+        groups: [
+          {
+            items: cpsItems + assetTypeCodeItems,
+          },
+        ],
+      },
+    };
+    expect(filterUnknownContentTypes(data)).toEqual(expected);
   });
 
   describe('cpsTypes rules', () => {
@@ -79,7 +129,7 @@ describe('filterContent', () => {
         },
       };
 
-      expect(filterUnknownCpsTypes(data)).toEqual(expected);
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
 
     it('should leave items with known CPS types alone', () => {
@@ -87,26 +137,7 @@ describe('filterContent', () => {
         content: {
           groups: [
             {
-              items: [
-                {
-                  headlines: {
-                    headline: 'A very important story',
-                  },
-                  cpsType: 'STY',
-                },
-                {
-                  headlines: {
-                    headline: 'A very important map',
-                  },
-                  cpsType: 'MAP',
-                },
-                {
-                  headlines: {
-                    headline: 'A very important live',
-                  },
-                  cpsType: 'LIV',
-                },
-              ],
+              items: cpsItems,
             },
           ],
         },
@@ -115,32 +146,13 @@ describe('filterContent', () => {
         content: {
           groups: [
             {
-              items: [
-                {
-                  headlines: {
-                    headline: 'A very important story',
-                  },
-                  cpsType: 'STY',
-                },
-                {
-                  headlines: {
-                    headline: 'A very important map',
-                  },
-                  cpsType: 'MAP',
-                },
-                {
-                  headlines: {
-                    headline: 'A very important live',
-                  },
-                  cpsType: 'LIV',
-                },
-              ],
+              items: cpsItems,
             },
           ],
         },
       };
 
-      expect(filterUnknownCpsTypes(data)).toEqual(expected);
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
 
     it('should work on all groups in the data', () => {
@@ -215,7 +227,7 @@ describe('filterContent', () => {
         },
       };
 
-      expect(filterUnknownCpsTypes(data)).toEqual(expected);
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
 
     it('should remove items without any CPS type', () => {
@@ -245,11 +257,11 @@ describe('filterContent', () => {
         },
       };
 
-      expect(filterUnknownCpsTypes(data)).toEqual(expected);
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
 
     it('should handle "real" data', () => {
-      expect(filterUnknownCpsTypes(igboFixtureData)).toMatchSnapshot();
+      expect(filterUnknownContentTypes(igboFixtureData)).toMatchSnapshot();
     });
   });
 
@@ -286,7 +298,7 @@ describe('filterContent', () => {
         },
       };
 
-      expect(filterUnknownAssetTypeCodes(data)).toEqual(expected);
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
 
     it('should leave items with known assetTypeCode alone', () => {
@@ -294,19 +306,7 @@ describe('filterContent', () => {
         content: {
           groups: [
             {
-              items: [
-                {
-                  name: 'Test assetTypeCode',
-                  summary: 'This is a test',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Text',
-                  assetTypeCode: 'PRO',
-                  timestamp: 1527598380040,
-                  type: 'link',
-                },
-              ],
+              items: assetTypeCodeItems,
             },
           ],
         },
@@ -315,25 +315,13 @@ describe('filterContent', () => {
         content: {
           groups: [
             {
-              items: [
-                {
-                  name: 'Test assetTypeCode',
-                  summary: 'This is a test',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Text',
-                  assetTypeCode: 'PRO',
-                  timestamp: 1527598380040,
-                  type: 'link',
-                },
-              ],
+              items: assetTypeCodeItems,
             },
           ],
         },
       };
 
-      expect(filterUnknownAssetTypeCodes(data)).toEqual(expected);
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
 
     it('should work on all groups in the data', () => {
@@ -394,7 +382,7 @@ describe('filterContent', () => {
         },
       };
 
-      expect(filterUnknownAssetTypeCodes(data)).toEqual(expected);
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
 
     it('should remove items without any assetTypeCode', () => {
@@ -425,11 +413,11 @@ describe('filterContent', () => {
         },
       };
 
-      expect(filterUnknownAssetTypeCodes(data)).toEqual(expected);
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
 
     it('should handle "real" data', () => {
-      expect(filterUnknownAssetTypeCodes(azeriFixtureData)).toMatchSnapshot();
+      expect(filterUnknownContentTypes(azeriFixtureData)).toMatchSnapshot();
     });
   });
 });
