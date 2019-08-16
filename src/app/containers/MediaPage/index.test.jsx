@@ -4,6 +4,9 @@ import { shouldMatchSnapshot } from '../../../testHelpers';
 
 const liveRadioScaffoldProps = {
   service: 'amharic',
+  isAmp: true,
+  pageType: 'media',
+  dials: {},
   match: {
     params: {
       serviceId: 'bbc_amharic_radio',
