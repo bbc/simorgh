@@ -146,27 +146,27 @@ exports[`Translations for amharic should have correct translation for seconds 1`
 
 exports[`Translations for arabic should have correct translation for day 1`] = `"25 ساعة"`;
 
-exports[`Translations for arabic should have correct translation for hour 1`] = `"1 undefined"`;
+exports[`Translations for arabic should have correct translation for hour 1`] = `"ساعة واحدة"`;
 
-exports[`Translations for arabic should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+exports[`Translations for arabic should have correct translation for hourMinute 1`] = `"ساعة واحدة دقيقة واحدة"`;
 
-exports[`Translations for arabic should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 ثانية"`;
+exports[`Translations for arabic should have correct translation for hourMinuteSecond 1`] = `"ساعة واحدة دقيقة واحدة 1 ثانية"`;
 
-exports[`Translations for arabic should have correct translation for hourMinutes 1`] = `"1 undefined دقيقتين"`;
+exports[`Translations for arabic should have correct translation for hourMinutes 1`] = `"ساعة واحدة دقيقتين"`;
 
-exports[`Translations for arabic should have correct translation for hourMinutesSecond 1`] = `"1 undefined دقيقتين 1 ثانية"`;
+exports[`Translations for arabic should have correct translation for hourMinutesSecond 1`] = `"ساعة واحدة دقيقتين 1 ثانية"`;
 
-exports[`Translations for arabic should have correct translation for hourMinutesSeconds 1`] = `"1 undefined دقيقتين ثانيتين"`;
+exports[`Translations for arabic should have correct translation for hourMinutesSeconds 1`] = `"ساعة واحدة دقيقتين ثانيتين"`;
 
-exports[`Translations for arabic should have correct translation for hourSecond 1`] = `"1 undefined  1 ثانية"`;
+exports[`Translations for arabic should have correct translation for hourSecond 1`] = `"ساعة واحدة  1 ثانية"`;
 
-exports[`Translations for arabic should have correct translation for hourSeconds 1`] = `"1 undefined  ثانيتين"`;
+exports[`Translations for arabic should have correct translation for hourSeconds 1`] = `"ساعة واحدة  ثانيتين"`;
 
 exports[`Translations for arabic should have correct translation for hours 1`] = `"ساعتين"`;
 
-exports[`Translations for arabic should have correct translation for hoursMinute 1`] = `"ساعتين 1 undefined"`;
+exports[`Translations for arabic should have correct translation for hoursMinute 1`] = `"ساعتين دقيقة واحدة"`;
 
-exports[`Translations for arabic should have correct translation for hoursMinuteSecond 1`] = `"ساعتين 1 undefined 1 ثانية"`;
+exports[`Translations for arabic should have correct translation for hoursMinuteSecond 1`] = `"ساعتين دقيقة واحدة 1 ثانية"`;
 
 exports[`Translations for arabic should have correct translation for hoursMinutes 1`] = `"ساعتين دقيقتين"`;
 
@@ -176,11 +176,11 @@ exports[`Translations for arabic should have correct translation for hoursMinute
 
 exports[`Translations for arabic should have correct translation for hoursSeconds 1`] = `"ساعتين  1 ثانية"`;
 
-exports[`Translations for arabic should have correct translation for minute 1`] = `"1 undefined"`;
+exports[`Translations for arabic should have correct translation for minute 1`] = `"دقيقة واحدة"`;
 
-exports[`Translations for arabic should have correct translation for minuteSecond 1`] = `"1 undefined 1 ثانية"`;
+exports[`Translations for arabic should have correct translation for minuteSecond 1`] = `"دقيقة واحدة 1 ثانية"`;
 
-exports[`Translations for arabic should have correct translation for minuteSeconds 1`] = `"1 undefined ثانيتين"`;
+exports[`Translations for arabic should have correct translation for minuteSeconds 1`] = `"دقيقة واحدة ثانيتين"`;
 
 exports[`Translations for arabic should have correct translation for minutes 1`] = `"دقيقتين"`;
 
@@ -818,27 +818,27 @@ exports[`Translations for kyrgyz should have correct translation for seconds 1`]
 
 exports[`Translations for marathi should have correct translation for day 1`] = `"25 तासां"`;
 
-exports[`Translations for marathi should have correct translation for hour 1`] = `"1 undefined"`;
+exports[`Translations for marathi should have correct translation for hour 1`] = `"एका तासा"`;
 
-exports[`Translations for marathi should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+exports[`Translations for marathi should have correct translation for hourMinute 1`] = `"एका तासा एका मिनिटा"`;
 
-exports[`Translations for marathi should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 सेकंद"`;
+exports[`Translations for marathi should have correct translation for hourMinuteSecond 1`] = `"एका तासा एका मिनिटा 1 सेकंद"`;
 
-exports[`Translations for marathi should have correct translation for hourMinutes 1`] = `"1 undefined 2 मिनिटां"`;
+exports[`Translations for marathi should have correct translation for hourMinutes 1`] = `"एका तासा 2 मिनिटां"`;
 
-exports[`Translations for marathi should have correct translation for hourMinutesSecond 1`] = `"1 undefined 2 मिनिटां 1 सेकंद"`;
+exports[`Translations for marathi should have correct translation for hourMinutesSecond 1`] = `"एका तासा 2 मिनिटां 1 सेकंद"`;
 
-exports[`Translations for marathi should have correct translation for hourMinutesSeconds 1`] = `"1 undefined 2 मिनिटां 2 सेकंदां"`;
+exports[`Translations for marathi should have correct translation for hourMinutesSeconds 1`] = `"एका तासा 2 मिनिटां 2 सेकंदां"`;
 
-exports[`Translations for marathi should have correct translation for hourSecond 1`] = `"1 undefined  1 सेकंद"`;
+exports[`Translations for marathi should have correct translation for hourSecond 1`] = `"एका तासा  1 सेकंद"`;
 
-exports[`Translations for marathi should have correct translation for hourSeconds 1`] = `"1 undefined  2 सेकंदां"`;
+exports[`Translations for marathi should have correct translation for hourSeconds 1`] = `"एका तासा  2 सेकंदां"`;
 
 exports[`Translations for marathi should have correct translation for hours 1`] = `"2 तासां"`;
 
-exports[`Translations for marathi should have correct translation for hoursMinute 1`] = `"2 तासां 1 undefined"`;
+exports[`Translations for marathi should have correct translation for hoursMinute 1`] = `"2 तासां एका मिनिटा"`;
 
-exports[`Translations for marathi should have correct translation for hoursMinuteSecond 1`] = `"2 तासां 1 undefined 1 सेकंद"`;
+exports[`Translations for marathi should have correct translation for hoursMinuteSecond 1`] = `"2 तासां एका मिनिटा 1 सेकंद"`;
 
 exports[`Translations for marathi should have correct translation for hoursMinutes 1`] = `"2 तासां 2 मिनिटां"`;
 
@@ -848,11 +848,11 @@ exports[`Translations for marathi should have correct translation for hoursMinut
 
 exports[`Translations for marathi should have correct translation for hoursSeconds 1`] = `"2 तासां  1 सेकंद"`;
 
-exports[`Translations for marathi should have correct translation for minute 1`] = `"1 undefined"`;
+exports[`Translations for marathi should have correct translation for minute 1`] = `"एका मिनिटा"`;
 
-exports[`Translations for marathi should have correct translation for minuteSecond 1`] = `"1 undefined 1 सेकंद"`;
+exports[`Translations for marathi should have correct translation for minuteSecond 1`] = `"एका मिनिटा 1 सेकंद"`;
 
-exports[`Translations for marathi should have correct translation for minuteSeconds 1`] = `"1 undefined 2 सेकंदां"`;
+exports[`Translations for marathi should have correct translation for minuteSeconds 1`] = `"एका मिनिटा 2 सेकंदां"`;
 
 exports[`Translations for marathi should have correct translation for minutes 1`] = `"2 मिनिटां"`;
 
@@ -1298,27 +1298,27 @@ exports[`Translations for punjabi should have correct translation for seconds 1`
 
 exports[`Translations for russian should have correct translation for day 1`] = `"25 часов"`;
 
-exports[`Translations for russian should have correct translation for hour 1`] = `"1 undefined"`;
+exports[`Translations for russian should have correct translation for hour 1`] = `"час"`;
 
-exports[`Translations for russian should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+exports[`Translations for russian should have correct translation for hourMinute 1`] = `"час минуту"`;
 
-exports[`Translations for russian should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 секунда"`;
+exports[`Translations for russian should have correct translation for hourMinuteSecond 1`] = `"час минуту 1 секунда"`;
 
-exports[`Translations for russian should have correct translation for hourMinutes 1`] = `"1 undefined 2 минуты"`;
+exports[`Translations for russian should have correct translation for hourMinutes 1`] = `"час 2 минуты"`;
 
-exports[`Translations for russian should have correct translation for hourMinutesSecond 1`] = `"1 undefined 2 минуты 1 секунда"`;
+exports[`Translations for russian should have correct translation for hourMinutesSecond 1`] = `"час 2 минуты 1 секунда"`;
 
-exports[`Translations for russian should have correct translation for hourMinutesSeconds 1`] = `"1 undefined 2 минуты 2 секунды"`;
+exports[`Translations for russian should have correct translation for hourMinutesSeconds 1`] = `"час 2 минуты 2 секунды"`;
 
-exports[`Translations for russian should have correct translation for hourSecond 1`] = `"1 undefined  1 секунда"`;
+exports[`Translations for russian should have correct translation for hourSecond 1`] = `"час  1 секунда"`;
 
-exports[`Translations for russian should have correct translation for hourSeconds 1`] = `"1 undefined  2 секунды"`;
+exports[`Translations for russian should have correct translation for hourSeconds 1`] = `"час  2 секунды"`;
 
 exports[`Translations for russian should have correct translation for hours 1`] = `"2 часа"`;
 
-exports[`Translations for russian should have correct translation for hoursMinute 1`] = `"2 часа 1 undefined"`;
+exports[`Translations for russian should have correct translation for hoursMinute 1`] = `"2 часа минуту"`;
 
-exports[`Translations for russian should have correct translation for hoursMinuteSecond 1`] = `"2 часа 1 undefined 1 секунда"`;
+exports[`Translations for russian should have correct translation for hoursMinuteSecond 1`] = `"2 часа минуту 1 секунда"`;
 
 exports[`Translations for russian should have correct translation for hoursMinutes 1`] = `"2 часа 2 минуты"`;
 
@@ -1328,11 +1328,11 @@ exports[`Translations for russian should have correct translation for hoursMinut
 
 exports[`Translations for russian should have correct translation for hoursSeconds 1`] = `"2 часа  1 секунда"`;
 
-exports[`Translations for russian should have correct translation for minute 1`] = `"1 undefined"`;
+exports[`Translations for russian should have correct translation for minute 1`] = `"минуту"`;
 
-exports[`Translations for russian should have correct translation for minuteSecond 1`] = `"1 undefined 1 секунда"`;
+exports[`Translations for russian should have correct translation for minuteSecond 1`] = `"минуту 1 секунда"`;
 
-exports[`Translations for russian should have correct translation for minuteSeconds 1`] = `"1 undefined 2 секунды"`;
+exports[`Translations for russian should have correct translation for minuteSeconds 1`] = `"минуту 2 секунды"`;
 
 exports[`Translations for russian should have correct translation for minutes 1`] = `"2 минуты"`;
 
@@ -1346,27 +1346,27 @@ exports[`Translations for russian should have correct translation for seconds 1`
 
 exports[`Translations for serbian should have correct translation for day 1`] = `"25 sati"`;
 
-exports[`Translations for serbian should have correct translation for hour 1`] = `"1 undefined"`;
+exports[`Translations for serbian should have correct translation for hour 1`] = `"jednog sata"`;
 
-exports[`Translations for serbian should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+exports[`Translations for serbian should have correct translation for hourMinute 1`] = `"jednog sata jedne minute"`;
 
-exports[`Translations for serbian should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 секунда"`;
+exports[`Translations for serbian should have correct translation for hourMinuteSecond 1`] = `"jednog sata jedne minute 1 секунда"`;
 
-exports[`Translations for serbian should have correct translation for hourMinutes 1`] = `"1 undefined 2 minute"`;
+exports[`Translations for serbian should have correct translation for hourMinutes 1`] = `"jednog sata 2 minute"`;
 
-exports[`Translations for serbian should have correct translation for hourMinutesSecond 1`] = `"1 undefined 2 minute 1 секунда"`;
+exports[`Translations for serbian should have correct translation for hourMinutesSecond 1`] = `"jednog sata 2 minute 1 секунда"`;
 
-exports[`Translations for serbian should have correct translation for hourMinutesSeconds 1`] = `"1 undefined 2 minute 2 sekunde"`;
+exports[`Translations for serbian should have correct translation for hourMinutesSeconds 1`] = `"jednog sata 2 minute 2 sekunde"`;
 
-exports[`Translations for serbian should have correct translation for hourSecond 1`] = `"1 undefined  1 секунда"`;
+exports[`Translations for serbian should have correct translation for hourSecond 1`] = `"jednog sata  1 секунда"`;
 
-exports[`Translations for serbian should have correct translation for hourSeconds 1`] = `"1 undefined  2 sekunde"`;
+exports[`Translations for serbian should have correct translation for hourSeconds 1`] = `"jednog sata  2 sekunde"`;
 
 exports[`Translations for serbian should have correct translation for hours 1`] = `"2 sata"`;
 
-exports[`Translations for serbian should have correct translation for hoursMinute 1`] = `"2 sata 1 undefined"`;
+exports[`Translations for serbian should have correct translation for hoursMinute 1`] = `"2 sata jedne minute"`;
 
-exports[`Translations for serbian should have correct translation for hoursMinuteSecond 1`] = `"2 sata 1 undefined 1 секунда"`;
+exports[`Translations for serbian should have correct translation for hoursMinuteSecond 1`] = `"2 sata jedne minute 1 секунда"`;
 
 exports[`Translations for serbian should have correct translation for hoursMinutes 1`] = `"2 sata 2 minute"`;
 
@@ -1376,11 +1376,11 @@ exports[`Translations for serbian should have correct translation for hoursMinut
 
 exports[`Translations for serbian should have correct translation for hoursSeconds 1`] = `"2 sata  1 секунда"`;
 
-exports[`Translations for serbian should have correct translation for minute 1`] = `"1 undefined"`;
+exports[`Translations for serbian should have correct translation for minute 1`] = `"jedne minute"`;
 
-exports[`Translations for serbian should have correct translation for minuteSecond 1`] = `"1 undefined 1 секунда"`;
+exports[`Translations for serbian should have correct translation for minuteSecond 1`] = `"jedne minute 1 секунда"`;
 
-exports[`Translations for serbian should have correct translation for minuteSeconds 1`] = `"1 undefined 2 sekunde"`;
+exports[`Translations for serbian should have correct translation for minuteSeconds 1`] = `"jedne minute 2 sekunde"`;
 
 exports[`Translations for serbian should have correct translation for minutes 1`] = `"2 minute"`;
 
@@ -1826,27 +1826,27 @@ exports[`Translations for ukchina should have correct translation for seconds 1`
 
 exports[`Translations for ukrainian should have correct translation for day 1`] = `"25 годин"`;
 
-exports[`Translations for ukrainian should have correct translation for hour 1`] = `"1 undefined"`;
+exports[`Translations for ukrainian should have correct translation for hour 1`] = `"годину"`;
 
-exports[`Translations for ukrainian should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+exports[`Translations for ukrainian should have correct translation for hourMinute 1`] = `"годину хвилину"`;
 
-exports[`Translations for ukrainian should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 секунда"`;
+exports[`Translations for ukrainian should have correct translation for hourMinuteSecond 1`] = `"годину хвилину 1 секунда"`;
 
-exports[`Translations for ukrainian should have correct translation for hourMinutes 1`] = `"1 undefined 2 хвилини"`;
+exports[`Translations for ukrainian should have correct translation for hourMinutes 1`] = `"годину 2 хвилини"`;
 
-exports[`Translations for ukrainian should have correct translation for hourMinutesSecond 1`] = `"1 undefined 2 хвилини 1 секунда"`;
+exports[`Translations for ukrainian should have correct translation for hourMinutesSecond 1`] = `"годину 2 хвилини 1 секунда"`;
 
-exports[`Translations for ukrainian should have correct translation for hourMinutesSeconds 1`] = `"1 undefined 2 хвилини 2 секунди"`;
+exports[`Translations for ukrainian should have correct translation for hourMinutesSeconds 1`] = `"годину 2 хвилини 2 секунди"`;
 
-exports[`Translations for ukrainian should have correct translation for hourSecond 1`] = `"1 undefined  1 секунда"`;
+exports[`Translations for ukrainian should have correct translation for hourSecond 1`] = `"годину  1 секунда"`;
 
-exports[`Translations for ukrainian should have correct translation for hourSeconds 1`] = `"1 undefined  2 секунди"`;
+exports[`Translations for ukrainian should have correct translation for hourSeconds 1`] = `"годину  2 секунди"`;
 
 exports[`Translations for ukrainian should have correct translation for hours 1`] = `"2 години"`;
 
-exports[`Translations for ukrainian should have correct translation for hoursMinute 1`] = `"2 години 1 undefined"`;
+exports[`Translations for ukrainian should have correct translation for hoursMinute 1`] = `"2 години хвилину"`;
 
-exports[`Translations for ukrainian should have correct translation for hoursMinuteSecond 1`] = `"2 години 1 undefined 1 секунда"`;
+exports[`Translations for ukrainian should have correct translation for hoursMinuteSecond 1`] = `"2 години хвилину 1 секунда"`;
 
 exports[`Translations for ukrainian should have correct translation for hoursMinutes 1`] = `"2 години 2 хвилини"`;
 
@@ -1856,11 +1856,11 @@ exports[`Translations for ukrainian should have correct translation for hoursMin
 
 exports[`Translations for ukrainian should have correct translation for hoursSeconds 1`] = `"2 години  1 секунда"`;
 
-exports[`Translations for ukrainian should have correct translation for minute 1`] = `"1 undefined"`;
+exports[`Translations for ukrainian should have correct translation for minute 1`] = `"хвилину"`;
 
-exports[`Translations for ukrainian should have correct translation for minuteSecond 1`] = `"1 undefined 1 секунда"`;
+exports[`Translations for ukrainian should have correct translation for minuteSecond 1`] = `"хвилину 1 секунда"`;
 
-exports[`Translations for ukrainian should have correct translation for minuteSeconds 1`] = `"1 undefined 2 секунди"`;
+exports[`Translations for ukrainian should have correct translation for minuteSeconds 1`] = `"хвилину 2 секунди"`;
 
 exports[`Translations for ukrainian should have correct translation for minutes 1`] = `"2 хвилини"`;
 

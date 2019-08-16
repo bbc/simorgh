@@ -1,10 +1,6 @@
 import moment from 'moment';
 
 const interpolate = (num, relativeTime, format, secondTranslation) => {
-  if (typeof format === 'function') {
-    return `1 ${secondTranslation}`;
-  }
-
   const interpolatedTime = relativeTime.split(' ');
   const index = format.split(' ').indexOf('%d');
   if (secondTranslation) {
@@ -27,6 +23,11 @@ const getDescription = (num, key, secondTranslation) => {
 
   const format = locale._relativeTime[key.repeat(2)]; // eslint-disable-line
   const relativeTime = locale.relativeTime(num, false, key);
+
+  if (typeof format === 'function') {
+    return key === 's' ? `1 ${secondTranslation}` : relativeTime;
+  }
+
   return interpolate(num, relativeTime, format, secondTranslation);
 };
 
