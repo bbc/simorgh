@@ -38,7 +38,7 @@ const ChartbeatAnalytics = ({ data }) => {
   const type = getType(pageType);
   const isAmp = platform === 'amp';
   const authors = getAuthors(pageType, articleAuthor);
-  const currentPath = onClient() ? window.location.pathname : null;
+  const currentPath = onClient() && window.location.pathname;
   const config = {
     domain,
     sections,
