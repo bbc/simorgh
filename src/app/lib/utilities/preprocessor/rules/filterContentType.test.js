@@ -78,7 +78,7 @@ describe('filterUnknownContentTypes', () => {
       content: {
         groups: [
           {
-            items: cpsItems + assetTypeCodeItems,
+            items: cpsItems.concat(assetTypeCodeItems),
           },
         ],
       },
@@ -87,7 +87,7 @@ describe('filterUnknownContentTypes', () => {
       content: {
         groups: [
           {
-            items: cpsItems + assetTypeCodeItems,
+            items: cpsItems.concat(assetTypeCodeItems),
           },
         ],
       },
