@@ -71,6 +71,9 @@ const runCommonTests = ({ service, pageType }) => {
             .find('a[class^="SkipLink"]')
             .should('have.lengthOf', 1)
             .should('have.attr', 'href', '#content');
+          cy.get('nav a[class^="StyledLink"]')
+            .should('have.attr', 'href', appConfig[service].navigation[0].url)
+            .should('contain', appConfig[service].navigation[0].title);
           cy.get('h1')
             .should('have.lengthOf', 1)
             .should('have.attr', 'id', 'content');
