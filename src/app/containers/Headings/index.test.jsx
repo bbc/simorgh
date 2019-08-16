@@ -92,9 +92,9 @@ describe('Headings', () => {
         HeadingsContainerWithContext(data),
       );
 
-      it('should not have an id', () => {
+      it('should have an id for the skiplink with value "content"', () => {
         const headlineHeading = render(HeadingsContainerWithContext(data));
-        expect(getId(headlineHeading)).toBe(undefined);
+        expect(getId(headlineHeading)).toBe('content');
       });
     });
 
