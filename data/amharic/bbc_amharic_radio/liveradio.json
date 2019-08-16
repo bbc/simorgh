@@ -1,31 +1,62 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::asset:amharic/bbc_amharic_radio/liveradio",
-    "tags": {}
+    "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
+    "locators": {},
+    "type": "WS-LIVE",
+    "createdBy": "amharic",
+    "language": "am-ET",
+    "lastUpdated": 0,
+    "firstPublished": 0,
+    "lastPublished": 0,
+    "options": {},
+    "analyticsLabels": {
+      "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page",
+      "pageTitle": "ያድምጡ - BBC News አማርኛ"
+    },
+    "tags": {},
+    "version": "1.1.1",
+    "blockTypes": ["heading", "version", "paragraph"]
   },
   "content": {
-    "title": "ያድምጡ",
-    "subtitle": "ዝግጅቶቻችንን",
     "blocks": [
       {
+        "text": "ያድምጡ",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "ዝግጅቶቻችንን",
+        "type": "paragraph"
+      },
+      {
         "id": "liveradio",
-        "type": "media",
+        "subType": "primary",
         "format": "audio",
-        "title": "TODO",
-        "caption": "TODO",
-        "versions": [
-          {
-            "versionId": "liveradio"
-          }
-        ]
+        "externalId": "bbc_amharic_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
       }
     ]
   },
   "promo": {
-    "subType": "IDX",
-    "name": "TODO: Amharic Live Radio",
-    "uri": "/amharic/bbc_amharic_radio/liveradio",
-    "id": "TODO",
-    "type": "simple"
+    "name": "ያድምጡ",
+    "summary": "ዝግጅቶቻችንን",
+    "uri": "/tigrinya/bbc_tigrinya_radio/liveradio",
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
+    "type": "link"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "simple",
+      "name": "amharic",
+      "uri": "/amharic",
+      "type": "simple"
+    },
+    "groups": []
   }
 }
