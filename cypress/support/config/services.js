@@ -75,7 +75,6 @@ export default {
     },
   },
   arabic: {
-    datetimeLocale: 'ar',
     font: undefined,
     isWorldService: true,
     pageTypes: {
