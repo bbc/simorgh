@@ -15,7 +15,6 @@ export const RequestContextProvider = ({
   pageType,
   service,
   previousPath,
-  currentPath,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
@@ -41,7 +40,6 @@ export const RequestContextProvider = ({
     statsDestination,
     statsPageIdentifier,
     previousPath,
-    currentPath,
   };
 
   return (
@@ -57,12 +55,10 @@ RequestContextProvider.propTypes = {
   pageType: oneOf(['article', 'frontPage', 'media']).isRequired,
   service: string.isRequired,
   previousPath: string,
-  currentPath: string,
 };
 
 RequestContextProvider.defaultProps = {
   bbcOrigin: null,
   id: null,
   previousPath: null,
-  currentPath: null,
 };

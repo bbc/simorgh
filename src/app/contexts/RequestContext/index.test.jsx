@@ -49,7 +49,6 @@ const expectedOutput = {
   statsDestination: 'getStatsDestination',
   statsPageIdentifier: 'getStatsPageIdentifier',
   previousPath: '/previous-path',
-  currentPath: null,
 };
 
 describe('RequestContext', () => {

@@ -17,7 +17,6 @@ const WithContexts = Component => {
       pageType,
       previousPath,
       dials,
-      currentPath,
     } = props;
     return (
       <ToggleContextProvider>
@@ -30,7 +29,6 @@ const WithContexts = Component => {
               pageType={pageType}
               service={service}
               previousPath={previousPath}
-              currentPath={currentPath}
             >
               <Component {...props} />
             </RequestContextProvider>
@@ -48,14 +46,12 @@ const WithContexts = Component => {
     previousPath: string,
     service: string.isRequired,
     dials: objectOf(bool).isRequired,
-    currentPath: string,
   };
 
   WithContextsContainer.defaultProps = {
     bbcOrigin: null,
     id: null,
     previousPath: null,
-    currentPath: null,
   };
 
   return WithContextsContainer;

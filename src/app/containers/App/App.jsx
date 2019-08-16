@@ -75,7 +75,6 @@ export const App = ({
   }, [routes, location.pathname]);
 
   const previousLocationPath = usePrevious(location.pathname);
-  const currentPath = location.pathname;
 
   // clear the previous path on back clicks
   const previousPath = history.action === 'POP' ? null : previousLocationPath;
@@ -85,7 +84,6 @@ export const App = ({
     bbcOrigin,
     dials,
     previousPath,
-    currentPath,
   });
 };
 

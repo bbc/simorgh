@@ -101,6 +101,7 @@ describe('Charbeats Analytics Container', () => {
       idSync: {
         bbc_hid: 'cookie',
       },
+      path: '/',
       sections: 'secction1 section2',
       title: 'This is an article',
       authors: 'Author1, Author2',
