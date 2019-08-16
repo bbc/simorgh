@@ -139,6 +139,7 @@ node {
                     colour: 'danger',
                     emoji: '😱',
                   ]
+                  echo "Build Result: ${currentBuild.currentResult}"
                   notifySlack(messageParameters)
                 }
                 break
