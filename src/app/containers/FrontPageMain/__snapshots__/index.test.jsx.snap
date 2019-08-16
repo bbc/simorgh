@@ -373,6 +373,9 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             },
           },
           "currentPage": "Peegi ị nọ ugbua",
+          "durations": Object {
+            "s": "nke abụọ",
+          },
           "error": Object {
             "404": Object {
               "callToActionFirst": "Maọbụ, biko gaa n'obi ",

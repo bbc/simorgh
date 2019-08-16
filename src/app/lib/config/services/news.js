@@ -127,6 +127,9 @@ const news = {
       photogallery: 'Image gallery',
       video: 'Video',
     },
+    durations: {
+      s: 'second',
+    },
   },
   brandSVG,
   footer: {

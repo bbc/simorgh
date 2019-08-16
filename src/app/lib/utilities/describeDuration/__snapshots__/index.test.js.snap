@@ -1,0 +1,2113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Translations for afaanoromoo should have correct translation for day 1`] = `"25,00,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hour 1`] = `"1,00,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hourMinute 1`] = `"1,01,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hourMinuteSecond 1`] = `"1,01,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hourMinutes 1`] = `"1,02,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hourMinutesSecond 1`] = `"1,02,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hourMinutesSeconds 1`] = `"1,02,02"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hourSecond 1`] = `"1,00,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hourSeconds 1`] = `"1,00,02"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hours 1`] = `"2,00,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hoursMinute 1`] = `"2,01,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hoursMinuteSecond 1`] = `"2,01,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hoursMinutes 1`] = `"2,02,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hoursMinutesSecond 1`] = `"2,02,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hoursMinutesSeconds 1`] = `"2,02,02"`;
+
+exports[`Translations for afaanoromoo should have correct translation for hoursSeconds 1`] = `"2,00,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for minute 1`] = `"1,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for minuteSecond 1`] = `"1,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for minuteSeconds 1`] = `"1,02"`;
+
+exports[`Translations for afaanoromoo should have correct translation for minutes 1`] = `"2,00"`;
+
+exports[`Translations for afaanoromoo should have correct translation for minutesSecond 1`] = `"2,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for minutesSeconds 1`] = `"2,02"`;
+
+exports[`Translations for afaanoromoo should have correct translation for second 1`] = `"0,01"`;
+
+exports[`Translations for afaanoromoo should have correct translation for seconds 1`] = `"0,20"`;
+
+exports[`Translations for afrique should have correct translation for day 1`] = `"25 heures"`;
+
+exports[`Translations for afrique should have correct translation for hour 1`] = `"1 heure"`;
+
+exports[`Translations for afrique should have correct translation for hourMinute 1`] = `"1 heure 1 minute"`;
+
+exports[`Translations for afrique should have correct translation for hourMinuteSecond 1`] = `"1 heure 1 minute 1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for hourMinutes 1`] = `"1 heure 2 minutes"`;
+
+exports[`Translations for afrique should have correct translation for hourMinutesSecond 1`] = `"1 heure 2 minutes 1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for hourMinutesSeconds 1`] = `"1 heure 2 minutes 2 secondes"`;
+
+exports[`Translations for afrique should have correct translation for hourSecond 1`] = `"1 heure  1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for hourSeconds 1`] = `"1 heure  2 secondes"`;
+
+exports[`Translations for afrique should have correct translation for hours 1`] = `"2 heures"`;
+
+exports[`Translations for afrique should have correct translation for hoursMinute 1`] = `"2 heures 1 minute"`;
+
+exports[`Translations for afrique should have correct translation for hoursMinuteSecond 1`] = `"2 heures 1 minute 1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for hoursMinutes 1`] = `"2 heures 2 minutes"`;
+
+exports[`Translations for afrique should have correct translation for hoursMinutesSecond 1`] = `"2 heures 2 minutes 1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for hoursMinutesSeconds 1`] = `"2 heures 2 minutes 2 secondes"`;
+
+exports[`Translations for afrique should have correct translation for hoursSeconds 1`] = `"2 heures  1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for minute 1`] = `"1 minute"`;
+
+exports[`Translations for afrique should have correct translation for minuteSecond 1`] = `"1 minute 1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for minuteSeconds 1`] = `"1 minute 2 secondes"`;
+
+exports[`Translations for afrique should have correct translation for minutes 1`] = `"2 minutes"`;
+
+exports[`Translations for afrique should have correct translation for minutesSecond 1`] = `"2 minutes 1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for minutesSeconds 1`] = `"2 minutes 2 secondes"`;
+
+exports[`Translations for afrique should have correct translation for second 1`] = `"1 seconde"`;
+
+exports[`Translations for afrique should have correct translation for seconds 1`] = `"20 secondes"`;
+
+exports[`Translations for amharic should have correct translation for day 1`] = `"25 heures"`;
+
+exports[`Translations for amharic should have correct translation for hour 1`] = `"1 heure"`;
+
+exports[`Translations for amharic should have correct translation for hourMinute 1`] = `"1 heure 1 minute"`;
+
+exports[`Translations for amharic should have correct translation for hourMinuteSecond 1`] = `"1 heure 1 minute 1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for hourMinutes 1`] = `"1 heure 2 minutes"`;
+
+exports[`Translations for amharic should have correct translation for hourMinutesSecond 1`] = `"1 heure 2 minutes 1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for hourMinutesSeconds 1`] = `"1 heure 2 minutes 2 secondes"`;
+
+exports[`Translations for amharic should have correct translation for hourSecond 1`] = `"1 heure  1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for hourSeconds 1`] = `"1 heure  2 secondes"`;
+
+exports[`Translations for amharic should have correct translation for hours 1`] = `"2 heures"`;
+
+exports[`Translations for amharic should have correct translation for hoursMinute 1`] = `"2 heures 1 minute"`;
+
+exports[`Translations for amharic should have correct translation for hoursMinuteSecond 1`] = `"2 heures 1 minute 1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for hoursMinutes 1`] = `"2 heures 2 minutes"`;
+
+exports[`Translations for amharic should have correct translation for hoursMinutesSecond 1`] = `"2 heures 2 minutes 1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for hoursMinutesSeconds 1`] = `"2 heures 2 minutes 2 secondes"`;
+
+exports[`Translations for amharic should have correct translation for hoursSeconds 1`] = `"2 heures  1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for minute 1`] = `"1 minute"`;
+
+exports[`Translations for amharic should have correct translation for minuteSecond 1`] = `"1 minute 1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for minuteSeconds 1`] = `"1 minute 2 secondes"`;
+
+exports[`Translations for amharic should have correct translation for minutes 1`] = `"2 minutes"`;
+
+exports[`Translations for amharic should have correct translation for minutesSecond 1`] = `"2 minutes 1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for minutesSeconds 1`] = `"2 minutes 2 secondes"`;
+
+exports[`Translations for amharic should have correct translation for second 1`] = `"1 ሰከንድ"`;
+
+exports[`Translations for amharic should have correct translation for seconds 1`] = `"20 secondes"`;
+
+exports[`Translations for arabic should have correct translation for day 1`] = `"25 ساعة"`;
+
+exports[`Translations for arabic should have correct translation for hour 1`] = `"1 undefined"`;
+
+exports[`Translations for arabic should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+
+exports[`Translations for arabic should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for hourMinutes 1`] = `"1 undefined دقيقتين"`;
+
+exports[`Translations for arabic should have correct translation for hourMinutesSecond 1`] = `"1 undefined دقيقتين 1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for hourMinutesSeconds 1`] = `"1 undefined دقيقتين ثانيتين"`;
+
+exports[`Translations for arabic should have correct translation for hourSecond 1`] = `"1 undefined  1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for hourSeconds 1`] = `"1 undefined  ثانيتين"`;
+
+exports[`Translations for arabic should have correct translation for hours 1`] = `"ساعتين"`;
+
+exports[`Translations for arabic should have correct translation for hoursMinute 1`] = `"ساعتين 1 undefined"`;
+
+exports[`Translations for arabic should have correct translation for hoursMinuteSecond 1`] = `"ساعتين 1 undefined 1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for hoursMinutes 1`] = `"ساعتين دقيقتين"`;
+
+exports[`Translations for arabic should have correct translation for hoursMinutesSecond 1`] = `"ساعتين دقيقتين 1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for hoursMinutesSeconds 1`] = `"ساعتين دقيقتين ثانيتين"`;
+
+exports[`Translations for arabic should have correct translation for hoursSeconds 1`] = `"ساعتين  1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for minute 1`] = `"1 undefined"`;
+
+exports[`Translations for arabic should have correct translation for minuteSecond 1`] = `"1 undefined 1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for minuteSeconds 1`] = `"1 undefined ثانيتين"`;
+
+exports[`Translations for arabic should have correct translation for minutes 1`] = `"دقيقتين"`;
+
+exports[`Translations for arabic should have correct translation for minutesSecond 1`] = `"دقيقتين 1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for minutesSeconds 1`] = `"دقيقتين ثانيتين"`;
+
+exports[`Translations for arabic should have correct translation for second 1`] = `"1 ثانية"`;
+
+exports[`Translations for arabic should have correct translation for seconds 1`] = `"20 ثانية"`;
+
+exports[`Translations for azeri should have correct translation for day 1`] = `"25 saat"`;
+
+exports[`Translations for azeri should have correct translation for hour 1`] = `"1 saat"`;
+
+exports[`Translations for azeri should have correct translation for hourMinute 1`] = `"1 saat 1 dəqiqə"`;
+
+exports[`Translations for azeri should have correct translation for hourMinuteSecond 1`] = `"1 saat 1 dəqiqə 1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for hourMinutes 1`] = `"1 saat 2 dəqiqə"`;
+
+exports[`Translations for azeri should have correct translation for hourMinutesSecond 1`] = `"1 saat 2 dəqiqə 1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for hourMinutesSeconds 1`] = `"1 saat 2 dəqiqə 2 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for hourSecond 1`] = `"1 saat  1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for hourSeconds 1`] = `"1 saat  2 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for hours 1`] = `"2 saat"`;
+
+exports[`Translations for azeri should have correct translation for hoursMinute 1`] = `"2 saat 1 dəqiqə"`;
+
+exports[`Translations for azeri should have correct translation for hoursMinuteSecond 1`] = `"2 saat 1 dəqiqə 1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for hoursMinutes 1`] = `"2 saat 2 dəqiqə"`;
+
+exports[`Translations for azeri should have correct translation for hoursMinutesSecond 1`] = `"2 saat 2 dəqiqə 1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for hoursMinutesSeconds 1`] = `"2 saat 2 dəqiqə 2 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for hoursSeconds 1`] = `"2 saat  1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for minute 1`] = `"1 dəqiqə"`;
+
+exports[`Translations for azeri should have correct translation for minuteSecond 1`] = `"1 dəqiqə 1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for minuteSeconds 1`] = `"1 dəqiqə 2 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for minutes 1`] = `"2 dəqiqə"`;
+
+exports[`Translations for azeri should have correct translation for minutesSecond 1`] = `"2 dəqiqə 1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for minutesSeconds 1`] = `"2 dəqiqə 2 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for second 1`] = `"1 saniyə"`;
+
+exports[`Translations for azeri should have correct translation for seconds 1`] = `"20 saniyə"`;
+
+exports[`Translations for bengali should have correct translation for day 1`] = `"25 ঘন্টা"`;
+
+exports[`Translations for bengali should have correct translation for hour 1`] = `"1 ঘন্টা"`;
+
+exports[`Translations for bengali should have correct translation for hourMinute 1`] = `"1 ঘন্টা 1 মিনিট"`;
+
+exports[`Translations for bengali should have correct translation for hourMinuteSecond 1`] = `"1 ঘন্টা 1 মিনিট 1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for hourMinutes 1`] = `"1 ঘন্টা 2 মিনিট"`;
+
+exports[`Translations for bengali should have correct translation for hourMinutesSecond 1`] = `"1 ঘন্টা 2 মিনিট 1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for hourMinutesSeconds 1`] = `"1 ঘন্টা 2 মিনিট 2 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for hourSecond 1`] = `"1 ঘন্টা  1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for hourSeconds 1`] = `"1 ঘন্টা  2 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for hours 1`] = `"2 ঘন্টা"`;
+
+exports[`Translations for bengali should have correct translation for hoursMinute 1`] = `"2 ঘন্টা 1 মিনিট"`;
+
+exports[`Translations for bengali should have correct translation for hoursMinuteSecond 1`] = `"2 ঘন্টা 1 মিনিট 1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for hoursMinutes 1`] = `"2 ঘন্টা 2 মিনিট"`;
+
+exports[`Translations for bengali should have correct translation for hoursMinutesSecond 1`] = `"2 ঘন্টা 2 মিনিট 1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for hoursMinutesSeconds 1`] = `"2 ঘন্টা 2 মিনিট 2 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for hoursSeconds 1`] = `"2 ঘন্টা  1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for minute 1`] = `"1 মিনিট"`;
+
+exports[`Translations for bengali should have correct translation for minuteSecond 1`] = `"1 মিনিট 1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for minuteSeconds 1`] = `"1 মিনিট 2 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for minutes 1`] = `"2 মিনিট"`;
+
+exports[`Translations for bengali should have correct translation for minutesSecond 1`] = `"2 মিনিট 1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for minutesSeconds 1`] = `"2 মিনিট 2 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for second 1`] = `"1 সেকেন্ড"`;
+
+exports[`Translations for bengali should have correct translation for seconds 1`] = `"20 সেকেন্ড"`;
+
+exports[`Translations for burmese should have correct translation for day 1`] = `"25 နာရီ"`;
+
+exports[`Translations for burmese should have correct translation for hour 1`] = `"1"`;
+
+exports[`Translations for burmese should have correct translation for hourMinute 1`] = `"1 1"`;
+
+exports[`Translations for burmese should have correct translation for hourMinuteSecond 1`] = `"1 1 1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for hourMinutes 1`] = `"1 2 မိနစ်"`;
+
+exports[`Translations for burmese should have correct translation for hourMinutesSecond 1`] = `"1 2 မိနစ် 1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for hourMinutesSeconds 1`] = `"1 2 မိနစ် 2 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for hourSecond 1`] = `"1  1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for hourSeconds 1`] = `"1  2 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for hours 1`] = `"2 နာရီ"`;
+
+exports[`Translations for burmese should have correct translation for hoursMinute 1`] = `"2 နာရီ 1"`;
+
+exports[`Translations for burmese should have correct translation for hoursMinuteSecond 1`] = `"2 နာရီ 1 1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for hoursMinutes 1`] = `"2 နာရီ 2 မိနစ်"`;
+
+exports[`Translations for burmese should have correct translation for hoursMinutesSecond 1`] = `"2 နာရီ 2 မိနစ် 1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for hoursMinutesSeconds 1`] = `"2 နာရီ 2 မိနစ် 2 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for hoursSeconds 1`] = `"2 နာရီ  1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for minute 1`] = `"1"`;
+
+exports[`Translations for burmese should have correct translation for minuteSecond 1`] = `"1 1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for minuteSeconds 1`] = `"1 2 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for minutes 1`] = `"2 မိနစ်"`;
+
+exports[`Translations for burmese should have correct translation for minutesSecond 1`] = `"2 မိနစ် 1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for minutesSeconds 1`] = `"2 မိနစ် 2 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for second 1`] = `"1 စက္ကန့်"`;
+
+exports[`Translations for burmese should have correct translation for seconds 1`] = `"20 စက္ကန့်"`;
+
+exports[`Translations for cymrufyw should have correct translation for day 1`] = `"25 awr"`;
+
+exports[`Translations for cymrufyw should have correct translation for hour 1`] = `"1"`;
+
+exports[`Translations for cymrufyw should have correct translation for hourMinute 1`] = `"1 1"`;
+
+exports[`Translations for cymrufyw should have correct translation for hourMinuteSecond 1`] = `"1 1 1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for hourMinutes 1`] = `"1 2 munud"`;
+
+exports[`Translations for cymrufyw should have correct translation for hourMinutesSecond 1`] = `"1 2 munud 1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for hourMinutesSeconds 1`] = `"1 2 munud 2 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for hourSecond 1`] = `"1  1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for hourSeconds 1`] = `"1  2 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for hours 1`] = `"2 awr"`;
+
+exports[`Translations for cymrufyw should have correct translation for hoursMinute 1`] = `"2 awr 1"`;
+
+exports[`Translations for cymrufyw should have correct translation for hoursMinuteSecond 1`] = `"2 awr 1 1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for hoursMinutes 1`] = `"2 awr 2 munud"`;
+
+exports[`Translations for cymrufyw should have correct translation for hoursMinutesSecond 1`] = `"2 awr 2 munud 1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for hoursMinutesSeconds 1`] = `"2 awr 2 munud 2 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for hoursSeconds 1`] = `"2 awr  1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for minute 1`] = `"1"`;
+
+exports[`Translations for cymrufyw should have correct translation for minuteSecond 1`] = `"1 1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for minuteSeconds 1`] = `"1 2 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for minutes 1`] = `"2 munud"`;
+
+exports[`Translations for cymrufyw should have correct translation for minutesSecond 1`] = `"2 munud 1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for minutesSeconds 1`] = `"2 munud 2 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for second 1`] = `"1 eiliad"`;
+
+exports[`Translations for cymrufyw should have correct translation for seconds 1`] = `"20 eiliad"`;
+
+exports[`Translations for gahuza should have correct translation for day 1`] = `"25,00,00"`;
+
+exports[`Translations for gahuza should have correct translation for hour 1`] = `"1,00,00"`;
+
+exports[`Translations for gahuza should have correct translation for hourMinute 1`] = `"1,01,00"`;
+
+exports[`Translations for gahuza should have correct translation for hourMinuteSecond 1`] = `"1,01,01"`;
+
+exports[`Translations for gahuza should have correct translation for hourMinutes 1`] = `"1,02,00"`;
+
+exports[`Translations for gahuza should have correct translation for hourMinutesSecond 1`] = `"1,02,01"`;
+
+exports[`Translations for gahuza should have correct translation for hourMinutesSeconds 1`] = `"1,02,02"`;
+
+exports[`Translations for gahuza should have correct translation for hourSecond 1`] = `"1,00,01"`;
+
+exports[`Translations for gahuza should have correct translation for hourSeconds 1`] = `"1,00,02"`;
+
+exports[`Translations for gahuza should have correct translation for hours 1`] = `"2,00,00"`;
+
+exports[`Translations for gahuza should have correct translation for hoursMinute 1`] = `"2,01,00"`;
+
+exports[`Translations for gahuza should have correct translation for hoursMinuteSecond 1`] = `"2,01,01"`;
+
+exports[`Translations for gahuza should have correct translation for hoursMinutes 1`] = `"2,02,00"`;
+
+exports[`Translations for gahuza should have correct translation for hoursMinutesSecond 1`] = `"2,02,01"`;
+
+exports[`Translations for gahuza should have correct translation for hoursMinutesSeconds 1`] = `"2,02,02"`;
+
+exports[`Translations for gahuza should have correct translation for hoursSeconds 1`] = `"2,00,01"`;
+
+exports[`Translations for gahuza should have correct translation for minute 1`] = `"1,00"`;
+
+exports[`Translations for gahuza should have correct translation for minuteSecond 1`] = `"1,01"`;
+
+exports[`Translations for gahuza should have correct translation for minuteSeconds 1`] = `"1,02"`;
+
+exports[`Translations for gahuza should have correct translation for minutes 1`] = `"2,00"`;
+
+exports[`Translations for gahuza should have correct translation for minutesSecond 1`] = `"2,01"`;
+
+exports[`Translations for gahuza should have correct translation for minutesSeconds 1`] = `"2,02"`;
+
+exports[`Translations for gahuza should have correct translation for second 1`] = `"0,01"`;
+
+exports[`Translations for gahuza should have correct translation for seconds 1`] = `"0,20"`;
+
+exports[`Translations for gujarati should have correct translation for day 1`] = `"25 કલાક"`;
+
+exports[`Translations for gujarati should have correct translation for hour 1`] = `"1 કલાક"`;
+
+exports[`Translations for gujarati should have correct translation for hourMinute 1`] = `"1 કલાક 1 મિનિટ"`;
+
+exports[`Translations for gujarati should have correct translation for hourMinuteSecond 1`] = `"1 કલાક 1 મિનિટ 1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for hourMinutes 1`] = `"1 કલાક 2 મિનિટ"`;
+
+exports[`Translations for gujarati should have correct translation for hourMinutesSecond 1`] = `"1 કલાક 2 મિનિટ 1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for hourMinutesSeconds 1`] = `"1 કલાક 2 મિનિટ 2 સેકંડ"`;
+
+exports[`Translations for gujarati should have correct translation for hourSecond 1`] = `"1 કલાક  1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for hourSeconds 1`] = `"1 કલાક  2 સેકંડ"`;
+
+exports[`Translations for gujarati should have correct translation for hours 1`] = `"2 કલાક"`;
+
+exports[`Translations for gujarati should have correct translation for hoursMinute 1`] = `"2 કલાક 1 મિનિટ"`;
+
+exports[`Translations for gujarati should have correct translation for hoursMinuteSecond 1`] = `"2 કલાક 1 મિનિટ 1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for hoursMinutes 1`] = `"2 કલાક 2 મિનિટ"`;
+
+exports[`Translations for gujarati should have correct translation for hoursMinutesSecond 1`] = `"2 કલાક 2 મિનિટ 1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for hoursMinutesSeconds 1`] = `"2 કલાક 2 મિનિટ 2 સેકંડ"`;
+
+exports[`Translations for gujarati should have correct translation for hoursSeconds 1`] = `"2 કલાક  1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for minute 1`] = `"1 મિનિટ"`;
+
+exports[`Translations for gujarati should have correct translation for minuteSecond 1`] = `"1 મિનિટ 1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for minuteSeconds 1`] = `"1 મિનિટ 2 સેકંડ"`;
+
+exports[`Translations for gujarati should have correct translation for minutes 1`] = `"2 મિનિટ"`;
+
+exports[`Translations for gujarati should have correct translation for minutesSecond 1`] = `"2 મિનિટ 1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for minutesSeconds 1`] = `"2 મિનિટ 2 સેકંડ"`;
+
+exports[`Translations for gujarati should have correct translation for second 1`] = `"1 સેકન્ડ"`;
+
+exports[`Translations for gujarati should have correct translation for seconds 1`] = `"20 સેકંડ"`;
+
+exports[`Translations for hausa should have correct translation for day 1`] = `"25 કલાક"`;
+
+exports[`Translations for hausa should have correct translation for hour 1`] = `"1 કલાક"`;
+
+exports[`Translations for hausa should have correct translation for hourMinute 1`] = `"1 કલાક 1 મિનિટ"`;
+
+exports[`Translations for hausa should have correct translation for hourMinuteSecond 1`] = `"1 કલાક 1 મિનિટ 1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for hourMinutes 1`] = `"1 કલાક 2 મિનિટ"`;
+
+exports[`Translations for hausa should have correct translation for hourMinutesSecond 1`] = `"1 કલાક 2 મિનિટ 1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for hourMinutesSeconds 1`] = `"1 કલાક 2 મિનિટ 2 સેકંડ"`;
+
+exports[`Translations for hausa should have correct translation for hourSecond 1`] = `"1 કલાક  1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for hourSeconds 1`] = `"1 કલાક  2 સેકંડ"`;
+
+exports[`Translations for hausa should have correct translation for hours 1`] = `"2 કલાક"`;
+
+exports[`Translations for hausa should have correct translation for hoursMinute 1`] = `"2 કલાક 1 મિનિટ"`;
+
+exports[`Translations for hausa should have correct translation for hoursMinuteSecond 1`] = `"2 કલાક 1 મિનિટ 1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for hoursMinutes 1`] = `"2 કલાક 2 મિનિટ"`;
+
+exports[`Translations for hausa should have correct translation for hoursMinutesSecond 1`] = `"2 કલાક 2 મિનિટ 1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for hoursMinutesSeconds 1`] = `"2 કલાક 2 મિનિટ 2 સેકંડ"`;
+
+exports[`Translations for hausa should have correct translation for hoursSeconds 1`] = `"2 કલાક  1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for minute 1`] = `"1 મિનિટ"`;
+
+exports[`Translations for hausa should have correct translation for minuteSecond 1`] = `"1 મિનિટ 1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for minuteSeconds 1`] = `"1 મિનિટ 2 સેકંડ"`;
+
+exports[`Translations for hausa should have correct translation for minutes 1`] = `"2 મિનિટ"`;
+
+exports[`Translations for hausa should have correct translation for minutesSecond 1`] = `"2 મિનિટ 1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for minutesSeconds 1`] = `"2 મિનિટ 2 સેકંડ"`;
+
+exports[`Translations for hausa should have correct translation for second 1`] = `"1 biyu"`;
+
+exports[`Translations for hausa should have correct translation for seconds 1`] = `"20 સેકંડ"`;
+
+exports[`Translations for hindi should have correct translation for day 1`] = `"25 घंटे"`;
+
+exports[`Translations for hindi should have correct translation for hour 1`] = `"1 घंटा"`;
+
+exports[`Translations for hindi should have correct translation for hourMinute 1`] = `"1 घंटा 1 मिनट"`;
+
+exports[`Translations for hindi should have correct translation for hourMinuteSecond 1`] = `"1 घंटा 1 मिनट 1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for hourMinutes 1`] = `"1 घंटा 2 मिनट"`;
+
+exports[`Translations for hindi should have correct translation for hourMinutesSecond 1`] = `"1 घंटा 2 मिनट 1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for hourMinutesSeconds 1`] = `"1 घंटा 2 मिनट 2 सेकंड"`;
+
+exports[`Translations for hindi should have correct translation for hourSecond 1`] = `"1 घंटा  1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for hourSeconds 1`] = `"1 घंटा  2 सेकंड"`;
+
+exports[`Translations for hindi should have correct translation for hours 1`] = `"2 घंटे"`;
+
+exports[`Translations for hindi should have correct translation for hoursMinute 1`] = `"2 घंटे 1 मिनट"`;
+
+exports[`Translations for hindi should have correct translation for hoursMinuteSecond 1`] = `"2 घंटे 1 मिनट 1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for hoursMinutes 1`] = `"2 घंटे 2 मिनट"`;
+
+exports[`Translations for hindi should have correct translation for hoursMinutesSecond 1`] = `"2 घंटे 2 मिनट 1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for hoursMinutesSeconds 1`] = `"2 घंटे 2 मिनट 2 सेकंड"`;
+
+exports[`Translations for hindi should have correct translation for hoursSeconds 1`] = `"2 घंटे  1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for minute 1`] = `"1 मिनट"`;
+
+exports[`Translations for hindi should have correct translation for minuteSecond 1`] = `"1 मिनट 1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for minuteSeconds 1`] = `"1 मिनट 2 सेकंड"`;
+
+exports[`Translations for hindi should have correct translation for minutes 1`] = `"2 मिनट"`;
+
+exports[`Translations for hindi should have correct translation for minutesSecond 1`] = `"2 मिनट 1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for minutesSeconds 1`] = `"2 मिनट 2 सेकंड"`;
+
+exports[`Translations for hindi should have correct translation for second 1`] = `"1 सेकेंड"`;
+
+exports[`Translations for hindi should have correct translation for seconds 1`] = `"20 सेकंड"`;
+
+exports[`Translations for igbo should have correct translation for day 1`] = `"elekere 25"`;
+
+exports[`Translations for igbo should have correct translation for hour 1`] = `"otu 1"`;
+
+exports[`Translations for igbo should have correct translation for hourMinute 1`] = `"otu 1 otu 1"`;
+
+exports[`Translations for igbo should have correct translation for hourMinuteSecond 1`] = `"otu 1 otu 1 nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for hourMinutes 1`] = `"otu 1 nkeji 2"`;
+
+exports[`Translations for igbo should have correct translation for hourMinutesSecond 1`] = `"otu 1 nkeji 2 nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for hourMinutesSeconds 1`] = `"otu 1 nkeji 2 ntabịanya 2"`;
+
+exports[`Translations for igbo should have correct translation for hourSecond 1`] = `"otu 1  nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for hourSeconds 1`] = `"otu 1  ntabịanya 2"`;
+
+exports[`Translations for igbo should have correct translation for hours 1`] = `"elekere 2"`;
+
+exports[`Translations for igbo should have correct translation for hoursMinute 1`] = `"elekere 2 otu 1"`;
+
+exports[`Translations for igbo should have correct translation for hoursMinuteSecond 1`] = `"elekere 2 otu 1 nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for hoursMinutes 1`] = `"elekere 2 nkeji 2"`;
+
+exports[`Translations for igbo should have correct translation for hoursMinutesSecond 1`] = `"elekere 2 nkeji 2 nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for hoursMinutesSeconds 1`] = `"elekere 2 nkeji 2 ntabịanya 2"`;
+
+exports[`Translations for igbo should have correct translation for hoursSeconds 1`] = `"elekere 2  nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for minute 1`] = `"otu 1"`;
+
+exports[`Translations for igbo should have correct translation for minuteSecond 1`] = `"otu 1 nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for minuteSeconds 1`] = `"otu 1 ntabịanya 2"`;
+
+exports[`Translations for igbo should have correct translation for minutes 1`] = `"nkeji 2"`;
+
+exports[`Translations for igbo should have correct translation for minutesSecond 1`] = `"nkeji 2 nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for minutesSeconds 1`] = `"nkeji 2 ntabịanya 2"`;
+
+exports[`Translations for igbo should have correct translation for second 1`] = `"nke abụọ 1"`;
+
+exports[`Translations for igbo should have correct translation for seconds 1`] = `"ntabịanya 20"`;
+
+exports[`Translations for indonesia should have correct translation for day 1`] = `"25 jam"`;
+
+exports[`Translations for indonesia should have correct translation for hour 1`] = `"1"`;
+
+exports[`Translations for indonesia should have correct translation for hourMinute 1`] = `"1 1"`;
+
+exports[`Translations for indonesia should have correct translation for hourMinuteSecond 1`] = `"1 1 1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for hourMinutes 1`] = `"1 2 menit"`;
+
+exports[`Translations for indonesia should have correct translation for hourMinutesSecond 1`] = `"1 2 menit 1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for hourMinutesSeconds 1`] = `"1 2 menit 2 detik"`;
+
+exports[`Translations for indonesia should have correct translation for hourSecond 1`] = `"1  1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for hourSeconds 1`] = `"1  2 detik"`;
+
+exports[`Translations for indonesia should have correct translation for hours 1`] = `"2 jam"`;
+
+exports[`Translations for indonesia should have correct translation for hoursMinute 1`] = `"2 jam 1"`;
+
+exports[`Translations for indonesia should have correct translation for hoursMinuteSecond 1`] = `"2 jam 1 1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for hoursMinutes 1`] = `"2 jam 2 menit"`;
+
+exports[`Translations for indonesia should have correct translation for hoursMinutesSecond 1`] = `"2 jam 2 menit 1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for hoursMinutesSeconds 1`] = `"2 jam 2 menit 2 detik"`;
+
+exports[`Translations for indonesia should have correct translation for hoursSeconds 1`] = `"2 jam  1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for minute 1`] = `"1"`;
+
+exports[`Translations for indonesia should have correct translation for minuteSecond 1`] = `"1 1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for minuteSeconds 1`] = `"1 2 detik"`;
+
+exports[`Translations for indonesia should have correct translation for minutes 1`] = `"2 menit"`;
+
+exports[`Translations for indonesia should have correct translation for minutesSecond 1`] = `"2 menit 1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for minutesSeconds 1`] = `"2 menit 2 detik"`;
+
+exports[`Translations for indonesia should have correct translation for second 1`] = `"1 detik"`;
+
+exports[`Translations for indonesia should have correct translation for seconds 1`] = `"20 detik"`;
+
+exports[`Translations for japanese should have correct translation for day 1`] = `"25時間"`;
+
+exports[`Translations for japanese should have correct translation for hour 1`] = `"1時間"`;
+
+exports[`Translations for japanese should have correct translation for hourMinute 1`] = `"1時間 1分"`;
+
+exports[`Translations for japanese should have correct translation for hourMinuteSecond 1`] = `"1時間 1分 秒 1"`;
+
+exports[`Translations for japanese should have correct translation for hourMinutes 1`] = `"1時間 2分"`;
+
+exports[`Translations for japanese should have correct translation for hourMinutesSecond 1`] = `"1時間 2分 秒 1"`;
+
+exports[`Translations for japanese should have correct translation for hourMinutesSeconds 1`] = `"1時間 2分 2秒"`;
+
+exports[`Translations for japanese should have correct translation for hourSecond 1`] = `"1時間  秒 1"`;
+
+exports[`Translations for japanese should have correct translation for hourSeconds 1`] = `"1時間  2秒"`;
+
+exports[`Translations for japanese should have correct translation for hours 1`] = `"2時間"`;
+
+exports[`Translations for japanese should have correct translation for hoursMinute 1`] = `"2時間 1分"`;
+
+exports[`Translations for japanese should have correct translation for hoursMinuteSecond 1`] = `"2時間 1分 秒 1"`;
+
+exports[`Translations for japanese should have correct translation for hoursMinutes 1`] = `"2時間 2分"`;
+
+exports[`Translations for japanese should have correct translation for hoursMinutesSecond 1`] = `"2時間 2分 秒 1"`;
+
+exports[`Translations for japanese should have correct translation for hoursMinutesSeconds 1`] = `"2時間 2分 2秒"`;
+
+exports[`Translations for japanese should have correct translation for hoursSeconds 1`] = `"2時間  秒 1"`;
+
+exports[`Translations for japanese should have correct translation for minute 1`] = `"1分"`;
+
+exports[`Translations for japanese should have correct translation for minuteSecond 1`] = `"1分 秒 1"`;
+
+exports[`Translations for japanese should have correct translation for minuteSeconds 1`] = `"1分 2秒"`;
+
+exports[`Translations for japanese should have correct translation for minutes 1`] = `"2分"`;
+
+exports[`Translations for japanese should have correct translation for minutesSecond 1`] = `"2分 秒 1"`;
+
+exports[`Translations for japanese should have correct translation for minutesSeconds 1`] = `"2分 2秒"`;
+
+exports[`Translations for japanese should have correct translation for second 1`] = `"秒 1"`;
+
+exports[`Translations for japanese should have correct translation for seconds 1`] = `"20秒"`;
+
+exports[`Translations for korean should have correct translation for day 1`] = `"25시간"`;
+
+exports[`Translations for korean should have correct translation for hour 1`] = `"한 시간"`;
+
+exports[`Translations for korean should have correct translation for hourMinute 1`] = `"한 시간 1분"`;
+
+exports[`Translations for korean should have correct translation for hourMinuteSecond 1`] = `"한 시간 1분 초 1"`;
+
+exports[`Translations for korean should have correct translation for hourMinutes 1`] = `"한 시간 2분"`;
+
+exports[`Translations for korean should have correct translation for hourMinutesSecond 1`] = `"한 시간 2분 초 1"`;
+
+exports[`Translations for korean should have correct translation for hourMinutesSeconds 1`] = `"한 시간 2분 2초"`;
+
+exports[`Translations for korean should have correct translation for hourSecond 1`] = `"한 시간  초 1"`;
+
+exports[`Translations for korean should have correct translation for hourSeconds 1`] = `"한 시간  2초"`;
+
+exports[`Translations for korean should have correct translation for hours 1`] = `"2시간"`;
+
+exports[`Translations for korean should have correct translation for hoursMinute 1`] = `"2시간 1분"`;
+
+exports[`Translations for korean should have correct translation for hoursMinuteSecond 1`] = `"2시간 1분 초 1"`;
+
+exports[`Translations for korean should have correct translation for hoursMinutes 1`] = `"2시간 2분"`;
+
+exports[`Translations for korean should have correct translation for hoursMinutesSecond 1`] = `"2시간 2분 초 1"`;
+
+exports[`Translations for korean should have correct translation for hoursMinutesSeconds 1`] = `"2시간 2분 2초"`;
+
+exports[`Translations for korean should have correct translation for hoursSeconds 1`] = `"2시간  초 1"`;
+
+exports[`Translations for korean should have correct translation for minute 1`] = `"1분"`;
+
+exports[`Translations for korean should have correct translation for minuteSecond 1`] = `"1분 초 1"`;
+
+exports[`Translations for korean should have correct translation for minuteSeconds 1`] = `"1분 2초"`;
+
+exports[`Translations for korean should have correct translation for minutes 1`] = `"2분"`;
+
+exports[`Translations for korean should have correct translation for minutesSecond 1`] = `"2분 초 1"`;
+
+exports[`Translations for korean should have correct translation for minutesSeconds 1`] = `"2분 2초"`;
+
+exports[`Translations for korean should have correct translation for second 1`] = `"초 1"`;
+
+exports[`Translations for korean should have correct translation for seconds 1`] = `"20초"`;
+
+exports[`Translations for kyrgyz should have correct translation for day 1`] = `"25 саат"`;
+
+exports[`Translations for kyrgyz should have correct translation for hour 1`] = `"1 саат"`;
+
+exports[`Translations for kyrgyz should have correct translation for hourMinute 1`] = `"1 саат 1 мүнөт"`;
+
+exports[`Translations for kyrgyz should have correct translation for hourMinuteSecond 1`] = `"1 саат 1 мүнөт 1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for hourMinutes 1`] = `"1 саат 2 мүнөт"`;
+
+exports[`Translations for kyrgyz should have correct translation for hourMinutesSecond 1`] = `"1 саат 2 мүнөт 1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for hourMinutesSeconds 1`] = `"1 саат 2 мүнөт 2 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for hourSecond 1`] = `"1 саат  1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for hourSeconds 1`] = `"1 саат  2 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for hours 1`] = `"2 саат"`;
+
+exports[`Translations for kyrgyz should have correct translation for hoursMinute 1`] = `"2 саат 1 мүнөт"`;
+
+exports[`Translations for kyrgyz should have correct translation for hoursMinuteSecond 1`] = `"2 саат 1 мүнөт 1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for hoursMinutes 1`] = `"2 саат 2 мүнөт"`;
+
+exports[`Translations for kyrgyz should have correct translation for hoursMinutesSecond 1`] = `"2 саат 2 мүнөт 1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for hoursMinutesSeconds 1`] = `"2 саат 2 мүнөт 2 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for hoursSeconds 1`] = `"2 саат  1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for minute 1`] = `"1 мүнөт"`;
+
+exports[`Translations for kyrgyz should have correct translation for minuteSecond 1`] = `"1 мүнөт 1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for minuteSeconds 1`] = `"1 мүнөт 2 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for minutes 1`] = `"2 мүнөт"`;
+
+exports[`Translations for kyrgyz should have correct translation for minutesSecond 1`] = `"2 мүнөт 1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for minutesSeconds 1`] = `"2 мүнөт 2 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for second 1`] = `"1 секунд"`;
+
+exports[`Translations for kyrgyz should have correct translation for seconds 1`] = `"20 секунд"`;
+
+exports[`Translations for marathi should have correct translation for day 1`] = `"25 तासां"`;
+
+exports[`Translations for marathi should have correct translation for hour 1`] = `"1 undefined"`;
+
+exports[`Translations for marathi should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+
+exports[`Translations for marathi should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for hourMinutes 1`] = `"1 undefined 2 मिनिटां"`;
+
+exports[`Translations for marathi should have correct translation for hourMinutesSecond 1`] = `"1 undefined 2 मिनिटां 1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for hourMinutesSeconds 1`] = `"1 undefined 2 मिनिटां 2 सेकंदां"`;
+
+exports[`Translations for marathi should have correct translation for hourSecond 1`] = `"1 undefined  1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for hourSeconds 1`] = `"1 undefined  2 सेकंदां"`;
+
+exports[`Translations for marathi should have correct translation for hours 1`] = `"2 तासां"`;
+
+exports[`Translations for marathi should have correct translation for hoursMinute 1`] = `"2 तासां 1 undefined"`;
+
+exports[`Translations for marathi should have correct translation for hoursMinuteSecond 1`] = `"2 तासां 1 undefined 1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for hoursMinutes 1`] = `"2 तासां 2 मिनिटां"`;
+
+exports[`Translations for marathi should have correct translation for hoursMinutesSecond 1`] = `"2 तासां 2 मिनिटां 1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for hoursMinutesSeconds 1`] = `"2 तासां 2 मिनिटां 2 सेकंदां"`;
+
+exports[`Translations for marathi should have correct translation for hoursSeconds 1`] = `"2 तासां  1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for minute 1`] = `"1 undefined"`;
+
+exports[`Translations for marathi should have correct translation for minuteSecond 1`] = `"1 undefined 1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for minuteSeconds 1`] = `"1 undefined 2 सेकंदां"`;
+
+exports[`Translations for marathi should have correct translation for minutes 1`] = `"2 मिनिटां"`;
+
+exports[`Translations for marathi should have correct translation for minutesSecond 1`] = `"2 मिनिटां 1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for minutesSeconds 1`] = `"2 मिनिटां 2 सेकंदां"`;
+
+exports[`Translations for marathi should have correct translation for second 1`] = `"1 सेकंद"`;
+
+exports[`Translations for marathi should have correct translation for seconds 1`] = `"20 सेकंदां"`;
+
+exports[`Translations for mundo should have correct translation for day 1`] = `"25 horas"`;
+
+exports[`Translations for mundo should have correct translation for hour 1`] = `"1 hora"`;
+
+exports[`Translations for mundo should have correct translation for hourMinute 1`] = `"1 hora 1 minuto"`;
+
+exports[`Translations for mundo should have correct translation for hourMinuteSecond 1`] = `"1 hora 1 minuto 1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for hourMinutes 1`] = `"1 hora 2 minutos"`;
+
+exports[`Translations for mundo should have correct translation for hourMinutesSecond 1`] = `"1 hora 2 minutos 1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for hourMinutesSeconds 1`] = `"1 hora 2 minutos 2 segundos"`;
+
+exports[`Translations for mundo should have correct translation for hourSecond 1`] = `"1 hora  1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for hourSeconds 1`] = `"1 hora  2 segundos"`;
+
+exports[`Translations for mundo should have correct translation for hours 1`] = `"2 horas"`;
+
+exports[`Translations for mundo should have correct translation for hoursMinute 1`] = `"2 horas 1 minuto"`;
+
+exports[`Translations for mundo should have correct translation for hoursMinuteSecond 1`] = `"2 horas 1 minuto 1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for hoursMinutes 1`] = `"2 horas 2 minutos"`;
+
+exports[`Translations for mundo should have correct translation for hoursMinutesSecond 1`] = `"2 horas 2 minutos 1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for hoursMinutesSeconds 1`] = `"2 horas 2 minutos 2 segundos"`;
+
+exports[`Translations for mundo should have correct translation for hoursSeconds 1`] = `"2 horas  1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for minute 1`] = `"1 minuto"`;
+
+exports[`Translations for mundo should have correct translation for minuteSecond 1`] = `"1 minuto 1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for minuteSeconds 1`] = `"1 minuto 2 segundos"`;
+
+exports[`Translations for mundo should have correct translation for minutes 1`] = `"2 minutos"`;
+
+exports[`Translations for mundo should have correct translation for minutesSecond 1`] = `"2 minutos 1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for minutesSeconds 1`] = `"2 minutos 2 segundos"`;
+
+exports[`Translations for mundo should have correct translation for second 1`] = `"1 segundo"`;
+
+exports[`Translations for mundo should have correct translation for seconds 1`] = `"20 segundos"`;
+
+exports[`Translations for naidheachdan should have correct translation for day 1`] = `"25 uairean"`;
+
+exports[`Translations for naidheachdan should have correct translation for hour 1`] = `"1"`;
+
+exports[`Translations for naidheachdan should have correct translation for hourMinute 1`] = `"1 1"`;
+
+exports[`Translations for naidheachdan should have correct translation for hourMinuteSecond 1`] = `"1 1 1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for hourMinutes 1`] = `"1 2 mionaidean"`;
+
+exports[`Translations for naidheachdan should have correct translation for hourMinutesSecond 1`] = `"1 2 mionaidean 1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for hourMinutesSeconds 1`] = `"1 2 mionaidean 2 diogan"`;
+
+exports[`Translations for naidheachdan should have correct translation for hourSecond 1`] = `"1  1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for hourSeconds 1`] = `"1  2 diogan"`;
+
+exports[`Translations for naidheachdan should have correct translation for hours 1`] = `"2 uairean"`;
+
+exports[`Translations for naidheachdan should have correct translation for hoursMinute 1`] = `"2 uairean 1"`;
+
+exports[`Translations for naidheachdan should have correct translation for hoursMinuteSecond 1`] = `"2 uairean 1 1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for hoursMinutes 1`] = `"2 uairean 2 mionaidean"`;
+
+exports[`Translations for naidheachdan should have correct translation for hoursMinutesSecond 1`] = `"2 uairean 2 mionaidean 1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for hoursMinutesSeconds 1`] = `"2 uairean 2 mionaidean 2 diogan"`;
+
+exports[`Translations for naidheachdan should have correct translation for hoursSeconds 1`] = `"2 uairean  1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for minute 1`] = `"1"`;
+
+exports[`Translations for naidheachdan should have correct translation for minuteSecond 1`] = `"1 1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for minuteSeconds 1`] = `"1 2 diogan"`;
+
+exports[`Translations for naidheachdan should have correct translation for minutes 1`] = `"2 mionaidean"`;
+
+exports[`Translations for naidheachdan should have correct translation for minutesSecond 1`] = `"2 mionaidean 1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for minutesSeconds 1`] = `"2 mionaidean 2 diogan"`;
+
+exports[`Translations for naidheachdan should have correct translation for second 1`] = `"1 diog"`;
+
+exports[`Translations for naidheachdan should have correct translation for seconds 1`] = `"20 diogan"`;
+
+exports[`Translations for nepali should have correct translation for day 1`] = `"25 घण्टा"`;
+
+exports[`Translations for nepali should have correct translation for hour 1`] = `"1 घण्टा"`;
+
+exports[`Translations for nepali should have correct translation for hourMinute 1`] = `"1 घण्टा 1 मिनेट"`;
+
+exports[`Translations for nepali should have correct translation for hourMinuteSecond 1`] = `"1 घण्टा 1 मिनेट 1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for hourMinutes 1`] = `"1 घण्टा 2 मिनेट"`;
+
+exports[`Translations for nepali should have correct translation for hourMinutesSecond 1`] = `"1 घण्टा 2 मिनेट 1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for hourMinutesSeconds 1`] = `"1 घण्टा 2 मिनेट 2 सेकेण्ड"`;
+
+exports[`Translations for nepali should have correct translation for hourSecond 1`] = `"1 घण्टा  1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for hourSeconds 1`] = `"1 घण्टा  2 सेकेण्ड"`;
+
+exports[`Translations for nepali should have correct translation for hours 1`] = `"2 घण्टा"`;
+
+exports[`Translations for nepali should have correct translation for hoursMinute 1`] = `"2 घण्टा 1 मिनेट"`;
+
+exports[`Translations for nepali should have correct translation for hoursMinuteSecond 1`] = `"2 घण्टा 1 मिनेट 1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for hoursMinutes 1`] = `"2 घण्टा 2 मिनेट"`;
+
+exports[`Translations for nepali should have correct translation for hoursMinutesSecond 1`] = `"2 घण्टा 2 मिनेट 1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for hoursMinutesSeconds 1`] = `"2 घण्टा 2 मिनेट 2 सेकेण्ड"`;
+
+exports[`Translations for nepali should have correct translation for hoursSeconds 1`] = `"2 घण्टा  1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for minute 1`] = `"1 मिनेट"`;
+
+exports[`Translations for nepali should have correct translation for minuteSecond 1`] = `"1 मिनेट 1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for minuteSeconds 1`] = `"1 मिनेट 2 सेकेण्ड"`;
+
+exports[`Translations for nepali should have correct translation for minutes 1`] = `"2 मिनेट"`;
+
+exports[`Translations for nepali should have correct translation for minutesSecond 1`] = `"2 मिनेट 1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for minutesSeconds 1`] = `"2 मिनेट 2 सेकेण्ड"`;
+
+exports[`Translations for nepali should have correct translation for second 1`] = `"1 सेकेन्ड"`;
+
+exports[`Translations for nepali should have correct translation for seconds 1`] = `"20 सेकेण्ड"`;
+
+exports[`Translations for news should have correct translation for day 1`] = `"25 hours"`;
+
+exports[`Translations for news should have correct translation for hour 1`] = `"1 hour"`;
+
+exports[`Translations for news should have correct translation for hourMinute 1`] = `"1 hour 1 minute"`;
+
+exports[`Translations for news should have correct translation for hourMinuteSecond 1`] = `"1 hour 1 minute 1 second"`;
+
+exports[`Translations for news should have correct translation for hourMinutes 1`] = `"1 hour 2 minutes"`;
+
+exports[`Translations for news should have correct translation for hourMinutesSecond 1`] = `"1 hour 2 minutes 1 second"`;
+
+exports[`Translations for news should have correct translation for hourMinutesSeconds 1`] = `"1 hour 2 minutes 2 seconds"`;
+
+exports[`Translations for news should have correct translation for hourSecond 1`] = `"1 hour  1 second"`;
+
+exports[`Translations for news should have correct translation for hourSeconds 1`] = `"1 hour  2 seconds"`;
+
+exports[`Translations for news should have correct translation for hours 1`] = `"2 hours"`;
+
+exports[`Translations for news should have correct translation for hoursMinute 1`] = `"2 hours 1 minute"`;
+
+exports[`Translations for news should have correct translation for hoursMinuteSecond 1`] = `"2 hours 1 minute 1 second"`;
+
+exports[`Translations for news should have correct translation for hoursMinutes 1`] = `"2 hours 2 minutes"`;
+
+exports[`Translations for news should have correct translation for hoursMinutesSecond 1`] = `"2 hours 2 minutes 1 second"`;
+
+exports[`Translations for news should have correct translation for hoursMinutesSeconds 1`] = `"2 hours 2 minutes 2 seconds"`;
+
+exports[`Translations for news should have correct translation for hoursSeconds 1`] = `"2 hours  1 second"`;
+
+exports[`Translations for news should have correct translation for minute 1`] = `"1 minute"`;
+
+exports[`Translations for news should have correct translation for minuteSecond 1`] = `"1 minute 1 second"`;
+
+exports[`Translations for news should have correct translation for minuteSeconds 1`] = `"1 minute 2 seconds"`;
+
+exports[`Translations for news should have correct translation for minutes 1`] = `"2 minutes"`;
+
+exports[`Translations for news should have correct translation for minutesSecond 1`] = `"2 minutes 1 second"`;
+
+exports[`Translations for news should have correct translation for minutesSeconds 1`] = `"2 minutes 2 seconds"`;
+
+exports[`Translations for news should have correct translation for second 1`] = `"1 second"`;
+
+exports[`Translations for news should have correct translation for seconds 1`] = `"20 seconds"`;
+
+exports[`Translations for pashto should have correct translation for day 1`] = `"25 hours"`;
+
+exports[`Translations for pashto should have correct translation for hour 1`] = `"1 hour"`;
+
+exports[`Translations for pashto should have correct translation for hourMinute 1`] = `"1 hour 1 minute"`;
+
+exports[`Translations for pashto should have correct translation for hourMinuteSecond 1`] = `"1 hour 1 minute 1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for hourMinutes 1`] = `"1 hour 2 minutes"`;
+
+exports[`Translations for pashto should have correct translation for hourMinutesSecond 1`] = `"1 hour 2 minutes 1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for hourMinutesSeconds 1`] = `"1 hour 2 minutes 2 seconds"`;
+
+exports[`Translations for pashto should have correct translation for hourSecond 1`] = `"1 hour  1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for hourSeconds 1`] = `"1 hour  2 seconds"`;
+
+exports[`Translations for pashto should have correct translation for hours 1`] = `"2 hours"`;
+
+exports[`Translations for pashto should have correct translation for hoursMinute 1`] = `"2 hours 1 minute"`;
+
+exports[`Translations for pashto should have correct translation for hoursMinuteSecond 1`] = `"2 hours 1 minute 1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for hoursMinutes 1`] = `"2 hours 2 minutes"`;
+
+exports[`Translations for pashto should have correct translation for hoursMinutesSecond 1`] = `"2 hours 2 minutes 1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for hoursMinutesSeconds 1`] = `"2 hours 2 minutes 2 seconds"`;
+
+exports[`Translations for pashto should have correct translation for hoursSeconds 1`] = `"2 hours  1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for minute 1`] = `"1 minute"`;
+
+exports[`Translations for pashto should have correct translation for minuteSecond 1`] = `"1 minute 1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for minuteSeconds 1`] = `"1 minute 2 seconds"`;
+
+exports[`Translations for pashto should have correct translation for minutes 1`] = `"2 minutes"`;
+
+exports[`Translations for pashto should have correct translation for minutesSecond 1`] = `"2 minutes 1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for minutesSeconds 1`] = `"2 minutes 2 seconds"`;
+
+exports[`Translations for pashto should have correct translation for second 1`] = `"1 ثانیه"`;
+
+exports[`Translations for pashto should have correct translation for seconds 1`] = `"20 seconds"`;
+
+exports[`Translations for persian should have correct translation for day 1`] = `"25 ساعت"`;
+
+exports[`Translations for persian should have correct translation for hour 1`] = `"1 ساعت"`;
+
+exports[`Translations for persian should have correct translation for hourMinute 1`] = `"1 ساعت 1 دقیقه"`;
+
+exports[`Translations for persian should have correct translation for hourMinuteSecond 1`] = `"1 ساعت 1 دقیقه ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for hourMinutes 1`] = `"1 ساعت 2 دقیقه"`;
+
+exports[`Translations for persian should have correct translation for hourMinutesSecond 1`] = `"1 ساعت 2 دقیقه ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for hourMinutesSeconds 1`] = `"1 ساعت 2 دقیقه ثانیه d%"`;
+
+exports[`Translations for persian should have correct translation for hourSecond 1`] = `"1 ساعت  ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for hourSeconds 1`] = `"1 ساعت  ثانیه d%"`;
+
+exports[`Translations for persian should have correct translation for hours 1`] = `"2 ساعت"`;
+
+exports[`Translations for persian should have correct translation for hoursMinute 1`] = `"2 ساعت 1 دقیقه"`;
+
+exports[`Translations for persian should have correct translation for hoursMinuteSecond 1`] = `"2 ساعت 1 دقیقه ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for hoursMinutes 1`] = `"2 ساعت 2 دقیقه"`;
+
+exports[`Translations for persian should have correct translation for hoursMinutesSecond 1`] = `"2 ساعت 2 دقیقه ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for hoursMinutesSeconds 1`] = `"2 ساعت 2 دقیقه ثانیه d%"`;
+
+exports[`Translations for persian should have correct translation for hoursSeconds 1`] = `"2 ساعت  ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for minute 1`] = `"1 دقیقه"`;
+
+exports[`Translations for persian should have correct translation for minuteSecond 1`] = `"1 دقیقه ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for minuteSeconds 1`] = `"1 دقیقه ثانیه d%"`;
+
+exports[`Translations for persian should have correct translation for minutes 1`] = `"2 دقیقه"`;
+
+exports[`Translations for persian should have correct translation for minutesSecond 1`] = `"2 دقیقه ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for minutesSeconds 1`] = `"2 دقیقه ثانیه d%"`;
+
+exports[`Translations for persian should have correct translation for second 1`] = `"ثانیه 1"`;
+
+exports[`Translations for persian should have correct translation for seconds 1`] = `"ثانیه d%"`;
+
+exports[`Translations for pidgin should have correct translation for day 1`] = `"25,00,00"`;
+
+exports[`Translations for pidgin should have correct translation for hour 1`] = `"1,00,00"`;
+
+exports[`Translations for pidgin should have correct translation for hourMinute 1`] = `"1,01,00"`;
+
+exports[`Translations for pidgin should have correct translation for hourMinuteSecond 1`] = `"1,01,01"`;
+
+exports[`Translations for pidgin should have correct translation for hourMinutes 1`] = `"1,02,00"`;
+
+exports[`Translations for pidgin should have correct translation for hourMinutesSecond 1`] = `"1,02,01"`;
+
+exports[`Translations for pidgin should have correct translation for hourMinutesSeconds 1`] = `"1,02,02"`;
+
+exports[`Translations for pidgin should have correct translation for hourSecond 1`] = `"1,00,01"`;
+
+exports[`Translations for pidgin should have correct translation for hourSeconds 1`] = `"1,00,02"`;
+
+exports[`Translations for pidgin should have correct translation for hours 1`] = `"2,00,00"`;
+
+exports[`Translations for pidgin should have correct translation for hoursMinute 1`] = `"2,01,00"`;
+
+exports[`Translations for pidgin should have correct translation for hoursMinuteSecond 1`] = `"2,01,01"`;
+
+exports[`Translations for pidgin should have correct translation for hoursMinutes 1`] = `"2,02,00"`;
+
+exports[`Translations for pidgin should have correct translation for hoursMinutesSecond 1`] = `"2,02,01"`;
+
+exports[`Translations for pidgin should have correct translation for hoursMinutesSeconds 1`] = `"2,02,02"`;
+
+exports[`Translations for pidgin should have correct translation for hoursSeconds 1`] = `"2,00,01"`;
+
+exports[`Translations for pidgin should have correct translation for minute 1`] = `"1,00"`;
+
+exports[`Translations for pidgin should have correct translation for minuteSecond 1`] = `"1,01"`;
+
+exports[`Translations for pidgin should have correct translation for minuteSeconds 1`] = `"1,02"`;
+
+exports[`Translations for pidgin should have correct translation for minutes 1`] = `"2,00"`;
+
+exports[`Translations for pidgin should have correct translation for minutesSecond 1`] = `"2,01"`;
+
+exports[`Translations for pidgin should have correct translation for minutesSeconds 1`] = `"2,02"`;
+
+exports[`Translations for pidgin should have correct translation for second 1`] = `"0,01"`;
+
+exports[`Translations for pidgin should have correct translation for seconds 1`] = `"0,20"`;
+
+exports[`Translations for portuguese should have correct translation for day 1`] = `"25 horas"`;
+
+exports[`Translations for portuguese should have correct translation for hour 1`] = `"1 hora"`;
+
+exports[`Translations for portuguese should have correct translation for hourMinute 1`] = `"1 hora 1 minuto"`;
+
+exports[`Translations for portuguese should have correct translation for hourMinuteSecond 1`] = `"1 hora 1 minuto 1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for hourMinutes 1`] = `"1 hora 2 minutos"`;
+
+exports[`Translations for portuguese should have correct translation for hourMinutesSecond 1`] = `"1 hora 2 minutos 1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for hourMinutesSeconds 1`] = `"1 hora 2 minutos 2 segundos"`;
+
+exports[`Translations for portuguese should have correct translation for hourSecond 1`] = `"1 hora  1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for hourSeconds 1`] = `"1 hora  2 segundos"`;
+
+exports[`Translations for portuguese should have correct translation for hours 1`] = `"2 horas"`;
+
+exports[`Translations for portuguese should have correct translation for hoursMinute 1`] = `"2 horas 1 minuto"`;
+
+exports[`Translations for portuguese should have correct translation for hoursMinuteSecond 1`] = `"2 horas 1 minuto 1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for hoursMinutes 1`] = `"2 horas 2 minutos"`;
+
+exports[`Translations for portuguese should have correct translation for hoursMinutesSecond 1`] = `"2 horas 2 minutos 1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for hoursMinutesSeconds 1`] = `"2 horas 2 minutos 2 segundos"`;
+
+exports[`Translations for portuguese should have correct translation for hoursSeconds 1`] = `"2 horas  1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for minute 1`] = `"1 minuto"`;
+
+exports[`Translations for portuguese should have correct translation for minuteSecond 1`] = `"1 minuto 1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for minuteSeconds 1`] = `"1 minuto 2 segundos"`;
+
+exports[`Translations for portuguese should have correct translation for minutes 1`] = `"2 minutos"`;
+
+exports[`Translations for portuguese should have correct translation for minutesSecond 1`] = `"2 minutos 1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for minutesSeconds 1`] = `"2 minutos 2 segundos"`;
+
+exports[`Translations for portuguese should have correct translation for second 1`] = `"1 segundo"`;
+
+exports[`Translations for portuguese should have correct translation for seconds 1`] = `"20 segundos"`;
+
+exports[`Translations for punjabi should have correct translation for day 1`] = `"25 ਘੰਟੇ"`;
+
+exports[`Translations for punjabi should have correct translation for hour 1`] = `"1 ਘੰਟਾ"`;
+
+exports[`Translations for punjabi should have correct translation for hourMinute 1`] = `"1 ਘੰਟਾ 1 ਮਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hourMinuteSecond 1`] = `"1 ਘੰਟਾ 1 ਮਿੰਟ 1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hourMinutes 1`] = `"1 ਘੰਟਾ 2 ਮਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hourMinutesSecond 1`] = `"1 ਘੰਟਾ 2 ਮਿੰਟ 1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hourMinutesSeconds 1`] = `"1 ਘੰਟਾ 2 ਮਿੰਟ 2 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hourSecond 1`] = `"1 ਘੰਟਾ  1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hourSeconds 1`] = `"1 ਘੰਟਾ  2 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hours 1`] = `"2 ਘੰਟੇ"`;
+
+exports[`Translations for punjabi should have correct translation for hoursMinute 1`] = `"2 ਘੰਟੇ 1 ਮਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hoursMinuteSecond 1`] = `"2 ਘੰਟੇ 1 ਮਿੰਟ 1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hoursMinutes 1`] = `"2 ਘੰਟੇ 2 ਮਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hoursMinutesSecond 1`] = `"2 ਘੰਟੇ 2 ਮਿੰਟ 1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hoursMinutesSeconds 1`] = `"2 ਘੰਟੇ 2 ਮਿੰਟ 2 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for hoursSeconds 1`] = `"2 ਘੰਟੇ  1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for minute 1`] = `"1 ਮਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for minuteSecond 1`] = `"1 ਮਿੰਟ 1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for minuteSeconds 1`] = `"1 ਮਿੰਟ 2 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for minutes 1`] = `"2 ਮਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for minutesSecond 1`] = `"2 ਮਿੰਟ 1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for minutesSeconds 1`] = `"2 ਮਿੰਟ 2 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for second 1`] = `"1 ਸਕਿੰਟ"`;
+
+exports[`Translations for punjabi should have correct translation for seconds 1`] = `"20 ਸਕਿੰਟ"`;
+
+exports[`Translations for russian should have correct translation for day 1`] = `"25 часов"`;
+
+exports[`Translations for russian should have correct translation for hour 1`] = `"1 undefined"`;
+
+exports[`Translations for russian should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+
+exports[`Translations for russian should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 секунда"`;
+
+exports[`Translations for russian should have correct translation for hourMinutes 1`] = `"1 undefined 2 минуты"`;
+
+exports[`Translations for russian should have correct translation for hourMinutesSecond 1`] = `"1 undefined 2 минуты 1 секунда"`;
+
+exports[`Translations for russian should have correct translation for hourMinutesSeconds 1`] = `"1 undefined 2 минуты 2 секунды"`;
+
+exports[`Translations for russian should have correct translation for hourSecond 1`] = `"1 undefined  1 секунда"`;
+
+exports[`Translations for russian should have correct translation for hourSeconds 1`] = `"1 undefined  2 секунды"`;
+
+exports[`Translations for russian should have correct translation for hours 1`] = `"2 часа"`;
+
+exports[`Translations for russian should have correct translation for hoursMinute 1`] = `"2 часа 1 undefined"`;
+
+exports[`Translations for russian should have correct translation for hoursMinuteSecond 1`] = `"2 часа 1 undefined 1 секунда"`;
+
+exports[`Translations for russian should have correct translation for hoursMinutes 1`] = `"2 часа 2 минуты"`;
+
+exports[`Translations for russian should have correct translation for hoursMinutesSecond 1`] = `"2 часа 2 минуты 1 секунда"`;
+
+exports[`Translations for russian should have correct translation for hoursMinutesSeconds 1`] = `"2 часа 2 минуты 2 секунды"`;
+
+exports[`Translations for russian should have correct translation for hoursSeconds 1`] = `"2 часа  1 секунда"`;
+
+exports[`Translations for russian should have correct translation for minute 1`] = `"1 undefined"`;
+
+exports[`Translations for russian should have correct translation for minuteSecond 1`] = `"1 undefined 1 секунда"`;
+
+exports[`Translations for russian should have correct translation for minuteSeconds 1`] = `"1 undefined 2 секунды"`;
+
+exports[`Translations for russian should have correct translation for minutes 1`] = `"2 минуты"`;
+
+exports[`Translations for russian should have correct translation for minutesSecond 1`] = `"2 минуты 1 секунда"`;
+
+exports[`Translations for russian should have correct translation for minutesSeconds 1`] = `"2 минуты 2 секунды"`;
+
+exports[`Translations for russian should have correct translation for second 1`] = `"1 секунда"`;
+
+exports[`Translations for russian should have correct translation for seconds 1`] = `"20 секунд"`;
+
+exports[`Translations for serbian should have correct translation for day 1`] = `"25 sati"`;
+
+exports[`Translations for serbian should have correct translation for hour 1`] = `"1 undefined"`;
+
+exports[`Translations for serbian should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+
+exports[`Translations for serbian should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for hourMinutes 1`] = `"1 undefined 2 minute"`;
+
+exports[`Translations for serbian should have correct translation for hourMinutesSecond 1`] = `"1 undefined 2 minute 1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for hourMinutesSeconds 1`] = `"1 undefined 2 minute 2 sekunde"`;
+
+exports[`Translations for serbian should have correct translation for hourSecond 1`] = `"1 undefined  1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for hourSeconds 1`] = `"1 undefined  2 sekunde"`;
+
+exports[`Translations for serbian should have correct translation for hours 1`] = `"2 sata"`;
+
+exports[`Translations for serbian should have correct translation for hoursMinute 1`] = `"2 sata 1 undefined"`;
+
+exports[`Translations for serbian should have correct translation for hoursMinuteSecond 1`] = `"2 sata 1 undefined 1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for hoursMinutes 1`] = `"2 sata 2 minute"`;
+
+exports[`Translations for serbian should have correct translation for hoursMinutesSecond 1`] = `"2 sata 2 minute 1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for hoursMinutesSeconds 1`] = `"2 sata 2 minute 2 sekunde"`;
+
+exports[`Translations for serbian should have correct translation for hoursSeconds 1`] = `"2 sata  1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for minute 1`] = `"1 undefined"`;
+
+exports[`Translations for serbian should have correct translation for minuteSecond 1`] = `"1 undefined 1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for minuteSeconds 1`] = `"1 undefined 2 sekunde"`;
+
+exports[`Translations for serbian should have correct translation for minutes 1`] = `"2 minute"`;
+
+exports[`Translations for serbian should have correct translation for minutesSecond 1`] = `"2 minute 1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for minutesSeconds 1`] = `"2 minute 2 sekunde"`;
+
+exports[`Translations for serbian should have correct translation for second 1`] = `"1 секунда"`;
+
+exports[`Translations for serbian should have correct translation for seconds 1`] = `"20 sekundi"`;
+
+exports[`Translations for sinhala should have correct translation for day 1`] = `"පැය 25"`;
+
+exports[`Translations for sinhala should have correct translation for hour 1`] = `"පැය 1"`;
+
+exports[`Translations for sinhala should have correct translation for hourMinute 1`] = `"පැය 1 මිනිත්තුව 1"`;
+
+exports[`Translations for sinhala should have correct translation for hourMinuteSecond 1`] = `"පැය 1 මිනිත්තුව 1 තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for hourMinutes 1`] = `"පැය 1 මිනිත්තු 2"`;
+
+exports[`Translations for sinhala should have correct translation for hourMinutesSecond 1`] = `"පැය 1 මිනිත්තු 2 තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for hourMinutesSeconds 1`] = `"පැය 1 මිනිත්තු 2 තත්පර 2"`;
+
+exports[`Translations for sinhala should have correct translation for hourSecond 1`] = `"පැය 1  තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for hourSeconds 1`] = `"පැය 1  තත්පර 2"`;
+
+exports[`Translations for sinhala should have correct translation for hours 1`] = `"පැය 2"`;
+
+exports[`Translations for sinhala should have correct translation for hoursMinute 1`] = `"පැය 2 මිනිත්තුව 1"`;
+
+exports[`Translations for sinhala should have correct translation for hoursMinuteSecond 1`] = `"පැය 2 මිනිත්තුව 1 තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for hoursMinutes 1`] = `"පැය 2 මිනිත්තු 2"`;
+
+exports[`Translations for sinhala should have correct translation for hoursMinutesSecond 1`] = `"පැය 2 මිනිත්තු 2 තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for hoursMinutesSeconds 1`] = `"පැය 2 මිනිත්තු 2 තත්පර 2"`;
+
+exports[`Translations for sinhala should have correct translation for hoursSeconds 1`] = `"පැය 2  තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for minute 1`] = `"මිනිත්තුව 1"`;
+
+exports[`Translations for sinhala should have correct translation for minuteSecond 1`] = `"මිනිත්තුව 1 තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for minuteSeconds 1`] = `"මිනිත්තුව 1 තත්පර 2"`;
+
+exports[`Translations for sinhala should have correct translation for minutes 1`] = `"මිනිත්තු 2"`;
+
+exports[`Translations for sinhala should have correct translation for minutesSecond 1`] = `"මිනිත්තු 2 තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for minutesSeconds 1`] = `"මිනිත්තු 2 තත්පර 2"`;
+
+exports[`Translations for sinhala should have correct translation for second 1`] = `"තත්පර 1 යි 1"`;
+
+exports[`Translations for sinhala should have correct translation for seconds 1`] = `"තත්පර 20"`;
+
+exports[`Translations for somali should have correct translation for day 1`] = `"පැය 25"`;
+
+exports[`Translations for somali should have correct translation for hour 1`] = `"පැය 1"`;
+
+exports[`Translations for somali should have correct translation for hourMinute 1`] = `"පැය 1 මිනිත්තුව 1"`;
+
+exports[`Translations for somali should have correct translation for hourMinuteSecond 1`] = `"පැය 1 මිනිත්තුව 1 sekan 1"`;
+
+exports[`Translations for somali should have correct translation for hourMinutes 1`] = `"පැය 1 මිනිත්තු 2"`;
+
+exports[`Translations for somali should have correct translation for hourMinutesSecond 1`] = `"පැය 1 මිනිත්තු 2 sekan 1"`;
+
+exports[`Translations for somali should have correct translation for hourMinutesSeconds 1`] = `"පැය 1 මිනිත්තු 2 තත්පර 2"`;
+
+exports[`Translations for somali should have correct translation for hourSecond 1`] = `"පැය 1  sekan 1"`;
+
+exports[`Translations for somali should have correct translation for hourSeconds 1`] = `"පැය 1  තත්පර 2"`;
+
+exports[`Translations for somali should have correct translation for hours 1`] = `"පැය 2"`;
+
+exports[`Translations for somali should have correct translation for hoursMinute 1`] = `"පැය 2 මිනිත්තුව 1"`;
+
+exports[`Translations for somali should have correct translation for hoursMinuteSecond 1`] = `"පැය 2 මිනිත්තුව 1 sekan 1"`;
+
+exports[`Translations for somali should have correct translation for hoursMinutes 1`] = `"පැය 2 මිනිත්තු 2"`;
+
+exports[`Translations for somali should have correct translation for hoursMinutesSecond 1`] = `"පැය 2 මිනිත්තු 2 sekan 1"`;
+
+exports[`Translations for somali should have correct translation for hoursMinutesSeconds 1`] = `"පැය 2 මිනිත්තු 2 තත්පර 2"`;
+
+exports[`Translations for somali should have correct translation for hoursSeconds 1`] = `"පැය 2  sekan 1"`;
+
+exports[`Translations for somali should have correct translation for minute 1`] = `"මිනිත්තුව 1"`;
+
+exports[`Translations for somali should have correct translation for minuteSecond 1`] = `"මිනිත්තුව 1 sekan 1"`;
+
+exports[`Translations for somali should have correct translation for minuteSeconds 1`] = `"මිනිත්තුව 1 තත්පර 2"`;
+
+exports[`Translations for somali should have correct translation for minutes 1`] = `"මිනිත්තු 2"`;
+
+exports[`Translations for somali should have correct translation for minutesSecond 1`] = `"මිනිත්තු 2 sekan 1"`;
+
+exports[`Translations for somali should have correct translation for minutesSeconds 1`] = `"මිනිත්තු 2 තත්පර 2"`;
+
+exports[`Translations for somali should have correct translation for second 1`] = `"sekan 1"`;
+
+exports[`Translations for somali should have correct translation for seconds 1`] = `"තත්පර 20"`;
+
+exports[`Translations for swahili should have correct translation for day 1`] = `"masaa 25"`;
+
+exports[`Translations for swahili should have correct translation for hour 1`] = `"saa 1"`;
+
+exports[`Translations for swahili should have correct translation for hourMinute 1`] = `"saa 1 dakika 1"`;
+
+exports[`Translations for swahili should have correct translation for hourMinuteSecond 1`] = `"saa 1 dakika 1 sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for hourMinutes 1`] = `"saa 1 dakika 2"`;
+
+exports[`Translations for swahili should have correct translation for hourMinutesSecond 1`] = `"saa 1 dakika 2 sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for hourMinutesSeconds 1`] = `"saa 1 dakika 2 sekunde 2"`;
+
+exports[`Translations for swahili should have correct translation for hourSecond 1`] = `"saa 1  sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for hourSeconds 1`] = `"saa 1  sekunde 2"`;
+
+exports[`Translations for swahili should have correct translation for hours 1`] = `"masaa 2"`;
+
+exports[`Translations for swahili should have correct translation for hoursMinute 1`] = `"masaa 2 dakika 1"`;
+
+exports[`Translations for swahili should have correct translation for hoursMinuteSecond 1`] = `"masaa 2 dakika 1 sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for hoursMinutes 1`] = `"masaa 2 dakika 2"`;
+
+exports[`Translations for swahili should have correct translation for hoursMinutesSecond 1`] = `"masaa 2 dakika 2 sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for hoursMinutesSeconds 1`] = `"masaa 2 dakika 2 sekunde 2"`;
+
+exports[`Translations for swahili should have correct translation for hoursSeconds 1`] = `"masaa 2  sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for minute 1`] = `"dakika 1"`;
+
+exports[`Translations for swahili should have correct translation for minuteSecond 1`] = `"dakika 1 sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for minuteSeconds 1`] = `"dakika 1 sekunde 2"`;
+
+exports[`Translations for swahili should have correct translation for minutes 1`] = `"dakika 2"`;
+
+exports[`Translations for swahili should have correct translation for minutesSecond 1`] = `"dakika 2 sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for minutesSeconds 1`] = `"dakika 2 sekunde 2"`;
+
+exports[`Translations for swahili should have correct translation for second 1`] = `"sekunde 1"`;
+
+exports[`Translations for swahili should have correct translation for seconds 1`] = `"sekunde 20"`;
+
+exports[`Translations for tamil should have correct translation for day 1`] = `"25 மணி நேரம்"`;
+
+exports[`Translations for tamil should have correct translation for hour 1`] = `"1 மணி நேரம்"`;
+
+exports[`Translations for tamil should have correct translation for hourMinute 1`] = `"1 மணி நேரம் 1 நிமிடம்"`;
+
+exports[`Translations for tamil should have correct translation for hourMinuteSecond 1`] = `"1 மணி நேரம் 1 நிமிடம் 1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for hourMinutes 1`] = `"1 மணி நேரம் 2 நிமிடங்கள்"`;
+
+exports[`Translations for tamil should have correct translation for hourMinutesSecond 1`] = `"1 மணி நேரம் 2 நிமிடங்கள் 1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for hourMinutesSeconds 1`] = `"1 மணி நேரம் 2 நிமிடங்கள் 2 விநாடிகள்"`;
+
+exports[`Translations for tamil should have correct translation for hourSecond 1`] = `"1 மணி நேரம்  1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for hourSeconds 1`] = `"1 மணி நேரம்  2 விநாடிகள்"`;
+
+exports[`Translations for tamil should have correct translation for hours 1`] = `"2 மணி நேரம்"`;
+
+exports[`Translations for tamil should have correct translation for hoursMinute 1`] = `"2 மணி நேரம் 1 நிமிடம்"`;
+
+exports[`Translations for tamil should have correct translation for hoursMinuteSecond 1`] = `"2 மணி நேரம் 1 நிமிடம் 1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for hoursMinutes 1`] = `"2 மணி நேரம் 2 நிமிடங்கள்"`;
+
+exports[`Translations for tamil should have correct translation for hoursMinutesSecond 1`] = `"2 மணி நேரம் 2 நிமிடங்கள் 1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for hoursMinutesSeconds 1`] = `"2 மணி நேரம் 2 நிமிடங்கள் 2 விநாடிகள்"`;
+
+exports[`Translations for tamil should have correct translation for hoursSeconds 1`] = `"2 மணி நேரம்  1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for minute 1`] = `"1 நிமிடம்"`;
+
+exports[`Translations for tamil should have correct translation for minuteSecond 1`] = `"1 நிமிடம் 1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for minuteSeconds 1`] = `"1 நிமிடம் 2 விநாடிகள்"`;
+
+exports[`Translations for tamil should have correct translation for minutes 1`] = `"2 நிமிடங்கள்"`;
+
+exports[`Translations for tamil should have correct translation for minutesSecond 1`] = `"2 நிமிடங்கள் 1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for minutesSeconds 1`] = `"2 நிமிடங்கள் 2 விநாடிகள்"`;
+
+exports[`Translations for tamil should have correct translation for second 1`] = `"1 வினாடி"`;
+
+exports[`Translations for tamil should have correct translation for seconds 1`] = `"20 விநாடிகள்"`;
+
+exports[`Translations for telugu should have correct translation for day 1`] = `"25 గంటలు"`;
+
+exports[`Translations for telugu should have correct translation for hour 1`] = `"1 గంట"`;
+
+exports[`Translations for telugu should have correct translation for hourMinute 1`] = `"1 గంట 1 నిమిషం"`;
+
+exports[`Translations for telugu should have correct translation for hourMinuteSecond 1`] = `"1 గంట 1 నిమిషం 1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for hourMinutes 1`] = `"1 గంట 2 నిమిషాలు"`;
+
+exports[`Translations for telugu should have correct translation for hourMinutesSecond 1`] = `"1 గంట 2 నిమిషాలు 1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for hourMinutesSeconds 1`] = `"1 గంట 2 నిమిషాలు 2 సెకన్లు"`;
+
+exports[`Translations for telugu should have correct translation for hourSecond 1`] = `"1 గంట  1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for hourSeconds 1`] = `"1 గంట  2 సెకన్లు"`;
+
+exports[`Translations for telugu should have correct translation for hours 1`] = `"2 గంటలు"`;
+
+exports[`Translations for telugu should have correct translation for hoursMinute 1`] = `"2 గంటలు 1 నిమిషం"`;
+
+exports[`Translations for telugu should have correct translation for hoursMinuteSecond 1`] = `"2 గంటలు 1 నిమిషం 1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for hoursMinutes 1`] = `"2 గంటలు 2 నిమిషాలు"`;
+
+exports[`Translations for telugu should have correct translation for hoursMinutesSecond 1`] = `"2 గంటలు 2 నిమిషాలు 1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for hoursMinutesSeconds 1`] = `"2 గంటలు 2 నిమిషాలు 2 సెకన్లు"`;
+
+exports[`Translations for telugu should have correct translation for hoursSeconds 1`] = `"2 గంటలు  1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for minute 1`] = `"1 నిమిషం"`;
+
+exports[`Translations for telugu should have correct translation for minuteSecond 1`] = `"1 నిమిషం 1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for minuteSeconds 1`] = `"1 నిమిషం 2 సెకన్లు"`;
+
+exports[`Translations for telugu should have correct translation for minutes 1`] = `"2 నిమిషాలు"`;
+
+exports[`Translations for telugu should have correct translation for minutesSecond 1`] = `"2 నిమిషాలు 1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for minutesSeconds 1`] = `"2 నిమిషాలు 2 సెకన్లు"`;
+
+exports[`Translations for telugu should have correct translation for second 1`] = `"1 సెకను"`;
+
+exports[`Translations for telugu should have correct translation for seconds 1`] = `"20 సెకన్లు"`;
+
+exports[`Translations for thai should have correct translation for day 1`] = `"25 ชั่วโมง"`;
+
+exports[`Translations for thai should have correct translation for hour 1`] = `"1 ชั่วโมง"`;
+
+exports[`Translations for thai should have correct translation for hourMinute 1`] = `"1 ชั่วโมง 1 นาที"`;
+
+exports[`Translations for thai should have correct translation for hourMinuteSecond 1`] = `"1 ชั่วโมง 1 นาที 1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for hourMinutes 1`] = `"1 ชั่วโมง 2 นาที"`;
+
+exports[`Translations for thai should have correct translation for hourMinutesSecond 1`] = `"1 ชั่วโมง 2 นาที 1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for hourMinutesSeconds 1`] = `"1 ชั่วโมง 2 นาที 2 วินาที"`;
+
+exports[`Translations for thai should have correct translation for hourSecond 1`] = `"1 ชั่วโมง  1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for hourSeconds 1`] = `"1 ชั่วโมง  2 วินาที"`;
+
+exports[`Translations for thai should have correct translation for hours 1`] = `"2 ชั่วโมง"`;
+
+exports[`Translations for thai should have correct translation for hoursMinute 1`] = `"2 ชั่วโมง 1 นาที"`;
+
+exports[`Translations for thai should have correct translation for hoursMinuteSecond 1`] = `"2 ชั่วโมง 1 นาที 1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for hoursMinutes 1`] = `"2 ชั่วโมง 2 นาที"`;
+
+exports[`Translations for thai should have correct translation for hoursMinutesSecond 1`] = `"2 ชั่วโมง 2 นาที 1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for hoursMinutesSeconds 1`] = `"2 ชั่วโมง 2 นาที 2 วินาที"`;
+
+exports[`Translations for thai should have correct translation for hoursSeconds 1`] = `"2 ชั่วโมง  1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for minute 1`] = `"1 นาที"`;
+
+exports[`Translations for thai should have correct translation for minuteSecond 1`] = `"1 นาที 1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for minuteSeconds 1`] = `"1 นาที 2 วินาที"`;
+
+exports[`Translations for thai should have correct translation for minutes 1`] = `"2 นาที"`;
+
+exports[`Translations for thai should have correct translation for minutesSecond 1`] = `"2 นาที 1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for minutesSeconds 1`] = `"2 นาที 2 วินาที"`;
+
+exports[`Translations for thai should have correct translation for second 1`] = `"1 วินาที"`;
+
+exports[`Translations for thai should have correct translation for seconds 1`] = `"20 วินาที"`;
+
+exports[`Translations for tigrinya should have correct translation for day 1`] = `"25,00,00"`;
+
+exports[`Translations for tigrinya should have correct translation for hour 1`] = `"1,00,00"`;
+
+exports[`Translations for tigrinya should have correct translation for hourMinute 1`] = `"1,01,00"`;
+
+exports[`Translations for tigrinya should have correct translation for hourMinuteSecond 1`] = `"1,01,01"`;
+
+exports[`Translations for tigrinya should have correct translation for hourMinutes 1`] = `"1,02,00"`;
+
+exports[`Translations for tigrinya should have correct translation for hourMinutesSecond 1`] = `"1,02,01"`;
+
+exports[`Translations for tigrinya should have correct translation for hourMinutesSeconds 1`] = `"1,02,02"`;
+
+exports[`Translations for tigrinya should have correct translation for hourSecond 1`] = `"1,00,01"`;
+
+exports[`Translations for tigrinya should have correct translation for hourSeconds 1`] = `"1,00,02"`;
+
+exports[`Translations for tigrinya should have correct translation for hours 1`] = `"2,00,00"`;
+
+exports[`Translations for tigrinya should have correct translation for hoursMinute 1`] = `"2,01,00"`;
+
+exports[`Translations for tigrinya should have correct translation for hoursMinuteSecond 1`] = `"2,01,01"`;
+
+exports[`Translations for tigrinya should have correct translation for hoursMinutes 1`] = `"2,02,00"`;
+
+exports[`Translations for tigrinya should have correct translation for hoursMinutesSecond 1`] = `"2,02,01"`;
+
+exports[`Translations for tigrinya should have correct translation for hoursMinutesSeconds 1`] = `"2,02,02"`;
+
+exports[`Translations for tigrinya should have correct translation for hoursSeconds 1`] = `"2,00,01"`;
+
+exports[`Translations for tigrinya should have correct translation for minute 1`] = `"1,00"`;
+
+exports[`Translations for tigrinya should have correct translation for minuteSecond 1`] = `"1,01"`;
+
+exports[`Translations for tigrinya should have correct translation for minuteSeconds 1`] = `"1,02"`;
+
+exports[`Translations for tigrinya should have correct translation for minutes 1`] = `"2,00"`;
+
+exports[`Translations for tigrinya should have correct translation for minutesSecond 1`] = `"2,01"`;
+
+exports[`Translations for tigrinya should have correct translation for minutesSeconds 1`] = `"2,02"`;
+
+exports[`Translations for tigrinya should have correct translation for second 1`] = `"0,01"`;
+
+exports[`Translations for tigrinya should have correct translation for seconds 1`] = `"0,20"`;
+
+exports[`Translations for turkce should have correct translation for day 1`] = `"25 saat"`;
+
+exports[`Translations for turkce should have correct translation for hour 1`] = `"1 saat"`;
+
+exports[`Translations for turkce should have correct translation for hourMinute 1`] = `"1 saat 1 dakika"`;
+
+exports[`Translations for turkce should have correct translation for hourMinuteSecond 1`] = `"1 saat 1 dakika 1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for hourMinutes 1`] = `"1 saat 2 dakika"`;
+
+exports[`Translations for turkce should have correct translation for hourMinutesSecond 1`] = `"1 saat 2 dakika 1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for hourMinutesSeconds 1`] = `"1 saat 2 dakika 2 saniye"`;
+
+exports[`Translations for turkce should have correct translation for hourSecond 1`] = `"1 saat  1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for hourSeconds 1`] = `"1 saat  2 saniye"`;
+
+exports[`Translations for turkce should have correct translation for hours 1`] = `"2 saat"`;
+
+exports[`Translations for turkce should have correct translation for hoursMinute 1`] = `"2 saat 1 dakika"`;
+
+exports[`Translations for turkce should have correct translation for hoursMinuteSecond 1`] = `"2 saat 1 dakika 1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for hoursMinutes 1`] = `"2 saat 2 dakika"`;
+
+exports[`Translations for turkce should have correct translation for hoursMinutesSecond 1`] = `"2 saat 2 dakika 1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for hoursMinutesSeconds 1`] = `"2 saat 2 dakika 2 saniye"`;
+
+exports[`Translations for turkce should have correct translation for hoursSeconds 1`] = `"2 saat  1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for minute 1`] = `"1 dakika"`;
+
+exports[`Translations for turkce should have correct translation for minuteSecond 1`] = `"1 dakika 1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for minuteSeconds 1`] = `"1 dakika 2 saniye"`;
+
+exports[`Translations for turkce should have correct translation for minutes 1`] = `"2 dakika"`;
+
+exports[`Translations for turkce should have correct translation for minutesSecond 1`] = `"2 dakika 1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for minutesSeconds 1`] = `"2 dakika 2 saniye"`;
+
+exports[`Translations for turkce should have correct translation for second 1`] = `"1 saniye"`;
+
+exports[`Translations for turkce should have correct translation for seconds 1`] = `"20 saniye"`;
+
+exports[`Translations for ukchina should have correct translation for day 1`] = `"25 小时"`;
+
+exports[`Translations for ukchina should have correct translation for hour 1`] = `"1 小时"`;
+
+exports[`Translations for ukchina should have correct translation for hourMinute 1`] = `"1 小时 1 分钟"`;
+
+exports[`Translations for ukchina should have correct translation for hourMinuteSecond 1`] = `"1 小时 1 分钟 1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for hourMinutes 1`] = `"1 小时 2 分钟"`;
+
+exports[`Translations for ukchina should have correct translation for hourMinutesSecond 1`] = `"1 小时 2 分钟 1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for hourMinutesSeconds 1`] = `"1 小时 2 分钟 2 秒"`;
+
+exports[`Translations for ukchina should have correct translation for hourSecond 1`] = `"1 小时  1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for hourSeconds 1`] = `"1 小时  2 秒"`;
+
+exports[`Translations for ukchina should have correct translation for hours 1`] = `"2 小时"`;
+
+exports[`Translations for ukchina should have correct translation for hoursMinute 1`] = `"2 小时 1 分钟"`;
+
+exports[`Translations for ukchina should have correct translation for hoursMinuteSecond 1`] = `"2 小时 1 分钟 1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for hoursMinutes 1`] = `"2 小时 2 分钟"`;
+
+exports[`Translations for ukchina should have correct translation for hoursMinutesSecond 1`] = `"2 小时 2 分钟 1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for hoursMinutesSeconds 1`] = `"2 小时 2 分钟 2 秒"`;
+
+exports[`Translations for ukchina should have correct translation for hoursSeconds 1`] = `"2 小时  1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for minute 1`] = `"1 分钟"`;
+
+exports[`Translations for ukchina should have correct translation for minuteSecond 1`] = `"1 分钟 1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for minuteSeconds 1`] = `"1 分钟 2 秒"`;
+
+exports[`Translations for ukchina should have correct translation for minutes 1`] = `"2 分钟"`;
+
+exports[`Translations for ukchina should have correct translation for minutesSecond 1`] = `"2 分钟 1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for minutesSeconds 1`] = `"2 分钟 2 秒"`;
+
+exports[`Translations for ukchina should have correct translation for second 1`] = `"1 秒"`;
+
+exports[`Translations for ukchina should have correct translation for seconds 1`] = `"20 秒"`;
+
+exports[`Translations for ukrainian should have correct translation for day 1`] = `"25 годин"`;
+
+exports[`Translations for ukrainian should have correct translation for hour 1`] = `"1 undefined"`;
+
+exports[`Translations for ukrainian should have correct translation for hourMinute 1`] = `"1 undefined 1 undefined"`;
+
+exports[`Translations for ukrainian should have correct translation for hourMinuteSecond 1`] = `"1 undefined 1 undefined 1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for hourMinutes 1`] = `"1 undefined 2 хвилини"`;
+
+exports[`Translations for ukrainian should have correct translation for hourMinutesSecond 1`] = `"1 undefined 2 хвилини 1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for hourMinutesSeconds 1`] = `"1 undefined 2 хвилини 2 секунди"`;
+
+exports[`Translations for ukrainian should have correct translation for hourSecond 1`] = `"1 undefined  1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for hourSeconds 1`] = `"1 undefined  2 секунди"`;
+
+exports[`Translations for ukrainian should have correct translation for hours 1`] = `"2 години"`;
+
+exports[`Translations for ukrainian should have correct translation for hoursMinute 1`] = `"2 години 1 undefined"`;
+
+exports[`Translations for ukrainian should have correct translation for hoursMinuteSecond 1`] = `"2 години 1 undefined 1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for hoursMinutes 1`] = `"2 години 2 хвилини"`;
+
+exports[`Translations for ukrainian should have correct translation for hoursMinutesSecond 1`] = `"2 години 2 хвилини 1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for hoursMinutesSeconds 1`] = `"2 години 2 хвилини 2 секунди"`;
+
+exports[`Translations for ukrainian should have correct translation for hoursSeconds 1`] = `"2 години  1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for minute 1`] = `"1 undefined"`;
+
+exports[`Translations for ukrainian should have correct translation for minuteSecond 1`] = `"1 undefined 1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for minuteSeconds 1`] = `"1 undefined 2 секунди"`;
+
+exports[`Translations for ukrainian should have correct translation for minutes 1`] = `"2 хвилини"`;
+
+exports[`Translations for ukrainian should have correct translation for minutesSecond 1`] = `"2 хвилини 1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for minutesSeconds 1`] = `"2 хвилини 2 секунди"`;
+
+exports[`Translations for ukrainian should have correct translation for second 1`] = `"1 секунда"`;
+
+exports[`Translations for ukrainian should have correct translation for seconds 1`] = `"20 секунд"`;
+
+exports[`Translations for urdu should have correct translation for day 1`] = `"25 گھنٹے"`;
+
+exports[`Translations for urdu should have correct translation for hour 1`] = `"1 گھنٹہ"`;
+
+exports[`Translations for urdu should have correct translation for hourMinute 1`] = `"1 گھنٹہ 1 منٹ"`;
+
+exports[`Translations for urdu should have correct translation for hourMinuteSecond 1`] = `"1 گھنٹہ 1 منٹ 1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for hourMinutes 1`] = `"1 گھنٹہ 2 منٹ"`;
+
+exports[`Translations for urdu should have correct translation for hourMinutesSecond 1`] = `"1 گھنٹہ 2 منٹ 1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for hourMinutesSeconds 1`] = `"1 گھنٹہ 2 منٹ 2 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for hourSecond 1`] = `"1 گھنٹہ  1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for hourSeconds 1`] = `"1 گھنٹہ  2 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for hours 1`] = `"2 گھنٹے"`;
+
+exports[`Translations for urdu should have correct translation for hoursMinute 1`] = `"2 گھنٹے 1 منٹ"`;
+
+exports[`Translations for urdu should have correct translation for hoursMinuteSecond 1`] = `"2 گھنٹے 1 منٹ 1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for hoursMinutes 1`] = `"2 گھنٹے 2 منٹ"`;
+
+exports[`Translations for urdu should have correct translation for hoursMinutesSecond 1`] = `"2 گھنٹے 2 منٹ 1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for hoursMinutesSeconds 1`] = `"2 گھنٹے 2 منٹ 2 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for hoursSeconds 1`] = `"2 گھنٹے  1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for minute 1`] = `"1 منٹ"`;
+
+exports[`Translations for urdu should have correct translation for minuteSecond 1`] = `"1 منٹ 1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for minuteSeconds 1`] = `"1 منٹ 2 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for minutes 1`] = `"2 منٹ"`;
+
+exports[`Translations for urdu should have correct translation for minutesSecond 1`] = `"2 منٹ 1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for minutesSeconds 1`] = `"2 منٹ 2 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for second 1`] = `"1 سیکنڈ"`;
+
+exports[`Translations for urdu should have correct translation for seconds 1`] = `"20 سیکنڈ"`;
+
+exports[`Translations for uzbek should have correct translation for day 1`] = `"25 соат"`;
+
+exports[`Translations for uzbek should have correct translation for hour 1`] = `"1 соат"`;
+
+exports[`Translations for uzbek should have correct translation for hourMinute 1`] = `"1 соат 1 дакика"`;
+
+exports[`Translations for uzbek should have correct translation for hourMinuteSecond 1`] = `"1 соат 1 дакика 1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for hourMinutes 1`] = `"1 соат 2 дакика"`;
+
+exports[`Translations for uzbek should have correct translation for hourMinutesSecond 1`] = `"1 соат 2 дакика 1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for hourMinutesSeconds 1`] = `"1 соат 2 дакика 2 фурсат"`;
+
+exports[`Translations for uzbek should have correct translation for hourSecond 1`] = `"1 соат  1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for hourSeconds 1`] = `"1 соат  2 фурсат"`;
+
+exports[`Translations for uzbek should have correct translation for hours 1`] = `"2 соат"`;
+
+exports[`Translations for uzbek should have correct translation for hoursMinute 1`] = `"2 соат 1 дакика"`;
+
+exports[`Translations for uzbek should have correct translation for hoursMinuteSecond 1`] = `"2 соат 1 дакика 1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for hoursMinutes 1`] = `"2 соат 2 дакика"`;
+
+exports[`Translations for uzbek should have correct translation for hoursMinutesSecond 1`] = `"2 соат 2 дакика 1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for hoursMinutesSeconds 1`] = `"2 соат 2 дакика 2 фурсат"`;
+
+exports[`Translations for uzbek should have correct translation for hoursSeconds 1`] = `"2 соат  1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for minute 1`] = `"1 дакика"`;
+
+exports[`Translations for uzbek should have correct translation for minuteSecond 1`] = `"1 дакика 1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for minuteSeconds 1`] = `"1 дакика 2 фурсат"`;
+
+exports[`Translations for uzbek should have correct translation for minutes 1`] = `"2 дакика"`;
+
+exports[`Translations for uzbek should have correct translation for minutesSecond 1`] = `"2 дакика 1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for minutesSeconds 1`] = `"2 дакика 2 фурсат"`;
+
+exports[`Translations for uzbek should have correct translation for second 1`] = `"1 soniya"`;
+
+exports[`Translations for uzbek should have correct translation for seconds 1`] = `"20 фурсат"`;
+
+exports[`Translations for vietnamese should have correct translation for day 1`] = `"25 giờ"`;
+
+exports[`Translations for vietnamese should have correct translation for hour 1`] = `"1 giờ"`;
+
+exports[`Translations for vietnamese should have correct translation for hourMinute 1`] = `"1 giờ 1 phút"`;
+
+exports[`Translations for vietnamese should have correct translation for hourMinuteSecond 1`] = `"1 giờ 1 phút 1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for hourMinutes 1`] = `"1 giờ 2 phút"`;
+
+exports[`Translations for vietnamese should have correct translation for hourMinutesSecond 1`] = `"1 giờ 2 phút 1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for hourMinutesSeconds 1`] = `"1 giờ 2 phút 2 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for hourSecond 1`] = `"1 giờ  1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for hourSeconds 1`] = `"1 giờ  2 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for hours 1`] = `"2 giờ"`;
+
+exports[`Translations for vietnamese should have correct translation for hoursMinute 1`] = `"2 giờ 1 phút"`;
+
+exports[`Translations for vietnamese should have correct translation for hoursMinuteSecond 1`] = `"2 giờ 1 phút 1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for hoursMinutes 1`] = `"2 giờ 2 phút"`;
+
+exports[`Translations for vietnamese should have correct translation for hoursMinutesSecond 1`] = `"2 giờ 2 phút 1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for hoursMinutesSeconds 1`] = `"2 giờ 2 phút 2 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for hoursSeconds 1`] = `"2 giờ  1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for minute 1`] = `"1 phút"`;
+
+exports[`Translations for vietnamese should have correct translation for minuteSecond 1`] = `"1 phút 1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for minuteSeconds 1`] = `"1 phút 2 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for minutes 1`] = `"2 phút"`;
+
+exports[`Translations for vietnamese should have correct translation for minutesSecond 1`] = `"2 phút 1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for minutesSeconds 1`] = `"2 phút 2 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for second 1`] = `"1 giây"`;
+
+exports[`Translations for vietnamese should have correct translation for seconds 1`] = `"20 giây"`;
+
+exports[`Translations for yoruba should have correct translation for day 1`] = `"wákati 25"`;
+
+exports[`Translations for yoruba should have correct translation for hour 1`] = `"wákati 1"`;
+
+exports[`Translations for yoruba should have correct translation for hourMinute 1`] = `"wákati 1 ìsẹjú 1"`;
+
+exports[`Translations for yoruba should have correct translation for hourMinuteSecond 1`] = `"wákati 1 ìsẹjú 1 keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for hourMinutes 1`] = `"wákati 1 ìsẹjú 2"`;
+
+exports[`Translations for yoruba should have correct translation for hourMinutesSecond 1`] = `"wákati 1 ìsẹjú 2 keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for hourMinutesSeconds 1`] = `"wákati 1 ìsẹjú 2 aayá 2"`;
+
+exports[`Translations for yoruba should have correct translation for hourSecond 1`] = `"wákati 1  keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for hourSeconds 1`] = `"wákati 1  aayá 2"`;
+
+exports[`Translations for yoruba should have correct translation for hours 1`] = `"wákati 2"`;
+
+exports[`Translations for yoruba should have correct translation for hoursMinute 1`] = `"wákati 2 ìsẹjú 1"`;
+
+exports[`Translations for yoruba should have correct translation for hoursMinuteSecond 1`] = `"wákati 2 ìsẹjú 1 keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for hoursMinutes 1`] = `"wákati 2 ìsẹjú 2"`;
+
+exports[`Translations for yoruba should have correct translation for hoursMinutesSecond 1`] = `"wákati 2 ìsẹjú 2 keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for hoursMinutesSeconds 1`] = `"wákati 2 ìsẹjú 2 aayá 2"`;
+
+exports[`Translations for yoruba should have correct translation for hoursSeconds 1`] = `"wákati 2  keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for minute 1`] = `"ìsẹjú 1"`;
+
+exports[`Translations for yoruba should have correct translation for minuteSecond 1`] = `"ìsẹjú 1 keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for minuteSeconds 1`] = `"ìsẹjú 1 aayá 2"`;
+
+exports[`Translations for yoruba should have correct translation for minutes 1`] = `"ìsẹjú 2"`;
+
+exports[`Translations for yoruba should have correct translation for minutesSecond 1`] = `"ìsẹjú 2 keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for minutesSeconds 1`] = `"ìsẹjú 2 aayá 2"`;
+
+exports[`Translations for yoruba should have correct translation for second 1`] = `"keji 1"`;
+
+exports[`Translations for yoruba should have correct translation for seconds 1`] = `"aayá 20"`;
+
+exports[`Translations for zhongwen should have correct translation for day 1`] = `"25 小时"`;
+
+exports[`Translations for zhongwen should have correct translation for hour 1`] = `"1 小时"`;
+
+exports[`Translations for zhongwen should have correct translation for hourMinute 1`] = `"1 小时 1 分钟"`;
+
+exports[`Translations for zhongwen should have correct translation for hourMinuteSecond 1`] = `"1 小时 1 分钟 1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for hourMinutes 1`] = `"1 小时 2 分钟"`;
+
+exports[`Translations for zhongwen should have correct translation for hourMinutesSecond 1`] = `"1 小时 2 分钟 1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for hourMinutesSeconds 1`] = `"1 小时 2 分钟 2 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for hourSecond 1`] = `"1 小时  1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for hourSeconds 1`] = `"1 小时  2 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for hours 1`] = `"2 小时"`;
+
+exports[`Translations for zhongwen should have correct translation for hoursMinute 1`] = `"2 小时 1 分钟"`;
+
+exports[`Translations for zhongwen should have correct translation for hoursMinuteSecond 1`] = `"2 小时 1 分钟 1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for hoursMinutes 1`] = `"2 小时 2 分钟"`;
+
+exports[`Translations for zhongwen should have correct translation for hoursMinutesSecond 1`] = `"2 小时 2 分钟 1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for hoursMinutesSeconds 1`] = `"2 小时 2 分钟 2 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for hoursSeconds 1`] = `"2 小时  1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for minute 1`] = `"1 分钟"`;
+
+exports[`Translations for zhongwen should have correct translation for minuteSecond 1`] = `"1 分钟 1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for minuteSeconds 1`] = `"1 分钟 2 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for minutes 1`] = `"2 分钟"`;
+
+exports[`Translations for zhongwen should have correct translation for minutesSecond 1`] = `"2 分钟 1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for minutesSeconds 1`] = `"2 分钟 2 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for second 1`] = `"1 秒"`;
+
+exports[`Translations for zhongwen should have correct translation for seconds 1`] = `"20 秒"`;
