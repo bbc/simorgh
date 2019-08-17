@@ -18,6 +18,16 @@ def notifySlack(messageParameters) {
 def stageHasFailed = false;
 
 node {
+  properties(
+    [
+        buildDiscarder(
+            logRotator(
+                daysToKeepStr: '10',
+                artifactDaysToKeepStr: '10'
+            )
+        )
+    ]
+  )
   properties([pipelineTriggers([cron(cron_string)])])
   timeout(time: 90, unit: 'MINUTES') {
     withEnv([
