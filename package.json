@@ -146,7 +146,7 @@
     "@storybook/react": "^5.1.11",
     "@storybook/theming": "^5.1.11",
     "@testing-library/react": "^8.0.5",
-    "@testing-library/react-hooks": "^1.1.0",
+    "@testing-library/react-hooks": "^2.0.1",
     "amphtml-validator": "^1.0.23",
     "assets-webpack-plugin": "^3.9.8",
     "audit-ci": "2.1.0",
