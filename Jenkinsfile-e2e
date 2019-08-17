@@ -26,9 +26,9 @@ node {
                 artifactDaysToKeepStr: '10'
             )
         )
+        pipelineTriggers([cron(cron_string)])
     ]
   )
-  properties([pipelineTriggers([cron(cron_string)])])
   timeout(time: 90, unit: 'MINUTES') {
     withEnv([
       'CI=true'
