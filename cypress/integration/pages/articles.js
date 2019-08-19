@@ -132,7 +132,7 @@ const runTests = ({ service }) =>
               .tz(firstPublished, `${appConfig[service].timezone}`)
               .locale(language)
               .format('D MMMM YYYY');
-
+            // exempt pashto as we do have currently its moment's locale implementation
             if (service !== 'pashto') {
               cy.get('time').then($time => {
                 if (lastPublished === firstPublished) {
@@ -145,8 +145,7 @@ const runTests = ({ service }) =>
                     .eq(1)
                     .should(
                       'contain',
-                      `${appConfig[service].articleTimestampPrefix} updatedTimestamp}`,
-                        ' '}${updatedTimestamp}`,
+                      `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
                     );
                 }
               });
