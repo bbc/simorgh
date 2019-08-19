@@ -5,7 +5,6 @@ import {
   F_NASSIM_ARABIC_REGULAR,
   F_NASSIM_ARABIC_BOLD,
 } from '@bbc/psammead-styles/fonts';
-import 'moment/locale/ar';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
