@@ -2,11 +2,11 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
-export default ({ service }) => {
-  describe('Tests', () => {
+export default ({ service }) =>
+  describe('Canonical Tests', () => {
     // will be addressed by https://github.com/bbc/simorgh/pull/2971
-    xdescribe('ATI', () => {
-      it('should have a noscript tag with an 1px image with the ati url', () => {
+    describe('ATI', () => {
+      it.skip('should have a noscript tag with an 1px image with the ati url', () => {
         cy.hasNoscriptImgAtiUrl(
           envConfig.atiUrl,
           config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
@@ -15,12 +15,12 @@ export default ({ service }) => {
     });
 
     // TODO Chartbeat not yet implemented
-    xdescribe('Chartbeat', () => {
+    describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
-        it('should have a script with src value set to chartbeat source', () => {
+        it.skip('should have a script with src value set to chartbeat source', () => {
           cy.hasScriptWithChartbeatSrc();
         });
-        it('should have chartbeat config set to window object', () => {
+        it.skip('should have chartbeat config set to window object', () => {
           cy.hasGlobalChartbeatConfig();
         });
       }
@@ -36,4 +36,3 @@ export default ({ service }) => {
       });
     });
   });
-};

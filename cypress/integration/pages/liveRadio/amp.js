@@ -1,37 +1,20 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
-import { getLiveRadioUrl } from '../../../support/getPageTypeUrl';
 
-export default ({ service }) => {
-  describe('Tests', () => {
-    // will be addressed by https://github.com/bbc/simorgh/issues/2750
-    it('Metadata', () => {
-      cy.request(`${getLiveRadioUrl(service)}.json`).then(({ body }) => {
-        cy.get('meta[name="description"]').should(
-          'have.attr',
-          'content',
-          body.promo.summary || body.promo.headlines.seoHeadline,
+export default ({ service }) =>
+  describe('Amp Tests', () => {
+    describe('AMP Status', () => {
+      it('should return a 200 response', () => {
+        cy.testResponseCodeAndType(
+          `${config[service].pageTypes.liveRadio.path}.amp`,
+          200,
+          'text/html',
         );
-
-        cy.get('meta[name="og:title"]').should(
-          'have.attr',
-          'content',
-          body.promo.headlines.seoHeadline,
-        );
-
-        cy.get('meta[name="og:type"]').should(
-          'have.attr',
-          'content',
-          body.metadata.type,
-        );
-
-        cy.get('html').should('have.attr', 'lang', body.metadata.language);
       });
     });
 
-    // will be addressed by https://github.com/bbc/simorgh/pull/2971
-    xdescribe('ATI', () => {
-      it('should have an amp-analytics tag with the ati url', () => {
+    describe('ATI', () => {
+      it.skip('should have an amp-analytics tag with the ati url', () => {
         cy.hasAmpAnalyticsAtiUrl(
           envConfig.atiUrl,
           config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
@@ -39,10 +22,9 @@ export default ({ service }) => {
       });
     });
 
-    // TODO Chartbeat not yet implemented
-    xdescribe('Chartbeat', () => {
+    describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
-        it('should have chartbeat config UID', () => {
+        it.skip('should have chartbeat config UID', () => {
           cy.hasAmpChartbeatConfigUid();
         });
       }
@@ -104,4 +86,3 @@ export default ({ service }) => {
         .should('be', 5); // 1 for amp.js + 1 for amp-geo + 1 for amp-consent + 1 for amp-analytics + 1 that Cypress injects into the head
     });
   });
-};
