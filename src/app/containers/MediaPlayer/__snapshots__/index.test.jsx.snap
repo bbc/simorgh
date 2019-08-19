@@ -17,7 +17,7 @@ exports[`MediaPlayer Calls the correct props Calls the AMP player when platform 
       <amp-img
         layout="fill"
         placeholder={true}
-        src={null}
+        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
       />
     </amp-iframe>
   </div>
