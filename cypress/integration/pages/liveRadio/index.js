@@ -1,11 +1,6 @@
 import iterator from '../../../support/iterator';
-import runCanonicalTests from './amp.test';
-import runAmpTests from './canonical.test';
-import runCommonTests from './common.test';
+import runCanonicalTests from './amp';
+import runAmpTests from './canonical';
+import runCommonTests from './common';
 
-export default iterator(
-  'liveRadio',
-  runCommonTests,
-  runCanonicalTests,
-  runAmpTests,
-);
+iterator('liveRadio', runCommonTests, runCanonicalTests, runAmpTests);
