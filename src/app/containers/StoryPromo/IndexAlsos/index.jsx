@@ -8,7 +8,7 @@ import {
   IndexAlso,
   IndexAlsosUl,
   IndexAlsosLi,
-} from '@bbc/psammead-story-promo/esm/IndexAlsos';
+} from '@bbc/psammead-story-promo/dist/IndexAlsos';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const IndexAlsosContainer = ({ alsoItems, script, service }) => {
@@ -44,7 +44,7 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
         <IndexAlsosUl>
           {alsoItems.slice(0, 3).map(item => {
             const { id, cpsType, mediaType } = item;
-            const headline = pathOr(null, ['headlines'], item);
+            const headline = pathOr(null, ['headlines', 'headline'], item);
             const url = pathOr(null, ['locators', 'assetUri'], item);
 
             return (
