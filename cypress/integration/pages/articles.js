@@ -145,7 +145,7 @@ const runTests = ({ service }) =>
                     .eq(1)
                     .should(
                       'contain',
-                      `${`${appConfig[service].articleTimestampPrefix}` +
+                      `${appConfig[service].articleTimestampPrefix} updatedTimestamp}`,
                         ' '}${updatedTimestamp}`,
                     );
                 }
