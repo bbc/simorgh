@@ -11,7 +11,16 @@ exports[`Story Promo Media Indicator should not render if item media object has 
 />
 `;
 
-exports[`Story Promo Media Indicator should render Index Also video indicator correctly 1`] = `null`;
+exports[`Story Promo Media Indicator should render Index Also video indicator correctly 1`] = `
+<MediaIndicator
+  datetime={null}
+  duration={null}
+  indexAlsos={true}
+  service="news"
+  topStory={false}
+  type="video"
+/>
+`;
 
 exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
 <MediaIndicator

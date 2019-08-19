@@ -132,6 +132,6 @@ describe('Story Promo Media Indicator', () => {
 
   shouldShallowMatchSnapshot(
     'should render Index Also video indicator correctly',
-    <MediaIndicator type="video" service="news" indexAlsos />,
+    <MediaIndicator item={noDurationItem} service="news" indexAlsos />,
   );
 });
