@@ -412,7 +412,7 @@ Array [
         <script
           dangerouslySetInnerHTML={
             Object {
-              "__html": "{\\"ISOCountryGroups\\":{\\"eu\\":[\\"at\\",\\"be\\",\\"bg\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ie\\",\\"is\\",\\"it\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mt\\",\\"nl\\",\\"no\\",\\"pl\\",\\"pt\\",\\"ro\\",\\"se\\",\\"si\\",\\"sl\\"]}}",
+              "__html": "{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}",
             }
           }
           type="application/json"
@@ -425,7 +425,7 @@ Array [
         <script
           dangerouslySetInnerHTML={
             Object {
-              "__html": "{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eu\\",\\"promptUI\\":\\"consent-prompt\\"}}}",
+              "__html": "{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}",
             }
           }
           type="application/json"
@@ -1296,6 +1296,7 @@ Array [
              
           </span>
           2019 ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም
+           
           <a
             className="c10 c14"
             href="https://www.bbc.co.uk/help/web/links/"
