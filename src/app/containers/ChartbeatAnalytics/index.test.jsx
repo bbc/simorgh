@@ -79,7 +79,6 @@ describe('Charbeats Analytics Container', () => {
     testUtils.buildSections = jest
       .fn()
       .mockImplementation(() => 'secction1 section2');
-
     const tree = renderer
       .create(
         <ContextWrap
@@ -98,6 +97,7 @@ describe('Charbeats Analytics Container', () => {
       idSync: {
         bbc_hid: 'cookie',
       },
+      path: '/',
       sections: 'secction1 section2',
       title: 'This is an article',
       type: 'article',
