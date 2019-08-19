@@ -402,8 +402,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               "title": "Mperi",
             },
             "currentPage": "Current page",
-            "home": "Home",
-            "skipLinkText": "Skip to content",
+            "home": "Akụkọ",
+            "skipLinkText": "Wụga n’ọdịnaya",
           },
           "home": "Akụkọ",
           "media": Object {
