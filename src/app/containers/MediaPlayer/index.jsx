@@ -59,7 +59,7 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
       <Metadata aresMediaBlock={aresMediaBlock} />
       <MediaPlayerWrapper
         showPlaceholder={shouldShowPlaceholder}
-        src={placeholderSrc}
+        placeholderSrc={placeholderSrc}
       >
         {isAmp ? (
           <AmpMediaPlayer

@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
   overflow: hidden;
 `;
 
-const MediaPlayerWrapper = ({ showPlaceholder, src, children }) => {
+const MediaPlayerWrapper = ({ showPlaceholder, placeholderSrc, children }) => {
   const [mediaPlayerActive, setMediaPlayerActive] = useState(!showPlaceholder);
   const handlePlaceholderClick = () => setMediaPlayerActive(true);
 
@@ -22,7 +22,10 @@ const MediaPlayerWrapper = ({ showPlaceholder, src, children }) => {
       {mediaPlayerActive ? (
         <React.Fragment>{children}</React.Fragment>
       ) : (
-        <MediaPlayerPlaceholder onClick={handlePlaceholderClick} src={src} />
+        <MediaPlayerPlaceholder
+          onClick={handlePlaceholderClick}
+          src={placeholderSrc}
+        />
       )}
     </StyledContainer>
   );
@@ -30,7 +33,7 @@ const MediaPlayerWrapper = ({ showPlaceholder, src, children }) => {
 
 MediaPlayerWrapper.propTypes = {
   showPlaceholder: bool.isRequired,
-  src: string.isRequired,
+  placeholderSrc: string.isRequired,
   children: node.isRequired,
 };
 

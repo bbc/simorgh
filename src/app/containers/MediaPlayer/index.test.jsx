@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { string, shape, node } from 'prop-types';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import MediaPlayerContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
@@ -48,25 +49,33 @@ ContextWrapper.defaultProps = {
 
 describe('MediaPlayer', () => {
   describe('Calls the correct props', () => {
-    it('Calls the canonical player when platform is canonical', () => {
-      const tree = renderer.create(
-        <ContextWrapper platform="canonical">
-          <MediaPlayerContainer blocks={validVideoFixture} />
-        </ContextWrapper>,
-      );
+    shouldMatchSnapshot(
+      'Calls the canonical placeholder when platform is canonical',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
+    );
 
-      expect(tree).toMatchSnapshot();
-    });
+    shouldMatchSnapshot(
+      'Calls the canonical player when platform is canonical and placeholder is false',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={validVideoFixture} placeholder={false} />
+      </ContextWrapper>,
+    );
 
-    it('Calls the AMP player when platform is AMP', () => {
-      const tree = renderer.create(
-        <ContextWrapper platform="amp">
-          <MediaPlayerContainer blocks={validVideoFixture} />
-        </ContextWrapper>,
-      );
+    shouldMatchSnapshot(
+      'Calls the AMP player when platform is AMP and placeholder is true',
+      <ContextWrapper platform="amp">
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
+    );
 
-      expect(tree).toMatchSnapshot();
-    });
+    shouldMatchSnapshot(
+      'Calls the AMP player when platform is AMP and placeholder is false',
+      <ContextWrapper platform="amp">
+        <MediaPlayerContainer blocks={validVideoFixture} placeholder={false} />
+      </ContextWrapper>,
+    );
   });
 
   describe('Fails and returns early when', () => {
