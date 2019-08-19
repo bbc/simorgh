@@ -200,7 +200,7 @@
     "wait-on": "^3.3.0",
     "webpack": "^4.39.0",
     "webpack-bundle-analyzer": "^3.4.1",
-    "webpack-cli": "^3.3.6",
+    "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.1.5",
     "webpack-node-externals": "^1.7.2",
