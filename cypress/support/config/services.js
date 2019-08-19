@@ -420,10 +420,18 @@ export default {
   },
   serbian: {
     font: undefined,
+    isWorldService: true,
+    serviceOverride: 'serbianLat',
     pageTypes: {
-      articles: undefined,
-      errorPage404: undefined,
-      frontPage: undefined,
+      articles:
+        Cypress.env('APP_ENV') === 'live'
+          ? undefined
+          : '/serbian/articles/c805k05kr73o/lat',
+      errorPage404:
+        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          ? undefined
+          : '/serbian/articles/c123456abcdo/lat',
+      frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/serbian/lat',
     },
   },
   sinhala: {

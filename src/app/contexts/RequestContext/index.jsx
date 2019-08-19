@@ -4,6 +4,7 @@ import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
+import getMetaUrls from './getMetaUrls'
 
 export const RequestContext = React.createContext('default');
 
@@ -14,6 +15,7 @@ export const RequestContextProvider = ({
   isAmp,
   pageType,
   service,
+  serviceVariant,
   previousPath,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
@@ -30,6 +32,8 @@ export const RequestContextProvider = ({
     id,
   });
 
+  const metaDataUrls = getMetaUrls(origin, service, serviceVariant, pageType, id);
+
   const value = {
     env,
     id,
@@ -40,6 +44,7 @@ export const RequestContextProvider = ({
     statsDestination,
     statsPageIdentifier,
     previousPath,
+    ...metaDataUrls
   };
 
   return (

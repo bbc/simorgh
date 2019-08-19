@@ -4,6 +4,7 @@ import * as getStatsDestination from './getStatsDestination';
 import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
+import * as getMetaUrls from './getMetaUrls';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
@@ -24,11 +25,20 @@ jest.mock('./getStatsDestination');
 jest.mock('./getStatsPageIdentifier');
 jest.mock('./getOriginContext');
 jest.mock('./getEnv');
+jest.mock('./getMetaUrls')
 
 getStatsDestination.default.mockReturnValue('getStatsDestination');
 getStatsPageIdentifier.default.mockReturnValue('getStatsPageIdentifier');
 getOriginContext.default.mockReturnValue({ isUK: true, origin: 'origin' });
 getEnv.default.mockReturnValue('getEnv');
+getMetaUrls.default.mockReturnValue({
+  canonicalLink: 'http://localhost.bbc.com:7080/service/',
+  ampLink: 'http://localhost.bbc.com:7080/service.amp',
+  canonicalUkLink: 'http://localhost.bbc.co.uk:7080/service',
+  ampUkLink: 'http://localhost.bbc.co.uk:7080/service.amp',
+  canonicalNonUkLink: 'http://localhost.bbc.com:7080/service',
+  ampNonUkLink: 'http://localhost.bbc.com:7080/service.amp' 
+})
 
 const input = {
   bbcOrigin: 'bbcOrigin',
@@ -36,6 +46,7 @@ const input = {
   isAmp: true,
   pageType: 'frontPage',
   service: 'service',
+  serviceVariant: null,
   previousPath: '/previous-path',
 };
 
@@ -49,6 +60,12 @@ const expectedOutput = {
   statsDestination: 'getStatsDestination',
   statsPageIdentifier: 'getStatsPageIdentifier',
   previousPath: '/previous-path',
+  canonicalLink: 'http://localhost.bbc.com:7080/service/',
+  ampLink: 'http://localhost.bbc.com:7080/service.amp',
+  canonicalUkLink: 'http://localhost.bbc.co.uk:7080/service',
+  ampUkLink: 'http://localhost.bbc.co.uk:7080/service.amp',
+  canonicalNonUkLink: 'http://localhost.bbc.com:7080/service',
+  ampNonUkLink: 'http://localhost.bbc.com:7080/service.amp'
 };
 
 describe('RequestContext', () => {
@@ -78,6 +95,8 @@ describe('RequestContext', () => {
     expect(getOriginContext.default).toHaveBeenCalledWith('bbcOrigin');
 
     expect(getEnv.default).toHaveBeenCalledWith('origin');
+
+    expect(getMetaUrls.default).toHaveBeenCalledWith("origin", 'service', null, 'frontPage', 'id')
 
     expect(React.useContext).toHaveReturnedWith(expectedOutput);
   });

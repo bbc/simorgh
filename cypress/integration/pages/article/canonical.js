@@ -16,6 +16,9 @@ const serviceHasArticlePageType = service =>
 Object.keys(config)
   .filter(serviceHasArticlePageType)
   .forEach(service => {
+    const serviceOverride = config[service].serviceOverride
+    const serviceConfig = serviceOverride ? appConfig[serviceOverride] : appConfig[service];
+
     describe(`Article - Canonical - ${service}`, () => {
       before(() => {
         cy.visit(config[service].pageTypes.articles);
@@ -26,7 +29,7 @@ Object.keys(config)
           cy.window().then(win => {
             cy.hasHtmlLangDirAttributes({
               lang: `${win.SIMORGH_DATA.pageData.metadata.passport.language}`,
-              dir: `${appConfig[service].dir}`,
+              dir: `${serviceConfig.dir}`,
             });
           });
         });
@@ -59,17 +62,17 @@ Object.keys(config)
           cy.checkFacebookMetadata(
             '100004154058350',
             '1609039196070050',
-            `${appConfig[service].articleAuthor}`,
+            `${serviceConfig.articleAuthor}`,
           );
         });
 
         it('should have the correct open graph metadata', () => {
           cy.checkOpenGraphMetadata(
             'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-            `${appConfig[service].defaultImage}`,
-            `${appConfig[service].defaultImageAltText}`,
-            `${appConfig[service].locale}`,
-            `${appConfig[service].defaultImageAltText}`,
+            `${serviceConfig.defaultImage}`,
+            `${serviceConfig.defaultImageAltText}`,
+            `${serviceConfig.locale}`,
+            `${serviceConfig.defaultImageAltText}`,
             "Meghan's bouquet laid on tomb of unknown warrior",
             'article',
             `https://www.bbc.com${config[service].pageTypes.articles}`,
@@ -79,11 +82,11 @@ Object.keys(config)
         it('should have the correct twitter metadata', () => {
           cy.checkTwitterMetadata(
             'summary_large_image',
-            `${appConfig[service].twitterCreator}`,
+            `${serviceConfig.twitterCreator}`,
             'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-            `${appConfig[service].defaultImageAltText}`,
-            `${appConfig[service].defaultImage}`,
-            `${appConfig[service].twitterSite}`,
+            `${serviceConfig.defaultImageAltText}`,
+            `${serviceConfig.defaultImage}`,
+            `${serviceConfig.twitterSite}`,
             "Meghan's bouquet laid on tomb of unknown warrior",
           );
         });
@@ -154,15 +157,15 @@ Object.keys(config)
             .eq(0)
             .should(
               'contain',
-              appConfig[service].serviceLocalizedName !== undefined
-                ? `${appConfig[service].product}, ${appConfig[service].serviceLocalizedName}`
-                : appConfig[service].product,
+              serviceConfig.serviceLocalizedName !== undefined
+                ? `${serviceConfig.product}, ${serviceConfig.serviceLocalizedName}`
+                : serviceConfig.product,
             );
         });
 
         it('should have working links', () => {
           cy.get('footer ul').within(() =>
-            appConfig[service].footer.links.forEach(({ href }, key) =>
+            serviceConfig.footer.links.forEach(({ href }, key) =>
               cy.checkLinks(key, href),
             ),
           );
@@ -172,7 +175,7 @@ Object.keys(config)
           cy.get('footer p').should(
             'contain',
             `© ${new Date().getFullYear()} ${
-              appConfig[service].footer.copyrightText
+              serviceConfig.footer.copyrightText
             }`,
           );
         });
@@ -183,7 +186,7 @@ Object.keys(config)
           cy.get('footer p')
             .children('a')
             .should('have.attr', 'href')
-            .and('contain', appConfig[service].footer.externalLink.href);
+            .and('contain', serviceConfig.footer.externalLink.href);
         });
       });
 
@@ -229,9 +232,9 @@ Object.keys(config)
         it('should render the BBC News branding', () => {
           cy.get('header a').should(
             'contain',
-            appConfig[service].serviceLocalizedName !== undefined
-              ? `${appConfig[service].product}, ${appConfig[service].serviceLocalizedName}`
-              : appConfig[service].product,
+            serviceConfig.serviceLocalizedName !== undefined
+              ? `${serviceConfig.product}, ${serviceConfig.serviceLocalizedName}`
+              : serviceConfig.product,
           );
         });
 
@@ -328,7 +331,7 @@ Object.keys(config)
           cy.window().then(win => {
             const { seoHeadline } = win.SIMORGH_DATA.pageData.promo.headlines;
             cy.renderedTitle(
-              `${seoHeadline} - ${appConfig[service].brandName}`,
+              `${seoHeadline} - ${serviceConfig.brandName}`,
             );
           });
         });

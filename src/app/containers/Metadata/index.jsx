@@ -84,7 +84,7 @@ const getAppleTouchUrl = service => {
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
-  const { origin, pageType, platform } = useContext(RequestContext);
+  const { pageType, platform, canonicalLink, ampLink, canonicalUkLink, ampUkLink, canonicalNonUkLink, ampNonUkLink } = useContext(RequestContext);
   const {
     service,
     brandName,
@@ -110,13 +110,7 @@ const MetadataContainer = ({ metadata, promo }) => {
 
   const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
   const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
-
-  const canonicalLink = getLink(origin, service, id, pageType, 'canonical');
-  const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
-  const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
-  const ampLink = getLink(origin, service, id, pageType, 'amp');
-  const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
-  const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
+  
   const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
 
@@ -124,15 +118,15 @@ const MetadataContainer = ({ metadata, promo }) => {
 
   const alternateLinksEnglishSites = [
     {
-      href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'x-default',
     },
     {
-      href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'en',
     },
     {
-      href: isAmp ? ampLinkUK : canonicalLinkUK,
+      href: isAmp ? ampUkLink : canonicalUkLink,
       hrefLang: 'en-gb',
     },
   ];
@@ -168,7 +162,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     <Fragment>
       <LinkedData
         brandName={brandName}
-        canonicalLink={canonicalLink}
+        canonicalLink={canonicalNonUkLink}
         firstPublished={timeFirstPublished}
         lastUpdated={timeLastPublished}
         logoUrl={defaultImage}
@@ -186,7 +180,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         articleAuthor={articleAuthor}
         articleSection={pathOr(null, ['passport', 'genre'], metadata)}
         brandName={brandName}
-        canonicalLink={canonicalLink}
+        canonicalLink={canonicalNonUkLink}
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
         description={getDescription(metadata, promo)}

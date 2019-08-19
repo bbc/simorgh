@@ -29,6 +29,7 @@ const WithContexts = Component => {
               isAmp={isAmp}
               pageType={pageType}
               service={service}
+              serviceVariant={serviceVariant}
               previousPath={previousPath}
             >
               <Component {...props} />
