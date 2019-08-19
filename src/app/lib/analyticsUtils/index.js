@@ -172,17 +172,17 @@ export const getPublishingInfo = (service, eventInfo, eventType) => {
       * format = [PAR=container-[component-name]::name~CHD=slot] = [PAR=container-navigation::name~CHD=1]
          ^ for format, currently using the name of the component clicked as slot
     */
-    const eventComponentInfo = eventInfo.path[0].dataset.info || 'brand-top';
+    const eventComponentInfo = eventInfo.path[0].dataset.info || 'brand-top'; // psammead components need to be updated with 'data' attrs
     const cleanCompInfo = eventComponentInfo.split('/').join('-');
-    const componentName = 'navigation';
-    const format = `PAR=container-${componentName}::name-CHD=${cleanCompInfo.toLowerCase()}`;
+    const componentName = 'navigation'; // psammead components need to be updated with 'data' attrs
+    const format = `PAR=container-${componentName}::name~CHD=${cleanCompInfo.toLowerCase()}`;
     const url = eventInfo.srcElement.href || '/';
 
     return `PUB-[${service}-${componentName}]-[${eventInfo.type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
   }
 
   // for background events we just need "campaings" => [service-name]-[component-name], e.g. yoruba-navigation
-  const componentName = eventType[0].dataset.info || 'navigation'; // because I still need to make changes to the nav comp
+  const componentName = eventType[0].dataset.info || 'navigation'; // psammead components need to be updated with 'data' attrs
 
   return `PUB-[${service}-${componentName}]`;
 };
