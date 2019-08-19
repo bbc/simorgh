@@ -28,7 +28,6 @@ const runTests = ({ service }) =>
       before(() => {
         cy.visit(config[service].pageTypes.errorPage404.path, {
           failOnStatusCode: false,
-          timeout: 10000,
         });
       });
 
