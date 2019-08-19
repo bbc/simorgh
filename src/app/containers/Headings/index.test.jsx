@@ -79,7 +79,7 @@ const template = (title, text, type) => {
 describe('Headings', () => {
   describe('with no data', () => {
     suppressPropWarnings(['type', 'undefined']);
-    suppressPropWarnings(['blocks', 'HeadingsContainer']);
+    suppressPropWarnings(['blocks', 'supplied']);
     isNull('should not render anything', HeadingsContainerWithContext());
   });
 
