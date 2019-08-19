@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import puppeteer from 'puppeteer';
 import { localBaseUrl } from '../src/testHelpers/config';
 
@@ -10,6 +11,8 @@ let page;
 let requests = [];
 
 const isJsBundle = url => url.includes(localBaseUrl);
+
+jest.setTimeout(10000); // overriding the default jest timeout
 
 describe('Js bundle requests', () => {
   beforeAll(async () => {
@@ -29,9 +32,11 @@ describe('Js bundle requests', () => {
 
   Object.keys(config).forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => config[service].pageTypes[pageType] !== undefined)
+      .filter(
+        pageType => config[service].pageTypes[pageType].path !== undefined,
+      )
       .forEach(pageType => {
-        const path = config[service].pageTypes[pageType];
+        const { path } = config[service].pageTypes[pageType];
 
         describe(service, () => {
           beforeAll(async () => {

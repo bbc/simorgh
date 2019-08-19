@@ -37,9 +37,9 @@ const allTags = tags => {
 };
 
 const getTitle = promo =>
-  promo.subType === 'IDX'
-    ? pathOr(null, ['name'], promo)
-    : pathOr(null, ['headlines', 'seoHeadline'], promo);
+  pathOr(null, ['headlines', 'seoHeadline'], promo)
+    ? pathOr(null, ['headlines', 'seoHeadline'], promo)
+    : pathOr(null, ['name'], promo);
 
 const getDescription = (metadata, promo) =>
   pathOr(null, ['summary'], promo) ||
