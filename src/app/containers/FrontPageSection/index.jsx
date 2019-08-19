@@ -52,7 +52,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
   const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
   const items = pathOr(null, ['items'], group);
-  const seeAll = pathOr(null, ['seeAll'], translations) || 'See All';
+  const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
 
   // The current implementation of SectionLabel *requires* a strapline to be
@@ -80,7 +80,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         visuallyHidden={isFirstSection}
         service={service}
         dir={dir}
-        linkText={isLink ? seeAll : null}
+        linkText={isLink && seeAll}
         href={href}
       >
         {group.strapline.name}
