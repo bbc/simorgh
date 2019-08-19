@@ -65,6 +65,3 @@ export const getTitle = (pageType, pageData, brandName) => {
       return null;
   }
 };
-
-export const getAuthors = (pageType, authors) =>
-  pageType === 'article' && authors ? authors : 'No Author';

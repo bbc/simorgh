@@ -79,10 +79,6 @@ describe('Charbeats Analytics Container', () => {
     testUtils.buildSections = jest
       .fn()
       .mockImplementation(() => 'secction1 section2');
-    testUtils.getAuthors = jest
-      .fn()
-      .mockImplementation(() => 'Author1, Author2');
-
     const tree = renderer
       .create(
         <ContextWrap
@@ -104,7 +100,6 @@ describe('Charbeats Analytics Container', () => {
       path: '/',
       sections: 'secction1 section2',
       title: 'This is an article',
-      authors: 'Author1, Author2',
       type: 'article',
       useCanonical: true,
       virtualReferrer: '/some-path',
@@ -144,10 +139,6 @@ describe('Charbeats Analytics Container', () => {
       .fn()
       .mockImplementation(() => 'secction1 section2');
 
-    testUtils.getAuthors = jest
-      .fn()
-      .mockImplementation(() => 'Author1, Author2');
-
     const toggleState = {
       live: {
         chartbeatAnalytics: {
@@ -178,7 +169,6 @@ describe('Charbeats Analytics Container', () => {
       contentType: 'article',
       virtualReferrer: '/some-path',
       title: 'This is an article',
-      authors: 'Author1, Author2',
     };
     expect(mockAmp).toHaveBeenCalledTimes(1);
     expect(mockAmp).toHaveBeenCalledWith(

@@ -16,11 +16,10 @@ import {
   buildSections,
   getType,
   getTitle,
-  getAuthors,
 } from '../../lib/analyticsUtils/chartbeat';
 
 const ChartbeatAnalytics = ({ data }) => {
-  const { service, brandName, articleAuthor } = useContext(ServiceContext);
+  const { service, brandName } = useContext(ServiceContext);
   const { enabled } = useToggle('chartbeatAnalytics');
   const { env, platform, pageType, previousPath, origin } = useContext(
     RequestContext,
@@ -37,14 +36,12 @@ const ChartbeatAnalytics = ({ data }) => {
   const cookie = getSylphidCookie();
   const type = getType(pageType);
   const isAmp = platform === 'amp';
-  const authors = getAuthors(pageType, articleAuthor);
   const currentPath = onClient() && window.location.pathname;
   const config = {
     domain,
     sections,
     uid: chartbeatUID,
     title,
-    authors,
     ...(isAmp && { contentType: type }),
     ...(!isAmp && { type, useCanonical, path: currentPath }),
     ...(referrer && { virtualReferrer: referrer }),
