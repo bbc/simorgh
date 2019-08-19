@@ -20,6 +20,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
         pageType="article"
         previousPath={null}
         service="news"
+        serviceVariant={null}
       >
         <Component
           bbcOrigin="https://www.bbc.com"
