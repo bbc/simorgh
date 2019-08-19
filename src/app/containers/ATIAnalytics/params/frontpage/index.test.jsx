@@ -52,7 +52,7 @@ describe('FrontPageAtiParams', () => {
 
     it('should call atiPageViewParams with the params from the Contexts', () => {
       const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiPageViewParams.atiPageViewParams = mock;
+      atiPageViewParams.default = mock;
 
       renderer.create(Component(serviceContextStub, requestContextStub));
 
