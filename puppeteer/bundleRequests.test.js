@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import puppeteer from 'puppeteer';
 import { localBaseUrl } from '../src/testHelpers/config';
 
