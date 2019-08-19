@@ -124,7 +124,9 @@ const runTests = ({ service }) =>
           if (datetimeLocale) {
             const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
             moment.locale(datetimeLocale);
-            const timestamp = moment(lastPublished).format('D MMMM YYYY');
+            const timestamp = Cypress.moment(lastPublished).format(
+              'D MMMM YYYY',
+            );
             cy.get('time').should('contain', timestamp);
           }
         });
