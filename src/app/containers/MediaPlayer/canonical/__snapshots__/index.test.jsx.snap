@@ -3,7 +3,6 @@
 exports[`Media Player: CanonicalMediaPlayer should render a MediaPlayer component when placeholder is clicked 1`] = `
 <CanonicalMediaPlayer
   embedSrc="http://foo.com"
-  placeholderSrc="http://bar.com"
 >
   <StyledIframe
     allow="autoplay; fullscreen"
