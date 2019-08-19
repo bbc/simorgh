@@ -32,6 +32,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: '모든 기사 보기',
     error: {
       404: {
         statusCode: '404',

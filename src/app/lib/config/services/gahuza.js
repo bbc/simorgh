@@ -32,6 +32,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'Raba vyose',
     error: {
       404: {
         statusCode: '404',

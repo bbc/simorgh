@@ -32,6 +32,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'Hunda ilaali',
     error: {
       404: {
         statusCode: '404',
