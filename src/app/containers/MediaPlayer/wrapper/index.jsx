@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import styled from 'styled-components';
 import { string, bool, node } from 'prop-types';
 import MediaPlayerPlaceholder from '../placeholder';
@@ -20,7 +20,7 @@ const MediaPlayerWrapper = ({ showPlaceholder, placeholderSrc, children }) => {
   return (
     <StyledContainer>
       {mediaPlayerActive ? (
-        <React.Fragment>{children}</React.Fragment>
+        <Fragment>{children}</Fragment>
       ) : (
         <MediaPlayerPlaceholder
           onClick={handlePlaceholderClick}
