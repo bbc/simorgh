@@ -1,7 +1,7 @@
-import './pageTestFragment/articleBody';
 import './pageTestFragment/metaData';
 import './pageTestFragment/analytics';
 import './pageTestFragment/scripts';
+import './pageTestFragment/consentBanner';
 
 // Overwriting Cypress Commands should very rarely be done.
 Cypress.Commands.overwrite('visit', (originalFn, url, options) => {

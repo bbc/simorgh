@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
 
 const service = {
   lang: `pt-BR`,
@@ -28,8 +29,8 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
@@ -156,6 +157,7 @@ const service = {
       'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
   },
   fonts: [],
+  timezone: 'America/Sao_Paulo',
 };
 
 export default service;

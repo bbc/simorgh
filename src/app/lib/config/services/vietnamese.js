@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { vietnamese as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 
 const service = {
   lang: `vi-VN`,
@@ -28,8 +29,8 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
@@ -156,6 +157,7 @@ const service = {
       'BBC. BBC không chịu trách nhiệm nội dung các trang bên ngoài',
   },
   fonts: [],
+  timezone: 'Asia/Ho_Chi_Minh',
 };
 
 export default service;

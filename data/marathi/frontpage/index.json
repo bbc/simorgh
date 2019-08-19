@@ -50,7 +50,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48960021"
             },
             "summary": "\"वाईट वेळ असताना तुम्ही मला आधार दिला. हे मी कधीच विसरलो नाही. मी एक शेतकऱ्याचा मुलगा आहे. उधारी ठेवून कधीच जगू शकत नाही. तुमचे पैसे दिले नाही तर परमेश्वराला काय म्हणून तोंड दाखवणार ?",
-            "timestamp": 1562930281,
+            "timestamp": 1562930280000,
             "byline": {
               "name": "हर्षल आकुडे",
               "title": "बीबीसी मराठी प्रतिनिधी ",
@@ -87,7 +87,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/marathi/international-48280034"
                 },
                 "summary": "दक्षिण अमेरिकेतील फ्रेंच गयाना या देशातील अॅमेझोन जंगलातील जैवविविधता बेकायदा सोनं उत्खननामुळं धोक्यात आलीये.",
-                "timestamp": 1558362589,
+                "timestamp": 1558362588000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:marathi/international-48280034",
                 "type": "cps"
@@ -101,7 +101,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/marathi/international-48655532"
                 },
                 "summary": "अर्जेंटिनाचे लोक स्थानिक निवडणुकांसाठी मतदान करण्यासाठी तयारी करत होते, नेमका तेव्हाच वीजपुरवठा ठप्प झाला.",
-                "timestamp": 1560738120,
+                "timestamp": 1560738119000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:marathi/international-48655532",
                 "type": "cps"
@@ -119,7 +119,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48960184"
             },
             "summary": "मराठा आरक्षणाला आव्हान देणाऱ्या याचिकांवर सुप्रीम कोर्टात सुनावणी झाली. मराठा आरक्षण कोर्टाने तूर्तास कायम ठेवलं आहे.",
-            "timestamp": 1562913811,
+            "timestamp": 1562913810000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -160,7 +160,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48961015"
             },
             "summary": "भारत वर्ल्ड कपमधून बाहेर फेकला गेल्यानंतर काही गोष्टींविषयी चर्चा सुरू झाली. या सगळ्यांत रवी शास्त्रींची भूमिका काय होती?",
-            "timestamp": 1562920350,
+            "timestamp": 1562920349000,
             "byline": {
               "name": "नितीन श्रीवास्तव ",
               "title": "बीबीसी प्रतिनिधी",
@@ -211,7 +211,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/media-48955873"
             },
             "summary": "अफगाणिस्तानात काही सरकारी अधिकाऱ्यांवर लैंगिक अत्याचार केल्याचे आरोप आहेत. यंत्रणाच पक्षपाती असल्याचं महिलांचं म्हणणं आहे.",
-            "timestamp": 1562924545,
+            "timestamp": 1562924544000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -291,7 +291,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48954611"
             },
             "summary": "पुण्याजवळच्या चौफुल्यातली रोजची संध्याकाळ लावणीच्या संगीताच्या साथीनं मावळते. पण आषाढात हे चित्र थोडं बदलतं.",
-            "timestamp": 1562909521,
+            "timestamp": 1562909520000,
             "byline": {
               "name": "जान्हवी मुळे ",
               "title": "बीबीसी मराठी ",
@@ -342,7 +342,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/media-48952876"
             },
             "summary": "जपानमध्ये सध्या कामगारांचा तुटवडा भासत आहे. त्यामुळे माणसांची कामं करण्यासाठी रोबो तयार केले जात आहेत.",
-            "timestamp": 1562911523,
+            "timestamp": 1562911522000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -424,7 +424,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48960015"
             },
             "summary": "विधानसभा निवडणुका स्वबळावर लढण्याचे संकेत वंचित बहुजन आघाडीचे नेते प्रकाश आंबेडकर यांनी दिले आहेत.",
-            "timestamp": 1562900617,
+            "timestamp": 1562900616000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -465,7 +465,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48951084"
             },
             "summary": "उत्तर प्रदेशातले भाजपचे आमदार राजेश कुमार यांच्या मुलीनं एका दलित तरुणासोबत लग्न केलं आहे.",
-            "timestamp": 1562847461,
+            "timestamp": 1562847460000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -516,7 +516,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48940853"
             },
             "summary": "अमेरिकेच्या आणि जगाच्या इतिहासात अपोलो 11 मोहिमेचं यश, हा मोठा क्षण होता. तेव्हा नक्की काय घडलं? ते इतकं महत्त्वाचं का आहे?",
-            "timestamp": 1562858157,
+            "timestamp": 1562858156000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -556,7 +556,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48949603"
             },
             "summary": "आम्ही ज्या महिलांशी बोललो त्यातल्या बऱ्याचजणींनी ओळख गुप्त ठेवण्याची विनंती केली. त्या चर्चेवरून एक गोष्ट कळली की सरकारमध्ये लैंगिक छळ एक मोठी समस्या आहे.",
-            "timestamp": 1562836421,
+            "timestamp": 1562836420000,
             "byline": {
               "name": "  योगिता लिमये",
               "title": " बीबीसी न्यूज, काबूल",
@@ -607,7 +607,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48920595"
             },
             "summary": "हाँगकाँग प्रत्यर्पण विधेयकाचा मुद्दा संपला, असं हाँग काँगच्या मुख्य कार्यकारी अधिकारी कॅरी लॅम यांनी म्हटलं आहे, पण निदर्शनं सुरूच राहणार",
-            "timestamp": 1562668777,
+            "timestamp": 1562668776000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -647,7 +647,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48911534"
             },
             "summary": "जुन्यापुराण्या चिंध्या शिवून या रंगीत बाहुल्यांमध्ये जीव ओतणाऱ्या महिलांचं आयुष्य मात्र बेरंग आहे. घरदार सोडून परक्या देशात त्यांनी आसरा घेतलाय.",
-            "timestamp": 1562648591,
+            "timestamp": 1562648590000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -728,7 +728,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48924431"
             },
             "summary": "कार्यकारिणीच्या सदस्यांनी आपल्या सोबतच राजीनामा द्यावा अशी राहुल गांधीची इच्छा होती. पण तसे न झाल्यामुळे ते नाराज झाले.",
-            "timestamp": 1562841162,
+            "timestamp": 1562841161000,
             "byline": {
               "name": "स्वाती चतुर्वेदी",
               "title": "वरिष्ठ पत्रकार, बीबीसी हिंदीसाठी",
@@ -782,7 +782,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48946444"
             },
             "summary": "भारत- न्यूझीलंडमध्ये अटीतटीच्या लढतीत महेंद्रसिंग धोनी मार्टिन गप्तीलच्या अफलातून थ्रोवर रनआऊट झाला आणि टीम इंडियाच्या विजयाच्या आशा मावळल्या.",
-            "timestamp": 1562815496,
+            "timestamp": 1562815495000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -826,7 +826,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48943496"
             },
             "summary": "एका अधिकाऱ्याच्या म्हणण्यानुसार बीएसएनल प्रत्येक ग्राहकाकडून 30 रुपये कमावतो. तर खाजगी ऑपरेटर्स 60 रुपयांपर्यंत कमावतात.",
-            "timestamp": 1562824499,
+            "timestamp": 1562824498000,
             "byline": {
               "name": "विनित खरे ",
               "title": "बीबीसी प्रतिनिधी",
@@ -877,7 +877,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48928256"
             },
             "summary": "निरुपम यंदा मुंबई उत्तर हा नेहमीचा मतदारसंघ सोडून मुंबई उत्तर पश्चिम मतदारसंघातून लोकसभा निवडणूक लढले.",
-            "timestamp": 1562722440,
+            "timestamp": 1562722439000,
             "byline": {
               "name": "मयुरेश कोण्णूर",
               "title": "बीबीसी मराठी प्रतिनिधी",
@@ -927,7 +927,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48904736"
             },
             "summary": "हा अर्थसंकल्प देशाच्या अर्थव्यवस्थेला आणि विशेषतः कृषीव्यवस्थेला चालना देईल का, हा खरा प्रश्न आहे.",
-            "timestamp": 1562567408,
+            "timestamp": 1562567407000,
             "byline": {
               "name": "सोमपाल शास्त्री ",
               "title": "माजी कृषीमंत्री",
@@ -981,7 +981,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48892298"
             },
             "summary": "चिपळूण जवळच्या तिवरे धरणफुटीला खेकडे जबाबदार असल्याचं विधान जलसंधारण मंत्री तानाजी सावंत यांनी केलं होतं.",
-            "timestamp": 1562418868,
+            "timestamp": 1562418867000,
             "byline": {
               "name": "हर्षल आकुडे",
               "title": "बीबीसी मराठी प्रतिनिधी ",
@@ -1041,7 +1041,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/media-48940859"
             },
             "summary": "लहान बाळांना किंवा कुत्र्या-मांजरांच्या पिल्लांना पाहून मिठी मारावीशी वाटणं अगदी नॉर्मल आहे.",
-            "timestamp": 1562825238,
+            "timestamp": 1562825237000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1121,7 +1121,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48923891"
             },
             "summary": "गायींची ने-आण करण्यासाठी यूपी सरकार देणार प्रमाणपत्र",
-            "timestamp": 1562671190,
+            "timestamp": 1562671189000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1161,7 +1161,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/media-48893478"
             },
             "summary": "साराला जन्मत:च हात नव्हते. तरीही ती बेसबॉल खेळात चँपियन झालीय. इतकंच नाही तर तिनं राष्ट्रीय पातळीवरची शुद्धलेखन स्पर्धाही जिंकली आहे.",
-            "timestamp": 1562502616,
+            "timestamp": 1562502615000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1232,7 +1232,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/media-48902614"
             },
             "summary": "तुमच्या त्वचेचा कोणताही रंग असला तरीही लाजल्यावर गालांचा रंग बदलतो.",
-            "timestamp": 1562550952,
+            "timestamp": 1562550951000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1313,7 +1313,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48852254"
             },
             "summary": "मिनाक्षी चौधरी, उर्वशी गुलाटी आणि केशनी अरोरा या सख्ख्या बहिणी आहेत. तिघींनीही हरियाणाच्या मुख्य सचिवपदावर काम केलं आहे.",
-            "timestamp": 1562429196,
+            "timestamp": 1562429195000,
             "byline": {
               "name": "अरविंद छाब्रा",
               "title": "बीबीसी प्रतिनिधी ",
@@ -1363,7 +1363,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48852153"
             },
             "summary": "15 वर्षं आणि 122 दिवस वय असणारी कोरी गॉफ ही 1968 पासून आतापर्यंतची विम्बल्डनसाठी पात्र होणारी सर्वात लहान खेळाडू ठरली आहे.",
-            "timestamp": 1562342426,
+            "timestamp": 1562342425000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1427,7 +1427,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48952883"
             },
             "summary": "सेमी फायनल आणि एकूणच वर्ल्ड कपमध्ये टीम इंडियाची मिडल ऑर्डर अडखळत खेळताना दिसली.",
-            "timestamp": 1562849673,
+            "timestamp": 1562849672000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1468,7 +1468,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48944923"
             },
             "summary": "प्राथमिक फेरीत दमदार प्रदर्शन करणाऱ्या टीम इंडियाला सेमी फायनलमध्ये पराभवाला का सामोरं जावं लागलं? जाणून घेऊया",
-            "timestamp": 1562782851,
+            "timestamp": 1562782850000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1503,7 +1503,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48932583"
             },
             "summary": "हरेश सोळंकी कच्छ जिल्ह्यातील अंजार तालुक्यामधील वरसामोडीचे होते. अहमदाबादमधील वरमोर गावातल्या उर्मिलावर त्याचं प्रेम होतं.",
-            "timestamp": 1562742692,
+            "timestamp": 1562742691000,
             "byline": {
               "name": "तेजस वैद्य ",
               "title": "बीबीसी गुजराती प्रतिनिधी ",
@@ -1554,7 +1554,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48930932"
             },
             "summary": "पावसाचा फटका बसणाऱ्या मॅचेसमध्ये डकवर्थ लुईस स्टर्न प्रणाली वापरली जाते. गणितीय समीकरणांवर आधारित ही प्रणाली नेमकी आहे तरी काय?",
-            "timestamp": 1562725139,
+            "timestamp": 1562725138000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1595,7 +1595,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48925493"
             },
             "summary": "फेसबुकवरील 'आज का सच' नामक पेजवरुन सात दिवसांपूर्वी मारहाणीचा व्हीडीओ पोस्ट करण्यात आला आहे.",
-            "timestamp": 1562746396,
+            "timestamp": 1562746395000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1642,7 +1642,7 @@
             "uri": "http://www.bbc.co.uk/learningenglish/marathi/features/phrase-of-the-day/episode33",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1562741677,
+            "timestamp": 1562741676000,
             "type": "link"
           }
         ],
@@ -1665,7 +1665,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/media-48887905"
             },
             "summary": "केशनी आनंद अरोरा या आता हरयाणाच्या मुख्य सचिव आहेत. याआधी त्यांच्या दोन बहिणींनी या पदावर काम केलं आहे.",
-            "timestamp": 1562428199,
+            "timestamp": 1562428198000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1735,7 +1735,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48850383"
             },
             "summary": "चारुलता पटेल नावाच्या या आजीबाई सोशलमीडियावर स्टार झाल्या आहेत. सध्या सर्वत्र त्यांचीच चर्चा आहे.",
-            "timestamp": 1562128323,
+            "timestamp": 1562128322000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1780,7 +1780,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/media-48818275"
             },
             "summary": "23 वर्षांच्या रेश्मानं 2016पासून टिक-टॉक व्हीडिओ बनवायला चालू केलं. टिक-टॉकवर रेश्माचे 8 लाख फॉलोअर्स आहेत.",
-            "timestamp": 1561993211,
+            "timestamp": 1561993210000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1858,7 +1858,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:marathi/international-48806177"
             },
             "summary": "इव्हा बी पाकिस्तानची रॅपर आहे आणि रणवीर सिंहच्या सिनेमामधल्या 'अपना टाईम आयेगा' सारखं तिने स्वतःचं एक रॅप सॉंग तयार केलं आहे. भविष्यात तिला मोठी रॅपर व्हायचं आहे.",
-            "timestamp": 1561794005,
+            "timestamp": 1561794004000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1949,7 +1949,7 @@
             "uri": "https://www.bbc.com/marathi/bbc_marathi_tv/tv_programmes/w13xttr2?limit=4",
             "contentType": "TVBulletin",
             "assetTypeCode": "PRO",
-            "timestamp": 1538407594,
+            "timestamp": 1538407593000,
             "type": "link"
           }
         ],

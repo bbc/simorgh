@@ -52,7 +52,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48962707"
                         },
                         "summary": "Truyền thông Bắc Hàn công bố tân hiến pháp để ông Kim Jong-un chính thức trở thành nguyên thủ quốc gia và tổng tư lệnh quân đội.",
-                        "timestamp": 1562928899,
+                        "timestamp": 1562928898000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -91,7 +91,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/media-48526914"
                                 },
                                 "summary": "Ông Kim và vợ có mặt trong buổi khai mạc tối thứ Hai 4/6/2019, nhưng không hài lòng với các nhà tổ chức sự kiện, truyền thông Bắc Hàn nói.",
-                                "timestamp": 1559748832,
+                                "timestamp": 1559748831000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:vietnamese/media-48526914",
                                 "type": "cps"
@@ -105,7 +105,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48881811"
                                 },
                                 "summary": "Rất ít người ngoại quốc được ở dài hạn tại đây, nhưng nếu không phải là nhân viên ngoại giao hoặc hoạt động nhân đạo thì họ là ai?",
-                                "timestamp": 1562609233,
+                                "timestamp": 1562609232000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48881811",
                                 "type": "cps"
@@ -134,7 +134,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48962575"
                         },
                         "summary": "Thủ tướng Lee Nak-yon nói lời xin lỗi khi đón Bộ trưởng Công an VN Tô Lâm tại Seoul sau vụ chồng Hàn hành hung vợ Việt.",
-                        "timestamp": 1562922312,
+                        "timestamp": 1562922311000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -174,7 +174,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-41508195"
                                 },
                                 "summary": "Cuộc sống của những cô dâu Việt lấy chồng Hàn có những thăng trầm khác nhau.",
-                                "timestamp": 1507276292,
+                                "timestamp": 1507276291000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-41508195",
                                 "type": "cps"
@@ -188,7 +188,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/culture-social-48941461"
                                 },
                                 "summary": "Hyung Eun Kim, BBC Tiếng Hàn giải thích lý do đằng sau vụ video chồng Hàn đánh vợ Việt trước mặt con nhỏ đang gây sốc cho xã hội Hàn Quốc.",
-                                "timestamp": 1562767782,
+                                "timestamp": 1562767781000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/culture-social-48941461",
                                 "type": "cps"
@@ -206,7 +206,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48960196"
                         },
                         "summary": "Ứng cử viên đảng Cộng hòa Robert Foster, tiểu bang Mississippi từ chối phỏng vấn với nữ phóng viên nếu không có nam giới đi cùng.",
-                        "timestamp": 1562916911,
+                        "timestamp": 1562916910000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -246,7 +246,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-cap-39541970"
                                 },
                                 "summary": "Sự phân biệt giới tính vẫn còn ngấm ngầm tồn tại trong xã hội ngày nay nói chung và chốn công sở nói riêng, thể hiện ở những từ ngữ tưởng chừng vô hại.",
-                                "timestamp": 1494168706,
+                                "timestamp": 1494168705000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-cap-39541970",
                                 "type": "cps"
@@ -260,7 +260,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-cap-38663124"
                                 },
                                 "summary": "Phụ nữ dễ gặp nhiều bất lợi trong vấn đề sự nghiệp ở tuổi trung niên hơn đàn ông và điều này khiến nhiều người tìm đến các nguồn thu nhập phụ để đảm bảo sự ổn định về lâu dài.",
-                                "timestamp": 1486483183,
+                                "timestamp": 1486483182000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-cap-38663124",
                                 "type": "cps"
@@ -278,7 +278,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48960105"
                         },
                         "summary": "Nhiều đại gia tại Hong Kong đã yêu cầu chuyển tài khoản sang Singapore và nhiều công ty xem xét chuyển trụ sở sang nước khác.",
-                        "timestamp": 1562910035,
+                        "timestamp": 1562910034000,
                         "byline": {
                             "name": "Karishma Vaswani",
                             "title": "Phóng viên Kinh doanh khu vực châu Á",
@@ -331,7 +331,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/media-48933047"
                                 },
                                 "summary": "BBC tổng kết những diễn biến quan trọng trong một tháng biểu tình phản đối dự luật dẫn độ của hàng triệu người dân Hong Kong.",
-                                "timestamp": 1562906521,
+                                "timestamp": 1562906520000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:vietnamese/media-48933047",
                                 "type": "cps"
@@ -345,7 +345,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-48686889"
                                 },
                                 "summary": "Tác giả nhận định rằng tiếng nói của giới trẻ Việt Nam dường như chưa được đánh giá đúng mức.",
-                                "timestamp": 1561085875,
+                                "timestamp": 1561085874000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-48686889",
                                 "type": "cps"
@@ -363,7 +363,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48918147"
                         },
                         "summary": "Báo cáo về kế hoạch đường sắt cao tốc Bắc Nam giữa hai cơ quan cấp bộ của Việt Nam chênh nhau tới 32 tỷ đồng.",
-                        "timestamp": 1562900528,
+                        "timestamp": 1562900527000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -403,7 +403,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-48660426"
                                 },
                                 "summary": "Một nữ nhà báo lý giải vì sao theo bà \"mọi tầng lớp nhân dân đều không muốn để TQ nhúng tay vào dự án cao tốc Bắc-Nam\".",
-                                "timestamp": 1561092630,
+                                "timestamp": 1561092629000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-48660426",
                                 "type": "cps"
@@ -417,7 +417,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-47823828"
                                 },
                                 "summary": "Đường Hồ Chí Minh đi qua vườn quốc gia Cúc Phương cũng từng gây tranh cãi về môi trường, như dự án La Sơn - Túy Loan hiện nay.",
-                                "timestamp": 1554719994,
+                                "timestamp": 1554719993000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-47823828",
                                 "type": "cps"
@@ -435,7 +435,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48932810"
                         },
                         "summary": "Việc lời qua tiếng lại xuyên Đại Tây Dương cho chính phủ Anh nếm chút hương vị về các kỹ năng quản lý của ông Donald Trump.",
-                        "timestamp": 1562899541,
+                        "timestamp": 1562899540000,
                         "byline": {
                             "name": "Anthony Zurcher",
                             "title": "Phóng viên BBC, Bắc Mỹ",
@@ -486,7 +486,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48933041"
                                 },
                                 "summary": "Đại sứ Vương quốc Anh tại Hoa Kỳ, Sir Kim Darroch, người bị TT Trump gọi là 'kẻ rất ngu ngốc', vừa từ chức.",
-                                "timestamp": 1562741450,
+                                "timestamp": 1562741449000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48933041",
                                 "type": "cps"
@@ -500,7 +500,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48918145"
                                 },
                                 "summary": "Downing Street cho biết đại sứ của Anh tại Mỹ, Sir Kim Darroch, có \"sự ủng hộ tuyệt đối\" của Thủ tướng Theresa May.",
-                                "timestamp": 1562646073,
+                                "timestamp": 1562646072000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48918145",
                                 "type": "cps"
@@ -526,7 +526,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48960195"
                         },
                         "summary": "Những bức tường Lennon khắp Hong Kong dán chi chít giấy ghi chú đầy màu sắc để ủng hộ biểu tình, nhưng nhiều người muốn gỡ bỏ.",
-                        "timestamp": 1562904691,
+                        "timestamp": 1562904690000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -565,7 +565,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48768155"
                                 },
                                 "summary": "Giới trí thức Hong Kong chia sẻ suy nghĩ và vai trò của họ trong việc hỗ trợ cuộc biểu tình chống luật dẫn độ.",
-                                "timestamp": 1561958470,
+                                "timestamp": 1561958469000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48768155",
                                 "type": "cps"
@@ -579,7 +579,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/media-48651980"
                                 },
                                 "summary": "Không thỏa mãn với tuyên bố ‘tạm hoãn’ dự luật dẫn độ của bà Carrie Lam, nhiều người vẫn quyết tâm xuống đường biểu tình vào 16/6.",
-                                "timestamp": 1560665626,
+                                "timestamp": 1560665625000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:vietnamese/media-48651980",
                                 "type": "cps"
@@ -597,7 +597,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48954754"
                         },
                         "summary": "Hội đồng Nhân quyền LHQ đã bỏ phiếu mở cuộc điều tra về tội ác được cho là xảy ra trong cuộc chiến chống ma túy của chính phủ Philippines.",
-                        "timestamp": 1562867250,
+                        "timestamp": 1562867249000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -636,7 +636,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-40949585"
                                 },
                                 "summary": "Cảnh sát giết chết 32 người trong các cuộc bố ráp ở tỉnh Bulanca hôm thứ Ba, là ngày đơn lẻ có số người chết cao nhất trong cuộc chiến chống ma túy tại Philippines.",
-                                "timestamp": 1502898421,
+                                "timestamp": 1502898420000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-40949585",
                                 "type": "cps"
@@ -650,7 +650,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-40769418"
                                 },
                                 "summary": "Một thị trưởng 'dính líu ma túy' ở Philippines đã bị bắn chết trong một cuộc đột kích của cảnh sát.",
-                                "timestamp": 1501429986,
+                                "timestamp": 1501429985000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-40769418",
                                 "type": "cps"
@@ -668,7 +668,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48951721"
                         },
                         "summary": "Tiếng chuông từ ngọn tháp có kiến trúc đầy tính biểu tượng của London vang lên lần đầu tiên là vào ngày 11/7/1859.",
-                        "timestamp": 1562860711,
+                        "timestamp": 1562860710000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
@@ -706,7 +706,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/culture-social-40986797"
                                 },
                                 "summary": "Đèn có tên Ayrton Light được lắp và thắp sáng đồng hồ Big Ben từ năm 1885 sẽ tắt trong thời gian trùng tu đồng hồ mà lần cuối đèn này tắt là từ Thế chiến Hai.",
-                                "timestamp": 1503156514,
+                                "timestamp": 1503156513000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/culture-social-40986797",
                                 "type": "cps"
@@ -720,7 +720,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-tra-41391696"
                                 },
                                 "summary": "Vì sao thị trấn nhỏ lại trở thành nơi đúc những quả chuông đưa đi khắp thế giới, phục vụ tám loại tôn giáo khác nhau trong hàng trăm năm qua?",
-                                "timestamp": 1506587838,
+                                "timestamp": 1506587837000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-tra-41391696",
                                 "type": "cps"
@@ -738,7 +738,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48933003"
                         },
                         "summary": "Người phụ nữ trong vụ \"ném giày\" nói \"HĐND chỉ có thể giám sát, không thể thay dân Thủ Thiêm thông qua chính sách bồi thường\".",
-                        "timestamp": 1562814337,
+                        "timestamp": 1562814336000,
                         "byline": {
                             "name": "Ben Ngô",
                             "title": "BBC Tiếng Việt",
@@ -786,7 +786,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-48182907"
                                 },
                                 "summary": "Cuộc tiếp xúc cử tri quận 2 TP HCM của đoàn đại biểu Quốc Hội hôm 7/5 lại nóng lên vì vụ đất Thủ Thiêm vẫn chưa được giải quyết.",
-                                "timestamp": 1557282766,
+                                "timestamp": 1557282765000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-48182907",
                                 "type": "cps"
@@ -800,7 +800,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-45931048"
                                 },
                                 "summary": "Người phụ nữ ném giày nói bà \"làm việc đó do bức xúc\" và \"không có sự đền bù nào có thể bù đắp cho những mất mát của nhân dân\".",
-                                "timestamp": 1540199891,
+                                "timestamp": 1540199890000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-45931048",
                                 "type": "cps"
@@ -818,7 +818,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/culture-social-48941461"
                         },
                         "summary": "Hyung Eun Kim, BBC Tiếng Hàn giải thích lý do đằng sau vụ video chồng Hàn đánh vợ Việt trước mặt con nhỏ đang gây sốc cho xã hội Hàn Quốc.",
-                        "timestamp": 1562767782,
+                        "timestamp": 1562767781000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -857,7 +857,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/forum-39488675"
                                 },
                                 "summary": "Ý kiến nói vụ bà Park Geun Hye cho thấy quy định pháp luật Hàn Quốc có tính nhân bản, còn ở VN, những bất cập trong việc giam giữ chưa được giải quyết.",
-                                "timestamp": 1491463662,
+                                "timestamp": 1491463661000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/forum-39488675",
                                 "type": "cps"
@@ -871,7 +871,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-41508195"
                                 },
                                 "summary": "Cuộc sống của những cô dâu Việt lấy chồng Hàn có những thăng trầm khác nhau.",
-                                "timestamp": 1507276292,
+                                "timestamp": 1507276291000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-41508195",
                                 "type": "cps"
@@ -889,7 +889,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48954753"
                         },
                         "summary": "Tổng Giám đốc BBC cảnh báo rằng thế giới đang đối mặt với 'cuộc tấn công lớn chưa từng có vào sự thật' trên thị trường truyền thông toàn cầu.",
-                        "timestamp": 1562853056,
+                        "timestamp": 1562853055000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -928,7 +928,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48922839"
                                 },
                                 "summary": "Anh bác đơn xin dự Hội nghị Tự do Truyền thông ở London của hai hãng tin Nga cùng báo chí Venezuela, Bắc Hàn và Syria.",
-                                "timestamp": 1562753381,
+                                "timestamp": 1562753380000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48922839",
                                 "type": "cps"
@@ -942,7 +942,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48554731"
                                 },
                                 "summary": "Việc khóa tài khoản WeChat của phóng viên BBC cho thấy mức độ kiểm soát của chính quyền Trung Quốc đối với xã hội trên không gian mạng.",
-                                "timestamp": 1559971787,
+                                "timestamp": 1559971786000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48554731",
                                 "type": "cps"
@@ -960,7 +960,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48954433"
                         },
                         "summary": "Hải quân Anh ngăn chặn Iran 'định bắt' tàu British Heritage ở Vịnh Oman sau khi tàu Grace 1 của Iran bị giữ ở Gibraltar.",
-                        "timestamp": 1562853234,
+                        "timestamp": 1562853233000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -999,7 +999,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-37728303"
                                 },
                                 "summary": "Anh điều tàu ra theo dõi đội tàu hải quân Nga đang vượt qua eo biển giữa Anh quốc và Pháp trên đường tới Syria.",
-                                "timestamp": 1477060162,
+                                "timestamp": 1477060161000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-37728303",
                                 "type": "cps"
@@ -1013,7 +1013,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-37666281"
                                 },
                                 "summary": "Đang có các nỗ lực mới nhằm trung gian đàm phán việc ngừng bắn tại Syria, nhưng giới chức không trông đợi đạt đột phá.",
-                                "timestamp": 1476542877,
+                                "timestamp": 1476542876000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-37666281",
                                 "type": "cps"
@@ -1031,7 +1031,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48946423"
                         },
                         "summary": "Bộ Ngoại giao Trung Quốc gọi các cáo buộc nêu trong thư của các đại sứ nhân quyền tại LHQ từ 22 quốc gia là vu khống và vô căn cứ.",
-                        "timestamp": 1562842132,
+                        "timestamp": 1562842131000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1070,7 +1070,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48715301"
                                 },
                                 "summary": "BBC vừa có một cơ hội hiếm hoi đến thăm một trong những trại 'cải tạo tư tưởng' của Trung Quốc ở Tân Cương.",
-                                "timestamp": 1561086367,
+                                "timestamp": 1561086366000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48715301",
                                 "type": "cps"
@@ -1084,7 +1084,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48716248"
                                 },
                                 "summary": "BBC có chuyến thăm hiếm hoi tới một trung tâm cải tạo tại Tân Cương, Trung Quốc.",
-                                "timestamp": 1561101037,
+                                "timestamp": 1561101036000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48716248",
                                 "type": "cps"
@@ -1102,7 +1102,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/forum-48928412"
                         },
                         "summary": "Ý kiến về cách phân loại ba 'thế lực thù địch' gồm 'cán bộ len lỏi, tự chuyển hóa' mà ông Võ Văn Thưởng nêu ra ở VN.",
-                        "timestamp": 1562813227,
+                        "timestamp": 1562813226000,
                         "byline": {
                             "name": "Lê Văn Sinh",
                             "title": "Gửi cho BBC News Tiếng Việt từ Hà Nội",
@@ -1157,7 +1157,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-48660423"
                                 },
                                 "summary": "Giới quan sát đưa ra bình luận sau khi Ủy viên Bộ Chính trị Võ Văn Thưởng viết về truyền thông xã hội.",
-                                "timestamp": 1560765095,
+                                "timestamp": 1560765094000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-48660423",
                                 "type": "cps"
@@ -1171,7 +1171,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-46223846"
                                 },
                                 "summary": "Giáo sư Chu Hảo vừa bị Đảng Cộng sản Việt Nam khai trừ vì 'có hành vi chống đối' và 'tự diễn biến'.",
-                                "timestamp": 1542283098,
+                                "timestamp": 1542283097000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-46223846",
                                 "type": "cps"
@@ -1189,7 +1189,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/forum-48935591"
                         },
                         "summary": "Lợi ích lớn nhất của EFVTA cho Việt Nam không phải là bỏ hay giảm thuế quan, mà là những cải tổ lớn, theo TS Đinh Trường Hinh từ Mỹ.",
-                        "timestamp": 1562753392,
+                        "timestamp": 1562753391000,
                         "byline": {
                             "name": "TS. Đinh Trường Hinh",
                             "title": "Gửi cho BBC từ Washington D.C.",
@@ -1255,7 +1255,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-48874261"
                                 },
                                 "summary": "EVFT đã ký nhưng sẽ tác động thế nào đến vấn đề nghiệp đoàn độc lập, quyền của người lao động Việt Nam.",
-                                "timestamp": 1562310184,
+                                "timestamp": 1562310183000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-48874261",
                                 "type": "cps"
@@ -1269,7 +1269,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/business-45892696"
                                 },
                                 "summary": "Ủy ban châu Âu hôm 17/10 thông qua hai thỏa thuận về thương mại và đầu tư EU - Việt Nam, mở đường cho việc ký kết.",
-                                "timestamp": 1539780617,
+                                "timestamp": 1539780616000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/business-45892696",
                                 "type": "cps"
@@ -1287,7 +1287,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48922839"
                         },
                         "summary": "Anh bác đơn xin dự Hội nghị Tự do Truyền thông ở London của hai hãng tin Nga cùng báo chí Venezuela, Bắc Hàn và Syria.",
-                        "timestamp": 1562753381,
+                        "timestamp": 1562753380000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1326,7 +1326,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48777835"
                                 },
                                 "summary": "Rath Rott Mony bị tù do dịch phim tài liệu 'Mẹ Đem Bán Tôi' cho RT của Nga; Campuchia nói đó là 'tin giả' và 'sỉ nhục đất nước'.",
-                                "timestamp": 1561588782,
+                                "timestamp": 1561588781000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48777835",
                                 "type": "cps"
@@ -1340,7 +1340,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-45524135"
                                 },
                                 "summary": "'Alexander Petrov' và 'Ruslan Boshirov' thăm Salisbury rồi về ngay và bị cáo buộc đánh thuốc độc nhà Skripal.",
-                                "timestamp": 1536930979,
+                                "timestamp": 1536930978000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-45524135",
                                 "type": "cps"
@@ -1358,7 +1358,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48910691"
                         },
                         "summary": "Kremlin nói việc người dẫn chương trình truyền hình Georgia công kích Tổng thống Putin là 'hoàn toàn không thể chấp nhận'.",
-                        "timestamp": 1562599984,
+                        "timestamp": 1562599983000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1397,7 +1397,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48717578"
                                 },
                                 "summary": "Phát biểu của nghị sĩ Nga, Sergei Gavrilov từ nghế chủ tịch Nghị viện Georgia gây phẫn nộ dẫn tới biểu tình lớn.",
-                                "timestamp": 1561108653,
+                                "timestamp": 1561108652000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48717578",
                                 "type": "cps"
@@ -1411,7 +1411,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-fut-48514446"
                                 },
                                 "summary": "Abkhazia tuyên bố độc lập khỏi Georgia hồi thập niên 1990, nhưng không mấy nước công nhận nơi từng là một phần của Liên Xô nằm trên bờ Biển Đen này.",
-                                "timestamp": 1560084126,
+                                "timestamp": 1560084125000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-fut-48514446",
                                 "type": "cps"
@@ -1429,7 +1429,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48919415"
                         },
                         "summary": "Một nữ luật sư đặt câu hỏi về 'trách nhiệm của cán bộ thuế' trong các vụ cáo buộc 'trốn thuế' liên quan giao dịch nhà đất.",
-                        "timestamp": 1562728831,
+                        "timestamp": 1562728830000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1472,7 +1472,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-48852642"
                                 },
                                 "summary": "Một số luât sư bày tỏ với BBC quan ngại của họ sau vụ Luật sư Trần Vũ Hải bị khởi tố tội \"trốn thuế\".",
-                                "timestamp": 1562299642,
+                                "timestamp": 1562299641000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-48852642",
                                 "type": "cps"
@@ -1486,7 +1486,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-48836079"
                                 },
                                 "summary": "Văn phòng luật sư của ông Hải cũng vừa bị công an khám xét sáng 2/7.",
-                                "timestamp": 1562051473,
+                                "timestamp": 1562051472000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-48836079",
                                 "type": "cps"
@@ -1504,7 +1504,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48904786"
                         },
                         "summary": "Có ý kiến rằng người dân có quyền biết chính phủ VN chi trả phí các vụ kiện như thế nào và việc giữ 'bí mật' chỉ khiến có thêm sai lầm.",
-                        "timestamp": 1562725059,
+                        "timestamp": 1562725058000,
                         "byline": {
                             "name": "Hoàng Việt",
                             "title": "Gửi đến BBC Tiếng Việt từ TP HCM",
@@ -1553,7 +1553,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-48850335"
                                 },
                                 "summary": "Ý kiến chuyên gia kinh tế rằng chính phủ Việt Nam nên 'kiện ngược lại' và công khai vụ kiện để thu hút sự ủng hộ từ nhiều giới.",
-                                "timestamp": 1562213182,
+                                "timestamp": 1562213181000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-48850335",
                                 "type": "cps"
@@ -1567,7 +1567,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vietnam-45204266"
                                 },
                                 "summary": "Tập công ty ConocoPhillips và Perenco nộp đơn lên tòa án của Liên Hiệp Quốc trong một nỗ lực ngăn chính phủ VN thu thuế hàng triệu đô la, theo The Guardian.",
-                                "timestamp": 1534384427,
+                                "timestamp": 1534384426000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vietnam-45204266",
                                 "type": "cps"
@@ -1585,7 +1585,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48932801"
                         },
                         "summary": "Có nhiều điều có thể bạn chưa biết về tỷ phú Texas, người hai lần ra tranh cử tổng thống Mỹ, vừa qua đời ở tuổi 89.",
-                        "timestamp": 1562736578,
+                        "timestamp": 1562736577000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1623,7 +1623,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-47038010"
                                 },
                                 "summary": "Đảng Dân chủ cho rằng nếu cựu CEO Starbucks tranh cử tổng thống như một ứng cử viên độc lập Donald Trump sẽ tái đắc cử.",
-                                "timestamp": 1548740415,
+                                "timestamp": 1548740414000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-47038010",
                                 "type": "cps"
@@ -1637,7 +1637,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-46109654"
                                 },
                                 "summary": "Đảng Dân chủ giành đủ số ghế để nắm quyền kiểm soát Hạ viện trong cuộc bầu cử giữa kỳ hôm 6/11.",
-                                "timestamp": 1541560794,
+                                "timestamp": 1541560793000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-46109654",
                                 "type": "cps"
@@ -1655,7 +1655,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/business-48928414"
                         },
                         "summary": "Trong một dấu hiệu vì Brexit không chắc chắn, hãng xe hơi của Đức quyết định rút một phần sản xuất ra khỏi Anh.",
-                        "timestamp": 1562699406,
+                        "timestamp": 1562699405000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1705,7 +1705,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48892743"
                                 },
                                 "summary": "Cựu giám đốc cơ quan tình báo Anh MI6 quan ngại về Brexit và thủ tướng tiếp theo thay thế bà Theresa May.",
-                                "timestamp": 1562418010,
+                                "timestamp": 1562418009000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48892743",
                                 "type": "cps"
@@ -1719,7 +1719,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/business-47686039"
                                 },
                                 "summary": "Tỉ lệ việc làm đang ở mức kỷ lục, nhưng tăng trưởng chậm, có thể nói gì về kinh tế Anh hiện tại?",
-                                "timestamp": 1553430693,
+                                "timestamp": 1553430692000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/business-47686039",
                                 "type": "cps"
@@ -1737,7 +1737,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48920920"
                         },
                         "summary": "Ông Jefrey Epstein ra tòa tại New York, bị cáo buộc điều hành mạng lưới các cô gái dưới tuổi trưởng thành phục vụ tình dục.",
-                        "timestamp": 1562681453,
+                        "timestamp": 1562681452000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1776,7 +1776,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/culture-social-48458530"
                                 },
                                 "summary": "Một người phụ nữ kể lại những lần mình bị cả họ hàng thân quen, lẫn người lạ quấy rối nhưng chính cha mẹ cô lại không tin.",
-                                "timestamp": 1561438858,
+                                "timestamp": 1561438857000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/culture-social-48458530",
                                 "type": "cps"
@@ -1790,7 +1790,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-47796814"
                                 },
                                 "summary": "Các nước trên thế giới xử phạt những kẻ tấn công tình dục ra sao.",
-                                "timestamp": 1554379764,
+                                "timestamp": 1554379763000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-47796814",
                                 "type": "cps"
@@ -1808,7 +1808,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48920918"
                         },
                         "summary": "Bắc Kinh thúc giục Mỹ ngưng vụ mua bán hàng trăm xe tăng, tên lửa cho Đài Bắc, một quyết định TQ nói là 'cực kỳ nhạy cảm và tai hại'.",
-                        "timestamp": 1562665513,
+                        "timestamp": 1562665512000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1846,7 +1846,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-48403433"
                                 },
                                 "summary": "Bắc Kinh giận dữ sau khi có tin quan chức an ninh cao cấp nhất của Hoa Kỳ lần đầu tiên sau 40 năm gặp người tương nhiệm Đài Loan.",
-                                "timestamp": 1558955466,
+                                "timestamp": 1558955465000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-48403433",
                                 "type": "cps"
@@ -1860,7 +1860,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/forum-48106477"
                                 },
                                 "summary": "Ý kiến nói Trung Quốc không nên nhầm lẫn về thái độ của Hoa Kỳ với Đài Loan.",
-                                "timestamp": 1557227679,
+                                "timestamp": 1557227678000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/forum-48106477",
                                 "type": "cps"
@@ -1878,7 +1878,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48905488"
                         },
                         "summary": "Mùa Hè và khí hậu nóng mang đến một câu hỏi không dễ trả lời: nhân viên có thể mặc gì đi làm khi nhiệt độ nóng không chịu nổi.",
-                        "timestamp": 1562653662,
+                        "timestamp": 1562653661000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1916,7 +1916,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-cap-42622651"
                                 },
                                 "summary": "Ngày càng nhiều các ông chủ lớn mặc đồ thể thao và giày đi bộ sành điệu vào văn phòng. Đó có phải là cách chứng tỏ sự chuyên nghiệp mới?",
-                                "timestamp": 1516093905,
+                                "timestamp": 1516093904000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-cap-42622651",
                                 "type": "cps"
@@ -1930,7 +1930,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-cap-48717678"
                                 },
                                 "summary": "Dù gì chăng nữa thì trên thực tế người ta vẫn sẽ đánh giá phụ nữ qua hình thức bề ngoài.",
-                                "timestamp": 1561105994,
+                                "timestamp": 1561105993000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-cap-48717678",
                                 "type": "cps"
@@ -1955,7 +1955,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-48933047"
                         },
                         "summary": "BBC tổng kết những diễn biến quan trọng trong một tháng biểu tình phản đối dự luật dẫn độ của hàng triệu người dân Hong Kong.",
-                        "timestamp": 1562906521,
+                        "timestamp": 1562906520000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Summary",
@@ -2027,7 +2027,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/culture-social-48932802"
                         },
                         "summary": "Khi một cô gái Á Đông tâm sự trong một diễn đàn trực tuyến rằng rất cô đơn, cô nhận được lời an ủi từ khắp thế giới.",
-                        "timestamp": 1562827512,
+                        "timestamp": 1562827511000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2067,7 +2067,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48933041"
                         },
                         "summary": "Đại sứ Vương quốc Anh tại Hoa Kỳ, Sir Kim Darroch, người bị TT Trump gọi là 'kẻ rất ngu ngốc', vừa từ chức.",
-                        "timestamp": 1562741450,
+                        "timestamp": 1562741449000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -2108,7 +2108,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48937582"
                         },
                         "summary": "Ông chủ tập đoàn Mường Thanh, đại gia địa ốc Lê Thanh Thản bị khởi tố vụ án và khởi tố bị can, theo truyền thông VN.",
-                        "timestamp": 1562761753,
+                        "timestamp": 1562761752000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2160,7 +2160,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48939286"
                         },
                         "summary": "Chongseo 1.0 gồm các bài viết của nhà sáng lập đất nước, Kim Nhật Thành, và con trai ông, cố lãnh đạo Kim Chính Nhất.",
-                        "timestamp": 1562837476,
+                        "timestamp": 1562837475000,
                         "byline": {
                             "name": "Tin tức các nơi",
                             "title": "... do BBC Monitoring tổng hợp",
@@ -2223,7 +2223,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48908416"
                         },
                         "summary": "Từ 1958 Bắc Kinh đã phản đối Anh định đổi quy chế cho Hong Kong và đàm phán mật 1982-84 quyết định số phận vùng lãnh thổ.",
-                        "timestamp": 1562583788,
+                        "timestamp": 1562583787000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
@@ -2275,7 +2275,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48881811"
                         },
                         "summary": "Rất ít người ngoại quốc được ở dài hạn tại đây, nhưng nếu không phải là nhân viên ngoại giao hoặc hoạt động nhân đạo thì họ là ai?",
-                        "timestamp": 1562609233,
+                        "timestamp": 1562609232000,
                         "byline": {
                             "name": "Frances Mao",
                             "title": "BBC News",
@@ -2326,7 +2326,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48898726"
                         },
                         "summary": "Ý kiến nói điều đáng kể nhất sau các vụ Trần Văn Mẫn, Nguyễn Bá Cảnh là \"quan chức nghĩ đến việc đưa con vào bộ máy sẽ phải do dự\".",
-                        "timestamp": 1562637815,
+                        "timestamp": 1562637814000,
                         "byline": {
                             "name": "Ben Ngô",
                             "title": "BBC Tiếng Việt",
@@ -2377,7 +2377,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/forum-48898725"
                         },
                         "summary": "Ý kiến nói vụ bắt ông Lê Tấn Hùng cho thấy TBT Nguyễn Phú Trọng không để gia tộc nào được ở tình trạng 'bất khả xâm phạm'.",
-                        "timestamp": 1562649207,
+                        "timestamp": 1562649206000,
                         "byline": {
                             "name": "Hoàng Trúc",
                             "title": "Gửi tới BBC News Tiếng Việt từ TPHCM",
@@ -2447,7 +2447,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/48942831"
                         },
                         "summary": "Bộ Tài chính VN nói về vai trò của Chính phủ và doanh nghiệp trong tiến trình cổ phần hóa DNNN.",
-                        "timestamp": 1562770320,
+                        "timestamp": 1562770319000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2523,7 +2523,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-48908526"
                         },
                         "summary": "Đặc Phái viên Thương mại với VN của Thủ tướng Anh nói về khả năng Anh ký FTA với Việt Nam.",
-                        "timestamp": 1562578767,
+                        "timestamp": 1562578766000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2594,7 +2594,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48891562"
                         },
                         "summary": "Chính quyền Trung Quốc cố tình tách những đứa trẻ Uyghur ra khỏi bố mẹ chúng, bắt chúng học tiếng Hán và quên đi gốc gác của mình.",
-                        "timestamp": 1562405026,
+                        "timestamp": 1562405025000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2664,7 +2664,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-48876732"
                         },
                         "summary": "Bộ trưởng Bộ Tài chính Việt Nam trả lời BBC Tiếng Việt về lý do chọn London là nơi kêu gọi đầu tư.",
-                        "timestamp": 1562265229,
+                        "timestamp": 1562265228000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2734,7 +2734,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-48852820"
                         },
                         "summary": "Nhà hoạt động Joshua Wong giải thích lý do tại sao người biểu tình chiếm Viện Lập pháp Hong Kong.",
-                        "timestamp": 1562143769,
+                        "timestamp": 1562143768000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2805,7 +2805,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-48831881"
                         },
                         "summary": "Boris Johnson, ứng viên lãnh đạo đảng Bảo thủ Anh, đột nhiên gọi Jeremy Corbyn của đảng Lao Động là 'kẻ theo chủ nghĩa Marx già cỗi'.",
-                        "timestamp": 1561995681,
+                        "timestamp": 1561995680000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -2876,7 +2876,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-48822216"
                         },
                         "summary": "Hàng trăm người đã tràn vào tòa nhà, xịt các dòng chữ lên tường, vẽ lên ảnh các chính trị gia đặt trong tòa nhà LegCo.",
-                        "timestamp": 1562049513,
+                        "timestamp": 1562049512000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2946,7 +2946,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-48805915"
                         },
                         "summary": "Các động thái của Mỹ đối với tòa giải quyết tranh chấp thương mại WTO có thể khiến tổ chức này khó hoạt động tốt.",
-                        "timestamp": 1561734197,
+                        "timestamp": 1561734196000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
@@ -3033,7 +3033,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-fut-48920915"
                         },
                         "summary": "Để đưa phi hành gia lên Mặt Trăng, Nasa thiết kế một tên lửa mạnh chưa từng có và Saturn V đã bay thành công vào vũ trụ.",
-                        "timestamp": 1562661243,
+                        "timestamp": 1562661242000,
                         "byline": {
                             "name": "Richard Hollingham",
                             "title": "BBC Future",
@@ -3083,7 +3083,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-fut-48806988"
                                 },
                                 "summary": "Nhân kỷ niệm 50 năm chuyến du hành của tàu vũ trụ Apollo đáp xuống Mặt Trăng, ta nhớ về những người đã làm việc, những phi hành gia đã thiệt mạng và làm nên lịch sử.",
-                                "timestamp": 1561988443,
+                                "timestamp": 1561988442000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-fut-48806988",
                                 "type": "cps"
@@ -3097,7 +3097,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-fut-47201556"
                                 },
                                 "summary": "Xây dựng 'làng Mặt Trăng' và đưa con người lên sống dài hạn trên đó đang là mục tiêu của một số cơ quan nghiên cứu không gian hùng mạnh.",
-                                "timestamp": 1550575916,
+                                "timestamp": 1550575915000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-fut-47201556",
                                 "type": "cps"
@@ -3115,7 +3115,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-fut-48901974"
                         },
                         "summary": "Khi chất thải nhựa đang ngày gây thảm họa cho môi trường, giới khoa học đang tìm kiếm những vật liệu sinh học bền vững hơn với môi trường.",
-                        "timestamp": 1562507628,
+                        "timestamp": 1562507627000,
                         "byline": {
                             "name": "Adrienne Bernhard",
                             "title": "BBC Future",
@@ -3164,7 +3164,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-fut-48240146"
                                 },
                                 "summary": "Vào những ngày ngột ngạt, nhiều đám mây ô nhiễm không khí, những vụ giết người, cưỡng hiếp gia tăng và con người khó có khả năng suy xét đúng sai.",
-                                "timestamp": 1557670611,
+                                "timestamp": 1557670610000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-fut-48240146",
                                 "type": "cps"
@@ -3178,7 +3178,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-fut-42417389"
                                 },
                                 "summary": "Nga tung những đội tàu ngầm tự hành tối tân vào hoạt động tại Bắc Cực nhằm tranh giữ mỏ tài nguyên thiên nhiên khổng lồ hay vì mục đích quân sự?",
-                                "timestamp": 1514202059,
+                                "timestamp": 1514202058000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-fut-42417389",
                                 "type": "cps"
@@ -3196,7 +3196,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-tra-48887184"
                         },
                         "summary": "Varanasi là thành phố linh thiêng, nơi hiện diện ngôi nhà cứu rỗi và vô số người tìm đến nơi này mỗi năm để tìm đến cái chết.",
-                        "timestamp": 1562428941,
+                        "timestamp": 1562428940000,
                         "byline": {
                             "name": "Romita Saluja",
                             "title": "BBC Travel",
@@ -3246,7 +3246,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-tra-48618034"
                                 },
                                 "summary": "Thành cổ Jaisalmer giữa lòng sa mạc từng phồn vinh nhờ vào Con đường Tơ lụa và là nơi ở của các đại gia tộc qua hàng chục thế hệ.",
-                                "timestamp": 1560616291,
+                                "timestamp": 1560616290000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-tra-48618034",
                                 "type": "cps"
@@ -3260,7 +3260,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-tra-48151154"
                                 },
                                 "summary": "Trong suốt hơn 100 năm qua, các giáo đường Do Thái ở Kolkata, Ấn Độ, đã được người Hồi giáo coi sóc, phản ánh tình bằng hữu, hoà hợp tôn giáo.",
-                                "timestamp": 1557057334,
+                                "timestamp": 1557057333000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-tra-48151154",
                                 "type": "cps"
@@ -3278,7 +3278,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-cap-48831888"
                         },
                         "summary": "Gourmet là nhãn hiệu cà phê hảo hạng đã làm mưa làm gió thị trường toàn cầu trong vài năm qua, được Klatch Coffee phục vụ với giá 75 đô la một ly.",
-                        "timestamp": 1562428964,
+                        "timestamp": 1562428963000,
                         "byline": {
                             "name": "Ellen Lee",
                             "title": "BBC Capital",
@@ -3328,7 +3328,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-tra-46268208"
                                 },
                                 "summary": "Từ túp lều hẻo lánh tới quán sành điệu nơi đô thị, nghi lễ uống cà phê là tâm điểm trong đời sống xã hội ở nơi món đồ uống thần kỳ này ra đời.",
-                                "timestamp": 1542810071,
+                                "timestamp": 1542810070000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-tra-46268208",
                                 "type": "cps"
@@ -3342,7 +3342,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-fut-42967948"
                                 },
                                 "summary": "Các khoa học gia Colombia từ nhiều năm qua nỗ lực tìm cách chống lại bệnh rỉ sắt, mối đe dọa có thể làm thay đổi hoàn toàn món cà phê trên thế giới.",
-                                "timestamp": 1519037968,
+                                "timestamp": 1519037967000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-fut-42967948",
                                 "type": "cps"
@@ -3360,7 +3360,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-cap-48884956"
                         },
                         "summary": "Một số người thúc giục việc áp dụng rộng rãi các phiên bản chính tả tiếng Anh đơn giản hơn.",
-                        "timestamp": 1562329635,
+                        "timestamp": 1562329634000,
                         "byline": {
                             "name": "Christine Ro",
                             "title": "BBC Capital",
@@ -3412,7 +3412,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-cap-48867347"
                         },
                         "summary": "Nạn quá tải du khách xảy ra thường xuyên tại các điểm nổi tiếng thế giới. Bạn cần làm gì để có được kỳ nghỉ hấp dẫn, tránh bị ghét bỏ?",
-                        "timestamp": 1562323331,
+                        "timestamp": 1562323330000,
                         "byline": {
                             "name": "Bryan Lufkin",
                             "title": "BBC Capital",
@@ -3462,7 +3462,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-cap-48772999"
                                 },
                                 "summary": "Quốc gia nào có chế độ nghỉ sinh con tốt nhất cho phụ nữ và nam giới? Unicef xem xét các chính sách gia đình và tỷ lệ thực hiện ở các nước giàu có nhất.",
-                                "timestamp": 1561728319,
+                                "timestamp": 1561728318000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-cap-48772999",
                                 "type": "cps"
@@ -3476,7 +3476,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/vert-cap-48733131"
                                 },
                                 "summary": "Việc gửi ra thông điệp mang dấu ấn cá nhân để báo cho mọi người biết bạn đang không có mặt nơi làm việc có thể tạo những kết quả vô cùng bất ngờ.",
-                                "timestamp": 1561222218,
+                                "timestamp": 1561222217000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/vert-cap-48733131",
                                 "type": "cps"
@@ -3504,7 +3504,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48918146"
                         },
                         "summary": "Hàng ngàn người ở Vũ Hán, thủ phủ tỉnh Hồ Bắc, đã xuống đường biểu tình tuần trước phản đối công trình 'gây ô nhiễm'.",
-                        "timestamp": 1562654372,
+                        "timestamp": 1562654371000,
                         "byline": {
                             "name": "BBC News",
                             "title": "Bắc Kinh",
@@ -3565,7 +3565,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48850335"
                         },
                         "summary": "Ý kiến chuyên gia kinh tế rằng chính phủ Việt Nam nên 'kiện ngược lại' và công khai vụ kiện để thu hút sự ủng hộ từ nhiều giới.",
-                        "timestamp": 1562213182,
+                        "timestamp": 1562213181000,
                         "byline": {
                             "name": "Mỹ Hằng",
                             "title": "MyHang.Tran@bbc.co.uk",
@@ -3626,7 +3626,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/sport-48881889"
                         },
                         "summary": "Nguyễn Công Phượng ký hợp đồng với CLB Sint-Truidense (Bỉ) để có cơ hội thi đấu ở châu Âu.",
-                        "timestamp": 1562322283,
+                        "timestamp": 1562322282000,
                         "byline": {
                             "name": "Phan Ngọc",
                             "title": "Gửi cho BBC từ TP.HCM",
@@ -3698,7 +3698,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48881893"
                         },
                         "summary": "Tranh cãi quanh cáo buộc Anh, Mỹ bán rẻ Ba Lan và Đông Âu cho Stalin tại hội nghị Yalta 1945.",
-                        "timestamp": 1562663141,
+                        "timestamp": 1562663140000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -3756,7 +3756,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48874261"
                         },
                         "summary": "EVFT đã ký nhưng sẽ tác động thế nào đến vấn đề nghiệp đoàn độc lập, quyền của người lao động Việt Nam.",
-                        "timestamp": 1562310184,
+                        "timestamp": 1562310183000,
                         "byline": {
                             "name": "Quốc Phương",
                             "title": "BBC News Tiếng Việt ",
@@ -3835,7 +3835,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48881890"
                         },
                         "summary": "Chính phủ Harry Truman bỏ rơi Tưởng Giới Thạch vì cho rằng tham ô, độc tài, nhưng cũng có người Mỹ cho rằng Washington sai lầm.",
-                        "timestamp": 1562329566,
+                        "timestamp": 1562329565000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -3886,7 +3886,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/culture-social-48855050"
                         },
                         "summary": "Nhà báo BBC thăm nghĩa trang và đài tưởng niệm Thế Chiến 2 ở Okinawa cùng nhân chứng từ trường y tá bị quân đội Nhật điều động ra chiến hào.",
-                        "timestamp": 1562157332,
+                        "timestamp": 1562157331000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3927,7 +3927,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/culture-social-48828970"
                         },
                         "summary": "Lourdes Heredia đạp xe từ Hà Nội qua Ninh Binh, Huế, Hội An vào tới TPHCM và ghi lại nhiều cảm xúc đẹp về đất nước, con người Việt Nam.",
-                        "timestamp": 1561990129,
+                        "timestamp": 1561990128000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3979,7 +3979,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48771208"
                         },
                         "summary": "Châu Âu đang có đợt nắng nóng hiếm có do luồng không khí nóng thổi từ sa mạc Sahara.",
-                        "timestamp": 1561546656,
+                        "timestamp": 1561546655000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4019,7 +4019,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48526439"
                         },
                         "summary": "Hoa Kỳ và châu Âu kỷ niệm 75 năm cuộc đổ bộ 06/06/1944 vào Normandy để giải phóng các quốc gia bị phát xít Đức chiếm đóng.",
-                        "timestamp": 1559731760,
+                        "timestamp": 1559731759000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4071,7 +4071,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48608033"
                         },
                         "summary": "Trong nỗ lực hiện đại hóa, Cảnh sát Đô thành London đang tuyển thêm nữ và người làm bán phần thời gian.",
-                        "timestamp": 1560330083,
+                        "timestamp": 1560330082000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -4112,7 +4112,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48514441"
                         },
                         "summary": "Tổng thống Hoa Kỳ và Đệ nhất Phu nhân Melania Trump dồn dập với nhiều hoạt động trong ngày thứ hai chuyến thăm cấp nhà nước.",
-                        "timestamp": 1559659372,
+                        "timestamp": 1559659371000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Summary",
@@ -4168,7 +4168,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-fut-48951717"
                         },
                         "summary": "Phải chăng nhân cách con người thực ra dễ biến đổi hơn ta tưởng, cho nên về bản chất ai cũng có thể làm người tốt được?",
-                        "timestamp": 1562855425,
+                        "timestamp": 1562855424000,
                         "byline": {
                             "name": "Kelly Oakes",
                             "title": "BBC Future",
@@ -4218,7 +4218,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-tra-48908531"
                         },
                         "summary": "Hơn 1000 năm trước ở vùng La Rioja của Tây Ban Nha, các tu sĩ đã viết ghi chú bên lề các văn bản Latinh.",
-                        "timestamp": 1562757390,
+                        "timestamp": 1562757389000,
                         "byline": {
                             "name": "Miriam Foley",
                             "title": "BBC Travel",
@@ -4269,7 +4269,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48829610"
                         },
                         "summary": "Xem lại phỏng vấn với GS Sophie Quinn-Judge về cuốn 'Ho Chi Minh: The Missing Years 1919-1941', hiện vẫn chưa được dịch và phát hành tại Việt Nam.",
-                        "timestamp": 1562491347,
+                        "timestamp": 1562491346000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -4321,7 +4321,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-fut-48910688"
                         },
                         "summary": "Vài thập kỷ qua là thời gian chúng ta thách thức ý tưởng cho rằng việc làm tình chỉ nên diễn ra vì mục đích cụ thể như sinh con, tạo kết gắn.",
-                        "timestamp": 1562587487,
+                        "timestamp": 1562587486000,
                         "byline": {
                             "name": "Brandon Ambrosino",
                             "title": "BBC Future",
@@ -4371,7 +4371,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/business-48908528"
                         },
                         "summary": "Bộ Tài chính Việt Nam nói với BBC về 'khẩu vị' của các nhà đầu tư Anh khi tham gia cổ phần hóa doanh nghiệp nhà nước lớn.",
-                        "timestamp": 1562669082,
+                        "timestamp": 1562669081000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4412,7 +4412,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48881892"
                         },
                         "summary": "Nguyên phó thủ tướng Vũ Văn Ninh từng được đánh giá ‘hoàn thành xuất sắc nhiệm vụ được giao’.",
-                        "timestamp": 1562582514,
+                        "timestamp": 1562582513000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4453,7 +4453,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48768155"
                         },
                         "summary": "Giới trí thức Hong Kong chia sẻ suy nghĩ và vai trò của họ trong việc hỗ trợ cuộc biểu tình chống luật dẫn độ.",
-                        "timestamp": 1561958470,
+                        "timestamp": 1561958469000,
                         "byline": {
                             "name": "Tina Hà Giang",
                             "title": "BBCVietnamese.com",
@@ -4505,7 +4505,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48904817"
                         },
                         "summary": "Là nơi bị vết đứt San Andreas chạy qua, California luôn có động đất lớn, nhưng đây vẫn là tiểu bang giàu có, được yêu chuộng.",
-                        "timestamp": 1562611173,
+                        "timestamp": 1562611172000,
                         "byline": {
                             "name": "Joaquin Nguyễn Hòa",
                             "title": "Gửi đến BBC Việt Ngữ từ San Francisco, California",
@@ -4556,7 +4556,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48769760"
                         },
                         "summary": "Giáo sư Trương Nguyện Thành chia sẻ phương pháp dạy con và vì sao không nên đặt nặng mục tiêu cải thiện thứ hạng của đại học VN.",
-                        "timestamp": 1562033988,
+                        "timestamp": 1562033987000,
                         "byline": {
                             "name": "Ben Ngô",
                             "title": "BBC Tiếng Việt",
@@ -4607,7 +4607,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48868389"
                         },
                         "summary": "Bộ trưởng Tài chính Việt Nam Đinh Tiến Dũng nói về mức độ quan tâm của Anh Quốc tới thị trường Việt Nam.",
-                        "timestamp": 1562316563,
+                        "timestamp": 1562316562000,
                         "byline": {
                             "name": "Nguyễn Hoàng",
                             "title": "BBC Tiếng Việt, London",
@@ -4658,7 +4658,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48758800"
                         },
                         "summary": "Tự tin, tâm huyết và dũng cảm - hai phụ nữ Việt thế hệ thứ hai đưa vở kịch đầu tiên về người Việt lên sân khấu chuyên nghiệp Anh.",
-                        "timestamp": 1561466047,
+                        "timestamp": 1561466046000,
                         "byline": {
                             "name": "Minh Thư",
                             "title": "BBC News Tiếng Việt ",
@@ -4709,7 +4709,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48809573"
                         },
                         "summary": "Thông tin mới đây cho biết Hiệp định thương mại tự do giữa Việt Nam và Liên minh Châu Âu EU, gọi tắt là EVFTA, sẽ được ký kết vào ngày 30/6 tại Hà Nội.",
-                        "timestamp": 1561779042,
+                        "timestamp": 1561779041000,
                         "byline": {
                             "name": "Luật sư Ngô Ngọc Trai",
                             "title": "Gửi tới BBC từ Việt Nam",
@@ -4760,7 +4760,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48772879"
                         },
                         "summary": "Tường thuật được xem là tường tận, chi tiết nhất về tập đoàn Vingroup, đăng trên tờ Financial Times, dẫn ra nhiều quan điểm trái ngược.",
-                        "timestamp": 1561718665,
+                        "timestamp": 1561718664000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -4801,7 +4801,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/forum-48465512"
                         },
                         "summary": "Các thanh niên tộc Choshu sau khi du học ở London năm 1863 đã góp phần tạo ra cải cách Minh Trị đưa Nhật Bản tới hùng cường.",
-                        "timestamp": 1561799945,
+                        "timestamp": 1561799944000,
                         "byline": {
                             "name": "Nguyễn Giang",
                             "title": "bbcvietnamese.com",
@@ -4869,7 +4869,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/business-48784455"
                         },
                         "summary": "Việt Nam không nên để thâm hụt thương mại của Mỹ với Việt Nam là chuyện nhỏ gây ảnh hưởng xấu đến chiến lược lớn, theo ý kiến từ Florida.",
-                        "timestamp": 1561627387,
+                        "timestamp": 1561627386000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -4909,7 +4909,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48811074"
                         },
                         "summary": "Vì sao Phạm Toàn 'không bị bắt' và ông có thể làm 'tấm gương' gì cho nhiều trí thức ở Việt Nam hiện nay?",
-                        "timestamp": 1561817888,
+                        "timestamp": 1561817887000,
                         "byline": {
                             "name": "Quốc Phương",
                             "title": "BBC News Tiếng Việt",
@@ -4971,7 +4971,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48666833"
                         },
                         "summary": "Biên Hòa bắt thêm một người sau vụ giang hồ \"vây chặn\" xe chở công an trong lúc có ý kiến nói xã hội đen VN không còn sợ giới thi hành pháp luật.",
-                        "timestamp": 1560781516,
+                        "timestamp": 1560781515000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5012,7 +5012,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/culture-social-48792240"
                         },
                         "summary": "Osaka, đô thị lớn thứ hai của Nhật Bản có truyền thống ẩm thực, ngôi chùa thuộc hàng cổ nhất nước và lâu đài 'sét đánh'.",
-                        "timestamp": 1561660767,
+                        "timestamp": 1561660766000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -5053,7 +5053,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48636856"
                         },
                         "summary": "Việt Nam lập một hội đồng khoa học, gồm cả người Việt và Nga, để kiểm tra, đánh giá trạng thái thi hài Chủ tịch Hồ Chí Minh.",
-                        "timestamp": 1561026206,
+                        "timestamp": 1561026205000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5094,7 +5094,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/culture-social-48458530"
                         },
                         "summary": "Một người phụ nữ kể lại những lần mình bị cả họ hàng thân quen, lẫn người lạ quấy rối nhưng chính cha mẹ cô lại không tin.",
-                        "timestamp": 1561438858,
+                        "timestamp": 1561438857000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -5134,7 +5134,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48704262"
                         },
                         "summary": "Nữ giám đốc công tố Romania từng đưa 1250 quan chức tham nhũng, gồm cả một thủ tướng đương chức, ra xử.",
-                        "timestamp": 1561031558,
+                        "timestamp": 1561031557000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -5175,7 +5175,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48660429"
                         },
                         "summary": "Việt Nam và EU sẽ ký Hiệp định thương mại Việt Nam và Liên minh châu Âu (EVFTA) ở Hà Nội.",
-                        "timestamp": 1561451137,
+                        "timestamp": 1561451136000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5216,7 +5216,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48719870"
                         },
                         "summary": "Căng thẳng Vịnh Oman giữa Hoa Kỳ và Iran hôm nay gợi lại sự kiện Vịnh Bắc Bộ 1964 đưa Hoa Kỳ tham chiến ở Việt Nam.",
-                        "timestamp": 1561117126,
+                        "timestamp": 1561117125000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -5257,7 +5257,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-48660426"
                         },
                         "summary": "Một nữ nhà báo lý giải vì sao theo bà \"mọi tầng lớp nhân dân đều không muốn để TQ nhúng tay vào dự án cao tốc Bắc-Nam\".",
-                        "timestamp": 1561092630,
+                        "timestamp": 1561092629000,
                         "byline": {
                             "name": "Ben Ngô",
                             "title": "BBC Tiếng Việt",
@@ -5308,7 +5308,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/forum-48660428"
                         },
                         "summary": "Ý kiến nói Việt Nam là bên có nhiều lý do nhất để khiến Hội nghị Cấp cao Asean lần này không \"mờ nhạt\" như mọi khi.",
-                        "timestamp": 1561021226,
+                        "timestamp": 1561021225000,
                         "byline": {
                             "name": "Nguyễn Khắc Giang",
                             "title": "Gửi cho BBC Tiếng Việt từ New Zealand",
@@ -5382,7 +5382,7 @@
                         "uri": "https://www.bbc.co.uk/academy/vi/articles/art20190314103801132",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1553179911,
+                        "timestamp": 1553179910000,
                         "type": "link"
                     },
                     {
@@ -5401,7 +5401,7 @@
                         "uri": "https://www.bbc.co.uk/academy/articles/art20181113100830676",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1542106917,
+                        "timestamp": 1542106916000,
                         "type": "link"
                     },
                     {
@@ -5420,7 +5420,7 @@
                         "uri": "http://www.bbc.co.uk/academy/vi/articles/art20160513123856479",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1513964936,
+                        "timestamp": 1513964935000,
                         "type": "link"
                     }
                 ],
@@ -5450,7 +5450,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/sport-44635767"
                         },
                         "summary": "Serbia tiếp Brazil còn Thụy sỹ đụng độ Costa Rica đề giành hai tấm vé vào gặp Mexico và Thụy Điện tại vòng knock-out",
-                        "timestamp": 1530122368,
+                        "timestamp": 1530122367000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5495,7 +5495,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-44619866"
                                 },
                                 "summary": "Pháp và Đan Mạch hòa nhau và chia nhau vị trí đứng đầu và thứ hai ở bảng C.",
-                                "timestamp": 1530023501,
+                                "timestamp": 1530023500000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-44619866",
                                 "type": "cps"
@@ -5509,7 +5509,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/sport-44610351"
                                 },
                                 "summary": "Tây Ban Nha và Bồ Đào Nha \"hút chết\" ở cuối trận, Uruguay thể hiện đẳng cấp và các đại diện châu Á cùng Morocco rời giải trong tư thế ngẩng cao đầu.",
-                                "timestamp": 1529971155,
+                                "timestamp": 1529971154000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/sport-44610351",
                                 "type": "cps"
@@ -5523,7 +5523,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/world-44594024"
                                 },
                                 "summary": "Tuyển Anh đè bẹp Panama 6-1 ở bảng G hôm Chủ Nhật và đoạt vé đi tiếp vào vòng sau.",
-                                "timestamp": 1529856260,
+                                "timestamp": 1529856259000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/world-44594024",
                                 "type": "cps"
@@ -5541,7 +5541,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/sport-44304398"
                         },
                         "summary": "Ý kiến từ London về ngày hội bóng đá lớn nhất hành tinh, Fifa World Cup 2018, sắp khai mạc ở Nga.",
-                        "timestamp": 1527755461,
+                        "timestamp": 1527755460000,
                         "byline": {
                             "name": "Nguyễn Long",
                             "title": "Gửi cho BBC Tiếng Việt từ London",
@@ -5596,7 +5596,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/sport-44216475"
                                 },
                                 "summary": "Chuyện bản quyền phát bóng đá World Cup năm nay ở Việt Nam và phản ứng có thể có của người hâm mộ.",
-                                "timestamp": 1527013552,
+                                "timestamp": 1527013551000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/sport-44216475",
                                 "type": "cps"
@@ -5610,7 +5610,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/sport-44290212"
                                 },
                                 "summary": "Sự cố bị công an kiểm tra hành chính trong lúc ở khách sạn với một cô gái khiến phó chủ tịch Liên đoàn Bóng đá Việt Nam xin từ chức.",
-                                "timestamp": 1527588269,
+                                "timestamp": 1527588268000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/sport-44290212",
                                 "type": "cps"
@@ -5628,7 +5628,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/sport-44513902"
                         },
                         "summary": "Ngày thi đấu thứ ba chứng kiến lịch sử thay đổi khi công nghệ trợ lý trọng tài điện tử (VAR) chính thức được sử dụng lần đầu tiên.",
-                        "timestamp": 1529250447,
+                        "timestamp": 1529250446000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -5662,7 +5662,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/sport-44484941"
                                 },
                                 "summary": "BBC giới thiệu tám đội từng lập kỳ tích trong lịch sử bóng đá thế giới và giải World Cup.",
-                                "timestamp": 1529080622,
+                                "timestamp": 1529080621000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:vietnamese/sport-44484941",
                                 "type": "cps"
@@ -5676,7 +5676,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/media-44480706"
                                 },
                                 "summary": "Tối nay, 14/6 sẽ diễn ra lễ khai mạc World Cup 2018, BBC điểm lại một số điều nên biết của giải đấu thể thao hấp dẫn bậc nhất hành tinh này.",
-                                "timestamp": 1528963409,
+                                "timestamp": 1528963408000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:vietnamese/media-44480706",
                                 "type": "cps"
@@ -5694,7 +5694,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/sport-44483757"
                         },
                         "summary": "Tam Sư luôn là một trong những cái tên được chú ý nhất ở World Cup.",
-                        "timestamp": 1529066743,
+                        "timestamp": 1529066742000,
                         "byline": {
                             "name": "Phan Ngọc",
                             "title": "Gửi cho BBC từ TP.HCM",
@@ -5738,7 +5738,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/media-44480706"
                                 },
                                 "summary": "Tối nay, 14/6 sẽ diễn ra lễ khai mạc World Cup 2018, BBC điểm lại một số điều nên biết của giải đấu thể thao hấp dẫn bậc nhất hành tinh này.",
-                                "timestamp": 1528963409,
+                                "timestamp": 1528963408000,
                                 "cpsType": "MAP",
                                 "id": "urn:bbc:ares::asset:vietnamese/media-44480706",
                                 "type": "cps"
@@ -5752,7 +5752,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/vietnamese/live/sport-44483750"
                                 },
                                 "summary": "Tuyển Nga đại thắng trận ra quân với tỷ số 5-0 trước Ả-rập Saudi trong ngày đầu khai mạc World Cup.",
-                                "timestamp": 1528972953,
+                                "timestamp": 1528972952000,
                                 "cpsType": "LIV",
                                 "id": "urn:bbc:ares::asset:vietnamese/live/sport-44483750",
                                 "type": "cps"
@@ -5776,7 +5776,7 @@
                         "uri": "https://www.bbc.com/vietnamese/sport-44370575",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1528993526,
+                        "timestamp": 1528993525000,
                         "type": "link"
                     }
                 ],
@@ -5803,7 +5803,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-47849572"
                         },
                         "summary": "Ý kiến nói việc quy hoạch báo chí được thực hiện bằng quan điểm coi báo chí là công cụ tuyên truyền và nhằm 'thu hẹp quyền ngôn luận'.",
-                        "timestamp": 1554804138,
+                        "timestamp": 1554804137000,
                         "byline": {
                             "name": "Ben Ngô",
                             "title": "BBC Tiếng Việt",

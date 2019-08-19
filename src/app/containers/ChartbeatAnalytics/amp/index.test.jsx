@@ -12,28 +12,61 @@ describe('AmpChartbeatAnalytics', () => {
     document.body.appendChild(container);
   });
 
-  it('renders with with appropriate props', () => {
-    const props = {
+  it('renders with appropriate props', () => {
+    const config = {
       domain: 'test-domain',
       type: 'article',
       sections: 'section1 section2',
-      cookie: 'cookie',
       chartbeatUID: 1111,
+      referrer: '/some-path',
+      title: 'This is an article',
+      idSync: {
+        bbc_hid: 'cookie',
+      },
     };
 
     const expectedValue = {
-      vars: {
-        uid: props.chartbeatUID,
-        sections: props.sections,
-        domain: props.domain,
-        contentType: props.type,
-        idSync: {
-          bbc_hid: props.cookie,
-        },
-      },
+      vars: config,
+      triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
     };
     act(() => {
-      ReactDOM.render(<AmpChartbeatAnalytics {...props} />, container);
+      ReactDOM.render(
+        <AmpChartbeatAnalytics chartbeatConfig={config} />,
+        container,
+      );
+    });
+
+    expect(container.querySelectorAll('amp-analytics').length).toEqual(1);
+    expect(
+      container.querySelectorAll(
+        'amp-analytics script[type="application/json"]',
+      ).length,
+    ).toEqual(1);
+    expect(
+      container.querySelector('amp-analytics script[type="application/json"]')
+        .innerHTML,
+    ).toMatch(JSON.stringify(expectedValue));
+  });
+
+  it('renders with with appropriate props without referrer or cookie', () => {
+    const config = {
+      domain: 'test-domain',
+      type: 'article',
+      sections: 'section1 section2',
+      chartbeatUID: 1111,
+      referrer: null,
+      title: 'This is an article',
+    };
+
+    const expectedValue = {
+      vars: config,
+      triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
+    };
+    act(() => {
+      ReactDOM.render(
+        <AmpChartbeatAnalytics chartbeatConfig={config} />,
+        container,
+      );
     });
 
     expect(container.querySelectorAll('amp-analytics').length).toEqual(1);

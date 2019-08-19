@@ -28,7 +28,7 @@ const ArticleMain = ({ articleData }) => {
   return (
     <Fragment>
       <ATIAnalytics data={articleData} />
-      <ChartbeatAnalytics />
+      <ChartbeatAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostGrid>

@@ -1,6 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { hindi as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
   lang: `hi-IN`,
@@ -28,8 +29,8 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
@@ -166,6 +167,7 @@ const service = {
       'बीबीसी। बीबीसी बाहरी इंटरनेट साइट की सामग्री के लिए ज़िम्मेदार नहीं है',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

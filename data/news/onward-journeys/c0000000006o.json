@@ -11,7 +11,7 @@
           "locators": {
             "uri": "/news/uk-politics-39825686"
           },
-          "timestamp": 1494005511,
+          "timestamp": 1494005510000,
           "image": {
             "blockId": "b1dc53a4-bfeb-4027-a117-ab99983fdc33",
             "type": "image",
@@ -48,7 +48,7 @@
           "locators": {
             "uri": "/news/uk-politics-44929736"
           },
-          "timestamp": 1532359352,
+          "timestamp": 1532359351000,
           "image": {
             "blockId": "ad1ae205-8025-4270-9d65-c79091abf397",
             "type": "image",
@@ -76,7 +76,7 @@
           "locators": {
             "uri": "/news/uk-wales-politics-45200554"
           },
-          "timestamp": 1534347098,
+          "timestamp": 1534347097000,
           "image": {
             "blockId": "eecf1b77-d065-4ef6-a2a6-fa3641b7ac7a",
             "type": "image",
@@ -104,7 +104,7 @@
           "locators": {
             "uri": "/news/uk-45162892"
           },
-          "timestamp": 1534156558,
+          "timestamp": 1534156557000,
           "image": {
             "blockId": "e6f33a0d-693d-4fd0-8773-975278d2d085",
             "type": "image",
@@ -132,7 +132,7 @@
           "locators": {
             "uri": "/news/uk-politics-45146080"
           },
-          "timestamp": 1533919109,
+          "timestamp": 1533919108000,
           "image": {
             "blockId": "1a235588-dda2-4f57-b168-886e405e51a4",
             "type": "image",
@@ -160,7 +160,7 @@
           "locators": {
             "uri": "/news/uk-45126243"
           },
-          "timestamp": 1533838696,
+          "timestamp": 1533838695000,
           "image": {
             "blockId": "13b812c3-1db3-494c-b775-a7bc7feb22f2",
             "type": "image",
@@ -188,7 +188,7 @@
           "locators": {
             "uri": "/news/uk-45107803"
           },
-          "timestamp": 1533741028,
+          "timestamp": 1533741027000,
           "image": {
             "blockId": "88e4d7c2-8a90-4755-a862-0e15cee45b1c",
             "type": "image",
@@ -223,7 +223,7 @@
           "locators": {
             "uri": "/news/uk-politics-39825686"
           },
-          "timestamp": 1494005511,
+          "timestamp": 1494005510000,
           "image": {
             "blockId": "b1dc53a4-bfeb-4027-a117-ab99983fdc33",
             "type": "image",
@@ -251,7 +251,7 @@
           "locators": {
             "uri": "/news/uk-england-dorset-39857518"
           },
-          "timestamp": 1494333551,
+          "timestamp": 1494333550000,
           "image": {
             "blockId": "b71ca80d-7648-413d-8d73-9f46616249f2",
             "type": "image",
@@ -279,7 +279,7 @@
           "locators": {
             "uri": "/news/uk-politics-39848156"
           },
-          "timestamp": 1494253553,
+          "timestamp": 1494253552000,
           "image": {
             "blockId": "7855ae06-c1c7-427c-b290-434877a03d74",
             "type": "image",
@@ -307,7 +307,7 @@
           "locators": {
             "uri": "/news/uk-39824062"
           },
-          "timestamp": 1494002391,
+          "timestamp": 1494002390000,
           "image": {
             "blockId": "5ba41618-9074-48c1-ac30-fe2db0b0484e",
             "type": "image",
@@ -335,7 +335,7 @@
           "locators": {
             "uri": "/news/uk-england-manchester-39829117"
           },
-          "timestamp": 1494068613,
+          "timestamp": 1494068612000,
           "image": {
             "blockId": "22391edc-7e26-4643-8501-e83b560b0700",
             "type": "image",
@@ -363,7 +363,7 @@
           "locators": {
             "uri": "/news/uk-england-dorset-39972618"
           },
-          "timestamp": 1495180709,
+          "timestamp": 1495180708000,
           "image": {
             "blockId": "2e402df0-4203-4cad-8ef9-63f2f03b8d5b",
             "type": "image",
@@ -398,7 +398,7 @@
           "locators": {
             "uri": "/news/uk-wales-north-east-wales-39980803"
           },
-          "timestamp": 1495208366,
+          "timestamp": 1495208365000,
           "image": {
             "blockId": "62975177-cfac-43f1-8768-1b69398d9a98",
             "type": "image",
@@ -426,7 +426,7 @@
           "locators": {
             "uri": "/news/uk-wales-north-west-wales-39888280"
           },
-          "timestamp": 1494527396,
+          "timestamp": 1494527395000,
           "image": {
             "blockId": "1865bc2a-6cbb-4508-9dc1-0cdaf4142916",
             "type": "image",
@@ -454,7 +454,7 @@
           "locators": {
             "uri": "/news/uk-wales-politics-39850100"
           },
-          "timestamp": 1494328493,
+          "timestamp": 1494328492000,
           "image": {
             "blockId": "ce3af73b-61e1-479f-8414-0caa74dd2645",
             "type": "image",
@@ -482,7 +482,7 @@
           "locators": {
             "uri": "/news/uk-wales-politics-39857376"
           },
-          "timestamp": 1494326296,
+          "timestamp": 1494326295000,
           "image": {
             "blockId": "e90a3ac2-a2d2-4f9c-864c-44f1b832f948",
             "type": "image",
@@ -515,7 +515,7 @@
       "locators": {
         "uri": "/news/business-45244579"
       },
-      "timestamp": 1534755771,
+      "timestamp": 1534755770000,
       "image": {
         "blockId": "3fc61bbf-f9b7-477f-9a31-95a2bab61f09",
         "type": "image",
@@ -543,7 +543,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "c7e55483-4b86-4a03-a600-008e896a54f5",
         "type": "image",
@@ -571,7 +571,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534762438,
+      "timestamp": 1534762437000,
       "image": {
         "blockId": "ad9c91b6-c1f9-4cee-acdd-30cf73b2e735",
         "type": "image",
@@ -599,7 +599,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "b7b3d653-17d3-40d5-8fd1-73c2d5a410c4",
         "type": "image",
@@ -627,7 +627,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "d6254ebb-6744-49c7-875b-d535623bb266",
         "type": "image",
@@ -655,7 +655,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534759236,
+      "timestamp": 1534759235000,
       "image": {
         "blockId": "bf9f483f-c365-48bb-a329-7df1357bec70",
         "type": "image",
@@ -683,7 +683,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "87ce1d84-cecc-4ab9-850a-18dc7942b0fd",
         "type": "image",
@@ -711,7 +711,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534762702,
+      "timestamp": 1534762701000,
       "image": {
         "blockId": "d8564907-a98f-4790-a74b-f74b7d9fced8",
         "type": "image",
@@ -739,7 +739,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "a2661dde-0991-449e-947b-34f8476d16ff",
         "type": "image",
@@ -767,7 +767,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534759395,
+      "timestamp": 1534759394000,
       "image": {
         "blockId": "0385f815-893b-4d3b-916f-dcf7ae4f24b7",
         "type": "image",

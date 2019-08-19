@@ -11,7 +11,7 @@
           "locators": {
             "uri": "/news/uk-england-essex-45209127"
           },
-          "timestamp": 1534445790,
+          "timestamp": 1534445789000,
           "image": {
             "blockId": "05e57268-2ea4-44ef-a208-f76b5736696d",
             "type": "image",
@@ -48,7 +48,7 @@
           "locators": {
             "uri": "/news/uk-england-essex-45209127"
           },
-          "timestamp": 1534445790,
+          "timestamp": 1534445789000,
           "image": {
             "blockId": "05e57268-2ea4-44ef-a208-f76b5736696d",
             "type": "image",
@@ -76,7 +76,7 @@
           "locators": {
             "uri": "/news/uk-england-essex-45215227"
           },
-          "timestamp": 1534446803,
+          "timestamp": 1534446802000,
           "image": {
             "blockId": "0906c126-ad7f-4c6b-9d7c-9d6436befd3a",
             "type": "image",
@@ -104,7 +104,7 @@
           "locators": {
             "uri": "/news/uk-england-45172137"
           },
-          "timestamp": 1534185058,
+          "timestamp": 1534185057000,
           "image": {
             "blockId": "9e50a2ea-c746-42a6-8764-49219ef31b9e",
             "type": "image",
@@ -132,7 +132,7 @@
           "locators": {
             "uri": "/sport/cricket/44810262"
           },
-          "timestamp": 1534454860,
+          "timestamp": 1534454859000,
           "image": {
             "blockId": "b7d0a63e-9e7e-4590-8376-ade0d1e5680a",
             "type": "image",
@@ -160,7 +160,7 @@
           "locators": {
             "uri": "/news/uk-england-essex-45225041"
           },
-          "timestamp": 1534513494,
+          "timestamp": 1534513493000,
           "image": {
             "blockId": "d1fcd7d6-1db8-46c8-8337-c732cf94947e",
             "type": "image",
@@ -188,7 +188,7 @@
           "locators": {
             "uri": "/news/uk-england-essex-45246690"
           },
-          "timestamp": 1534759428,
+          "timestamp": 1534759427000,
           "image": {
             "blockId": "8d0e93f1-9678-463f-9460-9e8b73677da7",
             "type": "image",
@@ -223,7 +223,7 @@
           "locators": {
             "uri": "/sport/football/45241028"
           },
-          "timestamp": 1534695446,
+          "timestamp": 1534695445000,
           "image": {
             "blockId": "0fe6dd33-edfd-4d54-84f2-2ddbd8e53010",
             "type": "image",
@@ -251,7 +251,7 @@
           "locators": {
             "uri": "/news/uk-scotland-glasgow-west-45220639"
           },
-          "timestamp": 1534523792,
+          "timestamp": 1534523791000,
           "image": {
             "blockId": "87b59c15-7b75-41af-8551-2baa90ba0d9d",
             "type": "image",
@@ -279,7 +279,7 @@
           "locators": {
             "uri": "/news/uk-scotland-scotland-business-45239904"
           },
-          "timestamp": 1534695696,
+          "timestamp": 1534695695000,
           "image": {
             "blockId": "8dde4e86-5c27-45a6-b6af-c3d6e68574e5",
             "type": "image",
@@ -307,7 +307,7 @@
           "locators": {
             "uri": "/news/uk-scotland-glasgow-west-45238697"
           },
-          "timestamp": 1534694703,
+          "timestamp": 1534694702000,
           "image": {
             "blockId": "4cea4bf0-437e-4503-aa45-015b6812527a",
             "type": "image",
@@ -335,7 +335,7 @@
           "locators": {
             "uri": "/news/uk-scotland-edinburgh-east-fife-45247063"
           },
-          "timestamp": 1534766427,
+          "timestamp": 1534766426000,
           "image": {
             "blockId": "086e443f-0462-4664-ab6b-e1d5f001059d",
             "type": "image",
@@ -363,7 +363,7 @@
           "locators": {
             "uri": "/news/uk-scotland-glasgow-west-45246810"
           },
-          "timestamp": 1534764896,
+          "timestamp": 1534764895000,
           "image": {
             "blockId": "d3a035b1-1dbc-46b0-b188-10078a0d1f2b",
             "type": "image",
@@ -398,7 +398,7 @@
           "locators": {
             "uri": "/news/uk-england-south-yorkshire-45210896"
           },
-          "timestamp": 1534426992,
+          "timestamp": 1534426991000,
           "image": {
             "blockId": "a2ca9428-df30-4810-8bd1-2c8763133633",
             "type": "image",
@@ -426,7 +426,7 @@
           "locators": {
             "uri": "/news/uk-england-bristol-45245419"
           },
-          "timestamp": 1534757266,
+          "timestamp": 1534757265000,
           "image": {
             "blockId": "a3dd626c-7464-45d7-8e81-85ab56f89af3",
             "type": "image",
@@ -454,7 +454,7 @@
           "locators": {
             "uri": "/news/uk-england-45219013"
           },
-          "timestamp": 1534552865,
+          "timestamp": 1534552864000,
           "image": {
             "blockId": "2c71b5be-9887-4fd7-9f1a-e33651531566",
             "type": "image",
@@ -482,7 +482,7 @@
           "locators": {
             "uri": "/sport/football/45248975"
           },
-          "timestamp": 1534768321,
+          "timestamp": 1534768320000,
           "image": {
             "blockId": "390c056d-8eed-4dfc-b861-6905da84b2ab",
             "type": "image",
@@ -510,7 +510,7 @@
           "locators": {
             "uri": "/news/live/uk-england-devon-45186923"
           },
-          "timestamp": 1534583594,
+          "timestamp": 1534583593000,
           "image": {
             "blockId": "ee212321-8752-46be-bcee-1113410e794b",
             "type": "image",
@@ -538,7 +538,7 @@
           "locators": {
             "uri": "/news/uk-england-45238888"
           },
-          "timestamp": 1534687374,
+          "timestamp": 1534687373000,
           "image": {
             "blockId": "ffb965b1-c2ad-41fb-b920-d01f61d3b2e2",
             "type": "image",
@@ -573,7 +573,7 @@
           "locators": {
             "uri": "/sport/football/45092544"
           },
-          "timestamp": 1534281040,
+          "timestamp": 1534281039000,
           "image": {
             "blockId": "3e77fdba-cec0-4727-a9cb-46bd6b889d00",
             "type": "image",
@@ -601,7 +601,7 @@
           "locators": {
             "uri": "/news/uk-england-tees-45190306"
           },
-          "timestamp": 1534314874,
+          "timestamp": 1534314873000,
           "image": {
             "blockId": "bf4daec0-ff7e-45cc-8bc2-a3305f007068",
             "type": "image",
@@ -629,7 +629,7 @@
           "locators": {
             "uri": "/sport/cricket/45219385"
           },
-          "timestamp": 1534492498,
+          "timestamp": 1534492497000,
           "image": {
             "blockId": "0044df7c-a4ca-425a-9a84-ed7fd260383c",
             "type": "image",
@@ -657,7 +657,7 @@
           "locators": {
             "uri": "/sport/cricket/45239093"
           },
-          "timestamp": 1534700540,
+          "timestamp": 1534700539000,
           "image": {
             "blockId": "040cfea5-3567-4c8c-b6e2-682cbbe8efdd",
             "type": "image",
@@ -685,7 +685,7 @@
           "locators": {
             "uri": "/news/uk-england-tyne-45239031"
           },
-          "timestamp": 1534684236,
+          "timestamp": 1534684235000,
           "image": {
             "blockId": "9253c0ab-2719-4dbd-beff-eb6be323f7b2",
             "type": "image",
@@ -713,7 +713,7 @@
           "locators": {
             "uri": "/sport/football/45153299"
           },
-          "timestamp": 1534612855,
+          "timestamp": 1534612854000,
           "image": {
             "blockId": "5587a5a6-ce4f-41b7-8fb6-40e6574d44cf",
             "type": "image",
@@ -748,7 +748,7 @@
           "locators": {
             "uri": "/news/business-45201155"
           },
-          "timestamp": 1534350771,
+          "timestamp": 1534350770000,
           "image": {
             "blockId": "887e7039-3865-40bc-9170-1800677f813f",
             "type": "image",
@@ -776,7 +776,7 @@
           "locators": {
             "uri": "/news/business-45244761"
           },
-          "timestamp": 1534759600,
+          "timestamp": 1534759599000,
           "image": {
             "blockId": "60cd1a0e-69ce-43b8-b7e4-3f795d0d5be0",
             "type": "image",
@@ -804,7 +804,7 @@
           "locators": {
             "uri": "/news/uk-wales-45240648"
           },
-          "timestamp": 1534758095,
+          "timestamp": 1534758094000,
           "image": {
             "blockId": "01fab6b2-cc4b-4f0b-b275-6f5c23114321",
             "type": "image",
@@ -832,7 +832,7 @@
           "locators": {
             "uri": "/news/business-45244579"
           },
-          "timestamp": 1534755771,
+          "timestamp": 1534755770000,
           "image": {
             "blockId": "9c2a4a01-a1e1-4af0-b0d8-0373dda73ddc",
             "type": "image",
@@ -860,7 +860,7 @@
           "locators": {
             "uri": "/news/business-45243271"
           },
-          "timestamp": 1534753924,
+          "timestamp": 1534753923000,
           "image": {
             "blockId": "4adb74a3-c842-4bc1-812f-712a6bf37efe",
             "type": "image",
@@ -888,7 +888,7 @@
           "locators": {
             "uri": "/news/business-45244759"
           },
-          "timestamp": 1534751184,
+          "timestamp": 1534751183000,
           "image": {
             "blockId": "996af7f5-27f2-44f0-bad5-a7f9fd9a4608",
             "type": "image",
@@ -923,7 +923,7 @@
           "locators": {
             "uri": "/sport/football/45092544"
           },
-          "timestamp": 1534281040,
+          "timestamp": 1534281039000,
           "image": {
             "blockId": "e86dc77b-0643-4356-a82c-3439102d3314",
             "type": "image",
@@ -951,7 +951,7 @@
           "locators": {
             "uri": "/sport/cricket/45239093"
           },
-          "timestamp": 1534700540,
+          "timestamp": 1534700539000,
           "image": {
             "blockId": "0879d8b9-83d4-4e2b-ab6b-7577aa5995c6",
             "type": "image",
@@ -979,7 +979,7 @@
           "locators": {
             "uri": "/news/uk-england-tees-45240111"
           },
-          "timestamp": 1534688729,
+          "timestamp": 1534688728000,
           "image": {
             "blockId": "515ba70c-8d17-4c27-8401-625e9b7540f7",
             "type": "image",
@@ -1007,7 +1007,7 @@
           "locators": {
             "uri": "/news/uk-england-tyne-45239031"
           },
-          "timestamp": 1534684236,
+          "timestamp": 1534684235000,
           "image": {
             "blockId": "69bf0e02-0da6-4e6b-8c3c-d259c0993eed",
             "type": "image",
@@ -1035,7 +1035,7 @@
           "locators": {
             "uri": "/sport/football/45153299"
           },
-          "timestamp": 1534612855,
+          "timestamp": 1534612854000,
           "image": {
             "blockId": "366c9dc5-0e17-43b2-bf5a-22e084b34026",
             "type": "image",
@@ -1063,7 +1063,7 @@
           "locators": {
             "uri": "/news/uk-england-45221241"
           },
-          "timestamp": 1534514578,
+          "timestamp": 1534514577000,
           "image": {
             "blockId": "ea2a004e-ee16-4097-a21a-ab2692d9d89a",
             "type": "image",
@@ -1098,7 +1098,7 @@
           "locators": {
             "uri": "/news/uk-england-merseyside-45200669"
           },
-          "timestamp": 1534406575,
+          "timestamp": 1534406574000,
           "image": {
             "blockId": "28876576-0aba-4218-b854-a6bcb80c95b7",
             "type": "image",
@@ -1126,7 +1126,7 @@
           "locators": {
             "uri": "/sport/football/45152780"
           },
-          "timestamp": 1534611315,
+          "timestamp": 1534611314000,
           "image": {
             "blockId": "f8e53f96-2a03-46be-a46f-7b011624a7a2",
             "type": "image",
@@ -1154,7 +1154,7 @@
           "locators": {
             "uri": "/news/uk-england-lancashire-45198084"
           },
-          "timestamp": 1534340368,
+          "timestamp": 1534340367000,
           "image": {
             "blockId": "480f3959-8ccd-4ef3-93ab-301fc8fd9680",
             "type": "image",
@@ -1182,7 +1182,7 @@
           "locators": {
             "uri": "/news/uk-england-lancashire-45239244"
           },
-          "timestamp": 1534684881,
+          "timestamp": 1534684880000,
           "image": {
             "blockId": "15a1c5da-89c8-4cc7-a800-85c10c413671",
             "type": "image",
@@ -1210,7 +1210,7 @@
           "locators": {
             "uri": "/sport/football/45238177"
           },
-          "timestamp": 1534679516,
+          "timestamp": 1534679515000,
           "image": {
             "blockId": "d6365d37-5e53-46b2-957d-9c7a047e1de3",
             "type": "image",
@@ -1238,7 +1238,7 @@
           "locators": {
             "uri": "/sport/cricket/45209299"
           },
-          "timestamp": 1534438921,
+          "timestamp": 1534438920000,
           "image": {
             "blockId": "8b5c329f-8fb4-4978-9d27-28ba014b7f52",
             "type": "image",
@@ -1273,7 +1273,7 @@
           "locators": {
             "uri": "/news/uk-england-northamptonshire-45172462"
           },
-          "timestamp": 1534165580,
+          "timestamp": 1534165579000,
           "image": {
             "blockId": "b4823ac4-033d-4060-80ed-edbf8cb7af37",
             "type": "image",
@@ -1301,7 +1301,7 @@
           "locators": {
             "uri": "/sport/cricket/45239373"
           },
-          "timestamp": 1534700122,
+          "timestamp": 1534700121000,
           "image": {
             "blockId": "eb4c0078-1420-47fe-b503-1744b9a0cea2",
             "type": "image",
@@ -1329,7 +1329,7 @@
           "locators": {
             "uri": "/news/uk-england-northamptonshire-45223478"
           },
-          "timestamp": 1534527253,
+          "timestamp": 1534527252000,
           "image": {
             "blockId": "e364d967-50b0-4d91-aeaa-b7fe98bbbe62",
             "type": "image",
@@ -1357,7 +1357,7 @@
           "locators": {
             "uri": "/sport/cricket/44810262"
           },
-          "timestamp": 1534454860,
+          "timestamp": 1534454859000,
           "image": {
             "blockId": "ba8c2100-7409-4803-bea5-f18928c977a6",
             "type": "image",
@@ -1385,7 +1385,7 @@
           "locators": {
             "uri": "/sport/cricket/45196584"
           },
-          "timestamp": 1534333125,
+          "timestamp": 1534333124000,
           "image": {
             "blockId": "9fffc679-7c90-4770-b98b-2380adce1cc0",
             "type": "image",
@@ -1413,7 +1413,7 @@
           "locators": {
             "uri": "/news/uk-england-northamptonshire-45181361"
           },
-          "timestamp": 1534254286,
+          "timestamp": 1534254285000,
           "image": {
             "blockId": "b117e5be-4100-470a-af82-4128fa833fea",
             "type": "image",
@@ -1448,7 +1448,7 @@
           "locators": {
             "uri": "/sport/football/45153221"
           },
-          "timestamp": 1534613886,
+          "timestamp": 1534613885000,
           "image": {
             "blockId": "32227ae2-94ed-44d6-a43a-c09c6bd5905f",
             "type": "image",
@@ -1476,7 +1476,7 @@
           "locators": {
             "uri": "/news/uk-45221249"
           },
-          "timestamp": 1534753963,
+          "timestamp": 1534753962000,
           "image": {
             "blockId": "df8afc21-0655-4eee-b9c4-82a9cab09470",
             "type": "image",
@@ -1504,7 +1504,7 @@
           "locators": {
             "uri": "/news/uk-england-london-45241751"
           },
-          "timestamp": 1534706873,
+          "timestamp": 1534706872000,
           "image": {
             "blockId": "3631771d-570c-47d2-a8c5-5c05e4e5ed7f",
             "type": "image",
@@ -1532,7 +1532,7 @@
           "locators": {
             "uri": "/news/uk-england-london-45247931"
           },
-          "timestamp": 1534765031,
+          "timestamp": 1534765030000,
           "image": {
             "blockId": "491ec64f-cd1d-460e-bdc8-236b67b4f328",
             "type": "image",
@@ -1560,7 +1560,7 @@
           "locators": {
             "uri": "/news/uk-45221245"
           },
-          "timestamp": 1534753880,
+          "timestamp": 1534753879000,
           "image": {
             "blockId": "63fa2a69-2e20-4bbf-8810-a98142cf3028",
             "type": "image",
@@ -1588,7 +1588,7 @@
           "locators": {
             "uri": "/news/uk-england-london-45241753"
           },
-          "timestamp": 1534700261,
+          "timestamp": 1534700260000,
           "image": {
             "blockId": "a5b67e8a-b882-419b-a1a1-d5e8e3d7ea47",
             "type": "image",
@@ -1623,7 +1623,7 @@
           "locators": {
             "uri": "/news/uk-england-norfolk-45202365"
           },
-          "timestamp": 1534352216,
+          "timestamp": 1534352215000,
           "image": {
             "blockId": "bfa4757d-606e-4cab-ac7b-b74f606c90e8",
             "type": "image",
@@ -1651,7 +1651,7 @@
           "locators": {
             "uri": "/sport/football/45152569"
           },
-          "timestamp": 1534608184,
+          "timestamp": 1534608183000,
           "image": {
             "blockId": "a2b04868-deb0-43f1-b6a3-ac88f6c7c0f9",
             "type": "image",
@@ -1679,7 +1679,7 @@
           "locators": {
             "uri": "/news/uk-england-suffolk-45233099"
           },
-          "timestamp": 1534606822,
+          "timestamp": 1534606821000,
           "image": {
             "blockId": "45daee1d-bf84-4475-a78e-cdadb3209fd0",
             "type": "image",
@@ -1707,7 +1707,7 @@
           "locators": {
             "uri": "/news/uk-england-suffolk-45227025"
           },
-          "timestamp": 1534550643,
+          "timestamp": 1534550642000,
           "image": {
             "blockId": "578f7f75-85e7-4e91-889d-494f4ed6c84a",
             "type": "image",
@@ -1735,7 +1735,7 @@
           "locators": {
             "uri": "/news/uk-england-suffolk-45226453"
           },
-          "timestamp": 1534529900,
+          "timestamp": 1534529899000,
           "image": {
             "blockId": "60052920-2cfc-4771-b1a1-258e53d7c7ac",
             "type": "image",
@@ -1763,7 +1763,7 @@
           "locators": {
             "uri": "/news/uk-england-cambridgeshire-45239202"
           },
-          "timestamp": 1534681896,
+          "timestamp": 1534681895000,
           "image": {
             "blockId": "7b830e30-64ff-48e6-86f5-52389ddcf9fe",
             "type": "image",
@@ -1798,7 +1798,7 @@
           "locators": {
             "uri": "/news/uk-england-northamptonshire-45172462"
           },
-          "timestamp": 1534165580,
+          "timestamp": 1534165579000,
           "image": {
             "blockId": "a29c6ca8-ed27-4645-8abb-a1e60763da65",
             "type": "image",
@@ -1826,7 +1826,7 @@
           "locators": {
             "uri": "/sport/cricket/45239373"
           },
-          "timestamp": 1534700122,
+          "timestamp": 1534700121000,
           "image": {
             "blockId": "89890737-344d-4a04-8d0c-3e1ae16e580c",
             "type": "image",
@@ -1854,7 +1854,7 @@
           "locators": {
             "uri": "/news/uk-england-northamptonshire-45201645"
           },
-          "timestamp": 1534666882,
+          "timestamp": 1534666881000,
           "image": {
             "blockId": "1c786748-0f62-4f9d-8f39-604be89661f0",
             "type": "image",
@@ -1882,7 +1882,7 @@
           "locators": {
             "uri": "/sport/football/45152978"
           },
-          "timestamp": 1534609787,
+          "timestamp": 1534609786000,
           "image": {
             "blockId": "97233457-1809-45d1-b22f-379f001c7a3b",
             "type": "image",
@@ -1910,7 +1910,7 @@
           "locators": {
             "uri": "/news/uk-england-northamptonshire-45223478"
           },
-          "timestamp": 1534527253,
+          "timestamp": 1534527252000,
           "image": {
             "blockId": "a12cee78-29e8-4796-b42a-19c97fb194e1",
             "type": "image",
@@ -1938,7 +1938,7 @@
           "locators": {
             "uri": "/sport/cricket/44810262"
           },
-          "timestamp": 1534454860,
+          "timestamp": 1534454859000,
           "image": {
             "blockId": "2318279a-d709-4811-a833-de575d0f77d0",
             "type": "image",
@@ -1973,7 +1973,7 @@
           "locators": {
             "uri": "/news/business-45184971"
           },
-          "timestamp": 1534247032,
+          "timestamp": 1534247031000,
           "image": {
             "blockId": "f951b5d3-efe0-447d-afaf-b85884bd87b7",
             "type": "image",
@@ -2001,7 +2001,7 @@
           "locators": {
             "uri": "/news/uk-northern-ireland-foyle-west-45161223"
           },
-          "timestamp": 1534659935,
+          "timestamp": 1534659934000,
           "image": {
             "blockId": "5e52bb68-4afc-45ac-b816-8e06e9d69e40",
             "type": "image",
@@ -2029,7 +2029,7 @@
           "locators": {
             "uri": "/news/world-us-canada-45175194"
           },
-          "timestamp": 1534449679,
+          "timestamp": 1534449678000,
           "image": {
             "blockId": "58b5126a-8654-4b18-8ce0-74bca761768a",
             "type": "image",
@@ -2057,7 +2057,7 @@
           "locators": {
             "uri": "/news/business-45210066"
           },
-          "timestamp": 1534421814,
+          "timestamp": 1534421813000,
           "image": {
             "blockId": "91b5cdd4-57d1-4de4-8910-83784b2abfd4",
             "type": "image",
@@ -2085,7 +2085,7 @@
           "locators": {
             "uri": "/news/business-45206107"
           },
-          "timestamp": 1534416486,
+          "timestamp": 1534416485000,
           "image": {
             "blockId": "ff73b94b-0594-470a-91d3-2c647340b39c",
             "type": "image",
@@ -2113,7 +2113,7 @@
           "locators": {
             "uri": "/news/business-45244579"
           },
-          "timestamp": 1534755771,
+          "timestamp": 1534755770000,
           "image": {
             "blockId": "365479e3-cf96-41b4-b44e-4e06042c31ec",
             "type": "image",
@@ -2148,7 +2148,7 @@
           "locators": {
             "uri": "/newsround/45208806"
           },
-          "timestamp": 1534418992,
+          "timestamp": 1534418991000,
           "image": {
             "blockId": "f30160c2-a154-46fb-b12c-c0b5fd69d539",
             "type": "image",
@@ -2176,7 +2176,7 @@
           "locators": {
             "uri": "/news/uk-england-merseyside-45232993"
           },
-          "timestamp": 1534679105,
+          "timestamp": 1534679104000,
           "image": {
             "blockId": "afe165a8-fcc4-43b1-b6f6-5fefa1c1fe91",
             "type": "image",
@@ -2204,7 +2204,7 @@
           "locators": {
             "uri": "/news/uk-england-merseyside-45200669"
           },
-          "timestamp": 1534406575,
+          "timestamp": 1534406574000,
           "image": {
             "blockId": "9bc7b44f-d453-4e54-8aec-591c1a02a1cd",
             "type": "image",
@@ -2232,7 +2232,7 @@
           "locators": {
             "uri": "/sport/football/45153160"
           },
-          "timestamp": 1534609953,
+          "timestamp": 1534609952000,
           "image": {
             "blockId": "653d4f99-4e1d-476a-a555-8273a5a8c4be",
             "type": "image",
@@ -2260,7 +2260,7 @@
           "locators": {
             "uri": "/news/uk-england-45219719"
           },
-          "timestamp": 1534551080,
+          "timestamp": 1534551079000,
           "image": {
             "blockId": "00064401-af53-4e50-a1cb-1584b26a5d9e",
             "type": "image",
@@ -2288,7 +2288,7 @@
           "locators": {
             "uri": "/sport/football/45220161"
           },
-          "timestamp": 1534529505,
+          "timestamp": 1534529504000,
           "image": {
             "blockId": "ae6d3f06-e018-489f-8fd1-ca298b0e2448",
             "type": "image",
@@ -2323,7 +2323,7 @@
           "locators": {
             "uri": "/sport/football/45152569"
           },
-          "timestamp": 1534608184,
+          "timestamp": 1534608183000,
           "image": {
             "blockId": "895ed817-7035-419f-befc-a54cb0668f00",
             "type": "image",
@@ -2351,7 +2351,7 @@
           "locators": {
             "uri": "/sport/football/45152770"
           },
-          "timestamp": 1534610088,
+          "timestamp": 1534610087000,
           "image": {
             "blockId": "fb93fbb1-a3e4-44d4-a8d8-7b90a2d0c70a",
             "type": "image",
@@ -2379,7 +2379,7 @@
           "locators": {
             "uri": "/news/uk-england-birmingham-45228322"
           },
-          "timestamp": 1534529386,
+          "timestamp": 1534529385000,
           "image": {
             "blockId": "dd21cf6e-f49c-4f08-9a77-44545ccca46a",
             "type": "image",
@@ -2407,7 +2407,7 @@
           "locators": {
             "uri": "/news/uk-england-birmingham-45240742"
           },
-          "timestamp": 1534764620,
+          "timestamp": 1534764619000,
           "image": {
             "blockId": "1354a1e7-082f-47cb-a053-4f2703f1507e",
             "type": "image",
@@ -2435,7 +2435,7 @@
           "locators": {
             "uri": "/news/uk-45247289"
           },
-          "timestamp": 1534761631,
+          "timestamp": 1534761630000,
           "image": {
             "blockId": "2fce525f-40c6-4dda-99d7-44fae63472c7",
             "type": "image",
@@ -2463,7 +2463,7 @@
           "locators": {
             "uri": "/news/uk-politics-45246729"
           },
-          "timestamp": 1534756867,
+          "timestamp": 1534756866000,
           "image": {
             "blockId": "6c292346-2c4b-4d81-849e-abd1ed2f330b",
             "type": "image",
@@ -2498,7 +2498,7 @@
           "locators": {
             "uri": "/sport/football/45152569"
           },
-          "timestamp": 1534608184,
+          "timestamp": 1534608183000,
           "image": {
             "blockId": "2f39d1d2-eef1-44d5-aa9d-38d975328a9b",
             "type": "image",
@@ -2526,7 +2526,7 @@
           "locators": {
             "uri": "/news/uk-england-birmingham-45240742"
           },
-          "timestamp": 1534764620,
+          "timestamp": 1534764619000,
           "image": {
             "blockId": "922a1b20-ddfa-45a1-89ee-6de53669114a",
             "type": "image",
@@ -2554,7 +2554,7 @@
           "locators": {
             "uri": "/news/uk-45247289"
           },
-          "timestamp": 1534761631,
+          "timestamp": 1534761630000,
           "image": {
             "blockId": "9531823c-fb41-439a-9e19-ee5615f29d63",
             "type": "image",
@@ -2582,7 +2582,7 @@
           "locators": {
             "uri": "/news/uk-politics-45246729"
           },
-          "timestamp": 1534756867,
+          "timestamp": 1534756866000,
           "image": {
             "blockId": "61b94bf2-5e2e-4022-9cb3-a8ffba2236fe",
             "type": "image",
@@ -2610,7 +2610,7 @@
           "locators": {
             "uri": "/news/uk-england-birmingham-45239546"
           },
-          "timestamp": 1534702948,
+          "timestamp": 1534702947000,
           "image": {
             "blockId": "2edd1379-e4b2-4082-b7d4-291f17429708",
             "type": "image",
@@ -2638,7 +2638,7 @@
           "locators": {
             "uri": "/news/uk-england-birmingham-45239538"
           },
-          "timestamp": 1534683841,
+          "timestamp": 1534683840000,
           "image": {
             "blockId": "5f08f926-d9e8-436f-8d3e-c625d9064b35",
             "type": "image",
@@ -2671,7 +2671,7 @@
       "locators": {
         "uri": "/news/business-45243088"
       },
-      "timestamp": 1534761406,
+      "timestamp": 1534761405000,
       "image": {
         "blockId": "beb04ee4-b63b-48ea-8057-354c2265ab2d",
         "type": "image",
@@ -2699,7 +2699,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534767877,
+      "timestamp": 1534767876000,
       "image": {
         "blockId": "03a64f66-3658-4f98-86c0-2bf79a958e20",
         "type": "image",
@@ -2727,7 +2727,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "0cf4b188-b351-4e4c-8fda-022af41fb7b6",
         "type": "image",
@@ -2755,7 +2755,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534766842,
+      "timestamp": 1534766841000,
       "image": {
         "blockId": "5522fb76-0b8a-42c6-9a08-2324d02d31c6",
         "type": "image",
@@ -2783,7 +2783,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "7ba75f38-b119-42a5-b4b6-b9fd528f6b4e",
         "type": "image",
@@ -2811,7 +2811,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "1180577d-1756-4767-8c98-cff7a8d5c9d8",
         "type": "image",
@@ -2839,7 +2839,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534764954,
+      "timestamp": 1534764953000,
       "image": {
         "blockId": "324fa9df-eddc-46f5-be3b-0c4fe1063737",
         "type": "image",
@@ -2867,7 +2867,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534768459,
+      "timestamp": 1534768458000,
       "image": {
         "blockId": "0ca22c14-b05b-4ad4-adb3-13e0b73378c3",
         "type": "image",
@@ -2895,7 +2895,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "6c1a98f6-2d7e-4ce1-baf8-0c0c9175cecc",
         "type": "image",
@@ -2923,7 +2923,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "2104ec04-c8a0-4ca2-90bc-4ba8956bffac",
         "type": "image",

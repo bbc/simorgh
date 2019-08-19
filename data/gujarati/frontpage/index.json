@@ -50,7 +50,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48959940"
             },
             "summary": "ભાજપ અને આરએસએસ દ્વારા બદનક્ષીના કેસમાં ગવાહી આપવા પહોંચ્યા ગુજરાત.",
-            "timestamp": 1562928228,
+            "timestamp": 1562928227000,
             "byline": {
               "name": "ટીમ બીબીસી ગુજરાતી ",
               "title": "નવી દિલ્હી, અમદાવાદ",
@@ -113,7 +113,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/gujarati/india-48855213"
                 },
                 "summary": "લોકસભાની ચૂંટણીમાં પરાજય બાદ બુધવારે રાહુલ ગાંધીએ પદ ઉપરથી રાજીનામું આપ્યું.",
-                "timestamp": 1562202445,
+                "timestamp": 1562202444000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:gujarati/india-48855213",
                 "type": "cps"
@@ -127,7 +127,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/gujarati/india-48571478"
                 },
                 "summary": "કૉંગ્રેસ સામે પ્રાદેશિક સ્તરે અનેક પડકારો અને વિખેરાઈ રહેલી સ્થિતિ છે.",
-                "timestamp": 1560129810,
+                "timestamp": 1560129809000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:gujarati/india-48571478",
                 "type": "cps"
@@ -145,7 +145,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48942922"
             },
             "summary": "વર્ષ 2014માં કૅલિફોર્નિયાએ 130 વર્ષમાં પડેલા સૌથી ભયાનક દુષ્કાળનો સામનો કર્યો હતો.",
-            "timestamp": 1562899303,
+            "timestamp": 1562899302000,
             "byline": {
               "name": "ડૉ. જયનારાયણ વ્યાસ",
               "title": "બીબીસી ગુજરાતી માટે ",
@@ -206,7 +206,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-48957099"
             },
             "summary": "સરકારી અધિકારીઓ અને મંત્રીઓ ઉપર મહિલાઓનાં જાતીય શોષણના આરોપો મૂકાયા છે.",
-            "timestamp": 1562897827,
+            "timestamp": 1562897826000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -286,7 +286,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48957115"
             },
             "summary": "એક કપ કૉફીની કિંમત 75 ડૉલર. એવું તો શું ખાસ છે એલિડા ગીશાની કૉફીમાં?",
-            "timestamp": 1562917498,
+            "timestamp": 1562917497000,
             "byline": {
               "name": "એલેન લી",
               "title": "બીબીસી કૅપિટલ",
@@ -347,7 +347,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48953902"
             },
             "summary": "બન્ને ટીમ અત્યાર સુધી 12 વર્લ્ડ કપ રમી છે અને બન્ને ટીમ પહેલી વખત વર્ષ 1975 વર્લ્ડ કપ રમી હતી.",
-            "timestamp": 1562916464,
+            "timestamp": 1562916463000,
             "byline": {
               "name": "ટીમ બીબીસી ગુજરાતી",
               "title": "નવી દિલ્હી",
@@ -398,7 +398,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48948101"
             },
             "summary": "સાક્ષી અને તેમના પતિનો વીડિયો સોશિયલ મીડિયામાં વાઇરલ થયો છે, સાક્ષીના પિતા બરેલીથી ધારાસભ્ય છે.",
-            "timestamp": 1562914247,
+            "timestamp": 1562914246000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -463,7 +463,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48933234"
             },
             "summary": "નવસારી જિલ્લાના પાંચ માછીમાર અબુ ધાબીમાં ફસાતા પરિવાર વિખરાયો, વિદેશ પ્રધાનને રજૂઆત.",
-            "timestamp": 1562807482,
+            "timestamp": 1562807481000,
             "byline": {
               "name": "ધર્મેશ અમીન ",
               "title": "બીબીસી ગુજરાતી માટે ",
@@ -513,7 +513,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48886096"
             },
             "summary": "જેલોમાં ગેરકાયદેસર ધંધો એટલા મોટાપાયે થાય છે કે ત્યાં આખું અંડરગ્રાઉન્ડ બજાર ઊભું થઈ ગયું છે.",
-            "timestamp": 1562494486,
+            "timestamp": 1562494485000,
             "byline": {
               "name": "કાર્લ કેટરમોલ",
               "title": "બીબીસી કૅપિટલ",
@@ -573,7 +573,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48891136"
             },
             "summary": "બેજોસે 2010માં એક ભાષણમાં દરિમયાન એમેઝૉનની સ્થાપના વિશે વાતો કરી હતી.",
-            "timestamp": 1562427169,
+            "timestamp": 1562427168000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -625,7 +625,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48951818"
             },
             "summary": "અફઘાનિસ્તાનમાં ઉચ્ચ વહીવટી અધિકારીઓ પર જાતીય સતામણીનો આરોપ.",
-            "timestamp": 1562861183,
+            "timestamp": 1562861182000,
             "byline": {
               "name": "યોગિતા લિમાયે",
               "title": "બીબીસી ન્યૂઝ, કાબુલ",
@@ -676,7 +676,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48843779"
             },
             "summary": "ઈરાનની પ્રજા અમેરિકાના રાષ્ટ્રપતિ ટ્રમ્પ અને અમેરિકાના પ્રતિબંધો મામલે શું વિચારે છે?",
-            "timestamp": 1562205211,
+            "timestamp": 1562205210000,
             "byline": {
               "name": "રાકેશ ભટ્ટ",
               "title": "ઈરાની બાબતોના જાણકાર",
@@ -736,7 +736,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48851630"
             },
             "summary": "દુબઈના શેખનાં પત્નીએ જાહોજલાલીભર્યું જીવન કેમ છોડવું પડ્યું?",
-            "timestamp": 1562219782,
+            "timestamp": 1562219781000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -786,7 +786,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48836613"
             },
             "summary": "ઇઝરાયલની એક કંપનીની બીયરની બૉટલ પર ગાંધીજીની ગૉગલ્સ અને ટી-શર્ટમાં તસવીર છપાતાં વિવાદ ઊભો થયો છે.",
-            "timestamp": 1562081401,
+            "timestamp": 1562081400000,
             "byline": {
               "name": "મેહુલ મકવાણા",
               "title": "બીબીસી ગુજરાતી ",
@@ -860,7 +860,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-47881472"
             },
             "summary": "ઇતિહાસમાં પ્રથમવાર વૃદ્ધોની સંખ્યા વધી, કયા દેશોમાં સમસ્યાઓ ઊભી થઈ શકે?",
-            "timestamp": 1562809195,
+            "timestamp": 1562809194000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -910,7 +910,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48951813"
             },
             "summary": "દુતી યુનિવર્સિયાડમાં ટ્રૅક ઍન્ડ ફિલ્ડમાં ગોલ્ડમૅડલ જીતનારાં પ્રથમ ભારતીય મહિલા બની ગયાં છે.",
-            "timestamp": 1562849389,
+            "timestamp": 1562849388000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -960,7 +960,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-44803541"
             },
             "summary": "અનિરુદ્ધ મહેતાએ સેક્રેડ ગેમ્સના સિમ્બૉલ્સ હિંદુ માઇથૉલૉજી અને સિંધુ સંસ્કૃતિના સમન્વયથી બનાવેલા છે.",
-            "timestamp": 1562668451,
+            "timestamp": 1562668450000,
             "byline": {
               "name": "રવિ પરમાર",
               "title": "બીબીસી સંવાદદાતા",
@@ -1020,7 +1020,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48953893"
             },
             "summary": "કર્ણાટકમાં ધારાસભ્યોનાં રાજીનામાંના ઘટનાક્રમ બાદ રાજકીય માહોલ ગરમાયો છે.",
-            "timestamp": 1562898007,
+            "timestamp": 1562898006000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1060,7 +1060,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48894668"
             },
             "summary": "હાલમાં આવેલા બે અહેવાલો દર્શાવે છે કે ભારતમાં હજીય રજસ્રાવના મુદ્દે નારીની મુશ્કેલીઓ દૂર થઈ નથી.",
-            "timestamp": 1562679889,
+            "timestamp": 1562679888000,
             "byline": {
               "name": "ગીતા પાંડે",
               "title": "બીબીસી ન્યૂઝ, દિલ્હી",
@@ -1114,7 +1114,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48894663"
             },
             "summary": "આર્થિક બાબતોના જાણકારનું માનવું છે કે રિટાયરમૅન્ટની ઉંમર વધારવાથી ફાયદા ઓછા અને નુકસાન વધુ થશે.",
-            "timestamp": 1562675526,
+            "timestamp": 1562675525000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1158,7 +1158,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48818189"
             },
             "summary": "જામનગરના રાજકુંવર રણજિતસિંહજીની બેટિંગથી અંગ્રેજો પ્રભાવિત થયા હતા.",
-            "timestamp": 1562637017,
+            "timestamp": 1562637016000,
             "byline": {
               "name": "પ્રશાંત કિદામ્બી",
               "title": "ઇતિહાસકાર ",
@@ -1220,7 +1220,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48937679"
             },
             "summary": "વર્લ્ડ કપની સેમિફાઇનલમાં ભારતનો ન્યૂઝીલૅન્ડ સામે 18 રને પરાજ્ય થયો છે.",
-            "timestamp": 1562815511,
+            "timestamp": 1562815510000,
             "byline": {
               "name": "ટીમ બીબીસી ગુજરાતી ",
               "title": "નવી દિલ્હી ",
@@ -1284,7 +1284,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48901579"
             },
             "summary": "12મી જુલાઈએ વિધાનસભાનું સત્ર શરૂ થાય ત્યારે ભાજપ અવિશ્વાસનો પ્રસ્તાવ લાવે તેવી શક્યતા.",
-            "timestamp": 1562817588,
+            "timestamp": 1562817587000,
             "byline": {
               "name": "ટીમ બીબીસી ગુજરાતી ",
               "title": "નવી દિલ્હી ",
@@ -1332,7 +1332,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48940921"
             },
             "summary": "ન્યૂઝીલૅન્ડ વિરુદ્ધ સેમિફાઇનલમાં ભારતની 18 રને હાર થતાં વર્લ્ડ કપમાંથી બહાર ફેંકાયું.",
-            "timestamp": 1562809241,
+            "timestamp": 1562809240000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1376,7 +1376,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48812689"
             },
             "summary": "વી. પી. સિંહના નામથી ઘોષણા થઈ તો ચંદ્રશેખરનો ચહેરો પડી ગયો અને ગુસ્સામાં કહ્યું કે મારી સાથે દગો થયો.",
-            "timestamp": 1562604210,
+            "timestamp": 1562604209000,
             "byline": {
               "name": "રેહાન ફઝલ",
               "title": "બીબીસી સંવાદદાતા",
@@ -1440,7 +1440,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48898381"
             },
             "summary": "ભારતે શ્રીલંકાને વર્લ્ડ કપની અંતિમ લીગ મૅચમાં હરાવીને પૉઇન્ટ ટેબલમાં સર્વોચ્ચ સ્થાન હાંસલ કર્યું છે.",
-            "timestamp": 1562478241,
+            "timestamp": 1562478240000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1480,7 +1480,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48901574"
             },
             "summary": "મંગળવારે ભારત તથા ન્યૂઝીલૅન્ડ વચ્ચે જ્યારે ગુરુવારે ઇંગ્લૅન્ડ તથા ઑસ્ટ્રેલિયા વચ્ચે સેમિફાઇનલ મૅચ રમાશે.",
-            "timestamp": 1562578980,
+            "timestamp": 1562578979000,
             "byline": {
               "name": "ટીમ બીબીસી ગુજરાતી ",
               "title": "નવી દિલ્હી ",
@@ -1544,7 +1544,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48857045"
             },
             "summary": "આ વર્લ્ડ કપમાં વકારે એવો દાવો કર્યો હતો કે ઇંગ્લૅન્ડ સામે ભારત જાણી જોઈને હારી ગયું.",
-            "timestamp": 1562474576,
+            "timestamp": 1562474575000,
             "byline": {
               "name": "તુષાર ત્રિવેદી",
               "title": "વરિષ્ઠ ખેલ પત્રકાર",
@@ -1608,7 +1608,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48847118"
             },
             "summary": "ભારતમાં ભીડ દ્વારા હિંસાની પ્રવૃત્તિ અને ઘટનાઓ બાદ આજે ફરી ગાંધી યાદ આવી રહ્યા છે.",
-            "timestamp": 1562400148,
+            "timestamp": 1562400147000,
             "byline": {
               "name": "અવ્યક્ત",
               "title": "બીબીસી ગુજરાતી માટે",
@@ -1672,7 +1672,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48902234"
             },
             "summary": "આર્થિક સર્વેક્ષણમાં 2019-20માં જીડીપી વધવાનો વાસ્તવિક દર 7 ટકા રહે તેવું અનુમાન કરાયું છે.",
-            "timestamp": 1562550021,
+            "timestamp": 1562550020000,
             "byline": {
               "name": "શિશિર સિન્હા",
               "title": "આર્થિક બાબતોના જાણકાર, બીબીસી ગુજરાતી માટે",
@@ -1736,7 +1736,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48826520"
             },
             "summary": "એક વૈજ્ઞાનિકે 11 પુરુષ અને મહિલાઓને ત્રણ મહિના સુધી એક બોટ પર રાખ્યાં. પછી શું થયું?",
-            "timestamp": 1562144314,
+            "timestamp": 1562144313000,
             "byline": {
               "name": "ડેલિયા વેંચુરા",
               "title": "બીબીસી મુંડો",
@@ -1796,7 +1796,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48831776"
             },
             "summary": "જળ સંરક્ષણની પરંપરાઓની અવગણના કરવાથી ગુજરાતમાં જળ સંકટની સ્થિતિ વકરી છે?",
-            "timestamp": 1562069823,
+            "timestamp": 1562069822000,
             "byline": {
               "name": "મહેઝબીન સૈયદ ",
               "title": "બીબીસી ગુજરાતી ",
@@ -1846,7 +1846,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48863679"
             },
             "summary": "'કૉંગ્રેસ પાર્ટી પાસે સમગ્ર રાષ્ટ્રને નેતૃત્વ આપી શકે એવી કોઈ પણ વ્યક્તિ ઉપલબ્ધ નથી.'",
-            "timestamp": 1562238294,
+            "timestamp": 1562238293000,
             "byline": {
               "name": "અજય ઉમટ ",
               "title": "વરિષ્ઠ પત્રકાર, બીબીસી ગુજરાતી માટે",
@@ -1906,7 +1906,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48371954"
             },
             "summary": "એક દેશમાં એવાં કેટલાક ગામો છે, જ્યાંથી બધી જ યુવાન માતાઓ વિદેશ જતી રહી છે, પણ શા માટે?",
-            "timestamp": 1562042072,
+            "timestamp": 1562042071000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1956,7 +1956,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48857040"
             },
             "summary": "ન્યૂઝીલૅન્ડ અને ઇંગ્લૅન્ડની મેચના પરિણામ બાદ સેમિફાઇનલમાં પહોંચનારી ત્રીજી ટીમ પણ નક્કી થઈ જશે.",
-            "timestamp": 1562158652,
+            "timestamp": 1562158651000,
             "byline": {
               "name": "ટીમ બીબીસી હિંદી",
               "title": "નવી દિલ્હી",
@@ -2020,7 +2020,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48830660"
             },
             "summary": "એકસમયે 'પૂર્વના લંડન' તરીકેની ખ્યાતિ ધરાવતા શહેરની સ્થિતિ ઉત્તરોત્તર વિકટ થઈ રહી છે.",
-            "timestamp": 1562030970,
+            "timestamp": 1562030969000,
             "byline": {
               "name": "રોહન ટિલ્લુ",
               "title": "બીબીસી મરાઠી",
@@ -2080,7 +2080,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-48954785"
             },
             "summary": "પૂણેના આઝમ કૅમ્પસમાં સ્થાનિક મુસ્લિમ સમાજની છોકરીઓ હિજાબ પહેરીને ક્રિકેટ રમે છે.",
-            "timestamp": 1562907152,
+            "timestamp": 1562907151000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2164,7 +2164,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-48942927"
             },
             "summary": "જાપાને હવે કેટલાક ક્ષેત્રમાં લોકોની જગ્યાએ કામ કરવા માટે રૉબો બનાવવાનું શરૂ કર્યું છે.",
-            "timestamp": 1562809961,
+            "timestamp": 1562809960000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2244,7 +2244,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-48938746"
             },
             "summary": "અપૉલો 11 મિશનને 50 વર્ષ થવાના છે ત્યારે જાણો એની ખાસ વાત.",
-            "timestamp": 1562893898,
+            "timestamp": 1562893897000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2324,7 +2324,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48836918"
             },
             "summary": "આ અનોખી બૅન્કમાં મહિલાઓ જોડાય છે અને મહિલાઓને પૅડ અંગે સમજાવે છે.",
-            "timestamp": 1562591714,
+            "timestamp": 1562591713000,
             "byline": {
               "name": "હરિતા કાંડપાલ",
               "title": "બીબીસી ગુજરાતી",
@@ -2374,7 +2374,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48937532"
             },
             "summary": "સાત-સાત માળની દીવાલો ઉપર 75 ફૂટ * 20 ફૂટનાં મ્યુરલ્સ બનાવ્યાં.",
-            "timestamp": 1562826964,
+            "timestamp": 1562826963000,
             "byline": {
               "name": "બિપીન ટંકારિયા ",
               "title": "બીબીસી ગુજરાતી માટે ",
@@ -2428,7 +2428,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-48929672"
             },
             "summary": "બરફ, કરા અને રણમાં તોફાનનો સામનો કરતાં ઇંગ્લૅન્ડમાં ભારતની મૅચ જોવા આવેલા પરિવારની કહાણી.",
-            "timestamp": 1562733967,
+            "timestamp": 1562733966000,
             "byline": {
               "name": "એડમ વિલિયમ્સ",
               "title": "બીબીસી સ્પોર્ટ",
@@ -2498,7 +2498,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48893278"
             },
             "summary": "ફરી જનારા સાક્ષીઓ સામે પણ કાર્યવાહી કરવાનો અદાલતનો આદેશ.",
-            "timestamp": 1562843265,
+            "timestamp": 1562843264000,
             "byline": {
               "name": "ટીમ બીબીસી ગુજરાતી ",
               "title": "નવી દિલ્હી અને અમદાવાદ ",
@@ -2558,7 +2558,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48928322"
             },
             "summary": "કિંમતની દૃષ્ટિએ 2017-18માં પકડાયેલા સોનાની કિંમત 28.99 કરોડ, સામે 2018-19માં 122.85 કરોડ જેટલી થવા જાય છે.",
-            "timestamp": 1562726204,
+            "timestamp": 1562726203000,
             "byline": {
               "name": "ડૉ. જયનારાયણ વ્યાસ",
               "title": "વરિષ્ઠ અર્થશાસ્ત્રી",
@@ -2622,7 +2622,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48908306"
             },
             "summary": "ગીરના 33 સિંહો કે જે ખતરનાક વાઇરસની ઝપેટમાંથી બચી ગયા હતા તેમને હવે જંગલમાં છોડાશે નહીં.",
-            "timestamp": 1562673573,
+            "timestamp": 1562673572000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107802338",
@@ -2660,7 +2660,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48894195"
             },
             "summary": "દેશનાં નાણામંત્રી નિર્મલા સીતારમણે બજેટ રજૂ કરતાં ફરી એક વાર 'મૂળ' તરફ પાછા વળવાની વાત પર ભાર મૂક્યો.",
-            "timestamp": 1562483324,
+            "timestamp": 1562483323000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2714,7 +2714,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48891731"
             },
             "summary": "યુએનના અહેવાલ મુજબ ભારતમાં બદલાતા સામાજિક ઢાંચા સાથે લગ્નો પણ બદલાઈ રહ્યાં છે.",
-            "timestamp": 1562482960,
+            "timestamp": 1562482959000,
             "byline": {
               "name": "સિન્ધુવાસિની",
               "title": "બીબીસી સંવાદદાતા",
@@ -2765,7 +2765,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48874271"
             },
             "summary": "શાહે સંસદમાં કાશ્મીર વિશે સરકારનો વિચાર મૂક્યો જે રાજનાથથી કેટલો અલગ છે?",
-            "timestamp": 1562331530,
+            "timestamp": 1562331529000,
             "byline": {
               "name": "ખાલિદ શાહ ",
               "title": "ઍસોસિયેટ ફેલો, ઑબ્ઝર્વર રિસર્ચ ફાઉન્ડેશન",
@@ -2825,7 +2825,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48886933"
             },
             "summary": "ઠાકોર સમાજ અલ્પેશ તથા ધવલસિંહ ઝાલાની સાથે રહેશે કે તેમનો સાથ છોડશે?",
-            "timestamp": 1562396253,
+            "timestamp": 1562396252000,
             "byline": {
               "name": "ટીમ બીબીસી ગુજરાતી ",
               "title": "નવી દિલ્હી ",
@@ -2880,7 +2880,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48855840"
             },
             "summary": "2015માં 12 લાખ કરતાં વધારે બાળકોનાં પાંચ વર્ષની ઉંમર પહેલાં જ મૃત્યુ થયાં હતાં.",
-            "timestamp": 1562245072,
+            "timestamp": 1562245071000,
             "byline": {
               "name": "દિવ્યા આર્ય",
               "title": "બીબીસી સંવાદદાતા",
@@ -2940,7 +2940,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48843809"
             },
             "summary": "બેહાલ ખેડૂત આપઘાત અને આંદોલનના માર્ગે છે અને પરિસ્થિતિ સમસ્યાની સમજ અને ઉકેલ માટેની તૈયારી માગે છે.",
-            "timestamp": 1562123911,
+            "timestamp": 1562123910000,
             "byline": {
               "name": "ડૉ. જયનારાયણ વ્યાસ",
               "title": "વરિષ્ઠ અર્થશાસ્ત્રી",
@@ -3011,7 +3011,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-48915507"
             },
             "summary": "BBCને શિનજિયાંગ પ્રાંતમાં મુસ્લિમોનાં બાળકોને અલગ કરવાનું કામ ચાલી રહ્યું હોવાના પુરાવા મળ્યા.",
-            "timestamp": 1562648786,
+            "timestamp": 1562648785000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -3096,7 +3096,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48805158"
             },
             "summary": "પોલીસે ગામના સરપંચ સહિત સાત શખ્સો સામે ફરિયાદ નોંધીને આરોપીઓને ઝડપી લેવાની તજવીજ હાથ ધરી",
-            "timestamp": 1561733529,
+            "timestamp": 1561733528000,
             "byline": {
               "name": "નીરજ પ્રિયદર્શી ",
               "title": "પટણાથી, બીબીસી ગુજરાતી માટે ",
@@ -3147,7 +3147,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-48765213"
             },
             "summary": "ચેન્નાઈનાં ચાર જળાશય હવે લગભગ સૂકાઈ ગયાં છે અને નાનાં તળાવ પણ દૂષિત થઈ ગયાં છે.",
-            "timestamp": 1561522096,
+            "timestamp": 1561522095000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3228,7 +3228,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-48645979"
             },
             "summary": "પોલીસે ડભોઈની હોટલના માલિક હસન અબ્બાસ ભોરાનિયા પર કેસ દાખલ કર્યો છે.",
-            "timestamp": 1560591281,
+            "timestamp": 1560591280000,
             "byline": {
               "name": "ટીમ બીબીસી ગુજરાતી",
               "title": "નવી દિલ્હી",
@@ -3307,7 +3307,7 @@
             "uri": "https://www.bbc.com/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr?limit=4",
             "contentType": "Video",
             "assetTypeCode": "PRO",
-            "timestamp": 1532704476,
+            "timestamp": 1532704475000,
             "type": "link"
           }
         ],

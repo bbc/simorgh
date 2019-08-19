@@ -54,7 +54,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-48994891"
             },
             "summary": "Aunque es uno de los personajes más mediáticos, su vida continúa rodeada de misterio. En su nuevo libro, la periodista Anna Fifield analiza algunos de los aspectos menos conocidos del joven líder de Corea del Norte.",
-            "timestamp": 1563340510,
+            "timestamp": 1563340509000,
             "byline": {
               "name": "Mar Pichel",
               "title": "BBC News Mundo",
@@ -104,7 +104,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-internacional-43379891"
                 },
                 "summary": "Si Donald Trump decide finalmente reunirse con Kim Jong-un, se topará con casi un completo desconocido. Poco se sabe del joven líder norcoreano, pese a que su rostro aparece casi a diario en televisiones de todo el mundo.",
-                "timestamp": 1524373489,
+                "timestamp": 1524373488000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:mundo/noticias-internacional-43379891",
                 "type": "cps"
@@ -133,7 +133,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-49012258"
             },
             "summary": "Tres sismos en un lapso de casi 20 minutos , uno con magnitud 2,9 y dos de 2,7, sorprendieron a habitantes del oeste y centro de Ciudad de México. Durante las últimas dos semanas se han registrado 11 temblores de baja intensidad que, de forma inusual, son percibidos por la población.",
-            "timestamp": 1563337559,
+            "timestamp": 1563337558000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -183,7 +183,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-america-latina-41217241"
                 },
                 "summary": "Algunas personas alegaron que el sistema de alerta sísmico no funcionó debidamente durante el terremoto de 7,1 del martes, pero el mecanismo ha comprobado ser una bendición para la ciudadanía al avisar con tiempo sobre un eventual movimiento telúrico.",
-                "timestamp": 1505901119,
+                "timestamp": 1505901118000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-41217241",
                 "type": "cps"
@@ -203,7 +203,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49010596"
             },
             "summary": "Una convocatoria realizada por Facebook para \"tomar por asalto\" masivamente esta instalación militar ha recogido el apoyo de más de 1,3 millones de personas. BBC Mundo te cuenta lo que se sabe del Área 51.",
-            "timestamp": 1563303189,
+            "timestamp": 1563303188000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -263,7 +263,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49012256"
             },
             "summary": "Un filtro para editar una foto y hacer que el rostro de una persona luzca como anciano ha inundado las redes sociales con imágenes curiosas y divertidas. Pero el uso de aplicaciones como FaceApp también entra al oscuro terreno del manejo de datos personales y el reconocimiento facial.",
-            "timestamp": 1563330000,
+            "timestamp": 1563329999000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -313,7 +313,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-48355042"
                 },
                 "summary": "La nueva herramienta, que se lanzó el 9 de mayo, ha generado críticas entre miembros de las comunidades trans pues aseguran que se \"bromea\" con la transición de género.",
-                "timestamp": 1558464659,
+                "timestamp": 1558464658000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:mundo/noticias-48355042",
                 "type": "cps"
@@ -339,7 +339,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-49014111"
             },
             "summary": "En una resolución que fue aprobada por una votación que siguió las líneas partidistas, la Cámara Baja denunció los recientes ataques del presidente contra cuatro legisladoras demócratas de minorías étnicas.",
-            "timestamp": 1563348633,
+            "timestamp": 1563348632000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -386,7 +386,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48997325"
             },
             "summary": "La ley sobre el aborto en El Salvador es una de las más restrictivas del mundo: organizaciones de derechos humanos dicen que al menos 16 mujeres están presas acusadas de homicidio tras sufrir abortos, en muchos casos espontáneos.",
-            "timestamp": 1563210488,
+            "timestamp": 1563210487000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -437,7 +437,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48966488"
             },
             "summary": "Te ofrecemos algunas respuestas a una pregunta que nos han hecho en los comentarios de nuestros videos sobre lenguaje: ¿se dice idioma español o castellano?",
-            "timestamp": 1563146844,
+            "timestamp": 1563146843000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -478,7 +478,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/media-48845118"
             },
             "summary": "Hace 50 años el módulo Águila aterrizó en la Luna y Neil Armstrong se convirtió en el primer ser humano en pisar nuestro satélite natural. Estos son algunos de los hechos y cifras que quizás no conocías sobre este acontecimiento histórico.",
-            "timestamp": 1563291215,
+            "timestamp": 1563291214000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -550,7 +550,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48995955"
             },
             "summary": "La capacidad de los árboles para absorber el dióxido de carbono hace que sean un arma valiosa en la lucha contra el aumento de las temperaturas. Un nuevo estudio sugiere que es necesario plantar 900 millones de hectáreas de árboles. ¿Es esto posible?",
-            "timestamp": 1563207548,
+            "timestamp": 1563207547000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -639,7 +639,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-48999126"
             },
             "summary": "Más del 85% de los migrantes que esperan en Ciudad Juárez para pedir asilo en Estados Unidos son de origen cubano. Su llegada a las cercanías de la frontera no ha pasado desapercibida para el crimen organizado.",
-            "timestamp": 1563281065,
+            "timestamp": 1563281064000,
             "byline": {
               "name": "Lioman Lima",
               "title": "BBC News Mundo, enviado especial a Ciudad Juárez",
@@ -691,7 +691,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48841238"
             },
             "summary": "El Programa Apolo fue un hito histórico que marcó la carrera espacial de Estados Unidos y la Unión Soviética. Pero, ¿sabías que también ayudó a conseguir cosas como agua más limpia o la manta isotérmica?",
-            "timestamp": 1563271554,
+            "timestamp": 1563271553000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -757,7 +757,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49000964"
             },
             "summary": "En lo que se describe como un resultado contundente, una investigación internacional concluyó que el desorden alimenticio tiene factores tanto físicos como mentales, lo que abre el camino a nuevos tratamientos.",
-            "timestamp": 1563291890,
+            "timestamp": 1563291889000,
             "byline": {
               "name": "James Gallagher",
               "title": "Corresponsal de Salud y Ciencia, BBC News",
@@ -808,7 +808,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48958096"
             },
             "summary": "Las nominaciones a los Emmy se anunciaron este martes y el drama épico \"Game of Thrones\" volvió a reinar, esta vez incluso rompiendo un récord. Te contamos de qué se trata, además de otros aspectos sobre los premios de la televisión estadounidense.",
-            "timestamp": 1563305713,
+            "timestamp": 1563305712000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -870,7 +870,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-48997717"
             },
             "summary": "Hace 20 años falleció en un accidente aéreo John F. Kennedy Jr., el hijo varón del asesinado presidente estadounidense JFK. BBC Mundo te cuenta otras tragedias que han afectado a esa poderosa familia.",
-            "timestamp": 1563255807,
+            "timestamp": 1563255806000,
             "byline": {
               "name": "Redacción   ",
               "title": "BBC News Mundo",
@@ -935,7 +935,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-49011091"
             },
             "summary": "Alejandro Toledo se encuentra en Estados Unidos y en mayo de 2018 Perú pidió extraditarlo como parte de la investigación de los sobornos que pagó la constructora brasileña Odebrecht en Perú y del caso \"Ecoteva\".",
-            "timestamp": 1563328284,
+            "timestamp": 1563328283000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -986,7 +986,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48964010"
             },
             "summary": "Un nuevo estudio encontró que una dieta de bananas, garbanzos y maní puede restablecer la flora intestinal de los niños con desnutrición severa, y está es la clave para que puedan volver a crecer.",
-            "timestamp": 1563274702,
+            "timestamp": 1563274701000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1042,7 +1042,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49012219"
             },
             "summary": "Luego de pasar 14 años consecutivos en el mismo lugar, el Louvre ha decidido trasladar temporalmente la obra maestra de Leonardo da Vinci.",
-            "timestamp": 1563318295,
+            "timestamp": 1563318294000,
             "byline": {
               "name": "Ashitha Nagesh",
               "title": "BBC News",
@@ -1093,7 +1093,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49004666"
             },
             "summary": "El fenómeno ocurre cuando dos partículas están conectadas al punto que lo que sucede con una inmediatamente afecta a la otra, sin importar cuán grande sea la distancia entre ellas.",
-            "timestamp": 1563293793,
+            "timestamp": 1563293792000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1152,7 +1152,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-49000956"
             },
             "summary": "A Alexandria Ocasio-Cortez, Ilhan Omar, Rashida Tlaib y Ayanna Pressley el presidente estadounidense les dijo que \"regresaran a sus países de origen\". Te contamos quiénes son.",
-            "timestamp": 1563273934,
+            "timestamp": 1563273933000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1204,7 +1204,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-48997715"
             },
             "summary": "Desde el pasado fin de semana numerosas personalidades de la isla han solicitado la renuncia del mandatario boricua, en medio de una crisis que ya obligó a dimitir a algunos de sus colaboradores.",
-            "timestamp": 1563217355,
+            "timestamp": 1563217354000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1257,7 +1257,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-48984459"
             },
             "summary": "Por primera vez en 135 años un presidente vivirá en Palacio Nacional. Se trata de Andrés Manuel López obrador quien pretende ocupar la construcción que durante siete siglos ha sido la sede del poder de México.",
-            "timestamp": 1563198747,
+            "timestamp": 1563198746000,
             "byline": {
               "name": "Alberto Nájar",
               "title": "BBC News Mundo, México",
@@ -1309,7 +1309,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48883049"
             },
             "summary": "Mientras llevaban puesto el casco, los astronautas que llegaron a la Luna no lo notaron. Pero al quitárselo dentro de la nave les llegó un intenso hedor que describieron como “pólvora quemada”. ¿Por qué huele tan mal el polvo lunar?",
-            "timestamp": 1563182800,
+            "timestamp": 1563182799000,
             "byline": {
               "name": "Lucía Blasco",
               "title": "BBC News Mundo",
@@ -1361,7 +1361,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-48959443"
             },
             "summary": "En plena crisis económica, el país sudamericano se está llenando de pequeños negocios que ofrecen artículos importados para la gente que aún puede permitirse \"caprichos\". ¿Qué hay detrás de su proliferación?",
-            "timestamp": 1563189782,
+            "timestamp": 1563189781000,
             "byline": {
               "name": "Guillermo D. Olmo (@BBCgolmo)",
               "title": "Corresponsal de BBC News Mundo en Venezuela ",
@@ -1413,7 +1413,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48931932"
             },
             "summary": "Se cumplen 20 años del accidente en el que murió \"John John\" Kennedy junto a su esposa y su cuñada. Aunque su muerte se sumó las tragedias de la familia Kennedy, lo que ocurrió obedece más a factores técnicos y científicos que a una maldición.",
-            "timestamp": 1563205118,
+            "timestamp": 1563205117000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1465,7 +1465,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-48980097"
             },
             "summary": "La revelación del contenido de un chat privado de miembros del gobierno de Puerto Rico, en el que insultan a políticos y periodistas con un lenguaje soez, desencadenó la renuncia de varios altos funcionarios.",
-            "timestamp": 1563146088,
+            "timestamp": 1563146087000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1516,7 +1516,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48959123"
             },
             "summary": "En los años 60, Anne Hamilton-Byrne fundó \"La Familia\", un secta basada en la creencia de que ella era la reencarnación de Jesucristo. Ben Shenton, uno de los sobrevivientes de este grupo, habló con BBC Outlook sobre cómo fue su vida mientras lo tuvieron cautivo.",
-            "timestamp": 1562953395,
+            "timestamp": 1562953394000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1568,7 +1568,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-48994218"
             },
             "summary": "La Casa Blanca anuncia nuevas medidas contra la migración para frenar lo que considera una \"crisis\" en la frontera sur del país. Se espera que la acción sea disputada en los tribunales.",
-            "timestamp": 1563212665,
+            "timestamp": 1563212664000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1620,7 +1620,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/vert-fut-48861190"
             },
             "summary": "¿Qué características hacen que algunos edificios, obras de arte o ideas permanezcan durante siglos mientras que la presencia de otros es fugaz? Parte de la respuesta se encuentra en el denominado \"efecto Lindy\".",
-            "timestamp": 1563195140,
+            "timestamp": 1563195139000,
             "byline": {
               "name": "Tom Chatfield ",
               "title": "BBC Future",
@@ -1672,7 +1672,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48955803"
             },
             "summary": "Cuando aún no los llamaban así, el agente del FBI se dedicó a visitar asesinos en serie para entender cómo funcionaban sus mentes y cómo se podía usar ese conocimiento para resolver casos. Pero su estudio lo afectó profundamente y casi le cuesta su vida.",
-            "timestamp": 1563106171,
+            "timestamp": 1563106170000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1724,7 +1724,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48978105"
             },
             "summary": "Christopher Knight pasó 27 años de su vida evitando al mundo en un diminuto refugio en medio de un bosque en Estados Unidos. Tanto él como otra mujer en Escocia explican sus razones para haberle dado la espalda a todo y todos y qué encontraron en sus años como ermitaños.",
-            "timestamp": 1563060601,
+            "timestamp": 1563060600000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1786,7 +1786,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-49011087"
             },
             "summary": "La Fiscalía de Perú anunció este martes que las autoridades estadounidenses arrestaron al exmandatario Alejandro Toledo, que se encuentra prófugo de la justicia peruana.",
-            "timestamp": 1563310555,
+            "timestamp": 1563310554000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1854,7 +1854,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-49011086"
             },
             "summary": "La actual ministra de Defensa alemana fue electa por una estrecha mayoría por el Parlamento Europeo. El próximo 1 de noviembre reemplazará al actual presidente de la Comisión, Jean-Claude Juncker.",
-            "timestamp": 1563308618,
+            "timestamp": 1563308617000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -1923,7 +1923,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49010886"
             },
             "summary": "Los reguladores y bancos centrales del mundo han empezado a preocuparse seriamente por la seguridad, protección de datos y uso fraudulento de Libra, la criptomoneda que la red social quiere poner en marcha en 2020.",
-            "timestamp": 1563315744,
+            "timestamp": 1563315743000,
             "byline": {
               "name": "Cristina J. Orgaz",
               "title": "BBC News Mundo",
@@ -1992,7 +1992,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48966545"
             },
             "summary": "A pesar de que en las cafeterías de las grandes ciudades se llega a pagar hasta US$5 por una taza de la humeante bebida, en mayo los precios del café cayeron a su punto más bajo en una década. Te contamos qué consecuencias tiene esto en cada eslabón de la cadena.",
-            "timestamp": 1563296594,
+            "timestamp": 1563296593000,
             "byline": {
               "name": "Ritu Prasad",
               "title": "BBC News",
@@ -2060,7 +2060,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-48991374"
             },
             "summary": "El descongelamiento del permafrost en Siberia ha hecho resurgir los restos de animales que vivieron hace más de 4.000 años: los mamuts. Y los colmillos de estos se han convertido en una mina para muchos comerciantes que los extraen y los venden de forma ilegal.",
-            "timestamp": 1563269777,
+            "timestamp": 1563269776000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -2129,7 +2129,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-49005946"
             },
             "summary": "Ocurrió en febrero de 2015 en una calle de la localidad de Fuengirola, en el sur de España. Cuando intentó ayudar a la mujer, uno de los asaltantes se golpeó fuertemente en la cabeza y murió dos días después.",
-            "timestamp": 1563280878,
+            "timestamp": 1563280877000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -2198,7 +2198,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48987879"
             },
             "summary": "Llamada también la Pirámide Romboidal, la construcción se ubica en Dahshur, a unos 40 kilómetros al sur de El Cairo, y abrirla a los visitantes es una medida para impulsar el turismo en el país.",
-            "timestamp": 1563178751,
+            "timestamp": 1563178750000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2240,7 +2240,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48954814"
             },
             "summary": "El desafío fotográfico semanal de BBC Mundo invitó a inspirarse en una palabra: carga. Aquí te presentamos una selección de las imágenes de los cargamentos, los pesos y las imposiciones que reflejan tus cargas. ¿Listo para el próximo?",
-            "timestamp": 1562935486,
+            "timestamp": 1562935485000,
             "byline": {
               "name": "Redacción  ",
               "title": "BBC News Mundo",
@@ -2299,7 +2299,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48956723"
             },
             "summary": "El 11 de julio de 1859, el Big Ben, el reloj más emblemático de Londres, comenzó a marcar las horas. La torre todavía sigue en pie, pero inmersa en un largo proceso de restauración.",
-            "timestamp": 1562865547,
+            "timestamp": 1562865546000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2340,7 +2340,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48939191"
             },
             "summary": "Desde parientes silvestres de la zanahoria, el café o la avena común, hasta un banano con semillas y un árbol que protege del hambre a más de 20 millones de personas en África. El artista Rob Kesseler creó estas fotos extraordinarias de semillas que podrían ser vitales para la seguridad alimenticia de la humanidad.",
-            "timestamp": 1562777822,
+            "timestamp": 1562777821000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2383,7 +2383,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48896829"
             },
             "summary": "Cada año la Unesco escoge lugares históricos o naturales alrededor del mundo destacándolos como parte del \"Patrimonio de la Humanidad\", como una forma de protegerlos y de ayudar a su preservación. BBC Mundo te muestra algunos de los que recién acaba de incorporar a su lista.",
-            "timestamp": 1562465291,
+            "timestamp": 1562465290000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2425,7 +2425,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-48883046"
             },
             "summary": "Una bajada de nivel en una presa de Mosul dejó al descubierto un tesoro arqueológico: un palacio de la Edad de Bronce con tres milenios de historia.",
-            "timestamp": 1562333173,
+            "timestamp": 1562333172000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2500,7 +2500,7 @@
             "uri": "https://www.bbc.co.uk/academy/es",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1489596875,
+            "timestamp": 1489596874000,
             "type": "link"
           }
         ],
@@ -2527,7 +2527,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:mundo/institucional-41670622"
             },
             "summary": "Conozca los socios de BBC Mundo en América Latina, donde pueden acceder a nuestro contenido.",
-            "timestamp": 1508339623,
+            "timestamp": 1508339622000,
             "cpsType": "STY",
             "indexImage": {
               "id": "98371089",

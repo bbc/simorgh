@@ -22,9 +22,9 @@ Cypress.Commands.add('hasAmpAnalyticsAtiUrl', (atiUrl, analyticsBucketId) => {
 });
 
 Cypress.Commands.add('hasScriptWithChartbeatSrc', () => {
-  cy.get(`script`)
-    .eq(0)
-    .should('have.attr', 'src', '//static.chartbeat.com/js/chartbeat.js');
+  cy.get(`script[src="//static.chartbeat.com/js/chartbeat.js"]`).should(
+    'exist',
+  );
 });
 
 Cypress.Commands.add('hasGlobalChartbeatConfig', () => {

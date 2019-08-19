@@ -5,7 +5,7 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import describeDuration from '../../../lib/utilities/describeDuration';
+import formatDuration from '../../../lib/utilities/formatDuration';
 import { storyItem } from '../../../models/propTypes/storyItem';
 
 const LinkContents = ({ item }) => {
@@ -14,22 +14,23 @@ const LinkContents = ({ item }) => {
   } = useContext(ServiceContext);
 
   const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
+  const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
   const headlines = pathOr(null, ['headlines'], item);
   const { headline, overtyped } = headlines;
   const content = overtyped || headline;
 
-  if (!isMedia) {
+  if (!isPGL && !isMedia) {
     return content;
   }
 
-  const type = pathOr(null, ['media', 'format'], item);
+  const type = isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
 
   // hilariously, this works. according to moment, null seconds == 0 seconds!
   const duration = moment.duration(rawDuration, 'seconds');
-  const durationString = describeDuration(duration);
+  const durationString = formatDuration(duration, ',');
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.

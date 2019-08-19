@@ -1,21 +1,64 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import CanonicalChartbeatAnalytics from '.';
 
 describe('CanonicalChartbeatAnalytics', () => {
-  const props = {
+  global.pSUPERFLY = {
+    virtualPage: jest.fn(),
+  };
+
+  const config = {
     domain: 'test-domain',
     type: 'article',
     sections: 'section1 section2',
-    cookie: 'cookie',
     chartbeatUID: 1111,
-    chartbeatSource: '//chartbeat.js',
+    virtualReferrer: null,
+    useCanonical: true,
+    title: 'This is an article',
   };
   it('should return the helmet wrapper with the script snippet', () => {
     const tree = renderer
-      .create(<CanonicalChartbeatAnalytics {...props} />)
+      .create(
+        <CanonicalChartbeatAnalytics
+          chartbeatConfig={config}
+          chartbeatSource="//chartbeat.js"
+        />,
+      )
       .toTree();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should call the global virtualPage function when props change', () => {
+    const wrapper = mount(
+      <CanonicalChartbeatAnalytics
+        chartbeatConfig={config}
+        chartbeatSource="//chartbeat.js"
+      />,
+    );
+
+    wrapper.setProps({
+      chartbeatConfig: {
+        domain: 'test-domain',
+        type: 'article',
+        sections: 'section1 section2',
+        chartbeatUID: 1111,
+        useCanonical: true,
+        virtualReferrer: '/some-path',
+        title: 'This is another article',
+      },
+    });
+    wrapper.mount();
+    expect(global.pSUPERFLY.virtualPage).toHaveBeenCalled();
+    expect(global.pSUPERFLY.virtualPage).toHaveBeenCalledWith({
+      domain: 'test-domain',
+      type: 'article',
+      sections: 'section1 section2',
+      chartbeatUID: 1111,
+      useCanonical: true,
+      virtualReferrer: '/some-path',
+      title: 'This is another article',
+    });
   });
 });

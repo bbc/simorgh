@@ -21,8 +21,11 @@ describe('ErrorMain', () => {
     <ErrorMain {...messaging} script={latin} service="news" />,
   );
 
-  shouldMatchSnapshot(
-    'should correctly render for an error page for Persian',
-    <ErrorMain {...messaging} script={arabic} service="persian" />,
-  );
+  const arabicServices = ['persian', 'arabic', 'pashto', 'urdu'];
+  arabicServices.forEach(service => {
+    shouldMatchSnapshot(
+      `should correctly render for an error page for ${service}`,
+      <ErrorMain {...messaging} script={arabic} service={service} />,
+    );
+  });
 });

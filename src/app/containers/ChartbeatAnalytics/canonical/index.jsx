@@ -1,57 +1,50 @@
-import React from 'react';
-import { string, bool, number } from 'prop-types';
+import React, { useEffect } from 'react';
+import { string, shape, number, bool } from 'prop-types';
 import Helmet from 'react-helmet';
 
-const CanonicalChartbeatBeacon = ({
-  domain,
-  type,
-  sections,
-  cookie,
-  chartbeatUID,
-  useCanonical,
-  chartbeatSource,
-}) => (
-  <Helmet>
-    <script async type="text/javascript">
-      {`
+const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.pSUPERFLY) {
+      /*
+        This function is always called to update config values on page changes 
+        https://chartbeat.zendesk.com/hc/en-us/articles/210271287-Handling-virtual-page-changes
+      */
+      window.pSUPERFLY.virtualPage(chartbeatConfig);
+    }
+  }, [chartbeatConfig]);
+
+  return (
+    <Helmet>
+      <script async type="text/javascript">
+        {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          _sf_async_config.uid = ${chartbeatUID};
-          _sf_async_config.domain = "${domain}";
-          _sf_async_config.useCanonical = ${useCanonical};
-          _sf_async_config.useCanonicalDomain = ${useCanonical};
-          _sf_async_config.contentType = "${type}";
-          _sf_async_config.sections = "${sections}";
-          _sf_async_config.idSync = {
-           bbc_hid: "${cookie}"
-          };
-          function loadChartbeat() {
-           var e = document.createElement('script');
-           var n = document.getElementsByTagName('script')[0];
-           e.type = 'text/javascript';
-           e.async = true;
-           e.src = "${chartbeatSource}";
-           n.parentNode.insertBefore(e, n);
+          var config = ${JSON.stringify(chartbeatConfig)};
+          for (var key in config) {
+            _sf_async_config[key] = config[key];
           }
-          loadChartbeat();
         })();
       `}
-    </script>
-  </Helmet>
-);
-
-CanonicalChartbeatBeacon.propTypes = {
-  domain: string.isRequired,
-  type: string.isRequired,
-  sections: string.isRequired,
-  cookie: string,
-  chartbeatUID: number.isRequired,
-  useCanonical: bool.isRequired,
-  chartbeatSource: string.isRequired,
+      </script>
+      <script async type="text/javascript" src={chartbeatSource} />
+    </Helmet>
+  );
 };
 
-CanonicalChartbeatBeacon.defaultProps = {
-  cookie: null,
+CanonicalChartbeatBeacon.propTypes = {
+  chartbeatConfig: shape({
+    domain: string.isRequired,
+    sections: string.isRequired,
+    uid: number.isRequired,
+    title: string.isRequired,
+    type: string.isRequired,
+    useCanonical: bool.isRequired,
+    virtualReferrer: string,
+    idSync: shape({
+      bbc_hid: string,
+    }),
+  }).isRequired,
+  chartbeatSource: string.isRequired,
 };
 
 export default CanonicalChartbeatBeacon;

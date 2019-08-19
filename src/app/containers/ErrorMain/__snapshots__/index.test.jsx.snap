@@ -15,8 +15,8 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 .c5:focus,
 .c5:hover {
-  color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 .c4 {
@@ -263,15 +263,15 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 .c5:focus,
 .c5:hover {
-  color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   padding-bottom: 1.5rem;
@@ -298,7 +298,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -511,8 +511,8 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 .c5:focus,
 .c5:hover {
-  color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 .c4 {
@@ -754,15 +754,15 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 .c5:focus,
 .c5:hover {
-  color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   padding-bottom: 1.5rem;
@@ -789,7 +789,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   font-size: 2rem;
   line-height: 2.625rem;
   color: #3F3F42;
-  font-family: NassimPersian,Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0;
@@ -997,8 +997,8 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 .c5:focus,
 .c5:hover {
-  color: #B80000;
   border-bottom: 2px solid #B80000;
+  color: #B80000;
 }
 
 .c4 {

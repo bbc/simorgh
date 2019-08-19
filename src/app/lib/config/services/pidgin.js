@@ -2,10 +2,12 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/pcm';
+import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const pidgin = {
   lang: 'pcm',
   product: 'BBC News',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-pidgin',
   brandName: 'BBC News Pidgin',
@@ -189,6 +191,7 @@ const pidgin = {
     ],
     copyrightText: 'BBC. De external site no concern BBC.',
   },
+  timezone: 'Africa/Lagos',
 };
 
 export default pidgin;

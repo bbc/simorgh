@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { render, mount } from 'enzyme';
 import ArticleTimestamp from '.';
 import { isNull } from '../../../testHelpers';
 import {
@@ -20,11 +20,16 @@ const secondChild = wrapper => wrapper[1].children[0].data;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
-const WrappedArticleTimestamp = props => (
-  <ServiceContextProvider service="news">
+// eslint-disable-next-line react/prop-types
+const WrappedArticleTimestamp = ({ service, ...props }) => (
+  <ServiceContextProvider service={service}>
     <ArticleTimestamp {...props} />
   </ServiceContextProvider>
 );
+
+WrappedArticleTimestamp.defaultProps = {
+  service: 'news',
+};
 
 describe('ArticleTimestamp', () => {
   let originalDate;
@@ -87,7 +92,7 @@ describe('ArticleTimestamp', () => {
     isNull(
       'should return null',
       <WrappedArticleTimestamp
-        firstPublished="8640000000000001"
+        firstPublished={8640000000000001}
         lastPublished={8640000000000001}
       />,
     );
@@ -210,5 +215,26 @@ describe('ArticleTimestamp', () => {
     expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
+  });
+
+  describe('With different timezones', () => {
+    it('should show the correct local date', () => {
+      const props = {
+        firstPublished: 1565380800000,
+        lastPublished: 1565380800000,
+      };
+      const newsContainer = mount(
+        <WrappedArticleTimestamp {...props} service="news" />,
+      );
+
+      const time = newsContainer.find('time').props().dateTime;
+      expect(time).toEqual('2019-08-09');
+
+      const bengaliContainer = mount(
+        <WrappedArticleTimestamp {...props} service="bengali" />,
+      );
+      const bengaliTime = bengaliContainer.find('time').props().dateTime;
+      expect(bengaliTime).toEqual('2019-08-10');
+    });
   });
 });

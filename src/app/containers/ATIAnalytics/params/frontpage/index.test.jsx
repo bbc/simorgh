@@ -36,7 +36,7 @@ describe('FrontPageAtiParams', () => {
   const requestContextStub = {
     bbcOrigin: 'https://www.test.bbc.co.uk',
     isAmp: false,
-    pageType: 'frontpage',
+    pageType: 'frontPage',
     service: 'SERVICE',
   };
   const serviceContextStub = {

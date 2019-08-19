@@ -83,7 +83,8 @@ def buildStaticAssets(env, tag) {
 pipeline {
   agent any
   options {
-    timeout(time: 60, unit: 'MINUTES')
+    buildDiscarder(logRotator(daysToKeepStr: '10', artifactDaysToKeepStr: '10'))
+    timeout(time: 90, unit: 'MINUTES')
     timestamps ()
   }
   environment {

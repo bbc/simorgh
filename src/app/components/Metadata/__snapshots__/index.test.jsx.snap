@@ -60,11 +60,11 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content="1539188371344"
+    content="2018-01-01T12:01:00.000Z"
     name="article:modified_time"
   />
   <meta
-    content="1514811600000"
+    content="2018-01-01T13:00:00.000Z"
     name="article:published_time"
   />
   <meta
@@ -304,11 +304,11 @@ exports[`Metadata News article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content="1539188371344"
+    content="2018-01-01T12:01:00.000Z"
     name="article:modified_time"
   />
   <meta
-    content="1514811600000"
+    content="2018-01-01T13:00:00.000Z"
     name="article:published_time"
   />
   <meta
@@ -530,11 +530,11 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content="1539188371344"
+    content="2018-01-01T12:01:00.000Z"
     name="article:modified_time"
   />
   <meta
-    content="1514811600000"
+    content="2018-01-01T13:00:00.000Z"
     name="article:published_time"
   />
   <meta
@@ -759,11 +759,11 @@ exports[`Metadata Persian article should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content="1539188371344"
+    content="2018-01-01T12:01:00.000Z"
     name="article:modified_time"
   />
   <meta
-    content="1514811600000"
+    content="2018-01-01T13:00:00.000Z"
     name="article:published_time"
   />
   <meta
@@ -1451,11 +1451,11 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     name="article:author"
   />
   <meta
-    content="1539188371344"
+    content="2018-01-01T12:01:00.000Z"
     name="article:modified_time"
   />
   <meta
-    content="1514811600000"
+    content="2018-01-01T13:00:00.000Z"
     name="article:published_time"
   />
   <meta
