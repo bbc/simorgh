@@ -139,8 +139,7 @@ describe('ATI Analytics Container', () => {
     });
   });
 
-  // TODO fix this once bbc/simorgh#3107 has been completed
-  describe.skip('pageType neither article nor frontPage', () => {
+  describe('pageType neither article nor frontPage', () => {
     suppressPropWarnings(['pageType', 'randomvalue']);
     isNull(
       'should render null',
