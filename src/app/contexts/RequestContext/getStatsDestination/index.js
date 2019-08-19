@@ -2,11 +2,11 @@ const getStatsDestination = ({ isUK = true, env = 'test', service }) => {
   let destination = '';
 
   if (service === 'news') {
-    destination = isUK !== false ? 'PS_NEWS' : 'GNL_NEWS';
+    destination = isUK !== false ? 'NEWS_PS' : 'NEWS_GNL';
   } else if (service === 'cymrufyw' || service === 'naidheachdan') {
-    destination = isUK !== false ? 'PS_NEWS_LANGUAGES' : 'GNL_NEWS_LANGUAGES';
+    destination = isUK !== false ? 'NEWS_LANGUAGES_PS' : 'NEWS_LANGUAGES_GNL';
   } else if (service === 'japanese') {
-    destination = 'GNL_NEWS_LANGUAGES';
+    destination = 'NEWS_LANGUAGES_GNL';
   } else {
     destination = 'WS_NEWS_LANGUAGES';
   }
