@@ -32,9 +32,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
-    home: 'Home',
+    home: 'बातम्या',
     currentPage: 'Current page',
-    skipLinkText: 'Skip to content',
+    skipLinkText: 'सामग्रीवर जा',
     error: {
       404: {
         statusCode: '404',
