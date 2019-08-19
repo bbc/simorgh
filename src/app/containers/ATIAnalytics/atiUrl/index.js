@@ -152,8 +152,8 @@ export const atiEventTrackParams = ({
   platform,
   statsDestination,
   service,
-  eventInfo = '',
-  componentInfo = '',
+  eventInfo,
+  eventType,
 }) => {
   const eventTrackingBeaconValues = [
     {
@@ -201,14 +201,7 @@ export const atiEventTrackParams = ({
     {
       key: 'ati',
       description: 'event publisher',
-      value: getPublishingInfo(
-        platform,
-        pageIdentifier,
-        statsDestination,
-        service,
-        eventInfo,
-        componentInfo,
-      ),
+      value: getPublishingInfo(service, eventInfo, eventType),
     },
   ];
 

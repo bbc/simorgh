@@ -160,15 +160,18 @@ export const getAtiUrl = data => {
   return parsedAtiValues.join('&');
 };
 
-export const getPublishingInfo = (
-  platform,
-  pageIdentifier,
-  statsDestination,
-  service,
-  eventInfo,
-  componentInfo,
-) => {
-  if (eventInfo !== '') {
+export const getPublishingInfo = (service, eventInfo, eventType) => {
+  if (eventType === 'click') {
+    /*
+    https://paper.dropbox.com/doc/Event-tracking--AjJpWibjeQPWsoRLFdZW13Y9Ag-3i47TvVb9IJBMJFcL8D6u
+    for click events we need to know:
+      * campaings = [service-name]-[component], e.g. yoruba-navigation
+      * creation (label) = [component]-[item], e.g. navigation-ere_idaraya
+      * creation (type) = [event-type], e.g. click or background
+      * url = the destination link
+      * format = [PAR=container-[component-name]::name~CHD=slot] = [PAR=container-navigation::name~CHD=1]
+         ^ for format, currently using the name of the component clicked as slot
+    */
     const eventComponentInfo = eventInfo.path[0].dataset.info || 'brand-top';
     const cleanCompInfo = eventComponentInfo.split('/').join('-');
     const componentName = 'navigation';
@@ -178,12 +181,13 @@ export const getPublishingInfo = (
     return `PUB-[${service}-${componentName}]-[${eventInfo.type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
   }
 
-  const componentName = componentInfo[0].dataset.info || 'navigation'; // because I still need to make changes to the nav comp
+  // for background events we just need "campaings" => [service-name]-[component-name], e.g. yoruba-navigation
+  const componentName = eventType[0].dataset.info || 'navigation'; // because I still need to make changes to the nav comp
 
   return `PUB-[${service}-${componentName}]`;
 };
 
 export const getComponentsToTrack = trackClassName => {
-  // if there is a better way of doing this I'm all for it
+  // should probably find a better way of doing this
   return document.getElementsByClassName(trackClassName);
 };

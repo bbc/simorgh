@@ -20,6 +20,7 @@ const listener = (data, platform, statsDestination, service) => {
             statsDestination,
             service,
             event,
+            'click',
           );
         });
       });
@@ -31,8 +32,8 @@ const listener = (data, platform, statsDestination, service) => {
           platform,
           statsDestination,
           service,
-          '',
           component,
+          'background',
         );
       }
     });
