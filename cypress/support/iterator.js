@@ -16,7 +16,6 @@ const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
         before(() => {
           cy.visit(config[service].pageTypes[pageType].path, {
             failOnStatusCode: !pageType.includes('error'),
-            timeout: 10000,
           });
         });
 
@@ -29,7 +28,6 @@ const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
         before(() => {
           cy.visit(`${config[service].pageTypes[pageType].path}.amp`, {
             failOnStatusCode: !pageType.includes('error'),
-            timeout: 10000,
           });
         });
 
