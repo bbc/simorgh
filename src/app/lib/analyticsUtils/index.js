@@ -182,3 +182,8 @@ export const getPublishingInfo = (
 
   return `PUB-[${service}-${componentName}]`;
 };
+
+export const getComponentsToTrack = trackClassName => {
+  // if there is a better way of doing this I'm all for it
+  return document.getElementsByClassName(trackClassName);
+};

@@ -1,10 +1,11 @@
 import onClient from '../../utilities/onClient';
+import { getComponentsToTrack } from '..';
 import FrontPageAtiEventTracker from '../../../containers/ATIAnalytics/event/frontpage';
 
 const listener = (data, platform, statsDestination, service) => {
   if (onClient()) {
-    const navItems = document.getElementsByClassName('track-nav');
-    const brandItems = document.getElementsByClassName('track-brand');
+    const navItems = getComponentsToTrack('track-nav');
+    const brandItems = getComponentsToTrack('track-brand');
 
     const trackedItems = [navItems, brandItems];
 
