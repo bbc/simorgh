@@ -32,7 +32,7 @@
         "id": "liveradio",
         "subType": "primary",
         "format": "audio",
-        "externalId": "bbc_korean_radio",
+        "externalId": "bbc_persian_radio",
         "duration": "PT0S",
         "caption": "",
         "embedding": false,
