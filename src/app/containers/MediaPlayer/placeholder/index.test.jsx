@@ -1,23 +1,24 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
+import { shouldMatchSnapshot } from '../../../../testHelpers';
 import MediaPlayerPlaceholder from '.';
 
 describe('Media Player: MediaPlayerPlaceholder', () => {
-  it('should render a placeholder image', () => {
-    const mockCallback = jest.fn();
-    const tree = renderer.create(
-      <MediaPlayerPlaceholder
-        onClick={mockCallback}
-        src="http://foo.bar/img.png"
-      />,
-    );
+  const mockCallback = jest.fn();
 
-    expect(tree).toMatchSnapshot();
+  afterEach(() => {
+    jest.resetModules();
   });
 
+  shouldMatchSnapshot(
+    'should render a placeholder image',
+    <MediaPlayerPlaceholder
+      onClick={mockCallback}
+      src="http://foo.bar/img.png"
+    />,
+  );
+
   it('should register a click when placeholder is clicked', () => {
-    const mockCallback = jest.fn();
     const tree = mount(
       <MediaPlayerPlaceholder
         onClick={mockCallback}

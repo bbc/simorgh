@@ -1,59 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Player: CanonicalMediaPlayer should render a MediaPlayer component when placeholder is clicked 1`] = `
-<CanonicalMediaPlayer
-  embedSrc="http://foo.com"
->
-  <StyledIframe
-    allow="autoplay; fullscreen"
-    gesture="media"
-    scrolling="no"
-    src="http://foo.com"
-  >
-    <StyledComponent
-      allow="autoplay; fullscreen"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "StyledIframe-x885p3-0",
-            "isStatic": true,
-            "lastClassName": "eTtGDx",
-            "rules": Array [
-              "position:absolute;top:0;left:0;width:100%;height:100%;border:0;overflow:hidden;",
-            ],
-          },
-          "displayName": "StyledIframe",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "StyledIframe-x885p3-0",
-          "target": "iframe",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      gesture="media"
-      scrolling="no"
-      src="http://foo.com"
-    >
-      <iframe
-        allow="autoplay; fullscreen"
-        className="StyledIframe-x885p3-0 eTtGDx"
-        scrolling="no"
-        src="http://foo.com"
-      />
-    </StyledComponent>
-  </StyledIframe>
-</CanonicalMediaPlayer>
-`;
+exports[`Media Player: CanonicalMediaPlayer should render an iframe 1`] = `
+.c0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
 
-exports[`Media Player: CanonicalMediaPlayer should render a placeholder image 1`] = `
 <iframe
   allow="autoplay; fullscreen"
-  className="StyledIframe-x885p3-0 eTtGDx"
+  className="c0"
   scrolling="no"
   src="https://foo.bar/"
 />

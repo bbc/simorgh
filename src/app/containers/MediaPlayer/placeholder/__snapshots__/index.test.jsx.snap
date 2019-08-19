@@ -1,13 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Media Player: MediaPlayerPlaceholder should render a placeholder image 1`] = `
+.c1 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c0 {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 <div
-  className="StyledPlaceholder-sc-1vm255o-0 bDdVI"
+  className="c0"
   onClick={[MockFunction]}
 >
   <img
     alt="Image Alt"
-    className="StyledImg-sc-7vx2mr-0 hIxkbt"
+    className="c1"
     height={null}
     sizes={null}
     src="http://foo.bar/img.png"
