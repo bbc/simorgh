@@ -3,6 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 import styled from 'styled-components';
 import AmpMediaPlayer from './amp';
 import CanonicalMediaPlayer from './canonical';
+import MediaPlayerPlaceholder from './placeholder';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
@@ -40,7 +41,7 @@ const placeholderImage = src => {
   return newUrl.join('/');
 };
 
-const MediaPlayerContainer = ({ blocks }) => {
+const MediaPlayerContainer = ({ blocks, placeholder }) => {
   const { id, platform, origin } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
@@ -72,6 +73,7 @@ const MediaPlayerContainer = ({ blocks }) => {
 
   const Player = isAmp ? AmpMediaPlayer : CanonicalMediaPlayer;
   const placeholderSrc = placeholderImage(imageUrl);
+  const shouldShowPlaceholder = !isAmp && placeholder;
   const embedSource = embedUrl({
     vpid: versionId,
     assetId: id,
@@ -83,13 +85,22 @@ const MediaPlayerContainer = ({ blocks }) => {
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
       <StyledContainer>
-        <Player placeholderSrc={placeholderSrc} embedSrc={embedSource} />
+        {shouldShowPlaceholder ? (
+          <MediaPlayerPlaceholder src={placeholderSrc}>
+            <Player embedSrc={embedSource} />
+          </MediaPlayerPlaceholder>
+        ) : (
+          <Player embedSrc={embedSource} />
+        )}
       </StyledContainer>
     </GridItemConstrainedMedium>
   );
 };
 
 MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
-MediaPlayerContainer.defaultProps = emptyBlockArrayDefaultProps;
+MediaPlayerContainer.defaultProps = {
+  ...emptyBlockArrayDefaultProps,
+  placeholder: true,
+};
 
 export default MediaPlayerContainer;
