@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { string, shape, node } from 'prop-types';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import MediaPlayerContainer from '.';
@@ -79,32 +78,26 @@ describe('MediaPlayer', () => {
   });
 
   describe('Fails and returns early when', () => {
-    it('there is no versionId', () => {
-      const tree = renderer.create(
-        <ContextWrapper platform="canonical">
-          <MediaPlayerContainer blocks={missingVpidFixture} />
-        </ContextWrapper>,
-      );
+    shouldMatchSnapshot(
+      'there is no versionId',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={missingVpidFixture} />
+      </ContextWrapper>,
+    );
 
-      expect(tree).toMatchSnapshot();
-    });
-
-    it('component is toggled off', () => {
-      const toggleState = {
-        test: {
-          mediaPlayer: {
-            enabled: false,
-          },
+    const toggleState = {
+      test: {
+        mediaPlayer: {
+          enabled: false,
         },
-      };
+      },
+    };
 
-      const tree = renderer.create(
-        <ContextWrapper platform="canonical" toggleState={toggleState}>
-          <MediaPlayerContainer blocks={validVideoFixture} />
-        </ContextWrapper>,
-      );
-
-      expect(tree).toMatchSnapshot();
-    });
+    shouldMatchSnapshot(
+      'component is toggled off',
+      <ContextWrapper platform="canonical" toggleState={toggleState}>
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
+    );
   });
 });
