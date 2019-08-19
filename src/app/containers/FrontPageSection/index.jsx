@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
+import styled from 'styled-components';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import pathOr from 'ramda/src/pathOr';
@@ -8,6 +10,24 @@ import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
 import { storyItem } from '../../models/propTypes/storyItem';
 import idSanitiser from '../../lib/utilities/idSanitiser';
+
+const TopMargin = styled.div`
+  margin-top: ${GEL_SPACING};
+`;
+
+// eslint-disable-next-line react/prop-types
+const MarginWrapper = ({ addMargin, as, children }) => {
+  // Conditionally add a `margin-top` to the `children`, mixing in
+  // `as` if present.
+  if (addMargin) {
+    return <TopMargin as={as}>{children}</TopMargin>;
+  }
+  if (as) {
+    const AsComponent = as;
+    return <AsComponent>{children}</AsComponent>;
+  }
+  return children;
+};
 
 const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
   const topStory = sectionNumber === 0 && storyNumber === 0;
@@ -25,11 +45,14 @@ StoryPromoComponent.propTypes = {
 };
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
   const strapline = pathOr(null, ['strapline', 'name'], group);
+  const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
+  const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
   const items = pathOr(null, ['items'], group);
+  const seeAll = pathOr(null, ['seeAll'], translations) || 'See All';
   const isFirstSection = sectionNumber === 0;
 
   // The current implementation of SectionLabel *requires* a strapline to be
@@ -57,11 +80,13 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         visuallyHidden={isFirstSection}
         service={service}
         dir={dir}
+        linkText={isLink ? seeAll : null}
+        href={href}
       >
         {group.strapline.name}
       </SectionLabel>
       {items.length > 1 ? (
-        <StoryPromoUl>
+        <MarginWrapper addMargin={!isFirstSection} as={StoryPromoUl}>
           {items.map((item, index) => (
             <StoryPromoLi key={item.id}>
               <StoryPromoComponent
@@ -71,13 +96,15 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
               />
             </StoryPromoLi>
           ))}
-        </StoryPromoUl>
+        </MarginWrapper>
       ) : (
-        <StoryPromoComponent
-          item={items[0]}
-          sectionNumber={sectionNumber}
-          storyNumber={0}
-        />
+        <MarginWrapper addMargin={!isFirstSection}>
+          <StoryPromoComponent
+            item={items[0]}
+            sectionNumber={sectionNumber}
+            storyNumber={0}
+          />
+        </MarginWrapper>
       )}
     </section>
   );
