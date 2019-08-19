@@ -37,9 +37,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
-    home: 'Home',
+    home: 'کور پاڼه',
     currentPage: 'Current page',
-    skipLinkText: 'Skip to content',
+    skipLinkText: 'مطلب ته ورشئ',
     error: {
       404: {
         statusCode: '۴۰۴',

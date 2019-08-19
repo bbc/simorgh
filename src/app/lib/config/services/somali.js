@@ -32,9 +32,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
-    home: 'Home',
+    home: 'War',
     currentPage: 'Current page',
-    skipLinkText: 'Skip to content',
+    skipLinkText: 'U gudub qaybta macluumaadka',
     error: {
       404: {
         statusCode: '404',

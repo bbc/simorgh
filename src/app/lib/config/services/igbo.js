@@ -35,9 +35,9 @@ const igbo = {
     currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
     error: {
-      home: 'Home',
+      home: 'Akụkọ',
       currentPage: 'Current page',
-      skipLinkText: 'Skip to content',
+      skipLinkText: 'Wụga n’ọdịnaya',
       404: {
         statusCode: '404',
         title: 'Ahụghị ibe akwụkwọ a',

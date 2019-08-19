@@ -32,9 +32,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
-    home: 'Home',
+    home: '뉴스',
     currentPage: 'Current page',
-    skipLinkText: 'Skip to content',
+    skipLinkText: '내용으로 건너뛰기',
     error: {
       404: {
         statusCode: '404',
