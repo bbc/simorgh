@@ -1,5 +1,5 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
-import moment from 'moment/min/moment-with-locales';
+import * as moment from 'moment-timezone';
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
@@ -119,17 +119,40 @@ const runTests = ({ service }) =>
       });
 
       it('should render a formatted timestamp', () => {
-        cy.window().then(win => {
-          const { datetimeLocale } = config[service];
-          if (datetimeLocale) {
-            const { lastPublished } = win.SIMORGH_DATA.pageData.metadata;
-            moment.locale(datetimeLocale);
-            const timestamp = Cypress.moment(lastPublished).format(
-              'D MMMM YYYY',
-            );
-            cy.get('time').should('contain', timestamp);
-          }
-        });
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+          ({ body }) => {
+            const { language } = body.metadata.passport;
+            const { lastPublished } = body.metadata;
+            const { firstPublished } = body.metadata;
+            const updatedTimestamp = moment
+              .tz(lastPublished, `${appConfig[service].timezone}`)
+              .locale(language)
+              .format('D MMMM YYYY');
+            const firstTimestamp = moment
+              .tz(firstPublished, `${appConfig[service].timezone}`)
+              .locale(language)
+              .format('D MMMM YYYY');
+
+            if (service !== 'pashto') {
+              cy.get('time').then($time => {
+                if (lastPublished === firstPublished) {
+                  cy.get($time).should('contain', updatedTimestamp);
+                } else {
+                  cy.get($time)
+                    .eq(0)
+                    .should('contain', firstTimestamp);
+                  cy.get($time)
+                    .eq(1)
+                    .should(
+                      'contain',
+                      `${`${appConfig[service].articleTimestampPrefix}` +
+                        ' '}${updatedTimestamp}`,
+                    );
+                }
+              });
+            }
+          },
+        );
       });
 
       it('should render an H2, which contains/displays a styled subheading', () => {
