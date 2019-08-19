@@ -2,6 +2,8 @@ import React, { Fragment, useContext } from 'react';
 import { string, shape, object } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
+
+import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -11,13 +13,16 @@ const MediaPageMain = props => {
   const { serviceId, mediaId } = match.params;
   const { script } = useContext(ServiceContext);
   const {
-    content: { title, subtitle },
+    content: {
+      blocks: [{ text: title }, { text: subtitle }],
+    },
     promo,
     metadata,
   } = pageData;
 
   return (
     <Fragment>
+      <ATIAnalytics data={pageData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <Grid>

@@ -185,10 +185,13 @@ export default {
             : '/cymrufyw/articles/c123456abcdo',
         smoke: false,
       },
-      frontPage:
-        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-          ? undefined
-          : '/cymrufyw',
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/cymrufyw',
+        smoke: false,
+      },
     },
   },
   gahuza: {
