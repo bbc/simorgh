@@ -93,7 +93,7 @@
     "@bbc/psammead-inline-link": "^1.2.4",
     "@bbc/psammead-locales": "^1.2.2",
     "@bbc/psammead-media-indicator": "^2.4.1",
-    "@bbc/psammead-navigation": "^2.1.4",
+    "@bbc/psammead-navigation": "^2.2.2",
     "@bbc/psammead-paragraph": "^2.1.4",
     "@bbc/psammead-section-label": "^2.1.5",
     "@bbc/psammead-sitewide-links": "^3.0.5",
