@@ -34,7 +34,7 @@ const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
         isAmp={false}
         pageType={pageType}
         service={service}
-        bbcOrigin="https://www.bbc.com"
+        bbcOrigin="https://www.test.bbc.com"
       >
         <HeaderContainer />
       </RequestContextProvider>
