@@ -12,7 +12,7 @@ developmentTests:
 	npm run test:chromatic
 
 productionTests:
-	npm run build && xvfb-run npm run test:ci;
+	npm run build && xvfb-run npm run test:prod:ci;
 
 testE2Es:
 	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
@@ -22,7 +22,3 @@ liveE2Es:
 
 buildStorybook:
 	npm run build:storybook;
-
-buildCi:
-	export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live;
-  
