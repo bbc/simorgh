@@ -1,46 +1,17 @@
-import {
-  hasFrontPage,
-  hasArticlePage,
-  hasLiveRadioPage,
-  hasErrorPage,
-} from '.';
+import serviceHasPageType from '.';
 
 describe('hasFrontPage', () => {
   it('should return true when a service has a front page', () => {
-    expect(hasFrontPage('afaanoromoo')).toBe(true);
-    expect(hasFrontPage('afrique')).toBe(true);
+    expect(serviceHasPageType('frontPage', 'afaanoromoo')).toBe(true);
+    expect(
+      expect(serviceHasPageType('frontPage')('afaanoromoo')).toBe(true),
+    ).toBe(true);
   });
 
   it('should return false when a service does not have a front page', () => {
-    expect(hasFrontPage('dummyService')).toBe(false);
-  });
-});
-
-describe('hasArticlePage', () => {
-  it('should return true when a service has an article page', () => {
-    expect(hasArticlePage('afaanoromoo')).toBe(true);
-    expect(hasArticlePage('afrique')).toBe(true);
-  });
-
-  it('should return false when a service does not have an article page', () => {
-    expect(hasArticlePage('dummyService')).toBe(false);
-  });
-});
-
-describe('hasLiveRadioPage', () => {
-  it('should return true when a service has a live radio page', () => {
-    expect(hasLiveRadioPage('afaanoromoo')).toBe(true);
-  });
-  it('should return false when a service does not have a live radio page', () => {
-    expect(hasLiveRadioPage('afrique')).toBe(false);
-  });
-});
-
-describe('hasErrorPage', () => {
-  it('should return true when a service has an error page', () => {
-    expect(hasErrorPage('afaanoromoo')).toBe(true);
-  });
-  it('should return false when a service does not have an error page', () => {
-    expect(hasErrorPage('dummyService')).toBe(false);
+    expect(serviceHasPageType('frontPage', 'dummyService')).toBe(false);
+    expect(serviceHasPageType('frontPage')('dummyService')).toBe(false);
+    expect(serviceHasPageType('dummyPage', 'dummyService')).toBe(false);
+    expect(serviceHasPageType('dummyPage')('dummyService')).toBe(false);
   });
 });
