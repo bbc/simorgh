@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { string, node } from 'prop-types';
+import { string, func } from 'prop-types';
 import Image from '@bbc/psammead-image';
 
 const StyledPlaceholder = styled.div`
@@ -12,22 +12,15 @@ const StyledPlaceholder = styled.div`
   height: 100%;
 `;
 
-const MediaPlayerPlaceholder = ({ src, children }) => {
-  const [mediaPlayerActive, setMediaPlayerActive] = useState(false);
-  const handlePlaceholderClick = () => setMediaPlayerActive(true);
-
-  return mediaPlayerActive ? (
-    <React.Fragment>{children}</React.Fragment>
-  ) : (
-    <StyledPlaceholder onClick={handlePlaceholderClick}>
-      <Image alt="Image Alt" src={src} />
-    </StyledPlaceholder>
-  );
-};
+const MediaPlayerPlaceholder = ({ onClick, src }) => (
+  <StyledPlaceholder onClick={onClick}>
+    <Image alt="Image Alt" src={src} />
+  </StyledPlaceholder>
+);
 
 MediaPlayerPlaceholder.propTypes = {
+  onClick: func.isRequired,
   src: string.isRequired,
-  children: node.isRequired,
 };
 
 export default MediaPlayerPlaceholder;
