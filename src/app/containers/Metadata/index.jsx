@@ -60,7 +60,7 @@ const getLink = ({
   pageType,
   linkType = '',
 }) => {
-  // https://github.com/bbc/simorgh/pull/1945 canonical links should use .com. However, AMP links use respect current origin
+  // https://github.com/bbc/simorgh/pull/1945 canonical links should use '.com'. However, AMP links use respect current origin
   const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
   let link;
 
