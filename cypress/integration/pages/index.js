@@ -64,15 +64,6 @@ const runCommonTests = ({ service, pageType }) => {
       });
     });
 
-    it('header links should not 404', () => {
-      cy.get('header a').each(element => {
-        const href = element.attr('href');
-        cy.request(href).then(resp => {
-          expect(resp.status).to.not.equal(404);
-        });
-      });
-    });
-
     describe('Footer Tests', () => {
       describe('footer tests', () => {
         it('should have a visible footer', () => {
