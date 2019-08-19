@@ -1,7 +1,6 @@
-import path from 'ramda/src/path';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
-import { getLiveRadioUrl } from '../../../support/getPageTypeUrl';
+import envConfig from '../../../support/config/envs';
 
 export default ({ service }) =>
   describe('Common tests', () => {
@@ -9,7 +8,7 @@ export default ({ service }) =>
       it('should render a H1, which contains/displays a styled headline', () => {
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
-            const [{ text: headline }] = path(['content', 'blocks'], body);
+            const [{ text: headline }] = body.content.blocks;
             cy.get('h1').should('contain', headline);
           },
         );
@@ -19,7 +18,7 @@ export default ({ service }) =>
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             if (body.metadata.language === 'en-gb') {
-              const { subheadline } = path(['content', 'blocks'], body)[1];
+              const { subheadline } = body.content.blocks[1];
               cy.get('h2').should('contain', subheadline);
             }
           },
@@ -67,7 +66,7 @@ export default ({ service }) =>
           `${appConfig[service].defaultImageAltText}`,
           "Meghan's bouquet laid on tomb of unknown warrior",
           'article',
-          `https://www.bbc.com${getLiveRadioUrl(service)}`,
+          `https://www.bbc.com${config[service].pageTypes.liveRadio.path}`,
         );
       });
 
@@ -115,6 +114,12 @@ export default ({ service }) =>
         cy.get('script[type="application/ld+json"]')
           .should('contain', 'mainEntityOfPage')
           .and('contain', 'headline');
+      });
+    });
+
+    describe('Scripts', () => {
+      it('should only have expected bundle script tags', () => {
+        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
       });
     });
   });
