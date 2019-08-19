@@ -52,14 +52,27 @@ const getDescription = (metadata, promo) =>
   pathOr(null, ['headlines', 'seoHeadline'], promo) ||
   pathOr(null, ['summary'], metadata);
 
-const getLink = (origin, service, id, pageType, linkType = '') => {
-  // according to https://github.com/bbc/simorgh/pull/1945, canonical links should use .com
+const getLink = ({
+  origin,
+  metadata,
+  promo,
+  service,
+  pageType,
+  linkType = '',
+}) => {
+  // https://github.com/bbc/simorgh/pull/1945 canonical links should use .com. However, AMP links use respect current origin
   const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
+  let link;
 
-  let link =
-    pageType === 'article'
-      ? `${linkOrigin}/${service}/articles/${id}`
-      : `${linkOrigin}/${service}`;
+  if (pageType === 'article') {
+    const id = metadata.id.split(':').pop();
+    link = `${linkOrigin}/${service}/articles/${id}`;
+  } else if (pageType === 'frontPage') {
+    link = `${linkOrigin}/${service}`;
+  } else {
+    // different payload formats have the uri in various places
+    link = `${linkOrigin}${promo.uri || metadata.locators.assetUri}`;
+  }
 
   if (linkType === 'amp') {
     link = `${link}.amp`;
@@ -117,10 +130,24 @@ const MetadataContainer = ({ metadata, promo }) => {
   const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
   const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
 
-  const canonicalLink = getLink(origin, service, id, pageType, 'canonical');
+  const canonicalLink = getLink({
+    origin,
+    metadata,
+    promo,
+    service,
+    pageType,
+    linkType: 'canonical',
+  });
   const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
   const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
-  const ampLink = getLink(origin, service, id, pageType, 'amp');
+  const ampLink = getLink({
+    origin,
+    metadata,
+    promo,
+    service,
+    pageType,
+    linkType: 'amp',
+  });
   const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
   const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const appleTouchIcon = getAppleTouchUrl(service);
