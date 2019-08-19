@@ -233,14 +233,19 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running the tests locally, run this single command:
 
 ```
-npm run cypress
+npm run build && npx run-p --race start cypress
 ```
 
 It will spin up a production server on port 7080 and run the Cypress tests against that.
+For running tests using interactive, run:
+
+```
+npm run build && npx run-p --race start cypress:interactive
+```
 
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 
-Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
+Cypress can be run interactively using `npm run build && npx run-p --race start cypress:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
 #### Running e2e in the UK against LIVE
 
@@ -253,6 +258,15 @@ Here is an example command:
 ```
 CYPRESS_APP_ENV=test CYPRESS_UK=true npm run cypress:interactive
 ```
+
+The following command runs both simorgh and cypress:
+
+```
+CYPRESS_APP_ENV=local CYPRESS_UK=true npm run build && npx run-p --race start cypress:interactive
+
+```
+
+CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.
 
 ### Lighthouse Best Practice tests
 
