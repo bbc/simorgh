@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Alsos should render multiple correctly 1`] = `
+<IndexAlsos
+  offScreenText="Related content"
+>
+  <IndexAlsosUl>
+    <IndexAlsosLi
+      mediaIndicator={
+        <MediaIndicator
+          datetime={null}
+          duration={null}
+          indexAlsos={true}
+          service="news"
+          topStory={false}
+          type="video"
+        />
+      }
+      mediaType="VIDEO"
+      script="hausa"
+      service="news"
+      url="/hausa/labarai-48916590"
+    >
+      APC ba ta isa ta kore ni ba – Buba Galadima
+    </IndexAlsosLi>
+    <IndexAlsosLi
+      mediaIndicator={null}
+      script="hausa"
+      service="news"
+      url="/hausa/labarai-42837051"
+    >
+      Yaushe Obasanjo ya fara yi wa shugabannin kasa baki?
+    </IndexAlsosLi>
+  </IndexAlsosUl>
+</IndexAlsos>
+`;
