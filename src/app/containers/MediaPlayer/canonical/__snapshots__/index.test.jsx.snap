@@ -5,69 +5,57 @@ exports[`Media Player: CanonicalMediaPlayer should render a MediaPlayer componen
   embedSrc="http://foo.com"
   placeholderSrc="http://bar.com"
 >
-  <MediaPlayer
+  <StyledIframe
+    allow="autoplay; fullscreen"
+    gesture="media"
+    scrolling="no"
     src="http://foo.com"
   >
-    <StyledIframe
+    <StyledComponent
       allow="autoplay; fullscreen"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "StyledIframe-x885p3-0",
+            "isStatic": true,
+            "lastClassName": "eTtGDx",
+            "rules": Array [
+              "position:absolute;top:0;left:0;width:100%;height:100%;border:0;overflow:hidden;",
+            ],
+          },
+          "displayName": "StyledIframe",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "StyledIframe-x885p3-0",
+          "target": "iframe",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       gesture="media"
       scrolling="no"
       src="http://foo.com"
     >
-      <StyledComponent
+      <iframe
         allow="autoplay; fullscreen"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "StyledIframe-x885p3-1",
-              "isStatic": true,
-              "lastClassName": "edHVAK",
-              "rules": Array [
-                "position:absolute;top:0;left:0;width:100%;height:100%;border:0;overflow:hidden;",
-              ],
-            },
-            "displayName": "StyledIframe",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "StyledIframe-x885p3-1",
-            "target": "iframe",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        gesture="media"
+        className="StyledIframe-x885p3-0 eTtGDx"
         scrolling="no"
         src="http://foo.com"
-      >
-        <iframe
-          allow="autoplay; fullscreen"
-          className="StyledIframe-x885p3-1 edHVAK"
-          scrolling="no"
-          src="http://foo.com"
-        />
-      </StyledComponent>
-    </StyledIframe>
-  </MediaPlayer>
+      />
+    </StyledComponent>
+  </StyledIframe>
 </CanonicalMediaPlayer>
 `;
 
 exports[`Media Player: CanonicalMediaPlayer should render a placeholder image 1`] = `
-<div
-  className="StyledPlaceholder-x885p3-0 eSTIIj"
-  onClick={[Function]}
->
-  <img
-    alt="Image Alt"
-    className="StyledImg-sc-7vx2mr-0 hIxkbt"
-    height={null}
-    sizes={null}
-    src="https://foo.bar/img"
-    srcSet={null}
-    width={null}
-  />
-</div>
+<iframe
+  allow="autoplay; fullscreen"
+  className="StyledIframe-x885p3-0 eTtGDx"
+  scrolling="no"
+  src="https://foo.bar/"
+/>
 `;
