@@ -129,4 +129,9 @@ describe('Story Promo Media Indicator', () => {
     'should not render if item media object is missing',
     <MediaIndicator item={noMediaObject} service="news" />,
   );
+
+  shouldShallowMatchSnapshot(
+    'should render Index Also video indicator correctly',
+    <MediaIndicator type="video" service="news" indexAlsos />,
+  );
 });
