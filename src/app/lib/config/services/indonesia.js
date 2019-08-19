@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 
 const service = {
@@ -29,8 +29,8 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
@@ -115,11 +115,6 @@ const service = {
       audio: 'Audio',
       photogallery: 'Galeri Foto',
       video: 'Video',
-      bbc_indonesian_radio: {
-        title: 'BBC Indonesia Radio',
-        subtitle:
-          'Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.',
-      },
     },
   },
   brandSVG,

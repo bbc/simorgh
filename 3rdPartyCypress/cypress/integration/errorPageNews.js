@@ -6,6 +6,7 @@ describe('Test the mozart 404 page', () => {
   before(() => {
     cy.visit('https://www.bbc.com/news/articles/cxvxrj8tvppo', {
       failOnStatusCode: false,
+      timeout: 10000,
     });
   });
 

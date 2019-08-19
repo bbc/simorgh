@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
 const service = {
@@ -29,8 +29,8 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
@@ -115,10 +115,6 @@ const service = {
       audio: '오디오',
       photogallery: '이미지 갤러리',
       video: '비디오',
-      bbc_korean_radio: {
-        title: 'BBC 코리아 라디오',
-        subtitle: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
-      },
     },
   },
   brandSVG,

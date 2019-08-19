@@ -1,6 +1,6 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
@@ -29,8 +29,8 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
     error: {
       404: {
@@ -115,53 +115,37 @@ const service = {
       audio: 'Sagalee',
       photogallery: 'Kuusaa Fakkii',
       video: 'Viidiyoo',
-      bbc_oromo_radio: {
-        title: 'Dhaggeeffadhaa',
-        subtitle: 'Sagantaawwan keenya',
-      },
-      bbc_afaanoromoo_radio: {
-        title: 'Dhaggeeffadhaa',
-        subtitle: 'Sagantaawwan keenya',
-      },
     },
   },
   brandSVG,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'Itti dhiyaachuu keenya gara geessituu.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',
+        text: 'BBC News maaliif amanuu dandeessa',
       },
       {
-        href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        text: 'Haala itti fayyadamaa',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
-        href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: 'Imaammata mateenyaa',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
+        text: 'Kuus-yaadannoo',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/afaanoromoo/institutional-42228538',
+        text: 'BBC qunnami',
       },
     ],
-    copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu",
+    copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu.",
   },
   fonts: [],
   navigation: [
