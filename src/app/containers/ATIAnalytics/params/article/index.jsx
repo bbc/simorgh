@@ -16,7 +16,9 @@ const ArticleAtiParams = articleData => {
   const { platform, isUK, statsDestination, previousPath, origin } = useContext(
     RequestContext,
   );
-  const { atiAnalyticsAppName, service } = useContext(ServiceContext);
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, service } = useContext(
+    ServiceContext,
+  );
 
   return atiPageViewParams({
     appName: atiAnalyticsAppName,
@@ -27,6 +29,7 @@ const ArticleAtiParams = articleData => {
     ldpThingLabels: getThingAttributes('thingLabel', articleData),
     pageIdentifier: getPageIdentifier(service, articleData),
     pageTitle: getPromoHeadline(articleData),
+    producerId: atiAnalyticsProducerId,
     timePublished: getPublishedDatetime('firstPublished', articleData),
     timeUpdated: getPublishedDatetime('lastPublished', articleData),
     isUK,

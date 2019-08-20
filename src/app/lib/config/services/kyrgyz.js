@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbckyrgyz`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-kyrgyz',
+  atiAnalyticsProducerId: '58',
   brandName: 'BBC News Кыргыз КызMATы',
   product: 'BBC News Кыргыз КызMATы',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',

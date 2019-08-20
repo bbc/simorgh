@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/pages/bbc-azeri/347501767628`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-azeri',
+  atiAnalyticsProducerId: '6',
   brandName: 'BBC News Azərbaycanca',
   product: 'BBC News Azərbaycanca',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png',

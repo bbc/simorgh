@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/pages/BBC-Indonesia/10150118096995434`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-indonesia',
+  atiAnalyticsProducerId: '54',
   brandName: 'BBC News Indonesia',
   product: 'BBC News Indonesia',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',

@@ -12,6 +12,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcnewsamharic`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-amharic',
+  atiAnalyticsProducerId: '4',
   brandName: 'BBC News አማርኛ',
   product: 'BBC News አማርኛ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png',

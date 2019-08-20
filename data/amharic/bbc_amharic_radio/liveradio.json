@@ -45,7 +45,7 @@
   "promo": {
     "name": "ያድምጡ",
     "summary": "ዝግጅቶቻችንን",
-    "uri": "/tigrinya/bbc_tigrinya_radio/liveradio",
+    "uri": "/amharic/bbc_amharic_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
     "type": "link"

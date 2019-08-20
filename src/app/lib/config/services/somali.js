@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcsomali`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-somali',
+  atiAnalyticsProducerId: '83',
   brandName: 'BBC News Somali',
   product: 'BBC News Somali',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',

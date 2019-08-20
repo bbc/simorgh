@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcnewsafaanoromoo`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-afaanoromoo',
+  atiAnalyticsProducerId: '2',
   brandName: 'BBC News Afaan Oromoo',
   product: 'BBC News Afaan Oromoo',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png',
