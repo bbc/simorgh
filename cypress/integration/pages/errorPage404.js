@@ -33,19 +33,28 @@ const runTests = ({ service, serviceVariantConfig }) =>
 
       it('should have the correct lang & dir attributes', () => {
         cy.hasHtmlLangDirAttributes({
-          lang: `${getAppConfig({service, serviceVariantConfig}).lang}`,
-          dir: `${getAppConfig({service, serviceVariantConfig}).dir}`,
+          lang: `${getAppConfig({ service, serviceVariantConfig }).lang}`,
+          dir: `${getAppConfig({ service, serviceVariantConfig }).dir}`,
         });
       });
 
-      it(`should display a ${getAppConfig({service, serviceVariantConfig}).translations.error[404].statusCode} error message on screen`, () => {
+      it(`should display a ${
+        getAppConfig({ service, serviceVariantConfig }).translations.error[404]
+          .statusCode
+      } error message on screen`, () => {
         cy.get('h1 span').should(
           'contain',
-          `${getAppConfig({service, serviceVariantConfig}).translations.error[404].statusCode}`,
+          `${
+            getAppConfig({ service, serviceVariantConfig }).translations
+              .error[404].statusCode
+          }`,
         );
         cy.get('h1').should(
           'contain',
-          `${getAppConfig({service, serviceVariantConfig}).translations.error[404].title}`,
+          `${
+            getAppConfig({ service, serviceVariantConfig }).translations
+              .error[404].title
+          }`,
         );
       });
 
@@ -56,7 +65,10 @@ const runTests = ({ service, serviceVariantConfig }) =>
             cy.get('a').should(
               'have.attr',
               'href',
-              `${getAppConfig({service, serviceVariantConfig}).translations.error[404].callToActionLinkUrl}`,
+              `${
+                getAppConfig({ service, serviceVariantConfig }).translations
+                  .error[404].callToActionLinkUrl
+              }`,
             );
           });
       });
@@ -64,7 +76,10 @@ const runTests = ({ service, serviceVariantConfig }) =>
       it('should have a relevant error title in the head', () => {
         cy.title().should(
           'eq',
-          `${getAppConfig({service, serviceVariantConfig}).translations.error[404].title} - ${getAppConfig({service, serviceVariantConfig}).brandName}`,
+          `${
+            getAppConfig({ service, serviceVariantConfig }).translations
+              .error[404].title
+          } - ${getAppConfig({ service, serviceVariantConfig }).brandName}`,
         );
       });
     });

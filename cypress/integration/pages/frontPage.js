@@ -11,7 +11,7 @@ const runTests = ({ service, serviceVariantConfig }) =>
       });
 
       describe('Header', () => {
-        if (getAppConfig({service, serviceVariantConfig}).navigation) {
+        if (getAppConfig({ service, serviceVariantConfig }).navigation) {
           it('should have one visible navigation', () => {
             cy.get('nav')
               .should('have.lengthOf', 1)
@@ -77,7 +77,11 @@ const runCanonicalTests = ({ service, serviceVariantConfig }) =>
 
     describe('Scripts', () => {
       it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service, serviceVariantConfig);
+        cy.hasExpectedJsBundles(
+          envConfig.assetOrigin,
+          service,
+          serviceVariantConfig,
+        );
       });
 
       it('should have 1 bundle for its service', () => {

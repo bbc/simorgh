@@ -1,10 +1,10 @@
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
-import getAppConfig from '../../support/config/getAppConfig'
+import getAppConfig from '../../support/config/getAppConfig';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
 const runCommonTests = ({ service, serviceVariantConfig, pageType }) => {
-  const appConfiguration = getAppConfig({service, serviceVariantConfig})
+  const appConfiguration = getAppConfig({ service, serviceVariantConfig });
   describe('Always tests', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {

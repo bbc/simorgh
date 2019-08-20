@@ -7,15 +7,15 @@ const serviceHasPageType = (service, pageType) =>
 const smokeTest = (service, pageType) =>
   Cypress.env('SMOKE') ? config[service].pageTypes[pageType].smoke : true;
 
-const serviceConfigOverride = service => config[service].serviceOverride || null
+const serviceConfigOverride = service =>
+  config[service].serviceOverride || null;
 
 const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
-  
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .filter(service => smokeTest(service, pageType))
     .forEach(service => {
-      const serviceVariantConfig = serviceConfigOverride(service)
+      const serviceVariantConfig = serviceConfigOverride(service);
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
           cy.visit(config[service].pageTypes[pageType].path, {
@@ -24,8 +24,9 @@ const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
         });
 
         runCommonTests({ service, serviceVariantConfig, pageType });
-        if (runTests) runTests({ service, serviceVariantConfig,  pageType });
-        if (runCanonicalTests) runCanonicalTests({ service, serviceVariantConfig, pageType });
+        if (runTests) runTests({ service, serviceVariantConfig, pageType });
+        if (runCanonicalTests)
+          runCanonicalTests({ service, serviceVariantConfig, pageType });
       });
 
       describe(`${pageType} - ${service} - Amp`, () => {
@@ -36,8 +37,9 @@ const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
         });
 
         runCommonTests({ service, serviceVariantConfig, pageType });
-        if (runTests) runTests({ service, serviceVariantConfig,  pageType });
-        if (runAmpTests) runAmpTests({ service, serviceVariantConfig,  pageType });
+        if (runTests) runTests({ service, serviceVariantConfig, pageType });
+        if (runAmpTests)
+          runAmpTests({ service, serviceVariantConfig, pageType });
       });
     });
 };

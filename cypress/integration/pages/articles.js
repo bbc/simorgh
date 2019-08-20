@@ -20,7 +20,7 @@ const runTests = ({ service, serviceVariantConfig }) =>
           ({ body }) => {
             cy.hasHtmlLangDirAttributes({
               lang: body.metadata.passport.language,
-              dir: getAppConfig({service, serviceVariantConfig}).dir,
+              dir: getAppConfig({ service, serviceVariantConfig }).dir,
             });
           },
         );
@@ -30,17 +30,21 @@ const runTests = ({ service, serviceVariantConfig }) =>
         cy.checkFacebookMetadata(
           '100004154058350',
           '1609039196070050',
-          `${getAppConfig({service, serviceVariantConfig}).articleAuthor}`,
+          `${getAppConfig({ service, serviceVariantConfig }).articleAuthor}`,
         );
       });
 
       it('should have the correct open graph metadata', () => {
         cy.checkOpenGraphMetadata(
           'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          `${getAppConfig({service, serviceVariantConfig}).defaultImage}`,
-          `${getAppConfig({service, serviceVariantConfig}).defaultImageAltText}`,
-          `${getAppConfig({service, serviceVariantConfig}).locale}`,
-          `${getAppConfig({service, serviceVariantConfig}).defaultImageAltText}`,
+          `${getAppConfig({ service, serviceVariantConfig }).defaultImage}`,
+          `${
+            getAppConfig({ service, serviceVariantConfig }).defaultImageAltText
+          }`,
+          `${getAppConfig({ service, serviceVariantConfig }).locale}`,
+          `${
+            getAppConfig({ service, serviceVariantConfig }).defaultImageAltText
+          }`,
           "Meghan's bouquet laid on tomb of unknown warrior",
           'article',
           `https://www.bbc.com${config[service].pageTypes.articles.path}`,
@@ -50,11 +54,13 @@ const runTests = ({ service, serviceVariantConfig }) =>
       it('should have the correct twitter metadata', () => {
         cy.checkTwitterMetadata(
           'summary_large_image',
-          `${getAppConfig({service, serviceVariantConfig}).twitterCreator}`,
+          `${getAppConfig({ service, serviceVariantConfig }).twitterCreator}`,
           'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          `${getAppConfig({service, serviceVariantConfig}).defaultImageAltText}`,
-          `${getAppConfig({service, serviceVariantConfig}).defaultImage}`,
-          `${getAppConfig({service, serviceVariantConfig}).twitterSite}`,
+          `${
+            getAppConfig({ service, serviceVariantConfig }).defaultImageAltText
+          }`,
+          `${getAppConfig({ service, serviceVariantConfig }).defaultImage}`,
+          `${getAppConfig({ service, serviceVariantConfig }).twitterSite}`,
           "Meghan's bouquet laid on tomb of unknown warrior",
         );
       });
@@ -216,7 +222,9 @@ const runTests = ({ service, serviceVariantConfig }) =>
             const { seoHeadline } = body.promo.headlines;
             cy.title().should(
               'eq',
-              `${seoHeadline} - ${getAppConfig({service, serviceVariantConfig}).brandName}`,
+              `${seoHeadline} - ${
+                getAppConfig({ service, serviceVariantConfig }).brandName
+              }`,
             );
           },
         );
@@ -264,7 +272,11 @@ const runCanonicalTests = ({ service, serviceVariantConfig }) =>
 
     describe('Scripts', () => {
       it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service, serviceVariantConfig);
+        cy.hasExpectedJsBundles(
+          envConfig.assetOrigin,
+          service,
+          serviceVariantConfig,
+        );
       });
 
       it('should have 1 bundle for its service', () => {

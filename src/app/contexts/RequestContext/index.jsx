@@ -4,7 +4,7 @@ import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
-import getMetaUrls from './getMetaUrls'
+import getMetaUrls from './getMetaUrls';
 
 export const RequestContext = React.createContext('default');
 
@@ -32,7 +32,13 @@ export const RequestContextProvider = ({
     id,
   });
 
-  const metaDataUrls = getMetaUrls(origin, service, serviceVariant, pageType, id);
+  const metaDataUrls = getMetaUrls(
+    origin,
+    service,
+    serviceVariant,
+    pageType,
+    id,
+  );
 
   const value = {
     env,
@@ -44,7 +50,7 @@ export const RequestContextProvider = ({
     statsDestination,
     statsPageIdentifier,
     previousPath,
-    ...metaDataUrls
+    ...metaDataUrls,
   };
 
   return (
@@ -59,6 +65,7 @@ RequestContextProvider.propTypes = {
   isAmp: bool.isRequired,
   pageType: oneOf(['article', 'frontPage', 'media']).isRequired,
   service: string.isRequired,
+  serviceVariant: string,
   previousPath: string,
 };
 
@@ -66,4 +73,5 @@ RequestContextProvider.defaultProps = {
   bbcOrigin: null,
   id: null,
   previousPath: null,
+  serviceVariant: null,
 };

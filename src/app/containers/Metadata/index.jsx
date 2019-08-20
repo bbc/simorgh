@@ -46,22 +46,6 @@ const getDescription = (metadata, promo) =>
   pathOr(null, ['headlines', 'seoHeadline'], promo) ||
   pathOr(null, ['summary'], metadata);
 
-const getLink = (origin, service, id, pageType, linkType = '') => {
-  // according to https://github.com/bbc/simorgh/pull/1945, canonical links should use .com
-  const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
-
-  let link =
-    pageType === 'article'
-      ? `${linkOrigin}/${service}/articles/${id}`
-      : `${linkOrigin}/${service}`;
-
-  if (linkType === 'amp') {
-    link = `${link}.amp`;
-  }
-
-  return link;
-};
-
 const getTimeTags = (timeTag, pageType) => {
   if (pageType !== 'article') {
     return null;
@@ -84,7 +68,16 @@ const getAppleTouchUrl = service => {
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
-  const { pageType, platform, canonicalLink, ampLink, canonicalUkLink, ampUkLink, canonicalNonUkLink, ampNonUkLink } = useContext(RequestContext);
+  const {
+    pageType,
+    platform,
+    canonicalLink,
+    ampLink,
+    canonicalUkLink,
+    ampUkLink,
+    canonicalNonUkLink,
+    ampNonUkLink,
+  } = useContext(RequestContext);
   const {
     service,
     brandName,
@@ -106,11 +99,9 @@ const MetadataContainer = ({ metadata, promo }) => {
     return null;
   }
 
-  const id = aresArticleId.split(':').pop();
-
   const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
   const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
-  
+
   const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
 

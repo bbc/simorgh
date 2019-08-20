@@ -25,7 +25,7 @@ jest.mock('./getStatsDestination');
 jest.mock('./getStatsPageIdentifier');
 jest.mock('./getOriginContext');
 jest.mock('./getEnv');
-jest.mock('./getMetaUrls')
+jest.mock('./getMetaUrls');
 
 getStatsDestination.default.mockReturnValue('getStatsDestination');
 getStatsPageIdentifier.default.mockReturnValue('getStatsPageIdentifier');
@@ -37,8 +37,8 @@ getMetaUrls.default.mockReturnValue({
   canonicalUkLink: 'http://localhost.bbc.co.uk:7080/service',
   ampUkLink: 'http://localhost.bbc.co.uk:7080/service.amp',
   canonicalNonUkLink: 'http://localhost.bbc.com:7080/service',
-  ampNonUkLink: 'http://localhost.bbc.com:7080/service.amp' 
-})
+  ampNonUkLink: 'http://localhost.bbc.com:7080/service.amp',
+});
 
 const input = {
   bbcOrigin: 'bbcOrigin',
@@ -65,7 +65,7 @@ const expectedOutput = {
   canonicalUkLink: 'http://localhost.bbc.co.uk:7080/service',
   ampUkLink: 'http://localhost.bbc.co.uk:7080/service.amp',
   canonicalNonUkLink: 'http://localhost.bbc.com:7080/service',
-  ampNonUkLink: 'http://localhost.bbc.com:7080/service.amp'
+  ampNonUkLink: 'http://localhost.bbc.com:7080/service.amp',
 };
 
 describe('RequestContext', () => {
@@ -96,7 +96,13 @@ describe('RequestContext', () => {
 
     expect(getEnv.default).toHaveBeenCalledWith('origin');
 
-    expect(getMetaUrls.default).toHaveBeenCalledWith("origin", 'service', null, 'frontPage', 'id')
+    expect(getMetaUrls.default).toHaveBeenCalledWith(
+      'origin',
+      'service',
+      null,
+      'frontPage',
+      'id',
+    );
 
     expect(React.useContext).toHaveReturnedWith(expectedOutput);
   });
