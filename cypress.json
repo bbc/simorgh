@@ -6,5 +6,8 @@
     "SMOKE": true,
     "UK": false
   },
-  "ignoreTestFiles": "**/integration/pages/index.js"
+  "ignoreTestFiles": "**/integration/pages/index.js",
+  "defaultCommandTimeout": 10000,
+  "pageLoadTimeout": 100000,
+  "responseTimeout": 50000
 }
