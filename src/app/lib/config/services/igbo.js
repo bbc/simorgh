@@ -10,6 +10,7 @@ const igbo = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',
+  atiAnalyticsProducerId: '53',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
   isoLang: 'ig',
