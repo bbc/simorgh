@@ -65,12 +65,6 @@ const consentBannerUtilities = ({
     setShowCookieBanner(false);
     setDismissedCookieBanner();
     setApprovedPolicy(logger);
-
-    // Call mPulse initialisation now that cookie banner is accepted
-    // This is temp code and shouldnt be moved outside of simorgh.
-    // If this logic is being moved to psammead, please move
-    // this code to keep it in simorgh.
-    if (window.SIMORGH_BOOMR) window.SIMORGH_BOOMR();
   };
 
   const cookieOnReject = () => {

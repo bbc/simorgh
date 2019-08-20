@@ -5,7 +5,6 @@ import { UserContext } from '../../contexts/UserContext';
 
 const Canonical = () => {
   const { updateCookiePolicy } = useContext(UserContext);
-
   const [showPrivacy, setShowPrivacyBanner] = useState(false);
   const [showCookie, setShowCookieBanner] = useState(false);
 
