@@ -31,7 +31,7 @@ const pidgin = {
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
   translations: {
-    seeAll: 'See All',
+    seeAll: 'See all',
     home: 'Home',
     currentPage: 'Page where you dey',
     skipLinkText: 'Waka go wetin de inside',
