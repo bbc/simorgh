@@ -1,5 +1,4 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
-import * as moment from 'moment-timezone';
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';

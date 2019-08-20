@@ -5,7 +5,6 @@ import {
   F_NASSIM_URDU_REGULAR,
   F_NASSIM_URDU_BOLD,
 } from '@bbc/psammead-styles/fonts';
-import 'moment/locale/ur';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 
 const service = {
@@ -14,6 +13,7 @@ const service = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'اپ ڈیٹ کی گئی',
   atiAnalyticsAppName: 'news-urdu',
+  atiAnalyticsProducerId: '95',
   brandName: 'BBC News اردو',
   serviceLocalizedName: 'اردو',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
