@@ -5,7 +5,6 @@ import {
   F_NASSIM_ARABIC_REGULAR,
   F_NASSIM_ARABIC_BOLD,
 } from '@bbc/psammead-styles/fonts';
-import 'moment/locale/ar';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
@@ -14,6 +13,7 @@ const service = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'جدّد في',
   atiAnalyticsAppName: 'news-arabic',
+  atiAnalyticsProducerId: '5',
   brandName: 'BBC News عربي',
   serviceLocalizedName: 'عربي',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',

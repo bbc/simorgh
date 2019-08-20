@@ -37,6 +37,7 @@ describe('ArticleAtiParams', () => {
   const newsServiceContextStub = {
     service: 'news',
     atiAnalyticsAppName: 'news',
+    atiAnalyticsProducerId: 0,
   };
   const requestContextStub = {
     bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -69,6 +70,7 @@ describe('ArticleAtiParams', () => {
         ldpThingLabels: 'label',
         pageIdentifier: 'news.articles.c0000000000o.page',
         pageTitle: 'A headline',
+        producerId: 0,
         platform: 'canonical',
         service: 'news',
         statsDestination: 'NEWS_PS_TEST',

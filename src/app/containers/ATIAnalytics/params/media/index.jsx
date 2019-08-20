@@ -7,7 +7,9 @@ import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const Params = pageData => {
   const { platform, statsDestination } = useContext(RequestContext);
-  const { atiAnalyticsAppName, service } = useContext(ServiceContext);
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, service } = useContext(
+    ServiceContext,
+  );
 
   const { metadata } = pageData;
 
@@ -18,6 +20,7 @@ const Params = pageData => {
     language: metadata.language,
     pageIdentifier: path(['analyticsLabels', 'pageIdentifier'], metadata),
     pageTitle: path(['analyticsLabels', 'pageTitle'], metadata),
+    producerId: atiAnalyticsProducerId,
     statsDestination,
     platform,
     service,
