@@ -8,6 +8,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
   pageType="article"
   previousPath={null}
   service="news"
+  serviceVariant={null}
 >
   <ArticleMain
     articleData={
@@ -167,6 +168,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
   pageType="article"
   previousPath={null}
   service="persian"
+  serviceVariant={null}
 >
   <ArticleMain
     articleData={
