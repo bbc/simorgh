@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled from 'styled-components';
+import { GEL_GROUP_CD_MIN_WIDTH } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
@@ -15,6 +16,14 @@ const TopMargin = styled.div`
   margin-top: ${GEL_SPACING};
 `;
 
+// TODO this is a bodge until desktop width top stories get merged.
+//  At that point, delete TopMarginSixHundred.
+const TopMarginSixHundred = styled.div`
+  @media (min-width: ${GEL_GROUP_CD_MIN_WIDTH}rem) {
+    margin-top: ${GEL_SPACING};
+  }
+`;
+
 // eslint-disable-next-line react/prop-types
 const MarginWrapper = ({ addMargin, as, children }) => {
   // Conditionally add a `margin-top` to the `children`, mixing in
@@ -23,10 +32,18 @@ const MarginWrapper = ({ addMargin, as, children }) => {
     return <TopMargin as={as}>{children}</TopMargin>;
   }
   if (as) {
-    const AsComponent = as;
-    return <AsComponent>{children}</AsComponent>;
+    // TODO this is a bodge until desktop width top stories get merged.
+    //  At that point, delete the below return statement and uncomment the following.
+
+    // const AsComponent = as;
+    // return <AsComponent>{children}</AsComponent>;
+    return <TopMarginSixHundred as={as}>{children}</TopMarginSixHundred>;
   }
-  return children;
+  // TODO this is a bodge until desktop width top stories get merged.
+  //  At that point, delete the below return statement and uncomment the following.
+
+  // return children;
+  return <TopMarginSixHundred>{children}</TopMarginSixHundred>;
 };
 
 const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
@@ -80,7 +97,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         visuallyHidden={isFirstSection}
         service={service}
         dir={dir}
-        linkText={isLink && seeAll}
+        linkText={isLink ? seeAll : null}
         href={href}
       >
         {group.strapline.name}
