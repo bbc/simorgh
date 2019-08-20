@@ -10,22 +10,20 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import aresBlockPropTypes from '../../models/propTypes/mediaPage/content/aresBlock';
 
 const renderBlock = ({ block, script, service, key }) => {
-  if (block.type === 'heading') {
-    return (
-      <Headline script={script} service={service} key={key}>
-        {block.text}
-      </Headline>
-    );
-  }
-  if (block.type === 'paragraph') {
-    return (
-      <Paragraph script={script} service={service} key={key}>
-        {block.text}
-      </Paragraph>
-    );
+  const Component = {
+    heading: Headline,
+    paragraph: Paragraph,
+  }[block.type];
+
+  if (!Component) {
+    return null;
   }
 
-  return null;
+  return (
+    <Component script={script} service={service} key={key}>
+      {block.text}
+    </Component>
+  );
 };
 
 renderBlock.propTypes = {
