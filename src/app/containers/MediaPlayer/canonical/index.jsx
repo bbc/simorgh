@@ -1,16 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
-import Image from '@bbc/psammead-image';
-
-const StyledPlaceholder = styled.div`
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`;
 
 const StyledIframe = styled.iframe`
   position: absolute;
@@ -22,35 +12,17 @@ const StyledIframe = styled.iframe`
   overflow: hidden;
 `;
 
-const MediaPlayer = ({ src }) => (
+const CanonicalMediaPlayer = ({ embedSrc }) => (
   <StyledIframe
-    src={src}
+    src={embedSrc}
     scrolling="no"
     allow="autoplay; fullscreen"
     gesture="media"
   />
 );
 
-const CanonicalMediaPlayer = ({ embedSrc, placeholderSrc }) => {
-  const [showMediaPlayer, setShowMediaPlayer] = useState(false);
-  const handlePlaceholderClick = () => setShowMediaPlayer(true);
-
-  return showMediaPlayer ? (
-    <MediaPlayer src={embedSrc} />
-  ) : (
-    <StyledPlaceholder onClick={handlePlaceholderClick}>
-      <Image alt="Image Alt" src={placeholderSrc} />
-    </StyledPlaceholder>
-  );
-};
-
-MediaPlayer.propTypes = {
-  src: string.isRequired,
-};
-
 CanonicalMediaPlayer.propTypes = {
   embedSrc: string.isRequired,
-  placeholderSrc: string.isRequired,
 };
 
 export default CanonicalMediaPlayer;
