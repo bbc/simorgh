@@ -33,12 +33,12 @@ const getPrivacyBannerAccept = (service, serviceVariantConfig) =>
     getAppConfig({ service, serviceVariantConfig }).translations.consentBanner
       .privacy.accept,
   );
-const getCookieBannerAccept = service =>
+const getCookieBannerAccept = (service, serviceVariantConfig) =>
   getCookieBannerContainer(service, serviceVariantConfig).contains(
     getAppConfig({ service, serviceVariantConfig }).translations.consentBanner
       .cookie.accept,
   );
-const getCookieBannerReject = service =>
+const getCookieBannerReject = (service, serviceVariantConfig) =>
   getCookieBannerContainer(service, serviceVariantConfig).contains(
     getAppConfig({ service, serviceVariantConfig }).translations.consentBanner
       .cookie.reject,

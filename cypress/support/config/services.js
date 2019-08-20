@@ -1,3 +1,5 @@
+/* eslint-disable no-dupe-keys */
+
 export default {
   afaanoromoo: {
     font: undefined,
