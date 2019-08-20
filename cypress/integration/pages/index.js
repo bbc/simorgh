@@ -1,9 +1,10 @@
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
-import appConfig from '../../../src/app/lib/config/services';
+import getAppConfig from '../../support/config/getAppConfig'
 import describeForEuOnly from '../../support/describeForEuOnly';
 
-const runCommonTests = ({ service, pageType }) => {
+const runCommonTests = ({ service, serviceVariantConfig, pageType }) => {
+  const appConfiguration = getAppConfig({service, serviceVariantConfig})
   describe('Always tests', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
@@ -25,7 +26,7 @@ const runCommonTests = ({ service, pageType }) => {
       if (pageType !== 'errorPage404') {
         it('should include the canonical URL', () => {
           cy.checkCanonicalURL(
-            `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
+            `${envConfig.baseUrl}${config[service].pageTypes[pageType].path}`,
           );
         });
 
@@ -37,7 +38,7 @@ const runCommonTests = ({ service, pageType }) => {
 
     describeForEuOnly('Consent Banners', () => {
       it('have correct translations', () => {
-        cy.hasConsentBannerTranslations(service);
+        cy.hasConsentBannerTranslations(service, serviceVariantConfig);
       });
     });
 
@@ -45,9 +46,9 @@ const runCommonTests = ({ service, pageType }) => {
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
           'contain',
-          appConfig[service].serviceLocalizedName !== undefined
-            ? `${appConfig[service].product}, ${appConfig[service].serviceLocalizedName}`
-            : appConfig[service].product,
+          appConfiguration.serviceLocalizedName !== undefined
+            ? `${appConfiguration.product}, ${appConfiguration.serviceLocalizedName}`
+            : appConfiguration.product,
         );
       });
 
@@ -82,15 +83,15 @@ const runCommonTests = ({ service, pageType }) => {
           .eq(0)
           .should(
             'contain',
-            appConfig[service].serviceLocalizedName !== undefined
-              ? `${appConfig[service].product}, ${appConfig[service].serviceLocalizedName}`
-              : appConfig[service].product,
+            appConfiguration.serviceLocalizedName !== undefined
+              ? `${appConfiguration.product}, ${appConfiguration.serviceLocalizedName}`
+              : appConfiguration.product,
           );
       });
 
       it('should have working links', () => {
         cy.get('footer ul').within(() =>
-          appConfig[service].footer.links.forEach(({ href }, key) =>
+          appConfiguration.footer.links.forEach(({ href }, key) =>
             cy.checkLinks(key, href),
           ),
         );
@@ -99,7 +100,7 @@ const runCommonTests = ({ service, pageType }) => {
       it('should contain copyright text', () => {
         cy.get('footer p').should(
           'contain',
-          appConfig[service].footer.copyrightText,
+          appConfiguration.footer.copyrightText,
         );
       });
 
@@ -111,7 +112,7 @@ const runCommonTests = ({ service, pageType }) => {
         cy.get('footer p')
           .children('a')
           .should('have.attr', 'href')
-          .and('contain', appConfig[service].footer.externalLink.href);
+          .and('contain', appConfiguration.footer.externalLink.href);
       });
     });
   });

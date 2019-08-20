@@ -2,7 +2,7 @@ import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
+import getAppConfig from '../../support/config/getAppConfig';
 import { getBlockByType, getBlockData } from '../../support/bodyTestHelper';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -12,7 +12,7 @@ const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
-const runTests = ({ service }) =>
+const runTests = ({ service, serviceVariantConfig }) =>
   describe(`Tests`, () => {
     describe(`Metadata`, () => {
       it('should have lang and dir attributes', () => {
@@ -20,7 +20,7 @@ const runTests = ({ service }) =>
           ({ body }) => {
             cy.hasHtmlLangDirAttributes({
               lang: body.metadata.passport.language,
-              dir: appConfig[service].dir,
+              dir: getAppConfig({service, serviceVariantConfig}).dir,
             });
           },
         );
@@ -30,17 +30,17 @@ const runTests = ({ service }) =>
         cy.checkFacebookMetadata(
           '100004154058350',
           '1609039196070050',
-          `${appConfig[service].articleAuthor}`,
+          `${getAppConfig({service, serviceVariantConfig}).articleAuthor}`,
         );
       });
 
       it('should have the correct open graph metadata', () => {
         cy.checkOpenGraphMetadata(
           'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          `${appConfig[service].defaultImage}`,
-          `${appConfig[service].defaultImageAltText}`,
-          `${appConfig[service].locale}`,
-          `${appConfig[service].defaultImageAltText}`,
+          `${getAppConfig({service, serviceVariantConfig}).defaultImage}`,
+          `${getAppConfig({service, serviceVariantConfig}).defaultImageAltText}`,
+          `${getAppConfig({service, serviceVariantConfig}).locale}`,
+          `${getAppConfig({service, serviceVariantConfig}).defaultImageAltText}`,
           "Meghan's bouquet laid on tomb of unknown warrior",
           'article',
           `https://www.bbc.com${config[service].pageTypes.articles.path}`,
@@ -50,11 +50,11 @@ const runTests = ({ service }) =>
       it('should have the correct twitter metadata', () => {
         cy.checkTwitterMetadata(
           'summary_large_image',
-          `${appConfig[service].twitterCreator}`,
+          `${getAppConfig({service, serviceVariantConfig}).twitterCreator}`,
           'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          `${appConfig[service].defaultImageAltText}`,
-          `${appConfig[service].defaultImage}`,
-          `${appConfig[service].twitterSite}`,
+          `${getAppConfig({service, serviceVariantConfig}).defaultImageAltText}`,
+          `${getAppConfig({service, serviceVariantConfig}).defaultImage}`,
+          `${getAppConfig({service, serviceVariantConfig}).twitterSite}`,
           "Meghan's bouquet laid on tomb of unknown warrior",
         );
       });
@@ -216,7 +216,7 @@ const runTests = ({ service }) =>
             const { seoHeadline } = body.promo.headlines;
             cy.title().should(
               'eq',
-              `${seoHeadline} - ${appConfig[service].brandName}`,
+              `${seoHeadline} - ${getAppConfig({service, serviceVariantConfig}).brandName}`,
             );
           },
         );
@@ -236,7 +236,7 @@ const runTests = ({ service }) =>
 
 // -------------------------------------------
 
-const runCanonicalTests = ({ service }) =>
+const runCanonicalTests = ({ service, serviceVariantConfig }) =>
   describe(`Canonical Tests`, () => {
     it('should not have an AMP attribute on the main article', () => {
       cy.get('html').should('not.have.attr', 'amp');
@@ -264,11 +264,11 @@ const runCanonicalTests = ({ service }) =>
 
     describe('Scripts', () => {
       it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
+        cy.hasExpectedJsBundles(envConfig.assetOrigin, service, serviceVariantConfig);
       });
 
       it('should have 1 bundle for its service', () => {
-        cy.hasOneServiceBundle(service);
+        cy.hasOneServiceBundle(service, serviceVariantConfig);
       });
     });
 

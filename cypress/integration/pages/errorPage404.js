@@ -1,8 +1,8 @@
 import iterator from '../../support/iterator';
 import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
+import getAppConfig from '../../support/config/getAppConfig';
 
-const runTests = ({ service }) =>
+const runTests = ({ service, serviceVariantConfig }) =>
   describe(`Tests`, () => {
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
@@ -33,19 +33,19 @@ const runTests = ({ service }) =>
 
       it('should have the correct lang & dir attributes', () => {
         cy.hasHtmlLangDirAttributes({
-          lang: `${appConfig[service].lang}`,
-          dir: `${appConfig[service].dir}`,
+          lang: `${getAppConfig({service, serviceVariantConfig}).lang}`,
+          dir: `${getAppConfig({service, serviceVariantConfig}).dir}`,
         });
       });
 
-      it(`should display a ${appConfig[service].translations.error[404].statusCode} error message on screen`, () => {
+      it(`should display a ${getAppConfig({service, serviceVariantConfig}).translations.error[404].statusCode} error message on screen`, () => {
         cy.get('h1 span').should(
           'contain',
-          `${appConfig[service].translations.error[404].statusCode}`,
+          `${getAppConfig({service, serviceVariantConfig}).translations.error[404].statusCode}`,
         );
         cy.get('h1').should(
           'contain',
-          `${appConfig[service].translations.error[404].title}`,
+          `${getAppConfig({service, serviceVariantConfig}).translations.error[404].title}`,
         );
       });
 
@@ -56,7 +56,7 @@ const runTests = ({ service }) =>
             cy.get('a').should(
               'have.attr',
               'href',
-              `${appConfig[service].translations.error[404].callToActionLinkUrl}`,
+              `${getAppConfig({service, serviceVariantConfig}).translations.error[404].callToActionLinkUrl}`,
             );
           });
       });
@@ -64,7 +64,7 @@ const runTests = ({ service }) =>
       it('should have a relevant error title in the head', () => {
         cy.title().should(
           'eq',
-          `${appConfig[service].translations.error[404].title} - ${appConfig[service].brandName}`,
+          `${getAppConfig({service, serviceVariantConfig}).translations.error[404].title} - ${getAppConfig({service, serviceVariantConfig}).brandName}`,
         );
       });
     });

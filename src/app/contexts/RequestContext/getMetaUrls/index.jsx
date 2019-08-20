@@ -37,6 +37,9 @@ const getMetaUrls = (origin, service, serviceVariant, pageType, id) => {
 
     if (serviceVariant) {
         canonicalLink = getCanonicalUrlWithVariant(origin, service, serviceVariant, pageType, id);
+        canonicalUkLink = getUkCanonicalUrl(canonicalLink),
+        canonicalNonUkLink = getNonUkCanonicalUrl(canonicalLink);
+        
         return {
             canonicalLink: canonicalLink,
             ampLink: getAmpUrl(canonicalLink),

@@ -1,9 +1,9 @@
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
+import getAppConfig from '../../support/config/getAppConfig';
 
-const runTests = ({ service }) =>
+const runTests = ({ service, serviceVariantConfig }) =>
   describe(`Tests`, () => {
     describe('Frontpage body', () => {
       before(() => {
@@ -11,7 +11,7 @@ const runTests = ({ service }) =>
       });
 
       describe('Header', () => {
-        if (appConfig[service].navigation) {
+        if (getAppConfig({service, serviceVariantConfig}).navigation) {
           it('should have one visible navigation', () => {
             cy.get('nav')
               .should('have.lengthOf', 1)
@@ -60,7 +60,7 @@ const runTests = ({ service }) =>
 
 // -------------------------------------------
 
-const runCanonicalTests = ({ service }) =>
+const runCanonicalTests = ({ service, serviceVariantConfig }) =>
   describe(`Canonical Tests`, () => {
     describe('ATI', () => {
       it('should have a noscript tag with an 1px image with the ati url', () => {
@@ -77,11 +77,11 @@ const runCanonicalTests = ({ service }) =>
 
     describe('Scripts', () => {
       it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
+        cy.hasExpectedJsBundles(envConfig.assetOrigin, service, serviceVariantConfig);
       });
 
       it('should have 1 bundle for its service', () => {
-        cy.hasOneServiceBundle(service);
+        cy.hasOneServiceBundle(service, serviceVariantConfig);
       });
     });
   });

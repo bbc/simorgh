@@ -1,5 +1,5 @@
 import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
+import getAppConfig from '../../support/config/getAppConfig';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
 // Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
@@ -8,20 +8,22 @@ const serviceFilter = service => ['news', 'persian'].includes(service);
 const filterPageTypes = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
-const getPrivacyBanner = service =>
-  cy.contains(appConfig[service].translations.consentBanner.privacy.title);
+const serviceConfigOverride = service => config[service].serviceOverride || null
 
-const getCookieBanner = service =>
-  cy.contains(appConfig[service].translations.consentBanner.cookie.title);
+const getPrivacyBanner = (service, serviceVariantConfig) =>
+  cy.contains(getAppConfig({service, serviceVariantConfig}).translations.consentBanner.privacy.title);
 
-const getPrivacyAccept = service =>
-  cy.contains(appConfig[service].translations.consentBanner.privacy.accept);
+const getCookieBanner = (service, serviceVariantConfig) =>
+  cy.contains(getAppConfig({service, serviceVariantConfig}).translations.consentBanner.cookie.title);
 
-const getCookieAccept = service =>
-  cy.contains(appConfig[service].translations.consentBanner.cookie.accept);
+const getPrivacyAccept = (service, serviceVariantConfig) =>
+  cy.contains(getAppConfig({service, serviceVariantConfig}).translations.consentBanner.privacy.accept);
 
-const getCookieReject = service =>
-  cy.contains(appConfig[service].translations.consentBanner.cookie.reject);
+const getCookieAccept = (service, serviceVariantConfig) =>
+  cy.contains(getAppConfig({service, serviceVariantConfig}).translations.consentBanner.cookie.accept);
+
+const getCookieReject = (service, serviceVariantConfig) =>
+  cy.contains(getAppConfig({service, serviceVariantConfig}).translations.consentBanner.cookie.reject);
 
 const visitPage = (service, pageType) => {
   cy.visit(`${config[service].pageTypes[pageType].path}.amp`, {
@@ -32,6 +34,7 @@ const visitPage = (service, pageType) => {
 Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
+    const serviceVariantConfig = serviceConfigOverride(service)
     Object.keys(config[service].pageTypes)
       .filter(pageType => filterPageTypes(service, pageType))
       .forEach(pageType => {
@@ -43,50 +46,50 @@ Object.keys(config)
             });
 
             it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
-              getPrivacyBanner(service).should('be.visible');
-              getCookieBanner(service).should('not.be.visible');
+              getPrivacyBanner(service, serviceVariantConfig).should('be.visible');
+              getCookieBanner(service, serviceVariantConfig).should('not.be.visible');
 
-              getPrivacyAccept(service).click();
+              getPrivacyAccept(service, serviceVariantConfig).click();
 
-              getCookieBanner(service).should('be.visible');
-              getPrivacyBanner(service).should('not.be.visible');
+              getCookieBanner(service, serviceVariantConfig).should('be.visible');
+              getPrivacyBanner(service, serviceVariantConfig).should('not.be.visible');
 
-              getCookieAccept(service).click();
+              getCookieAccept(service, serviceVariantConfig).click();
 
-              getCookieBanner(service).should('not.be.visible');
-              getPrivacyBanner(service).should('not.be.visible');
+              getCookieBanner(service, serviceVariantConfig).should('not.be.visible');
+              getPrivacyBanner(service, serviceVariantConfig).should('not.be.visible');
             });
 
             it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
-              getPrivacyAccept(service).click();
+              getPrivacyAccept(service, serviceVariantConfig).click();
 
               visitPage(service, pageType);
 
-              getPrivacyBanner(service).should('be.visible');
-              getCookieBanner(service).should('not.be.visible');
+              getPrivacyBanner(service, serviceVariantConfig).should('be.visible');
+              getCookieBanner(service, serviceVariantConfig).should('not.be.visible');
             });
 
             it('should not show privacy & cookie banners once both accepted, on reload', () => {
-              getPrivacyAccept(service).click();
-              getCookieAccept(service).click();
+              getPrivacyAccept(service, serviceVariantConfig).click();
+              getCookieAccept(service, serviceVariantConfig).click();
 
               visitPage(service, pageType);
 
-              getPrivacyBanner(service).should('not.be.visible');
-              getCookieBanner(service).should('not.be.visible');
+              getPrivacyBanner(service, serviceVariantConfig).should('not.be.visible');
+              getCookieBanner(service, serviceVariantConfig).should('not.be.visible');
             });
 
             it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
-              getPrivacyBanner(service).should('be.visible');
-              getCookieBanner(service).should('not.be.visible');
+              getPrivacyBanner(service, serviceVariantConfig).should('be.visible');
+              getCookieBanner(service, serviceVariantConfig).should('not.be.visible');
 
-              getPrivacyAccept(service).click();
-              getCookieReject(service).click();
+              getPrivacyAccept(service, serviceVariantConfig).click();
+              getCookieReject(service, serviceVariantConfig).click();
 
               visitPage(service, pageType);
 
-              getPrivacyBanner(service).should('not.be.visible');
-              getCookieBanner(service).should('not.be.visible');
+              getPrivacyBanner(service, serviceVariantConfig).should('not.be.visible');
+              getCookieBanner( v).should('not.be.visible');
             });
           },
         );

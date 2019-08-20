@@ -666,224 +666,100 @@ export default {
     isWorldService: true,
     serviceOverride: 'serbianLat',
     pageTypes: {
-      articles:
-        Cypress.env('APP_ENV') === 'live'
-          ? undefined
-          : '/serbian/articles/c805k05kr73o/lat',
-      errorPage404:
-        Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-          ? undefined
-          : '/serbian/articles/c123456abcdo/lat',
-      frontPage: Cypress.env('APP_ENV') === 'live' ? undefined : '/serbian/lat',
-    },
-  },
-  sinhala: {
-    font: undefined,
-    isWorldService: true,
-    pageTypes: {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
             ? undefined
-            : '/sinhala/articles/c45w255zlexo',
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/sinhala/articles/c123456abcdo',
-        smoke: false,
-      },
-      frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/sinhala',
-        smoke: false,
-      },
-    },
-  },
-  somali: {
-    font: undefined,
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/somali/articles/cgn6emk3jm8o',
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/somali/articles/c123456abcdo',
-        smoke: false,
-      },
-      frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/somali',
-        smoke: false,
-      },
-    },
-  },
-  sport: {
-    font: undefined,
-    pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
-    },
-  },
-  swahili: {
-    font: undefined,
-    isWorldService: true,
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/swahili/articles/czjqge2jwn2o',
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/swahili/articles/c123456abcdo',
-        smoke: false,
-      },
-      frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/swahili',
-        smoke: false,
-      },
-    },
-  },
-  tamil: {
-    font: undefined,
-    isWorldService: true,
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/tamil/articles/cwl08ll3me8o',
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/tamil/articles/c123456abcdo',
-        smoke: false,
-      },
-      frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/tamil',
-        smoke: false,
-      },
-    },
-  },
-  telugu: {
-    font: undefined,
-    isWorldService: true,
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/telugu/articles/cq0y4008d4vo',
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/telugu/articles/c123456abcdo',
-        smoke: false,
-      },
-      frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/telugu',
-        smoke: false,
-      },
-    },
-  },
-  thai: {
-    font: undefined,
-    isWorldService: true,
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/thai/articles/c3qxeqm7ldjo',
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/thai/articles/c123456abcdo',
+            : '/serbian/articles/c805k05kr73o/lat',
         smoke: true,
+      },  
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/c123456abcdo/lat',
+          smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/thai',
+        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/serbian/lat',
+        smoke: true
+      } 
+    }
+  },
+  serbian: {
+    font: undefined,
+    isWorldService: true,
+    serviceOverride: 'serbianCyr',
+    pageTypes: {
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live'
+            ? undefined
+            : '/serbian/articles/c805k05kr73o/cyr',
         smoke: true,
-      },
-    },
-  },
-  tigrinya: {
-    font: undefined,
-    isWorldService: true,
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/tigrinya/articles/c12g32eldk6o',
-        smoke: false,
-      },
+      },  
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/tigrinya/articles/c123456abcdo',
-        smoke: false,
+            : '/serbian/articles/c123456abcdo/cyr',
+          smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/tigrinya',
-        smoke: false,
-      },
-    },
-  },
-  turkce: {
-    font: undefined,
-    isWorldService: true,
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/turkce/articles/cr2d32lwww2o',
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/turkce/articles/c123456abcdo',
-        smoke: false,
-      },
-      frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/turkce',
-        smoke: false,
-      },
-    },
+        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/serbian/cyr',
+        smoke: true
+      } 
+    }
   },
   ukchina: {
     font: undefined,
     isWorldService: true,
+    serviceOverride: 'ukchinaSimp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
-    },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/simp',
+        smoke: true,
+      },  
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/simp',
+          smoke: false,
+      },
+      frontPage: {
+        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/ukchina/simp',
+        smoke: true
+      } 
+    }
+  },
+  ukchina: {
+    font: undefined,
+    isWorldService: true,
+    serviceOverride: 'ukchinaTrad',
+    pageTypes: {
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/trad',
+        smoke: true,
+      },  
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/trad',
+          smoke: false,
+      },
+      frontPage: {
+        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/ukchina/trad',
+        smoke: true
+      } 
+    }
   },
   ukrainian: {
     font: undefined,
@@ -1005,10 +881,51 @@ export default {
   zhongwen: {
     font: undefined,
     isWorldService: true,
+    serviceOverride: 'zhongwenTrad',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
-    },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/trad',
+        smoke: true,
+      },  
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/trad',
+          smoke: false,
+      },
+      frontPage: {
+        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/zhongwen/trad',
+        smoke: true
+      } 
+    }
   },
+  zhongwen: {
+    font: undefined,
+    isWorldService: true,
+    serviceOverride: 'zhongwenSimp',
+    pageTypes: {
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/simp',
+        smoke: true,
+      },  
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/simp',
+          smoke: false,
+      },
+      frontPage: {
+        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/zhongwen/simp',
+        smoke: true
+      } 
+    }
+  }
 };
