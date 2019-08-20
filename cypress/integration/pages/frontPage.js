@@ -84,6 +84,9 @@ const runTests = ({ service }) =>
             cy.get('p')
               .eq(3)
               .should('be.hidden');
+            cy.get('time')
+            .should('have.length.of.at.least', 1)
+            .should('be.visible');
           });
         });
       });
