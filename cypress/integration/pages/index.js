@@ -97,7 +97,7 @@ const runCommonTests = ({ service, pageType }) => {
       });
 
       it('footer links should not 404', () => {
-        cy.get('footer a').each(element => {
+        cy.get('a').each(element => {
           const href = element.attr('href');
           cy.request(href).then(resp => {
             expect(resp.status).to.not.equal(404);
