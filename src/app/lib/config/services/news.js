@@ -17,6 +17,7 @@ const news = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news',
+  atiAnalyticsProducerId: '64',
   brandName: 'BBC News',
   product: 'BBC News',
   defaultImage:
