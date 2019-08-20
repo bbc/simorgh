@@ -1,8 +1,9 @@
 import React from 'react';
 import MediaPageMain from '.';
 import { shouldMatchSnapshot } from '../../../testHelpers';
-import amharicConfig from '../../lib/config/services/amharic';
 import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
+import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const liveRadioScaffoldProps = {
   service: 'amharic',
@@ -15,22 +16,21 @@ const liveRadioScaffoldProps = {
   },
 };
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-
-const { useContext } = jest.requireMock('react');
-useContext.mockReturnValue(amharicConfig);
-
 describe('Media Page Main', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should match scaffold snapshot',
-      <MediaPageMain {...liveRadioScaffoldProps} />,
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="media"
+        service="amharic"
+      >
+        <ServiceContextProvider service="amharic">
+          <MediaPageMain {...liveRadioScaffoldProps} />
+        </ServiceContextProvider>
+      </RequestContextProvider>,
     );
   });
 });

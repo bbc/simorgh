@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
-.c2 {
+Array [
+  <noscript>
+    <img
+      alt=""
+      height="1px"
+      src="undefineds=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=0x0x24x24&re=1024x768&hl=17x16x51&lng=en-US&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[responsive]&x3=[news-amharic]&x4=[am-ET]&x5=[http://localhost/]&x7=[player-live]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"
+      style={
+        Object {
+          "position": "absolute",
+        }
+      }
+      width="1px"
+    />
+  </noscript>,
+  .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
   color: #3F3F42;
@@ -146,48 +160,49 @@ exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
 }
 
 <main
-  role="main"
->
-  <div
-    className="c0"
+    role="main"
   >
     <div
-      className="c1"
+      className="c0"
     >
-      <h1
-        className="c2"
+      <div
+        className="c1"
       >
-        ያድምጡ
-      </h1>
-      <p
-        className="c3"
-      >
-        ዝግጅቶቻችንን
-      </p>
-      <ul>
-        <li>
-          <strong>
-            Service
-          </strong>
-          : 
-          amharic
-        </li>
-        <li>
-          <strong>
-            Brand
-          </strong>
-          : 
-          bbc_amharic_radio
-        </li>
-        <li>
-          <strong>
-            MediaId
-          </strong>
-          : 
-          liveradio
-        </li>
-      </ul>
+        <h1
+          className="c2"
+        >
+          ያድምጡ
+        </h1>
+        <p
+          className="c3"
+        >
+          ዝግጅቶቻችንን
+        </p>
+        <ul>
+          <li>
+            <strong>
+              Service
+            </strong>
+            : 
+            amharic
+          </li>
+          <li>
+            <strong>
+              Brand
+            </strong>
+            : 
+            bbc_amharic_radio
+          </li>
+          <li>
+            <strong>
+              MediaId
+            </strong>
+            : 
+            liveradio
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</main>
+  </main>,
+]
 `;
