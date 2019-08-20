@@ -8,9 +8,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   <SectionLabel
     bar={true}
     dir="ltr"
-    href={null}
     labelId="Top-Stories"
-    linkText={null}
     script={
       Object {
         "atlas": Object {
@@ -295,9 +293,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   <SectionLabel
     bar={true}
     dir="ltr"
-    href={null}
     labelId="Top-Stories"
-    linkText={null}
     script={
       Object {
         "atlas": Object {
@@ -552,9 +548,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   <SectionLabel
     bar={false}
     dir="ltr"
-    href={null}
     labelId="Top-Stories"
-    linkText={null}
     script={
       Object {
         "atlas": Object {
