@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://facebook.com/bbcnewsafrique`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-afrique',
+  atiAnalyticsProducerId: '3',
   brandName: 'BBC News Afrique',
   product: 'BBC News Afrique',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
