@@ -34,6 +34,15 @@ const runTests = ({ service }) =>
                 cy.get('h2').should('have.lengthOf', 1);
               });
             });
+          cy.viewport(320, 480);
+          cy.get('section')
+            .should('have.length.of.at.least', 1)
+            .should('be.visible')
+            .each($section => {
+              cy.wrap($section).within(() => {
+                cy.get('h2').should('have.lengthOf', 1);
+              });
+            });
         });
 
         it('should contain at least one story promo', () => {
@@ -52,6 +61,29 @@ const runTests = ({ service }) =>
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
+          });
+          cy.viewport(320, 480);
+          cy.get('section').within(() => {
+            cy.get('img')
+              .should('have.length.of.at.least', 1)
+              .should('be.visible');
+            cy.get('h3')
+              .should('have.length.of.at.least', 1)
+              .should('be.visible')
+              .find('a')
+              .should('have.attr', 'href');
+            cy.get('p')
+              .eq(0)
+              .should('be.visible');
+            cy.get('p')
+              .eq(1)
+              .should('be.hidden');
+            cy.get('p')
+              .eq(2)
+              .should('be.hidden');
+            cy.get('p')
+              .eq(3)
+              .should('be.hidden');
           });
         });
       });
