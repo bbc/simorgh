@@ -15,10 +15,8 @@ To run chromatic locally export the app code in bash profile(`export CHROMATIC_A
 - When the tests are run first it creates the baselines screenshots unreviewed for all the browsers enabled in the settings.
 - Each new build creates snapshots of the components which are compared with the baseline screenshots and unchanged ones are automatically accepted and changed ones needs review(accordingly it has to be accepted or denied).If there are new components added they are listed under new components.
 - Each story has its own baseline that is tracked independent of each branch. When you approve a snapshot you also update the baseline for that story.
--
 
 Chromatic
 Advantages
-- We do not have to manage any infrastructure including provisioning resources, maintaining containers.
-- Reviews can be done just for visual changes. Leaving the code change reviews to GitHub.
-- Developed by the same people developing Storybook. Making integration painless and future upgrades less time consuming.
+- We do not have to manage any infrastructure kind of stuff as it is maintained by the storybook people.
+- Run time for chrome and IE together is approx 4-5m.
