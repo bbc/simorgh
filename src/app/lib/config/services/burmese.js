@@ -9,6 +9,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcburmese`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-burmese',
+  atiAnalyticsProducerId: '35',
   brandName: 'BBC News မြန်မာ',
   product: 'BBC News မြန်မာ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png',
