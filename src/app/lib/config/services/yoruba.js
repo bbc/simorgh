@@ -34,7 +34,7 @@ const yoruba = {
     home: 'Ìròyìn',
     currentPage: 'Ojú ewé to wà yìí',
     skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
-    seeAll: 'See all',
+    seeAll: 'Wo gbogbo ẹ̀',
     error: {
       404: {
         statusCode: '404',
