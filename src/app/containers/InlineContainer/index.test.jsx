@@ -5,6 +5,7 @@ import InlineContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
+  id: '113144',
   type: 'fragment',
   model: {
     text,
@@ -12,9 +13,11 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-const inlineLinkBlock = (locator, blocks, isExternal) => ({
+const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
+  id: '123124',
   type: 'urlLink',
   model: {
+    text,
     locator,
     blocks,
     isExternal,
@@ -38,6 +41,6 @@ const InlineContainerWithContext = blocks => (
 describe('InlineContainer', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    InlineContainerWithContext([[persianLink]]),
+    InlineContainerWithContext([persianLink]),
   );
 });

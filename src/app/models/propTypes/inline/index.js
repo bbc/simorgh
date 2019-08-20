@@ -5,7 +5,6 @@ import { inlineLinkBlockPropTypes } from '../inlineLink';
 
 export const inlineModelPropTypes = {
   language: string.isRequired,
-  text: string.isRequired,
   ...blocksWithTypes([fragmentBlockPropTypes, inlineLinkBlockPropTypes]),
 };
 
