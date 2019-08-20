@@ -1,9 +1,14 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  isNull,
+  suppressPropWarnings,
+} from '../../../testHelpers';
 import TextContainer from './index';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
+    suppressPropWarnings(['blocks', 'undefined']);
     isNull('should return null', <TextContainer />);
   });
 

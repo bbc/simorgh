@@ -11,7 +11,7 @@ import '@bbc/moment-timezone-include/tz/Europe/London';
 const persian = {
   lang: 'fa',
   product: 'BBC News',
-  articleAuthor: 'https://www.facebook.com/bbcpersian',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'به روز شده در',
   atiAnalyticsAppName: 'news-persian',
   atiAnalyticsProducerId: '69',
