@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcbrasil`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-portuguese',
+  atiAnalyticsProducerId: '33',
   brandName: 'BBC News Brasil',
   product: 'BBC News Brasil',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/brasil.png',

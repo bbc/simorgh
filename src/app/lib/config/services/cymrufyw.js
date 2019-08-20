@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/BBCCymruFyw`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-cymrufyw',
+  atiAnalyticsProducerId: '100',
   brandName: 'BBC Cymru Fyw',
   product: 'BBC Cymru Fyw',
   defaultImage:

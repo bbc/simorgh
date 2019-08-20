@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcnewsmarathi`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-marathi',
+  atiAnalyticsProducerId: '59',
   brandName: 'BBC News मराठी',
   product: 'BBC News मराठी',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',

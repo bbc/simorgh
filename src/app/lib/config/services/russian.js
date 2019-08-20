@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcrussian`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-russian',
+  atiAnalyticsProducerId: '75',
   brandName: 'BBC News Русская служба',
   product: 'BBC News Русская служба',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',

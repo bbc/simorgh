@@ -14,6 +14,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
         "articleAuthor": "https://www.facebook.com/bbcnews",
         "articleTimestampPrefix": "Updated",
         "atiAnalyticsAppName": "news-igbo",
+        "atiAnalyticsProducerId": "53",
         "brandName": "BBC News Ìgbò",
         "brandSVG": Object {
           "group": <g

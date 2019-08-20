@@ -12,6 +12,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcnewstigrinya`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-tigrinya',
+  atiAnalyticsProducerId: '91',
   brandName: 'BBC News ትግርኛ',
   product: 'BBC News ትግርኛ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',

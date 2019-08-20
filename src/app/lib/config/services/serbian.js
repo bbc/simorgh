@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-serbian',
+  atiAnalyticsProducerId: '81',
   brandName: 'BBC News na srpskom',
   product: 'BBC News na srpskom',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',

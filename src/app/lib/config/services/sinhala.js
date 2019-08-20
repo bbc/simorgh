@@ -12,6 +12,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/BBCSinhala`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-sinhala',
+  atiAnalyticsProducerId: '82',
   brandName: 'BBC News සිංහල',
   product: 'BBC News සිංහල',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png',

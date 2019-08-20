@@ -9,6 +9,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbctamil`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-tamil',
+  atiAnalyticsProducerId: '87',
   brandName: 'BBC News தமிழ்',
   product: 'BBC News தமிழ்',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',

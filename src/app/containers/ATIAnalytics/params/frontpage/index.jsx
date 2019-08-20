@@ -12,9 +12,12 @@ import {
 
 const FrontPageAtiParams = frontpageData => {
   const { platform, statsDestination } = useContext(RequestContext);
-  const { atiAnalyticsAppName, brandName, service } = useContext(
-    ServiceContext,
-  );
+  const {
+    atiAnalyticsAppName,
+    atiAnalyticsProducerId,
+    brandName,
+    service,
+  } = useContext(ServiceContext);
 
   return atiPageViewParams({
     appName: atiAnalyticsAppName,
@@ -23,6 +26,7 @@ const FrontPageAtiParams = frontpageData => {
     language: getLanguage(frontpageData),
     pageIdentifier: getPageIdentifier(frontpageData),
     pageTitle: getPageTitle(frontpageData, brandName),
+    producerId: atiAnalyticsProducerId,
     timePublished: getPublishedDatetime('firstPublished', frontpageData),
     timeUpdated: getPublishedDatetime('lastPublished', frontpageData),
     platform,
