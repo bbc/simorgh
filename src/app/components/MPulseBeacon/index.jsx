@@ -2,8 +2,17 @@ import React from 'react';
 import { string } from 'prop-types';
 
 const snippet = apiKey => `
-(function() {
-    if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
+(window.SIMORGH_BOOMR = function() {
+    console.log('INIT BOOMR');
+    function getCookie(name) {
+      var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      if (match) return match[2];
+    }
+    function performanceCookiesEnabled() {
+        var policy = getCookie('ckns_policy');
+        return policy && policy.length == 3 && policy[1] == '1'
+    }
+    if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted) || !performanceCookiesEnabled()) {
         return;
     }
     window.BOOMR = window.BOOMR || {};
