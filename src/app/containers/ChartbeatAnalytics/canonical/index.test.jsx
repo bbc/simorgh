@@ -16,6 +16,7 @@ describe('CanonicalChartbeatAnalytics', () => {
     virtualReferrer: null,
     useCanonical: true,
     title: 'This is an article',
+    uid: 123,
   };
   it('should return the helmet wrapper with the script snippet', () => {
     const tree = renderer
@@ -47,6 +48,7 @@ describe('CanonicalChartbeatAnalytics', () => {
         useCanonical: true,
         virtualReferrer: '/some-path',
         title: 'This is another article',
+        uid: 123,
       },
     });
     wrapper.mount();
@@ -59,6 +61,7 @@ describe('CanonicalChartbeatAnalytics', () => {
       useCanonical: true,
       virtualReferrer: '/some-path',
       title: 'This is another article',
+      uid: 123,
     });
   });
 });

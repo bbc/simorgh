@@ -9,6 +9,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/bbcnewspunjabi`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-punjabi',
+  atiAnalyticsProducerId: '73',
   brandName: 'BBC News ਖ਼ਬਰਾਂ',
   product: 'BBC News ਖ਼ਬਰਾਂ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png',
