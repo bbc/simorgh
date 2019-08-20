@@ -3,7 +3,6 @@ import { string } from 'prop-types';
 
 const snippet = apiKey => `
 (window.SIMORGH_BOOMR = function() {
-    console.log('INIT BOOMR');
     function getCookie(name) {
       var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
       if (match) return match[2];
