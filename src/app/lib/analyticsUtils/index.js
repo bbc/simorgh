@@ -30,19 +30,6 @@ export const isLocServeCookieSet = platform => {
   return null;
 };
 
-export const getProducer = service => {
-  const producers = {
-    igbo: '53',
-    news: '64',
-    persian: '69',
-    pidgin: '70',
-    thai: '90',
-    yoruba: '107',
-  };
-
-  return producers[service] || 0;
-};
-
 export const getScreenInfo = platform => {
   if (platform === 'amp') {
     return `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`;
