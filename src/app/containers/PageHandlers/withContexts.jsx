@@ -6,6 +6,7 @@ import { DialContextProvider } from '../../contexts/DialContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { UserContextProvider } from '../../contexts/UserContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
@@ -30,7 +31,9 @@ const WithContexts = Component => {
               service={service}
               previousPath={previousPath}
             >
-              <Component {...props} />
+              <UserContextProvider>
+                <Component {...props} />
+              </UserContextProvider>
             </RequestContextProvider>
           </ServiceContextProvider>
         </DialContextProvider>
