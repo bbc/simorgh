@@ -1,9 +1,8 @@
 import React from 'react';
 import MediaPageMain from '.';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import amharicConfig from '../../lib/config/services/amharic';
 import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
-import { RequestContext } from '../../contexts/RequestContext';
 
 const liveRadioScaffoldProps = {
   service: 'amharic',
@@ -29,11 +28,9 @@ useContext.mockReturnValue(amharicConfig);
 
 describe('Media Page Main', () => {
   describe('snapshots', () => {
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should match scaffold snapshot',
-      <RequestContext.Provider value={{ pageType: 'media' }}>
-        <MediaPageMain {...liveRadioScaffoldProps} />,
-      </RequestContext.Provider>,
+      <MediaPageMain {...liveRadioScaffoldProps} />,
     );
   });
 });
