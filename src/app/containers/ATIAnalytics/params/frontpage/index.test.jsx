@@ -41,6 +41,7 @@ describe('FrontPageAtiParams', () => {
   };
   const serviceContextStub = {
     atiAnalyticsAppName: 'news-SERVICE',
+    atiAnalyticsProducerId: 0,
     brandName: 'BBC News SERVICE',
     service: 'SERVICE',
   };
@@ -64,6 +65,7 @@ describe('FrontPageAtiParams', () => {
         language: 'LANGUAGE',
         pageIdentifier: 'SERVICE.page',
         pageTitle: 'PAGE TITLE - BBC News SERVICE',
+        producerId: 0,
         platform: 'canonical',
         service: 'SERVICE',
         statsDestination: 'WS_NEWS_LANGUAGES_TEST',

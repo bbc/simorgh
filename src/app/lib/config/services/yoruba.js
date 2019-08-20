@@ -10,6 +10,7 @@ const yoruba = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-yoruba',
+  atiAnalyticsProducerId: '107',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
   isoLang: 'yo',

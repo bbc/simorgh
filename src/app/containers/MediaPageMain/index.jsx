@@ -7,15 +7,38 @@ import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import aresBlockPropTypes from '../../models/propTypes/mediaPage/content/aresBlock';
+
+const renderBlock = ({ block, script, service, key }) => {
+  const Component = {
+    heading: Headline,
+    paragraph: Paragraph,
+  }[block.type];
+
+  if (!Component) {
+    return null;
+  }
+
+  return (
+    <Component script={script} service={service} key={key}>
+      {block.text}
+    </Component>
+  );
+};
+
+renderBlock.propTypes = {
+  block: aresBlockPropTypes.isRequired,
+  script: string.isRequired,
+  service: string.isRequired,
+  key: string.isRequired,
+};
 
 const MediaPageMain = props => {
   const { pageData, service, match } = props;
   const { serviceId, mediaId } = match.params;
   const { script } = useContext(ServiceContext);
   const {
-    content: {
-      blocks: [{ text: title }, { text: subtitle }],
-    },
+    content: { blocks },
     promo,
     metadata,
   } = pageData;
@@ -27,12 +50,9 @@ const MediaPageMain = props => {
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
-            <Headline script={script} service={service}>
-              {title}
-            </Headline>
-            <Paragraph script={script} service={service}>
-              {subtitle}
-            </Paragraph>
+            {blocks.map(block => {
+              return renderBlock({ block, script, service, key: block.text });
+            })}
             <ul>
               <li>
                 <strong>Service</strong>: {service}

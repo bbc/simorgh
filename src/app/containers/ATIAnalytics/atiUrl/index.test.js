@@ -21,7 +21,6 @@ const analyticsUtilFunctions = [
   { name: 'getCurrentTime', source: genericLabelHelpers },
   { name: 'getDeviceLanguage', source: genericLabelHelpers },
   { name: 'getHref', source: genericLabelHelpers },
-  { name: 'getProducer', source: genericLabelHelpers },
   { name: 'getReferrer', source: genericLabelHelpers },
   { name: 'isLocServeCookieSet', source: genericLabelHelpers },
   { name: 'sanitise', source: genericLabelHelpers },
@@ -59,12 +58,14 @@ describe('getThingAttributes', () => {
       pageIdentifier: 'pageIdentifier',
       pageTitle: 'pageTitle',
       platform: 'platform',
+      producerId: 'producerId',
       timePublished: 'timePublished',
       timeUpdated: 'timeUpdated',
     });
 
     const queryParamsArray = splitUrl(queryParams);
     const expectedValues = [
+      's2=producerId',
       'p=pageIdentifier',
       'x1=[contentId]',
       'x3=[appName]',
@@ -95,7 +96,6 @@ describe('getThingAttributes', () => {
     const queryParamsArray = splitUrl(queryParams);
     const expectedValues = [
       's=getDestination',
-      's2=getProducer',
       'r=getScreenInfo',
       're=getBrowserViewPort',
       'hl=getCurrentTime',
