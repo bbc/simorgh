@@ -138,7 +138,8 @@ const service = {
         text: 'Kebijakan tentang Privasi',
       },
       {
-        href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+        href:
+          'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
         text: 'Cookies',
       },
       {
@@ -146,7 +147,8 @@ const service = {
         text: 'Hubungi BBC',
       },
     ],
-    copyrightText: 'Copyright © 2019 BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
+    copyrightText:
+      'Copyright © 2019 BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
   },
   fonts: [],
   navigation: [
