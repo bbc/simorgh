@@ -8,8 +8,17 @@ import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import frontPageData from '../../../../data/igbo/frontpage/index.json';
+import liveRadioPageData from '../../../../data/korean/bbc_korean_radio/liveradio.json';
 
-const Container = (service, bbcOrigin, platform, data, id, pageType) => {
+const Container = (
+  service,
+  bbcOrigin,
+  platform,
+  data,
+  id,
+  pageType,
+  pathname,
+) => {
   const serviceConfig = services[service];
 
   return (
@@ -20,6 +29,7 @@ const Container = (service, bbcOrigin, platform, data, id, pageType) => {
         isAmp={platform === 'amp'}
         pageType={pageType}
         service={service}
+        pathname={pathname}
       >
         <MetadataContainer {...articleDataNews} {...data} />
       </RequestContextProvider>
@@ -125,6 +135,7 @@ describe('Metadata Container', () => {
           articleDataNews,
           'c0000000001o',
           'article',
+          '/news/articles/c0000000001o',
         ),
       );
 
@@ -199,6 +210,7 @@ describe('Metadata Container', () => {
           articleDataNews,
           'c0000000001o',
           'article',
+          '/news/articles/c0000000001o',
         ),
       );
 
@@ -273,6 +285,7 @@ describe('Metadata Container', () => {
           articleDataPersian,
           'c4vlle3q337o',
           'article',
+          '/persian/articles/c4vlle3q337o',
         ),
       );
 
@@ -323,6 +336,7 @@ describe('Metadata Container', () => {
           articleDataPersian,
           'c4vlle3q337o',
           'article',
+          '/persian/articles/c4vlle3q337o',
         ),
       );
 
@@ -373,6 +387,7 @@ describe('Metadata Container', () => {
           frontPageData,
           null,
           'frontPage',
+          '/igbo',
         ),
       );
 
@@ -418,5 +433,56 @@ describe('Metadata Container', () => {
         ),
       );
     });
+  });
+
+  it('should be correct for WS Media liveradio', () => {
+    const Wrapper = mount(
+      Container(
+        'korean',
+        dotComOrigin,
+        'canonical',
+        liveRadioPageData,
+        null,
+        'media',
+        '/korean/bbc_korean_radio/liveradio',
+      ),
+    );
+
+    expect(
+      Wrapper.containsMatchingElement(
+        <MetadataContainer {...liveRadioPageData} />,
+      ),
+    ).toEqual(true);
+    expect(Wrapper.find(Metadata).props()).toEqual(
+      metadataProps(
+        false,
+        [],
+        'https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp',
+        'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
+        '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
+        'ltr',
+        'ko-KO',
+        [],
+        null,
+        null,
+        'BBC News 코리아 라디오',
+        services.korean,
+        'website',
+        'korean',
+        false,
+      ),
+    );
+    expect(Wrapper.find(LinkedData).props()).toEqual(
+      linkedDataProps(
+        'BBC News 코리아',
+        'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
+        null,
+        null,
+        'Korean',
+        'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
+        'BBC News 코리아 라디오',
+        'RadioChannel',
+      ),
+    );
   });
 });

@@ -39,6 +39,7 @@ describe('withContexts HOC', () => {
     isAmp: true,
     pageType: 'article',
     dials,
+    location: { pathname: '/foo/bar' },
   };
 
   shouldShallowMatchSnapshot(
@@ -66,6 +67,7 @@ describe('withContexts HOC', () => {
           isAmp: true,
           pageType,
           dials,
+          location: { pathname: '/foo/bar' },
         };
 
         render(<ContextsHOC {...fixture} />);

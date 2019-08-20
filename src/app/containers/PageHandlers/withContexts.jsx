@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, element, objectOf, string } from 'prop-types';
+import { bool, element, objectOf, string, shape } from 'prop-types';
 
 // context providers
 import { DialContextProvider } from '../../contexts/DialContext';
@@ -17,8 +17,10 @@ const WithContexts = Component => {
       isAmp,
       pageType,
       previousPath,
+      location,
       dials,
     } = props;
+    const { pathname } = location;
     return (
       <ToggleContextProvider>
         <DialContextProvider dials={dials}>
@@ -31,6 +33,7 @@ const WithContexts = Component => {
               service={service}
               serviceVariant={serviceVariant}
               previousPath={previousPath}
+              pathname={pathname}
             >
               <Component {...props} />
             </RequestContextProvider>
@@ -46,6 +49,7 @@ const WithContexts = Component => {
     isAmp: bool.isRequired,
     pageType: string.isRequired,
     previousPath: string,
+    location: shape.isRequired,
     service: string.isRequired,
     serviceVariant: string,
     dials: objectOf(bool).isRequired,

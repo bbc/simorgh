@@ -18,6 +18,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
         id="c0000000000o"
         isAmp={true}
         pageType="article"
+        pathname="/foo/bar"
         previousPath={null}
         service="news"
         serviceVariant={null}
@@ -31,6 +32,11 @@ exports[`withContexts HOC should return all context providers 1`] = `
           }
           id="c0000000000o"
           isAmp={true}
+          location={
+            Object {
+              "pathname": "/foo/bar",
+            }
+          }
           pageType="article"
           previousPath={null}
           service="news"

@@ -48,6 +48,7 @@ const input = {
   service: 'service',
   serviceVariant: null,
   previousPath: '/previous-path',
+  pathname: '/foo/bar',
 };
 
 const expectedOutput = {
@@ -96,13 +97,7 @@ describe('RequestContext', () => {
 
     expect(getEnv.default).toHaveBeenCalledWith('origin');
 
-    expect(getMetaUrls.default).toHaveBeenCalledWith(
-      'origin',
-      'service',
-      null,
-      'frontPage',
-      'id',
-    );
+    expect(getMetaUrls.default).toHaveBeenCalledWith('origin', '/foo/bar');
 
     expect(React.useContext).toHaveReturnedWith(expectedOutput);
   });
