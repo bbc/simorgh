@@ -25,7 +25,7 @@ node {
                 daysToKeepStr: '10',
                 artifactDaysToKeepStr: '10'
             )
-        )
+        ),
         pipelineTriggers([cron(cron_string)])
     ]
   )
