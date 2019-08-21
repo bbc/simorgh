@@ -8,6 +8,7 @@ const service = {
   articleAuthor: `https://www.facebook.com/pages/BBC-Vietnamese/228458913833525?ref=ts&sk=wall`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-vietnamese',
+  atiAnalyticsProducerId: '97',
   brandName: 'BBC News Tiếng Việt',
   product: 'BBC News Tiếng Việt',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png',
