@@ -67,7 +67,9 @@ export const runCommonTests = ({ service, pageType }) => {
 
       if (pageType !== 'errorPage404') {
         it('should include the canonical URL', () => {
-          cy.checkCanonicalURL(
+          cy.get('head link[rel="canonical"]').should(
+            'have.attr',
+            'href',
             `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
           );
         });

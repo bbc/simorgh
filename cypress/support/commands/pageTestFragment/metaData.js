@@ -1,3 +1,5 @@
+// Why aren't these used more widely? They should either be refactored for general use or shouldn't be a cy.command
+
 Cypress.Commands.add('hasHtmlLangDirAttributes', ({ lang, dir }) => {
   cy.get('html')
     .should('have.attr', 'lang', lang)
@@ -102,12 +104,4 @@ Cypress.Commands.add('checkTwitterMetadata', (
     cy.checkMetadataContent('head meta[name="twitter:image:src"]', imageSrc);
     cy.checkMetadataContent('head meta[name="twitter:site"]', site);
   });
-});
-
-Cypress.Commands.add('checkCanonicalURL', URL => {
-  cy.get('head link[rel="canonical"]').should('have.attr', 'href', URL);
-});
-
-Cypress.Commands.add('checkAmpHTML', amphtml => {
-  cy.get('head link[rel="amphtml"]').should('have.attr', 'href', amphtml);
 });

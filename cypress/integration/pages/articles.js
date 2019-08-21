@@ -263,7 +263,9 @@ const runCanonicalTests = ({ service }) =>
     });
 
     it('should include ampHTML tag', () => {
-      cy.checkAmpHTML(
+      cy.get('head link[rel="amphtml"]').should(
+        'have.attr',
+        'href',
         `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
       );
     });
