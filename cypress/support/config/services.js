@@ -219,21 +219,21 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/cymrufyw/articles/c06p32z9x2mo',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/cymrufyw/articles/c123456abcdo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/cymrufyw',
-        smoke: false,
+        smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
     },
@@ -418,18 +418,18 @@ export default {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/japanese/articles/c693w95w0mko',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/japanese/articles/c123456abcdo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/japanese',
-        smoke: false,
+        smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
     },
@@ -555,21 +555,21 @@ export default {
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/naidheachdan/articles/c18q7nedn2ko',
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/naidheachdan/articles/c123456abcdo',
-        smoke: false,
+        smoke: true,
       },
       frontPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/naidheachdan',
-        smoke: false,
+        smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
     },
