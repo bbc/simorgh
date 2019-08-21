@@ -96,14 +96,16 @@ const runCommonTests = ({ service, pageType }) => {
         );
       });
 
-      it('footer links should not 404', () => {
-        cy.get('a').each(element => {
-          const href = element.attr('href');
-          cy.request(href).then(resp => {
-            expect(resp.status).to.not.equal(404);
+      if (Cypress.env('APP_ENV') === 'live') {
+        it('footer links should not 404', () => {
+          cy.get('a').each(element => {
+            const href = element.attr('href');
+            cy.request(href).then(resp => {
+              expect(resp.status).to.not.equal(404);
+            });
           });
         });
-      });
+      }
 
       it('should contain copyright text', () => {
         cy.get('footer p').should(
