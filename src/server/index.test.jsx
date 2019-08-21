@@ -151,22 +151,22 @@ describe('Server', () => {
   });
 
   describe('/{service}/articles/{optimoID}', () => {
+    const isAmp = false;
     const successDataResponse = {
-      isAmp: false,
+      isAmp,
       data: { some: 'data' },
       service: 'someService',
       status: 200,
     };
 
     const notFoundDataResponse = {
-      isAmp: false,
+      isAmp,
       data: { some: 'data' },
       service: 'someService',
       status: 404,
     };
     const id = 'c0000000001o';
     const service = 'news';
-    const isAmp = false;
 
     describe('Successful render', () => {
       describe('200 status code', () => {
