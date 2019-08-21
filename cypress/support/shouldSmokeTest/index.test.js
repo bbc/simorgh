@@ -4,6 +4,10 @@ import shouldSmokeTest from './index';
 const PAGE_TYPE = 'frontPage';
 const SERVICE = 'korean';
 
+afterAll(() => {
+  global.Cypress = jest.fn();
+});
+
 it('should return smoke value from config when env variable is true', () => {
   global.Cypress.env = jest.fn().mockReturnValue(true);
   config.korean.pageTypes.frontPage.smoke = false;
