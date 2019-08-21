@@ -1,4 +1,3 @@
-import _ from 'ramda/src/__';
 import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
@@ -35,7 +34,7 @@ Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(shouldSmokeTest(_, service))
+      .filter(pageType => shouldSmokeTest(pageType, service))
       .filter(pageType => filterPageTypes(service, pageType))
       .forEach(pageType => {
         describeForEuOnly(
