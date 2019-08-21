@@ -41,7 +41,7 @@ const runCommonTests = ({ service, pageType }) => {
       });
     });
 
-    describe('Page links test', () = > {
+    describe('Page links test', () => {
       if (Cypress.env('APP_ENV') === 'live') {
         it('footer links should not 404', () => {
           cy.get('a')
