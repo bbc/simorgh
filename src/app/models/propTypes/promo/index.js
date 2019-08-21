@@ -1,5 +1,14 @@
 import { number, shape, string } from 'prop-types';
 
+export const mediaPromoPropTypes = {
+  name: string.isRequired,
+  summary: string.isRequired,
+  uri: string,
+  contentType: string,
+  id: string,
+  type: string,
+};
+
 export const optimoPromoPropTypes = {
   id: string.isRequired,
   headlines: shape({
