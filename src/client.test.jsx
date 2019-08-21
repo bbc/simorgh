@@ -42,7 +42,7 @@ describe('Client', () => {
   it('should hydrate client once routes are ready', async () => {
     setWindowValue('location', { pathname });
 
-    await new Promise(async resolve => {
+    await new Promise(resolve => {
       jest.isolateModules(async () => {
         await import('./client');
 
@@ -58,7 +58,7 @@ describe('Client', () => {
   it('should not hydrate client if no routes match', async () => {
     setWindowValue('location', { pathname: unknownPathName });
 
-    await new Promise(async resolve => {
+    await new Promise(resolve => {
       jest.isolateModules(async () => {
         await import('./client');
 

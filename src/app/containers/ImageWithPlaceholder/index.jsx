@@ -1,4 +1,4 @@
-import React, { useContext, Fragment } from 'react';
+import React, { useContext } from 'react';
 import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -9,12 +9,12 @@ const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loa
 
 const renderImage = (imageToRender, lazyLoad, fallback) =>
   lazyLoad ? (
-    <Fragment>
+    <>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
       {fallback && <noscript>{imageToRender}</noscript>}
-    </Fragment>
+    </>
   ) : (
     imageToRender
   );
