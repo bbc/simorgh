@@ -51,7 +51,7 @@ describe('CanonicalChartbeatAnalytics', () => {
         uid: 123,
       },
     });
-    wrapper.mount();
+    wrapper.unmount();
     expect(global.pSUPERFLY.virtualPage).toHaveBeenCalled();
     expect(global.pSUPERFLY.virtualPage).toHaveBeenCalledWith({
       domain: 'test-domain',
