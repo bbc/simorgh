@@ -17,7 +17,7 @@ describe('AmpChartbeatAnalytics', () => {
       domain: 'test-domain',
       type: 'article',
       sections: 'section1 section2',
-      chartbeatUID: 1111,
+      uid: 1111,
       referrer: '/some-path',
       title: 'This is an article',
       idSync: {
@@ -53,7 +53,7 @@ describe('AmpChartbeatAnalytics', () => {
       domain: 'test-domain',
       type: 'article',
       sections: 'section1 section2',
-      chartbeatUID: 1111,
+      uid: 1111,
       referrer: null,
       title: 'This is an article',
     };
