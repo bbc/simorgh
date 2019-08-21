@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { shape, bool, string, element } from 'prop-types';
 import StoryPromoComponent, {
   Headline,
@@ -107,7 +107,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   }
 
   const Info = (
-    <Fragment>
+    <>
       {headline && (
         <Headline script={script} service={service} topStory={topStory}>
           <Link href={url}>
@@ -148,7 +148,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           service={service}
         />
       )}
-    </Fragment>
+    </>
   );
 
   const imageValues = pathOr(null, ['indexImage'], item);

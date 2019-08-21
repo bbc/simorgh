@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -27,7 +27,7 @@ const Document = ({
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
   const scripts = (
-    <Fragment>
+    <>
       <IfAboveIE9>
         {assets.map(asset => (
           <script
@@ -39,7 +39,7 @@ const Document = ({
           />
         ))}
       </IfAboveIE9>
-    </Fragment>
+    </>
   );
 
   return (
@@ -58,15 +58,15 @@ const Document = ({
           </DialContextProvider>
         )}
         {isAmp && (
-          <Fragment>
+          <>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
             <noscript>
               <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
             </noscript>
-          </Fragment>
+          </>
         )}
         {isAmp && (
-          <Fragment>
+          <>
             <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
             <script
               async
@@ -83,7 +83,7 @@ const Document = ({
               custom-element="amp-analytics"
               src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
             />
-          </Fragment>
+          </>
         )}
       </head>
       <body>
