@@ -35,6 +35,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'See all',
+    home: 'ပင်မစာမျက်နှာ',
+    currentPage: 'Current page',
+    skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားပါ',
     error: {
       404: {
         statusCode: '404',

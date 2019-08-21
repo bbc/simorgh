@@ -39,6 +39,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'See all',
+    home: 'کور پاڼه',
+    currentPage: 'Current page',
+    skipLinkText: 'مطلب ته ورشئ',
     error: {
       404: {
         statusCode: '۴۰۴',

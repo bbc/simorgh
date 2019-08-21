@@ -34,6 +34,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'Hunda ilaali',
+    home: 'Oduu',
+    currentPage: 'Current page',
+    skipLinkText: 'Qabiyyeetti darbi',
     error: {
       404: {
         statusCode: '404',

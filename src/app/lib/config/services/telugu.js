@@ -35,6 +35,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'See all',
+    home: 'వార్తలు',
+    currentPage: 'Current page',
+    skipLinkText: 'కంటెంట్‌కు దాటవేయండి',
     error: {
       404: {
         statusCode: '404',

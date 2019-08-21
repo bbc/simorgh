@@ -34,6 +34,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'See all',
+    home: 'Haberler',
+    currentPage: 'Current page',
+    skipLinkText: 'Siteye gir',
     error: {
       404: {
         statusCode: '404',

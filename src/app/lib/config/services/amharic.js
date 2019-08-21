@@ -38,6 +38,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'See all',
+    home: 'ዜና',
+    currentPage: 'Current page',
+    skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
     error: {
       404: {
         statusCode: '404',

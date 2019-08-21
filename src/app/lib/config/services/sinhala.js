@@ -38,6 +38,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'See all',
+    home: 'මුල් පිටුව',
+    currentPage: 'Current page',
+    skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
     error: {
       404: {
         statusCode: '404',

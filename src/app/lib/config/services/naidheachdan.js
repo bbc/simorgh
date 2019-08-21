@@ -35,6 +35,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'See all',
+    home: 'Alba',
+    currentPage: 'Current page',
+    skipLinkText: 'Air adhart',
     error: {
       404: {
         statusCode: '404',

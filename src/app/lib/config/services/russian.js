@@ -34,6 +34,9 @@ const service = {
   swPath: '/sw.js',
   translations: {
     seeAll: 'See all',
+    home: 'Главная',
+    currentPage: 'Current page',
+    skipLinkText: 'Перейти к содержанию',
     error: {
       404: {
         statusCode: '404',
