@@ -33,6 +33,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'War',
+    currentPage: 'Current page',
+    skipLinkText: 'U gudub qaybta macluumaadka',
     error: {
       404: {
         statusCode: '404',

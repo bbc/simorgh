@@ -33,6 +33,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: `Urupapuro rw'itangiriro`,
+    currentPage: 'Current page',
+    skipLinkText: 'Simbira ku birimwo',
     error: {
       404: {
         statusCode: '404',
