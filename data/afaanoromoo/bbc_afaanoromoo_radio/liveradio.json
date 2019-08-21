@@ -32,7 +32,7 @@
         "id": "liveradio",
         "subType": "primary",
         "format": "audio",
-        "externalId": "bbc_afaanoromoo_radio",
+        "externalId": "bbc_oromo_radio",
         "duration": "PT0S",
         "caption": "",
         "embedding": false,
@@ -45,7 +45,7 @@
   "promo": {
     "name": "Dhaggeeffadhaa",
     "summary": "Sagantaawwan keenya.",
-    "uri": "/afaanoromo/bbc_afaanoromoo_radio/liveradio",
+    "uri": "/afaanoromoo/bbc_afaanoromoo_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_afaanoromoo_radio",
     "type": "link"
