@@ -85,8 +85,8 @@ const runTests = ({ service }) =>
               .eq(3)
               .should('be.hidden');
             cy.get('time')
-            .should('have.length.of.at.least', 1)
-            .should('be.visible');
+              .should('have.length.of.at.least', 1)
+              .should('be.visible');
           });
         });
       });
