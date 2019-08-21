@@ -1,13 +1,51 @@
 #!/usr/bin/env groovy
 
+import groovy.json.JsonOutput;
+
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
 def nodeImageVersion = "10.16.0-1"
 def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
 
+
+class BuildTag {
+  private String name;
+  private String number;
+  private String url;
+  private String commit;
+  private String commitAuthor;
+  private String commitMessage;
+
+  public BuildTag(name, number, url, commit, commitAuthor, commitMessage) {
+    this.name = name;
+    this.number = number;
+    this.url = url;
+    this.commit = commit;
+    this.commitAuthor = commitAuthor;
+    this.commitMessage = commitMessage;
+  }
+  public getBuildName(){
+    return this.name;
+  }
+  public getBuildNumber(){
+    return this.number;
+  }
+  public getBuildUrl(){
+    return this.url;
+  }
+  public getCommit(){
+    return this.commit;
+  }
+  public getCommitAuthor(){
+    return this.commitAuthor;
+  }
+  public getCommitMessage(){
+    return this.commitMessage;
+  }
+}
+
 def appGitCommit = ""
 def appGitCommitAuthor = ""
 def appGitCommitMessage = ""
-def buildTagText = ""
 def messageColor = 'danger'
 
 def stageName = ""
@@ -30,6 +68,18 @@ def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
   appGitCommitMessage = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
+}
+
+def createBuildTag() { 
+  // Remove any tags that exist currently
+  sh 'rm -f ./pack/build_tag.json'
+
+  // Get Simorgh commit information
+  getCommitInfo()
+
+  BuildTag build = new BuildTag(env.JOB_NAME, env.BUILD_NUMBER, env.BUILD_URL, appGitCommit, appGitCommitAuthor, appGitCommitMessage)
+  def json = JsonOutput.toJson(build)
+  new File("/pack/build_tag.json").write(json)
 }
 
 def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
@@ -123,6 +173,9 @@ pipeline {
           }
           steps {
             runProductionTests()
+            sh 'mkdir pack'
+            createBuildTag()
+            sh 'cat ./pack/build_tag.json'
           }
         }
       }
@@ -166,16 +219,7 @@ pipeline {
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
 
-            script {
-              // Get Simorgh commit information
-              getCommitInfo()
-
-              // Set build tag information
-              buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
-            }
-
-            // Write commit information to build_tag.txt
-            sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
+            createBuildTag()
 
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
@@ -245,11 +289,6 @@ pipeline {
   }
   post {
     always {
-      script {
-        // Get Simorgh commit information
-        getCommitInfo()
-      }
-
       // Clean the workspace
       cleanWs()
     }
