@@ -121,6 +121,26 @@ const audioItemNoDuration = {
   },
 };
 
+const indexAlsosItem = {
+  headlines: {
+    headline: 'A headline',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  summary: 'Summary text',
+  timestamp: 1556795033000,
+  indexImage: {
+    path: '/cpsprodpb/0A06/production/image.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Image Alt text',
+    copyrightHolder: 'Image provider',
+  },
+  cpsType: 'STY',
+  relatedItems: `${relatedItems}`,
+};
+
 const fixtures = {
   standard: completeItem,
   video: videoItem,
@@ -159,16 +179,12 @@ describe('StoryPromo Container', () => {
       `should render ${name} correctly for amp`,
       <WrappedStoryPromo platform="amp" item={data} />,
     );
-
-    shouldMatchSnapshot(
-      `should render multiple Index Alsos correctly for canonical`,
-      <WrappedStoryPromo
-        platform="canonical"
-        item={data}
-        relatedItems={relatedItems}
-      />,
-    );
   });
+
+  shouldMatchSnapshot(
+    `should render multiple Index Alsos correctly for canonical`,
+    <WrappedStoryPromo platform="canonical" item={indexAlsosItem} />,
+  );
 
   describe('assertion tests', () => {
     let item;

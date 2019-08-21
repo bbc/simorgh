@@ -8,7 +8,7 @@ import {
   IndexAlso,
   IndexAlsosUl,
   IndexAlsosLi,
-} from '@bbc/psammead-story-promo/dist/IndexAlsos';
+} from '@bbc/psammead-story-promo/index-alsos';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const IndexAlsosContainer = ({ alsoItems, script, service }) => {
