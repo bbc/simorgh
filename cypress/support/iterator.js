@@ -1,17 +1,12 @@
-import path from 'ramda/src/path';
 import config from './config/services';
+import shouldSmokeTest from './shouldSmokeTest';
 import runCommonTests from '../integration/pages';
 import serviceHasPageType from './serviceHasPageType';
 
-const smokeTest = pageType => service =>
-  Cypress.env('SMOKE')
-    ? path([service, 'pageTypes', pageType, 'smoke'], config)
-    : true;
-
 const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
   Object.keys(config)
-    .filter(serviceHasPageType(pageType))
-    .filter(smokeTest(pageType))
+    .filter(service => serviceHasPageType(service, pageType))
+    .filter(service => shouldSmokeTest(pageType, service))
     .forEach(service => {
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
