@@ -21,7 +21,6 @@ import {
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
-import getDials from './getDials';
 import logResponseTime from './utilities/logResponseTime';
 
 const morgan = require('morgan');
@@ -174,14 +173,6 @@ server
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
 
-        let dials = {};
-        try {
-          dials = await getDials();
-        } catch ({ message }) {
-          logger.error(`Error fetching Cosmos dials: ${message}`);
-        }
-        // Preserve initial dial state in window so it is available during hydration
-        data.dials = dials;
         data.path = urlPath;
 
         res.status(status).send(

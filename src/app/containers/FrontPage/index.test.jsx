@@ -14,7 +14,6 @@ const defaultProps = {
   isAmp: false,
   pageType: 'frontPage',
   service: 'news',
-  dials: {},
 };
 
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {
@@ -117,7 +116,6 @@ describe('FrontPageContainer', () => {
         const data = {
           pageData: igboData,
           status: 200,
-          dials: {},
         };
 
         const frontPageMainMock = jest.requireMock('../FrontPageMain');

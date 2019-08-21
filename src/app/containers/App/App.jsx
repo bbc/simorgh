@@ -9,7 +9,6 @@ export const App = ({
   location,
   initialData,
   bbcOrigin,
-  dials,
   history,
 }) => {
   const {
@@ -82,7 +81,6 @@ export const App = ({
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
-    dials,
     previousPath,
   });
 };

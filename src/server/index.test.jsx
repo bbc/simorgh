@@ -5,10 +5,7 @@ import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import Document from './Document/component';
-import getDials from './getDials';
 import { localBaseUrl } from '../testHelpers/config';
-
-jest.mock('./getDials');
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -157,9 +154,6 @@ describe('Server', () => {
         });
 
         it('should respond with rendered data', async () => {
-          const dials = { dial: 'value' };
-          getDials.mockResolvedValue(dials);
-
           const { text, status } = await makeRequest(
             `/${service}/articles/${id}`,
           );
@@ -190,20 +184,12 @@ describe('Server', () => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={dials}
             />,
           );
 
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
-        });
-
-        it('should respond successfully even if dials fetch fails', async () => {
-          getDials.mockRejectedValue(new Error('Fetch fail'));
-
-          const { status } = await makeRequest('/news/articles/c0000000001o');
-          expect(status).toBe(200);
         });
       });
 
@@ -285,9 +271,6 @@ describe('Server', () => {
         });
 
         it('should respond with rendered data', async () => {
-          const dials = { dial: 'value' };
-          getDials.mockResolvedValue(dials);
-
           const { text, status } = await makeRequest(`/${service}`);
 
           expect(status).toBe(200);
@@ -316,20 +299,12 @@ describe('Server', () => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={dials}
             />,
           );
 
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
-        });
-
-        it('should respond successfully even if dials fetch fails', async () => {
-          getDials.mockRejectedValue(new Error('Fetch fail'));
-
-          const { status } = await makeRequest('/news/articles/c0000000001o');
-          expect(status).toBe(200);
         });
       });
 

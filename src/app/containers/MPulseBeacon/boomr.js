@@ -1,7 +1,6 @@
 /* eslint-disable */
 
 const boomr = (apiKey) => {
-  console.log('BOOMR INIT');
   if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
       return;
   }
