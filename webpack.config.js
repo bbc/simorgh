@@ -33,7 +33,12 @@ module.exports = (shell = {}) => {
   const baseConfig = {
     mode: IS_PROD ? 'production' : 'development',
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
-    resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
+    resolve: {
+      extensions: ['.js', '.jsx'],
+      alias: {
+        lib: resolvePath('src/app/lib/'),
+      },
+    }, // resolves `import '../Foo'` to `../Foo/index.jsx`
     devServer: {
       stats,
     },
