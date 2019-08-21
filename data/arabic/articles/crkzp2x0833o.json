@@ -1431,7 +1431,7 @@
     },
     "options": {},
     "passport": {
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
       "language": "ar"
     },
     "tags": {},
