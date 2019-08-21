@@ -41,6 +41,21 @@ const runCommonTests = ({ service, pageType }) => {
       });
     });
 
+    describe('Page links test', () = > {
+      if (Cypress.env('APP_ENV') === 'live') {
+        it('footer links should not 404', () => {
+          cy.get('a')
+            .not('[href="#*"]')
+            .each(element => {
+              const href = element.attr('href');
+              cy.request(href).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      };
+    });
+
     describe('Header Tests', () => {
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
@@ -95,19 +110,6 @@ const runCommonTests = ({ service, pageType }) => {
           ),
         );
       });
-
-      if (Cypress.env('APP_ENV') === 'live') {
-        it('footer links should not 404', () => {
-          cy.get('a')
-            .not('[href="#*"]')
-            .each(element => {
-              const href = element.attr('href');
-              cy.request(href).then(resp => {
-                expect(resp.status).to.not.equal(404);
-              });
-            });
-        });
-      }
 
       it('should contain copyright text', () => {
         cy.get('footer p').should(
