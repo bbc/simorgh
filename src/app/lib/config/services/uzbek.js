@@ -33,9 +33,6 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
-    home: 'Бош саҳифа',
-    currentPage: 'Current page',
-    skipLinkText: 'Саҳифага ўтиш',
     error: {
       404: {
         statusCode: '404',

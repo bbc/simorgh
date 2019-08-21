@@ -2,7 +2,6 @@ import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
-import toggles from '../../support/toggles';
 
 export const runCommonCanonicalTests = ({ service }) => {
   cy.hasGlobalChartbeatConfig();
@@ -83,28 +82,6 @@ export const runCommonTests = ({ service, pageType }) => {
           .find('svg')
           .should('be.visible');
       });
-
-      if (appConfig[service].navigation) {
-        if (
-          pageType !== 'articles' ||
-          (pageType === 'articles' && toggles.navOnArticles.enabled)
-        ) {
-          it('should have one visible navigation with a skiplink to h1', () => {
-            cy.get('nav')
-              .should('have.lengthOf', 1)
-              .should('be.visible')
-              .find('a[class^="SkipLink"]')
-              .should('have.lengthOf', 1)
-              .should('have.attr', 'href', '#content');
-            cy.get('nav a[class^="StyledLink"]')
-              .should('have.attr', 'href', appConfig[service].navigation[0].url)
-              .should('contain', appConfig[service].navigation[0].title);
-            cy.get('h1')
-              .should('have.lengthOf', 1)
-              .should('have.attr', 'id', 'content');
-          });
-        }
-      }
     });
 
     describe('Footer Tests', () => {
