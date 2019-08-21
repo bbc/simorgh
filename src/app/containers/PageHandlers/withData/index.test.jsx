@@ -59,7 +59,7 @@ describe('withData HOC', () => {
     );
   });
 
-  describe('with missing articleData', () => {
+  describe('with missing pageData', () => {
     suppressPropWarnings(['data.pageData', 'undefined']);
     shouldShallowMatchSnapshot(
       'should return the errorMain component',
