@@ -15,17 +15,6 @@ const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 const runTests = ({ service }) =>
   describe(`Tests`, () => {
     describe(`Metadata`, () => {
-      it('should have lang and dir attributes', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            cy.hasHtmlLangDirAttributes({
-              lang: body.metadata.passport.language,
-              dir: appConfig[service].dir,
-            });
-          },
-        );
-      });
-
       it('should have the correct facebook metadata', () => {
         cy.checkFacebookMetadata(
           '100004154058350',

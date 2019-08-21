@@ -78,6 +78,21 @@ export const runCommonTests = ({ service, pageType }) => {
           cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
         });
       }
+
+      it('should have lang and dir attributes', () => {
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+          ({ body }) => {
+            const lang =
+              pageType === 'articles'
+                ? body.metadata.passport.language
+                : appConfig[service].lang;
+
+            cy.get('html')
+              .should('have.attr', 'lang', lang)
+              .and('have.attr', 'dir', `${appConfig[service].dir}`);
+          },
+        );
+      });
     });
 
     describeForEuOnly('Consent Banners', () => {
