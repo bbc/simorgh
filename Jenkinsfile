@@ -74,11 +74,6 @@ def createBuildTag() {
   // Remove any tags that exist currently
   sh 'rm -f ./pack/build_tag.json'
 
-  // Get Simorgh commit information
-  script {
-    getCommitInfo()
-  }
-
   BuildTag build = new BuildTag(env.JOB_NAME, env.BUILD_NUMBER, env.BUILD_URL, appGitCommit, appGitCommitAuthor, appGitCommitMessage)
   def json = JsonOutput.toJson(build)
   new File("/pack/build_tag.json").write(json)
@@ -174,8 +169,13 @@ pipeline {
             }
           }
           steps {
-            runProductionTests()
+            // runProductionTests()
             sh 'mkdir pack'
+
+            // Get Simorgh commit information
+            script {
+              getCommitInfo()
+            }
             createBuildTag()
             sh 'cat ./pack/build_tag.json'
           }
