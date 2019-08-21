@@ -7,9 +7,8 @@ import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import aresBlockPropTypes from '../../models/propTypes/mediaPage/content/aresBlock';
 
-const renderBlock = ({ block, script, service, key }) => {
+const renderBlock = ({ script, service }) => block => {
   const Component = {
     heading: Headline,
     paragraph: Paragraph,
@@ -20,17 +19,10 @@ const renderBlock = ({ block, script, service, key }) => {
   }
 
   return (
-    <Component script={script} service={service} key={key}>
+    <Component script={script} service={service} key={block.text}>
       {block.text}
     </Component>
   );
-};
-
-renderBlock.propTypes = {
-  block: aresBlockPropTypes.isRequired,
-  script: string.isRequired,
-  service: string.isRequired,
-  key: string.isRequired,
 };
 
 const MediaPageMain = props => {
@@ -50,9 +42,7 @@ const MediaPageMain = props => {
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
-            {blocks.map(block => {
-              return renderBlock({ block, script, service, key: block.text });
-            })}
+            {blocks.map(renderBlock({ script, service }))}
             <ul>
               <li>
                 <strong>Service</strong>: {service}
