@@ -1,9 +1,11 @@
+import _ from 'ramda/src/__';
 import {
   assertCookieValue,
   assertCookieExpiryDate,
 } from '../../support/metaTestHelper';
 import appConfig from '../../../src/app/lib/config/services';
 import config from '../../support/config/services';
+import shouldSmokeTest from '../../support/shouldSmokeTest';
 
 // Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
 const serviceFilter = service => ['news', 'persian'].includes(service);
@@ -53,6 +55,7 @@ Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
+      .filter(shouldSmokeTest(_, service))
       .filter(pageType => filterPageTypes(pageType, service))
       .forEach(pageType => {
         describe(`Canonical Cookie Banner Test for ${service} ${pageType}`, () => {
