@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
-
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-
+import relatedItems from './IndexAlsos/relatedItems';
 import StoryPromo from '.';
 
 const completeItem = {
@@ -159,6 +158,15 @@ describe('StoryPromo Container', () => {
     shouldMatchSnapshot(
       `should render ${name} correctly for amp`,
       <WrappedStoryPromo platform="amp" item={data} />,
+    );
+
+    shouldMatchSnapshot(
+      `should render multiple Index Alsos correctly for canonical`,
+      <WrappedStoryPromo
+        platform="canonical"
+        item={data}
+        relatedItems={relatedItems}
+      />,
     );
   });
 
