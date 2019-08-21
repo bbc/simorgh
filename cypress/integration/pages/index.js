@@ -99,7 +99,7 @@ const runCommonTests = ({ service, pageType }) => {
       if (Cypress.env('APP_ENV') === 'live') {
         it('footer links should not 404', () => {
           cy.get('a')
-            .not('[href="#content"]')
+            .not('[href="#*"]')
             .each(element => {
               const href = element.attr('href');
               cy.request(href).then(resp => {
