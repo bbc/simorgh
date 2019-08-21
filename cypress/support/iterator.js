@@ -18,7 +18,7 @@ const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
         });
 
         runCommonTests({ service, pageType });
-        runCommonCanonicalTests({ service });
+        runCommonCanonicalTests({ service, pageType });
         if (runTests) runTests({ service, pageType });
         if (runCanonicalTests) runCanonicalTests({ service, pageType });
       });
