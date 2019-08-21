@@ -1,14 +1,16 @@
 import config from './config/services';
-import shouldSmokeTest from './shouldSmokeTest';
 import runCommonTests from '../integration/pages';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
+const smokeTest = (service, pageType) =>
+  Cypress.env('SMOKE') ? config[service].pageTypes[pageType].smoke : true;
+
 const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
-    .filter(service => shouldSmokeTest(pageType, service))
+    .filter(service => smokeTest(service, pageType))
     .forEach(service => {
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {

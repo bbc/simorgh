@@ -8,10 +8,6 @@ import path from 'path';
  */
 jest.mock('../app/contexts/ServiceContext');
 
-global.Cypress = {
-  env: jest.fn(),
-};
-
 Enzyme.configure({ adapter: new Adapter() });
 
 global.fetch = fetch;
