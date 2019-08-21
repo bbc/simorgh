@@ -75,7 +75,9 @@ def createBuildTag() {
   sh 'rm -f ./pack/build_tag.json'
 
   // Get Simorgh commit information
-  getCommitInfo()
+  script {
+    getCommitInfo()
+  }
 
   BuildTag build = new BuildTag(env.JOB_NAME, env.BUILD_NUMBER, env.BUILD_URL, appGitCommit, appGitCommitAuthor, appGitCommitMessage)
   def json = JsonOutput.toJson(build)
@@ -289,7 +291,9 @@ pipeline {
   }
   post {
     always {
-      getCommitInfo()
+      script {
+        getCommitInfo()
+      }
       // Clean the workspace
       cleanWs()
     }
