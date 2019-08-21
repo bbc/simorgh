@@ -1,9 +1,5 @@
 // Why aren't these used more widely? They should either be refactored for general use or shouldn't be a cy.command
 
-Cypress.Commands.add('checkMetadataContent', (metaDataTag, content) => {
-  cy.get(metaDataTag).should('have.attr', 'content', content);
-});
-
 Cypress.Commands.add(
   'checkFacebookMetadata',
   (fbAdmins, appID, articleAuthor) => {
@@ -49,8 +45,16 @@ Cypress.Commands.add('checkOpenGraphMetadata', (
       // cy.get('meta[name="og:description"]').should('have.attr', 'content', description); // !!! Remove eslint-disabling comment above when un-commenting this test.
     });
 
-    cy.checkMetadataContent('head meta[name="og:locale"]', locale);
-    cy.checkMetadataContent('head meta[name="og:site_name"]', siteName);
+    cy.get('head meta[name="og:locale"]').should(
+      'have.attr',
+      'content',
+      locale,
+    );
+    cy.get('head meta[name="og:site_name"]').should(
+      'have.attr',
+      'content',
+      siteName,
+    );
   });
 });
 
@@ -93,9 +97,25 @@ Cypress.Commands.add('checkTwitterMetadata', (
       //   title,
       // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
     });
-    cy.checkMetadataContent('head meta[name="twitter:creator"]', creator);
-    cy.checkMetadataContent('head meta[name="twitter:image:alt"]', imageAlt);
-    cy.checkMetadataContent('head meta[name="twitter:image:src"]', imageSrc);
-    cy.checkMetadataContent('head meta[name="twitter:site"]', site);
+    cy.get('head meta[name="twitter:creator"]').should(
+      'have.attr',
+      'content',
+      creator,
+    );
+    cy.get('head meta[name="twitter:image:alt"]').should(
+      'have.attr',
+      'content',
+      imageAlt,
+    );
+    cy.get('head meta[name="twitter:image:src"]').should(
+      'have.attr',
+      'content',
+      imageSrc,
+    );
+    cy.get('head meta[name="twitter:site"]').should(
+      'have.attr',
+      'content',
+      site,
+    );
   });
 });

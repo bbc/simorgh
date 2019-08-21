@@ -75,7 +75,11 @@ export const runCommonTests = ({ service, pageType }) => {
         });
 
         it('should have a correct robot meta tag', () => {
-          cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
+          cy.get('head meta[name="robots"]').should(
+            'have.attr',
+            'content',
+            'noodp,noydir',
+          );
         });
       }
 
