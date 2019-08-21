@@ -1,9 +1,8 @@
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
 
-const runTests = ({ service }) =>
+const runTests = () =>
   describe(`Tests`, () => {
     describe('Frontpage body', () => {
       before(() => {
@@ -11,14 +10,6 @@ const runTests = ({ service }) =>
       });
 
       describe('Header', () => {
-        if (appConfig[service].navigation) {
-          it('should have one visible navigation', () => {
-            cy.get('nav')
-              .should('have.lengthOf', 1)
-              .should('be.visible');
-          });
-        }
-
         it('should have a visually hidden top-level header', () => {
           cy.get('h1').should('have.length', 1);
         });
@@ -26,15 +17,6 @@ const runTests = ({ service }) =>
 
       describe('Section', () => {
         it('should be labelled by a visible section label', () => {
-          cy.get('section')
-            .should('have.length.of.at.least', 1)
-            .should('be.visible')
-            .each($section => {
-              cy.wrap($section).within(() => {
-                cy.get('h2').should('have.lengthOf', 1);
-              });
-            });
-          cy.viewport(320, 480);
           cy.get('section')
             .should('have.length.of.at.least', 1)
             .should('be.visible')
@@ -58,32 +40,6 @@ const runTests = ({ service }) =>
             cy.get('p')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
-            cy.get('time')
-              .should('have.length.of.at.least', 1)
-              .should('be.visible');
-          });
-          cy.viewport(320, 480);
-          cy.get('section').within(() => {
-            cy.get('img')
-              .should('have.length.of.at.least', 1)
-              .should('be.visible');
-            cy.get('h3')
-              .should('have.length.of.at.least', 1)
-              .should('be.visible')
-              .find('a')
-              .should('have.attr', 'href');
-            cy.get('p')
-              .eq(0)
-              .should('be.visible');
-            cy.get('p')
-              .eq(1)
-              .should('be.hidden');
-            cy.get('p')
-              .eq(2)
-              .should('be.hidden');
-            cy.get('p')
-              .eq(3)
-              .should('be.hidden');
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
