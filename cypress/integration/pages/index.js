@@ -4,7 +4,12 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 import toggles from '../../support/toggles';
 
-const runCommonTests = ({ service, pageType }) => {
+export const runCommonCanonicalTests = ({ service }) => {
+  cy.hasGlobalChartbeatConfig();
+  cy.hasOneServiceBundle(service);
+};
+
+export const runCommonTests = ({ service, pageType }) => {
   describe('Always tests', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
@@ -38,7 +43,22 @@ const runCommonTests = ({ service, pageType }) => {
 
     describeForEuOnly('Consent Banners', () => {
       it('have correct translations', () => {
-        cy.hasConsentBannerTranslations(service);
+        cy.contains(
+          appConfig[service].translations.consentBanner.privacy.title,
+        );
+        cy.contains(
+          appConfig[service].translations.consentBanner.privacy.reject,
+        );
+        cy.contains(
+          appConfig[service].translations.consentBanner.privacy.accept,
+        ).click();
+        cy.contains(appConfig[service].translations.consentBanner.cookie.title);
+        cy.contains(
+          appConfig[service].translations.consentBanner.cookie.reject,
+        );
+        cy.contains(
+          appConfig[service].translations.consentBanner.cookie.accept,
+        );
       });
     });
 
@@ -139,5 +159,3 @@ const runCommonTests = ({ service, pageType }) => {
     });
   });
 };
-
-export default runCommonTests;
