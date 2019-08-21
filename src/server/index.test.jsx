@@ -141,7 +141,9 @@ describe('Server', () => {
 
       describe('with non-existent data', () => {
         it('should respond with a 404', async () => {
-          const { statusCode } = await makeRequest('/ERROR.json');
+          const { statusCode } = await makeRequest(
+            '/korean/bbc_korean_radio/ERROR.json',
+          );
           expect(statusCode).toEqual(404);
         });
       });
