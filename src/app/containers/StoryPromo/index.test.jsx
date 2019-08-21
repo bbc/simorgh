@@ -4,7 +4,7 @@ import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import relatedItems from './IndexAlsos/relatedItems';
+import relItems from './IndexAlsos/relatedItems';
 import StoryPromo from '.';
 
 const completeItem = {
@@ -138,7 +138,7 @@ const indexAlsosItem = {
     copyrightHolder: 'Image provider',
   },
   cpsType: 'STY',
-  relatedItems: `${relatedItems}`,
+  relatedItems: relItems,
 };
 
 const fixtures = {
@@ -183,7 +183,7 @@ describe('StoryPromo Container', () => {
 
   shouldMatchSnapshot(
     `should render multiple Index Alsos correctly for canonical`,
-    <WrappedStoryPromo platform="canonical" item={indexAlsosItem} />,
+    <WrappedStoryPromo platform="canonical" item={indexAlsosItem} topStory />,
   );
 
   describe('assertion tests', () => {
@@ -346,6 +346,26 @@ describe('StoryPromo Container', () => {
         } = bengaliContainer.querySelector('time');
         expect(bengaliTime).toEqual('৬ আগস্ট ২০১৯');
         expect(bengaliDate).toEqual('2019-08-06');
+      });
+    });
+
+    describe('With Index Alsos', () => {
+      it('should render a list with two related items', () => {
+        const { container } = render(
+          <WrappedStoryPromo item={indexAlsosItem} topStory />,
+        );
+
+        expect(container.getElementsByTagName('ul')).toHaveLength(1);
+        expect(container.getElementsByTagName('li')).toHaveLength(2);
+      });
+
+      it('should render a related item not contained within a list', () => {
+        const { container } = render(
+          <WrappedStoryPromo item={indexAlsosItem[0]} topStory />,
+        );
+
+        expect(container.getElementsByTagName('ul')).toHaveLength(0);
+        expect(container.getElementsByTagName('li')).toHaveLength(0);
       });
     });
   });
