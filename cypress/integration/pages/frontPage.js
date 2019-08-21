@@ -36,6 +36,13 @@ const runTests = ({ service }) =>
             });
         });
 
+        it('should have the correct lang & dir attributes', () => {
+          cy.hasHtmlLangDirAttributes({
+            lang: `${appConfig[service].lang}`,
+            dir: `${appConfig[service].dir}`,
+          });
+        });
+
         it('should contain at least one story promo', () => {
           cy.get('section').within(() => {
             cy.get('img')
