@@ -4,7 +4,7 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
 export const runCommonCanonicalTests = ({ service }) => {
-  cy.hasGlobalChartbeatConfig();
+  cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
   cy.hasOneServiceBundle(service);
 };
 
