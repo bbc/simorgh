@@ -16,7 +16,7 @@ const AmpHead = () => {
 
 const AmpMediaPlayer = ({ embedSrc, placeholderSrc }) => {
   return (
-    <React.Fragment>
+    <>
       <AmpHead />
       <amp-iframe
         sandbox="allow-scripts allow-same-origin"
@@ -27,7 +27,7 @@ const AmpMediaPlayer = ({ embedSrc, placeholderSrc }) => {
       >
         <amp-img layout="fill" src={placeholderSrc} placeholder />
       </amp-iframe>
-    </React.Fragment>
+    </>
   );
 };
 
