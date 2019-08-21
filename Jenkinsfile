@@ -289,6 +289,7 @@ pipeline {
   }
   post {
     always {
+      getCommitInfo()
       // Clean the workspace
       cleanWs()
     }
