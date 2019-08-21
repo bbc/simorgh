@@ -1,6 +1,8 @@
+import _ from 'ramda/src/__';
 import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
+import shouldSmokeTest from '../../support/shouldSmokeTest';
 
 // Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
 const serviceFilter = service => ['news', 'persian'].includes(service);
@@ -33,6 +35,7 @@ Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
+      .filter(shouldSmokeTest(_, service))
       .filter(pageType => filterPageTypes(service, pageType))
       .forEach(pageType => {
         describeForEuOnly(
