@@ -122,3 +122,16 @@ export const articleDataPersian = articleDataBuilder(
   'خلاصه مقاله',
   emptyThings,
 );
+
+export const articleDataPidgin = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  'Article Headline in Pidgin',
+  'A paragraph in Pidgin.',
+  'Article Headline for SEO in Pidgin',
+  'Article Headline for Promo in Pidgin',
+  'Article summary in Pidgin',
+  emptyThings,
+);
