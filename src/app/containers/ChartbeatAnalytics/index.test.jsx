@@ -185,7 +185,7 @@ describe('Charbeats Analytics Container', () => {
     expect(utils.getReferrer).toHaveBeenCalledTimes(1);
     expect(tree).toMatchSnapshot();
   });
-  it('should return null when toggle is disbaled for live', () => {
+  it('should return null when toggle is disabled for live', () => {
     const tree = renderer
       .create(
         <ContextWrap platform="canonical" pageType="article" origin="bbc.com">
