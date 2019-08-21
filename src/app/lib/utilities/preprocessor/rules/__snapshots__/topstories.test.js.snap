@@ -864,6 +864,9 @@ Object {
             "type": "cps",
           },
         ],
+        "strapline": Object {
+          "name": "ข่าวเด่น",
+        },
         "title": "Top stories",
         "type": "top-stories",
       },
