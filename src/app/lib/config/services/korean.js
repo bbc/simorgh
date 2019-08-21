@@ -122,7 +122,7 @@ const service = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: '외부 콘텐츠 링크에 대한 본사 정책 보기',
+      text: '외부 콘텐츠 링크에 대한 본사 정책 보기.',
     },
     links: [
       {
