@@ -2,7 +2,7 @@ import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
-import toggles from '../../../src/app/lib/config/toggles';
+import toggles from '../../support/toggles';
 
 const runCommonTests = ({ service, pageType }) => {
   describe('Always tests', () => {
@@ -65,11 +65,9 @@ const runCommonTests = ({ service, pageType }) => {
       });
 
       if (appConfig[service].navigation) {
-        const isNavOnArticleEnabled =
-          toggles[Cypress.env('APP_ENV')].navOnArticles.enabled;
         if (
           pageType !== 'articles' ||
-          (pageType === 'articles' && isNavOnArticleEnabled)
+          (pageType === 'articles' && toggles.navOnArticles.enabled)
         ) {
           it('should have one visible navigation with a skiplink to h1', () => {
             cy.get('nav')
