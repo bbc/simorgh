@@ -236,14 +236,19 @@ exports[`MediaPlayer Calls the correct props Calls the canonical placeholder whe
 `;
 
 exports[`MediaPlayer Calls the correct props Calls the canonical player when platform is canonical and placeholder is false 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
 .c2 {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  overflow: hidden;
 }
 
 .c1 {
@@ -301,12 +306,20 @@ exports[`MediaPlayer Calls the correct props Calls the canonical player when pla
   <div
     className="c1"
   >
-    <iframe
-      allow="autoplay; fullscreen"
+    <div
       className="c2"
-      scrolling="no"
-      src="https://www.test.bbc.com/ws/av-embeds/foo/p01k6msp"
-    />
+      onClick={[Function]}
+    >
+      <img
+        alt="Image Alt"
+        className="c3"
+        height={null}
+        sizes={null}
+        src={false}
+        srcSet={null}
+        width={null}
+      />
+    </div>
   </div>
 </div>
 `;
