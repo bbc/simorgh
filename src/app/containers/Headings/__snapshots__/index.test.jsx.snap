@@ -67,7 +67,7 @@ exports[`Headings with headline data should render correctly 1`] = `
 >
   <h1
     className="c1"
-    id="content"
+    id={null}
   >
     This is a headline!
   </h1>
@@ -141,7 +141,7 @@ exports[`Headings with plain text headline should render h1 containing correct t
 >
   <h1
     className="c1"
-    id="content"
+    id={null}
   >
     Plain headline
   </h1>
@@ -303,7 +303,7 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 >
   <h1
     className="c1"
-    id="content"
+    id={null}
   >
     <b>
       All is bold
@@ -387,7 +387,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
 >
   <h1
     className="c1"
-    id="content"
+    id={null}
   >
     <i
       className="c2"
@@ -473,7 +473,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
 >
   <h1
     className="c1"
-    id="content"
+    id={null}
   >
     <i
       className="c2"
@@ -561,7 +561,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
 >
   <h1
     className="c1"
-    id="content"
+    id={null}
   >
     <b>
       <i
@@ -649,7 +649,7 @@ exports[`Headings with rich text with different attributes should render headlin
 >
   <h1
     className="c1"
-    id="content"
+    id={null}
   >
     This is 
     <i
