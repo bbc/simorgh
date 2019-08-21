@@ -262,16 +262,6 @@ const runCanonicalTests = ({ service }) =>
       }
     });
 
-    describe('Scripts', () => {
-      it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
-      });
-
-      it('should have 1 bundle for its service', () => {
-        cy.hasOneServiceBundle(service);
-      });
-    });
-
     it('should include ampHTML tag', () => {
       cy.checkAmpHTML(
         `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,

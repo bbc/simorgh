@@ -3,9 +3,18 @@ import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 
-export const runCommonCanonicalTests = ({ service }) => {
-  cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
-  cy.hasOneServiceBundle(service);
+export const runCommonCanonicalTests = ({ service, pageType }) => {
+  if (pageType !== 'errorPage404') {
+    describe('Scripts', () => {
+      it('should only have expected bundle script tags', () => {
+        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
+      });
+
+      it('should have 1 bundle for its service', () => {
+        cy.hasOneServiceBundle(service);
+      });
+    });
+  }
 };
 
 export const runCommonTests = ({ service, pageType }) => {
