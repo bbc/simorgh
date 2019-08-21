@@ -145,6 +145,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/azeri',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   bengali: {
@@ -234,6 +235,7 @@ export default {
             : '/cymrufyw',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   gahuza: {
@@ -289,6 +291,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/gujarati',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   hausa: {
@@ -372,6 +375,7 @@ export default {
         smoke: true,
       },
       frontPage: { path: '/igbo', smoke: true },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   indonesia: {
@@ -427,6 +431,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/japanese',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   korean: {
@@ -513,6 +518,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/marathi',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   mundo: {
@@ -537,6 +543,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/mundo',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   naidheachdan: {
@@ -564,6 +571,7 @@ export default {
             : '/naidheachdan',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   nepali: {
@@ -616,6 +624,7 @@ export default {
         smoke: true,
       },
       frontPage: { path: undefined, smoke: false },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   pashto: {
@@ -699,6 +708,7 @@ export default {
         smoke: true,
       },
       frontPage: { path: '/pidgin', smoke: true },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   portuguese: {
@@ -717,6 +727,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/portuguese',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   punjabi: {
@@ -740,6 +751,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/punjabi',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   russian: {
@@ -764,6 +776,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/russian',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   serbian: {
@@ -772,6 +785,7 @@ export default {
       articles: { path: undefined, smoke: false },
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   sinhala: {
@@ -841,6 +855,7 @@ export default {
       articles: { path: undefined, smoke: false },
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   swahili: {
@@ -927,6 +942,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/telugu',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   thai: {
@@ -951,6 +967,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/thai',
         smoke: true,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   tigrinya: {
@@ -1006,6 +1023,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/turkce',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   ukchina: {
@@ -1015,6 +1033,7 @@ export default {
       articles: { path: undefined, smoke: false },
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   ukrainian: {
@@ -1039,6 +1058,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/ukrainian',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   urdu: {
@@ -1125,6 +1145,7 @@ export default {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/vietnamese',
         smoke: false,
       },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   yoruba: {
@@ -1146,6 +1167,7 @@ export default {
         smoke: true,
       },
       frontPage: { path: '/yoruba', smoke: true },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
   zhongwen: {
@@ -1155,6 +1177,7 @@ export default {
       articles: { path: undefined, smoke: false },
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
+      liveRadio: { path: undefined, smoke: false },
     },
   },
 };
