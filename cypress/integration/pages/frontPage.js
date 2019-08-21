@@ -1,8 +1,9 @@
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
+import appConfig from '../../../src/app/lib/config/services';
 
-const runTests = () =>
+const runTests = ({ service }) =>
   describe(`Tests`, () => {
     describe('Frontpage body', () => {
       before(() => {
@@ -10,6 +11,14 @@ const runTests = () =>
       });
 
       describe('Header', () => {
+        if (appConfig[service].navigation) {
+          it('should have one visible navigation', () => {
+            cy.get('nav')
+              .should('have.lengthOf', 1)
+              .should('be.visible');
+          });
+        }
+
         it('should have a visually hidden top-level header', () => {
           cy.get('h1').should('have.length', 1);
         });
