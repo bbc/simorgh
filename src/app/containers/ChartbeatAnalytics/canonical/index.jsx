@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { string, shape, number, bool } from 'prop-types';
+import { string, shape, number, bool, oneOf, oneOfType } from 'prop-types';
 import Helmet from 'react-helmet';
 
 const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
@@ -44,7 +44,7 @@ CanonicalChartbeatBeacon.propTypes = {
     title: string.isRequired,
     type: string.isRequired,
     useCanonical: bool.isRequired,
-    virtualReferrer: string,
+    virtualReferrer: oneOfType([string, oneOf([null])]),
     idSync: shape({
       bbc_hid: string,
     }),
