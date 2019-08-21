@@ -667,6 +667,7 @@ export default {
     font: undefined,
     isWorldService: true,
     serviceOverride: 'serbianLat',
+    bundleOverrideName: 'serbian_lat',
     pageTypes: {
       articles: {
         path:
@@ -692,6 +693,7 @@ export default {
     font: undefined,
     isWorldService: true,
     serviceOverride: 'serbianCyr',
+    bundleOverrideName: 'serbian_cyr',
     pageTypes: {
       articles: {
         path:
@@ -717,6 +719,7 @@ export default {
     font: undefined,
     isWorldService: true,
     serviceOverride: 'ukchinaSimp',
+    bundleOverrideName: 'ukchina_simp',
     pageTypes: {
       articles: {
         path:
@@ -742,6 +745,7 @@ export default {
     font: undefined,
     isWorldService: true,
     serviceOverride: 'ukchinaTrad',
+    bundleOverrideName: 'ukchina_trad',
     pageTypes: {
       articles: {
         path:
@@ -884,6 +888,7 @@ export default {
     font: undefined,
     isWorldService: true,
     serviceOverride: 'zhongwenTrad',
+    bundleOverrideName: 'zhongwen_trad',
     pageTypes: {
       articles: {
         path:
@@ -909,6 +914,7 @@ export default {
     font: undefined,
     isWorldService: true,
     serviceOverride: 'zhongwenSimp',
+    bundleOverrideName: 'zhongwen_trad',
     pageTypes: {
       articles: {
         path:

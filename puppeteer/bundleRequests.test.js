@@ -31,6 +31,7 @@ describe('Js bundle requests', () => {
   });
 
   Object.keys(config).forEach(service => {
+    const serviceBundleName = config[service].bundleOverrideName || service;
     Object.keys(config[service].pageTypes)
       .filter(
         pageType => config[service].pageTypes[pageType].path !== undefined,
@@ -56,7 +57,7 @@ describe('Js bundle requests', () => {
               .forEach(url => {
                 expect(url).toMatch(
                   new RegExp(
-                    `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
+                    `(\\/static\\/js\\/(main|vendor|${serviceBundleName})-\\w+\\.\\w+\\.js)`,
                     'g',
                   ),
                 );
@@ -67,7 +68,7 @@ describe('Js bundle requests', () => {
             const serviceMatches = requests.filter(url =>
               url.match(
                 new RegExp(
-                  `(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`,
+                  `(\\/static\\/js\\/${serviceBundleName}-\\w+\\.\\w+\\.js)`,
                   'g',
                 ),
               ),
