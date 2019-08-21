@@ -1,7 +1,9 @@
 import config from './config/services';
 import shouldSmokeTest from './shouldSmokeTest';
 import runCommonTests from '../integration/pages';
-import serviceHasPageType from './serviceHasPageType';
+
+const serviceHasPageType = (service, pageType) =>
+  config[service].pageTypes[pageType].path !== undefined;
 
 const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
   Object.keys(config)
