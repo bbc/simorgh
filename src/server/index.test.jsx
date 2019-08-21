@@ -61,6 +61,10 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
 }));
 
 describe('Server', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   const makeRequest = async path => request(server).get(path);
 
   describe('/status', () => {
@@ -98,6 +102,15 @@ describe('Server', () => {
           expect(statusCode).toEqual(404);
         });
       });
+
+      describe('Trailing slash redirects', () => {
+        it('should respond with a 301', async () => {
+          const { statusCode } = await makeRequest(
+            '/news/articles/c6v11qzyv8po/',
+          );
+          expect(statusCode).toEqual(301);
+        });
+      });
     });
 
     describe('for front pages', () => {
@@ -114,13 +127,22 @@ describe('Server', () => {
           expect(statusCode).toEqual(404);
         });
       });
+    });
 
-      describe('Trailing slash redirects', () => {
-        it('should respond with a 301', async () => {
-          const { statusCode } = await makeRequest(
-            '/news/articles/c6v11qzyv8po/',
-          );
-          expect(statusCode).toEqual(301);
+    describe('for media page - live radio', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest(
+          '/korean/bbc_korean_radio/liveradio.json',
+        );
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest('/ERROR.json');
+          expect(statusCode).toEqual(404);
         });
       });
     });
@@ -140,13 +162,12 @@ describe('Server', () => {
       service: 'someService',
       status: 404,
     };
+    const id = 'c0000000001o';
+    const service = 'news';
+    const isAmp = false;
 
     describe('Successful render', () => {
       describe('200 status code', () => {
-        const id = 'c0000000001o';
-        const service = 'news';
-        const isAmp = false;
-
         beforeEach(() => {
           mockRouteProps({
             id,
@@ -208,14 +229,11 @@ describe('Server', () => {
       });
 
       describe('404 status code', () => {
-        const id = 'c0000000001o';
-        const service = 'news';
-
         beforeEach(() => {
           mockRouteProps({
             id,
             service,
-            isAmp: false,
+            isAmp,
             dataResponse: notFoundDataResponse,
           });
         });
@@ -233,14 +251,11 @@ describe('Server', () => {
     });
 
     describe('Unknown error within universal-react-app or its dependencies', () => {
-      const id = 'c0000000001o';
-      const service = 'news';
-
       beforeEach(() => {
         mockRouteProps({
           id,
           service,
-          isAmp: false,
+          isAmp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
         });
@@ -257,15 +272,17 @@ describe('Server', () => {
   });
 
   describe('/{service}', () => {
+    const service = 'igbo';
+    const isAmp = false;
     const successDataResponse = {
-      isAmp: false,
+      isAmp,
       data: { some: 'data' },
       service: 'someService',
       status: 200,
     };
 
     const notFoundDataResponse = {
-      isAmp: false,
+      isAmp,
       data: { some: 'data' },
       service: 'someService',
       status: 404,
@@ -273,9 +290,6 @@ describe('Server', () => {
 
     describe('Successful render', () => {
       describe('200 status code', () => {
-        const service = 'igbo';
-        const isAmp = false;
-
         beforeEach(() => {
           mockRouteProps({
             service,
@@ -334,12 +348,10 @@ describe('Server', () => {
       });
 
       describe('404 status code', () => {
-        const service = 'igbo';
-
         beforeEach(() => {
           mockRouteProps({
             service,
-            isAmp: false,
+            isAmp,
             dataResponse: notFoundDataResponse,
           });
         });
@@ -355,12 +367,10 @@ describe('Server', () => {
     });
 
     describe('Unknown error within universal-react-app or its dependencies', () => {
-      const service = 'igbo';
-
       beforeEach(() => {
         mockRouteProps({
           service,
-          isAmp: false,
+          isAmp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
         });
@@ -368,6 +378,115 @@ describe('Server', () => {
 
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(`/${service}`);
+        expect(status).toEqual(500);
+        expect(text).toEqual('Error!');
+      });
+    });
+  });
+
+  describe('media page - live radio', () => {
+    const service = 'korean';
+    const serviceId = 'bbc_korean_radio';
+    const mediaId = 'liveradio';
+    const isAmp = false;
+    const successDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+          });
+        });
+
+        it('should respond with rendered data', async () => {
+          const { text, status } = await makeRequest(
+            `/${service}/${serviceId}/${mediaId}`,
+          );
+
+          expect(status).toBe(200);
+
+          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+            <h1>Mock app</h1>,
+          );
+
+          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+            <Document
+              app="<h1>Mock app</h1>"
+              assets={[
+                `${localBaseUrl}/static/js/korean-12345.12345.js`,
+                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+                `${localBaseUrl}/static/js/main-12345.12345.js`,
+              ]}
+              assetOrigins={[
+                'https://ichef.bbci.co.uk',
+                'https://gel.files.bbci.co.uk',
+                localBaseUrl,
+                'https://logws1363.ati-host.net?',
+              ]}
+              data={successDataResponse}
+              helmet={{ head: 'tags' }}
+              isAmp={isAmp}
+              service={service}
+              styleTags={<style />}
+              dials={{}}
+            />,
+          );
+
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+    });
+
+    describe('404 status code', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: notFoundDataResponse,
+        });
+      });
+
+      it('should respond with a rendered 404', async () => {
+        const { status, text } = await makeRequest(`/${service}`);
+        expect(status).toBe(404);
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
+      });
+    });
+
+    describe('Unknown error within universal-react-app or its dependencies', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(
+          `/${service}/${serviceId}/${mediaId}`,
+        );
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
       });
