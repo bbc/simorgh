@@ -8,7 +8,7 @@ const serviceHasPageType = (service, pageType) =>
 const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
-    .filter(shouldSmokeTest(pageType))
+    .filter(service => shouldSmokeTest(pageType, service))
     .forEach(service => {
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
