@@ -5,8 +5,12 @@ import onClient from '../utilities/onClient';
 export const getDestination = statsDestination => {
   const destinationIDs = {
     NEWS_PS: 598285,
+    NEWS_LANGUAGES_PS: 598291,
     NEWS_GNL: 598287,
+    NEWS_LANGUAGES_GNL: 598289,
     NEWS_PS_TEST: 598286,
+    NEWS_LANGUAGES_PS_TEST: 598292,
+    NEWS_LANGUAGES_GNL_TEST: 598290,
     NEWS_GNL_TEST: 598288,
     WS_NEWS_LANGUAGES: 598342,
     WS_NEWS_LANGUAGES_TEST: 598343,
