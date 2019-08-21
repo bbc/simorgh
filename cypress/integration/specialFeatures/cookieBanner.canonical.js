@@ -1,4 +1,3 @@
-import _ from 'ramda/src/__';
 import {
   assertCookieValue,
   assertCookieExpiryDate,
@@ -55,7 +54,7 @@ Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(shouldSmokeTest(_, service))
+      .filter(pageType => shouldSmokeTest(pageType, service))
       .filter(pageType => filterPageTypes(pageType, service))
       .forEach(pageType => {
         describe(`Canonical Cookie Banner Test for ${service} ${pageType}`, () => {
