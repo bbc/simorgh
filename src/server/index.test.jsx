@@ -252,7 +252,7 @@ describe('Server', () => {
       });
     });
 
-    describe('Unknown error within universal-react-app or its dependencies', () => {
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
       beforeEach(() => {
         mockRouteProps({
           id,
@@ -368,7 +368,7 @@ describe('Server', () => {
       });
     });
 
-    describe('Unknown error within universal-react-app or its dependencies', () => {
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
       beforeEach(() => {
         mockRouteProps({
           service,
@@ -475,7 +475,7 @@ describe('Server', () => {
       });
     });
 
-    describe('Unknown error within universal-react-app or its dependencies', () => {
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
       beforeEach(() => {
         mockRouteProps({
           service,
