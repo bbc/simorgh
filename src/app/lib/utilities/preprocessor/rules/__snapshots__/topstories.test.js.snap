@@ -436,83 +436,84 @@ Object {
       Object {
         "items": Array [
           Object {
-            "assetTypeCode": "PRO",
-            "contentType": "Text",
-            "indexImage": Object {
-              "altText": "บีบีซีอิงลิช",
-              "copyrightHolder": "Getty Images",
-              "height": 549,
-              "href": "http://c.files.bbci.co.uk/524C/production/_107886012_gettyimages-953264272.jpg",
-              "id": "107886012",
-              "path": "/cpsprodpb/524C/production/_107886012_gettyimages-953264272.jpg",
-              "subType": "index",
-              "width": 976,
-            },
-            "name": "เรียนภาษาอังกฤษกับบีบีซี",
-            "summary": "เรียนภาษาอังกฤษกับบีบีซี ฟัง อ่าน และ ออกเสียง แบบอังกฤษ",
-            "timestamp": 1501172170000,
-            "type": "link",
-            "uri": "http://www.bbc.co.uk/learningenglish/thai/home",
-          },
-        ],
-        "semanticGroupName": "Learning English",
-        "strapline": Object {
-          "name": "เรียนภาษาอังกฤษกับบีบีซี",
-        },
-        "title": "Learning English",
-        "type": "featured-site-top-stories",
-      },
-      Object {
-        "items": Array [
-          Object {
-            "cpsType": "STY",
-            "headlines": Object {
-              "headline": "วันแม่ กับ 12 พระบรมฉายาลักษณ์ประวัติศาสตร์สมเด็จพระพันปีหลวง",
-            },
-            "id": "urn:bbc:ares::asset:thai/thailand-49293011",
-            "imageThumbnail": Object {
-              "altText": "ภาพ รูป ราชินี ในหลวง พระบรมราชชนนีพันปีหลวง สมเด็จพระนางเจ้าสิริกิติ์",
-              "copyrightHolder": "Photo 12",
-              "height": 180,
-              "href": "http://c.files.bbci.co.uk/0D5A/production/_108281430_gettyimages-871684012.jpg",
-              "id": "108281430",
-              "path": "/cpsprodpb/0D5A/production/_108281430_gettyimages-871684012.jpg",
-              "subType": "index-thumbnail",
-              "width": 320,
-            },
-            "indexImage": Object {
-              "altText": "ภาพ รูป ราชินี ในหลวง พระบรมราชชนนีพันปีหลวง สมเด็จพระนางเจ้าสิริกิติ์",
-              "copyrightHolder": "Photo 12",
-              "height": 1152,
-              "href": "http://c.files.bbci.co.uk/141F2/production/_108281428_gettyimages-871684012.jpg",
-              "id": "108281428",
-              "path": "/cpsprodpb/141F2/production/_108281428_gettyimages-871684012.jpg",
-              "subType": "index",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "/thai/thailand-49293011",
-              "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49293011",
-            },
-            "options": Object {
-              "isBreakingNews": false,
-              "isFactCheck": false,
-            },
-            "passport": Object {
-              "campaigns": Array [
-                Object {
-                  "campaignId": "5a988e3e39461b000e9dabfb",
-                  "campaignName": "WS - Keep me on trend",
+            "items": Array [
+              Object {
+                "cpsType": "STY",
+                "headlines": Object {
+                  "headline": "\\"จะทำหน้าที่ของเราให้ดีที่สุดเพื่อประเทศชาติและประชาชนต่อไป\\"",
                 },
-              ],
-              "category": Object {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature",
+                "id": "urn:bbc:ares::asset:thai/thailand-49001909",
+                "imageThumbnail": Object {
+                  "altText": "ครม",
+                  "caption": "ครม. ประยุทธ์ 2/1 จำนวน 36 คน (รวมนายกรัฐมนตรี) มีรัฐมนตรีผู้หญิงเพียง 3 คน",
+                  "copyrightHolder": "TOSSAPOL CHAISAMRITPOL/BBC Thai",
+                  "height": 180,
+                  "href": "http://c.files.bbci.co.uk/CA9D/production/_107896815_67071551_349201999307079_420398661722177536_n.jpg",
+                  "id": "107896815",
+                  "path": "/cpsprodpb/CA9D/production/_107896815_67071551_349201999307079_420398661722177536_n.jpg",
+                  "subType": "index-thumbnail",
+                  "width": 320,
+                },
+                "indexImage": Object {
+                  "altText": "ครม",
+                  "caption": "ครม. ประยุทธ์ 2/1 จำนวน 36 คน (รวมนายกรัฐมนตรี) มีรัฐมนตรีผู้หญิงเพียง 3 คน",
+                  "copyrightHolder": "TOSSAPOL CHAISAMRITPOL/BBC Thai",
+                  "height": 900,
+                  "href": "http://c.files.bbci.co.uk/3714/production/_107900141_67071551_349201999307079_420398661722177536_n.jpg",
+                  "id": "107900141",
+                  "path": "/cpsprodpb/3714/production/_107900141_67071551_349201999307079_420398661722177536_n.jpg",
+                  "subType": "index",
+                  "width": 1600,
+                },
+                "locators": Object {
+                  "assetUri": "/thai/thailand-49001909",
+                  "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49001909",
+                },
+                "options": Object {
+                  "isBreakingNews": false,
+                  "isFactCheck": false,
+                },
+                "passport": Object {
+                  "campaigns": Array [
+                    Object {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me",
+                    },
+                  ],
+                  "category": Object {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News",
+                  },
+                },
+                "prominence": "standard",
+                "relatedItems": Array [
+                  Object {
+                    "cpsType": "STY",
+                    "headlines": Object {
+                      "headline": "พล.อ. ประยุทธ์ ประกาศ 5 ปี คสช. ฟื้นฟูเกียรติคุณ-ความสงบให้แก่ประเทศ",
+                    },
+                    "id": "urn:bbc:ares::asset:thai/thailand-48986979",
+                    "locators": Object {
+                      "assetUri": "/thai/thailand-48986979",
+                      "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-48986979",
+                    },
+                    "summary": "คณะรักษาความสงบแห่งชาติ (คสช.) ที่ยึดครองอำนาจยาวนานถึง 5 ปี 55 วันนับจากรัฐประหาร 22 พ.ค. 2557 กำลังจะพ้นจากตำแหน่งไปในวันพรุ่งนี้ (16 ก.ค.)",
+                    "timestamp": 1563189198000,
+                    "type": "cps",
+                  },
+                ],
+                "summary": "นับหนึ่ง ครม. ประยุทธ์ 2/1 พล.อ. ประยุทธ์ จันทร์โอชา นายกรัฐมนตรี นำคณะรัฐมนตรี 35 คน จากพรรคร่วมรัฐบาล 6 พรรค ถ่ายภาพหมู่ร่วมกันที่ทำเนียบรัฐบาล หลังเข้าเฝ้าฯ ถวายสัตย์ปฏิญาณตน",
+                "timestamp": 1563281643000,
+                "type": "cps",
               },
+            ],
+            "maxRelatedLinks": 4,
+            "semanticGroupName": "Top story",
+            "strapline": Object {
+              "name": "ข่าวเด่น",
             },
-            "summary": "บีบีซีไทยรวบรวมพระบรมฉายาลักษณ์ประวัติศาสตร์ สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง ในความทรงจำของปวงชนชาวไทย",
-            "timestamp": 1565580939000,
-            "type": "cps",
+            "title": "Top story",
+            "type": "top-story",
           },
           Object {
             "cpsType": "STY",
@@ -571,8 +572,8 @@ Object {
         "strapline": Object {
           "name": "แกลเลอรี่ภาพ",
         },
-        "title": "Picture galleries",
-        "type": "picture-gallery-stories",
+        "title": "Learning English",
+        "type": "featured-site-top-stories",
       },
       Object {
         "items": Array [

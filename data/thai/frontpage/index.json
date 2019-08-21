@@ -474,83 +474,84 @@
         "title": "Learning English",
         "items": [
           {
-            "name": "เรียนภาษาอังกฤษกับบีบีซี",
-            "summary": "เรียนภาษาอังกฤษกับบีบีซี ฟัง อ่าน และ ออกเสียง แบบอังกฤษ",
-            "indexImage": {
-              "id": "107886012",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/524C/production/_107886012_gettyimages-953264272.jpg",
-              "path": "/cpsprodpb/524C/production/_107886012_gettyimages-953264272.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "บีบีซีอิงลิช",
-              "copyrightHolder": "Getty Images"
+            "type": "top-story",
+            "title": "Top story",
+            "maxRelatedLinks": 4,
+            "items": [
+              {
+                "headlines": {
+                  "headline": "\"จะทำหน้าที่ของเราให้ดีที่สุดเพื่อประเทศชาติและประชาชนต่อไป\""
+                },
+                "locators": {
+                  "assetUri": "/thai/thailand-49001909",
+                  "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49001909"
+                },
+                "summary": "นับหนึ่ง ครม. ประยุทธ์ 2/1 พล.อ. ประยุทธ์ จันทร์โอชา นายกรัฐมนตรี นำคณะรัฐมนตรี 35 คน จากพรรคร่วมรัฐบาล 6 พรรค ถ่ายภาพหมู่ร่วมกันที่ทำเนียบรัฐบาล หลังเข้าเฝ้าฯ ถวายสัตย์ปฏิญาณตน",
+                "timestamp": 1563281643000,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ]
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "107900141",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3714/production/_107900141_67071551_349201999307079_420398661722177536_n.jpg",
+                  "path": "/cpsprodpb/3714/production/_107900141_67071551_349201999307079_420398661722177536_n.jpg",
+                  "height": 900,
+                  "width": 1600,
+                  "altText": "ครม",
+                  "caption": "ครม. ประยุทธ์ 2/1 จำนวน 36 คน (รวมนายกรัฐมนตรี) มีรัฐมนตรีผู้หญิงเพียง 3 คน",
+                  "copyrightHolder": "TOSSAPOL CHAISAMRITPOL/BBC Thai"
+                },
+                "imageThumbnail": {
+                  "id": "107896815",
+                  "subType": "index-thumbnail",
+                  "href": "http://c.files.bbci.co.uk/CA9D/production/_107896815_67071551_349201999307079_420398661722177536_n.jpg",
+                  "path": "/cpsprodpb/CA9D/production/_107896815_67071551_349201999307079_420398661722177536_n.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "ครม",
+                  "caption": "ครม. ประยุทธ์ 2/1 จำนวน 36 คน (รวมนายกรัฐมนตรี) มีรัฐมนตรีผู้หญิงเพียง 3 คน",
+                  "copyrightHolder": "TOSSAPOL CHAISAMRITPOL/BBC Thai"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "prominence": "standard",
+                "relatedItems": [
+                  {
+                    "headlines": {
+                      "headline": "พล.อ. ประยุทธ์ ประกาศ 5 ปี คสช. ฟื้นฟูเกียรติคุณ-ความสงบให้แก่ประเทศ"
+                    },
+                    "locators": {
+                      "assetUri": "/thai/thailand-48986979",
+                      "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-48986979"
+                    },
+                    "summary": "คณะรักษาความสงบแห่งชาติ (คสช.) ที่ยึดครองอำนาจยาวนานถึง 5 ปี 55 วันนับจากรัฐประหาร 22 พ.ค. 2557 กำลังจะพ้นจากตำแหน่งไปในวันพรุ่งนี้ (16 ก.ค.)",
+                    "timestamp": 1563189198000,
+                    "cpsType": "STY",
+                    "id": "urn:bbc:ares::asset:thai/thailand-48986979",
+                    "type": "cps"
+                  }
+                ],
+                "id": "urn:bbc:ares::asset:thai/thailand-49001909",
+                "type": "cps"
+              }
+            ],
+            "strapline": {
+              "name": "ข่าวเด่น"
             },
-            "uri": "http://www.bbc.co.uk/learningenglish/thai/home",
-            "contentType": "Text",
-            "assetTypeCode": "PRO",
-            "timestamp": 1501172170000,
-            "type": "link"
-          }
-        ],
-        "strapline": {
-          "name": "เรียนภาษาอังกฤษกับบีบีซี"
-        },
-        "semanticGroupName": "Learning English"
-      },
-      {
-        "type": "picture-gallery-stories",
-        "title": "Picture galleries",
-        "items": [
-          {
-            "headlines": {
-              "headline": "วันแม่ กับ 12 พระบรมฉายาลักษณ์ประวัติศาสตร์สมเด็จพระพันปีหลวง"
-            },
-            "locators": {
-              "assetUri": "/thai/thailand-49293011",
-              "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49293011"
-            },
-            "summary": "บีบีซีไทยรวบรวมพระบรมฉายาลักษณ์ประวัติศาสตร์ สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง ในความทรงจำของปวงชนชาวไทย",
-            "timestamp": 1565580939000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3e39461b000e9dabfb",
-                  "campaignName": "WS - Keep me on trend"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "108281428",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/141F2/production/_108281428_gettyimages-871684012.jpg",
-              "path": "/cpsprodpb/141F2/production/_108281428_gettyimages-871684012.jpg",
-              "height": 1152,
-              "width": 2048,
-              "altText": "ภาพ รูป ราชินี ในหลวง พระบรมราชชนนีพันปีหลวง สมเด็จพระนางเจ้าสิริกิติ์",
-              "copyrightHolder": "Photo 12"
-            },
-            "imageThumbnail": {
-              "id": "108281430",
-              "subType": "index-thumbnail",
-              "href": "http://c.files.bbci.co.uk/0D5A/production/_108281430_gettyimages-871684012.jpg",
-              "path": "/cpsprodpb/0D5A/production/_108281430_gettyimages-871684012.jpg",
-              "height": 180,
-              "width": 320,
-              "altText": "ภาพ รูป ราชินี ในหลวง พระบรมราชชนนีพันปีหลวง สมเด็จพระนางเจ้าสิริกิติ์",
-              "copyrightHolder": "Photo 12"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:thai/thailand-49293011",
-            "type": "cps"
+            "semanticGroupName": "Top story"
           },
           {
             "headlines": {
