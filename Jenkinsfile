@@ -13,15 +13,13 @@ class BuildTag {
   private String url;
   private String commit;
   private String commitAuthor;
-  private String commitMessage;
 
-  public BuildTag(name, number, url, commit, commitAuthor, commitMessage) {
+  public BuildTag(name, number, url, commit, commitAuthor) {
     this.name = name;
     this.number = number;
     this.url = url;
     this.commit = commit;
     this.commitAuthor = commitAuthor;
-    this.commitMessage = commitMessage;
   }
   public getBuildName(){
     return this.name;
@@ -38,14 +36,10 @@ class BuildTag {
   public getCommitAuthor(){
     return this.commitAuthor;
   }
-  public getCommitMessage(){
-    return this.commitMessage;
-  }
 }
 
 def appGitCommit = ""
 def appGitCommitAuthor = ""
-def appGitCommitMessage = ""
 def messageColor = 'danger'
 
 def stageName = ""
@@ -67,32 +61,29 @@ def runProductionTests(){
 def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
-  appGitCommitMessage = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
 }
 
 def createBuildTag() { 
-  BuildTag build = new BuildTag(env.JOB_NAME, env.BUILD_NUMBER, env.BUILD_URL, "appGitCommit", "appGitCommitAuthor", "appGitCommitMessage")
+  BuildTag build = new BuildTag(env.JOB_NAME, env.BUILD_NUMBER, env.BUILD_URL, "appGitCommit", "appGitCommitAuthor")
   def json = JsonOutput.toJson(build)
   new File("/pack/build_tag.json").write(json)
 }
 
-def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
+def setBuildTagInfo(gitCommit, gitCommitAuthor) {
   """
   *${env.JOB_NAME} [build #${env.BUILD_NUMBER}]*
   ${env.BUILD_URL}
   *Author*: ${gitCommitAuthor}
   *Commit Hash*
   ${gitCommit}
-  *Commit Message*
-  ${gitCommitMessage}
   """
 }
 
-def messageContent(title, text, stageName, gitCommit, gitCommitMessage) {
+def messageContent(title, text, stageName, gitCommit) {
   "${env.JOB_NAME}\n ${title}\n ${env.BUILD_URL}\n ${text}\n\
     *Stage*: ${stageName}\n\
     *Commit Hash*\n ${gitCommit}\n\
-    *Commit Message*\n ${gitCommitMessage}"
+    "
 }
 
 def notifySlack(messageParameters) {
@@ -101,8 +92,7 @@ def notifySlack(messageParameters) {
   def text = "*Author*: ${messageParameters.gitCommitAuthor}"
 
   def message = messageContent(title, text,
-    messageParameters.stageName, messageParameters.gitCommit,
-    messageParameters.gitCommitMessage
+    messageParameters.stageName, messageParameters.gitCommit
   )
 
   slackSend(
@@ -306,7 +296,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]
@@ -323,7 +312,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]
@@ -340,7 +328,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]
