@@ -58,8 +58,9 @@ const runCommonTests = ({ service }) =>
               'content',
               'website',
             );
-            cy.get('html').should('have.attr', 'lang', body.metadata.language);
-            // .and('have.attr', 'dir', dir); // TODO
+            cy.get('html')
+              .should('have.attr', 'lang', body.metadata.language)
+              .and('have.attr', 'dir', appConfig[service].dir);
           },
         );
       });
