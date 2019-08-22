@@ -1,5 +1,10 @@
 /* eslint-disable */
 
+/*
+ * This file contains the JS code snippet that was provided by mpulse. It
+ * is a direct copy and paste and thus has not need refactored or tested.
+ */
+
 const boomr = (apiKey) => {
   if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
       return;

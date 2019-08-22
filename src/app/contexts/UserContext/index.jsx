@@ -7,11 +7,9 @@ export const UserContext = React.createContext({});
 export const UserContextProvider = ({ children }) => {
   const [cookiePolicy, setCookiePolicy] = useState(getCookiePolicy());
 
-  const updateCookiePolicy = () => setCookiePolicy(getCookiePolicy());
-
   const value = {
     cookiePolicy,
-    updateCookiePolicy,
+    updateCookiePolicy: () => setCookiePolicy(getCookiePolicy()),
     personalisationEnabled: personalisationEnabled(cookiePolicy),
   };
 
