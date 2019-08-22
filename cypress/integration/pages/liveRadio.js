@@ -3,6 +3,8 @@ import appConfig from '../../../src/app/lib/config/services';
 import envConfig from '../../support/config/envs';
 import iterator from '../../support/iterator';
 
+const serviceIsNotGNL = service => service !== 'japanese';
+
 const runCommonTests = ({ service }) =>
   describe('Common tests', () => {
     describe('Live Radio body', () => {
@@ -130,10 +132,19 @@ const runCanonicalTests = ({ service }) =>
     // will be addressed by https://github.com/bbc/simorgh/issues/3324
     describe('ATI', () => {
       it.skip('should have a noscript tag with an 1px image with the ati url', () => {
-        cy.hasNoscriptImgAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
+        if (serviceIsNotGNL) {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        } else {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            envConfig.atiAnalyticsGNLBucket,
+          );
+        }
       });
     });
 
@@ -170,10 +181,19 @@ const runAmpTests = ({ service }) =>
 
     describe('ATI', () => {
       it.skip('should have an amp-analytics tag with the ati url', () => {
-        cy.hasAmpAnalyticsAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
+        if (serviceIsNotGNL) {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        } else {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            envConfig.atiAnalyticsGNLBucket,
+          );
+        }
       });
     });
 
