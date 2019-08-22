@@ -1,7 +1,7 @@
 # How our Cypress tests work
 We have a very bespoke approach to testing. We split our tests in 3 sections: Application, Pages and specialFeatures (features that cannot be tested in a single page visit). 
 
-We only run smoke tests (a subset of all tests) in CI and CD, but have a regular [cron job](https://en.wikipedia.org/wiki/Cron) that runs all e2e tests in this directory against localhost, test.bbc.com and www.bbc.com.
+We only run a subset of these integrations tests in CI and CD (those we always run are called smoke tests), but have a regular [cron job](https://en.wikipedia.org/wiki/Cron) that runs all e2e tests in this directory against localhost, test.bbc.com and www.bbc.com.
 
 ## [Config used in the tests](../support/config)
 It's important to familiarise yourself with the service.js config before writing e2e tests. Within there we define which combinations of services and pageTypes should be tested, what the paths to test on are and whether something should be tested while only smoke testing.
