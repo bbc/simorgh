@@ -23,7 +23,7 @@ Key points:
    - /[pageName]/tests.js
    - /[pageName]/testsForAMPOnly.js or /[pageName]/testsForCanonicalOnly.js
  - Inside each of the files in the list above there are two sets of tests:
-   - tests (these will run using the smoke true/flase flag in the [services config file](../support/config))
+   - tests (these will run using the smoke true/false flag in the [services config file](../support/config))
    - testsToAlwaysRun (as the name implies these will always run, use this sparingly because it will run for every service!)
      - as such tests bypass smoke test rules logic limiting the services/pages they run on are strongly encouraged
 
