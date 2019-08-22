@@ -33,6 +33,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'Haberler',
+    currentPage: 'Current page',
+    skipLinkText: 'Siteye gir',
     error: {
       404: {
         statusCode: '404',
