@@ -4,13 +4,7 @@ import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '../../lib/utilities/usePrevious';
 
-export const App = ({
-  routes,
-  location,
-  initialData,
-  bbcOrigin,
-  history,
-}) => {
+export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const {
     service,
     isAmp,

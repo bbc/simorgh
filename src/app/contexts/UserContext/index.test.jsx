@@ -1,5 +1,4 @@
-// TODO
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { UserContext, UserContextProvider } from '.';
@@ -18,7 +17,7 @@ jest.mock('./cookies', () => ({
   personalisationEnabled: jest.fn(),
 }));
 
-let DummyComponent = () => {
+const DummyComponent = () => {
   useContext(UserContext);
   return null;
 };
@@ -40,7 +39,7 @@ describe('UserContext', () => {
     jest.clearAllMocks();
   });
 
-  it('should', () => {
+  it('should provide cookie values and state function', () => {
     act(() => {
       ReactDOM.render(<DummyComponentWithContext />, container);
     });
