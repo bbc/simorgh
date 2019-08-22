@@ -1,7 +1,5 @@
 #!/usr/bin/env groovy
 
-import groovy.json.JsonOutput;
-
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
 def nodeImageVersion = "10.16.0-1"
 def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
