@@ -127,7 +127,7 @@ const runCommonTests = ({ service }) =>
 
 const runCanonicalTests = ({ service }) =>
   describe('Canonical Tests', () => {
-    // will be addressed by https://github.com/bbc/simorgh/pull/2971
+    // will be addressed by https://github.com/bbc/simorgh/issues/3324
     describe('ATI', () => {
       it.skip('should have a noscript tag with an 1px image with the ati url', () => {
         cy.hasNoscriptImgAtiUrl(
