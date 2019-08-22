@@ -43,15 +43,6 @@ const runCommonTests = ({ service }) =>
 
     // will be addressed by https://github.com/bbc/simorgh/issues/2750
     describe('Metadata', () => {
-      it.skip('should have the correct lang & dir attributes', () => {
-        cy.request().then(({ body }) => {
-          cy.hasHtmlLangDirAttributes({
-            lang: `${body.pageData.metadata.language}`,
-            dir: `${appConfig[service].dir}`,
-          });
-        });
-      });
-
       it.skip('should have the correct facebook metadata', () => {
         cy.checkFacebookMetadata(
           '100004154058350',
@@ -104,11 +95,6 @@ const runCommonTests = ({ service }) =>
               body.pageData.metadata.type,
             );
           });
-          cy.get('html').should(
-            'have.attr',
-            'lang',
-            body.pageData.metadata.passport.language,
-          );
         });
       });
 
@@ -117,12 +103,6 @@ const runCommonTests = ({ service }) =>
         cy.get('script[type="application/ld+json"]')
           .should('contain', 'mainEntityOfPage')
           .and('contain', 'headline');
-      });
-    });
-
-    describe('Scripts', () => {
-      it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
       });
     });
   });
@@ -158,12 +138,6 @@ const runCanonicalTests = ({ service }) =>
           cy.hasGlobalChartbeatConfig();
         });
       }
-    });
-
-    describe('Scripts', () => {
-      it('should have 1 bundle for its service', () => {
-        cy.hasOneServiceBundle(service);
-      });
     });
   });
 

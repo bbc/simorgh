@@ -1,4 +1,5 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
+import * as moment from 'moment-timezone';
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
@@ -11,53 +12,33 @@ const serviceHasFigure = service =>
 const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
+const serviceHasTimestamp = service => service === 'news';
 const serviceIsNotGNL = service => service !== 'japanese';
 
 const runTests = ({ service }) =>
   describe(`Tests`, () => {
     describe(`Metadata`, () => {
-      it('should have lang and dir attributes', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            cy.hasHtmlLangDirAttributes({
-              lang: body.metadata.passport.language,
-              dir: appConfig[service].dir,
-            });
-          },
-        );
-      });
-
-      it('should have the correct facebook metadata', () => {
-        cy.checkFacebookMetadata(
-          '100004154058350',
-          '1609039196070050',
-          `${appConfig[service].articleAuthor}`,
-        );
-      });
-
-      it('should have the correct open graph metadata', () => {
-        cy.checkOpenGraphMetadata(
-          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          `${appConfig[service].defaultImage}`,
-          `${appConfig[service].defaultImageAltText}`,
-          `${appConfig[service].locale}`,
-          `${appConfig[service].defaultImageAltText}`,
-          "Meghan's bouquet laid on tomb of unknown warrior",
-          'article',
-          `https://www.bbc.com${config[service].pageTypes.articles.path}`,
-        );
-      });
-
-      it('should have the correct twitter metadata', () => {
-        cy.checkTwitterMetadata(
-          'summary_large_image',
-          `${appConfig[service].twitterCreator}`,
-          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          `${appConfig[service].defaultImageAltText}`,
-          `${appConfig[service].defaultImage}`,
-          `${appConfig[service].twitterSite}`,
-          "Meghan's bouquet laid on tomb of unknown warrior",
-        );
+      it('should have the correct articles metadata', () => {
+        cy.checkArticlesMetadata({
+          articleAuthor: `${appConfig[service].articleAuthor}`,
+          description:
+            'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+          imageUrl: `${appConfig[service].defaultImage}`,
+          altText: `${appConfig[service].defaultImageAltText}`,
+          locale: `${appConfig[service].locale}`,
+          siteName: `${appConfig[service].defaultImageAltText}`,
+          title: "Meghan's bouquet laid on tomb of unknown warrior",
+          type: 'article',
+          url: `https://www.bbc.com${config[service].pageTypes.articles.path}`,
+          twitterCard: 'summary_large_image',
+          twitterCreator: `${appConfig[service].twitterCreator}`,
+          twitterDescription:
+            'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.', // eslint-disable-line no-unused-vars
+          twitterImageAlt: `${appConfig[service].defaultImageAltText}`,
+          twitterImageSrc: `${appConfig[service].defaultImage}`,
+          twitterSite: `${appConfig[service].twitterSite}`,
+          twitterTitle: "Meghan's bouquet laid on tomb of unknown warrior", // eslint-disable-line no-unused-vars
+        });
       });
 
       it('should include mainEntityOfPage in the LinkedData', () => {
@@ -95,11 +76,6 @@ const runTests = ({ service }) =>
               'content',
               new Date(body.metadata.lastPublished).toISOString(),
             );
-            cy.get('html').should(
-              'have.attr',
-              'lang',
-              body.metadata.passport.language,
-            );
           },
         );
       });
@@ -118,19 +94,43 @@ const runTests = ({ service }) =>
         );
       });
 
-      it('should render a formatted timestamp', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
+      if (serviceHasTimestamp(service)) {
+        it('should render a formatted timestamp', () => {
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            ({ body }) => {
+              const { language } = body.metadata.passport;
               const { lastPublished } = body.metadata;
-              const timestamp = Cypress.moment(lastPublished).format(
-                'D MMMM YYYY',
-              );
-              cy.get('time').should('contain', timestamp);
-            }
-          },
-        );
-      });
+              const { firstPublished } = body.metadata;
+              const updatedTimestamp = moment
+                .tz(lastPublished, `${appConfig[service].timezone}`)
+                .locale(language)
+                .format('D MMMM YYYY');
+              const firstTimestamp = moment
+                .tz(firstPublished, `${appConfig[service].timezone}`)
+                .locale(language)
+                .format('D MMMM YYYY');
+              // exempt pashto && arabic as we do have currently their locale implementation
+              if (!['pashto', 'arabic'].includes(service)) {
+                cy.get('time').then($time => {
+                  if (lastPublished === firstPublished) {
+                    cy.get($time).should('contain', updatedTimestamp);
+                  } else {
+                    cy.get($time)
+                      .eq(0)
+                      .should('contain', firstTimestamp);
+                    cy.get($time)
+                      .eq(1)
+                      .should(
+                        'contain',
+                        `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+                      );
+                  }
+                });
+              }
+            },
+          );
+        });
+      }
 
       it('should render an H2, which contains/displays a styled subheading', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
@@ -272,18 +272,10 @@ const runCanonicalTests = ({ service }) =>
       }
     });
 
-    describe('Scripts', () => {
-      it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
-      });
-
-      it('should have 1 bundle for its service', () => {
-        cy.hasOneServiceBundle(service);
-      });
-    });
-
     it('should include ampHTML tag', () => {
-      cy.checkAmpHTML(
+      cy.get('head link[rel="amphtml"]').should(
+        'have.attr',
+        'href',
         `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
       );
     });
