@@ -42,9 +42,9 @@ const ChartbeatAnalytics = ({ data }) => {
     sections,
     uid: chartbeatUID,
     title,
+    virtualReferrer: referrer,
     ...(isAmp && { contentType: type }),
     ...(!isAmp && { type, useCanonical, path: currentPath }),
-    ...(referrer && { virtualReferrer: referrer }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };
 
