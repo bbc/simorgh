@@ -2,6 +2,7 @@ import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
+import toggles from '../../support/toggles';
 
 const runCommonTests = ({ service, pageType }) => {
   describe('Always tests', () => {
@@ -41,6 +42,21 @@ const runCommonTests = ({ service, pageType }) => {
       });
     });
 
+    describe('Page links test', () => {
+      if (Cypress.env('APP_ENV') === 'live') {
+        it('footer links should not 404', () => {
+          cy.get('a')
+            .not('[href="#*"]')
+            .each(element => {
+              const href = element.attr('href');
+              cy.request(href).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      }
+    });
+
     describe('Header Tests', () => {
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
@@ -62,6 +78,28 @@ const runCommonTests = ({ service, pageType }) => {
           .find('svg')
           .should('be.visible');
       });
+
+      if (appConfig[service].navigation) {
+        if (
+          pageType !== 'articles' ||
+          (pageType === 'articles' && toggles.navOnArticles.enabled)
+        ) {
+          it('should have one visible navigation with a skiplink to h1', () => {
+            cy.get('nav')
+              .should('have.lengthOf', 1)
+              .should('be.visible')
+              .find('a[class^="SkipLink"]')
+              .should('have.lengthOf', 1)
+              .should('have.attr', 'href', '#content');
+            cy.get('nav a[class^="StyledLink"]')
+              .should('have.attr', 'href', appConfig[service].navigation[0].url)
+              .should('contain', appConfig[service].navigation[0].title);
+            cy.get('h1')
+              .should('have.lengthOf', 1)
+              .should('have.attr', 'id', 'content');
+          });
+        }
+      }
     });
 
     describe('Footer Tests', () => {
