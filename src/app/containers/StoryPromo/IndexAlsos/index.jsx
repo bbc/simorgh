@@ -46,6 +46,13 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
             const { id, cpsType, mediaType } = item;
             const headline = pathOr(null, ['headlines', 'headline'], item);
             const url = pathOr(null, ['locators', 'assetUri'], item);
+            const indexAlsoMediaIndicator = IndexAlsosMediaIndicator(
+              cpsType,
+              mediaType,
+              service,
+            );
+            const indexAlsoMediaType =
+              mediaTranslations[getMediaType(cpsType, mediaType)];
 
             return (
               <IndexAlsosLi
@@ -53,12 +60,8 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
                 script={script}
                 service={service}
                 url={url}
-                mediaIndicator={IndexAlsosMediaIndicator(
-                  cpsType,
-                  mediaType,
-                  service,
-                )}
-                mediaType={mediaTranslations[getMediaType(cpsType, mediaType)]}
+                mediaIndicator={indexAlsoMediaIndicator}
+                mediaType={indexAlsoMediaType}
               >
                 {headline}
               </IndexAlsosLi>
@@ -71,18 +74,21 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
           const { cpsType, mediaType } = alsoItems;
           const headline = pathOr(null, ['headlines'], alsoItems);
           const url = pathOr(null, ['locators', 'assetUri'], alsoItems);
+          const indexAlsoMediaIndicator = IndexAlsosMediaIndicator(
+            cpsType,
+            mediaType,
+            service,
+          );
+          const indexAlsoMediaType =
+            mediaTranslations[getMediaType(cpsType, mediaType)];
 
           return (
             <IndexAlso
               script={script}
               service={service}
               url={url}
-              mediaIndicator={IndexAlsosMediaIndicator(
-                cpsType,
-                mediaType,
-                service,
-              )}
-              mediaType={mediaTranslations[getMediaType(cpsType, mediaType)]}
+              mediaIndicator={indexAlsoMediaIndicator}
+              mediaType={indexAlsoMediaType}
             >
               {headline}
             </IndexAlso>
