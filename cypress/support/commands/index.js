@@ -14,6 +14,7 @@ Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
   });
 });
 
+// This is only used once and can be removed
 Cypress.Commands.add('checkLinks', (position, url) => {
   cy.get('a')
     .eq(position)
