@@ -41,15 +41,6 @@ const runCommonTests = ({ service }) =>
 
     // will be addressed by https://github.com/bbc/simorgh/issues/2750
     describe('Metadata', () => {
-      it.skip('should have the correct lang & dir attributes', () => {
-        cy.request().then(({ body }) => {
-          cy.hasHtmlLangDirAttributes({
-            lang: `${body.pageData.metadata.language}`,
-            dir: `${appConfig[service].dir}`,
-          });
-        });
-      });
-
       it.skip('should have the correct facebook metadata', () => {
         cy.checkFacebookMetadata(
           '100004154058350',
