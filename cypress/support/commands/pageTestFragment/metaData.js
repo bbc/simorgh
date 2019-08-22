@@ -8,20 +8,12 @@ Cypress.Commands.add('checkMetadataContent', (metaDataTag, content) => {
   cy.get(metaDataTag).should('have.attr', 'content', content);
 });
 
-Cypress.Commands.add(
-  'checkFacebookMetadata',
-  (fbAdmins, appID, articleAuthor) => {
-    cy.get('head').within(() => {
-      cy.get('meta[name="fb:admins"]').should('have.attr', 'content', fbAdmins);
-      cy.get('meta[name="fb:app_id"]').should('have.attr', 'content', appID);
-      cy.get('meta[name="article:author"]').should(
-        'have.attr',
-        'content',
-        articleAuthor,
-      );
-    });
-  },
-);
+Cypress.Commands.add('checkFacebookMetadata', (fbAdmins, appID) => {
+  cy.get('head').within(() => {
+    cy.get('meta[name="fb:admins"]').should('have.attr', 'content', fbAdmins);
+    cy.get('meta[name="fb:app_id"]').should('have.attr', 'content', appID);
+  });
+});
 
 Cypress.Commands.add('checkOpenGraphMetadata', (
   description, // eslint-disable-line no-unused-vars

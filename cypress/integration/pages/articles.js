@@ -27,11 +27,14 @@ const runTests = ({ service }) =>
       });
 
       it('should have the correct facebook metadata', () => {
-        cy.checkFacebookMetadata(
-          '100004154058350',
-          '1609039196070050',
-          `${appConfig[service].articleAuthor}`,
-        );
+        cy.checkFacebookMetadata('100004154058350', '1609039196070050');
+        cy.get('head').within(() => {
+          cy.get('meta[name="article:author"]').should(
+            'have.attr',
+            'content',
+            appConfig[service].articleAuthor,
+          );
+        });
       });
 
       it('should have the correct open graph metadata', () => {
