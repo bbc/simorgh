@@ -16,7 +16,7 @@ Key points:
     - reduces the number of page visits to one visit to the canonical page and one visit to the [AMP](https://amp.dev/) version of the same page.
     - runs tests on every service automatically based on the service:page type combinations found in the [services config file](../support/config).
  - Files in the base of the pages directory run on all page types (as their naming suggests.
- - There is a directory per page type where each page's custom tests are written, the naming convention with each is exactly the same as every other one and is should be kept this way for ease of comprehension.
+ - There is a directory per page type where each page's custom tests are written, the naming convention with each is exactly the same as every other one and should be kept this way for ease of comprehension.
  - In all cases tests should be written at the 'highest' possible level. The importance of this is that it tends our tests written to the highest possible level of coverage with the smallest possible amount of code. This means when writing a test you should write it based on this order of preference:
    - testsForALLPages.js
    - testsForALLAMPPages.js or testsForAllCanonicalPages.js
