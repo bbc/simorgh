@@ -1,23 +1,43 @@
 const toggles = {
-  test: {
-    mpulse: {
-      enabled: false,
+  local: {
+    chartbeatAnalytics: {
+      enabled: true,
     },
     mediaPlayer: {
       enabled: true,
     },
+    mpulse: {
+      enabled: false,
+    },
+    navOnArticles: {
+      enabled: true,
+    },
+  },
+  test: {
     chartbeatAnalytics: {
+      enabled: true,
+    },
+    mediaPlayer: {
+      enabled: true,
+    },
+    mpulse: {
+      enabled: false,
+    },
+    navOnArticles: {
       enabled: true,
     },
   },
   live: {
-    mpulse: {
+    chartbeatAnalytics: {
       enabled: false,
     },
     mediaPlayer: {
       enabled: false,
     },
-    chartbeatAnalytics: {
+    mpulse: {
+      enabled: false,
+    },
+    navOnArticles: {
       enabled: false,
     },
   },
