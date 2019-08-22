@@ -19,9 +19,9 @@ const renderBlock = ({ script, service }) => block => {
   }
 
   const props = {
+    key: block.text,
     script,
     service,
-    key: block.text,
   };
 
   if (block.type === 'heading') {
