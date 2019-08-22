@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { shape, oneOfType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -198,7 +198,7 @@ const MetadataContainer = ({ metadata, promo }) => {
   };
 
   return (
-    <Fragment>
+    <>
       <LinkedData
         brandName={brandName}
         canonicalLink={canonicalLink}
@@ -243,7 +243,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         showArticleTags={pageType === 'article'}
         iconSizes={iconSizes}
       />
-    </Fragment>
+    </>
   );
 };
 

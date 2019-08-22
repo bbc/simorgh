@@ -402,9 +402,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               "statusCode": "500",
               "title": "Mperi",
             },
-            "currentPage": "Current page",
-            "home": "Akụkọ",
-            "skipLinkText": "Wụga n’ọdịnaya",
           },
           "home": "Akụkọ",
           "media": Object {
