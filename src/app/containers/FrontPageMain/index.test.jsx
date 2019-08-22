@@ -5,12 +5,12 @@ import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
 import preprocessor from '../../lib/utilities/preprocessor';
-import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/cpstypes';
+import filterUnknownContentTypes from '../../lib/utilities/preprocessor/rules/filterContentType';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const processedPidgin = preprocessor(frontPageDataPidgin, [
-  filterUnknownCpsTypes,
+  filterUnknownContentTypes,
 ]);
 
 jest.mock('../ChartbeatAnalytics', () => {
@@ -67,7 +67,7 @@ describe('FrontPageMain', () => {
       );
       const sections = container.querySelectorAll('section');
 
-      expect(sections).toHaveLength(6);
+      expect(sections).toHaveLength(7);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
