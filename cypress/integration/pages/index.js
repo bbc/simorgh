@@ -84,7 +84,7 @@ export const runCommonTests = ({ service, pageType }) => {
         });
       }
 
-      it('should have lang and dir attributes', () => {
+      it('should have dir matching service config & lang matching payload data', () => {
         cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
           ({ body }) => {
             const lang =
@@ -92,9 +92,10 @@ export const runCommonTests = ({ service, pageType }) => {
                 ? body.metadata.passport.language
                 : appConfig[service].lang;
 
-            cy.get('html')
-              .should('have.attr', 'lang', lang)
-              .and('have.attr', 'dir', `${appConfig[service].dir}`);
+            cy.hasHtmlLangDirAttributes({
+              lang,
+              dir: appConfig[service].dir,
+            });
           },
         );
       });
