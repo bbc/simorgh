@@ -244,10 +244,19 @@ const runCanonicalTests = ({ service }) =>
 
     describe('ATI', () => {
       it('should have a noscript tag with an 1px image with the ati url', () => {
-        cy.hasNoscriptImgAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
+        if (!service.japanese) {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        } else {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            envConfig.atiAnalyticsGNLBucket,
+          );
+        }
       });
     });
 
@@ -315,10 +324,19 @@ const runAmpTests = ({ service }) =>
   describe(`Amp Tests`, () => {
     describe('ATI', () => {
       it('should have an amp-analytics tag with the ati url', () => {
-        cy.hasAmpAnalyticsAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
+        if (!service.japanese) {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        } else {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            envConfig.atiAnalyticsGNLBucket,
+          );
+        }
       });
     });
 
