@@ -6,7 +6,7 @@ Cypress.Commands.add('hasHtmlLangAttribute', ({ lang }) => {
 
 /* As these are generalised, they should be moved out of this
  * checkArticlesMetadata command and into the
- * checkSharedMetadata command
+ * checkSharedSocialmediaMetadata command
  */
 
 Cypress.Commands.add(
