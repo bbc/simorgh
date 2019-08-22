@@ -1,11 +1,19 @@
-import config from './config/services';
+import config from '../config/services';
 import shouldSmokeTest from './shouldSmokeTest';
-import { runCommonTests, runCommonCanonicalTests } from '../integration/pages';
+import {
+  runCommonTests,
+  runCommonCanonicalTests,
+} from '../../integration/pages';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
-const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
+const runTestsForPage = (
+  pageType,
+  runTests,
+  runCanonicalTests,
+  runAmpTests,
+) => {
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .filter(service => shouldSmokeTest(pageType, service))
@@ -37,4 +45,4 @@ const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
     });
 };
 
-export default iterator;
+export default runTestsForPage;
