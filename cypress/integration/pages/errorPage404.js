@@ -31,13 +31,6 @@ const runTests = ({ service }) =>
         });
       });
 
-      it('should have the correct lang & dir attributes', () => {
-        cy.hasHtmlLangDirAttributes({
-          lang: `${appConfig[service].lang}`,
-          dir: `${appConfig[service].dir}`,
-        });
-      });
-
       it(`should display a ${appConfig[service].translations.error[404].statusCode} error message on screen`, () => {
         cy.get('h1 span').should(
           'contain',

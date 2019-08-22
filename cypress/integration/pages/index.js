@@ -4,7 +4,50 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/describeForEuOnly';
 import toggles from '../../support/toggles';
 
-const runCommonTests = ({ service, pageType }) => {
+export const runCommonCanonicalTests = ({ service, pageType }) => {
+  if (pageType !== 'errorPage404') {
+    describe('Scripts', () => {
+      it('should only have expected bundle script tags', () => {
+        cy.get('script[src]').each($p => {
+          if ($p.attr('src').includes(envConfig.assetOrigin)) {
+            return expect($p.attr('src')).to.match(
+              new RegExp(
+                `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
+                'g',
+              ),
+            );
+          }
+          return null;
+        });
+      });
+
+      it('should have 1 bundle for its service', () => {
+        let matches = 0;
+
+        cy.get('script[src]')
+          .each($p => {
+            const match = $p
+              .attr('src')
+              .match(
+                new RegExp(
+                  `(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`,
+                  'g',
+                ),
+              );
+
+            if (match) {
+              matches += 1;
+            }
+          })
+          .then(() => {
+            expect(matches).to.equal(1);
+          });
+      });
+    });
+  }
+};
+
+export const runCommonTests = ({ service, pageType }) => {
   describe('Always tests', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
@@ -25,26 +68,72 @@ const runCommonTests = ({ service, pageType }) => {
 
       if (pageType !== 'errorPage404') {
         it('should include the canonical URL', () => {
-          cy.checkCanonicalURL(
+          cy.get('head link[rel="canonical"]').should(
+            'have.attr',
+            'href',
             `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
           );
         });
 
         it('should have a correct robot meta tag', () => {
-          cy.checkMetadataContent('head meta[name="robots"]', 'noodp,noydir');
+          cy.get('head meta[name="robots"]').should(
+            'have.attr',
+            'content',
+            'noodp,noydir',
+          );
+        });
+
+        it('should have lang attribute matching payload data', () => {
+          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            ({ body }) => {
+              const lang =
+                pageType === 'articles'
+                  ? body.metadata.passport.language
+                  : appConfig[service].lang;
+
+              cy.get('html').should('have.attr', 'lang', lang);
+            },
+          );
+        });
+
+        it('should have the correct shared social media metadata', () => {
+          cy.checkSharedSocialmediaMetadata({
+            fbAdmins: '100004154058350',
+            appID: '1609039196070050',
+          });
         });
       }
+
+      it('should have dir matching service config', () => {
+        cy.get('html').and('have.attr', 'dir', appConfig[service].dir);
+      });
     });
 
     describeForEuOnly('Consent Banners', () => {
       it('have correct translations', () => {
-        cy.hasConsentBannerTranslations(service);
+        cy.contains(
+          appConfig[service].translations.consentBanner.privacy.title,
+        );
+        cy.contains(
+          appConfig[service].translations.consentBanner.privacy.reject,
+        );
+        cy.contains(
+          appConfig[service].translations.consentBanner.privacy.accept,
+        ).click();
+        cy.contains(appConfig[service].translations.consentBanner.cookie.title);
+        cy.contains(
+          appConfig[service].translations.consentBanner.cookie.reject,
+        );
+        cy.contains(
+          appConfig[service].translations.consentBanner.cookie.accept,
+        );
       });
     });
 
+    // Should be made to not be a smoke test
     describe('Page links test', () => {
       if (Cypress.env('APP_ENV') === 'live') {
-        it('footer links should not 404', () => {
+        it('links should not 404', () => {
           cy.get('a')
             .not('[href="#*"]')
             .each(element => {
@@ -154,5 +243,3 @@ const runCommonTests = ({ service, pageType }) => {
     });
   });
 };
-
-export default runCommonTests;
