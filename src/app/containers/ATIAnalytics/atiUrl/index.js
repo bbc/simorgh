@@ -149,11 +149,11 @@ export const atiPageViewParams = ({
 
 export const atiEventTrackParams = ({
   pageIdentifier,
+  service,
   platform,
   statsDestination,
-  service,
   eventInfo,
-  eventType,
+  typeOfEvent,
 }) => {
   const eventTrackingBeaconValues = [
     {
@@ -201,7 +201,7 @@ export const atiEventTrackParams = ({
     {
       key: 'ati',
       description: 'event publisher',
-      value: getPublishingInfo(service, eventInfo, eventType),
+      value: getPublishingInfo(service, eventInfo, typeOfEvent),
     },
   ];
 
