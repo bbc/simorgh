@@ -85,7 +85,7 @@ export const runCommonTests = ({ service, pageType }) => {
       }
 
       it('should have lang and dir attributes', () => {
-        cy.request(`${config[service].pageTypes[${pageType}].path}.json`).then(
+        cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
           ({ body }) => {
             const lang =
               pageType === 'articles'
