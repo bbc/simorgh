@@ -2239,7 +2239,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 .c10 {
   position: relative;
   z-index: 2;
-  padding: 1rem 0 0.5rem;
+  padding: 1rem 0 0;
 }
 
 .c13 {
