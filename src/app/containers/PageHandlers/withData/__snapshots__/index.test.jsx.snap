@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withData HOC with missing articleData should return the errorMain component 1`] = `
+exports[`withData HOC with missing pageData should return the errorMain component 1`] = `
 <ErrorMain
   status={200}
 />
