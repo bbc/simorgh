@@ -247,6 +247,16 @@ Here is an example command:
 CYPRESS_APP_ENV=test CYPRESS_UK=true npm run cypress:interactive
 ```
 
+#### Running e2e outside EU
+**This affects developers based out off the EU (but may affect you if you're using a VPM routing through a country in the EU)**
+
+Running Cypress tests outside of the EU will not show the EU consent banners and this may cause some tests to fail. Set `CYPRESS_SKIP_EU=true` to prevent these tests from failing when outside the EU.
+
+An example command will be:
+```
+CYPRESS_SKIP_EU=true npm run cypress:interactive
+```
+
 ### Lighthouse Best Practice tests
 
 We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. However these have been moved out of Simorgh down to our own internal CD processes. This allows us to run these tests on a more accurate depiction of Simorgh. You are free to run lighthouse on your own from your Chrome browser or use the Node Lighthouse CLI.
