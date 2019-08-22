@@ -15,7 +15,7 @@ const runTestsForPage = (
 ) => {
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
-    .filter(service => shouldSmokeTest(pageType, service)) // I cannot do this and override
+    .filter(service => shouldSmokeTest(pageType, service))
     .forEach(service => {
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
