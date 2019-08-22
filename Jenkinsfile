@@ -100,8 +100,8 @@ pipeline {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
+      failFast true
       parallel {
-        failFast true
         stage ('Test Development') {
           agent {
             docker {
