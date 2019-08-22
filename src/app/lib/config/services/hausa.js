@@ -4,7 +4,7 @@ import { hausa as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ha-GH`,
+  lang: `ha`,
   articleAuthor: `https://www.facebook.com/bbchausa?v=wall&ref=mf`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-hausa',

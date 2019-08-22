@@ -43,7 +43,7 @@ describe('MediaAtiParams', () => {
         appName: 'news-SERVICE',
         contentId: 'urn:bbc:ares::ws_live:bbc_indonesian_radio',
         contentType: 'player-live',
-        language: 'id-ID',
+        language: 'id',
         pageIdentifier: 'indonesia.bbc_indonesian_radio.liveradio.page',
         pageTitle: 'BBC Indonesia Radio - BBC News Indonesia',
         producerId: 0,
