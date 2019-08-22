@@ -1,9 +1,3 @@
-// Why aren't these used more widely? They should either be refactored for general use or shouldn't be a cy.command
-
-Cypress.Commands.add('hasHtmlLangAttribute', ({ lang }) => {
-  cy.get('html').should('have.attr', 'lang', lang);
-});
-
 /* As these are generalised, they should be moved out of this
  * checkArticlesMetadata command and into the
  * checkSharedSocialmediaMetadata command
