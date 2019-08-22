@@ -170,6 +170,7 @@ pipeline {
           }
           steps {
             // runProductionTests()
+            sh 'rm -rf pack'
             sh 'mkdir pack'
 
             // Get Simorgh commit information
