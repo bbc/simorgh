@@ -47,7 +47,7 @@ ContextWrapper.defaultProps = {
 };
 
 describe('MediaPlayer', () => {
-  describe('Calls the correct props', () => {
+  describe('is called correctly', () => {
     shouldMatchSnapshot(
       'Calls the canonical placeholder when platform is canonical',
       <ContextWrapper platform="canonical">
@@ -63,16 +63,9 @@ describe('MediaPlayer', () => {
     );
 
     shouldMatchSnapshot(
-      'Calls the AMP player when platform is AMP and placeholder is true',
+      'Calls the AMP player when platform is AMP',
       <ContextWrapper platform="amp">
         <MediaPlayerContainer blocks={validVideoFixture} />
-      </ContextWrapper>,
-    );
-
-    shouldMatchSnapshot(
-      'Calls the AMP player when platform is AMP and placeholder is false',
-      <ContextWrapper platform="amp">
-        <MediaPlayerContainer blocks={validVideoFixture} placeholder={false} />
       </ContextWrapper>,
     );
   });
