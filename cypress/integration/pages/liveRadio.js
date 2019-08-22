@@ -39,18 +39,31 @@ const runCommonTests = ({ service }) =>
       });
     });
 
-    // will be addressed by https://github.com/bbc/simorgh/issues/2750
     describe('Metadata', () => {
-      it.skip('should have the correct lang & dir attributes', () => {
-        cy.request().then(({ body }) => {
-          cy.hasHtmlLangDirAttributes({
-            lang: `${body.pageData.metadata.language}`,
-            dir: `${appConfig[service].dir}`,
-          });
-        });
+      it('should include correct metadata', () => {
+        cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
+          ({ body }) => {
+            cy.get('meta[name="description"]').should(
+              'have.attr',
+              'content',
+              body.promo.summary,
+            );
+            cy.get('meta[name="og:title"]').should(
+              'have.attr',
+              'content',
+              body.promo.name,
+            );
+            cy.get('meta[name="og:type"]').should(
+              'have.attr',
+              'content',
+              'website',
+            );
+            cy.get('html').should('have.attr', 'lang', body.metadata.language);
+          },
+        );
       });
 
-      it.skip('should have the correct facebook metadata', () => {
+      it('should have the correct facebook metadata', () => {
         cy.checkFacebookMetadata(
           '100004154058350',
           '1609039196070050',
@@ -58,63 +71,36 @@ const runCommonTests = ({ service }) =>
         );
       });
 
-      it.skip('should have the correct open graph metadata', () => {
+      it('should have the correct open graph metadata', () => {
         cy.checkOpenGraphMetadata(
-          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+          null,
           `${appConfig[service].defaultImage}`,
           `${appConfig[service].defaultImageAltText}`,
           `${appConfig[service].locale}`,
           `${appConfig[service].defaultImageAltText}`,
-          "Meghan's bouquet laid on tomb of unknown warrior",
+          null,
           'article',
           `https://www.bbc.com${config[service].pageTypes.liveRadio.path}`,
         );
       });
 
-      it.skip('should have the correct twitter metadata', () => {
+      it('should have the correct twitter metadata', () => {
         cy.checkTwitterMetadata(
           'summary_large_image',
           `${appConfig[service].twitterCreator}`,
-          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+          null,
           `${appConfig[service].defaultImageAltText}`,
           `${appConfig[service].defaultImage}`,
           `${appConfig[service].twitterSite}`,
-          "Meghan's bouquet laid on tomb of unknown warrior",
+          null,
         );
       });
 
-      it.skip('should include metadata that matches the JSON data', () => {
-        cy.request().then(({ body }) => {
-          cy.get('head').within(() => {
-            cy.get('meta[name="description"]').should(
-              'have.attr',
-              'content',
-              body.pageData.promo.summary || body.pageData.promo.name,
-            );
-            cy.get('meta[name="og:title"]').should(
-              'have.attr',
-              'content',
-              body.pageData.promo.name,
-            );
-            cy.get('meta[name="og:type"]').should(
-              'have.attr',
-              'content',
-              body.pageData.metadata.type,
-            );
-          });
-          cy.get('html').should(
-            'have.attr',
-            'lang',
-            body.pageData.metadata.passport.language,
-          );
-        });
-      });
-
-      // will be addressed by this https://github.com/bbc/simorgh/issues/3117
-      it.skip('should include mainEntityOfPage in the LinkedData', () => {
-        cy.get('script[type="application/ld+json"]')
-          .should('contain', 'mainEntityOfPage')
-          .and('contain', 'headline');
+      it('should include mainEntityOfPage in the LinkedData', () => {
+        cy.get('script[type="application/ld+json"]').should(
+          'contain',
+          'mainEntityOfPage',
+        );
       });
     });
 
@@ -127,9 +113,8 @@ const runCommonTests = ({ service }) =>
 
 const runCanonicalTests = ({ service }) =>
   describe('Canonical Tests', () => {
-    // will be addressed by https://github.com/bbc/simorgh/issues/3324
     describe('ATI', () => {
-      it.skip('should have a noscript tag with an 1px image with the ati url', () => {
+      it('should have a noscript tag with an 1px image with the ati url', () => {
         cy.hasNoscriptImgAtiUrl(
           envConfig.atiUrl,
           config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
@@ -164,15 +149,6 @@ const runAmpTests = ({ service }) =>
           `${config[service].pageTypes.liveRadio.path}.amp`,
           200,
           'text/html',
-        );
-      });
-    });
-
-    describe('ATI', () => {
-      it.skip('should have an amp-analytics tag with the ati url', () => {
-        cy.hasAmpAnalyticsAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
         );
       });
     });
