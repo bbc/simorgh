@@ -5,14 +5,14 @@ import pidginData from '../../../../data/pidgin/frontpage';
 import thaiData from '../../../../data/thai/frontpage';
 import yorubaData from '../../../../data/yoruba/frontpage';
 
-import filterUnknownCpsTypes from '../../lib/utilities/preprocessor/rules/cpstypes';
+import filterUnknownContentTypes from '../../lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
 import preprocess from '../../lib/utilities/preprocessor';
 import FrontPage from '.';
 
 const preprocessorRules = [
-  filterUnknownCpsTypes,
+  filterUnknownContentTypes,
   filterEmptyGroupItems,
   applySquashTopstories,
 ];
