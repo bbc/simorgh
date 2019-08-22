@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPlayer Calls the correct props Calls the AMP player when platform is AMP and placeholder is false 1`] = `
+exports[`MediaPlayer Fails and returns early when component is toggled off 1`] = `null`;
+
+exports[`MediaPlayer Fails and returns early when there is no versionId 1`] = `null`;
+
+exports[`MediaPlayer is called correctly Calls the AMP player when platform is AMP 1`] = `
 .c1 {
   padding-top: 56.25%;
   position: relative;
@@ -73,80 +77,7 @@ exports[`MediaPlayer Calls the correct props Calls the AMP player when platform 
 </div>
 `;
 
-exports[`MediaPlayer Calls the correct props Calls the AMP player when platform is AMP and placeholder is true 1`] = `
-.c1 {
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-.c0 {
-  grid-column: 1 / span 6;
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    max-width: initial;
-  }
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <amp-iframe
-      allowfullscreen={true}
-      frameborder="0"
-      layout="fill"
-      sandbox="allow-scripts allow-same-origin"
-      src="https://www.test.bbc.com/ws/av-embeds/foo/p01k6msp/amp"
-    >
-      <amp-img
-        layout="fill"
-        placeholder={true}
-        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-      />
-    </amp-iframe>
-  </div>
-</div>
-`;
-
-exports[`MediaPlayer Calls the correct props Calls the canonical placeholder when platform is canonical 1`] = `
+exports[`MediaPlayer is called correctly Calls the canonical placeholder when platform is canonical 1`] = `
 .c3 {
   display: block;
   width: 100%;
@@ -235,15 +166,20 @@ exports[`MediaPlayer Calls the correct props Calls the canonical placeholder whe
 </div>
 `;
 
-exports[`MediaPlayer Calls the correct props Calls the canonical player when platform is canonical and placeholder is false 1`] = `
+exports[`MediaPlayer is called correctly Calls the canonical player when platform is canonical and placeholder is false 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
 .c2 {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  overflow: hidden;
 }
 
 .c1 {
@@ -301,16 +237,20 @@ exports[`MediaPlayer Calls the correct props Calls the canonical player when pla
   <div
     className="c1"
   >
-    <iframe
-      allow="autoplay; fullscreen"
+    <div
       className="c2"
-      scrolling="no"
-      src="https://www.test.bbc.com/ws/av-embeds/foo/p01k6msp"
-    />
+      onClick={[Function]}
+    >
+      <img
+        alt="Image Alt"
+        className="c3"
+        height={null}
+        sizes={null}
+        src=""
+        srcSet={null}
+        width={null}
+      />
+    </div>
   </div>
 </div>
 `;
-
-exports[`MediaPlayer Fails and returns early when component is toggled off 1`] = `null`;
-
-exports[`MediaPlayer Fails and returns early when there is no versionId 1`] = `null`;
