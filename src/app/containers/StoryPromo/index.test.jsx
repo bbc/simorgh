@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -122,12 +122,34 @@ const audioItemNoDuration = {
   },
 };
 
+const standardLinkItem = {
+  name: 'Standard promo with summary',
+  summary: 'Summary text',
+  indexImage: {
+    id: 63692548,
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
+    path: '/cpsdevpb/14A31/test/_63692548_000327537-1.jpg',
+    height: 549,
+    width: 976,
+    altText: 'A lone Koala perches in a eucalyptus tree',
+    caption: 'Koalas are from Australia',
+    copyrightHolder: 'BBC',
+  },
+  uri: 'http://www.bbc.com/azeri',
+  contentType: 'Text',
+  assetTypeCode: 'PRO',
+  timestamp: 1565186015000,
+  type: 'link',
+};
+
 const fixtures = {
   standard: completeItem,
   video: videoItem,
   audio: audioItem,
   live: liveItem,
   'audio with no duration': audioItemNoDuration,
+  standardLink: standardLinkItem,
 };
 
 // eslint-disable-next-line react/prop-types
@@ -163,33 +185,52 @@ describe('StoryPromo Container', () => {
   });
 
   describe('assertion tests', () => {
-    let item;
+    let cpsItem;
+    let assetTypeItem;
+    let cpsContainer;
+    let assetTypeContainer;
+
     beforeEach(() => {
-      item = deepClone(completeItem);
+      cpsItem = deepClone(completeItem);
+      cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+
+      assetTypeItem = deepClone(standardLinkItem);
+      assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
+        .container;
     });
 
-    it('should render h3, a, p, time', () => {
-      const igboContainer = render(<WrappedStoryPromo item={item} />).container;
+    afterEach(cleanup);
 
-      expect(igboContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        item.headlines.headline,
+    it('should render h3, a, p, time', () => {
+      expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
+        cpsItem.headlines.headline,
       );
-      expect(igboContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
-        item.summary,
+      expect(cpsContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
+        cpsItem.summary,
       );
-      expect(igboContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
+      expect(cpsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 Mee 2019',
       );
 
+      expect(assetTypeContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
+        assetTypeItem.name,
+      );
+      expect(assetTypeContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
+        assetTypeItem.summary,
+      );
+      expect(
+        assetTypeContainer.getElementsByTagName('time')[0].innerHTML,
+      ).toEqual('7 Ọgọọst 2019');
+
       const newsContainer = render(
-        <WrappedStoryPromo service="news" item={item} />,
+        <WrappedStoryPromo service="news" item={cpsItem} />,
       ).container;
       expect(newsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 May 2019',
       );
 
       const yorubaContainer = render(
-        <WrappedStoryPromo service="yoruba" item={item} />,
+        <WrappedStoryPromo service="yoruba" item={cpsItem} />,
       ).container;
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 Èbibi 2019',
@@ -199,7 +240,7 @@ describe('StoryPromo Container', () => {
     it('should render relative time if timestamp < 10 hours', () => {
       const oneMinuteAgo = Date.now() - 60 * 1000;
       const newItem = {
-        ...item,
+        ...cpsItem,
         timestamp: oneMinuteAgo,
       };
 
@@ -220,90 +261,107 @@ describe('StoryPromo Container', () => {
 
     it('should render img with src & alt when platform is canonical', () => {
       const { container } = render(
-        <WrappedStoryPromo item={item} lazyLoadImage={false} />,
+        <WrappedStoryPromo item={cpsItem} lazyLoadImage={false} />,
       );
 
       expect(container.getElementsByTagName('img').length).toEqual(1);
       expect(container.getElementsByTagName('amp-img').length).toEqual(0);
       expect(
         container.getElementsByTagName('img')[0].getAttribute('src'),
-      ).toEqual(`https://ichef.bbci.co.uk/news/660${item.indexImage.path}`);
+      ).toEqual(`https://ichef.bbci.co.uk/news/660${cpsItem.indexImage.path}`);
       expect(
         container.getElementsByTagName('img')[0].getAttribute('alt'),
-      ).toEqual(item.indexImage.altText);
+      ).toEqual(cpsItem.indexImage.altText);
     });
 
     it('should render amp-img with src & alt when platform is amp', () => {
       const { container } = render(
-        <WrappedStoryPromo platform="amp" item={item} />,
+        <WrappedStoryPromo platform="amp" item={cpsItem} />,
       );
 
       expect(container.getElementsByTagName('amp-img').length).toEqual(1);
       expect(container.getElementsByTagName('img').length).toEqual(0);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),
-      ).toEqual(`https://ichef.bbci.co.uk/news/660${item.indexImage.path}`);
+      ).toEqual(`https://ichef.bbci.co.uk/news/660${cpsItem.indexImage.path}`);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('alt'),
-      ).toEqual(item.indexImage.altText);
+      ).toEqual(cpsItem.indexImage.altText);
     });
 
     describe('With no headline provided', () => {
       beforeEach(() => {
-        delete item.headlines;
+        delete cpsItem.headlines;
+        delete assetTypeItem.name;
       });
 
       it('should not include a headline element', () => {
-        const { container } = render(<WrappedStoryPromo item={item} />);
+        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
+          .container;
 
-        expect(container.getElementsByTagName('h3').length).toEqual(0);
+        expect(cpsContainer.getElementsByTagName('h3').length).toEqual(0);
+        expect(assetTypeContainer.getElementsByTagName('h3').length).toEqual(0);
       });
     });
 
     describe('With no summary provided', () => {
       beforeEach(() => {
-        delete item.summary;
-        delete item.indexImage.copyrightHolder;
+        delete cpsItem.summary;
+        delete cpsItem.indexImage.copyrightHolder;
+        delete assetTypeItem.summary;
       });
 
       it('should not include any paragraph element', () => {
-        const { container } = render(<WrappedStoryPromo item={item} />);
-        expect(container.getElementsByTagName('p').length).toEqual(0);
+        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
+          .container;
+
+        expect(cpsContainer.getElementsByTagName('p').length).toEqual(0);
+        expect(assetTypeContainer.getElementsByTagName('p').length).toEqual(0);
       });
     });
 
     describe('With no timestamp provided', () => {
       beforeEach(() => {
-        delete item.timestamp;
+        delete cpsItem.timestamp;
+        delete assetTypeItem.timestamp;
       });
 
       it('should not include a time element', () => {
-        const { container } = render(<WrappedStoryPromo item={item} />);
+        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
+          .container;
 
-        expect(container.getElementsByTagName('time').length).toEqual(0);
+        expect(cpsContainer.getElementsByTagName('time').length).toEqual(0);
+        expect(assetTypeContainer.getElementsByTagName('time').length).toEqual(
+          0,
+        );
       });
     });
 
     describe('With no indexImage provided', () => {
       beforeEach(() => {
-        delete item.indexImage;
+        delete cpsItem.indexImage;
+        delete assetTypeItem.indexImage;
       });
 
       it('should not include an img element', () => {
-        const { container } = render(<WrappedStoryPromo item={item} />);
-
-        expect(container.getElementsByTagName('img').length).toEqual(0);
+        expect(cpsContainer.getElementsByTagName('img').length).toEqual(0);
+        expect(assetTypeContainer.getElementsByTagName('img').length).toEqual(
+          0,
+        );
       });
     });
 
     describe('With different timezones', () => {
       beforeEach(() => {
-        item.timestamp = 1565035200000;
+        cpsItem.timestamp = 1565035200000;
       });
 
       it('should show the correct local date', () => {
         const { container: newsContainer } = render(
-          <WrappedStoryPromo item={item} service="news" />,
+          <WrappedStoryPromo item={cpsItem} service="news" />,
         );
         const {
           textContent: newsTime,
@@ -314,7 +372,7 @@ describe('StoryPromo Container', () => {
         expect(newsDate).toEqual('2019-08-05');
 
         const { container: bengaliContainer } = render(
-          <WrappedStoryPromo item={item} service="bengali" />,
+          <WrappedStoryPromo item={cpsItem} service="bengali" />,
         );
         const {
           textContent: bengaliTime,
