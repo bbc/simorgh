@@ -215,13 +215,19 @@ export const runCommonTests = ({ service, pageType }) => {
           );
       });
 
-      it('should have working links', () => {
-        cy.get('footer ul').within(() =>
-          appConfig[service].footer.links.forEach(({ href }, key) =>
-            cy.checkLinks(key, href),
-          ),
-        );
-      });
+      if (!Cypress.env('SMOKE')) {
+        it('should have working links', () => {
+          cy.get('footer ul').within(() =>
+            appConfig[service].footer.links.forEach(({ href }, key) =>
+              cy
+                .get('a')
+                .eq(key)
+                .should('have.attr', 'href')
+                .and('contain', href),
+            ),
+          );
+        });
+      }
 
       it('should contain copyright text', () => {
         cy.get('footer p').should(
