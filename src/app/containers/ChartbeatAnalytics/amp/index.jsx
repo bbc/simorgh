@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape, string, number } from 'prop-types';
+import { shape, string, number, oneOf, oneOfType } from 'prop-types';
 
 const chartbeatAmpConfigOptions = options => ({
   vars: options,
@@ -26,8 +26,8 @@ AmpChartbeatBeacon.propTypes = {
     sections: string.isRequired,
     uid: number.isRequired,
     title: string.isRequired,
-    type: string.isRequired,
-    virtualReferrer: string,
+    contentType: string.isRequired,
+    virtualReferrer: oneOfType([string, oneOf([null])]),
     idSync: shape({
       bbc_hid: string,
     }),
