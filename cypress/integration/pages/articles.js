@@ -1,4 +1,5 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
+import * as moment from 'moment-timezone';
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
@@ -11,6 +12,7 @@ const serviceHasFigure = service =>
 const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
+const serviceHasTimestamp = service => service === 'news';
 
 const runTests = ({ service }) =>
   describe(`Tests`, () => {
@@ -91,19 +93,43 @@ const runTests = ({ service }) =>
         );
       });
 
-      it('should render a formatted timestamp', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
+      if (serviceHasTimestamp(service)) {
+        it('should render a formatted timestamp', () => {
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            ({ body }) => {
+              const { language } = body.metadata.passport;
               const { lastPublished } = body.metadata;
-              const timestamp = Cypress.moment(lastPublished).format(
-                'D MMMM YYYY',
-              );
-              cy.get('time').should('contain', timestamp);
-            }
-          },
-        );
-      });
+              const { firstPublished } = body.metadata;
+              const updatedTimestamp = moment
+                .tz(lastPublished, `${appConfig[service].timezone}`)
+                .locale(language)
+                .format('D MMMM YYYY');
+              const firstTimestamp = moment
+                .tz(firstPublished, `${appConfig[service].timezone}`)
+                .locale(language)
+                .format('D MMMM YYYY');
+              // exempt pashto && arabic as we do have currently their locale implementation
+              if (!['pashto', 'arabic'].includes(service)) {
+                cy.get('time').then($time => {
+                  if (lastPublished === firstPublished) {
+                    cy.get($time).should('contain', updatedTimestamp);
+                  } else {
+                    cy.get($time)
+                      .eq(0)
+                      .should('contain', firstTimestamp);
+                    cy.get($time)
+                      .eq(1)
+                      .should(
+                        'contain',
+                        `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+                      );
+                  }
+                });
+              }
+            },
+          );
+        });
+      }
 
       it('should render an H2, which contains/displays a styled subheading', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
