@@ -1,5 +1,5 @@
 import 'storybook-chromatic';
-import React, { Fragment } from 'react';
+import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
@@ -20,10 +20,10 @@ function loadStories() {
 
 addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
-  <Fragment>
+  <>
     <GlobalStyle fonts={Object.values(fontFaces)} />
     {story()}
-  </Fragment>
+  </>
   /* eslint-enable react/jsx-filename-extension */
 ));
 
