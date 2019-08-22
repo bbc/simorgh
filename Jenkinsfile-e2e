@@ -51,7 +51,7 @@ node {
                 colour: 'danger',
                 emoji: '😱',
               ]
-              
+
               if (env.BRANCH_NAME == 'latest') {
                 notifySlack(messageParameters)
                 stageHasFailed = true
@@ -80,7 +80,7 @@ node {
 
               currentBuild.result = 'FAILURE'
               throw e
-            }   
+            }
           }
           stage ('Test E2Es') {
             try {
@@ -93,7 +93,7 @@ node {
                 colour: 'danger',
                 emoji: '😱',
               ]
-              
+
               if (env.BRANCH_NAME == 'latest') {
                 notifySlack(messageParameters)
                 stageHasFailed = true
