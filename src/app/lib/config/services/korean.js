@@ -4,7 +4,7 @@ import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
 const service = {
-  lang: `ko-KO`,
+  lang: `ko`,
   articleAuthor: `https://www.facebook.com/bbcnewskorean`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-korean',
