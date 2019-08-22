@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { string, shape, object } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -36,7 +36,7 @@ const MediaPageMain = props => {
   } = pageData;
 
   return (
-    <Fragment>
+    <>
       <ATIAnalytics data={pageData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
@@ -57,7 +57,7 @@ const MediaPageMain = props => {
           </GridItemConstrainedMedium>
         </Grid>
       </main>
-    </Fragment>
+    </>
   );
 };
 
