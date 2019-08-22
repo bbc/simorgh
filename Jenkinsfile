@@ -6,38 +6,6 @@ def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
 def nodeImageVersion = "10.16.0-1"
 def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
 
-
-class BuildTag {
-  private String name;
-  private String number;
-  private String url;
-  private String commit;
-  private String commitAuthor;
-
-  public BuildTag(name, number, url, commit, commitAuthor) {
-    this.name = name;
-    this.number = number;
-    this.url = url;
-    this.commit = commit;
-    this.commitAuthor = commitAuthor;
-  }
-  public getBuildName(){
-    return this.name;
-  }
-  public getBuildNumber(){
-    return this.number;
-  }
-  public getBuildUrl(){
-    return this.url;
-  }
-  public getCommit(){
-    return this.commit;
-  }
-  public getCommitAuthor(){
-    return this.commitAuthor;
-  }
-}
-
 def appGitCommit = ""
 def appGitCommitAuthor = ""
 def messageColor = 'danger'
@@ -61,11 +29,6 @@ def runProductionTests(){
 def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
-}
-
-def createBuildTag() { 
-  BuildTag build = new BuildTag(env.JOB_NAME, env.BUILD_NUMBER, env.BUILD_URL, "appGitCommit", "appGitCommitAuthor")
-  return build;
 }
 
 def setBuildTagInfo(gitCommit, gitCommitAuthor) {
@@ -142,10 +105,9 @@ pipeline {
             }
           }
           steps {
-            // withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-            //   runDevelopmentTests()
-            // }
-            sh 'echo bs'
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              runDevelopmentTests()
+            }
           }
         }
         stage ('Test Production') {
@@ -156,17 +118,7 @@ pipeline {
             }
           }
           steps {
-            // runProductionTests()
-            sh 'rm -rf pack'
-            sh 'mkdir pack'
-
-            // Get Simorgh commit information
-            script {
-              getCommitInfo()
-              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-              sh 'cd pack && cat build_tag.json'
-              sh 'ls -l ./pack'
-            }
+            runProductionTests()
           }
         }
       }
@@ -210,7 +162,10 @@ pipeline {
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
 
-            createBuildTag()
+            script {
+              getCommitInfo()
+              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
+            }
 
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
