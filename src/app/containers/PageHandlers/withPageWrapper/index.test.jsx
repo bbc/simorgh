@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContext } from '../../../contexts/ToggleContext';

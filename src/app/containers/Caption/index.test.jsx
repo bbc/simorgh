@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'enzyme';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CaptionContainer from '.';
-import { shouldMatchSnapshot } from '../../../testHelpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { blockContainingText } from '../../models/blocks';
 

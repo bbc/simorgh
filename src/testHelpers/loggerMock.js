@@ -12,4 +12,4 @@ const mocks = {
 jest.mock('../app/lib/logger.node', () => jest.fn());
 nodeLogger.mockImplementation(() => mocks);
 
-export default mocks;
+export default nodeLogger;

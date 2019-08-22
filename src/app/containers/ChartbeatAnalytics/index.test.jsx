@@ -1,6 +1,7 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
 import renderer from 'react-test-renderer';
+import { localBaseUrl } from '../../../testHelpers/config';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
@@ -9,7 +10,6 @@ import * as testUtils from '../../lib/analyticsUtils/chartbeat';
 import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
-import { localBaseUrl } from '../../../testHelpers/config';
 
 const defaultToggleState = {
   test: {

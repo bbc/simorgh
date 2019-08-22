@@ -1,6 +1,6 @@
 import React from 'react';
+import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MediaPageMain from '.';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import amharicConfig from '../../lib/config/services/amharic';
 import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
 

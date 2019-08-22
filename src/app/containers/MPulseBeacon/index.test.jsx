@@ -1,6 +1,6 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import { isNull } from '../../../testHelpers';
+import { isNull } from '@bbc/psammead-test-helpers';
 import { DialContextProvider } from '../../contexts/DialContext';
 import MPulseBeaconContainer from './index';
 import MPulseBeacon from '../../components/MPulseBeacon';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, shape, node } from 'prop-types';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MediaPlayerContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
