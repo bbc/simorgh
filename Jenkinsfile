@@ -176,9 +176,9 @@ pipeline {
             // Get Simorgh commit information
             script {
               getCommitInfo()
+              createBuildTag()
+              sh 'cat ./pack/build_tag.json'
             }
-            createBuildTag()
-            sh 'cat ./pack/build_tag.json'
           }
         }
       }
