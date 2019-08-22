@@ -33,9 +33,15 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
   const IndexAlsosMediaIndicator = (cpsType, mediaType) => {
     const indexAlsosMediaType = getMediaType(cpsType, mediaType);
 
-    return indexAlsosMediaType ? (
-      <MediaIndicator service={service} type={indexAlsosMediaType} indexAlsos />
-    ) : null;
+    return (
+      indexAlsosMediaType && (
+        <MediaIndicator
+          service={service}
+          type={indexAlsosMediaType}
+          indexAlsos
+        />
+      )
+    );
   };
 
   return (
