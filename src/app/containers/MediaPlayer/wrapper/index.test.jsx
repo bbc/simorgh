@@ -9,14 +9,14 @@ describe('Media Player: Wrapper', () => {
       showPlaceholder
       placeholderSrc="http://foo.bar/placeholder.png"
     >
-      <React.Fragment>Foo bar</React.Fragment>
+      <>Foo bar</>
     </MediaPlayerWrapper>,
   );
 
   shouldMatchSnapshot(
     'should render component children when placeholder prop is `false`',
     <MediaPlayerWrapper placeholderSrc="foo.bar" showPlaceholder={false}>
-      <React.Fragment>Foo bar</React.Fragment>
+      <>Foo bar</>
     </MediaPlayerWrapper>,
   );
 });
