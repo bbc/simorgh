@@ -3,14 +3,11 @@ import BrandContainer from '../Brand';
 import NavigationContainer from '../Navigation';
 import { RequestContext } from '../../contexts/RequestContext';
 import ConsentBanner from '../ConsentBanner';
-import useToggle from '../Toggle/useToggle';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
   const borderBottom = pageType !== 'frontPage';
-  const { enabled } = useToggle('navOnArticles');
-  const showNavBar =
-    ['frontPage', 'media', 'error'].includes(pageType) || enabled;
+  const showNavBar = ['frontPage', 'media'].includes(pageType);
 
   return (
     <header role="banner">
