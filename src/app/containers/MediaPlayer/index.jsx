@@ -1,8 +1,9 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import AmpMediaPlayer from './amp';
-import CanonicalMediaPlayer from './canonical';
-import MediaPlayerWrapper from './wrapper';
+import {
+  CanonicalMediaPlayer,
+  AmpMediaPlayer,
+} from '@bbc/psammead-media-player';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import getPlaceholderSrc from './helpers/placeholder';
@@ -45,7 +46,6 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     return null; // this should be the holding image with an error overlay
   }
 
-  const shouldShowPlaceholder = !isAmp && placeholder;
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
     vpid: versionId,
@@ -57,19 +57,15 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
   return (
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
-      <MediaPlayerWrapper
-        showPlaceholder={shouldShowPlaceholder}
-        placeholderSrc={placeholderSrc}
-      >
-        {isAmp ? (
-          <AmpMediaPlayer
-            embedSrc={embedSource}
-            placeholderSrc={placeholderSrc}
-          />
-        ) : (
-          <CanonicalMediaPlayer embedSrc={embedSource} />
-        )}
-      </MediaPlayerWrapper>
+      {isAmp ? (
+        <AmpMediaPlayer src={embedSource} placeholderSrc={placeholderSrc} />
+      ) : (
+        <CanonicalMediaPlayer
+          src={embedSource}
+          placeholder={placeholder}
+          placeholderSrc={placeholder ? placeholderSrc : ''}
+        />
+      )}
     </GridItemConstrainedMedium>
   );
 };
