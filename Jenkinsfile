@@ -164,7 +164,8 @@ pipeline {
             script {
               getCommitInfo()
               sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-              sh 'echo ./pack/build_tag.json'
+              sh 'cd pack && cat build_tag.json'
+              sh 'ls -l ./pack'
             }
           }
         }
