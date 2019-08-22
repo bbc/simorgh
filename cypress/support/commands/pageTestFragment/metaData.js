@@ -1,37 +1,39 @@
 // Why aren't these used more widely? They should either be refactored for general use or shouldn't be a cy.command
 
-Cypress.Commands.add('hasHtmlLangDirAttributes', ({ lang, dir }) => {
-  cy.get('html')
-    .should('have.attr', 'lang', lang)
-    .and('have.attr', 'dir', dir);
+Cypress.Commands.add('hasHtmlLangAttribute', ({ lang }) => {
+  cy.get('html').should('have.attr', 'lang', lang);
 });
 
-Cypress.Commands.add(
-  'checkFacebookMetadata',
-  (fbAdmins, appID, articleAuthor) => {
-    cy.get('head').within(() => {
-      cy.get('meta[name="fb:admins"]').should('have.attr', 'content', fbAdmins);
-      cy.get('meta[name="fb:app_id"]').should('have.attr', 'content', appID);
-      cy.get('meta[name="article:author"]').should(
-        'have.attr',
-        'content',
-        articleAuthor,
-      );
-    });
-  },
-);
+/* As these are generalised, they should be moved out of this
+ * checkArticlesMetadata command and into the
+ * checkSharedMetadata command
+ */
 
-Cypress.Commands.add('checkOpenGraphMetadata', (
-  description, // eslint-disable-line no-unused-vars
-  imageUrl,
-  altText,
-  locale,
-  siteName,
-  title, // eslint-disable-line no-unused-vars
-  type,
-  url,
-) => {
-  it('should have OpenGraph meta data', () => {
+Cypress.Commands.add(
+  'checkArticlesMetadata',
+  ({
+    articleAuthor,
+    description, // eslint-disable-line no-unused-vars
+    imageUrl,
+    altText,
+    locale,
+    siteName,
+    title, // eslint-disable-line no-unused-vars
+    type,
+    url,
+    twitterCard,
+    twitterCreator,
+    twitterDescription, // eslint-disable-line no-unused-vars
+    twitterImageAlt,
+    twitterImageSrc,
+    twitterSite,
+    twitterTitle, // eslint-disable-line no-unused-vars
+  }) => {
+    cy.get('meta[name="article:author"]').should(
+      'have.attr',
+      'content',
+      articleAuthor,
+    );
     cy.get('head').within(() => {
       cy.get('meta[name="og:image"]').should('have.attr', 'content', imageUrl);
       cy.get('meta[name="og:image:alt"]').should(
@@ -61,67 +63,73 @@ Cypress.Commands.add('checkOpenGraphMetadata', (
       'content',
       siteName,
     );
-  });
-});
 
-Cypress.Commands.add('checkTwitterMetadata', (
-  card,
-  creator,
-  description, // eslint-disable-line no-unused-vars
-  imageAlt,
-  imageSrc,
-  site,
-  title, // eslint-disable-line no-unused-vars
-) => {
-  it('should have Twitter meta data', () => {
     cy.get('head').within(() => {
-      cy.get('meta[name="twitter:card"]').should('have.attr', 'content', card);
+      cy.get('meta[name="twitter:card"]').should(
+        'have.attr',
+        'content',
+        twitterCard,
+      );
       cy.get('meta[name="twitter:creator"]').should(
         'have.attr',
         'content',
-        creator,
+        twitterCreator,
       );
       cy.get('meta[name="twitter:image:alt"]').should(
         'have.attr',
         'content',
-        imageAlt,
+        twitterImageAlt,
       );
       cy.get('meta[name="twitter:image:src"]').should(
         'have.attr',
         'content',
-        imageSrc,
+        twitterImageSrc,
       );
-      cy.get('meta[name="twitter:site"]').should('have.attr', 'content', site);
+      cy.get('meta[name="twitter:site"]').should(
+        'have.attr',
+        'content',
+        twitterSite,
+      );
       // cy.get('meta[name="twitter:description"]').should(
       //   'have.attr',
       //   'content',
-      //   description,
+      //   twitterDescription,
       // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
       // cy.get('meta[name="twitter:title"]').should(
       //   'have.attr',
       //   'content',
-      //   title,
+      //   twitterTitle,
       // ); // !!! Remove eslint-disabling comment above when un-commenting this test.
     });
     cy.get('head meta[name="twitter:creator"]').should(
       'have.attr',
       'content',
-      creator,
+      twitterCreator,
     );
     cy.get('head meta[name="twitter:image:alt"]').should(
       'have.attr',
       'content',
-      imageAlt,
+      twitterImageAlt,
     );
     cy.get('head meta[name="twitter:image:src"]').should(
       'have.attr',
       'content',
-      imageSrc,
+      twitterImageSrc,
     );
     cy.get('head meta[name="twitter:site"]').should(
       'have.attr',
       'content',
-      site,
+      twitterSite,
     );
-  });
-});
+  },
+);
+
+Cypress.Commands.add(
+  'checkSharedSocialmediaMetadata',
+  ({ fbAdmins, appID }) => {
+    cy.get('head').within(() => {
+      cy.get('meta[name="fb:admins"]').should('have.attr', 'content', fbAdmins);
+      cy.get('meta[name="fb:app_id"]').should('have.attr', 'content', appID);
+    });
+  },
+);

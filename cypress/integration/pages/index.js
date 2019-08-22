@@ -82,22 +82,32 @@ export const runCommonTests = ({ service, pageType }) => {
             'noodp,noydir',
           );
         });
+
+        it('should have lang attribute matching payload data', () => {
+          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            ({ body }) => {
+              const lang =
+                pageType === 'articles'
+                  ? body.metadata.passport.language
+                  : appConfig[service].lang;
+
+              cy.hasHtmlLangAttribute({
+                lang,
+              });
+            },
+          );
+        });
+
+        it('should have the correct shared social media metadata', () => {
+          cy.checkSharedSocialmediaMetadata({
+            fbAdmins: '100004154058350',
+            appID: '1609039196070050',
+          });
+        });
       }
 
-      it('should have dir matching service config & lang matching payload data', () => {
-        cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-          ({ body }) => {
-            const lang =
-              pageType === 'articles'
-                ? body.metadata.passport.language
-                : appConfig[service].lang;
-
-            cy.hasHtmlLangDirAttributes({
-              lang,
-              dir: appConfig[service].dir,
-            });
-          },
-        );
+      it('should have dir matching service config', () => {
+        cy.get('html').and('have.attr', 'dir', appConfig[service].dir);
       });
     });
 

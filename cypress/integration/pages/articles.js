@@ -15,37 +15,27 @@ const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 const runTests = ({ service }) =>
   describe(`Tests`, () => {
     describe(`Metadata`, () => {
-      it('should have the correct facebook metadata', () => {
-        cy.checkFacebookMetadata(
-          '100004154058350',
-          '1609039196070050',
-          `${appConfig[service].articleAuthor}`,
-        );
-      });
-
-      it('should have the correct open graph metadata', () => {
-        cy.checkOpenGraphMetadata(
-          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          `${appConfig[service].defaultImage}`,
-          `${appConfig[service].defaultImageAltText}`,
-          `${appConfig[service].locale}`,
-          `${appConfig[service].defaultImageAltText}`,
-          "Meghan's bouquet laid on tomb of unknown warrior",
-          'article',
-          `https://www.bbc.com${config[service].pageTypes.articles.path}`,
-        );
-      });
-
-      it('should have the correct twitter metadata', () => {
-        cy.checkTwitterMetadata(
-          'summary_large_image',
-          `${appConfig[service].twitterCreator}`,
-          'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          `${appConfig[service].defaultImageAltText}`,
-          `${appConfig[service].defaultImage}`,
-          `${appConfig[service].twitterSite}`,
-          "Meghan's bouquet laid on tomb of unknown warrior",
-        );
+      it('should have the correct articles metadata', () => {
+        cy.checkArticlesMetadata({
+          articleAuthor: `${appConfig[service].articleAuthor}`,
+          description:
+            'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
+          imageUrl: `${appConfig[service].defaultImage}`,
+          altText: `${appConfig[service].defaultImageAltText}`,
+          locale: `${appConfig[service].locale}`,
+          siteName: `${appConfig[service].defaultImageAltText}`,
+          title: "Meghan's bouquet laid on tomb of unknown warrior",
+          type: 'article',
+          url: `https://www.bbc.com${config[service].pageTypes.articles.path}`,
+          twitterCard: 'summary_large_image',
+          twitterCreator: `${appConfig[service].twitterCreator}`,
+          twitterDescription:
+            'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.', // eslint-disable-line no-unused-vars
+          twitterImageAlt: `${appConfig[service].defaultImageAltText}`,
+          twitterImageSrc: `${appConfig[service].defaultImage}`,
+          twitterSite: `${appConfig[service].twitterSite}`,
+          twitterTitle: "Meghan's bouquet laid on tomb of unknown warrior", // eslint-disable-line no-unused-vars
+        });
       });
 
       it('should include mainEntityOfPage in the LinkedData', () => {
