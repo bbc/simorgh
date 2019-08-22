@@ -4,7 +4,7 @@ import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `es-005`,
+  lang: `es`,
   articleAuthor: `https://www.facebook.com/bbcmundo`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-mundo',
