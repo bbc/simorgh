@@ -65,16 +65,6 @@ const runCanonicalTests = ({ service }) =>
         cy.get('html').should('not.have.attr', 'amp');
       });
     });
-
-    describe('Scripts', () => {
-      it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
-      });
-
-      it('should have 1 bundle for its service', () => {
-        cy.hasOneServiceBundle(service);
-      });
-    });
   });
 
 // -------------------------------------------

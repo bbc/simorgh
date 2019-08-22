@@ -40,6 +40,27 @@ node {
           stage ('Install & Setup') {
             sh 'make install'
           }
+          stage ('Live E2Es') {
+            try {
+              sh 'make liveE2Es'
+            } catch (Throwable e) {
+              def messageParameters = [
+                buildStatus: 'Failed',
+                env: 'LIVE',
+                branch: env.BRANCH_NAME,
+                colour: 'danger',
+                emoji: '😱',
+              ]
+
+              if (env.BRANCH_NAME == 'latest') {
+                notifySlack(messageParameters)
+                stageHasFailed = true
+              }
+
+              currentBuild.result = 'FAILURE'
+              throw e
+            }
+          }
           stage ('Local Prod Tests') {
             try {
               sh 'CYPRESS_SMOKE=false npm run build && xvfb-run -a npm run test:prod:ci;'
@@ -59,7 +80,7 @@ node {
 
               currentBuild.result = 'FAILURE'
               throw e
-            }   
+            }
           }
           stage ('Test E2Es') {
             try {
@@ -72,28 +93,7 @@ node {
                 colour: 'danger',
                 emoji: '😱',
               ]
-              
-              if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters)
-                stageHasFailed = true
-              }
 
-              currentBuild.result = 'FAILURE'
-              throw e
-            }
-          }
-          stage ('Live E2Es') {
-            try {
-              sh 'make liveE2Es'
-            } catch (Throwable e) {
-              def messageParameters = [
-                buildStatus: 'Failed',
-                env: 'LIVE',
-                branch: env.BRANCH_NAME,
-                colour: 'danger',
-                emoji: '😱',
-              ]
-              
               if (env.BRANCH_NAME == 'latest') {
                 notifySlack(messageParameters)
                 stageHasFailed = true
