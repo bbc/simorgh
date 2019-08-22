@@ -246,7 +246,7 @@ exports[`MediaPlayer is called correctly Calls the canonical player when platfor
         className="c3"
         height={null}
         sizes={null}
-        src={false}
+        src=""
         srcSet={null}
         width={null}
       />

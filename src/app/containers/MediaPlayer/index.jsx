@@ -63,7 +63,7 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
         <CanonicalMediaPlayer
           src={embedSource}
           placeholder={placeholder}
-          placeholderSrc={placeholder && placeholderSrc}
+          placeholderSrc={placeholder ? placeholderSrc : ''}
         />
       )}
     </GridItemConstrainedMedium>
