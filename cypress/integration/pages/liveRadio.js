@@ -102,11 +102,6 @@ const runCommonTests = ({ service }) =>
               body.pageData.metadata.type,
             );
           });
-          cy.get('html').should(
-            'have.attr',
-            'lang',
-            body.pageData.metadata.passport.language,
-          );
         });
       });
 
@@ -115,12 +110,6 @@ const runCommonTests = ({ service }) =>
         cy.get('script[type="application/ld+json"]')
           .should('contain', 'mainEntityOfPage')
           .and('contain', 'headline');
-      });
-    });
-
-    describe('Scripts', () => {
-      it('should only have expected bundle script tags', () => {
-        cy.hasExpectedJsBundles(envConfig.assetOrigin, service);
       });
     });
   });
