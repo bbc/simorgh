@@ -2,7 +2,7 @@ import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
-import toggles from '../../support/helpers/toggles';
+import useAppToggles from '../../support/helpers/useAppToggles';
 
 export const runCommonCanonicalTests = ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
@@ -171,7 +171,7 @@ export const runCommonTests = ({ service, pageType }) => {
       if (appConfig[service].navigation) {
         if (
           pageType !== 'articles' ||
-          (pageType === 'articles' && toggles.navOnArticles.enabled)
+          (pageType === 'articles' && useAppToggles.navOnArticles.enabled)
         ) {
           it('should have one visible navigation with a skiplink to h1', () => {
             cy.get('nav')

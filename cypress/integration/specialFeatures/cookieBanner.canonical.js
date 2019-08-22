@@ -1,13 +1,23 @@
-import {
-  assertCookieValue,
-  assertCookieExpiryDate,
-} from '../../support/helpers/metaTestHelper';
 import appConfig from '../../../src/app/lib/config/services';
 import config from '../../support/config/services';
 import shouldSmokeTest from '../../support/helpers/shouldSmokeTest';
 
 // Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
 const serviceFilter = service => ['news', 'persian'].includes(service);
+
+const assertCookieValue = (cookieName, value) => {
+  cy.getCookie(cookieName).should('have.property', 'value', value);
+};
+
+const assertCookieExpiryDate = (cookieName, timestamp) => {
+  const testBuffer = 60;
+  cy.getCookie(cookieName).then(c => {
+    expect(c.expiry).to.be.within(
+      timestamp - testBuffer,
+      timestamp + testBuffer,
+    );
+  });
+};
 
 const filterPageTypes = (pageType, service) =>
   config[service].pageTypes[pageType].path !== undefined;
