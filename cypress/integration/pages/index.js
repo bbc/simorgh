@@ -132,9 +132,10 @@ export const runCommonTests = ({ service, pageType }) => {
       });
     });
 
+    // Should be made to not be a smoke test
     describe('Page links test', () => {
       if (Cypress.env('APP_ENV') === 'live') {
-        it('footer links should not 404', () => {
+        it('links should not 404', () => {
           cy.get('a')
             .not('[href="#*"]')
             .each(element => {
