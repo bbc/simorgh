@@ -1,5 +1,8 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  suppressPropWarnings,
+} from '../../../../testHelpers';
 import { articleDataNews, articleDataPersian } from '../../Article/fixtureData';
 import WithData from '.';
 import frontPageDataPidgin from '../../../../../data/pidgin/frontpage';
@@ -49,13 +52,15 @@ describe('withData HOC', () => {
   };
 
   describe('with no data', () => {
+    suppressPropWarnings(['data.dials', 'undefined']);
     shouldShallowMatchSnapshot(
       'should return the errorMain component and 500 status',
       <WithDataHOC {...noDataProps} />,
     );
   });
 
-  describe('with missing articleData', () => {
+  describe('with missing pageData', () => {
+    suppressPropWarnings(['data.pageData', 'undefined']);
     shouldShallowMatchSnapshot(
       'should return the errorMain component',
       <WithDataHOC {...noAssetData} />,
