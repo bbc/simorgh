@@ -4,7 +4,7 @@ global.Cypress = { env: () => {} }; // Fake Cypress.env
 const services = require('./cypress/support/config/services');
 
 // allPageWidths = [240, 360, 600, 1008, 1280];
-// Run ally on 360px only since designs are done in this width
+// Run a11y on 360px only since designs are done in this width
 // This functionality can be extended to allow for testing on all widths
 const pageWidths = [360];
 const baseUrl = 'http://localhost.bbc.com:7080';
