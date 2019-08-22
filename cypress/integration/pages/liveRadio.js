@@ -137,12 +137,6 @@ const runCanonicalTests = ({ service }) =>
         });
       }
     });
-
-    describe('Scripts', () => {
-      it('should have 1 bundle for its service', () => {
-        cy.hasOneServiceBundle(service);
-      });
-    });
   });
 
 const runAmpTests = ({ service }) =>
