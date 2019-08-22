@@ -65,7 +65,7 @@ def getCommitInfo = {
 
 def createBuildTag() { 
   BuildTag build = new BuildTag(env.JOB_NAME, env.BUILD_NUMBER, env.BUILD_URL, "appGitCommit", "appGitCommitAuthor")
-  sh "node ./scripts/signBuild.js ${build.getBuildName()} ${build.getBuildNumber()} ${build.getBuildUrl()} ${build.getCommit()} ${build.getCommitAuthor()}"
+  return build;
 }
 
 def setBuildTagInfo(gitCommit, gitCommitAuthor) {
@@ -163,7 +163,8 @@ pipeline {
             // Get Simorgh commit information
             script {
               getCommitInfo()
-              createBuildTag()
+              build = createBuildTag()
+              sh "node ./scripts/signBuild.js ${build.getBuildName()} ${build.getBuildNumber()} ${build.getBuildUrl()} ${build.getCommit()} ${build.getCommitAuthor()}"
               sh 'cat ./pack/build_tag.json'
             }
           }
