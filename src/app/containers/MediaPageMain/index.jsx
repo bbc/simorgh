@@ -22,11 +22,8 @@ const renderBlock = ({ script, service }) => block => {
     key: block.text,
     script,
     service,
+    ...(block.type === 'heading' && { id: 'content' }),
   };
-
-  if (block.type === 'heading') {
-    props.id = 'content';
-  }
 
   return <Component {...props}>{block.text}</Component>;
 };
