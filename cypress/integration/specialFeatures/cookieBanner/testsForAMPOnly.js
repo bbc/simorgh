@@ -1,6 +1,6 @@
-import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
-import describeForEuOnly from '../../support/helpers/describeForEuOnly';
+import config from '../../../support/config/services';
+import appConfig from '../../../../src/app/lib/config/services';
+import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
