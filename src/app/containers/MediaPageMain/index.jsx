@@ -18,11 +18,17 @@ const renderBlock = ({ script, service }) => block => {
     return null;
   }
 
-  return (
-    <Component script={script} service={service} key={block.text}>
-      {block.text}
-    </Component>
-  );
+  const props = {
+    script,
+    service,
+    key: block.text,
+  };
+
+  if (block.type === 'heading') {
+    props.id = 'content';
+  }
+
+  return <Component {...props}>{block.text}</Component>;
 };
 
 const MediaPageMain = props => {
