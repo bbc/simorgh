@@ -83,11 +83,6 @@ const runTests = ({ service }) =>
               'content',
               new Date(body.metadata.lastPublished).toISOString(),
             );
-            cy.get('html').should(
-              'have.attr',
-              'lang',
-              body.metadata.passport.language,
-            );
           },
         );
       });
