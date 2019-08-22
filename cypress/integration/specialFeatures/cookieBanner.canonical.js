@@ -1,10 +1,10 @@
 import {
   assertCookieValue,
   assertCookieExpiryDate,
-} from '../../support/metaTestHelper';
+} from '../../support/helpers/metaTestHelper';
 import appConfig from '../../../src/app/lib/config/services';
 import config from '../../support/config/services';
-import shouldSmokeTest from '../../support/shouldSmokeTest';
+import shouldSmokeTest from '../../support/helpers/shouldSmokeTest';
 
 // Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
 const serviceFilter = service => ['news', 'persian'].includes(service);

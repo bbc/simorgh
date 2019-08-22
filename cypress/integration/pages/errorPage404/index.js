@@ -1,4 +1,4 @@
-import iterator from '../../../support/iterator';
+import iterator from '../../../support/helpers/iterator';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 

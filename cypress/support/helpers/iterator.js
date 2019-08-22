@@ -1,6 +1,9 @@
-import config from './config/services';
+import config from '../config/services';
 import shouldSmokeTest from './shouldSmokeTest';
-import { runCommonTests, runCommonCanonicalTests } from '../integration/pages';
+import {
+  runCommonTests,
+  runCommonCanonicalTests,
+} from '../../integration/pages';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;

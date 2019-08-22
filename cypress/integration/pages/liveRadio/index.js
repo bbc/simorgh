@@ -1,7 +1,7 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 import envConfig from '../../../support/config/envs';
-import iterator from '../../../support/iterator';
+import iterator from '../../../support/helpers/iterator';
 
 const runCommonTests = ({ service }) =>
   describe('Common tests', () => {

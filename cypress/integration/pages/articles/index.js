@@ -1,10 +1,13 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import * as moment from 'moment-timezone';
-import iterator from '../../../support/iterator';
+import iterator from '../../../support/helpers/iterator';
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
-import { getBlockByType, getBlockData } from '../../../support/bodyTestHelper';
+import {
+  getBlockByType,
+  getBlockData,
+} from '../../../support/helpers/bodyTestHelper';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>

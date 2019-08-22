@@ -1,8 +1,8 @@
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
-import describeForEuOnly from '../../support/describeForEuOnly';
-import toggles from '../../support/toggles';
+import describeForEuOnly from '../../support/helpers/describeForEuOnly';
+import toggles from '../../support/helpers/toggles';
 
 export const runCommonCanonicalTests = ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
