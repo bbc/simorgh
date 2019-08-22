@@ -11,6 +11,7 @@ const serviceHasFigure = service =>
 const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
+const serviceIsNotGNL = service => service !== 'japanese';
 
 const runTests = ({ service }) =>
   describe(`Tests`, () => {
@@ -244,7 +245,7 @@ const runCanonicalTests = ({ service }) =>
 
     describe('ATI', () => {
       it('should have a noscript tag with an 1px image with the ati url', () => {
-        if (!service.japanese) {
+        if (serviceIsNotGNL) {
           cy.hasNoscriptImgAtiUrl(
             envConfig.atiUrl,
             config[service].isWorldService
@@ -324,7 +325,7 @@ const runAmpTests = ({ service }) =>
   describe(`Amp Tests`, () => {
     describe('ATI', () => {
       it('should have an amp-analytics tag with the ati url', () => {
-        if (!service.japanese) {
+        if (serviceIsNotGNL) {
           cy.hasAmpAnalyticsAtiUrl(
             envConfig.atiUrl,
             config[service].isWorldService

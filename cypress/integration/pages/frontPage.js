@@ -2,6 +2,8 @@ import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
 
+const serviceIsNotGNL = service => service !== 'japanese';
+
 const runTests = () =>
   describe(`Tests`, () => {
     describe('Frontpage body', () => {
@@ -55,7 +57,7 @@ const runCanonicalTests = ({ service }) =>
   describe(`Canonical Tests`, () => {
     describe('ATI', () => {
       it('should have a noscript tag with an 1px image with the ati url', () => {
-        if (!service.japanese) {
+        if (serviceIsNotGNL) {
           cy.hasNoscriptImgAtiUrl(
             envConfig.atiUrl,
             config[service].isWorldService
@@ -102,7 +104,7 @@ const runAmpTests = ({ service }) =>
 
     describe('ATI', () => {
       it('should have an amp-analytics tag with the ati url', () => {
-        if (!service.japanese) {
+        if (serviceIsNotGNL) {
           cy.hasAmpAnalyticsAtiUrl(
             envConfig.atiUrl,
             config[service].isWorldService
