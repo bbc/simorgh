@@ -91,9 +91,7 @@ export const runCommonTests = ({ service, pageType }) => {
                   ? body.metadata.passport.language
                   : appConfig[service].lang;
 
-              cy.hasHtmlLangAttribute({
-                lang,
-              });
+              cy.get('html').should('have.attr', 'lang', lang);
             },
           );
         });
