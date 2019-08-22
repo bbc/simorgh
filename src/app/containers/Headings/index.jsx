@@ -46,11 +46,13 @@ const HeadingsContainer = ({ blocks, type }) => {
     <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
   );
 
+  const headingId = 'content'; // Used for the skiplink
   const subHeadingId = sanitiseSubheadline(type, text);
+  const id = type === 'headline' ? headingId : subHeadingId;
 
   return (
     <GridConstrain>
-      <Heading script={script} service={service} id={subHeadingId}>
+      <Heading script={script} service={service} id={id}>
         {renderText()}
       </Heading>
     </GridConstrain>
