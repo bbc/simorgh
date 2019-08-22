@@ -1,5 +1,7 @@
-import serviceHasPageType from '../../support/serviceHasPageType';
 import config from '../../support/config/services';
+
+const serviceHasPageType = (service, pageType) =>
+  config[service].pageTypes[pageType].path !== undefined;
 
 describe('Application', () => {
   Object.keys(config)
