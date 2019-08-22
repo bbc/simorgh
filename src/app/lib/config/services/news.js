@@ -43,6 +43,9 @@ const news = {
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
   translations: {
+    home: 'Home',
+    currentPage: 'Current page',
+    skipLinkText: 'Skip to content',
     error: {
       404: {
         statusCode: '404',
