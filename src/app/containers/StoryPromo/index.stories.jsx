@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import pathOr from 'ramda/src/pathOr';
+import fixture from '../../../../data/pidgin/frontpage';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoContainer from '.';
-import fixture from '../../../../data/pidgin/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 const mediaFixture = type =>

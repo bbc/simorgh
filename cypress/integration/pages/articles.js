@@ -1,8 +1,8 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
+import appConfig from '@lib/config/services';
 import iterator from '../../support/iterator';
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
 import { getBlockByType, getBlockData } from '../../support/bodyTestHelper';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959

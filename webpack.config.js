@@ -7,6 +7,8 @@ const MomentTimezoneInclude = require('@bbc/moment-timezone-include');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
+console.log(appDirectory);
+
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
   const IS_PROD = process.env.NODE_ENV === 'production';
@@ -36,6 +38,7 @@ module.exports = (shell = {}) => {
     resolve: {
       extensions: ['.js', '.jsx'],
       alias: {
+        '@data': resolvePath('data/'),
         '@lib': resolvePath('src/app/lib/'),
       },
     }, // resolves `import '../Foo'` to `../Foo/index.jsx`
