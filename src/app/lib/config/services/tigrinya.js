@@ -37,9 +37,6 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
-    home: 'ዜና',
-    currentPage: 'Current page',
-    skipLinkText: 'እቲ ትሕዝቶ ዝለል',
     error: {
       404: {
         statusCode: '404',
