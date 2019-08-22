@@ -37,6 +37,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'ዜና',
+    currentPage: 'Current page',
+    skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
     error: {
       404: {
         statusCode: '404',
