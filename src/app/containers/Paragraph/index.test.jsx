@@ -26,12 +26,13 @@ const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
 });
 
 const inlineSpanBlock = (blocks, language, text) => ({
+  type: 'inline',
+  id: uuid,
   model: {
     blocks,
     language,
     text,
   },
-  type: 'inline',
 });
 
 const persianText = 'چیسربرگر';
