@@ -163,7 +163,7 @@ pipeline {
             // Get Simorgh commit information
             script {
               getCommitInfo()
-              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit} author && echo buenos diaz"
+              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
               sh 'cat ./pack/build_tag.json'
             }
           }
