@@ -14,7 +14,7 @@ This is where the overwhelming majority of e2es live.
 Key points:
  - Files in the base of the directory run on all page types.
  - There is a directory per page type where each page's custom test are written.
- - The index.js of each page type directory must use the [page iterator](../support/iterator.js), this reduces the number of page visits to 1 visit to the canonical page and 1 visit to the amp version of the same page.
+ - The index.js of each page type directory must use the [runTestsForPage function](../support/runTestsForPage.js), this reduces the number of page visits to 1 visit to the canonical page and 1 visit to the amp version of the same page.
 
 ## Special Features
 There are features on pages that cannot be tested in one page visit. The only such example is cookie banner/GDPR logic testing. It is not envisaged that any other tests would be added here.

@@ -1,13 +1,26 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import * as moment from 'moment-timezone';
-import iterator from '../../../support/helpers/iterator';
+import runTestsForPage from '../../../support/helpers/runTestsForPage';
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
-import {
-  getBlockByType,
-  getBlockData,
-} from '../../../support/helpers/bodyTestHelper';
+
+const getBlockByType = (blocks, blockType) => {
+  let blockData;
+
+  blocks.forEach(block => {
+    if (!blockData && block.type === blockType) {
+      blockData = block;
+    }
+  });
+  return blockData;
+};
+
+const getBlockData = (blockType, body) => {
+  const { blocks } = body.content.model;
+
+  return getBlockByType(blocks, blockType);
+};
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -393,4 +406,4 @@ const runAmpTests = ({ service }) =>
     });
   });
 
-iterator('articles', runTests, runCanonicalTests, runAmpTests);
+runTestsForPage('articles', runTests, runCanonicalTests, runAmpTests);

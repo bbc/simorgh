@@ -1,4 +1,4 @@
-import iterator from '../../../support/helpers/iterator';
+import runTestsForPage from '../../../support/helpers/runTestsForPage';
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 
@@ -145,4 +145,4 @@ const runAmpTests = ({ service }) =>
     });
   });
 
-iterator('frontPage', runTests, runCanonicalTests, runAmpTests);
+runTestsForPage('frontPage', runTests, runCanonicalTests, runAmpTests);

@@ -1,4 +1,4 @@
-import iterator from '../../../support/helpers/iterator';
+import runTestsForPage from '../../../support/helpers/runTestsForPage';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 
@@ -89,4 +89,4 @@ const runAmpTests = ({ service }) =>
     });
   });
 
-iterator('errorPage404', runTests, runCanonicalTests, runAmpTests);
+runTestsForPage('errorPage404', runTests, runCanonicalTests, runAmpTests);
