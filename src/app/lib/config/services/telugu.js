@@ -34,6 +34,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'వార్తలు',
+    currentPage: 'Current page',
+    skipLinkText: 'కంటెంట్‌కు దాటవేయండి',
     error: {
       404: {
         statusCode: '404',

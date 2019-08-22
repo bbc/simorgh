@@ -201,6 +201,7 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
@@ -444,6 +445,7 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
@@ -687,6 +689,7 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
@@ -930,6 +933,7 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
@@ -1173,6 +1177,7 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
