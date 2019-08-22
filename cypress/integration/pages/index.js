@@ -54,7 +54,7 @@ const runCommonTests = ({ service, pageType }) => {
               });
             });
         });
-      };
+      }
     });
 
     describe('Header Tests', () => {
