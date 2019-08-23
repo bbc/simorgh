@@ -1,14 +1,14 @@
-import React, { useContext, Fragment } from 'react';
+import React, { useContext } from 'react';
 import SitewideLinks from '@bbc/psammead-sitewide-links';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import BrandContainer from '../Brand';
 
 const currentYear = () => new Date().getFullYear();
 const getCopyrightText = text => (
-  <Fragment>
+  <>
     <span lang="en-GB">{`\u00A9`} </span>
     {`${currentYear()} ${text}`}
-  </Fragment>
+  </>
 );
 
 const FooterContainer = () => {

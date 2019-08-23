@@ -4,7 +4,7 @@ import { gahuza as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `rw-RW`,
+  lang: `rw`,
   articleAuthor: `https://www.facebook.com/BBCGahuza`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-gahuza',
@@ -33,6 +33,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: `Urupapuro rw'itangiriro`,
+    currentPage: 'Current page',
+    skipLinkText: 'Simbira ku birimwo',
     error: {
       404: {
         statusCode: '404',

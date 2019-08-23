@@ -8,7 +8,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 
 const service = {
-  lang: `bn-BD`,
+  lang: `bn`,
   articleAuthor: `https://www.facebook.com/BBCBengaliService`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-bengali',
@@ -37,6 +37,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'মূলপাতা',
+    currentPage: 'Current page',
+    skipLinkText: 'সরাসরি কনটেন্টে যান',
     error: {
       404: {
         statusCode: '404',
