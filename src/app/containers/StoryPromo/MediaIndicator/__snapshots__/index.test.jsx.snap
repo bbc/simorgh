@@ -11,17 +11,6 @@ exports[`Story Promo Media Indicator should not render if item media object has 
 />
 `;
 
-exports[`Story Promo Media Indicator should render Index Also video indicator correctly 1`] = `
-<MediaIndicator
-  datetime={null}
-  duration={null}
-  indexAlsos={true}
-  service="news"
-  topStory={false}
-  type="video"
-/>
-`;
-
 exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
 <MediaIndicator
   datetime={null}
@@ -64,4 +53,36 @@ exports[`Story Promo Media Indicator should render correctly even without durati
   topStory={false}
   type="video"
 />
+`;
+
+exports[`Story Promo Media Indicator with Index Alsos should render a video indicator correctly 1`] = `
+.c1 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c0 > svg {
+  margin: 0;
+}
+
+<span
+  aria-hidden="true"
+  className="c0"
+>
+  <svg
+    className="c1"
+    focusable="false"
+    height="12px"
+    viewBox="0 0 32 32"
+    width="12px"
+  >
+    <polygon
+      points="3,32 29,16 3,0"
+    />
+  </svg>
+</span>
 `;

@@ -1,6 +1,12 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 
-import { shouldShallowMatchSnapshot, isNull } from '../../../../testHelpers';
+import {
+  shouldShallowMatchSnapshot,
+  shouldMatchSnapshot,
+  isNull,
+} from '../../../../testHelpers';
+
 import MediaIndicator from '.';
 
 const audioItem = {
@@ -130,8 +136,20 @@ describe('Story Promo Media Indicator', () => {
     <MediaIndicator item={noMediaObject} service="news" />,
   );
 
-  shouldShallowMatchSnapshot(
-    'should render Index Also video indicator correctly',
-    <MediaIndicator item={noDurationItem} service="news" indexAlsos />,
-  );
+  describe('with Index Alsos', () => {
+    shouldMatchSnapshot(
+      'should render a video indicator correctly',
+      <MediaIndicator item={noDurationItem} service="news" indexAlsos />,
+    );
+
+    it('should render ', () => {
+      const { container } = render(
+        <MediaIndicator item={noDurationItem} service="news" indexAlsos />,
+      );
+
+      const span = container.getElementsByTagName('span')[0];
+      expect(span.getAttribute('aria-hidden')).toBeDefined();
+      expect(span.getAttribute('aria-hidden')).toEqual('true');
+    });
+  });
 });
