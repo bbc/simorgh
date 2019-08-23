@@ -1,11 +1,18 @@
-import config from './config/services';
+import config from '../config/services';
 import shouldSmokeTest from './shouldSmokeTest';
-import runCommonTests from '../integration/pages';
+import testsForAllPages from '../../integration/pages/testsForAllPages';
+import testsForAllAMPPages from '../../integration/pages/testsForAllAMPPages';
+import testsForAllCanonicalPages from '../../integration/pages/testsForAllCanonicalPages';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
-const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
+const runTestsForPage = (
+  pageType,
+  runTests,
+  runCanonicalTests,
+  runAmpTests,
+) => {
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .filter(service => shouldSmokeTest(pageType, service))
@@ -17,7 +24,8 @@ const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
           });
         });
 
-        runCommonTests({ service, pageType });
+        testsForAllPages({ service, pageType });
+        testsForAllCanonicalPages({ service, pageType });
         if (runTests) runTests({ service, pageType });
         if (runCanonicalTests) runCanonicalTests({ service, pageType });
       });
@@ -29,11 +37,12 @@ const iterator = (pageType, runTests, runCanonicalTests, runAmpTests) => {
           });
         });
 
-        runCommonTests({ service, pageType });
+        testsForAllPages({ service, pageType });
+        testsForAllAMPPages(pageType);
         if (runTests) runTests({ service, pageType });
         if (runAmpTests) runAmpTests({ service, pageType });
       });
     });
 };
 
-export default iterator;
+export default runTestsForPage;
