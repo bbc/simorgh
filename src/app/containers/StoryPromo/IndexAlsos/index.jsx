@@ -11,7 +11,7 @@ import {
 } from '@bbc/psammead-story-promo/index-alsos';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.
+const MAX_NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.
 
 const getMediaType = (cpsType, mediaType) => {
   const isPGL = cpsType === 'PGL';
@@ -22,9 +22,7 @@ const getMediaType = (cpsType, mediaType) => {
     return null;
   }
 
-  const type = isPGL ? 'photogallery' : media.toLowerCase();
-
-  return type;
+  return isPGL ? 'photogallery' : media.toLowerCase();
 };
 
 const buildIndexAlsosMediaIndicator = (cpsType, mediaType, service) => {
@@ -48,7 +46,7 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
   return (
     <IndexAlsos offScreenText="Related content">
       <IndexAlsosWrapper>
-        {alsoItems.slice(0, NUM_INDEX_ALSOS).map(item => {
+        {alsoItems.slice(0, MAX_NUM_INDEX_ALSOS).map(item => {
           const { id, cpsType, mediaType } = item;
           const headline = pathOr(null, ['headlines', 'headline'], item);
           const url = pathOr(null, ['locators', 'assetUri'], item);

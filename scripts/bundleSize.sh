@@ -5,7 +5,7 @@
 # If updating:
 # - The min value should be 5K less than the smallest service bundle and max should be 5K greater than the largest bundle
 # - Bundle sizes can be viewed by running a production build
-min=511
+min=520
 max=555
 
 
