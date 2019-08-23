@@ -1,9 +1,10 @@
-import appConfig from '../../../src/app/lib/config/services';
-import config from '../../support/config/services';
-import shouldSmokeTest from '../../support/helpers/shouldSmokeTest';
+import appConfig from '../../../../src/app/lib/config/services';
+import config from '../../../support/config/services';
 
-// Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
-const serviceFilter = service => ['news', 'persian'].includes(service);
+// Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
+// This is why this file doesn't check smoke test values.
+const serviceFilter = service =>
+  Cypress.env('SMOKE') ? ['news', 'persian'].includes(service) : service;
 
 const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
@@ -64,7 +65,6 @@ Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => shouldSmokeTest(pageType, service))
       .filter(pageType => filterPageTypes(pageType, service))
       .forEach(pageType => {
         describe(`Canonical Cookie Banner Test for ${service} ${pageType}`, () => {

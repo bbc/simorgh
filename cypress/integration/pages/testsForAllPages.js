@@ -4,50 +4,7 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
-export const runCommonCanonicalTests = ({ service, pageType }) => {
-  if (pageType !== 'errorPage404') {
-    describe('Scripts', () => {
-      it('should only have expected bundle script tags', () => {
-        cy.get('script[src]').each($p => {
-          if ($p.attr('src').includes(envConfig.assetOrigin)) {
-            return expect($p.attr('src')).to.match(
-              new RegExp(
-                `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
-                'g',
-              ),
-            );
-          }
-          return null;
-        });
-      });
-
-      it('should have 1 bundle for its service', () => {
-        let matches = 0;
-
-        cy.get('script[src]')
-          .each($p => {
-            const match = $p
-              .attr('src')
-              .match(
-                new RegExp(
-                  `(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`,
-                  'g',
-                ),
-              );
-
-            if (match) {
-              matches += 1;
-            }
-          })
-          .then(() => {
-            expect(matches).to.equal(1);
-          });
-      });
-    });
-  }
-};
-
-export const runCommonTests = ({ service, pageType }) => {
+const testsForAllPages = ({ service, pageType }) => {
   describe('Always tests', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
@@ -215,13 +172,19 @@ export const runCommonTests = ({ service, pageType }) => {
           );
       });
 
-      it('should have working links', () => {
-        cy.get('footer ul').within(() =>
-          appConfig[service].footer.links.forEach(({ href }, key) =>
-            cy.checkLinks(key, href),
-          ),
-        );
-      });
+      if (!Cypress.env('SMOKE')) {
+        it('should have working links', () => {
+          cy.get('footer ul').within(() =>
+            appConfig[service].footer.links.forEach(({ href }, key) =>
+              cy
+                .get('a')
+                .eq(key)
+                .should('have.attr', 'href')
+                .and('contain', href),
+            ),
+          );
+        });
+      }
 
       it('should contain copyright text', () => {
         cy.get('footer p').should(
@@ -243,3 +206,5 @@ export const runCommonTests = ({ service, pageType }) => {
     });
   });
 };
+
+export default testsForAllPages;
