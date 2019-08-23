@@ -1,7 +1,7 @@
 # Order is important. The last matching pattern has the most precedence.
 # Protected files
 **/*webpack*    @benjaminhobbs @jamesdonoh @sareh @hindsc52 @dr3 @jblaut @jroebu14
-/src/    @benjaminhobbs @jamesdonoh @sareh @hindsc52 @dr3 @jblaut @jroebu14
+/src/           @benjaminhobbs @jamesdonoh @sareh @hindsc52 @dr3 @jblaut @jroebu14
 /envConfig/     @benjaminhobbs @jamesdonoh @sareh @hindsc52 @dr3 @jblaut @jroebu14
 /scripts/       @benjaminhobbs @jamesdonoh @sareh @hindsc52 @dr3 @jblaut @jroebu14
 package.json    @benjaminhobbs @jamesdonoh @sareh @hindsc52 @dr3 @jblaut @jroebu14
