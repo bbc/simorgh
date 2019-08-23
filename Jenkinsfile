@@ -6,8 +6,6 @@ def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
 
 def appGitCommit = ""
 def appGitCommitAuthor = ""
-def appGitCommitMessage = ""
-def buildTagText = ""
 def messageColor = 'danger'
 
 def stageName = ""
@@ -29,26 +27,23 @@ def runProductionTests(){
 def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
-  appGitCommitMessage = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
 }
 
-def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
+def setBuildTagInfo(gitCommit, gitCommitAuthor) {
   """
   *${env.JOB_NAME} [build #${env.BUILD_NUMBER}]*
   ${env.BUILD_URL}
   *Author*: ${gitCommitAuthor}
   *Commit Hash*
   ${gitCommit}
-  *Commit Message*
-  ${gitCommitMessage}
   """
 }
 
-def messageContent(title, text, stageName, gitCommit, gitCommitMessage) {
+def messageContent(title, text, stageName, gitCommit) {
   "${env.JOB_NAME}\n ${title}\n ${env.BUILD_URL}\n ${text}\n\
     *Stage*: ${stageName}\n\
     *Commit Hash*\n ${gitCommit}\n\
-    *Commit Message*\n ${gitCommitMessage}"
+    "
 }
 
 def notifySlack(messageParameters) {
@@ -57,8 +52,7 @@ def notifySlack(messageParameters) {
   def text = "*Author*: ${messageParameters.gitCommitAuthor}"
 
   def message = messageContent(title, text,
-    messageParameters.stageName, messageParameters.gitCommit,
-    messageParameters.gitCommitMessage
+    messageParameters.stageName, messageParameters.gitCommit
   )
 
   slackSend(
@@ -168,15 +162,9 @@ pipeline {
             sh "./scripts/jenkinsProductionFiles.sh"
 
             script {
-              // Get Simorgh commit information
               getCommitInfo()
-
-              // Set build tag information
-              buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
+              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
             }
-
-            // Write commit information to build_tag.txt
-            sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
 
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
@@ -247,10 +235,8 @@ pipeline {
   post {
     always {
       script {
-        // Get Simorgh commit information
         getCommitInfo()
       }
-
       // Clean the workspace
       cleanWs()
     }
@@ -263,7 +249,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]
@@ -280,7 +265,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]
@@ -297,7 +281,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]
