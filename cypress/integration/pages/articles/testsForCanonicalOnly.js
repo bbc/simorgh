@@ -1,7 +1,6 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 
-const serviceIsNotGNL = service => service !== 'japanese';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
 
@@ -13,7 +12,7 @@ const tests = ({ service }) =>
 
     describe('ATI', () => {
       it('should have a noscript tag with an 1px image with the ati url', () => {
-        if (serviceIsNotGNL) {
+        if (service !== 'japanese') {
           cy.hasNoscriptImgAtiUrl(
             envConfig.atiUrl,
             config[service].isWorldService
