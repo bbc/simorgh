@@ -4,7 +4,7 @@ import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
-  lang: `om-ET`,
+  lang: `om`,
   articleAuthor: `https://www.facebook.com/bbcnewsafaanoromoo`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-afaanoromoo',

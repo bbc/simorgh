@@ -4,7 +4,7 @@ import { marathi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `mr-IN`,
+  lang: `mr`,
   articleAuthor: `https://www.facebook.com/bbcnewsmarathi`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-marathi',
