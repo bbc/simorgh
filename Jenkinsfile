@@ -117,9 +117,9 @@ pipeline {
           }
           steps {
             setupCodeCoverage()
-            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-              runDevelopmentTests()
-            }
+            // withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+            //   runDevelopmentTests()
+            // }
           }
         }
         stage ('Test Production') {
@@ -130,7 +130,7 @@ pipeline {
             }
           }
           steps {
-            runProductionTests()
+            // runProductionTests()
           }
         }
       }
