@@ -1,7 +1,7 @@
 import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
-import describeForEuOnly from '../../support/describeForEuOnly';
-import shouldSmokeTest from '../../support/shouldSmokeTest';
+import describeForEuOnly from '../../support/helpers/describeForEuOnly';
+import shouldSmokeTest from '../../support/helpers/shouldSmokeTest';
 
 // Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
 const serviceFilter = service => ['news', 'persian'].includes(service);
