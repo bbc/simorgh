@@ -15,6 +15,12 @@ def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
 def staticAssetsDist = 'static.zip'
 
+def setupCodeCoverage() {
+  sh 'curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter'
+  sh 'chmod +x ./cc-test-reporter'
+  sh './cc-test-reporter before-build'
+}
+
 def runDevelopmentTests(){
   sh 'make install'
   sh 'make developmentTests'
@@ -110,6 +116,7 @@ pipeline {
             }
           }
           steps {
+            setupCodeCoverage()
             withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
               runDevelopmentTests()
             }
