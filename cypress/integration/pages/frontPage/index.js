@@ -1,6 +1,6 @@
-import iterator from '../../support/iterator';
-import envConfig from '../../support/config/envs';
-import config from '../../support/config/services';
+import runTestsForPage from '../../../support/helpers/runTestsForPage';
+import envConfig from '../../../support/config/envs';
+import config from '../../../support/config/services';
 
 const serviceIsNotGNL = service => service !== 'japanese';
 
@@ -165,4 +165,4 @@ const runAmpTests = ({ service }) =>
     });
   });
 
-iterator('frontPage', runTests, runCanonicalTests, runAmpTests);
+runTestsForPage('frontPage', runTests, runCanonicalTests, runAmpTests);

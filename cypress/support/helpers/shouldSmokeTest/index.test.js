@@ -1,4 +1,4 @@
-import config from '../config/services';
+import config from '../../config/services';
 import shouldSmokeTest from './index';
 
 const PAGE_TYPE = 'frontPage';

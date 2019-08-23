@@ -26,7 +26,7 @@ AmpChartbeatBeacon.propTypes = {
     sections: string.isRequired,
     uid: number.isRequired,
     title: string.isRequired,
-    contentType: string.isRequired,
+    type: string.isRequired,
     virtualReferrer: oneOfType([string, oneOf([null])]),
     idSync: shape({
       bbc_hid: string,

@@ -8,7 +8,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 
 const service = {
-  lang: `bn-BD`,
+  lang: `bn`,
   articleAuthor: `https://www.facebook.com/BBCBengaliService`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-bengali',
