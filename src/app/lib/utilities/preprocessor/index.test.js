@@ -1,4 +1,4 @@
-import { loggerMock } from '../../../../testHelpers/index';
+import { mocks } from '../../../../testHelpers/loggerMock';
 import preprocess from '.';
 
 const fixtureData = { foo: 'bar' };
@@ -6,7 +6,7 @@ const fixtureData = { foo: 'bar' };
 describe('Preprocessor', () => {
   it('should pass data unchanged if none of the business rules apply', () => {
     expect(preprocess(fixtureData)).toEqual(fixtureData);
-    expect(loggerMock.error).not.toBeCalled();
+    expect(mocks.error).not.toBeCalled();
   });
 
   it('should transform data according to the passed business rules', () => {
@@ -18,7 +18,7 @@ describe('Preprocessor', () => {
       expectedOutput,
     );
     expect(customTransformer).toBeCalled();
-    expect(loggerMock.error).not.toBeCalled();
+    expect(mocks.error).not.toBeCalled();
   });
 
   it('should call the logger if unable to preprocess the JSON', () => {
@@ -26,7 +26,7 @@ describe('Preprocessor', () => {
       throw new Error('something went wrong');
     };
     preprocess(fixtureData, [transformerThatErrors]);
-    expect(loggerMock.error).toBeCalledWith(
+    expect(mocks.error).toBeCalledWith(
       'JSON preprocessing failed: "Error: something went wrong"',
     );
   });

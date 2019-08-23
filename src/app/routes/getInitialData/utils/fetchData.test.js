@@ -1,4 +1,4 @@
-import { loggerMock } from '../../../../testHelpers'; // Must be imported before getInitialData
+import { mocks } from '../../../../testHelpers/loggerMock'; // Must be imported before getInitialData
 import preprocess from '../../../lib/utilities/preprocessor';
 
 jest.mock('../../../lib/utilities/preprocessor', () => jest.fn());
@@ -127,7 +127,7 @@ describe('fetchData', () => {
 
       expect(preprocess).not.toHaveBeenCalled();
 
-      expect(loggerMock.warn).toBeCalledWith(
+      expect(mocks.warn).toBeCalledWith(
         `Unexpected upstream response (HTTP status code 418) when requesting ${requestedUrl}`,
       );
 

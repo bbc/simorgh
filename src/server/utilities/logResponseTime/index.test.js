@@ -1,4 +1,4 @@
-import { loggerMock } from '../../../testHelpers/index';
+import { mocks } from '../../../testHelpers/loggerMock';
 import logResponseTime from '.';
 
 const req = {
@@ -26,9 +26,7 @@ describe('logResponseTime', () => {
   it('should log respons time in nanoseconds with path', () => {
     logResponseTime(req, res, next);
 
-    expect(loggerMock.info).toBeCalledWith(
-      'ResponseTime: 1000012345, Path: /path',
-    );
+    expect(mocks.info).toBeCalledWith('ResponseTime: 1000012345, Path: /path');
 
     expect(process.hrtime).toHaveBeenCalledWith('startTime');
 
