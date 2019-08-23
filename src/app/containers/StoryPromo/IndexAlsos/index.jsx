@@ -35,6 +35,10 @@ const buildIndexAlsosMediaIndicator = (cpsType, mediaType, service) => {
   );
 };
 
+/*
+ * When there are more than one Index Alsos, they should be wrapped in a list item `IndexAlsosLi` within an unordered list `IndexAlsosUl`.
+ * On the other hand, when there is exactly one Index Also, it should use the `IndexAlso` component and it should not be contained within a list.
+ */
 const IndexAlsosContainer = ({ alsoItems, script, service }) => {
   const {
     translations: { media: mediaTranslations },
