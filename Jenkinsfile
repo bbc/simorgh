@@ -113,7 +113,7 @@ pipeline {
             setupCodeCoverage()
             withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID')]) {
               runDevelopmentTests()
-              ./cc-test-reporter after-build -t lcov --debug --exit-code 0
+              sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
 
             }
             // withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
