@@ -2,14 +2,7 @@ import fetchData from '../utils/fetchData';
 import onClient from '../../../lib/utilities/onClient';
 import getBaseUrl from '../utils/getBaseUrl';
 
-const getMediaPageInitialData = props => {
-  const { service, mediaId } = props;
-  let { serviceId } = props;
-
-  if (serviceId === 'bbc_oromo_radio') {
-    serviceId = 'bbc_afaanoromo_radio';
-  }
-
+const getMediaPageInitialData = ({ service, serviceId, mediaId }) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;

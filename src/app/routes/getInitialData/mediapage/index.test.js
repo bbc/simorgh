@@ -26,18 +26,6 @@ const defaultParams = {
 };
 
 describe('getMediaPageInitialData', () => {
-  it('remaps bbc_oromo_radio', async () => {
-    await getMediaPageInitialData({
-      service: 'afaanoromo',
-      serviceId: 'bbc_oromo_radio',
-      mediaId: 'liveradio',
-    });
-    expect(fetchData).toBeCalledWith({
-      url:
-        'https://www.getBaseUrl.com/afaanoromo/bbc_afaanoromo_radio/liveradio.json',
-    });
-  });
-
   it('returns expected pageData', async () => {
     expect(await getMediaPageInitialData(defaultParams)).toEqual(mockData);
   });
