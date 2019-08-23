@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react';
-import { oneOfType, arrayOf, shape, number, string } from 'prop-types';
+import { arrayOf, shape, number, string } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import pathOr from 'ramda/src/pathOr';
 import MediaIndicator from '@bbc/psammead-media-indicator';
@@ -11,38 +11,36 @@ import {
 } from '@bbc/psammead-story-promo/index-alsos';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
+const NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.
+
+const getMediaType = (cpsType, mediaType) => {
+  const isPGL = cpsType === 'PGL';
+  const isMedia = cpsType === 'MAP';
+  const media = mediaType || 'Video';
+
+  if (!isPGL && !isMedia) {
+    return null;
+  }
+
+  const type = isPGL ? 'photogallery' : media.toLowerCase();
+
+  return type;
+};
+
+const buildIndexAlsosMediaIndicator = (cpsType, mediaType, service) => {
+  const indexAlsosMediaType = getMediaType(cpsType, mediaType);
+
+  return (
+    indexAlsosMediaType && (
+      <MediaIndicator service={service} type={indexAlsosMediaType} indexAlsos />
+    )
+  );
+};
+
 const IndexAlsosContainer = ({ alsoItems, script, service }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
-
-  const getMediaType = (cpsType, mediaType) => {
-    const isPGL = cpsType === 'PGL';
-    const isMedia = cpsType === 'MAP';
-    const media = mediaType || 'Video';
-
-    if (!isPGL && !isMedia) {
-      return null;
-    }
-
-    const type = isPGL ? 'photogallery' : media.toLowerCase();
-
-    return type;
-  };
-
-  const IndexAlsosMediaIndicator = (cpsType, mediaType) => {
-    const indexAlsosMediaType = getMediaType(cpsType, mediaType);
-
-    return (
-      indexAlsosMediaType && (
-        <MediaIndicator
-          service={service}
-          type={indexAlsosMediaType}
-          indexAlsos
-        />
-      )
-    );
-  };
 
   const IndexAlsosWrapper = alsoItems.length > 1 ? IndexAlsosUl : Fragment;
   const IndexAlsoItem = alsoItems.length > 1 ? IndexAlsosLi : IndexAlso;
@@ -50,11 +48,11 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
   return (
     <IndexAlsos offScreenText="Related content">
       <IndexAlsosWrapper>
-        {alsoItems.slice(0, 3).map(item => {
+        {alsoItems.slice(0, NUM_INDEX_ALSOS).map(item => {
           const { id, cpsType, mediaType } = item;
           const headline = pathOr(null, ['headlines', 'headline'], item);
           const url = pathOr(null, ['locators', 'assetUri'], item);
-          const indexAlsoMediaIndicator = IndexAlsosMediaIndicator(
+          const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator(
             cpsType,
             mediaType,
             service,
@@ -96,8 +94,7 @@ const alsoItemsPropTypes = shape({
 });
 
 IndexAlsosContainer.propTypes = {
-  alsoItems: oneOfType([arrayOf(alsoItemsPropTypes), alsoItemsPropTypes])
-    .isRequired,
+  alsoItems: arrayOf(alsoItemsPropTypes).isRequired,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
 };
