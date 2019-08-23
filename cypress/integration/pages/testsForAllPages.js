@@ -54,7 +54,7 @@ const testsForAllPages = ({ service, pageType }) => {
         });
 
         it('should have the correct shared metadata', () => {
-          // const description = pageType === 'articles' ? (appConfig[service].promo.summary || appConfig[service].promo.headlines.seoHeadline) : appConfig[service].metadata.summary;
+          const description = pageType === 'articles' ? (appConfig[service].promo.summary || appConfig[service].promo.headlines.seoHeadline) : appConfig[service].metadata.summary;
           // const title = pageType === 'articles' ? appConfig[service].promo.headlines.seoHeadline : appConfig[service].promo.name;
 
           cy.get('head').within(() => {
@@ -93,7 +93,7 @@ const testsForAllPages = ({ service, pageType }) => {
               'content',
               pageType === 'articles' ? 'article' : 'website',
             );
-            // cy.get('meta[name="og:description"]').should('have.attr', 'content', description);
+            cy.get('meta[name="og:description"]').should('have.attr', 'content', description);
             cy.get('meta[name="og:url"]').should(
               'have.attr',
               'content',
