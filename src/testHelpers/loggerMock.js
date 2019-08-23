@@ -1,6 +1,6 @@
 import nodeLogger from '../app/lib/logger.node';
 
-export const mocks = {
+const mocks = {
   error: jest.fn(),
   warn: jest.fn(),
   info: jest.fn(),
