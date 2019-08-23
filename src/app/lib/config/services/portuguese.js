@@ -4,7 +4,7 @@ import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
 
 const service = {
-  lang: `pt`,
+  lang: `pt-BR`,
   articleAuthor: `https://www.facebook.com/bbcbrasil`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-portuguese',
