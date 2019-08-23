@@ -4,7 +4,7 @@ import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `sw-KE`,
+  lang: `sw`,
   articleAuthor: `https://www.facebook.com/pages/BBC-Swahili/160894643929209?v=wall`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-swahili',

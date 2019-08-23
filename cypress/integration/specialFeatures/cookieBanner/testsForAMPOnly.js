@@ -1,10 +1,11 @@
-import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
-import describeForEuOnly from '../../support/describeForEuOnly';
-import shouldSmokeTest from '../../support/shouldSmokeTest';
+import config from '../../../support/config/services';
+import appConfig from '../../../../src/app/lib/config/services';
+import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 
-// Limited to 1 UK & 1 WS service for now due to time test takes to run per page.
-const serviceFilter = service => ['news', 'persian'].includes(service);
+// Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
+// This is why this file doesn't check smoke test values.
+const serviceFilter = service =>
+  Cypress.env('SMOKE') ? ['news', 'persian'].includes(service) : service;
 
 const filterPageTypes = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
@@ -34,7 +35,6 @@ Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => shouldSmokeTest(pageType, service))
       .filter(pageType => filterPageTypes(service, pageType))
       .forEach(pageType => {
         describeForEuOnly(

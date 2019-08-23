@@ -4,7 +4,7 @@ import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 
 const service = {
-  lang: `id-ID`,
+  lang: `id`,
   articleAuthor: `https://www.facebook.com/pages/BBC-Indonesia/10150118096995434`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-indonesia',

@@ -8,7 +8,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
-  lang: `ti-ET`,
+  lang: `ti`,
   articleAuthor: `https://www.facebook.com/bbcnewstigrinya`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-tigrinya',

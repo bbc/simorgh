@@ -8,7 +8,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `si-LK`,
+  lang: `si`,
   articleAuthor: `https://www.facebook.com/BBCSinhala`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-sinhala',

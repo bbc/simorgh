@@ -4,7 +4,7 @@ import { gahuza as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `rw-RW`,
+  lang: `rw`,
   articleAuthor: `https://www.facebook.com/BBCGahuza`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-gahuza',

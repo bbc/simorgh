@@ -4,7 +4,7 @@ import { japanese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Tokyo';
 
 const service = {
-  lang: `ja-JP`,
+  lang: `ja`,
   articleAuthor: `https://www.facebook.com/bbcnewsjapan/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-japanese',
