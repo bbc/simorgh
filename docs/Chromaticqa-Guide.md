@@ -19,4 +19,4 @@ To run chromatic locally export the app code in bash profile(`export CHROMATIC_A
 Chromatic
 Advantages
 - We do not have to manage any infrastructure kind of stuff as it is maintained by the storybook people.
-- Run time for chrome and IE together is approx 4-5m.
+- Run time for chrome and IE together is approx 6-8m.
