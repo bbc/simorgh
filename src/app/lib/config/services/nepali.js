@@ -4,7 +4,7 @@ import { nepali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
 
 const service = {
-  lang: `ne-NP`,
+  lang: `ne`,
   articleAuthor: `http://www.facebook.com/bbcnepaliservice`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-nepali',

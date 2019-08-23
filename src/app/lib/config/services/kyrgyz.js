@@ -4,7 +4,7 @@ import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ky-KG`,
+  lang: `ky`,
   articleAuthor: `https://www.facebook.com/bbckyrgyz`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-kyrgyz',
