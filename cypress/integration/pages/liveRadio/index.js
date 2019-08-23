@@ -1,7 +1,7 @@
-import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
-import envConfig from '../../support/config/envs';
-import iterator from '../../support/iterator';
+import config from '../../../support/config/services';
+import appConfig from '../../../../src/app/lib/config/services';
+import envConfig from '../../../support/config/envs';
+import runTestsForPage from '../../../support/helpers/runTestsForPage';
 
 const runCommonTests = ({ service }) =>
   describe('Common tests', () => {
@@ -216,4 +216,4 @@ const runAmpTests = ({ service }) =>
     });
   });
 
-iterator('liveRadio', runCommonTests, runCanonicalTests, runAmpTests);
+runTestsForPage('liveRadio', runCommonTests, runCanonicalTests, runAmpTests);

@@ -1,6 +1,6 @@
-import iterator from '../../support/iterator';
-import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
+import runTestsForPage from '../../../support/helpers/runTestsForPage';
+import config from '../../../support/config/services';
+import appConfig from '../../../../src/app/lib/config/services';
 
 const runTests = ({ service }) =>
   describe(`Tests`, () => {
@@ -89,4 +89,4 @@ const runAmpTests = ({ service }) =>
     });
   });
 
-iterator('errorPage404', runTests, runCanonicalTests, runAmpTests);
+runTestsForPage('errorPage404', runTests, runCanonicalTests, runAmpTests);

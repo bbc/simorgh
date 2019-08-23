@@ -4,7 +4,7 @@ import { vietnamese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 
 const service = {
-  lang: `vi-VN`,
+  lang: `vi`,
   articleAuthor: `https://www.facebook.com/pages/BBC-Vietnamese/228458913833525?ref=ts&sk=wall`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-vietnamese',
