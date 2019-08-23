@@ -125,6 +125,7 @@ pipeline {
           }
           steps {
             // runProductionTests()
+            sh 'echo dab'
           }
         }
       }
