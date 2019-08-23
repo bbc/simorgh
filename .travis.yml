@@ -8,8 +8,6 @@ cache:
     # Cache only the folder with Cypress binary, other caching takes longer and saves
     # less time, therefore this is more efficient than caching all.
     - ~/.cache/Cypress
-env:
-  - CC_TEST_REPORTER_ID=f5b40344b76ccf66fbab5aa40bd5db671464c74f255cc3d4063f8bcd7c0812cf
 before_install:
   - sudo apt-get install -y libgconf-2-4
 jobs:
@@ -18,13 +16,8 @@ jobs:
       if: type = push OR (pull_request AND fork = true)
       name: 'Unit Tests and storybook e2e'
       install: npm ci
-      before_script:
-        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-        - chmod +x ./cc-test-reporter
-        - ./cc-test-reporter before-build
       script:
         - npm run test
-        - ./cc-test-reporter after-build -t lcov --debug --exit-code $TRAVIS_TEST_RESULT
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
