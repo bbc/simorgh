@@ -55,13 +55,13 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <amp-iframe
-      allowfullscreen={true}
+      allowfullscreen="true"
       frameborder="0"
       layout="fill"
       sandbox="allow-scripts allow-same-origin"
@@ -69,7 +69,7 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
     >
       <amp-img
         layout="fill"
-        placeholder={true}
+        placeholder="true"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
       />
     </amp-iframe>
@@ -143,23 +143,18 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
-      onClick={[Function]}
+      class="c2"
     >
       <img
         alt="Image Alt"
-        className="c3"
-        height={null}
-        sizes={null}
+        class="c3"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-        srcSet={null}
-        width={null}
       />
     </div>
   </div>
@@ -232,23 +227,18 @@ exports[`MediaPlayer is called correctly Calls the canonical player when platfor
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
-      onClick={[Function]}
+      class="c2"
     >
       <img
         alt="Image Alt"
-        className="c3"
-        height={null}
-        sizes={null}
+        class="c3"
         src=""
-        srcSet={null}
-        width={null}
       />
     </div>
   </div>

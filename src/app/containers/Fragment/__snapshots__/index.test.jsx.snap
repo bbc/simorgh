@@ -16,7 +16,7 @@ exports[`Fragment with bold and italic attributes should render text wrapped in 
 }
 
 <i
-  className="c0"
+  class="c0"
 >
   <b>
     This is some text with bold and italic attributes
@@ -40,7 +40,7 @@ exports[`Fragment with italic attributes in Farsi should render text wrapped in 
 }
 
 <i
-  className="c0"
+  class="c0"
 >
   This is some text with italic attributes
 </i>
@@ -56,10 +56,10 @@ exports[`Fragment with italic attributes should render text wrapped in an italic
 }
 
 <i
-  className="c0"
+  class="c0"
 >
   This is some text with italic attributes
 </i>
 `;
 
-exports[`Fragment with no attributes should render just text 1`] = `"This is some text with no attributes"`;
+exports[`Fragment with no attributes should render just text 1`] = `This is some text with no attributes`;

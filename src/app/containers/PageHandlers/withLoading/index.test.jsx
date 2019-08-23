@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
 import WithLoading from '.';
 
 describe('withLoading HOC', () => {

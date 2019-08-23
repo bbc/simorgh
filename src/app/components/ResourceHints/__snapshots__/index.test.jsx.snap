@@ -1,24 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResourceHints should be correct 1`] = `
-Array [
-  <link
-    crossOrigin="anonymous"
-    href="http://foo.com"
-    rel="preconnect"
-  />,
-  <link
-    crossOrigin="anonymous"
-    href="https://bar.com"
-    rel="preconnect"
-  />,
-  <link
-    href="http://foo.com"
-    rel="dns-prefetch"
-  />,
-  <link
-    href="https://bar.com"
-    rel="dns-prefetch"
-  />,
-]
+<link
+  crossorigin="anonymous"
+  href="http://foo.com"
+  rel="preconnect"
+/>
 `;

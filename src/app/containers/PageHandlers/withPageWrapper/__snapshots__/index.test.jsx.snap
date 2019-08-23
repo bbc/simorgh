@@ -1,232 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`with pageWrapper should render correctly 1`] = `
-Array [
-  .c5 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c0 {
-  background-color: #B80000;
-  height: 3.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-.c3 {
-  display: inline-block;
-  width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-}
-
-.c4 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 1rem;
-  padding-bottom: 0.75rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-}
-
-.c2:hover .c4,
-.c2:focus .c4 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-@media (min-width:25rem) {
-  .c0 {
-    height: 5rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c4 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c4 {
-    fill: windowText;
-  }
-}
-
-<header
-    role="banner"
-  >
-    <div
-      className="c0"
-    >
-      <div
-        className="c1"
-      >
-        <a
-          className="c2 c3"
-          href="/news"
-        >
-          <svg
-            aria-hidden="true"
-            className="c4"
-            focusable="false"
-            height={24}
-            viewBox="0 0 167.95 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fillRule="evenodd"
-              stroke="#000"
-              strokeWidth=".335"
-              style={
-                Object {
-                  "stroke": "#fff",
-                }
-              }
-            >
-              <path
-                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-              />
-              <path
-                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-              />
-              <path
-                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
-              />
-            </g>
-          </svg>
-          <span
-            className="c5"
-          >
-            BBC News
-          </span>
-        </a>
-      </div>
-    </div>
-  </header>,
-  <h1>
-    Holla
-  </h1>,
-  .c5 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c0 {
-  background-color: #B80000;
-  height: 3.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-top: 0.0625rem solid transparent;
-}
-
-.c3 {
-  display: inline-block;
-  width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-}
-
-.c4 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 1rem;
-  padding-bottom: 0.75rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-}
-
-.c2:hover .c4,
-.c2:focus .c4 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
 .c11 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: block;
-}
-
-.c14 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline;
-}
-
-.c10:hover .c12,
-.c10:focus .c12 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c8 {
-  border-bottom: 1px solid #3F3F42;
-  list-style-type: none;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
   margin: 0;
-  padding: 0 0 0.5rem;
-}
-
-.c8 > li:first-child {
-  border-bottom: 1px solid #3F3F42;
-  padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
-  grid-column: 1/-1;
-}
-
-.c9 {
-  min-width: 50%;
-}
-
-.c6 {
-  background-color: #222222;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .c7 {
@@ -234,303 +18,327 @@ Array [
   margin: 0 auto;
 }
 
-.c13 {
+.c6 {
+  background-color: #B80000;
+  height: 3.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c9 {
+  display: inline-block;
+  width: 100%;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
+}
+
+.c10 {
+  box-sizing: content-box;
   color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 10.496849999999998rem;
+  min-width: 6.9979rem;
+}
+
+.c8:hover .c10,
+.c8:focus .c10 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
   margin: 0;
-  padding: 1rem 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c6 {
     height: 5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c4 {
+  .c10 {
     padding-top: 1.75rem;
     padding-bottom: 1.5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),print {
-  .c4 {
+  .c10 {
     fill: windowText;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
-    display: grid;
-    grid-auto-flow: column;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c8 {
-    grid-auto-flow: row;
-  }
-}
-
-@media (min-width:15rem) and (max-width:37.4375rem) {
-  .c8 {
-    grid-column-gap: 0.5rem;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat( 4,auto );
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c8 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat( 3,auto );
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c8 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat( 3,auto );
-  }
-}
-
-@media (min-width:80rem) {
-  .c8 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat( 3,auto );
-  }
-}
-
-@supports not (grid-template-columns:fit-content(200px)) {
-  .c8 > li:first-child {
-    width: 100%;
-  }
-}
-
-@supports not (grid-template-columns:fit-content(200px)) {
-  .c9 {
-    display: inline-block;
-  }
-}
-
-@media (max-width:25rem) {
-  .c6 {
-    padding: 0 0.5rem;
-  }
-}
-
 @media (min-width:25rem) {
-  .c6 {
-    padding: 0 1rem;
+  .c0 {
+    padding: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    float: left;
+    margin-right: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
-    font-size: 0.8125rem;
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
-<footer
-    role="contentinfo"
+@media (min-width:37.5rem) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+<header
+  role="banner"
+>
+  <div
+    class="c0"
+    dir="ltr"
   >
     <div
-      className="c0"
+      class="c1"
+      dir="ltr"
     >
-      <div
-        className="c1"
+      <h2
+        class="c2"
+        dir="ltr"
       >
-        <a
-          className="c2 c3"
-          href="/news"
-        >
-          <svg
-            aria-hidden="true"
-            className="c4"
-            focusable="false"
-            height={24}
-            viewBox="0 0 167.95 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fillRule="evenodd"
-              stroke="#000"
-              strokeWidth=".335"
-              style={
-                Object {
-                  "stroke": "#fff",
-                }
-              }
-            >
-              <path
-                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-              />
-              <path
-                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-              />
-              <path
-                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
-              />
-            </g>
-          </svg>
-          <span
-            className="c5"
-          >
-            BBC News
-          </span>
-        </a>
-      </div>
-    </div>
-    <div
-      className="c6"
-    >
-      <div
-        className="c7"
+        We've updated our Privacy and Cookies Policy
+      </h2>
+      <p
+        class="c3"
+        dir="ltr"
       >
-        <ul
-          className="c8"
-          role="list"
+        We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+      </p>
+      <ul
+        class="c4"
+        dir="ltr"
+      >
+        <li
+          class="c5"
+          dir="ltr"
         >
-          <li
-            className="c9"
-            role="listitem"
+          <button
+            type="button"
           >
-            <a
-              className="c10 c11"
-              href="https://www.bbc.com/news/help-41670342"
-            >
-              <span
-                className="c12"
-              >
-                Why you can trust the BBC
-              </span>
-            </a>
-          </li>
-          <li
-            className="c9"
-            role="listitem"
-          >
-            <a
-              className="c10 c11"
-              href="https://www.bbc.com/terms"
-            >
-              <span
-                className="c12"
-              >
-                Terms of Use
-              </span>
-            </a>
-          </li>
-          <li
-            className="c9"
-            role="listitem"
-          >
-            <a
-              className="c10 c11"
-              href="https://www.bbc.co.uk/aboutthebbc/"
-            >
-              <span
-                className="c12"
-              >
-                About the BBC
-              </span>
-            </a>
-          </li>
-          <li
-            className="c9"
-            role="listitem"
-          >
-            <a
-              className="c10 c11"
-              href="https://www.bbc.com/privacy/"
-            >
-              <span
-                className="c12"
-              >
-                Privacy Policy
-              </span>
-            </a>
-          </li>
-          <li
-            className="c9"
-            role="listitem"
-          >
-            <a
-              className="c10 c11"
-              href="https://www.bbc.com/usingthebbc/cookies/"
-            >
-              <span
-                className="c12"
-              >
-                Cookies
-              </span>
-            </a>
-          </li>
-          <li
-            className="c9"
-            role="listitem"
-          >
-            <a
-              className="c10 c11"
-              href="https://www.bbc.com/accessibility/"
-            >
-              <span
-                className="c12"
-              >
-                Accessibility Help
-              </span>
-            </a>
-          </li>
-          <li
-            className="c9"
-            role="listitem"
-          >
-            <a
-              className="c10 c11"
-              href="https://www.bbc.com/contact/"
-            >
-              <span
-                className="c12"
-              >
-                Contact the BBC
-              </span>
-            </a>
-          </li>
-        </ul>
-        <p
-          className="c13"
+            OK
+          </button>
+        </li>
+        <li
+          class="c5"
+          dir="ltr"
         >
-          <span
-            lang="en-GB"
-          >
-            ©
-             
-          </span>
-          2019 BBC. The BBC is not responsible for the content of external sites.
-           
           <a
-            className="c10 c14"
-            href="https://www.bbc.co.uk/help/web/links/"
+            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
           >
-            <span
-              className="c12"
-            >
-              Read about our approach to external linking.
-            </span>
+            Find out what's changed
           </a>
-        </p>
-      </div>
+        </li>
+      </ul>
     </div>
-  </footer>,
-]
+  </div>
+  <div
+    class="c6"
+  >
+    <div
+      class="c7"
+    >
+      <a
+        class="c8 c9"
+        href="/news"
+      >
+        <svg
+          aria-hidden="true"
+          class="c10"
+          focusable="false"
+          height="24"
+          viewBox="0 0 167.95 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill-rule="evenodd"
+            stroke="#000"
+            stroke-width=".335"
+            style="stroke: #fff;"
+          >
+            <path
+              d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+            />
+            <path
+              d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+            />
+            <path
+              d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+            />
+          </g>
+        </svg>
+        <span
+          class="c11"
+        >
+          BBC News
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
 `;

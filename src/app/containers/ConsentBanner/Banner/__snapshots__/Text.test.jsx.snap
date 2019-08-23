@@ -25,7 +25,7 @@ exports[`Consent Banner Text should correctly render banner text in the UK 1`] =
 }
 
 <p
-  className="c0"
+  class="c0"
   dir="ltr"
 >
   Just some text
@@ -57,7 +57,7 @@ exports[`Consent Banner Text should correctly render banner text outside the UK 
 }
 
 <p
-  className="c0"
+  class="c0"
   dir="ltr"
 >
   Just some international text
@@ -89,7 +89,7 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
 }
 
 <p
-  className="c0"
+  class="c0"
   dir="ltr"
 >
   Some text 
@@ -127,7 +127,7 @@ exports[`Consent Banner Text should correctly render banner text with a link out
 }
 
 <p
-  className="c0"
+  class="c0"
   dir="ltr"
 >
   Some international text

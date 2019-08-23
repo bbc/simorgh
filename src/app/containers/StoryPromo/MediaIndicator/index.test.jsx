@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { shouldShallowMatchSnapshot, isNull } from '../../../../testHelpers';
+import { shouldShallowMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import MediaIndicator from '.';
 
 const audioItem = {

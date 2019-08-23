@@ -1,17 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical ATI Analytics should render correctly 1`] = `
-<noscript>
-  <img
-    alt=""
-    height="1px"
-    src="https://foobar.com?key=value&key2=value2"
-    style={
-      Object {
-        "position": "absolute",
-      }
-    }
-    width="1px"
-  />
-</noscript>
-`;
+exports[`Canonical ATI Analytics should render correctly 1`] = `<noscript />`;

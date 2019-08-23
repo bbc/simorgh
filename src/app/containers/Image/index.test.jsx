@@ -1,10 +1,10 @@
 import React from 'react';
-import ImageContainer from './index';
 import {
   shouldShallowMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '../../../testHelpers';
+} from '@bbc/psammead-test-helpers';
+import ImageContainer from './index';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 
 describe('Image', () => {

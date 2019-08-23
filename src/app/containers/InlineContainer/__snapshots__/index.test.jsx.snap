@@ -7,7 +7,7 @@ exports[`InlineContainer should render correctly 1`] = `
 }
 
 <span
-  className="c0"
+  class="c0"
   lang="fa"
 />
 `;

@@ -461,23 +461,21 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   role="banner"
 >
   <div
-    className="c0"
+    class="c0"
     dir="ltr"
-    hidden={null}
-    id={null}
   >
     <div
-      className="c1"
+      class="c1"
       dir="ltr"
     >
       <h2
-        className="c2"
+        class="c2"
         dir="ltr"
       >
         Let us know say you agree to cookies
       </h2>
       <p
-        className="c3"
+        class="c3"
         dir="ltr"
       >
         We and our partners use technologies, like 
@@ -489,27 +487,25 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         , and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.
       </p>
       <ul
-        className="c4"
+        class="c4"
         dir="ltr"
       >
         <li
-          className="c5"
+          class="c5"
           dir="ltr"
         >
           <button
-            onClick={[Function]}
             type="button"
           >
             Yes, I agree
           </button>
         </li>
         <li
-          className="c5"
+          class="c5"
           dir="ltr"
         >
           <a
             href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
-            onClick={[Function]}
           >
             No, cari me go settings
           </a>
@@ -518,32 +514,28 @@ exports[`Header should render correctly for WS frontPage 1`] = `
     </div>
   </div>
   <div
-    className="c6"
+    class="c6"
   >
     <div
-      className="c7"
+      class="c7"
     >
       <a
-        className="c8 c9"
+        class="c8 c9"
         href="/pidgin"
       >
         <svg
           aria-hidden="true"
-          className="c10"
+          class="c10"
           focusable="false"
-          height={24}
+          height="24"
           viewBox="0 0 238 24"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            fillRule="evenodd"
+            fill-rule="evenodd"
             stroke="#000"
-            strokeWidth=".335"
-            style={
-              Object {
-                "stroke": "#fff",
-              }
-            }
+            stroke-width=".335"
+            style="stroke: #fff;"
           >
             <path
               d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
@@ -556,12 +548,12 @@ exports[`Header should render correctly for WS frontPage 1`] = `
             />
             <path
               d="M168.37 0v22.59"
-              strokeWidth="2"
+              stroke-width="2"
             />
           </g>
         </svg>
         <span
-          className="c11"
+          class="c11"
           role="text"
         >
           <span
@@ -576,37 +568,37 @@ exports[`Header should render correctly for WS frontPage 1`] = `
     </div>
   </div>
   <nav
-    className="c12"
+    class="c12"
     role="navigation"
   >
     <div
-      className="c13"
+      class="c13"
     >
       <a
-        className="c14"
+        class="c14"
         href="#content"
       >
         Waka go wetin de inside
       </a>
       <ul
-        className="c15"
+        class="c15"
         role="list"
       >
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c17"
+            class="c17"
             href="/pidgin"
           >
             <span
-              className="c18"
+              class="c18"
               role="text"
             >
               <span
-                className="c11"
+                class="c11"
               >
                 Page where you dey
                 , 
@@ -616,96 +608,96 @@ exports[`Header should render correctly for WS frontPage 1`] = `
           </a>
         </li>
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c19"
+            class="c19"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
           </a>
         </li>
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c19"
+            class="c19"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
           </a>
         </li>
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c19"
+            class="c19"
             href="/pidgin/world"
           >
             World
           </a>
         </li>
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c19"
+            class="c19"
             href="/pidgin/media/video"
           >
             Video
           </a>
         </li>
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c19"
+            class="c19"
             href="/pidgin/media/audio"
           >
             Audio
           </a>
         </li>
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c19"
+            class="c19"
             href="/pidgin/sport"
           >
             Sport
           </a>
         </li>
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c19"
+            class="c19"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
           </a>
         </li>
         <li
-          className="c16"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c19"
+            class="c19"
             href="/pidgin/popular/read"
           >
             Most popular
@@ -718,7 +710,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 `;
 
 exports[`Header should render correctly for WS media page 1`] = `
-.c5 {
+.c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -730,12 +722,12 @@ exports[`Header should render correctly for WS media page 1`] = `
   margin: 0;
 }
 
-.c1 {
+.c7 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c0 {
+.c6 {
   background-color: #B80000;
   height: 3.5rem;
   width: 100%;
@@ -743,14 +735,14 @@ exports[`Header should render correctly for WS media page 1`] = `
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c3 {
+.c9 {
   display: inline-block;
   width: 100%;
   max-width: 14.880600000000001rem;
   min-width: 9.9204rem;
 }
 
-.c4 {
+.c10 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -762,24 +754,24 @@ exports[`Header should render correctly for WS media page 1`] = `
   min-width: 9.9204rem;
 }
 
-.c2:hover .c4,
-.c2:focus .c4 {
+.c8:hover .c10,
+.c8:focus .c10 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c6 {
+.c12 {
   background-color: #B80000;
 }
 
-.c7 {
+.c13 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c8 {
+.c14 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -801,7 +793,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   line-height: 1.25rem;
 }
 
-.c8:focus {
+.c14:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -812,7 +804,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   left: 0.5rem;
 }
 
-.c9 {
+.c15 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -820,13 +812,13 @@ exports[`Header should render correctly for WS media page 1`] = `
   overflow: hidden;
 }
 
-.c10 {
+.c16 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c10::after {
+.c16::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -836,7 +828,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   left: 0;
 }
 
-.c11 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -850,7 +842,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c11:hover::after {
+.c17:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -860,7 +852,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c11:focus::after {
+.c17:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -871,7 +863,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c13 {
+.c19 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -885,7 +877,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c13:hover::after {
+.c19:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -894,7 +886,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c13:focus::after {
+.c19:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -905,7 +897,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c12::after {
+.c18::after {
   content: '';
   position: absolute;
   left: 0;
@@ -914,89 +906,264 @@ exports[`Header should render correctly for WS media page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
+.c0 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
 @media (min-width:25rem) {
-  .c0 {
+  .c6 {
     height: 5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c4 {
+  .c10 {
     padding-top: 1.75rem;
     padding-bottom: 1.5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),print {
-  .c4 {
+  .c10 {
     fill: windowText;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8:focus {
+  .c14:focus {
     top: -4rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c8:focus {
+  .c14:focus {
     left: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c11 {
+  .c17 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c13 {
+  .c19 {
     padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    float: left;
+    margin-right: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1004,32 +1171,81 @@ exports[`Header should render correctly for WS media page 1`] = `
   role="banner"
 >
   <div
-    className="c0"
+    class="c0"
+    dir="ltr"
   >
     <div
-      className="c1"
+      class="c1"
+      dir="ltr"
+    >
+      <h2
+        class="c2"
+        dir="ltr"
+      >
+        Let us know say you agree to cookies
+      </h2>
+      <p
+        class="c3"
+        dir="ltr"
+      >
+        We and our partners use technologies, like 
+        <a
+          href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+        >
+          cookies
+        </a>
+        , and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.
+      </p>
+      <ul
+        class="c4"
+        dir="ltr"
+      >
+        <li
+          class="c5"
+          dir="ltr"
+        >
+          <button
+            type="button"
+          >
+            Yes, I agree
+          </button>
+        </li>
+        <li
+          class="c5"
+          dir="ltr"
+        >
+          <a
+            href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+          >
+            No, cari me go settings
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="c6"
+  >
+    <div
+      class="c7"
     >
       <a
-        className="c2 c3"
+        class="c8 c9"
         href="/pidgin"
       >
         <svg
           aria-hidden="true"
-          className="c4"
+          class="c10"
           focusable="false"
-          height={24}
+          height="24"
           viewBox="0 0 238 24"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            fillRule="evenodd"
+            fill-rule="evenodd"
             stroke="#000"
-            strokeWidth=".335"
-            style={
-              Object {
-                "stroke": "#fff",
-              }
-            }
+            stroke-width=".335"
+            style="stroke: #fff;"
           >
             <path
               d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
@@ -1042,12 +1258,12 @@ exports[`Header should render correctly for WS media page 1`] = `
             />
             <path
               d="M168.37 0v22.59"
-              strokeWidth="2"
+              stroke-width="2"
             />
           </g>
         </svg>
         <span
-          className="c5"
+          class="c11"
           role="text"
         >
           <span
@@ -1062,37 +1278,37 @@ exports[`Header should render correctly for WS media page 1`] = `
     </div>
   </div>
   <nav
-    className="c6"
+    class="c12"
     role="navigation"
   >
     <div
-      className="c7"
+      class="c13"
     >
       <a
-        className="c8"
+        class="c14"
         href="#content"
       >
         Waka go wetin de inside
       </a>
       <ul
-        className="c9"
+        class="c15"
         role="list"
       >
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c11"
+            class="c17"
             href="/pidgin"
           >
             <span
-              className="c12"
+              class="c18"
               role="text"
             >
               <span
-                className="c5"
+                class="c11"
               >
                 Page where you dey
                 , 
@@ -1102,96 +1318,96 @@ exports[`Header should render correctly for WS media page 1`] = `
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/world"
           >
             World
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/media/video"
           >
             Video
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/media/audio"
           >
             Audio
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/sport"
           >
             Sport
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/popular/read"
           >
             Most popular
@@ -1204,7 +1420,7 @@ exports[`Header should render correctly for WS media page 1`] = `
 `;
 
 exports[`Header should render correctly for news article 1`] = `
-.c5 {
+.c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1216,12 +1432,12 @@ exports[`Header should render correctly for news article 1`] = `
   margin: 0;
 }
 
-.c1 {
+.c7 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c0 {
+.c6 {
   background-color: #B80000;
   height: 3.5rem;
   width: 100%;
@@ -1229,14 +1445,14 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c3 {
+.c9 {
   display: inline-block;
   width: 100%;
   max-width: 14.880600000000001rem;
   min-width: 9.9204rem;
 }
 
-.c4 {
+.c10 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -1248,24 +1464,24 @@ exports[`Header should render correctly for news article 1`] = `
   min-width: 9.9204rem;
 }
 
-.c2:hover .c4,
-.c2:focus .c4 {
+.c8:hover .c10,
+.c8:focus .c10 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c6 {
+.c12 {
   background-color: #B80000;
 }
 
-.c7 {
+.c13 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c8 {
+.c14 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1287,7 +1503,7 @@ exports[`Header should render correctly for news article 1`] = `
   line-height: 1.25rem;
 }
 
-.c8:focus {
+.c14:focus {
   -webkit-clip-path: none;
   clip-path: none;
   -webkit-clip: auto;
@@ -1298,7 +1514,7 @@ exports[`Header should render correctly for news article 1`] = `
   left: 0.5rem;
 }
 
-.c9 {
+.c15 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -1306,13 +1522,13 @@ exports[`Header should render correctly for news article 1`] = `
   overflow: hidden;
 }
 
-.c10 {
+.c16 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c10::after {
+.c16::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1322,7 +1538,7 @@ exports[`Header should render correctly for news article 1`] = `
   left: 0;
 }
 
-.c11 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1336,7 +1552,7 @@ exports[`Header should render correctly for news article 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c11:hover::after {
+.c17:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1346,7 +1562,7 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c11:focus::after {
+.c17:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1357,7 +1573,7 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c13 {
+.c19 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1371,7 +1587,7 @@ exports[`Header should render correctly for news article 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c13:hover::after {
+.c19:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1380,7 +1596,7 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c13:focus::after {
+.c19:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1391,7 +1607,7 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c12::after {
+.c18::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1400,89 +1616,264 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
+.c0 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
 @media (min-width:25rem) {
-  .c0 {
+  .c6 {
     height: 5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c4 {
+  .c10 {
     padding-top: 1.75rem;
     padding-bottom: 1.5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),print {
-  .c4 {
+  .c10 {
     fill: windowText;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8:focus {
+  .c14:focus {
     top: -4rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c8:focus {
+  .c14:focus {
     left: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c11 {
+  .c17 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c13 {
+  .c19 {
     padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    float: left;
+    margin-right: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1490,32 +1881,75 @@ exports[`Header should render correctly for news article 1`] = `
   role="banner"
 >
   <div
-    className="c0"
+    class="c0"
+    dir="ltr"
   >
     <div
-      className="c1"
+      class="c1"
+      dir="ltr"
+    >
+      <h2
+        class="c2"
+        dir="ltr"
+      >
+        We don update our Privacy and Cookies Policy
+      </h2>
+      <p
+        class="c3"
+        dir="ltr"
+      >
+        We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+      </p>
+      <ul
+        class="c4"
+        dir="ltr"
+      >
+        <li
+          class="c5"
+          dir="ltr"
+        >
+          <button
+            type="button"
+          >
+            OK
+          </button>
+        </li>
+        <li
+          class="c5"
+          dir="ltr"
+        >
+          <a
+            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+          >
+            Find out wetin don change
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="c6"
+  >
+    <div
+      class="c7"
     >
       <a
-        className="c2 c3"
+        class="c8 c9"
         href="/pidgin"
       >
         <svg
           aria-hidden="true"
-          className="c4"
+          class="c10"
           focusable="false"
-          height={24}
+          height="24"
           viewBox="0 0 238 24"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            fillRule="evenodd"
+            fill-rule="evenodd"
             stroke="#000"
-            strokeWidth=".335"
-            style={
-              Object {
-                "stroke": "#fff",
-              }
-            }
+            stroke-width=".335"
+            style="stroke: #fff;"
           >
             <path
               d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
@@ -1528,12 +1962,12 @@ exports[`Header should render correctly for news article 1`] = `
             />
             <path
               d="M168.37 0v22.59"
-              strokeWidth="2"
+              stroke-width="2"
             />
           </g>
         </svg>
         <span
-          className="c5"
+          class="c11"
           role="text"
         >
           <span
@@ -1548,37 +1982,37 @@ exports[`Header should render correctly for news article 1`] = `
     </div>
   </div>
   <nav
-    className="c6"
+    class="c12"
     role="navigation"
   >
     <div
-      className="c7"
+      class="c13"
     >
       <a
-        className="c8"
+        class="c14"
         href="#content"
       >
         Waka go wetin de inside
       </a>
       <ul
-        className="c9"
+        class="c15"
         role="list"
       >
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c11"
+            class="c17"
             href="/pidgin"
           >
             <span
-              className="c12"
+              class="c18"
               role="text"
             >
               <span
-                className="c5"
+                class="c11"
               >
                 Page where you dey
                 , 
@@ -1588,96 +2022,96 @@ exports[`Header should render correctly for news article 1`] = `
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/world"
           >
             World
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/media/video"
           >
             Video
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/media/audio"
           >
             Audio
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/sport"
           >
             Sport
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
           </a>
         </li>
         <li
-          className="c10"
+          class="c16"
           dir="ltr"
           role="listitem"
         >
           <a
-            className="c13"
+            class="c19"
             href="/pidgin/popular/read"
           >
             Most popular

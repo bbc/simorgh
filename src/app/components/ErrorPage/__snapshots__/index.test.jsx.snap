@@ -194,45 +194,45 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   role="main"
 >
   <div
-    className="c0"
+    class="c0"
   >
     <div
-      className="c1"
+      class="c1"
     >
       <h1
-        className="c2"
+        class="c2"
         id="content"
       >
         <span
-          className="c3"
+          class="c3"
         >
           StatusCode
         </span>
         A error has occured
       </h1>
       <p
-        className="c4"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          className="c4"
+          class="c4"
         >
           Option one
         </li>
         <li
-          className="c4"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        className="c4"
+        class="c4"
       >
         You can do 
         <a
-          className="c5"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
@@ -438,45 +438,45 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
   role="main"
 >
   <div
-    className="c0"
+    class="c0"
   >
     <div
-      className="c1"
+      class="c1"
     >
       <h1
-        className="c2"
+        class="c2"
         id="content"
       >
         <span
-          className="c3"
+          class="c3"
         >
           StatusCode
         </span>
         A error has occured
       </h1>
       <p
-        className="c4"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          className="c4"
+          class="c4"
         >
           Option one
         </li>
         <li
-          className="c4"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        className="c4"
+        class="c4"
       >
         You can do 
         <a
-          className="c5"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
@@ -682,45 +682,45 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
   role="main"
 >
   <div
-    className="c0"
+    class="c0"
   >
     <div
-      className="c1"
+      class="c1"
     >
       <h1
-        className="c2"
+        class="c2"
         id="content"
       >
         <span
-          className="c3"
+          class="c3"
         >
           StatusCode
         </span>
         A error has occured
       </h1>
       <p
-        className="c4"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          className="c4"
+          class="c4"
         >
           Option one
         </li>
         <li
-          className="c4"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        className="c4"
+        class="c4"
       >
         You can do 
         <a
-          className="c5"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
@@ -926,45 +926,45 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
   role="main"
 >
   <div
-    className="c0"
+    class="c0"
   >
     <div
-      className="c1"
+      class="c1"
     >
       <h1
-        className="c2"
+        class="c2"
         id="content"
       >
         <span
-          className="c3"
+          class="c3"
         >
           StatusCode
         </span>
         A error has occured
       </h1>
       <p
-        className="c4"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          className="c4"
+          class="c4"
         >
           Option one
         </li>
         <li
-          className="c4"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        className="c4"
+        class="c4"
       >
         You can do 
         <a
-          className="c5"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
@@ -1170,45 +1170,45 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
   role="main"
 >
   <div
-    className="c0"
+    class="c0"
   >
     <div
-      className="c1"
+      class="c1"
     >
       <h1
-        className="c2"
+        class="c2"
         id="content"
       >
         <span
-          className="c3"
+          class="c3"
         >
           StatusCode
         </span>
         A error has occured
       </h1>
       <p
-        className="c4"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          className="c4"
+          class="c4"
         >
           Option one
         </li>
         <li
-          className="c4"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        className="c4"
+        class="c4"
       >
         You can do 
         <a
-          className="c5"
+          class="c5"
           href="https://www.bbc.com"
         >
           this

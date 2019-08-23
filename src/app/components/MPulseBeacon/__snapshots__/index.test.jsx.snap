@@ -2,9 +2,9 @@
 
 exports[`MPulseBeacon should return script snippet 1`] = `
 <script
-  dangerouslySetInnerHTML={
-    Object {
-      "__html": "
+  type="text/javascript"
+>
+  
 (function() {
     if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
         return;
@@ -13,17 +13,17 @@ exports[`MPulseBeacon should return script snippet 1`] = `
     window.BOOMR.snippetStart = new Date().getTime();
     window.BOOMR.snippetExecuted = true;
     window.BOOMR.snippetVersion = 12;
-    window.BOOMR.url = \\"https://s.go-mpulse.net/boomerang/XXXXX-XXXXX-XXXXX-XXXXX-XXXXX\\";
+    window.BOOMR.url = "https://s.go-mpulse.net/boomerang/XXXXX-XXXXX-XXXXX-XXXXX-XXXXX";
     var
-        where = document.currentScript || document.getElementsByTagName(\\"script\\")[0],
+        where = document.currentScript || document.getElementsByTagName("script")[0],
         promoted = false,
         LOADER_TIMEOUT = 3000;
     function promote() {
         if (promoted) {
             return;
         }
-        var script = document.createElement(\\"script\\");
-        script.id = \\"boomr-scr-as\\";
+        var script = document.createElement("script");
+        script.id = "boomr-scr-as";
         script.src = window.BOOMR.url;
         script.async = true;
         where.parentNode.appendChild(script);
@@ -32,30 +32,30 @@ exports[`MPulseBeacon should return script snippet 1`] = `
     function iframeLoader(wasFallback) {
         promoted = true;
         var dom, doc = document, bootstrap, iframe, iframeStyle, win = window;
-        window.BOOMR.snippetMethod = wasFallback ? \\"if\\" : \\"i\\";
+        window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
         bootstrap = function(parent, scriptId) {
-            var script = doc.createElement(\\"script\\");
-            script.id = scriptId || \\"boomr-if-as\\";
+            var script = doc.createElement("script");
+            script.id = scriptId || "boomr-if-as";
             script.src = window.BOOMR.url;
             BOOMR_lstart = new Date().getTime();
             parent = parent || doc.body;
             parent.appendChild(script);
         };
         if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
-            window.BOOMR.snippetMethod = \\"s\\";
-            bootstrap(where.parentNode, \\"boomr-async\\");
+            window.BOOMR.snippetMethod = "s";
+            bootstrap(where.parentNode, "boomr-async");
             return;
         }
-        iframe = document.createElement(\\"IFRAME\\");
-        iframe.src = \\"about:blank\\";
-        iframe.title = \\"\\";
-        iframe.role = \\"presentation\\";
-        iframe.loading = \\"eager\\";
+        iframe = document.createElement("IFRAME");
+        iframe.src = "about:blank";
+        iframe.title = "";
+        iframe.role = "presentation";
+        iframe.loading = "eager";
         iframeStyle = (iframe.frameElement || iframe).style;
         iframeStyle.width = 0;
         iframeStyle.height = 0;
         iframeStyle.border = 0;
-        iframeStyle.display = \\"none\\";
+        iframeStyle.display = "none";
         where.parentNode.appendChild(iframe);
         try {
             win = iframe.contentWindow;
@@ -63,7 +63,7 @@ exports[`MPulseBeacon should return script snippet 1`] = `
         }
         catch (e) {
             dom = document.domain;
-            iframe.src = \\"javascript:var d=document.open();d.domain='\\" + dom + \\"';void(0);\\";
+            iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
             win = iframe.contentWindow;
             doc = win.document.open();
         }
@@ -72,32 +72,32 @@ exports[`MPulseBeacon should return script snippet 1`] = `
                 this.domain = dom;
                 bootstrap();
             };
-            doc.write(\\"<bo\\" + \\"dy onload='document._boomrl();'>\\");
+            doc.write("&lt;bo" + "dy onload='document._boomrl();'&gt;");
         }
         else {
             win._boomrl = function() {
                 bootstrap();
             };
             if (win.addEventListener) {
-                win.addEventListener(\\"load\\", win._boomrl, false);
+                win.addEventListener("load", win._boomrl, false);
             }
             else if (win.attachEvent) {
-                win.attachEvent(\\"onload\\", win._boomrl);
+                win.attachEvent("onload", win._boomrl);
             }
         }
         doc.close();
     }
-    var link = document.createElement(\\"link\\");
+    var link = document.createElement("link");
     if (link.relList &&
-        typeof link.relList.supports === \\"function\\" &&
-        link.relList.supports(\\"preload\\") &&
-        (\\"as\\" in link)) {
-        window.BOOMR.snippetMethod = \\"p\\";
+        typeof link.relList.supports === "function" &&
+        link.relList.supports("preload") &&
+        ("as" in link)) {
+        window.BOOMR.snippetMethod = "p";
         link.href = window.BOOMR.url;
-        link.rel  = \\"preload\\";
-        link.as   = \\"script\\";
-        link.addEventListener(\\"load\\", promote);
-        link.addEventListener(\\"error\\", function() {
+        link.rel  = "preload";
+        link.as   = "script";
+        link.addEventListener("load", promote);
+        link.addEventListener("error", function() {
             iframeLoader(true);
         });
         setTimeout(function() {
@@ -115,15 +115,12 @@ exports[`MPulseBeacon should return script snippet 1`] = `
         window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
     }
     if (window.addEventListener) {
-        window.addEventListener(\\"load\\", boomerangSaveLoadTime, false);
+        window.addEventListener("load", boomerangSaveLoadTime, false);
     }
     else if (window.attachEvent) {
-        window.attachEvent(\\"onload\\", boomerangSaveLoadTime);
+        window.attachEvent("onload", boomerangSaveLoadTime);
     }
 })();
-",
-    }
-  }
-  type="text/javascript"
-/>
+
+</script>
 `;

@@ -48,7 +48,7 @@ exports[`Styled Grid items GhostGrid should render correctly 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 />
 `;
 
@@ -99,7 +99,7 @@ exports[`Styled Grid items Grid should render correctly 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 />
 `;
 
@@ -221,16 +221,16 @@ exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & s
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           1/4 or 1/5 or 1/8
@@ -359,16 +359,16 @@ exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & s
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           4/4 or 5/5 or 8/8
@@ -497,16 +497,16 @@ exports[`Styled Grid items GridItemConstrainedLarge should start at column 1 & s
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           Spanning a various number of columns depending on breakpoint
@@ -607,10 +607,10 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should pop out of gr
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     Group 5 pop out grid.
   </div>
@@ -723,16 +723,16 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at colu
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           1/4 or 1/5 or 1/8
@@ -849,16 +849,16 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at colu
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           4/4 or 5/5 or 8/8
@@ -975,16 +975,16 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should start at colu
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           Spanning a various number of columns depending on breakpoint
@@ -1132,16 +1132,16 @@ exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & 
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           1/4 or 1/5 or 1/8
@@ -1289,16 +1289,16 @@ exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & 
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           4/4 or 5/5 or 8/8
@@ -1446,16 +1446,16 @@ exports[`Styled Grid items GridItemConstrainedMedium should start at column 1 & 
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           Spanning a various number of columns depending on breakpoint
@@ -1636,16 +1636,16 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           1/4 or 1/5 or 1/8
@@ -1826,16 +1826,16 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           4/4 or 5/5 or 8/8
@@ -2016,16 +2016,16 @@ exports[`Styled Grid items GridItemConstrainedSmall should start at column 1 & s
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div>
           Spanning a various number of columns depending on breakpoint

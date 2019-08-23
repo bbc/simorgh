@@ -278,40 +278,38 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <amp-img
           alt="Image Alt text"
           attribution="Image provider"
-          height={1152}
+          height="1152"
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-          srcSet={null}
-          width={2048}
+          width="2048"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       >
         <div
           aria-hidden="true"
-          className="c5"
+          class="c5"
         >
           <div
-            className="c6"
+            class="c6"
           >
             <svg
-              className="c7"
+              class="c7"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -325,8 +323,8 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
               />
             </svg>
             <time
-              className="c8"
-              dateTime="PT3M12S"
+              class="c8"
+              datetime="PT3M12S"
             >
               3:12
             </time>
@@ -336,20 +334,20 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
     </div>
   </div>
   <div
-    className="c9"
+    class="c9"
   >
     <h3
-      className="c10"
+      class="c10"
     >
       <a
-        className="c11"
+        class="c11"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c12"
+            class="c12"
           >
             Ọdịyo
             , 
@@ -358,7 +356,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
             An audio item
           </span>
           <span
-            className="c12"
+            class="c12"
           >
             , 3,12
           </span>
@@ -366,13 +364,13 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
       </a>
     </h3>
     <p
-      className="c13"
+      class="c13"
     >
       Summary text
     </p>
     <time
-      className="c14"
-      dateTime="2019-05-02"
+      class="c14"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -658,38 +656,33 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div
-          className="lazyload-placeholder"
-          style={
-            Object {
-              "height": undefined,
-            }
-          }
+          class="lazyload-placeholder"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       >
         <div
           aria-hidden="true"
-          className="c5"
+          class="c5"
         >
           <div
-            className="c6"
+            class="c6"
           >
             <svg
-              className="c7"
+              class="c7"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -703,8 +696,8 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
               />
             </svg>
             <time
-              className="c8"
-              dateTime="PT3M12S"
+              class="c8"
+              datetime="PT3M12S"
             >
               3:12
             </time>
@@ -714,20 +707,20 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
     </div>
   </div>
   <div
-    className="c9"
+    class="c9"
   >
     <h3
-      className="c10"
+      class="c10"
     >
       <a
-        className="c11"
+        class="c11"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c12"
+            class="c12"
           >
             Ọdịyo
             , 
@@ -736,7 +729,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
             An audio item
           </span>
           <span
-            className="c12"
+            class="c12"
           >
             , 3,12
           </span>
@@ -744,13 +737,13 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
       </a>
     </h3>
     <p
-      className="c13"
+      class="c13"
     >
       Summary text
     </p>
     <time
-      className="c14"
-      dateTime="2019-05-02"
+      class="c14"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -1031,40 +1024,38 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <amp-img
           alt="Image Alt text"
           attribution="Image provider"
-          height={1152}
+          height="1152"
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-          srcSet={null}
-          width={2048}
+          width="2048"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       >
         <div
           aria-hidden="true"
-          className="c5"
+          class="c5"
         >
           <div
-            className="c6"
+            class="c6"
           >
             <svg
-              className="c7"
+              class="c7"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -1083,20 +1074,20 @@ exports[`StoryPromo Container should render audio with no duration correctly for
     </div>
   </div>
   <div
-    className="c8"
+    class="c8"
   >
     <h3
-      className="c9"
+      class="c9"
     >
       <a
-        className="c10"
+        class="c10"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c11"
+            class="c11"
           >
             Ọdịyo
             , 
@@ -1108,13 +1099,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       </a>
     </h3>
     <p
-      className="c12"
+      class="c12"
     >
       Summary text
     </p>
     <time
-      className="c13"
-      dateTime="2019-05-02"
+      class="c13"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -1395,38 +1386,33 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div
-          className="lazyload-placeholder"
-          style={
-            Object {
-              "height": undefined,
-            }
-          }
+          class="lazyload-placeholder"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       >
         <div
           aria-hidden="true"
-          className="c5"
+          class="c5"
         >
           <div
-            className="c6"
+            class="c6"
           >
             <svg
-              className="c7"
+              class="c7"
               focusable="false"
               height="12px"
               viewBox="0 0 13 12"
@@ -1445,20 +1431,20 @@ exports[`StoryPromo Container should render audio with no duration correctly for
     </div>
   </div>
   <div
-    className="c8"
+    class="c8"
   >
     <h3
-      className="c9"
+      class="c9"
     >
       <a
-        className="c10"
+        class="c10"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c11"
+            class="c11"
           >
             Ọdịyo
             , 
@@ -1470,13 +1456,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       </a>
     </h3>
     <p
-      className="c12"
+      class="c12"
     >
       Summary text
     </p>
     <time
-      className="c13"
-      dateTime="2019-05-02"
+      class="c13"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -1725,41 +1711,39 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <amp-img
           alt="Image Alt text"
           attribution="Image provider"
-          height={1152}
+          height="1152"
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-          srcSet={null}
-          width={2048}
+          width="2048"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       />
     </div>
   </div>
   <div
-    className="c5"
+    class="c5"
   >
     <h3
-      className="c6"
+      class="c6"
     >
       <a
-        className="c7"
+        class="c7"
         href="https://www.bbc.co.uk"
       >
         <span
@@ -1767,13 +1751,13 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
         >
           <span
             aria-hidden="true"
-            className="c8"
+            class="c8"
             dir="ltr"
           >
             LIVE
           </span>
           <span
-            className="c9"
+            class="c9"
             lang="en-GB"
           >
             Live, 
@@ -1783,13 +1767,13 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
       </a>
     </h3>
     <p
-      className="c10"
+      class="c10"
     >
       Summary text
     </p>
     <time
-      className="c11"
-      dateTime="2019-05-02"
+      class="c11"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -2038,39 +2022,34 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div
-          className="lazyload-placeholder"
-          style={
-            Object {
-              "height": undefined,
-            }
-          }
+          class="lazyload-placeholder"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       />
     </div>
   </div>
   <div
-    className="c5"
+    class="c5"
   >
     <h3
-      className="c6"
+      class="c6"
     >
       <a
-        className="c7"
+        class="c7"
         href="https://www.bbc.co.uk"
       >
         <span
@@ -2078,13 +2057,13 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
         >
           <span
             aria-hidden="true"
-            className="c8"
+            class="c8"
             dir="ltr"
           >
             LIVE
           </span>
           <span
-            className="c9"
+            class="c9"
             lang="en-GB"
           >
             Live, 
@@ -2094,13 +2073,13 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
       </a>
     </h3>
     <p
-      className="c10"
+      class="c10"
     >
       Summary text
     </p>
     <time
-      className="c11"
-      dateTime="2019-05-02"
+      class="c11"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -2328,54 +2307,52 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <amp-img
           alt="Image Alt text"
           attribution="Image provider"
-          height={1152}
+          height="1152"
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-          srcSet={null}
-          width={2048}
+          width="2048"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       />
     </div>
   </div>
   <div
-    className="c5"
+    class="c5"
   >
     <h3
-      className="c6"
+      class="c6"
     >
       <a
-        className="c7"
+        class="c7"
         href="https://www.bbc.co.uk"
       >
         A headline
       </a>
     </h3>
     <p
-      className="c8"
+      class="c8"
     >
       Summary text
     </p>
     <time
-      className="c9"
-      dateTime="2019-05-02"
+      class="c9"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -2603,52 +2580,47 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div
-          className="lazyload-placeholder"
-          style={
-            Object {
-              "height": undefined,
-            }
-          }
+          class="lazyload-placeholder"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       />
     </div>
   </div>
   <div
-    className="c5"
+    class="c5"
   >
     <h3
-      className="c6"
+      class="c6"
     >
       <a
-        className="c7"
+        class="c7"
         href="https://www.bbc.co.uk"
       >
         A headline
       </a>
     </h3>
     <p
-      className="c8"
+      class="c8"
     >
       Summary text
     </p>
     <time
-      className="c9"
-      dateTime="2019-05-02"
+      class="c9"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -2876,54 +2848,52 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <amp-img
           alt="A lone Koala perches in a eucalyptus tree"
           attribution="BBC"
-          height={549}
+          height="549"
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
-          srcSet={null}
-          width={976}
+          width="976"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       />
     </div>
   </div>
   <div
-    className="c5"
+    class="c5"
   >
     <h3
-      className="c6"
+      class="c6"
     >
       <a
-        className="c7"
+        class="c7"
         href="http://www.bbc.com/azeri"
       >
         Standard promo with summary
       </a>
     </h3>
     <p
-      className="c8"
+      class="c8"
     >
       Summary text
     </p>
     <time
-      className="c9"
-      dateTime="2019-08-07"
+      class="c9"
+      datetime="2019-08-07"
     >
       7 Ọgọọst 2019
     </time>
@@ -3151,52 +3121,47 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div
-          className="lazyload-placeholder"
-          style={
-            Object {
-              "height": undefined,
-            }
-          }
+          class="lazyload-placeholder"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       />
     </div>
   </div>
   <div
-    className="c5"
+    class="c5"
   >
     <h3
-      className="c6"
+      class="c6"
     >
       <a
-        className="c7"
+        class="c7"
         href="http://www.bbc.com/azeri"
       >
         Standard promo with summary
       </a>
     </h3>
     <p
-      className="c8"
+      class="c8"
     >
       Summary text
     </p>
     <time
-      className="c9"
-      dateTime="2019-08-07"
+      class="c9"
+      datetime="2019-08-07"
     >
       7 Ọgọọst 2019
     </time>
@@ -3482,40 +3447,38 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <amp-img
           alt="Image Alt text"
           attribution="Image provider"
-          height={1152}
+          height="1152"
           layout="responsive"
-          sizes={null}
           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-          srcSet={null}
-          width={2048}
+          width="2048"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       >
         <div
           aria-hidden="true"
-          className="c5"
+          class="c5"
         >
           <div
-            className="c6"
+            class="c6"
           >
             <svg
-              className="c7"
+              class="c7"
               focusable="false"
               height="12px"
               viewBox="0 0 32 32"
@@ -3526,8 +3489,8 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
               />
             </svg>
             <time
-              className="c8"
-              dateTime="PT1H33M20S"
+              class="c8"
+              datetime="PT1H33M20S"
             >
               1:33:20
             </time>
@@ -3537,20 +3500,20 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
     </div>
   </div>
   <div
-    className="c9"
+    class="c9"
   >
     <h3
-      className="c10"
+      class="c10"
     >
       <a
-        className="c11"
+        class="c11"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c12"
+            class="c12"
           >
             Vidio
             , 
@@ -3559,7 +3522,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
             A video item
           </span>
           <span
-            className="c12"
+            class="c12"
           >
             , 1,33,20
           </span>
@@ -3567,13 +3530,13 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
       </a>
     </h3>
     <p
-      className="c13"
+      class="c13"
     >
       Summary text
     </p>
     <time
-      className="c14"
-      dateTime="2019-05-02"
+      class="c14"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
@@ -3859,38 +3822,33 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div
-          className="lazyload-placeholder"
-          style={
-            Object {
-              "height": undefined,
-            }
-          }
+          class="lazyload-placeholder"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       >
         <div
           aria-hidden="true"
-          className="c5"
+          class="c5"
         >
           <div
-            className="c6"
+            class="c6"
           >
             <svg
-              className="c7"
+              class="c7"
               focusable="false"
               height="12px"
               viewBox="0 0 32 32"
@@ -3901,8 +3859,8 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
               />
             </svg>
             <time
-              className="c8"
-              dateTime="PT1H33M20S"
+              class="c8"
+              datetime="PT1H33M20S"
             >
               1:33:20
             </time>
@@ -3912,20 +3870,20 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
     </div>
   </div>
   <div
-    className="c9"
+    class="c9"
   >
     <h3
-      className="c10"
+      class="c10"
     >
       <a
-        className="c11"
+        class="c11"
         href="https://www.bbc.co.uk"
       >
         <span
           role="text"
         >
           <span
-            className="c12"
+            class="c12"
           >
             Vidio
             , 
@@ -3934,7 +3892,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
             A video item
           </span>
           <span
-            className="c12"
+            class="c12"
           >
             , 1,33,20
           </span>
@@ -3942,13 +3900,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
       </a>
     </h3>
     <p
-      className="c13"
+      class="c13"
     >
       Summary text
     </p>
     <time
-      className="c14"
-      dateTime="2019-05-02"
+      class="c14"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
