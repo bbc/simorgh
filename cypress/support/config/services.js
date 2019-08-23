@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   afaanoromoo: {
     font: undefined,
     isWorldService: true,
