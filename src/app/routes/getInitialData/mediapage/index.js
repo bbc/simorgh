@@ -1,4 +1,6 @@
 import fetchData from '../utils/fetchData';
+import onClient from '../../../lib/utilities/onClient';
+import getBaseUrl from '../utils/getBaseUrl';
 
 const getMediaPageInitialData = props => {
   const { service, mediaId } = props;
@@ -8,7 +10,11 @@ const getMediaPageInitialData = props => {
     serviceId = 'bbc_afaanoromo_radio';
   }
 
-  const url = `http://localhost:7080/${service}/${serviceId}/${mediaId}.json`;
+  const baseUrl = onClient()
+    ? getBaseUrl(window.location.origin)
+    : process.env.SIMORGH_BASE_URL;
+
+  const url = `${baseUrl}/${service}/${serviceId}/${mediaId}.json`;
 
   return fetchData({ url });
 };
