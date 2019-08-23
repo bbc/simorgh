@@ -34,26 +34,11 @@ const runTests = ({ service }) =>
   describe(`Tests`, () => {
     describe(`Metadata`, () => {
       it('should have the correct articles metadata', () => {
-        cy.checkArticlesMetadata({
-          articleAuthor: `${appConfig[service].articleAuthor}`,
-          description:
-            'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.',
-          imageUrl: `${appConfig[service].defaultImage}`,
-          altText: `${appConfig[service].defaultImageAltText}`,
-          locale: `${appConfig[service].locale}`,
-          siteName: `${appConfig[service].defaultImageAltText}`,
-          title: "Meghan's bouquet laid on tomb of unknown warrior",
-          type: 'article',
-          url: `https://www.bbc.com${config[service].pageTypes.articles.path}`,
-          twitterCard: 'summary_large_image',
-          twitterCreator: `${appConfig[service].twitterCreator}`,
-          twitterDescription:
-            'Meghan follows the royal bridal tradition started by the Queen Mother in 1923.', // eslint-disable-line no-unused-vars
-          twitterImageAlt: `${appConfig[service].defaultImageAltText}`,
-          twitterImageSrc: `${appConfig[service].defaultImage}`,
-          twitterSite: `${appConfig[service].twitterSite}`,
-          twitterTitle: "Meghan's bouquet laid on tomb of unknown warrior", // eslint-disable-line no-unused-vars
-        });
+        cy.get('meta[name="article:author"]').should(
+          'have.attr',
+          'content',
+          appConfig[service].articleAuthor,
+        );
       });
 
       it('should include mainEntityOfPage in the LinkedData', () => {

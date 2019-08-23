@@ -96,10 +96,94 @@ export const runCommonTests = ({ service, pageType }) => {
           );
         });
 
-        it('should have the correct shared social media metadata', () => {
-          cy.checkSharedSocialmediaMetadata({
-            fbAdmins: '100004154058350',
-            appID: '1609039196070050',
+        it('should have the correct shared metadata', () => {
+          // const description = pageType === 'articles' ? (appConfig[service].promo.summary || appConfig[service].promo.headlines.seoHeadline) : appConfig[service].metadata.summary;
+          // const title = pageType === 'articles' ? appConfig[service].promo.headlines.seoHeadline : appConfig[service].promo.name;
+
+          cy.get('head').within(() => {
+            cy.get('meta[name="fb:admins"]').should(
+              'have.attr',
+              'content',
+              '100004154058350',
+            );
+            cy.get('meta[name="fb:app_id"]').should(
+              'have.attr',
+              'content',
+              '1609039196070050',
+            );
+            cy.get('meta[name="og:image"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImage,
+            );
+            cy.get('meta[name="og:image:alt"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImageAltText,
+            );
+            cy.get('meta[name="og:locale"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].locale,
+            );
+            cy.get('meta[name="og:site_name"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImageAltText,
+            );
+            cy.get('meta[name="og:type"]').should(
+              'have.attr',
+              'content',
+              pageType === 'articles' ? 'article' : 'website',
+            );
+            // cy.get('meta[name="og:description"]').should('have.attr', 'content', description);
+            cy.get('meta[name="og:url"]').should(
+              'have.attr',
+              'content',
+              `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
+            );
+            cy.get('meta[name="og:site_name"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].brandName,
+            );
+
+            // cy.get('meta[name="og:title"]').should('have.attr', 'content', title);
+            cy.get('meta[name="twitter:card"]').should(
+              'have.attr',
+              'content',
+              'summary_large_image',
+            );
+            cy.get('meta[name="twitter:creator"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].twitterCreator,
+            );
+            cy.get('meta[name="twitter:image:alt"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImageAltText,
+            );
+            cy.get('meta[name="twitter:image:src"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImage,
+            );
+            // cy.get('meta[name="twitter:description"]').should(
+            //   'have.attr',
+            //   'content',
+            //   description,
+            // );
+            cy.get('meta[name="twitter:site"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].twitterSite,
+            );
+            // cy.get('meta[name="twitter:title"]').should(
+            //   'have.attr',
+            //   'content',
+            //   title,
+            // );
           });
         });
       }

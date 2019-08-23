@@ -1,5 +1,4 @@
 import './application';
-import './metaData';
 import './analytics';
 
 // Overwriting Cypress Commands should very rarely be done.
