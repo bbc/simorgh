@@ -6,10 +6,19 @@ const tests = ({ service }) =>
     // will be addressed by https://github.com/bbc/simorgh/issues/3324
     describe('ATI', () => {
       it.skip('should have a noscript tag with an 1px image with the ati url', () => {
-        cy.hasNoscriptImgAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
+        if (service !== 'japanese') {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        } else {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            envConfig.atiAnalyticsGNLBucket,
+          );
+        }
       });
     });
 

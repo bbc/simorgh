@@ -9,10 +9,19 @@ const tests = ({ service }) =>
   describe(`Amp Tests`, () => {
     describe('ATI', () => {
       it('should have an amp-analytics tag with the ati url', () => {
-        cy.hasAmpAnalyticsAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
+        if (service !== 'japanese') {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        } else {
+          cy.hasAmpAnalyticsAtiUrl(
+            envConfig.atiUrl,
+            envConfig.atiAnalyticsGNLBucket,
+          );
+        }
       });
     });
 
