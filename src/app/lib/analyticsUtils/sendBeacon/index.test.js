@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import { mocks } from '../../../../testHelpers/loggerMock';
+import loggerMock from '../../../../testHelpers/loggerMock';
 
 let fetchResponse;
 let isOnClient;
@@ -54,7 +54,7 @@ describe('sendBeacon', () => {
 
       await sendBeacon('https://foobar.com');
 
-      expect(mocks.error).toHaveBeenCalledWith(error);
+      expect(loggerMock.error).toHaveBeenCalledWith(error);
     });
   });
 });
