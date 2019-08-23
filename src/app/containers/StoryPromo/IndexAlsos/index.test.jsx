@@ -30,6 +30,6 @@ describe('Index Alsos', () => {
 
   shouldShallowMatchSnapshot(
     'should render one correctly',
-    <IndexAlsos alsoItems={relatedItems[0]} script={latin} service="news" />,
+    <IndexAlsos alsoItems={[relatedItems[0]]} script={latin} service="news" />,
   );
 });

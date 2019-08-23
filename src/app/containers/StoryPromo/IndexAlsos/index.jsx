@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, Fragment } from 'react';
 import { oneOfType, arrayOf, shape, number, string } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import pathOr from 'ramda/src/pathOr';
@@ -44,42 +44,16 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
     );
   };
 
+  const IndexAlsosWrapper = alsoItems.length > 1 ? IndexAlsosUl : Fragment;
+  const IndexAlsoItem = alsoItems.length > 1 ? IndexAlsosLi : IndexAlso;
+
   return (
     <IndexAlsos offScreenText="Related content">
-      {alsoItems.length > 1 ? (
-        <IndexAlsosUl>
-          {alsoItems.slice(0, 3).map(item => {
-            const { id, cpsType, mediaType } = item;
-            const headline = pathOr(null, ['headlines', 'headline'], item);
-            const url = pathOr(null, ['locators', 'assetUri'], item);
-            const indexAlsoMediaIndicator = IndexAlsosMediaIndicator(
-              cpsType,
-              mediaType,
-              service,
-            );
-            const indexAlsoMediaType =
-              mediaTranslations[getMediaType(cpsType, mediaType)];
-
-            return (
-              <IndexAlsosLi
-                key={id}
-                script={script}
-                service={service}
-                url={url}
-                mediaIndicator={indexAlsoMediaIndicator}
-                mediaType={indexAlsoMediaType}
-              >
-                {headline}
-              </IndexAlsosLi>
-            );
-          })}
-        </IndexAlsosUl>
-      ) : (
-        // When there is exactly one related item, it should not be contained within a list.
-        (() => {
-          const { cpsType, mediaType } = alsoItems;
-          const headline = pathOr(null, ['headlines'], alsoItems);
-          const url = pathOr(null, ['locators', 'assetUri'], alsoItems);
+      <IndexAlsosWrapper>
+        {alsoItems.slice(0, 3).map(item => {
+          const { id, cpsType, mediaType } = item;
+          const headline = pathOr(null, ['headlines', 'headline'], item);
+          const url = pathOr(null, ['locators', 'assetUri'], item);
           const indexAlsoMediaIndicator = IndexAlsosMediaIndicator(
             cpsType,
             mediaType,
@@ -89,7 +63,8 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
             mediaTranslations[getMediaType(cpsType, mediaType)];
 
           return (
-            <IndexAlso
+            <IndexAlsoItem
+              key={id}
               script={script}
               service={service}
               url={url}
@@ -97,10 +72,10 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
               mediaType={indexAlsoMediaType}
             >
               {headline}
-            </IndexAlso>
+            </IndexAlsoItem>
           );
-        })()
-      )}
+        })}
+      </IndexAlsosWrapper>
     </IndexAlsos>
   );
 };
