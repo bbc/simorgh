@@ -13,10 +13,10 @@ const getSection = platform => (service, data) => (
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.com"
       isAmp={platform === 'amp'}
-      pageType="frontpage"
+      pageType="frontPage"
       service={service}
     >
-      <FrontPageSection group={data} />
+      <FrontPageSection group={data} sectionNumber={1} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
@@ -24,13 +24,13 @@ const getSection = platform => (service, data) => (
 const getCanonicalSection = getSection('canonical');
 const getAmpSection = getSection('amp');
 
-storiesOf('Front Page Section container', module)
+storiesOf('Containers|Front Page Section/Canonical', module)
   .add('igbo', () => getCanonicalSection('igbo', igboData.content.groups[0]))
   .add('pidgin', () =>
     getCanonicalSection('pidgin', pidginData.content.groups[0]),
   );
 
-storiesOf('Front Page Section container', module)
+storiesOf('Containers|Front Page Section/AMP', module)
   .addDecorator(AmpDecorator)
   .add('igbo - amp', () => getAmpSection('igbo', igboData.content.groups[0]))
   .add('pidgin - amp', () =>

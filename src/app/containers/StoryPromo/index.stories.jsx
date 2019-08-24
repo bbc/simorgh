@@ -16,13 +16,26 @@ const mediaFixture = type =>
         pathOr(null, ['media', 'format'], item) === type,
     );
 
+const promoFixture = type =>
+  pathOr(null, ['content', 'groups'], fixture)
+    .flatMap(group => pathOr(null, ['items'], group))
+    .find(
+      item =>
+        pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
+        pathOr(null, ['contentType'], item) === type,
+    );
+
 const firstFixture = pathOr(
   null,
   ['content', 'groups', '0', 'items', '0'],
   fixture,
 );
+
+firstFixture.timestamp = Date.now();
+
 const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
+const standardPromo = promoFixture('Text');
 
 const getStoryPromo = platform => item => (
   <ServiceContextProvider service="news">
@@ -41,13 +54,15 @@ const getStoryPromo = platform => item => (
 const getCanonicalStoryPromo = getStoryPromo('canonical');
 const getAmpStoryPromo = getStoryPromo('amp');
 
-storiesOf('Story Promo', module)
+storiesOf('Containers|Story Promo/Canonical', module)
   .add('canonical', () => getCanonicalStoryPromo(firstFixture))
   .add('audio promo', () => getCanonicalStoryPromo(audioFixture))
-  .add('video promo', () => getCanonicalStoryPromo(videoFixture));
+  .add('video promo', () => getCanonicalStoryPromo(videoFixture))
+  .add('standard link promo', () => getCanonicalStoryPromo(standardPromo));
 
-storiesOf('Story Promo', module)
+storiesOf('Containers|Story Promo/AMP', module)
   .addDecorator(AmpDecorator)
   .add('amp', () => getAmpStoryPromo(firstFixture))
   .add('audio promo - amp', () => getAmpStoryPromo(audioFixture))
-  .add('video promo - amp', () => getAmpStoryPromo(videoFixture));
+  .add('video promo - amp', () => getAmpStoryPromo(videoFixture))
+  .add('standard link promo', () => getAmpStoryPromo(standardPromo));

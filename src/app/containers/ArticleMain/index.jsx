@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -8,6 +8,7 @@ import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
+import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';
 
 const componentsToRender = {
@@ -25,15 +26,16 @@ const ArticleMain = ({ articleData }) => {
   const { blocks } = content.model;
 
   return (
-    <Fragment>
+    <>
       <ATIAnalytics data={articleData} />
+      <ChartbeatAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostGrid>
       </main>
-    </Fragment>
+    </>
   );
 };
 

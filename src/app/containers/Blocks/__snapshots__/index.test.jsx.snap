@@ -6,12 +6,15 @@ Array [
     blocks={
       Array [
         Object {
+          "id": null,
           "model": Object {
             "blocks": Array [
               Object {
+                "id": null,
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": null,
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a headline!",
@@ -35,12 +38,15 @@ Array [
     blocks={
       Array [
         Object {
+          "id": null,
           "model": Object {
             "blocks": Array [
               Object {
+                "id": null,
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": null,
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a subheadline!",
@@ -65,9 +71,11 @@ Array [
     blocks={
       Array [
         Object {
+          "id": null,
           "model": Object {
             "blocks": Array [
               Object {
+                "id": null,
                 "model": Object {
                   "attributes": Array [],
                   "text": "This is some text content!",
@@ -93,12 +101,15 @@ Array [
     blocks={
       Array [
         Object {
+          "id": null,
           "model": Object {
             "blocks": Array [
               Object {
+                "id": null,
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": null,
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a headline!",
@@ -122,12 +133,15 @@ Array [
     blocks={
       Array [
         Object {
+          "id": null,
           "model": Object {
             "blocks": Array [
               Object {
+                "id": null,
                 "model": Object {
                   "blocks": Array [
                     Object {
+                      "id": null,
                       "model": Object {
                         "attributes": Array [],
                         "text": "This is a subheadline!",
@@ -152,9 +166,11 @@ Array [
     blocks={
       Array [
         Object {
+          "id": null,
           "model": Object {
             "blocks": Array [
               Object {
+                "id": null,
                 "model": Object {
                   "attributes": Array [],
                   "text": "This is some text content!",

@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ky-KG`,
+  lang: `ky`,
   articleAuthor: `https://www.facebook.com/bbckyrgyz`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-kyrgyz',
+  atiAnalyticsProducerId: '58',
   brandName: 'BBC News Кыргыз КызMATы',
   product: 'BBC News Кыргыз КызMATы',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
@@ -28,9 +30,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'Башталгыч бет',
+    currentPage: 'Current page',
+    skipLinkText: 'Сайтка өтүү',
     error: {
       404: {
         statusCode: '404',
@@ -162,9 +167,10 @@ const service = {
       },
     ],
     copyrightText:
-      'Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
+      'Би-Би-Си. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

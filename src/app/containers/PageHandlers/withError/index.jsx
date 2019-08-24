@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, element } from 'prop-types';
+import { string, element, shape } from 'prop-types';
 import ErrorMain from '../../ErrorMain';
 
 const WithError = Component => {
@@ -9,11 +9,11 @@ const WithError = Component => {
   };
 
   ErrorContainer.propTypes = {
-    error: string,
+    error: shape({ message: string.isRequired }),
   };
 
   ErrorContainer.defaultProps = {
-    error: true,
+    error: null,
   };
 
   return ErrorContainer;

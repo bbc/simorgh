@@ -6,7 +6,7 @@ import mainContentPropTypes from '../mainContent';
 export const articleDataPropTypes = shape({
   metadata: shape(optimoMetadataPropTypes).isRequired,
   content: shape({
-    model: shape(mainContentPropTypes),
+    model: shape(mainContentPropTypes).isRequired,
   }).isRequired,
   promo: shape(optimoPromoPropTypes).isRequired,
 });

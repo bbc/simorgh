@@ -4,6 +4,14 @@ We welcome feedback and help on this work. By participating in this project, you
 
 We are particularly looking for help with our [open issues](https://github.com/bbc/simorgh/issues). We appreciate all forms of contribution - not just code - that can include documentation, clarifications, typo corrections and much more.
 
+## Documentation index
+Please familiarise yourself with our:
+- [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
+- [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
+- [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
+- [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
+- [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
+
 ## Getting started
 
 Before starting a pull request, firstly search through [existing issues](https://github.com/bbc/simorgh/issues). Please also ensure to branch from latest, we only review PRs that are as small as they can be; which we do to maximise productivity.
@@ -94,6 +102,66 @@ To run these on your forked version follow these steps.
 
 **Note**: The code coverage, CC_TEST_REPORTER_ID, is defined in [.travis.yml](.travis.yml#L3). As such, you don't need to obtain the CC_TEST_REPORTER_ID from CodeClimate and configure it in the repository settings in Travis CI. This is because, the [.travis.yml](.travis.yml#L3) takes precedence over the value configured in repository settings. See the [Travis CI public variables guide](https://docs.travis-ci.com/user/environment-variables/#defining-public-variables-in-travisyml) for more details.
 
+### Fixture data
+
+We have a lot of [sample data feeds](https://github.com/bbc/simorgh/tree/49a74f2c3b1df0fb1adb6b8bb7fff51ddce55dda/data). These are categorised in directories under this primary directory. Finding useful examples within these folder can be done by searching for the asset (page type) and block types (e.g. paragraph, media etc.) you're looking for.
+
+#### Update local fixture data
+Pick a JSON file under `data/news/articles/[id].json`, and:
+
+1) add an example of your block somewhere in the `content.model.blocks` array.
+2) add your new component to the `blockTypes` array.
+
+Run `npm run dev` and you should see your component at your article of choice, eg http://localhost.bbc.com:7080/news/articles/c0000000001o
+
+#### Update the schema
+data/schema.yaml describes the Article API definition for web. We need to make it aware of our new component.
+
+Your component is more than likely a new 'block' in the data feed, so you'll need to add it to the array of which blocks the application should validate:
+
+```yaml
+    blocks:
+      type: object
+      items:
+        oneOf:
+          - $ref: '#/components/schemas/altText'
+          ... etc ...
+          - $ref: '#/components/schemas/[your component name]'
+      minItems: 2
+```
+
+You'll also need to define the block subtype itself:
+
+```yaml
+    blockquote:
+      type: object
+      required:
+        - model
+        - type
+      properties:
+        model:
+          properties:
+            blocks:
+              $ref: '#/components/schemas/blocks'
+          type: object
+        type:
+          enum:
+            - blockquote
+          type: string
+```
+
+The schema check currently only happens on local data.
+
+### Create the container
+We've added our _component_, which should be kept as simple as possible. Now we need to create our _container_, which contains the business logic for mapping Optimo block data to the React parameters our component needs.
+
+Add a new folder under `src/app/containers/[Component Name]/`. You will need:
+
+* index.jsx - describes the mapping of Optimo block data to React parameters
+* index.test.jsx - creates "snapshots" of the component with the various different rendered outputs for the business logic in the container
+
+This step is quite complicated, so copy and paste from a similar example and tweak the code to your requirements.
+
 ### Merging a Pull Request
 
 There is a [guide](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/MERGE_PROCESS.md) for BBC staff which documents the manual process that should be followed before merging a PR. Please note: The guide links through to our CI endpoints and therefore is hosted in a private repository.
@@ -104,4 +172,10 @@ As part of our deployment & pipeline work, we have created a handy script to cop
 
 If on the other hand you are adding new files to the root directory of simorgh, and these files are necessary for production, you have to manually add the copy commands for the relevant files to the `/script/jenkinsProductionFiles.sh`.
 
-_This script is temporary and will most likely be refactored later on_
+### `.env` is showing in my `git status`
+
+The `.env` file should not be commited as it is often overwritten by the values in `envConfig/` at build time. There is a `postshrinkwrap` command which runs after an `npm install` so should be run during setup of the application. 
+
+If the `.env` file is appearing in your `git status` it means it is now longer being assumed as unchanged, to fix this run:
+```
+git update-index --assume-unchanged .env

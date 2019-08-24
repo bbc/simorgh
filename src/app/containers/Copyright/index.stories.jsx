@@ -6,7 +6,7 @@ import CopyrightContainer from '.';
 import services from '../../lib/config/services';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-storiesOf('Copyright Container', module)
+storiesOf('Containers|Copyright', module)
   .addDecorator(withKnobs)
   .add(
     'default',

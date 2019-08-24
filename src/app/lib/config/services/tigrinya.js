@@ -1,12 +1,18 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { tigrinya as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NOTO_SANS_ETHIOPIC_BOLD,
+  F_NOTO_SANS_ETHIOPIC_REGULAR,
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
-  lang: `ti-ET`,
+  lang: `ti`,
   articleAuthor: `https://www.facebook.com/bbcnewstigrinya`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-tigrinya',
+  atiAnalyticsProducerId: '91',
   brandName: 'BBC News ትግርኛ',
   product: 'BBC News ትግርኛ',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
@@ -28,9 +34,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'ዜና',
+    currentPage: 'Current page',
+    skipLinkText: 'እቲ ትሕዝቶ ዝለል',
     error: {
       404: {
         statusCode: '404',
@@ -113,10 +122,6 @@ const service = {
       audio: 'ድምፂ',
       photogallery: 'ማህደረ-ምስሊ',
       video: 'ቪድዮ',
-      bbc_tigrinya_radio: {
-        title: 'ስምዑ',
-        subtitle: 'መደባትና',
-      },
     },
   },
   brandSVG,
@@ -155,9 +160,24 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
+    copyrightText: 'ቢቢሲ. ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
   },
-  fonts: [],
+  fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
+  navigation: [
+    {
+      title: 'ዜና',
+      url: '/tigrinya',
+    },
+    {
+      title: 'ቪድዮ',
+      url: '/tigrinya/media/video',
+    },
+    {
+      title: 'ኣመና ፍቱዋት',
+      url: '/tigrinya/popular/read',
+    },
+  ],
+  timezone: 'Africa/Addis_Ababa',
 };
 
 export default service;

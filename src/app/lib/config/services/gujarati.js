@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { gujarati as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `gu-IN`,
+  lang: `gu`,
   articleAuthor: `https://www.facebook.com/bbcnewsgujarati`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-gujarati',
+  atiAnalyticsProducerId: '50',
   brandName: 'BBC News ગુજરાતી',
   product: 'BBC News ગુજરાતી',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png',
@@ -28,9 +30,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'સમાચાર',
+    currentPage: 'Current page',
+    skipLinkText: 'સામગ્રી પર જાઓ',
     error: {
       404: {
         statusCode: '404',
@@ -157,9 +162,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
+    copyrightText: 'BBC. એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

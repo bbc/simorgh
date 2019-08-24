@@ -54,7 +54,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48959886"
             },
             "summary": "தங்களது ராஜிநாமா கடிதம் மீது எந்த முடிவும் எடுக்கப்படவில்லை என்று கூறி, அதிருப்தி எம்எல்ஏக்கள் உச்சநீதிமன்றத்தில் மனுதாக்கல் செய்தனர். சபாநாயகர் வேண்டும் என்றே காலம் தாழ்த்துவதாக அவர்கள் குற்றஞ்சாட்டினர்.",
-            "timestamp": 1562918225,
+            "timestamp": 1562918224000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -102,7 +102,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sri-lanka-48963615"
             },
             "summary": "“நாங்கள் ஏழைகள். ஒரு வருமானத்தைப் பெற்றுக் கொள்ளலாம் என்று நினைத்துத்தான் எங்கள் வீட்டை வாடகைக்குக் கொடுத்தோம். ஆனால் இப்படியாகி விட்டது\" என்று கூறி அழுகிறார் அமீதா.",
-            "timestamp": 1562929808,
+            "timestamp": 1562929807000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -144,7 +144,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/global-48952108"
             },
             "summary": "\"நீங்கள் நீதிபதி, போலீஸ், அரசு வழக்கறிஞர் என்று யாரிடம் போய் புகார் அளித்தாலும், அவர்களும் தங்களுடன் பாலியல் உறவில் ஈடுபடுமாறு உங்களை கேட்பார்கள். அப்படியிருக்க நீங்கள் யாரிடம் செல்ல முடியும்?\"",
-            "timestamp": 1562909006,
+            "timestamp": 1562909005000,
             "byline": {
               "name": "யோகிடா லிமே",
               "title": "பிபிசி, காபுல்",
@@ -196,7 +196,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48948109"
             },
             "summary": "\"அமித் ஷா மற்றும் நரேந்திர மோதியுடன் நேரடியான மோதல் இது, மிகப்பெரியதொரு ஆபத்து என்று எல்லோருக்கும் தெரியும். ஆனால் அதுதான் டி.கே.சிவகுமார்\"",
-            "timestamp": 1562925515,
+            "timestamp": 1562925514000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -245,7 +245,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/arts-and-culture-48957218"
             },
             "summary": "'மும்பையில் உதவி இயக்குநராக பணிபுரிந்த போதே எனது அடையாளங்களை மறைத்துதான் பணிபுரிந்திருக்கிறேன். ஒவ்வொருவரிடமும் தனித்துவம் உள்ளது.",
-            "timestamp": 1562914478,
+            "timestamp": 1562914477000,
             "byline": {
               "name": "நா ரமேஷ்குமார்  ",
               "title": "பிபிசி தமிழுக்காக  ",
@@ -296,7 +296,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/global-48959881"
             },
             "summary": "160 கிலோ மீட்டர் நீளம் கொண்ட இப்பாறை சில காலமாகவே ஆழமற்ற கடல் பகுதியில் சிக்கிக் கொண்டிருந்ததாக தெரிந்தது. இந்நிலையில், தற்போது இது நகர ஆரம்பித்துள்ளது.",
-            "timestamp": 1562898272,
+            "timestamp": 1562898271000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -351,7 +351,7 @@
             "uri": "https://www.bbc.com/tamil/india-47567532",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1552555988,
+            "timestamp": 1552555987000,
             "type": "link"
           }
         ],
@@ -373,7 +373,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48953492"
             },
             "summary": "தண்ணீருக்கு ஏற்பட்டுள்ள பற்றாகுறையால், சென்னைவாசிகள் அதிகம் செலவு செய்ய வேண்டிய கட்டாயம் ஏற்பட்டுள்ளது.",
-            "timestamp": 1562894352,
+            "timestamp": 1562894351000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -444,7 +444,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48943076"
             },
             "summary": "இணையத்தில் எப்போதும் கேலிக் கிண்டலுக்கு உள்ளாகக்கூடிய ஒரு விஷயம் டக்வொர்த் லூயிஸ் முறை.",
-            "timestamp": 1562813289,
+            "timestamp": 1562813288000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -516,7 +516,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/science-48909067"
             },
             "summary": "குழந்தைகளை பார்த்து கொள்வது முதல் உடல் நலம் குன்றியவர்களை பராமரிப்பது வரை எல்லாம் எந்திரன் மயம்தான்,",
-            "timestamp": 1562635282,
+            "timestamp": 1562635281000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -604,7 +604,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48957318"
             },
             "summary": "பெர்மிங்காமின் ஒவ்வொரு அங்குலத்தையும் தெரிந்து வைத்திருந்த ராய் மற்றும் பேர்ஸ்டோ இணை அதிரடி பாணியை கையிலெடுத்தது. இதன் விளைவாக 1992 உலகக்கோப்பைக்கு பிறகு முதன் முறையாக உலகக்கோப்பை அரை இறுதியில் நுழைந்திருக்கிறது இங்கிலாந்து அணி",
-            "timestamp": 1562896802,
+            "timestamp": 1562896801000,
             "byline": {
               "name": "விவேக் ஆனந்த்",
               "title": "பிபிசி தமிழ்",
@@ -655,7 +655,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/global-48951754"
             },
             "summary": "தனது எண்ணெய் கப்பலை பிரிட்டன் தடுத்து வைத்திருப்பதற்கு பதிலடி வழங்கப்படும் என்று இரான் முன்னதாக மிரட்டல் விடுத்திருந்தது. ஆனால், அத்தகைய முயற்சி எதையும் எடுக்கவில்லை என்று இரான் தெரிவித்திருக்கிறது.",
-            "timestamp": 1562849343,
+            "timestamp": 1562849342000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -691,7 +691,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48954393"
             },
             "summary": "மக்கள் எதிர்ப்புகளுக்கிடையே தேனி மாவட்டம் பொட்டிபுரம் கிராமத்திலுள்ள மலைப்பகுதியில் நியூட்ரினோ திட்டத்தை செயல்படுத்துவதற்கு நரேந்திர மோதி தலைமையிலான மத்திய அரசு அனுமதி வழங்கியுள்ளது.",
-            "timestamp": 1562851287,
+            "timestamp": 1562851286000,
             "byline": {
               "name": "மு. நியாஸ் அகமது",
               "title": "பிபிசி தமிழ்",
@@ -742,7 +742,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48946199"
             },
             "summary": "2011 உலகக்கோப்பை இறுதியாட்டத்தில் வென்று, அப்போதைய கேப்டன் தோனி சச்சினுக்கு கொடுத்த பிரியாவிடை பரிசை ஏன் கோலியால் தோனிக்கு தரமுடியவில்லை என்று சில ரசிகர்கள் தங்கள் ஆதங்கத்தை வெளிப்படுத்தி இருந்தனர்.",
-            "timestamp": 1562853364,
+            "timestamp": 1562853363000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -783,7 +783,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sri-lanka-48952103"
             },
             "summary": "\"கிழக்கு மாகாணத்திலுள்ள சுற்றுலாப் பிரதேசங்களான அறுகம்பே, பாசிக்குடா ஆகிய இடங்களிலும், அவற்றினைச் சுற்றியுள்ள பகுதிகளிலும் ஹெரோயின் உள்ளிட்ட போதைப்பொருள் விற்பனை அதிகமாக இருப்பதே இதற்கு உதாரணம்\"",
-            "timestamp": 1562848329,
+            "timestamp": 1562848328000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -824,7 +824,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48946193"
             },
             "summary": "அணியில் ஜாம்பவான் வீரர்கள் இல்லாத போதிலும், தங்களின் கட்டுக்கோப்பான மற்றும் நேர்த்தியான பந்துவீச்சு, அட்டகாசமான ஃ பீல்டிங் ஆகியவற்றால் மற்ற அணிகளுக்கு தொடர்ந்து நியூசிலாந்து அதிர்ச்சி அளித்து வந்துள்ளது.",
-            "timestamp": 1562813841,
+            "timestamp": 1562813840000,
             "byline": {
               "name": "சிவக்குமார் உலகநாதன்",
               "title": "பிபிசி தமிழ்",
@@ -875,7 +875,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48950774"
             },
             "summary": "தோனி நேற்று இந்தியா - நியூசிலாந்து அணிகள் மோதிய அரை இறுதி ஆட்டத்தில் 50 ரன்கள் எடுத்த நிலையில் ரன் அவுட் ஆனார். அத்துடன் இந்திய அணியின் உலகக்கோப்பை கனவு தகர்ந்தது. இந்நிலையில் அவர் ஓய்வு பெறக்கூடாது என ரசிகர்கள் கூறி வருகின்றனர்.",
-            "timestamp": 1562845150,
+            "timestamp": 1562845149000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -926,7 +926,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/global-48891083"
             },
             "summary": "ஒரு நகரில் மட்டும் 400க்கும் மேற்பட்ட குழந்தைகள் பெற்றோரில் ஒருவர் அல்லது இருவரையும் இழந்திருக்கிறார்கள் என்று பதிவேடுகள் காட்டுகின்றன. முகாம்கள் அல்லது சிறைகளில் பெற்றோர்கள் வைக்கப்பட்டிருக்கிறார்கள்.",
-            "timestamp": 1562401594,
+            "timestamp": 1562401593000,
             "byline": {
               "name": "ஜான் சட்வர்த்",
               "title": "பிபிசி, சின்ஜியாங்",
@@ -994,7 +994,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sri-lanka-48817018"
             },
             "summary": "இலங்கையில் டிசம்பர் மாதம் அதிபர் தேர்தல் நடைபெற உள்ள நிலையில், கோத்தபய ராஜபக்சேவின் போக்கில் மாற்றம் ஏற்பட்டிருக்கிறது. இந்தத் தேர்தலில் போட்டியிட அவர் உத்தேசித்துள்ளார்.",
-            "timestamp": 1561968322,
+            "timestamp": 1561968321000,
             "byline": {
               "name": "அன்பரசன் எத்திராஜன் ",
               "title": "பிபிசி  ",
@@ -1067,7 +1067,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48888468"
             },
             "summary": "சென்னை தண்ணீர் பிரச்சனை தொடர்பாக டைட்டானிக் பட நாயகன் லியனார்டோ டிகாப்ரியோ கடந்தவாரம் இன்ஸ்டாகிராமில் பதிவு செய்தபோது, அதில் காணப்பட்ட சமுதாயக் கிணறு பிரபலம் அடைந்தது.",
-            "timestamp": 1562416754,
+            "timestamp": 1562416753000,
             "byline": {
               "name": "பிரமிளா கிருஷ்ணன்",
               "title": "பிபிசி தமிழ்",
@@ -1135,7 +1135,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48795007"
             },
             "summary": "இளம் வயதில் நீண்ட தலைமுடியும், முகம் முழுவதும் தெறிக்கும் சிரிப்புமாக காணப்பட்ட தோனியின் நடையுடை பாணிகள் மாறிவிட்டன. மாறாதது கடைசி ஓவர்களில் தொடரும் அவரின் அதிரடியும், ரசிகர்களுக்கு அவர் மீதான நம்பிக்கையும்தான்.",
-            "timestamp": 1561694758,
+            "timestamp": 1561694757000,
             "byline": {
               "name": "சிவக்குமார் உலகநாதன்",
               "title": "பிபிசி தமிழ் ",
@@ -1203,7 +1203,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/science-48887023"
             },
             "summary": "உடல் பருமனோடு இருப்பதால் ஒருவருக்கு நிச்சயம் புற்றுநோய் வரும் என்பது அர்த்தமல்ல. ஆனால் புற்றுநோய் அபாயத்தில் அவர்கள் இருக்கிறார்கள் என்பதே இந்த ஆய்வின் பொருள்.",
-            "timestamp": 1562395509,
+            "timestamp": 1562395508000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1259,7 +1259,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/arts-and-culture-48636098"
             },
             "summary": "மகிழ்ச்சிக்கு முக்கியமான தேவையாக இருப்பது நேர்மறையான சமூக தொடர்புகள் தான் என்று முன்வைக்கப்படுகிறது. நாம் எவ்வளவு சம்பாதிக்கிறோம் என்பதைவிட இதுதான் முக்கியமானதாகக் கருதப்படுகிறது.",
-            "timestamp": 1560560689,
+            "timestamp": 1560560688000,
             "byline": {
               "name": "நிக்கோலஸ் எப்ளே & ஜூலியானா ஷ்ரோடர்",
               "title": "பிபிசிக்காக ",
@@ -1332,7 +1332,7 @@
             "uri": "https://www.bbc.com/tamil/global-46152082",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1541768907,
+            "timestamp": 1541768906000,
             "type": "link"
           }
         ],
@@ -1354,7 +1354,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-46695376"
             },
             "summary": "கடந்த சில நாட்களாக வட இந்தியாவில் கடும் குளிர் நிலவிவரும் நிலையில், காஷ்மீரில் தொடர்ந்து கடும் குளிர் காற்று வீசி வருகிறது.",
-            "timestamp": 1545925487,
+            "timestamp": 1545925486000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1429,7 +1429,7 @@
             "uri": "http://www.bbc.com/tamil/bbc_tamil_tv/tv_programmes/w13xttmy?limit=4",
             "contentType": "TVBulletin",
             "assetTypeCode": "PRO",
-            "timestamp": 1473758073,
+            "timestamp": 1473758072000,
             "type": "link"
           }
         ],
@@ -1451,7 +1451,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48950779"
             },
             "summary": "1975லிருந்து உலகக்கோப்பை அரை இறுதிப் போட்டியில் தோல்வியே அடையாத அணி எனும் பெருமையோடு வளைய வந்த ஆஸ்திரேலியாவை இங்கிலாந்து தோற்கடித்துள்ளது.",
-            "timestamp": 1562864197,
+            "timestamp": 1562864196000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Summary",
@@ -1492,7 +1492,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48941311"
             },
             "summary": "'ஜடேஜா சச்சின், திராவிட் போன்ற நுணுக்கமான பேட்ஸ்மேன் அல்ல. விராட் கோலி, ரோகித் சர்மா போன்றுஅதிரடி வீரருமல்ல. ஆனால், அவருக்கென்று ஒரு தனி பாணியுள்ளது''",
-            "timestamp": 1562805719,
+            "timestamp": 1562805718000,
             "byline": {
               "name": "சிவக்குமார் உலகநாதன்",
               "title": "பிபிசி தமிழ்",
@@ -1543,7 +1543,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48943071"
             },
             "summary": "கட்டட பொறியாளராக பணியாற்றிய முகிலன், மாவோயிசத்தை அடிப்படையாகக் கொண்ட மார்க்சிய லெனினிய கட்சி அமைப்பிலும் தீவிரமாக பணியாற்றி வந்தார்.",
-            "timestamp": 1562829562,
+            "timestamp": 1562829561000,
             "byline": {
               "name": "முரளிதரன் காசிவிஸ்வநாதன் ",
               "title": " பிபிசி தமிழ்",
@@ -1594,7 +1594,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48942283"
             },
             "summary": "தோனி இன்று ஏன் முன்கூட்டி இறங்கவில்லை என சமூக வலைதளங்களில் இந்திய ரசிகர்கள் ஆதங்கப்பட்டனர். இந்நிலையில் போட்டி முடிந்து விராட் கோலி நிருபர்களுக்கு பதிலளிக்கும் போது இதற்கான விளக்கத்தை தெரிவித்தார்.",
-            "timestamp": 1562774413,
+            "timestamp": 1562774412000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1635,7 +1635,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48932727"
             },
             "summary": "பாரதிய ஜனதா கட்சி இதன் பின்னணியில் இருக்கிறது, ஆப்ரேஷன் கமலா என்ற பேரில் அவர்கள் ஆட்சியை கலைக்கும் பணியை முன்னெடுத்துள்ளார்கள் என்று பரவலாக கூறப்படுகிறது. ஆனால், பா.ஜ.கவின் மூத்த தலைவரும், பாதுகாப்பு அமைச்சருமான ராஜ்நாத் சிங் இதனை மறுத்துள்ளார்.",
-            "timestamp": 1562741845,
+            "timestamp": 1562741844000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1676,7 +1676,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/science-48921856"
             },
             "summary": "பாட்டுப் பாடுவது நிறைய பயன்களைத் தரும். மன நலம் முதல், நுரையீரல் செயல்பாடு வரை, ஞாபகசக்தி குறைபாடுகளை சரி செய்வது வரையிலான பயன்கள் கிடைக்கும்.",
-            "timestamp": 1562722561,
+            "timestamp": 1562722560000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1721,7 +1721,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48942288"
             },
             "summary": "இந்தியா நியூசிலாந்து அணிகள் மோதிய உலகக்கோப்பை கிரிக்கெட் தொடரின் முதல் ஆட்டத்தில் 240 ரன்கள் எனும் இலக்கை வெற்றிகரமாக சேசிங் செய்ய முடியாமல் தொடரில் இருந்து வெளியேறியுள்ளது இந்திய அணி.",
-            "timestamp": 1562776766,
+            "timestamp": 1562776765000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1762,7 +1762,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48909073"
             },
             "summary": "இந்தியாவில் 2015ஆம் ஆண்டில் ஐந்து வயது எட்டுவதற்குள் பத்து லட்சத்துக்கும் மேற்பட்ட குழந்தைகள் மரணம் அடைந்துள்ளனர். ஆனால் இந்தியாவுக்குள் மாநில அளவில் இதில் வேறுபாடுகள் உள்ளன.",
-            "timestamp": 1562671778,
+            "timestamp": 1562671777000,
             "byline": {
               "name": "திவ்யா ஆர்யா",
               "title": "பிபிசி ",
@@ -1813,7 +1813,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48924735"
             },
             "summary": "தற்போதைய இந்திய அணியில் இடம்பெற்றுள்ள பேட்ஸ்மென்களில் நியூசிலாந்து அணிக்கு எதிராக கணிசமான போட்டிகளில் பேட்டிங் செய்தவர்கள் ரோகித் ஷர்மா, தோனி மற்றும் விராட் கோலி ஆகிய மூன்று பேர் மட்டுமே.",
-            "timestamp": 1562673885,
+            "timestamp": 1562673884000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1854,7 +1854,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48917584"
             },
             "summary": "சிம்லாவின் தண்ணீர் பிரச்சினைக்குத் தீர்வு காணப்பட்ட நடவடிக்கைகள், சென்னை மக்களுக்கு மகிழ்ச்சியைத் தருவதாக இருக்கலாம். ஆனால் அதற்கான செயல்திட்டம் இப்போதே தொடங்க வேண்டும். இல்லாவிட்டால் மிகவும் தாமதமாகிவிடும்.",
-            "timestamp": 1562647331,
+            "timestamp": 1562647330000,
             "byline": {
               "name": "அஷ்வனி சர்மா",
               "title": "பிபிசிக்காக",
@@ -1905,7 +1905,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48915148"
             },
             "summary": "தமிழகத்தில் உள்ள சில ஆடை தொழிற்சாலைகளில் பணிபுரியும் பெண்களுக்கு மாதவிடாய் நேரங்களில் வழங்கப்படும் வலி நிவாரண மாத்திரைகளால் ஏற்படும் பக்க விளைவுகள் அவர்களின் உடல்நலத்தில் பாதிப்பினை ஏற்படுத்துகின்றன என கூறப்படுகிறது.",
-            "timestamp": 1562662624,
+            "timestamp": 1562662623000,
             "byline": {
               "name": "அகிலா இளஞ்செழியன்",
               "title": "பிபிசி தமிழ்",
@@ -1956,7 +1956,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48895152"
             },
             "summary": "பிபிசியின் ஃபேஸ்புக் நேரலையில் பட்ஜெட் குறித்த தனது கருத்துக்களை செய்தியாளர் முரளிதரன் காசிவிஸ்வநாதனிடம் பகிர்ந்துகொண்டார் சென்னைப் பல்கலைக்கழகத்தின் பொருளியல் துறை தலைவர் க. ஜோதி சிவஞானம்.",
-            "timestamp": 1562552484,
+            "timestamp": 1562552483000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1998,7 +1998,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48913212"
             },
             "summary": "இதுவரை ஆறு முறை உலகக்கோப்பையில் அரை இறுதிப் போட்டிகளில் விளையாடியுள்ள இந்திய அணி மூன்று முறை வென்றுள்ளது. மூன்று முறை தோல்வியடைந்துள்ளது.",
-            "timestamp": 1562637266,
+            "timestamp": 1562637265000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Summary",
@@ -2056,7 +2056,7 @@
             "uri": "http://www.bbc.com/tamil/specials/1414_cojo_tamil",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1473758624,
+            "timestamp": 1473758623000,
             "type": "link"
           }
         ],
@@ -2091,7 +2091,7 @@
             "uri": "https://www.bbc.com/tamil/india-45383419",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1535823086,
+            "timestamp": 1535823085000,
             "type": "link"
           }
         ],
@@ -2110,7 +2110,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48927567"
             },
             "summary": "''டக்வொர்த் லூயிஸ் ஒரு தோற்றுப்போன அல்காரிதம் என்பதை தற்போதைய சூழல் காட்டுகிறது. 20 ஓவரில் 148 ரன்கள் எடுக்க வேண்டும் என்பதற்கு பதிலாக ரிசர்வ் டே பயன்படுத்தலாமே'' என நிநாட் என்பவர் எழுதியுள்ளார்",
-            "timestamp": 1562689180,
+            "timestamp": 1562689179000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2151,7 +2151,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/global-48921859"
             },
             "summary": "ஆண் கருவை அகற்றியுள்ளதாக மருத்துவர்கள் தெரிவித்திருந்த நிலையில், ஸ்கேன் சோதனை செய்தபோது, இந்த தம்பதி இரட்டை ஆண் குழந்தைகளை பெற்றெடுப்பர் என்று தெரிவித்தபோதே குழப்பம் நடந்துள்ளதற்கான அறிகுறிகள் தோன்றியிருந்தன.",
-            "timestamp": 1562738123,
+            "timestamp": 1562738122000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2192,7 +2192,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-48932721"
             },
             "summary": "``வாழ்வில் ஒரு முறை மேற்கொள்ளும் பயணம், வாழ்வை மாற்றக் கூடிய பயணம்'' என்று அனுபம் கூறினார். ``பல புதிய விஷயங்களை நாங்கள் கற்றுக் கொண்டோம். வாழ்க்கையை எப்படி முன்னெடுத்துச் செல்வது என்பது பற்றியும் தெரிந்து கொண்டோம்'' என்றார் அவர்.",
-            "timestamp": 1562729556,
+            "timestamp": 1562729555000,
             "byline": {
               "name": "ஆடம் வில்லியம்ஸ்",
               "title": "பிபிசி விளையாட்டு",
@@ -2243,7 +2243,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/india-48600166"
             },
             "summary": "மரண தண்டனைக்கு உள்ளானவர்களின் குடும்ப உறுப்பினர்கள் குறிப்பாக குழந்தைகள் உட்பட இந்த மரண தண்டனையை பார்க்க நிர்பந்திக்கப்பட்டதாக இந்த அறிக்கை விவரிக்கிறது.",
-            "timestamp": 1560270683,
+            "timestamp": 1560270682000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2284,7 +2284,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:tamil/arts-and-culture-48593281"
             },
             "summary": "எம்.ஜி.ஆர், சிவாஜி, எஸ்.எஸ், ராஜேந்திரன், வி.கே.ராமசாமி, மேஜர் சுந்தர்ராஜன் போன்ற ஆளுமைகள் நிர்வாகிகளாக இருந்த பெருமைக்கு உரியது தென்னிந்திய நடிகர் சங்கம். நடிகர் சங்கத்துக்கு வரும் 23ந்தேதி தேர்தல் நடைபெற இருக்கிறது.",
-            "timestamp": 1560269707,
+            "timestamp": 1560269706000,
             "byline": {
               "name": "நா.ரமேஷ் குமார்",
               "title": "பிபிசி தமிழுக்காக",

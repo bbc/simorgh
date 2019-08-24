@@ -5,7 +5,11 @@ const readScenario = require('./readScenario');
 module.exports.asyncValidateDir = dirName => {
   const fileNames = fs.readdirSync(dirName);
 
+  const fileNamesToIgnore = ['liveradio.json'];
+
   return Promise.all(
-    fileNames.map(fileName => readScenario.readScenario(fileName, dirName)),
+    fileNames
+      .filter(fileName => !fileNamesToIgnore.includes(fileName))
+      .map(fileName => readScenario.readScenario(fileName, dirName)),
   );
 };

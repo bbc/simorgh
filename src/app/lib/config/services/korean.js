@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
 const service = {
-  lang: `ko-KO`,
+  lang: `ko`,
   articleAuthor: `https://www.facebook.com/bbcnewskorean`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-korean',
+  atiAnalyticsProducerId: '57',
   brandName: 'BBC News 코리아',
   product: 'BBC News 코리아',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
@@ -28,9 +30,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: '뉴스',
+    currentPage: 'Current page',
+    skipLinkText: '내용으로 건너뛰기',
     error: {
       404: {
         statusCode: '404',
@@ -114,51 +119,59 @@ const service = {
       audio: '오디오',
       photogallery: '이미지 갤러리',
       video: '비디오',
-      bbc_korean_radio: {
-        title: 'BBC 코리아 라디오',
-        subtitle: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
-      },
     },
   },
   brandSVG,
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: '외부 콘텐츠 링크에 대한 본사 정책 보기.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        href: 'https://www.bbc.com/korean/institutional-49283197',
+        text: 'BBC News를 신뢰할 수 있는 이유',
       },
       {
-        href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+        text: '이용 약관',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+        text: '개인정보취급방침',
       },
       {
-        href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+        text: '쿠키정책',
       },
       {
-        href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/korean/institutional-42224941',
+        text: '고객센터',
       },
     ],
-    copyrightText: 'BBC는 외부 인터넷 사이트의 내용에 대한 책임이 없습니다.',
+    copyrightText:
+      'Copyright © 2019 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
   },
   fonts: [],
+  navigation: [
+    {
+      title: '뉴스',
+      url: '/korean',
+    },
+    {
+      title: '비디오',
+      url: '/korean/media/video',
+    },
+    {
+      title: '다운로드',
+      url: '/korean/downloads',
+    },
+    {
+      title: 'TOP 뉴스',
+      url: '/korean/popular/read',
+    },
+  ],
+  timezone: 'Asia/Seoul',
 };
 
 export default service;

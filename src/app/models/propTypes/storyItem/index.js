@@ -1,10 +1,10 @@
 import { shape, string, number } from 'prop-types';
 
 export const storyItemImage = {
-  path: string.isRequired,
-  altText: string.isRequired,
-  height: number.isRequired,
-  width: number.isRequired,
+  path: string,
+  altText: string,
+  height: number,
+  width: number,
 };
 
 export const storyItem = {
@@ -13,8 +13,16 @@ export const storyItem = {
   }),
   locators: shape({
     assetUri: string.isRequired,
-  }).isRequired,
-  summary: string.isRequired,
-  timestamp: number.isRequired,
-  indexImage: shape(storyItemImage).isRequired,
+  }),
+  summary: string,
+  timestamp: number,
+  indexImage: shape(storyItemImage),
+};
+
+export const linkPromo = {
+  name: string.isRequired,
+  url: string.isRequired,
+  summary: string,
+  indexImage: shape(storyItemImage),
+  timestamp: number,
 };

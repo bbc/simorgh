@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { japanese as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Tokyo';
 
 const service = {
-  lang: `ja-JP`,
+  lang: `ja`,
   articleAuthor: `https://www.facebook.com/bbcnewsjapan/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-japanese',
+  atiAnalyticsProducerId: '56',
   brandName: 'BBCニュース',
   product: 'BBCニュース',
   defaultImage:
@@ -29,9 +31,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'ホーム',
+    currentPage: 'Current page',
+    skipLinkText: 'コンテンツへ移動',
     error: {
       404: {
         statusCode: '404',
@@ -152,9 +157,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBCは外部サイトの内容に責任を負いません',
+    copyrightText: 'BBC。BBCは外部サイトの内容に責任を負いません',
   },
   fonts: [],
+  timezone: 'Asia/Tokyo',
 };
 
 export default service;

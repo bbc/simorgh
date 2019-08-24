@@ -1,5 +1,5 @@
 const servicesWithRadioOrTv = {
-  afaanoromoo: ['bbc_oromo_radio'], // how to handle vanity URL of bbc_afaanoromoo_radio ?
+  afaanoromoo: ['bbc_oromo_radio', 'bbc_afaanoromoo_radio'],
   afrique: ['bbc_afrique_radio', 'bbc_afrique_tv'],
   amharic: ['bbc_amharic_radio'],
   arabic: ['bbc_arabic_radio'],

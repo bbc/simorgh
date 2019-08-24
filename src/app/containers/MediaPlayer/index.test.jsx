@@ -1,128 +1,96 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shouldShallowMatchSnapshot, isNull } from '../../../testHelpers';
-import {
-  NoData,
-  NoAresMedia,
-  VideoClipGlobalWithCaption,
-  VideoClipGlobalWithoutCaption,
-  VideoClipGlobalPortrait,
-  VideoClipUkWithGuidance,
-  VideoClipNonUk,
-  AudioClipGlobalGuidanceWithCaption,
-  AudioClipUk,
-  AudioClipNonUk,
-} from './helpers/fixtureData';
+import { string, shape, node } from 'prop-types';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import MediaPlayerContainer from '.';
-import { videoClipGlobalGuidanceBlock } from './helpers/fixtures';
-import * as gridComponents from '../../lib/styledGrid';
 import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { ToggleContext } from '../../contexts/ToggleContext';
+import { validVideoFixture, missingVpidFixture } from './helpers/fixtures';
+
+const defaultToggles = {
+  test: {
+    mediaPlayer: {
+      enabled: true,
+    },
+  },
+  live: {
+    mediaPlayer: {
+      enabled: false,
+    },
+  },
+};
+
+const mockToggleDispatch = jest.fn();
+const ContextWrapper = ({ platform, children, toggleState }) => (
+  <RequestContextProvider
+    isAmp={platform === 'amp'}
+    service="news"
+    platform={platform}
+    id="foo"
+    pageType="article"
+  >
+    <ToggleContext.Provider
+      value={{ toggleState, toggleDispatch: mockToggleDispatch }}
+    >
+      {children}
+    </ToggleContext.Provider>
+  </RequestContextProvider>
+);
+
+ContextWrapper.propTypes = {
+  children: node.isRequired,
+  platform: string.isRequired,
+  toggleState: shape({}),
+};
+
+ContextWrapper.defaultProps = {
+  toggleState: defaultToggles,
+};
 
 describe('MediaPlayer', () => {
-  describe('with no data', () => {
-    isNull('canonical - should render null', NoData({ platform: 'canonical' }));
-    isNull('amp - should render null', NoData({ platform: 'amp' }));
-  });
-
-  describe('with no aresMedia block', () => {
-    isNull(
-      'canonical - should render null',
-      NoAresMedia({ platform: 'canonical' }),
-    );
-    isNull('amp - should render null', NoAresMedia({ platform: 'amp' }));
-  });
-
-  describe('with Video data', () => {
-    it('should render', () => {
-      const mockGridItem = jest.fn().mockReturnValue('whatever');
-      gridComponents.GridItemConstrainedLargeNoMargin = mockGridItem;
-
-      renderer.create(
-        <RequestContextProvider isAmp>
-          <ToggleContextProvider>
-            <MediaPlayerContainer blocks={[videoClipGlobalGuidanceBlock]} />
-          </ToggleContextProvider>
-        </RequestContextProvider>,
-      );
-
-      expect(mockGridItem).toHaveBeenCalledTimes(1);
-    });
-
-    shouldShallowMatchSnapshot(
-      'canonical - should render the video without a caption',
-      VideoClipGlobalWithoutCaption({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render the video without a caption',
-      VideoClipGlobalWithoutCaption({ platform: 'amp' }),
+  describe('is called correctly', () => {
+    shouldMatchSnapshot(
+      'Calls the canonical placeholder when platform is canonical',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
     );
 
-    shouldShallowMatchSnapshot(
-      'canonical - should render portrait video with global visibility',
-      VideoClipGlobalPortrait({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render portrait video with global visibility',
-      VideoClipGlobalPortrait({ platform: 'amp' }),
+    shouldMatchSnapshot(
+      'Calls the canonical player when platform is canonical and placeholder is false',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={validVideoFixture} placeholder={false} />
+      </ContextWrapper>,
     );
 
-    shouldShallowMatchSnapshot(
-      'canonical - should render the video without a caption',
-      VideoClipUkWithGuidance({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render the video without a caption',
-      VideoClipUkWithGuidance({ platform: 'amp' }),
-    );
-
-    shouldShallowMatchSnapshot(
-      'canonical - should render the video without a caption',
-      VideoClipNonUk({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render the video without a caption',
-      VideoClipNonUk({ platform: 'amp' }),
+    shouldMatchSnapshot(
+      'Calls the AMP player when platform is AMP',
+      <ContextWrapper platform="amp">
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
     );
   });
 
-  describe('with Video data and a caption', () => {
-    shouldShallowMatchSnapshot(
-      'canonical - should render the video and caption',
-      VideoClipGlobalWithCaption({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render the video and caption',
-      VideoClipGlobalWithCaption({ platform: 'amp' }),
-    );
-  });
-
-  describe('with Audio data', () => {
-    shouldShallowMatchSnapshot(
-      'canonical - should render audio clip global with guidance and caption',
-      AudioClipGlobalGuidanceWithCaption({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render audio clip global with guidance and caption',
-      AudioClipGlobalGuidanceWithCaption({ platform: 'amp' }),
+  describe('Fails and returns early when', () => {
+    shouldMatchSnapshot(
+      'there is no versionId',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={missingVpidFixture} />
+      </ContextWrapper>,
     );
 
-    shouldShallowMatchSnapshot(
-      'canonical - should render audio clip UK only',
-      AudioClipUk({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render audio clip UK only',
-      AudioClipUk({ platform: 'amp' }),
-    );
+    const toggleState = {
+      test: {
+        mediaPlayer: {
+          enabled: false,
+        },
+      },
+    };
 
-    shouldShallowMatchSnapshot(
-      'canonical - should render audio clip non-UK only',
-      AudioClipNonUk({ platform: 'canonical' }),
-    );
-    shouldShallowMatchSnapshot(
-      'amp - should render audio clip non-UK only',
-      AudioClipNonUk({ platform: 'amp' }),
+    shouldMatchSnapshot(
+      'component is toggled off',
+      <ContextWrapper platform="canonical" toggleState={toggleState}>
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
     );
   });
 });

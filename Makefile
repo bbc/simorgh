@@ -3,19 +3,22 @@ none:
 
 install:
 	npm --version; node --version;
-	npm ci;
-
-installProd:
 	rm -rf node_modules
-	npm ci --only=production
+	npm ci;
 
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
-	xvfb-run npm run test:e2e:storybook:ci;
+	npm run test:chromatic
 
 productionTests:
 	npm run build && xvfb-run npm run test:prod:ci;
+
+testE2Es:
+	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
+
+liveE2Es:
+	CYPRESS_SMOKE=false CYPRESS_APP_ENV=live npm run cypress
 
 buildStorybook:
 	npm run build:storybook;

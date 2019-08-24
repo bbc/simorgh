@@ -1,4 +1,5 @@
 import getEnv from '.';
+import { localBaseUrl } from '../../../../testHelpers/config';
 
 const tests = [
   {
@@ -17,7 +18,7 @@ const tests = [
     assertion: 'should return expected output for test',
   },
   {
-    input: 'http://localhost.bbc.com:7080',
+    input: localBaseUrl,
     expected: 'local',
     assertion: 'should return expected output for local',
   },

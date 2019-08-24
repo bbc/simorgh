@@ -7,10 +7,10 @@ import {
 } from './fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-storiesOf('ImageWithPlaceholder', module)
+storiesOf('Containers|Image with Placeholder/Canonical', module)
   .add('default', () => <ImageWithPlaceholder />)
   .add('with a lazyloaded image', () => <LazyLoadImageWithPlaceholder />);
 
-storiesOf('ImageWithPlaceholder - AMP', module)
+storiesOf('Containers|Image with Placeholder/AMP', module)
   .addDecorator(AmpDecorator)
   .add('default', () => <AmpImageWithPlaceholder />);

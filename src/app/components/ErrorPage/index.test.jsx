@@ -13,15 +13,19 @@ describe('ErrorMain', () => {
     callToActionLinkText: 'this',
     callToActionLinkUrl: 'https://www.bbc.com',
     callToActionLast: ' thing',
+    service: 'news',
   };
 
   shouldMatchSnapshot(
     'should correctly render for an error page for News',
-    <ErrorMain {...messaging} script={latin} />,
+    <ErrorMain {...messaging} script={latin} service="news" />,
   );
 
-  shouldMatchSnapshot(
-    'should correctly render for an error page for Persian',
-    <ErrorMain {...messaging} script={arabic} />,
-  );
+  const arabicServices = ['persian', 'arabic', 'pashto', 'urdu'];
+  arabicServices.forEach(service => {
+    shouldMatchSnapshot(
+      `should correctly render for an error page for ${service}`,
+      <ErrorMain {...messaging} script={arabic} service={service} />,
+    );
+  });
 });

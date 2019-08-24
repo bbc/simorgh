@@ -1,19 +1,30 @@
-import config from '../../../src/app/lib/config/services';
-import { describeForLocalOnly } from '../../support/limitEnvRuns';
+import config from '../../support/config/services';
 
-describeForLocalOnly('Application', () => {
+const serviceHasPageType = (service, pageType) =>
+  config[service].pageTypes[pageType].path !== undefined;
+
+describe('Application', () => {
   Object.keys(config)
-    .filter(service => service !== 'default')
+    .filter(service => service !== 'news')
+    .filter(service =>
+      Object.keys(config[service].pageTypes).some(pageType =>
+        serviceHasPageType(service, pageType),
+      ),
+    )
     .forEach(service => {
-      if (service === 'default') {
-        return;
-      }
-      // All services test sws
       it(`should return a 200 status code for ${service}'s service worker`, () => {
         cy.testResponseCodeAndType(
           `/${service}/sw.js`,
           200,
           'application/javascript',
+        );
+      });
+
+      it(`should return a 200 status code for ${service} manifest file`, () => {
+        cy.testResponseCodeAndType(
+          `/${service}/manifest.json`,
+          200,
+          'application/json',
         );
       });
     });
@@ -26,16 +37,5 @@ describe('Application', () => {
       200,
       'application/javascript',
     );
-  });
-
-  // Once all manifest are done this should be move into the object forEach above
-  ['igbo', 'news/articles', 'pidgin', 'yoruba'].forEach(service => {
-    it(`should return a 200 status code for ${service} manifest file`, () => {
-      cy.testResponseCodeAndType(
-        `/${service}/manifest.json`,
-        200,
-        'application/json',
-      );
-    });
   });
 });

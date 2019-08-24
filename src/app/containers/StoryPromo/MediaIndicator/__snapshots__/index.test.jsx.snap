@@ -4,21 +4,43 @@ exports[`Story Promo Media Indicator should not render if item media object has 
 <MediaIndicator
   datetime="PT1H33M20S"
   duration="1:33:20"
-  offscreenText={null}
+  indexAlsos={false}
   service="news"
   topStory={false}
   type={null}
 />
 `;
 
-exports[`Story Promo Media Indicator should render correctly 1`] = `
+exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
+<MediaIndicator
+  datetime={null}
+  duration={null}
+  indexAlsos={false}
+  service="news"
+  topStory={false}
+  type="photogallery"
+/>
+`;
+
+exports[`Story Promo Media Indicator should render a video item correctly 1`] = `
 <MediaIndicator
   datetime="PT1H33M20S"
   duration="1:33:20"
-  offscreenText={null}
+  indexAlsos={false}
   service="news"
   topStory={false}
   type="video"
+/>
+`;
+
+exports[`Story Promo Media Indicator should render an audio item correctly 1`] = `
+<MediaIndicator
+  datetime="PT59S"
+  duration="0:59"
+  indexAlsos={false}
+  service="news"
+  topStory={false}
+  type="audio"
 />
 `;
 
@@ -26,7 +48,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 <MediaIndicator
   datetime={null}
   duration={null}
-  offscreenText={null}
+  indexAlsos={false}
   service="news"
   topStory={false}
   type="video"

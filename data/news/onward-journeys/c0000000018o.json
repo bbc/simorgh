@@ -9,7 +9,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "f6ae837d-812a-4636-a56a-7734517fc349",
         "type": "image",
@@ -37,7 +37,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534767877,
+      "timestamp": 1534767876000,
       "image": {
         "blockId": "ec147190-5026-4e6d-8950-f1f519086796",
         "type": "image",
@@ -65,7 +65,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "4f119d7a-8225-4acf-9d67-2554867ae7f0",
         "type": "image",
@@ -93,7 +93,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534766842,
+      "timestamp": 1534766841000,
       "image": {
         "blockId": "cc56f10a-30f9-4c1d-8851-387fa002ca61",
         "type": "image",
@@ -121,7 +121,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "d9c8a256-d11f-4fbe-800d-4ebac3a4c8cf",
         "type": "image",
@@ -149,7 +149,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "a0ee45c4-3841-4b88-a158-5ddf58536eb6",
         "type": "image",
@@ -177,7 +177,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "c2b65a68-7856-4c1a-9882-5b76ab0f3cea",
         "type": "image",
@@ -205,7 +205,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534764954,
+      "timestamp": 1534764953000,
       "image": {
         "blockId": "6415f6ef-e855-4875-a1e6-5b701ea267f2",
         "type": "image",
@@ -233,7 +233,7 @@
       "locators": {
         "uri": "/news/entertainment-arts-45168010"
       },
-      "timestamp": 1534768198,
+      "timestamp": 1534768197000,
       "image": {
         "blockId": "db9cc69a-faa3-4cab-80ca-952e19e13cdf",
         "type": "image",
@@ -261,7 +261,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534768459,
+      "timestamp": 1534768458000,
       "image": {
         "blockId": "4f5798fd-3a36-4d5e-b7fc-69b97e08abb5",
         "type": "image",

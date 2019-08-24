@@ -10,7 +10,7 @@ import {
   square,
 } from './helpers/fixtureData';
 
-storiesOf('Image container within grid', module)
+storiesOf('Containers|Image within grid', module)
   .add('landscape image', () => (
     <Grid>
       <ImageContainer {...imageData(landscape)} />

@@ -17,6 +17,7 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     datetimeLocale,
     script,
     service,
+    timezone,
   } = useContext(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
@@ -27,6 +28,8 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     dateTimeFormat: formatDateNumeric,
     script,
     locale: datetimeLocale,
+    service,
+    timezone,
   };
 
   const firstPublishedProps = {
@@ -44,17 +47,9 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
 
   return (
     <PopOutGridItemMedium>
-      <Timestamp
-        {...timestampProps}
-        {...firstPublishedProps}
-        service={service}
-      />
+      <Timestamp {...timestampProps} {...firstPublishedProps} />
       {firstPublished !== lastPublished && (
-        <Timestamp
-          {...timestampProps}
-          {...lastPublishedProps}
-          service={service}
-        />
+        <Timestamp {...timestampProps} {...lastPublishedProps} />
       )}
     </PopOutGridItemMedium>
   );

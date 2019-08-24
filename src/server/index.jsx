@@ -16,6 +16,7 @@ import {
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
   mediaRadioAndTvRegexPathsArray,
+  mediaDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
@@ -77,17 +78,16 @@ if (process.env.APP_ENV !== 'local') {
 /*
  * Local env routes - fixture data
  */
+const sendDataFile = (res, dataFilePath, next) => {
+  res.sendFile(dataFilePath, {}, sendErr => {
+    if (sendErr) {
+      logger.error(sendErr);
+      next(sendErr);
+    }
+  });
+};
 
 if (process.env.APP_ENV === 'local') {
-  const sendDataFile = (res, dataFilePath, next) => {
-    res.sendFile(dataFilePath, {}, sendErr => {
-      if (sendErr) {
-        logger.error(sendErr);
-        next(sendErr);
-      }
-    });
-  };
-
   server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)
@@ -122,6 +122,22 @@ if (process.env.APP_ENV === 'local') {
     });
 }
 
+if (['local', 'test'].includes(process.env.APP_ENV)) {
+  server.get(mediaDataRegexPath, async ({ params }, res, next) => {
+    const { service, serviceId, mediaId } = params;
+
+    const dataFilePath = path.join(
+      process.cwd(),
+      'data',
+      service,
+      serviceId,
+      mediaId,
+    );
+
+    sendDataFile(res, `${dataFilePath}.json`, next);
+  });
+}
+
 /*
  * Application env routes
  */
@@ -151,7 +167,7 @@ server
   )
   .get(
     [articleRegexPath, frontpageRegexPath, ...mediaRadioAndTvRegexPathsArray],
-    async ({ url, headers }, res) => {
+    async ({ url, headers, path: urlPath }, res) => {
       try {
         const { service, isAmp, route, match } = getRouteProps(routes, url);
         const data = await route.getInitialData(match.params);
@@ -166,6 +182,7 @@ server
         }
         // Preserve initial dial state in window so it is available during hydration
         data.dials = dials;
+        data.path = urlPath;
 
         res.status(status).send(
           await renderDocument({

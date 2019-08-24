@@ -1,10 +1,13 @@
 import Cookie from 'js-cookie';
 import onClient from '../../utilities/onClient';
+import { getPromoHeadline } from '../article';
+import { getPageTitle } from '../frontpage';
 
 const ID_COOKIE = 'ckns_sylphid';
 
 export const chartbeatUID = 50924;
 export const useCanonical = true;
+export const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
 
 const buildSectionArr = (service, value, type) => [
   `${service} - ${value}`,
@@ -49,4 +52,16 @@ export const buildSections = (service, type, producer, chapter) => {
   ];
 
   return parts.join(', ');
+};
+
+export const getTitle = (pageType, pageData, brandName) => {
+  switch (pageType) {
+    case 'frontPage':
+    case 'index':
+      return getPageTitle(pageData, brandName);
+    case 'article':
+      return getPromoHeadline(pageData);
+    default:
+      return null;
+  }
 };

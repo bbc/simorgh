@@ -1,11 +1,16 @@
-// TODO: get real data once fixtures are available
-// https://github.com/bbc/simorgh/issues/2493
-const getMediaPageInitialData = ({ service }) => {
-  return Promise.resolve({
-    status: 200,
-    service,
-    pageData: {},
-  });
+import fetchData from '../utils/fetchData';
+
+const getMediaPageInitialData = props => {
+  const { service, mediaId } = props;
+  let { serviceId } = props;
+
+  if (serviceId === 'bbc_oromo_radio') {
+    serviceId = 'bbc_afaanoromo_radio';
+  }
+
+  const url = `http://localhost:7080/${service}/${serviceId}/${mediaId}.json`;
+
+  return fetchData({ url });
 };
 
 export default getMediaPageInitialData;

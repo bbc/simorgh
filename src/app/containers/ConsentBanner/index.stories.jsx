@@ -10,9 +10,11 @@ const getConsentBanner = platform => (
     <RequestContextProvider
       platform={platform}
       isUK
+      isAmp={platform === 'amp'}
       origin="https://www.bbc.co.uk"
       pageType="article"
       id="c0000000000o"
+      service="news"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
     >
@@ -23,10 +25,10 @@ const getConsentBanner = platform => (
   </ServiceContextProvider>
 );
 
-storiesOf('ConsentBanner Container', module)
+storiesOf('Containers|Consent Banner/', module)
   .addDecorator(AmpDecorator)
   .add('amp', () => getConsentBanner('amp'));
 
-storiesOf('ConsentBanner Container', module).add('canonical', () =>
+storiesOf('Containers|Consent Banner/', module).add('canonical', () =>
   getConsentBanner('canonical'),
 );

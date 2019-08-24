@@ -595,7 +595,7 @@ exports[`Styled Grid items GridItemConstrainedLargeNoMargin should pop out of gr
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 3 / span 3;
+    grid-column: 2 / span 4;
     max-width: 38.5rem;
   }
 }

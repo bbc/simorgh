@@ -16,7 +16,6 @@ const Blocks = ({ blocks, componentsToRender }) =>
     }
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
-
     return (
       <Block
         key={id}

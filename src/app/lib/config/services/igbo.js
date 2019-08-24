@@ -2,12 +2,15 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
+import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const igbo = {
   lang: 'ig',
   product: 'BBC News',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-igbo',
+  atiAnalyticsProducerId: '53',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
   isoLang: 'ig',
@@ -33,6 +36,9 @@ const igbo = {
     currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
     error: {
+      home: 'Akụkọ',
+      currentPage: 'Current page',
+      skipLinkText: 'Wụga n’ọdịnaya',
       404: {
         statusCode: '404',
         title: 'Ahụghị ibe akwụkwọ a',
@@ -170,6 +176,7 @@ const igbo = {
     copyrightText:
       'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
   },
+  timezone: 'Africa/Lagos',
 };
 
 export default igbo;

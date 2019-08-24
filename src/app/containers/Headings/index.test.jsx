@@ -4,11 +4,15 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import HeadingsContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { textBlock } from '../../models/blocks';
-import { shouldMatchSnapshot, isNull } from '../../../testHelpers';
+import {
+  shouldMatchSnapshot,
+  isNull,
+  suppressPropWarnings,
+} from '../../../testHelpers';
 import blocksSingleFragment from './testHelpers';
 
 const HeadingsContainerWithContext = data => (
-  <ServiceContext.Provider value={{ script: latin }}>
+  <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
     <HeadingsContainer {...data} />
   </ServiceContext.Provider>
 );
@@ -17,15 +21,18 @@ const getId = enzymeWrapper => enzymeWrapper[0].children[0].attribs.id;
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {
+    id: '12398083',
     type: 'text',
     model: {
       blocks: [
         {
+          id: '98239082',
           type: 'paragraph',
           model: {
             text: text1 + text2Italic + text3,
             blocks: [
               {
+                id: '23048106',
                 type: 'fragment',
                 model: {
                   text: text1,
@@ -33,6 +40,7 @@ const textItalicFragmentPart = (text1, text2Italic, text3) => [
                 },
               },
               {
+                id: '82892194',
                 type: 'fragment',
                 model: {
                   text: text2Italic,
@@ -40,6 +48,7 @@ const textItalicFragmentPart = (text1, text2Italic, text3) => [
                 },
               },
               {
+                id: '34219424',
                 type: 'fragment',
                 model: {
                   text: text3,
@@ -69,7 +78,9 @@ const template = (title, text, type) => {
 
 describe('Headings', () => {
   describe('with no data', () => {
-    isNull('should not render anything', HeadingsContainerWithContext);
+    suppressPropWarnings(['type', 'undefined']);
+    suppressPropWarnings(['blocks', 'supplied']);
+    isNull('should not render anything', HeadingsContainerWithContext());
   });
 
   template('with headline data', 'This is a headline!', 'headline');
@@ -87,9 +98,9 @@ describe('Headings', () => {
         HeadingsContainerWithContext(data),
       );
 
-      it('should not have an id', () => {
-        const headlineHeading = render(<HeadingsContainer {...data} />);
-        expect(getId(headlineHeading)).toBe(undefined);
+      it('should have an id for the skiplink with value "content"', () => {
+        const headlineHeading = render(HeadingsContainerWithContext(data));
+        expect(getId(headlineHeading)).toBe('content');
       });
     });
 
@@ -101,11 +112,11 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h2 containing correct text',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
 
       it('should have an id of sanitised text', () => {
-        const subheadlineHeading = render(<HeadingsContainer {...data} />);
+        const subheadlineHeading = render(HeadingsContainerWithContext(data));
         expect(getId(subheadlineHeading)).toBe('Plain-subheadline');
       });
     });
@@ -120,7 +131,7 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h1 with <i> tag',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
     });
 
@@ -132,7 +143,7 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h1 with <b> tag',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
     });
 
@@ -147,7 +158,7 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h1 with <i><b> tags',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
     });
 
@@ -162,7 +173,7 @@ describe('Headings', () => {
 
       shouldMatchSnapshot(
         'should render h1 with <b><i> tags',
-        <HeadingsContainer {...data} />,
+        HeadingsContainerWithContext(data),
       );
     });
 
@@ -175,7 +186,7 @@ describe('Headings', () => {
 
         shouldMatchSnapshot(
           'should render correctly',
-          <HeadingsContainer {...data} />,
+          HeadingsContainerWithContext(data),
         );
       });
     });

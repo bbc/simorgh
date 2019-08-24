@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `uz-UZ`,
+  lang: `uz-Cyrl`,
   articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-uzbek',
+  atiAnalyticsProducerId: '96',
   brandName: "BBC News O'zbek",
   product: "BBC News O'zbek",
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
@@ -28,9 +30,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'Бош саҳифа',
+    currentPage: 'Current page',
+    skipLinkText: 'Саҳифага ўтиш',
     error: {
       404: {
         statusCode: '404',
@@ -161,9 +166,10 @@ const service = {
         text: 'Contact the BBC',
       },
     ],
-    copyrightText: 'BBC ташқи интернет саҳифалар учун масъул эмас',
+    copyrightText: 'BBC. BBC ташқи интернет саҳифалар учун масъул эмас',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

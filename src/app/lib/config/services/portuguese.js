@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
 
 const service = {
   lang: `pt-BR`,
   articleAuthor: `https://www.facebook.com/bbcbrasil`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-portuguese',
+  atiAnalyticsProducerId: '33',
   brandName: 'BBC News Brasil',
   product: 'BBC News Brasil',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/brasil.png',
@@ -28,9 +30,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'Notícias',
+    currentPage: 'Current page',
+    skipLinkText: 'Ir para o conteúdo',
     error: {
       404: {
         statusCode: '404',
@@ -153,9 +158,10 @@ const service = {
       },
     ],
     copyrightText:
-      'A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
+      'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
   },
   fonts: [],
+  timezone: 'America/Sao_Paulo',
 };
 
 export default service;

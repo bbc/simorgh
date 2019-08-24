@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { number, oneOf, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -42,7 +42,7 @@ const ErrorMain = ({ status }) => {
   const messaging = translations.error[status] || translations.error[500];
 
   return (
-    <Fragment>
+    <>
       <ErrorMetadata
         brandName={brandName}
         dir={dir}
@@ -51,7 +51,7 @@ const ErrorMain = ({ status }) => {
         themeColor={themeColor}
       />
       <ErrorPageComponent {...messaging} script={script} service={service} />
-    </Fragment>
+    </>
   );
 };
 
