@@ -116,6 +116,7 @@
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
     "morgan": "^1.9.1",
+    "ora": "^3.4.0",
     "path-to-regexp": "^3.0.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "ramda": "^0.26.1",
