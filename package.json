@@ -134,7 +134,6 @@
     "moment-timezone": "^0.5.26",
     "moment-timezone-data-webpack-plugin": "^1.1.0",
     "morgan": "^1.9.1",
-    "ora": "^3.4.0",
     "path-to-regexp": "^3.0.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "prop-types": "^15.6.2",
