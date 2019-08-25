@@ -1,13 +1,15 @@
-import React, { Fragment, useContext } from 'react';
-import { shape, bool } from 'prop-types';
+import React, { useContext } from 'react';
+import { shape, bool, string, element, oneOfType } from 'prop-types';
 import StoryPromoComponent, {
   Headline,
   Summary,
   Link,
+  LiveLabel,
 } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
-import { storyItem } from '../../models/propTypes/storyItem';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { storyItem, linkPromo } from '../../models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -68,31 +70,63 @@ StoryPromoImage.defaultProps = {
   }),
 };
 
-const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
-  const { script, datetimeLocale, service } = useContext(ServiceContext);
-  const headline = pathOr(null, ['headlines', 'headline'], item);
-  const url = pathOr(null, ['locators', 'assetUri'], item);
-  const summary = pathOr(null, ['summary'], item);
-  let timestamp = pathOr(null, ['timestamp'], item);
+const LiveComponent = ({ headline, service, dir }) => (
+  // eslint-disable-next-line jsx-a11y/aria-role
+  <span role="text">
+    <LiveLabel service={service} dir={dir}>
+      LIVE
+    </LiveLabel>
+    <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
+    {headline}
+  </span>
+);
 
-  if (new Date(timestamp).getFullYear() < 1980) {
-    // if the date is before 1980, our timestamp was probably in seconds.
-    // this fixes an ares bug - ARES-758 on JIRA.
-    // if you come across this in the future, please check if it's no longer needed
-    // if so, delete this!
-    timestamp *= 1000;
+LiveComponent.propTypes = {
+  service: string.isRequired,
+  dir: string.isRequired,
+  headline: element.isRequired,
+};
+
+const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
+  const { script, datetimeLocale, service, timezone, dir } = useContext(
+    ServiceContext,
+  );
+  const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
+  let headline;
+  let url;
+  let isLive;
+
+  if (isAssetTypeCode !== null) {
+    headline = pathOr(null, ['name'], item);
+    url = pathOr(null, ['uri'], item);
+  } else {
+    headline = pathOr(null, ['headlines', 'headline'], item);
+    url = pathOr(null, ['locators', 'assetUri'], item);
+    isLive = pathOr(null, ['cpsType'], item) === 'LIV';
   }
+
+  const summary = pathOr(null, ['summary'], item);
+  const timestamp = pathOr(null, ['timestamp'], item);
+  const linkcontents = <LinkContents item={item} />;
 
   if (!headline || !url) {
     return null;
   }
 
   const Info = (
-    <Fragment>
+    <>
       {headline && (
         <Headline script={script} service={service} topStory={topStory}>
           <Link href={url}>
-            <LinkContents item={item} />
+            {isLive ? (
+              <LiveComponent
+                service={service}
+                headline={linkcontents}
+                dir={dir}
+              />
+            ) : (
+              linkcontents
+            )}
           </Link>
         </Headline>
       )}
@@ -106,14 +140,15 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           locale={datetimeLocale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
-          format="D MMMM YYYY"
+          format="LL"
           script={script}
           padding={false}
           service={service}
+          timezone={timezone}
           isRelative={isTenHoursAgo(timestamp)}
         />
       )}
-    </Fragment>
+    </>
   );
 
   const imageValues = pathOr(null, ['indexImage'], item);
@@ -138,7 +173,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
 };
 
 StoryPromo.propTypes = {
-  item: shape(storyItem).isRequired,
+  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   lazyLoadImage: bool,
   topStory: bool,
 };

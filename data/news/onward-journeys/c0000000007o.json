@@ -11,7 +11,7 @@
           "locators": {
             "uri": "/news/uk-scotland-scotland-business-45238735"
           },
-          "timestamp": 1534679634,
+          "timestamp": 1534679633000,
           "image": {
             "blockId": "98e0205b-f60c-4432-98f5-d2c1438624d8",
             "type": "image",
@@ -48,7 +48,7 @@
           "locators": {
             "uri": "/news/uk-england-merseyside-44439553"
           },
-          "timestamp": 1528979008,
+          "timestamp": 1528979007000,
           "image": {
             "blockId": "e7dd2732-b372-43cf-ad57-5ed586dca913",
             "type": "image",
@@ -76,7 +76,7 @@
           "locators": {
             "uri": "/news/uk-45038649"
           },
-          "timestamp": 1533168727,
+          "timestamp": 1533168726000,
           "image": {
             "blockId": "3863b4b9-7fd0-44d2-bb08-5a0ad167b6d0",
             "type": "image",
@@ -104,7 +104,7 @@
           "locators": {
             "uri": "/news/uk-england-london-44862008"
           },
-          "timestamp": 1531839355,
+          "timestamp": 1531839354000,
           "image": {
             "blockId": "1eb5ac61-91f1-4926-9e2e-effd74dcabfe",
             "type": "image",
@@ -132,7 +132,7 @@
           "locators": {
             "uri": "/news/uk-44832931"
           },
-          "timestamp": 1531575203,
+          "timestamp": 1531575202000,
           "image": {
             "blockId": "81cbd873-8fff-4951-afce-c4e914530c14",
             "type": "image",
@@ -160,7 +160,7 @@
           "locators": {
             "uri": "/news/world-europe-44793556"
           },
-          "timestamp": 1531318651,
+          "timestamp": 1531318650000,
           "image": {
             "blockId": "7d0ea295-8a73-4912-94c1-be2d89569836",
             "type": "image",
@@ -188,7 +188,7 @@
           "locators": {
             "uri": "/news/newsbeat-44780698"
           },
-          "timestamp": 1531267228,
+          "timestamp": 1531267227000,
           "image": {
             "blockId": "fc28e32e-2c95-4494-b656-cd783d09ab8b",
             "type": "image",
@@ -223,7 +223,7 @@
           "locators": {
             "uri": "/news/uk-scotland-scotland-business-45238735"
           },
-          "timestamp": 1534679634,
+          "timestamp": 1534679633000,
           "image": {
             "blockId": "98e0205b-f60c-4432-98f5-d2c1438624d8",
             "type": "image",
@@ -251,7 +251,7 @@
           "locators": {
             "uri": "/news/uk-scotland-south-scotland-45245798"
           },
-          "timestamp": 1534762867,
+          "timestamp": 1534762866000,
           "image": {
             "blockId": "b7fded8e-429d-4c4f-932e-9c3b9bb9f583",
             "type": "image",
@@ -279,7 +279,7 @@
           "locators": {
             "uri": "/news/uk-scotland-tayside-central-45246809"
           },
-          "timestamp": 1534761813,
+          "timestamp": 1534761812000,
           "image": {
             "blockId": "d136a625-a27a-4cc3-97d2-19ba5cfc504e",
             "type": "image",
@@ -307,7 +307,7 @@
           "locators": {
             "uri": "/news/uk-scotland-highlands-islands-45246171"
           },
-          "timestamp": 1534761617,
+          "timestamp": 1534761616000,
           "image": {
             "blockId": "20f6a85a-abd4-49b1-9799-ae53fbe13c4c",
             "type": "image",
@@ -335,7 +335,7 @@
           "locators": {
             "uri": "/sport/football/45246215"
           },
-          "timestamp": 1534760870,
+          "timestamp": 1534760869000,
           "image": {
             "blockId": "867f5e21-b183-45eb-8b9a-01a485e5dd83",
             "type": "image",
@@ -363,7 +363,7 @@
           "locators": {
             "uri": "/news/uk-scotland-edinburgh-east-fife-45247059"
           },
-          "timestamp": 1534759852,
+          "timestamp": 1534759851000,
           "image": {
             "blockId": "a8f2f3fd-87b9-47f2-8007-2e783c507b87",
             "type": "image",
@@ -398,7 +398,7 @@
           "locators": {
             "uri": "/news/uk-wales-45030422"
           },
-          "timestamp": 1533128253,
+          "timestamp": 1533128252000,
           "image": {
             "blockId": "f1706be3-3b78-4696-90e3-a2501fc6cb56",
             "type": "image",
@@ -426,7 +426,7 @@
           "locators": {
             "uri": "/news/uk-england-manchester-43125385"
           },
-          "timestamp": 1519129846,
+          "timestamp": 1519129845000,
           "image": {
             "blockId": "78f5b643-2f1c-41b0-a02f-a420c570f947",
             "type": "image",
@@ -461,7 +461,7 @@
           "locators": {
             "uri": "/sport/football/45152922"
           },
-          "timestamp": 1534611473,
+          "timestamp": 1534611472000,
           "image": {
             "blockId": "e5a1274b-cc66-4e4c-87fb-a979a162e8a6",
             "type": "image",
@@ -489,7 +489,7 @@
           "locators": {
             "uri": "/sport/football/45152985"
           },
-          "timestamp": 1534611055,
+          "timestamp": 1534611054000,
           "image": {
             "blockId": "6abaf432-2711-466e-b110-51a79024dbae",
             "type": "image",
@@ -517,7 +517,7 @@
           "locators": {
             "uri": "/sport/football/45159604"
           },
-          "timestamp": 1534695607,
+          "timestamp": 1534695606000,
           "image": {
             "blockId": "bc6dd5a8-8554-446b-874a-00e68ac6abab",
             "type": "image",
@@ -545,7 +545,7 @@
           "locators": {
             "uri": "/news/uk-england-essex-45239204"
           },
-          "timestamp": 1534686739,
+          "timestamp": 1534686738000,
           "image": {
             "blockId": "ee1f8139-8fc5-4771-b644-0f8d0b5976f4",
             "type": "image",
@@ -573,7 +573,7 @@
           "locators": {
             "uri": "/news/uk-england-beds-bucks-herts-45184251"
           },
-          "timestamp": 1534666571,
+          "timestamp": 1534666570000,
           "image": {
             "blockId": "a81af9ad-8517-4c48-af27-7ae749f76492",
             "type": "image",
@@ -601,7 +601,7 @@
           "locators": {
             "uri": "/sport/football/45153300"
           },
-          "timestamp": 1534612913,
+          "timestamp": 1534612912000,
           "image": {
             "blockId": "1ef1ec36-57e0-446e-8d2a-28325fecb2b3",
             "type": "image",
@@ -634,7 +634,7 @@
       "locators": {
         "uri": "/news/business-45244579"
       },
-      "timestamp": 1534755771,
+      "timestamp": 1534755770000,
       "image": {
         "blockId": "82cb4a1f-4511-4c84-92fb-4aa5f0bbc7e9",
         "type": "image",
@@ -662,7 +662,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "c8651eda-96bf-49df-812d-48822c4722af",
         "type": "image",
@@ -690,7 +690,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534762438,
+      "timestamp": 1534762437000,
       "image": {
         "blockId": "e2deecb8-c472-47e1-aa8b-08b47e36e78b",
         "type": "image",
@@ -718,7 +718,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "5ec19281-03e1-4488-af8a-13b77343fc42",
         "type": "image",
@@ -746,7 +746,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "ae110350-6e32-4758-812c-7277c0b5d2ca",
         "type": "image",
@@ -774,7 +774,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534759236,
+      "timestamp": 1534759235000,
       "image": {
         "blockId": "d05b7f4f-612c-4265-a428-60128cebe820",
         "type": "image",
@@ -802,7 +802,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "4f1b8d96-5d4b-4847-beeb-2287b9ed52c5",
         "type": "image",
@@ -830,7 +830,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534762702,
+      "timestamp": 1534762701000,
       "image": {
         "blockId": "ee63fa1d-7c7c-4192-95f7-d09ce0939157",
         "type": "image",
@@ -858,7 +858,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "91e9ef3d-4fb3-4d3e-905e-4e6694df31bf",
         "type": "image",
@@ -886,7 +886,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534759395,
+      "timestamp": 1534759394000,
       "image": {
         "blockId": "fd2b3c9a-0f67-467c-9089-bc871408e458",
         "type": "image",

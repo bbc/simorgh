@@ -1,20 +1,10 @@
-import baseUrl from '../utils/getBaseUrl';
-import onClient from '../../../lib/utilities/onClient';
 import fetchData from '../utils/fetchData';
 
 import getMediaPageInitialData from '.';
 
 const mockData = { service: 'amharic', status: 200, pageData: {} };
 
-process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
-
-const getBaseUrlMockOrigin = 'https://www.getBaseUrl.com';
-jest.mock('../utils/getBaseUrl', () => jest.fn());
-baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
-
-const onClientMockResponse = true;
-jest.mock('../../../lib/utilities/onClient', () => jest.fn());
-onClient.mockImplementation(() => onClientMockResponse);
+const mockBaseUrl = 'http://localhost:7080';
 
 jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => mockData);
@@ -27,7 +17,7 @@ describe('getMediaPageInitialData', () => {
       mediaId: 'liveradio',
     });
     expect(fetchData).toBeCalledWith({
-      url: `${getBaseUrlMockOrigin}/afaanoromo/bbc_afaanoromo_radio/liveradio.json`,
+      url: `${mockBaseUrl}/afaanoromo/bbc_afaanoromo_radio/liveradio.json`,
     });
   });
 

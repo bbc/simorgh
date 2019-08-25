@@ -56,7 +56,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-48959573"
             },
             "summary": "المجلس العسكري الانتقالي في السودان يعلن إحباط \"محاولة انقلابية\" تهدف إلى \"عرقلة الاتفاق\" مع ممثلي المعارضة.",
-            "timestamp": 1562902913,
+            "timestamp": 1562902912000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -96,7 +96,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/middleeast-48901645"
                 },
                 "summary": "وثائقي من بي بي سي عربي يوثق احتجاجات السودان لإسقاط الرئيس عمر البشير وما حدث بعد رحيله من السلطة، الفيلم بعنوان \"السودان: الحديد والنار\".",
-                "timestamp": 1562754477,
+                "timestamp": 1562754476000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/middleeast-48901645",
                 "type": "cps"
@@ -110,7 +110,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-48934531"
                 },
                 "summary": "صانع الأفلام نمق خونشاو رافق دكتورة سودانية تدعى نمارق في الخرطوم بداخل الاعتصام قبل فضه، وسافر معها إلى مدينتها عطبرة، حيث أندلعت شعلة الاحتجاجات في ديسمبر/كانون الأول.",
-                "timestamp": 1562744117,
+                "timestamp": 1562744116000,
                 "cpsType": "MAP",
                 "id": "urn:bbc:ares::asset:arabic/media-48934531",
                 "type": "cps"
@@ -124,7 +124,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-48839628"
                 },
                 "summary": "قاد الشباب السوداني المظاهرات السلمية التي أطاحت بـ30 عاما من حكم عمر البشير. وبعد فترة هدوء تلت فض اعتصام القيادة العامة، عاد الشباب للمطالبة بالتغيير.",
-                "timestamp": 1562063636,
+                "timestamp": 1562063635000,
                 "cpsType": "MAP",
                 "id": "urn:bbc:ares::asset:arabic/media-48839628",
                 "type": "cps"
@@ -156,7 +156,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/live/48949036"
             },
             "summary": "صفحة التغطية المباشرة اليومية من بي بي سي عربي",
-            "timestamp": 1562919398,
+            "timestamp": 1562919397000,
             "cpsType": "LIV",
             "indexImage": {
               "id": "107836596",
@@ -220,7 +220,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48955463"
             },
             "summary": "بي بي سي تجري مقابلات مع سيدات في أفغانستان تحدثن عن مزاعم حدوث تحرش جنسي على أعلى المستويات داخل الجهاز الحكومي.",
-            "timestamp": 1562907628,
+            "timestamp": 1562907627000,
             "byline": {
               "name": "يوغيتا ليمايا",
               "title": "بي بي سي",
@@ -270,7 +270,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/middleeast-48944051"
                 },
                 "summary": "39 في المئة من الذكور في العراق تعرضوا للاعتداء أو التحرش الجنسي سواء لفظيا أو جسديا وهي نسبة تتجاوز نسبة النساء اللواتي تعرضن لذلك.",
-                "timestamp": 1562819534,
+                "timestamp": 1562819533000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/middleeast-48944051",
                 "type": "cps"
@@ -288,7 +288,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-48959211"
             },
             "summary": "تونس تفوز على مدغشقر بثلاثة أهداف نظيفة لتتأهل لنصف نهائي كأس الأمم الإفريقية، للمرة الأولى منذ 2004.",
-            "timestamp": 1562883343,
+            "timestamp": 1562883342000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -328,7 +328,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-48953075"
                 },
                 "summary": "المنتخب الجزائري لكرة القدم يتأهل إلى الدور نصف النهائي من بطولة كأس الأمم الإفريقية بعد فوزه على ساحل العاج بركلات الترجيح.",
-                "timestamp": 1562873023,
+                "timestamp": 1562873022000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-48953075",
                 "type": "cps"
@@ -342,7 +342,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-48951553"
                 },
                 "summary": "مقطع مصور من إعلان تجاري لشركة مصرية يظهر اعتذار ستة من لاعبي المنتخب المصري عن الخروج المبكر من بطولة الأمم الأفريقية، يثير جدلا على مواقع التواصل الاجتماعي، والشركة تقول إن المقطع يعد نسخة غير رسمية \"تم تحريفها وتسريبها\".",
-                "timestamp": 1562854138,
+                "timestamp": 1562854137000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-48951553",
                 "type": "cps"
@@ -360,7 +360,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48962135"
             },
             "summary": "القبض على سيدة في ولاية تكساس الأمريكية بعد العثور على بقايا جثة أمها في شقة مكونة من غرفتين كانت تتشارك فيها العيش مع ابنتها.",
-            "timestamp": 1562926169,
+            "timestamp": 1562926168000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -399,7 +399,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/world-47969647"
                 },
                 "summary": "مكتب التحقيقات الفيدرالي (إف بي آي) الأمريكي يقول إن سيدة مشتبها بأنها شكلت تهديدا لمدارس تقع في مدينة دنفر في ولاية كولورادو الأمريكية عُثر عليها ميتة.",
-                "timestamp": 1555529200,
+                "timestamp": 1555529199000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/world-47969647",
                 "type": "cps"
@@ -413,7 +413,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/world-48132721"
                 },
                 "summary": "اتهام رجل بمنع الدفن القانوني لجثتَيّ امرأتين عُثر عليهما في ثلاجة في شقته بشرقي لندن، وشرطة العاصمة البريطانية تحقق مع رجل آخر بشبهة القتل.",
-                "timestamp": 1556790959,
+                "timestamp": 1556790958000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/world-48132721",
                 "type": "cps"
@@ -431,7 +431,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/science-and-tech-48953443"
             },
             "summary": "من خلال اتباع نظام غذائي متوازن وأسلوب حياة نشط والمحافظة على صحة نفسية جيدة يمكن أن تتحسن حياتك الجنسية، فهل ثمة أطعمة بعينها تعتبر من المحفزات الجنسية الطبيعية؟",
-            "timestamp": 1562906573,
+            "timestamp": 1562906572000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -475,7 +475,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/science-and-tech-47655431"
                 },
                 "summary": "حظرت السلطات في زامبيا مشروبا للطاقة بعد ان أظهرت نتائج مخبرية احتواءه على مادة منشطة موجودة في علاج للعجز الجنسي \"الفياغرا\".",
-                "timestamp": 1553180052,
+                "timestamp": 1553180051000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/science-and-tech-47655431",
                 "type": "cps"
@@ -489,7 +489,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-44866190"
                 },
                 "summary": "اسمه ياراسغومبا أو فطر اليرقة، وهو أغلى فطر يستخدم في الطب التقليدي.",
-                "timestamp": 1531843454,
+                "timestamp": 1531843453000,
                 "cpsType": "MAP",
                 "id": "urn:bbc:ares::asset:arabic/media-44866190",
                 "type": "cps"
@@ -507,7 +507,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-48942210"
             },
             "summary": "ماذا سيحدث لو أصبحت الرقابة المشددة التي تفرضها بعض الشركات للتجسس على موظفيها عرفا شائعا في جميع الشركات؟",
-            "timestamp": 1562921662,
+            "timestamp": 1562921661000,
             "byline": {
               "name": "سارة غريفيث",
               "title": "بي بي سي",
@@ -557,7 +557,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/vert-cap-48830427"
                 },
                 "summary": "إسبانيا تطبق قواعد جديدة لوضع حد لتقاعس الشركات عن تعويض الموظفين عن ساعات العمل الإضافية، لكن هل ستحقق هذه الإجراءات الجديدة أهدافها، أم ستزيد الأعباء الإدارية التي تعرقل سير العمل؟",
-                "timestamp": 1562063154,
+                "timestamp": 1562063153000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/vert-cap-48830427",
                 "type": "cps"
@@ -571,7 +571,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/vert-fut-48927242"
                 },
                 "summary": "هنام سمات يطلق عليها بعض العلماء وصف \"الثالوث المظلم\"، والتي تجعل الناس أكثر استعدادا لممارسة أعمال الغش والخداع دون الإحساس بالذنب، وهناك في المقابل ما يوصف بـ\"الثالوث المشرق\" المتعلق بالميل لعمل الخير.",
-                "timestamp": 1562755972,
+                "timestamp": 1562755971000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/vert-fut-48927242",
                 "type": "cps"
@@ -596,7 +596,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/media-48964795"
             },
             "summary": "احتضنت كينيا مباريات خاصة بلعبة الكريكيت غريبةَ المكان والدوافع.",
-            "timestamp": 1562926872,
+            "timestamp": 1562926871000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -666,7 +666,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/media-48957605"
             },
             "summary": "هل شعرت يوما برغبة في احتضان طفل لطيف أو جرو صغير؟",
-            "timestamp": 1562912671,
+            "timestamp": 1562912670000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -750,7 +750,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/media-48947933"
             },
             "summary": "المرأة اللبنانية في مهمة لجعل الناس يستمتعون بحياتهم الجنسية عبر التحدث إليهم مباشرة من خلال وسائل التواصل الإجتماعي عن مواضيع محرمة.",
-            "timestamp": 1562829483,
+            "timestamp": 1562829482000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -824,7 +824,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/media-48957603"
             },
             "summary": "يشير إستطلاع بي بي سي والبارومتر العربي الذي أجري في عشر دول عربية والأراضي الفلسطينية إلى أن عدد الرجال الذين يقولون إنهم تعرضوا للتحرش الجنسي في العراق يفوق عدد النساء .",
-            "timestamp": 1562863157,
+            "timestamp": 1562863156000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -894,7 +894,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/media-48957607"
             },
             "summary": "قررت نيابة أمن الدولة العليا في مصر حبس كريم حسين، مدير صفحة \"أنا آسف يا ريس\" على فيسبوك التي تدعم الرئيس المصري السابق حسني مبارك.",
-            "timestamp": 1562867698,
+            "timestamp": 1562867697000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -968,7 +968,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/media-48951953"
             },
             "summary": "نتائج حديثة أجراها عدد من الباحثين تشير إلى أن الببغاوات لديها قدرة على أداء 14 حركة راقصة مختلفة بشكل تلقائي.",
-            "timestamp": 1562848729,
+            "timestamp": 1562848728000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
@@ -1059,7 +1059,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-48641068"
             },
             "summary": "تعرف على جدول مباريات كأس الأمم الإفريقية لكرة القدم للرجال 2019 في مصر وتابع نتائجها.",
-            "timestamp": 1560521009,
+            "timestamp": 1560521008000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -1126,7 +1126,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48906626"
             },
             "summary": "حالات صادمة في الهند تبين مدى اضطراب نظرة البلاد للنساء والدورة الشهرية وكيف أجبرت شابات في مقتبل العمر على إجراء عمليات استئصال الرحم.",
-            "timestamp": 1562640319,
+            "timestamp": 1562640318000,
             "byline": {
               "name": "غيتا باندي",
               "title": "بي بي سي - دلهي",
@@ -1198,7 +1198,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/magazine-48920335"
             },
             "summary": "لم تكد كايتي تبلغ من العمر الـ 16 عاما عندما وصفت لها أدوية مسكنة للألم للمرة الأولى، ولم يمر وقت طويل قبل أن تدمن هذه العقاقير.",
-            "timestamp": 1562732902,
+            "timestamp": 1562732901000,
             "byline": {
               "name": "ألينور لايهي",
               "title": "بي بي سي الثالثة",
@@ -1266,7 +1266,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/business-48902018"
             },
             "summary": "شركة \"طيران أديل\" السعودية للطيران تلغي طلب شراء 30 طائرة بوينغ طراز 737 ماكس بقيمة 5.9 مليار دولار بالسعر الأولي.",
-            "timestamp": 1562520475,
+            "timestamp": 1562520474000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1323,7 +1323,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/business-48952433"
             },
             "summary": "البرلمان الفرنسي يوافق على تشريع بفرض ضريبة قدرها 3 في المئة على شركات الإنترنت والتكنولوجيا، مثل غوغل وفيسبوك، وإدارة ترامب تندد بها.",
-            "timestamp": 1562847978,
+            "timestamp": 1562847977000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1380,7 +1380,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/art-and-culture-48931872"
             },
             "summary": "مغنية الراب الأمريكية نيكي ميناج تقرر إلغاء حفلها الغنائي، الذي كان مقررا في مدينة جدة السعودية الأسبوع المقبل، معلنة مساندتها لحقوق المرأة والمثليين.",
-            "timestamp": 1562717500,
+            "timestamp": 1562717499000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1438,7 +1438,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-48953075"
             },
             "summary": "المنتخب الجزائري لكرة القدم يتأهل إلى الدور نصف النهائي من بطولة كأس الأمم الإفريقية بعد فوزه على ساحل العاج بركلات الترجيح.",
-            "timestamp": 1562873023,
+            "timestamp": 1562873022000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1495,7 +1495,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/media-48907956"
             },
             "summary": "في الحلقة الجديدة من \"عالم الكتب\" تستمعون إلى حوار خاص مع الروائي السوداني حمور زيادة عن روايته الأخيرة \" الغرق\" ومشاركته في الاحتجاجات الأخيرة في السودان.",
-            "timestamp": 1562576460,
+            "timestamp": 1562576459000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1565,7 +1565,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/blog-tv-and-radio-48876312"
             },
             "summary": "يقول أمين عوض إن الخطة الاقليمية لمفوضية اللاجئين تواجه نقصا في التمويل، ويدعو إلى ايجاد آليات أخرى لمواجهة الاحتياجات الكبير.",
-            "timestamp": 1562323758,
+            "timestamp": 1562323757000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1645,7 +1645,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/inthepress-48960205"
             },
             "summary": "تراجع اهتمام الصحف البريطانية الجمعة بالشأن العربي والشرق أوسطي. لكن من بين القضايا التي تناولتها الصحف أوضاع النساء في السعودية وتأييد واشنطن لاتفاق اقتسام السلطة في السودان.",
-            "timestamp": 1562909048,
+            "timestamp": 1562909047000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1686,7 +1686,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/inthepress-48937578"
             },
             "summary": "صحف عربية تعلق على احتجاجات يهود الفلاشا في إسرائيل قائلة إنها شاهد على \"ديمقراطية زائفة\" و\"مجتمع متصدع موبوء بالتمييز العنصري\".",
-            "timestamp": 1562847871,
+            "timestamp": 1562847870000,
             "byline": {
               "name": "قسم  المتابعة الإعلامية",
               "title": "بي بي سي ",
@@ -1749,7 +1749,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cul-48942204"
             },
             "summary": "مفهوم \"سوسيغاد\" المشتق من مفردة \"سوسيغادو\" البرتغالية، التي تعني الهدوء، يشير إلى ذلك التوجه الهادئ والمسترخي الذي يتبناه سكان ولاية غوا الهندية، الذين يبدو أنهم يعيشون في حالة من الرضا والقناعة الدائمتيْن.",
-            "timestamp": 1562868576,
+            "timestamp": 1562868575000,
             "byline": {
               "name": "شاروكيسي رامادوراي",
               "title": "بي بي سي",
@@ -1799,7 +1799,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cul-48939511"
             },
             "summary": "الغابات الكثيفة في قلب فيتنام تخفي في ثناياها مداخل لمتاهة من المغارات والممرات تحت الأرض تضم ثلاثة من أكبر أربعة كهوف في العالم.",
-            "timestamp": 1562843609,
+            "timestamp": 1562843608000,
             "byline": {
               "name": "روبرت ريد",
               "title": "بي بي سي",
@@ -1866,7 +1866,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/interactivity-48957823"
             },
             "summary": "طبقا لاستطلاع أجرته شبكة البارومتر العربي البحثية المستقلة لصالح بي بي سي عربي شمل 11 دولة عربية، فإن نحو 30% من المواطنين العرب يعانون من الاكتئاب ومن ضغوط الحياة اليومية. وتصدر كل من العراق وتونس الدول العربية بنسبة زادت عن 40% من المصابين بالاكتئاب.",
-            "timestamp": 1562864778,
+            "timestamp": 1562864777000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1919,7 +1919,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/interactivity-48925952"
             },
             "summary": "الإمارات تعلن عن سحب لقواتها من هناك، ضمن خطة \"إعادة انتشار\" لأسباب \"إستراتيجية وتكتيكية\"، وتكهنات واسعة حول الدوافع الحقيقية ومغزى التوقيت",
-            "timestamp": 1562677303,
+            "timestamp": 1562677302000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1989,7 +1989,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/trending-48941472"
             },
             "summary": "يتعرض المطرب السعودي محمد عبده لكثير من الانتقادات عبر وسائل التواصل الاجتماعي بسبب كثرة الحفلات التي يحييها وقد تجاوز السبعين من العمر.",
-            "timestamp": 1562846442,
+            "timestamp": 1562846441000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
@@ -2042,7 +2042,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/trending-48941471"
             },
             "summary": "بعد عودة الإنترنت إلى السودان، بدأت تظهر على الشبكة العنكبوتية مقاطع توثق انتهاكات وتجاوزات وقعت خلال فض اعتصام القيادة العامة بالعاصمة الخرطوم.",
-            "timestamp": 1562767918,
+            "timestamp": 1562767917000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
@@ -2113,7 +2113,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48892787"
             },
             "summary": "اشتباكات بين متظاهرين والشرطة الإسرائيلية، وامرأة تسقط أثناء مشيها على الحبل، من بين أفضل صور الأسبوع.",
-            "timestamp": 1562435569,
+            "timestamp": 1562435568000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2155,7 +2155,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/48802086"
             },
             "summary": "درجات الحرارة تبلغ أرقاما قياسية في دول أوروبا وتدفع الناس إلى البحث بكل الوسائل عن وسائل الترويح عن النفس والاحتماء من ضربات الشمس الحارقة.",
-            "timestamp": 1561736398,
+            "timestamp": 1561736397000,
             "cpsType": "PGL",
             "indexImage": {
               "id": "107581035",
@@ -2192,7 +2192,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48730117"
             },
             "summary": "مجموعة منتقاة من أفضل الصور التي وردت بي بي سي من أفريقيا، ومن أفارقة خارج القارة خلال الأسبوع الماضي.",
-            "timestamp": 1561229197,
+            "timestamp": 1561229196000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2234,7 +2234,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/art-and-culture-48719392"
             },
             "summary": "عشرات الآلاف من الناس يجتمعون في أماكن مختلفة من العالم للاحتفال باليوم العالمي لليوغا، وهنا بعض الصور التي التُقطت لفعاليات أقيمت بهذه المناسبة في الهند.",
-            "timestamp": 1561140649,
+            "timestamp": 1561140648000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2276,7 +2276,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48720749"
             },
             "summary": "تعرف على أطول يوم في السنة.. أين ومتى؟ وكيف يحتفل الناس به؟",
-            "timestamp": 1561129353,
+            "timestamp": 1561129352000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -2331,7 +2331,7 @@
             "uri": "http://www.bbc.com/arabic/tvandradio/2013/05/000000_bbcarabic_livetv",
             "contentType": "Video",
             "assetTypeCode": "PRO",
-            "timestamp": 1477471465,
+            "timestamp": 1477471464000,
             "type": "link"
           },
           {
@@ -2339,7 +2339,7 @@
             "uri": "http://www.bbc.com/arabic/bbc_arabic_radio/liveradio",
             "contentType": "Video",
             "assetTypeCode": "PRO",
-            "timestamp": 1477471440,
+            "timestamp": 1477471439000,
             "type": "link"
           }
         ],
@@ -2361,7 +2361,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-48951433"
             },
             "summary": "رئيس مجلس النواب اللبناني نبيه بري يقول إن العقوبات الأمريكية على مسؤولين في حزب الله اعتداء على البرلمان وعلى كل لبنان، فمن هؤلاء الذين فرضت عليهم عقوبات؟",
-            "timestamp": 1562846107,
+            "timestamp": 1562846106000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -2402,7 +2402,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48941201"
             },
             "summary": "انتشار ظاهرة الاستشهاد بـ\"الإله رام\" من جانب الهندوس لمهاجمة المسلمين في الهند، مما يثير المخاوف من تفاقم الاستقطاب الديني في البلاد.",
-            "timestamp": 1562820017,
+            "timestamp": 1562820016000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2443,7 +2443,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-48951434"
             },
             "summary": "النواب الجزائريون ينتخبون لأول مرة منذ استقلال البلاد شخصية إسلامية معارضة رئيساً للبرلمان، فمن هو؟",
-            "timestamp": 1562862337,
+            "timestamp": 1562862336000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -2483,7 +2483,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-48944051"
             },
             "summary": "39 في المئة من الذكور في العراق تعرضوا للاعتداء أو التحرش الجنسي سواء لفظيا أو جسديا وهي نسبة تتجاوز نسبة النساء اللواتي تعرضن لذلك.",
-            "timestamp": 1562819534,
+            "timestamp": 1562819533000,
             "byline": {
               "name": "سامية حسني",
               "title": "بي ‌بي ‌سي",
@@ -2538,7 +2538,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48935021"
             },
             "summary": "أحدثت جمجمة بشرية أهدتها مرشحة عن حزب المحافظين في كندا إلى صديقها ضجة كبيرة خاصة بين السكان الأصليين، فما هي قصة هذه الجمجمة؟",
-            "timestamp": 1562819926,
+            "timestamp": 1562819925000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -2586,7 +2586,7 @@
             "uri": "http://www.bbc.com/arabic/48920338",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1562831699,
+            "timestamp": 1562831698000,
             "type": "link"
           },
           {
@@ -2598,7 +2598,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/science-and-tech-48940532"
             },
             "summary": "منذ خمسين عاما تقريبا تمكنت الولايات المتحدة من إرسال أول إنسان ليهبط على سطح القمر. فماذا تعرف عن هذه المهمة التي تعرف باسم أبولو 11.",
-            "timestamp": 1562850315,
+            "timestamp": 1562850314000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2639,7 +2639,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-48901645"
             },
             "summary": "وثائقي من بي بي سي عربي يوثق احتجاجات السودان لإسقاط الرئيس عمر البشير وما حدث بعد رحيله من السلطة، الفيلم بعنوان \"السودان: الحديد والنار\".",
-            "timestamp": 1562754477,
+            "timestamp": 1562754476000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2679,7 +2679,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/world-48927249"
             },
             "summary": "محكمة ألمانية تقضي بسجن عراقي مدى الحياة بتهمة اغتصاب وقتل فتاة ألمانية تبلغ من العمر 14 عاما، في قضية هزت الرأي العام في البلاد وأثارت جدلا حول طالبي اللجوء والمهاجرين.",
-            "timestamp": 1562772081,
+            "timestamp": 1562772080000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2730,7 +2730,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/48861031"
             },
             "summary": "إعلان عن وظائف في بي بي سي عربي للعمل من مكتب بيروت",
-            "timestamp": 1562170134,
+            "timestamp": 1562170133000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2787,7 +2787,7 @@
             "uri": "http://www.bbc.co.uk/academy/ar",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1477471317,
+            "timestamp": 1477471316000,
             "type": "link"
           },
           {
@@ -2816,7 +2816,7 @@
             "uri": "http://www.bbc.com/arabic/42791340",
             "contentType": "Gallery",
             "assetTypeCode": "PRO",
-            "timestamp": 1516633230,
+            "timestamp": 1516633229000,
             "type": "link"
           },
           {
@@ -2845,7 +2845,7 @@
             "uri": "http://www.bbc.com/arabic/resources/idt-sh/marks_arabic",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1517503206,
+            "timestamp": 1517503205000,
             "type": "link"
           },
           {
@@ -2853,7 +2853,7 @@
             "uri": "http://www.bbc.com/arabic/institutional/2013/04/130415_bbcarabic_partners.shtml",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1477471377,
+            "timestamp": 1477471376000,
             "type": "link"
           }
         ],
@@ -2876,7 +2876,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/inthepress-44491932"
             },
             "summary": "كأس العالم وملف الهجرة في أوروبا من أبرز الموضوعات التي اهتمت بها الصحف البريطانية في نسختها الورقية الصادرة صباح السبت.",
-            "timestamp": 1529038127,
+            "timestamp": 1529038126000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2911,7 +2911,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/live/44546680"
             },
             "summary": "تغطية حية ومباشرة لمجريات مباريات كأس العالم بكرة القدم حيث تواجه السعودية أوروغواي والمغرب تقابل البرتغال",
-            "timestamp": 1529485072,
+            "timestamp": 1529485071000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2973,7 +2973,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-44550404"
             },
             "summary": "النجم البرتغالي كريستيانو رونالدو يواصل بدايته القوية في كأس العالم 2018 في روسيا ويحرز الهدف الوحيد لمنتخب بلاده في مرمى المغرب ليطيح بأسود الأطلس خارج المونديال.",
-            "timestamp": 1529508460,
+            "timestamp": 1529508459000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3006,7 +3006,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-44495559"
                 },
                 "summary": "حقق المنتخب الإيراني لكرة القدم فوزا قاتلا على نظيره المغربي بنيجة 1-صفر في الجولة الأولى من منافسات المجموعة الثانية في مونديال روسيا 2018.",
-                "timestamp": 1529091029,
+                "timestamp": 1529091028000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-44495559",
                 "type": "cps"
@@ -3020,7 +3020,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/44470248"
                 },
                 "summary": "المغرب يخسر معركة استضافة كأس العالم 2026 لصالح الملف الأمريكي المشترك الثلاثي ومغردون يلومون\"النفاق العربي\".",
-                "timestamp": 1528906314,
+                "timestamp": 1528906313000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/44470248",
                 "type": "cps"
@@ -3038,7 +3038,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-44550402"
             },
             "summary": "الجمهور الياباني في كأس العالم بروسيا 2018 يثير إعجاب الجميع بتنظيفه المدرجات بعد المباريات.",
-            "timestamp": 1529498788,
+            "timestamp": 1529498787000,
             "byline": {
               "name": "أندريس إيمير",
               "title": "بي بي سي نيوز",
@@ -3081,7 +3081,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-44536528"
                 },
                 "summary": "التقرير التالي يرصد تأثير البطولات الرياضية على زيادة معدلات المواليد في الدول المضيفة، ويرصد تأثير بطولة كأس العالم في روسيا 2018 بالإيجاب كحل لمواجة الأزمة الديموغرافية التي تعاني منها البلاد.",
-                "timestamp": 1529434970,
+                "timestamp": 1529434969000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-44536528",
                 "type": "cps"
@@ -3095,7 +3095,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/vert-cap-44527763"
                 },
                 "summary": "محللون وخبراء اقتصاديون يطورون نماذج إحصائية مستعينين بالخوارزميات المستخدمة في البورصة للتكهن بنتائج مباريات كأس العالم، وتحديد حظوظ المنتخبات في الفوز بالمونديال.",
-                "timestamp": 1529347604,
+                "timestamp": 1529347603000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/vert-cap-44527763",
                 "type": "cps"
@@ -3113,7 +3113,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/trending-44507291"
             },
             "summary": "مباريات كأس العالم وأداء المنتخبات العربية تهيمن على تعليقات المغردين العرب.",
-            "timestamp": 1529155643,
+            "timestamp": 1529155642000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
@@ -3154,7 +3154,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-44495559"
             },
             "summary": "حقق المنتخب الإيراني لكرة القدم فوزا قاتلا على نظيره المغربي بنيجة 1-صفر في الجولة الأولى من منافسات المجموعة الثانية في مونديال روسيا 2018.",
-            "timestamp": 1529091029,
+            "timestamp": 1529091028000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3187,7 +3187,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-44073621"
                 },
                 "summary": "أربعة منتخبات عربية تشارك في نهائيات كأس العالم لكرة القدم والتي ستنطلق في 14 يونيو حزيران المقبل بالمباراة الافتتاحية للبطولة بين البلد المضيف روسيا والمملكة العربية السعودية، فما هي حظوظ المنتخبات العربية في المونديال؟",
-                "timestamp": 1526009606,
+                "timestamp": 1526009605000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-44073621",
                 "type": "cps"
@@ -3205,7 +3205,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/live/44505750"
             },
             "summary": "تغطية حية ومباشرة لمباريات كأس العالم بكرة القدم 2018",
-            "timestamp": 1529134866,
+            "timestamp": 1529134865000,
             "cpsType": "LIV",
             "indexImage": {
               "id": "102076098",
@@ -3261,7 +3261,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/live/44480758"
             },
             "summary": "صفحة التغطية المباشرة اليومية من بي بي سي عربي",
-            "timestamp": 1529050383,
+            "timestamp": 1529050382000,
             "cpsType": "LIV",
             "indexImage": {
               "id": "102015865",
@@ -3307,7 +3307,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/inthepress-44507190"
             },
             "summary": "صحف عربية، وخاصة الخليجية، تشن هجوما على تغطية قناة بي ان سبورت القطرية لمباراة السعودية أمام روسيا في كأس العالم وتتهمها بـ\"استغلال الرياضة في أغراض سياسية\".",
-            "timestamp": 1529151013,
+            "timestamp": 1529151012000,
             "byline": {
               "name": "قسم المتابعة الإعلامية",
               "title": "بي بي سي ",
@@ -3350,7 +3350,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-44481132"
                 },
                 "summary": "مواعيد مباريات المنتخبات العربية في بطولة كأس العالم 2018 في روسيا والملاعب التي ستجرى المباريات فيها.",
-                "timestamp": 1528976522,
+                "timestamp": 1528976521000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-44481132",
                 "type": "cps"
@@ -3368,7 +3368,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-44397737"
             },
             "summary": "دليل بي بي سي للملاعب الروسية التي تستضيف مباريات بطولة كأس العالم 2018",
-            "timestamp": 1528460128,
+            "timestamp": 1528460127000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3401,7 +3401,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/44386356"
                 },
                 "summary": "هل يمكنك توقع المنتخب الذي سيفوز بكأس العالم لكرة القدم 2018، وأي المنتخبات ستصعد من المرحلة الأولى؟",
-                "timestamp": 1528293599,
+                "timestamp": 1528293598000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/44386356",
                 "type": "cps"
@@ -3425,7 +3425,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-44414788"
             },
             "summary": "ستة جداول مصورة تعطيك كل ما تحتاجه من معلومات حول بطولة كأس العالم 2018 لكرة القدم التي تستضيفها روسيا.",
-            "timestamp": 1528705008,
+            "timestamp": 1528705007000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3458,7 +3458,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/44386356"
                 },
                 "summary": "هل يمكنك توقع المنتخب الذي سيفوز بكأس العالم لكرة القدم 2018، وأي المنتخبات ستصعد من المرحلة الأولى؟",
-                "timestamp": 1528293599,
+                "timestamp": 1528293598000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/44386356",
                 "type": "cps"
@@ -3472,7 +3472,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-44386354"
                 },
                 "summary": "مسابقة: هل تستطيع أن تتعرف على اللاعبين من خلال الوشوم التي على أجسامهم؟",
-                "timestamp": 1528294749,
+                "timestamp": 1528294748000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-44386354",
                 "type": "cps"
@@ -3491,7 +3491,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-44481132"
             },
             "summary": "مواعيد مباريات المنتخبات العربية في بطولة كأس العالم 2018 في روسيا والملاعب التي ستجرى المباريات فيها.",
-            "timestamp": 1528976522,
+            "timestamp": 1528976521000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3524,7 +3524,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-44470127"
                 },
                 "summary": "لم تعد بطولة كأس العالم لكرة القدم مجرد منافسة كروية بين أبرز النجوم وأقوى المنتخبات في العالم، لكنها أصبحت مناسبة لظهور نجوم من نوع آخر، وهي الحيوانات التي تتنبأ بنتائج المباريات.",
-                "timestamp": 1528892632,
+                "timestamp": 1528892631000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-44470127",
                 "type": "cps"
@@ -3538,7 +3538,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-44466747"
                 },
                 "summary": "هل يمكننا أن نحتكم إلى التاريخ في التنبؤ بالمنتخب الذي سيفوز بكأس العالم 2018؟",
-                "timestamp": 1528902851,
+                "timestamp": 1528902850000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-44466747",
                 "type": "cps"
@@ -3557,7 +3557,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-44073621"
             },
             "summary": "أربعة منتخبات عربية تشارك في نهائيات كأس العالم لكرة القدم والتي ستنطلق في 14 يونيو حزيران المقبل بالمباراة الافتتاحية للبطولة بين البلد المضيف روسيا والمملكة العربية السعودية، فما هي حظوظ المنتخبات العربية في المونديال؟",
-            "timestamp": 1526009606,
+            "timestamp": 1526009605000,
             "byline": {
               "name": "مصطفى يحيى",
               "title": "بي بي سي - القاهرة",
@@ -3600,7 +3600,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-43795548"
                 },
                 "summary": "لم تعد بطولة كأس العالم مجرد مناسبة رياضية ممتعة تحظى بشعبية طاغية في جميع أنحاء العالم فحسب، لكنها أصبحت بمثابة صناعة تدر أرباحا بمليارات الدولارات. ومع قرب انطلاق منافسات الدورة المقبلة من البطولة في روسيا، يدور الحديث عن حجم الجوائز وكذلك القيمة السوقية للاعبين والمنتخبات المشاركة.",
-                "timestamp": 1524108226,
+                "timestamp": 1524108225000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-43795548",
                 "type": "cps"
@@ -3614,7 +3614,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-43703774"
                 },
                 "summary": "دائما ما تكون أهم لحظة في تاريخ أي لاعب كرة قدم هي الصعود لمنصة التتويج لرفع كأس العالم مع منتخب بلاده. وهناك العديد من الحكايات الغريبة التي تتحدث عن تلك الكأس المرموقة، فكيف صُنعت أول كأس للمونديال؟ ومن صنعها؟ وما هي الأحداث المحيطة بذلك؟",
-                "timestamp": 1523339895,
+                "timestamp": 1523339894000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-43703774",
                 "type": "cps"
@@ -3633,7 +3633,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:arabic/sports-41958279"
             },
             "summary": "ما هي المنتخبات العربية التي تأهلت لنهائيات كأس العالم 2018؟ ومن هم أبرز اللاعبين؟",
-            "timestamp": 1510448913,
+            "timestamp": 1510448912000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3666,7 +3666,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/arabic/sports-41957698"
                 },
                 "summary": "منتخبا المغرب وتونس يتأهلان إلى نهائيات كأس العالم في روسيا 2018 لينضما إلى مصر والسنغال ونيجيريا في قائمة المتأهلين عن القارة الافريقية.",
-                "timestamp": 1510430345,
+                "timestamp": 1510430344000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:arabic/sports-41957698",
                 "type": "cps"

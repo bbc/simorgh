@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: `gd`,
   articleAuthor: `https://www.facebook.com/BBCNaidheachdan`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-naidheachdan',
+  atiAnalyticsProducerId: '79',
   brandName: "Naidheachdan a' BhBC",
   product: "Naidheachdan a' BhBC",
   defaultImage:
@@ -29,9 +31,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'Alba',
+    currentPage: 'Current page',
+    skipLinkText: 'Air adhart',
     error: {
       404: {
         statusCode: '404',
@@ -157,6 +162,7 @@ const service = {
       "BhBC. Chan eil uallach air a' BhBC son na tha air làraichean-lìn eile",
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

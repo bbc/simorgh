@@ -34,5 +34,9 @@ If applicable, add screenshots to help explain your problem.
 - Browser [e.g. stock browser, safari]
 - Version [e.g. 22]
 
+**Testing notes**
+
+- [ ] This bug fix is expected to need manual testing.
+
 **Additional context**
 Add any other context about the problem here.

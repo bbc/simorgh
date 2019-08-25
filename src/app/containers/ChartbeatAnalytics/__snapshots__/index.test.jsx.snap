@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Charbeats Analytics Container should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on test 1`] = `"amp-return-value"`;
+exports[`Charbeats Analytics Container should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live 1`] = `"amp-return-value"`;
 
 exports[`Charbeats Analytics Container should call CanonicalCharbeatsBeacon when platform is canonical, and toggle enabled for chartbeat for local 1`] = `"canonical-return-value"`;
 

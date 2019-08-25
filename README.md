@@ -1,6 +1,12 @@
 # Simorgh
 
-[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage) [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh) [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
+[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage)
+[![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
+[![dependencies Status](https://david-dm.org/bbc/simorgh/status.svg)](https://david-dm.org/bbc/simorgh)
+[![devDependencies Status](https://david-dm.org/bbc/simorgh/dev-status.svg)](https://david-dm.org/bbc/simorgh?type=dev)
+[![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
+[![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
 The BBC websites are being rebuilt from the bottom up as ReactJS based Single Page Applications, that will (eventually) also be fully fledged Progressive Web Apps. This application also builds Accelerated Mobile Pages for every regular HTML page that it renders.
 
@@ -87,7 +93,7 @@ Assuming the other HOC's have returned the original Article or FrontPage contain
 
 ## Before Installation
 Please read:
-CONTRIBUTING.md
+[CONTRIBUTING.md](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
 ## Installation
 
 Install Node. [https://nodejs.org/en/](https://nodejs.org/en/). We use the version specified in `.nvmrc` and if you have a node version manager (nvm) you can run the following script to automatically change to the project supported version.

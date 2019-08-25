@@ -11,7 +11,7 @@
           "locators": {
             "uri": "/news/uk-wales-44864963"
           },
-          "timestamp": 1531921296,
+          "timestamp": 1531921295000,
           "image": {
             "blockId": "f05fadbb-9214-492a-913d-12a8f866f600",
             "type": "image",
@@ -48,7 +48,7 @@
           "locators": {
             "uri": "/news/uk-wales-44864963"
           },
-          "timestamp": 1531921296,
+          "timestamp": 1531921295000,
           "image": {
             "blockId": "f05fadbb-9214-492a-913d-12a8f866f600",
             "type": "image",
@@ -76,7 +76,7 @@
           "locators": {
             "uri": "/news/uk-wales-44253662"
           },
-          "timestamp": 1527548592,
+          "timestamp": 1527548591000,
           "image": {
             "blockId": "41e82bb2-d0e6-4669-bca6-0b2369ddbf69",
             "type": "image",
@@ -104,7 +104,7 @@
           "locators": {
             "uri": "/news/uk-wales-44237816"
           },
-          "timestamp": 1527548580,
+          "timestamp": 1527548579000,
           "image": {
             "blockId": "c68e28ba-2f31-4cec-82a5-d04ef5232d9e",
             "type": "image",
@@ -132,7 +132,7 @@
           "locators": {
             "uri": "/news/uk-wales-43796987"
           },
-          "timestamp": 1523975484,
+          "timestamp": 1523975483000,
           "image": {
             "blockId": "153e4656-ee64-4e22-98d3-fc7ad00dfb7c",
             "type": "image",
@@ -165,7 +165,7 @@
       "locators": {
         "uri": "/news/entertainment-arts-45168010"
       },
-      "timestamp": 1534768198,
+      "timestamp": 1534768197000,
       "image": {
         "blockId": "6cd25127-e93a-4e87-be08-3d9d906ece7b",
         "type": "image",
@@ -193,7 +193,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534767877,
+      "timestamp": 1534767876000,
       "image": {
         "blockId": "508328e3-5d3f-4bd4-8dcd-2287c0dab502",
         "type": "image",
@@ -221,7 +221,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "6da3613d-23fb-4c60-b481-4a22ae9a18b3",
         "type": "image",
@@ -249,7 +249,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534766842,
+      "timestamp": 1534766841000,
       "image": {
         "blockId": "75e16992-5034-4d27-9658-4525866b67a1",
         "type": "image",
@@ -277,7 +277,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "9cb1ec09-0183-4713-ad57-dd52020e7f32",
         "type": "image",
@@ -305,7 +305,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "249c381d-942f-4f0f-b2b3-377cb273fe3f",
         "type": "image",
@@ -333,7 +333,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "1b9cad19-c214-4e08-952d-1d94287b8ad1",
         "type": "image",
@@ -361,7 +361,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534764954,
+      "timestamp": 1534764953000,
       "image": {
         "blockId": "f46f368a-bea3-4449-8822-f40b879034ba",
         "type": "image",
@@ -389,7 +389,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "0c8145b0-571d-483b-8eb1-f053fc8a48cf",
         "type": "image",
@@ -417,7 +417,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534768459,
+      "timestamp": 1534768458000,
       "image": {
         "blockId": "6f280990-c8c0-44e5-9bb9-7a803bbb58eb",
         "type": "image",

@@ -55,7 +55,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48939292"
                         },
                         "summary": "\"Ата Мекен\" партиясы абактагы лидеринин сотун утурлай президентке кайрылуу жолдоду. Партия Сооронбай Жээнбековдон Жогорку Сотто Текебаевдин иши калыс жана бейтарап каралышын камсыздоону суранып жатат.",
-                        "timestamp": 1562918731,
+                        "timestamp": 1562918730000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -105,7 +105,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/kyrgyzstan-47442552"
                                 },
                                 "summary": "\"Адилет\" укуктук клиникасынын юристтери абактагы \"Ата Мекен\" лидери Өмүрбек Текебаев быйыл мартта жатак абакка которуулуга укуктуу дешип, Жогорку Сотко кайрылышты. Жаза аткаруу мамлекеттик кызматы буга чейин Текебаев 2020-жылдын февралынан эрте жатак абакка которулбай тургандыгын айткан эле",
-                                "timestamp": 1551700507,
+                                "timestamp": 1551700506000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-47442552",
                                 "type": "cps"
@@ -119,7 +119,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/kyrgyzstan-46947458"
                                 },
                                 "summary": "Жаза аткаруу мамлекеттик кызматынын жетекчилиги камактагы саясатчы Өмүрбек Текебаев 2020-жылдын февраль айында жатак абагына чыгат деп Би-Би-Сиге билдирди. Буга чейин \"Ата Мекен\" партиясынын абактагы лидери быйыл 20-мартта жатак абакка которуларын декабрда жарыя кылган.",
-                                "timestamp": 1548311172,
+                                "timestamp": 1548311171000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-46947458",
                                 "type": "cps"
@@ -147,7 +147,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48947357"
                         },
                         "summary": "Орусиянын Жогорку Соту \"Хизб ут-Тахрир\" диний экстремисттик уюмунун мүчөсү деп соттолгон төрт крымдык татардын доо арызын карады. Доо арыз каралып жаткан маалда сот имаратынын алдында каршылык акциясы өттү.",
-                        "timestamp": 1562917513,
+                        "timestamp": 1562917512000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -188,7 +188,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48822454"
                         },
                         "summary": "Ангела Меркелдин расмий иш-чаралар учурунда улам эле колу калтыраган абалда көрүнгөнү Германиянын саясий чөйрөсүн бушайман кылууда. Меркелдин өлкөнү башкаруусуна ден соолугу жооп береби деген кабатырлануу күчөдү.",
-                        "timestamp": 1562909986,
+                        "timestamp": 1562909985000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -228,7 +228,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48947358"
                         },
                         "summary": "Эгерде Грециянын Апидима үңкүрүнөн табылган баш сөөктүн кайсыл доорго таандык экени так аныкталса, анда биздин Homo sapiens (аң-сезими калыптанган киши) тарыхы тууралуу түшүнүктөрүбүздү өзгөртөт.",
-                        "timestamp": 1562926755,
+                        "timestamp": 1562926754000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -277,7 +277,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48933052"
                         },
                         "summary": "Порнографиялык роликтерди интернетке өзү жүктөп, аны көчүрүп алгандарды сотко берип, мыйзамсыз байып кеткен америкалык адвокат Джон Стил беш жыл түрмөгө кесилди.",
-                        "timestamp": 1562911049,
+                        "timestamp": 1562911048000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -328,7 +328,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48951773"
                         },
                         "summary": "Кыргызстанда ажырашкан түгөйлөр саны жыл санап өсүүдө. Бул тууралуу өлкөнүн Улуттук статистика комитетинин соңку маалыматында айтылды. Расмийлердин айтымында, ар бир бешинчи түгөй эки айрылыш жолго түшүүдө.",
-                        "timestamp": 1562843745,
+                        "timestamp": 1562843744000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -379,7 +379,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/48933942"
                         },
                         "summary": "Улуу Британиянын өкмөтү Ормуз кысыгында мунай тартып бара жаткан британдык кемени Иран күчтөрү токтотууга аракет кылганын кабарлады. Мындан бир апта мурун Гибралтар кысыгында британдык деңиз аскерлери Ирандын мунай кемесин токтотушкан эле.",
-                        "timestamp": 1562834378,
+                        "timestamp": 1562834377000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -418,7 +418,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/world-48633726"
                                 },
                                 "summary": "Перс булуңу - дүйнөдөгү эң тынчы жок аймактардын бири жана соңку 40 жылда бир нече ирет куралдуу жаңжалдар орун алды. Булуңдагы өлкөлөрдүн ар бири этияттап саясат жүргүзгөнү менен кээде чөлкөмдөгү таасир талаштан бири-бирине үстөмдүк кылуу үчүн агрессивдүү кадамдарга барган учурлар болот.",
-                                "timestamp": 1560766185,
+                                "timestamp": 1560766184000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:kyrgyz/world-48633726",
                                 "type": "cps"
@@ -432,7 +432,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/world-48702373"
                                 },
                                 "summary": "Ислам революциясынын сакчылары корпусу Ирандын аба мейкиндигин бузуп кирген америкалык чалгынчы дронду атып түшүргөнүн билдирди. АКШ бул пилотсуз учак Аскер-деңиз күчтөрүнө таандык болгонун ырастаган.",
-                                "timestamp": 1561021685,
+                                "timestamp": 1561021684000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:kyrgyz/world-48702373",
                                 "type": "cps"
@@ -450,7 +450,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48947354"
                         },
                         "summary": "Орусиянын Екатеринбург шаарында иш таштоого барган кыргызстандык айдоочулар жумуш орундарына кайтып келди. Екатеринбург шаарындагы №012, 019 каттамдарында иштеген 40ка чукул кыргызстандык айдоочу иш таштаган эле.",
-                        "timestamp": 1562832520,
+                        "timestamp": 1562832519000,
                         "byline": {
                             "name": "Калыйнур Калмурза",
                             "title": "Екатеринбург",
@@ -501,7 +501,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48633727"
                         },
                         "summary": "Түркия орусиялык С-400 үлгүсүндөгү зениттик-ракеталык комплексин сатып алуу боюнча келишимден баш тарткан жок. Бул куралды Түркияга жеткирүүнүн биринчи этабы июль айында башталууга тийиш.",
-                        "timestamp": 1562825498,
+                        "timestamp": 1562825497000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -541,7 +541,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/world-47811510"
                                 },
                                 "summary": "Түркиянын Орусиядан С-400 ракета системасын сатып алуу чечимине АКШ каршылык билдирүүдө. Вице-президент Майк Пенс Түркияны мындан баш тартууга чакырды.",
-                                "timestamp": 1554357568,
+                                "timestamp": 1554357567000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:kyrgyz/world-47811510",
                                 "type": "cps"
@@ -555,7 +555,7 @@
                                     "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/world-44997118"
                                 },
                                 "summary": "\"Алар эми F-35 аскер учагын бербейбиз деп, бизди коркутканга өттү. Эгер мындай болсо, эл аралык арбитраждык сот деген бар. Биз ошолорго кайрылабыз. Зарылчылык болсо, анда альтернатива [америкалык аскер учактарына] дагы бар\", - деди түрк президенти.",
-                                "timestamp": 1532848753,
+                                "timestamp": 1532848752000,
                                 "cpsType": "STY",
                                 "id": "urn:bbc:ares::asset:kyrgyz/world-44997118",
                                 "type": "cps"
@@ -573,7 +573,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-48947353"
                         },
                         "summary": "Жүргүнчүлөрдүн бири таксист жигиттин Жузеппе Вердинин La donna è mobile ариясын ырдап баратканын смартфонго тартып алып, интернетке чыгарып жиберген. Таксист интернеттин жылдызына айланып, кийин операда ырдоо боюнча сунуш алды.",
-                        "timestamp": 1562823323,
+                        "timestamp": 1562823322000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -638,7 +638,7 @@
                         "uri": "https://www.bbc.com/kyrgyz/entertainment-48606377",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1560331265,
+                        "timestamp": 1560331264000,
                         "type": "link"
                     },
                     {
@@ -658,7 +658,7 @@
                         "uri": "https://www.bbc.com/kyrgyz/kyrgyzstan-44207471",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1526967626,
+                        "timestamp": 1526967625000,
                         "type": "link"
                     }
                 ],
@@ -677,7 +677,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-48930552"
                         },
                         "summary": "Орусиялык ырчы Александр Серовдун \"Я люблю тебя до слёз\" деген ырын аткарып, интернетте топ жарган Даниярга кабарчыбыз Руфат Эргешов жолугуп келди.",
-                        "timestamp": 1562692852,
+                        "timestamp": 1562692851000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "48930553",
@@ -713,7 +713,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-48889665"
                         },
                         "summary": "Адеп чыккан жеке плеер эсиңиздеби?",
-                        "timestamp": 1562348786,
+                        "timestamp": 1562348785000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07g5003",
@@ -771,7 +771,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-48889663"
                         },
                         "summary": "Кытайдагы мусулмандардын балдары ата-энесинен байма-бай ажыратылып турганы Би-Би-Си иликтөөсүндө аныкталды. Алардын айрымдары болгону эки жашта.",
-                        "timestamp": 1562348698,
+                        "timestamp": 1562348697000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07g4zlz",
@@ -831,7 +831,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-48805525"
                         },
                         "summary": "Кытай менен АКШ ортосундагы соода согушу технологиядагы \"кансыз согушка\" айланууда",
-                        "timestamp": 1561731956,
+                        "timestamp": 1561731955000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07fgkxy",
@@ -888,7 +888,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-48724222"
                         },
                         "summary": "Дүйнөлүк Саламаттык Уюму дүйнө жүзү кызылча илдетине каршы күрөштө артты карай кадам таштап жатат деп эскертти",
-                        "timestamp": 1561127452,
+                        "timestamp": 1561127451000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -948,7 +948,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-48695525"
                         },
                         "summary": "Кытай мечиттерди жок кылууда",
-                        "timestamp": 1560963662,
+                        "timestamp": 1560963661000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "48695526",
@@ -1001,7 +1001,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/sapar-tv-48695523"
                         },
                         "summary": "Өмүр узарууда, бирок карылыкты коштогон деменция сыяктуу акыл-эсти кемиткен илдеттерден кантип сактанууга болот?",
-                        "timestamp": 1560953895,
+                        "timestamp": 1560953894000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07dkpsd",
@@ -1061,7 +1061,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/sapar-tv-48388210"
                         },
                         "summary": "Кыргызстандын Алыкул Осмонов атындагы Улуттук китепканасы 85 жылдыгын белгилеп жатат. Өлкөдөгү башкы китепкананын фондунда 90 тилдеги 6 миллион басылма бар.",
-                        "timestamp": 1558623667,
+                        "timestamp": 1558623666000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1133,7 +1133,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/sapar-tv-47982254"
                         },
                         "summary": "Балаңызды эмдөөдөн өткөрдүңүз беле? Иммунизацияга жалган маалыматтар, диний ишенимдер жана вакцинанын сапаты кандай таасир этет?",
-                        "timestamp": 1555599569,
+                        "timestamp": 1555599568000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1204,7 +1204,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48933944"
                         },
                         "summary": "Украинанын президенти Владимир Зеленский 24-августта өлкөнүн эгемендүүлүк күнүнө карата салттуу өтүп келген аскер параддан баш тартарын билдирди. Парад өткөрүүгө сарпталган каражатты аскер кызматкерлерине сый акы катары берүүнү сунуштады.",
-                        "timestamp": 1562750542,
+                        "timestamp": 1562750541000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1262,7 +1262,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48947356"
                         },
                         "summary": "Грециянын түндүгүндөгү Халкидики жарым аралында кечинде болгон катуу шамал эс алуу жайын будуң-чаң кылды. Аймакта күн катуу ысып, +37 градуска жеткен эле. Эки күн катуу ысыгындан кийин, аба-ырайы кескин өзгөргөн.",
-                        "timestamp": 1562838921,
+                        "timestamp": 1562838920000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1302,7 +1302,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48933051"
                         },
                         "summary": "\"Инстаграм\" Интернетте басмырлоо жана шылдыңдоого каршы күрөшүүнүн жаңы функцияларын киргизди. Жасалма интеллектин жардамы менен иштеген жаңы каражат обу жок же мазактаган контентти тааный алат.",
-                        "timestamp": 1562733313,
+                        "timestamp": 1562733312000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1352,7 +1352,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48933941"
                         },
                         "summary": "Акыркы айларда Филиппиндин чыгыш жээктерине таңгакталып, желим баштык менен оролгон кокаиндер чыгып калууда. Алардын баасы миллиондогон долларды чапчыйт. Жекшембиде мындай таңгакталган жети баштык Кесон провинциясындагы деңиз жээгинен табылды.",
-                        "timestamp": 1562739310,
+                        "timestamp": 1562739309000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1393,7 +1393,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48906511"
                         },
                         "summary": "Түндүк Кореянын бийлиги 29 жаштагы австралиялык студент Алек Сиглини бошотту. Ал өткөн жылдын июнь айында кармалып, бир жыл КЭДР аймагында кармалды. Ал күнөөсүн мойнуна алып, кечирим сурагандан кийин бошотулган, дейт Түндүк Кореянын мамлекеттик агенттиги.",
-                        "timestamp": 1562649145,
+                        "timestamp": 1562649144000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1434,7 +1434,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48906509"
                         },
                         "summary": "Англиянын Бирмингем соту адам сатуу менен алектенген өлкө тарыхындагы эң ири кылмыш тобунун мүчөлөрүнүн үстүнөн өкүм чыгарды. Полициянын эсебинде, кылмышкерлердин торуна түшкөн 400дөй киши Англиянын түндүк-батышында өтө оор шартта кармалган.",
-                        "timestamp": 1562580177,
+                        "timestamp": 1562580176000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1475,7 +1475,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48906510"
                         },
                         "summary": "Грузиянын \"Рустави 2\" телеканалында түз эфир учурунда орус президенти Владимир Путиндин дарегине сөгүнгөн, орой сөз айтылганы талкууга түштү. Дүйшөмбүдө телеканалдын эфири үзгүлтүккө учурап, кайра жанданды.",
-                        "timestamp": 1562582902,
+                        "timestamp": 1562582901000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1515,7 +1515,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/48878629"
                         },
                         "summary": "Лондондун Сазарк районунда королдук сот 28 жаштагы Айсултан Назарбаевдин ишин карады. Казакстандын экс-президентинин жээни баңгизат чегип алып, полицияга каршылык көрсөтүп, тиш салган деп айыпталууда.",
-                        "timestamp": 1562297555,
+                        "timestamp": 1562297554000,
                         "byline": {
                             "name": "Андрей Козенко, Бен Тавенер",
                             "title": "Би-Би-Си",
@@ -1581,7 +1581,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48879089"
                         },
                         "summary": "Белоруссиянын эгемендик күнүнө арналган майрамдык салют учурунда 64 жаштагы аял каза таап, бир нече киши жаракат алган. Тергөө кызматы бул үчүн орусиялык пиротехниканы айыптады.",
-                        "timestamp": 1562303371,
+                        "timestamp": 1562303370000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1621,7 +1621,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48864590"
                         },
                         "summary": "Канбийке Хайя бинт аль-Хусейн Дубайдын башкаруучусу, БАЭнин вице-президенти, шейх Мухаммед бен Рашид ал-Мактумдун алтынчы аялы эле. Ал өлкөсүнөн качып кетти.",
-                        "timestamp": 1562221731,
+                        "timestamp": 1562221730000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1662,7 +1662,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48837146"
                         },
                         "summary": "Түндүк уюлдун жаш түлкүсү норвегиялык Шпицберген архипелагынан Канаданын Элсмир аралына чейин эки жарым айдын ичинде 3500 км. жолду басып өтүп, зоологдорду айраң-таң калтырды.",
-                        "timestamp": 1562065257,
+                        "timestamp": 1562065256000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1703,7 +1703,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48837143"
                         },
                         "summary": "Жекшембиде болжолу саат 15:00 чамасында Лондондогу Клэпхэм районундагы үйгө асмандан кишинин сөөгү түшкөн. Бул учурда үйдүн кожоюну күнгө кактанып олтурган.",
-                        "timestamp": 1562055964,
+                        "timestamp": 1562055963000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1744,7 +1744,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48850871"
                         },
                         "summary": "Триполидеги качкындар лагерине урулган аба соккусунан кеминде 40 киши каза таап, 80 киши жаракат алган. Бул тууралуу өкмөт өкүлдөрү кабарлады. Ливиянын бийлиги кол салууну фельдмаршал Халифа Хафтарга ыктаган күчтөр ишке ашырган деп айыптады.",
-                        "timestamp": 1562137349,
+                        "timestamp": 1562137348000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1785,7 +1785,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48837145"
                         },
                         "summary": "Кори Гауфф беттеш бүткөн соң калыстар менен кол алышып жатып, ыйлап жиберди. Өзүнүн кумири Винус Уильямс менен беттешкен мында калсын, жанынан көрөм деп дагы ойлогон эмес.",
-                        "timestamp": 1562059405,
+                        "timestamp": 1562059404000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1825,7 +1825,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48822450"
                         },
                         "summary": "Жекшембидеги маалыматтарга таянсак, 53 калктуу конушта 4197 үйдү (10415 киши жашайт) суу басканы белгилүү болду. Метеорологдор жакынкы күндөрдө Ока, Уда жана Бирюса дарыяларында суу тартылбайт деп болжоп жатышат.",
-                        "timestamp": 1561956574,
+                        "timestamp": 1561956573000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1865,7 +1865,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48768991"
                         },
                         "summary": "Орусиянын президенти Владимир Путин менен АКШ лидери Дональд Трамп Осака шаарында эки тараптуу сүйлөшүүлөрдү өткөрдү. Эки лидер акыркы жолу өткөн жылы жолуккан. Андан бери Москва менен Вашингтондун мамилеси бузулду.",
-                        "timestamp": 1561709726,
+                        "timestamp": 1561709725000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1905,7 +1905,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48755313"
                         },
                         "summary": "Кочарянды 2008-жылдын 1-мартындагы күч менен таратылган демонстрация үчүн айыптап жатышат. Ага \"конституциялык түзүлүштү кулатууга аракет кылган\" деген айып тагылды. Башаламандык учурунда демонстранттар менен аскер күчтөрү кагылышып, он киши каза тапкан.",
-                        "timestamp": 1561528506,
+                        "timestamp": 1561528505000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1946,7 +1946,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48783285"
                         },
                         "summary": "Батыш жана Борбордук Европада күн катуу ысып баштады. Шаршембиде Франция, Испания жана Португалияда температуралык рекорддор жаңыланды. Европанын көп аймактарында адаттагы июнда катталаган орточо температурадан Цельсия боюнча 10-15 градус жогору ысык катталууда.",
-                        "timestamp": 1561615740,
+                        "timestamp": 1561615739000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1988,7 +1988,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48595988"
                         },
                         "summary": "АКШнын президенти Дональд Трамп менен Ирандын лидери Хассан Роухани кайым айтышты. Роухани Ак үйдөгүлөрдүн \"кемакыл\" деп атагандан кийин, Трамп \"Твиттер\" баракчасына Иранга каршы \"күч колдоном\" деп опузалады.",
-                        "timestamp": 1561529548,
+                        "timestamp": 1561529547000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2028,7 +2028,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48741971"
                         },
                         "summary": "Түркиянын бийликтеги Акыйкаттык жана өнүгүү партиясы Стамбул шаарындагы муниципалдык шайлоодо экинчи ирет утулуп калды. Стамбулдун мэрлигине оппозициянын талапкери катары чыккан Экрем Имамоглу добуштардын 54 пайызын алды.",
-                        "timestamp": 1561355064,
+                        "timestamp": 1561355063000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2069,7 +2069,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/48523928"
                         },
                         "summary": "Жекшембиде Праганын борборундагы негизги аянтка 250 миң киши чогулуп, премьер-министр Андрей Бабиштин кызматтан кетишин талап кылды. Уюштуруучулар каршылык акциясына 250 миң киши катышканын маалымдады.",
-                        "timestamp": 1561357743,
+                        "timestamp": 1561357742000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2109,7 +2109,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48702373"
                         },
                         "summary": "Ислам революциясынын сакчылары корпусу Ирандын аба мейкиндигин бузуп кирген америкалык чалгынчы дронду атып түшүргөнүн билдирди. АКШ бул пилотсуз учак Аскер-деңиз күчтөрүнө таандык болгонун ырастаган.",
-                        "timestamp": 1561021685,
+                        "timestamp": 1561021684000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2149,7 +2149,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48591821"
                         },
                         "summary": "Казакстандын Ички иштер министрлиги өлкөнүн бир катар региондорунда 9-12-июнда болгон санкцияланбаган митингдер учурунда 300 кызматкери жаракат алганын билдирди.",
-                        "timestamp": 1560923723,
+                        "timestamp": 1560923722000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2189,7 +2189,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48674873"
                         },
                         "summary": "Египеттин экс-президенти \"Мусулман агайындар\" уюмунун мурдагы лидери Мохаммед Мурси сот залында көз жумду. Аны тыңчылык боюнча айыптап, соттук териштирүү жүрүп жаткан эле.",
-                        "timestamp": 1560845927,
+                        "timestamp": 1560845926000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2230,7 +2230,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48659973"
                         },
                         "summary": "Гонконгдун эки миллиондой тургуну экстрадиция боюнча мыйзамга каршы нааразылык жүрүшүнө чыкты. Бул Гонконгдун тарыхындагы эң ири каршылык жүрүшү болуп калды.",
-                        "timestamp": 1560749814,
+                        "timestamp": 1560749813000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2270,7 +2270,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48591822"
                         },
                         "summary": "Журналист Иван Голуновго тилектештик билдирип чыккандар, курулай доомат менен кугуунтуктоого каршылыгын билдирди. Мунун алдында эле Иван Голуновго карата козголгон кылмыш иши далил жоктугунан улам токтотулганы белгилүү болгон эле.",
-                        "timestamp": 1560415036,
+                        "timestamp": 1560415035000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2310,7 +2310,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48580982"
                         },
                         "summary": "Венгрияда куткаруучулар Дунай дарыясына чөгүп кеткен чоң катерди суудан алып чыгышты. Андан төрт адамдын сөөгү табылды. Сейил катери өткөн айдын аягында баш калаа Будапештте чоң лайнер сүзүп алганда чөгүп кеткен эле. Дунайдагы соңку 65 жылда болгон ири кырсыкта 28 адам курман болду.",
-                        "timestamp": 1560309281,
+                        "timestamp": 1560309280000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2361,7 +2361,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48579218"
                         },
                         "summary": "Владимир Зеленскийдин \"Слуга народа\" партиясы курултайын өткөрүп, шайлоо тизмесин түздү. Президенттин партиясы Жогорку Рададагы көпчүлүк орундарды жеңип алууга умтулат.",
-                        "timestamp": 1560153983,
+                        "timestamp": 1560153982000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2401,7 +2401,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48565821"
                         },
                         "summary": "Казакстанда жекшембиде болгон президенттик шайлоодо экзитполдун эсеби боюнча Касым-Жомарт Токаев 70% добуш алып, алдыда келатат. Шайлоо күнү санкциясы жок митингге чыкканы үчүн полиция беш жүздөй адамды кармады.",
-                        "timestamp": 1560138402,
+                        "timestamp": 1560138401000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2441,7 +2441,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48538962"
                         },
                         "summary": "Британиянын премьер-министри Тереза Мэй 7-июнда консерваторлор партиясынын лидерлигинен кетет. Өлкө алдында турган чоң кыйынчылыктарга карабастан, консерваторлор партиясынын ичинде премьер-министр кызматын талашкандар көп.",
-                        "timestamp": 1559887026,
+                        "timestamp": 1559887025000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2498,7 +2498,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48939591"
                         },
                         "summary": "Улуттук тарых музейин жана Чолпон-Атадагы ат майданды оңдоп-түзөөгө байланыштуу козголгон кылмыш иши боюнча шектелип жаткан Сапар Исаков менен Мира Карыбаевага айып коюлду.",
-                        "timestamp": 1562762080,
+                        "timestamp": 1562762079000,
                         "byline": {
                             "name": "Венера Алымкул кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -2549,7 +2549,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48939291"
                         },
                         "summary": "Жогорку сот 16-июлда Өмүрбек Текебаевдин ишин жаңы ачылган жагдайларга байланыштуу кайра карайт. Сотту утурлай, \"Ата Мекен\" өкүлдөрү лидери абактан чыгарылбаса, партия оппозицияга өтөрүн эскертүүдө.",
-                        "timestamp": 1562762140,
+                        "timestamp": 1562762139000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -2600,7 +2600,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48910606"
                         },
                         "summary": "Мамлекет башчы Сооронбай Жээнбеков эртең Швейцарияга расмий иш сапары менен барат. Жаратылыш шарттары жагынан Кыргызстанга окшош делип келген Швейцария өлкө үчүн негизги донорлордун бири.",
-                        "timestamp": 1562586227,
+                        "timestamp": 1562586226000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -2651,7 +2651,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48879091"
                         },
                         "summary": "Тартылып калган видеодон эс-учун жоготкон кара терилүү кишиге башкалар жардам берип жатканын көрүүгө болот. Күбөлөр эки киши соода борборунан бирге чыгышканын айтып беришкен. Алардын бири экинчисин бет талаштыра урганда, башы менен асфальтка жыгылып калган.",
-                        "timestamp": 1562316750,
+                        "timestamp": 1562316749000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2691,7 +2691,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48867750"
                         },
                         "summary": "Атамбаевдин митинги тынч өтүп, экс-президент макамы алынгандан бери Кой-Таштагы резиденциясынан чыга элек мурунку өлкө башчысы биринчи жолу борборго чыкты. Анын тарапкерлери Атамбаевди кармап кетүү же чагымчыл аракеттерди күтүшкөнү менен, митинг тынч өттү. Бирок мурунку өлкө башчысына карата ашкере сабырдуу мамиле бийликтин оюнда эмне бар деген суроону коюуда.",
-                        "timestamp": 1562231714,
+                        "timestamp": 1562231713000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -2741,7 +2741,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48850530"
                         },
                         "summary": "Окуя 2-июль күнү саат 15:00 чамасында Калинин көчөсүндө өзү жашаган үйдүн жанында болгон. Учурда Тергөө комитети жана укук коргоочулар окуя болгон жерде иликтөө иштерин жүргүзүүдө. Окуянын чоо-жайы айтыла элек.",
-                        "timestamp": 1562127631,
+                        "timestamp": 1562127630000,
                         "byline": {
                             "name": "Калыйнур Калмурза",
                             "title": "Екатеринбург",
@@ -2793,7 +2793,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48853247"
                         },
                         "summary": "Бишкекте мурдагы президент Алмазбек Атамбаевдин тарапкерлери чогулган митинг парламентти таратуу, өкмөттү кетирүү, саясий куугунтукту токтотуу жөнүндө талаптарды койду.",
-                        "timestamp": 1562147760,
+                        "timestamp": 1562147759000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2833,7 +2833,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48835989"
                         },
                         "summary": "Куткаруучулар Көкөмерен дарыясынан шейшембиде кечке жуук эки эркек адамдын жансыз денесин табышты. Анын бирөө Чүй областтык администрациясынын аппарат башчысы Молдакун Абдылдаевдин өзү, экинчиси айдоочу деп жатышат.",
-                        "timestamp": 1562129705,
+                        "timestamp": 1562129704000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2883,7 +2883,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-48755315"
                         },
                         "summary": "Ылдам жана арзан интернет, стипендия төлөп берген акысыз окуу жай, жардам бергенге дилгирленип турган меймандос кишилер. Өзбекстандык блогер Давронбек Тожиалиев Кыргызстан баш калаасы Бишкектен дагы кандай таасирленди?",
-                        "timestamp": 1561548538,
+                        "timestamp": 1561548537000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2923,7 +2923,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48755314"
                         },
                         "summary": "Кыргызстандын экс-президенти Алмазбек Атамбаев Чүй облсунун Кой-Таш айылындагы үйүндө элдик штабдын мүчөлөрү менен жолукту. Би-Би-Си кабарчылары экс-президенттин тарапкерлери тарабынан түзүлгөн штабда болуп келди.",
-                        "timestamp": 1561530024,
+                        "timestamp": 1561530023000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2963,7 +2963,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48746457"
                         },
                         "summary": "Кыргызстанда экс-президенттин жана үй-бүлө мүчөлөрүнүн коммерциялык банктардагы депозиттик эсептери жөнүндө документтерди алууга сот уруксат бергени жана Атамбаевдин Кой-Ташта сүйлөгөн сөзү талкууну ого бетер курчутту.",
-                        "timestamp": 1561375569,
+                        "timestamp": 1561375568000,
                         "byline": {
                             "name": "Венера Алымкул кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -3014,7 +3014,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48745763"
                         },
                         "summary": "Кыргызстанда байкоо жүрбөгөн көмүскө жана формалдуу эмес экономиканын көлөмү расмий статистика боюнча 2017-жылы 125,2 млрд. сомду түздү, ал эми анын ИДПдагы үлүшү 23,6 пайызга барабар болду.",
-                        "timestamp": 1561372440,
+                        "timestamp": 1561372439000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -3066,7 +3066,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48715585"
                         },
                         "summary": "Экс-президент Алмазбек Атамбаев парламентте айтылган айыптоолор боюнча билдирүү таратып, \"жалган дооматтар менен соттогулары келип жатат\" деп бийликти сындады.",
-                        "timestamp": 1561115943,
+                        "timestamp": 1561115942000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3117,7 +3117,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48702372"
                         },
                         "summary": "Жогорку Кеңеш экс-президент Алмазбек Атамбаевди жоопко тартуу үчүн анын кол тийбестигин алуу боюнча маселени талкуулап жатат. Атайын депутаттык комиссия Алмазбек Атамбаевге тогуз айыптан турган корутунду чыгарып, кийин үчөөнү кыскартты.",
-                        "timestamp": 1561013187,
+                        "timestamp": 1561013186000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3157,7 +3157,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48580983"
                         },
                         "summary": "Кыргызcтандын улуттук статистика комитети 2018-жылы кедейчиликтин деңгээли жалпы өлкө боюнча 22,4% түзгөнүн билдирди. Башкача айтканда, 1 млн. 429 миң адам жакырчылыктын чегинде жашайт, алардын 68,0 пайызы айыл тургундары.",
-                        "timestamp": 1560397913,
+                        "timestamp": 1560397912000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -3209,7 +3209,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48595982"
                         },
                         "summary": "Ички саясатта экс-президент Алмазбек Атамбаевге каршы олуттуу саясий чаралардын сааты жакындап калды көрүнөт. Жогорку Кеңеш мурдагы мамлекет башчыдан экс-президент макамын алып, анын соңку билдирүүлөрүнө катаң чаралар менен жооп берүүгө шымалана киришти.",
-                        "timestamp": 1560320086,
+                        "timestamp": 1560320085000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3264,7 +3264,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48595981"
                         },
                         "summary": "Камактагы Аида Салянованын жактоочулары биринчи тергөө абагындагы мурунку баш прокурордун коопсуздугу жөнүндө маселе көтөрүштү. Кезинде коррупцияга каршы күрөштүн башында турган Саляновада душман жетиштүү экени айтылып, ал түрмөгө камаган айрым паракорлор да ошол эле тергөө абагында экени эскертилди.",
-                        "timestamp": 1560252865,
+                        "timestamp": 1560252864000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3315,7 +3315,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48523931"
                         },
                         "summary": "Бишкектин Биринчи май райондук соту мурдакы баш прокурордун бөгөт чарасын карап жатат. Салянова шейшембиде сураккка чакырылып, андан соң 48 саатка кармалган. Ал кримтөбөл Азиз Батукаевдин мөөнөтүнөн мурда түрмөдөн бошоп кеткени жөнүндө каралып жаткан кылмыш иши боюнча кармалды.",
-                        "timestamp": 1559734153,
+                        "timestamp": 1559734152000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3356,7 +3356,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-47986409"
                         },
                         "summary": "Эненин жатынында жатканда эле жынысын аныктоого жардам берген технология мындан 40 жыл мурун табылган. Бул өз учурунда жынысына карап бойдон алдыруу практикасын жайылтты.",
-                        "timestamp": 1559883986,
+                        "timestamp": 1559883985000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3396,7 +3396,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48461945"
                         },
                         "summary": "\"КТ мобайл\" компаниясында чыккан чыр боюнча түзүлгөн депутаттык комиссия эч бир жыйынтык чыгарбай, экинчи отурумун аяктады. Парламенттеги жыйынга өкмөт башчы Мухаммедкалый Абылгазиев өзү катышып, депутаттардын суроолоруна жооп берди.",
-                        "timestamp": 1559294789,
+                        "timestamp": 1559294788000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3447,7 +3447,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48461940"
                         },
                         "summary": "Матраимовдордун эсеби жок байлыгы тууралуу \"Азаттыктын\" иликтөөсүнөн кийин жарандык коом коррупция менен чыныгы күрөштү талап кылып, 3-июнда Ак үй алдында тынчтык митингин өткөргөнү жатат.",
-                        "timestamp": 1559216626,
+                        "timestamp": 1559216625000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3497,7 +3497,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48430010"
                         },
                         "summary": "Ош шаарында эки күндөн бери эт саткан дүкөндөр, күркөлөр жабылып, шаардагы касапчылык кылган ишкерлер иш таштап жатат. Ветеринардык кызмат талапка жооп бербеген мал союлуучу жайларды жабууга буйрук берип, райондордо союлган этти алып кирүүгө тыюу салган.",
-                        "timestamp": 1559121326,
+                        "timestamp": 1559121325000,
                         "byline": {
                             "name": "Айбек Абдылдаев",
                             "title": "Би-Би-Си Кыргыз кызматы",
@@ -3547,7 +3547,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48431605"
                         },
                         "summary": "Коррупция айыбы менен быйыл 688 кылмыш иши козголуп, келтирилген зыян 3,5 миллиард сомду түздү. Баш прокуратура быйылкы жылдын I кварталындагы ишмердигинин жыйынтыгын чыгарып, резонанстуу иштердин жүрүшү боюнча маалымат берди.",
-                        "timestamp": 1559130900,
+                        "timestamp": 1559130899000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3598,7 +3598,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48174450"
                         },
                         "summary": "Премьер-министр ошондой эле Мамлекеттик бажы кызматынын мурдагы орун басары Раимбек Матраимовдун мүлкүн текшерүү маселесин козгоду жана текшерүү процессин тездетип, коомчулукка объективдүү жана толук маалымат берүүнү тапшырган.",
-                        "timestamp": 1559021589,
+                        "timestamp": 1559021588000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3639,7 +3639,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48435823"
                         },
                         "summary": "Өкмөт башчы учурда министрдин орун басары болуп турган Эркинбек Чодуевдин талапкерлигин сунуш кылды. Парламенттин тиешелүү комитети да Чодуевдин талапкерлигин колдоду.",
-                        "timestamp": 1559048558,
+                        "timestamp": 1559048557000,
                         "byline": {
                             "name": "Абдыбек Казиев",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3690,7 +3690,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48366966"
                         },
                         "summary": "Парламентте \"Президентти жана Жогорку Кеңеш депутаттарын шайлоо тууралуу\" Конституциялык мыйзамга төрт башка өзгөртүүлөр демилгеленип жатат. Мындан тышкары президенттик аппарат жетектеген атайы жумушчу топтун шайлоо стратегиясынын алкагында депутаттардын жоон тобу шайлоо тууралуу жети мыйзамга толуктоолорду сунуштоодо.",
-                        "timestamp": 1558614198,
+                        "timestamp": 1558614197000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3742,7 +3742,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48230315"
                         },
                         "summary": "Президент Соооронбай Жээнбековго атайын кызматты реформалоо талабы коюлууда. УКМК экс-президенттин тушунда саясий атаандаштарга каршы курал болуп, азыркы бийлик түптөлгөн ал системаны пайдаланып, анын жолоюна түшүү коркунучу бар, дешет укук коргоочулар.",
-                        "timestamp": 1558670837,
+                        "timestamp": 1558670836000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3793,7 +3793,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48366964"
                         },
                         "summary": "\"КТ Мобайл\" чуусунан улам өкмөттүк аппараттын жетекчиси жана Маалыматтык технологиялар жана байланыш комитетинин төрагасынын иштен кетиши, премьер-министрдин айланасындагы талкууну ого бетер кызытты. Өкмөт башчы аппараттын башындагы кадрларын кетирип, өзүнүн кызматын сактап калыштын айласын жасап жаткандай көрүнөт.",
-                        "timestamp": 1558520841,
+                        "timestamp": 1558520840000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -3845,7 +3845,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48340889"
                         },
                         "summary": "Кыргызстандын калкынын номиналдык акчалай кирешелери 2018-жылы 413 млрд. сомду түзүп, мурдакы жылга салыштырмалуу 16,1 пайызга көбөйдү. Калктын акчалай кирешесинин негизги булагы эмгек ишмердиги болуп калды, ага бардык кирешенин 70 пайыздан ашыгы туура келет.",
-                        "timestamp": 1558406580,
+                        "timestamp": 1558406579000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107040697",
@@ -3902,7 +3902,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48633728"
                         },
                         "summary": "Бартер же товар алмашуу - бизнес жүргүзүүнүн байыртан келе жаткан ыкмасы. Айырбаштоо, алмашуу акча пайда боло электе эле жаралып, кишилерди коомдошуп жашоого түрткөн себептердин бири.",
-                        "timestamp": 1560507373,
+                        "timestamp": 1560507372000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3943,7 +3943,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48094751"
                         },
                         "summary": "Бут кийим чыгарган белгилүү ишканалар АКШ президенти Дональд Трампка коллективдүү кат жазып, Кытай менен соода согушун токтотууга чакырды. Соода министринин маалыматына караганда, АКШда сатылган бут кийимдердин 70 пайызы Кытайда тигилет.",
-                        "timestamp": 1558502143,
+                        "timestamp": 1558502142000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -3984,7 +3984,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48295578"
                         },
                         "summary": "Кыргызстанда бир катар активисттер өлкөдөгү мунай аткезчилигине бөгөт коюуну талап кылып чыгышты. Алар бул тармактагы контрабандадан улам мамлекеттин экономикасы жабыркап жатканын айтышууда.",
-                        "timestamp": 1558002196,
+                        "timestamp": 1558002195000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -4035,7 +4035,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48263797"
                         },
                         "summary": "АКШнын президенти Трамп Кытай менен соода согушунда туруштук берүү үчүн Федералдык резерв системасынан колдоо алуу жөнүндө сөз кылды.",
-                        "timestamp": 1557902921,
+                        "timestamp": 1557902920000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4075,7 +4075,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48026140"
                         },
                         "summary": "Кыргызстандын башка аймактарына салыштырмалуу Ош- чакан бизнес эң көп жайылган шаар. Эгемендик жылдардан кийин реэкспорт менен жан багып келген аймакта соңку жылдары чакан жана орто бизнести өнүктүрүү аракети жанданды.",
-                        "timestamp": 1556021815,
+                        "timestamp": 1556021814000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -4126,7 +4126,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-47937668"
                         },
                         "summary": "Кыргыз өкмөтү быйыл жалпы экспорттун көлөмүн 2 миллиард долларга чейин жекирүүгө белсенүүдө. Өлкөдө өндүрүлгөн продукцияларды ЕАЭБге мүчө мамлекеттерге гана эмес, Европага ташуу мүмкүнчүлүгү дагы чоң.",
-                        "timestamp": 1555331562,
+                        "timestamp": 1555331561000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -4194,7 +4194,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48822493"
                         },
                         "summary": "Кара ниеттик триаданын мүнөзүнө ээ болуу биздин креативдүү кылат, бирок шумпайлыкка, шылуундукка азгырбай койбойт. Ошол эле учурда ак ниеттиктин триадасы бар, биздин кээ бирибиз табияттан жакшы адам экенибиздин сырын айрым бир деңгээлде ошондон түшүнсөк болот.",
-                        "timestamp": 1562037522,
+                        "timestamp": 1562037521000,
                         "byline": {
                             "name": "Келли Оукс",
                             "title": "BBC Future",
@@ -4254,7 +4254,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48715581"
                         },
                         "summary": "Дүйнөлүк саламаттыкты сактоо уюмунун маалыматына таянсак, 2016-жылы дүйнөдө болжолу 793 000 суицид катталаган. Алардын көпчүлүгү эркектер болгон. Андан бери бул тема боюнча башка глобалдык статистика чыга элек.",
-                        "timestamp": 1561091280,
+                        "timestamp": 1561091279000,
                         "byline": {
                             "name": "Хелен Шумахер",
                             "title": "BBC Future",
@@ -4304,7 +4304,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48689793"
                         },
                         "summary": "Мурдагы Ички иштер министри Молдомуса Конгантиевдин кайра жандандырылган иши боюнча сот отуруму 21-июнга жылдырылды. Бишкектин Биринчи май райондук сотунда бүгүн айыпталуучуга акыркы сөз берилмек. Учурда Конгантиевге байланыштуу сотто эки эпизод боюнча иш каралып жатат.",
-                        "timestamp": 1560937509,
+                        "timestamp": 1560937508000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -4355,7 +4355,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48508892"
                         },
                         "summary": "Жакынкы Чыгыштагы жаңжалдуу аймактан Кыргызстан жарандарын алып келүүгө аракет көрүлүп жатат. Бул жөнүндө Тышкы иштер министрлиги кабарлады.",
-                        "timestamp": 1559625865,
+                        "timestamp": 1559625864000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4395,7 +4395,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48580977"
                         },
                         "summary": "Акыркы жылдары ата-энесин багуу үчүн бешиктен бели чыга элек өспүрүм кыздар да чет өлкөгө иштегени кеткен учурлар көбөйдү. Мектеп курагындагы 12 жаштан 16 жашка чейинки кыздар көбүнчө бала багуу үчүн кетип жатышат. Бирок, өзү бала болуп туруп бала багып иштөө кыздардын психикасына терс таасирин тийгизүүдө деп укук коргоочулар коңгуроо кагышууда.",
-                        "timestamp": 1560157114,
+                        "timestamp": 1560157113000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4436,7 +4436,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48460370"
                         },
                         "summary": "Бишкекте белгилүү кыргыз режиссеру Болотбек Шамшиевдин совет доорундагы бандиттерге каршы күрөшкөн кыргыз милициясы жөнүндө \"Эсимде\" деп аталган жаңы кино-романы жарык көрдү.",
-                        "timestamp": 1559211066,
+                        "timestamp": 1559211065000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4488,7 +4488,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48393958"
                         },
                         "summary": "Даниялык Нилз Молбаек Таиланддын секс туризм менен атагы чыккан Паттайя шаарына барып, сойкулардын бирин жактырып калып, акыры ага баш кошкон. Арадан жылдар өтүп, азыр эми бул аймакта миңден ашуун таиланддык келиндер пайда болгон.",
-                        "timestamp": 1558941323,
+                        "timestamp": 1558941322000,
                         "byline": {
                             "name": "Каона Понгпипат",
                             "title": "BBC News Thai",
@@ -4543,7 +4543,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48361656"
                         },
                         "summary": "«Сабаттуу бол» өнөктүгүнүн Бишкек шаары боюнча жыйынтыгы чыкты. Жат жазууга катышкан 1100 адамдын ичинен \"5\" алган 63 адам болуп, катышкандардын 5 пайызын түздү. Катышкандардын ичинде эң чоң тобу - 42 % - \"2\" деген баа алгандар.",
-                        "timestamp": 1558515473,
+                        "timestamp": 1558515472000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4594,7 +4594,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/48300194"
                         },
                         "summary": "\"Мегаком\" компаниясынын жетекчиси Акылбек Жамангулов ага мурунку министр, учурда \"Ачык өкмөт\" эл аралык уюмунун катчылыгынын жетектеп жаткан Иманкадыр Рысалиев тарабынан коркутуулар болгонун билдириди.",
-                        "timestamp": 1558080301,
+                        "timestamp": 1558080300000,
                         "byline": {
                             "name": "Абдыбек Казиев",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -4651,7 +4651,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48120132"
                         },
                         "summary": "Кыргызстанда журналисттерге чоң доо коюп соттошкондор дагы эле Атамбаевдер болуп жатат. Атамбаев Алмазбек президент болуп турганда аны сындаган бир катар ММКлар миллиондогон сомго айыпка жыгылганы белгилүү.",
-                        "timestamp": 1556878965,
+                        "timestamp": 1556878964000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -4702,7 +4702,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48089517"
                         },
                         "summary": "Кытайдын түштүгүндөгү Шэньчжэнь шаарынын мектеп окуучуларына үй-бүлөлүк унааны сүрөткө тартып келгиле деген үй тапшырма берилген. Бул кадам мугалимдердин окуучуларга карата дискриминациясы тууралуу кызуу талкууга жем таштады.",
-                        "timestamp": 1556520070,
+                        "timestamp": 1556520069000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4742,7 +4742,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/47775582"
                         },
                         "summary": "Бишкекте Путинге каршы саясий талап менен чыккан активисттин улут аралык касташуу боюнча айыпталышы мамлекеттик лингвистикалык экспертизанын жоопкерчилиги жөнүндөгү маселени күн тартибине кайрадан чыгарды.",
-                        "timestamp": 1554120949,
+                        "timestamp": 1554120948000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -4810,7 +4810,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48922295"
                         },
                         "summary": "1969-жылдын 20-июлундагы бул окуя адамзат тарыхындагы технологиялык чоң жетишкендик катары каралды. Бирок космостогу ийгилик биздин күнүмдүк жашообуздагы өзгөрүүлөргө дагы жол салып бергенин аңдай бербейбиз.",
-                        "timestamp": 1562666028,
+                        "timestamp": 1562666027000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4850,7 +4850,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48754588"
                         },
                         "summary": "Учурда хакерлер телефонго атайын программа орнотуп, смартфондогу жеке маалыматты ачып, камера менен микрофонду алыстан башкара алат. Буга чейин эле журналисттер, активисттер менен адвокаттардын смартфондоруна тыңчылык кылган программалар орнотулганы ашкереленген.",
-                        "timestamp": 1561451864,
+                        "timestamp": 1561451863000,
                         "byline": {
                             "name": "Paul Kenyon & Joe Kent",
                             "title": "File on 4",
@@ -4909,7 +4909,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48689795"
                         },
                         "summary": "Улуттук илимдер академиясынын айрым кызматкерлери президентке кайрылуу жолдоп, чарбалык иштерде жана кадрдык саясатта эреже бузууларга жол берип жатат деп, жетекчилигин айыптады.",
-                        "timestamp": 1561023840,
+                        "timestamp": 1561023839000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -4950,7 +4950,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-48523930"
                         },
                         "summary": "Мындан туура 30 жыл мурун Кыргызстан жаш тарыхчылар ассоциациясы түзүлүп, алгачкы уюштуруу жыйынына ошол кездеги акылгөй интеллигенциянын Түгөлбай Сыдыкбеков баштаган чыгаан өкүлдөрү, тыштан манасчы Жүсүп Мамай катышты.",
-                        "timestamp": 1559723821,
+                        "timestamp": 1559723820000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4990,7 +4990,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48278425"
                         },
                         "summary": "Экинчи дүйнөлүк согушта эрдик көрсөткөн орус жоокеринин уурдалып кеткен\"Кызыл Жылдыз\" ордени отуз жылдан кийин Мексикадан табылып, өзүнүн ээсине кайтарылды. Көрсө, бул мартабалуу орден Александр Смирновдуку экен.",
-                        "timestamp": 1558074799,
+                        "timestamp": 1558074798000,
                         "byline": {
                             "name": "Ольга Ившина",
                             "title": "BBC News Russian",
@@ -5044,7 +5044,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48283152"
                         },
                         "summary": "УКМКнын төрагасы Идрис Кадыркулов кызматынан кетти. Ал паспорт маселесине байланыштуу тергөө иштерине кийлигишүү ыктымалдыгы жөнүндө пикирлерди четке кагуу үчүн кызматынан баш тартканын айтып жатат.",
-                        "timestamp": 1557919280,
+                        "timestamp": 1557919279000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -5095,7 +5095,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48183337"
                         },
                         "summary": "Адамзат барган сайын тездик менен биосфераны бүлүндүрүүдө. Адамдын айлана-чөйрөгө тийгизген таасири менен миллион чамалуу өсүмдүк жана жаныбарлардын түрү жок болуу коркунучуна кептелди.",
-                        "timestamp": 1557217703,
+                        "timestamp": 1557217702000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5135,7 +5135,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48090470"
                         },
                         "summary": "Кыргыз этноними кытай булактарында эң биринчи биздин заманга чейинки Х кылымда эле учурайт. Бул тарыхый жаңылыкты кытайлык илимпоздор аныктаганын тарыхчы Кыяс Молдокасымов жазды.",
-                        "timestamp": 1556537800,
+                        "timestamp": 1556537799000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5175,7 +5175,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48068172"
                         },
                         "summary": "Бишкекте \"салттуу музыка\" жумалыгы борбордук аянтта гала концерт менен жыйынтыкталды.",
-                        "timestamp": 1556280153,
+                        "timestamp": 1556280152000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5216,7 +5216,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-47986408"
                         },
                         "summary": "Ош маанилүү аскердик-стратегиялык, соода-экономикалык жана маданий борбору экендигин төмөнкүлөр далилдейт: Ош тээ байыртадан, коло доорунан баштап эле алгачкы адамдардын жашаган жери болгон.",
-                        "timestamp": 1555651016,
+                        "timestamp": 1555651015000,
                         "byline": {
                             "name": "Байболот Абытов,",
                             "title": "тарых илимдеринин доктору, профессор",
@@ -5266,7 +5266,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-47931872"
                         },
                         "summary": "Психоанализди негиздеген Зигмунд Фрейд селфиге кандай көз карашта болмок? Селфинин психологиялык кесепети барбы? Психолог, бир нече китептин автору Томас Часорро-Премузич пикири менен бөлүштү.",
-                        "timestamp": 1555392023,
+                        "timestamp": 1555392022000,
                         "byline": {
                             "name": "Tomás Chamorro-Premuzic, psychologist",
                             "title": "BBC Ideas",
@@ -5321,7 +5321,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-47828275"
                         },
                         "summary": "Түштүк Корея жана АКШда биринчи жолу 5G технологиясы ишке кирди. Ал смартфон колдонуучулардын мүмкүнчүлүктөрүн кеңейтет деп айтылууда. Бирок жаңы технология коопсуздукка коркунуч жаратат дегендер да бар.",
-                        "timestamp": 1554709892,
+                        "timestamp": 1554709891000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5362,7 +5362,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-47864732"
                         },
                         "summary": "Экологдор 140 жылдан соң биринчи жолу Голландияга карышкырлардын үйүрү кайтып келгенин кабарлашты. Европанын кээ бир аймактарында карышкырларга аңчылык күчөгөндө, көбү жер которуп кетүүгө аргасыз болгон.",
-                        "timestamp": 1554878801,
+                        "timestamp": 1554878800000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5403,7 +5403,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-47669166"
                         },
                         "summary": "Кыргызстанда жана башка өлкөлөрдө мурдагы жана азыркы президенттердин саясий этиканы сактоо маданияты кандай? Би-Би-Синин “Дүйнө чабыт” программасында коомдук ишмер Алмаз Окин менен журналист Азимжан Ибраимов ушул теманы талкуулашты.",
-                        "timestamp": 1553508285,
+                        "timestamp": 1553508284000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -5472,7 +5472,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48741824"
                         },
                         "summary": "АКШда күн сайын 1,8 миллион китеп сатып алышат. Улуу Британияда жарым миллион китеп сатылат. Азыркы доордо кишинин көңүлүн алагды кылган көптөгөн себептер болгонуна карабай, көп кишилер мурдакыдай эле китеп окуганды жактырат.",
-                        "timestamp": 1561375362,
+                        "timestamp": 1561375361000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5512,7 +5512,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48864309"
                         },
                         "summary": "Бир караганда бул жер кадимки эле шалбаа болуп көрүнөт -калың чөп, кай бир жеринде бийик өсөт. Алыстан караганда, сейилдегенге эң сонун жер болуп сезилет. Бирок бул жердин чөбү бир метр жогору, себеби бир нече апта бою аны өлгөн адамдын чириген денелери менен азыктандырышкан.",
-                        "timestamp": 1562215492,
+                        "timestamp": 1562215491000,
                         "byline": {
                             "name": " Карлос Серрано,",
                             "title": "Би-Би-Си",
@@ -5574,7 +5574,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48837138"
                         },
                         "summary": "Адатта сырткы келбетибиз биздин мүнөзүбүзгө таасирин тийгизбейт го деп эсептейбиз. Көрсө, боюбуз же өң-келбетибиз биздин инсандыгыбызды (личность) калыптандырып, журум-турумга таасирин тийгизет экен.",
-                        "timestamp": 1562048234,
+                        "timestamp": 1562048233000,
                         "byline": {
                             "name": "Кристиан Жарретт",
                             "title": "BBC Future",
@@ -5624,7 +5624,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48430418"
                         },
                         "summary": "Мурда аялдар кош бойлуу экенин кантип текшерген деген суроо жолдодуңуз беле? Көрсө, 1930-жылдары муну бакалар аркылуу билишчү экен. Африкалык тырмактуу бака аялдын боюнда бар экенин так аныктагандыктан, жыйырма жыл бою он миңдеген бакалар тест катары колдонулган.",
-                        "timestamp": 1559105531,
+                        "timestamp": 1559105530000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5669,7 +5669,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48120129"
                         },
                         "summary": "Изилдөөчүлөр жумуш берүүчүлөргө кайрылып, \"кызматкерлердин эмгек өндүрүмдүүлүгү кызыктырса, анда имараттын ичиндеги температурага көңүл бурулушу зарыл\" деп кеңеш берди.",
-                        "timestamp": 1559100991,
+                        "timestamp": 1559100990000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -5710,7 +5710,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48183336"
                         },
                         "summary": "Жаш инженер-механик АКШга бир нече ай мурун эле коноктоп келген. Өзү менен чогуу ойлоп тапкан табылгасын - эки дөңгөлөктүү, бут аркылуу педалды айлантып кыймылга келген конструкциясын ала келиптир. Муну өзү \"велосипед\" деп атачу.",
-                        "timestamp": 1557203023,
+                        "timestamp": 1557203022000,
                         "byline": {
                             "name": "Тим Харфорд",
                             "title": "BBC",
@@ -5765,7 +5765,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48117375"
                         },
                         "summary": "Бул аптада Таиланддын королу өзүнүн жансакчысына үйлөнүп, аны ханыша деп жарыялады. Королдор карапайым үй-бүлөдөн чыккан кыздардын колун сураган дагы кандай учурлар бар?",
-                        "timestamp": 1556873728,
+                        "timestamp": 1556873727000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5805,7 +5805,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48048807"
                         },
                         "summary": "Бириккен Араб Эмираттарынын жараны Мунира Абдула 27 жылга созулган комадан кийин өзүнө келген. 1991-жылы Мунира унаа кырысыгына кабылып, төрт жаштагы уулу Омарды денеси менен калкалап калган экен.",
-                        "timestamp": 1556174315,
+                        "timestamp": 1556174314000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5846,7 +5846,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-47935663"
                         },
                         "summary": "Күнүгө белгилүү өлчөмдө суу ичкиле, мыкты ден соолуктун сырдуу эшиги ошол деп ынандырган пикирлер үстөмдүк кылат. Энергия берет, жүзүң жылмакай тартып, ашыкча салмактан кутуласың, рак болуудан сактанасың деп ишендиришет.",
-                        "timestamp": 1555396334,
+                        "timestamp": 1555396333000,
                         "byline": {
                             "name": "Жессика Браун",
                             "title": "BBC Future",
@@ -5896,7 +5896,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-47935664"
                         },
                         "summary": "Тактыга келе турган киши калбай калды деп айтсак туура болбос. Ооба, мураскерди алып келүү жолу бар эле, бирок кемчиликтери, бүдөмүк жагдайлары болгон үчүн тактынын орду бош туруп калды. Королдун артындагы жалгыз туягы Матильда ысымдуу кыз эле.",
-                        "timestamp": 1555480423,
+                        "timestamp": 1555480422000,
                         "byline": {
                             "name": "Яна Литвинова",
                             "title": "Би-Би-Си, Лондон",
@@ -5947,7 +5947,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-47878739"
                         },
                         "summary": "Кылмыш иштеринде же жарандык соттук териштирүүлөрдө эгиздер жооп берип калган учурлар дүйнөдө ондоп саналат. Кээде аларды татуировкасынан же башка бир белгилеринен улам таанып, жоопко тартышат.",
-                        "timestamp": 1554953265,
+                        "timestamp": 1554953264000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5987,7 +5987,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-47770645"
                         },
                         "summary": "Изилдөө учурунда 9 жаштан 13 жашка чейинки балдар ата-энелери чыгарган жакшы сүрөттөрдү жактырышкан. Бирок маселе ошол \"жакшы сүрөт\" дегенге ата-энелер менен балдардын ача пикири.",
-                        "timestamp": 1554112731,
+                        "timestamp": 1554112730000,
                         "byline": {
                             "name": "Хелиер Чен",
                             "title": "Би-Би-Си",
@@ -6038,7 +6038,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-47664270"
                         },
                         "summary": "АКШнын Йел университетинин психология боюнча окумуштуусу профессор Лори Сантостун пикиринде, киши бактылуу болуш үчүн машыгуу зарыл. Ооба, музыканттар, спортчулар сыяктуу эле машыгуу керек.",
-                        "timestamp": 1553244381,
+                        "timestamp": 1553244380000,
                         "byline": {
                             "name": "Ева Онтиверос",
                             "title": "Би-Би-Си",
@@ -6118,7 +6118,7 @@
                         "uri": "http://www.bbc.com/kyrgyz/entertainment-43538389",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1522049998,
+                        "timestamp": 1522049997000,
                         "type": "link"
                     },
                     {
@@ -6137,7 +6137,7 @@
                         "uri": "https://www.bbc.com/kyrgyz/entertainment-46945906",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1548074975,
+                        "timestamp": 1548074974000,
                         "type": "link"
                     },
                     {
@@ -6156,7 +6156,7 @@
                         "uri": "http://www.bbc.com/kyrgyz/kyrgyzstan-42306634",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1512997165,
+                        "timestamp": 1512997164000,
                         "type": "link"
                     },
                     {
@@ -6175,7 +6175,7 @@
                         "uri": "https://www.bbc.com/kyrgyz/kyrgyzstan-45354746",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1536123076,
+                        "timestamp": 1536123075000,
                         "type": "link"
                     },
                     {
@@ -6194,7 +6194,7 @@
                         "uri": "https://www.bbc.com/kyrgyz/world-44468266",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1528888259,
+                        "timestamp": 1528888258000,
                         "type": "link"
                     },
                     {
@@ -6213,7 +6213,7 @@
                         "uri": "http://www.bbc.com/kyrgyz/kyrgyzstan-41981159",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1510652043,
+                        "timestamp": 1510652042000,
                         "type": "link"
                     },
                     {
@@ -6232,7 +6232,7 @@
                         "uri": "http://www.bbc.com/kyrgyz/world-40850566",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1504609736,
+                        "timestamp": 1504609735000,
                         "type": "link"
                     },
                     {
@@ -6251,7 +6251,7 @@
                         "uri": "http://www.bbc.com/kyrgyz/resources/idt-sh/russian_revolution_and_me_kyrgyz",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1509985424,
+                        "timestamp": 1509985423000,
                         "type": "link"
                     }
                 ],
@@ -6270,7 +6270,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48822456"
                         },
                         "summary": "Мексиканын Гвадалахара шаарынын жака-белиндеги алты райондо күтүүсүз жерден кар жаады. Айрым жерлерде кардын калыңдыгы жарым метрдей бар.",
-                        "timestamp": 1561980042,
+                        "timestamp": 1561980041000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6310,7 +6310,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48659974"
                         },
                         "summary": "National Geographic сүрөт конкурсунун жыйынтыктары чыкты. Фотосүрөттөр өзүнчө эле чоң чыгарма сыяктуу. Саякат боюнча башкы сыйлыкты Вэймин Чу алды. Ал батыш Гренландиядагы балыкчылары шаары болгон Упернавикти сүрөткө тарткан.",
-                        "timestamp": 1560755909,
+                        "timestamp": 1560755908000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6350,7 +6350,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48755312"
                         },
                         "summary": "Бул аптада европалык өлкөлөрдө рекорддук аба ырайы күтүлөт. Метеорологдордун божомолунда абанын температурасы Европанын батыш тарабында 40 градуска жетет. Буга Испаниядан Швейцарияга чейинки бир катар өлкөлөр кабылат.",
-                        "timestamp": 1561524443,
+                        "timestamp": 1561524442000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6390,7 +6390,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48619725"
                         },
                         "summary": "Кыргызстандын баш калаасы Бишкекте ШКУга мүчө өлкөлөрдүн мамлекет башчыларынын кезектеги жыйыны башталды. ШКУ жыйынына он эки өлкөнүн лидери катышууда. ШКУнун курамындагы мамлекеттердин башчыларынын саммити 13-14-июнь күндөрү өтөт. Бишкектеги жыйында Кыргызстан уюмга төрагалык кылуу милдетин Орусияга өткөрүп берет.",
-                        "timestamp": 1560426349,
+                        "timestamp": 1560426348000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6431,7 +6431,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48619726"
                         },
                         "summary": "Украиналык окумуштуулар Чернобылда кайрадан жапайы жаратылыш калыбына келип жатканын айтууда. Өлкөдө сейрек кездешкен жан-жаныбарлар аймакты байырлай баштады.",
-                        "timestamp": 1560430351,
+                        "timestamp": 1560430350000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6472,7 +6472,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48495043"
                         },
                         "summary": "Кыргызстанда балдар жана өспүрүмдөр өлкө калкынын 38 пайызын түзөт. Өлкөдө балдарга байланышкан маселе арбын. Бирок бүгүн биз бейкапар балалыктын доорун чагылдырган Дастан Үмөтбай уулунун сүрөттөрү менен бөлүшөбүз.",
-                        "timestamp": 1559542652,
+                        "timestamp": 1559542651000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6513,7 +6513,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-48538584"
                         },
                         "summary": "Апамдын кичи мекени Алай. Бала кезде жайкы каникул учурунда көп келет элек. Эсимде, айылдык аңчылардан жапайы жаныбарлар жөнүндө, кызыктуу окуялары тууралуу көп сурап, артынан ээрчип алчумун.",
-                        "timestamp": 1559814020,
+                        "timestamp": 1559814019000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6553,7 +6553,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-48117371"
                         },
                         "summary": "Бейшембиде Жапонияда жаңы император Нарухито расмий түрдө такка олтурду. Император саясий бийликке эгедер эмес, бирок конституция боюнча мамлекеттин бүтүндүгү жана биримдигинин маанилүү символу.",
-                        "timestamp": 1556773906,
+                        "timestamp": 1556773905000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6593,7 +6593,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-47935661"
                         },
                         "summary": "15-апрелде белгилүү орусиялык ырчы Алла Пугачева 70 жашка чыкты. Бул ырчы бир гана Орусияда эмес, мурдакы советтик өлкөлөрдүн баарында кеңири таанымал. Анткени анын сахнага алгач кадам таштаган учурлары 1965-жылга туура келет. Ошондо Алла 16 гана жашта эле.",
-                        "timestamp": 1555322298,
+                        "timestamp": 1555322297000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6633,7 +6633,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-47935662"
                         },
                         "summary": "Париждеги белгилүү Нотр-Дам чиркөөсүндө өрт чыгып, чатыры жана мунарасы урап түштү. Өрт өчүрүүгө мүмкүн болбой калды. Кырсык катталган чиркөөгө өлкө президенти Эммануэль Макрон келди.",
-                        "timestamp": 1555388170,
+                        "timestamp": 1555388169000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6682,7 +6682,7 @@
                         "uri": "https://www.bbc.co.uk/kyrgyz/resources/idt-sh/nowruz_kyrgyz",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1553598895,
+                        "timestamp": 1553598894000,
                         "type": "link"
                     },
                     {
@@ -6694,7 +6694,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-47354412"
                         },
                         "summary": "Лос-Анжелесте америкалык киноакадемиянын 91-салтанаты өтүүдө. Бул жолку \"Оскардын\" башкы сыйлыгын Питер Фореллинин \"Жашыл китеп\" тасмасы жеңип алды. Сыйлык тапшыруу салтанаты 1989-жылдан бери биринчи жолу алып баруучусу жок өттү.",
-                        "timestamp": 1551078992,
+                        "timestamp": 1551078991000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6735,7 +6735,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-47329666"
                         },
                         "summary": "Эң престиждүү World Press Photo эл аралык фото сынагы 2019-жылдагы жеңүүчүлөрдү атады. Сыйлыктар бир нече номинациялар боюнча берилген. Анын ичинде \"жылдын сүрөтү\" дагы бар.",
-                        "timestamp": 1550828117,
+                        "timestamp": 1550828116000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6775,7 +6775,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-47113168"
                         },
                         "summary": "Дүйнө жүзүндө миллиарддан ашуун адам 12 жаныбардын атына негизделип түзүлгөн чыгыш жыл санагын колдонот. Ага ылайык, быйыл доңуз жылы кирип келди.",
-                        "timestamp": 1549344401,
+                        "timestamp": 1549344400000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6815,7 +6815,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-47027903"
                         },
                         "summary": "Бразилиянын түштүк-чыгышында дамбадагы кырсык 58 кишинин өмүрүн алып, 300дөй киши дайынсыз болуп жатат. Куткаруучулар дайынсыз кеткендерди тирүү табуу мүмкүнчүлүгү улам азайып жатканын айтууда.",
-                        "timestamp": 1548670751,
+                        "timestamp": 1548670750000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6879,7 +6879,7 @@
                         "uri": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1479748622,
+                        "timestamp": 1479748621000,
                         "type": "link"
                     }
                 ],
@@ -6909,7 +6909,7 @@
                         "uri": "http://www.bbc.com/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth",
                         "contentType": "Audio",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1482481354,
+                        "timestamp": 1482481353000,
                         "type": "link"
                     }
                 ],
@@ -6928,7 +6928,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48906514"
                         },
                         "summary": "Орусия президенти Владимир Путин парламенттин Грузияга каршы санкция киргизүү демилгесин колдобой турганын айтты. Мамдуманын депутаттары Путиндин дарегине айтылган мазактоого жооп кылып, Грузияга экономикалык санкция киргизүү сунушу менен чыккан.",
-                        "timestamp": 1562734204,
+                        "timestamp": 1562734203000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6968,7 +6968,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/48878631"
                         },
                         "summary": "Би-Би-Си Кытайдын Синцзянь регионунда мусулман балдар ата-энелеринен зордук менен ажыратылып жатканынын жаңы далилдерин таап чыкты. Расмий документтер көп сандагы мамлекеттик мектеп-интернаттар курулуп, алардын айрымдары балдарга эсептелгенин көрсөтүүдө. Кытай өкмөтүн сынга алгандар балдарды үй-бүлөсүнөн бөлүп ажыратууну бул жакта максаттуу түрдө болуп жаткан саясат деп аташууда.",
-                        "timestamp": 1562321519,
+                        "timestamp": 1562321518000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -7026,7 +7026,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48918755"
                         },
                         "summary": "Жогорку Кеңеш мыйзамды одоно бузуу менен Атамбаевди кол тийбестигинен ажыратуу токтомун кабыл алган. Баш мыйзамда экс-президентти макамынан ажыратуу боюнча конкреттүү чаралар камтылган эмес, деди Сергей Слесарев.",
-                        "timestamp": 1562651281,
+                        "timestamp": 1562651280000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -7076,7 +7076,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/46301660"
                         },
                         "summary": "Би-Би-Си америкалык, британдык, советтик көрсөтүүлөр тууралуу айтып берет. Бул теле көрсөтүүлөр бүтүндөй бир муундун эсинде калып, кишилердин дүйнөгө болгон көз карашын өзгөрткөн эле.",
-                        "timestamp": 1562752731,
+                        "timestamp": 1562752730000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7116,7 +7116,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48906506"
                         },
                         "summary": "Казыналык мекемелердеги узун-узун кезектер, кагазды толтуруп, анан чиновниктердин эшигин түртмөй... Көп өлкөлөрдөгү абал ушундай эмеспи. \"Интернеттин жеткиликтүүлүгү\" жана \" онлайн аркылуу мамлекеттик кызмат көрсөтүүлөр\" боюнча лидер өлкөлөр тууралуу айтып беребиз.",
-                        "timestamp": 1562570248,
+                        "timestamp": 1562570247000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7157,7 +7157,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48879090"
                         },
                         "summary": "Кыргызстандык Данияр Жаныбековдун Оштогу ресторандардын биринде ырдаган ырын Youtube сайтында аз эле убакыттын ичинде 1 млн. 100 миң ашуун киши көрдү. Даниярдын эч кандай музыкалык билим жок. Бул кудайдан берилген талант болсо керек, деди Данияр Би-Би-Сиге берген маегинде.",
-                        "timestamp": 1562308548,
+                        "timestamp": 1562308547000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7197,7 +7197,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48853246"
                         },
                         "summary": "\"Фейсбук\" коомдук сайтында миңдеген ыктыярчылар кастык тили менен күрөшүүдө. Алар бул күрөштү #IAmHere урааны алдында уюштурду. Бул багытта ыктыярчылар дагы троллдордун консервативдүү көз караштарына же башкы ойлорунун куралы болбоого үндөөдө.",
-                        "timestamp": 1562144354,
+                        "timestamp": 1562144353000,
                         "byline": {
                             "name": "By Jessica Bateman",
                             "title": "BBC Trending",
@@ -7249,7 +7249,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48881897"
                         },
                         "summary": "Жогорку Кеңештин мурунку он бир төрагасы Алмаз Атамбаевдин кыңк этпей анын айтканын аткарган президент жана премьер-министр жөнүндө планы ойрон болду деп билдирүү жасашты. Алар мурдакы мамлекет башчысын өзүнүн актыгын мыйзам чегинде далилдөөгө чакырышты.",
-                        "timestamp": 1562320230,
+                        "timestamp": 1562320229000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -7300,7 +7300,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48864591"
                         },
                         "summary": "Британдык кайрымдуулук уюмунун (Cancer Research UK) окумуштуулары ашыкча салмак рактын бир нече түрүнүн өөрчүшүнө алып келет деген тыянакка келген. Аталган уюм ракты изилдөө менен алектенет.",
-                        "timestamp": 1562233327,
+                        "timestamp": 1562233326000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7341,7 +7341,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48835990"
                         },
                         "summary": "Алмазбек Атамбаевдин жубайы Раиса Атамбаеванын чет элдик компаниянын мүлкүн рейдерлик менен тартып алуу кылмышына катышы бар экени жөнүндө иликтөөнү КТРКдан көрсөтүштү. Анда мурдакы биринчи лединин президенттин сотторду караган бөлүмүнө өзүнүн талабын таңуулап, рейдердик басып алууну ишке ашырган айрым кызмат адамдарына колдоо көрсөтүп келгени айтылат.",
-                        "timestamp": 1562126855,
+                        "timestamp": 1562126854000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -7392,7 +7392,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48850870"
                         },
                         "summary": "\"Аскер-деңиз флотунун 14 жоокери суунун тереңинде илимий изилдөө үчүн колдонулган аппаратта чыккан өрттөн каза тапкан\",-деп кабарлады Орусиянын Коргоо министрлиги. Жоокерлер иске ууланып каза тапкан.",
-                        "timestamp": 1562245088,
+                        "timestamp": 1562245087000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7432,7 +7432,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48837142"
                         },
                         "summary": "Соңку саясий окуялардан улам парламенттин дарегине айтылган сындар курчуду. Бишкекте Жогорку Кеңештин депутаттарынын санын 120дан 35ке кыскартып, алардын артыкчылыктарын жана айлыктарын азайтуу боюнча кол топтоо жүрүп жатат.",
-                        "timestamp": 1562053473,
+                        "timestamp": 1562053472000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -7482,7 +7482,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48823560"
                         },
                         "summary": "Роза Отунбаева мурунку өлкө башчысы Алмазбек Атамбаевдин тегерегинде түзүлгөн саясий кырдаал боюнча өзүнүн билдирүүсүн жарыялады.",
-                        "timestamp": 1561965905,
+                        "timestamp": 1561965904000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -7533,7 +7533,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48804025"
                         },
                         "summary": "Атамбаевдин айланасында түзүлгөн кырдаал географиялык тирешүүгө айланып кетпейби деген кооптонуу күчөп турган чакта, Чүй боорундагы элдин аксакалдары жана абройлуу адамдары саясатчыларды элди бөлүп жарбоого чакырып жатышат.",
-                        "timestamp": 1561726609,
+                        "timestamp": 1561726608000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -7583,7 +7583,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48768990"
                         },
                         "summary": "Жогорку Кеңеш Башкы прокуратуранын корутундусуна таянып, Алмазбек Атамбаевди бир топ кылмыштарга катышы бар деген шек менен экс-президенттик макамынан ажыратты. Атамбаев экс-президенттик бардык артыкчылыктарынан жана кол тийбестик укуктарынын баарынан ажырады.",
-                        "timestamp": 1561620905,
+                        "timestamp": 1561620904000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -7634,7 +7634,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48822490"
                         },
                         "summary": "Гонконгдо шаардын Британиядан Кытайга өткөнүнүн 22 жылдыгы белгиленип жаткан учурда каршылык демонстрациясына чыккандар менен полиция кайрадан кагылышты. Полиция демонстранттарга каршы көз ачыштырган газ менен союлдарды колдонду.",
-                        "timestamp": 1561956686,
+                        "timestamp": 1561956685000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7684,7 +7684,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48741975"
                         },
                         "summary": "Жакынкы Чыгыш жана Түндүк Африкада жүргүзүлгөн иликтөөгө ылайык, арабдардын көбүнүн динге ишеними төмөн. Иликтөө учурундагы сурамжылоодо региондогу негизги көйгөйлөр, анын ичинде аялдардын укугу, миграция жана коопсуздук боюнча суроолор дагы берилген.",
-                        "timestamp": 1561364929,
+                        "timestamp": 1561364928000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7728,7 +7728,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48783293"
                         },
                         "summary": "Борбор Азиянын көпчүлүк жаштары өмүрүндө мамлекет башында турган бир эле ысымды билишет. Өзгөчө казакстандык жаштар. 79 жаштагы Нурсултан Назарбаев 1989-жылдан баштап мамлекетти башкарып келди. Ушул жылдын 20-мартында кызматтан кетип жатканын жарыялаган.",
-                        "timestamp": 1561693398,
+                        "timestamp": 1561693397000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7770,7 +7770,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48741821"
                         },
                         "summary": "Мегаполистин жашоосу дээрлик токтоп калды. Көптөгөн бюджеттик мекемелер, кафе, ресторан жана мейманканалар жабылды. Суу менен камсыздоону шаардык кызматтар 40 пайызга чейин кыскарткан.",
-                        "timestamp": 1561616261,
+                        "timestamp": 1561616260000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7810,7 +7810,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48755310"
                         },
                         "summary": "Арыс шаарынан тургундар коопсуз жайга чыгарылып, шаарды Улуттук гвардиянын аскер бөлүктөрү көзөмөлдөп жатат. Шаардагы 43 миңден ашуун туругундун дээрлик баары коопсуз жайга чыгарылып кеткен.",
-                        "timestamp": 1561442423,
+                        "timestamp": 1561442422000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7850,7 +7850,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48755311"
                         },
                         "summary": "Дүйшөмбү күнү Швейцариянын Башкы прокуратурасы Гүлнара Каримованын жакын тууганына козголгон кылмыш иштин жүрүшүндө камакка алынган 130 миллион франк ($133 миллион) Өзбекстанга кайтарыларын маалымдады.",
-                        "timestamp": 1561464590,
+                        "timestamp": 1561464589000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7890,7 +7890,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48741822"
                         },
                         "summary": "Айрым капчыктарда бир тыйын дагы акча жок эле. Кээ бирине жергиликтүү валюта менен аз гана акча салынган. Маселен, Орусияда 250 рублга чейин, Казакстанда 1200 тенгеден көп эмес.",
-                        "timestamp": 1561361833,
+                        "timestamp": 1561361832000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7931,7 +7931,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48715582"
                         },
                         "summary": "Абакта жаткан Кыргызстандагы белгилүү саясатчы, \"Ата Мекен\" саясий партиясынын лидери Өмүрбек Текебаевдин Би-Би-Сиге берген маеги. Окурмандарга маекти толугу менен жакынкы күндөрдө сунуштайбыз.",
-                        "timestamp": 1561096509,
+                        "timestamp": 1561096508000,
                         "byline": {
                             "name": "Абдыбек Казиев",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -7981,7 +7981,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-48715584"
                         },
                         "summary": "Чакырууну кабыл алуунун көптөгөн тобокелчиликтери бар эле. Бизди алып барган лагерлер алдынала даярдалганы талашсыз. Муну спутниктен тартылган сүрөттөр дагы далилдейт.",
-                        "timestamp": 1561104871,
+                        "timestamp": 1561104870000,
                         "byline": {
                             "name": "By John Sudworth",
                             "title": "BBC News, Xinjiang",
@@ -8032,7 +8032,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48715583"
                         },
                         "summary": "Тбилисидеги демонстрация учурунда полиция желим ок жана газ колдонду. Өкмөттүн отставкасын талап кылып жаткан митингчилер парламент имаратына кирүүгө аракет кылган.",
-                        "timestamp": 1561100497,
+                        "timestamp": 1561100496000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8073,7 +8073,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48674879"
                         },
                         "summary": "Дүйнөдө 70,8 миллион киши согуш, жаңжал жана куугунтуктан улам жер которууга аргасыз болгон. Бул тууралуу БУУнун Качкындар агенттигинин соңку баяндамасында айтылат. Венесуэладагы кризис толугу менен баяндамага кошулбагандыктан, качкындар саны мындагы дагы көп болушу мүмкүн.",
-                        "timestamp": 1560926143,
+                        "timestamp": 1560926142000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8114,7 +8114,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48659975"
                         },
                         "summary": "Үйлөнүү - адам өмүрүндөгү эң бактылуу жана маанилүү күн эмеспи. Бирок патриархалдык салттар бекем сакталган өлкөлөрдө айрым учурларда бул күн кыздар үчүн азапка айланат.",
-                        "timestamp": 1560768556,
+                        "timestamp": 1560768555000,
                         "byline": {
                             "name": "Магеррам Зейналов",
                             "title": "Би-Би-Си",
@@ -8164,7 +8164,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48619724"
                         },
                         "summary": "Кытайга келсек, бир эле Кыргызстан эмес, Казакстанда дагы \"кытайга каршы маанай\" сакталып келүүдө. Президент Жээнбеков дагы төрага Си Цзиньпин менен жолугушуу учурунда эки өлкө ортосундагы мамилеге тоскоолдук жараткан күчтөр бар экенин айтты.",
-                        "timestamp": 1560404460,
+                        "timestamp": 1560404459000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8204,7 +8204,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-48690403"
                         },
                         "summary": "Кыз ала качуунун курмандыгы болгон Бурулайдын кайгылуу окуясынан бери толук бир жыл өттү. Кыргыз коомун селт эттирип, үрөйүн учурган бул окуя баарыбир кыз ала качууга карата көз караштарды өзгөртө алган жок деп ойлойм.",
-                        "timestamp": 1560937376,
+                        "timestamp": 1560937375000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8245,7 +8245,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48674043"
                         },
                         "summary": "Кытайдын төрагасы Си Цзиньпин биринчи жолу мамлекеттик иш сапар менен Түндүк Кореяга келди. Эки күндүк иш сапар учурунда Си Цзиньпин Түндүк Кореянын лидери Ким Чен Ын менен Корей жарым аралындагы көйгөйлөрдү талкууга алат.",
-                        "timestamp": 1561009102,
+                        "timestamp": 1561009101000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8286,7 +8286,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48633726"
                         },
                         "summary": "Перс булуңу - дүйнөдөгү эң тынчы жок аймактардын бири жана соңку 40 жылда бир нече ирет куралдуу жаңжалдар орун алды. Булуңдагы өлкөлөрдүн ар бири этияттап саясат жүргүзгөнү менен кээде чөлкөмдөгү таасир талаштан бири-бирине үстөмдүк кылуу үчүн агрессивдүү кадамдарга барган учурлар болот.",
-                        "timestamp": 1560766185,
+                        "timestamp": 1560766184000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8328,7 +8328,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48663783"
                         },
                         "summary": "Атамбаевди кол тийбестиктен ажыратуу боюнча түзүлгөн атайын депутаттык комиссия бүгүн өз корутундусун чыгарды. Экс-президентке шектүү негизде коюлуп жаткан тогуз айыптын үчөө кыскарып, депутаттар Атамбаевдин премьер-министр кезиндеги ишмердиги боюнча айыптарды корутундуга киргизишпеди.",
-                        "timestamp": 1560858427,
+                        "timestamp": 1560858426000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -8383,7 +8383,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/blog-48538583"
                         },
                         "summary": "Би-Би-Си \"Абалың кандай, айылдаш?\" түрмөгүндө Кыргызстандын айыл-кыштактарындагы турмуштук ар кандай окуялар, айылдык таанымал инсандар жөнүндө кат-кабарларды, сүрөт баяндамаларды жарыялап баштады.",
-                        "timestamp": 1559798234,
+                        "timestamp": 1559798233000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8424,7 +8424,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/48606373"
                         },
                         "summary": "Шайлоону оңой утканы менен жаңы президенттин алдында оор маселелер күтүп турат. Ошол эле учурда көпчүлүк саясат таануучулар Токаевди өз алдынча саясий фигура боло албайт деп эсептейт.",
-                        "timestamp": 1560320012,
+                        "timestamp": 1560320011000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8465,7 +8465,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48579217"
                         },
                         "summary": "Жекшембиде Гонконгдо жарандарды Кытайга экстрадициялоо боюнча мыйзамга каршы нааразылык жүрүшү өттү. Кытайдын мамлекеттик маалымат каражаттары муну \"чет өлкөдөгү күчтөр уюштурду\", алар \"Кытайга зыян келтирүүгө\" аракет кылып жатышат деп жазды.",
-                        "timestamp": 1560146859,
+                        "timestamp": 1560146858000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8506,7 +8506,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48606374"
                         },
                         "summary": "Докладда өлүм жазасынын аткарылышын көрүү үчүн миңден ашуун киши жыйылып келери белгиленген. Документтин авторлору жазгандай, өлүм жазасы аткарылып жатканда, жазага тартылган кишинин жакындары сөзсүз күбө болуп турат.",
-                        "timestamp": 1560327632,
+                        "timestamp": 1560327631000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8547,7 +8547,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48495047"
                         },
                         "summary": "1986-жылы 26-апрелге караган түнү Украинанын Чернобыль АЭСинде жарылуу болуп, болжолу Хиросиманын күлүн көккө сапырган \"Малыш\" атом бомбасынан 400 эсе көп радиоактивдүү заттар айлана-чөйрөгө тараган.",
-                        "timestamp": 1560406902,
+                        "timestamp": 1560406901000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8587,7 +8587,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48582607"
                         },
                         "summary": "Экс-президенттин соңку митингдеги риторикасы эми ал эч нерседен кайра тартпаган жүрүш баштагандай таасир калтырууда. Атамбаев азыркы президент менен мамилесин оңдоо аракети оңунан чыкпаган соң, курч сындуу саясат стратегиясын карманып жатканы байкалат.",
-                        "timestamp": 1560166514,
+                        "timestamp": 1560166513000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -8638,7 +8638,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/48553440"
                         },
                         "summary": "Парламент депутаттарынын кызматы көп өлкөлөрдө мансаптуу, шаан-шөкөттүү. Кымбат унаа, олчойгон эмгек акы, кызматтык жеңилдиктер. Бирок мындай жыргал жашоо бир гана Швецияга мүнөздүү эмес. Бул өлкөнүн саясий маданиятында эл өкүлдөрү абдан үнөмдүү болушу керек.",
-                        "timestamp": 1559907797,
+                        "timestamp": 1559907796000,
                         "byline": {
                             "name": "Клаудия Валлин",
                             "title": "BBC News Brasil, Стокгольм",
@@ -8694,7 +8694,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48553439"
                         },
                         "summary": "Европа баңгизатка суроо талап жогору болгон дүйнөдөгү эң ири базар бойдон кала берүүдө. Изилдөө көрсөткөндөй, ЕБ мамлекеттеринде 91 миллион киши, биримдиктеги калктын болжолу 27 пайызы өмүрүндө бир жолу марихуана чеккен.",
-                        "timestamp": 1559889412,
+                        "timestamp": 1559889411000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8734,7 +8734,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48580978"
                         },
                         "summary": "Суданда оппозиция жекшембиде мөөнөтсүз иш таштоо акциясын баштап, аскердик кеңеш менен диалогду таптакыр токтотту. Бир апта мурда судан полициясы жана атайын күчтөр каршылык акциясына чыккандардын палаткаларын кыйратып, кууп таркатканда көп адам курман болуп, кырдаал курчуп кетти.",
-                        "timestamp": 1560165299,
+                        "timestamp": 1560165298000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8786,7 +8786,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48545613"
                         },
                         "summary": "1944-жылы 6-июнда британдык, америкалык жана канадалык аскер күчтөрү Нормандиянын жээктерине жайгаштырылган. Десанттык күчтөрдүн бул аймакка түшүрүлүшү \"Оверлорд\" операциясынын бир бөлүгү эле.",
-                        "timestamp": 1559824381,
+                        "timestamp": 1559824380000,
                         "byline": {
                             "name": "Клэр Жонс",
                             "title": "Би-Би-Си",
@@ -8837,7 +8837,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-48431773"
                         },
                         "summary": "Быйыл бир килограммдын так салмагын аныктаган жаңы масса бирдиги күчүнө кирди. Мындан ары килограмм Ватт таразасы (же Киббл таразасы) менен аныкталат. Бул каражат массаны аныктоо үчүн буюмду эмес, квант физикасындагы константаны колдонот.",
-                        "timestamp": 1559191872,
+                        "timestamp": 1559191871000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8882,7 +8882,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48565820"
                         },
                         "summary": "\"Медиа форум\" имаратынын алдына митингге чогулгандар \"коррупцияга каршы күрөш тандалма жүрүүдө\" деп азыркы бийликти айыптап, кээ бир саясатчылар куугунтукка алынып жатканын айтууда. Митинг \"Унчукпай турба! Үн кат!\" деген чакырык алдында башталган.",
-                        "timestamp": 1559975193,
+                        "timestamp": 1559975192000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8922,7 +8922,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48430001"
                         },
                         "summary": "Өзбекстанда кыргыз-өзбек чек арасын тактоо боюнча эки өлкөнүн жумушчу тобунун кезектеги жолугушуусу өттү. Маалыматтарга караганда, чек ара тилкесин тактоодо тараптар Кемпир-Абад суу сактагычы жана Гавасай аймагы боюнча орток пикир таба албай турат.",
-                        "timestamp": 1559633316,
+                        "timestamp": 1559633315000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8962,7 +8962,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48523929"
                         },
                         "summary": "30 жыл илгери Тяньаньмэнь аянтындагы студенттердин нааразылык акциясы күч менен басылган. 1989-жылы болгон бул кандуу окуяга кытай бийлиги азырга чейин өзүнүн баасын бере элек.",
-                        "timestamp": 1559716471,
+                        "timestamp": 1559716470000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9003,7 +9003,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48494835"
                         },
                         "summary": "Кошумча салмактан арылуу үчүн ар түрдүү диеталар сунушталат. Өткөн жылы үзүп ачкалык кармоо ыкмасы эң популярдуу болду. Бул ыкма иштейби, ал кооптуу эмеспи?",
-                        "timestamp": 1559553005,
+                        "timestamp": 1559553004000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9059,7 +9059,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48455864"
                         },
                         "summary": "Петербургда полиция мигранттар жашаган жерлерде масштабдуу рейд өткөрүүдө. Полиция өткөн аптадагы шаардын түштүк-чыгыш тарабында кафеде катталган мушташтын катышуучуларын издеп жатканын билдирди.",
-                        "timestamp": 1559200957,
+                        "timestamp": 1559200956000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9099,7 +9099,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-39513643"
                         },
                         "summary": "Дүйнөдөгү ар бир онунчу өлүм тамеки тартуунун кесепетинен болуп жатат деп айтылат жаңы иликтөө тыянактарында. Ошону менен бирге бул кейиштүү көрсөткүчтүн дээрлик жарымы төрт гана өлкөгө - Орусия, АКШ, Кытай жана Индияга туура келет.",
-                        "timestamp": 1559280524,
+                        "timestamp": 1559280523000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9139,7 +9139,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48431602"
                         },
                         "summary": "Өкмөт колунда жок ата-энерлерге жардам кылып, жеке менчик бала бакчага кеткен чыгымдын жарымын көтөрүп алганы жатат. Азырынча мындай жеңилдик Бишкек шаарындагы каражаты жетишсиз үй-бүлөлөр үчүн гана берилет. Айына өкмөттөн алты миңден сегиз миң сомго чейин акчалай жардам алса болот.",
-                        "timestamp": 1559030763,
+                        "timestamp": 1559030762000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -9190,7 +9190,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48455860"
                         },
                         "summary": "Лондондо чет жактан келген коррупционер жана башка кылмышка тиешеси бар кишилерге каршы өнөктүктүн таскагы катуулады. Мурдакы СССР аймагынан жана Орусиядан келип, шектүү жол менен байлыкка ээ болгондорду текшерүү уланууда.",
-                        "timestamp": 1559193162,
+                        "timestamp": 1559193161000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9231,7 +9231,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48431778"
                         },
                         "summary": "Швейцариядагы беш жылдыздуу мейманканада белгилүү жана талаштуу Билдерберг клубу (Bilderberg Group) төрт күндүк жыйынын баштады. Дүйнөнүн бизнес, финансы, илим жана медиа тармагынын алдыңкы 130 өкүлү жыйынга чакырылган.",
-                        "timestamp": 1559278778,
+                        "timestamp": 1559278777000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9294,7 +9294,7 @@
                         "uri": "https://www.bbc.com/kyrgyz/resources/idt-sh/opium_kyrgyz",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1553252414,
+                        "timestamp": 1553252413000,
                         "type": "link"
                     },
                     {
@@ -9306,7 +9306,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48442135"
                         },
                         "summary": "Соода согушу боордошубуз, коңшубуз деген өлкө эл аралык келишимдерге карабай, өз өлкөсүндөгү фирмалардын гана кызыкчылыгын коргоп, өз көмөчүнө күл тарта баштаганда чыкты.",
-                        "timestamp": 1559107424,
+                        "timestamp": 1559107423000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9350,7 +9350,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-48306409"
                         },
                         "summary": "Жыл сайын дүйнөдө 800 миң адам өз өмүрүн кыят. Алардын көбү эркектер. Буга эркектердин көйгөйлөрүн башкаларга айтпай, аларды ичинде кармаганы себеп. Кайсы көйгөйлөрдү эркектер ачык сүйлөшкөнү туура?",
-                        "timestamp": 1558343294,
+                        "timestamp": 1558343293000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9394,7 +9394,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48442814"
                         },
                         "summary": "Нур-Султан шаарында Евразиялык экономикалык биримдикке мүчө мамлекеттердин башчылары уюмдун беш жылдыгына арналган саммитине чогулууда.",
-                        "timestamp": 1559107435,
+                        "timestamp": 1559107434000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -9445,7 +9445,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48366973"
                         },
                         "summary": "Экс-президент Алмазбек Атамбаев өткөн аптада КСДП партиясынын төралыгынан кетип, серепчилер бул жүрүштү саясаттан убактылуу чегинүү деп баалап жатышат. Чегинүү 27-майда күчүнө кирген \"Президенттин ишмердигинин кепилдиги тууралуу\" мыйзамына байланыштуу болду.",
-                        "timestamp": 1558953591,
+                        "timestamp": 1558953590000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -9496,7 +9496,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48419994"
                         },
                         "summary": "Ирактын соту өздөрүн \"Ислам мамлекети\" атаган экстремисттик топтун катарында согушкан үч франциялыкты өлүм жазасына тартты. Алар экстремисттик топко кошулганы үчүн айыпталууда.",
-                        "timestamp": 1558933702,
+                        "timestamp": 1558933701000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9537,7 +9537,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-48419995"
                         },
                         "summary": "Бул сезондо Непалдын бийлиги дүйнөнүн эң бийик чокусун багындырууну каалагандар үчүн рекорддук сандагы лицензияларды сатты. Ошону менен өмүргө чоң тобокелчилик жараткан бийиктикте кезек күтүүлөр орун алууда.",
-                        "timestamp": 1558940375,
+                        "timestamp": 1558940374000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9578,7 +9578,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48332359"
                         },
                         "summary": "Ааламдашуу доорунда саясатчылар үгүт иштери учурунда өз идеяларын коомго жеткирип, шайлоочуларды өзүнө тартуу үчүн ар түрдүү ыкмаларды колдонушат. Алардын айрымдары кескин сынга кабылган.",
-                        "timestamp": 1558678550,
+                        "timestamp": 1558678549000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9619,7 +9619,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48337289"
                         },
                         "summary": "Тажикстандын баш калаасы Дүйшөмбү шаарына жакын жердеги катуу кайтарылган түрмөдө чыккан козголоңду басуу учурунда 29 адам өлдү, алардын үчөө түрмөнү кайтарган аскерлер. Козголоң чыгаргандар \"Ислам мамлекети\" тобунун абакта жазасын өтөп жаткан согушкерлери деп билдирди Тажикстан бийлиги.",
-                        "timestamp": 1558347340,
+                        "timestamp": 1558347339000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9659,7 +9659,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48393891"
                         },
                         "summary": "Армениянын премьер-министри Никол Пашинян соттордун иш кеңселерине киргизбей койгон тарапташтарын колдоп, бир жыл мурун болгон революциянын \"экинчи баскычын\" жарыялады.",
-                        "timestamp": 1558679015,
+                        "timestamp": 1558679014000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9700,7 +9700,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48430851"
                         },
                         "summary": "Быйылкы жылдын 1-апрелине карата Кыргызстанда ВИЧ жана СПИД илдетине кабылгандардын саны 9010 кишиге жеткен. Алардын ичинен 658и балдар. Вирустан улам 1952 киши каза болгон.",
-                        "timestamp": 1559105131,
+                        "timestamp": 1559105130000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -9751,7 +9751,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48422911"
                         },
                         "summary": "Экс-президенттин жансакчысынын жактоочулары Ысык-Көлдө кайрадан нааразылык акциясына чыгууну көздөп жатышат. Алар Дамир Мусакеевдин мыйзамсыз айыпталып жатканын айтып, аны бошотууну талап кылышууда.",
-                        "timestamp": 1558951854,
+                        "timestamp": 1558951853000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -9802,7 +9802,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48117175"
                         },
                         "summary": "Владимир Зеленский президенттик кызматка киришкен алгачкы эле күндөрдө өзүнүн командасын чогулта баштады. Алардын арасында Зеленский менен \"Квартал-95\" студиясында бирге жүргөн адамдар да бар.",
-                        "timestamp": 1558592382,
+                        "timestamp": 1558592381000,
                         "passport": {
                             "category": {
                                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -9843,7 +9843,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48366970"
                         },
                         "summary": "Жарандык коом өкүлдөрүнүн УКМКнын реформасы тууралуу иш-чарасы туш тараптан чагымчыл аракеттерге кабылды. Атамбаевчил күчтөр, атайын кызматтын өкүлдөрү делген адамдар жана орусиячыл активисттер талкууну үзгүлтүккө учурата жаздады.",
-                        "timestamp": 1558684690,
+                        "timestamp": 1558684689000,
                         "byline": {
                             "name": "Элеонора  Сагындык кызы",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы",
@@ -9894,7 +9894,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-48311162"
                         },
                         "summary": "Сооронбай Жээнбеков экс-президенттин кепилдиктери тууралуу мыйзамга кол койду. Бул мыйзам экс-президенти кол тийбестик укугунан ажыратып, кылмыш жоопкерчилигине тартууга жол ачат. Бул өлкөдө Азиз Батукаев чыры ырбап, камоолор күч алган учурга туш келди.",
-                        "timestamp": 1558094145,
+                        "timestamp": 1558094144000,
                         "byline": {
                             "name": "Венера Алымкул кызы ",
                             "title": "Би-Би-Синин Бишкектеги кабарчысы ",
@@ -9968,7 +9968,7 @@
                         "uri": "http://www.bbc.co.uk/academy/beta/ky/",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1478773085,
+                        "timestamp": 1478773084000,
                         "type": "link"
                     },
                     {
@@ -9987,7 +9987,7 @@
                         "uri": "http://www.bbc.co.uk/academy/ky/articles/art20161025101211588",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1533042293,
+                        "timestamp": 1533042292000,
                         "type": "link"
                     },
                     {
@@ -10006,7 +10006,7 @@
                         "uri": "http://www.bbc.co.uk/academy/ky/articles/art20161201120621450",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1533042464,
+                        "timestamp": 1533042463000,
                         "type": "link"
                     },
                     {
@@ -10025,7 +10025,7 @@
                         "uri": "http://www.bbc.co.uk/academy/ky/articles/art20161024155301237",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1533042675,
+                        "timestamp": 1533042674000,
                         "type": "link"
                     }
                 ],
@@ -10050,7 +10050,7 @@
                         "uri": "http://www.bbc.com/russian",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1478773225,
+                        "timestamp": 1478773224000,
                         "type": "link"
                     },
                     {
@@ -10058,7 +10058,7 @@
                         "uri": "http://www.bbc.com/russian",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1478773236,
+                        "timestamp": 1478773235000,
                         "type": "link"
                     },
                     {
@@ -10066,7 +10066,7 @@
                         "uri": "http://www.bbc.com/uzbek",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1478773270,
+                        "timestamp": 1478773269000,
                         "type": "link"
                     },
                     {
@@ -10074,7 +10074,7 @@
                         "uri": "http://www.bbc.com/turkce",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1478773292,
+                        "timestamp": 1478773291000,
                         "type": "link"
                     }
                 ],

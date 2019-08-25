@@ -11,7 +11,7 @@
           "locators": {
             "uri": "/news/business-45162132"
           },
-          "timestamp": 1534115732,
+          "timestamp": 1534115731000,
           "image": {
             "blockId": "ac949dbe-4ca9-4d4d-a187-a3a18521931f",
             "type": "image",
@@ -48,7 +48,7 @@
           "locators": {
             "uri": "/news/business-45162132"
           },
-          "timestamp": 1534115732,
+          "timestamp": 1534115731000,
           "image": {
             "blockId": "ac949dbe-4ca9-4d4d-a187-a3a18521931f",
             "type": "image",
@@ -76,7 +76,7 @@
           "locators": {
             "uri": "/news/uk-politics-45235655"
           },
-          "timestamp": 1534682446,
+          "timestamp": 1534682445000,
           "image": {
             "blockId": "42f5e472-b2c6-47ef-ab39-1a1428551efa",
             "type": "image",
@@ -104,7 +104,7 @@
           "locators": {
             "uri": "/news/business-45238457"
           },
-          "timestamp": 1534678572,
+          "timestamp": 1534678571000,
           "image": {
             "blockId": "ee67cfa2-f2c6-41e3-bb03-be4cb09bcd5f",
             "type": "image",
@@ -132,7 +132,7 @@
           "locators": {
             "uri": "/news/uk-politics-45237152"
           },
-          "timestamp": 1534643937,
+          "timestamp": 1534643936000,
           "image": {
             "blockId": "001628ae-f9d2-42ba-a302-acc30f8f6284",
             "type": "image",
@@ -160,7 +160,7 @@
           "locators": {
             "uri": "/news/uk-politics-45229426"
           },
-          "timestamp": 1534607930,
+          "timestamp": 1534607929000,
           "image": {
             "blockId": "dbee5248-be73-4042-9f4d-a688067b1712",
             "type": "image",
@@ -188,7 +188,7 @@
           "locators": {
             "uri": "/news/uk-politics-45234956"
           },
-          "timestamp": 1534607853,
+          "timestamp": 1534607852000,
           "image": {
             "blockId": "c64d1b37-b112-48ed-8893-b277d4f73a19",
             "type": "image",
@@ -223,7 +223,7 @@
           "locators": {
             "uri": "/sport/football/45152571"
           },
-          "timestamp": 1534608368,
+          "timestamp": 1534608367000,
           "image": {
             "blockId": "529abfde-a86b-4acd-9d5f-16e7e0715087",
             "type": "image",
@@ -251,7 +251,7 @@
           "locators": {
             "uri": "/sport/football/45159603"
           },
-          "timestamp": 1534707178,
+          "timestamp": 1534707177000,
           "image": {
             "blockId": "6f8a26c6-9c15-422c-98dd-a7ecfad9a84b",
             "type": "image",
@@ -279,7 +279,7 @@
           "locators": {
             "uri": "/news/uk-england-manchester-45240372"
           },
-          "timestamp": 1534695690,
+          "timestamp": 1534695689000,
           "image": {
             "blockId": "3dc17442-09c4-4169-b5f0-1bfae61acef5",
             "type": "image",
@@ -307,7 +307,7 @@
           "locators": {
             "uri": "/sport/football/45241107"
           },
-          "timestamp": 1534701579,
+          "timestamp": 1534701578000,
           "image": {
             "blockId": "715b07a7-a441-46ab-a339-d042ece7c721",
             "type": "image",
@@ -335,7 +335,7 @@
           "locators": {
             "uri": "/sport/football/45159602"
           },
-          "timestamp": 1534694593,
+          "timestamp": 1534694592000,
           "image": {
             "blockId": "f0e70a9e-0399-429b-992b-8ea66101822c",
             "type": "image",
@@ -363,7 +363,7 @@
           "locators": {
             "uri": "/news/uk-england-manchester-45239239"
           },
-          "timestamp": 1534678456,
+          "timestamp": 1534678455000,
           "image": {
             "blockId": "e4dcbeec-79ca-49f1-bf76-9d1525001a7d",
             "type": "image",
@@ -396,7 +396,7 @@
       "locators": {
         "uri": "/news/business-45244579"
       },
-      "timestamp": 1534755771,
+      "timestamp": 1534755770000,
       "image": {
         "blockId": "df1713a4-5614-4c1c-bd54-9d05900644ea",
         "type": "image",
@@ -424,7 +424,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "02301623-f0ce-4eab-83e3-2b66ccdc0e7d",
         "type": "image",
@@ -452,7 +452,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534762438,
+      "timestamp": 1534762437000,
       "image": {
         "blockId": "3d3134be-6f8d-469a-a702-ceb5892d47b3",
         "type": "image",
@@ -480,7 +480,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "e15a6ea4-6680-489d-8254-1ace8fef5403",
         "type": "image",
@@ -508,7 +508,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "b04d94ce-6254-4ad3-9632-da066e26205a",
         "type": "image",
@@ -536,7 +536,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534759236,
+      "timestamp": 1534759235000,
       "image": {
         "blockId": "dd3114f2-9a05-4b65-8bde-891252f444a6",
         "type": "image",
@@ -564,7 +564,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "a28bf82c-bf6c-4231-9dec-8b9366b514e1",
         "type": "image",
@@ -592,7 +592,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534762702,
+      "timestamp": 1534762701000,
       "image": {
         "blockId": "432a83c5-0d0d-44ad-b905-3d0f47939e90",
         "type": "image",
@@ -620,7 +620,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "19fba5d6-a18e-4220-9bb5-46aa38046885",
         "type": "image",
@@ -648,7 +648,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534759395,
+      "timestamp": 1534759394000,
       "image": {
         "blockId": "74b9faeb-1b28-4181-b3ec-72a7752a1564",
         "type": "image",

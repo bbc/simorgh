@@ -11,7 +11,7 @@
           "locators": {
             "uri": "/news/business-45162132"
           },
-          "timestamp": 1534115732,
+          "timestamp": 1534115731000,
           "image": {
             "blockId": "e350ffdb-17a5-44cc-97be-67db2b3d9edc",
             "type": "image",
@@ -48,7 +48,7 @@
           "locators": {
             "uri": "/news/business-45162132"
           },
-          "timestamp": 1534115732,
+          "timestamp": 1534115731000,
           "image": {
             "blockId": "e350ffdb-17a5-44cc-97be-67db2b3d9edc",
             "type": "image",
@@ -76,7 +76,7 @@
           "locators": {
             "uri": "/news/uk-politics-45235655"
           },
-          "timestamp": 1534682446,
+          "timestamp": 1534682445000,
           "image": {
             "blockId": "134a1110-c12e-479b-8da2-b5824cacbaff",
             "type": "image",
@@ -104,7 +104,7 @@
           "locators": {
             "uri": "/news/business-45238457"
           },
-          "timestamp": 1534678572,
+          "timestamp": 1534678571000,
           "image": {
             "blockId": "76d9f455-a876-429c-ab8b-1d172b901123",
             "type": "image",
@@ -132,7 +132,7 @@
           "locators": {
             "uri": "/news/uk-politics-45237152"
           },
-          "timestamp": 1534643937,
+          "timestamp": 1534643936000,
           "image": {
             "blockId": "7bc77542-e925-4116-809c-14744884ff83",
             "type": "image",
@@ -160,7 +160,7 @@
           "locators": {
             "uri": "/news/uk-politics-45229426"
           },
-          "timestamp": 1534607930,
+          "timestamp": 1534607929000,
           "image": {
             "blockId": "b31be776-9c14-4b76-b2a7-f55d56df4d90",
             "type": "image",
@@ -188,7 +188,7 @@
           "locators": {
             "uri": "/news/uk-politics-45234956"
           },
-          "timestamp": 1534607853,
+          "timestamp": 1534607852000,
           "image": {
             "blockId": "69beec98-81ba-4a1e-8885-4ff66496e18f",
             "type": "image",
@@ -223,7 +223,7 @@
           "locators": {
             "uri": "/news/world-europe-42025071"
           },
-          "timestamp": 1510921811,
+          "timestamp": 1510921810000,
           "image": {
             "blockId": "56706dfd-675e-46d3-9f60-ac54f967b709",
             "type": "image",
@@ -251,7 +251,7 @@
           "locators": {
             "uri": "/news/world-europe-43052436"
           },
-          "timestamp": 1518547691,
+          "timestamp": 1518547690000,
           "image": {
             "blockId": "629c29cd-1493-4600-add3-77d6520445e0",
             "type": "image",
@@ -279,7 +279,7 @@
           "locators": {
             "uri": "/news/world-europe-43025363"
           },
-          "timestamp": 1518380172,
+          "timestamp": 1518380171000,
           "image": {
             "blockId": "3b261869-64ef-469d-9d42-5bdcbcb58358",
             "type": "image",
@@ -307,7 +307,7 @@
           "locators": {
             "uri": "/news/world-europe-43001578"
           },
-          "timestamp": 1518187927,
+          "timestamp": 1518187926000,
           "image": {
             "blockId": "a510a292-1d3c-452d-8d11-1871ace1ba32",
             "type": "image",
@@ -335,7 +335,7 @@
           "locators": {
             "uri": "/news/world-europe-42983013"
           },
-          "timestamp": 1518032809,
+          "timestamp": 1518032808000,
           "image": {
             "blockId": "1a61873c-c022-4912-ae48-c3fe5e8fe570",
             "type": "image",
@@ -363,7 +363,7 @@
           "locators": {
             "uri": "/news/world-europe-42802300"
           },
-          "timestamp": 1516812644,
+          "timestamp": 1516812643000,
           "image": {
             "blockId": "efe7f5ad-7779-43b2-9398-a3b5ef6bf577",
             "type": "image",
@@ -398,7 +398,7 @@
           "locators": {
             "uri": "/news/uk-northern-ireland-37926547"
           },
-          "timestamp": 1478779193,
+          "timestamp": 1478779192000,
           "image": {
             "blockId": "1fe86dc5-a76d-430e-9208-c69d6b941255",
             "type": "image",
@@ -426,7 +426,7 @@
           "locators": {
             "uri": "/news/election-us-2016-37918242"
           },
-          "timestamp": 1493138598,
+          "timestamp": 1493138597000,
           "image": {
             "blockId": "84d02a87-354a-4022-80e0-a6c614c08435",
             "type": "image",
@@ -454,7 +454,7 @@
           "locators": {
             "uri": "/news/world-us-canada-37924617"
           },
-          "timestamp": 1490865370,
+          "timestamp": 1490865369000,
           "image": {
             "blockId": "472394fb-2937-4d94-923f-a8d77ec0f313",
             "type": "image",
@@ -482,7 +482,7 @@
           "locators": {
             "uri": "/news/world-us-canada-35318432"
           },
-          "timestamp": 1484932156,
+          "timestamp": 1484932155000,
           "image": {
             "blockId": "1179f1f8-ead3-4481-8a4a-17a5b8922958",
             "type": "image",
@@ -510,7 +510,7 @@
           "locators": {
             "uri": "/news/election-us-2016-37889032"
           },
-          "timestamp": 1480607247,
+          "timestamp": 1480607246000,
           "image": {
             "blockId": "0b19a8d5-ce8b-42c5-b039-85ba37437110",
             "type": "image",
@@ -538,7 +538,7 @@
           "locators": {
             "uri": "/news/election-us-2016-37931552"
           },
-          "timestamp": 1479143943,
+          "timestamp": 1479143942000,
           "image": {
             "blockId": "4cf2df60-3774-4b68-81aa-953eeaad77fc",
             "type": "image",
@@ -573,7 +573,7 @@
           "locators": {
             "uri": "/news/world-europe-43445816"
           },
-          "timestamp": 1521393738,
+          "timestamp": 1521393737000,
           "image": {
             "blockId": "6b0682a4-d3f9-49d8-860d-42baad0c0d6b",
             "type": "image",
@@ -601,7 +601,7 @@
           "locators": {
             "uri": "/news/world-europe-44024184"
           },
-          "timestamp": 1525687755,
+          "timestamp": 1525687754000,
           "image": {
             "blockId": "e4eae9c5-92ee-4a78-a105-2607abe82c5c",
             "type": "image",
@@ -629,7 +629,7 @@
           "locators": {
             "uri": "/news/world-europe-44017166"
           },
-          "timestamp": 1525526042,
+          "timestamp": 1525526041000,
           "image": {
             "blockId": "59b30757-f3ec-4211-a0c0-c42713b74510",
             "type": "image",
@@ -657,7 +657,7 @@
           "locators": {
             "uri": "/news/world-us-canada-43488358"
           },
-          "timestamp": 1521660146,
+          "timestamp": 1521660145000,
           "image": {
             "blockId": "901f6659-1fd5-48c9-9e6b-5c9c806986e8",
             "type": "image",
@@ -685,7 +685,7 @@
           "locators": {
             "uri": "/news/world-europe-43476895"
           },
-          "timestamp": 1521615874,
+          "timestamp": 1521615873000,
           "image": {
             "blockId": "f24b52c6-b9f5-4d8e-a1ad-18d4d4296b69",
             "type": "image",
@@ -713,7 +713,7 @@
           "locators": {
             "uri": "/news/world-europe-43413997"
           },
-          "timestamp": 1521453676,
+          "timestamp": 1521453675000,
           "image": {
             "blockId": "740f53c0-010e-45fb-b3b9-44a814d5026d",
             "type": "image",
@@ -748,7 +748,7 @@
           "locators": {
             "uri": "/news/world-us-canada-29412354"
           },
-          "timestamp": 1525725148,
+          "timestamp": 1525725147000,
           "image": {
             "blockId": "8629376d-fd7c-4bf9-9894-1a2ed5b05eeb",
             "type": "image",
@@ -776,7 +776,7 @@
           "locators": {
             "uri": "/news/world-us-canada-45146113"
           },
-          "timestamp": 1534118132,
+          "timestamp": 1534118131000,
           "image": {
             "blockId": "578f73ac-dceb-494f-bfcc-13f2904bcf79",
             "type": "image",
@@ -804,7 +804,7 @@
           "locators": {
             "uri": "/news/technology-45154903"
           },
-          "timestamp": 1533977722,
+          "timestamp": 1533977721000,
           "image": {
             "blockId": "f287d2fe-a7f3-4577-a1be-f2f48eaf20b8",
             "type": "image",
@@ -832,7 +832,7 @@
           "locators": {
             "uri": "/news/world-us-canada-45109836"
           },
-          "timestamp": 1533764863,
+          "timestamp": 1533764862000,
           "image": {
             "blockId": "22de10a2-0d69-4bca-8f8e-f767fc490b99",
             "type": "image",
@@ -860,7 +860,7 @@
           "locators": {
             "uri": "/news/world-us-canada-45119533"
           },
-          "timestamp": 1533742933,
+          "timestamp": 1533742932000,
           "image": {
             "blockId": "c2fadf7b-897d-4abc-b1ee-08ac50d94bda",
             "type": "image",
@@ -888,7 +888,7 @@
           "locators": {
             "uri": "/news/world-us-canada-45065541"
           },
-          "timestamp": 1533675736,
+          "timestamp": 1533675735000,
           "image": {
             "blockId": "60d833c6-1604-4fa6-aa26-f8917abc18bb",
             "type": "image",
@@ -921,7 +921,7 @@
       "locators": {
         "uri": "/news/business-45244579"
       },
-      "timestamp": 1534755771,
+      "timestamp": 1534755770000,
       "image": {
         "blockId": "e81a6d87-9cdd-4fcb-830c-d30d99ebb7fb",
         "type": "image",
@@ -949,7 +949,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "2e33680f-3842-4933-be5b-3bc8464d101c",
         "type": "image",
@@ -977,7 +977,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534762438,
+      "timestamp": 1534762437000,
       "image": {
         "blockId": "16216d4e-c86c-4cfc-a259-ef29dee99ec2",
         "type": "image",
@@ -1005,7 +1005,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "2f997d51-7c38-4f41-ac89-139ae92dbaa0",
         "type": "image",
@@ -1033,7 +1033,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "9fcf268f-b86c-4e81-83fa-0a12760ebef4",
         "type": "image",
@@ -1061,7 +1061,7 @@
       "locators": {
         "uri": "/news/world-europe-45244739"
       },
-      "timestamp": 1534759236,
+      "timestamp": 1534759235000,
       "image": {
         "blockId": "e256a3cb-a2b8-48f6-92ca-b315fa1a85d3",
         "type": "image",
@@ -1089,7 +1089,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "150c2f48-2d47-4898-b017-75ec1231d0e9",
         "type": "image",
@@ -1117,7 +1117,7 @@
       "locators": {
         "uri": "/news/uk-england-sussex-45247499"
       },
-      "timestamp": 1534762702,
+      "timestamp": 1534762701000,
       "image": {
         "blockId": "e396b823-22ee-4df7-a949-e0a03cf25aa8",
         "type": "image",
@@ -1145,7 +1145,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "8780e406-9d52-41c3-8dbc-ef4f959326fc",
         "type": "image",
@@ -1173,7 +1173,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534759395,
+      "timestamp": 1534759394000,
       "image": {
         "blockId": "cc232f5b-b8ab-43f3-a75e-b4f455abcc31",
         "type": "image",

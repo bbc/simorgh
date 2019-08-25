@@ -1,6 +1,11 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { pashto as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NASSIM_PASHTO_REGULAR,
+  F_NASSIM_PASHTO_BOLD,
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: 'ps',
@@ -8,6 +13,7 @@ const service = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'تازه',
   atiAnalyticsAppName: 'news-pashto',
+  atiAnalyticsProducerId: '68',
   brandName: 'BBC News پښتو',
   serviceLocalizedName: 'پښتو',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
@@ -32,6 +38,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'کور پاڼه',
+    currentPage: 'Current page',
+    skipLinkText: 'مطلب ته ورشئ',
     error: {
       404: {
         statusCode: '۴۰۴',
@@ -160,7 +169,8 @@ const service = {
     ],
     copyrightText: 'بی بی سی. بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده',
   },
-  fonts: [],
+  fonts: [F_NASSIM_PASHTO_REGULAR, F_NASSIM_PASHTO_BOLD],
+  timezone: 'Europe/London',
 };
 
 export default service;

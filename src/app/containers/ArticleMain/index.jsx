@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -26,16 +26,16 @@ const ArticleMain = ({ articleData }) => {
   const { blocks } = content.model;
 
   return (
-    <Fragment>
+    <>
       <ATIAnalytics data={articleData} />
-      <ChartbeatAnalytics />
+      <ChartbeatAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GhostGrid>
       </main>
-    </Fragment>
+    </>
   );
 };
 

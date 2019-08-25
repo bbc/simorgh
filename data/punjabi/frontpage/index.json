@@ -49,7 +49,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48961069"
             },
             "summary": "ਯੋਗਾ ਦਾ ਹਿੱਸਾ ਹੋਣ ਕਰਕੇ ਇਸ ਲਈ ਹਰੇਕ ਵਿਦਿਆਰਥੀ ਨੂੰ ਉਲਟੇ ਹੱਥਾਂ ਨਾਲ ਕੰਨ ਫੜ ਕੇ ਅਜਿਹਾ ਕਰਨਾ ਲਾਜ਼ਮੀ",
-            "timestamp": 1562930011,
+            "timestamp": 1562930010000,
             "byline": {
               "name": "ਸੱਤ ਸਿੰਘ",
               "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ",
@@ -98,7 +98,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-48956343"
                 },
                 "summary": "ਭਾਜਪਾ ਵਿਧਾਇਕ ਦੀ ਧੀ ਨੇ ਸੋਸ਼ਲ ਮੀਡੀਆ 'ਤੇ ਇੱਕ ਵੀਡੀਓ ਪਾ ਕੇ ਕਿਹਾ ਹੈ ਕਿ ਮੇਰੇ ਪਿਤਾ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਬੰਦੇ ਸਾਡਾ ਪਿੱਛਾ ਕਰ ਰਹੇ ਹਨ",
-                "timestamp": 1562917926,
+                "timestamp": 1562917925000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:punjabi/india-48956343",
                 "type": "cps"
@@ -112,7 +112,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-48956344"
                 },
                 "summary": "ਟੀਮ ਇੰਡੀਆ ਦੀ ਸੈਮੀਫਾਈਨਲ 'ਚ ਹਾਰ ਤੋਂ ਇੱਕ ਦਿਨ ਪਹਿਲਾਂ ਦੂਤੀ ਚੰਦ ਨੇ ਸ਼ਾਨਦਾਰ ਪ੍ਰਦਰਸ਼ਨ ਕੀਤਾ ਸੀ, ਪਰ ਲੋਕਾਂ ਕ੍ਰਿਕਟ ਟੀਮ ਦੀ ਹਾਰ ਦਾ ਗ਼ਮ ਜ਼ਿਆਦਾ ਹੈ",
-                "timestamp": 1562917909,
+                "timestamp": 1562917908000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:punjabi/india-48956344",
                 "type": "cps"
@@ -137,7 +137,7 @@
             "uri": "https://www.bbc.com/punjabi/extra/JZmsi7IDHK/chandrayan-2_punjabi",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1562924311,
+            "timestamp": 1562924310000,
             "type": "link"
           },
           {
@@ -149,7 +149,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48960185"
             },
             "summary": "14 ਦੀ ਉਮਰ ਉਮਰ ’ਚ ਹਥਿਆਰਾਂ ਨਾਲ ਵਾਹ ਪਿਆ ਅਤੇ 25 ਦੀ ਹੁੰਦਿਆਂ-ਹੁੰਦਿਆਂ 309 ਲੋਕਾਂ ਨੂੰ ਆਪਣਾ ਸ਼ਿਕਾਰ ਬਣਾਇਆ",
-            "timestamp": 1562919374,
+            "timestamp": 1562919373000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -191,7 +191,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48944546"
             },
             "summary": "ਇੱਥੇ ਤਾਂ ਮਹਿਮਾਨਾਂ ਵੱਲੋਂ ਗਲਾਸ ਵਿੱਚ ਛੱਡੇ ਗਏ ਪੀਣ ਵਾਲੇ ਪਾਣੀ ਨੂੰ ਵੀ ਸਾਂਭਿਆ ਜਾਂਦਾ ਹੈ",
-            "timestamp": 1562919613,
+            "timestamp": 1562919612000,
             "byline": {
               "name": "ਮੋਗਾ ਤੋਂ ਸੁਰਿੰਦਰ ਮਾਨ ਅਤੇ ਬਰਨਾਲਾ ਤੋਂ ਸੁਖਚਰਨ ਪ੍ਰੀਤ ਦੀ ਰਿਪੋਰਟ",
               "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਲਈ",
@@ -242,7 +242,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48956344"
             },
             "summary": "ਟੀਮ ਇੰਡੀਆ ਦੀ ਸੈਮੀਫਾਈਨਲ 'ਚ ਹਾਰ ਤੋਂ ਇੱਕ ਦਿਨ ਪਹਿਲਾਂ ਦੂਤੀ ਚੰਦ ਨੇ ਸ਼ਾਨਦਾਰ ਪ੍ਰਦਰਸ਼ਨ ਕੀਤਾ ਸੀ, ਪਰ ਲੋਕਾਂ ਕ੍ਰਿਕਟ ਟੀਮ ਦੀ ਹਾਰ ਦਾ ਗ਼ਮ ਜ਼ਿਆਦਾ ਹੈ",
-            "timestamp": 1562917909,
+            "timestamp": 1562917908000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -283,7 +283,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48956343"
             },
             "summary": "ਭਾਜਪਾ ਵਿਧਾਇਕ ਦੀ ਧੀ ਨੇ ਸੋਸ਼ਲ ਮੀਡੀਆ 'ਤੇ ਇੱਕ ਵੀਡੀਓ ਪਾ ਕੇ ਕਿਹਾ ਹੈ ਕਿ ਮੇਰੇ ਪਿਤਾ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਬੰਦੇ ਸਾਡਾ ਪਿੱਛਾ ਕਰ ਰਹੇ ਹਨ",
-            "timestamp": 1562917926,
+            "timestamp": 1562917925000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -334,7 +334,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48944541"
             },
             "summary": "ਵਿਸ਼ਵ ਕੱਪ 2019 ਦੇ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਨਿਊਜ਼ੀਲੈਂਡ ਨੇ ਭਾਰਤ ਨੂੰ 18 ਦੌੜਾਂ ਨਾਲ ਹਰਾ ਦਿੱਤਾ ਹੈ।",
-            "timestamp": 1562840361,
+            "timestamp": 1562840360000,
             "byline": {
               "name": "ਜਸਪਾਲ ਸਿੰਘ",
               "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
@@ -385,7 +385,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-48938362"
             },
             "summary": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਮੋਦੀ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਭਾਰਤ ਪੁਲਾੜ ਵਿੱਚ ਨਿਵੇਸ਼ ਕਰਨ ਵਾਲਾ ਮਹਾਂਸ਼ਕਤੀਸ਼ਾਲੀ ਦੇਸ਼ ਹੈ।",
-            "timestamp": 1562835503,
+            "timestamp": 1562835502000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -455,7 +455,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48905579"
             },
             "summary": "ਮੈਨਚੈਸਟਰ ਦੇ ਓਲਡ ਟਰੈਫਰਡ ਮੈਦਾਨ ਵਿੱਚ ਸੈਮੀ-ਫਾਈਨਲ 'ਚ ਨਿਊਜ਼ੀਲੈਂਡ ਨੇ ਭਾਰਤ ਨੂੰ 18 ਦੌੜਾਂ ਨਾਲ ਹਰਾਇਆ।",
-            "timestamp": 1562777747,
+            "timestamp": 1562777746000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -495,7 +495,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/live/india-48851406"
             },
             "summary": "ਕੇਂਦਰੀ ਵਿੱਤ ਮੰਤਰੀ ਨਿਰਮਲਾ ਸੀਤਾਰਮਨ ਨੇ ਸੰਸਦ ਵਿੱਚ ਬਜਟ ਪੇਸ਼ ਕੀਤਾ। 2 ਘੰਟੇ ਤੋਂ ਵੱਧ ਚੱਲਿਆ ਭਾਸ਼ਣ",
-            "timestamp": 1562141247,
+            "timestamp": 1562141246000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -552,7 +552,7 @@
             "uri": "https://www.bbc.com/punjabi/india-48470132",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1559287939,
+            "timestamp": 1559287938000,
             "type": "link"
           }
         ],
@@ -574,7 +574,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48960193"
             },
             "summary": "ਇਨ੍ਹਾਂ ਮੁਸਲਿਮ ਕੁੜੀਆਂ ਦੇ ਸੁਪਨੇ ਸਮਾਜ ਦੀਆਂ ਰੁਕਾਵਟਾਂ ਨਾਲੋਂ ਕਿਤੇ ਮਜ਼ਬੂਤ ਹਨ",
-            "timestamp": 1562913405,
+            "timestamp": 1562913404000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -644,7 +644,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-48927647"
             },
             "summary": "ਭਾਰਤੀ ਮੂਲ ਦੇ ਆਯੂਸ਼ ਕੇਜਰੀਵਾਲ ਗਲਾਸਗੋ ਵਿੱਚ ਸਾੜੀ ਡਿਜ਼ਾਇਨਰ ਹਨ ਉਹ ਕਾਲੀਆਂ ਤੇ ਮੋਟੀਆਂ ਔਰਤਾਂ ਕੋਲੋਂ ਸਾੜੀਆਂ ਦੀ ਪ੍ਰਮੋਸ਼ਨ ਕਰਵਾਉਂਦੇ ਹਨ।",
-            "timestamp": 1562826151,
+            "timestamp": 1562826150000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -714,7 +714,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48922190"
             },
             "summary": "ਇਨ੍ਹਾਂ ਬੱਚਿਆਂ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਰਗਬੀ ਨੇ ਇਨ੍ਹਾਂ ਦੀ ਜ਼ਿੰਦਗੀ ਬਦਲ ਦਿੱਤੀ ਹੈ।",
-            "timestamp": 1562685215,
+            "timestamp": 1562685214000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -784,7 +784,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48366504"
             },
             "summary": "ਧਾਵਕ ਨੇ ਦੱਸਿਆ ਕਿ ਉਨ੍ਹਾਂ ਨੇ ਕਿਸੇ ਹੋਰ ਦੇ ਦੱਸਣ ਤੋਂ ਪਹਿਲਾਂ ਹੀ ਖੁਦ ਆਪਣੇ ਰਿਸ਼ਤੇ ਨੂੰ ਜਗ ਜ਼ਾਹਰ ਕਰਨਾ ਬਿਹਤਰ ਸਮਝਿਆ।",
-            "timestamp": 1558540207,
+            "timestamp": 1558540206000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -854,7 +854,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48917555"
             },
             "summary": "ਕਿੱਥੇ ਕੀਤੀ ਜਹਾਜ਼ਾਂ ਨੇ ਗਲਤ ਪਰੇਡ ਤੇ ਟਰੰਪ ਨੇ ਕਿਉਂ ਕੀਤਾ ਬਰਤਾਨਵੀ ਰਾਜਦੂਤ ਤੋਂ ਕਿਨਾਰਾ ਸਮੇਤ 5 ਅਹਿਮ ਖ਼ਬਰਾਂ",
-            "timestamp": 1562638070,
+            "timestamp": 1562638069000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -894,7 +894,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48913635"
             },
             "summary": "ਮਨਦੀਪ ਸਿੰਘ ਦੀ ਚੋਣ ਭਾਰਤੀ ਕ੍ਰਿਕਟ ਟੀਮ (ਫਿਜ਼ੀਕਲੀ ਚੈਲੇਂਜਡ) ਲਈ ਹੋਈ ਹੈ।",
-            "timestamp": 1562667485,
+            "timestamp": 1562667484000,
             "byline": {
               "name": "ਸੁਖਚਰਨ ਪ੍ਰੀਤ",
               "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਦੇ ਲਈ ",
@@ -944,7 +944,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-48902699"
             },
             "summary": "10 ਸਾਲਾ ਸਾਰਾ ਦੇ ਦੋਵੇਂ ਹੱਥ ਨਹੀਂ ਹਨ ਫਿਰ ਵੀ ਉਸਦੀ ਲਿਖਾਈ ਕਮਾਲ ਦੀ ਹੈ।",
-            "timestamp": 1562576355,
+            "timestamp": 1562576354000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1024,7 +1024,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48942858"
             },
             "summary": "ਫ਼ਿਲਮ ਕਬੀਰ ਸਿੰਘ ਦੇ ਡਾਇਰੈਕਟਰ ਦੇ ਬਿਆਨ 'ਤੇ ਅਜਿਹੀ ਕੁੜੀ ਦੀ ਕਹਾਣੀ, ਜਿਸ ਨੇ ਪਿਆਰ ਵਿੱਚ ਹਿੰਸਾ ਝੱਲੀ।",
-            "timestamp": 1562825822,
+            "timestamp": 1562825821000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -1064,7 +1064,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48949103"
             },
             "summary": "ਬ੍ਰਿਟਿਸ਼ ਮੈਡੀਕਲ ਜਨਰਲ ਵਿੱਚ ਕਿਹਾ ਗਿਆ ਹੈ ਕਿ ਮਿੱਠੇ ਪਦਾਰਥਾਂ ਤੇ ਕੈਂਸਰ ਦਾ ਸਬੰਧ ਹੈ",
-            "timestamp": 1562917389,
+            "timestamp": 1562917388000,
             "byline": {
               "name": "ਜੇਮਜ਼ ਗਾਲਾਘਰ",
               "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
@@ -1114,7 +1114,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48932459"
             },
             "summary": "ਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਚੈਟ ਤੋਂ ਬਾਅਦ ਨਤਾਸ਼ਾ ਗੁਰਦਾਸਪੁਰ ਗਈ ਤੇ ਮਲਕੀਤ ਦਾ ਇਲਾਜ ਕਰਵਾ ਰਹੀ ਹੈ, ਦੋਵੇਂ ਵਿਆਹ ਕਰਵਾ ਚੁੱਕੇ ਹਨ।",
-            "timestamp": 1562917915,
+            "timestamp": 1562917914000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1154,7 +1154,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48959911"
             },
             "summary": "ਸੁਖਬੀਰ ਤੇ ਮਜੀਠੀਆ ਨੂੰ ਅਲਾਦਤ ਦੀ ਹਦਾਇਤ, ਭੋਪਾਲ 'ਚ 8 ਸਾਲ ਦੀ ਬੱਚੀ ਨਾ ਬਲਾਤਕਾਰ ਤੇ ਕਤਲ ਦੇ ਮਾਮਲੇ 'ਚ ਫਾਂਸੀ ਸਣੇ 5 ਅਹਿਮ ਖ਼ਬਰਾਂ",
-            "timestamp": 1562898078,
+            "timestamp": 1562898077000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1194,7 +1194,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48937246"
             },
             "summary": "ਪੁਲਿਸ ਨੇ ਕੁੜੀ ਦੇ ਪਿਤਾ ਸਮੇਤ ਅੱਠ ਲੋਕਾਂ ਨੂੰ ਮਾਮਲੇ ਵਿੱਚ ਮੁਲਜ਼ਮ ਕਰਾਰ ਦਿੱਤਾ ਹੈ।",
-            "timestamp": 1562777764,
+            "timestamp": 1562777763000,
             "byline": {
               "name": "ਤੇਜਸ ਵੈਦ",
               "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ ",
@@ -1244,7 +1244,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48937241"
             },
             "summary": "ਇੱਕ ਤਸਵੀਰ ਵਿੱਚ ਟੀਮ ਇੰਡੀਆ ਦੇ ਕੋਚ ਦੀ ਕੁਰਸੀ ਹੇਠਾਂ ਸ਼ਰਾਬ ਦੀ ਬੋਤਲ ਨਜ਼ਰ ਆ ਰਹੀ ਹੈ।",
-            "timestamp": 1562773085,
+            "timestamp": 1562773084000,
             "byline": {
               "name": " ਫ਼ੈਕਟ ਚੈੱਕ ਟੀਮ",
               "title": "ਬੀਬੀਸੀ ਨਿਊਜ਼",
@@ -1294,7 +1294,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48948909"
             },
             "summary": "ਵੀਡੀਓ ਰਾਹੀਂ ਭਾਰਤੀ ਟੀਮ ਦੀ ਨਿਊਜ਼ੀਲੈਂਡ ਹੱਥੋਂ ਹੋਈ ਹਾਰ ਬਾਰੇ ਤੰਜ ਕਸੇ",
-            "timestamp": 1562835019,
+            "timestamp": 1562835018000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
@@ -1373,7 +1373,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48939981"
             },
             "summary": "ਅਕਸ਼ੈ ਕੁਮਾਰ ਨੇ ਅੰਗਰੇਜ਼ੀ ਫਿਲਮਾਂ ਦੇ ਐਕਸ਼ਨ ਹੀਰੋ ਜੈਸਨ ਸਟੈਥਮ ਤੋਂ ਪ੍ਰੈਰਿਤ ਹੋ ਕੇ ਇਹ ਚੈਲੇਂਜ ਲਿਆ।",
-            "timestamp": 1562896007,
+            "timestamp": 1562896006000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1414,7 +1414,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48929103"
             },
             "summary": "ਇੰਟਰਨੈੱਟ ਦੀ ਵਧੇਰੇ ਵਰਤੋਂ ਨਾਲ ਸਰੀਰਕ ਬਿਮਾਰੀਆਂ ਨਾਲ ਵੀ ਲੋਕ ਪੀੜਤ ਹੋ ਰਹੇ ਹਨ।",
-            "timestamp": 1562754704,
+            "timestamp": 1562754703000,
             "byline": {
               "name": "ਰਵਿੰਦਰ ਸਿੰਘ ਰੋਬਿਨ",
               "title": "ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਦੇ ਲਈ ",
@@ -1464,7 +1464,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48948903"
             },
             "summary": "ਇੱਕ ਡੈਨਿਸ਼ ਲੜਕੀ ਪੰਜਾਬ ਦੇ ਇੱਕ ਨਸ਼ਾ ਪੀੜਤ ਨੌਜਵਾਨ ਨਾਲ ਵਿਆਹ ਕਰ ਉਸ ਨੂੰ ਨਸ਼ੇ ਦੀ ਦਲਦਲ ਵਿੱਚੋ ਕੱਢਣ ਦੇ ਯਤਨ ਕਰ ਰਹੀ ਹੈ",
-            "timestamp": 1562832595,
+            "timestamp": 1562832594000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1533,7 +1533,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48922817"
             },
             "summary": "ਲਵ ਮੈਰਿਜ, ਅਰੇਂਜਡ ਮੈਰਿਜ ਤੇ ਲਵ-ਕਮ-ਅਰੇਂਜਡ ਮੈਰਿਜ ਸੁਣੀ ਹੈ...",
-            "timestamp": 1562725482,
+            "timestamp": 1562725481000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1603,7 +1603,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48922461"
             },
             "summary": "ਫ਼ਿਲਮ ਦੇ ਗੀਤ ‘ਵੱਖਰਾ ਸਵੈਗ’ ਦੇ ਲਾਂਚ ਮੌਕੇ ਕੰਗਨਾ ਤੇ ਇੱਕ ਪੱਤਰਕਾਰ ਵਿਚਾਲੇ ਬਹਿਸ ਹੋ ਗਈ",
-            "timestamp": 1562674707,
+            "timestamp": 1562674706000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1673,7 +1673,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-48884055"
             },
             "summary": "ਤੁਸੀਂ ਲਵ ਮੈਰਿਜ, ਲਵ ਕਮ ਅਰੇਂਜਡ ਅਤੇ ਅਰੇਂਜਡ ਮੈਰਿਜ ਬਾਰੇ ਤਾਂ ਸੁਣਿਆ ਹੋਵੇਗਾ ਪਰ ਇਹ 'ਸੈਮੀ ਅਰੇਂਜਡ' ਮੈਰਿਜ ਕੀ ਹੈ",
-            "timestamp": 1562560452,
+            "timestamp": 1562560451000,
             "byline": {
               "name": "ਸਿੰਧੁਵਾਸਿਨੀ",
               "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
@@ -1724,7 +1724,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48900877"
             },
             "summary": "ਇਹ ਉਹ 5 ਦੇਸ ਹਨ ਜੋ ਤਕਨੀਕ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਮੁਹੱਈਆ ਕਰਵਾਉਣ ਵਿੱਚ ਸਭ ਤੋਂ ਅੱਗੇ ਹਨ।",
-            "timestamp": 1562583784,
+            "timestamp": 1562583783000,
             "byline": {
               "name": "ਲਿੰਡਸੇ ਗੈਲੋਵੋ",
               "title": "ਬੀਬੀਸੀ ਟਰੈਵਲ ",
@@ -1784,7 +1784,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48951793"
             },
             "summary": "ਅਫ਼ਗਾਨਿਸਤਾਨ ਸੁਰੱਖਿਆ ਦੇ ਮਾਮਲੇ ਵਿੱਚ ਔਰਤਾਂ ਲਈ ਸਭ ਤੋਂ ਖ਼ਤਰਨਾਕ ਦੇਸਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।",
-            "timestamp": 1562894728,
+            "timestamp": 1562894727000,
             "byline": {
               "name": "ਯੋਗਿਤਾ ਲਿਮੇ",
               "title": "ਬੀਬੀਸੀ ਨਿਊਜ਼, ਕਾਬੁਲ ",
@@ -1835,7 +1835,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48899512"
             },
             "summary": "ਈਰਾਨ ਦੇ ਇਸ ਐਲਾਨ ਨਾਲ ਹੋਰ ਵਧੇਗਾ ਤਣਾਅ, ਟਰੰਪ ਪਹਿਲਾਂ ਹੀ ਧਮਕੀ ਦੇ ਚੁੱਕੇ ਹਨ।",
-            "timestamp": 1562550359,
+            "timestamp": 1562550358000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1875,7 +1875,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48901605"
             },
             "summary": "ਵੀਡੀਓ ਵਿੱਚ ਜੱਜ ਨੇ ਨਵਾਜ਼ ਸ਼ਰੀਫ਼ ਦੇ ਖ਼ਿਲਾਫ਼ ਫ਼ੈਸਲਾ ਦੇਣ ਲਈ ਕਥਿਤ ਤੌਰ 'ਤੇ ਦਬਾਅ ਦੀ ਗੱਲ ਮੰਨੀ ਸੀ। ਜੱਜ ਨੇ ਵੀਡੀਓ ਨੂੰ ਫ਼ਰਜ਼ੀ ਦੱਸਿਆ",
-            "timestamp": 1562550098,
+            "timestamp": 1562550097000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1915,7 +1915,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48886371"
             },
             "summary": "ਈਰਾਨ ਨੇ ਕਿਹਾ ਯੂਕੇ ਦਾ ਕੋਈ ਸਨਮਾਨ ਨਹੀਂ ਉਹ ਸਿਰਫ਼ ਅਮਰੀਕੀ ਇਸ਼ਾਰਿਆਂ ਉੱਤੇ ਨੱਚਦਾ ਹੈ।",
-            "timestamp": 1562376261,
+            "timestamp": 1562376260000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1955,7 +1955,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-48899201"
             },
             "summary": "ਪਰਮ ਸੰਧੂ UK ਵਿੱਚ ਉੱਚ ਅਹੁਦੇ 'ਤੇ ਕੰਮ ਕਰਨ ਵਾਲੀਆਂ ਏਸ਼ੀਆ ਮੂਲ ਦੀਆਂ ਘੱਟਗਿਣਤੀ ਔਰਤਾਂ ਵਿਚੋਂ ਇੱਕ ਹਨ",
-            "timestamp": 1562486404,
+            "timestamp": 1562486403000,
             "byline": {
               "name": "ਡੈਨੀ ਸ਼ਾਅ",
               "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ ",

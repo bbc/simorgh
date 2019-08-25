@@ -46,7 +46,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48756155"
                         },
                         "summary": "Dhearbh Poileas Alba gun deach pìosan de phrama a lorg ann an cuaraidh a tha iad a' sgrùdadh mar phàirt de rannsachadh air cùis Renee NicRath is a mac Anndra.",
-                        "timestamp": 1561455803,
+                        "timestamp": 1561455802000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107529038",
@@ -81,7 +81,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48756044"
                         },
                         "summary": "'S e drochaid a b' fheàrr le Còmhdhail Alba airson piseach a thoirt air sruth na trafaig aig cearcall-rathaid an Longman air an A9 an Inbhir Nis.",
-                        "timestamp": 1561473093,
+                        "timestamp": 1561473092000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107535392",
@@ -115,7 +115,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48756158"
                         },
                         "summary": "Chaidh deugaire a bha a dhìth air a' Ghàidhealtachd a lorg slàn sàbhailte.",
-                        "timestamp": 1561473902,
+                        "timestamp": 1561473901000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107535390",
@@ -149,7 +149,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48757220"
                         },
                         "summary": "Sgìrean mòintich na h-Alba a' faighinn £11m a bharrachd airson an dìon.",
-                        "timestamp": 1561458897,
+                        "timestamp": 1561458896000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107530060",
@@ -183,7 +183,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48756040"
                         },
                         "summary": "Tha iarrtas ann nach cuireadh Riaghaltas na h-Alba uimhir de riaghailtean air taighean-spadaidh ann an àitichean iomallach 's a tha mu choinneimh thaighean-spadaidh mòra air Tìr-Mòr.",
-                        "timestamp": 1561450702,
+                        "timestamp": 1561450701000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107528081",
@@ -217,7 +217,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48756150"
                         },
                         "summary": "Dh'iarr Port-Adhair Obar Dheathain nach bi inbhe shònraichte aig Port-Adhair Inbhir Nis tuilleadh an taca ri puirt-àdhair eile air Tìr-Mòr.",
-                        "timestamp": 1561450653,
+                        "timestamp": 1561450652000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107527823",
@@ -258,7 +258,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48752230"
                         },
                         "summary": "Tha dragh air nochdadh mu na duilgheadasan a th' aig teaghlaichean sna h-eileanan tadhal air feadhainn a tha càirdeach dhaibh sa phrìosan air tìr-mòr.",
-                        "timestamp": 1561401844,
+                        "timestamp": 1561401843000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07f25r4",
@@ -322,7 +322,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48752228"
                         },
                         "summary": "Chadih teisteanas sònnraichte a thoirt seachad do dh'Ard-sgoil MhicNeacail airson a' phàirt a bh' acasan ann an a bhith a' cuimhneachadh Call an Iolaire.",
-                        "timestamp": 1561401708,
+                        "timestamp": 1561401707000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07f24w2",
@@ -386,7 +386,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48732951"
                         },
                         "summary": "Mòrag Rothach a' leigeil seachad a h-obair le Crossroads na Hearadh.",
-                        "timestamp": 1561220458,
+                        "timestamp": 1561220457000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07dwxcw",
@@ -450,7 +450,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48732953"
                         },
                         "summary": "Bidh an dràma Gàidhlig Bannan ri fhaicinn gu h-eadar-nàiseanta tro chùmhnant sgaoilidh ùr.",
-                        "timestamp": 1561220750,
+                        "timestamp": 1561220749000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07dwxd0",
@@ -514,7 +514,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48739131"
                         },
                         "summary": "Tha feadhainn a tha nam prìosanaich ann am prìosan Phorterfield ann an Inbhir Nis air taisbeanadh poblach a chur ri chèile de phìosan ealain a chruthaich iad 's iad fo ghlais.",
-                        "timestamp": 1561307987,
+                        "timestamp": 1561307986000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07dyhns",
@@ -578,7 +578,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48726984"
                         },
                         "summary": "Planaichean gam foillseachadh airson trì taighean ùra air a' Chomraich.",
-                        "timestamp": 1561140907,
+                        "timestamp": 1561140906000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07dtwtb",
@@ -668,7 +668,7 @@
                         "uri": "http://www.bbc.co.uk/programmes/b00drynf",
                         "contentType": "Video",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1417526178,
+                        "timestamp": 1417526177000,
                         "type": "link"
                     }
                 ],
@@ -690,7 +690,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48756157"
                         },
                         "summary": "Dh'innis Ross County gu bheil Josh Mullin air a chùmhnant ann an Inbhir Pheofharain a leudachadh.",
-                        "timestamp": 1561471874,
+                        "timestamp": 1561471873000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107534525",
@@ -726,7 +726,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48756156"
                         },
                         "summary": "Bha droch oidhche aig sgioba Ùige & Bheàrnaraigh air ais ann an Cupa Eilean an Fhraoich is iad a' call 8-0 an aghaidh an Rubha.",
-                        "timestamp": 1561469326,
+                        "timestamp": 1561469325000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107530097",
@@ -761,7 +761,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48743346"
                         },
                         "summary": "Dhearbh sgioba Nis gu bheil iad air tarraing a-mach à Cupa Amaitearach na Gàidhealtachd.",
-                        "timestamp": 1561366393,
+                        "timestamp": 1561366392000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107514006",
@@ -803,7 +803,7 @@
                         "uri": "https://www.bbc.co.uk/programmes/p02nrtrf/episodes/downloads",
                         "contentType": "Audio",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1556705535,
+                        "timestamp": 1556705534000,
                         "type": "link"
                     },
                     {
@@ -832,7 +832,7 @@
                         "uri": "http://www.bbc.co.uk/naidheachdan/36586129",
                         "contentType": "Text",
                         "assetTypeCode": "PRO",
-                        "timestamp": 1492610243,
+                        "timestamp": 1492610242000,
                         "type": "link"
                     }
                 ],
@@ -854,7 +854,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48688537"
                         },
                         "summary": "Dùbhlan sgèith ùr eadar Alba agus Graonlainn.",
-                        "timestamp": 1560950843,
+                        "timestamp": 1560950842000,
                         "cpsType": "STY",
                         "indexImage": {
                             "id": "107456609",
@@ -888,7 +888,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48674246"
                         },
                         "summary": "Sgriobh Àrd-oifigear Meadaigeach na h-Alba gu dotairean air feadh na dùthcha ag iarraidh orra a bhith mothachail do thinneas Lyme nuair a tha iad a' dèiligeadh ri euslaintich.",
-                        "timestamp": 1560852296,
+                        "timestamp": 1560852295000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07dg5ls",
@@ -953,7 +953,7 @@
                             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/48756042"
                         },
                         "summary": "Geàrr-chunntas sgrìobhte de naidheachdan 11:00m, le clàr-fuaime na chois.",
-                        "timestamp": 1561465275,
+                        "timestamp": 1561465274000,
                         "cpsType": "MAP",
                         "media": {
                             "id": "p07f3y5d",

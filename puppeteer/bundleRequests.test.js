@@ -1,9 +1,10 @@
+// eslint-disable-next-line import/no-unresolved
 import puppeteer from 'puppeteer';
 import { localBaseUrl } from '../src/testHelpers/config';
 
 global.Cypress = { env: () => 'local' };
 
-const config = require('../cypress/support/config/services').default;
+const config = require('../cypress/support/config/services');
 
 let browser;
 let page;
@@ -11,8 +12,10 @@ let requests = [];
 
 const isJsBundle = url => url.includes(localBaseUrl);
 
+jest.setTimeout(10000); // overriding the default jest timeout
+
 describe('Js bundle requests', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
     browser = await puppeteer.launch({
       args: ['--no-sandbox'],
     });
@@ -23,25 +26,30 @@ describe('Js bundle requests', () => {
     });
   });
 
-  afterEach(async () => {
-    browser.close();
-    requests = [];
+  afterAll(async () => {
+    await browser.close();
   });
 
   Object.keys(config).forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => config[service].pageTypes[pageType] !== undefined)
+      .filter(
+        pageType => config[service].pageTypes[pageType].path !== undefined,
+      )
       .forEach(pageType => {
-        const path = config[service].pageTypes[pageType];
+        const { path } = config[service].pageTypes[pageType];
 
         describe(service, () => {
-          beforeEach(async () => {
+          beforeAll(async () => {
             await page.goto(`${localBaseUrl}${path}`, {
               waitUntil: 'networkidle2',
             });
           });
 
-          it('only loads expected js bundles', async () => {
+          afterAll(() => {
+            requests = [];
+          });
+
+          it('only loads expected js bundles', () => {
             requests
               .filter(url => url.endsWith('.js'))
               .filter(isJsBundle)
@@ -55,7 +63,7 @@ describe('Js bundle requests', () => {
               });
           });
 
-          it('loads at least 1 service bundle', async () => {
+          it('loads at least 1 service bundle', () => {
             const serviceMatches = requests.filter(url =>
               url.match(
                 new RegExp(
