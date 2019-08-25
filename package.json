@@ -108,7 +108,7 @@
     "dotenv": "^8.1.0",
     "es6-promise": "^4.2.8",
     "express": "^4.17.1",
-    "express-static-gzip": "^1.1.3",
+    "express-static-gzip": "^2.0.3",
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^3.20.0",
     "isomorphic-fetch": "^2.2.1",
