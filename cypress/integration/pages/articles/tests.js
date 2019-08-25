@@ -26,7 +26,8 @@ const serviceHasFigure = service =>
 const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
-const serviceHasTimestamp = service => service === 'news';
+const serviceHasTimestamp = service => 
+['news', 'urdu'].includes(service);
 
 const tests = ({ service }) =>
   describe(`Tests`, () => {
