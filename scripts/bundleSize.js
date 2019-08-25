@@ -4,25 +4,16 @@ const ora = require('ora');
 const fs = require('fs');
 const chalk = require('chalk');
 
-const { MIN_SIZE, MAX_SIZE, MIN_SERVICES } = require('./bundleSizeConfig');
+// need fake Cypress in global scope to require service configs:
+global.Cypress = { env: () => ({}) };
+const cypressServiceConfigs = require('../cypress/support/config/services');
+
+const services = Object.keys(cypressServiceConfigs);
+const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
 
 const jsFiles = fs
   .readdirSync('build/public/static/js')
   .filter(fileName => fileName.endsWith('.js'));
-
-const services = jsFiles
-  .filter(
-    fileName => !(fileName.startsWith('main') || fileName.startsWith('vendor')),
-  )
-  .map(fileName => {
-    const matches = fileName.match(/(\w+)-\w+.\w+.js/);
-    if (Array.isArray(matches) && matches.length >= 2) {
-      return matches[1];
-    }
-    throw new Error(
-      `Unexpectedly formatted filename in "build/public/static/js": ${fileName}`,
-    );
-  });
 
 const getFileSize = filePath => fs.statSync(filePath).size;
 const getTotalSizeOfFilesBeginningWith = string => {
@@ -69,7 +60,6 @@ const spinner = ora({
 spinner.start();
 
 let totalSize = 0;
-let numberOfServices = 0;
 let smallestBundle;
 let largestBundle;
 
@@ -78,7 +68,6 @@ const errors = services
     const size = getServiceBundleSize(service);
 
     totalSize += size;
-    numberOfServices += 1;
 
     if (!smallestBundle || size < smallestBundle.size) {
       smallestBundle = { service, size };
@@ -92,12 +81,7 @@ const errors = services
   })
   .filter(item => !!item);
 
-if (numberOfServices < MIN_SERVICES) {
-  spinner.fail(
-    `Service bundles appear to be missing. Found ${numberOfServices} but expecting ${MIN_SERVICES}`,
-  );
-  throw new Error();
-} else if (errors.length) {
+if (errors.length) {
   spinner.fail('Issues with service bundles: ');
   errors.forEach(err => console.error(err)); // eslint-disable-line no-console
   throw new Error();

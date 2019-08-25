@@ -9,35 +9,27 @@ jest.mock('chalk', () => ({
   blue: a => a,
   yellow: a => a,
 }));
-jest.mock('../src/app/lib/config/services/loadableConfig', () => ({
-  default: {
-    service1: {},
-    service2: {},
-  },
+jest.mock('../cypress/support/config/services', () => ({
+  service1: {},
+  service2: {},
 }));
 jest.mock('fs');
 jest.mock('./bundleSizeConfig', () => ({
   MIN_SIZE: 564,
   MAX_SIZE: 582,
-  MIN_SERVICES: 2,
 }));
 
-const setUpFSMocks = (
-  service1FileSize,
-  service2FileSize,
-  shouldExcludeService2,
-) => {
+const setUpFSMocks = (service1FileSize, service2FileSize) => {
   beforeEach(() => {
-    let bundles = [
+    const bundles = [
       'main-12345.js',
       'vendor-11111.js',
       'vendor-22222.js',
       'vendor-33333.js',
       'vendor-44444.js',
       'service1-12345.12345.js',
+      'service2-12345.12345.js',
     ];
-    if (!shouldExcludeService2)
-      bundles = bundles.concat('service2-12345.12345.js');
     readdirSync.mockReturnValue(bundles);
 
     const filePatternToSizeMap = {
@@ -227,40 +219,6 @@ describe('bundleSize', () => {
 
       expect(global.console.error).toHaveBeenCalledWith(
         "Bundle size for Service2 is too large at 585 kB. Please update thresholds in './scripts/bundleSize.js'",
-      );
-    });
-  });
-
-  describe('when there are less service bundles than MIN_SERVICES', () => {
-    setUpFSMocks(145000, 150000, true);
-
-    it('should throw an error', () => {
-      let didThrow = false;
-      jest.isolateModules(() => {
-        try {
-          require('./bundleSize'); // eslint-disable-line global-require
-        } catch (e) {
-          didThrow = true;
-        }
-      });
-      expect(didThrow).toBe(true);
-    });
-
-    it('should use ora to show loading and failure states', () => {
-      jest.isolateModules(() => {
-        try {
-          require('./bundleSize'); // eslint-disable-line global-require
-        } catch (e) {
-          // silence error
-        }
-      });
-
-      expect(ora).toHaveBeenCalledWith(
-        expect.objectContaining({ text: 'Analysing bundles...' }),
-      );
-      expect(start).toHaveBeenCalled();
-      expect(fail).toHaveBeenCalledWith(
-        'Service bundles appear to be missing. Found 1 but expecting 2',
       );
     });
   });
