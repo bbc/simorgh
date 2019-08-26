@@ -88,20 +88,22 @@ const testsForAllPages = ({ service, pageType }) => {
     });
 
     // Should be made to not be a smoke test
-    describe('Page links test', () => {
-      if (Cypress.env('APP_ENV') === 'live') {
-        it('links should not 404', () => {
-          cy.get('a')
-            .not('[href="#*"]')
-            .each(element => {
-              const href = element.attr('href');
-              cy.request(href).then(resp => {
-                expect(resp.status).to.not.equal(404);
+    if (!Cypress.env('SMOKE')) {
+      describe('Page links test', () => {
+        if (Cypress.env('APP_ENV') === 'live') {
+          it('links should not 404', () => {
+            cy.get('a')
+              .not('[href="#*"]')
+              .each(element => {
+                const href = element.attr('href');
+                cy.request(href).then(resp => {
+                  expect(resp.status).to.not.equal(404);
+                });
               });
-            });
-        });
-      }
-    });
+          });
+        }
+      });
+    }
 
     describe('Header Tests', () => {
       it('should render the BBC News branding', () => {
