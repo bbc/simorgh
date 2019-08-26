@@ -5,8 +5,12 @@ import config from '../../../support/config/services';
 const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 
-const tests = ({ service }) =>
-  describe(`Amp Tests`, () => {
+export const testsToAlwaysRunForAMPOnly = () => {
+  describe(`No testsToAlwaysRunForAMPOnly to run`, () => {});
+};
+
+export const testsForAMPOnly = ({ service }) =>
+  describe(`Running testsForAMPOnly`, () => {
     describe('ATI', () => {
       it('should have an amp-analytics tag with the ati url', () => {
         cy.hasAmpAnalyticsAtiUrl(
@@ -92,4 +96,6 @@ const tests = ({ service }) =>
     });
   });
 
-export default tests;
+export const testsToNeverSmokeTestForAMPOnly = () => {
+  describe(`No testsToNeverSmokeTestForAMPOnly to run`, () => {});
+};

@@ -4,7 +4,11 @@ import config from '../../../support/config/services';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
 
-const tests = ({ service }) =>
+export const testsToAlwaysRunForCanonicalOnly = () => {
+  describe(`No testsToAlwaysRunForCanonicalOnly to run`, () => {});
+};
+
+export const testsForCanonicalOnly = ({ service }) =>
   describe(`Canonical Tests`, () => {
     it('should not have an AMP attribute on the main article', () => {
       cy.get('html').should('not.have.attr', 'amp');
@@ -69,4 +73,6 @@ const tests = ({ service }) =>
     }
   });
 
-export default tests;
+export const testsToNeverSmokeTestForCanonicalOnly = () => {
+  describe(`No testsToNeverSmokeTestForCanonicalOnly to run`, () => {});
+};
