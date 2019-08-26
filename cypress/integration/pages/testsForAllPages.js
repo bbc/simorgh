@@ -126,16 +126,18 @@ const testsForAllPages = ({ service, pageType }) => {
               'content',
               appConfig[service].twitterSite,
             );
+          });
+          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            ({ body }) => {
+              const description =
+                pathOr(null, ['promo', 'summary'], body) ||
+                pathOr(null, ['promo', 'headlines', 'seoHeadline'], body) ||
+                pathOr(null, ['metadata', 'summary'], body);
+              const title =
+                pathOr(null, ['promo', 'headlines', 'seoHeadline'], body) ||
+                pathOr(null, ['promo', 'name'], body);
 
-            cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-              ({ body }) => {
-                const description =
-                  pathOr(null, ['promo', 'summary'], body) ||
-                  pathOr(null, ['promo', 'headlines', 'seoHeadline'], body) ||
-                  pathOr(null, ['metadata', 'summary'], body);
-                const title =
-                  pathOr(null, ['promo', 'headlines', 'seoHeadline'], body) ||
-                  pathOr(null, ['promo', 'name'], body);
+              cy.get('head').within(() => {
                 cy.get('meta[name="og:description"]').should(
                   'have.attr',
                   'content',
@@ -156,9 +158,9 @@ const testsForAllPages = ({ service, pageType }) => {
                   'content',
                   title,
                 );
-              },
-            );
-          });
+              });
+            },
+          );
         });
       }
 
