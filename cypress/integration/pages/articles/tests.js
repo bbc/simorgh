@@ -30,7 +30,7 @@ const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 const serviceHasTimestamp = service => service === 'news';
 
 export const testsToAlwaysRun = ({ service }) => {
-  describe(`Article Body`, () => {
+  describe(`Running testsToAlwaysRun`, () => {
     if (serviceHasTimestamp(service)) {
       it('should render a formatted timestamp', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
@@ -72,7 +72,7 @@ export const testsToAlwaysRun = ({ service }) => {
 };
 
 export const tests = ({ service }) => {
-  describe(`Tests`, () => {
+  describe(`Running tests`, () => {
     describe(`Metadata`, () => {
       it('should have the correct articles metadata', () => {
         cy.checkArticlesMetadata({
@@ -254,22 +254,6 @@ export const tests = ({ service }) => {
   });
 };
 
-// Uncomment if ever needed
-// export testsToNeverSmokeTest = ({ service }) => {
-//   describe(`Tests`, () => {
-//     it('should have an inline link', () => {
-//       cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-//         ({ body }) => {
-//           if (body.metadata.language === 'en-gb') {
-//             cy.get('main a');
-//           }
-//         },
-//       );
-//     });
-//     console.log(`No testsToNeverSmokeTest tests for ${service}`);
-//   });
-// };
-
 export const testsToNeverSmokeTest = () => {
-  describe(`Nothing to test here yet`, () => {});
+  describe(`No testsToNeverSmokeTest to run`, () => {});
 };

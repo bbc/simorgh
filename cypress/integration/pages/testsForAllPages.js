@@ -4,7 +4,19 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
-const testsForAllPages = ({ service, pageType }) => {
+export const testsToAlwaysRunForAllPages = ({ service, pageType }) => {
+  describe(`Eunning testsToAlwaysRunForAllPages`, () => {
+    it('should include the canonical URL', () => {
+      cy.get('head link[rel="canonical"]').should(
+        'have.attr',
+        'href',
+        `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
+      );
+    });
+  });
+};
+
+export const testsForAllPages = ({ service, pageType }) => {
   describe('Always tests', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
@@ -24,14 +36,6 @@ const testsForAllPages = ({ service, pageType }) => {
       });
 
       if (pageType !== 'errorPage404') {
-        it('should include the canonical URL', () => {
-          cy.get('head link[rel="canonical"]').should(
-            'have.attr',
-            'href',
-            `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
-          );
-        });
-
         it('should have a correct robot meta tag', () => {
           cy.get('head meta[name="robots"]').should(
             'have.attr',
@@ -86,24 +90,6 @@ const testsForAllPages = ({ service, pageType }) => {
         );
       });
     });
-
-    // Should be made to not be a smoke test
-    if (!Cypress.env('SMOKE')) {
-      describe('Page links test', () => {
-        if (Cypress.env('APP_ENV') === 'live') {
-          it('links should not 404', () => {
-            cy.get('a')
-              .not('[href="#*"]')
-              .each(element => {
-                const href = element.attr('href');
-                cy.request(href).then(resp => {
-                  expect(resp.status).to.not.equal(404);
-                });
-              });
-          });
-        }
-      });
-    }
 
     describe('Header Tests', () => {
       it('should render the BBC News branding', () => {
@@ -174,20 +160,6 @@ const testsForAllPages = ({ service, pageType }) => {
           );
       });
 
-      if (!Cypress.env('SMOKE')) {
-        it('should have working links', () => {
-          cy.get('footer ul').within(() =>
-            appConfig[service].footer.links.forEach(({ href }, key) =>
-              cy
-                .get('a')
-                .eq(key)
-                .should('have.attr', 'href')
-                .and('contain', href),
-            ),
-          );
-        });
-      }
-
       it('should contain copyright text', () => {
         cy.get('footer p').should(
           'contain',
@@ -209,4 +181,21 @@ const testsForAllPages = ({ service, pageType }) => {
   });
 };
 
-export default testsForAllPages;
+export const testsToNeverSmokeTestForAllPageTypes = () => {
+  describe(`Running testsToNeverSmokeTestForAllPageTypes`, () => {
+    if (!Cypress.env('SMOKE') && Cypress.env('APP_ENV') === 'live') {
+      describe('Page links test', () => {
+        it('links should not 404', () => {
+          cy.get('a')
+            .not('[href="#*"]')
+            .each(element => {
+              const href = element.attr('href');
+              cy.request(href).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      });
+    }
+  });
+};

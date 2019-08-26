@@ -1,6 +1,10 @@
 import config from '../config/services';
 import shouldSmokeTest from './shouldSmokeTest';
-import runTestsForAllPages from '../../integration/pages/testsForAllPages';
+import {
+  testsToAlwaysRunForAllPages,
+  testsForAllPages,
+  testsToNeverSmokeTestForAllPageTypes,
+} from '../../integration/pages/testsForAllPages';
 import runTestsForAllAMPPages from '../../integration/pages/testsForAllAMPPages';
 import runTestsForAllCanonicalPages from '../../integration/pages/testsForAllCanonicalPages';
 
@@ -30,12 +34,14 @@ const runTestsForPage = (
         });
 
         // Enables overriding of the smoke test values in the config/services.js file
-        if (runTestsSpecificToPageTypeToAlwaysRun)
+        testsToAlwaysRunForAllPages({ service, pageType });
+        if (runTestsSpecificToPageTypeToAlwaysRun) {
           runTestsSpecificToPageTypeToAlwaysRun({ service, pageType });
+        }
 
         // This runs most tests but only on Service:PageType combinations with smoke enabled
         if (shouldSmokeTest(pageType, service)) {
-          runTestsForAllPages({ service, pageType });
+          testsForAllPages({ service, pageType });
           runTestsForAllCanonicalPages({ service, pageType });
           if (runTestsSpecificToPageType)
             runTestsSpecificToPageType({ service, pageType });
@@ -44,6 +50,7 @@ const runTestsForPage = (
 
         // This is for low priority and long running tests and ensures they're only run when not smoke testing.
         if (!Cypress.env('SMOKE')) {
+          testsToNeverSmokeTestForAllPageTypes({ service, pageType });
           if (runTestsSpecificToPageTypeToNeverSmokeTest)
             runTestsSpecificToPageTypeToNeverSmokeTest({ service, pageType });
         }
@@ -58,13 +65,14 @@ const runTestsForPage = (
         });
 
         // Enables overriding of the smoke test values in the config/services.js file
+        testsToAlwaysRunForAllPages({ service, pageType });
         if (runTestsSpecificToPageTypeToAlwaysRun)
           runTestsSpecificToPageTypeToAlwaysRun({ service, pageType });
 
         // This runs most tests but only on Service:PageType combinations with smoke enabled
         if (shouldSmokeTest(pageType, service)) {
-          runTestsForAllPages({ service, pageType });
-          runTestsForAllAMPPages(pageType);
+          testsForAllPages({ service, pageType });
+          runTestsForAllAMPPages({ service, pageType });
           if (runTestsSpecificToPageType)
             runTestsSpecificToPageType({ service, pageType });
           if (runAmpTests) runAmpTests({ service, pageType });
@@ -72,6 +80,7 @@ const runTestsForPage = (
 
         // This is for low priority and long running tests and ensures they're only run when not smoke testing.
         if (!Cypress.env('SMOKE')) {
+          testsToNeverSmokeTestForAllPageTypes({ service, pageType });
           if (runTestsSpecificToPageTypeToNeverSmokeTest)
             runTestsSpecificToPageTypeToNeverSmokeTest({ service, pageType });
         }
