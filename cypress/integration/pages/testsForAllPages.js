@@ -5,7 +5,7 @@ import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
 export const testsToAlwaysRunForAllPages = ({ service, pageType }) => {
-  describe(`Eunning testsToAlwaysRunForAllPages`, () => {
+  describe(`Running testsToAlwaysRunForAllPages`, () => {
     it('should include the canonical URL', () => {
       cy.get('head link[rel="canonical"]').should(
         'have.attr',
@@ -17,7 +17,7 @@ export const testsToAlwaysRunForAllPages = ({ service, pageType }) => {
 };
 
 export const testsForAllPages = ({ service, pageType }) => {
-  describe('Always tests', () => {
+  describe('Running testsForAllPages', () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
         const resources = [

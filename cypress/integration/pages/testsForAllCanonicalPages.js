@@ -1,8 +1,12 @@
 import envConfig from '../../support/config/envs';
 
-const testsForAllCanonicalPages = ({ service, pageType }) => {
+export const testsToAlwaysRunForCanonicalPages = () => {
+  describe(`No testsToAlwaysRunForCanonicalPages to run`, () => {});
+};
+
+export const testsForAllCanonicalPages = ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
-    describe('Canonical Scripts', () => {
+    describe('Running testsForAllCanonicalPages', () => {
       it('should only have expected bundle script tags', () => {
         cy.get('script[src]').each($p => {
           if ($p.attr('src').includes(envConfig.assetOrigin)) {
@@ -48,4 +52,6 @@ const testsForAllCanonicalPages = ({ service, pageType }) => {
   });
 };
 
-export default testsForAllCanonicalPages;
+export const testsToNeverSmokeTestForCanonicalPages = () => {
+  describe(`No testsToNeverSmokeTestForCanonicalPages to run`, () => {});
+};
