@@ -6,7 +6,6 @@ import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 
 const service = {
   lang: `th`,
-  isoLang: `th`,
   articleAuthor: `https://www.facebook.com/BBCThai`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-thai',

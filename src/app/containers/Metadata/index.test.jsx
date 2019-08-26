@@ -285,7 +285,12 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           false,
-          [],
+          [
+            {
+              href: 'https://www.bbc.com/persian/articles/c4vlle3q337o',
+              hrefLang: 'fa',
+            },
+          ],
           'https://www.bbc.com/persian/articles/c4vlle3q337o.amp',
           'https://www.bbc.com/persian/articles/c4vlle3q337o',
           'خلاصه مقاله',
@@ -335,7 +340,12 @@ describe('Metadata Container', () => {
       expect(Wrapper.find(Metadata).props()).toEqual(
         metadataProps(
           true,
-          [],
+          [
+            {
+              href: 'https://www.bbc.com/persian/articles/c4vlle3q337o',
+              hrefLang: 'fa',
+            },
+          ],
           'https://www.bbc.co.uk/persian/articles/c4vlle3q337o.amp',
           'https://www.bbc.com/persian/articles/c4vlle3q337o',
           'خلاصه مقاله',
@@ -441,7 +451,12 @@ describe('Metadata Container', () => {
     expect(Wrapper.find(Metadata).props()).toEqual(
       metadataProps(
         false,
-        [],
+        [
+          {
+            href: 'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
+            hrefLang: 'ko',
+          },
+        ],
         'https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp',
         'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
         '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
