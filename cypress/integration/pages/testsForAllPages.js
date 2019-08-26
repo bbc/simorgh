@@ -5,17 +5,7 @@ import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
 export const testsToAlwaysRunForAllPages = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRunForAllPages for ${service} ${pageType}`, () => {
-    if (pageType !== 'errorPage404') {
-      it('should include the canonical URL', () => {
-        cy.get('head link[rel="canonical"]').should(
-          'have.attr',
-          'href',
-          `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
-        );
-      });
-    }
-  });
+  describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
 };
 
 export const testsForAllPages = ({ service, pageType }) => {
@@ -38,6 +28,14 @@ export const testsForAllPages = ({ service, pageType }) => {
       });
 
       if (pageType !== 'errorPage404') {
+        it('should include the canonical URL', () => {
+          cy.get('head link[rel="canonical"]').should(
+            'have.attr',
+            'href',
+            `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
+          );
+        });
+
         it('should have a correct robot meta tag', () => {
           cy.get('head meta[name="robots"]').should(
             'have.attr',
