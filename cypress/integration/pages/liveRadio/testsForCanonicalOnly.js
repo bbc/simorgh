@@ -1,12 +1,12 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
-export const testsToAlwaysRunForCanonicalOnly = () => {
-  describe(`No testsToAlwaysRunForCanonicalOnly to run`, () => {});
+export const testsToAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForCanonicalOnly = ({ service }) =>
-  describe('Canonical Tests', () => {
+export const testsForCanonicalOnly = ({ service, pageType }) =>
+  describe(`Canonical Tests for ${service} ${pageType}`, () => {
     // will be addressed by https://github.com/bbc/simorgh/issues/3324
     describe('ATI', () => {
       it.skip('should have a noscript tag with an 1px image with the ati url', () => {
@@ -30,6 +30,9 @@ export const testsForCanonicalOnly = ({ service }) =>
     });
   });
 
-export const testsToNeverSmokeTestForCanonicalOnly = () => {
-  describe(`No testsToNeverSmokeTestForCanonicalOnly to run`, () => {});
+export const testsToNeverSmokeTestForCanonicalOnly = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };

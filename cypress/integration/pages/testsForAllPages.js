@@ -5,7 +5,7 @@ import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
 export const testsToAlwaysRunForAllPages = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRunForAllPages`, () => {
+  describe(`Running testsToAlwaysRunForAllPages for ${service} ${pageType}`, () => {
     if (pageType !== 'errorPage404') {
       it('should include the canonical URL', () => {
         cy.get('head link[rel="canonical"]').should(
@@ -19,7 +19,7 @@ export const testsToAlwaysRunForAllPages = ({ service, pageType }) => {
 };
 
 export const testsForAllPages = ({ service, pageType }) => {
-  describe('Running testsForAllPages', () => {
+  describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
         const resources = [
@@ -183,8 +183,8 @@ export const testsForAllPages = ({ service, pageType }) => {
   });
 };
 
-export const testsToNeverSmokeTestForAllPageTypes = () => {
-  describe(`Running testsToNeverSmokeTestForAllPageTypes`, () => {
+export const testsToNeverSmokeTestForAllPageTypes = ({ service, pageType }) => {
+  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
     if (!Cypress.env('SMOKE') && Cypress.env('APP_ENV') === 'live') {
       describe('Page links test', () => {
         it('links should not 404', () => {

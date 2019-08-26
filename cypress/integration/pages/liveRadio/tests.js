@@ -1,12 +1,12 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 
-export const testsToAlwaysRun = () => {
-  describe(`No testsToAlwaysRun to run`, () => {});
+export const testsToAlwaysRun = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
 
-export const tests = ({ service }) =>
-  describe('Common tests', () => {
+export const tests = ({ service, pageType }) =>
+  describe(`Tests for ${service} ${pageType}`, () => {
     describe('Live Radio body', () => {
       it('should render a H1, which contains/displays a styled headline', () => {
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
@@ -107,6 +107,6 @@ export const tests = ({ service }) =>
     });
   });
 
-export const testsToNeverSmokeTest = () => {
-  describe(`No testsToNeverSmokeTest to run`, () => {});
+export const testsToNeverSmokeTest = ({ service, pageType }) => {
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };

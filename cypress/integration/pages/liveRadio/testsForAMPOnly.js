@@ -1,12 +1,12 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
-export const testsToAlwaysRunForAMPOnly = () => {
-  describe(`No testsToAlwaysRunForAMPOnly to run`, () => {});
+export const testsToAlwaysRunForAMPOnly = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForAMPOnly = ({ service }) =>
-  describe('Amp Tests', () => {
+export const testsForAMPOnly = ({ service, pageType }) =>
+  describe(`Amp Tests for ${service} ${pageType}`, () => {
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
         cy.testResponseCodeAndType(
@@ -91,6 +91,6 @@ export const testsForAMPOnly = ({ service }) =>
     });
   });
 
-export const testsToNeverSmokeTestForAMPOnly = () => {
-  describe(`No testsToNeverSmokeTestForAMPOnly to run`, () => {});
+export const testsToNeverSmokeTestForAMPOnly = ({ service, pageType }) => {
+  describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
 };

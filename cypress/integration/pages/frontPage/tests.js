@@ -1,9 +1,9 @@
-export const testsToAlwaysRun = () => {
-  describe(`No testsToAlwaysRun to run`, () => {});
+export const testsToAlwaysRun = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
 
-export const tests = () =>
-  describe(`Tests`, () => {
+export const tests = ({ service, pageType }) =>
+  describe(`Tests for ${service} ${pageType}`, () => {
     describe('Frontpage body', () => {
       before(() => {
         cy.viewport(1008, 768);
@@ -49,6 +49,6 @@ export const tests = () =>
     });
   });
 
-export const testsToNeverSmokeTest = () => {
-  describe(`No testsToNeverSmokeTest to run`, () => {});
+export const testsToNeverSmokeTest = ({ service, pageType }) => {
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };

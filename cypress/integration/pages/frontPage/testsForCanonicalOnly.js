@@ -1,12 +1,12 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 
-export const testsToAlwaysRunForCanonicalOnly = () => {
-  describe(`No testsToAlwaysRunForCanonicalOnly to run`, () => {});
+export const testsToAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForCanonicalOnly = ({ service }) =>
-  describe(`Canonical Tests`, () => {
+export const testsForCanonicalOnly = ({ service, pageType }) =>
+  describe(`Canonical Tests for ${service} ${pageType}`, () => {
     describe('ATI', () => {
       it('should have a noscript tag with an 1px image with the ati url', () => {
         cy.hasNoscriptImgAtiUrl(
@@ -21,6 +21,9 @@ export const testsForCanonicalOnly = ({ service }) =>
     });
   });
 
-export const testsToNeverSmokeTestForCanonicalOnly = () => {
-  describe(`No testsToNeverSmokeTestForCanonicalOnly to run`, () => {});
+export const testsToNeverSmokeTestForCanonicalOnly = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };

@@ -1,12 +1,12 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 
-export const testsToAlwaysRun = () => {
-  describe(`No testsToAlwaysRun to run`, () => {});
+export const testsToAlwaysRun = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
 
-export const tests = ({ service }) =>
-  describe(`Tests`, () => {
+export const tests = ({ service, pageType }) =>
+  describe(`Tests for ${service} ${pageType}`, () => {
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
         cy.testResponseCodeAndType(
@@ -66,6 +66,6 @@ export const tests = ({ service }) =>
     });
   });
 
-export const testsToNeverSmokeTest = () => {
-  describe(`No testsToNeverSmokeTest to run`, () => {});
+export const testsToNeverSmokeTest = ({ service, pageType }) => {
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };

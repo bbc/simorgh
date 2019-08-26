@@ -4,12 +4,12 @@ import config from '../../../support/config/services';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
 
-export const testsToAlwaysRunForCanonicalOnly = () => {
-  describe(`No testsToAlwaysRunForCanonicalOnly to run`, () => {});
+export const testsToAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForCanonicalOnly = ({ service }) =>
-  describe(`Canonical Tests`, () => {
+export const testsForCanonicalOnly = ({ service, pageType }) =>
+  describe(`Canonical Tests for ${service} ${pageType}`, () => {
     it('should not have an AMP attribute on the main article', () => {
       cy.get('html').should('not.have.attr', 'amp');
     });
@@ -73,6 +73,9 @@ export const testsForCanonicalOnly = ({ service }) =>
     }
   });
 
-export const testsToNeverSmokeTestForCanonicalOnly = () => {
-  describe(`No testsToNeverSmokeTestForCanonicalOnly to run`, () => {});
+export const testsToNeverSmokeTestForCanonicalOnly = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
