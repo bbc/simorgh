@@ -1,6 +1,13 @@
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
-import tests from './tests';
+import { testsToAlwaysRun, tests, testsToNeverSmokeTest } from './tests';
 import testsForAMPOnly from './testsForAMPOnly';
 import testsForCanonicalOnly from './testsForCanonicalOnly';
 
-runTestsForPage('articles', tests, testsForCanonicalOnly, testsForAMPOnly);
+runTestsForPage(
+  'articles',
+  testsToAlwaysRun,
+  tests,
+  testsToNeverSmokeTest,
+  testsForCanonicalOnly,
+  testsForAMPOnly,
+);

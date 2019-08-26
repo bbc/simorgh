@@ -26,9 +26,52 @@ const serviceHasFigure = service =>
 const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
+
 const serviceHasTimestamp = service => service === 'news';
 
-const tests = ({ service }) =>
+export const testsToAlwaysRun = ({ service }) => {
+  describe(`Article Body`, () => {
+    if (serviceHasTimestamp(service)) {
+      it('should render a formatted timestamp', () => {
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+          ({ body }) => {
+            const { language } = body.metadata.passport;
+            const { lastPublished } = body.metadata;
+            const { firstPublished } = body.metadata;
+            const updatedTimestamp = moment
+              .tz(lastPublished, `${appConfig[service].timezone}`)
+              .locale(language)
+              .format('D MMMM YYYY');
+            const firstTimestamp = moment
+              .tz(firstPublished, `${appConfig[service].timezone}`)
+              .locale(language)
+              .format('D MMMM YYYY');
+            // exempt pashto && arabic as we do have currently their locale implementation
+            if (!['pashto', 'arabic'].includes(service)) {
+              cy.get('time').then($time => {
+                if (lastPublished === firstPublished) {
+                  cy.get($time).should('contain', updatedTimestamp);
+                } else {
+                  cy.get($time)
+                    .eq(0)
+                    .should('contain', firstTimestamp);
+                  cy.get($time)
+                    .eq(1)
+                    .should(
+                      'contain',
+                      `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+                    );
+                }
+              });
+            }
+          },
+        );
+      });
+    }
+  });
+};
+
+export const tests = ({ service }) => {
   describe(`Tests`, () => {
     describe(`Metadata`, () => {
       it('should have the correct articles metadata', () => {
@@ -106,44 +149,6 @@ const tests = ({ service }) =>
           },
         );
       });
-
-      if (serviceHasTimestamp(service)) {
-        it('should render a formatted timestamp', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const { language } = body.metadata.passport;
-              const { lastPublished } = body.metadata;
-              const { firstPublished } = body.metadata;
-              const updatedTimestamp = moment
-                .tz(lastPublished, `${appConfig[service].timezone}`)
-                .locale(language)
-                .format('D MMMM YYYY');
-              const firstTimestamp = moment
-                .tz(firstPublished, `${appConfig[service].timezone}`)
-                .locale(language)
-                .format('D MMMM YYYY');
-              // exempt pashto && arabic as we do have currently their locale implementation
-              if (!['pashto', 'arabic'].includes(service)) {
-                cy.get('time').then($time => {
-                  if (lastPublished === firstPublished) {
-                    cy.get($time).should('contain', updatedTimestamp);
-                  } else {
-                    cy.get($time)
-                      .eq(0)
-                      .should('contain', firstTimestamp);
-                    cy.get($time)
-                      .eq(1)
-                      .should(
-                        'contain',
-                        `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
-                      );
-                  }
-                });
-              }
-            },
-          );
-        });
-      }
 
       it('should render an H2, which contains/displays a styled subheading', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
@@ -247,5 +252,24 @@ const tests = ({ service }) =>
       });
     });
   });
+};
 
-export default tests;
+// Uncomment if ever needed
+// export testsToNeverSmokeTest = ({ service }) => {
+//   describe(`Tests`, () => {
+//     it('should have an inline link', () => {
+//       cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+//         ({ body }) => {
+//           if (body.metadata.language === 'en-gb') {
+//             cy.get('main a');
+//           }
+//         },
+//       );
+//     });
+//     console.log(`No testsToNeverSmokeTest tests for ${service}`);
+//   });
+// };
+
+export const testsToNeverSmokeTest = () => {
+  describe(`Nothing to test here yet`, () => {});
+};
