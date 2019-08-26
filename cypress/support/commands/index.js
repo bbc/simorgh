@@ -13,10 +13,3 @@ Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
     return false;
   });
 });
-
-Cypress.Commands.add('checkLinks', (position, url) => {
-  cy.get('a')
-    .eq(position)
-    .should('have.attr', 'href')
-    .and('contain', url);
-});
