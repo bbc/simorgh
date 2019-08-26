@@ -1,6 +1,10 @@
 import config from '../../../support/config/services';
 
-const tests = ({ service }) =>
+export const testsToAlwaysRunForCanonicalOnly = () => {
+  describe(`No testsToAlwaysRunForCanonicalOnly to run`, () => {});
+};
+
+export const testsForCanonicalOnly = ({ service }) =>
   describe(`Canonical Tests`, () => {
     it('should return a 404 error code', () => {
       cy.testResponseCodeAndType(
@@ -11,4 +15,6 @@ const tests = ({ service }) =>
     });
   });
 
-export default tests;
+export const testsToNeverSmokeTestForCanonicalOnly = () => {
+  describe(`No testsToNeverSmokeTestForCanonicalOnly to run`, () => {});
+};

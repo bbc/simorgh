@@ -1,7 +1,11 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 
-const tests = ({ service }) =>
+export const testsToAlwaysRun = () => {
+  describe(`No testsToAlwaysRun to run`, () => {});
+};
+
+export const tests = ({ service }) =>
   describe(`Tests`, () => {
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
@@ -62,4 +66,6 @@ const tests = ({ service }) =>
     });
   });
 
-export default tests;
+export const testsToNeverSmokeTest = () => {
+  describe(`No testsToNeverSmokeTest to run`, () => {});
+};

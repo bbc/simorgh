@@ -1,7 +1,11 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
-const tests = ({ service }) =>
+export const testsToAlwaysRunForCanonicalOnly = () => {
+  describe(`No testsToAlwaysRunForCanonicalOnly to run`, () => {});
+};
+
+export const testsForCanonicalOnly = ({ service }) =>
   describe('Canonical Tests', () => {
     // will be addressed by https://github.com/bbc/simorgh/issues/3324
     describe('ATI', () => {
@@ -26,4 +30,6 @@ const tests = ({ service }) =>
     });
   });
 
-export default tests;
+export const testsToNeverSmokeTestForCanonicalOnly = () => {
+  describe(`No testsToNeverSmokeTestForCanonicalOnly to run`, () => {});
+};

@@ -1,6 +1,25 @@
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
-import tests from './tests';
-import testsForAMPOnly from './testsForAMPOnly';
-import testsForCanonicalOnly from './testsForCanonicalOnly';
+import { testsToAlwaysRun, tests, testsToNeverSmokeTest } from './tests';
+import {
+  testsToAlwaysRunForAMPOnly,
+  testsForAMPOnly,
+  testsToNeverSmokeTestForAMPOnly,
+} from './testsForAMPOnly';
+import {
+  testsToAlwaysRunForCanonicalOnly,
+  testsForCanonicalOnly,
+  testsToNeverSmokeTestForCanonicalOnly,
+} from './testsForCanonicalOnly';
 
-runTestsForPage('errorPage404', tests, testsForAMPOnly, testsForCanonicalOnly);
+runTestsForPage(
+  'errorPage404',
+  testsToAlwaysRun,
+  tests,
+  testsToNeverSmokeTest,
+  testsToAlwaysRunForCanonicalOnly,
+  testsForCanonicalOnly,
+  testsToNeverSmokeTestForCanonicalOnly,
+  testsToAlwaysRunForAMPOnly,
+  testsForAMPOnly,
+  testsToNeverSmokeTestForAMPOnly,
+);

@@ -1,7 +1,11 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 
-const tests = ({ service }) =>
+export const testsToAlwaysRun = () => {
+  describe(`No testsToAlwaysRun to run`, () => {});
+};
+
+export const tests = ({ service }) =>
   describe('Common tests', () => {
     describe('Live Radio body', () => {
       it('should render a H1, which contains/displays a styled headline', () => {
@@ -103,4 +107,6 @@ const tests = ({ service }) =>
     });
   });
 
-export default tests;
+export const testsToNeverSmokeTest = () => {
+  describe(`No testsToNeverSmokeTest to run`, () => {});
+};

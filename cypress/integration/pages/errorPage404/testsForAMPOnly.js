@@ -1,6 +1,10 @@
 import config from '../../../support/config/services';
 
-const tests = ({ service }) =>
+export const testsToAlwaysRunForAMPOnly = () => {
+  describe(`No testsToAlwaysRunForAMPOnly to run`, () => {});
+};
+
+export const testsForAMPOnly = ({ service }) =>
   describe(`Amp Tests`, () => {
     it('should return a 404 error code', () => {
       cy.testResponseCodeAndType(
@@ -11,4 +15,6 @@ const tests = ({ service }) =>
     });
   });
 
-export default tests;
+export const testsToNeverSmokeTestForAMPOnly = () => {
+  describe(`No testsToNeverSmokeTestForAMPOnly to run`, () => {});
+};

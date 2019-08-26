@@ -1,4 +1,8 @@
-const tests = () =>
+export const testsToAlwaysRun = () => {
+  describe(`No testsToAlwaysRun to run`, () => {});
+};
+
+export const tests = () =>
   describe(`Tests`, () => {
     describe('Frontpage body', () => {
       before(() => {
@@ -45,4 +49,6 @@ const tests = () =>
     });
   });
 
-export default tests;
+export const testsToNeverSmokeTest = () => {
+  describe(`No testsToNeverSmokeTest to run`, () => {});
+};
