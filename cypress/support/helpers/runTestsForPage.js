@@ -49,18 +49,14 @@ const runTestsForPage = (
         testsToAlwaysRunForAllPages({ service, pageType });
         testsToAlwaysRunForCanonicalPages({ service, pageType });
         runCanonicalTestsSpecificToPageTypeToAlwaysRun({ service, pageType });
-        if (runTestsSpecificToPageTypeToAlwaysRun) {
-          runTestsSpecificToPageTypeToAlwaysRun({ service, pageType });
-        }
+        runTestsSpecificToPageTypeToAlwaysRun({ service, pageType });
 
         // This runs most tests but only on Service:PageType combinations with smoke enabled
         if (shouldSmokeTest(pageType, service)) {
           testsForAllPages({ service, pageType });
           testsForAllCanonicalPages({ service, pageType });
-          if (runTestsSpecificToPageType)
-            runTestsSpecificToPageType({ service, pageType });
-          if (runCanonicalTestsSpecificToPageType)
-            runCanonicalTestsSpecificToPageType({ service, pageType });
+          runTestsSpecificToPageType({ service, pageType });
+          runCanonicalTestsSpecificToPageType({ service, pageType });
         }
 
         // This is for low priority and long running tests and ensures they're only run when not smoke testing.
@@ -70,10 +66,8 @@ const runTestsForPage = (
           runCanonicalTestsSpecificToPageTypeToNeverSmokeTest({
             service,
             pageType,
-            testsToAlwaysRunForAllPages,
           });
-          if (runTestsSpecificToPageTypeToNeverSmokeTest)
-            runTestsSpecificToPageTypeToNeverSmokeTest({ service, pageType });
+          runTestsSpecificToPageTypeToNeverSmokeTest({ service, pageType });
         }
       });
 
@@ -89,17 +83,14 @@ const runTestsForPage = (
         testsToAlwaysRunForAllPages({ service, pageType });
         testsToAlwaysRunForAMPPages({ service, pageType });
         runAMPTestsSpecificToPageTypeToAlwaysRun({ service, pageType });
-        if (runTestsSpecificToPageTypeToAlwaysRun)
-          runTestsSpecificToPageTypeToAlwaysRun({ service, pageType });
+        runTestsSpecificToPageTypeToAlwaysRun({ service, pageType });
 
         // This runs most tests but only on Service:PageType combinations with smoke enabled
         if (shouldSmokeTest(pageType, service)) {
           testsForAllPages({ service, pageType });
           testsForAllAMPPages({ service, pageType });
-          if (runTestsSpecificToPageType)
-            runTestsSpecificToPageType({ service, pageType });
-          if (runAmpTestsSpecificToPageType)
-            runAmpTestsSpecificToPageType({ service, pageType });
+          runTestsSpecificToPageType({ service, pageType });
+          runAmpTestsSpecificToPageType({ service, pageType });
         }
 
         // This is for low priority and long running tests and ensures they're only run when not smoke testing.
@@ -107,8 +98,7 @@ const runTestsForPage = (
           testsToNeverSmokeTestForAllPageTypes({ service, pageType });
           testsToNeverSmokeTestForAMPPages({ service, pageType });
           runAmpTestsSpecificToPageTypeToNeverSmokeTest({ service, pageType });
-          if (runTestsSpecificToPageTypeToNeverSmokeTest)
-            runTestsSpecificToPageTypeToNeverSmokeTest({ service, pageType });
+          runTestsSpecificToPageTypeToNeverSmokeTest({ service, pageType });
         }
       });
     });
