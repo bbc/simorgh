@@ -11,15 +11,17 @@ import {
   testsToNeverSmokeTestForCanonicalOnly,
 } from './testsForCanonicalOnly';
 
-runTestsForPage(
-  'articles',
-  testsToAlwaysRun,
-  tests,
-  testsToNeverSmokeTest,
-  testsToAlwaysRunForCanonicalOnly,
-  testsForCanonicalOnly,
-  testsToNeverSmokeTestForCanonicalOnly,
-  testsToAlwaysRunForAMPOnly,
-  testsForAMPOnly,
-  testsToNeverSmokeTestForAMPOnly,
-);
+const testsForPage = {
+  pageType: 'articles',
+  runTestsSpecificToPageTypeToAlwaysRun: testsToAlwaysRun(),
+  runTestsSpecificToPageType: tests(),
+  runTestsSpecificToPageTypeToNeverSmokeTest: testsToNeverSmokeTest(),
+  runCanonicalTestsSpecificToPageTypeToAlwaysRun: testsToAlwaysRunForCanonicalOnly(),
+  runCanonicalTestsSpecificToPageType: testsForCanonicalOnly(),
+  runCanonicalTestsSpecificToPageTypeToNeverSmokeTest: testsToNeverSmokeTestForCanonicalOnly(),
+  runAMPTestsSpecificToPageTypeToAlwaysRun: testsToAlwaysRunForAMPOnly(),
+  runAmpTestsSpecificToPageType: testsForAMPOnly(),
+  runAmpTestsSpecificToPageTypeToNeverSmokeTest: testsToNeverSmokeTestForAMPOnly(),
+};
+
+runTestsForPage(testsForPage);
