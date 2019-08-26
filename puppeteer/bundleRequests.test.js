@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-unresolved
 import puppeteer from 'puppeteer';
 import { localBaseUrl } from '../src/testHelpers/config';
+import shouldSmokeTest from '../cypress/support/helpers/shouldSmokeTest';
 
 global.Cypress = { env: () => 'local' };
 
@@ -35,6 +36,7 @@ describe('Js bundle requests', () => {
       .filter(
         pageType => config[service].pageTypes[pageType].path !== undefined,
       )
+      .filter(pageType => shouldSmokeTest(pageType, service))
       .forEach(pageType => {
         const { path } = config[service].pageTypes[pageType];
 
