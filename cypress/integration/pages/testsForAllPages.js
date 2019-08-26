@@ -1,3 +1,4 @@
+import pathOr from 'ramda/src/pathOr';
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
@@ -54,9 +55,6 @@ const testsForAllPages = ({ service, pageType }) => {
         });
 
         it('should have the correct shared metadata', () => {
-          const description = pageType === 'articles' ? (appConfig[service].promo.summary || appConfig[service].promo.headlines.seoHeadline) : appConfig[service].metadata.summary;
-          // const title = pageType === 'articles' ? appConfig[service].promo.headlines.seoHeadline : appConfig[service].promo.name;
-
           cy.get('head').within(() => {
             cy.get('meta[name="fb:admins"]').should(
               'have.attr',
@@ -93,7 +91,6 @@ const testsForAllPages = ({ service, pageType }) => {
               'content',
               pageType === 'articles' ? 'article' : 'website',
             );
-            cy.get('meta[name="og:description"]').should('have.attr', 'content', description);
             cy.get('meta[name="og:url"]').should(
               'have.attr',
               'content',
@@ -104,8 +101,6 @@ const testsForAllPages = ({ service, pageType }) => {
               'content',
               appConfig[service].brandName,
             );
-
-            // cy.get('meta[name="og:title"]').should('have.attr', 'content', title);
             cy.get('meta[name="twitter:card"]').should(
               'have.attr',
               'content',
@@ -126,21 +121,43 @@ const testsForAllPages = ({ service, pageType }) => {
               'content',
               appConfig[service].defaultImage,
             );
-            // cy.get('meta[name="twitter:description"]').should(
-            //   'have.attr',
-            //   'content',
-            //   description,
-            // );
             cy.get('meta[name="twitter:site"]').should(
               'have.attr',
               'content',
               appConfig[service].twitterSite,
             );
-            // cy.get('meta[name="twitter:title"]').should(
-            //   'have.attr',
-            //   'content',
-            //   title,
-            // );
+
+            cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+              ({ body }) => {
+                const description =
+                  pathOr(null, ['promo', 'summary'], body) ||
+                  pathOr(null, ['promo', 'headlines', 'seoHeadline'], body) ||
+                  pathOr(null, ['metadata', 'summary'], body);
+                const title =
+                  pathOr(null, ['promo', 'headlines', 'seoHeadline'], body) ||
+                  pathOr(null, ['promo', 'name'], body);
+                cy.get('meta[name="og:description"]').should(
+                  'have.attr',
+                  'content',
+                  description,
+                );
+                cy.get('meta[name="og:title"]').should(
+                  'have.attr',
+                  'content',
+                  title,
+                );
+                cy.get('meta[name="twitter:description"]').should(
+                  'have.attr',
+                  'content',
+                  description,
+                );
+                cy.get('meta[name="twitter:title"]').should(
+                  'have.attr',
+                  'content',
+                  title,
+                );
+              },
+            );
           });
         });
       }
