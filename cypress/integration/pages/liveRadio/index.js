@@ -11,8 +11,8 @@ import {
   testsToNeverSmokeTestForCanonicalOnly,
 } from './testsForCanonicalOnly';
 
-runTestsForPage(
-  'liveRadio',
+const testsForPage = {
+  pageType: 'liveRadio',
   testsToAlwaysRun,
   tests,
   testsToNeverSmokeTest,
@@ -22,4 +22,6 @@ runTestsForPage(
   testsToAlwaysRunForAMPOnly,
   testsForAMPOnly,
   testsToNeverSmokeTestForAMPOnly,
-);
+};
+
+runTestsForPage(testsForPage);

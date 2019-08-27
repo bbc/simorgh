@@ -13,15 +13,15 @@ import {
 
 const testsForPage = {
   pageType: 'articles',
-  runTestsSpecificToPageTypeToAlwaysRun: testsToAlwaysRun(),
-  runTestsSpecificToPageType: tests(),
-  runTestsSpecificToPageTypeToNeverSmokeTest: testsToNeverSmokeTest(),
-  runCanonicalTestsSpecificToPageTypeToAlwaysRun: testsToAlwaysRunForCanonicalOnly(),
-  runCanonicalTestsSpecificToPageType: testsForCanonicalOnly(),
-  runCanonicalTestsSpecificToPageTypeToNeverSmokeTest: testsToNeverSmokeTestForCanonicalOnly(),
-  runAMPTestsSpecificToPageTypeToAlwaysRun: testsToAlwaysRunForAMPOnly(),
-  runAmpTestsSpecificToPageType: testsForAMPOnly(),
-  runAmpTestsSpecificToPageTypeToNeverSmokeTest: testsToNeverSmokeTestForAMPOnly(),
+  testsToAlwaysRun,
+  tests,
+  testsToNeverSmokeTest,
+  testsToAlwaysRunForCanonicalOnly,
+  testsForCanonicalOnly,
+  testsToNeverSmokeTestForCanonicalOnly,
+  testsToAlwaysRunForAMPOnly,
+  testsForAMPOnly,
+  testsToNeverSmokeTestForAMPOnly,
 };
 
 runTestsForPage(testsForPage);

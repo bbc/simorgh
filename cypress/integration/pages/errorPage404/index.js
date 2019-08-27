@@ -11,8 +11,8 @@ import {
   testsToNeverSmokeTestForCanonicalOnly,
 } from './testsForCanonicalOnly';
 
-runTestsForPage(
-  'errorPage404',
+const testsForPage = {
+  pageType: 'errorPage404',
   testsToAlwaysRun,
   tests,
   testsToNeverSmokeTest,
@@ -22,4 +22,6 @@ runTestsForPage(
   testsToAlwaysRunForAMPOnly,
   testsForAMPOnly,
   testsToNeverSmokeTestForAMPOnly,
-);
+};
+
+runTestsForPage(testsForPage);
