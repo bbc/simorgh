@@ -96,124 +96,63 @@ pipeline {
     booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
   stages {
-    parallel {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
-      // Build things if latest, don't test first as branch is already tested
-      stage ('Build & Package') {
-        parallel {
-          stage ('Zip Production') {
-            agent {
-              docker {
-                image "${nodeImage}"
-                args '-u root -v /etc/pki:/certs'
-              }
-            }
-            steps {
-              // Moving files necessary for production to `pack` directory.
-              sh "./scripts/jenkinsProductionFiles.sh"
-
-              script {
-                getCommitInfo()
-                sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-              }
-
-              sh "rm -f ${packageName}"
-              zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-              stash name: 'simorgh', includes: packageName
-            }
-          }
-          stage ('Build storybook dist') {
-            agent {
-              docker {
-                image "${nodeImage}"
-                args '-u root -v /etc/pki:/certs'
-              }
-            }
-            steps {
-              sh "rm -f storybook.zip"
-              sh 'make install'
-              sh 'make buildStorybook'
-              zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-              stash name: 'simorgh_storybook', includes: storybookDist
-            }
-          }
-          stage ('Build Static Assets') {
-            agent {
-              docker {
-                image "${nodeImage}"
-                args '-u root -v /etc/pki:/certs'
-              }
-            }
-            steps {
-              sh 'make install'
-
-              buildStaticAssets("test", "TEST")
-              buildStaticAssets("live", "LIVE")
-            }
-          }
-        }
-      }
-      post {
-        always {
-          script {
-            stageName = env.STAGE_NAME
-          }
-        }
-      }
-    }
-    parallel {
-      // Deploy if latest parallel with tests because PR was already tested
-      stage ('Run Pipeline') {
+    stage ('Test if not latest, deploy and test if latest') {
+      parallel {
         when {
           expression { env.BRANCH_NAME == 'latest' }
         }
-        options {
-          // Do not perform the SCM step
-          skipDefaultCheckout true
-        }
-        agent any
-        steps {
-          unstash 'simorgh'
-          build(
-            job: 'simorgh-infrastructure-test/latest',
-            parameters: [
-              [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-              booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
-            ],
-            wait: true
-          )
-        }
-      }
-      //run dev and prod tests
-      stage ('Build and Test') {
-        parallel {
-          stage ('Test Development') {
-            agent {
-              docker {
-                image "${nodeImage}"
-                args '-u root -v /etc/pki:/certs'
+        // Build things if latest, don't test first as branch is already tested
+        stage ('Build & Package') {
+          parallel {
+            stage ('Zip Production') {
+              agent {
+                docker {
+                  image "${nodeImage}"
+                  args '-u root -v /etc/pki:/certs'
+                }
               }
-            }
-            steps {
-              setupCodeCoverage()
-              withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-                runDevelopmentTests()
-                sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
+              steps {
+                // Moving files necessary for production to `pack` directory.
+                sh "./scripts/jenkinsProductionFiles.sh"
 
+                script {
+                  getCommitInfo()
+                  sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
+                }
+
+                sh "rm -f ${packageName}"
+                zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+                stash name: 'simorgh', includes: packageName
               }
             }
-          }
-          stage ('Test Production') {
-            agent {
-              docker {
-                image "${nodeImage}"
-                args '-u root -v /etc/pki:/certs'
+            stage ('Build storybook dist') {
+              agent {
+                docker {
+                  image "${nodeImage}"
+                  args '-u root -v /etc/pki:/certs'
+                }
+              }
+              steps {
+                sh "rm -f storybook.zip"
+                sh 'make install'
+                sh 'make buildStorybook'
+                zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+                stash name: 'simorgh_storybook', includes: storybookDist
               }
             }
-            steps {
-              runProductionTests()
+            stage ('Build Static Assets') {
+              agent {
+                docker {
+                  image "${nodeImage}"
+                  args '-u root -v /etc/pki:/certs'
+                }
+              }
+              steps {
+                sh 'make install'
+
+                buildStaticAssets("test", "TEST")
+                buildStaticAssets("live", "LIVE")
+              }
             }
           }
         }
@@ -221,6 +160,69 @@ pipeline {
           always {
             script {
               stageName = env.STAGE_NAME
+            }
+          }
+        }
+      }
+      parallel {
+        // Deploy if latest parallel with tests because PR was already tested
+        stage ('Run Pipeline') {
+          when {
+            expression { env.BRANCH_NAME == 'latest' }
+          }
+          options {
+            // Do not perform the SCM step
+            skipDefaultCheckout true
+          }
+          agent any
+          steps {
+            unstash 'simorgh'
+            build(
+              job: 'simorgh-infrastructure-test/latest',
+              parameters: [
+                [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
+                booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
+              ],
+              wait: true
+            )
+          }
+        }
+        //run dev and prod tests
+        stage ('Build and Test') {
+          parallel {
+            stage ('Test Development') {
+              agent {
+                docker {
+                  image "${nodeImage}"
+                  args '-u root -v /etc/pki:/certs'
+                }
+              }
+              steps {
+                setupCodeCoverage()
+                withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+                  runDevelopmentTests()
+                  sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
+
+                }
+              }
+            }
+            stage ('Test Production') {
+              agent {
+                docker {
+                  image "${nodeImage}"
+                  args '-u root -v /etc/pki:/certs'
+                }
+              }
+              steps {
+                runProductionTests()
+              }
+            }
+          }
+          post {
+            always {
+              script {
+                stageName = env.STAGE_NAME
+              }
             }
           }
         }
