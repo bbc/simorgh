@@ -39,7 +39,7 @@ const createConsoleError = (service, size, adjective) =>
     chalk.red.bold(capitaliseFirstLetter(service)),
     chalk.red(`is too ${adjective} at`),
     chalk.red.bold(`${size} kB.`),
-    chalk.red("Please update thresholds in './scripts/bundleSize.js'"),
+    chalk.red("Please update thresholds in './scripts/bundleSize.test.js'"),
   ].join(' ');
 
 const mapSizeToError = (service, size) => {
