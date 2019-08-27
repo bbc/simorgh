@@ -4,9 +4,11 @@ import fetchData from '../utils/fetchData';
 import filterUnknownContentTypes from '../../../lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '../../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../../lib/utilities/preprocessor/rules/topstories';
+import addIdsToItems from '../../../lib/utilities/preprocessor/rules/addIdsToItems';
 
 const preprocessorRules = [
   filterUnknownContentTypes,
+  addIdsToItems,
   filterEmptyGroupItems,
   applySquashTopstories,
 ];

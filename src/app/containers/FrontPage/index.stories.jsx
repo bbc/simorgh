@@ -11,8 +11,8 @@ import preprocess from '../../lib/utilities/preprocessor';
 import FrontPage from '.';
 
 const preprocessorRules = [
-  addIdsToItems,
   filterUnknownContentTypes,
+  addIdsToItems,
   filterEmptyGroupItems,
   applySquashTopstories,
 ];
