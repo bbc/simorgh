@@ -1,7 +1,7 @@
 import envConfig from '../../support/config/envs';
 
 // For testing important features that differ between services, e.g. Timestamps.
-// Inline conditional logic limiting tests to only those service/s which are different are encouraged.
+// We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForAllCanonicalPages = ({
   service,
   pageType,

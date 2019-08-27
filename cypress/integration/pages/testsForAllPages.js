@@ -5,7 +5,7 @@ import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
 // For testing important features that differ between services, e.g. Timestamps.
-// Inline conditional logic limiting tests to only those service/s which are different are encouraged.
+// We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
 };
