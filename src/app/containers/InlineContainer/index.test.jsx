@@ -33,7 +33,7 @@ const persianLink = inlineLinkBlock(
 );
 
 const InlineContainerWithContext = blocks => (
-  <ServiceContext.Provider value={{ script: latin }}>
+  <ServiceContext.Provider value={{ script: latin, externalLinkText: '' }}>
     <InlineContainer blocks={blocks} language="fa" />
   </ServiceContext.Provider>
 );
