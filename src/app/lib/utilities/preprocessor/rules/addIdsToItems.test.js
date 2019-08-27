@@ -22,10 +22,10 @@ const noId = {
             contentType: 'Text',
             assetTypeCode: 'PRO',
             type: 'link',
-          }
-        ]
-      }
-    ]
+          },
+        ],
+      },
+    ],
   },
   promo: {},
   relatedContent: {},
@@ -52,11 +52,11 @@ const withIds = {
             contentType: 'Text',
             assetTypeCode: 'PRO',
             type: 'link',
-            id: 'urn:bbc:ares::asset:test/live/story-1r2e3a457'
-          }
-        ]
-      }
-    ]
+            id: 'urn:bbc:ares::asset:test/live/story-1r2e3a457',
+          },
+        ],
+      },
+    ],
   },
   promo: {},
   relatedContent: {},
@@ -66,7 +66,7 @@ describe('addIdsToItems rule', () => {
   it('should add ids to all content type items without ids', () => {
     const actual = addIdsToItems(noId);
     const expected = {
-      metadata: {},
+      ...noId,
       content: {
         groups: [
           {
@@ -87,13 +87,11 @@ describe('addIdsToItems rule', () => {
                 assetTypeCode: 'PRO',
                 type: 'link',
                 id: 'mockId',
-              }
-            ]
-          }
-        ]
+              },
+            ],
+          },
+        ],
       },
-      promo: {},
-      relatedContent: {},
     };
 
     expect(actual).toEqual(expected);
