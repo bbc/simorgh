@@ -10,5 +10,7 @@ module.exports = {
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: {
     '^@lib(.*)$': '<rootDir>/src/app/lib$1',
+    '^@data(.*)$': '<rootDir>/data$1',
+    '^@testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
   },
 };

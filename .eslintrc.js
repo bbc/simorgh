@@ -39,6 +39,14 @@ module.exports = {
     ],
   },
   settings: {
-    'import/resolver': 'webpack',
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@lib', './src/app/lib'],
+          ['@data', './data'],
+          ['@testHelpers', './src/testHelpers'],
+        ],
+      },
+    },
   },
 };
