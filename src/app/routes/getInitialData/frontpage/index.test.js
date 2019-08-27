@@ -4,13 +4,13 @@ import fetchData from '../utils/fetchData';
 import filterUnknownContentTypes from '../../../lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '../../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../../lib/utilities/preprocessor/rules/topstories';
-import filterStraplines from '../../../lib/utilities/preprocessor/rules/filterStraplines';
+import filterGroupsWithoutStraplines from '../../../lib/utilities/preprocessor/rules/filterStraplines';
 
 const preprocessorRules = [
   filterUnknownContentTypes,
   filterEmptyGroupItems,
   applySquashTopstories,
-  filterStraplines,
+  filterGroupsWithoutStraplines,
 ];
 
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';

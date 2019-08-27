@@ -1,4 +1,4 @@
-import filterStraplines from './filterStraplines';
+import filterGroupsWithoutStraplines from './filterStraplines';
 
 describe('strapline rules', () => {
   it('should keep groups with a strapline', () => {
@@ -26,31 +26,7 @@ describe('strapline rules', () => {
       },
     };
 
-    const expected = {
-      content: {
-        groups: [
-          {
-            items: [
-              {
-                headlines: {
-                  headline: 'This is a headline',
-                },
-              },
-              {
-                headlines: {
-                  headline: 'This is another headline',
-                },
-              },
-            ],
-            strapline: {
-              name: 'Strapline name',
-            },
-          },
-        ],
-      },
-    };
-
-    expect(filterStraplines(data)).toEqual(expected);
+    expect(filterGroupsWithoutStraplines(data)).toEqual(data);
   });
 
   it('should remove groups without a strapline', () => {
@@ -81,7 +57,7 @@ describe('strapline rules', () => {
       },
     };
 
-    expect(filterStraplines(data)).toEqual(expected);
+    expect(filterGroupsWithoutStraplines(data)).toEqual(expected);
   });
 
   it('should search for straplines in all groups in the data', () => {
@@ -181,7 +157,7 @@ describe('strapline rules', () => {
       },
     };
 
-    expect(filterStraplines(data)).toEqual(expected);
+    expect(filterGroupsWithoutStraplines(data)).toEqual(expected);
   });
 
   it('should not work when there are no groups', () => {
@@ -189,6 +165,6 @@ describe('strapline rules', () => {
       content: {},
     };
 
-    expect(filterStraplines(data)).toEqual(data);
+    expect(filterGroupsWithoutStraplines(data)).toEqual(data);
   });
 });
