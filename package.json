@@ -47,7 +47,7 @@
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml",
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --env=jsdom --colors ./puppeteer",
-    "test:size": "./scripts/bundleSize.sh",
+    "test:size": "node ./scripts/bundleSize.js",
     "test:unit": "jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\"",
     "test:unit:watch": "jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\" --watch",
     "snyk": "snyk test",
@@ -116,6 +116,7 @@
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
     "morgan": "^1.9.1",
+    "ora": "^3.4.0",
     "path-to-regexp": "^3.0.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "ramda": "^0.26.1",
@@ -129,7 +130,7 @@
     "speculate": "^2.1.0",
     "styled-components": "^4.3.2",
     "styled-normalize": "^8.0.3",
-    "uuid": "^3.3.2",
+    "uuid": "^3.3.3",
     "winston": "^3.1.0"
   },
   "devDependencies": {
