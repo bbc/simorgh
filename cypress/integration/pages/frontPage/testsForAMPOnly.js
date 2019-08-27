@@ -1,4 +1,3 @@
-import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 
 const tests = ({ service }) =>
@@ -10,24 +9,6 @@ const tests = ({ service }) =>
           200,
           'text/html',
         );
-      });
-    });
-
-    describe('ATI', () => {
-      it('should have an amp-analytics tag with the ati url', () => {
-        if (service !== 'japanese') {
-          cy.hasAmpAnalyticsAtiUrl(
-            envConfig.atiUrl,
-            config[service].isWorldService
-              ? envConfig.atiAnalyticsWSBucket
-              : '',
-          );
-        } else {
-          cy.hasAmpAnalyticsAtiUrl(
-            envConfig.atiUrl,
-            envConfig.atiAnalyticsGNLBucket,
-          );
-        }
       });
     });
 

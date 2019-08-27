@@ -1,5 +1,4 @@
 import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -7,24 +6,6 @@ const serviceHasFigure = service =>
 
 const tests = ({ service }) =>
   describe(`Amp Tests`, () => {
-    describe('ATI', () => {
-      it('should have an amp-analytics tag with the ati url', () => {
-        if (service !== 'japanese') {
-          cy.hasAmpAnalyticsAtiUrl(
-            envConfig.atiUrl,
-            config[service].isWorldService
-              ? envConfig.atiAnalyticsWSBucket
-              : '',
-          );
-        } else {
-          cy.hasAmpAnalyticsAtiUrl(
-            envConfig.atiUrl,
-            envConfig.atiAnalyticsGNLBucket,
-          );
-        }
-      });
-    });
-
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
         it('should have chartbeat config UID', () => {

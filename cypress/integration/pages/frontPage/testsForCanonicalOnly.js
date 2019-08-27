@@ -1,28 +1,7 @@
-import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
-
-const tests = ({ service }) =>
+const tests = () =>
   describe(`Canonical Tests`, () => {
-    describe('ATI', () => {
-      it('should have a noscript tag with an 1px image with the ati url', () => {
-        if (service !== 'japanese') {
-          cy.hasNoscriptImgAtiUrl(
-            envConfig.atiUrl,
-            config[service].isWorldService
-              ? envConfig.atiAnalyticsWSBucket
-              : '',
-          );
-        } else {
-          cy.hasNoscriptImgAtiUrl(
-            envConfig.atiUrl,
-            envConfig.atiAnalyticsGNLBucket,
-          );
-        }
-      });
-
-      it('should not have an AMP attribute', () => {
-        cy.get('html').should('not.have.attr', 'amp');
-      });
+    it('should not have an AMP attribute', () => {
+      cy.get('html').should('not.have.attr', 'amp');
     });
   });
 

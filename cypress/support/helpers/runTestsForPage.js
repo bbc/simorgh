@@ -38,7 +38,7 @@ const runTestsForPage = (
         });
 
         testsForAllPages({ service, pageType });
-        testsForAllAMPPages(pageType);
+        testsForAllAMPPages({ service, pageType });
         if (runTests) runTests({ service, pageType });
         if (runAmpTests) runAmpTests({ service, pageType });
       });

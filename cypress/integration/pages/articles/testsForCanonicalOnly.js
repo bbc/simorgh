@@ -10,24 +10,6 @@ const tests = ({ service }) =>
       cy.get('html').should('not.have.attr', 'amp');
     });
 
-    describe('ATI', () => {
-      it('should have a noscript tag with an 1px image with the ati url', () => {
-        if (service !== 'japanese') {
-          cy.hasNoscriptImgAtiUrl(
-            envConfig.atiUrl,
-            config[service].isWorldService
-              ? envConfig.atiAnalyticsWSBucket
-              : '',
-          );
-        } else {
-          cy.hasNoscriptImgAtiUrl(
-            envConfig.atiUrl,
-            envConfig.atiAnalyticsGNLBucket,
-          );
-        }
-      });
-    });
-
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
         it('should have a script with src value set to chartbeat source', () => {

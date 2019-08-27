@@ -1,7 +1,27 @@
 import envConfig from '../../support/config/envs';
+import config from '../../support/config/services';
+
+const serviceIsGNL = service => service === 'japanese';
 
 const testsForAllCanonicalPages = ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
+    describe('ATI', () => {
+      it('should have a noscript tag with an 1px image with the ati url', () => {
+        if (service === serviceIsGNL) {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            envConfig.atiAnalyticsGNLBucket,
+          );
+        } else {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            config[service].isWorldService
+              ? envConfig.atiAnalyticsWSBucket
+              : '',
+          );
+        }
+      });
+    });
     describe('Canonical Scripts', () => {
       it('should only have expected bundle script tags', () => {
         cy.get('script[src]').each($p => {
