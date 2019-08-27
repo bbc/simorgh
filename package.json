@@ -130,7 +130,7 @@
     "speculate": "^2.1.0",
     "styled-components": "^4.3.2",
     "styled-normalize": "^8.0.3",
-    "uuid": "^3.3.2",
+    "uuid": "^3.3.3",
     "winston": "^3.1.0"
   },
   "devDependencies": {
