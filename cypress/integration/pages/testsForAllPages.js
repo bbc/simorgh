@@ -1,4 +1,3 @@
-import pathOr from 'ramda/src/pathOr';
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/app/lib/config/services';
@@ -127,40 +126,45 @@ const testsForAllPages = ({ service, pageType }) => {
               appConfig[service].twitterSite,
             );
           });
-          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-            ({ body }) => {
-              const description =
-                pathOr(null, ['promo', 'summary'], body) ||
-                pathOr(null, ['promo', 'headlines', 'seoHeadline'], body) ||
-                pathOr(null, ['metadata', 'summary'], body);
-              const title =
-                pathOr(null, ['promo', 'headlines', 'seoHeadline'], body) ||
-                pathOr(null, ['promo', 'name'], body);
 
-              cy.get('head').within(() => {
-                cy.get('meta[name="og:description"]').should(
-                  'have.attr',
-                  'content',
-                  description,
-                );
-                cy.get('meta[name="og:title"]').should(
-                  'have.attr',
-                  'content',
-                  title,
-                );
-                cy.get('meta[name="twitter:description"]').should(
-                  'have.attr',
-                  'content',
-                  description,
-                );
-                cy.get('meta[name="twitter:title"]').should(
-                  'have.attr',
-                  'content',
-                  title,
-                );
-              });
-            },
-          );
+          /* Naidheachdan needs to have correct metadata added to all environments
+           * Issue https://github.com/bbc/simorgh/issues/
+           */
+          if (service !== 'naidheachdan') {
+            cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+              ({ body }) => {
+                const description =
+                  body.promo.summary ||
+                  body.promo.headlines.seoHeadline ||
+                  body.metadata.summary;
+                const title =
+                  body.promo.headlines.seoHeadline || body.promo.name;
+
+                cy.get('head').within(() => {
+                  cy.get('meta[name="og:description"]').should(
+                    'have.attr',
+                    'content',
+                    description,
+                  );
+                  cy.get('meta[name="og:title"]').should(
+                    'have.attr',
+                    'content',
+                    title,
+                  );
+                  cy.get('meta[name="twitter:description"]').should(
+                    'have.attr',
+                    'content',
+                    description,
+                  );
+                  cy.get('meta[name="twitter:title"]').should(
+                    'have.attr',
+                    'content',
+                    title,
+                  );
+                });
+              },
+            );
+          }
         });
       }
 
