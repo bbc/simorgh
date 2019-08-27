@@ -98,7 +98,7 @@
     "@bbc/psammead-paragraph": "^2.2.3",
     "@bbc/psammead-section-label": "2.1.6",
     "@bbc/psammead-sitewide-links": "^3.1.3",
-    "@bbc/psammead-story-promo": "^2.5.3",
+    "@bbc/psammead-story-promo": "^2.6.1",
     "@bbc/psammead-story-promo-list": "^2.1.3",
     "@bbc/psammead-styles": "^2.1.1",
     "@bbc/psammead-timestamp-container": "^2.4.5",
@@ -130,7 +130,7 @@
     "speculate": "^2.1.0",
     "styled-components": "^4.3.2",
     "styled-normalize": "^8.0.3",
-    "uuid": "^3.3.2",
+    "uuid": "^3.3.3",
     "winston": "^3.1.0"
   },
   "devDependencies": {
@@ -190,7 +190,7 @@
     "prop-types": "^15.6.2",
     "react-test-renderer": "^16.9.0",
     "start-server-webpack-plugin": "^2.2.5",
-    "storybook-chromatic": "^2.1.1",
+    "storybook-chromatic": "^2.2.2",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
