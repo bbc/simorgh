@@ -12,13 +12,13 @@ const testsForAllCanonicalPages = ({ service, pageType }) => {
             envConfig.atiUrl,
             envConfig.atiAnalyticsGNLBucket,
           );
-        } else {
+        } else if (config[service].isWorldService) {
           cy.hasNoscriptImgAtiUrl(
             envConfig.atiUrl,
-            config[service].isWorldService
-              ? envConfig.atiAnalyticsWSBucket
-              : '',
+            envConfig.atiAnalyticsWSBucket,
           );
+        } else {
+          cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
         }
       });
     });

@@ -16,13 +16,13 @@ const testsForAllAMPPages = ({ service, pageType }) => {
               envConfig.atiUrl,
               envConfig.atiAnalyticsGNLBucket,
             );
-          } else {
+          } else if (config[service].isWorldService) {
             cy.hasAmpAnalyticsAtiUrl(
               envConfig.atiUrl,
-              config[service].isWorldService
-                ? envConfig.atiAnalyticsWSBucket
-                : '',
+              envConfig.atiAnalyticsWSBucket,
             );
+          } else {
+            cy.hasAmpAnalyticsAtiUrl(envConfig.atiUrl, '');
           }
         });
       });
