@@ -1,10 +1,13 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
 
+// For testing important features that differ between services, e.g. Timestamps.
+// Inline conditional logic limiting tests to only those service/s which are different are encouraged.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
 
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
     describe(`${service} Test we get a 404`, () => {
@@ -66,6 +69,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
     });
   });
 
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
   describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };

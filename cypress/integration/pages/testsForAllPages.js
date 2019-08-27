@@ -4,10 +4,13 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
+// For testing important features that differ between services, e.g. Timestamps.
+// Inline conditional logic limiting tests to only those service/s which are different are encouraged.
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
 };
 
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigforAllPages = ({
   service,
   pageType,
@@ -184,6 +187,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
   });
 };
 
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
   service,
   pageType,

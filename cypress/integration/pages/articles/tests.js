@@ -29,6 +29,8 @@ const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const serviceHasTimestamp = service => service === 'news';
 
+// For testing important features that differ between services, e.g. Timestamps.
+// Inline conditional logic limiting tests to only those service/s which are different are encouraged.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
     if (serviceHasTimestamp(service)) {
@@ -71,6 +73,7 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
   });
 };
 
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
@@ -254,6 +257,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   });
 };
 
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
   describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };
