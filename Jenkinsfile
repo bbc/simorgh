@@ -97,12 +97,12 @@ pipeline {
   }
   stages {
     stage ('If latest build') {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
       parallel {
         // Build things if latest, don't test first as branch is already tested
         stage ('Zip Production') {
-          when {
-            expression { env.BRANCH_NAME == 'latest' }
-          }
           agent {
             docker {
               image "${nodeImage}"
@@ -124,9 +124,6 @@ pipeline {
           }
         }
         stage ('Build storybook dist') {
-          when {
-            expression { env.BRANCH_NAME == 'latest' }
-          }
           agent {
             docker {
               image "${nodeImage}"
@@ -142,9 +139,6 @@ pipeline {
           }
         }
         stage ('Build Static Assets') {
-          when {
-            expression { env.BRANCH_NAME == 'latest' }
-          }
           agent {
             docker {
               image "${nodeImage}"
