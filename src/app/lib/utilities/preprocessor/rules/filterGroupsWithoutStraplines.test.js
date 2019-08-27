@@ -1,4 +1,4 @@
-import filterGroupsWithoutStraplines from './filterStraplines';
+import filterGroupsWithoutStraplines from './filterGroupsWithoutStraplines';
 
 describe('strapline rules', () => {
   it('should keep groups with a strapline', () => {
