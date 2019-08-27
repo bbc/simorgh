@@ -1,10 +1,13 @@
 import config from '../../../support/config/services';
 
-export const testsToAlwaysRunForAMPOnly = ({ service, pageType }) => {
+export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForAMPOnly = ({ service, pageType }) =>
+export const testsThatFollowSmokeTestConfigForAMPOnly = ({
+  service,
+  pageType,
+}) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
     it('should return a 404 error code', () => {
       cy.testResponseCodeAndType(
@@ -15,6 +18,9 @@ export const testsForAMPOnly = ({ service, pageType }) =>
     });
   });
 
-export const testsToNeverSmokeTestForAMPOnly = ({ service, pageType }) => {
+export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
+  service,
+  pageType,
+}) => {
   describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
 };

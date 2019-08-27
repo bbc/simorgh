@@ -29,7 +29,7 @@ const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const serviceHasTimestamp = service => service === 'news';
 
-export const testsToAlwaysRun = ({ service, pageType }) => {
+export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
     if (serviceHasTimestamp(service)) {
       it('should render a formatted timestamp', () => {
@@ -71,7 +71,7 @@ export const testsToAlwaysRun = ({ service, pageType }) => {
   });
 };
 
-export const tests = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       it('should have the correct articles metadata', () => {
@@ -254,6 +254,6 @@ export const tests = ({ service, pageType }) => {
   });
 };
 
-export const testsToNeverSmokeTest = ({ service, pageType }) => {
+export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
   describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };

@@ -1,8 +1,8 @@
-export const testsToAlwaysRun = ({ service, pageType }) => {
+export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
 
-export const tests = ({ service, pageType }) =>
+export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Frontpage body', () => {
       before(() => {
@@ -49,6 +49,6 @@ export const tests = ({ service, pageType }) =>
     });
   });
 
-export const testsToNeverSmokeTest = ({ service, pageType }) => {
+export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
   describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };

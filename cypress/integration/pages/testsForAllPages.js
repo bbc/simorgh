@@ -4,11 +4,14 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
-export const testsToAlwaysRunForAllPages = ({ service, pageType }) => {
+export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForAllPages = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfigforAllPages = ({
+  service,
+  pageType,
+}) => {
   describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
@@ -181,7 +184,10 @@ export const testsForAllPages = ({ service, pageType }) => {
   });
 };
 
-export const testsToNeverSmokeTestForAllPageTypes = ({ service, pageType }) => {
+export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
+  service,
+  pageType,
+}) => {
   describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
     if (Cypress.env('APP_ENV') === 'live') {
       describe('Page links test', () => {

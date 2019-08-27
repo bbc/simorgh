@@ -1,19 +1,19 @@
 import config from '../config/services';
 import shouldSmokeTest from './shouldSmokeTest';
 import {
-  testsToAlwaysRunForAllPages,
-  testsForAllPages,
-  testsToNeverSmokeTestForAllPageTypes,
+  testsThatAlwaysRunForAllPages,
+  testsThatFollowSmokeTestConfigforAllPages,
+  testsThatNeverRunDuringSmokeTestingForAllPageTypes,
 } from '../../integration/pages/testsForAllPages';
 import {
-  testsToAlwaysRunForAMPPages,
-  testsForAllAMPPages,
-  testsToNeverSmokeTestForAMPPages,
+  testsThatAlwaysRunForAllAMPPages,
+  testsThatFollowSmokeTestConfigForAllAMPPages,
+  testsThatNeverRunDuringSmokeTestingForAllAMPPages,
 } from '../../integration/pages/testsForAllAMPPages';
 import {
-  testsToAlwaysRunForCanonicalPages,
-  testsForAllCanonicalPages,
-  testsToNeverSmokeTestForCanonicalPages,
+  testsThatAlwaysRunForAllCanonicalPages,
+  testsThatFollowSmokeTestConfigForAllCanonicalPages,
+  testsThatNeverRunDuringSmokeTestingForAllCanonicalPages,
 } from '../../integration/pages/testsForAllCanonicalPages';
 
 const serviceHasPageType = (service, pageType) =>
@@ -24,15 +24,15 @@ const serviceHasPageType = (service, pageType) =>
 // Pass arguments in from each page's index.js file
 const runTestsForPage = ({
   pageType,
-  testsToAlwaysRun,
-  tests,
-  testsToNeverSmokeTest,
-  testsToAlwaysRunForCanonicalOnly,
-  testsForCanonicalOnly,
-  testsToNeverSmokeTestForCanonicalOnly,
-  testsToAlwaysRunForAMPOnly,
-  testsForAMPOnly,
-  testsToNeverSmokeTestForAMPOnly,
+  testsThatAlwaysRun,
+  testsThatFollowSmokeTestConfig,
+  testsThatNeverRunDuringSmokeTesting,
+  testsThatAlwaysRunForCanonicalOnly,
+  testsThatFollowSmokeTestConfigForCanonicalOnly,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
+  testsThatAlwaysRunForAMPOnly,
+  testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatNeverRunDuringSmokeTestingForAMPOnly,
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
   Object.keys(config)
@@ -46,31 +46,40 @@ const runTestsForPage = ({
         });
 
         // Enables overriding of the smoke test values in the config/services.js file
-        testsToAlwaysRunForAllPages({ service, pageType });
-        testsToAlwaysRunForCanonicalPages({ service, pageType });
+        testsThatAlwaysRunForAllPages({ service, pageType });
+        testsThatAlwaysRunForAllCanonicalPages({ service, pageType });
         // Page specific tests
-        testsToAlwaysRunForCanonicalOnly({ service, pageType });
-        testsToAlwaysRun({ service, pageType });
+        testsThatAlwaysRunForCanonicalOnly({ service, pageType });
+        testsThatAlwaysRun({ service, pageType });
 
         // This runs most tests but only on Service:PageType combinations with smoke enabled
         if (shouldSmokeTest(pageType, service)) {
-          testsForAllPages({ service, pageType });
-          testsForAllCanonicalPages({ service, pageType });
+          testsThatFollowSmokeTestConfigforAllPages({ service, pageType });
+          testsThatFollowSmokeTestConfigForAllCanonicalPages({
+            service,
+            pageType,
+          });
           // Page specific tests
-          tests({ service, pageType });
-          testsForCanonicalOnly({ service, pageType });
+          testsThatFollowSmokeTestConfig({ service, pageType });
+          testsThatFollowSmokeTestConfigForCanonicalOnly({ service, pageType });
         }
 
         // This is for low priority and long running tests and ensures they're only run when not smoke testing.
         if (!Cypress.env('SMOKE')) {
-          testsToNeverSmokeTestForAllPageTypes({ service, pageType });
-          testsToNeverSmokeTestForCanonicalPages({ service, pageType });
-          // Page specific tests
-          testsToNeverSmokeTestForCanonicalOnly({
+          testsThatNeverRunDuringSmokeTestingForAllPageTypes({
             service,
             pageType,
           });
-          testsToNeverSmokeTest({ service, pageType });
+          testsThatNeverRunDuringSmokeTestingForAllCanonicalPages({
+            service,
+            pageType,
+          });
+          // Page specific tests
+          testsThatNeverRunDuringSmokeTestingForCanonicalOnly({
+            service,
+            pageType,
+          });
+          testsThatNeverRunDuringSmokeTesting({ service, pageType });
         }
       });
 
@@ -83,28 +92,34 @@ const runTestsForPage = ({
         });
 
         // Enables overriding of the smoke test values in the config/services.js file
-        testsToAlwaysRunForAllPages({ service, pageType });
-        testsToAlwaysRunForAMPPages({ service, pageType });
+        testsThatAlwaysRunForAllPages({ service, pageType });
+        testsThatAlwaysRunForAllAMPPages({ service, pageType });
         // Page specific tests
-        testsToAlwaysRunForAMPOnly({ service, pageType });
-        testsToAlwaysRun({ service, pageType });
+        testsThatAlwaysRunForAMPOnly({ service, pageType });
+        testsThatAlwaysRun({ service, pageType });
 
         // This runs most tests but only on Service:PageType combinations with smoke enabled
         if (shouldSmokeTest(pageType, service)) {
-          testsForAllPages({ service, pageType });
-          testsForAllAMPPages({ service, pageType });
+          testsThatFollowSmokeTestConfigforAllPages({ service, pageType });
+          testsThatFollowSmokeTestConfigForAllAMPPages({ service, pageType });
           // Page specific tests
-          tests({ service, pageType });
-          testsForAMPOnly({ service, pageType });
+          testsThatFollowSmokeTestConfig({ service, pageType });
+          testsThatFollowSmokeTestConfigForAMPOnly({ service, pageType });
         }
 
         // This is for low priority and long running tests and ensures they're only run when not smoke testing.
         if (!Cypress.env('SMOKE')) {
-          testsToNeverSmokeTestForAllPageTypes({ service, pageType });
-          testsToNeverSmokeTestForAMPPages({ service, pageType });
+          testsThatNeverRunDuringSmokeTestingForAllPageTypes({
+            service,
+            pageType,
+          });
+          testsThatNeverRunDuringSmokeTestingForAllAMPPages({
+            service,
+            pageType,
+          });
           // Page specific tests
-          testsToNeverSmokeTestForAMPOnly({ service, pageType });
-          testsToNeverSmokeTest({ service, pageType });
+          testsThatNeverRunDuringSmokeTestingForAMPOnly({ service, pageType });
+          testsThatNeverRunDuringSmokeTesting({ service, pageType });
         }
       });
     });

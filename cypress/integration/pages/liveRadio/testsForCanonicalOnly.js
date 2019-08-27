@@ -1,11 +1,14 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
-export const testsToAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
+export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForCanonicalOnly = ({ service, pageType }) =>
+export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
+  service,
+  pageType,
+}) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     // will be addressed by https://github.com/bbc/simorgh/issues/3324
     describe('ATI', () => {
@@ -30,7 +33,7 @@ export const testsForCanonicalOnly = ({ service, pageType }) =>
     });
   });
 
-export const testsToNeverSmokeTestForCanonicalOnly = ({
+export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
   service,
   pageType,
 }) => {

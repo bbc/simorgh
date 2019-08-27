@@ -1,11 +1,14 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 
-export const testsToAlwaysRunForAMPOnly = ({ service, pageType }) => {
+export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForAMPOnly = ({ service, pageType }) =>
+export const testsThatFollowSmokeTestConfigForAMPOnly = ({
+  service,
+  pageType,
+}) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
@@ -81,6 +84,9 @@ export const testsForAMPOnly = ({ service, pageType }) =>
     });
   });
 
-export const testsToNeverSmokeTestForAMPOnly = ({ service, pageType }) => {
+export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
+  service,
+  pageType,
+}) => {
   describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
 };

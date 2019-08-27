@@ -1,10 +1,16 @@
 import envConfig from '../../support/config/envs';
 
-export const testsToAlwaysRunForCanonicalPages = ({ service, pageType }) => {
+export const testsThatAlwaysRunForAllCanonicalPages = ({
+  service,
+  pageType,
+}) => {
   describe(`No testsToAlwaysRunForCanonicalPages to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForAllCanonicalPages = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
+  service,
+  pageType,
+}) => {
   if (pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       it('should only have expected bundle script tags', () => {
@@ -52,7 +58,7 @@ export const testsForAllCanonicalPages = ({ service, pageType }) => {
   });
 };
 
-export const testsToNeverSmokeTestForCanonicalPages = ({
+export const testsThatNeverRunDuringSmokeTestingForAllCanonicalPages = ({
   service,
   pageType,
 }) => {

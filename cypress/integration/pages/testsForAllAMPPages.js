@@ -1,8 +1,11 @@
-export const testsToAlwaysRunForAMPPages = ({ service, pageType }) => {
+export const testsThatAlwaysRunForAllAMPPages = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAMPPages to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForAllAMPPages = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
+  service,
+  pageType,
+}) => {
   describe(`Running testsForAllAMPPages for ${service} ${pageType}`, () => {
     if (pageType !== 'errorPage404') {
       it('should have an AMP attribute on the page', () => {
@@ -12,6 +15,9 @@ export const testsForAllAMPPages = ({ service, pageType }) => {
   });
 };
 
-export const testsToNeverSmokeTestForAMPPages = ({ service, pageType }) => {
+export const testsThatNeverRunDuringSmokeTestingForAllAMPPages = ({
+  service,
+  pageType,
+}) => {
   describe(`No testsToNeverSmokeTestForAMPPages to run for ${service} ${pageType}`, () => {});
 };

@@ -5,11 +5,14 @@ import config from '../../../support/config/services';
 const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 
-export const testsToAlwaysRunForAMPOnly = ({ service, pageType }) => {
+export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {});
 };
 
-export const testsForAMPOnly = ({ service, pageType }) =>
+export const testsThatFollowSmokeTestConfigForAMPOnly = ({
+  service,
+  pageType,
+}) =>
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
     describe('ATI', () => {
       it('should have an amp-analytics tag with the ati url', () => {
@@ -96,6 +99,9 @@ export const testsForAMPOnly = ({ service, pageType }) =>
     });
   });
 
-export const testsToNeverSmokeTestForAMPOnly = ({ service, pageType }) => {
+export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
+  service,
+  pageType,
+}) => {
   describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
 };

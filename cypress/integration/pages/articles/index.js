@@ -1,27 +1,31 @@
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
-import { testsToAlwaysRun, tests, testsToNeverSmokeTest } from './tests';
 import {
-  testsToAlwaysRunForAMPOnly,
-  testsForAMPOnly,
-  testsToNeverSmokeTestForAMPOnly,
+  testsThatAlwaysRun,
+  testsThatFollowSmokeTestConfig,
+  testsThatNeverRunDuringSmokeTesting,
+} from './tests';
+import {
+  testsThatAlwaysRunForAMPOnly,
+  testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatNeverRunDuringSmokeTestingForAMPOnly,
 } from './testsForAMPOnly';
 import {
-  testsToAlwaysRunForCanonicalOnly,
-  testsForCanonicalOnly,
-  testsToNeverSmokeTestForCanonicalOnly,
+  testsThatAlwaysRunForCanonicalOnly,
+  testsThatFollowSmokeTestConfigForCanonicalOnly,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
 } from './testsForCanonicalOnly';
 
 const testsForPage = {
   pageType: 'articles',
-  testsToAlwaysRun,
-  tests,
-  testsToNeverSmokeTest,
-  testsToAlwaysRunForCanonicalOnly,
-  testsForCanonicalOnly,
-  testsToNeverSmokeTestForCanonicalOnly,
-  testsToAlwaysRunForAMPOnly,
-  testsForAMPOnly,
-  testsToNeverSmokeTestForAMPOnly,
+  testsThatAlwaysRun,
+  testsThatFollowSmokeTestConfig,
+  testsThatNeverRunDuringSmokeTesting,
+  testsThatAlwaysRunForCanonicalOnly,
+  testsThatFollowSmokeTestConfigForCanonicalOnly,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
+  testsThatAlwaysRunForAMPOnly,
+  testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatNeverRunDuringSmokeTestingForAMPOnly,
 };
 
 runTestsForPage(testsForPage);
