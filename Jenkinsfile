@@ -98,11 +98,11 @@ pipeline {
   stages {
     stage ('Test if not latest, deploy and test if latest') {
       parallel {
-        when {
-          expression { env.BRANCH_NAME == 'latest' }
-        }
         // Build things if latest, don't test first as branch is already tested
         stage ('Build & Package') {
+          when {
+            expression { env.BRANCH_NAME == 'latest' }
+          }
           parallel {
             stage ('Zip Production') {
               agent {
