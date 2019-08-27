@@ -1,12 +1,15 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `te-IN`,
+  lang: `te`,
   articleAuthor: `https://www.facebook.com/bbcnewstelugu`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-telugu',
+  atiAnalyticsProducerId: '89',
   brandName: 'BBC News తెలుగు',
   product: 'BBC News తెలుగు',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png',
@@ -28,9 +31,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'వార్తలు',
+    currentPage: 'Current page',
+    skipLinkText: 'కంటెంట్‌కు దాటవేయండి',
     error: {
       404: {
         statusCode: '404',
@@ -160,7 +166,8 @@ const service = {
     copyrightText:
       'BBC. బయటి ఇంటర్నెట్ సైట్‌లలోని కంటెంట్‌కు BBC బాధ్యత వహించదు',
   },
-  fonts: [],
+  fonts: [F_MALLANNA_REGULAR],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

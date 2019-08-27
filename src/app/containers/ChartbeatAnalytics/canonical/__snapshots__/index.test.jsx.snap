@@ -11,6 +11,7 @@ Object {
       "sections": "section1 section2",
       "title": "This is an article",
       "type": "article",
+      "uid": 123,
       "useCanonical": true,
       "virtualReferrer": null,
     },
@@ -20,20 +21,24 @@ Object {
     "instance": HelmetWrapper {
       "_reactInternalFiber": FiberNode {
         "_debugHookTypes": null,
-        "_debugID": 5,
+        "_debugID": 4,
         "_debugIsCurrentlyTiming": false,
+        "_debugNeedsRemount": false,
         "_debugOwner": FiberNode {
           "_debugHookTypes": Array [
             "useEffect",
           ],
-          "_debugID": 4,
+          "_debugID": 3,
           "_debugIsCurrentlyTiming": false,
+          "_debugNeedsRemount": false,
           "_debugOwner": null,
           "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
           "alternate": null,
           "child": [Circular],
           "childExpirationTime": 0,
-          "contextDependencies": null,
+          "dependencies": null,
           "effectTag": 517,
           "elementType": [Function],
           "expirationTime": 0,
@@ -48,6 +53,7 @@ Object {
               "sections": "section1 section2",
               "title": "This is an article",
               "type": "article",
+              "uid": 123,
               "useCanonical": true,
               "virtualReferrer": null,
             },
@@ -65,6 +71,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -85,6 +92,7 @@ Object {
               "sections": "section1 section2",
               "title": "This is an article",
               "type": "article",
+              "uid": 123,
               "useCanonical": true,
               "virtualReferrer": null,
             },
@@ -93,20 +101,26 @@ Object {
           "ref": null,
           "return": FiberNode {
             "_debugHookTypes": null,
-            "_debugID": 2,
+            "_debugID": 1,
             "_debugIsCurrentlyTiming": false,
+            "_debugNeedsRemount": false,
             "_debugOwner": null,
             "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
             "alternate": FiberNode {
               "_debugHookTypes": null,
-              "_debugID": 2,
+              "_debugID": 1,
               "_debugIsCurrentlyTiming": false,
+              "_debugNeedsRemount": false,
               "_debugOwner": null,
               "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
               "alternate": [Circular],
               "child": null,
               "childExpirationTime": 0,
-              "contextDependencies": null,
+              "dependencies": null,
               "effectTag": 0,
               "elementType": null,
               "expirationTime": 1073741823,
@@ -121,8 +135,11 @@ Object {
               "pendingProps": null,
               "ref": null,
               "return": null,
+              "selfBaseDuration": 0,
               "sibling": null,
-              "stateNode": Object {
+              "stateNode": FiberRootNode {
+                "callbackExpirationTime": 0,
+                "callbackNode": null,
                 "containerInfo": Object {
                   "children": Array [],
                   "createNodeMock": [Function],
@@ -130,25 +147,24 @@ Object {
                 },
                 "context": Object {},
                 "current": [Circular],
-                "didError": false,
-                "earliestPendingTime": 0,
-                "earliestSuspendedTime": 0,
-                "expirationTime": 0,
+                "finishedExpirationTime": 0,
                 "finishedWork": null,
                 "firstBatch": null,
+                "firstPendingTime": 0,
                 "hydrate": false,
-                "latestPendingTime": 0,
-                "latestPingedTime": 0,
-                "latestSuspendedTime": 0,
-                "nextExpirationTimeToWorkOn": 0,
-                "nextScheduledRoot": null,
+                "interactionThreadID": 1,
+                "lastPendingTime": 0,
+                "memoizedInteractions": Set {},
                 "pendingChildren": null,
-                "pendingCommitExpirationTime": 0,
                 "pendingContext": null,
+                "pendingInteractionMap": Map {},
                 "pingCache": null,
+                "pingTime": 0,
+                "tag": 0,
                 "timeoutHandle": -1,
               },
               "tag": 3,
+              "treeBaseDuration": 0,
               "type": null,
               "updateQueue": Object {
                 "baseState": null,
@@ -169,6 +185,7 @@ Object {
                           "sections": "section1 section2",
                           "title": "This is an article",
                           "type": "article",
+                          "uid": 123,
                           "useCanonical": true,
                           "virtualReferrer": null,
                         }
@@ -176,6 +193,8 @@ Object {
                       chartbeatSource="//chartbeat.js"
                     />,
                   },
+                  "priority": 97,
+                  "suspenseConfig": null,
                   "tag": 0,
                 },
                 "lastCapturedEffect": null,
@@ -195,6 +214,7 @@ Object {
                           "sections": "section1 section2",
                           "title": "This is an article",
                           "type": "article",
+                          "uid": 123,
                           "useCanonical": true,
                           "virtualReferrer": null,
                         }
@@ -202,13 +222,15 @@ Object {
                       chartbeatSource="//chartbeat.js"
                     />,
                   },
+                  "priority": 97,
+                  "suspenseConfig": null,
                   "tag": 0,
                 },
               },
             },
             "child": [Circular],
             "childExpirationTime": 0,
-            "contextDependencies": null,
+            "dependencies": null,
             "effectTag": 0,
             "elementType": null,
             "expirationTime": 0,
@@ -226,6 +248,7 @@ Object {
                     "sections": "section1 section2",
                     "title": "This is an article",
                     "type": "article",
+                    "uid": 123,
                     "useCanonical": true,
                     "virtualReferrer": null,
                   }
@@ -238,8 +261,11 @@ Object {
             "pendingProps": null,
             "ref": null,
             "return": null,
+            "selfBaseDuration": 0,
             "sibling": null,
-            "stateNode": Object {
+            "stateNode": FiberRootNode {
+              "callbackExpirationTime": 0,
+              "callbackNode": null,
               "containerInfo": Object {
                 "children": Array [],
                 "createNodeMock": [Function],
@@ -247,25 +273,24 @@ Object {
               },
               "context": Object {},
               "current": [Circular],
-              "didError": false,
-              "earliestPendingTime": 0,
-              "earliestSuspendedTime": 0,
-              "expirationTime": 0,
+              "finishedExpirationTime": 0,
               "finishedWork": null,
               "firstBatch": null,
+              "firstPendingTime": 0,
               "hydrate": false,
-              "latestPendingTime": 0,
-              "latestPingedTime": 0,
-              "latestSuspendedTime": 0,
-              "nextExpirationTimeToWorkOn": 0,
-              "nextScheduledRoot": null,
+              "interactionThreadID": 1,
+              "lastPendingTime": 0,
+              "memoizedInteractions": Set {},
               "pendingChildren": null,
-              "pendingCommitExpirationTime": 0,
               "pendingContext": null,
+              "pendingInteractionMap": Map {},
               "pingCache": null,
+              "pingTime": 0,
+              "tag": 0,
               "timeoutHandle": -1,
             },
             "tag": 3,
+            "treeBaseDuration": 0,
             "type": null,
             "updateQueue": Object {
               "baseState": Object {
@@ -277,6 +302,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     }
@@ -294,9 +320,11 @@ Object {
               "lastUpdate": null,
             },
           },
+          "selfBaseDuration": 0,
           "sibling": null,
           "stateNode": null,
           "tag": 0,
+          "treeBaseDuration": 0,
           "type": [Function],
           "updateQueue": Object {
             "lastEffect": Object {
@@ -308,6 +336,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -319,24 +348,32 @@ Object {
           },
         },
         "_debugSource": null,
+        "actualDuration": 0,
+        "actualStartTime": -1,
         "alternate": null,
         "child": FiberNode {
           "_debugHookTypes": null,
-          "_debugID": 6,
+          "_debugID": 5,
           "_debugIsCurrentlyTiming": false,
+          "_debugNeedsRemount": false,
           "_debugOwner": [Circular],
           "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
           "alternate": null,
           "child": FiberNode {
             "_debugHookTypes": null,
-            "_debugID": 7,
+            "_debugID": 6,
             "_debugIsCurrentlyTiming": false,
+            "_debugNeedsRemount": false,
             "_debugOwner": [Circular],
             "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
             "alternate": null,
             "child": null,
             "childExpirationTime": 0,
-            "contextDependencies": null,
+            "dependencies": null,
             "effectTag": 1,
             "elementType": [Function],
             "expirationTime": 0,
@@ -353,7 +390,7 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -380,7 +417,7 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -397,14 +434,16 @@ Object {
             },
             "ref": null,
             "return": [Circular],
+            "selfBaseDuration": 0,
             "sibling": null,
             "stateNode": null,
             "tag": 0,
+            "treeBaseDuration": 0,
             "type": [Function],
             "updateQueue": null,
           },
           "childExpirationTime": 0,
-          "contextDependencies": null,
+          "dependencies": null,
           "effectTag": 1,
           "elementType": [Function],
           "expirationTime": 0,
@@ -421,7 +460,7 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -448,7 +487,7 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -465,6 +504,7 @@ Object {
           },
           "ref": null,
           "return": [Circular],
+          "selfBaseDuration": 0,
           "sibling": null,
           "stateNode": SideEffect {
             "_reactInternalFiber": [Circular],
@@ -479,7 +519,7 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -504,11 +544,12 @@ Object {
             },
           },
           "tag": 1,
+          "treeBaseDuration": 0,
           "type": [Function],
           "updateQueue": null,
         },
         "childExpirationTime": 0,
-        "contextDependencies": null,
+        "dependencies": null,
         "effectTag": 1,
         "elementType": [Function],
         "expirationTime": 0,
@@ -525,7 +566,7 @@ Object {
               
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -553,7 +594,7 @@ Object {
               
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -574,14 +615,17 @@ Object {
           "_debugHookTypes": Array [
             "useEffect",
           ],
-          "_debugID": 4,
+          "_debugID": 3,
           "_debugIsCurrentlyTiming": false,
+          "_debugNeedsRemount": false,
           "_debugOwner": null,
           "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
           "alternate": null,
           "child": [Circular],
           "childExpirationTime": 0,
-          "contextDependencies": null,
+          "dependencies": null,
           "effectTag": 517,
           "elementType": [Function],
           "expirationTime": 0,
@@ -596,6 +640,7 @@ Object {
               "sections": "section1 section2",
               "title": "This is an article",
               "type": "article",
+              "uid": 123,
               "useCanonical": true,
               "virtualReferrer": null,
             },
@@ -613,6 +658,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -633,6 +679,7 @@ Object {
               "sections": "section1 section2",
               "title": "This is an article",
               "type": "article",
+              "uid": 123,
               "useCanonical": true,
               "virtualReferrer": null,
             },
@@ -641,20 +688,26 @@ Object {
           "ref": null,
           "return": FiberNode {
             "_debugHookTypes": null,
-            "_debugID": 2,
+            "_debugID": 1,
             "_debugIsCurrentlyTiming": false,
+            "_debugNeedsRemount": false,
             "_debugOwner": null,
             "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
             "alternate": FiberNode {
               "_debugHookTypes": null,
-              "_debugID": 2,
+              "_debugID": 1,
               "_debugIsCurrentlyTiming": false,
+              "_debugNeedsRemount": false,
               "_debugOwner": null,
               "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
               "alternate": [Circular],
               "child": null,
               "childExpirationTime": 0,
-              "contextDependencies": null,
+              "dependencies": null,
               "effectTag": 0,
               "elementType": null,
               "expirationTime": 1073741823,
@@ -669,8 +722,11 @@ Object {
               "pendingProps": null,
               "ref": null,
               "return": null,
+              "selfBaseDuration": 0,
               "sibling": null,
-              "stateNode": Object {
+              "stateNode": FiberRootNode {
+                "callbackExpirationTime": 0,
+                "callbackNode": null,
                 "containerInfo": Object {
                   "children": Array [],
                   "createNodeMock": [Function],
@@ -678,25 +734,24 @@ Object {
                 },
                 "context": Object {},
                 "current": [Circular],
-                "didError": false,
-                "earliestPendingTime": 0,
-                "earliestSuspendedTime": 0,
-                "expirationTime": 0,
+                "finishedExpirationTime": 0,
                 "finishedWork": null,
                 "firstBatch": null,
+                "firstPendingTime": 0,
                 "hydrate": false,
-                "latestPendingTime": 0,
-                "latestPingedTime": 0,
-                "latestSuspendedTime": 0,
-                "nextExpirationTimeToWorkOn": 0,
-                "nextScheduledRoot": null,
+                "interactionThreadID": 1,
+                "lastPendingTime": 0,
+                "memoizedInteractions": Set {},
                 "pendingChildren": null,
-                "pendingCommitExpirationTime": 0,
                 "pendingContext": null,
+                "pendingInteractionMap": Map {},
                 "pingCache": null,
+                "pingTime": 0,
+                "tag": 0,
                 "timeoutHandle": -1,
               },
               "tag": 3,
+              "treeBaseDuration": 0,
               "type": null,
               "updateQueue": Object {
                 "baseState": null,
@@ -717,6 +772,7 @@ Object {
                           "sections": "section1 section2",
                           "title": "This is an article",
                           "type": "article",
+                          "uid": 123,
                           "useCanonical": true,
                           "virtualReferrer": null,
                         }
@@ -724,6 +780,8 @@ Object {
                       chartbeatSource="//chartbeat.js"
                     />,
                   },
+                  "priority": 97,
+                  "suspenseConfig": null,
                   "tag": 0,
                 },
                 "lastCapturedEffect": null,
@@ -743,6 +801,7 @@ Object {
                           "sections": "section1 section2",
                           "title": "This is an article",
                           "type": "article",
+                          "uid": 123,
                           "useCanonical": true,
                           "virtualReferrer": null,
                         }
@@ -750,13 +809,15 @@ Object {
                       chartbeatSource="//chartbeat.js"
                     />,
                   },
+                  "priority": 97,
+                  "suspenseConfig": null,
                   "tag": 0,
                 },
               },
             },
             "child": [Circular],
             "childExpirationTime": 0,
-            "contextDependencies": null,
+            "dependencies": null,
             "effectTag": 0,
             "elementType": null,
             "expirationTime": 0,
@@ -774,6 +835,7 @@ Object {
                     "sections": "section1 section2",
                     "title": "This is an article",
                     "type": "article",
+                    "uid": 123,
                     "useCanonical": true,
                     "virtualReferrer": null,
                   }
@@ -786,8 +848,11 @@ Object {
             "pendingProps": null,
             "ref": null,
             "return": null,
+            "selfBaseDuration": 0,
             "sibling": null,
-            "stateNode": Object {
+            "stateNode": FiberRootNode {
+              "callbackExpirationTime": 0,
+              "callbackNode": null,
               "containerInfo": Object {
                 "children": Array [],
                 "createNodeMock": [Function],
@@ -795,25 +860,24 @@ Object {
               },
               "context": Object {},
               "current": [Circular],
-              "didError": false,
-              "earliestPendingTime": 0,
-              "earliestSuspendedTime": 0,
-              "expirationTime": 0,
+              "finishedExpirationTime": 0,
               "finishedWork": null,
               "firstBatch": null,
+              "firstPendingTime": 0,
               "hydrate": false,
-              "latestPendingTime": 0,
-              "latestPingedTime": 0,
-              "latestSuspendedTime": 0,
-              "nextExpirationTimeToWorkOn": 0,
-              "nextScheduledRoot": null,
+              "interactionThreadID": 1,
+              "lastPendingTime": 0,
+              "memoizedInteractions": Set {},
               "pendingChildren": null,
-              "pendingCommitExpirationTime": 0,
               "pendingContext": null,
+              "pendingInteractionMap": Map {},
               "pingCache": null,
+              "pingTime": 0,
+              "tag": 0,
               "timeoutHandle": -1,
             },
             "tag": 3,
+            "treeBaseDuration": 0,
             "type": null,
             "updateQueue": Object {
               "baseState": Object {
@@ -825,6 +889,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     }
@@ -842,9 +907,11 @@ Object {
               "lastUpdate": null,
             },
           },
+          "selfBaseDuration": 0,
           "sibling": null,
           "stateNode": null,
           "tag": 0,
+          "treeBaseDuration": 0,
           "type": [Function],
           "updateQueue": Object {
             "lastEffect": Object {
@@ -856,6 +923,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -866,9 +934,11 @@ Object {
             },
           },
         },
+        "selfBaseDuration": 0,
         "sibling": null,
         "stateNode": [Circular],
         "tag": 1,
+        "treeBaseDuration": 0,
         "type": [Function],
         "updateQueue": null,
       },
@@ -883,7 +953,7 @@ Object {
             
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -918,7 +988,7 @@ Object {
           
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -938,24 +1008,29 @@ Object {
       "instance": SideEffect {
         "_reactInternalFiber": FiberNode {
           "_debugHookTypes": null,
-          "_debugID": 6,
+          "_debugID": 5,
           "_debugIsCurrentlyTiming": false,
+          "_debugNeedsRemount": false,
           "_debugOwner": FiberNode {
             "_debugHookTypes": null,
-            "_debugID": 5,
+            "_debugID": 4,
             "_debugIsCurrentlyTiming": false,
+            "_debugNeedsRemount": false,
             "_debugOwner": FiberNode {
               "_debugHookTypes": Array [
                 "useEffect",
               ],
-              "_debugID": 4,
+              "_debugID": 3,
               "_debugIsCurrentlyTiming": false,
+              "_debugNeedsRemount": false,
               "_debugOwner": null,
               "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
               "alternate": null,
               "child": [Circular],
               "childExpirationTime": 0,
-              "contextDependencies": null,
+              "dependencies": null,
               "effectTag": 517,
               "elementType": [Function],
               "expirationTime": 0,
@@ -970,6 +1045,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -987,6 +1063,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
@@ -1007,6 +1084,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -1015,20 +1093,26 @@ Object {
               "ref": null,
               "return": FiberNode {
                 "_debugHookTypes": null,
-                "_debugID": 2,
+                "_debugID": 1,
                 "_debugIsCurrentlyTiming": false,
+                "_debugNeedsRemount": false,
                 "_debugOwner": null,
                 "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
                 "alternate": FiberNode {
                   "_debugHookTypes": null,
-                  "_debugID": 2,
+                  "_debugID": 1,
                   "_debugIsCurrentlyTiming": false,
+                  "_debugNeedsRemount": false,
                   "_debugOwner": null,
                   "_debugSource": null,
+                  "actualDuration": 0,
+                  "actualStartTime": -1,
                   "alternate": [Circular],
                   "child": null,
                   "childExpirationTime": 0,
-                  "contextDependencies": null,
+                  "dependencies": null,
                   "effectTag": 0,
                   "elementType": null,
                   "expirationTime": 1073741823,
@@ -1043,8 +1127,11 @@ Object {
                   "pendingProps": null,
                   "ref": null,
                   "return": null,
+                  "selfBaseDuration": 0,
                   "sibling": null,
-                  "stateNode": Object {
+                  "stateNode": FiberRootNode {
+                    "callbackExpirationTime": 0,
+                    "callbackNode": null,
                     "containerInfo": Object {
                       "children": Array [],
                       "createNodeMock": [Function],
@@ -1052,25 +1139,24 @@ Object {
                     },
                     "context": Object {},
                     "current": [Circular],
-                    "didError": false,
-                    "earliestPendingTime": 0,
-                    "earliestSuspendedTime": 0,
-                    "expirationTime": 0,
+                    "finishedExpirationTime": 0,
                     "finishedWork": null,
                     "firstBatch": null,
+                    "firstPendingTime": 0,
                     "hydrate": false,
-                    "latestPendingTime": 0,
-                    "latestPingedTime": 0,
-                    "latestSuspendedTime": 0,
-                    "nextExpirationTimeToWorkOn": 0,
-                    "nextScheduledRoot": null,
+                    "interactionThreadID": 1,
+                    "lastPendingTime": 0,
+                    "memoizedInteractions": Set {},
                     "pendingChildren": null,
-                    "pendingCommitExpirationTime": 0,
                     "pendingContext": null,
+                    "pendingInteractionMap": Map {},
                     "pingCache": null,
+                    "pingTime": 0,
+                    "tag": 0,
                     "timeoutHandle": -1,
                   },
                   "tag": 3,
+                  "treeBaseDuration": 0,
                   "type": null,
                   "updateQueue": Object {
                     "baseState": null,
@@ -1091,6 +1177,7 @@ Object {
                               "sections": "section1 section2",
                               "title": "This is an article",
                               "type": "article",
+                              "uid": 123,
                               "useCanonical": true,
                               "virtualReferrer": null,
                             }
@@ -1098,6 +1185,8 @@ Object {
                           chartbeatSource="//chartbeat.js"
                         />,
                       },
+                      "priority": 97,
+                      "suspenseConfig": null,
                       "tag": 0,
                     },
                     "lastCapturedEffect": null,
@@ -1117,6 +1206,7 @@ Object {
                               "sections": "section1 section2",
                               "title": "This is an article",
                               "type": "article",
+                              "uid": 123,
                               "useCanonical": true,
                               "virtualReferrer": null,
                             }
@@ -1124,13 +1214,15 @@ Object {
                           chartbeatSource="//chartbeat.js"
                         />,
                       },
+                      "priority": 97,
+                      "suspenseConfig": null,
                       "tag": 0,
                     },
                   },
                 },
                 "child": [Circular],
                 "childExpirationTime": 0,
-                "contextDependencies": null,
+                "dependencies": null,
                 "effectTag": 0,
                 "elementType": null,
                 "expirationTime": 0,
@@ -1148,6 +1240,7 @@ Object {
                         "sections": "section1 section2",
                         "title": "This is an article",
                         "type": "article",
+                        "uid": 123,
                         "useCanonical": true,
                         "virtualReferrer": null,
                       }
@@ -1160,8 +1253,11 @@ Object {
                 "pendingProps": null,
                 "ref": null,
                 "return": null,
+                "selfBaseDuration": 0,
                 "sibling": null,
-                "stateNode": Object {
+                "stateNode": FiberRootNode {
+                  "callbackExpirationTime": 0,
+                  "callbackNode": null,
                   "containerInfo": Object {
                     "children": Array [],
                     "createNodeMock": [Function],
@@ -1169,25 +1265,24 @@ Object {
                   },
                   "context": Object {},
                   "current": [Circular],
-                  "didError": false,
-                  "earliestPendingTime": 0,
-                  "earliestSuspendedTime": 0,
-                  "expirationTime": 0,
+                  "finishedExpirationTime": 0,
                   "finishedWork": null,
                   "firstBatch": null,
+                  "firstPendingTime": 0,
                   "hydrate": false,
-                  "latestPendingTime": 0,
-                  "latestPingedTime": 0,
-                  "latestSuspendedTime": 0,
-                  "nextExpirationTimeToWorkOn": 0,
-                  "nextScheduledRoot": null,
+                  "interactionThreadID": 1,
+                  "lastPendingTime": 0,
+                  "memoizedInteractions": Set {},
                   "pendingChildren": null,
-                  "pendingCommitExpirationTime": 0,
                   "pendingContext": null,
+                  "pendingInteractionMap": Map {},
                   "pingCache": null,
+                  "pingTime": 0,
+                  "tag": 0,
                   "timeoutHandle": -1,
                 },
                 "tag": 3,
+                "treeBaseDuration": 0,
                 "type": null,
                 "updateQueue": Object {
                   "baseState": Object {
@@ -1199,6 +1294,7 @@ Object {
                           "sections": "section1 section2",
                           "title": "This is an article",
                           "type": "article",
+                          "uid": 123,
                           "useCanonical": true,
                           "virtualReferrer": null,
                         }
@@ -1216,9 +1312,11 @@ Object {
                   "lastUpdate": null,
                 },
               },
+              "selfBaseDuration": 0,
               "sibling": null,
               "stateNode": null,
               "tag": 0,
+              "treeBaseDuration": 0,
               "type": [Function],
               "updateQueue": Object {
                 "lastEffect": Object {
@@ -1230,6 +1328,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
@@ -1241,10 +1340,12 @@ Object {
               },
             },
             "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
             "alternate": null,
             "child": [Circular],
             "childExpirationTime": 0,
-            "contextDependencies": null,
+            "dependencies": null,
             "effectTag": 1,
             "elementType": [Function],
             "expirationTime": 0,
@@ -1261,7 +1362,7 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -1289,7 +1390,7 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -1310,14 +1411,17 @@ Object {
               "_debugHookTypes": Array [
                 "useEffect",
               ],
-              "_debugID": 4,
+              "_debugID": 3,
               "_debugIsCurrentlyTiming": false,
+              "_debugNeedsRemount": false,
               "_debugOwner": null,
               "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
               "alternate": null,
               "child": [Circular],
               "childExpirationTime": 0,
-              "contextDependencies": null,
+              "dependencies": null,
               "effectTag": 517,
               "elementType": [Function],
               "expirationTime": 0,
@@ -1332,6 +1436,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -1349,6 +1454,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
@@ -1369,6 +1475,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -1377,20 +1484,26 @@ Object {
               "ref": null,
               "return": FiberNode {
                 "_debugHookTypes": null,
-                "_debugID": 2,
+                "_debugID": 1,
                 "_debugIsCurrentlyTiming": false,
+                "_debugNeedsRemount": false,
                 "_debugOwner": null,
                 "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
                 "alternate": FiberNode {
                   "_debugHookTypes": null,
-                  "_debugID": 2,
+                  "_debugID": 1,
                   "_debugIsCurrentlyTiming": false,
+                  "_debugNeedsRemount": false,
                   "_debugOwner": null,
                   "_debugSource": null,
+                  "actualDuration": 0,
+                  "actualStartTime": -1,
                   "alternate": [Circular],
                   "child": null,
                   "childExpirationTime": 0,
-                  "contextDependencies": null,
+                  "dependencies": null,
                   "effectTag": 0,
                   "elementType": null,
                   "expirationTime": 1073741823,
@@ -1405,8 +1518,11 @@ Object {
                   "pendingProps": null,
                   "ref": null,
                   "return": null,
+                  "selfBaseDuration": 0,
                   "sibling": null,
-                  "stateNode": Object {
+                  "stateNode": FiberRootNode {
+                    "callbackExpirationTime": 0,
+                    "callbackNode": null,
                     "containerInfo": Object {
                       "children": Array [],
                       "createNodeMock": [Function],
@@ -1414,25 +1530,24 @@ Object {
                     },
                     "context": Object {},
                     "current": [Circular],
-                    "didError": false,
-                    "earliestPendingTime": 0,
-                    "earliestSuspendedTime": 0,
-                    "expirationTime": 0,
+                    "finishedExpirationTime": 0,
                     "finishedWork": null,
                     "firstBatch": null,
+                    "firstPendingTime": 0,
                     "hydrate": false,
-                    "latestPendingTime": 0,
-                    "latestPingedTime": 0,
-                    "latestSuspendedTime": 0,
-                    "nextExpirationTimeToWorkOn": 0,
-                    "nextScheduledRoot": null,
+                    "interactionThreadID": 1,
+                    "lastPendingTime": 0,
+                    "memoizedInteractions": Set {},
                     "pendingChildren": null,
-                    "pendingCommitExpirationTime": 0,
                     "pendingContext": null,
+                    "pendingInteractionMap": Map {},
                     "pingCache": null,
+                    "pingTime": 0,
+                    "tag": 0,
                     "timeoutHandle": -1,
                   },
                   "tag": 3,
+                  "treeBaseDuration": 0,
                   "type": null,
                   "updateQueue": Object {
                     "baseState": null,
@@ -1453,6 +1568,7 @@ Object {
                               "sections": "section1 section2",
                               "title": "This is an article",
                               "type": "article",
+                              "uid": 123,
                               "useCanonical": true,
                               "virtualReferrer": null,
                             }
@@ -1460,6 +1576,8 @@ Object {
                           chartbeatSource="//chartbeat.js"
                         />,
                       },
+                      "priority": 97,
+                      "suspenseConfig": null,
                       "tag": 0,
                     },
                     "lastCapturedEffect": null,
@@ -1479,6 +1597,7 @@ Object {
                               "sections": "section1 section2",
                               "title": "This is an article",
                               "type": "article",
+                              "uid": 123,
                               "useCanonical": true,
                               "virtualReferrer": null,
                             }
@@ -1486,13 +1605,15 @@ Object {
                           chartbeatSource="//chartbeat.js"
                         />,
                       },
+                      "priority": 97,
+                      "suspenseConfig": null,
                       "tag": 0,
                     },
                   },
                 },
                 "child": [Circular],
                 "childExpirationTime": 0,
-                "contextDependencies": null,
+                "dependencies": null,
                 "effectTag": 0,
                 "elementType": null,
                 "expirationTime": 0,
@@ -1510,6 +1631,7 @@ Object {
                         "sections": "section1 section2",
                         "title": "This is an article",
                         "type": "article",
+                        "uid": 123,
                         "useCanonical": true,
                         "virtualReferrer": null,
                       }
@@ -1522,8 +1644,11 @@ Object {
                 "pendingProps": null,
                 "ref": null,
                 "return": null,
+                "selfBaseDuration": 0,
                 "sibling": null,
-                "stateNode": Object {
+                "stateNode": FiberRootNode {
+                  "callbackExpirationTime": 0,
+                  "callbackNode": null,
                   "containerInfo": Object {
                     "children": Array [],
                     "createNodeMock": [Function],
@@ -1531,25 +1656,24 @@ Object {
                   },
                   "context": Object {},
                   "current": [Circular],
-                  "didError": false,
-                  "earliestPendingTime": 0,
-                  "earliestSuspendedTime": 0,
-                  "expirationTime": 0,
+                  "finishedExpirationTime": 0,
                   "finishedWork": null,
                   "firstBatch": null,
+                  "firstPendingTime": 0,
                   "hydrate": false,
-                  "latestPendingTime": 0,
-                  "latestPingedTime": 0,
-                  "latestSuspendedTime": 0,
-                  "nextExpirationTimeToWorkOn": 0,
-                  "nextScheduledRoot": null,
+                  "interactionThreadID": 1,
+                  "lastPendingTime": 0,
+                  "memoizedInteractions": Set {},
                   "pendingChildren": null,
-                  "pendingCommitExpirationTime": 0,
                   "pendingContext": null,
+                  "pendingInteractionMap": Map {},
                   "pingCache": null,
+                  "pingTime": 0,
+                  "tag": 0,
                   "timeoutHandle": -1,
                 },
                 "tag": 3,
+                "treeBaseDuration": 0,
                 "type": null,
                 "updateQueue": Object {
                   "baseState": Object {
@@ -1561,6 +1685,7 @@ Object {
                           "sections": "section1 section2",
                           "title": "This is an article",
                           "type": "article",
+                          "uid": 123,
                           "useCanonical": true,
                           "virtualReferrer": null,
                         }
@@ -1578,9 +1703,11 @@ Object {
                   "lastUpdate": null,
                 },
               },
+              "selfBaseDuration": 0,
               "sibling": null,
               "stateNode": null,
               "tag": 0,
+              "treeBaseDuration": 0,
               "type": [Function],
               "updateQueue": Object {
                 "lastEffect": Object {
@@ -1592,6 +1719,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
@@ -1602,6 +1730,7 @@ Object {
                 },
               },
             },
+            "selfBaseDuration": 0,
             "sibling": null,
             "stateNode": HelmetWrapper {
               "_reactInternalFiber": [Circular],
@@ -1616,7 +1745,7 @@ Object {
                     
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -1642,21 +1771,27 @@ Object {
               },
             },
             "tag": 1,
+            "treeBaseDuration": 0,
             "type": [Function],
             "updateQueue": null,
           },
           "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
           "alternate": null,
           "child": FiberNode {
             "_debugHookTypes": null,
-            "_debugID": 7,
+            "_debugID": 6,
             "_debugIsCurrentlyTiming": false,
+            "_debugNeedsRemount": false,
             "_debugOwner": [Circular],
             "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
             "alternate": null,
             "child": null,
             "childExpirationTime": 0,
-            "contextDependencies": null,
+            "dependencies": null,
             "effectTag": 1,
             "elementType": [Function],
             "expirationTime": 0,
@@ -1673,7 +1808,7 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -1700,7 +1835,7 @@ Object {
                   "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -1717,14 +1852,16 @@ Object {
             },
             "ref": null,
             "return": [Circular],
+            "selfBaseDuration": 0,
             "sibling": null,
             "stateNode": null,
             "tag": 0,
+            "treeBaseDuration": 0,
             "type": [Function],
             "updateQueue": null,
           },
           "childExpirationTime": 0,
-          "contextDependencies": null,
+          "dependencies": null,
           "effectTag": 1,
           "elementType": [Function],
           "expirationTime": 0,
@@ -1741,7 +1878,7 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -1768,7 +1905,7 @@ Object {
                 "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -1786,20 +1923,24 @@ Object {
           "ref": null,
           "return": FiberNode {
             "_debugHookTypes": null,
-            "_debugID": 5,
+            "_debugID": 4,
             "_debugIsCurrentlyTiming": false,
+            "_debugNeedsRemount": false,
             "_debugOwner": FiberNode {
               "_debugHookTypes": Array [
                 "useEffect",
               ],
-              "_debugID": 4,
+              "_debugID": 3,
               "_debugIsCurrentlyTiming": false,
+              "_debugNeedsRemount": false,
               "_debugOwner": null,
               "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
               "alternate": null,
               "child": [Circular],
               "childExpirationTime": 0,
-              "contextDependencies": null,
+              "dependencies": null,
               "effectTag": 517,
               "elementType": [Function],
               "expirationTime": 0,
@@ -1814,6 +1955,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -1831,6 +1973,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
@@ -1851,6 +1994,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -1859,20 +2003,26 @@ Object {
               "ref": null,
               "return": FiberNode {
                 "_debugHookTypes": null,
-                "_debugID": 2,
+                "_debugID": 1,
                 "_debugIsCurrentlyTiming": false,
+                "_debugNeedsRemount": false,
                 "_debugOwner": null,
                 "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
                 "alternate": FiberNode {
                   "_debugHookTypes": null,
-                  "_debugID": 2,
+                  "_debugID": 1,
                   "_debugIsCurrentlyTiming": false,
+                  "_debugNeedsRemount": false,
                   "_debugOwner": null,
                   "_debugSource": null,
+                  "actualDuration": 0,
+                  "actualStartTime": -1,
                   "alternate": [Circular],
                   "child": null,
                   "childExpirationTime": 0,
-                  "contextDependencies": null,
+                  "dependencies": null,
                   "effectTag": 0,
                   "elementType": null,
                   "expirationTime": 1073741823,
@@ -1887,8 +2037,11 @@ Object {
                   "pendingProps": null,
                   "ref": null,
                   "return": null,
+                  "selfBaseDuration": 0,
                   "sibling": null,
-                  "stateNode": Object {
+                  "stateNode": FiberRootNode {
+                    "callbackExpirationTime": 0,
+                    "callbackNode": null,
                     "containerInfo": Object {
                       "children": Array [],
                       "createNodeMock": [Function],
@@ -1896,25 +2049,24 @@ Object {
                     },
                     "context": Object {},
                     "current": [Circular],
-                    "didError": false,
-                    "earliestPendingTime": 0,
-                    "earliestSuspendedTime": 0,
-                    "expirationTime": 0,
+                    "finishedExpirationTime": 0,
                     "finishedWork": null,
                     "firstBatch": null,
+                    "firstPendingTime": 0,
                     "hydrate": false,
-                    "latestPendingTime": 0,
-                    "latestPingedTime": 0,
-                    "latestSuspendedTime": 0,
-                    "nextExpirationTimeToWorkOn": 0,
-                    "nextScheduledRoot": null,
+                    "interactionThreadID": 1,
+                    "lastPendingTime": 0,
+                    "memoizedInteractions": Set {},
                     "pendingChildren": null,
-                    "pendingCommitExpirationTime": 0,
                     "pendingContext": null,
+                    "pendingInteractionMap": Map {},
                     "pingCache": null,
+                    "pingTime": 0,
+                    "tag": 0,
                     "timeoutHandle": -1,
                   },
                   "tag": 3,
+                  "treeBaseDuration": 0,
                   "type": null,
                   "updateQueue": Object {
                     "baseState": null,
@@ -1935,6 +2087,7 @@ Object {
                               "sections": "section1 section2",
                               "title": "This is an article",
                               "type": "article",
+                              "uid": 123,
                               "useCanonical": true,
                               "virtualReferrer": null,
                             }
@@ -1942,6 +2095,8 @@ Object {
                           chartbeatSource="//chartbeat.js"
                         />,
                       },
+                      "priority": 97,
+                      "suspenseConfig": null,
                       "tag": 0,
                     },
                     "lastCapturedEffect": null,
@@ -1961,6 +2116,7 @@ Object {
                               "sections": "section1 section2",
                               "title": "This is an article",
                               "type": "article",
+                              "uid": 123,
                               "useCanonical": true,
                               "virtualReferrer": null,
                             }
@@ -1968,13 +2124,15 @@ Object {
                           chartbeatSource="//chartbeat.js"
                         />,
                       },
+                      "priority": 97,
+                      "suspenseConfig": null,
                       "tag": 0,
                     },
                   },
                 },
                 "child": [Circular],
                 "childExpirationTime": 0,
-                "contextDependencies": null,
+                "dependencies": null,
                 "effectTag": 0,
                 "elementType": null,
                 "expirationTime": 0,
@@ -1992,6 +2150,7 @@ Object {
                         "sections": "section1 section2",
                         "title": "This is an article",
                         "type": "article",
+                        "uid": 123,
                         "useCanonical": true,
                         "virtualReferrer": null,
                       }
@@ -2004,8 +2163,11 @@ Object {
                 "pendingProps": null,
                 "ref": null,
                 "return": null,
+                "selfBaseDuration": 0,
                 "sibling": null,
-                "stateNode": Object {
+                "stateNode": FiberRootNode {
+                  "callbackExpirationTime": 0,
+                  "callbackNode": null,
                   "containerInfo": Object {
                     "children": Array [],
                     "createNodeMock": [Function],
@@ -2013,25 +2175,24 @@ Object {
                   },
                   "context": Object {},
                   "current": [Circular],
-                  "didError": false,
-                  "earliestPendingTime": 0,
-                  "earliestSuspendedTime": 0,
-                  "expirationTime": 0,
+                  "finishedExpirationTime": 0,
                   "finishedWork": null,
                   "firstBatch": null,
+                  "firstPendingTime": 0,
                   "hydrate": false,
-                  "latestPendingTime": 0,
-                  "latestPingedTime": 0,
-                  "latestSuspendedTime": 0,
-                  "nextExpirationTimeToWorkOn": 0,
-                  "nextScheduledRoot": null,
+                  "interactionThreadID": 1,
+                  "lastPendingTime": 0,
+                  "memoizedInteractions": Set {},
                   "pendingChildren": null,
-                  "pendingCommitExpirationTime": 0,
                   "pendingContext": null,
+                  "pendingInteractionMap": Map {},
                   "pingCache": null,
+                  "pingTime": 0,
+                  "tag": 0,
                   "timeoutHandle": -1,
                 },
                 "tag": 3,
+                "treeBaseDuration": 0,
                 "type": null,
                 "updateQueue": Object {
                   "baseState": Object {
@@ -2043,6 +2204,7 @@ Object {
                           "sections": "section1 section2",
                           "title": "This is an article",
                           "type": "article",
+                          "uid": 123,
                           "useCanonical": true,
                           "virtualReferrer": null,
                         }
@@ -2060,9 +2222,11 @@ Object {
                   "lastUpdate": null,
                 },
               },
+              "selfBaseDuration": 0,
               "sibling": null,
               "stateNode": null,
               "tag": 0,
+              "treeBaseDuration": 0,
               "type": [Function],
               "updateQueue": Object {
                 "lastEffect": Object {
@@ -2074,6 +2238,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
@@ -2085,10 +2250,12 @@ Object {
               },
             },
             "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
             "alternate": null,
             "child": [Circular],
             "childExpirationTime": 0,
-            "contextDependencies": null,
+            "dependencies": null,
             "effectTag": 1,
             "elementType": [Function],
             "expirationTime": 0,
@@ -2105,7 +2272,7 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -2133,7 +2300,7 @@ Object {
                   
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -2154,14 +2321,17 @@ Object {
               "_debugHookTypes": Array [
                 "useEffect",
               ],
-              "_debugID": 4,
+              "_debugID": 3,
               "_debugIsCurrentlyTiming": false,
+              "_debugNeedsRemount": false,
               "_debugOwner": null,
               "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
               "alternate": null,
               "child": [Circular],
               "childExpirationTime": 0,
-              "contextDependencies": null,
+              "dependencies": null,
               "effectTag": 517,
               "elementType": [Function],
               "expirationTime": 0,
@@ -2176,6 +2346,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -2193,6 +2364,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
@@ -2213,6 +2385,7 @@ Object {
                   "sections": "section1 section2",
                   "title": "This is an article",
                   "type": "article",
+                  "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
@@ -2221,20 +2394,26 @@ Object {
               "ref": null,
               "return": FiberNode {
                 "_debugHookTypes": null,
-                "_debugID": 2,
+                "_debugID": 1,
                 "_debugIsCurrentlyTiming": false,
+                "_debugNeedsRemount": false,
                 "_debugOwner": null,
                 "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
                 "alternate": FiberNode {
                   "_debugHookTypes": null,
-                  "_debugID": 2,
+                  "_debugID": 1,
                   "_debugIsCurrentlyTiming": false,
+                  "_debugNeedsRemount": false,
                   "_debugOwner": null,
                   "_debugSource": null,
+                  "actualDuration": 0,
+                  "actualStartTime": -1,
                   "alternate": [Circular],
                   "child": null,
                   "childExpirationTime": 0,
-                  "contextDependencies": null,
+                  "dependencies": null,
                   "effectTag": 0,
                   "elementType": null,
                   "expirationTime": 1073741823,
@@ -2249,8 +2428,11 @@ Object {
                   "pendingProps": null,
                   "ref": null,
                   "return": null,
+                  "selfBaseDuration": 0,
                   "sibling": null,
-                  "stateNode": Object {
+                  "stateNode": FiberRootNode {
+                    "callbackExpirationTime": 0,
+                    "callbackNode": null,
                     "containerInfo": Object {
                       "children": Array [],
                       "createNodeMock": [Function],
@@ -2258,25 +2440,24 @@ Object {
                     },
                     "context": Object {},
                     "current": [Circular],
-                    "didError": false,
-                    "earliestPendingTime": 0,
-                    "earliestSuspendedTime": 0,
-                    "expirationTime": 0,
+                    "finishedExpirationTime": 0,
                     "finishedWork": null,
                     "firstBatch": null,
+                    "firstPendingTime": 0,
                     "hydrate": false,
-                    "latestPendingTime": 0,
-                    "latestPingedTime": 0,
-                    "latestSuspendedTime": 0,
-                    "nextExpirationTimeToWorkOn": 0,
-                    "nextScheduledRoot": null,
+                    "interactionThreadID": 1,
+                    "lastPendingTime": 0,
+                    "memoizedInteractions": Set {},
                     "pendingChildren": null,
-                    "pendingCommitExpirationTime": 0,
                     "pendingContext": null,
+                    "pendingInteractionMap": Map {},
                     "pingCache": null,
+                    "pingTime": 0,
+                    "tag": 0,
                     "timeoutHandle": -1,
                   },
                   "tag": 3,
+                  "treeBaseDuration": 0,
                   "type": null,
                   "updateQueue": Object {
                     "baseState": null,
@@ -2297,6 +2478,7 @@ Object {
                               "sections": "section1 section2",
                               "title": "This is an article",
                               "type": "article",
+                              "uid": 123,
                               "useCanonical": true,
                               "virtualReferrer": null,
                             }
@@ -2304,6 +2486,8 @@ Object {
                           chartbeatSource="//chartbeat.js"
                         />,
                       },
+                      "priority": 97,
+                      "suspenseConfig": null,
                       "tag": 0,
                     },
                     "lastCapturedEffect": null,
@@ -2323,6 +2507,7 @@ Object {
                               "sections": "section1 section2",
                               "title": "This is an article",
                               "type": "article",
+                              "uid": 123,
                               "useCanonical": true,
                               "virtualReferrer": null,
                             }
@@ -2330,13 +2515,15 @@ Object {
                           chartbeatSource="//chartbeat.js"
                         />,
                       },
+                      "priority": 97,
+                      "suspenseConfig": null,
                       "tag": 0,
                     },
                   },
                 },
                 "child": [Circular],
                 "childExpirationTime": 0,
-                "contextDependencies": null,
+                "dependencies": null,
                 "effectTag": 0,
                 "elementType": null,
                 "expirationTime": 0,
@@ -2354,6 +2541,7 @@ Object {
                         "sections": "section1 section2",
                         "title": "This is an article",
                         "type": "article",
+                        "uid": 123,
                         "useCanonical": true,
                         "virtualReferrer": null,
                       }
@@ -2366,8 +2554,11 @@ Object {
                 "pendingProps": null,
                 "ref": null,
                 "return": null,
+                "selfBaseDuration": 0,
                 "sibling": null,
-                "stateNode": Object {
+                "stateNode": FiberRootNode {
+                  "callbackExpirationTime": 0,
+                  "callbackNode": null,
                   "containerInfo": Object {
                     "children": Array [],
                     "createNodeMock": [Function],
@@ -2375,25 +2566,24 @@ Object {
                   },
                   "context": Object {},
                   "current": [Circular],
-                  "didError": false,
-                  "earliestPendingTime": 0,
-                  "earliestSuspendedTime": 0,
-                  "expirationTime": 0,
+                  "finishedExpirationTime": 0,
                   "finishedWork": null,
                   "firstBatch": null,
+                  "firstPendingTime": 0,
                   "hydrate": false,
-                  "latestPendingTime": 0,
-                  "latestPingedTime": 0,
-                  "latestSuspendedTime": 0,
-                  "nextExpirationTimeToWorkOn": 0,
-                  "nextScheduledRoot": null,
+                  "interactionThreadID": 1,
+                  "lastPendingTime": 0,
+                  "memoizedInteractions": Set {},
                   "pendingChildren": null,
-                  "pendingCommitExpirationTime": 0,
                   "pendingContext": null,
+                  "pendingInteractionMap": Map {},
                   "pingCache": null,
+                  "pingTime": 0,
+                  "tag": 0,
                   "timeoutHandle": -1,
                 },
                 "tag": 3,
+                "treeBaseDuration": 0,
                 "type": null,
                 "updateQueue": Object {
                   "baseState": Object {
@@ -2405,6 +2595,7 @@ Object {
                           "sections": "section1 section2",
                           "title": "This is an article",
                           "type": "article",
+                          "uid": 123,
                           "useCanonical": true,
                           "virtualReferrer": null,
                         }
@@ -2422,9 +2613,11 @@ Object {
                   "lastUpdate": null,
                 },
               },
+              "selfBaseDuration": 0,
               "sibling": null,
               "stateNode": null,
               "tag": 0,
+              "treeBaseDuration": 0,
               "type": [Function],
               "updateQueue": Object {
                 "lastEffect": Object {
@@ -2436,6 +2629,7 @@ Object {
                       "sections": "section1 section2",
                       "title": "This is an article",
                       "type": "article",
+                      "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
@@ -2446,6 +2640,7 @@ Object {
                 },
               },
             },
+            "selfBaseDuration": 0,
             "sibling": null,
             "stateNode": HelmetWrapper {
               "_reactInternalFiber": [Circular],
@@ -2460,7 +2655,7 @@ Object {
                     
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article"};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -2486,12 +2681,15 @@ Object {
               },
             },
             "tag": 1,
+            "treeBaseDuration": 0,
             "type": [Function],
             "updateQueue": null,
           },
+          "selfBaseDuration": 0,
           "sibling": null,
           "stateNode": [Circular],
           "tag": 1,
+          "treeBaseDuration": 0,
           "type": [Function],
           "updateQueue": null,
         },
@@ -2506,7 +2704,7 @@ Object {
               "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -2540,7 +2738,7 @@ Object {
             "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
@@ -2567,7 +2765,7 @@ Object {
               "innerHTML": "
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\"};
+          var config = {\\"domain\\":\\"test-domain\\",\\"type\\":\\"article\\",\\"sections\\":\\"section1 section2\\",\\"chartbeatUID\\":1111,\\"virtualReferrer\\":null,\\"useCanonical\\":true,\\"title\\":\\"This is an article\\",\\"uid\\":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }

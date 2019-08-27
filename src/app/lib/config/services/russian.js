@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ru-RU`,
+  lang: `ru`,
   articleAuthor: `https://www.facebook.com/bbcrussian`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-russian',
+  atiAnalyticsProducerId: '75',
   brandName: 'BBC News Русская служба',
   product: 'BBC News Русская служба',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
@@ -28,9 +30,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'Главная',
+    currentPage: 'Current page',
+    skipLinkText: 'Перейти к содержанию',
     error: {
       404: {
         statusCode: '404',
@@ -166,6 +171,7 @@ const service = {
       'Би-би-си. Би-би-си не несет ответственности за содержание других сайтов.',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

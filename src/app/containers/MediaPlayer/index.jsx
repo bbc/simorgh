@@ -1,55 +1,27 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
-import Caption from '../Caption';
-import videoMetadata from './metadata';
 import {
-  NestedGridParentLarge,
-  NestedGridParentSmall,
-  NestedGridItemChildSmall,
-  NestedGridItemChildLarge,
-  GridItemConstrainedLargeNoMargin,
-  GridItemConstrainedSmall,
-} from '../../lib/styledGrid';
-
+  CanonicalMediaPlayer,
+  AmpMediaPlayer,
+} from '@bbc/psammead-media-player';
+import Metadata from './Metadata';
+import embedUrl from './helpers/embedUrl';
+import getPlaceholderSrc from './helpers/placeholder';
+import filterForBlockType from '../../lib/utilities/blockHandlers';
+import useToggle from '../Toggle/useToggle';
+import { RequestContext } from '../../contexts/RequestContext';
+import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
-import { RequestContext } from '../../contexts/RequestContext';
-import useToggle from '../Toggle/useToggle';
 
-const selectWrappers = orientation => {
-  const wrapperSpan = {
-    default: '6',
-    group5: '12',
-  };
-  let ParentWrapper = NestedGridParentLarge;
-  let ChildWrapper = NestedGridItemChildLarge;
-  let Container = GridItemConstrainedLargeNoMargin;
-  let portrait = false;
-
-  if (orientation === 'Portrait') {
-    ParentWrapper = NestedGridParentSmall;
-    ChildWrapper = NestedGridItemChildSmall;
-    Container = GridItemConstrainedSmall;
-    wrapperSpan.default = '4';
-    portrait = true;
-  }
-
-  return { ParentWrapper, ChildWrapper, Container, wrapperSpan, portrait };
-};
-
-const MediaPlayerContainer = ({ blocks }) => {
-  const { platform } = React.useContext(RequestContext);
+const MediaPlayerContainer = ({ blocks, placeholder }) => {
+  const { id, platform, origin } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
+  const isAmp = platform === 'amp';
 
-  if (!enabled) {
-    return null;
-  }
-
-  if (!blocks) {
+  if (!enabled || !blocks) {
     return null;
   }
 
@@ -59,68 +31,49 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null;
   }
 
-  const metadata = videoMetadata(aresMediaBlock);
-  const captionBlock = filterForBlockType(blocks, 'caption');
-  const nestedModel = pathOr(
+  const imageUrl = pathOr(
     null,
-    ['model', 'blocks', 0, 'model'],
+    ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock,
   );
-  const pid = pathOr(null, ['id'], nestedModel);
-  const kind =
-    pathOr(null, ['format'], nestedModel) === 'audio_video'
-      ? 'programme'
-      : 'audio';
+  const versionId = pathOr(
+    null,
+    ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
+    aresMediaBlock,
+  );
 
-  const type = kind === 'audio' ? kind : 'video';
-  const orientation = pathOr(null, ['versions', 0, 'types', 0], nestedModel);
+  if (!versionId) {
+    return null; // this should be the holding image with an error overlay
+  }
 
-  const {
-    ParentWrapper,
-    ChildWrapper,
-    Container,
-    wrapperSpan,
-    portrait,
-  } = selectWrappers(orientation);
+  const placeholderSrc = getPlaceholderSrc(imageUrl);
+  const embedSource = embedUrl({
+    vpid: versionId,
+    assetId: id,
+    isAmp,
+    origin,
+  });
 
   return (
-    <Container>
-      {metadata ? (
-        <Helmet>
-          {
-            <script type="application/ld+json">
-              {JSON.stringify(metadata)}
-            </script>
-          }
-        </Helmet>
-      ) : null}
-      <ParentWrapper>
-        <ChildWrapper gridColumnStart={1} gridSpan={wrapperSpan}>
-          <ul>
-            <li>PID: {pid}</li>
-            <li>Orientation: {orientation}</li>
-            <li>Platform: {platform}</li>
-            <li>Portrait? {String(portrait)}</li>
-          </ul>
-        </ChildWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          gridSpan={{
-            default: '6',
-            group3: '5',
-            group4: '5',
-            group5: '10',
-          }}
-        >
-          {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
-        </ChildWrapper>
-      </ParentWrapper>
-    </Container>
+    <GridItemConstrainedMedium>
+      <Metadata aresMediaBlock={aresMediaBlock} />
+      {isAmp ? (
+        <AmpMediaPlayer src={embedSource} placeholderSrc={placeholderSrc} />
+      ) : (
+        <CanonicalMediaPlayer
+          src={embedSource}
+          placeholder={placeholder}
+          placeholderSrc={placeholder ? placeholderSrc : ''}
+        />
+      )}
+    </GridItemConstrainedMedium>
   );
 };
 
 MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
-
-MediaPlayerContainer.defaultProps = emptyBlockArrayDefaultProps;
+MediaPlayerContainer.defaultProps = {
+  ...emptyBlockArrayDefaultProps,
+  placeholder: true,
+};
 
 export default MediaPlayerContainer;

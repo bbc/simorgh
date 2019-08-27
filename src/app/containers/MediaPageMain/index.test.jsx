@@ -1,23 +1,12 @@
 import React from 'react';
 import MediaPageMain from '.';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import amharicConfig from '../../lib/config/services/amharic';
+import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
 
 const liveRadioScaffoldProps = {
   service: 'amharic',
-  pageData: {
-    metadata: {
-      id: 'bbc_amharic_radio',
-      tags: {},
-    },
-    promo: {
-      subType: 'IDX',
-      name: 'BBC Amharic Radio',
-      uri: '/amharic/bbc_amharic_radio/liveradio',
-      id: 'some-id',
-      type: 'simple',
-    },
-  },
+  pageData: amharicPageData,
   match: {
     params: {
       serviceId: 'bbc_amharic_radio',
@@ -39,7 +28,7 @@ useContext.mockReturnValue(amharicConfig);
 
 describe('Media Page Main', () => {
   describe('snapshots', () => {
-    shouldMatchSnapshot(
+    shouldShallowMatchSnapshot(
       'should match scaffold snapshot',
       <MediaPageMain {...liveRadioScaffoldProps} />,
     );

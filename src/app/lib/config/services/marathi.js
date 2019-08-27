@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { marathi as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `mr-IN`,
+  lang: `mr`,
   articleAuthor: `https://www.facebook.com/bbcnewsmarathi`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-marathi',
+  atiAnalyticsProducerId: '59',
   brandName: 'BBC News मराठी',
   product: 'BBC News मराठी',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
@@ -28,9 +30,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'बातम्या',
+    currentPage: 'Current page',
+    skipLinkText: 'सामग्रीवर जा',
     error: {
       404: {
         statusCode: '404',
@@ -161,6 +166,7 @@ const service = {
       'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही',
   },
   fonts: [],
+  timezone: 'Asia/Kolkata',
 };
 
 export default service;

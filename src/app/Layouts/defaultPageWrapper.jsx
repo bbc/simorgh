@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { node } from 'prop-types';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
@@ -7,14 +7,14 @@ import ServiceWorkerContainer from '../containers/ServiceWorker';
 import GlobalStyle from '../lib/globalStyles';
 
 const PageWrapper = ({ children }) => (
-  <Fragment>
+  <>
     <GlobalStyle />
     <ServiceWorkerContainer />
     <ManifestContainer />
     <HeaderContainer />
     {children}
     <FooterContainer />
-  </Fragment>
+  </>
 );
 
 PageWrapper.propTypes = {

@@ -1,12 +1,18 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_ISKOOLA_POTA_BBC_BOLD,
+  F_ISKOOLA_POTA_BBC_REGULAR,
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `si-LK`,
+  lang: `si`,
   articleAuthor: `https://www.facebook.com/BBCSinhala`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-sinhala',
+  atiAnalyticsProducerId: '82',
   brandName: 'BBC News සිංහල',
   product: 'BBC News සිංහල',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png',
@@ -28,9 +34,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'මුල් පිටුව',
+    currentPage: 'Current page',
+    skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
     error: {
       404: {
         statusCode: '404',
@@ -160,7 +169,8 @@ const service = {
     copyrightText:
       'බීබීසී. වෙනත් අන්තර්ජාල අඩවිවල අන්තර්ගතය පිළිබඳව බීබීසීය වගකීමෙන් නොබැඳේ',
   },
-  fonts: [],
+  fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
+  timezone: 'Europe/London',
 };
 
 export default service;

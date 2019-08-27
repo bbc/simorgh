@@ -1,14 +1,23 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
-import * as fonts from '@bbc/psammead-styles/fonts';
+import {
+  F_REITH_SANS_BOLD,
+  F_REITH_SANS_BOLD_ITALIC,
+  F_REITH_SANS_ITALIC,
+  F_REITH_SANS_REGULAR,
+  F_REITH_SERIF_MEDIUM,
+  F_REITH_SERIF_MEDIUM_ITALIC,
+} from '@bbc/psammead-styles/fonts';
 import 'moment/locale/en-gb';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const news = {
   lang: 'en-GB',
   articleAuthor: `https://www.facebook.com/bbcnews`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news',
+  atiAnalyticsProducerId: '64',
   brandName: 'BBC News',
   product: 'BBC News',
   defaultImage:
@@ -34,6 +43,9 @@ const news = {
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
   translations: {
+    home: 'Home',
+    currentPage: 'Current page',
+    skipLinkText: 'Skip to content',
     error: {
       404: {
         statusCode: '404',
@@ -160,13 +172,14 @@ const news = {
       'BBC. The BBC is not responsible for the content of external sites.',
   },
   fonts: [
-    fonts.F_REITH_SERIF_MEDIUM,
-    fonts.F_REITH_SERIF_MEDIUM_ITALIC,
-    fonts.F_REITH_SANS_REGULAR,
-    fonts.F_REITH_SANS_ITALIC,
-    fonts.F_REITH_SANS_BOLD,
-    fonts.F_REITH_SANS_BOLD_ITALIC,
+    F_REITH_SANS_BOLD,
+    F_REITH_SANS_BOLD_ITALIC,
+    F_REITH_SANS_ITALIC,
+    F_REITH_SANS_REGULAR,
+    F_REITH_SERIF_MEDIUM,
+    F_REITH_SERIF_MEDIUM_ITALIC,
   ],
+  timezone: 'Europe/London',
 };
 
 export default news;

@@ -13,3 +13,6 @@ exclude_patterns:
   - '**/node_modules/'
   - 'src/app/lib/config/'
   - 'src/app/**/fixtures.js'
+  - 'scripts/signBuild.js'
+  - 'scripts/lighthouseBudget.test.js'
+  - 'scripts/lighthouseBudget.js'

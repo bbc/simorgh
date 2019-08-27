@@ -4,7 +4,12 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import BrandContainer from '../Brand';
 
 const currentYear = () => new Date().getFullYear();
-const getCopyrightText = text => `\u00A9 ${currentYear()} ${text} `;
+const getCopyrightText = text => (
+  <>
+    <span lang="en-GB">{`\u00A9`} </span>
+    {`${currentYear()} ${text}`}
+  </>
+);
 
 const FooterContainer = () => {
   const { footer, service } = useContext(ServiceContext);

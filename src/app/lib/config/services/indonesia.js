@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 
 const service = {
-  lang: `id-ID`,
+  lang: `id`,
   articleAuthor: `https://www.facebook.com/pages/BBC-Indonesia/10150118096995434`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-indonesia',
+  atiAnalyticsProducerId: '54',
   brandName: 'BBC News Indonesia',
   product: 'BBC News Indonesia',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
@@ -28,9 +30,12 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    home: 'Berita',
+    currentPage: 'Current page',
+    skipLinkText: 'Langsung ke konten',
     error: {
       404: {
         statusCode: '404',
@@ -114,52 +119,92 @@ const service = {
       audio: 'Audio',
       photogallery: 'Galeri Foto',
       video: 'Video',
-      bbc_indonesian_radio: {
-        title: 'BBC Indonesia Radio',
-        subtitle:
-          'Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.',
-      },
     },
   },
   brandSVG,
   footer: {
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      href: 'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
+      text: 'Baca tentang peraturan baru terkait link eksternal.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        href: 'https://www.bbc.com/indonesia/institutional-49283175',
+        text: 'Alasan Anda dapat mempercayai BBC News',
       },
       {
-        href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        href: 'https://www.bbc.com/indonesia/institutional-37818421',
+        text: 'Peraturan Penggunaan',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        href: 'https://www.bbc.com/indonesia/institutional-37818425/',
+        text: 'Kebijakan tentang Privasi',
       },
       {
-        href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
-      },
-      {
-        href: 'https://www.bbc.com/usingthebbc/cookies/',
+        href:
+          'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/indonesia/institutional-37818427',
+        text: 'Hubungi BBC',
       },
     ],
-    copyrightText: 'BBC. BBC tidak bertanggung jawab atas konten internet luar',
+    copyrightText:
+      'Copyright © 2019 BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
   },
   fonts: [],
+  navigation: [
+    {
+      title: 'Berita',
+      url: '/indonesia',
+    },
+    {
+      title: 'Dunia',
+      url: '/indonesia/dunia',
+    },
+    {
+      title: 'Indonesia',
+      url: '/indonesia/indonesia',
+    },
+    {
+      title: 'Olahraga',
+      url: '/indonesia/olahraga',
+    },
+    {
+      title: 'Majalah',
+      url: '/indonesia/majalah',
+    },
+    {
+      title: '#TrenSosial',
+      url: '/indonesia/trensosial',
+    },
+    {
+      title: 'Video',
+      url: '/indonesia/media/video',
+    },
+    {
+      title: 'Audio',
+      url: '/indonesia/media/audio',
+    },
+    {
+      title: 'Galeri',
+      url: '/indonesia/media/photogalleries',
+    },
+    {
+      title: 'Karangan khas',
+      url: '/indonesia/karangan_khas',
+    },
+    {
+      title: 'Laporan khusus',
+      url: '/indonesia/in_depth',
+    },
+    {
+      title: 'Belajar Bahasa Inggris',
+      url: '/indonesia/bahasa_inggris',
+    },
+  ],
+  timezone: 'Asia/Jakarta',
 };
 
 export default service;
