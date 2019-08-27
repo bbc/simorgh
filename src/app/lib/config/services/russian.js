@@ -4,7 +4,7 @@ import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ru-RU`,
+  lang: `ru`,
   articleAuthor: `https://www.facebook.com/bbcrussian`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-russian',
