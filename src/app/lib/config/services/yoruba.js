@@ -13,6 +13,7 @@ const yoruba = {
   atiAnalyticsProducerId: '107',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
+  isoLang: 'yo',
   datetimeLocale: 'yo',
   service: 'yoruba',
   serviceName: 'Yoruba',

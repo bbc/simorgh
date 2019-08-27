@@ -13,6 +13,7 @@ const igbo = {
   atiAnalyticsProducerId: '53',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
+  isoLang: 'ig',
   datetimeLocale: 'ig',
   service: 'igbo',
   serviceName: 'Igbo',

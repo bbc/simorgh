@@ -119,7 +119,6 @@ const MetadataContainer = ({ metadata, promo }) => {
     publishingPrinciples,
     noBylinesPolicy,
     frontPageTitle,
-    lang,
   } = useContext(ServiceContext);
   const { id: aresArticleId } = metadata;
 
@@ -175,14 +174,13 @@ const MetadataContainer = ({ metadata, promo }) => {
   const alternateLinksWsSites = [
     {
       href: canonicalLink,
-      hrefLang: lang,
+      hrefLang: isoLang,
     },
   ];
 
   if (ENGLISH_SERVICES.includes(service)) {
     alternateLinks = alternateLinksEnglishSites;
-  } else if (isoLang !== null) {
-    // this check is done to filter out services whose lang is not a valid html hreflang
+  } else if (isoLang) {
     alternateLinks = alternateLinksWsSites;
   }
 
