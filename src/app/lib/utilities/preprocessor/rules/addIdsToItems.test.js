@@ -3,7 +3,6 @@ import addIdsToItems from './addIdsToItems';
 jest.mock('uuid', () => () => 'mockId');
 
 const noId = {
-  metadata: {},
   content: {
     groups: [
       {
@@ -27,12 +26,9 @@ const noId = {
       },
     ],
   },
-  promo: {},
-  relatedContent: {},
 };
 
 const withIds = {
-  metadata: {},
   content: {
     groups: [
       {
@@ -58,15 +54,12 @@ const withIds = {
       },
     ],
   },
-  promo: {},
-  relatedContent: {},
 };
 
 describe('addIdsToItems rule', () => {
   it('should add ids to all content type items without ids', () => {
     const actual = addIdsToItems(noId);
     const expected = {
-      ...noId,
       content: {
         groups: [
           {
@@ -97,10 +90,9 @@ describe('addIdsToItems rule', () => {
     expect(actual).toEqual(expected);
   });
 
-  it('should leave items with ids alone', () => {
+  it('should not add id to items with ids', () => {
     const actual = addIdsToItems(withIds);
-    const expected = withIds;
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(withIds);
   });
 });
