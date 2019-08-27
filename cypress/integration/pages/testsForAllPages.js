@@ -183,7 +183,7 @@ export const testsForAllPages = ({ service, pageType }) => {
 
 export const testsToNeverSmokeTestForAllPageTypes = ({ service, pageType }) => {
   describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
-    if (!Cypress.env('SMOKE') && Cypress.env('APP_ENV') === 'live') {
+    if (Cypress.env('APP_ENV') === 'live') {
       describe('Page links test', () => {
         it('links should not 404', () => {
           cy.get('a')
