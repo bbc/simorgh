@@ -27,7 +27,7 @@ Key points:
  - Inside each of the files in the list above there are three sets of tests:
    - **testsThatAlwaysRun** - as the name implies these will always run, use this sparingly because by default it will run for every service, page type and platform (canonical, AMP)! This is useful for features that vary between services.
      - We recommend using conditional logic to select just the services/pagetypes that are necessary. e.g. only run ATI analytics tests on `afaanoromoo, cymrufyw, japanese, naidheachdan, news` instead of all 44 services, since these cover all variants. 
-   - testsThatFollowSmokeTestConfig (this is where most tests go these will run using the smoke true/false flag in the [services config file](../support/config))
+   - **testsThatFollowSmokeTestConfig** - this is where most tests will go. These will only run on PRs if the `smoke` value is `true` for that service/pageType combination. [services config file](../support/config)
    - **testsThatNeverRunDuringSmokeTesting** - this is for tests that are very CPU intensive, long running or low priority. It's a good place for testing layout or page-width variants.
 
 
