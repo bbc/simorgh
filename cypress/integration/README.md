@@ -24,7 +24,7 @@ Key points:
    - testsForALLAMPPages.js or testsForAllCanonicalPages.js
    - /[pageName]/tests.js
    - /[pageName]/testsForAMPOnly.js or /[pageName]/testsForCanonicalOnly.js
- - Inside each of the files in the list above there are two sets of tests:
+ - Inside each of the files in the list above there are three sets of tests:
    - testsThatAlwaysRun (as the name implies these will always run, use this sparingly because it will run for every service!)
      - as such tests bypass smoke test rules logic, limiting the services/pages they run on with conditonal logic is strongly encouraged - these tests are deliberately not given their own config for service:pageType combinations to run on to keep config maintainable and to reduce the cognitive complexity of these tests rather than increase the level of abstraction. This may cause a wasted page visit during testing.
    - testsThatFollowSmokeTestConfig (this is where most tests go these will run using the smoke true/false flag in the [services config file](../support/config))
