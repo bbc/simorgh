@@ -18,13 +18,13 @@ import {
 const testsForPage = {
   pageType: 'errorPage404',
   testsThatAlwaysRun,
-  testsThatFollowSmokeTestConfig,
-  testsThatNeverRunDuringSmokeTesting,
   testsThatAlwaysRunForCanonicalOnly,
-  testsThatFollowSmokeTestConfigForCanonicalOnly,
-  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,
+  testsThatFollowSmokeTestConfig,
+  testsThatFollowSmokeTestConfigForCanonicalOnly,
   testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatNeverRunDuringSmokeTesting,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
   testsThatNeverRunDuringSmokeTestingForAMPOnly,
 };
 

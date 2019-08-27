@@ -18,13 +18,13 @@ import {
 const testsForPage = {
   pageType: 'liveRadio',
   testsThatAlwaysRun,
-  testsThatFollowSmokeTestConfig,
-  testsThatNeverRunDuringSmokeTesting,
   testsThatAlwaysRunForCanonicalOnly,
-  testsThatFollowSmokeTestConfigForCanonicalOnly,
-  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,
+  testsThatFollowSmokeTestConfig,
+  testsThatFollowSmokeTestConfigForCanonicalOnly,
   testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatNeverRunDuringSmokeTesting,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
   testsThatNeverRunDuringSmokeTestingForAMPOnly,
 };
 

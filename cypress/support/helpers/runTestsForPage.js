@@ -25,13 +25,13 @@ const serviceHasPageType = (service, pageType) =>
 const runTestsForPage = ({
   pageType,
   testsThatAlwaysRun,
-  testsThatFollowSmokeTestConfig,
-  testsThatNeverRunDuringSmokeTesting,
   testsThatAlwaysRunForCanonicalOnly,
-  testsThatFollowSmokeTestConfigForCanonicalOnly,
-  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,
+  testsThatFollowSmokeTestConfig,
+  testsThatFollowSmokeTestConfigForCanonicalOnly,
   testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatNeverRunDuringSmokeTesting,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
   testsThatNeverRunDuringSmokeTestingForAMPOnly,
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
