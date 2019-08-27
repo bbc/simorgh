@@ -48,7 +48,7 @@
     "test:lint:css": "stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --env=jsdom --colors ./puppeteer",
     "test:size": "node ./scripts/bundleSize.js",
-    "test:unit": "jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\" --clearCache",
+    "test:unit": "jest --clearCache && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\"",
     "test:unit:watch": "jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\" --watch",
     "snyk": "snyk test",
     "updateSnapshots": "npm run test:unit -- -u",
