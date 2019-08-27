@@ -4,7 +4,7 @@ import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
-  lang: `om-ET`,
+  lang: `om`,
   articleAuthor: `https://www.facebook.com/bbcnewsafaanoromoo`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-afaanoromoo',
@@ -33,6 +33,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'Oduu',
+    currentPage: 'Current page',
+    skipLinkText: 'Qabiyyeetti darbi',
     error: {
       404: {
         statusCode: '404',

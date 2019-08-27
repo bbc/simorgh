@@ -5,7 +5,7 @@ import 'moment/locale/th';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 
 const service = {
-  lang: `th-TH`,
+  lang: `th`,
   articleAuthor: `https://www.facebook.com/BBCThai`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-thai',
@@ -34,6 +34,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'หน้าแรก',
     currentPage: 'หน้าปัจจุบัน',
     skipLinkText: 'ข้ามไปยังเนื้อหา',
     error: {

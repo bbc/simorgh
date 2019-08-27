@@ -2,8 +2,8 @@
 
 def nodeImage = "329802642264.dkr.ecr.eu-west-1.amazonaws.com/bbc-news/node-10-lts:10.16.0-1"
 
-// Run latest every 4 hours
-def cron_string = env.BRANCH_NAME == "latest" ? "0 */4 * * *" : ""
+// Run latest every 1 hour
+def cron_string = env.BRANCH_NAME == "latest" ? "0 */1 * * *" : ""
 
 def notifySlack(messageParameters) {
   def message = "${messageParameters.emoji} Simorgh E2Es \n*Status:* ${messageParameters.buildStatus} \n*Env:* ${messageParameters.env} \n*Branch:* ${messageParameters.branch} \n*Pipeline:* ${env.BUILD_URL}"
@@ -18,7 +18,17 @@ def notifySlack(messageParameters) {
 def stageHasFailed = false;
 
 node {
-  properties([pipelineTriggers([cron(cron_string)])])
+  properties(
+    [
+        buildDiscarder(
+            logRotator(
+                daysToKeepStr: '10',
+                artifactDaysToKeepStr: '10'
+            )
+        ),
+        pipelineTriggers([cron(cron_string)])
+    ]
+  )
   timeout(time: 90, unit: 'MINUTES') {
     withEnv([
       'CI=true'
@@ -29,6 +39,27 @@ node {
         try {
           stage ('Install & Setup') {
             sh 'make install'
+          }
+          stage ('Live E2Es') {
+            try {
+              sh 'make liveE2Es'
+            } catch (Throwable e) {
+              def messageParameters = [
+                buildStatus: 'Failed',
+                env: 'LIVE',
+                branch: env.BRANCH_NAME,
+                colour: 'danger',
+                emoji: '😱',
+              ]
+
+              if (env.BRANCH_NAME == 'latest') {
+                notifySlack(messageParameters)
+                stageHasFailed = true
+              }
+
+              currentBuild.result = 'FAILURE'
+              throw e
+            }
           }
           stage ('Local Prod Tests') {
             try {
@@ -49,7 +80,7 @@ node {
 
               currentBuild.result = 'FAILURE'
               throw e
-            }   
+            }
           }
           stage ('Test E2Es') {
             try {
@@ -62,28 +93,7 @@ node {
                 colour: 'danger',
                 emoji: '😱',
               ]
-              
-              if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters)
-                stageHasFailed = true
-              }
 
-              currentBuild.result = 'FAILURE'
-              throw e
-            }
-          }
-          stage ('Live E2Es') {
-            try {
-              sh 'make liveE2Es'
-            } catch (Throwable e) {
-              def messageParameters = [
-                buildStatus: 'Failed',
-                env: 'LIVE',
-                branch: env.BRANCH_NAME,
-                colour: 'danger',
-                emoji: '😱',
-              ]
-              
               if (env.BRANCH_NAME == 'latest') {
                 notifySlack(messageParameters)
                 stageHasFailed = true

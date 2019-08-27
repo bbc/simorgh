@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { arrayOf, string } from 'prop-types';
 
 const ResourceHints = ({ assetOrigins }) => (
-  <Fragment>
+  <>
     {assetOrigins.map(origin => (
       <link
         rel="preconnect"
@@ -14,7 +14,7 @@ const ResourceHints = ({ assetOrigins }) => (
     {assetOrigins.map(origin => (
       <link rel="dns-prefetch" key={origin} href={origin} />
     ))}
-  </Fragment>
+  </>
 );
 
 ResourceHints.propTypes = {

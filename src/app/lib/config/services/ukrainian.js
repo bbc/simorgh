@@ -4,7 +4,7 @@ import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `uk-UA`,
+  lang: `uk`,
   articleAuthor: `http://www.facebook.com/BBC.Ukrainian`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-ukrainian',
@@ -33,6 +33,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'Головна',
+    currentPage: 'Current page',
+    skipLinkText: 'Перейти до змісту',
     error: {
       404: {
         statusCode: '404',

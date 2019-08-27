@@ -4,7 +4,7 @@ import { japanese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Tokyo';
 
 const service = {
-  lang: `ja-JP`,
+  lang: `ja`,
   articleAuthor: `https://www.facebook.com/bbcnewsjapan/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-japanese',
@@ -34,6 +34,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'ホーム',
+    currentPage: 'Current page',
+    skipLinkText: 'コンテンツへ移動',
     error: {
       404: {
         statusCode: '404',

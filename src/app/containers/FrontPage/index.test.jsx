@@ -105,7 +105,7 @@ describe('FrontPageContainer', () => {
 
       it('should render error page when an error occurs', () => {
         const { container } = render(
-          <FrontPageComponent {...defaultProps} error />,
+          <FrontPageComponent {...defaultProps} error={new Error('oh no')} />,
         );
 
         const { textContent } = container.querySelector('main');
@@ -124,7 +124,7 @@ describe('FrontPageContainer', () => {
         const { container } = render(
           <FrontPageComponent
             {...defaultProps}
-            error={false}
+            error={null}
             data={data}
             service="igbo"
           />,

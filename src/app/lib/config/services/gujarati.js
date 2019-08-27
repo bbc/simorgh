@@ -4,7 +4,7 @@ import { gujarati as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `gu-IN`,
+  lang: `gu`,
   articleAuthor: `https://www.facebook.com/bbcnewsgujarati`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-gujarati',
@@ -33,6 +33,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'સમાચાર',
+    currentPage: 'Current page',
+    skipLinkText: 'સામગ્રી પર જાઓ',
     error: {
       404: {
         statusCode: '404',

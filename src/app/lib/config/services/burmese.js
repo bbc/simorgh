@@ -5,7 +5,7 @@ import { F_PADAUK_BOLD, F_PADAUK_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `my-MM`,
+  lang: `my`,
   articleAuthor: `https://www.facebook.com/bbcburmese`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-burmese',
@@ -34,6 +34,9 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    home: 'ပင်မစာမျက်နှာ',
+    currentPage: 'Current page',
+    skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားပါ',
     error: {
       404: {
         statusCode: '404',

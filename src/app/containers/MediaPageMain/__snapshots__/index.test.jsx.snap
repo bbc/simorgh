@@ -1,193 +1,585 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
-.c2 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  color: #3F3F42;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #3F3F42;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
-}
-
-<main
-  role="main"
->
-  <div
-    className="c0"
+<React.Fragment>
+  <ATIAnalytics
+    data={
+      Object {
+        "content": Object {
+          "blocks": Array [
+            Object {
+              "markupType": "plain_text",
+              "text": "ያድምጡ",
+              "type": "heading",
+            },
+            Object {
+              "text": "ዝግጅቶቻችንን",
+              "type": "paragraph",
+            },
+            Object {
+              "available": true,
+              "caption": "",
+              "duration": "PT0S",
+              "embedding": false,
+              "externalId": "bbc_amharic_radio",
+              "format": "audio",
+              "id": "liveradio",
+              "live": true,
+              "subType": "primary",
+              "type": "version",
+            },
+          ],
+        },
+        "metadata": Object {
+          "analyticsLabels": Object {
+            "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page",
+            "pageTitle": "ያድምጡ - BBC News አማርኛ",
+          },
+          "blockTypes": Array [
+            "heading",
+            "version",
+            "paragraph",
+          ],
+          "createdBy": "amharic",
+          "firstPublished": 0,
+          "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
+          "language": "am",
+          "lastPublished": 0,
+          "lastUpdated": 0,
+          "locators": Object {},
+          "options": Object {},
+          "tags": Object {},
+          "type": "WS-LIVE",
+          "version": "1.1.1",
+        },
+        "promo": Object {
+          "contentType": "WS-LIVE",
+          "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
+          "name": "ያድምጡ",
+          "summary": "ዝግጅቶቻችንን",
+          "type": "link",
+          "uri": "/amharic/bbc_amharic_radio/liveradio",
+        },
+        "relatedContent": Object {
+          "groups": Array [],
+          "site": Object {
+            "name": "amharic",
+            "subType": "simple",
+            "type": "simple",
+            "uri": "/amharic",
+          },
+        },
+      }
+    }
+  />
+  <MetadataContainer
+    metadata={
+      Object {
+        "analyticsLabels": Object {
+          "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page",
+          "pageTitle": "ያድምጡ - BBC News አማርኛ",
+        },
+        "blockTypes": Array [
+          "heading",
+          "version",
+          "paragraph",
+        ],
+        "createdBy": "amharic",
+        "firstPublished": 0,
+        "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
+        "language": "am",
+        "lastPublished": 0,
+        "lastUpdated": 0,
+        "locators": Object {},
+        "options": Object {},
+        "tags": Object {},
+        "type": "WS-LIVE",
+        "version": "1.1.1",
+      }
+    }
+    promo={
+      Object {
+        "contentType": "WS-LIVE",
+        "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
+        "name": "ያድምጡ",
+        "summary": "ዝግጅቶቻችንን",
+        "type": "link",
+        "uri": "/amharic/bbc_amharic_radio/liveradio",
+      }
+    }
+  />
+  <main
+    role="main"
   >
-    <div
-      className="c1"
-    >
-      <h1
-        className="c2"
+    <ForwardRef(Grid)>
+      <ForwardRef(GridItemConstrainedMedium)
+        gridColumnStart={6}
+        gridSpan={10}
       >
-        ያድምጡ
-      </h1>
-      <p
-        className="c3"
-      >
-        ዝግጅቶቻችንን
-      </p>
-      <ul>
-        <li>
-          <strong>
-            Service
-          </strong>
-          : 
-          amharic
-        </li>
-        <li>
-          <strong>
-            Brand
-          </strong>
-          : 
-          bbc_amharic_radio
-        </li>
-        <li>
-          <strong>
-            MediaId
-          </strong>
-          : 
-          liveradio
-        </li>
-      </ul>
-    </div>
-  </div>
-</main>
+        <ForwardRef(Headline)
+          id="content"
+          script={
+            Object {
+              "atlas": Object {
+                "groupA": Object {
+                  "fontSize": "78",
+                  "lineHeight": "84",
+                },
+                "groupB": Object {
+                  "fontSize": "96",
+                  "lineHeight": "104",
+                },
+                "groupD": Object {
+                  "fontSize": "140",
+                  "lineHeight": "148",
+                },
+              },
+              "bodyCopy": Object {
+                "groupA": Object {
+                  "fontSize": "15",
+                  "lineHeight": "20",
+                },
+                "groupB": Object {
+                  "fontSize": "16",
+                  "lineHeight": "22",
+                },
+                "groupD": Object {
+                  "fontSize": "16",
+                  "lineHeight": "22",
+                },
+              },
+              "brevier": Object {
+                "groupA": Object {
+                  "fontSize": "14",
+                  "lineHeight": "18",
+                },
+                "groupB": Object {
+                  "fontSize": "14",
+                  "lineHeight": "18",
+                },
+                "groupD": Object {
+                  "fontSize": "13",
+                  "lineHeight": "16",
+                },
+              },
+              "canon": Object {
+                "groupA": Object {
+                  "fontSize": "28",
+                  "lineHeight": "32",
+                },
+                "groupB": Object {
+                  "fontSize": "32",
+                  "lineHeight": "36",
+                },
+                "groupD": Object {
+                  "fontSize": "44",
+                  "lineHeight": "48",
+                },
+              },
+              "doublePica": Object {
+                "groupA": Object {
+                  "fontSize": "18",
+                  "lineHeight": "22",
+                },
+                "groupB": Object {
+                  "fontSize": "20",
+                  "lineHeight": "24",
+                },
+                "groupD": Object {
+                  "fontSize": "24",
+                  "lineHeight": "28",
+                },
+              },
+              "elephant": Object {
+                "groupA": Object {
+                  "fontSize": "60",
+                  "lineHeight": "64",
+                },
+                "groupB": Object {
+                  "fontSize": "78",
+                  "lineHeight": "84",
+                },
+                "groupD": Object {
+                  "fontSize": "116",
+                  "lineHeight": "124",
+                },
+              },
+              "foolscap": Object {
+                "groupA": Object {
+                  "fontSize": "32",
+                  "lineHeight": "36",
+                },
+                "groupB": Object {
+                  "fontSize": "40",
+                  "lineHeight": "44",
+                },
+                "groupD": Object {
+                  "fontSize": "56",
+                  "lineHeight": "60",
+                },
+              },
+              "greatPrimer": Object {
+                "groupA": Object {
+                  "fontSize": "18",
+                  "lineHeight": "22",
+                },
+                "groupB": Object {
+                  "fontSize": "18",
+                  "lineHeight": "22",
+                },
+                "groupD": Object {
+                  "fontSize": "20",
+                  "lineHeight": "24",
+                },
+              },
+              "imperial": Object {
+                "groupA": Object {
+                  "fontSize": "50",
+                  "lineHeight": "54",
+                },
+                "groupB": Object {
+                  "fontSize": "64",
+                  "lineHeight": "72",
+                },
+                "groupD": Object {
+                  "fontSize": "96",
+                  "lineHeight": "104",
+                },
+              },
+              "longPrimer": Object {
+                "groupA": Object {
+                  "fontSize": "15",
+                  "lineHeight": "18",
+                },
+                "groupB": Object {
+                  "fontSize": "15",
+                  "lineHeight": "18",
+                },
+                "groupD": Object {
+                  "fontSize": "14",
+                  "lineHeight": "18",
+                },
+              },
+              "minion": Object {
+                "groupA": Object {
+                  "fontSize": "12",
+                  "lineHeight": "16",
+                },
+                "groupB": Object {
+                  "fontSize": "12",
+                  "lineHeight": "16",
+                },
+                "groupD": Object {
+                  "fontSize": "12",
+                  "lineHeight": "16",
+                },
+              },
+              "paragon": Object {
+                "groupA": Object {
+                  "fontSize": "20",
+                  "lineHeight": "24",
+                },
+                "groupB": Object {
+                  "fontSize": "22",
+                  "lineHeight": "26",
+                },
+                "groupD": Object {
+                  "fontSize": "28",
+                  "lineHeight": "32",
+                },
+              },
+              "pica": Object {
+                "groupA": Object {
+                  "fontSize": "15",
+                  "lineHeight": "20",
+                },
+                "groupB": Object {
+                  "fontSize": "16",
+                  "lineHeight": "20",
+                },
+                "groupD": Object {
+                  "fontSize": "16",
+                  "lineHeight": "20",
+                },
+              },
+              "royal": Object {
+                "groupA": Object {
+                  "fontSize": "40",
+                  "lineHeight": "44",
+                },
+                "groupB": Object {
+                  "fontSize": "52",
+                  "lineHeight": "60",
+                },
+                "groupD": Object {
+                  "fontSize": "76",
+                  "lineHeight": "84",
+                },
+              },
+              "trafalgar": Object {
+                "groupA": Object {
+                  "fontSize": "20",
+                  "lineHeight": "24",
+                },
+                "groupB": Object {
+                  "fontSize": "24",
+                  "lineHeight": "28",
+                },
+                "groupD": Object {
+                  "fontSize": "32",
+                  "lineHeight": "36",
+                },
+              },
+            }
+          }
+          service="amharic"
+        >
+          ያድምጡ
+        </ForwardRef(Headline)>
+        <ForwardRef(Paragraph)
+          script={
+            Object {
+              "atlas": Object {
+                "groupA": Object {
+                  "fontSize": "78",
+                  "lineHeight": "84",
+                },
+                "groupB": Object {
+                  "fontSize": "96",
+                  "lineHeight": "104",
+                },
+                "groupD": Object {
+                  "fontSize": "140",
+                  "lineHeight": "148",
+                },
+              },
+              "bodyCopy": Object {
+                "groupA": Object {
+                  "fontSize": "15",
+                  "lineHeight": "20",
+                },
+                "groupB": Object {
+                  "fontSize": "16",
+                  "lineHeight": "22",
+                },
+                "groupD": Object {
+                  "fontSize": "16",
+                  "lineHeight": "22",
+                },
+              },
+              "brevier": Object {
+                "groupA": Object {
+                  "fontSize": "14",
+                  "lineHeight": "18",
+                },
+                "groupB": Object {
+                  "fontSize": "14",
+                  "lineHeight": "18",
+                },
+                "groupD": Object {
+                  "fontSize": "13",
+                  "lineHeight": "16",
+                },
+              },
+              "canon": Object {
+                "groupA": Object {
+                  "fontSize": "28",
+                  "lineHeight": "32",
+                },
+                "groupB": Object {
+                  "fontSize": "32",
+                  "lineHeight": "36",
+                },
+                "groupD": Object {
+                  "fontSize": "44",
+                  "lineHeight": "48",
+                },
+              },
+              "doublePica": Object {
+                "groupA": Object {
+                  "fontSize": "18",
+                  "lineHeight": "22",
+                },
+                "groupB": Object {
+                  "fontSize": "20",
+                  "lineHeight": "24",
+                },
+                "groupD": Object {
+                  "fontSize": "24",
+                  "lineHeight": "28",
+                },
+              },
+              "elephant": Object {
+                "groupA": Object {
+                  "fontSize": "60",
+                  "lineHeight": "64",
+                },
+                "groupB": Object {
+                  "fontSize": "78",
+                  "lineHeight": "84",
+                },
+                "groupD": Object {
+                  "fontSize": "116",
+                  "lineHeight": "124",
+                },
+              },
+              "foolscap": Object {
+                "groupA": Object {
+                  "fontSize": "32",
+                  "lineHeight": "36",
+                },
+                "groupB": Object {
+                  "fontSize": "40",
+                  "lineHeight": "44",
+                },
+                "groupD": Object {
+                  "fontSize": "56",
+                  "lineHeight": "60",
+                },
+              },
+              "greatPrimer": Object {
+                "groupA": Object {
+                  "fontSize": "18",
+                  "lineHeight": "22",
+                },
+                "groupB": Object {
+                  "fontSize": "18",
+                  "lineHeight": "22",
+                },
+                "groupD": Object {
+                  "fontSize": "20",
+                  "lineHeight": "24",
+                },
+              },
+              "imperial": Object {
+                "groupA": Object {
+                  "fontSize": "50",
+                  "lineHeight": "54",
+                },
+                "groupB": Object {
+                  "fontSize": "64",
+                  "lineHeight": "72",
+                },
+                "groupD": Object {
+                  "fontSize": "96",
+                  "lineHeight": "104",
+                },
+              },
+              "longPrimer": Object {
+                "groupA": Object {
+                  "fontSize": "15",
+                  "lineHeight": "18",
+                },
+                "groupB": Object {
+                  "fontSize": "15",
+                  "lineHeight": "18",
+                },
+                "groupD": Object {
+                  "fontSize": "14",
+                  "lineHeight": "18",
+                },
+              },
+              "minion": Object {
+                "groupA": Object {
+                  "fontSize": "12",
+                  "lineHeight": "16",
+                },
+                "groupB": Object {
+                  "fontSize": "12",
+                  "lineHeight": "16",
+                },
+                "groupD": Object {
+                  "fontSize": "12",
+                  "lineHeight": "16",
+                },
+              },
+              "paragon": Object {
+                "groupA": Object {
+                  "fontSize": "20",
+                  "lineHeight": "24",
+                },
+                "groupB": Object {
+                  "fontSize": "22",
+                  "lineHeight": "26",
+                },
+                "groupD": Object {
+                  "fontSize": "28",
+                  "lineHeight": "32",
+                },
+              },
+              "pica": Object {
+                "groupA": Object {
+                  "fontSize": "15",
+                  "lineHeight": "20",
+                },
+                "groupB": Object {
+                  "fontSize": "16",
+                  "lineHeight": "20",
+                },
+                "groupD": Object {
+                  "fontSize": "16",
+                  "lineHeight": "20",
+                },
+              },
+              "royal": Object {
+                "groupA": Object {
+                  "fontSize": "40",
+                  "lineHeight": "44",
+                },
+                "groupB": Object {
+                  "fontSize": "52",
+                  "lineHeight": "60",
+                },
+                "groupD": Object {
+                  "fontSize": "76",
+                  "lineHeight": "84",
+                },
+              },
+              "trafalgar": Object {
+                "groupA": Object {
+                  "fontSize": "20",
+                  "lineHeight": "24",
+                },
+                "groupB": Object {
+                  "fontSize": "24",
+                  "lineHeight": "28",
+                },
+                "groupD": Object {
+                  "fontSize": "32",
+                  "lineHeight": "36",
+                },
+              },
+            }
+          }
+          service="amharic"
+        >
+          ዝግጅቶቻችንን
+        </ForwardRef(Paragraph)>
+        <ul>
+          <li>
+            <strong>
+              Service
+            </strong>
+            : 
+            amharic
+          </li>
+          <li>
+            <strong>
+              Brand
+            </strong>
+            : 
+            bbc_amharic_radio
+          </li>
+          <li>
+            <strong>
+              MediaId
+            </strong>
+            : 
+            liveradio
+          </li>
+        </ul>
+      </ForwardRef(GridItemConstrainedMedium)>
+    </ForwardRef(Grid)>
+  </main>
+</React.Fragment>
 `;
