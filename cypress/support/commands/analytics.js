@@ -1,0 +1,36 @@
+// Should be moved into integration/pages/index.js once all pages have ATI
+Cypress.Commands.add('hasNoscriptImgAtiUrl', (atiUrl, analyticsBucketId) => {
+  cy.get('noscript')
+    .eq(0)
+    .should(
+      'contain',
+      `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}s=${analyticsBucketId}`,
+    );
+});
+
+// Should be moved into integration/pages/index.js once all pages have ATI
+Cypress.Commands.add('hasAmpAnalyticsAtiUrl', (atiUrl, analyticsBucketId) => {
+  cy.get('amp-analytics script[type="application/json"]')
+    .eq(0)
+    .should('contain', `${atiUrl}`)
+    .should('contain', `s=${analyticsBucketId}`);
+});
+
+// Should be moved into integration/pages/index.js once all pages have Chartbeat
+Cypress.Commands.add('hasScriptWithChartbeatSrc', () => {
+  cy.get(`script[src="//static.chartbeat.com/js/chartbeat.js"]`).should(
+    'exist',
+  );
+});
+
+// Should be moved into integration/pages/index.js once all pages have Chartbeat
+Cypress.Commands.add('hasGlobalChartbeatConfig', () => {
+  cy.window().should('have.property', '_sf_async_config');
+});
+
+// Should be moved into integration/pages/index.js once all pages have Chartbeat
+Cypress.Commands.add('hasAmpChartbeatConfigUid', () => {
+  cy.get('amp-analytics script[type="application/json"]')
+    .eq(1)
+    .should('contain', '50924');
+});
