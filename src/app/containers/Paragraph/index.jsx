@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import Paragraph from '@bbc/psammead-paragraph';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '@contexts/ServiceContext';
+import { GridItemConstrainedMedium } from '@lib/styledGrid';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import inline from '../InlineContainer';
 import { paragraphModelPropTypes } from '../../models/propTypes/paragraph';
-import { GridItemConstrainedMedium } from '../../lib/styledGrid';
 
 const componentsToRender = { fragment, urlLink: InlineLink, inline };
 

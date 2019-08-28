@@ -3,11 +3,11 @@ import { bool, shape, number } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '@contexts/ServiceContext';
+import idSanitiser from '@lib/utilities/idSanitiser';
 import StoryPromo from '../StoryPromo';
 import groupShape from '../../models/propTypes/frontPageGroup';
 import { storyItem } from '../../models/propTypes/storyItem';
-import idSanitiser from '../../lib/utilities/idSanitiser';
 
 const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
   const topStory = sectionNumber === 0 && storyNumber === 0;

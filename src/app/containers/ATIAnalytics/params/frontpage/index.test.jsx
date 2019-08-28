@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import * as commonTestUtils from '@lib/analyticsUtils';
+import * as testUtils from '@lib/analyticsUtils/frontpage';
+import { ServiceContext } from '@contexts/ServiceContext';
+import { RequestContextProvider } from '@contexts/RequestContext';
 import * as atiPageViewParams from '../../atiUrl';
-import * as commonTestUtils from '../../../../lib/analyticsUtils';
-import * as testUtils from '../../../../lib/analyticsUtils/frontpage';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../../contexts/RequestContext';
 
 import FrontPageAtiParams from '.';
 

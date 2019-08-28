@@ -3,10 +3,10 @@ import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import ResourceHints from '../../app/components/ResourceHints';
-import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
-import MPulseBeacon from '../../app/containers/MPulseBeacon';
-import { DialContextProvider } from '../../app/contexts/DialContext';
+import ResourceHints from '@components/ResourceHints';
+import IfAboveIE9 from '@components/IfAboveIE9Comment';
+import MPulseBeacon from '@app/containers/MPulseBeacon';
+import { DialContextProvider } from '@app/contexts/DialContext';
 
 /* eslint-disable react/prop-types */
 const Document = ({

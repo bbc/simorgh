@@ -1,11 +1,11 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import { isNull } from '../../../testHelpers';
-import { DialContextProvider } from '../../contexts/DialContext';
+import MPulseBeacon from '@components/MPulseBeacon';
+import { DialContextProvider } from '@contexts/DialContext';
+import { isNull } from '@testHelpers';
 import MPulseBeaconContainer from './index';
-import MPulseBeacon from '../../components/MPulseBeacon';
 
-jest.mock('../../components/MPulseBeacon', () => () => <script>mPulse</script>);
+jest.mock('@components/MPulseBeacon', () => () => <script>mPulse</script>);
 
 // eslint-disable-next-line react/prop-types
 const beaconContainerWithContext = dials => (

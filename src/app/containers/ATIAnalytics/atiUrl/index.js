@@ -9,7 +9,7 @@ import {
   getReferrer,
   isLocServeCookieSet,
   sanitise,
-} from '../../../lib/analyticsUtils';
+} from '@lib/analyticsUtils';
 
 /*
  * For AMP pages, certain browser and device values are determined

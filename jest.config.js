@@ -14,6 +14,7 @@ module.exports = {
     '^@data(.*)$': '<rootDir>/data$1',
     '^@testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
     '^@app(.*)$': '<rootDir>/src/app$1',
+    '^@contexts(.*)$': '<rootDir>/src/app/contexts$1',
   },
   transform: {
     '^.+\\.js$': 'babel-jest',

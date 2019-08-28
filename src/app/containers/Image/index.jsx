@@ -1,15 +1,15 @@
 import React from 'react';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
-import { imageModelPropTypes } from '../../models/propTypes/image';
-import ArticleFigure from '../ArticleFigure';
+import filterForBlockType from '@lib/utilities/blockHandlers';
 import {
   GridItemConstrainedLargeNoMargin,
   GridItemConstrainedMedium,
   GridItemConstrainedSmall,
-} from '../../lib/styledGrid';
+} from '@lib/styledGrid';
+import urlWithPageAnchor from '@lib/utilities/pageAnchor';
+import { imageModelPropTypes } from '../../models/propTypes/image';
+import ArticleFigure from '../ArticleFigure';
 import createSrcset from './helpers/srcSet';
 import getIChefURL from './helpers/ichefUrl';
-import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 3;

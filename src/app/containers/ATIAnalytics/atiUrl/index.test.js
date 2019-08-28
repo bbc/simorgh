@@ -1,4 +1,4 @@
-import * as genericLabelHelpers from '../../../lib/analyticsUtils';
+import * as genericLabelHelpers from '@lib/analyticsUtils';
 
 const atiPageViewParams = require('.').default;
 

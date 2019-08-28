@@ -2,7 +2,7 @@ import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import { ServerApp } from '../../app/containers/App';
+import { ServerApp } from '@app/containers/App';
 
 import { getStyleTag } from '../styles';
 import { getAssetsArray, getAssetOrigins } from '../assets';

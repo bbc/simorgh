@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { DialContext } from '../../contexts/DialContext';
-import MPulseBeacon from '../../components/MPulseBeacon';
+import { DialContext } from '@contexts/DialContext';
+import MPulseBeacon from '@components/MPulseBeacon';
 
 const MPulseBeaconContainer = () => {
   const { mpulse } = useContext(DialContext);

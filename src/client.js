@@ -2,10 +2,10 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 import { hydrate } from 'react-dom';
+import { template, templateStyles } from '@lib/joinUsTemplate';
+import loggerNode from '@lib/logger.node';
 import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
-import { template, templateStyles } from './app/lib/joinUsTemplate';
-import loggerNode from './app/lib/logger.node';
 
 const logger = loggerNode();
 

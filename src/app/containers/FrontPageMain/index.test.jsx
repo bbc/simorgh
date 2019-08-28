@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
+import frontPageDataPidgin from '@data/pidgin/frontpage';
+import igboConfig from '@lib/config/services/igbo';
+import preprocessor from '@lib/utilities/preprocessor';
+import filterUnknownContentTypes from '@lib/utilities/preprocessor/rules/filterContentType';
+import { RequestContext } from '@contexts/RequestContext';
+import { ServiceContext } from '@contexts/ServiceContext';
+import { shouldShallowMatchSnapshot } from '@testHelpers';
 import FrontPageMain from '.';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
-import igboConfig from '../../lib/config/services/igbo';
-import preprocessor from '../../lib/utilities/preprocessor';
-import filterUnknownContentTypes from '../../lib/utilities/preprocessor/rules/filterContentType';
-import { RequestContext } from '../../contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
 
 const processedPidgin = preprocessor(frontPageDataPidgin, [
   filterUnknownContentTypes,

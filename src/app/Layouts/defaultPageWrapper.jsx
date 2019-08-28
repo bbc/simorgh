@@ -1,10 +1,10 @@
 import React from 'react';
 import { node } from 'prop-types';
+import GlobalStyle from '@lib/globalStyles';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
-import GlobalStyle from '../lib/globalStyles';
 
 const PageWrapper = ({ children }) => (
   <>

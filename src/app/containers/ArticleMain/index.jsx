@@ -1,4 +1,5 @@
 import React from 'react';
+import { GhostGrid } from '@lib/styledGrid';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
@@ -6,7 +7,6 @@ import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
-import { GhostGrid } from '../../lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';

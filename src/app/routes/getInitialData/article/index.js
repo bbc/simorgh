@@ -1,9 +1,9 @@
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '@lib/utilities/onClient';
+import applyTimestampRules from '@lib/utilities/preprocessor/rules/timestamp';
+import addIdsToBlocks from '@lib/utilities/preprocessor/rules/addIdsToBlocks';
+import applyBlockPositioning from '@lib/utilities/preprocessor/rules/blockPositioning';
 import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
-import applyTimestampRules from '../../../lib/utilities/preprocessor/rules/timestamp';
-import addIdsToBlocks from '../../../lib/utilities/preprocessor/rules/addIdsToBlocks';
-import applyBlockPositioning from '../../../lib/utilities/preprocessor/rules/blockPositioning';
 
 const getArticleInitialData = async ({ id, service }) => {
   const baseUrl = onClient()

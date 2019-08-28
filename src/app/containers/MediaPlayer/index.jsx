@@ -1,5 +1,8 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
+import { RequestContext } from '@contexts/RequestContext';
+import { GridItemConstrainedMedium } from '@lib/styledGrid';
+import filterForBlockType from '@lib/utilities/blockHandlers';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -7,10 +10,8 @@ import {
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import getPlaceholderSrc from './helpers/placeholder';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
 import useToggle from '../Toggle/useToggle';
-import { RequestContext } from '../../contexts/RequestContext';
-import { GridItemConstrainedMedium } from '../../lib/styledGrid';
+
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,

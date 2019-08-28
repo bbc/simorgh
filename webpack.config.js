@@ -41,6 +41,7 @@ module.exports = (shell = {}) => {
         '@lib': resolvePath('src/app/lib/'),
         '@testHelpers': resolvePath('src/testHelpers/'),
         '@app': resolvePath('src/app'),
+        '@contexts': resolvePath('src/app/contexts'),
       },
     }, // resolves `import '../Foo'` to `../Foo/index.jsx`
     devServer: {

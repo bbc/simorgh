@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import { node } from 'prop-types';
+import defaultToggles from '@lib/config/toggles';
 import toggleReducer from '../../reducers/ToggleReducer';
-import defaultToggles from '../../lib/config/toggles';
 
 const ToggleContext = createContext();
 
