@@ -34,6 +34,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
     home: 'వార్తలు',
     currentPage: 'Current page',
     skipLinkText: 'కంటెంట్‌కు దాటవేయండి',
