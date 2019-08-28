@@ -10,6 +10,7 @@ import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
 import { localBaseUrl } from '../../../testHelpers/config';
+import data from '../../../../data/news/frontpage';
 
 const defaultToggleState = {
   test: {
@@ -58,7 +59,7 @@ ContextWrap.defaultProps = {
   toggleState: defaultToggleState,
 };
 
-const mockData = {};
+const mockData = data;
 
 describe('Charbeats Analytics Container', () => {
   it('should call CanonicalCharbeatsBeacon when platform is canonical, and toggle enabled for chartbeat for local', () => {
