@@ -32,6 +32,7 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: '홈페이지',
   translations: {
     home: '뉴스',
     currentPage: 'Current page',

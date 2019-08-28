@@ -32,6 +32,8 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle:
+    'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
   translations: {
     home: 'होम पेज',
     currentPage: 'Current page',

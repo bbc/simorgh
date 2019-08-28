@@ -33,6 +33,7 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'मुख पृष्ठ',
   translations: {
     home: 'मुख पृष्ठ',
     currentPage: 'Current page',

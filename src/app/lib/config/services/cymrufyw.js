@@ -33,6 +33,7 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Newyddion a mwy',
   translations: {
     home: 'Hafan',
     currentPage: 'Current page',

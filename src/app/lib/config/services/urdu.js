@@ -38,6 +38,8 @@ const service = {
   script: arabic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle:
+    'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
   translations: {
     home: 'صفحۂ اول',
     currentPage: 'Current page',
