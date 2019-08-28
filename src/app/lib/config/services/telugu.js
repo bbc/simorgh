@@ -5,7 +5,7 @@ import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `te-IN`,
+  lang: `te`,
   articleAuthor: `https://www.facebook.com/bbcnewstelugu`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-telugu',
@@ -34,6 +34,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'వార్తలు',
+    currentPage: 'Current page',
+    skipLinkText: 'కంటెంట్‌కు దాటవేయండి',
     error: {
       404: {
         statusCode: '404',

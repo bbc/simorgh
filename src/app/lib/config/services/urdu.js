@@ -5,6 +5,7 @@ import {
   F_NASSIM_URDU_REGULAR,
   F_NASSIM_URDU_BOLD,
 } from '@bbc/psammead-styles/fonts';
+import 'moment/locale/ur';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 
 const service = {
@@ -38,6 +39,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'صفحۂ اول',
+    currentPage: 'Current page',
+    skipLinkText: 'مواد پر جائیں',
     error: {
       404: {
         statusCode: '404',

@@ -4,7 +4,7 @@ import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ru-RU`,
+  lang: `ru`,
   articleAuthor: `https://www.facebook.com/bbcrussian`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-russian',
@@ -33,6 +33,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'Главная',
+    currentPage: 'Current page',
+    skipLinkText: 'Перейти к содержанию',
     error: {
       404: {
         statusCode: '404',

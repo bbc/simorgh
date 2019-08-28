@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
@@ -24,15 +24,15 @@ const FrontPageMain = ({ frontPageData }) => {
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
-    <Fragment>
+    <>
       <span role="text">
         <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
       </span>
-    </Fragment>
+    </>
   );
 
   return (
-    <Fragment>
+    <>
       <ATIAnalytics data={frontPageData} />
       <ChartbeatAnalytics data={frontPageData} />
       <MetadataContainer metadata={metadata} promo={promo} />
@@ -52,7 +52,7 @@ const FrontPageMain = ({ frontPageData }) => {
           </GridItemConstrainedLargeWithTopMargin>
         </Grid>
       </main>
-    </Fragment>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import 'moment/locale/pa-in';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `pa-IN`,
+  lang: `pa`,
   articleAuthor: `https://www.facebook.com/bbcnewspunjabi`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-punjabi',
@@ -34,6 +34,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
     home: 'ਖ਼ਬਰਾਂ',
     currentPage: 'Current page',
     skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,

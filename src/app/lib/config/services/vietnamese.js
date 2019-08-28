@@ -4,7 +4,7 @@ import { vietnamese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 
 const service = {
-  lang: `vi-VN`,
+  lang: `vi`,
   articleAuthor: `https://www.facebook.com/pages/BBC-Vietnamese/228458913833525?ref=ts&sk=wall`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-vietnamese',
@@ -33,6 +33,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'Tin chính',
+    currentPage: 'Current page',
+    skipLinkText: 'Bỏ qua để xem nội dung',
     error: {
       404: {
         statusCode: '404',

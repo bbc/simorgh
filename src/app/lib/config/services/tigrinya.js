@@ -8,7 +8,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
-  lang: `ti-ET`,
+  lang: `ti`,
   articleAuthor: `https://www.facebook.com/bbcnewstigrinya`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-tigrinya',
@@ -37,6 +37,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'ዜና',
+    currentPage: 'Current page',
+    skipLinkText: 'እቲ ትሕዝቶ ዝለል',
     error: {
       404: {
         statusCode: '404',

@@ -4,7 +4,7 @@ import { marathi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `mr-IN`,
+  lang: `mr`,
   articleAuthor: `https://www.facebook.com/bbcnewsmarathi`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-marathi',
@@ -33,6 +33,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'बातम्या',
+    currentPage: 'Current page',
+    skipLinkText: 'सामग्रीवर जा',
     error: {
       404: {
         statusCode: '404',

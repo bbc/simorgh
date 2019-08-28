@@ -4,7 +4,7 @@ import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 
 const service = {
-  lang: `id-ID`,
+  lang: `id`,
   articleAuthor: `https://www.facebook.com/pages/BBC-Indonesia/10150118096995434`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-indonesia',
@@ -33,6 +33,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'Lihat semua',
+    home: 'Berita',
+    currentPage: 'Current page',
+    skipLinkText: 'Langsung ke konten',
     error: {
       404: {
         statusCode: '404',
@@ -121,40 +125,34 @@ const service = {
   brandSVG,
   footer: {
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      href: 'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
+      text: 'Baca tentang peraturan baru terkait link eksternal.',
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        href: 'https://www.bbc.com/indonesia/institutional-49283175',
+        text: 'Alasan Anda dapat mempercayai BBC News',
       },
       {
-        href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        href: 'https://www.bbc.com/indonesia/institutional-37818421',
+        text: 'Peraturan Penggunaan',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        href: 'https://www.bbc.com/indonesia/institutional-37818425/',
+        text: 'Kebijakan tentang Privasi',
       },
       {
-        href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
-      },
-      {
-        href: 'https://www.bbc.com/usingthebbc/cookies/',
+        href:
+          'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/indonesia/institutional-37818427',
+        text: 'Hubungi BBC',
       },
     ],
-    copyrightText: 'BBC. BBC tidak bertanggung jawab atas konten internet luar',
+    copyrightText:
+      'Copyright © 2019 BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
   },
   fonts: [],
   navigation: [

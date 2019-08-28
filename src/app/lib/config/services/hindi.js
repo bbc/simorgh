@@ -4,7 +4,7 @@ import { hindi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
-  lang: `hi-IN`,
+  lang: `hi`,
   articleAuthor: `https://www.facebook.com/bbchindi`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-hindi',
@@ -33,6 +33,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'होम पेज',
+    currentPage: 'Current page',
+    skipLinkText: 'सामग्री को स्किप करें',
     error: {
       404: {
         statusCode: '404',

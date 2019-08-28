@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Banner from './Banner/index.canonical';
 import consentBannerUtilities from './CanonicalLogic';
 import { UserContext } from '../../contexts/UserContext';
@@ -24,7 +24,7 @@ const Canonical = () => {
   };
 
   return (
-    <Fragment>
+    <>
       {showPrivacy ? (
         <Banner
           type="privacy"
@@ -39,7 +39,7 @@ const Canonical = () => {
           onReject={cookieOnReject}
         />
       ) : null}
-    </Fragment>
+    </>
   );
 };
 

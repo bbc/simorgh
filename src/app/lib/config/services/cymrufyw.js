@@ -34,6 +34,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'Hafan',
+    currentPage: 'Current page',
+    skipLinkText: `Neidio i'r cynnwys`,
     error: {
       404: {
         statusCode: '404',

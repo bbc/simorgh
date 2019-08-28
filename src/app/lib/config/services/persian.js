@@ -39,6 +39,10 @@ const persian = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'صفحه اول',
+    currentPage: 'Current page',
+    skipLinkText: 'مشاهده محتوا',
     error: {
       404: {
         statusCode: '۴۰۴',

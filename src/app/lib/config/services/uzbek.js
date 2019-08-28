@@ -4,7 +4,7 @@ import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `uz-UZ`,
+  lang: `uz-Cyrl`,
   articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-uzbek',
@@ -33,6 +33,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'Бош саҳифа',
+    currentPage: 'Current page',
+    skipLinkText: 'Саҳифага ўтиш',
     error: {
       404: {
         statusCode: '404',

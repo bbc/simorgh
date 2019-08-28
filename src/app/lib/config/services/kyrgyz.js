@@ -4,7 +4,7 @@ import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ky-KG`,
+  lang: `ky`,
   articleAuthor: `https://www.facebook.com/bbckyrgyz`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-kyrgyz',
@@ -33,6 +33,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'Башталгыч бет',
+    currentPage: 'Current page',
+    skipLinkText: 'Сайтка өтүү',
     error: {
       404: {
         statusCode: '404',
