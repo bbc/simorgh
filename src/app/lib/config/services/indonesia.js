@@ -40,9 +40,9 @@ const service = {
     error: {
       404: {
         statusCode: '404',
-        title: 'Error: 404 Halaman tidak ditemukan',
+        title: 'Halaman tidak dapat ditemukan',
         message:
-          'Masalah ini mungkin karena Anda salah ketik mengetik alamat situs. Periksa kembali alamat dan ejaan.',
+          'Maaf, kami tidak dapat menampilkan halaman yang Anda cari. Mohon coba:',
         solutions: [
           'Periksa kembali tautan',
           'Klik tombol perbarui di peramban Anda',
@@ -56,7 +56,8 @@ const service = {
       500: {
         statusCode: '500',
         title: 'Kesalahan internal jaringan komputer',
-        message: 'Terjadi kesalahan, Mohon perbarui laman',
+        message:
+          'Maaf, kami tidak dapat menampilkan halaman yang Anda cari. Mohon coba:',
         solutions: [
           'Klik tombol perbarui di peramban Anda',
           'Telusuri lagi nanti',
