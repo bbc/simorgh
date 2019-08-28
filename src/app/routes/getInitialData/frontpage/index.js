@@ -9,8 +9,8 @@ import filterGroupsWithoutStraplines from '../../../lib/utilities/preprocessor/r
 
 const preprocessorRules = [
   filterUnknownContentTypes,
-  addIdsToItems,
   filterEmptyGroupItems,
+  addIdsToItems,
   applySquashTopstories,
   filterGroupsWithoutStraplines,
 ];
