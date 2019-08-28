@@ -33,6 +33,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
     home: 'Главная',
     currentPage: 'Current page',
     skipLinkText: 'Перейти к содержанию',
