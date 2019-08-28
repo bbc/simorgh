@@ -35,6 +35,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Dachaigh',
   translations: {
+    seeAll: 'See all',
     home: 'Alba',
     currentPage: 'Current page',
     skipLinkText: 'Air adhart',

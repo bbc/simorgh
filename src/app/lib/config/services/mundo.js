@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Noticias',
   translations: {
+    seeAll: 'See all',
     home: 'Noticias',
     currentPage: 'Current page',
     skipLinkText: 'Ir al contenido',

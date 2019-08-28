@@ -36,6 +36,7 @@ const service = {
   frontPageTitle:
     'ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း',
   translations: {
+    seeAll: 'See all',
     home: 'ပင်မစာမျက်နှာ',
     currentPage: 'Current page',
     skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားပါ',

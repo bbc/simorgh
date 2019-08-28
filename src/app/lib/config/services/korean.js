@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: '홈페이지',
   translations: {
+    seeAll: '모든 기사 보기',
     home: '뉴스',
     currentPage: 'Current page',
     skipLinkText: '내용으로 건너뛰기',

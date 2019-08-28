@@ -41,6 +41,7 @@ const service = {
   frontPageTitle:
     'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
   translations: {
+    seeAll: 'See all',
     home: 'صفحۂ اول',
     currentPage: 'Current page',
     skipLinkText: 'مواد پر جائیں',

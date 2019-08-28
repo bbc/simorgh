@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Tin chính',
   translations: {
+    seeAll: 'See all',
     home: 'Tin chính',
     currentPage: 'Current page',
     skipLinkText: 'Bỏ qua để xem nội dung',

@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Новини',
   translations: {
+    seeAll: 'See all',
     home: 'Головна',
     currentPage: 'Current page',
     skipLinkText: 'Перейти до змісту',

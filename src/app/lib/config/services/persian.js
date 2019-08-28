@@ -40,6 +40,7 @@ const persian = {
   swPath: '/sw.js',
   frontPageTitle: 'صفحه اول',
   translations: {
+    seeAll: 'See all',
     home: 'صفحه اول',
     currentPage: 'Current page',
     skipLinkText: 'مشاهده محتوا',

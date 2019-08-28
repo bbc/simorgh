@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Xəbərlər',
   translations: {
+    seeAll: 'See all',
     home: 'Xəbərlər',
     currentPage: 'Current page',
     skipLinkText: 'Mətnə keçid',

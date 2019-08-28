@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Башталгыч бет',
   translations: {
+    seeAll: 'See all',
     home: 'Башталгыч бет',
     currentPage: 'Current page',
     skipLinkText: 'Сайтка өтүү',

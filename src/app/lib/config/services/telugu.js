@@ -35,6 +35,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'వార్తలు',
   translations: {
+    seeAll: 'See all',
     home: 'వార్తలు',
     currentPage: 'Current page',
     skipLinkText: 'కంటెంట్‌కు దాటవేయండి',

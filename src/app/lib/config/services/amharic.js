@@ -38,6 +38,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'ዜና',
   translations: {
+    seeAll: 'See all',
     home: 'ዜና',
     currentPage: 'Current page',
     skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',

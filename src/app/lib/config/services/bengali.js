@@ -39,6 +39,7 @@ const service = {
   frontPageTitle:
     'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
   translations: {
+    seeAll: 'See all',
     home: 'মূলপাতা',
     currentPage: 'Current page',
     skipLinkText: 'সরাসরি কনটেন্টে যান',

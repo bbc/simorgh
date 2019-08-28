@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Labaran Duniya',
   translations: {
+    seeAll: 'Duba su baki daya',
     home: 'Labaran Duniya',
     currentPage: 'Current page',
     skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',

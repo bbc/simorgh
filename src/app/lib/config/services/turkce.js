@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Haberler',
   translations: {
+    seeAll: 'See all',
     home: 'Haberler',
     currentPage: 'Current page',
     skipLinkText: 'Siteye gir',

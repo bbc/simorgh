@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Swahili',
   translations: {
+    seeAll: 'Hamısına bax',
     home: 'Habari',
     currentPage: 'Current page',
     skipLinkText: 'Ruka hadi maelezo',

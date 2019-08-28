@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'बातम्या',
   translations: {
+    seeAll: 'See all',
     home: 'बातम्या',
     currentPage: 'Current page',
     skipLinkText: 'सामग्रीवर जा',

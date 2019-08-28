@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Berita',
   translations: {
+    seeAll: 'Lihat semua',
     home: 'Berita',
     currentPage: 'Current page',
     skipLinkText: 'Langsung ke konten',

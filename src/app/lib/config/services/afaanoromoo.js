@@ -34,6 +34,7 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'Oduu',
   translations: {
+    seeAll: 'Hunda ilaali',
     home: 'Oduu',
     currentPage: 'Current page',
     skipLinkText: 'Qabiyyeetti darbi',
