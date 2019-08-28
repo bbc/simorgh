@@ -1,8 +1,8 @@
 import uuid from 'uuid';
 import compose from 'ramda/src/compose';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 
-const getGroups = jsonRaw => pathOr(null, ['content', 'groups'], jsonRaw);
+const getGroups = path(['content', 'groups']);
 
 const addIdToItem = ({ id, ...item }) => ({ ...item, id: id || uuid() });
 
