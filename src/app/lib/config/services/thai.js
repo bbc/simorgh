@@ -6,6 +6,7 @@ import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 
 const service = {
   lang: `th`,
+  // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: `th`,
   articleAuthor: `https://www.facebook.com/BBCThai`,
   articleTimestampPrefix: 'Updated',
@@ -39,6 +40,7 @@ const service = {
     home: 'หน้าแรก',
     currentPage: 'หน้าปัจจุบัน',
     skipLinkText: 'ข้ามไปยังเนื้อหา',
+    seeAll: 'ดูทั้งหมด',
     error: {
       404: {
         statusCode: '404',

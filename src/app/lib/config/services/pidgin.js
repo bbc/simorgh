@@ -13,6 +13,7 @@ const pidgin = {
   atiAnalyticsProducerId: '70',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
+  // there is no valid ISO 639-1 code for Pidgin
   isoLang: null,
   datetimeLocale: 'pcm',
   service: 'pidgin',
@@ -32,6 +33,7 @@ const pidgin = {
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
   translations: {
+    seeAll: 'See everitin',
     home: 'Home',
     currentPage: 'Page where you dey',
     skipLinkText: 'Waka go wetin de inside',
