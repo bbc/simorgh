@@ -26,5 +26,6 @@ export default jsonRaw => {
     mapGroups,
     getGroups,
   )(jsonRaw);
-  return addIdsToItems;
+
+  return addIdsToItems(jsonRaw);
 };
