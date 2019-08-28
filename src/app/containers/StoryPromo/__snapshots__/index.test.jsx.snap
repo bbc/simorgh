@@ -2495,6 +2495,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
           >
             <span
               className="c15"
+              dir="ltr"
             >
               <span
                 aria-hidden="true"

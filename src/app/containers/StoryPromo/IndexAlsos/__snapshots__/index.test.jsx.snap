@@ -6,6 +6,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
 >
   <IndexAlsosUl>
     <IndexAlsosLi
+      dir="ltr"
       mediaIndicator={
         <MediaIndicator
           datetime={null}
@@ -237,6 +238,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
       APC ba ta isa ta kore ni ba – Buba Galadima
     </IndexAlsosLi>
     <IndexAlsosLi
+      dir="ltr"
       mediaIndicator={null}
       script={
         Object {
@@ -467,6 +469,7 @@ exports[`Index Alsos should render one correctly 1`] = `
 >
   <React.Fragment>
     <IndexAlso
+      dir="ltr"
       mediaIndicator={
         <MediaIndicator
           datetime={null}
