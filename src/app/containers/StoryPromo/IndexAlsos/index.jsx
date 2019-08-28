@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react';
-import { arrayOf, shape, number, string } from 'prop-types';
+import { arrayOf, shape, oneOf, number, string } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import pathOr from 'ramda/src/pathOr';
 import MediaIndicator from '@bbc/psammead-media-indicator';
@@ -39,7 +39,7 @@ const buildIndexAlsosMediaIndicator = (cpsType, mediaType, service) => {
  * When there are more than one Index Alsos, they should be wrapped in a list item `IndexAlsosLi` within an unordered list `IndexAlsosUl`.
  * On the other hand, when there is exactly one Index Also, it should use the `IndexAlso` component and it should not be contained within a list.
  */
-const IndexAlsosContainer = ({ alsoItems, script, service }) => {
+const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
@@ -68,6 +68,7 @@ const IndexAlsosContainer = ({ alsoItems, script, service }) => {
               script={script}
               service={service}
               url={url}
+              dir={dir}
               mediaIndicator={indexAlsoMediaIndicator}
               mediaType={indexAlsoMediaType}
             >
@@ -99,6 +100,11 @@ IndexAlsosContainer.propTypes = {
   alsoItems: arrayOf(alsoItemsPropTypes).isRequired,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
+  dir: oneOf(['ltr', 'rtl']),
+};
+
+IndexAlsosContainer.defaultProps = {
+  dir: 'ltr',
 };
 
 export default IndexAlsosContainer;

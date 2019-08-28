@@ -156,6 +156,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           alsoItems={relatedItems}
           script={script}
           service={service}
+          dir={dir}
         />
       )}
     </>
