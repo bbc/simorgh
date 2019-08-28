@@ -83,13 +83,15 @@ describe('FrontPageContainer', () => {
             ...original,
             useContext: jest.fn(),
             useReducer: jest.fn(),
+            useState: jest.fn(),
           };
         });
 
-        const { useContext, useReducer } = jest.requireMock('react');
+        const { useContext, useReducer, useState } = jest.requireMock('react');
         useContext.mockReturnValue({ ...igboConfig, lang: 'ig' });
         FrontPageComponent = jest.requireActual('.').default;
         useReducer.mockReturnValue([toggleReducer, defaultToggles]);
+        useState.mockImplementation(input => [input, () => {}]);
       });
 
       it('should not render frontpage if still loading', () => {
