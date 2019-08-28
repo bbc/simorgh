@@ -39,6 +39,7 @@ const service = {
     home: 'หน้าแรก',
     currentPage: 'หน้าปัจจุบัน',
     skipLinkText: 'ข้ามไปยังเนื้อหา',
+    seeAll: 'ดูทั้งหมด',
     error: {
       404: {
         statusCode: '404',
