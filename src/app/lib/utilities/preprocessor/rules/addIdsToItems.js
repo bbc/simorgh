@@ -16,6 +16,7 @@ const mapGroups = groups => groups.map(addIdsToGroupItems);
 const mergeContentWithAddedIdItems = itemsWithIds => jsonRaw => ({
   ...jsonRaw,
   content: {
+    ...path(['content'], jsonRaw),
     groups: itemsWithIds,
   },
 });
