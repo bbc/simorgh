@@ -1,4 +1,4 @@
-import services from '@lib/config/services/loadableConfig';
+import services from '../../lib/config/services/loadableConfig';
 import servicesWithRadioOrTv from '../config';
 import buildMediaRoutes, { buildMediaDataRoutes } from '../buildMediaRoutes';
 

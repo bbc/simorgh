@@ -6,7 +6,7 @@ import path from 'path';
 /*
  * Mock to avoid async behaviour in tests
  */
-jest.mock('@contexts/ServiceContext');
+jest.mock('../app/contexts/ServiceContext');
 
 global.Cypress = {
   env: jest.fn(),

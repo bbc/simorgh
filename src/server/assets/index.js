@@ -1,5 +1,5 @@
 import fs from 'fs';
-import nodeLogger from '@lib/logger.node';
+import nodeLogger from '../../app/lib/logger.node';
 import assetsFilter from './assetsFilter';
 
 const logger = nodeLogger(__filename);

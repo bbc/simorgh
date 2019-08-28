@@ -2,7 +2,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import deepClone from 'ramda/src/clone';
-import nodeLogger from '@lib/logger.node';
+import nodeLogger from '../app/lib/logger.node';
 
 export const shouldMatchSnapshot = (title, component) => {
   it(title, () => {
@@ -77,7 +77,7 @@ const mocks = {
   silly: jest.fn(),
 };
 
-jest.mock('@lib/logger.node', () => jest.fn());
+jest.mock('../app/lib/logger.node', () => jest.fn());
 nodeLogger.mockImplementation(() => mocks);
 
 export const loggerMock = mocks;

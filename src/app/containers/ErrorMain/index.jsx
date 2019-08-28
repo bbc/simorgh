@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { number, oneOf, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
-import ErrorPageComponent from '@components/ErrorPage';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import ErrorPageComponent from '../../components/ErrorPage';
 
 /*
  * MVP Metadata for the error

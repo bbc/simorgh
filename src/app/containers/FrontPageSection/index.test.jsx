@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
 import * as SectionLabel from '@bbc/psammead-section-label';
-import newsConfig from '@lib/config/services/news';
-import { ServiceContextProvider } from '@contexts/ServiceContext';
-import { shouldShallowMatchSnapshot } from '@testHelpers';
+import newsConfig from '../../lib/config/services/news';
+import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import FrontPageSection from '.';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const React = jest.requireActual('react');
 

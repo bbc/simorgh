@@ -1,10 +1,10 @@
-import onClient from '@lib/utilities/onClient';
-import filterUnknownContentTypes from '@lib/utilities/preprocessor/rules/filterContentType';
-import filterEmptyGroupItems from '@lib/utilities/preprocessor/rules/filterEmptyGroupItems';
-import applySquashTopstories from '@lib/utilities/preprocessor/rules/topstories';
-import filterGroupsWithoutStraplines from '@lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
-import fetchData from '../utils/fetchData';
 import baseUrl from '../utils/getBaseUrl';
+import onClient from '../../../lib/utilities/onClient';
+import fetchData from '../utils/fetchData';
+import filterUnknownContentTypes from '../../../lib/utilities/preprocessor/rules/filterContentType';
+import filterEmptyGroupItems from '../../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
+import applySquashTopstories from '../../../lib/utilities/preprocessor/rules/topstories';
+import filterGroupsWithoutStraplines from '../../../lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
 
 const preprocessorRules = [
   filterUnknownContentTypes,
@@ -20,7 +20,7 @@ jest.mock('../utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
 let onClientMockResponse = true;
-jest.mock('@lib/utilities/onClient', () => jest.fn());
+jest.mock('../../../lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockResponse);
 
 const fetchDataMockResponse = {

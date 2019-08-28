@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import InlineSpan from '@components/InlineSpan';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
+import InlineSpan from '../../components/InlineSpan';
 import { inlineModelPropTypes } from '../../models/propTypes/inline';
 
 const componentsToRender = { fragment, urlLink: InlineLink };

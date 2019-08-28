@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
-import { ServiceContext } from '@contexts/ServiceContext';
-import {
-  GridItemConstrainedMedium,
-  GridItemConstrainedLarge,
-} from '@lib/styledGrid';
-import idSanitiser from '@lib/utilities/idSanitiser';
 import { textDefaultPropTypes } from '../../models/propTypes';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import { headlineModelPropTypes } from '../../models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
+import idSanitiser from '../../lib/utilities/idSanitiser';
+import {
+  GridItemConstrainedMedium,
+  GridItemConstrainedLarge,
+} from '../../lib/styledGrid';
 
 const Headings = {
   headline: Headline,

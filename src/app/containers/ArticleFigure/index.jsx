@@ -1,6 +1,9 @@
 import React from 'react';
 import { string, number, objectOf, any, bool } from 'prop-types';
 import Figure from '@bbc/psammead-figure';
+import Copyright from '../Copyright';
+import Caption from '../Caption';
+import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import {
   NestedGridParentLarge,
   NestedGridParentMedium,
@@ -8,10 +11,7 @@ import {
   NestedGridItemChildSmall,
   NestedGridItemChildMedium,
   NestedGridItemChildLarge,
-} from '@lib/styledGrid';
-import Copyright from '../Copyright';
-import Caption from '../Caption';
-import ImageWithPlaceholder from '../ImageWithPlaceholder';
+} from '../../lib/styledGrid';
 
 const renderCopyright = copyright =>
   copyright && <Copyright>{copyright}</Copyright>;

@@ -2,15 +2,16 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '../../contexts/RequestContext';
+
 import MediaPageMain from '.';
 import indonesia from '../../../../data/indonesia/bbc_indonesian_radio/liveradio.json';
 import korean from '../../../../data/korean/bbc_korean_radio/liveradio.json';
 import tigrinya from '../../../../data/tigrinya/bbc_tigrinya_radio/liveradio.json';
 import afaanoromoo from '../../../../data/afaanoromoo/bbc_afaanoromoo_radio/liveradio.json';
 import amharic from '../../../../data/amharic/bbc_amharic_radio/liveradio.json';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
 
 // Not all services have fixtures for article data yet
 // the service selector will be constrained to services that have article fixtures:

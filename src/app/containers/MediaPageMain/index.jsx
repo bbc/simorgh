@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { string, shape, object } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
-import { Grid, GridItemConstrainedMedium } from '@lib/styledGrid';
-import { ServiceContext } from '@contexts/ServiceContext';
+
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
+import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const renderBlock = ({ script, service }) => block => {
   const Component = {

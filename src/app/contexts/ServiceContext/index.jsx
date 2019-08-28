@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import services from '@lib/config/services/loadableConfig';
-import defaultService from '@lib/config/services/default';
+import services from '../../lib/config/services/loadableConfig';
+import defaultService from '../../lib/config/services/default';
 import createLoadableContext from '../utils/createLoadableContext';
 
 /* Create ServiceContext using the default service */

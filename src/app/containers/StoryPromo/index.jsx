@@ -8,18 +8,18 @@ import StoryPromoComponent, {
 } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '@contexts/ServiceContext';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import isTenHoursAgo from '@lib/utilities/isTenHoursAgo';
 import { storyItem, linkPromo } from '../../models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
+import { ServiceContext } from '../../contexts/ServiceContext';
 import createSrcset from '../Image/helpers/srcSet';
 import getOriginCode from './imageSrcHelpers/originCode';
 import getLocator from './imageSrcHelpers/locator';
 
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
+import isTenHoursAgo from '../../lib/utilities/isTenHoursAgo';
 import IndexAlsos from './IndexAlsos';
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {

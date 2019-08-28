@@ -12,10 +12,6 @@ exports[`ParagraphContainer should render correctly 1`] = `
   margin: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 .c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -40,6 +36,10 @@ exports[`ParagraphContainer should render correctly 1`] = `
 .c2:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -135,10 +135,6 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   margin: 0;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 .c3 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -160,6 +156,10 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 .c2 {
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {

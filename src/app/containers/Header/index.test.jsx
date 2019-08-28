@@ -1,11 +1,11 @@
 import React from 'react';
 import { string, shape } from 'prop-types';
-import { RequestContextProvider } from '@contexts/RequestContext';
-import { ServiceContext } from '@contexts/ServiceContext';
-import { ToggleContext } from '@contexts/ToggleContext';
-import pidginServiceConfig from '@lib/config/services/pidgin';
-import { shouldMatchSnapshot } from '@testHelpers';
 import HeaderContainer from './index';
+import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import { ToggleContext } from '../../contexts/ToggleContext';
+import { shouldMatchSnapshot } from '../../../testHelpers';
+import pidginServiceConfig from '../../lib/config/services/pidgin';
 
 const defaultToggleState = {
   test: {

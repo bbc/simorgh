@@ -11,7 +11,7 @@ import {
   mediaRadioAndTvRegexPathsArray,
 } from './index';
 
-jest.mock('@lib/config/services', () => ({
+jest.mock('../../lib/config/services', () => ({
   news: {},
   persian: {},
 }));

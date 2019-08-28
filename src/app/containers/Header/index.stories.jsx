@@ -2,11 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
-import { RequestContextProvider } from '@contexts/RequestContext';
-import services from '@lib/config/services';
-import { ServiceContextProvider } from '@contexts/ServiceContext';
-import { ToggleContextProvider } from '@contexts/ToggleContext';
 import HeaderContainer from '.';
+import { RequestContextProvider } from '../../contexts/RequestContext';
+import services from '../../lib/config/services';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 
 storiesOf('Containers|Header', module)
   .addDecorator(withKnobs)

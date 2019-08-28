@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
-import usePrevious from '@lib/utilities/usePrevious';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
+import usePrevious from '../../lib/utilities/usePrevious';
 
 export const App = ({
   routes,

@@ -5,14 +5,14 @@ exports[`MediaPlayer Fails and returns early when component is toggled off 1`] =
 exports[`MediaPlayer Fails and returns early when there is no versionId 1`] = `null`;
 
 exports[`MediaPlayer is called correctly Calls the AMP player when platform is AMP 1`] = `
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 .c1 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
 }
 
 @media (max-width:25rem) {
@@ -78,10 +78,6 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
 `;
 
 exports[`MediaPlayer is called correctly Calls the canonical placeholder when platform is canonical 1`] = `
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 .c3 {
   display: block;
   width: 100%;
@@ -101,6 +97,10 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
 }
 
 @media (max-width:25rem) {
@@ -167,10 +167,6 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
 `;
 
 exports[`MediaPlayer is called correctly Calls the canonical player when platform is canonical and placeholder is false 1`] = `
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 .c3 {
   display: block;
   width: 100%;
@@ -190,6 +186,10 @@ exports[`MediaPlayer is called correctly Calls the canonical player when platfor
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
 }
 
 @media (max-width:25rem) {
