@@ -33,6 +33,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'Raba vyose',
     home: `Urupapuro rw'itangiriro`,
     currentPage: 'Current page',
     skipLinkText: 'Simbira ku birimwo',

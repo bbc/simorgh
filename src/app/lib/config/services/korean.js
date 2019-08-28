@@ -33,6 +33,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: '모든 기사 보기',
     home: '뉴스',
     currentPage: 'Current page',
     skipLinkText: '내용으로 건너뛰기',
