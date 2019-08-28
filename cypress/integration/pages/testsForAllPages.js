@@ -136,21 +136,45 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               appConfig[service].twitterSite,
             );
           });
+        });
 
+        it('should have correct title & description metadata', () => {
           /* Naidheachdan needs to have correct metadata added to all environments
            * Issue https://github.com/bbc/simorgh/issues/
            */
           if (service !== 'naidheachdan') {
             cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
               ({ body }) => {
-                const description =
-                  body.promo.summary ||
-                  body.promo.headlines.seoHeadline ||
-                  body.metadata.summary;
-                const title =
-                  body.promo.headlines.seoHeadline || body.promo.name;
+                let description;
+                let pageTitle;
+                switch (pageType) {
+                  case 'articles':
+                    description =
+                      body.promo.summary || body.promo.headlines.seoHeadline;
+                    pageTitle = body.promo.headlines.seoHeadline;
+                    break;
+                  case 'errorPage404':
+                    description = '';
+                    pageTitle =
+                      appConfig[service].translations.error[404].title;
+                    break;
+                  case 'frontPage':
+                    description = body.metadata.summary;
+                    pageTitle = body.promo.name;
+                    break;
+                  case 'liveRadio':
+                    description = body.promo.summary;
+                    pageTitle = body.promo.name;
+                    break;
+                  default:
+                    description = '';
+                    pageTitle = '';
+                }
+
+                // const title = `${pageTitle} - ${appConfig[service].brandName}`;
 
                 cy.get('head').within(() => {
+                  cy.title().should('eq', pageTitle);
                   cy.get('meta[name="og:description"]').should(
                     'have.attr',
                     'content',
@@ -159,7 +183,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   cy.get('meta[name="og:title"]').should(
                     'have.attr',
                     'content',
-                    title,
+                    pageTitle,
                   );
                   cy.get('meta[name="twitter:description"]').should(
                     'have.attr',
@@ -169,7 +193,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   cy.get('meta[name="twitter:title"]').should(
                     'have.attr',
                     'content',
-                    title,
+                    pageTitle,
                   );
                 });
               },
