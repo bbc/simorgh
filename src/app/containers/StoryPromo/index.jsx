@@ -20,6 +20,7 @@ import getLocator from './imageSrcHelpers/locator';
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
 import isTenHoursAgo from '../../lib/utilities/isTenHoursAgo';
+import IndexAlsos from './IndexAlsos';
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -107,6 +108,8 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
 
   const summary = pathOr(null, ['summary'], item);
   const timestamp = pathOr(null, ['timestamp'], item);
+  const relatedItems = pathOr(null, ['relatedItems'], item);
+
   const linkcontents = <LinkContents item={item} />;
 
   if (!headline || !url) {
@@ -146,6 +149,14 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           service={service}
           timezone={timezone}
           isRelative={isTenHoursAgo(timestamp)}
+        />
+      )}
+      {topStory && relatedItems && (
+        <IndexAlsos
+          alsoItems={relatedItems}
+          script={script}
+          service={service}
+          dir={dir}
         />
       )}
     </>
