@@ -118,6 +118,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     twitterSite,
     publishingPrinciples,
     noBylinesPolicy,
+    frontPageTitle,
   } = useContext(ServiceContext);
   const { id: aresArticleId } = metadata;
 
@@ -197,6 +198,11 @@ const MetadataContainer = ({ metadata, promo }) => {
     icon: ['72x72', '96x96', '192x192'],
   };
 
+  const title =
+    pageType === 'frontPage' && frontPageTitle
+      ? frontPageTitle
+      : getTitle(promo);
+
   return (
     <>
       <LinkedData
@@ -235,7 +241,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         themeColor={themeColor}
         timeFirstPublished={timeFirstPublished}
         timeLastPublished={timeLastPublished}
-        title={getTitle(promo)}
+        title={title}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
         type={pathOr(null, [pageType, 'openGraph'], pageTypeMetadata)}
