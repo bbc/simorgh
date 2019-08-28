@@ -1,8 +1,15 @@
+import appConfig from '@lib/config/services';
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/app/lib/config/services';
 
-const tests = ({ service }) =>
-  describe(`Tests`, () => {
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+export const testsThatAlwaysRun = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
+};
+
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
+  describe(`Tests for ${service} ${pageType}`, () => {
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
         cy.testResponseCodeAndType(
@@ -62,4 +69,7 @@ const tests = ({ service }) =>
     });
   });
 
-export default tests;
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
+};

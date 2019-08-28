@@ -12,7 +12,7 @@ timemachine.config({
   timestamp: 1565359454,
 });
 
-const req = require.context('../src/app', true, /\.stories\.jsx$/);
+const req = require.context('@app', true, /\.stories\.jsx$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
