@@ -16,7 +16,7 @@ import {
 } from './testsForCanonicalOnly';
 
 const testsForPage = {
-  pageType: 'liveRadio',
+  pageType: '!!!!!!!!!YOUNEEEDTOWRITEAPAGENAMEHERE!!!!!!!!',
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,

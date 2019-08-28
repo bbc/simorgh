@@ -6,7 +6,7 @@
     "SMOKE": true,
     "UK": false
   },
-  "ignoreTestFiles": ["**/integration/pages/index.js", "**/integration/README.md", "**/tests.js", "**/testsForAMPOnly.js", "**/testsForCanonicalOnly.js", "**/pages/testsForAllPages.js", "**/pages/testsForAllAMPPages.js", "**/pages/testsForAllCanonicalPages.js"],
+  "ignoreTestFiles": ["**/integration/pages/index.js", "**/tests.js", "**/testsForAMPOnly.js", "**/testsForCanonicalOnly.js", "**/pages/testsForAllPages.js", "**/pages/testsForAllAMPPages.js", "**/pages/testsForAllCanonicalPages.js", "**/README.md", "**/123PlaygroundForTests/**"],
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 100000,
   "responseTimeout": 50000
