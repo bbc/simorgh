@@ -10,7 +10,6 @@ const componentsToRender = { fragment, urlLink: InlineLink };
 
 const InlineContainer = ({ blocks, language }) => {
   const { script, service } = useContext(ServiceContext);
-  
   return (
     <InlineSpan lang={language} script={script} service={service}>
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
