@@ -59,13 +59,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             );
           });
       });
-
-      it('should have a relevant error title in the head', () => {
-        cy.title().should(
-          'eq',
-          `${appConfig[service].translations.error[404].title} - ${appConfig[service].brandName}`,
-        );
-      });
     });
   });
 
