@@ -37,6 +37,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
     home: 'ዜና',
     currentPage: 'Current page',
     skipLinkText: 'እቲ ትሕዝቶ ዝለል',
