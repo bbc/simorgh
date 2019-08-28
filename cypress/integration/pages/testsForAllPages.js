@@ -146,32 +146,32 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
               ({ body }) => {
                 let description;
-                let pageTitle;
+                let title;
                 switch (pageType) {
                   case 'articles':
                     description =
                       body.promo.summary || body.promo.headlines.seoHeadline;
-                    pageTitle = body.promo.headlines.seoHeadline;
+                    title = body.promo.headlines.seoHeadline;
                     break;
                   case 'errorPage404':
-                    description = '';
-                    pageTitle =
+                    description =
                       appConfig[service].translations.error[404].title;
+                    title = appConfig[service].translations.error[404].title;
                     break;
                   case 'frontPage':
                     description = body.metadata.summary;
-                    pageTitle = body.promo.name;
+                    title = body.promo.name;
                     break;
                   case 'liveRadio':
                     description = body.promo.summary;
-                    pageTitle = body.promo.name;
+                    title = body.promo.name;
                     break;
                   default:
                     description = '';
-                    pageTitle = '';
+                    title = '';
                 }
 
-                // const title = `${pageTitle} - ${appConfig[service].brandName}`;
+                const pageTitle = `${title} - ${appConfig[service].brandName}`;
 
                 cy.get('head').within(() => {
                   cy.title().should('eq', pageTitle);
