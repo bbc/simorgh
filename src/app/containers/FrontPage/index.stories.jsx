@@ -91,7 +91,6 @@ storiesOf('Pages|Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
-        dials={dials}
       />
     );
   });

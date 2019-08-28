@@ -421,7 +421,6 @@ describe('Server', () => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={{}}
             />,
           );
 
