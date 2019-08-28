@@ -3,26 +3,39 @@ import config from '../../support/config/services';
 
 const serviceIsGNL = service => service === 'japanese';
 
-const testsForAllCanonicalPages = ({ service, pageType }) => {
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+export const testsThatAlwaysRunForAllCanonicalPages = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToAlwaysRunForCanonicalPages to run for ${service} ${pageType}`, () => {});
+};
+
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
+  service,
+  pageType,
+}) => {
   if (pageType !== 'errorPage404') {
-    describe('ATI', () => {
-      it('should have a noscript tag with an 1px image with the ati url', () => {
-        if (service === serviceIsGNL) {
-          cy.hasNoscriptImgAtiUrl(
-            envConfig.atiUrl,
-            envConfig.atiAnalyticsGNLBucket,
-          );
-        } else if (config[service].isWorldService) {
-          cy.hasNoscriptImgAtiUrl(
-            envConfig.atiUrl,
-            envConfig.atiAnalyticsWSBucket,
-          );
-        } else {
-          cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
-        }
+    describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
+      describe('ATI', () => {
+        it('should have a noscript tag with an 1px image with the ati url', () => {
+          if (service === serviceIsGNL) {
+            cy.hasNoscriptImgAtiUrl(
+              envConfig.atiUrl,
+              envConfig.atiAnalyticsGNLBucket,
+            );
+          } else if (config[service].isWorldService) {
+            cy.hasNoscriptImgAtiUrl(
+              envConfig.atiUrl,
+              envConfig.atiAnalyticsWSBucket,
+            );
+          } else {
+            cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
+          }
+        });
       });
-    });
-    describe('Canonical Scripts', () => {
       it('should only have expected bundle script tags', () => {
         cy.get('script[src]').each($p => {
           if ($p.attr('src').includes(envConfig.assetOrigin)) {
@@ -68,4 +81,10 @@ const testsForAllCanonicalPages = ({ service, pageType }) => {
   });
 };
 
-export default testsForAllCanonicalPages;
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTestingForAllCanonicalPages = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToNeverSmokeTestForCanonicalPages to run for ${service} ${pageType}`, () => {});
+};
