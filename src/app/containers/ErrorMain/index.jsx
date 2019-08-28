@@ -25,6 +25,10 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
       />
       <title>{pageTitle}</title>
       <meta name="description" content={pageTitle} />
+      <meta name="og:description" content={pageTitle} />
+      <meta name="og:title" content={pageTitle} />
+      <meta name="twitter:description" content={pageTitle} />
+      <meta name="twitter:title" content={pageTitle} />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
   );
