@@ -8,7 +8,7 @@ ChromaticQA is a visual regression tool for storybook maintained by Storybook.Th
 ## Running Test
 ChromaticQA runs as a part of the build. The builds can be seen here (https://www.chromaticqa.com/builds?appId=5d28eb3fe163f6002046d6fa)
 
-To run chromatic locally export the app code in bash profile(`export CHROMATIC_APP_CODE=<app-code>`) and run `npm run test:chromatic`
+To run chromatic locally export the app code in bash profile(`export CHROMATIC_APP_CODE=<app-code>`) and run `npx chromatic test run  --build-script-name build:storybook || true`
 
 - When the tests are run first it creates the baselines screenshots unreviewed for all the browsers enabled in the settings.
 - Each new build creates snapshots of the components which are compared with the baseline screenshots and unchanged ones are automatically accepted and changed ones needs review(accordingly it has to be accepted or denied).If there are new components added they are listed under new components.
