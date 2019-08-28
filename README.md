@@ -263,7 +263,6 @@ The following command runs both simorgh and cypress:
 
 ```
 CYPRESS_APP_ENV=local CYPRESS_UK=true npm run build && npx run-p --race start cypress:interactive
-
 ```
 
 CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.
