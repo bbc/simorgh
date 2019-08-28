@@ -63,7 +63,7 @@ node {
           }
           stage ('Local Prod Tests') {
             try {
-              sh 'CYPRESS_SMOKE=false npm run build && xvfb-run -a npm run test:prod:ci;'
+              sh 'CYPRESS_SMOKE=false npm run build && xvfb-run -a npm run test:ci;'
             } catch (Throwable e) {
               def messageParameters = [
                 buildStatus: 'Failed',
