@@ -34,6 +34,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
     home: 'Alba',
     currentPage: 'Current page',
     skipLinkText: 'Air adhart',
