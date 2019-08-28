@@ -3,7 +3,7 @@
 ## Introduction to ChromaticQA
 [Chromatic Docs](https://docs.chromaticqa.com/)
 
-ChromaticQA is a visual regression tool for storybook maintained by Storybook.The purpose of having chromaticQA run on all stories is to capture unwanted visual changes introduced by every change done to the code base.This reduces the overhead on manual regression as it supports screenshot comparisons for chrome,IE and FF.
+ChromaticQA is a visual regression tool for storybook maintained by Storybook. The purpose of having chromaticQA run on all stories is to capture unwanted visual changes introduced by every change done to the code base. This reduces the overhead on manual regression as it supports screenshot comparisons for Chrome, IE and FF.
 
 ## Running Test
 ChromaticQA runs as a part of the build. The builds can be seen here (https://www.chromaticqa.com/builds?appId=5d28eb3fe163f6002046d6fa)
