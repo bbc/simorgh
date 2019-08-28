@@ -7,7 +7,7 @@ import pick from 'ramda/src/pick';
 import { storyItem } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
-const MediaIndicator = ({ item, topStory, service }) => {
+const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
   const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
   const hasMediaInfo = pathOr(null, ['media'], item);
@@ -37,17 +37,21 @@ const MediaIndicator = ({ item, topStory, service }) => {
     );
   }
 
-  return <MediaIndicatorComp type={type} service={service} />;
+  return (
+    <MediaIndicatorComp type={type} service={service} indexAlsos={indexAlsos} />
+  );
 };
 
 MediaIndicator.propTypes = {
   item: shape(pick(['cpsType', 'media'], storyItem)).isRequired,
   topStory: bool,
   service: string.isRequired,
+  indexAlsos: bool,
 };
 
 MediaIndicator.defaultProps = {
   topStory: false,
+  indexAlsos: false,
 };
 
 export default MediaIndicator;
