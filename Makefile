@@ -12,7 +12,7 @@ developmentTests:
 	npx chromatic test run  --build-script-name build:storybook || true
 
 productionTests:
-	npm run build && xvfb-run npm run test:ci;
+	npm run build && xvfb-run -a npm run test:ci;
 testE2Es:
 	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
 
