@@ -9,6 +9,7 @@ install:
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
+	npx chromatic test run  --build-script-name build:storybook || true
 
 productionTests:
 	npm run build && xvfb-run npm run test:ci;
