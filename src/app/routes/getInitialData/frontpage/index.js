@@ -5,12 +5,14 @@ import filterUnknownContentTypes from '../../../lib/utilities/preprocessor/rules
 import filterEmptyGroupItems from '../../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../../lib/utilities/preprocessor/rules/topstories';
 import addIdsToItems from '../../../lib/utilities/preprocessor/rules/addIdsToItems';
+import filterGroupsWithoutStraplines from '../../../lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
 
 const preprocessorRules = [
   filterUnknownContentTypes,
   addIdsToItems,
   filterEmptyGroupItems,
   applySquashTopstories,
+  filterGroupsWithoutStraplines,
 ];
 
 const getFrontpageInitialData = async ({ service }) => {
