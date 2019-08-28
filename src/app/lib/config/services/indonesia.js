@@ -68,7 +68,7 @@ const service = {
     },
     consentBanner: {
       privacy: {
-        title: 'Kami telah memperbarui Kebijakan Privasi dan Cookies kami',
+        title: "We've updated our Privacy and Cookies Policy",
         description: {
           uk: {
             first:
@@ -79,18 +79,18 @@ const service = {
           },
           international: {
             first:
-              'Kami melakukan sejumlah perubahan penting terkait Kebijakan Privasi dan Cookies dan kami ingin memberitahu Anda, apa arti langkah ini bagi Anda dan data Anda.',
+              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
-        accept: 'OKE',
-        reject: 'Coba lihat apa yang berubah',
+        accept: 'OK',
+        reject: "Find out what's changed",
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Tolong beritahu kami apakah Anda setuju dengan cookies',
+        title: 'Let us know you agree to cookies',
         description: {
           uk: {
             first: 'We use ',
@@ -101,16 +101,16 @@ const service = {
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'Kami dan para mitra kami menggunakan teknologi, seperti ',
+            first: 'We and our partners use technologies, such as ',
             linkText: 'cookies',
             last:
-              ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
+              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Ya, saya setuju',
-        reject: 'Tidak, tampilkan pengaturan',
+        accept: 'Yes, I agree',
+        reject: 'No, take me to settings',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
