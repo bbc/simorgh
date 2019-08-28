@@ -139,7 +139,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
       }
 
-      const runDescriptionAndTitleTests = (description, title) => {
+      const runDescriptionAndTitleTests = ({ description, title }) => {
         const pageTitle = `${title} - ${appConfig[service].brandName}`;
 
         cy.get('head').within(() => {
@@ -195,16 +195,16 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   description = '';
                   title = '';
               }
-              runDescriptionAndTitleTests(description, title);
+              runDescriptionAndTitleTests({ description, title });
             },
           );
         }
 
         if (pageType === 'errorPage404') {
-          runDescriptionAndTitleTests(
-            appConfig[service].translations.error[404].title,
-            appConfig[service].translations.error[404].title,
-          );
+          runDescriptionAndTitleTests({
+            description: appConfig[service].translations.error[404].title,
+            title: appConfig[service].translations.error[404].title,
+          });
         }
       });
 

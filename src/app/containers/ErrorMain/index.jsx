@@ -24,10 +24,9 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
       <title>{pageTitle}</title>
-      <meta name="description" content={pageTitle} />
-      <meta name="og:description" content={pageTitle} />
+      <meta name="og:description" content={title} />
       <meta name="og:title" content={pageTitle} />
-      <meta name="twitter:description" content={pageTitle} />
+      <meta name="twitter:description" content={title} />
       <meta name="twitter:title" content={pageTitle} />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
