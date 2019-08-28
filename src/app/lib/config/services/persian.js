@@ -6,13 +6,15 @@ import {
   F_NASSIM_PERSIAN_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const persian = {
   lang: 'fa',
   product: 'BBC News',
-  articleAuthor: 'https://www.facebook.com/bbcpersian',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'به روز شده در',
   atiAnalyticsAppName: 'news-persian',
+  atiAnalyticsProducerId: '69',
   brandName: 'BBC News فارسی',
   serviceLocalizedName: 'فارسی',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
@@ -37,6 +39,10 @@ const persian = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'صفحه اول',
+    currentPage: 'Current page',
+    skipLinkText: 'مشاهده محتوا',
     error: {
       404: {
         statusCode: '۴۰۴',
@@ -187,6 +193,7 @@ const persian = {
     copyrightText:
       'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
   },
+  timezone: 'Europe/London',
   fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };
 

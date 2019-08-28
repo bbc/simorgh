@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { nepali as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
 
 const service = {
-  lang: `ne-NP`,
+  lang: `ne`,
   articleAuthor: `http://www.facebook.com/bbcnepaliservice`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-nepali',
+  atiAnalyticsProducerId: '63',
   brandName: 'BBC News नेपाली',
   product: 'BBC News नेपाली',
   defaultImage:
@@ -29,9 +31,13 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'मुख पृष्ठ',
+    currentPage: 'Current page',
+    skipLinkText: 'यो सामग्री स्कीप गर्नुहोस्',
     error: {
       404: {
         statusCode: '404',
@@ -162,6 +168,7 @@ const service = {
       'बीबीसी। बाहिरी वेबसाइटहरुको सामग्रीका लागि बीबीसी जिम्मेवार छैन।',
   },
   fonts: [],
+  timezone: 'Asia/Kathmandu',
 };
 
 export default service;

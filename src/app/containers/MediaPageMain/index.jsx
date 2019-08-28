@@ -1,32 +1,51 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { string, shape, object } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
-import pathOr from 'ramda/src/pathOr';
 
+import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
+const renderBlock = ({ script, service }) => block => {
+  const Component = {
+    heading: Headline,
+    paragraph: Paragraph,
+  }[block.type];
+
+  if (!Component) {
+    return null;
+  }
+
+  const props = {
+    key: block.text,
+    script,
+    service,
+    ...(block.type === 'heading' && { id: 'content' }),
+  };
+
+  return <Component {...props}>{block.text}</Component>;
+};
+
 const MediaPageMain = props => {
   const { pageData, service, match } = props;
   const { serviceId, mediaId } = match.params;
-  const { script, translations } = useContext(ServiceContext);
-
-  const { title, subtitle } = pathOr(null, ['media', serviceId], translations);
+  const { script } = useContext(ServiceContext);
+  const {
+    content: { blocks },
+    promo,
+    metadata,
+  } = pageData;
 
   return (
-    <Fragment>
-      <MetadataContainer metadata={pageData.metadata} promo={pageData.promo} />
+    <>
+      <ATIAnalytics data={pageData} />
+      <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
-            <Headline script={script} service={service}>
-              {title}
-            </Headline>
-            <Paragraph script={script} service={service}>
-              {subtitle}
-            </Paragraph>
+            {blocks.map(renderBlock({ script, service }))}
             <ul>
               <li>
                 <strong>Service</strong>: {service}
@@ -41,7 +60,7 @@ const MediaPageMain = props => {
           </GridItemConstrainedMedium>
         </Grid>
       </main>
-    </Fragment>
+    </>
   );
 };
 

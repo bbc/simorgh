@@ -1,6 +1,11 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { arabic as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_NASSIM_ARABIC_REGULAR,
+  F_NASSIM_ARABIC_BOLD,
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: 'ar',
@@ -8,6 +13,7 @@ const service = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
   articleTimestampPrefix: 'جدّد في',
   atiAnalyticsAppName: 'news-arabic',
+  atiAnalyticsProducerId: '5',
   brandName: 'BBC News عربي',
   serviceLocalizedName: 'عربي',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
@@ -32,6 +38,10 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'رئيسية',
+    currentPage: 'Current page',
+    skipLinkText: 'إذهب الى المحتوى',
     error: {
       404: {
         statusCode: '404',
@@ -162,7 +172,8 @@ const service = {
     ],
     copyrightText: 'بي بي سي. بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
   },
-  fonts: [],
+  fonts: [F_NASSIM_ARABIC_REGULAR, F_NASSIM_ARABIC_BOLD],
+  timezone: 'Europe/London',
 };
 
 export default service;

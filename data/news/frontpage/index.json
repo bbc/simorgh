@@ -50,7 +50,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-scotland-48938509"
             },
             "summary": "The number of drug-related deaths in the country soared last year, with the rate now three times that of the UK as a whole.",
-            "timestamp": 1563283114,
+            "timestamp": 1563283113000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -90,7 +90,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-scotland-48853004"
                 },
                 "summary": "Nearly 1,200 people died of drug-related deaths in Scotland last year, the highest ever total.",
-                "timestamp": 1563279761,
+                "timestamp": 1563279760000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/uk-scotland-48853004",
                 "type": "cps"
@@ -104,7 +104,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-scotland-48993861"
                 },
                 "summary": "Jacquie says it was like a fire ripping through her family after five relatives died because of drug addiction.",
-                "timestamp": 1563234304,
+                "timestamp": 1563234303000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/uk-scotland-48993861",
                 "type": "cps"
@@ -119,7 +119,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-scotland-scotland-politics-48879369"
                 },
                 "summary": "Prof Catriona Matheson will advise on policies to tackle Scotland's rising number of drug deaths.",
-                "timestamp": 1562311607,
+                "timestamp": 1562311606000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/uk-scotland-scotland-politics-48879369",
                 "type": "cps"
@@ -138,7 +138,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-49007472"
             },
             "summary": "Police and the PM's spokesperson praise officers' courage and professionalism during the attack.",
-            "timestamp": 1563296948,
+            "timestamp": 1563296947000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -178,7 +178,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-48619714"
                 },
                 "summary": "An account of one devastating summer's night in June 2017 when eight people are killed and 48 more injured.",
-                "timestamp": 1561683570,
+                "timestamp": 1561683569000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/uk-48619714",
                 "type": "cps"
@@ -192,7 +192,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-48784545"
                 },
                 "summary": "What do we know about the police and MI5 investigation into the London Bridge attackers?",
-                "timestamp": 1561741490,
+                "timestamp": 1561741489000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/uk-48784545",
                 "type": "cps"
@@ -206,7 +206,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-48580750"
                 },
                 "summary": "A cannabis-smoking petty thief from east London, Khuram Butt embraced extremism and became a murderer.",
-                "timestamp": 1561736926,
+                "timestamp": 1561736925000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/uk-48580750",
                 "type": "cps"
@@ -224,7 +224,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-49009486"
             },
             "summary": "The BBC has obtained footage of the night which shows unarmed police and members of the public as they tried to confront the armed men.",
-            "timestamp": 1563291767,
+            "timestamp": 1563291766000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -299,7 +299,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-europe-49010801"
             },
             "summary": "German Ursula von der Leyen will replace Jean-Claude Juncker on 1 November after a close vote.",
-            "timestamp": 1563304255,
+            "timestamp": 1563304254000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -369,7 +369,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/world-europe-49008882"
                 },
                 "summary": "Germany's Ursula von der Leyen is voted in by MEPs as the head of the EU Commission.",
-                "timestamp": 1563305016,
+                "timestamp": 1563305015000,
                 "cpsType": "MAP",
                 "id": "urn:bbc:ares::asset:news/world-europe-49008882",
                 "type": "cps"
@@ -383,7 +383,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/world-europe-48841980"
                 },
                 "summary": "The defence minister emerged from the shadows as choice to replace President Jean-Claude Juncker.",
-                "timestamp": 1563299746,
+                "timestamp": 1563299745000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/world-europe-48841980",
                 "type": "cps"
@@ -397,7 +397,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/world-europe-48963555"
                 },
                 "summary": "The European Commission is a key EU body - what is it and who gets to be part of it?",
-                "timestamp": 1563299863,
+                "timestamp": 1563299862000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/world-europe-48963555",
                 "type": "cps"
@@ -415,7 +415,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-us-canada-49008454"
             },
             "summary": "The US president hits back after his controversial attack on four minority Democratic congresswomen.",
-            "timestamp": 1563293478,
+            "timestamp": 1563293477000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -484,7 +484,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/world-us-canada-49008136"
                 },
                 "summary": "Some in the US state of Virginia are appalled by the president’s tweets about lawmakers - but others stand by him.",
-                "timestamp": 1563299123,
+                "timestamp": 1563299122000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/world-us-canada-49008136",
                 "type": "cps"
@@ -499,7 +499,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/world-us-canada-49001236"
                 },
                 "summary": "After President Trump tells four women of colour to \"go home\", his own party is muted in its criticism.",
-                "timestamp": 1563273923,
+                "timestamp": 1563273922000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/world-us-canada-49001236",
                 "type": "cps"
@@ -513,7 +513,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/world-us-canada-48997905"
                 },
                 "summary": "At the Made in America showcase, Mr Trump responds to questions about the meaning behind his tweets.",
-                "timestamp": 1563215454,
+                "timestamp": 1563215453000,
                 "cpsType": "MAP",
                 "id": "urn:bbc:ares::asset:news/world-us-canada-48997905",
                 "type": "cps"
@@ -531,7 +531,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-49006906"
             },
             "summary": "The government says it will consult on raising the age limit for playing the National Lottery from 16 to 18.",
-            "timestamp": 1563286545,
+            "timestamp": 1563286544000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -570,7 +570,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-47652870"
                 },
                 "summary": "From £3m investments to designer handbags - the ways a lucky few have chosen to spend the payouts.",
-                "timestamp": 1553180462,
+                "timestamp": 1553180461000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/uk-47652870",
                 "type": "cps"
@@ -584,7 +584,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/uk-48711129"
                 },
                 "summary": "The jackpot is the third largest amount to ever be won on EuroMillions.",
-                "timestamp": 1561047801,
+                "timestamp": 1561047800000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/uk-48711129",
                 "type": "cps"
@@ -603,7 +603,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/health-48956943"
             },
             "summary": "Exclusive access to Great Ormond Street as surgeons worked to separate two girls who shared a skull.",
-            "timestamp": 1563278664,
+            "timestamp": 1563278663000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -674,7 +674,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-49001503"
             },
             "summary": "The Killing Eve actresses are both up for best actress in a drama series at this year's Emmy TV awards.",
-            "timestamp": 1563295931,
+            "timestamp": 1563295930000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -713,7 +713,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/news/entertainment-arts-48341381"
                 },
                 "summary": "\"It's never old news that I'm from Liverpool,\" says Jodie Comer.",
-                "timestamp": 1559604515,
+                "timestamp": 1559604514000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:news/entertainment-arts-48341381",
                 "type": "cps"
@@ -731,7 +731,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-middle-east-49009336"
             },
             "summary": "US imposed sanctions are crippling the economy, making food and medicines unaffordable.",
-            "timestamp": 1563303452,
+            "timestamp": 1563303451000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -802,7 +802,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-49009446"
             },
             "summary": "A man accused of lying about an alleged VIP paedophile ring is a sophisticated paedophile, jurors are told.",
-            "timestamp": 1563295002,
+            "timestamp": 1563295001000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -844,7 +844,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/newsbeat-49003957"
             },
             "summary": "London rapper Unknown T has been charged with the murder of a 20-year-old at a 2018 New Year's Party.",
-            "timestamp": 1563294223,
+            "timestamp": 1563294222000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -885,7 +885,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-kent-49006138"
             },
             "summary": "The man was suffering from mild hypothermia when he was picked up by French authorities.",
-            "timestamp": 1563303566,
+            "timestamp": 1563303565000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -927,7 +927,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/newsbeat-48989949"
             },
             "summary": "More than a million people RSVP to an event calling for people to break into the Nevada base.",
-            "timestamp": 1563284941,
+            "timestamp": 1563284940000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -977,7 +977,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-48993712"
             },
             "summary": "When Rose Brown was aged 12, she was hit by a drink driver and left unable to walk or talk. She's now been able to choose how she sounds.",
-            "timestamp": 1563231748,
+            "timestamp": 1563231747000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1046,7 +1046,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/technology-49008496"
             },
             "summary": "Fifa 20 will be the first game in 25 years not to feature the licence for Serie A champions Juventus.",
-            "timestamp": 1563292665,
+            "timestamp": 1563292664000,
             "byline": {
               "name": "By Tom Gerken",
               "title": "BBC News",
@@ -1108,7 +1108,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-wales-49008538"
             },
             "summary": "Dylan Hughes and Amelie Barker have known each other since they were three and plan to marry.",
-            "timestamp": 1563306342,
+            "timestamp": 1563306341000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1148,7 +1148,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-middle-east-48997165"
             },
             "summary": "The BBC has been given rare access inside the country as tensions with the United States and its allies increase.",
-            "timestamp": 1563215291,
+            "timestamp": 1563215290000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1217,7 +1217,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/business-48995846"
             },
             "summary": "Nicholas Fearn says someone created a Gmail account in his name, and then withdrew his job application.",
-            "timestamp": 1563274805,
+            "timestamp": 1563274804000,
             "byline": {
               "name": "By Victoria Park",
               "title": "BBC News",
@@ -1277,7 +1277,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-48106617"
             },
             "summary": "A TV presenter is thought to be the first person to die in an accident involving an electric scooter in the UK. How safe are they?",
-            "timestamp": 1563204225,
+            "timestamp": 1563204224000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
@@ -1328,7 +1328,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-middle-east-49002046"
             },
             "summary": "Tools, jewels, figurines, seeds and other objects are discovered at the site near Jerusalem.",
-            "timestamp": 1563271695,
+            "timestamp": 1563271694000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1375,7 +1375,7 @@
             "uri": "https://www.bbc.com/ideas/videos/who-was-the-original-chauvinist/p07gybpm?playlist=eponyms-explored",
             "contentType": "Video",
             "assetTypeCode": "PRO",
-            "timestamp": 1563197752,
+            "timestamp": 1563197751000,
             "type": "link"
           },
           {
@@ -1388,7 +1388,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/stories-48990179"
             },
             "summary": "Nicola is doing a 'no buy' year and fighting back against social media pressure to buy new things.",
-            "timestamp": 1563232895,
+            "timestamp": 1563232894000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1468,7 +1468,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/in-pictures-48746287"
             },
             "summary": "Photographer Jorgen Angel was present at Led Zeppelin's first concert, in 1968.",
-            "timestamp": 1563232938,
+            "timestamp": 1563232937000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1508,7 +1508,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-scotland-highlands-islands-48995746"
             },
             "summary": "The two females are part of a captive breeding programme that could one day see cats released into the wild.",
-            "timestamp": 1563234391,
+            "timestamp": 1563234390000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1555,7 +1555,7 @@
             "uri": "https://www.bbc.com/ideas/videos/is-technology-addiction-a-myth/p07ggx85",
             "contentType": "Video",
             "assetTypeCode": "PRO",
-            "timestamp": 1562921763,
+            "timestamp": 1562921762000,
             "type": "link"
           }
         ],
@@ -1578,7 +1578,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/10318089"
             },
             "summary": "Britain's most-watched news channel, delivering breaking news and analysis all day, every day.",
-            "timestamp": 1561355860,
+            "timestamp": 1561355859000,
             "cpsType": "MAP",
             "media": {
               "id": "59970310",
@@ -1641,7 +1641,7 @@
             "uri": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_five_live",
             "contentType": "Audio",
             "assetTypeCode": "PRO",
-            "timestamp": 1384872025,
+            "timestamp": 1384872024000,
             "type": "link"
           }
         ],
@@ -1663,7 +1663,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-49000638"
             },
             "summary": "Djokovic credited the power of imagining after his Wimbledon win. Sports psychologists explain how it works.",
-            "timestamp": 1563288515,
+            "timestamp": 1563288514000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1703,7 +1703,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-49000966"
             },
             "summary": "MPs warn that Britons are being exposed to a \"cocktail of chemicals\" from birth. What are the risks?",
-            "timestamp": 1563290963,
+            "timestamp": 1563290962000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1743,7 +1743,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-europe-48963555"
             },
             "summary": "The European Commission is a key EU body - what is it and who gets to be part of it?",
-            "timestamp": 1563299863,
+            "timestamp": 1563299862000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1790,7 +1790,7 @@
             "uri": "https://www.bbc.co.uk/news/extra/PLNMqvmycN/conjoined-twins",
             "contentType": "Feature",
             "assetTypeCode": "PRO",
-            "timestamp": 1563202512,
+            "timestamp": 1563202511000,
             "type": "link"
           },
           {
@@ -1802,7 +1802,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-scotland-48853004"
             },
             "summary": "Nearly 1,200 people died of drug-related deaths in Scotland last year, the highest ever total.",
-            "timestamp": 1563279761,
+            "timestamp": 1563279760000,
             "byline": {
               "name": "By Ed Lowther and Steven Brocklehurst",
               "title": "BBC News",
@@ -1852,7 +1852,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-us-canada-48931502"
             },
             "summary": "Why two men with type one diabetes are hiking to the the highest points in all 50 US states - in 50 days.",
-            "timestamp": 1563225114,
+            "timestamp": 1563225113000,
             "byline": {
               "name": "By Lauren Turner",
               "title": "BBC News",
@@ -1902,7 +1902,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:sport/boxing/48974341"
             },
             "summary": "Sonny Liston was found dead at his Las Vegas home in 1971. A coroner concluded he died of natural causes - but some say the truth is darker.",
-            "timestamp": 1563231776,
+            "timestamp": 1563231775000,
             "byline": {
               "name": "By Gareth Evans",
               "title": "BBC Sport",
@@ -1959,7 +1959,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/uk-48607989"
             },
             "summary": "The Extinction Rebellion group is holding climate protests across the UK.",
-            "timestamp": 1563236272,
+            "timestamp": 1563236271000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -2000,7 +2000,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/business-48993008"
             },
             "summary": "The Bank of England has unveiled the new Alan Turing £50 note, but does it make sense to even have it?",
-            "timestamp": 1563260781,
+            "timestamp": 1563260780000,
             "byline": {
               "name": "By Kevin Peachey",
               "title": "Personal finance reporter",
@@ -2052,7 +2052,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-48886136"
             },
             "summary": "Fronted by 13 Reasons Why actor Dylan Minnette, US band Wallows are balancing music with movies.",
-            "timestamp": 1563235290,
+            "timestamp": 1563235289000,
             "byline": {
               "name": "By Kev Geoghegan",
               "title": "Arts and entertainment reporter",
@@ -2102,7 +2102,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/business-48992071"
             },
             "summary": "Mike Ashley promised to revitalise House of Fraser, but there are concerns over how he is managing the brand.",
-            "timestamp": 1563232734,
+            "timestamp": 1563232733000,
             "byline": {
               "name": "By Lucy Hooker",
               "title": "Business reporter, BBC News",
@@ -2152,7 +2152,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-europe-48853747"
             },
             "summary": "Volodymyr Zelensky's presidential victory was hailed as a political earthquake but he has been unable to make changes.",
-            "timestamp": 1563234464,
+            "timestamp": 1563234463000,
             "byline": {
               "name": "By Jonah Fisher",
               "title": "BBC Kiev correspondent",
@@ -2202,7 +2202,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/business-48871452"
             },
             "summary": "May saw the world's first unmanned commercial shipping operation.",
-            "timestamp": 1563234290,
+            "timestamp": 1563234289000,
             "byline": {
               "name": "By Stav Dimitropoulos",
               "title": "Technology of Business reporter",
@@ -2252,7 +2252,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-india-48986799"
             },
             "summary": "Every year, tensions increase between India and Nepal during the monsoon season. Why?",
-            "timestamp": 1563234944,
+            "timestamp": 1563234943000,
             "byline": {
               "name": "Navin Singh Khadka",
               "title": "Environment correspondent, BBC World Service",
@@ -2313,7 +2313,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:sport/football/49010376"
             },
             "summary": "Tottenham and England right-back Kieran Trippier is close to completing a £20m move Spanish side Atletico Madrid.",
-            "timestamp": 1563306459,
+            "timestamp": 1563306458000,
             "byline": {
               "name": "By David Ornstein",
               "title": "BBC Sport",
@@ -2371,7 +2371,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:sport/golf/49003811"
             },
             "summary": "Tiger Woods is \"not as sharp\" as he would like to be for this week's Open Championship but says a light schedule is vital to prolonging his career.",
-            "timestamp": 1563286712,
+            "timestamp": 1563286711000,
             "byline": {
               "name": "By Alex Bysouth",
               "title": "BBC Sport at Royal Portrush",
@@ -2421,7 +2421,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:sport/boxing/49001043"
             },
             "summary": "Manny Pacquiao's camp deny a deal has been agreed to fight Britain's Amir Khan in Saudi Arabia in November.",
-            "timestamp": 1563300982,
+            "timestamp": 1563300981000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107900771",
@@ -2461,7 +2461,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:sport/formula1/48984966"
             },
             "summary": "Lewis Hamilton is proving too good this season, leaving Valtteri Bottas behind, says Jolyon Palmer.",
-            "timestamp": 1563308161,
+            "timestamp": 1563308160000,
             "byline": {
               "name": "By Jolyon Palmer",
               "title": "Former Renault driver & BBC Radio 5 Live commentator",
@@ -2518,7 +2518,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:sport/live/football/48942083"
             },
             "summary": "BBC Radio Scotland's Sportsound provides commentary of the Scottish League Cup tie at Central Park, plus score updates of Tuesday's other ties.",
-            "timestamp": 1563195044,
+            "timestamp": 1563195043000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/News",
@@ -2581,7 +2581,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:sport/av/netball/49005330"
             },
             "summary": "Watch the best plays from day five of the Netball World Cup, including Shaunagh Craig's \"spectacular\" long-range throw for Northern Ireland.",
-            "timestamp": 1563296836,
+            "timestamp": 1563296835000,
             "cpsType": "MAP",
             "media": {
               "id": "p07h1fnj",
@@ -2644,7 +2644,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:sport/av/cricket/48984303"
             },
             "summary": "Watch the moment that Jos Buttler runs out New Zealand's Martin Guptill to win England the World Cup.",
-            "timestamp": 1563129727,
+            "timestamp": 1563129726000,
             "cpsType": "MAP",
             "media": {
               "id": "p07gwwpz",
@@ -2728,7 +2728,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-us-canada-48911106"
             },
             "summary": "It's 50 years since the first ever manned landing on the Moon - what was involved?",
-            "timestamp": 1562716338,
+            "timestamp": 1562716337000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2768,7 +2768,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-us-canada-49009476"
             },
             "summary": "JoAnn Morgan tells the BBC about her role at the launch of the Apollo 11 mission to the Moon.",
-            "timestamp": 1563301073,
+            "timestamp": 1563301072000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2838,7 +2838,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/science-environment-48907836"
             },
             "summary": "Fifty years on, here are four things that made the Apollo Moon programme one of humankind's greatest technological achievements.",
-            "timestamp": 1562972975,
+            "timestamp": 1562972974000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2888,7 +2888,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/world-us-canada-48931816"
             },
             "summary": "All the focus was on the Moon, the mission and the men – but what about the families back on Earth?",
-            "timestamp": 1563059723,
+            "timestamp": 1563059722000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -2963,7 +2963,7 @@
             "uri": "https://www.bbc.co.uk/news/extra/nkzysaP3pB/to-the-moon-and-beyond",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1562856639,
+            "timestamp": 1562856638000,
             "type": "link"
           },
           {
@@ -2975,7 +2975,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:news/science-environment-48953973"
             },
             "summary": "The public knew little about this enigmatic man, but now we are gaining a glimpse of the real Neil Armstrong.",
-            "timestamp": 1563147056,
+            "timestamp": 1563147055000,
             "byline": {
               "name": "By Pallab Ghosh",
               "title": "Science correspondent, BBC News ",
@@ -3057,7 +3057,7 @@
             "uri": "https://www.bbc.co.uk/news/uk-48619714",
             "contentType": "Feature",
             "assetTypeCode": "PRO",
-            "timestamp": 1561700514,
+            "timestamp": 1561700513000,
             "type": "link"
           },
           {
@@ -3075,7 +3075,7 @@
             "uri": "https://www.bbc.co.uk/news/extra/KnxBMVGAcn/michigan_central_detroit",
             "contentType": "Feature",
             "assetTypeCode": "PRO",
-            "timestamp": 1562763203,
+            "timestamp": 1562763202000,
             "type": "link"
           },
           {
@@ -3093,7 +3093,7 @@
             "uri": "https://www.bbc.co.uk/news/uk-england-london-48928442",
             "contentType": "Feature",
             "assetTypeCode": "PRO",
-            "timestamp": 1563258209,
+            "timestamp": 1563258208000,
             "type": "link"
           },
           {
@@ -3111,7 +3111,7 @@
             "uri": "https://www.bbc.co.uk/news/uk-48942411",
             "contentType": "Feature",
             "assetTypeCode": "PRO",
-            "timestamp": 1563175950,
+            "timestamp": 1563175949000,
             "type": "link"
           },
           {
@@ -3139,7 +3139,7 @@
             "uri": "https://www.bbc.co.uk/news/stories-48968502",
             "contentType": "Feature",
             "assetTypeCode": "PRO",
-            "timestamp": 1563176138,
+            "timestamp": 1563176137000,
             "type": "link"
           }
         ],

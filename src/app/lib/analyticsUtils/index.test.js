@@ -348,7 +348,7 @@ describe('getPublishedDatetime', () => {
   const data = {
     metadata: {
       firstPublished: 946688461000,
-      seconds: 1504785600,
+      seconds: 1504785600000,
       invalidDate: 'foobar',
     },
   };

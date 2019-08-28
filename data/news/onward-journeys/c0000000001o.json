@@ -9,7 +9,7 @@
       "locators": {
         "uri": "/news/business-45243088"
       },
-      "timestamp": 1534761406,
+      "timestamp": 1534761405000,
       "image": {
         "blockId": "d228e31c-95d7-4614-bacd-bac4672dbb29",
         "type": "image",
@@ -37,7 +37,7 @@
       "locators": {
         "uri": "/news/business-45244761"
       },
-      "timestamp": 1534759600,
+      "timestamp": 1534759599000,
       "image": {
         "blockId": "e5deda34-d12c-4400-b213-90b541d7c6d0",
         "type": "image",
@@ -65,7 +65,7 @@
       "locators": {
         "uri": "/news/uk-45240390"
       },
-      "timestamp": 1534762438,
+      "timestamp": 1534762437000,
       "image": {
         "blockId": "23f653b0-805e-4b2d-ba38-5fb4b79dbe4b",
         "type": "image",
@@ -93,7 +93,7 @@
       "locators": {
         "uri": "/news/uk-45244269"
       },
-      "timestamp": 1534759395,
+      "timestamp": 1534759394000,
       "image": {
         "blockId": "4e559990-fe8b-4e48-9d58-ecd799cc76f0",
         "type": "image",
@@ -121,7 +121,7 @@
       "locators": {
         "uri": "/news/uk-scotland-edinburgh-east-fife-45238696"
       },
-      "timestamp": 1534757191,
+      "timestamp": 1534757190000,
       "image": {
         "blockId": "87eb7778-84c5-4d8e-80b8-c7fc5cfa2f92",
         "type": "image",
@@ -149,7 +149,7 @@
       "locators": {
         "uri": "/news/uk-england-northamptonshire-45211357"
       },
-      "timestamp": 1534720965,
+      "timestamp": 1534720964000,
       "image": {
         "blockId": "a4e49efc-cb6d-452a-a6fe-31121160bce2",
         "type": "image",
@@ -177,7 +177,7 @@
       "locators": {
         "uri": "/news/business-44894414"
       },
-      "timestamp": 1534720669,
+      "timestamp": 1534720668000,
       "image": {
         "blockId": "df8062f8-8f11-4c45-b0dc-50b0e1cff872",
         "type": "image",
@@ -205,7 +205,7 @@
       "locators": {
         "uri": "/news/uk-england-cornwall-45244859"
       },
-      "timestamp": 1534750881,
+      "timestamp": 1534750880000,
       "image": {
         "blockId": "a26e3252-1faf-4f31-ba93-d8f1a5ca0dfe",
         "type": "image",
@@ -233,7 +233,7 @@
       "locators": {
         "uri": "/news/stories-45226482"
       },
-      "timestamp": 1534720978,
+      "timestamp": 1534720977000,
       "image": {
         "blockId": "91aa958b-caf2-4398-a73d-b4c6e30c7adb",
         "type": "image",
@@ -261,7 +261,7 @@
       "locators": {
         "uri": "/news/business-45244579"
       },
-      "timestamp": 1534755771,
+      "timestamp": 1534755770000,
       "image": {
         "blockId": "d9c60ed4-dab5-49fe-997f-b04fa6fecae8",
         "type": "image",

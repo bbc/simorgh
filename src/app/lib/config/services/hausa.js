@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { hausa as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ha-GH`,
+  lang: `ha`,
   articleAuthor: `https://www.facebook.com/bbchausa?v=wall&ref=mf`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-hausa',
+  atiAnalyticsProducerId: '51',
   brandName: 'BBC News Hausa',
   product: 'BBC News Hausa',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
@@ -28,9 +30,13 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    seeAll: 'Duba su baki daya',
+    home: 'Labaran Duniya',
+    currentPage: 'Current page',
+    skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
     error: {
       404: {
         statusCode: '404',
@@ -165,6 +171,7 @@ const service = {
     copyrightText: 'BBC. BBC ba tada alhaki game da shafukan da ba nata ba',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

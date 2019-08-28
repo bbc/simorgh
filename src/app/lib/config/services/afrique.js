@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: `fr`,
   articleAuthor: `https://facebook.com/bbcnewsafrique`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-afrique',
+  atiAnalyticsProducerId: '3',
   brandName: 'BBC News Afrique',
   product: 'BBC News Afrique',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
@@ -28,9 +30,13 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    seeAll: 'Tout voir',
+    home: 'Accueil',
+    currentPage: 'Current page',
+    skipLinkText: 'Aller au contenu',
     error: {
       404: {
         statusCode: '404',
@@ -165,6 +171,7 @@ const service = {
       "BBC. La BBC n'est pas responsable du contenu de sites externes",
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

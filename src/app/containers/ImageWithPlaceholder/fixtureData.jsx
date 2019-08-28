@@ -15,8 +15,10 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
       isUK
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
+      service="news"
       statsDestination="NEWS_PS_TEST"
       statsPageIdentifier="news.articles.c0000000000o"
+      pageType="frontPage"
     >
       <FigureContainer {...otherProps} />
     </RequestContextProvider>

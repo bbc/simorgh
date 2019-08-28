@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: `sr-Latn`,
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-serbian',
+  atiAnalyticsProducerId: '81',
   brandName: 'BBC News na srpskom',
   product: 'BBC News na srpskom',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
@@ -28,9 +30,13 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'Home',
+    currentPage: 'Current page',
+    skipLinkText: 'Skip to content',
     error: {
       404: {
         statusCode: '404',
@@ -156,6 +162,7 @@ const service = {
       'BBC. BBC nije odgovoran za sadržaj sajtova sa spoljnih linkova',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

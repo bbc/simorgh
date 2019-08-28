@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { zhongwen as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   lang: `zh_CN`,
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-zhongwen',
+  atiAnalyticsProducerId: '38',
   brandName: 'BBC News 中文',
   product: 'BBC News 中文',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png',
@@ -28,9 +30,13 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'Home',
+    currentPage: 'Current page',
+    skipLinkText: 'Skip to content',
     error: {
       404: {
         statusCode: '404',
@@ -159,6 +165,7 @@ const service = {
     copyrightText: 'BBC。BBC不为BBC以外的网站的内容负责',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;

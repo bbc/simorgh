@@ -54,7 +54,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
             },
             "summary": "রোহিত শর্মা, ডেভিড ওয়ার্নার নাকি কেইন উইলিয়ামসন? নাকি সাকিব আল হাসানেরও সুযোগ রয়েছে? এখন পর্যন্ত কারা কারা সেরা পারফর্ম করেছেন চলতি বিশ্বকাপে?",
-            "timestamp": 1562921555,
+            "timestamp": 1562921554000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -104,7 +104,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/bengali/news-48918961"
                 },
                 "summary": "সেমিফাইনালে নিউজিল্যান্ডের কাছে ১৮ রানে হেরে যাওয়ার পর হতাশ ভারতের অধিনায়ক ভিরাট কোহলি টুর্নামেন্টের ফরম্যাট পরিবর্তনের পক্ষে যুক্তি দিলেন।",
-                "timestamp": 1562821799,
+                "timestamp": 1562821798000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:bengali/news-48918961",
                 "type": "cps"
@@ -133,7 +133,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48953693"
             },
             "summary": "বাংলাদেশে জন্মনিয়ন্ত্রণ পদ্ধতিগুলোর ক্ষেত্রে সবচেয়ে জনপ্রিয় খাবার বড়ি ও কনডম। কিন্তু এর বিকল্প কী আছে। জন্মনিয়ন্ত্রণ বা এর পদ্ধতিগুলো নিয়ে দৃষ্টিভঙ্গীই বা কতটুকু পাল্টেছে?",
-            "timestamp": 1562911344,
+            "timestamp": 1562911343000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -182,7 +182,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48946496"
             },
             "summary": "নিউজিল্যান্ডের কাছে ভারতের হারের পর বাংলাদেশে সামাজিক মাধ্যম ব্যবহারকারীদের অনেকের পোস্ট ও কমেন্টে ভারতবিরোধী মনোভাব ফুটে উঠেছে।",
-            "timestamp": 1562858432,
+            "timestamp": 1562858431000,
             "byline": {
               "name": "নাগিব বাহার",
               "title": "বিবিসি বাংলা, ঢাকা",
@@ -231,7 +231,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/bengali/news-48951604"
                 },
                 "summary": "বিশ্বকাপের সেমিফাইনালে ভারতের পরাজয়ের পর ভিরাট কোহলিকে নিয়ে প্রশ্ন তুলেছেন ভারতের সাবেক ক্রিকেটাররা।",
-                "timestamp": 1562842431,
+                "timestamp": 1562842430000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:bengali/news-48951604",
                 "type": "cps"
@@ -249,7 +249,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48946013"
             },
             "summary": "মানসিক স্বাস্থ্য থেকে শুরু করে, ফুসফুসের কার্যকারিতা বাড়াতে সেইসঙ্গে স্মৃতিভ্রষ্ট রোগের সাথে মোকাবেলা করতে মানুষের জীবনে গান গাওয়া বড় ধরণের ভূমিকা রাখে বলছেন গবেষকরা।",
-            "timestamp": 1562897460,
+            "timestamp": 1562897459000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -288,7 +288,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/bengali/news-45922433"
                 },
                 "summary": "প্রায় সময় কোন গান শুনলে সেটা আর মগজ থেকে বেরোতে চায় না। সারাদিন নিজের অজান্তেই আপনি গুনগুন করতেই থাকেন। এমনটা কেন হয়? এ থেকে পরিত্রাণের সবচেয়ে ভাল উপায় কি?",
-                "timestamp": 1540028737,
+                "timestamp": 1540028736000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:bengali/news-45922433",
                 "type": "cps"
@@ -314,7 +314,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48961445"
             },
             "summary": "১৬ কোটিরও বেশি জনসংখ্যার বাংলাদেশে নারীর ক্ষমতায়নে কতটা সহায়ক হয়েছে জন্মনিয়ন্ত্রণ পদ্ধতির ব্যবহার? নারীদের জন্মনিয়ন্ত্রণ পদ্ধতিগুলো কতটা নিরাপদ?",
-            "timestamp": 1562922668,
+            "timestamp": 1562922667000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -382,7 +382,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48949693"
             },
             "summary": "জোয়ানা পার্কের বয়স ২০ বছর। জন্মসূত্রে তিনি বাংলাদেশি। যখন জোয়ানার বয়স ১০ বছর, তখন তাকে এক কোরিয়ান দম্পতি দত্তক নেন এবং কোরিয়ায় নিয়ে যান।",
-            "timestamp": 1562836308,
+            "timestamp": 1562836307000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -453,7 +453,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48949695"
             },
             "summary": "বাংলাদেশের বড় শহরগুলোতে বিশেষ করে ঢাকার রাস্তায় বের হলেই যে বিষয়টা সবার জন্যই বিরক্তিকর সেটা হলো রাস্তার যানজট। এই যানজট ও ট্রাফিক সিস্টেমের বিষয়টি ভাবাচ্ছে তরুণ প্রজন্মকেও।",
-            "timestamp": 1562840350,
+            "timestamp": 1562840349000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -523,7 +523,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48932873"
             },
             "summary": "যুক্তরাষ্ট্র ও ইরানের মধ্যে সাম্প্রতিক সময়ে যে চরম উত্তেজনা চলছে, তার ইতিহাস অনেক দিনের। কিন্তু এই শত্রুতার কারণ কী?",
-            "timestamp": 1562765538,
+            "timestamp": 1562765537000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -592,7 +592,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48860251"
             },
             "summary": "ঢাকার কামরাঙ্গীর চরে বেড়ে ওঠা রানার একটি হিপ হপ গান ফেসবুকে ছড়িয়ে পড়লে তা সকলের নজর কাড়ে। এই গানে রানা তারা নিজের জীবন সংগ্রাম, স্বপ্ন এবং তার প্রতি সমাজের আচরণের কথা তুলে ধরেছিল।",
-            "timestamp": 1562220437,
+            "timestamp": 1562220436000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -662,7 +662,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48919387"
             },
             "summary": "গণমাধ্যমের স্বাধীনতা নিয়ে লন্ডনে এক আন্তর্জাতিক সম্মেলনের প্রাক্কালে ঢাকায় বিবিসি বাংলাকে ব্রিটিশ হাইকমিশনার রবার্ট চ্যাটার্টন ডিকসন বলেছেন, বাংলাদেশের সাংবাদিকরা চাপের কারণে সংবাদ ধামাচাপা দেয়।",
-            "timestamp": 1562666642,
+            "timestamp": 1562666641000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -753,7 +753,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48959821"
             },
             "summary": "গত সপ্তাহে ইরানের কয়েকটি নৌযান ব্রিটিশ একটি তেলের ট্যাংকারকে বাঁধা দেয়ার চেষ্টা করলে ব্রিটিশ রয়্যাল নৌবাহিনীর জাহাজ তাদেরকে তাড়িয়ে দেয়। ব্রিটেনের প্রতিরক্ষা মন্ত্রণালয় এ তথ্য জানিয়েছে।",
-            "timestamp": 1562899193,
+            "timestamp": 1562899192000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -794,7 +794,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48954613"
             },
             "summary": "বাংলাদেশে জন্মনিয়ন্ত্রণের জন্য যেসব পদ্ধতি রয়েছে তার মধ্যে মোটে ৭ শতাংশ রয়েছে কনডমের ব্যবহার। দেশে যত ধরনের পদ্ধতি ব্যবহার করা হয় তার দুটি ছাড়া সবই নারীদের জন্য।",
-            "timestamp": 1562916848,
+            "timestamp": 1562916847000,
             "byline": {
               "name": "শাহনাজ পারভীন",
               "title": "বিবিসি বাংলা, ঢাকা",
@@ -846,7 +846,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48951684"
             },
             "summary": "ক্রিকেটের হিসেবে দুটো দেশের মধ্যে বিস্তর ব্যবধান। অর্থ, ক্ষমতা, প্রভাব, তারকা-সব দিকেই এগিয়ে ভারত। কিন্তু তাদেরকেই ছুঁড়ে ফেলে দিল নিউজিল্যান্ড।",
-            "timestamp": 1562854522,
+            "timestamp": 1562854521000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -887,7 +887,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48951683"
             },
             "summary": "ফরাসী বিজ্ঞানীরা বলছেন, ফলের রস ও ফিজি ড্রিঙ্কের মতো চিনিযুক্ত পানীয় খেলে ক্যান্সারের ঝুঁকি বেড়ে যেতে পারে। এসবের মধ্যে আছে ফলের রস, সফট ড্রিঙ্ক, মিল্কশেক, এনার্জি ড্রিঙ্ক এবং চিনি দেওয়া চা ও কফি।",
-            "timestamp": 1562843938,
+            "timestamp": 1562843937000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -928,7 +928,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48954953"
             },
             "summary": "বাংলাদেশ থেকে ভারতে বার্ষিক রফতানি এই প্রথমবারের মতো একশো কোটি মার্কিন ডলারের অঙ্ক ছাড়িয়েছে। ভারতের উদ্বিগ্ন গার্মেন্ট শিল্পমালিকরা এখন প্রশ্ন তুলছেন প্রতিবেশী দেশের ডিউটি-ফ্রি অ্যাকসেস নিয়ে।",
-            "timestamp": 1562860235,
+            "timestamp": 1562860234000,
             "byline": {
               "name": "শুভজ্যোতি ঘোষ",
               "title": "বিবিসি বাংলা, দিল্লি",
@@ -980,7 +980,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48951604"
             },
             "summary": "বিশ্বকাপের সেমিফাইনালে ভারতের পরাজয়ের পর ভিরাট কোহলিকে নিয়ে প্রশ্ন তুলেছেন ভারতের সাবেক ক্রিকেটাররা।",
-            "timestamp": 1562842431,
+            "timestamp": 1562842430000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1032,7 +1032,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48946494"
             },
             "summary": "গত সপ্তাহে ইরানের একটি তেলের ট্যাংকার আটক করার ঘটনার প্রতিশোধ হিসেবে ইরান ব্রিটিশ একটি তেলের ট্যাংকার আটকের চেষ্টা করেছে বলে ধারণা করা হচ্ছে।",
-            "timestamp": 1562828486,
+            "timestamp": 1562828485000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1073,7 +1073,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48946493"
             },
             "summary": "রেস্টুরেন্ট চেইন 'সারাভানা ভবন'এর কর্ণধার মি. রাজাগোপালের রেস্টুরেন্টের একটি দক্ষিণ ভারতীয় খাবারের নামানুসারে তাকে 'দোসা কিং' বা দোসা'র রাজা বলে ডাকা হতো।",
-            "timestamp": 1562832846,
+            "timestamp": 1562832845000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1114,7 +1114,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48946133"
             },
             "summary": "রাষ্ট্রদূত মিস্টার ডারখ'কে পূর্ণ সমর্থন দিতে ব্যর্থ হওয়ায় কঠোর সমালোচনার মুখে পড়েছেন টোরি নেতৃত্ব প্রত্যাশী প্রার্থী বরিস জনসন।",
-            "timestamp": 1562815515,
+            "timestamp": 1562815514000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1155,7 +1155,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48932695"
             },
             "summary": "পদ্মা সেতু তৈরির কাজে মানুষের মাথা প্রয়োজন হওয়ার গুজব ছড়িয়ে পড়ায় বিজ্ঞপ্তি প্রকাশ করে ঐ গুজবের প্রতিবাদ করেছে সেতু প্রকল্প পরিচালকের দপ্তর থেকে। কিন্তু এধরণের গুজব তৈরি হওয়ার ভিত্তি কী?",
-            "timestamp": 1562770963,
+            "timestamp": 1562770962000,
             "byline": {
               "name": "নাগিব বাহার",
               "title": "বিবিসি বাংলা, ঢাকা",
@@ -1238,7 +1238,7 @@
             "uri": "https://www.bbc.com/bengali/news-48328142",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1558268780,
+            "timestamp": 1558268779000,
             "type": "link"
           }
         ],
@@ -1264,7 +1264,7 @@
             "uri": "https://www.bbc.com/bengali/news-46633372",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1545311723,
+            "timestamp": 1545311722000,
             "type": "link"
           },
           {
@@ -1293,7 +1293,7 @@
             "uri": "http://www.bbc.com/bengali/news-41378428",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1506258993,
+            "timestamp": 1506258992000,
             "type": "link"
           },
           {
@@ -1305,7 +1305,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-38513669"
             },
             "summary": "বিবিসি বাংলার ৭৫ বছর পূর্তি উপলক্ষে প্রকাশিত এই স্মরণিকায় আছে বিগত ৭৫ বছরে বিবিসি বাংলার সাংবাদিকদের কর্মজীবনের নানা কথা।",
-            "timestamp": 1483616848,
+            "timestamp": 1483616847000,
             "cpsType": "STY",
             "indexImage": {
               "id": "93269259",
@@ -1345,7 +1345,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48415310"
             },
             "summary": "এবারের বিশ্বকাপে বাংলাদেশ যেসব ম্যাচ খেলবে তার ফলাফল কী হতে পারে? আপনি কী ভাবছেন? মিলিয়ে নিন বিবিসির বিশেষজ্ঞদের পূর্বাভাসের সাথে।",
-            "timestamp": 1558881032,
+            "timestamp": 1558881031000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
@@ -1387,7 +1387,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-47694960"
             },
             "summary": "সিক, স্বপ্নদোষ, কনডম-ইত্যাদি বাংলাদেশের সামাজিক বাস্তবতায় অনেকটা নিষিদ্ধ শব্দ। কিন্তু বাংলাদেশের সাড়ে তিনশটি বিদ্যালয়ের শিক্ষার্থীরা এখন ক্লাসরুমে অবলীলায় চর্চ্চা করছে এসব। সামাজিক সংস্কার কতটা কাটিয়ে উঠতে পারছে তারা?",
-            "timestamp": 1553516772,
+            "timestamp": 1553516771000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1464,7 +1464,7 @@
             "uri": "https://www.bbc.com/bengali/news-44603080",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1529937535,
+            "timestamp": 1529937534000,
             "type": "link"
           }
         ],
@@ -1487,7 +1487,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48911676"
             },
             "summary": "গরুকে ওষুধ খাইয়ে মোটা করা, কথিত বন্দুকযুদ্ধে অপরাধীর মৃত্যু এসব নিয়েই পাঠক-শ্রোতাদের মতামত",
-            "timestamp": 1562609703,
+            "timestamp": 1562609702000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
@@ -1528,7 +1528,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48560829"
             },
             "summary": "চন্দনা আর সঞ্জু যমজ দুই ভাইবোন। অন্ধকার পেরোতে পেরোতে বলতো— 'ভূত আমার পুত, পেত্নী আমার ঝি ...'",
-            "timestamp": 1559925172,
+            "timestamp": 1559925171000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -1584,7 +1584,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-47868637"
             },
             "summary": "সোশ্যাল মিডিয়া নিয়ন্ত্রণে বিভিন্ন দেশ যেন হঠাৎ গা ঝাড়া দিয়ে উঠেছে। বিভিন্ন দেশেই তৈরি হচ্ছে নানা ধরণের কঠোর আইন। থাকছে বড় অংকের জরিমানা থেকে কারাদণ্ডের বিধান।",
-            "timestamp": 1562132996,
+            "timestamp": 1562132995000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -1631,7 +1631,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-46056946"
             },
             "summary": "যে কাজ পুরুষের বেলায় এত স্বাভাবিক, নারীর বেলায় কেন তা নিয়ে এত কথা, এত প্রশ্ন? পুরুষ চালক তার মোটর বাইক নিয়ে ছুটছে, কেউ ফিরেও দেখছে না, নারী চালকের বেলায় কেন এত বাঁকা চাহনি, ব্যঙ্গ বিদ্রুপ?",
-            "timestamp": 1541162182,
+            "timestamp": 1541162181000,
             "byline": {
               "name": "ফারহানা পারভীন",
               "title": "বিবিসি বাংলা, ঢাকা",
@@ -1690,7 +1690,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48668691"
             },
             "summary": "দ্বিতীয় বিশ্বযুদ্ধের পর চীনকে তাদের প্রভাব বলয়ে রাখার আপ্রাণ চেষ্টা করেছিল যুক্তরাষ্ট্র। চীনের গৃহযুদ্ধ এবং চার্চিলের বক্তব্য বিবৃতিতে ব্যর্থ হয়ে যায় সেই চেষ্টা।",
-            "timestamp": 1562403277,
+            "timestamp": 1562403276000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1739,7 +1739,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-45777822"
             },
             "summary": "দ্বিতীয় বিশ্বযুদ্ধের সময় থাইল্যান্ড থেকে বার্মা পর্যন্ত এক রেল লাইন নির্মাণ করতে গিয়ে প্রাণ হারিয়েছিল হাজার হাজার যুদ্ধবন্দী। এই রেলওয়ের নাম দেয়া হয়েছিল 'ডেথ রেলওয়ে'।",
-            "timestamp": 1561351154,
+            "timestamp": 1561351153000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1788,7 +1788,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48878269"
             },
             "summary": "পশুর প্রতি নিষ্ঠুরতার বিরুদ্ধে সোচ্চার একদল তরুণ সংগঠক। প্রতিবাদ থেকে শুরু করে তাদের সচেতনতামূলক প্রচারণা-প্রতিটি ক্ষেত্রে শক্তিশালী হাতিয়ার হিসেবে কাজ করছে সামাজিক যোগাযোগ মাধ্যম।",
-            "timestamp": 1562322390,
+            "timestamp": 1562322389000,
             "byline": {
               "name": "সানজানা  চৌধুরী",
               "title": "বিবিসি বাংলা, ঢাকা",
@@ -1839,7 +1839,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-47109429"
             },
             "summary": "একাদশ জাতীয় সংসদ নির্বাচনের পর বাংলাদেশের প্রধান বিরোধী দল বিএনপির সাংগঠনিক কার্যক্রম অনেকটাই স্তিমিত। গত একমাসে রাজপথেও দেখা যায়নি দলটিকে। বর্তমান পরিস্থিতিতে বিএনপির অবস্থা কতটা নাজুক?",
-            "timestamp": 1549207735,
+            "timestamp": 1549207734000,
             "byline": {
               "name": "তাফসীর  বাবু",
               "title": "বিবিসি বাংলা, ঢাকা",
@@ -1900,7 +1900,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48897697"
             },
             "summary": "প্রতি বছর বিশ্বের প্রাকৃতিক নিদর্শন ও নানা ধরনের গুরুত্বপূর্ণ স্থাপনাকে তার গুরুত্বের জন্য বিশেষ মর্যাদা দেয়া হয়।",
-            "timestamp": 1562466056,
+            "timestamp": 1562466055000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1944,7 +1944,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48848613"
             },
             "summary": "দুই কোরিয়াকে বিভক্ত করে, এমন একটি অত্যন্ত সুরক্ষিত এলাকায় উত্তর কোরিয়ার নেতা কিম জং-আনের সাথে দেখা করার পর প্রথম মার্কিন প্রেসিডেন্ট হিসেবে উত্তর কোরিয়ার ভেতরে প্রবেশ করেন ডোনাল্ড ট্রাম্প। সেই দিনের কয়েকটি মুহূর্তের ছবি নিয়ে আমাদের আজকের ফটোগ্যালারি",
-            "timestamp": 1562119798,
+            "timestamp": 1562119797000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1984,7 +1984,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48834211"
             },
             "summary": "হংকং-এ যে বিক্ষোভকারীরা একটি বিতর্কিত আইনের প্রতিবাদ জানাচ্ছিল, তাদের মধ্যে কয়েকশ' তরুণের একটি দল আইনসভা ভবনের ভেতরে ঢুকে পড়েছে। বিক্ষোভকারীরা আইনসভা ভবনটির কাচ ভেঙে অধিবেশন কক্ষে ঢুকে পড়ে, এবং স্প্রে-পেইন্ট দিয়ে কক্ষের দেয়ালে নানা রকম বার্তা লিখে দেয়।",
-            "timestamp": 1562032631,
+            "timestamp": 1562032630000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2025,7 +2025,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48814790"
             },
             "summary": "গত এক সপ্তাহে বিশ্বব্যাপী ঘটে যাওয়া নানা ঘটনার ছবি।",
-            "timestamp": 1561893095,
+            "timestamp": 1561893094000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2077,7 +2077,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48779636"
             },
             "summary": "যেসব দেশে এখন দাবদাহ চলছে সেগুলো সাধারণত শীত প্রধান দেশ। এসব দেশে প্রচন্ড গরম খুবই অস্বাভাবিক। গরমে কিভাবে মানুষের জীবন?",
-            "timestamp": 1561603088,
+            "timestamp": 1561603087000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2136,7 +2136,7 @@
             "uri": "http://www.bbc.co.uk/academy/beta/bn/",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1489667076,
+            "timestamp": 1489667075000,
             "type": "link"
           }
         ],

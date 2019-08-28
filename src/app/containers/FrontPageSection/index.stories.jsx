@@ -1,4 +1,5 @@
 import React from 'react';
+import pathOr from 'ramda/src/pathOr';
 import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import FrontPageSection from '.';
@@ -13,10 +14,10 @@ const getSection = platform => (service, data) => (
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.com"
       isAmp={platform === 'amp'}
-      pageType="frontpage"
+      pageType="frontPage"
       service={service}
     >
-      <FrontPageSection group={data} />
+      <FrontPageSection group={data} sectionNumber={1} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
@@ -28,6 +29,14 @@ storiesOf('Containers|Front Page Section/Canonical', module)
   .add('igbo', () => getCanonicalSection('igbo', igboData.content.groups[0]))
   .add('pidgin', () =>
     getCanonicalSection('pidgin', pidginData.content.groups[0]),
+  )
+  .add('link to more', () =>
+    getCanonicalSection(
+      'pidgin',
+      pidginData.content.groups.find(
+        sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
+      ),
+    ),
   );
 
 storiesOf('Containers|Front Page Section/AMP', module)
@@ -35,4 +44,12 @@ storiesOf('Containers|Front Page Section/AMP', module)
   .add('igbo - amp', () => getAmpSection('igbo', igboData.content.groups[0]))
   .add('pidgin - amp', () =>
     getAmpSection('pidgin', pidginData.content.groups[0]),
+  )
+  .add('link to more - amp', () =>
+    getCanonicalSection(
+      'pidgin',
+      pidginData.content.groups.find(
+        sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
+      ),
+    ),
   );

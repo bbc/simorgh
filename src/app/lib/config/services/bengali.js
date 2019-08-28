@@ -1,12 +1,18 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_SHONAR_BANGLA_BOLD,
+  F_SHONAR_BANGLA_REGULAR,
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 
 const service = {
-  lang: `bn-BD`,
+  lang: `bn`,
   articleAuthor: `https://www.facebook.com/BBCBengaliService`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-bengali',
+  atiAnalyticsProducerId: '31',
   brandName: 'BBC News বাংলা',
   product: 'BBC News বাংলা',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png',
@@ -28,9 +34,13 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'মূলপাতা',
+    currentPage: 'Current page',
+    skipLinkText: 'সরাসরি কনটেন্টে যান',
     error: {
       404: {
         statusCode: '404',
@@ -159,7 +169,8 @@ const service = {
     ],
     copyrightText: 'বিবিসি। ইন্টারনেটে অন্যান্য সাইটের জন্য বিবিসি দায়বদ্ধ নয়',
   },
-  fonts: [],
+  fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
+  timezone: 'Asia/Dhaka',
 };
 
 export default service;

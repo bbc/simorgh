@@ -23,11 +23,12 @@ const AmpConsentBannerContainer = ({
   promptId,
   hidden,
 }) => {
-  const { translations, script, service } = useContext(ServiceContext);
+  const { dir, translations, script, service } = useContext(ServiceContext);
   const consentBannerConfig = translations.consentBanner[type];
 
   return (
     <ConsentBanner
+      dir={dir}
       id={promptId}
       title={consentBannerConfig.title}
       text={BannerText(consentBannerConfig.description)}

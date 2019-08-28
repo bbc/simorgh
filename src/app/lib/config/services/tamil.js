@@ -1,12 +1,15 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
+import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ta-IN`,
+  lang: `ta`,
   articleAuthor: `https://www.facebook.com/bbctamil`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-tamil',
+  atiAnalyticsProducerId: '87',
   brandName: 'BBC News தமிழ்',
   product: 'BBC News தமிழ்',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
@@ -28,9 +31,13 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'முகப்பு',
+    currentPage: 'Current page',
+    skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
     error: {
       404: {
         statusCode: '404',
@@ -165,7 +172,8 @@ const service = {
     copyrightText:
       'பிபிசி. வெளியார் இணைய தளங்களில் உள்ள விஷயங்களுக்கு பிபிசி பொறுப்பாகாது',
   },
-  fonts: [],
+  fonts: [F_LATHA_BOLD, F_LATHA_REGULAR],
+  timezone: 'Europe/London',
 };
 
 export default service;

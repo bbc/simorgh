@@ -10,6 +10,13 @@ import defaultToggles from '../../lib/config/toggles';
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
 
+const defaultProps = {
+  isAmp: false,
+  pageType: 'frontPage',
+  service: 'news',
+  dials: {},
+};
+
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
@@ -59,9 +66,10 @@ describe('FrontPageContainer', () => {
     describe('Composing the Front Page Container using the page handlers', () => {
       shouldMatchSnapshot(
         'should compose frontPageContainer with the Page Handler in the correct order',
-        <FrontPageContainer />,
+        <FrontPageContainer {...defaultProps} />,
       );
     });
+
     describe('Assertions', () => {
       let FrontPageComponent;
       beforeAll(() => {
@@ -80,13 +88,15 @@ describe('FrontPageContainer', () => {
         });
 
         const { useContext, useReducer } = jest.requireMock('react');
-        useContext.mockReturnValue(igboConfig);
+        useContext.mockReturnValue({ ...igboConfig, lang: 'ig' });
         FrontPageComponent = jest.requireActual('.').default;
         useReducer.mockReturnValue([toggleReducer, defaultToggles]);
       });
 
       it('should not render frontpage if still loading', () => {
-        const { container } = render(<FrontPageComponent loading />);
+        const { container } = render(
+          <FrontPageComponent {...defaultProps} loading />,
+        );
         const { textContent } = container.querySelector('main');
 
         expect(textContent).toEqual('');
@@ -95,7 +105,7 @@ describe('FrontPageContainer', () => {
 
       it('should render error page when an error occurs', () => {
         const { container } = render(
-          <FrontPageComponent error="An error Occured" />,
+          <FrontPageComponent {...defaultProps} error={new Error('oh no')} />,
         );
 
         const { textContent } = container.querySelector('main');
@@ -107,11 +117,17 @@ describe('FrontPageContainer', () => {
         const data = {
           pageData: igboData,
           status: 200,
+          dials: {},
         };
 
         const frontPageMainMock = jest.requireMock('../FrontPageMain');
         const { container } = render(
-          <FrontPageComponent error="" data={data} service="igbo" />,
+          <FrontPageComponent
+            {...defaultProps}
+            error={null}
+            data={data}
+            service="igbo"
+          />,
         );
 
         expect(frontPageMainMock.mock.calls).toHaveLength(1);

@@ -34,7 +34,7 @@ const input = {
   bbcOrigin: 'bbcOrigin',
   id: 'id',
   isAmp: true,
-  pageType: 'frontpage',
+  pageType: 'frontPage',
   service: 'service',
   previousPath: '/previous-path',
 };
@@ -71,7 +71,7 @@ describe('RequestContext', () => {
 
     expect(getStatsPageIdentifier.default).toHaveBeenCalledWith({
       id: 'id',
-      pageType: 'frontpage',
+      pageType: 'frontPage',
       service: 'service',
     });
 

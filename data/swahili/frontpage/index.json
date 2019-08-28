@@ -54,7 +54,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48964617"
             },
             "summary": "Uamuzi huo wa Uturuki huenda ukasababisha mgogoro mkubwa na washirika wake wa Nato, Marekani.",
-            "timestamp": 1562929288,
+            "timestamp": 1562929287000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -94,7 +94,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/swahili/habari-48552248"
                 },
                 "summary": "Uturuki ina hadi mwisho wa Julai kuamua kati ya kununua ndege za kivita za Marekani na Urusi",
-                "timestamp": 1560077284,
+                "timestamp": 1560077283000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:swahili/habari-48552248",
                 "type": "cps"
@@ -108,7 +108,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/swahili/habari-48822026"
                 },
                 "summary": "Uturuki imemtishia kiongozi wa kijeshi Haftar, ikimtaka kuwaachia raia wake sita wanaoshikiliwa.",
-                "timestamp": 1561957533,
+                "timestamp": 1561957532000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:swahili/habari-48822026",
                 "type": "cps"
@@ -137,7 +137,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48960589"
             },
             "summary": "Wakuu wa afya na asasi za kijamii wanahofu kwamba sasa wanawake na wasichana baleghe wanakabiliwa na kitisho cha kushika mimba bila kutaka.",
-            "timestamp": 1562922434,
+            "timestamp": 1562922433000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -175,7 +175,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/swahili/habari-48676618"
                 },
                 "summary": "BBC Africa Eye imefichua wizi wa madawa ya wagonjwa Uganda na jinsi wafanyakazi wa afya walivyojitosa katika mitandao ya uhalifu nchini humo.",
-                "timestamp": 1560870506,
+                "timestamp": 1560870505000,
                 "cpsType": "MAP",
                 "id": "urn:bbc:ares::asset:swahili/habari-48676618",
                 "type": "cps"
@@ -194,7 +194,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48960586"
             },
             "summary": "Lishe bora, kufanya mazoezi na afya nzuri ya akili yote yanaweza kuimarisha tendo la ndoa. lakini kuna vyakula vyovyote maalum vinavyoweza kukuongezea hamu ya tendo la ndoa?",
-            "timestamp": 1562913193,
+            "timestamp": 1562913192000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -246,7 +246,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/swahili/habari-48856311"
                 },
                 "summary": "Tangu kuzaliwa kwa mtoto wa kwanza wa maabara 1978, takriban watoto milioni nane wamezaliwa kupitia mfumo wa kiteknolojia wa IVF",
-                "timestamp": 1562168850,
+                "timestamp": 1562168849000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:swahili/habari-48856311",
                 "type": "cps"
@@ -265,7 +265,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48963455"
             },
             "summary": "Vijana wa Afrika wana uwezekano mkubwa zaidi wa kutoa hongo kuliko waafrika wenye wakubwa wao, limesema shirika la Transparency International",
-            "timestamp": 1562923020,
+            "timestamp": 1562923019000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -304,7 +304,7 @@
                   "cpsUrn": "urn:bbc:content:assetUri:/swahili/habari-37858231"
                 },
                 "summary": "Mamia ya watu wamekusanyika eneo la Freedom Corner katika Uwanja wa Uhuru Park, katikati mwa jiji la Nairobi, kuandamana kulalamikia wanachosema ni ongezeko la visa vya ufisadi serikalini.",
-                "timestamp": 1478163178,
+                "timestamp": 1478163177000,
                 "cpsType": "STY",
                 "id": "urn:bbc:ares::asset:swahili/habari-37858231",
                 "type": "cps"
@@ -330,7 +330,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48960590"
             },
             "summary": "Vipi unaweza kuutambua ugonjwa wa Mabusha?",
-            "timestamp": 1562924800,
+            "timestamp": 1562924799000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -400,7 +400,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48960587"
             },
             "summary": "Wakimbizi kutoka Burundi katika kambi ya Nyarugusu wanasema maafisa wamewatishia kuwarudisha kwa lazima nyumbani. Tanzania imekana kuwa kuna mpango wa aina hiyo.",
-            "timestamp": 1562916057,
+            "timestamp": 1562916056000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -440,7 +440,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48960585"
             },
             "summary": "Polisi Marekani wanaamini mwanamke huyo aliyefariki alianguka mnamo 2016 na binti yake hakumhudumia vizuri.",
-            "timestamp": 1562907874,
+            "timestamp": 1562907873000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -481,7 +481,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48960286"
             },
             "summary": "Utawala wa mpito unaoongoza kijeshi nchini Sudan umesema umezima jaribio la mapinduzi nchini humo.",
-            "timestamp": 1562902142,
+            "timestamp": 1562902141000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -551,7 +551,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48959515"
             },
             "summary": "Utafiti ulioangazia tabia mashariki ya kati ulibani kwamba asilimia 30 ya wanaume nchini Iraq wamenyanyaswa",
-            "timestamp": 1562893391,
+            "timestamp": 1562893390000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -593,7 +593,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48959514"
             },
             "summary": "Tunisia ilifika katika nusu fainali ya Kombe la mataifa ya Afrika kwa mara ya kwanza tangu 2004 baada ya kuilza Madagascar.",
-            "timestamp": 1562882248,
+            "timestamp": 1562882247000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107844149",
@@ -622,7 +622,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48945736"
             },
             "summary": "Kaimu mkurugenzi wa Tume hiyo Jummanne Issango alisema wakati wa mkakati wa nne wa kuangamiza Ukimwi kwamba tume hiyo inawahamasisha vijana kuhusu afya ya uzazi pamoja na kutoa hamasa kuhusu ugonjwa huo.",
-            "timestamp": 1562809433,
+            "timestamp": 1562809432000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -663,7 +663,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48950336"
             },
             "summary": "Wanafunzi wa chuo kikuu nchini Tanzania wafikishwa mahakamani kwa kumkejeli rais Magufuli.",
-            "timestamp": 1562853894,
+            "timestamp": 1562853893000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -704,7 +704,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48945737"
             },
             "summary": "Utafiti unasema kuna uhusiano wa saratani na unywajhi wa vinywaji vya sukari, ijapokuwa sababu haiko wazi",
-            "timestamp": 1562819458,
+            "timestamp": 1562819457000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -745,7 +745,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48951204"
             },
             "summary": "Sturridge hata hivyo ahakusema kama alitoa pesa kwa mtu aliyemrejesha.",
-            "timestamp": 1562861306,
+            "timestamp": 1562861305000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -786,7 +786,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48947614"
             },
             "summary": "Serikali ya Kenya imefuta kwa muda vibali vya makampuni takriban 27 ya mchezo wa bahati nasibu hadi yatakapolipa ushuru",
-            "timestamp": 1562838222,
+            "timestamp": 1562838221000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -828,7 +828,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48951178"
             },
             "summary": "Profesa Kabudi akanusha kuthibitisha 'kifo' cha Azory Gwanda",
-            "timestamp": 1562839827,
+            "timestamp": 1562839826000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -870,7 +870,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48950335"
             },
             "summary": "Hukumu ya bibi huyo itasomwa baadae mwezi huu.",
-            "timestamp": 1562844623,
+            "timestamp": 1562844622000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107833242",
@@ -899,7 +899,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48946815"
             },
             "summary": "Maboti ya Iran yaliyokuwa yamesheheni silaha yameripotiwa kurudi nyuma baada ya kupokea onyo kutoka kwa meli ya jeshi la majini la Uingereza",
-            "timestamp": 1562826696,
+            "timestamp": 1562826695000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -948,7 +948,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48950333"
             },
             "summary": "Uhuru wa habari : Waandishi wa habari nchini Kenya, Tanzania wazungumza kuhusu mazingira ya kutekeleza kazi zao.",
-            "timestamp": 1562837601,
+            "timestamp": 1562837600000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1018,7 +1018,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48945735"
             },
             "summary": "Kutoweka kwa mwandishi mpekuzi nchini Tanzania Azory Gwanda hatimaye kumechukua mwelekeo mpya baada ya waziri wa maswala ya kigeni nchini humo kusema kwamba mwandishi huyo 'alitoweka na kufariki'.",
-            "timestamp": 1562806328,
+            "timestamp": 1562806327000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1059,7 +1059,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48946943"
             },
             "summary": "Serikali ya Tanzania yashinikizwa kutoa ufafanuzi kuhusu 'kifo' cha mwandishi habari aliyetoweka Azory Gwanda.",
-            "timestamp": 1562823314,
+            "timestamp": 1562823313000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1100,7 +1100,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48946813"
             },
             "summary": "Watafiti wamebaini kuwa aina ya binadamu wa kwanza anayefanana na binadamu aliyepo wakati huu alitoka nje ya Afrika",
-            "timestamp": 1562820518,
+            "timestamp": 1562820517000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1150,7 +1150,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48946945"
             },
             "summary": "Kwanini kumeshuhudiwa ongezeko la matumizi ya maziwa na Ngamia duniani?",
-            "timestamp": 1562832807,
+            "timestamp": 1562832806000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1201,7 +1201,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48945733"
             },
             "summary": "Rais John Magufuli amewataka wanawake nchini Tanzania kutofunga vizazi vyao ili kuweza kuzaa watoto wengi kama njia mojawapo ya kupiga jeki uchumi wa taifa hilo",
-            "timestamp": 1562793717,
+            "timestamp": 1562793716000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1242,7 +1242,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48935153"
             },
             "summary": "Kibao hicho kimeachiwa hii leo",
-            "timestamp": 1562765486,
+            "timestamp": 1562765485000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1283,7 +1283,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48937910"
             },
             "summary": "Ukurasa wa Twitter wa Trump ni kwa ajili ya Umma hivyo watu wana uhuru wa kutoa maoni bila kuzuiwa, imeelezwa.",
-            "timestamp": 1562776993,
+            "timestamp": 1562776992000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1328,7 +1328,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48937907"
             },
             "summary": "Balozi wa Uingereza nchini Marekani ajiuzulu baada ya mzozo wa kuvuja kwa barua pepe.",
-            "timestamp": 1562759885,
+            "timestamp": 1562759884000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1372,7 +1372,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48937909"
             },
             "summary": "Serikali ya Uingereza imetangaza kuwekeza kiasi cha shilingi za Tanzania bilioni 7.8 ili kuboresha mazingira vyombo vya habari.",
-            "timestamp": 1562772310,
+            "timestamp": 1562772309000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1412,7 +1412,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48932912"
             },
             "summary": "Tambo za mashabiki zaanza mitandaoni kila upande ukivutia kwake.",
-            "timestamp": 1562761425,
+            "timestamp": 1562761424000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1453,7 +1453,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48912278"
             },
             "summary": "Kampuni ya Amazon ilianzishwa miaka 25 iliyopita na Jeff Bezos ambaye aliacha kazi akiwa na miaka 30.",
-            "timestamp": 1562741345,
+            "timestamp": 1562741344000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1499,7 +1499,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48936052"
             },
             "summary": "Mtaalamu wa UN Agnes Callamard ameitaka Marekani kufanya uchunguzi kuhusu kifo cha mwandishi wa habari Jamal Khashoggi.",
-            "timestamp": 1562753494,
+            "timestamp": 1562753493000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1540,7 +1540,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48931714"
             },
             "summary": "Trump alisema kuwa balozi wa Uingereza nchini Marekani ni 'mjinga' kufuatia mzozo wa kufichuliwa kwa barua pepe",
-            "timestamp": 1562723556,
+            "timestamp": 1562723555000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1592,7 +1592,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48931718"
             },
             "summary": "Jenerali wa jeshi la wanamaji la Marekani Joseph Dunford anasema kua hatua hiyo itahakikisha kuna uhuru wa uchukuzi katika maji ya Ghuba na Yemen",
-            "timestamp": 1562734106,
+            "timestamp": 1562734105000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107814103",
@@ -1622,7 +1622,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48918629"
             },
             "summary": "Watu mbali mbali wakiongozwa na rais wa Tanzania John Magufuli wamekuwa wakituma salamu za rambirambi.",
-            "timestamp": 1562664695,
+            "timestamp": 1562664694000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1662,7 +1662,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48928622"
             },
             "summary": "Peter John Dalglish, 62, aliwahi kushikilia nafasi mbalimbali ndani ya umoja wa mataifa.",
-            "timestamp": 1562687539,
+            "timestamp": 1562687538000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107805966",
@@ -1691,7 +1691,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48923692"
             },
             "summary": "Katie alikuwa mraibu wa dawa za kuondoa maumivu tangu akiwa na miaka 16, ilimchukua miaka mingi kuondokana na hali hiyo.",
-            "timestamp": 1562682455,
+            "timestamp": 1562682454000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1740,7 +1740,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48918630"
             },
             "summary": "Kampuni ya Instagram inaamini hatua hii mpya itapunguza visa vya udhalilishaji mtandaoni.",
-            "timestamp": 1562671969,
+            "timestamp": 1562671968000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1781,7 +1781,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48917786"
             },
             "summary": "Rais wa Marekani anasema kuwa Sir Kim Darroch hapendwi Marekani na kumshutumu waziri mkuu Theresa May",
-            "timestamp": 1562646377,
+            "timestamp": 1562646376000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1822,7 +1822,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48918188"
             },
             "summary": "Imewachukua wiki sita kukamilisha safari ya kilomita 12,000 kwa kutumia ndege ndogo waliyoitengeneza kwa wiki tatu.",
-            "timestamp": 1562650034,
+            "timestamp": 1562650033000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1863,7 +1863,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48918626"
             },
             "summary": "Andrea Benedetto aliokolewa baada ya kuwa hatarini kuzama nchini Italia",
-            "timestamp": 1562653964,
+            "timestamp": 1562653963000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1904,7 +1904,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48917789"
             },
             "summary": "China iliiambia Marekani kuzuia uuzaji wa silaha zenye thamani ya $2.2bn kwa Taiwan, ikitaja mpango huo kuwa uamuzi mbaya",
-            "timestamp": 1562652673,
+            "timestamp": 1562652672000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1946,7 +1946,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48910921"
             },
             "summary": "Mandla Maseko, wa Afrika Kusini alipata nafasi ya kuwa mwafrika wa kwanza kufika mwezini.",
-            "timestamp": 1562594717,
+            "timestamp": 1562594716000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -1991,7 +1991,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48917026"
             },
             "summary": "Taarifa mbili za habari za kusikitisha zinazowahusu wanawake na hedhi zimetangazwa nchini India katika miezi ya hivi karibuni.",
-            "timestamp": 1562635185,
+            "timestamp": 1562635184000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2033,7 +2033,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48908170"
             },
             "summary": "Kocha Amunike 'ang'oka' Tanzania",
-            "timestamp": 1562592592,
+            "timestamp": 1562592591000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2079,7 +2079,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48905133"
             },
             "summary": "Wafanyakazi watano Azam TV wafariki ajalini wakielekea Chato",
-            "timestamp": 1562577201,
+            "timestamp": 1562577200000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2120,7 +2120,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48908077"
             },
             "summary": "Bosco Ntaganda amekutwa na hatia ya vitendo vya mauaji, ubakaji na kuwasajili watoto kujiunga na jeshi.",
-            "timestamp": 1562581829,
+            "timestamp": 1562581828000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2164,7 +2164,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48905128"
             },
             "summary": "Magari yataya umeme kukuza utalii au kuharibu Mazingira Mlima Kilimanjaro?",
-            "timestamp": 1562567942,
+            "timestamp": 1562567941000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2205,7 +2205,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48910917"
             },
             "summary": "Aliyekuwa kocha wa Manchester United na Chelsea Jose Mourinho amekataa ofa ya kufundisha China.",
-            "timestamp": 1562588115,
+            "timestamp": 1562588114000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2247,7 +2247,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48908080"
             },
             "summary": "Trump amkosoa balozi wa Uingereza kuhusu barua pepe zilizovuja zikikosoa utawala wa Trump.",
-            "timestamp": 1562585097,
+            "timestamp": 1562585096000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107784506",
@@ -2276,7 +2276,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48880838"
             },
             "summary": "Yuichi Ishii ni mtu wa kipekee nchini Japan. Anaeleza anavyojisikia kuwa na familia nyingi.",
-            "timestamp": 1562473441,
+            "timestamp": 1562473440000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2325,7 +2325,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48901917"
             },
             "summary": "Kuvuja kwa barua pepe hizo kunaelezwa kutaleta dosari kwa mahusiano kati ya Marekani na Uingereza.",
-            "timestamp": 1562510443,
+            "timestamp": 1562510442000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2366,7 +2366,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48899183"
             },
             "summary": "Iran imelaumu nchi za Ulaya kushindwa kutimiza wajibu wao.",
-            "timestamp": 1562490580,
+            "timestamp": 1562490579000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2407,7 +2407,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48899184"
             },
             "summary": "Warembo wanene 22 walishiriki mchuano wa Miss Kenya plus Size World.",
-            "timestamp": 1562492557,
+            "timestamp": 1562492556000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2452,7 +2452,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48895322"
             },
             "summary": "Nigeria na Afrika Kusini kuminyana robo fainali",
-            "timestamp": 1562448961,
+            "timestamp": 1562448960000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2497,7 +2497,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48893372"
             },
             "summary": "Wanaakiolojia wapiga mbizi wazama bahari kuyafikia makaburi kwa mara ya kwanza katika miaka 100.",
-            "timestamp": 1562412312,
+            "timestamp": 1562412311000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2538,7 +2538,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48884537"
             },
             "summary": "Matumizi yaliyopitiliza ya simu za mkononi husababisha wanafunzi kuwa na alama ndogo, unywaji pombe na wapenzi wengi",
-            "timestamp": 1562478439,
+            "timestamp": 1562478438000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2580,7 +2580,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48893114"
             },
             "summary": "Atletico Madrid amemshutumu Antoine Griezmann na Barcelona kwa 'utovu wa heshima', na kusema mabingwa wa La Liga walizungumza na mshambuliaji wao mnamo Machi.",
-            "timestamp": 1562408540,
+            "timestamp": 1562408539000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2621,7 +2621,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48894354"
             },
             "summary": "Mkuu wa sheria asema mahakama kuu \"ilikosa\" katika uamuzi iliotoa uliohalalisha mapenzi ya jinsia moja.",
-            "timestamp": 1562416755,
+            "timestamp": 1562416754000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2673,7 +2673,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48893108"
             },
             "summary": "Waziri huko Quebec ameshutumiwa baada ya kukutana na mshinidi wa tuzo ya Nobel ya amani.",
-            "timestamp": 1562406152,
+            "timestamp": 1562406151000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2715,7 +2715,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48891769"
             },
             "summary": "Je, sheria inasema nini kuhusu tume ya uchaguzi kutangaza uchaguzi mdogo?",
-            "timestamp": 1562392236,
+            "timestamp": 1562392235000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2786,7 +2786,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48848555"
             },
             "summary": "Je wazo la kutangamana na watu katika sherehe au kuzungumza mbele yao linakutia hofu?",
-            "timestamp": 1562398602,
+            "timestamp": 1562398601000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2842,7 +2842,7 @@
             "uri": "https://www.bbc.com/swahili/michezo-48703383",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1561018456,
+            "timestamp": 1561018455000,
             "type": "link"
           }
         ],
@@ -2861,7 +2861,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48959518"
             },
             "summary": "Barcelona inakaribia kumsaini mshambuliaji wa Ufaransa na Atletico Madrid Antoine Griezmann kutoka Atletico Madrid kwa dau la £107m . (Mirror)",
-            "timestamp": 1562899871,
+            "timestamp": 1562899870000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2919,7 +2919,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48945734"
             },
             "summary": "William Troost-Ekong alifunga goli la dakika za mwisho na kuisaidia Nigeria kutinga nusu fainali ya kombe la mataifa ya Afrika dhidi ya Afrika Kusini.",
-            "timestamp": 1562798298,
+            "timestamp": 1562798297000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -2960,7 +2960,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48932920"
             },
             "summary": "Strurridge amemaliza mkataba wake na Liverpool mwezi uliopita na anatazamiwa kuhamia Aston Villa.",
-            "timestamp": 1562750646,
+            "timestamp": 1562750645000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3001,7 +3001,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48946553"
             },
             "summary": "Arsenal inataka kumsaini winga wa Barcelona Malcom, 22, huku Everton ikiwa tayari imewasilisha ofa ya dau la £31.5m kumsaini raia huyo wa Brazil. (Sun)",
-            "timestamp": 1562814171,
+            "timestamp": 1562814170000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3048,7 +3048,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48936059"
             },
             "summary": "Kocha wa Manchester United Ole Gunnar Solskjaer amesema Paul Pogba, ambaye wakala wake anasema anataka kuondoka ni ''Mchezaji mzuri na mwenye moyo wa kipekee''.",
-            "timestamp": 1562758930,
+            "timestamp": 1562758929000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3089,7 +3089,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48931713"
             },
             "summary": "Joao Felix sasa ndiye mchezaji ghali zaidi mwenye umri mdogo duniani baada ya kujiunga na Atletico Madrid kutoka Benfica kwa dau la £113m.",
-            "timestamp": 1562715093,
+            "timestamp": 1562715092000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3130,7 +3130,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48931717"
             },
             "summary": "Barcelona inamnyatia beki wa Manchester United na raia wa Sweden Victor Lindelof, 24, huku ikiwa beki wa Ajax Matthijs de Ligt anatarajiwa kujiunga na Juventus. (Mundo Deportivo - in Spanish)",
-            "timestamp": 1562727321,
+            "timestamp": 1562727320000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3171,7 +3171,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48931712"
             },
             "summary": "Neymar anaweza kuondoka PSG iwapo kutakuwa na ofa itakayomfurahisha , amesema mkurugenzi wa michezo katika klabu hiyo Leonardo.",
-            "timestamp": 1562706564,
+            "timestamp": 1562706563000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3213,7 +3213,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48918193"
             },
             "summary": "Hawezi kuwa mchezaji wa kulipwa mpaka atakapotimu umri wa miaka 17, ambayo itakuwa ni Aprili mwakani.",
-            "timestamp": 1562678534,
+            "timestamp": 1562678533000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3254,7 +3254,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48927504"
             },
             "summary": "\"Mchezaji (Pogba) hakufanya kosa lolote,\" Raiola aliuambia mtandao wa Talksport.",
-            "timestamp": 1562684279,
+            "timestamp": 1562684278000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3295,7 +3295,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48917021"
             },
             "summary": "Tunisia iliishinda Ghana kupitia mikwaju ya penlati ili kufuzu katika robo fainali michuano ya afcon dhidi ya Madagascar.",
-            "timestamp": 1562626714,
+            "timestamp": 1562626713000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3336,7 +3336,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48917785"
             },
             "summary": "Atletico Madrid imeanzisha mchakato wa kumuadhibu mshambuliaji wa Ufaransa Antoine Griezmann, 28, ambaye anatarajiwa kuhamia Barcelona kwa dau la £107.5m . (Guardian)",
-            "timestamp": 1562639171,
+            "timestamp": 1562639170000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3377,7 +3377,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48908169"
             },
             "summary": "Brazil yatwaa ubingwa wa Copa Amerika baada ya miaka tisa.",
-            "timestamp": 1562590882,
+            "timestamp": 1562590881000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3419,7 +3419,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48917018"
             },
             "summary": "Paris St-Germain imesema kuwa itachukua hatua kali baada ya mshambuliaji wa Brazil Neymar kufeli kuhudhuria mazoezi ya kwanza ya timu hiyo.",
-            "timestamp": 1562623560,
+            "timestamp": 1562623559000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3460,7 +3460,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48905126"
             },
             "summary": "Klabu ya Tottenham ipo katika mazungumzo na beki wa Wales Ben Davies, 26, ili kumpatia mkataba wa muda mrefu.",
-            "timestamp": 1562559977,
+            "timestamp": 1562559976000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3502,7 +3502,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48901923"
             },
             "summary": "Kocha wa timu ya taifa Uganda Sebastien Desabre aachia ngazi kwa ridhaa yake baada ya Uganda kuondolewa kwenye michuano ya AFCON.",
-            "timestamp": 1562512762,
+            "timestamp": 1562512761000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107780962",
@@ -3531,7 +3531,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48900673"
             },
             "summary": "Joe alifahamika awapo uwanjani hasa kwa maneno 'Kadenge na Mpira'.",
-            "timestamp": 1562498269,
+            "timestamp": 1562498268000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107779491",
@@ -3560,7 +3560,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48899181"
             },
             "summary": "Manchester Unted ni Klabu pekee inayotaka kumsajili Harry Maguire.",
-            "timestamp": 1562489338,
+            "timestamp": 1562489337000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3601,7 +3601,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48899188"
             },
             "summary": "Messi apewa kadi nyekundu baada ya miaka 14 wakati Argentina ilipokutana na Chile na kuondoka na ushindi wa 2-1.",
-            "timestamp": 1562501963,
+            "timestamp": 1562501962000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3643,7 +3643,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48885365"
             },
             "summary": "Mchezaji wa kiungo cha kati wa Manchester United Paul Pogba hajafika kwa mazoezi katika timu hiyo ya Uingereza lakini ana ruhusa ya meneja Ole Gunnar Solskjaer",
-            "timestamp": 1562341919,
+            "timestamp": 1562341918000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3684,7 +3684,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48891139"
             },
             "summary": "Winga wa Chelsea Callum Hudson-Odoi anakaribia kutia saini mkataba mpya na klabu hiyo.",
-            "timestamp": 1562382116,
+            "timestamp": 1562382115000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3726,7 +3726,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48865401"
             },
             "summary": "Frank Lampard asaini mkataba wa kuinoa Chelsea",
-            "timestamp": 1562228458,
+            "timestamp": 1562228457000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3767,7 +3767,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48890406"
             },
             "summary": "Sadio Mane ameisaidia Senegal kutinga robo fainali ya michuano ya mataifa ya Afrika Afcon",
-            "timestamp": 1562366623,
+            "timestamp": 1562366622000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3808,7 +3808,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48877796"
             },
             "summary": "Mchezaji Bruno Fernandes ameuonesha uwezekano wa kuhamia Old Trafford.",
-            "timestamp": 1562292068,
+            "timestamp": 1562292067000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3849,7 +3849,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48857233"
             },
             "summary": "Wachezaji wa Uganda Cranes walisusia mazoezi Jumanne katika mashindano ya kombe la mataifa ya Afrika",
-            "timestamp": 1562157990,
+            "timestamp": 1562157989000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3890,7 +3890,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48863316"
             },
             "summary": "Frank Lampard amepigwa picha katika uwanja wa Stamford Bridge",
-            "timestamp": 1562205455,
+            "timestamp": 1562205454000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3932,7 +3932,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48835648"
             },
             "summary": "Kocha wa United, Ole Gunnar Solskjaer amewaambia wakuu wa klabu hiyo kumsajili kiungo wa kati wa Newcastle Muingereza Sean Longstaff",
-            "timestamp": 1562036114,
+            "timestamp": 1562036113000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -3974,7 +3974,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48803435"
             },
             "summary": "BBC inakupa fursa ya kuchagua wachezaji bora na kupanga kikosi vile utakavyo.",
-            "timestamp": 1561784822,
+            "timestamp": 1561784821000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -4015,7 +4015,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48833792"
             },
             "summary": "Penalti ya Sadio Mane iliokolewa na kipa Patrick Matasi wa kenya kabla ya Senegal kufunga goli lake la kwanza kupitia Ismaila Sarr.",
-            "timestamp": 1562018090,
+            "timestamp": 1562018089000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4056,7 +4056,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48822040"
             },
             "summary": "Klabu ya Juventus inapanga kumsajili winga wa kinda wa Burnley na England, Dwight McNeil, 19.",
-            "timestamp": 1561952282,
+            "timestamp": 1561952281000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4097,7 +4097,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48849665"
             },
             "summary": "Real Madrid wana mpango wa kumjumuisha mshambuliaji wa Wales Gareth Bale, 29, katika makubaliano yatakayowawezesha kumpata Paul Pogba",
-            "timestamp": 1562123518,
+            "timestamp": 1562123517000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4139,7 +4139,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48823143"
             },
             "summary": "Endapo Kenya itapata walau sare dhidi ya Senegal, watakuwa kwenye nafasi ya kuingia katika kinyang'anyiro cha hatua mtoano.",
-            "timestamp": 1561980585,
+            "timestamp": 1561980584000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4181,7 +4181,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48803438"
             },
             "summary": "Manchester United wanamini kuwa wataweza kukamilisha usajili wa kuwanasa Sean Longstaff, 21, kutoka Newcastle na Bruno Fernandes, 24, kutoka Sporting Lisbon ya Ureno.",
-            "timestamp": 1561776341,
+            "timestamp": 1561776340000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4222,7 +4222,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48804747"
             },
             "summary": "Mechi ya jana ya kombe la taifa bingwa Afrika kati ya Kenya na Tanzania ilisubiriwa kwa shauku kubwa wapenzi soka kote barani Afrika",
-            "timestamp": 1561732296,
+            "timestamp": 1561732295000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4263,7 +4263,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48817068"
             },
             "summary": "Kylian Mbappe hana mpango wa kuendelea kuichezea Paris St-Germain mkataba wake utakapomalizika.",
-            "timestamp": 1561890285,
+            "timestamp": 1561890284000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4304,7 +4304,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48795071"
             },
             "summary": "Neymar anataka kurudi Barcelona lakini hakuna mawasiliano yaliofanywa kati yao na nyota wao wa zamani kulingana na makamu wa rais wa klabu hiyo",
-            "timestamp": 1561699319,
+            "timestamp": 1561699318000,
             "cpsType": "STY",
             "indexImage": {
               "id": "107557137",
@@ -4332,7 +4332,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48795513"
             },
             "summary": "Manchester United inafikiria kumnunua beki wa Ufaransa na Barcelona Samuel Umtiti, 25. (Mundo Deportivo - in Spanish)",
-            "timestamp": 1561690977,
+            "timestamp": 1561690976000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4373,7 +4373,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48772252"
             },
             "summary": "Manchester United imefikia makubaliano na Crystal Palace kumsajili beki wa kulia Aaron Wan-Bissaka.",
-            "timestamp": 1561556254,
+            "timestamp": 1561556253000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4414,7 +4414,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48767116"
             },
             "summary": "Barcelona inakaribia kukamilisha usajili wa mshambuliaji wa Ufaransa na Atletico Madrid Antoine Griezmann kwa dau la £107m",
-            "timestamp": 1561517928,
+            "timestamp": 1561517927000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4455,7 +4455,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48753108"
             },
             "summary": "Waandishi wa BBC Radio 5 wanajadiliana kuhusu hatma ya mshambulijia wa PSG Neymar",
-            "timestamp": 1561436386,
+            "timestamp": 1561436385000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4496,7 +4496,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48782278"
             },
             "summary": "Kenya v Tanzania: Mashabiki wanasemaje?",
-            "timestamp": 1561611862,
+            "timestamp": 1561611861000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
@@ -4566,7 +4566,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48738916"
             },
             "summary": "Ubora wa Senegal na Algeria wadhihirika kwa kuifunga Tanzania na Kenya",
-            "timestamp": 1561320866,
+            "timestamp": 1561320865000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4607,7 +4607,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48705154"
             },
             "summary": "Real Madrid Sergio Ramos amuoa mchumba wake wa muda mrefu Pilar Rubio",
-            "timestamp": 1561115685,
+            "timestamp": 1561115684000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4652,7 +4652,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48735617"
             },
             "summary": "Kocha wa Newcastle Rafa Benitez anajiandaa kuondoka mkataba wake utakapokwisha mwishoni mwa juma lijalo.",
-            "timestamp": 1561272991,
+            "timestamp": 1561272990000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4693,7 +4693,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48717121"
             },
             "summary": "Itachezwa katika uwanja wa Cairo ambao haujatumika sasa Takribani miaka nane kutokana na sababu za kiusalama.",
-            "timestamp": 1561110703,
+            "timestamp": 1561110702000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4735,7 +4735,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48715161"
             },
             "summary": "Mchezaji nyota wa kimataifa wa Brazil Neymar, 27, hana mpango wa kuchezea tena Paris St-Germain. (Sport - in Spanish)",
-            "timestamp": 1561086636,
+            "timestamp": 1561086635000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4777,7 +4777,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48728108"
             },
             "summary": "Inter Milan wanataka kumsaini mshambuliaji wa Manchester United Romelu Lukaku lakini watalazimika kumuuza Mauro Icardi.",
-            "timestamp": 1561180273,
+            "timestamp": 1561180272000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4829,7 +4829,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48711869"
             },
             "summary": "Mchezaji mpya wa Real Madrid aliyesajiliwa Frelabd Mendy anasema kuwa aliambiwa kwamba hatoweza tena kucheza soka baada ya kufanyiwa upasuaji wa kiunoni akiwa na umri wa miaka 15",
-            "timestamp": 1561050237,
+            "timestamp": 1561050236000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4877,7 +4877,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48917790"
             },
             "summary": "Bill Maxwell Kasanda ni mwendesha pikipiki mwenye ulemavu ambaye ari yake ya kushiriki katika mashindano ya pikipiki haikuvunjika licha ya kupoteza mgu wake mmoja",
-            "timestamp": 1562651206,
+            "timestamp": 1562651205000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -4947,7 +4947,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48804748"
             },
             "summary": "Derby ya Afrika Mashariki baina ya nyota wawili",
-            "timestamp": 1561735739,
+            "timestamp": 1561735738000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5018,7 +5018,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48772255"
             },
             "summary": "Bado shule za kulea vipaji ni chache Tanzania, na mashindano ya mitaani ndiyo hukuza vipaji vya soka.",
-            "timestamp": 1561557383,
+            "timestamp": 1561557382000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -5089,7 +5089,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48457082"
             },
             "summary": "Pamoja na hali ya utasa, bado wanandoa walifurahia maisha yao",
-            "timestamp": 1559198954,
+            "timestamp": 1559198953000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5160,7 +5160,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48416010"
             },
             "summary": "Mtoto huyu anaweza kufumbua fumbo la mche mraba huu au Rubic Cube akiwa amefungwa kitambaa machoni.. Jina lake ni V. Sakthivel kutoka jimbo la India la Tamil Nadu.",
-            "timestamp": 1558883927,
+            "timestamp": 1558883926000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -5230,7 +5230,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48408010"
             },
             "summary": "Mtanzania aliyesifiwa na rais wa Marekani Donald Trump, kupitia mtandao wa Twitter kwa mtindo wake wa kupiga danadana mpira , kipaji chake kimeanzwa kukuzwa na makampuni makubwa.",
-            "timestamp": 1558775837,
+            "timestamp": 1558775836000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -5279,7 +5279,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48391350"
             },
             "summary": "Mchezo huo wa kirafiki ulivuta hisia za mashabiki wengi Afrika Mashariki.",
-            "timestamp": 1558650024,
+            "timestamp": 1558650023000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5350,7 +5350,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48256270"
             },
             "summary": "Mamilioni ya watu duniani kote wanaadhimisha mwezi mtukufu wa Ramadani kila mwaka kwa kufunga, kusali na kufanya matendo mema.",
-            "timestamp": 1557751462,
+            "timestamp": 1557751461000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -5421,7 +5421,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48263454"
             },
             "summary": "Zaidi ya visa 6000 vya ukatili au unyanyasaji dhidi ya watoto ikiwemo ukatili kiongono viliripotiwa mnamo 2018",
-            "timestamp": 1557831058,
+            "timestamp": 1557831057000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5492,7 +5492,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48301934"
             },
             "summary": "Mwanafunzi wa Kitanzania aliyefariki Marekani wiki iliyopita, Allen Buberwa amezikwa leo baada ya mwili wake kurudishwa Tanzania jana Jumatano.",
-            "timestamp": 1558019382,
+            "timestamp": 1558019381000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5541,7 +5541,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48292132"
             },
             "summary": "Nasa inasema umesinyaa kwa kiasi ya mita 50 katika miaka milioni mia kadhaa iliyopita.",
-            "timestamp": 1558006696,
+            "timestamp": 1558006695000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5612,7 +5612,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48282911"
             },
             "summary": "Taarifa ghushi kuhusu vifo, familia, mapenzi na kazi zimeathiri maisha ya watu wengi maarufu duniani.",
-            "timestamp": 1557925138,
+            "timestamp": 1557925137000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -5682,7 +5682,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48250676"
             },
             "summary": "Fahamu namna bora ya kudurusu kabla ya mtihani wako",
-            "timestamp": 1557734253,
+            "timestamp": 1557734252000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -5757,7 +5757,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-47638176"
             },
             "summary": "Kwanini ni mwiko kwa wanawake kujifungua katika tika kijiji cha Mafi Dove nchini Ghana?",
-            "timestamp": 1553074516,
+            "timestamp": 1553074515000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5832,7 +5832,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48133563"
             },
             "summary": "Kwa miezi sita sasa mwalimu Josephat Mussa maarufu 'maprosoo' anachoma na kutembeza mishikaki katika mitaa mbali mbali mji wa Mtwara kujikimu maisha.",
-            "timestamp": 1556854494,
+            "timestamp": 1556854493000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -5903,7 +5903,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48162032"
             },
             "summary": "Rais mstaafu wa Tanzania Jakaya Kikwete ameitembelea familia ya Bwana Regnald Mengi aliyefariki dunia mjini Dubai wiki hii, ambapo ameiomba familia kuwa na subra wakati huu",
-            "timestamp": 1556978122,
+            "timestamp": 1556978121000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -5981,7 +5981,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48138296"
             },
             "summary": "Utaratibu wa tafrija ya watu wenye ulemavu iliyoandaliwa na Dr.Mengi ,wakumbukwa kwa namna ya kipekee nchini Tanzania",
-            "timestamp": 1556807752,
+            "timestamp": 1556807751000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -6052,7 +6052,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48071485"
             },
             "summary": "Hali ya kawaida imerudi katika maeneo mengi ya mji wa Mtwara na Lindi baada ya Kimbunga Kenneth kuisha nguvu kilipowasili Msumbiji",
-            "timestamp": 1556298341,
+            "timestamp": 1556298340000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6149,7 +6149,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-47368008"
             },
             "summary": "Ni juhudi gani zifanyike ili kusaidia mtoto kujua kusoma na kuandika akimaliza shule ya msingi nchini Tanzania",
-            "timestamp": 1551161604,
+            "timestamp": 1551161603000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -6219,7 +6219,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-47090114"
             },
             "summary": "Nini maana ya ugonjwa wa Sonona, vyanzo vyake ni vipi na ni jinsi gani wananchi wanaweza kujikinga na ugonjwa huo ?",
-            "timestamp": 1549018514,
+            "timestamp": 1549018513000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6290,7 +6290,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-46779993"
             },
             "summary": "Rais John Pombe Magufuli alizindua vitambulisho 670,000 vya kukabidhiwa kwa wakuu wa mikoa kwa ajili ya matumizi ya wajasiriamali wadogo wadogo (machinga).",
-            "timestamp": 1546858598,
+            "timestamp": 1546858597000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6360,7 +6360,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-46624064"
             },
             "summary": "Katika Haba na Haba wiki hii, tunazungumzia suala la ulaji rushwa nchini Tanzania. Je, ni njia gani zinaweza kufanikiwa kuangazia ulaji rushwa nchini Tanzania?",
-            "timestamp": 1545238010,
+            "timestamp": 1545238009000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
@@ -6441,7 +6441,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48764891"
             },
             "summary": "Wakili Abdel-Adheem Hassan ameshinda kesi na kurudishiwa huduma ya internet dhidi ya wamiliki wa mtandao wa Zain Sudan",
-            "timestamp": 1561479289,
+            "timestamp": 1561479288000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6513,7 +6513,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48611795"
             },
             "summary": "KT Robbins alibeba picha ya Jeannine katika maadhimisho ya D Day na kwa mshangao wanahabari walimpata mpenzi wake.",
-            "timestamp": 1560343204,
+            "timestamp": 1560343203000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6594,7 +6594,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48676618"
             },
             "summary": "BBC Africa Eye imefichua wizi wa madawa ya wagonjwa Uganda na jinsi wafanyakazi wa afya walivyojitosa katika mitandao ya uhalifu nchini humo.",
-            "timestamp": 1560870506,
+            "timestamp": 1560870505000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -6642,7 +6642,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48266223"
             },
             "summary": "Ulimwengu wa wa ajira - kwa kampuni kubwa na ndogo - unabadilika kwa kasi sana.",
-            "timestamp": 1558172143,
+            "timestamp": 1558172142000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -6688,7 +6688,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48391835"
             },
             "summary": "Narendra Modi ameibuka kuwa kiongozi maarufu sana nchini India.",
-            "timestamp": 1558675471,
+            "timestamp": 1558675470000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6739,7 +6739,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48346731"
             },
             "summary": "Dk Bashiru akiwa mchambuzi wa siasa mara kadhaa alichukua msimamo mkali wa mawazo dhidi ya serikali na CCM yenyewe.",
-            "timestamp": 1558416559,
+            "timestamp": 1558416558000,
             "byline": {
               "name": "Markus Mpangala",
               "title": "Mchambuzi, Tanzania",
@@ -6790,7 +6790,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48134111"
             },
             "summary": "Kijana aliyezaliwa na jinsia mbili nchini Kenya Ruth Wangui sasa amebadili jinsia yake na kuwa mwanamume",
-            "timestamp": 1557464008,
+            "timestamp": 1557464007000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -6836,7 +6836,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48277627"
             },
             "summary": "Kila mwaka takriban watu 800,000 hufariki kwa kujitoa uhai duniani. Wengi wao ni wanaume, ambao mara nyingi hawazungumzii matataizo yao wala hawatafuti usaidizi kwa msongo wa mawazo.",
-            "timestamp": 1557906964,
+            "timestamp": 1557906963000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6887,7 +6887,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48262575"
             },
             "summary": "Wadukuzi wanaweza kuweka programu ya Sofware ya kuchunguza taarifa kwenye simu yako na vifaa vingine vinavyotumiwa kwa kutuma ujumbe wa WhatsApp, imethibitishwa",
-            "timestamp": 1557798921,
+            "timestamp": 1557798920000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6944,7 +6944,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48183136"
             },
             "summary": "Kuna baadhi ya familia au marafiki huwa wana utamaduni wa kutumia chombo kimoja katika mlo wa mchana au jioni.",
-            "timestamp": 1557208535,
+            "timestamp": 1557208534000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -6992,7 +6992,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48391837"
             },
             "summary": "Mkusanyiko wa picha kutoka maeneo tofauti Afrika wiki hii.",
-            "timestamp": 1558735814,
+            "timestamp": 1558735813000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7033,7 +7033,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48304487"
             },
             "summary": "Baadhi ya picha bora kutoka maeneo mbali mbali ya Afrika wiki hii",
-            "timestamp": 1558058983,
+            "timestamp": 1558058982000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7083,7 +7083,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48121277"
             },
             "summary": "Picha inayoonyesha wanavijiji wa Uchina wakiadhimisha siku ya kuzaliwa ya muungu wa kike Nuwa",
-            "timestamp": 1556719389,
+            "timestamp": 1556719388000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7136,7 +7136,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48100420"
             },
             "summary": "Kimbunga Kenneth kimesomba maelfu ya nyumba na kusababisha mafuriko katika maeneo ya chini ya Msumbiji",
-            "timestamp": 1556569840,
+            "timestamp": 1556569839000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7195,7 +7195,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/dira-tv-48958973"
             },
             "summary": "Alhamisi 11.07.2019 na Salim Kikeke",
-            "timestamp": 1562872451,
+            "timestamp": 1562872450000,
             "cpsType": "MAP",
             "media": {
               "id": "p07gnpkt",
@@ -7260,7 +7260,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48932913"
             },
             "summary": "Mwanamuziki huyo amechagua kusimama na wanaharakati wa haki za binaadamu",
-            "timestamp": 1562733250,
+            "timestamp": 1562733249000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7301,7 +7301,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48912281"
             },
             "summary": "Wenza waishtaki hospitali iliyowapandikiza watoto kwa kupandikiza watoto wasiofanana asili yao.",
-            "timestamp": 1562602757,
+            "timestamp": 1562602756000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7342,7 +7342,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48767907"
             },
             "summary": "Uzinduzi wa Kim Kardashian West wa mavazi ya ndani kwa jina Kimono umeshutumiwa na raia wa Japan wanaosema vazi linakiuka utamaduni.",
-            "timestamp": 1561546203,
+            "timestamp": 1561546202000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7385,7 +7385,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48767113"
             },
             "summary": "Wanawake watatu wameambia shirika la haki za kibinadamu la Human Rights Watch jinsi walivyonyanyaswa kingono na kiongozi huyo aliye mafichoni-madai ambayo chama chake kimeyakana.",
-            "timestamp": 1561520174,
+            "timestamp": 1561520173000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7426,7 +7426,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48738918"
             },
             "summary": "Tiffani Adams amesema amekuwa akikumbwa na njozi za kutisha toka lilipotokea na tukio hilo.",
-            "timestamp": 1561371947,
+            "timestamp": 1561371946000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7467,7 +7467,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48744446"
             },
             "summary": "Mahakama yamuonya kutokiuka masharti ya dhamana",
-            "timestamp": 1561378816,
+            "timestamp": 1561378815000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7508,7 +7508,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48736461"
             },
             "summary": "Baadhi ya abiria waliruka kutoka kwenye boti na kujijeruhi vichwa.",
-            "timestamp": 1561291965,
+            "timestamp": 1561291964000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7548,7 +7548,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48556760"
             },
             "summary": "Walikuwa wanatolewa kwa Asiimwe Edward mfanyabiashara katika mji wa Mbarara mashariki mwa Uganda na Bwana Amos Besigye Kutoka wilaya ya Ntungamo ambaye ni mvuvi katika wilaya ya Rwampara",
-            "timestamp": 1559919251,
+            "timestamp": 1559919250000,
             "byline": {
               "name": "Na Dinah Gahamanyi",
               "title": "BBC News Swahili",
@@ -7599,7 +7599,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48514308"
             },
             "summary": "Ni rasmi Jay-Z ndiye bilionea wa kwanza wa muziki wa hip hop ,limetangaza jarida la Forbes , baada ya kujijengea ufalme kutokana na muziki, mali, fasheni na uwekezaji",
-            "timestamp": 1559645775,
+            "timestamp": 1559645774000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7648,7 +7648,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo-48487904"
             },
             "summary": "Mwanamke mmoja amewasilisha malalamishi kwa maafisa wa polisi nchini Brazil akidai kwamba mchezaji huyo wa kandanda alimnyanyasa mjini Paris mwezi Mei.",
-            "timestamp": 1559442673,
+            "timestamp": 1559442672000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7689,7 +7689,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48470420"
             },
             "summary": "Mganga mkuu wa wilaya amesema uchunguzi unafanyika kubaini kama alijipasua mwenyewe au kuna mtu mwingine alifanya hivyo",
-            "timestamp": 1559287308,
+            "timestamp": 1559287307000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7730,7 +7730,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48405926"
             },
             "summary": "Mara nyingi watu humkejeli Alok Menon kutokana na muonekano wake - lakini hilo halijamkatisha tamaa.",
-            "timestamp": 1558748058,
+            "timestamp": 1558748057000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7771,7 +7771,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48318301"
             },
             "summary": "Mbwa mmoja nchini kaskazini mwa Thailand amemuokoa mtoto mchanga aliyekuwa amezaliwa baada ya kuzikwa hai anayedaiwa kuzikwa na mwanamke mwenye umri mdogo.",
-            "timestamp": 1558132863,
+            "timestamp": 1558132862000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7824,7 +7824,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48304483"
             },
             "summary": "Genge la uhalifu wa kimataifa linalotumia mtandao kuiba dola milioni 100 kutoka kwa watu zaidi ya 40,000 limevunjwa.",
-            "timestamp": 1558048506,
+            "timestamp": 1558048505000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7877,7 +7877,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48252559"
             },
             "summary": "Wanawake wanaopewa homoni ya progesterone inaweza kuwasaidia kuokoa maisha ya watoto wachanga, utafiti unaonyesha.",
-            "timestamp": 1558173384,
+            "timestamp": 1558173383000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7922,7 +7922,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48331938"
             },
             "summary": "Muigizaji huyo anasema kuwa hatomfungulia mashtaka mtu aliyemshambulia katika hafla ya hadhara nchini Agfrika Kusini",
-            "timestamp": 1558336621,
+            "timestamp": 1558336620000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -7963,7 +7963,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48293149"
             },
             "summary": "Serikali ya eSwatini imekanusha taarifa kuwa mfalme Mswati III",
-            "timestamp": 1558009369,
+            "timestamp": 1558009368000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8009,7 +8009,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48276372"
             },
             "summary": "Mwanamume mmoja wa Uchina amefungwa kwa siku 10 jela kwa kuwapa mbwa wake majina ya maafisa wa usalama",
-            "timestamp": 1557873180,
+            "timestamp": 1557873179000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8063,7 +8063,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48324041"
             },
             "summary": "Muigizaji huyo wa filamu aliambia mashabiki wake hakuna cha kutia wasiwasi baada ya kushambuliwa katika hafla moja iliokuwa katika eneo la umma.",
-            "timestamp": 1558208252,
+            "timestamp": 1558208251000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8105,7 +8105,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48237953"
             },
             "summary": "Kim Kardarshian na Kanye West wamethibitisha kuwa wamempata mtoto wa nne kwa njia ya kusaidiwa.",
-            "timestamp": 1557567235,
+            "timestamp": 1557567234000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -8154,7 +8154,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48173744"
             },
             "summary": "Lady Latrine anasema huwa anafurahia kueleza mara ngapi ameenda chooni bila kuona aibu.",
-            "timestamp": 1557131822,
+            "timestamp": 1557131821000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
@@ -8206,7 +8206,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-46650120"
             },
             "summary": "Habari za uzushi au habari feki zimekuwa zinasambazwa haraka, hasa katika mtandao wa internet. Vipi waandishi wa habari wazikabili.",
-            "timestamp": 1545394785,
+            "timestamp": 1545394784000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -8276,7 +8276,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-46650127"
             },
             "summary": "Mwandishi Ayisha Yahya anaendelea kuzungumza na mkuu wa Idara ya Lugha za Afrika katika BBC, Solomon Mugera.",
-            "timestamp": 1545408731,
+            "timestamp": 1545408730000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -8353,7 +8353,7 @@
             "uri": "https://www.bbc.co.uk/academy/sw/articles/art20180612093951172",
             "contentType": "Text",
             "assetTypeCode": "PRO",
-            "timestamp": 1535014884,
+            "timestamp": 1535014883000,
             "type": "link"
           }
         ],
@@ -8382,7 +8382,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48212463"
             },
             "summary": "Nyota wawili wa Kenya wanazichezea timu zitakazokutana katika fainali ya ligi ya mabingwa Ulaya Juni mosi.",
-            "timestamp": 1557390552,
+            "timestamp": 1557390551000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",

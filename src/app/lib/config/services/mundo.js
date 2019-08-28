@@ -1,12 +1,14 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `es-005`,
+  lang: `es`,
   articleAuthor: `https://www.facebook.com/bbcmundo`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-mundo',
+  atiAnalyticsProducerId: '62',
   brandName: 'BBC News Mundo',
   product: 'BBC News Mundo',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
@@ -28,9 +30,13 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/articles/manifest.json',
-  swPath: '/articles/sw.js',
+  manifestPath: '/manifest.json',
+  swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
+    home: 'Noticias',
+    currentPage: 'Current page',
+    skipLinkText: 'Ir al contenido',
     error: {
       404: {
         statusCode: '404',
@@ -156,6 +162,7 @@ const service = {
       'BBC. El contenido de las páginas externas no es responsabilidad de la BBC.',
   },
   fonts: [],
+  timezone: 'Europe/London',
 };
 
 export default service;
