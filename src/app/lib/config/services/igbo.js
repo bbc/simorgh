@@ -13,6 +13,7 @@ const igbo = {
   atiAnalyticsProducerId: '53',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
+  // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'ig',
   datetimeLocale: 'ig',
   service: 'igbo',
@@ -32,6 +33,7 @@ const igbo = {
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
   translations: {
+    seeAll: 'Lee ha niile',
     home: 'Akụkọ',
     currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
