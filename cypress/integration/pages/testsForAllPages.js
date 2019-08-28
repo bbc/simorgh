@@ -170,7 +170,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       it('should have correct title & description metadata', () => {
         /*
          * Naidheachdan needs to have correct metadata added to all environments.
-         * Naidheachdan condition will be removed in issue https://github.com/bbc/simorgh/issues/
+         * Naidheachdan condition will be removed in issue https://github.com/bbc/simorgh-infrastructure/issues/679
          */
         if (pageType !== 'errorPage404' && service !== 'naidheachdan') {
           cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
