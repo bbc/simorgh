@@ -129,7 +129,7 @@ const service = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
+      text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ፡፡',
     },
     links: [
       {
