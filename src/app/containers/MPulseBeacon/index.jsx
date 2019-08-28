@@ -2,6 +2,7 @@ import { useEffect, useContext } from 'react';
 import nodeLogger from '../../lib/logger.node';
 import { UserContext } from '../../contexts/UserContext';
 import useToggle from '../Toggle/useToggle';
+import onClient from '../../lib/utilities/onClient';
 import boomr from './boomr';
 
 const logger = nodeLogger(__filename);
@@ -10,7 +11,7 @@ const MPulseBeaconContainer = () => {
   const { enabled } = useToggle('mpulse');
   const { personalisationEnabled } = useContext(UserContext);
   const API_KEY = process.env.SIMORGH_MPULSE_API_KEY;
-  const isEnabled = enabled && API_KEY;
+  const isEnabled = enabled && API_KEY && onClient();
 
   useEffect(() => {
     if (isEnabled && personalisationEnabled) {
