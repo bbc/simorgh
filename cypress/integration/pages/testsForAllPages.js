@@ -4,8 +4,18 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
-const testsForAllPages = ({ service, pageType }) => {
-  describe('Always tests', () => {
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
+};
+
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfigforAllPages = ({
+  service,
+  pageType,
+}) => {
+  describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
         const resources = [
@@ -194,22 +204,6 @@ const testsForAllPages = ({ service, pageType }) => {
       });
     });
 
-    // Should be made to not be a smoke test
-    describe('Page links test', () => {
-      if (Cypress.env('APP_ENV') === 'live') {
-        it('links should not 404', () => {
-          cy.get('a')
-            .not('[href="#*"]')
-            .each(element => {
-              const href = element.attr('href');
-              cy.request(href).then(resp => {
-                expect(resp.status).to.not.equal(404);
-              });
-            });
-        });
-      }
-    });
-
     describe('Header Tests', () => {
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
@@ -279,20 +273,6 @@ const testsForAllPages = ({ service, pageType }) => {
           );
       });
 
-      if (!Cypress.env('SMOKE')) {
-        it('should have working links', () => {
-          cy.get('footer ul').within(() =>
-            appConfig[service].footer.links.forEach(({ href }, key) =>
-              cy
-                .get('a')
-                .eq(key)
-                .should('have.attr', 'href')
-                .and('contain', href),
-            ),
-          );
-        });
-      }
-
       it('should contain copyright text', () => {
         cy.get('footer p').should(
           'contain',
@@ -314,4 +294,25 @@ const testsForAllPages = ({ service, pageType }) => {
   });
 };
 
-export default testsForAllPages;
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
+  service,
+  pageType,
+}) => {
+  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
+    if (Cypress.env('APP_ENV') === 'live') {
+      describe('Page links test', () => {
+        it('links should not 404', () => {
+          cy.get('a')
+            .not('[href="#*"]')
+            .each(element => {
+              const href = element.attr('href');
+              cy.request(href).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      });
+    }
+  });
+};

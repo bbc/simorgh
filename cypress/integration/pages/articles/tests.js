@@ -26,10 +26,56 @@ const serviceHasFigure = service =>
 const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
+
 const serviceHasTimestamp = service => service === 'news';
 
-const tests = ({ service }) =>
-  describe(`Tests`, () => {
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+export const testsThatAlwaysRun = ({ service, pageType }) => {
+  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
+    if (serviceHasTimestamp(service)) {
+      it('should render a formatted timestamp', () => {
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+          ({ body }) => {
+            const { language } = body.metadata.passport;
+            const { lastPublished } = body.metadata;
+            const { firstPublished } = body.metadata;
+            const updatedTimestamp = moment
+              .tz(lastPublished, `${appConfig[service].timezone}`)
+              .locale(language)
+              .format('D MMMM YYYY');
+            const firstTimestamp = moment
+              .tz(firstPublished, `${appConfig[service].timezone}`)
+              .locale(language)
+              .format('D MMMM YYYY');
+            // exempt pashto && arabic as we do have currently their locale implementation
+            if (!['pashto', 'arabic'].includes(service)) {
+              cy.get('time').then($time => {
+                if (lastPublished === firstPublished) {
+                  cy.get($time).should('contain', updatedTimestamp);
+                } else {
+                  cy.get($time)
+                    .eq(0)
+                    .should('contain', firstTimestamp);
+                  cy.get($time)
+                    .eq(1)
+                    .should(
+                      'contain',
+                      `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+                    );
+                }
+              });
+            }
+          },
+        );
+      });
+    }
+  });
+};
+
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
+  describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       it('should have the correct articles metadata', () => {
         cy.get('meta[name="article:author"]').should(
@@ -91,44 +137,6 @@ const tests = ({ service }) =>
           },
         );
       });
-
-      if (serviceHasTimestamp(service)) {
-        it('should render a formatted timestamp', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const { language } = body.metadata.passport;
-              const { lastPublished } = body.metadata;
-              const { firstPublished } = body.metadata;
-              const updatedTimestamp = moment
-                .tz(lastPublished, `${appConfig[service].timezone}`)
-                .locale(language)
-                .format('D MMMM YYYY');
-              const firstTimestamp = moment
-                .tz(firstPublished, `${appConfig[service].timezone}`)
-                .locale(language)
-                .format('D MMMM YYYY');
-              // exempt pashto && arabic as we do have currently their locale implementation
-              if (!['pashto', 'arabic'].includes(service)) {
-                cy.get('time').then($time => {
-                  if (lastPublished === firstPublished) {
-                    cy.get($time).should('contain', updatedTimestamp);
-                  } else {
-                    cy.get($time)
-                      .eq(0)
-                      .should('contain', firstTimestamp);
-                    cy.get($time)
-                      .eq(1)
-                      .should(
-                        'contain',
-                        `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
-                      );
-                  }
-                });
-              }
-            },
-          );
-        });
-      }
 
       it('should render an H2, which contains/displays a styled subheading', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
@@ -232,5 +240,9 @@ const tests = ({ service }) =>
       });
     });
   });
+};
 
-export default tests;
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
+};
