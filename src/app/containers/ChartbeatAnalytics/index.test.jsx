@@ -52,7 +52,7 @@ ContextWrap.propTypes = {
   pageType: string.isRequired,
   origin: string.isRequired,
   platform: string.isRequired,
-  toggleState: shape,
+  toggleState: shape({}),
 };
 
 ContextWrap.defaultProps = {
