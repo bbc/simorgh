@@ -13,6 +13,7 @@ const pidgin = {
   atiAnalyticsProducerId: '70',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
+  // there is no valid ISO 639-1 code for Pidgin
   isoLang: null,
   datetimeLocale: 'pcm',
   service: 'pidgin',
