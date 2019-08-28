@@ -3,6 +3,8 @@ We have a very bespoke approach to testing. We split our tests in 3 sections: Ap
 
 We only run a subset of these integrations tests in CI and CD (those we always run are called smoke tests), but have a regular [cron job](https://en.wikipedia.org/wiki/Cron) that runs all integration tests (a.k.a. e2e tests) in this directory against localhost, test.bbc.com and www.bbc.com.
 
+If you would like to run e2e tests as it runs on the cron pass this env variable to cypress `CYPRESS_SMOKE=false`, so your script could be something like `CYPRESS_SMOKE=false npm run test:e2e`.
+
 ## [Config used in the tests](../support/config)
 It's important to familiarise yourself with the service.js config before writing e2e tests. Within there we define which combinations of services and page types should be tested, what the paths to test on are and whether something should be tested while only smoke testing.
 
@@ -22,6 +24,12 @@ Key points:
    - testsForALLAMPPages.js or testsForAllCanonicalPages.js
    - /[pageName]/tests.js
    - /[pageName]/testsForAMPOnly.js or /[pageName]/testsForCanonicalOnly.js
+ - Inside each of the files in the list above there are three sets of tests:
+   - **testsThatAlwaysRun** - as the name implies these will always run, use this sparingly because by default it will run for every service, page type and platform (canonical, AMP)! This is useful for features that vary between services.
+     - We recommend using conditional logic to select just the services/pagetypes that are necessary. e.g. only run ATI analytics tests on `afaanoromoo, cymrufyw, japanese, naidheachdan, news` instead of all 44 services, since these cover all variants. 
+   - **testsThatFollowSmokeTestConfig** - this is where most tests will go. These will only run on PRs if the `smoke` value is `true` for that service/pageType combination. [services config file](../support/config)
+   - **testsThatNeverRunDuringSmokeTesting** - this is for tests that are very CPU intensive, long running or low priority. It's a good place for testing layout or page-width variants.
+
 
 NB Despite all these rules, we don't favour highly abstracted tests, duplication of tests is preferred where it gives the same test coverage and enhances readability.
 
