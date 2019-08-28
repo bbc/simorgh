@@ -37,7 +37,7 @@ const boomr = (apiKey) => {
           var script = doc.createElement("script");
           script.id = scriptId || "boomr-if-as";
           script.src = window.BOOMR.url;
-          BOOMR_lstart = new Date().getTime();
+          window.BOOMR_lstart = new Date().getTime();
           parent = parent || doc.body;
           parent.appendChild(script);
       };
@@ -105,7 +105,7 @@ const boomr = (apiKey) => {
               iframeLoader(true);
           }
       }, LOADER_TIMEOUT);
-      BOOMR_lstart = new Date().getTime();
+      window.BOOMR_lstart = new Date().getTime();
       where.parentNode.appendChild(link);
   }
   else {
