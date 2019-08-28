@@ -79,7 +79,7 @@ const service = {
           },
           international: {
             first:
-              '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다',
+              '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다.',
             linkText: null,
             last: null,
             linkUrl: null,
