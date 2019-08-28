@@ -1,4 +1,4 @@
-import appConfig from '@lib/config/services';
+import appConfig from '../../../../src/app/lib/config/services';
 import config from '../../../support/config/services';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.

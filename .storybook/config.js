@@ -4,7 +4,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import timemachine from 'timemachine';
-import GlobalStyle from '@lib/globalStyles';
+import GlobalStyle from '../src/app/lib/globalStyles';
 
 // This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
 timemachine.config({
@@ -12,7 +12,7 @@ timemachine.config({
   timestamp: 1565359454,
 });
 
-const req = require.context('@app', true, /\.stories\.jsx$/);
+const req = require.context('../src/app', true, /\.stories\.jsx$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

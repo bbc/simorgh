@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-unresolved
 import puppeteer from 'puppeteer';
-import { localBaseUrl } from '@testHelpers/config';
+import { localBaseUrl } from '../src/testHelpers/config';
 
 global.Cypress = { env: () => 'local' };
 

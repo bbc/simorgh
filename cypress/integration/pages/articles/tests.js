@@ -1,7 +1,7 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import * as moment from 'moment-timezone';
-import appConfig from '@lib/config/services';
 import config from '../../../support/config/services';
+import appConfig from '../../../../src/app/lib/config/services';
 
 const getBlockByType = (blocks, blockType) => {
   let blockData;
