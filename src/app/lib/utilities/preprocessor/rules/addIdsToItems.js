@@ -4,20 +4,14 @@ import pathOr from 'ramda/src/pathOr';
 
 const getGroups = jsonRaw => pathOr(null, ['content', 'groups'], jsonRaw);
 
-const addIds = groups => {
-  const newGroups = groups.map(group => {
-    const newGroup = group;
+const addIdToItem = ({ id, ...item }) => ({ ...item, id: id || uuid() });
 
-    if (Array.isArray(group.items)) {
-      newGroup.items = group.items.map(item =>
-        item.id ? item : { ...item, id: uuid() },
-      );
-    }
-    return newGroup;
-  });
+const addIdsToGroupItems = ({ items, ...group }) => ({
+  ...group,
+  items: items && items.map(addIdToItem),
+});
 
-  return newGroups;
-};
+const mapGroups = groups => groups.map(addIdsToGroupItems);
 
 const mergeContentWithAddedIdItems = itemsWithIds => jsonRaw => ({
   ...jsonRaw,
@@ -27,11 +21,10 @@ const mergeContentWithAddedIdItems = itemsWithIds => jsonRaw => ({
 });
 
 export default jsonRaw => {
-  const addIdsToProItems = compose(
+  const addIdsToItems = compose(
     mergeContentWithAddedIdItems,
-    addIds,
+    mapGroups,
     getGroups,
   )(jsonRaw);
-
-  return addIdsToProItems(jsonRaw);
+  return addIdsToItems;
 };
