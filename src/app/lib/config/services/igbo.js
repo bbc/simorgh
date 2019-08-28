@@ -32,6 +32,7 @@ const igbo = {
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
   translations: {
+    seeAll: 'Lee ha niile',
     home: 'Akụkọ',
     currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
