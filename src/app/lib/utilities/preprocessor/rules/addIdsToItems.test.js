@@ -6,21 +6,12 @@ const noId = {
   content: {
     groups: [
       {
-        type: 'responsive-top-stories',
-        title: 'Top Stories',
         items: [
           {
             headlines: 'Test headlines',
-            locators: {},
-            summary: 'This is a test that checks addIdsToItems',
-            cpsType: 'LIV',
           },
           {
-            name: 'This is a test assetType',
-            uri: 'https://www.test.url.com',
-            contentType: 'Text',
-            assetTypeCode: 'PRO',
-            type: 'link',
+            name: 'This is a test headline',
           },
         ],
       },
@@ -32,22 +23,13 @@ const withIds = {
   content: {
     groups: [
       {
-        type: 'responsive-top-stories',
-        title: 'Top Stories',
         items: [
           {
             headlines: 'Test headlines',
-            locators: {},
-            summary: 'This is a test that checks addIdsToItems',
-            cpsType: 'LIV',
             id: 'urn:bbc:ares::asset:test/live/story-1r2e3a456',
           },
           {
             name: 'This is a test assetType',
-            uri: 'https://www.test.url.com',
-            contentType: 'Text',
-            assetTypeCode: 'PRO',
-            type: 'link',
             id: 'urn:bbc:ares::asset:test/live/story-1r2e3a457',
           },
         ],
@@ -63,22 +45,13 @@ describe('addIdsToItems rule', () => {
       content: {
         groups: [
           {
-            type: 'responsive-top-stories',
-            title: 'Top Stories',
             items: [
               {
                 headlines: 'Test headlines',
-                locators: {},
-                summary: 'This is a test that checks addIdsToItems',
-                cpsType: 'LIV',
                 id: 'mockId',
               },
               {
-                name: 'This is a test assetType',
-                uri: 'https://www.test.url.com',
-                contentType: 'Text',
-                assetTypeCode: 'PRO',
-                type: 'link',
+                name: 'This is a test headline',
                 id: 'mockId',
               },
             ],
