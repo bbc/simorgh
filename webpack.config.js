@@ -34,7 +34,7 @@ module.exports = (shell = {}) => {
     mode: IS_PROD ? 'production' : 'development',
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
       alias: {
         '#components': resolvePath('src/app/components'),
         '#data': resolvePath('data/'),
@@ -43,7 +43,7 @@ module.exports = (shell = {}) => {
         '#app': resolvePath('src/app'),
         '#contexts': resolvePath('src/app/contexts'),
       },
-    }, // resolves `import '../Foo'` to `../Foo/index.jsx`
+    },
     devServer: {
       stats,
     },
