@@ -162,6 +162,11 @@ const indexAlsosItem = {
   relatedItems: relItems,
 };
 
+const onlyOneRelatedItem = {
+  ...indexAlsosItem,
+  relatedItems: [indexAlsosItem.relatedItems[0]],
+};
+
 const fixtures = {
   standard: completeItem,
   video: videoItem,
@@ -419,9 +424,8 @@ describe('StoryPromo Container', () => {
 
       it('should render a related item not contained within a list', () => {
         const { container } = render(
-          <WrappedStoryPromo item={indexAlsosItem.relatedItems[0]} topStory />,
+          <WrappedStoryPromo item={onlyOneRelatedItem} topStory />,
         );
-
         expect(container.getElementsByTagName('ul')).toHaveLength(0);
         expect(container.getElementsByTagName('li')).toHaveLength(0);
       });
