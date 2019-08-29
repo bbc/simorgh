@@ -13,6 +13,7 @@ const yoruba = {
   atiAnalyticsProducerId: '107',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
+  // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'yo',
   datetimeLocale: 'yo',
   service: 'yoruba',
@@ -35,6 +36,7 @@ const yoruba = {
     home: 'Ìròyìn',
     currentPage: 'Ojú ewé to wà yìí',
     skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
+    seeAll: 'Wo gbogbo ẹ̀',
     error: {
       404: {
         statusCode: '404',
