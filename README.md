@@ -15,7 +15,9 @@ Simorgh will be used across the BBC World Service News websites ([some are alrea
 We lean heavily on the component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain. This library is also open source and used even more widely across the BBC.
 
 ## Documentation index
+
 Please familiarise yourself with our:
+
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
@@ -23,6 +25,7 @@ Please familiarise yourself with our:
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md) (you are here)
 
 ## Simorgh Overview
+
 ### A High Level User Journey
 
 #### The initial page load - Server Side Render (SSR)
@@ -68,6 +71,7 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withData
 
 #### withContexts
+
 The withContexts HOC is a wrapper that provides access to the different context providers available in the application. Any child component inside of these context providers has access to the context data via the useContexts hook.
 
 #### withPageWrapper
@@ -90,10 +94,11 @@ If error is set to true the Error component is returned, giving the user a visua
 
 Assuming the other HOC's have returned the original Article or FrontPage container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
 
-
 ## Before Installation
+
 Please read:
 [CONTRIBUTING.md](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
+
 ## Installation
 
 Install Node. [https://nodejs.org/en/](https://nodejs.org/en/). We use the version specified in `.nvmrc` and if you have a node version manager (nvm) you can run the following script to automatically change to the project supported version.
@@ -118,7 +123,7 @@ To run this application locally, with hot-reloading, run
 npm run dev
 ```
 
-The application will start on [http://localhost.bbc.com:7080](http://localhost.bbc.com:7080). 
+The application will start on [http://localhost.bbc.com:7080](http://localhost.bbc.com:7080).
 
 ### Article pages
 
@@ -149,6 +154,7 @@ The World Service front pages follow the article format for AMP too, being avail
 - [http://localhost.bbc.com:7080/pidgin.amp](http://localhost.bbc.com:7080/pidgin.amp)
 
 ### Other page types
+
 You can find other pages types by looking through our routes and their associates regexes, but we suggest you start with the above then have a look at the core of the application to understand and find the other routes.
 
 ### Storybook (UI Development Environment/Style Guide)
@@ -202,7 +208,7 @@ Some features perform differently dependant on whether a user is located within 
 
 ## Production build on CI
 
-On deployment `npm run build:ci` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
+On deployment `make buildCi` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
 
 ### Bundle analysis reports
 
@@ -225,16 +231,22 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running the tests locally, run this single command:
 
 ```
-npm run test:e2e
+npm run build && npx run-p --race start cypress
 ```
 
 It will spin up a production server on port 7080 and run the Cypress tests against that.
+For running tests using interactive, run:
+
+```
+npm run build && npx run-p --race start cypress:interactive
+```
 
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 
-Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
+Cypress can be run interactively using `npm run build && npx run-p --race start cypress:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
 #### Running e2e in the UK against LIVE
+
 **This affects developers based in the UK only (but may affect you if you're using a VPN routing through the UK)**
 
 Cypress .visit() function is locked to visiting a single domain per test. This becomes problematic when you launch the e2e tests from within the UK, due to redirects from `.com` to `.co.uk`. By default cypress tests will run as if they were ran outside of the uk. In order to run these tests from the UK you have to pass in the `UK` Cypress environment variable to the tests. This will replace the URL endings to `.co.uk`, which will allow you to run these tests successfully.
@@ -244,6 +256,14 @@ Here is an example command:
 ```
 CYPRESS_APP_ENV=test CYPRESS_UK=true npm run cypress:interactive
 ```
+
+The following command runs both simorgh and cypress:
+
+```
+CYPRESS_APP_ENV=local CYPRESS_UK=true npm run build && npx run-p --race start cypress:interactive
+```
+
+CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.
 
 ### Lighthouse Best Practice tests
 
