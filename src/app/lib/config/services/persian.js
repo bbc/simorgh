@@ -169,25 +169,12 @@ const persian = {
         text: 'سیاست حفظ حریم خصوصی',
       },
       {
-        href:
-          'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.co.uk/accessibility',
-        text: 'Accessibility Help',
-      },
-      {
-        href: 'https://www.bbc.co.uk/guidance',
-        text: 'Parental Guidance',
       },
       {
         href: 'https://www.bbc.com/persian/institutional-37542244',
         text: 'تماس با بی بی سی',
-      },
-      {
-        href: 'https://www.bbc.co.uk/bbcnewsletter',
-        text: 'Get Personalised Newsletters',
       },
     ],
     copyrightText:
