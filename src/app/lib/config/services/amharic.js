@@ -153,7 +153,7 @@ const service = {
         text: 'ቢቢሲን ያግኙ',
       },
     ],
-    copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
+    copyrightText: ' BBC፡፡ ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም፡፡',
   },
   fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
   navigation: [
