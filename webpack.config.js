@@ -36,12 +36,11 @@ module.exports = (shell = {}) => {
     resolve: {
       extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
       alias: {
-        '#components': resolvePath('src/app/components'),
+        '#app': resolvePath('src/app'),
+        '#contexts': resolvePath('src/app/contexts'),
         '#data': resolvePath('data/'),
         '#lib': resolvePath('src/app/lib/'),
         '#testHelpers': resolvePath('src/testHelpers/'),
-        '#app': resolvePath('src/app'),
-        '#contexts': resolvePath('src/app/contexts'),
       },
     },
     devServer: {
