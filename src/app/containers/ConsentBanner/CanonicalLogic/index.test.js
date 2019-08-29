@@ -51,7 +51,7 @@ describe('Consent Banner Utilities', () => {
   });
 
   describe('runInitial', () => {
-    it('does not show the privacy banner when PRIVACY_COOKIE is 1', () => {
+    it('does not show the privacy banner when PRIVACY_COOKIE is july2019', () => {
       setCookieGetMock({ privacy: '1' });
 
       const { runInitial } = getConsentBannerUtilities();
@@ -62,7 +62,18 @@ describe('Consent Banner Utilities', () => {
       expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
     });
 
-    it('sets PRIVACY_COOKIE and shows privacy banner when cookie is 0', () => {
+    it('does not show the privacy banner when PRIVACY_COOKIE is anythingelse', () => {
+      setCookieGetMock({ privacy: 'anythingelse' });
+
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(Cookie.set).toHaveBeenCalledTimes(0);
+      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
+    });
+
+    it('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 0', () => {
       setCookieGetMock({ privacy: '0' });
 
       const { runInitial } = getConsentBannerUtilities();
@@ -70,7 +81,35 @@ describe('Consent Banner Utilities', () => {
       runInitial();
 
       expect(Cookie.set).toHaveBeenCalledTimes(1);
-      expect(Cookie.set).toHaveBeenCalledWith(PRIVACY_COOKIE, '1', {
+      expect(Cookie.set).toHaveBeenCalledWith(PRIVACY_COOKIE, 'july2019', {
+        expires: 365,
+      });
+      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
+    });
+
+    it('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 1', () => {
+      setCookieGetMock({ privacy: '1' });
+
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(Cookie.set).toHaveBeenCalledTimes(1);
+      expect(Cookie.set).toHaveBeenCalledWith(PRIVACY_COOKIE, 'july2019', {
+        expires: 365,
+      });
+      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
+    });
+
+    it('sets PRIVACY_COOKIE and shows privacy banner when cookie is july2019', () => {
+      setCookieGetMock({ privacy: 'july2019' });
+
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(Cookie.set).toHaveBeenCalledTimes(1);
+      expect(Cookie.set).toHaveBeenCalledWith(PRIVACY_COOKIE, 'july2019', {
         expires: 365,
       });
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
