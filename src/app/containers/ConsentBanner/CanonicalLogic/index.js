@@ -5,9 +5,11 @@ const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
 const COOKIE_EXPIRY = 365;
-const BANNER_APPROVED = '1';
+const COOKIE_BANNER_APPROVED = '1';
 const POLICY_APPROVED = '111';
 const POLICY_DENIED = '000';
+const PRIVACY_COOKIE_CURRENT = 'july2019';
+const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
 
@@ -19,15 +21,22 @@ const setPolicyCookie = (value, logger) => {
   setCookieOven(POLICY_COOKIE, value, logger);
 };
 
-const seenPrivacyBanner = () => Cookie.get(PRIVACY_COOKIE) === BANNER_APPROVED;
-const seenCookieBanner = () => Cookie.get(EXPLICIT_COOKIE) === BANNER_APPROVED;
+const showPrivacyBanner = () => {
+  const privacyCookie = Cookie.get(PRIVACY_COOKIE);
+  return (
+    !privacyCookie || PRIVACY_COOKIE_PREVIOUS_VALUES.includes(privacyCookie)
+  );
+};
+const showCookieBanner = () =>
+  Cookie.get(EXPLICIT_COOKIE) !== COOKIE_BANNER_APPROVED;
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
-const setSeenPrivacyBanner = () => setCookie(PRIVACY_COOKIE, BANNER_APPROVED);
+const setSeenPrivacyBanner = () =>
+  setCookie(PRIVACY_COOKIE, PRIVACY_COOKIE_CURRENT);
 const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
 const setApprovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
-  setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
+  setCookie(EXPLICIT_COOKIE, COOKIE_BANNER_APPROVED);
 
 const consentBannerUtilities = ({
   setShowPrivacyBanner,
@@ -36,12 +45,12 @@ const consentBannerUtilities = ({
 }) => {
   const runInitial = () => {
     if (onClient) {
-      if (!seenPrivacyBanner()) {
+      if (showPrivacyBanner()) {
         setShowPrivacyBanner(true);
         setSeenPrivacyBanner();
       }
 
-      if (!seenCookieBanner()) {
+      if (showCookieBanner()) {
         // Up to the application renderer to show the privacy
         // banner and cookie banner in the correct order
         setShowCookieBanner(true);
