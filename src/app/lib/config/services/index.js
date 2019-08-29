@@ -1,10 +1,9 @@
 /*
   Do not import this file into the primary application.
-  This file is intended for use by tests only where needed. 
-  Including this file in the application will cause the 
+  This file is intended for use by tests only where needed.
+  Including this file in the application will cause the
   bundle splitting to stop working.
 */
-import defaultConfig from './default';
 
 import afaanoromoo from './afaanoromoo';
 import afrique from './afrique';
@@ -52,8 +51,6 @@ import yoruba from './yoruba';
 import zhongwen from './zhongwen';
 
 export default {
-  default: defaultConfig,
-
   afaanoromoo,
   afrique,
   amharic,
