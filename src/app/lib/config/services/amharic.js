@@ -37,7 +37,6 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
-    seeAll: 'See all',
     home: 'ዜና',
     currentPage: 'Current page',
     skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
@@ -154,7 +153,7 @@ const service = {
         text: 'ቢቢሲን ያግኙ',
       },
     ],
-    copyrightText: ' BBC፡፡ ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም፡፡',
+    copyrightText: 'BBC፡፡ ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም፡፡',
   },
   fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
   navigation: [
