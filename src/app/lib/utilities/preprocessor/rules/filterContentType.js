@@ -15,14 +15,17 @@ const filterUnknownContentTypes = data => {
     const newGroup = group;
 
     if (Array.isArray(group.items)) {
-      newGroup.items = group.items.filter(
-        item =>
-          (item.assetTypeCode || item.cpsType) &&
-          whitelist.includes(item.cpsType || item.assetTypeCode) &&
-          (item.assetTypeCode === 'PRO'
-            ? !!contentTypes.includes(item.contentType)
-            : true),
-      );
+      newGroup.items = group.items.filter(item => {
+        const itemType = item.assetTypeCode || item.cpsType;
+        const validItemType = whitelist.includes(
+          item.cpsType || item.assetTypeCode,
+        );
+        const validContentType =
+          item.assetTypeCode !== 'PRO' ||
+          contentTypes.includes(item.contentType);
+
+        return itemType && validItemType && validContentType;
+      });
     }
 
     return newGroup;
