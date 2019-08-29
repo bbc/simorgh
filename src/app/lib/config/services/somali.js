@@ -33,6 +33,7 @@ const service = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   translations: {
+    seeAll: 'See all',
     home: 'War',
     currentPage: 'Current page',
     skipLinkText: 'U gudub qaybta macluumaadka',
