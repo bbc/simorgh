@@ -5,7 +5,8 @@ const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
 const COOKIE_EXPIRY = 365;
-const BANNER_APPROVED = '1';
+const PRIVACY_BANNER_APPROVED = 'july2019';
+const COOKIE_BANNER_APPROVED = '1';
 const POLICY_APPROVED = '111';
 const POLICY_DENIED = '000';
 
@@ -19,15 +20,18 @@ const setPolicyCookie = (value, logger) => {
   setCookieOven(POLICY_COOKIE, value, logger);
 };
 
-const seenPrivacyBanner = () => Cookie.get(PRIVACY_COOKIE) === BANNER_APPROVED;
-const seenCookieBanner = () => Cookie.get(EXPLICIT_COOKIE) === BANNER_APPROVED;
+const seenPrivacyBanner = () =>
+  Cookie.get(PRIVACY_COOKIE) === PRIVACY_BANNER_APPROVED;
+const seenCookieBanner = () =>
+  Cookie.get(EXPLICIT_COOKIE) === COOKIE_BANNER_APPROVED;
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
-const setSeenPrivacyBanner = () => setCookie(PRIVACY_COOKIE, BANNER_APPROVED);
+const setSeenPrivacyBanner = () =>
+  setCookie(PRIVACY_COOKIE, PRIVACY_BANNER_APPROVED);
 const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
 const setApprovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
-  setCookie(EXPLICIT_COOKIE, BANNER_APPROVED);
+  setCookie(EXPLICIT_COOKIE, COOKIE_BANNER_APPROVED);
 
 const consentBannerUtilities = ({
   setShowPrivacyBanner,
