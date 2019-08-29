@@ -27,8 +27,8 @@ const showPrivacyBanner = () => {
     !privacyCookie || PRIVACY_COOKIE_PREVIOUS_VALUES.includes(privacyCookie)
   );
 };
-const seenCookieBanner = () =>
-  Cookie.get(EXPLICIT_COOKIE) === COOKIE_BANNER_APPROVED;
+const showCookieBanner = () =>
+  Cookie.get(EXPLICIT_COOKIE) !== COOKIE_BANNER_APPROVED;
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
 const setSeenPrivacyBanner = () =>
@@ -50,7 +50,7 @@ const consentBannerUtilities = ({
         setSeenPrivacyBanner();
       }
 
-      if (!seenCookieBanner()) {
+      if (showCookieBanner()) {
         // Up to the application renderer to show the privacy
         // banner and cookie banner in the correct order
         setShowCookieBanner(true);
