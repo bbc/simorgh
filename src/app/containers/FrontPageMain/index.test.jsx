@@ -11,6 +11,16 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 const processedPidgin = preprocessor(frontPageDataPidgin, [addIdsToItems]);
 
+jest.mock('uuid', () =>
+  (() => {
+    let x = 1;
+    return () => {
+      x += 1;
+      return `mockid-${x}`;
+    };
+  })(),
+);
+
 jest.mock('../ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
