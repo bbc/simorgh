@@ -419,7 +419,7 @@ describe('StoryPromo Container', () => {
 
       it('should render a related item not contained within a list', () => {
         const { container } = render(
-          <WrappedStoryPromo item={[indexAlsosItem[0]]} topStory />,
+          <WrappedStoryPromo item={indexAlsosItem.relatedItems[0]} topStory />,
         );
 
         expect(container.getElementsByTagName('ul')).toHaveLength(0);
