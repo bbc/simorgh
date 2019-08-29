@@ -37,6 +37,7 @@ const service = {
   script: arabic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'کور پاڼه',
   translations: {
     seeAll: 'See all',
     home: 'کور پاڼه',

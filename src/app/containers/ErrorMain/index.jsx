@@ -11,6 +11,8 @@ import ErrorPageComponent from '../../components/ErrorPage';
 const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
   const { title } = messaging;
 
+  const pageTitle = `${title} - ${brandName}`;
+
   return (
     <Helmet htmlAttributes={{ lang, dir }}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -21,9 +23,11 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
-      <title>
-        {title} - {brandName}
-      </title>
+      <title>{pageTitle}</title>
+      <meta name="og:description" content={title} />
+      <meta name="og:title" content={pageTitle} />
+      <meta name="twitter:description" content={title} />
+      <meta name="twitter:title" content={pageTitle} />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </Helmet>
   );
