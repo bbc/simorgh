@@ -43,12 +43,12 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [
-          ['@components', './src/app/components'],
-          ['@lib', './src/app/lib'],
-          ['@data', './data'],
-          ['@testHelpers', './src/testHelpers'],
-          ['@app', './src/app'],
-          ['@contexts', './src/app/contexts'],
+          ['#components', './src/app/components'],
+          ['#lib', './src/app/lib'],
+          ['#data', './data'],
+          ['#testHelpers', './src/testHelpers'],
+          ['#app', './src/app'],
+          ['#contexts', './src/app/contexts'],
         ],
         extensions: ['.js', '.jsx', '.json'],
       },
