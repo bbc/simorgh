@@ -77,6 +77,7 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
+      // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {
         cy.get('meta[name="article:author"]').should(
           'have.attr',
