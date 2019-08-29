@@ -131,11 +131,11 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Wanda aka fi karantawa',
+    lastUpdated: 'Na baya-bayan nan: ',
+  },
   footer: {
-    externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
-    },
     links: [
       {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -159,6 +159,10 @@ const service = {
       },
     ],
     copyrightText: 'BBC. BBC ba tada alhaki game da shafukan da ba nata ba',
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'Read about our approach to external linking.',
+    },
   },
   fonts: [],
   timezone: 'Europe/London',
