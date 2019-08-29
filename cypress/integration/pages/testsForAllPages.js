@@ -55,7 +55,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             ({ body }) => {
               const lang =
                 pageType === 'articles'
-                  ? body.metadata.passport.language
+                  ? body.metadata.passport.language || body.metadata.language
                   : appConfig[service].lang;
 
               cy.get('html').should('have.attr', 'lang', lang);
