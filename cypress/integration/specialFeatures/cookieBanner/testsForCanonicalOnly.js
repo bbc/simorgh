@@ -76,7 +76,7 @@ Object.keys(config)
             getCookieBanner(service).should('not.be.visible');
 
             assertCookieValues({
-              ckns_privacy: '1',
+              ckns_privacy: 'july2019',
               ckns_policy: '000',
             });
 
@@ -89,7 +89,7 @@ Object.keys(config)
 
             assertCookieValues({
               ckns_explicit: '1',
-              ckns_privacy: '1',
+              ckns_privacy: 'july2019',
               ckns_policy: '111',
             });
 
@@ -107,7 +107,7 @@ Object.keys(config)
             getCookieBanner(service).should('not.be.visible');
 
             assertCookieValues({
-              ckns_privacy: '1',
+              ckns_privacy: 'july2019',
               ckns_policy: '000',
             });
 
@@ -118,7 +118,7 @@ Object.keys(config)
 
             assertCookieValues({
               ckns_explicit: '1',
-              ckns_privacy: '1',
+              ckns_privacy: 'july2019',
               ckns_policy: '000',
             });
 
@@ -130,7 +130,7 @@ Object.keys(config)
 
           it("should show cookie banner (and NOT privacy banner) if user has visited the page before and didn't explicitly 'accept' cookies", () => {
             cy.clearCookies();
-            cy.setCookie('ckns_privacy', '1');
+            cy.setCookie('ckns_privacy', 'july2019');
             visitPage(service, pageType);
 
             getPrivacyBanner(service).should('not.be.visible');
