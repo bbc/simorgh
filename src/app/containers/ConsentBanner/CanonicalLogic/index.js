@@ -20,10 +20,19 @@ const setPolicyCookie = (value, logger) => {
   setCookieOven(POLICY_COOKIE, value, logger);
 };
 
-const seenPrivacyBanner = () =>
-  Cookie.get(PRIVACY_COOKIE) === PRIVACY_BANNER_APPROVED;
-const seenCookieBanner = () =>
-  Cookie.get(EXPLICIT_COOKIE) === COOKIE_BANNER_APPROVED;
+// if `ckns_policy` is 0 => show banner
+// if `ckns_policy` is 1 => show banner
+// if `ckns_policy` is unset => show banner
+// if `ckns_policy` is `july2019` => dont show banner
+// if `ckns_policy` is anything else => dont show banner
+const showPrivacyBanner = () => {
+  const cookieValue = Cookie.get(PRIVACY_COOKIE);
+  return !cookieValue || cookieValue === '0' || cookieValue === '1';
+};
+
+const showCookieBanner = () =>
+  Cookie.get(EXPLICIT_COOKIE) !== COOKIE_BANNER_APPROVED;
+
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
 const setSeenPrivacyBanner = () =>
@@ -40,12 +49,12 @@ const consentBannerUtilities = ({
 }) => {
   const runInitial = () => {
     if (onClient) {
-      if (!seenPrivacyBanner()) {
+      if (showPrivacyBanner()) {
         setShowPrivacyBanner(true);
         setSeenPrivacyBanner();
       }
 
-      if (!seenCookieBanner()) {
+      if (showCookieBanner()) {
         // Up to the application renderer to show the privacy
         // banner and cookie banner in the correct order
         setShowCookieBanner(true);
