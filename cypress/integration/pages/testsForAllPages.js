@@ -137,76 +137,67 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             );
           });
         });
-      }
 
-      const runDescriptionAndTitleTests = ({ description, title }) => {
-        const pageTitle = `${title} - ${appConfig[service].brandName}`;
+        it('should have correct title & description metadata', () => {
+          /*
+           * Naidheachdan needs to have correct metadata added to all environments.
+           * Naidheachdan condition will be removed in issue https://github.com/bbc/simorgh-infrastructure/issues/679
+           */
+          if (service !== 'naidheachdan') {
+            cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+              ({ body }) => {
+                let description;
+                let title;
+                switch (pageType) {
+                  case 'articles':
+                    description =
+                      body.promo.summary || body.promo.headlines.seoHeadline;
+                    title = body.promo.headlines.seoHeadline;
+                    break;
+                  case 'frontPage':
+                    description = body.metadata.summary;
+                    title = body.promo.name;
+                    break;
+                  case 'liveRadio':
+                    description = body.promo.summary;
+                    title = body.promo.name;
+                    break;
+                  default:
+                    description = '';
+                    title = '';
+                }
+                /* Note that if updating these, also do the same for errorPage404/test.js */
+                const pageTitle = `${title} - ${appConfig[service].brandName}`;
 
-        cy.get('head').within(() => {
-          cy.title().should('eq', pageTitle);
-          cy.get('meta[name="og:description"]').should(
-            'have.attr',
-            'content',
-            description,
-          );
-          cy.get('meta[name="og:title"]').should(
-            'have.attr',
-            'content',
-            pageTitle,
-          );
-          cy.get('meta[name="twitter:description"]').should(
-            'have.attr',
-            'content',
-            description,
-          );
-          cy.get('meta[name="twitter:title"]').should(
-            'have.attr',
-            'content',
-            pageTitle,
-          );
+                cy.get('head').within(() => {
+                  cy.title().should('eq', pageTitle);
+                  cy.get('meta[name="og:description"]').should(
+                    'have.attr',
+                    'content',
+                    description,
+                  );
+                  cy.get('meta[name="og:title"]').should(
+                    'have.attr',
+                    'content',
+                    pageTitle,
+                  );
+                  cy.get('meta[name="twitter:description"]').should(
+                    'have.attr',
+                    'content',
+                    description,
+                  );
+                  cy.get('meta[name="twitter:title"]').should(
+                    'have.attr',
+                    'content',
+                    pageTitle,
+                  );
+                });
+              },
+            );
+          }
         });
-      };
-
-      it('should have correct title & description metadata', () => {
-        /*
-         * Naidheachdan needs to have correct metadata added to all environments.
-         * Naidheachdan condition will be removed in issue https://github.com/bbc/simorgh-infrastructure/issues/679
-         */
-        if (pageType !== 'errorPage404' && service !== 'naidheachdan') {
-          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-            ({ body }) => {
-              let description;
-              let title;
-              switch (pageType) {
-                case 'articles':
-                  description =
-                    body.promo.summary || body.promo.headlines.seoHeadline;
-                  title = body.promo.headlines.seoHeadline;
-                  break;
-                case 'frontPage':
-                  description = body.metadata.summary;
-                  title = body.promo.name;
-                  break;
-                case 'liveRadio':
-                  description = body.promo.summary;
-                  title = body.promo.name;
-                  break;
-                default:
-                  description = '';
-                  title = '';
-              }
-              runDescriptionAndTitleTests({ description, title });
-            },
-          );
-        }
-
-        if (pageType === 'errorPage404') {
-          runDescriptionAndTitleTests({
-            description: appConfig[service].translations.error[404].title,
-            title: appConfig[service].translations.error[404].title,
-          });
-        }
-      });
+      }
+      /* End of block (pageType !== 'errorPage404') */
 
       it('should have dir matching service config', () => {
         cy.get('html').and('have.attr', 'dir', appConfig[service].dir);
