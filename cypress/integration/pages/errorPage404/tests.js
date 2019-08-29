@@ -60,11 +60,35 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
       });
 
-      it('should have a relevant error title in the head', () => {
-        cy.title().should(
-          'eq',
-          `${appConfig[service].translations.error[404].title} - ${appConfig[service].brandName}`,
-        );
+      it('should have correct title & description metadata', () => {
+        /* Note that description & title tests for all other page types are in /pages/testsForAllPages.js */
+        const description = appConfig[service].translations.error[404].title;
+        const { title } = appConfig[service].translations.error[404];
+        const pageTitle = `${title} - ${appConfig[service].brandName}`;
+
+        cy.get('head').within(() => {
+          cy.title().should('eq', pageTitle);
+          cy.get('meta[name="og:description"]').should(
+            'have.attr',
+            'content',
+            description,
+          );
+          cy.get('meta[name="og:title"]').should(
+            'have.attr',
+            'content',
+            pageTitle,
+          );
+          cy.get('meta[name="twitter:description"]').should(
+            'have.attr',
+            'content',
+            description,
+          );
+          cy.get('meta[name="twitter:title"]').should(
+            'have.attr',
+            'content',
+            pageTitle,
+          );
+        });
       });
     });
   });
