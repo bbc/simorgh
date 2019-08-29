@@ -1,7 +1,8 @@
 import envConfig from '../../support/config/envs';
-import config from '../../support/config/services';
 
 const serviceIsGNL = service => service === 'japanese';
+const serviceIsWS = service => service === 'persian';
+const serviceIsPS = service => service === 'news';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -21,17 +22,17 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       describe('ATI', () => {
         it('should have a noscript tag with an 1px image with the ati url', () => {
-          if (service === serviceIsGNL) {
+          if (serviceIsGNL(service)) {
             cy.hasNoscriptImgAtiUrl(
               envConfig.atiUrl,
               envConfig.atiAnalyticsGNLBucket,
             );
-          } else if (config[service].isWorldService) {
+          } else if (serviceIsWS(service)) {
             cy.hasNoscriptImgAtiUrl(
               envConfig.atiUrl,
               envConfig.atiAnalyticsWSBucket,
             );
-          } else {
+          } else if (serviceIsPS(service)) {
             cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
           }
         });
