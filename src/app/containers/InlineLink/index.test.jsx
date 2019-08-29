@@ -20,11 +20,13 @@ const testInternalInlineLink = (description, locator, blocks, isExternal) => {
       for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
     */
     <StaticRouter>
-      <InlineLinkContainer
-        locator={locator}
-        blocks={blocks}
-        isExternal={isExternal}
-      />
+      <ServiceContextProvider service="news">
+        <InlineLinkContainer
+          locator={locator}
+          blocks={blocks}
+          isExternal={isExternal}
+        />
+      </ServiceContextProvider>
     </StaticRouter>,
   );
 };
@@ -49,11 +51,13 @@ describe('InlineLinkContainer', () => {
   describe('internal link not matching SPA route', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <InlineLinkContainer
-        locator="https://www.bbc.com/news"
-        blocks={[fragmentBlock('This is bold text for a link', ['bold'])]}
-        isExternal={false}
-      />,
+      <ServiceContextProvider service="news">
+        <InlineLinkContainer
+          locator="https://www.bbc.com/news"
+          blocks={[fragmentBlock('This is bold text for a link', ['bold'])]}
+          isExternal={false}
+        />
+      </ServiceContextProvider>,
     );
   });
 
