@@ -50,19 +50,18 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 
             // exempt pashto && arabic as we do have currently their locale implementation
             if (!['pashto', 'arabic'].includes(service)) {
-              if (lastPublished === firstPublished) {
+              if (lastPublished === firstPublished)
                 cy.get('time').should('contain', updatedTimestamp);
-              } else {
-                cy.get('time')
-                  .eq(0)
-                  .should('contain', firstTimestamp);
-                cy.get('time')
-                  .eq(1)
-                  .should(
-                    'contain',
-                    `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
-                  );
-              }
+            } else {
+              cy.get('time')
+                .eq(0)
+                .should('contain', firstTimestamp);
+              cy.get('time')
+                .eq(1)
+                .should(
+                  'contain',
+                  `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+                );
             }
           },
         );
