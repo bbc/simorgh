@@ -141,9 +141,14 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         it('should have correct title & description metadata', () => {
           /*
            * Naidheachdan needs to have correct metadata added to all environments.
-           * Naidheachdan condition will be removed in issue https://github.com/bbc/simorgh-infrastructure/issues/679
+           * afaanoromoo & tigrinya need correct metadata on TEST env
+           * These conditions will be removed in issue https://github.com/bbc/simorgh-infrastructure/issues/679
            */
-          if (service !== 'naidheachdan') {
+          if (
+            service !== 'naidheachdan' ||
+            !(service === 'afaanoromoo' && Cypress.env('APP_ENV') === 'test') ||
+            !(service === 'tigrinya' && Cypress.env('APP_ENV') === 'test')
+          ) {
             cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
               ({ body }) => {
                 let description;
