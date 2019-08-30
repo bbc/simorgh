@@ -38,7 +38,6 @@ const service = {
   swPath: '/sw.js',
   frontPageTitle: 'ዜና',
   translations: {
-    seeAll: 'See all',
     home: 'ዜና',
     currentPage: 'Current page',
     skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
@@ -131,39 +130,31 @@ const service = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ፡፡',
     },
     links: [
       {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       {
         href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
-      },
-      {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        text: 'የአጠቃቀም ደንብ',
       },
       {
         href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        text: 'የፕራይቬሲ ፖሊሲ',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
+        text: 'ኩኪዎች',
       },
       {
         href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        text: 'ቢቢሲን ያግኙ',
       },
     ],
-    copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
+    copyrightText: 'BBC፡፡ ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም፡፡',
   },
   fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
   navigation: [
