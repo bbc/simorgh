@@ -4,7 +4,7 @@ import { hausa as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `ha-GH`,
+  lang: `ha`,
   articleAuthor: `https://www.facebook.com/bbchausa?v=wall&ref=mf`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-hausa',
@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Labaran Duniya',
   translations: {
+    seeAll: 'Duba su baki daya',
     home: 'Labaran Duniya',
     currentPage: 'Current page',
     skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',

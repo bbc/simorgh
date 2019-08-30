@@ -4,7 +4,7 @@ import { somali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
 
 const service = {
-  lang: `so-SO`,
+  lang: `so`,
   articleAuthor: `https://www.facebook.com/bbcsomali`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-somali',
@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Somali',
   translations: {
+    seeAll: 'See all',
     home: 'War',
     currentPage: 'Current page',
     skipLinkText: 'U gudub qaybta macluumaadka',

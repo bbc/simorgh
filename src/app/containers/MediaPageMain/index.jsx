@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { string, shape, object } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -18,11 +18,14 @@ const renderBlock = ({ script, service }) => block => {
     return null;
   }
 
-  return (
-    <Component script={script} service={service} key={block.text}>
-      {block.text}
-    </Component>
-  );
+  const props = {
+    key: block.text,
+    script,
+    service,
+    ...(block.type === 'heading' && { id: 'content' }),
+  };
+
+  return <Component {...props}>{block.text}</Component>;
 };
 
 const MediaPageMain = props => {
@@ -36,7 +39,7 @@ const MediaPageMain = props => {
   } = pageData;
 
   return (
-    <Fragment>
+    <>
       <ATIAnalytics data={pageData} />
       <MetadataContainer metadata={metadata} promo={promo} />
       <main role="main">
@@ -57,7 +60,7 @@ const MediaPageMain = props => {
           </GridItemConstrainedMedium>
         </Grid>
       </main>
-    </Fragment>
+    </>
   );
 };
 

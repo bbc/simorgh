@@ -4,7 +4,7 @@ import { turkce as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Istanbul';
 
 const service = {
-  lang: `tr-TR`,
+  lang: `tr`,
   articleAuthor: `https://www.facebook.com/pages/BBC-Turkce/230299653821`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-turkce',
@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Haberler',
   translations: {
+    seeAll: 'See all',
     home: 'Haberler',
     currentPage: 'Current page',
     skipLinkText: 'Siteye gir',

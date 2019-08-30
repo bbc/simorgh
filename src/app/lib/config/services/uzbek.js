@@ -4,7 +4,7 @@ import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `uz-UZ`,
+  lang: `uz-Cyrl`,
   articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-uzbek',
@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Бош саҳифа',
   translations: {
+    seeAll: 'See all',
     home: 'Бош саҳифа',
     currentPage: 'Current page',
     skipLinkText: 'Саҳифага ўтиш',

@@ -8,7 +8,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 
 const service = {
-  lang: `bn-BD`,
+  lang: `bn`,
   articleAuthor: `https://www.facebook.com/BBCBengaliService`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-bengali',
@@ -36,7 +36,10 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle:
+    'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
   translations: {
+    seeAll: 'See all',
     home: 'মূলপাতা',
     currentPage: 'Current page',
     skipLinkText: 'সরাসরি কনটেন্টে যান',

@@ -33,7 +33,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Newyddion a mwy',
   translations: {
+    seeAll: 'See all',
     home: 'Hafan',
     currentPage: 'Current page',
     skipLinkText: `Neidio i'r cynnwys`,

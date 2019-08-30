@@ -1,5 +1,5 @@
-import React, { Fragment, useContext } from 'react';
-import { shape, bool, string, element } from 'prop-types';
+import React, { useContext } from 'react';
+import { shape, bool, string, element, oneOfType } from 'prop-types';
 import StoryPromoComponent, {
   Headline,
   Summary,
@@ -9,7 +9,7 @@ import StoryPromoComponent, {
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { storyItem } from '../../models/propTypes/storyItem';
+import { storyItem, linkPromo } from '../../models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -20,6 +20,7 @@ import getLocator from './imageSrcHelpers/locator';
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
 import isTenHoursAgo from '../../lib/utilities/isTenHoursAgo';
+import IndexAlsos from './IndexAlsos';
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -91,12 +92,23 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const { script, datetimeLocale, service, timezone, dir } = useContext(
     ServiceContext,
   );
+  const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
+  let headline;
+  let url;
+  let isLive;
 
-  const headline = pathOr(null, ['headlines', 'headline'], item);
-  const url = pathOr(null, ['locators', 'assetUri'], item);
+  if (isAssetTypeCode !== null) {
+    headline = pathOr(null, ['name'], item);
+    url = pathOr(null, ['uri'], item);
+  } else {
+    headline = pathOr(null, ['headlines', 'headline'], item);
+    url = pathOr(null, ['locators', 'assetUri'], item);
+    isLive = pathOr(null, ['cpsType'], item) === 'LIV';
+  }
+
   const summary = pathOr(null, ['summary'], item);
-  const isLive = pathOr(null, ['cpsType'], item) === 'LIV';
   const timestamp = pathOr(null, ['timestamp'], item);
+  const relatedItems = pathOr(null, ['relatedItems'], item);
 
   const linkcontents = <LinkContents item={item} />;
 
@@ -105,7 +117,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   }
 
   const Info = (
-    <Fragment>
+    <>
       {headline && (
         <Headline script={script} service={service} topStory={topStory}>
           <Link href={url}>
@@ -139,7 +151,15 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
           isRelative={isTenHoursAgo(timestamp)}
         />
       )}
-    </Fragment>
+      {topStory && relatedItems && (
+        <IndexAlsos
+          alsoItems={relatedItems}
+          script={script}
+          service={service}
+          dir={dir}
+        />
+      )}
+    </>
   );
 
   const imageValues = pathOr(null, ['indexImage'], item);
@@ -164,7 +184,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
 };
 
 StoryPromo.propTypes = {
-  item: shape(storyItem).isRequired,
+  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   lazyLoadImage: bool,
   topStory: bool,
 };

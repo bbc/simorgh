@@ -6,14 +6,18 @@ def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
 
 def appGitCommit = ""
 def appGitCommitAuthor = ""
-def appGitCommitMessage = ""
-def buildTagText = ""
 def messageColor = 'danger'
 
 def stageName = ""
 def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
 def staticAssetsDist = 'static.zip'
+
+def setupCodeCoverage() {
+  sh 'curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter'
+  sh 'chmod +x ./cc-test-reporter'
+  sh './cc-test-reporter before-build'
+}
 
 def runDevelopmentTests(){
   sh 'make install'
@@ -29,26 +33,23 @@ def runProductionTests(){
 def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
-  appGitCommitMessage = sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
 }
 
-def setBuildTagInfo(gitCommit, gitCommitAuthor, gitCommitMessage) {
+def setBuildTagInfo(gitCommit, gitCommitAuthor) {
   """
   *${env.JOB_NAME} [build #${env.BUILD_NUMBER}]*
   ${env.BUILD_URL}
   *Author*: ${gitCommitAuthor}
   *Commit Hash*
   ${gitCommit}
-  *Commit Message*
-  ${gitCommitMessage}
   """
 }
 
-def messageContent(title, text, stageName, gitCommit, gitCommitMessage) {
+def messageContent(title, text, stageName, gitCommit) {
   "${env.JOB_NAME}\n ${title}\n ${env.BUILD_URL}\n ${text}\n\
     *Stage*: ${stageName}\n\
     *Commit Hash*\n ${gitCommit}\n\
-    *Commit Message*\n ${gitCommitMessage}"
+    "
 }
 
 def notifySlack(messageParameters) {
@@ -57,8 +58,7 @@ def notifySlack(messageParameters) {
   def text = "*Author*: ${messageParameters.gitCommitAuthor}"
 
   def message = messageContent(title, text,
-    messageParameters.stageName, messageParameters.gitCommit,
-    messageParameters.gitCommitMessage
+    messageParameters.stageName, messageParameters.gitCommit
   )
 
   slackSend(
@@ -100,6 +100,7 @@ pipeline {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
+      failFast true
       parallel {
         stage ('Test Development') {
           agent {
@@ -109,8 +110,11 @@ pipeline {
             }
           }
           steps {
-            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+            setupCodeCoverage()
+            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
               runDevelopmentTests()
+              sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
+
             }
           }
         }
@@ -167,19 +171,14 @@ pipeline {
             sh "./scripts/jenkinsProductionFiles.sh"
 
             script {
-              // Get Simorgh commit information
               getCommitInfo()
-
-              // Set build tag information
-              buildTagText = setBuildTagInfo(appGitCommit, appGitCommitAuthor, appGitCommitMessage)
+              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
             }
-
-            // Write commit information to build_tag.txt
-            sh "./scripts/signSimorghArchive.sh \"${buildTagText}\""
 
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName
+            sh "rm -rf pack"
           }
         }
         stage ('Build storybook dist') {
@@ -246,10 +245,8 @@ pipeline {
   post {
     always {
       script {
-        // Get Simorgh commit information
         getCommitInfo()
       }
-
       // Clean the workspace
       cleanWs()
     }
@@ -262,7 +259,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]
@@ -279,7 +275,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]
@@ -296,7 +291,6 @@ pipeline {
             colour: messageColor,
             gitCommit: appGitCommit,
             gitCommitAuthor: appGitCommitAuthor,
-            gitCommitMessage: appGitCommitMessage,
             stageName: stageName,
             slackChannel: params.SLACK_CHANNEL
           ]

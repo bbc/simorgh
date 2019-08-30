@@ -5,7 +5,7 @@ import { F_PADAUK_BOLD, F_PADAUK_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `my-MM`,
+  lang: `my`,
   articleAuthor: `https://www.facebook.com/bbcburmese`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-burmese',
@@ -33,7 +33,10 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle:
+    'ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း',
   translations: {
+    seeAll: 'See all',
     home: 'ပင်မစာမျက်နှာ',
     currentPage: 'Current page',
     skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားပါ',

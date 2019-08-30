@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { shape, oneOfType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -118,6 +118,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     twitterSite,
     publishingPrinciples,
     noBylinesPolicy,
+    frontPageTitle,
   } = useContext(ServiceContext);
   const { id: aresArticleId } = metadata;
 
@@ -197,8 +198,13 @@ const MetadataContainer = ({ metadata, promo }) => {
     icon: ['72x72', '96x96', '192x192'],
   };
 
+  const title =
+    pageType === 'frontPage' && frontPageTitle
+      ? frontPageTitle
+      : getTitle(promo);
+
   return (
-    <Fragment>
+    <>
       <LinkedData
         brandName={brandName}
         canonicalLink={canonicalLink}
@@ -235,7 +241,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         themeColor={themeColor}
         timeFirstPublished={timeFirstPublished}
         timeLastPublished={timeLastPublished}
-        title={getTitle(promo)}
+        title={title}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
         type={pathOr(null, [pageType, 'openGraph'], pageTypeMetadata)}
@@ -243,7 +249,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         showArticleTags={pageType === 'article'}
         iconSizes={iconSizes}
       />
-    </Fragment>
+    </>
   );
 };
 

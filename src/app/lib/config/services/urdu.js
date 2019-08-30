@@ -5,6 +5,7 @@ import {
   F_NASSIM_URDU_REGULAR,
   F_NASSIM_URDU_BOLD,
 } from '@bbc/psammead-styles/fonts';
+import 'moment/locale/ur';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 
 const service = {
@@ -37,7 +38,10 @@ const service = {
   script: arabic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle:
+    'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
   translations: {
+    seeAll: 'See all',
     home: 'صفحۂ اول',
     currentPage: 'Current page',
     skipLinkText: 'مواد پر جائیں',

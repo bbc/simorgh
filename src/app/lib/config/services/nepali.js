@@ -4,7 +4,7 @@ import { nepali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
 
 const service = {
-  lang: `ne-NP`,
+  lang: `ne`,
   articleAuthor: `http://www.facebook.com/bbcnepaliservice`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-nepali',
@@ -33,7 +33,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'मुख पृष्ठ',
   translations: {
+    seeAll: 'See all',
     home: 'मुख पृष्ठ',
     currentPage: 'Current page',
     skipLinkText: 'यो सामग्री स्कीप गर्नुहोस्',

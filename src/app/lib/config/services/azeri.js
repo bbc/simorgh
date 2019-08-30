@@ -4,7 +4,7 @@ import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
 
 const service = {
-  lang: `az-AZ`,
+  lang: `az`,
   articleAuthor: `https://www.facebook.com/pages/bbc-azeri/347501767628`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-azeri',
@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Xəbərlər',
   translations: {
+    seeAll: 'See all',
     home: 'Xəbərlər',
     currentPage: 'Current page',
     skipLinkText: 'Mətnə keçid',

@@ -8,7 +8,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
-  lang: `si-LK`,
+  lang: `si`,
   articleAuthor: `https://www.facebook.com/BBCSinhala`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-sinhala',
@@ -36,7 +36,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'මුල් පිටුව',
   translations: {
+    seeAll: 'See all',
     home: 'මුල් පිටුව',
     currentPage: 'Current page',
     skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
