@@ -51,7 +51,7 @@ const service = {
         ],
         callToActionFirst: '',
         callToActionLinkText: 'BBC News 코리아',
-        callToActionLast: ' 코리아 홈페이지를 방문해보세요',
+        callToActionLast: ' 홈페이지를 방문해보세요',
         callToActionLinkUrl: 'https://www.bbc.com/korean',
       },
       500: {
