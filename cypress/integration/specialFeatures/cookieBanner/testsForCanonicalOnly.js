@@ -30,17 +30,17 @@ const getCookieBanner = service =>
 const getPrivacyBannerContainer = service => getPrivacyBanner(service).parent();
 const getCookieBannerContainer = service => getCookieBanner(service).parent();
 const getPrivacyBannerAccept = service =>
-  getPrivacyBannerContainer(service).contains(
-    appConfig[service].translations.consentBanner.privacy.accept,
-  );
+  getPrivacyBannerContainer(service)
+    .find('button')
+    .contains(appConfig[service].translations.consentBanner.privacy.accept);
 const getCookieBannerAccept = service =>
-  getCookieBannerContainer(service).contains(
-    appConfig[service].translations.consentBanner.cookie.accept,
-  );
+  getCookieBannerContainer(service)
+    .find('button')
+    .contains(appConfig[service].translations.consentBanner.cookie.accept);
 const getCookieBannerReject = service =>
-  getCookieBannerContainer(service).contains(
-    appConfig[service].translations.consentBanner.cookie.reject,
-  );
+  getCookieBannerContainer(service)
+    .find('a')
+    .contains(appConfig[service].translations.consentBanner.cookie.reject);
 
 const ensureCookieExpiryDates = () => {
   const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
