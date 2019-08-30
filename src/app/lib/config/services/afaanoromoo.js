@@ -32,6 +32,7 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Oduu',
   translations: {
     seeAll: 'Hunda ilaali',
     home: 'Oduu',
@@ -40,29 +41,30 @@ const service = {
     error: {
       404: {
         statusCode: '404',
-        title: '404 - Fuulli kun hin argamne',
+        title: 'Fuulli argamuu hin dandeenye',
         message:
-          'Tarii kun kan uumame sababa maqaa marsariitii doggoggorteefi. Maaloo maqichaa fi qubee sirreeffadhu',
+          'Dhiifama, fuula ati barbaaddaa jirtu siif fiduu hin dandeenye. maaloo yaali.',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'url sna dabalii ilaali',
+          'Barbaadduu kee keessaan furtuu haaromsituu cuqaasuu',
+          "Bo'aa barbaacha kan BBC fayyadamuun fuula kana barbaaduu",
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC Afaan Oromoo Fuula duraa',
+        callToActionFirst: 'Akka filannootti, maaloo fuula duraa ',
+        callToActionLinkText: 'BBC Afaan Oromoo daawwadhu',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/afaanoromoo',
       },
       500: {
         statusCode: '500',
-        title: '500 - Dogogorawwaan',
-        message: 'Dogoggorri uumameera. Maaloo fuulicha haaressi',
+        title: 'Dogogora keessoo haadhoo',
+        message:
+          'Dhiifama, fuula ati barbaaddaa jirtu siif fiduu hin dandeenye. maaloo yaali.',
         solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
+          'Barbaadduu kee keessaan furtuu haaromsituu cuqaasuu',
+          'Ammas gara boodaarra ni deebiya',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC Afaan Oromoo Fuula duraa',
+        callToActionFirst: 'Akka filannootti, maaloo fuula duraa ',
+        callToActionLinkText: 'BBC Afaan Oromoo daawwadhu',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/afaanoromoo',
       },
