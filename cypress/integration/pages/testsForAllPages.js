@@ -156,9 +156,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     break;
                   case 'frontPage':
                     description = body.metadata.summary;
-                    title =
-                      appConfig[service].translations.frontPageTitle ||
-                      body.promo.name;
+                    title = appConfig[service].frontPageTitle;
                     break;
                   case 'liveRadio':
                     description = body.promo.summary;
