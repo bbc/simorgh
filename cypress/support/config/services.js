@@ -388,7 +388,7 @@ module.exports = {
             : '/igbo/articles/cxvxrj8tvppo',
         smoke: true,
       },
-      frontPage: { path: '/igbo', smoke: true },
+      frontPage: { path: '/igbo', smoke: false },
       liveRadio: { path: undefined, smoke: false },
     },
   },
@@ -993,7 +993,7 @@ module.exports = {
       },
       frontPage: {
         path: '/thai',
-        smoke: false,
+        smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
     },
