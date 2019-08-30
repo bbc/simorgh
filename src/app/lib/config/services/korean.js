@@ -62,7 +62,7 @@ const service = {
         solutions: ['웹브라우저의 새로 고침 버튼 누르기', '다시 시도해 보기'],
         callToActionFirst: '',
         callToActionLinkText: 'BBC News 코리아',
-        callToActionLast: ' 코리아 홈페이지를 방문해보세요',
+        callToActionLast: ' 홈페이지를 방문해보세요',
         callToActionLinkUrl: 'https://www.bbc.com/korean',
       },
     },
