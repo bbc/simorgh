@@ -50,6 +50,19 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           );
         });
 
+        it('should have lang attribute matching payload data', () => {
+          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            ({ body }) => {
+              const lang =
+                pageType === 'articles'
+                  ? body.metadata.passport.language
+                  : body.metadata.language;
+
+              cy.get('html').should('have.attr', 'lang', lang);
+            },
+          );
+        });
+
         it('should have the correct shared metadata', () => {
           cy.get('head').within(() => {
             cy.get('meta[name="fb:admins"]').should(
