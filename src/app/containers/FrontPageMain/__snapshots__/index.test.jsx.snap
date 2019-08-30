@@ -87,6 +87,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             },
           ],
         },
+        "frontPageTitle": "Ogbako",
         "isoLang": "ig",
         "lang": "ig",
         "locale": "ig",
