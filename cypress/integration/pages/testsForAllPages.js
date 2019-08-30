@@ -146,8 +146,8 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
            */
           if (
             service !== 'naidheachdan' ||
-            !(service === 'afaanoromoo' && Cypress.env('APP_ENV') === 'test') ||
-            !(service === 'tigrinya' && Cypress.env('APP_ENV') === 'test')
+            !(service === 'afaanoromoo' && Cypress.env('APP_ENV') !== 'test') ||
+            !(service === 'tigrinya' && Cypress.env('APP_ENV') !== 'test')
           ) {
             cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
               ({ body }) => {
