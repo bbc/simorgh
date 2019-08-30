@@ -63,7 +63,7 @@ node {
           }
           stage ('Local Prod Tests') {
             try {
-              sh 'CYPRESS_SMOKE=false npm run build && xvfb-run -a npm run test:ci;'
+              sh 'CYPRESS_SMOKE=false npm run build && npm run test:ci;'
             } catch (Throwable e) {
               def messageParameters = [
                 buildStatus: 'Failed',
@@ -109,7 +109,7 @@ node {
           throw e
         } finally {
           def buildResult = currentBuild.result ?: 'SUCCESS'
-          
+
           echo "currentBuild.currentResult: ${currentBuild.currentResult}"
           echo "currentBuild.result: ${currentBuild.result}"
 

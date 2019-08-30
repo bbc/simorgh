@@ -32,6 +32,7 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: '홈페이지',
   translations: {
     seeAll: '모든 기사 보기',
     home: '뉴스',
