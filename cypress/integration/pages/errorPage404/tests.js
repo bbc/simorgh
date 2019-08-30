@@ -90,6 +90,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           );
         });
       });
+
+      it('should have lang attribute', () => {
+        cy.get('html').should('have.attr', 'lang', appConfig[service].lang);
+      });
     });
   });
 
