@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useContext, useEffect, useState } from 'react';
 import useToggle from '../Toggle/useToggle';
 import AmpChartbeatBeacon from './amp';
 import CanonicalChartbeatBeacon from './canonical';
@@ -18,26 +19,25 @@ import {
   getTitle,
 } from '../../lib/analyticsUtils/chartbeat';
 
-const ChartbeatAnalytics = ({ data }) => {
-  const { service, brandName } = useContext(ServiceContext);
-  const { enabled } = useToggle('chartbeatAnalytics');
-  const { env, platform, pageType, previousPath, origin } = useContext(
-    RequestContext,
-  );
-
-  if (!enabled) {
-    return null;
-  }
-
+const generateConfigData = (
+  data,
+  pageType,
+  isAmp,
+  previousPath,
+  origin,
+  env,
+  service,
+  brandName,
+  platform,
+) => {
   const referrer = getReferrer(platform, origin, previousPath);
   const title = getTitle(pageType, data, brandName);
   const domain = env !== 'live' ? getDomain('test') : getDomain(service);
   const sections = buildSections(service, pageType);
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const isAmp = platform === 'amp';
   const currentPath = onClient() && window.location.pathname;
-  const config = {
+  return {
     domain,
     sections,
     uid: chartbeatUID,
@@ -47,6 +47,59 @@ const ChartbeatAnalytics = ({ data }) => {
     ...(!isAmp && { type, useCanonical, path: currentPath }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };
+};
+
+const ChartbeatAnalytics = ({ data }) => {
+  const { env, platform, pageType, previousPath, origin } = useContext(
+    RequestContext,
+  );
+  const { service, brandName } = useContext(ServiceContext);
+  // const { enabled } = useToggle('chartbeatAnalytics');
+
+  // if (!enabled) {
+  //   return null;
+  // }
+  const isAmp = platform === 'amp';
+
+  const [config, setConfig] = useState(
+    generateConfigData(
+      data,
+      pageType,
+      isAmp,
+      previousPath,
+      origin,
+      env,
+      service,
+      brandName,
+      platform,
+    ),
+  );
+
+  useEffect(() => {
+    setConfig(
+      generateConfigData(
+        data,
+        pageType,
+        isAmp,
+        previousPath,
+        origin,
+        env,
+        service,
+        brandName,
+        platform,
+      ),
+    );
+  }, [
+    brandName,
+    data,
+    env,
+    isAmp,
+    origin,
+    pageType,
+    platform,
+    previousPath,
+    service,
+  ]);
 
   return isAmp ? (
     <AmpChartbeatBeacon chartbeatConfig={config} />

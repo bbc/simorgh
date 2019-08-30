@@ -1,19 +1,38 @@
-import React, { useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useEffect, useRef } from 'react';
 import { string, shape, number, bool, oneOf, oneOfType } from 'prop-types';
 import Helmet from 'react-helmet';
+import { withRouter } from 'react-router-dom';
 
-const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
+const trackPage = (title, path, virtualReferrer) => {
+  if (typeof window !== 'undefined' && window.pSUPERFLY) {
+    /*
+      This function is always called to update config values on page changes
+      https://chartbeat.zendesk.com/hc/en-us/articles/210271287-Handling-virtual-page-changes
+    */
+    window.pSUPERFLY.virtualPage({
+      title,
+      path,
+      virtualReferrer,
+    });
+  }
+};
+
+const CanonicalChartbeatBeacon = ({
+  chartbeatConfig,
+  chartbeatSource,
+  location,
+}) => {
+  const { title, virtualReferrer } = chartbeatConfig;
+
+  const isInitialMount = useRef(true);
   useEffect(() => {
-    return () => {
-      if (typeof window !== 'undefined' && window.pSUPERFLY) {
-        /*
-          This function is always called to update config values on page changes
-          https://chartbeat.zendesk.com/hc/en-us/articles/210271287-Handling-virtual-page-changes
-        */
-        window.pSUPERFLY.virtualPage(chartbeatConfig);
-      }
-    };
-  }, [chartbeatConfig]);
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      trackPage();
+    }
+  }, [title, virtualReferrer, location.pathname]);
 
   return (
     <Helmet>
@@ -49,4 +68,4 @@ CanonicalChartbeatBeacon.propTypes = {
   chartbeatSource: string.isRequired,
 };
 
-export default CanonicalChartbeatBeacon;
+export default withRouter(CanonicalChartbeatBeacon);
