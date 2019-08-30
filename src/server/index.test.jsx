@@ -140,9 +140,7 @@ const testFrontPages = ({ platform, service }) => {
         it('should respond successfully even if dials fetch fails', async () => {
           getDials.mockRejectedValue(new Error('Fetch fail'));
 
-          const { status } = await makeRequest(
-            `/news/articles/c0000000001o${extension}`,
-          );
+          const { status } = await makeRequest(serviceURL);
           expect(status).toBe(200);
         });
       });
