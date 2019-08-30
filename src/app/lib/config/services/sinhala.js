@@ -36,6 +36,7 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'මුල් පිටුව',
   translations: {
     seeAll: 'See all',
     home: 'මුල් පිටුව',

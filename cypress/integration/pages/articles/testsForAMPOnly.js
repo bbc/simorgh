@@ -15,7 +15,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Amp Tests for ${service} ${pageType}`, () => {
+  describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
         it('should have chartbeat config UID', () => {

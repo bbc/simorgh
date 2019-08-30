@@ -13,6 +13,7 @@ const yoruba = {
   atiAnalyticsProducerId: '107',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
+  // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'yo',
   datetimeLocale: 'yo',
   service: 'yoruba',
@@ -25,6 +26,7 @@ const yoruba = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Àbáwọlé',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',

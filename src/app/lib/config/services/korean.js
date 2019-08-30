@@ -32,6 +32,7 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: '홈페이지',
   translations: {
     seeAll: '모든 기사 보기',
     home: '뉴스',
@@ -69,7 +70,7 @@ const service = {
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: '개인정보와 쿠키 처리방침을 변경했습니다',
         description: {
           uk: {
             first:
@@ -80,18 +81,18 @@ const service = {
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다.',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
-        accept: 'OK',
-        reject: "Find out what's changed",
+        accept: '알겠습니다',
+        reject: '변경사항을 확인하세요',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: '쿠키생성에 동의하시나요',
         description: {
           uk: {
             first: 'We use ',
@@ -102,16 +103,16 @@ const service = {
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
-            linkText: 'cookies',
+            first: 'BBC와 파트너사는 ',
+            linkText: '쿠키',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              '웹브라우징 데이터 수집 같은 기술을 통해 이용자에게 최적의 온라인 경험을 제공하고 개인에 맞춤화된 콘텐츠와 광고를 노출하고자 합니다. 이에 동의하는지 알려주세요.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: '네, 동의합니다',
+        reject: '아니요, 재 세팅 하겠습니다',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
