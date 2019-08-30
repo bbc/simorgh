@@ -333,7 +333,9 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
             .not('[href="#*"]')
             .each(element => {
               const href = element.attr('href');
-              cy.request(href).then(resp => {
+              cy.request(href, {
+                failOnStatusCode: false,
+              }).then(resp => {
                 expect(resp.status).to.not.equal(404);
               });
             });
