@@ -41,29 +41,30 @@ const service = {
     error: {
       404: {
         statusCode: '404',
-        title: 'Error: 404 Halaman tidak ditemukan',
+        title: 'Halaman tidak dapat ditemukan',
         message:
-          'Masalah ini mungkin karena Anda salah ketik mengetik alamat situs. Periksa kembali alamat dan ejaan.',
+          'Maaf, kami tidak dapat menampilkan halaman yang Anda cari. Mohon coba:',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'Periksa kembali tautan',
+          'Klik tombol perbarui di peramban Anda',
+          'Cari halaman ini dengan menggunakan tombol pencari di BBC',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'Berita',
+        callToActionFirst: 'Sebagai alternatif, coba klik ',
+        callToActionLinkText: 'Berita.',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/indonesia',
       },
       500: {
         statusCode: '500',
-        title: '500 - Error',
-        message: 'Terjadi kesalahan, Mohon perbarui laman',
+        title: 'Kesalahan internal jaringan komputer',
+        message:
+          'Maaf, kami tidak dapat menampilkan halaman yang Anda cari. Mohon coba:',
         solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
+          'Klik tombol perbarui di peramban Anda',
+          'Telusuri lagi nanti',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'Berita',
+        callToActionFirst: 'Sebagai alternatif, coba klik ',
+        callToActionLinkText: 'Berita.',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/indonesia',
       },
