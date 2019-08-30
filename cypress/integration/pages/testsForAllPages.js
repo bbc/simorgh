@@ -56,7 +56,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               const lang =
                 pageType === 'articles'
                   ? body.metadata.passport.language
-                  : appConfig[service].lang;
+                  : body.metadata.language;
 
               cy.get('html').should('have.attr', 'lang', lang);
             },
@@ -156,7 +156,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     break;
                   case 'frontPage':
                     description = body.metadata.summary;
-                    title = body.promo.name;
+                    title = appConfig[service].frontPageTitle;
                     break;
                   case 'liveRadio':
                     description = body.promo.summary;
