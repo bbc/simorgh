@@ -24,7 +24,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     });
 
     describe('ATI', () => {
-      it.skip('should have an amp-analytics tag with the ati url', () => {
+      it('should have an amp-analytics tag with the ati url', () => {
         cy.hasAmpAnalyticsAtiUrl(
           envConfig.atiUrl,
           config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',

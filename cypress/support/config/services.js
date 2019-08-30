@@ -90,7 +90,7 @@ module.exports = {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/amharic/bbc_amharic_radio/liveradio',
-        smoke: false,
+        smoke: true,
       },
     },
   },
@@ -419,7 +419,7 @@ module.exports = {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/indonesia/bbc_indonesian_radio/liveradio',
-        smoke: false,
+        smoke: true,
       },
     },
   },
@@ -475,7 +475,7 @@ module.exports = {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/korean/bbc_korean_radio/liveradio',
-        smoke: false,
+        smoke: true,
       },
     },
   },
@@ -1025,7 +1025,7 @@ module.exports = {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/tigrinya/bbc_tigrinya_radio/liveradio',
-        smoke: false,
+        smoke: true,
       },
     },
   },

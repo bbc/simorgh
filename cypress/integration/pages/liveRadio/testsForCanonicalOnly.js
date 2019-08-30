@@ -13,9 +13,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   pageType,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    // will be addressed by https://github.com/bbc/simorgh/issues/3324
     describe('ATI', () => {
-      it.skip('should have a noscript tag with an 1px image with the ati url', () => {
+      it('should have a noscript tag with an 1px image with the ati url', () => {
         cy.hasNoscriptImgAtiUrl(
           envConfig.atiUrl,
           config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',

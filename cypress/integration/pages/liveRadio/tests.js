@@ -32,11 +32,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
     });
 
     describe('LinkedData', () => {
-      // will be addressed by this https://github.com/bbc/simorgh/issues/3117
-      it.skip('should include mainEntityOfPage in the LinkedData', () => {
-        cy.get('script[type="application/ld+json"]')
-          .should('contain', 'mainEntityOfPage')
-          .and('contain', 'headline');
+      it('should include mainEntityOfPage in the LinkedData', () => {
+        cy.get('script[type="application/ld+json"]').should(
+          'contain',
+          'mainEntityOfPage',
+        );
       });
     });
   });
