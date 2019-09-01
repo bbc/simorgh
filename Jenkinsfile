@@ -178,6 +178,7 @@ pipeline {
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
             stash name: 'simorgh', includes: packageName
+            sh "rm -rf pack"
           }
         }
         stage ('Build storybook dist') {

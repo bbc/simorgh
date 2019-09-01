@@ -13,6 +13,7 @@ const pidgin = {
   atiAnalyticsProducerId: '70',
   brandName: 'BBC News Pidgin',
   locale: 'pcm',
+  // there is no valid ISO 639-1 code for Pidgin
   isoLang: null,
   datetimeLocale: 'pcm',
   service: 'pidgin',
@@ -25,6 +26,7 @@ const pidgin = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Domot',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
