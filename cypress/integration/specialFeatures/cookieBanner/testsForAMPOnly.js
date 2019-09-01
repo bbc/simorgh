@@ -5,25 +5,29 @@ import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
 const serviceFilter = service =>
-  Cypress.env('SMOKE') ? ['news', 'persian'].includes(service) : service;
+  Cypress.env('SMOKE') ? ['news', 'thai'].includes(service) : service;
 
 const filterPageTypes = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
 const getPrivacyBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.privacy.title);
-
 const getCookieBanner = service =>
   cy.contains(appConfig[service].translations.consentBanner.cookie.title);
-
-const getPrivacyAccept = service =>
-  cy.contains(appConfig[service].translations.consentBanner.privacy.accept);
-
-const getCookieAccept = service =>
-  cy.contains(appConfig[service].translations.consentBanner.cookie.accept);
-
-const getCookieReject = service =>
-  cy.contains(appConfig[service].translations.consentBanner.cookie.reject);
+const getPrivacyBannerContainer = service => getPrivacyBanner(service).parent();
+const getCookieBannerContainer = service => getCookieBanner(service).parent();
+const getPrivacyBannerAccept = service =>
+  getPrivacyBannerContainer(service)
+    .find('button')
+    .contains(appConfig[service].translations.consentBanner.privacy.accept);
+const getCookieBannerAccept = service =>
+  getCookieBannerContainer(service)
+    .find('button')
+    .contains(appConfig[service].translations.consentBanner.cookie.accept);
+const getCookieBannerReject = service =>
+  getCookieBannerContainer(service)
+    .find('a')
+    .contains(appConfig[service].translations.consentBanner.cookie.reject);
 
 const visitPage = (service, pageType) => {
   cy.visit(`${config[service].pageTypes[pageType].path}.amp`, {
@@ -48,19 +52,19 @@ Object.keys(config)
               getPrivacyBanner(service).should('be.visible');
               getCookieBanner(service).should('not.be.visible');
 
-              getPrivacyAccept(service).click();
+              getPrivacyBannerAccept(service).click();
 
               getCookieBanner(service).should('be.visible');
               getPrivacyBanner(service).should('not.be.visible');
 
-              getCookieAccept(service).click();
+              getCookieBannerAccept(service).click();
 
               getCookieBanner(service).should('not.be.visible');
               getPrivacyBanner(service).should('not.be.visible');
             });
 
             it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
-              getPrivacyAccept(service).click();
+              getPrivacyBannerAccept(service).click();
 
               visitPage(service, pageType);
 
@@ -69,8 +73,8 @@ Object.keys(config)
             });
 
             it('should not show privacy & cookie banners once both accepted, on reload', () => {
-              getPrivacyAccept(service).click();
-              getCookieAccept(service).click();
+              getPrivacyBannerAccept(service).click();
+              getCookieBannerAccept(service).click();
 
               visitPage(service, pageType);
 
@@ -82,8 +86,8 @@ Object.keys(config)
               getPrivacyBanner(service).should('be.visible');
               getCookieBanner(service).should('not.be.visible');
 
-              getPrivacyAccept(service).click();
-              getCookieReject(service).click();
+              getPrivacyBannerAccept(service).click();
+              getCookieBannerReject(service).click();
 
               visitPage(service, pageType);
 
