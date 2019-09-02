@@ -7,7 +7,7 @@ const toggles = {
       enabled: true,
     },
     mpulse: {
-      enabled: false,
+      enabled: true,
     },
     navOnArticles: {
       enabled: true,
@@ -21,7 +21,7 @@ const toggles = {
       enabled: true,
     },
     mpulse: {
-      enabled: false,
+      enabled: true,
     },
     navOnArticles: {
       enabled: true,
