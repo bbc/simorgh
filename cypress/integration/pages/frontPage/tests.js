@@ -1,6 +1,6 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-const serviceHasInfoAlsos = service => service === 'mundo';
+const serviceHasIndexAlsos = service => service === 'mundo';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -86,25 +86,20 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
         });
 
-        if (serviceHasInfoAlsos(service)) {
+        if (serviceHasIndexAlsos(service)) {
           it('should contain Index Alsos at a mobile view', () => {
-            cy.viewport('iphone-5');
-            cy.get('section li')
-              .eq(0)
-              .within(() => {
-                cy.get('div div div')
-                  .eq(3)
-                  .within(() => {
-                    // This is retrieving the nested Index-Alsos
-                    cy.get('span').then($el => {
-                      if ($el.length >= 2) {
-                        cy.get('svg').should('be.visible');
-                      } else {
-                        expect($el).not.to.have.descendants('svg');
-                      }
-                    });
-                  });
-              });
+            cy.viewport('iphone-5')
+            cy.get('section li').eq(0).within(() => {
+              cy.get('div div div span').then(($el) => {
+                  // This is retrieving the nested Index-Alsos
+                  if ($el.length >= 2) {
+                    cy.get('svg')
+                    .should('be.visible')
+                  } else {
+                    expect($el).not.to.have.descendants('svg')
+                  }
+              })
+            })
           });
         }
       });
