@@ -85,6 +85,13 @@ describe('Server', () => {
     });
   });
 
+  describe('Service workers', () => {
+    it('should serve a 404 error if path to service worker is invalid', async () => {
+      const { statusCode } = await makeRequest('/non/existent/sw.js');
+      expect(statusCode).toEqual(404);
+    });
+  });
+
   describe('Data', () => {
     describe('for articles', () => {
       it('should respond with JSON', async () => {
