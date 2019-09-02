@@ -10,12 +10,12 @@ const getRouteProps = (routes, url) => {
   const params = pathOr({}, ['params'], match);
 
   const amp = pathOr(undefined, ['amp'], params);
-  const service = pathOr(fallbackServiceParam(url), ['service'], params);
+  const service = pathOr(undefined, ['service'], params);
   const id = pathOr(undefined, ['id'], params);
 
   return {
     isAmp: 'amp' in params ? !!amp : fallbackAmpParam(url),
-    service,
+    service: service || fallbackServiceParam(url),
     id,
     route,
     match,

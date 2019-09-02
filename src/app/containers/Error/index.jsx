@@ -8,7 +8,9 @@ import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withLoading from '../PageHandlers/withLoading';
 
-const ErrorContainer = ({ data }) => (<ErrorMain status={pathOr(500, ['status'], data)} />);
+const ErrorContainer = ({ data }) => (
+  <ErrorMain status={pathOr(500, ['status'], data)} />
+);
 
 ErrorContainer.propTypes = {
   data: shape({

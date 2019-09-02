@@ -14,21 +14,6 @@ describe('getRouteProps', () => {
     jest.clearAllMocks();
   });
 
-  describe('no matched route', () => {
-    it('should return an empty object', async () => {
-      reactRouterConfig.matchRoutes.mockReturnValue([]);
-
-      try {
-        await getRouteProps([], 'fake url');
-      } catch (error) {
-        expect(error).toMatchSnapshot();
-      }
-
-      expect(routeFallbackParams.fallbackAmpParam).not.toHaveBeenCalled();
-      expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
-    });
-  });
-
   describe('valid route', () => {
     it('should return service, isAmp, route and match', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([
@@ -94,7 +79,7 @@ describe('getRouteProps', () => {
     // This is the match returned for a 'catch all' route.
     const match = { path: '/', url: '/', params: {}, isExact: false };
 
-    it('should return service, isAmp, route and match', async () => {
+    it('should return fallback service and isAmp. With catch-all route and match', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([{ route, match }]);
 
       const methodCall = await getRouteProps([], 'unknownURL');
@@ -112,6 +97,30 @@ describe('getRouteProps', () => {
         route,
         service: 'fallbackService',
       });
+    });
+  });
+
+  /*
+   * This behaviour should never happen, due to the catch-all error route
+   * thats availible. This test however asserts that if that route isnt
+   * availible, it fails gracefully.
+   */
+  describe('no matched route', () => {
+    it('should return fallback service and amp with no route, match or Id', async () => {
+      reactRouterConfig.matchRoutes.mockReturnValue([]);
+
+      const methodCall = await getRouteProps([], 'fakepath');
+
+      expect(methodCall).toEqual({
+        id: undefined,
+        isAmp: true,
+        match: undefined,
+        route: undefined,
+        service: 'fallbackService',
+      });
+
+      expect(routeFallbackParams.fallbackAmpParam).toHaveBeenCalled();
+      expect(routeFallbackParams.fallbackServiceParam).toHaveBeenCalled();
     });
   });
 });
