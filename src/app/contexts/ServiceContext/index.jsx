@@ -34,7 +34,9 @@ export const ServiceContextProvider = ({ children, service }) => {
   }
 
   return (
-    <LoadableServiceContextProvider>{children}</LoadableServiceContextProvider>
+    <LoadableServiceContextProvider configKey="default">
+      {children}
+    </LoadableServiceContextProvider>
   );
 };
 
