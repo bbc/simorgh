@@ -47,6 +47,7 @@ module.exports = {
           ['#contexts', './src/app/contexts'],
           ['#data', './data'],
           ['#lib', './src/app/lib'],
+          ['#models', './src/app/models'],
           ['#testHelpers', './src/testHelpers'],
         ],
         extensions: ['.js', '.jsx', '.json'],

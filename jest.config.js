@@ -13,6 +13,7 @@ module.exports = {
     '^#contexts(.*)$': '<rootDir>/src/app/contexts$1',
     '^#data(.*)$': '<rootDir>/data$1',
     '^#lib(.*)$': '<rootDir>/src/app/lib$1',
+    '^#models(.*)$': '<rootDir>/src/app/models$1',
     '^#testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
   },
   transform: {

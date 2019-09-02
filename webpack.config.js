@@ -40,6 +40,7 @@ module.exports = (shell = {}) => {
         '#contexts': resolvePath('src/app/contexts'),
         '#data': resolvePath('data/'),
         '#lib': resolvePath('src/app/lib/'),
+        '#models': resolvePath('src/app/models/'),
         '#testHelpers': resolvePath('src/testHelpers/'),
       },
     },
