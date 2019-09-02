@@ -6,10 +6,10 @@ export const fallbackAmpParam = url => {
 };
 
 export const fallbackServiceParam = url => {
-  const pathParts = url.split('/').filter(Boolean);
+  const [service] = url.split('/').filter(Boolean);
 
-  if (pathParts[0] && Object.keys(services).includes(pathParts[0])) {
-    return pathParts[0];
+  if (service && Object.keys(services).includes(service)) {
+    return service;
   }
 
   return 'news';

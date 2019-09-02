@@ -51,12 +51,8 @@ jest.mock('../ErrorMain', () => {
 });
 
 describe('ErrorContainer', () => {
-  describe('Component', () => {
-    describe('Composing the Error Container using the page handlers', () => {
-      shouldMatchSnapshot(
-        'should compose ErrorContainer with the Page Handler in the correct order',
-        <ArticleContainer {...defaultProps} />,
-      );
-    });
-  });
+  shouldMatchSnapshot(
+    'should compose ErrorContainer with the Page Handler in the correct order',
+    <ArticleContainer {...defaultProps} />,
+  );
 });
