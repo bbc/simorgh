@@ -38,6 +38,7 @@ const persian = {
   script: arabic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'صفحه اول',
   translations: {
     seeAll: 'See all',
     home: 'صفحه اول',

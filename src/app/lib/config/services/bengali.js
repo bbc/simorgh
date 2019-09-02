@@ -36,6 +36,8 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle:
+    'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
   translations: {
     seeAll: 'See all',
     home: 'মূলপাতা',

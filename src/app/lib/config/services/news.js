@@ -42,6 +42,7 @@ const news = {
   script: latin,
   manifestPath: '/articles/manifest.json',
   swPath: '/articles/sw.js',
+  frontPageTitle: 'Home',
   translations: {
     home: 'Home',
     currentPage: 'Current page',
