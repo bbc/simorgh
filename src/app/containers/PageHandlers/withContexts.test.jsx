@@ -26,8 +26,6 @@ getStatsPageIdentifier.mockImplementation(
   () => 'news.articles.c0000000000o.page',
 );
 
-const dials = { mpulse: false };
-
 describe('withContexts HOC', () => {
   const Component = () => <h1>All the contexts!!</h1>;
   const ContextsHOC = WithContexts(Component);
@@ -38,7 +36,6 @@ describe('withContexts HOC', () => {
     service: 'news',
     isAmp: true,
     pageType: 'article',
-    dials,
   };
 
   shouldShallowMatchSnapshot(
@@ -65,7 +62,6 @@ describe('withContexts HOC', () => {
           service: 'news',
           isAmp: true,
           pageType,
-          dials,
         };
 
         render(<ContextsHOC {...fixture} />);
