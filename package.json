@@ -59,7 +59,7 @@
     "@bbc/moment-timezone-include": "^1.1.1",
     "@bbc/psammead-amp-geo": "^1.1.1",
     "@bbc/psammead-assets": "^2.2.3",
-    "@bbc/psammead-brand": "^4.3.3",
+    "@bbc/psammead-brand": "^4.3.5",
     "@bbc/psammead-caption": "^2.2.3",
     "@bbc/psammead-consent-banner": "^2.3.3",
     "@bbc/psammead-copyright": "^1.2.3",
