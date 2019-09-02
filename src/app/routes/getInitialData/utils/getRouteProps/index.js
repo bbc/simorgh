@@ -12,8 +12,10 @@ const getRouteProps = (routes, url) => {
 
   const amp = path(['amp'], params);
   const service = path(['service'], params);
-  const variant = path(['variant'], params);
+  const rawVariant = path(['variant'], params);
   const id = path(['id'], params);
+
+  const variant = rawVariant && rawVariant.replace('/', '');
 
   return {
     isAmp: 'amp' in params ? !!amp : fallbackAmpParam(url),

@@ -19,6 +19,7 @@ const WithContexts = Component => {
       previousPath,
       dials,
     } = props;
+
     return (
       <ToggleContextProvider>
         <DialContextProvider dials={dials}>
