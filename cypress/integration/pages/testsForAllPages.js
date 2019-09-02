@@ -4,8 +4,18 @@ import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
-const testsForAllPages = ({ service, pageType }) => {
-  describe('Always tests', () => {
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
+};
+
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfigforAllPages = ({
+  service,
+  pageType,
+}) => {
+  describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
         const resources = [
@@ -46,20 +56,153 @@ const testsForAllPages = ({ service, pageType }) => {
               const lang =
                 pageType === 'articles'
                   ? body.metadata.passport.language
-                  : appConfig[service].lang;
+                  : body.metadata.language;
 
               cy.get('html').should('have.attr', 'lang', lang);
             },
           );
         });
 
-        it('should have the correct shared social media metadata', () => {
-          cy.checkSharedSocialmediaMetadata({
-            fbAdmins: '100004154058350',
-            appID: '1609039196070050',
+        it('should have the correct shared metadata', () => {
+          cy.get('head').within(() => {
+            cy.get('meta[name="fb:admins"]').should(
+              'have.attr',
+              'content',
+              '100004154058350',
+            );
+            cy.get('meta[name="fb:app_id"]').should(
+              'have.attr',
+              'content',
+              '1609039196070050',
+            );
+            cy.get('meta[name="og:image"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImage,
+            );
+            cy.get('meta[name="og:image:alt"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImageAltText,
+            );
+            cy.get('meta[name="og:locale"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].locale,
+            );
+            cy.get('meta[name="og:site_name"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImageAltText,
+            );
+            cy.get('meta[name="og:type"]').should(
+              'have.attr',
+              'content',
+              pageType === 'articles' ? 'article' : 'website',
+            );
+            cy.get('meta[name="og:url"]').should(
+              'have.attr',
+              'content',
+              `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
+            );
+            cy.get('meta[name="og:site_name"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].brandName,
+            );
+            cy.get('meta[name="twitter:card"]').should(
+              'have.attr',
+              'content',
+              'summary_large_image',
+            );
+            cy.get('meta[name="twitter:creator"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].twitterCreator,
+            );
+            cy.get('meta[name="twitter:image:alt"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImageAltText,
+            );
+            cy.get('meta[name="twitter:image:src"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].defaultImage,
+            );
+            cy.get('meta[name="twitter:site"]').should(
+              'have.attr',
+              'content',
+              appConfig[service].twitterSite,
+            );
           });
         });
+
+        it('should have correct title & description metadata', () => {
+          /*
+           * Naidheachdan needs to have correct metadata added to all environments.
+           * afaanoromoo & tigrinya need correct metadata on TEST env
+           * These conditions will be removed in issue https://github.com/bbc/simorgh-infrastructure/issues/679
+           */
+          if (
+            service !== 'naidheachdan' &&
+            !(service === 'afaanoromoo' && Cypress.env('APP_ENV') === 'test') &&
+            !(service === 'tigrinya' && Cypress.env('APP_ENV') === 'test')
+          ) {
+            cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+              ({ body }) => {
+                let description;
+                let title;
+                switch (pageType) {
+                  case 'articles':
+                    description =
+                      body.promo.summary || body.promo.headlines.seoHeadline;
+                    title = body.promo.headlines.seoHeadline;
+                    break;
+                  case 'frontPage':
+                    description = body.metadata.summary;
+                    title = appConfig[service].frontPageTitle;
+                    break;
+                  case 'liveRadio':
+                    description = body.promo.summary;
+                    title = body.promo.name;
+                    break;
+                  default:
+                    description = '';
+                    title = '';
+                }
+                /* Note that if updating these, also do the same for errorPage404/test.js */
+                const pageTitle = `${title} - ${appConfig[service].brandName}`;
+
+                cy.get('head').within(() => {
+                  cy.title().should('eq', pageTitle);
+                  cy.get('meta[name="og:description"]').should(
+                    'have.attr',
+                    'content',
+                    description,
+                  );
+                  cy.get('meta[name="og:title"]').should(
+                    'have.attr',
+                    'content',
+                    pageTitle,
+                  );
+                  cy.get('meta[name="twitter:description"]').should(
+                    'have.attr',
+                    'content',
+                    description,
+                  );
+                  cy.get('meta[name="twitter:title"]').should(
+                    'have.attr',
+                    'content',
+                    pageTitle,
+                  );
+                });
+              },
+            );
+          }
+        });
       }
+      /* End of block (pageType !== 'errorPage404') */
 
       it('should have dir matching service config', () => {
         cy.get('html').and('have.attr', 'dir', appConfig[service].dir);
@@ -85,22 +228,6 @@ const testsForAllPages = ({ service, pageType }) => {
           appConfig[service].translations.consentBanner.cookie.accept,
         );
       });
-    });
-
-    // Should be made to not be a smoke test
-    describe('Page links test', () => {
-      if (Cypress.env('APP_ENV') === 'live') {
-        it('links should not 404', () => {
-          cy.get('a')
-            .not('[href="#*"]')
-            .each(element => {
-              const href = element.attr('href');
-              cy.request(href).then(resp => {
-                expect(resp.status).to.not.equal(404);
-              });
-            });
-        });
-      }
     });
 
     describe('Header Tests', () => {
@@ -172,20 +299,6 @@ const testsForAllPages = ({ service, pageType }) => {
           );
       });
 
-      if (!Cypress.env('SMOKE')) {
-        it('should have working links', () => {
-          cy.get('footer ul').within(() =>
-            appConfig[service].footer.links.forEach(({ href }, key) =>
-              cy
-                .get('a')
-                .eq(key)
-                .should('have.attr', 'href')
-                .and('contain', href),
-            ),
-          );
-        });
-      }
-
       it('should contain copyright text', () => {
         cy.get('footer p').should(
           'contain',
@@ -207,4 +320,27 @@ const testsForAllPages = ({ service, pageType }) => {
   });
 };
 
-export default testsForAllPages;
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
+  service,
+  pageType,
+}) => {
+  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
+    if (Cypress.env('APP_ENV') === 'live') {
+      describe('Page links test', () => {
+        it('links should not 404', () => {
+          cy.get('a')
+            .not('[href="#*"]')
+            .each(element => {
+              const href = element.attr('href');
+              cy.request(href, {
+                failOnStatusCode: false,
+              }).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      });
+    }
+  });
+};

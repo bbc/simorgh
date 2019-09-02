@@ -32,7 +32,10 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle:
+    'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
   translations: {
+    seeAll: 'See all',
     home: 'होम पेज',
     currentPage: 'Current page',
     skipLinkText: 'सामग्री को स्किप करें',

@@ -37,7 +37,9 @@ const service = {
   script: arabic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'الرئيسية',
   translations: {
+    seeAll: 'See all',
     home: 'رئيسية',
     currentPage: 'Current page',
     skipLinkText: 'إذهب الى المحتوى',

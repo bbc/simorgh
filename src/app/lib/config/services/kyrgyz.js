@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Башталгыч бет',
   translations: {
+    seeAll: 'See all',
     home: 'Башталгыч бет',
     currentPage: 'Current page',
     skipLinkText: 'Сайтка өтүү',

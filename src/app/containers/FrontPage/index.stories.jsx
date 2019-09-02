@@ -1,8 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import igboData from '../../../../data/igbo/frontpage';
-import yorubaData from '../../../../data/yoruba/frontpage';
 import pidginData from '../../../../data/pidgin/frontpage';
+import addIdsToItems from '../../lib/utilities/preprocessor/rules/addIdsToItems';
+import thaiData from '../../../../data/thai/frontpage';
+import yorubaData from '../../../../data/yoruba/frontpage';
+
 import filterUnknownContentTypes from '../../lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
@@ -11,10 +14,10 @@ import FrontPage from '.';
 
 const preprocessorRules = [
   filterUnknownContentTypes,
+  addIdsToItems,
   filterEmptyGroupItems,
   applySquashTopstories,
 ];
-const dials = { mpulse: false };
 
 storiesOf('Pages|Front Page', module)
   .add('Igbo', () => {
@@ -33,7 +36,6 @@ storiesOf('Pages|Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
-        dials={dials}
       />
     );
   })
@@ -53,7 +55,6 @@ storiesOf('Pages|Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
-        dials={dials}
       />
     );
   })
@@ -73,7 +74,25 @@ storiesOf('Pages|Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
-        dials={dials}
+      />
+    );
+  })
+  .add('Thai', () => {
+    const thaiFrontPageData = preprocess(thaiData, preprocessorRules);
+
+    const data = {
+      pageData: thaiFrontPageData,
+      status: 200,
+    };
+
+    return (
+      <FrontPage
+        data={data}
+        service="thai"
+        isAmp={false}
+        loading={false}
+        error=""
+        pageType="frontPage"
       />
     );
   });

@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: "Urupapuro rw'itangiriro",
   translations: {
+    seeAll: 'Raba vyose',
     home: `Urupapuro rw'itangiriro`,
     currentPage: 'Current page',
     skipLinkText: 'Simbira ku birimwo',

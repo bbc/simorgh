@@ -36,6 +36,7 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'ዜና',
   translations: {
     home: 'ዜና',
     currentPage: 'Current page',
@@ -43,36 +44,32 @@ const service = {
     error: {
       404: {
         statusCode: '404',
-        title: '404 - ገጹ አልተገኘም',
-        message:
-          'ይህ የድረገጽ አድራሻውን በትክክል ስላላስገቡ ሊሆን ይችላል፡፡ እባክዎትን አድራሻውን እና ፊደላቱን ያረጋግጡ፡፡',
+        title: 'ገፁን አሁን ማግኘት አይችሉም',
+        message: 'የሚፈልጉትን ገፅ ማምጣት ባለመቻላችን እናዝናለን። እባክዎ እንደገና ይሞክሩ',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'ድረገፁን በድጋሚ በመሞከር ላይ',
+          'ገፅዎ ላይ ያለውን ሪፍሬሽ ቁልፍ  እንደገና ተጭነው ይሞክሩት',
+          'የቢቢሲን መፈለጊያ ቁልፍ በመጠቀም ይፈልጉ',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'የቢቢሲ ዜና መነሻ ገጽ',
+        callToActionFirst: 'እንደ አማራጭም እባክዎ ገፃችን ላይ የሚገኘውን ',
+        callToActionLinkText: '[BBC ድረገፅ ይጎብኙ]',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/amharic',
       },
       500: {
         statusCode: '500',
-        title: '500 - ስህተት',
-        message: 'ስህተት ተፈጥሯል ፡ እባክዎን ገጽዎን ያድሱ',
-        solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
-        ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'የቢቢሲ ዜና መነሻ ገጽ',
+        title: 'የአገልግሎት ችግር አጋጥሟል',
+        message: 'የሚፈልጉትን ገፅ ማምጣት ባለመቻላችን እናዝናለን። እባክዎ እንደገና ይሞክሩ',
+        solutions: ['በገፅዎ ላይ ያለውን ሪፍሬሽ የሚለውን ቁልፍ ይጫኑ', 'እንደገና ይመለሱ'],
+        callToActionFirst: 'እንደ አማራጭም እባክዎ ገፃችን ላይ የሚገኘውን ',
+        callToActionLinkText: '[BBC ድረገፅ ይጎብ]',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/amharic',
       },
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: 'በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ማሻሻያ አድርገናል።',
         description: {
           uk: {
             first:
@@ -83,18 +80,18 @@ const service = {
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ጠቃሚ ለውጦችን አድርገናል። ለርስዎም ሆን በመረጃዎች ላይ ለውጦቹ ምን ማለት እንደሆኑ እንዲያውቁ እንፈልጋለን።',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
-        accept: 'OK',
-        reject: "Find out what's changed",
+        accept: 'እሺ',
+        reject: 'ምን እንደተቀየረ ይመልከቱ',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'ኩኪዎችን መጠቀም ላይ መስማማትዎን ያሳውቁን',
         description: {
           uk: {
             first: 'We use ',
@@ -105,16 +102,16 @@ const service = {
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
-            linkText: 'cookies',
+            first: 'እኛም ሆን ቴክኖሎጂያችንን የሚጠቀሙ አጋሮቻችን ለምሳሌም  ',
+            linkText: 'ኩኪዎችን የምንጠቀመው',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              ', ና መረጃዎችንም የምንሰብስበው የሚፈልጓቸውን መረጃዎችና ማስታወቂያዎች ቅድሚያ እንዲያገኙዋቸው በማሰብና አግልግሎታችንም የተሻለ እንዲሆን ነው።እባክዎ መስማማትዎን ያሳውቁን።',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: 'እሺ፣ እስማማለሁ',
+        reject: 'ወደ ማውጫ መመለስ እፈልጋለሁ',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
@@ -129,39 +126,31 @@ const service = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ፡፡',
     },
     links: [
       {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       {
         href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
-      },
-      {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        text: 'የአጠቃቀም ደንብ',
       },
       {
         href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        text: 'የፕራይቬሲ ፖሊሲ',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
+        text: 'ኩኪዎች',
       },
       {
         href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        text: 'ቢቢሲን ያግኙ',
       },
     ],
-    copyrightText: 'ቢቢሲ፡፡ ቢቢሲ ለሌሎች የኢንተርኔት ገጾች ኃላፊነት አይወስድም',
+    copyrightText: 'BBC፡፡ ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም፡፡',
   },
   fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
   navigation: [
