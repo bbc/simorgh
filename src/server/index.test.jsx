@@ -455,31 +455,10 @@ describe('Server', () => {
   });
 
   describe('Data', () => {
-    describe('for articles', () => {
-      it('should respond with JSON', async () => {
-        const { body } = await makeRequest('/news/articles/c0g992jmmkko.json');
-        expect(body).toEqual(
-          expect.objectContaining({ content: expect.any(Object) }),
-        );
-      });
-
-      describe('with non-existent data', () => {
-        it('should respond with a 404', async () => {
-          const { statusCode } = await makeRequest(
-            '/news/articles/cERROR00025o.json',
-          );
-          expect(statusCode).toEqual(404);
-        });
-      });
-
-      describe('Trailing slash redirects', () => {
-        it('should respond with a 301', async () => {
-          const { statusCode } = await makeRequest(
-            '/news/articles/c6v11qzyv8po/',
-          );
-          expect(statusCode).toEqual(301);
-        });
-      });
+    testData({
+      title: 'for articles',
+      validDataUrl: '/news/articles/c0g992jmmkko.json',
+      invalidDataUrl: '/news/articles/cERROR00025o.json',
     });
 
     testData({
@@ -487,10 +466,18 @@ describe('Server', () => {
       validDataUrl: '/igbo.json',
       invalidDataUrl: '/ERROR.json',
     });
+
     testData({
       title: 'for media page - live radio',
       validDataUrl: '/korean/bbc_korean_radio/liveradio.json',
       invalidDataUrl: '/korean/bbc_korean_radio/ERROR.json',
+    });
+  });
+
+  describe('Trailing slash redirects', () => {
+    it('should respond with a 301', async () => {
+      const { statusCode } = await makeRequest('/news/articles/c6v11qzyv8po/');
+      expect(statusCode).toEqual(301);
     });
   });
 
