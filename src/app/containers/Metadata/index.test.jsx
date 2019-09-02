@@ -446,7 +446,7 @@ describe('Metadata Container', () => {
         'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
         '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
         'ltr',
-        'ko',
+        'ko-KO',
         [],
         null,
         null,
