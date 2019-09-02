@@ -5,13 +5,21 @@ import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
 import preprocessor from '../../lib/utilities/preprocessor';
-import filterUnknownContentTypes from '../../lib/utilities/preprocessor/rules/filterContentType';
+import addIdsToItems from '../../lib/utilities/preprocessor/rules/addIdsToItems';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const processedPidgin = preprocessor(frontPageDataPidgin, [
-  filterUnknownContentTypes,
-]);
+const processedPidgin = preprocessor(frontPageDataPidgin, [addIdsToItems]);
+
+jest.mock('uuid', () =>
+  (() => {
+    let x = 1;
+    return () => {
+      x += 1;
+      return `mockid-${x}`;
+    };
+  })(),
+);
 
 jest.mock('../ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
