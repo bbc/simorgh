@@ -1,4 +1,3 @@
-import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -19,15 +18,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           `${config[service].pageTypes.frontPage.path}.amp`,
           200,
           'text/html',
-        );
-      });
-    });
-
-    describe('ATI', () => {
-      it('should have an amp-analytics tag with the ati url', () => {
-        cy.hasAmpAnalyticsAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
         );
       });
     });

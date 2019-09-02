@@ -1,6 +1,3 @@
-import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
@@ -13,17 +10,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   pageType,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    describe('ATI', () => {
-      it('should have a noscript tag with an 1px image with the ati url', () => {
-        cy.hasNoscriptImgAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
-      });
-
-      it('should not have an AMP attribute', () => {
-        cy.get('html').should('not.have.attr', 'amp');
-      });
+    it('should not have an AMP attribute', () => {
+      cy.get('html').should('not.have.attr', 'amp');
     });
   });
 

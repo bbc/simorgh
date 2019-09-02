@@ -20,15 +20,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       cy.get('html').should('not.have.attr', 'amp');
     });
 
-    describe('ATI', () => {
-      it('should have a noscript tag with an 1px image with the ati url', () => {
-        cy.hasNoscriptImgAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
-      });
-    });
-
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
         it('should have a script with src value set to chartbeat source', () => {
