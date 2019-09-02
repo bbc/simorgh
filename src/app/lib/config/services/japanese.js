@@ -124,6 +124,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

@@ -147,6 +147,10 @@ const persian = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
