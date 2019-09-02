@@ -7,4 +7,4 @@ export const getCookiePolicy = () => {
 };
 
 export const personalisationEnabled = cookiePolicy =>
-  cookiePolicy && cookiePolicy.length === 3 && cookiePolicy[1] === '1';
+  cookiePolicy && cookiePolicy.length === 3 && cookiePolicy[2] === '1';

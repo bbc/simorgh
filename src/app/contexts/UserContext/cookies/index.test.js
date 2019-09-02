@@ -35,18 +35,18 @@ describe('UserContext cookies', () => {
   describe('personalisationEnabled', () => {
     [
       {
-        test: 'when middle character is 1',
+        test: 'when last character is 1',
         cookiePolicy: '111',
         result: 'toBeTruthy',
       },
       {
-        test: 'when middle character is 1',
-        cookiePolicy: '010',
+        test: 'when last character is 1',
+        cookiePolicy: '001',
         result: 'toBeTruthy',
       },
       {
-        test: 'when middle character is 0',
-        cookiePolicy: '101',
+        test: 'when last character is 0',
+        cookiePolicy: '110',
         result: 'toBeFalsy',
       },
       {
@@ -70,8 +70,8 @@ describe('UserContext cookies', () => {
         result: 'toBeFalsy',
       },
       {
-        test: 'when middle character is not 1 or 0',
-        cookiePolicy: '1a1',
+        test: 'when last character is not 1 or 0',
+        cookiePolicy: '11a',
         result: 'toBeFalsy',
       },
     ].forEach(({ test, cookiePolicy, result }) => {
