@@ -127,7 +127,7 @@ const service = {
   brandSVG,
   mostRead: {
     header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    lastUpdated: 'Yeroo dhuma kan haaromfame: ',
   },
   footer: {
     externalLink: {

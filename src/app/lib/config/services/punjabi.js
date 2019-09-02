@@ -125,6 +125,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   navigation: [
     {
       title: 'ਖ਼ਬਰਾਂ',

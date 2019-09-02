@@ -135,8 +135,8 @@ const service = {
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'Les plus lus',
+    lastUpdated: 'Dernière mise à jour: ',
   },
   footer: {
     externalLink: {

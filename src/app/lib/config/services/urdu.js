@@ -130,8 +130,8 @@ const service = {
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'سب سے زیادہ پڑھی جانے والی',
+    lastUpdated: 'آخری اپ ڈیٹ ',
   },
   footer: {
     externalLink: {

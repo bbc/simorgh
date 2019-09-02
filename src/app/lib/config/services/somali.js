@@ -135,8 +135,8 @@ const service = {
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'Ugu akhris badan',
+    lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay ',
   },
   footer: {
     externalLink: {

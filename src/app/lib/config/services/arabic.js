@@ -137,8 +137,8 @@ const service = {
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'الأكثر قراءة',
+    lastUpdated: 'آخر تحديث ',
   },
   footer: {
     externalLink: {

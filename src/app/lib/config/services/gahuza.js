@@ -130,8 +130,8 @@ const service = {
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'Ibisomwa cane',
+    lastUpdated: 'Ibiheruka kuvugururwa: ',
   },
   footer: {
     externalLink: {

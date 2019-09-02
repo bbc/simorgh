@@ -135,8 +135,8 @@ const service = {
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'ډېر لوستل شوي',
+    lastUpdated: 'د خپرېدو نیټه ',
   },
   footer: {
     externalLink: {

@@ -148,8 +148,8 @@ const persian = {
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'پربیننده‌ترین‌ها',
+    lastUpdated: 'به روز شده در ',
   },
   footer: {
     externalLink: {

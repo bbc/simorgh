@@ -134,7 +134,7 @@ const service = {
   brandSVG,
   mostRead: {
     header: 'Wanda aka fi karantawa',
-    lastUpdated: 'Na baya-bayan nan: ',
+    lastUpdated: 'Na baya-bayan nan ',
   },
   footer: {
     links: [

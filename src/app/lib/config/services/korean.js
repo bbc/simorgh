@@ -123,8 +123,8 @@ const service = {
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'TOP 뉴스',
+    lastUpdated: '최종 송고일',
   },
   footer: {
     externalLink: {
