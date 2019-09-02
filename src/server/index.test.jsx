@@ -535,56 +535,54 @@ describe('Server', () => {
       status: 404,
     };
 
-    describe('Unknown route', () => {
-      describe('200 status code', () => {
-        beforeEach(() => {
-          mockRouteProps({
-            service,
-            isAmp,
-            dataResponse,
-          });
+    describe('404 status code', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse,
         });
+      });
 
-        it('should respond with rendered data', async () => {
-          const dials = { dial: 'value' };
-          getDials.mockResolvedValue(dials);
+      it('should respond with rendered data', async () => {
+        const dials = { dial: 'value' };
+        getDials.mockResolvedValue(dials);
 
-          const { text, status } = await makeRequest(`/${service}/foobar`);
+        const { text, status } = await makeRequest(`/${service}/foobar`);
 
-          expect(status).toBe(404);
+        expect(status).toBe(404);
 
-          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-            <h1>Mock app</h1>,
-          );
+        expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+          <h1>Mock app</h1>,
+        );
 
-          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-            <Document
-              app="<h1>Mock app</h1>"
-              assets={[
-                `${localBaseUrl}/static/js/igbo-12345.12345.js`,
-                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-                `${localBaseUrl}/static/js/main-12345.12345.js`,
-              ]}
-              assetOrigins={[
-                'https://ichef.bbci.co.uk',
-                'https://gel.files.bbci.co.uk',
-                localBaseUrl,
-                'https://logws1363.ati-host.net?',
-              ]}
-              data={dataResponse}
-              helmet={{ head: 'tags' }}
-              isAmp={isAmp}
-              service={service}
-              styleTags={<style />}
-              dials={dials}
-            />,
-          );
+        expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+          <Document
+            app="<h1>Mock app</h1>"
+            assets={[
+              `${localBaseUrl}/static/js/igbo-12345.12345.js`,
+              `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+              `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+              `${localBaseUrl}/static/js/main-12345.12345.js`,
+            ]}
+            assetOrigins={[
+              'https://ichef.bbci.co.uk',
+              'https://gel.files.bbci.co.uk',
+              localBaseUrl,
+              'https://logws1363.ati-host.net?',
+            ]}
+            data={dataResponse}
+            helmet={{ head: 'tags' }}
+            isAmp={isAmp}
+            service={service}
+            styleTags={<style />}
+            dials={dials}
+          />,
+        );
 
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
       });
     });
   });
