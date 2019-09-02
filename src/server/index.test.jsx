@@ -519,9 +519,6 @@ describe('Server', () => {
       });
 
       it('should respond with rendered data', async () => {
-        const dials = { dial: 'value' };
-        getDials.mockResolvedValue(dials);
-
         const { text, status } = await makeRequest(`/${service}/foobar`);
 
         expect(status).toBe(404);
@@ -550,7 +547,6 @@ describe('Server', () => {
             isAmp={isAmp}
             service={service}
             styleTags={<style />}
-            dials={dials}
           />,
         );
 
