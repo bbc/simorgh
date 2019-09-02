@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
-import nodeLogger from '../../../lib/logger.node';
-import preprocess from '../../../lib/utilities/preprocessor';
+import nodeLogger from '../../../../lib/logger.node';
+import preprocess from '../../../../lib/utilities/preprocessor';
 
 const logger = nodeLogger(__filename);
 const upstreamStatusCodesToPropagate = [200, 404];

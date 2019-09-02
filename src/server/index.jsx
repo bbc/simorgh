@@ -7,15 +7,12 @@ import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes from '../app/routes';
 import {
-  articleRegexPath,
   articleDataRegexPath,
   articleManifestRegexPath,
   articleSwRegexPath,
-  frontpageRegexPath,
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
-  mediaRadioAndTvRegexPathsArray,
   mediaDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
@@ -165,41 +162,38 @@ server
       });
     },
   )
-  .get(
-    [articleRegexPath, frontpageRegexPath, ...mediaRadioAndTvRegexPathsArray],
-    async ({ url, headers, path: urlPath }, res) => {
+  .get('/*', async ({ url, headers, path: urlPath }, res) => {
+    try {
+      const { service, isAmp, route, match } = getRouteProps(routes, url);
+      const data = await route.getInitialData(match.params);
+      const { status } = data;
+      const bbcOrigin = headers['bbc-origin'];
+
+      let dials = {};
       try {
-        const { service, isAmp, route, match } = getRouteProps(routes, url);
-        const data = await route.getInitialData(match.params);
-        const { status } = data;
-        const bbcOrigin = headers['bbc-origin'];
-
-        let dials = {};
-        try {
-          dials = await getDials();
-        } catch ({ message }) {
-          logger.error(`Error fetching Cosmos dials: ${message}`);
-        }
-        // Preserve initial dial state in window so it is available during hydration
-        data.dials = dials;
-        data.path = urlPath;
-
-        res.status(status).send(
-          await renderDocument({
-            bbcOrigin,
-            data,
-            isAmp,
-            routes,
-            service,
-            url,
-          }),
-        );
-      } catch ({ message, status }) {
-        // Return an internal server error for any uncaught errors
-        logger.error(`status: ${status || 500} - ${message}`);
-        res.status(500).send(message);
+        dials = await getDials();
+      } catch ({ message }) {
+        logger.error(`Error fetching Cosmos dials: ${message}`);
       }
-    },
-  );
+      // Preserve initial dial state in window so it is available during hydration
+      data.dials = dials;
+      data.path = urlPath;
+
+      res.status(status).send(
+        await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+        }),
+      );
+    } catch ({ message, status }) {
+      // Return an internal server error for any uncaught errors
+      logger.error(`status: ${status || 500} - ${message}`);
+      res.status(500).send(message);
+    }
+  });
 
 export default server;
