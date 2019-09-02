@@ -22,10 +22,11 @@ const cpsItems = [
     cpsType: 'LIV',
   },
 ];
+
 const assetTypeCodeItems = [
   {
-    name: 'Test assetTypeCode',
-    summary: 'This is a test',
+    name: 'Test standard link promo',
+    summary: 'This is a standard link promo',
     indexImage: {},
     indexThumbnail: {},
     uri: 'http://this.is.a.test.com/',
@@ -59,7 +60,7 @@ describe('filterUnknownContentTypes', () => {
     expect(filterUnknownContentTypes(data)).toEqual(data);
   });
 
-  it('should no-op when items is not an array', () => {
+  it('should no-op when items are not an array', () => {
     const data = {
       content: {
         groups: [
@@ -408,6 +409,75 @@ describe('filterUnknownContentTypes', () => {
           groups: [
             {
               items: [],
+            },
+          ],
+        },
+      };
+
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
+    });
+
+    it('should leave items with known assetTypeCode and contentType', () => {
+      const data = {
+        content: {
+          groups: [
+            {
+              items: [
+                {
+                  name: 'Test assetTypeCode',
+                  summary: 'This is a test',
+                  indexImage: {},
+                  indexThumbnail: {},
+                  uri: 'http://this.is.a.test.com/',
+                  contentType: 'Text',
+                  assetTypeCode: 'OOO',
+                  timestamp: 1527598380040,
+                  type: 'link',
+                },
+                {
+                  name: 'Test standard link promo',
+                  summary: 'This is a standard link promo',
+                  indexImage: {},
+                  indexThumbnail: {},
+                  uri: 'http://this.is.a.test.com/',
+                  contentType: 'Text',
+                  assetTypeCode: 'PRO',
+                  timestamp: 1527598380040,
+                  type: 'link',
+                },
+                {
+                  name: 'Test audio link promo',
+                  summary: 'This is an audio link promo',
+                  indexImage: {},
+                  indexThumbnail: {},
+                  uri: 'http://this.is.a.test.com/',
+                  contentType: 'Audio',
+                  assetTypeCode: 'PRO',
+                  timestamp: 1469005433000,
+                  type: 'link',
+                },
+              ],
+            },
+          ],
+        },
+      };
+      const expected = {
+        content: {
+          groups: [
+            {
+              items: [
+                {
+                  name: 'Test standard link promo',
+                  summary: 'This is a standard link promo',
+                  indexImage: {},
+                  indexThumbnail: {},
+                  uri: 'http://this.is.a.test.com/',
+                  contentType: 'Text',
+                  assetTypeCode: 'PRO',
+                  timestamp: 1527598380040,
+                  type: 'link',
+                },
+              ],
             },
           ],
         },
