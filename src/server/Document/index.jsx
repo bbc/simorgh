@@ -45,7 +45,6 @@ const renderDocument = async ({
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}
-      dials={data.dials}
     />,
   );
 

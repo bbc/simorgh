@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 
@@ -20,6 +20,18 @@ jest.mock('./Banner/index.canonical', () => jest.fn());
 const Banner = require('./Banner/index.canonical');
 
 Banner.mockImplementation(({ type }) => <div>Canonical {type} banner</div>);
+
+jest.mock('react', () => {
+  const original = jest.requireActual('react');
+  return {
+    ...original,
+    useContext: jest.fn().mockImplementation(original.useContext),
+  };
+});
+
+const updateCookiePolicy = jest.fn();
+
+useContext.mockImplementation(() => ({ updateCookiePolicy }));
 
 describe('Canonical Consent Banner Container', () => {
   beforeEach(() => {
@@ -114,9 +126,21 @@ describe('Canonical Consent Banner Container', () => {
       setShowPrivacyBanner: expect.any(Function),
     });
     expect(Banner).toHaveBeenCalledWith(
-      { onAccept: cookieOnAllow, onReject: cookieOnReject, type: 'cookie' },
+      {
+        onAccept: expect.any(Function),
+        onReject: cookieOnReject,
+        type: 'cookie',
+      },
       {},
     );
+
+    expect(cookieOnAllow).not.toHaveBeenCalled();
+    expect(updateCookiePolicy).not.toHaveBeenCalled();
+
+    Banner.mock.calls[0][0].onAccept();
+
+    expect(cookieOnAllow).toHaveBeenCalled();
+    expect(updateCookiePolicy).toHaveBeenCalled();
   });
 
   it('should render no banners when both are set to not be shown', () => {
