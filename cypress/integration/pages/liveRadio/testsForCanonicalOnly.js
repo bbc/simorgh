@@ -1,4 +1,3 @@
-import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -13,16 +12,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   pageType,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    // will be addressed by https://github.com/bbc/simorgh/issues/3324
-    describe('ATI', () => {
-      it.skip('should have a noscript tag with an 1px image with the ati url', () => {
-        cy.hasNoscriptImgAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
-      });
-    });
-
     // TODO Chartbeat not yet implemented
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {

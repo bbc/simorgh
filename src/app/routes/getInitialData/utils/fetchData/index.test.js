@@ -1,10 +1,10 @@
-import { loggerMock } from '../../../../testHelpers'; // Must be imported before getInitialData
-import preprocess from '../../../lib/utilities/preprocessor';
+import { loggerMock } from '../../../../../testHelpers'; // Must be imported before getInitialData
+import preprocess from '../../../../lib/utilities/preprocessor';
 
-jest.mock('../../../lib/utilities/preprocessor', () => jest.fn());
+jest.mock('../../../../lib/utilities/preprocessor', () => jest.fn());
 preprocess.mockImplementation(data => data);
 
-const fetchData = require('./fetchData').default;
+const fetchData = require('./index').default;
 
 describe('fetchData', () => {
   const mockSuccessfulResponse = { pageData: '12345' };
