@@ -83,12 +83,42 @@ describe('Server', () => {
         expect(statusCode).toEqual(404);
       });
     });
+    describe('Unknown data fetch error', () => {
+      mockRouteProps({
+        id: 'c0000000001o',
+        service: 'news',
+        isAmp: false,
+        dataResponse: Error('Error!'),
+        responseType: 'reject',
+      });
+
+      it('should serve a 500 error', async () => {
+        const { statusCode } = await makeRequest(
+          `/news/articles/manifest.json`,
+        );
+        expect(statusCode).toEqual(500);
+      });
+    });
   });
 
   describe('Service workers', () => {
     it('should serve a 404 error if path to service worker is invalid', async () => {
       const { statusCode } = await makeRequest('/non/existent/sw.js');
       expect(statusCode).toEqual(404);
+    });
+    describe('Unknown data fetch error', () => {
+      mockRouteProps({
+        id: 'c0000000001o',
+        service: 'news',
+        isAmp: false,
+        dataResponse: Error('Error!'),
+        responseType: 'reject',
+      });
+
+      it('should serve a 500 error', async () => {
+        const { statusCode } = await makeRequest('/news/articles/sw.js');
+        expect(statusCode).toEqual(500);
+      });
     });
   });
 
