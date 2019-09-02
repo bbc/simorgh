@@ -413,6 +413,24 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
   });
 };
 
+const testData = ({ title, validDataUrl, invalidDataUrl }) => {
+  describe(title, () => {
+    it('should respond with JSON', async () => {
+      const { body } = await makeRequest(validDataUrl);
+      expect(body).toEqual(
+        expect.objectContaining({ content: expect.any(Object) }),
+      );
+    });
+
+    describe('with non-existent data', () => {
+      it('should respond with a 404', async () => {
+        const { statusCode } = await makeRequest(invalidDataUrl);
+        expect(statusCode).toEqual(404);
+      });
+    });
+  });
+};
+
 describe('Server', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -464,40 +482,15 @@ describe('Server', () => {
       });
     });
 
-    describe('for front pages', () => {
-      it('should respond with JSON', async () => {
-        const { body } = await makeRequest('/igbo.json');
-        expect(body).toEqual(
-          expect.objectContaining({ content: expect.any(Object) }),
-        );
-      });
-
-      describe('with non-existent data', () => {
-        it('should respond with a 404', async () => {
-          const { statusCode } = await makeRequest('/ERROR.json');
-          expect(statusCode).toEqual(404);
-        });
-      });
+    testData({
+      title: 'for frontpages',
+      validDataUrl: '/igbo.json',
+      invalidDataUrl: '/ERROR.json',
     });
-
-    describe('for media page - live radio', () => {
-      it('should respond with JSON', async () => {
-        const { body } = await makeRequest(
-          '/korean/bbc_korean_radio/liveradio.json',
-        );
-        expect(body).toEqual(
-          expect.objectContaining({ content: expect.any(Object) }),
-        );
-      });
-
-      describe('with non-existent data', () => {
-        it('should respond with a 404', async () => {
-          const { statusCode } = await makeRequest(
-            '/korean/bbc_korean_radio/ERROR.json',
-          );
-          expect(statusCode).toEqual(404);
-        });
-      });
+    testData({
+      title: 'for media page - live radio',
+      validDataUrl: '/korean/bbc_korean_radio/liveradio.json',
+      invalidDataUrl: '/korean/bbc_korean_radio/ERROR.json',
     });
   });
 
