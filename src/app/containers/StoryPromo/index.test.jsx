@@ -1,11 +1,10 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
-
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-
+import relItems from './IndexAlsos/relatedItems';
 import StoryPromo from '.';
 
 const completeItem = {
@@ -143,6 +142,31 @@ const standardLinkItem = {
   type: 'link',
 };
 
+const indexAlsosItem = {
+  headlines: {
+    headline: 'A headline',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  summary: 'Summary text',
+  timestamp: 1556795033000,
+  indexImage: {
+    path: '/cpsprodpb/0A06/production/image.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Image Alt text',
+    copyrightHolder: 'Image provider',
+  },
+  cpsType: 'STY',
+  relatedItems: relItems,
+};
+
+const onlyOneRelatedItem = {
+  ...indexAlsosItem,
+  relatedItems: [indexAlsosItem.relatedItems[0]],
+};
+
 const fixtures = {
   standard: completeItem,
   video: videoItem,
@@ -183,6 +207,11 @@ describe('StoryPromo Container', () => {
       <WrappedStoryPromo platform="amp" item={data} />,
     );
   });
+
+  shouldMatchSnapshot(
+    `should render multiple Index Alsos correctly for canonical`,
+    <WrappedStoryPromo platform="canonical" item={indexAlsosItem} topStory />,
+  );
 
   describe('assertion tests', () => {
     let cpsItem;
@@ -233,7 +262,7 @@ describe('StoryPromo Container', () => {
         <WrappedStoryPromo service="yoruba" item={cpsItem} />,
       ).container;
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        '2 Èbibi 2019',
+        '2 Èbibi 2019',
       );
     });
 
@@ -380,6 +409,25 @@ describe('StoryPromo Container', () => {
         } = bengaliContainer.querySelector('time');
         expect(bengaliTime).toEqual('৬ আগস্ট ২০১৯');
         expect(bengaliDate).toEqual('2019-08-06');
+      });
+    });
+
+    describe('With Index Alsos', () => {
+      it('should render a list with two related items', () => {
+        const { container } = render(
+          <WrappedStoryPromo item={indexAlsosItem} topStory />,
+        );
+
+        expect(container.getElementsByTagName('ul')).toHaveLength(1);
+        expect(container.getElementsByTagName('li')).toHaveLength(2);
+      });
+
+      it('should render a related item not contained within a list', () => {
+        const { container } = render(
+          <WrappedStoryPromo item={onlyOneRelatedItem} topStory />,
+        );
+        expect(container.getElementsByTagName('ul')).toHaveLength(0);
+        expect(container.getElementsByTagName('li')).toHaveLength(0);
       });
     });
   });

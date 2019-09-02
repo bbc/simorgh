@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { render } from '@testing-library/react';
 import { shouldShallowMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import MediaIndicator from '.';
 
@@ -129,4 +129,21 @@ describe('Story Promo Media Indicator', () => {
     'should not render if item media object is missing',
     <MediaIndicator item={noMediaObject} service="news" />,
   );
+
+  describe('with Index Alsos', () => {
+    shouldMatchSnapshot(
+      'should render a video indicator correctly',
+      <MediaIndicator item={noDurationItem} service="news" indexAlsos />,
+    );
+
+    it('should render ', () => {
+      const { container } = render(
+        <MediaIndicator item={noDurationItem} service="news" indexAlsos />,
+      );
+
+      const span = container.getElementsByTagName('span')[0];
+      expect(span.getAttribute('aria-hidden')).toBeDefined();
+      expect(span.getAttribute('aria-hidden')).toEqual('true');
+    });
+  });
 });

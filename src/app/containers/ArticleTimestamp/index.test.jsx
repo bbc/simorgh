@@ -87,7 +87,7 @@ describe('ArticleTimestamp', () => {
   describe('with no data', () => {
     suppressPropWarnings(['firstPublished', 'undefined']);
     suppressPropWarnings(['lastPublished', 'undefined']);
-    isNull('should return null', <ArticleTimestamp />);
+    isNull('should return null', <WrappedArticleTimestamp />);
   });
 
   describe('with invalid data', () => {

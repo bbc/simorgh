@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
   translations: {
+    seeAll: 'See all',
     home: 'Notícias',
     currentPage: 'Current page',
     skipLinkText: 'Ir para o conteúdo',

@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Somali',
   translations: {
+    seeAll: 'See all',
     home: 'War',
     currentPage: 'Current page',
     skipLinkText: 'U gudub qaybta macluumaadka',

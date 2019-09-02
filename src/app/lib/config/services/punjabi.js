@@ -33,7 +33,9 @@ const service = {
   script: nepali,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'ਨਿਊਜ਼',
   translations: {
+    seeAll: 'See all',
     home: 'ਖ਼ਬਰਾਂ',
     currentPage: 'Current page',
     skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,

@@ -2,6 +2,8 @@
 
 exports[`Consent Banner Text should correctly render banner text in the UK 1`] = `
 .c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #BEBEBE;
 }
 
@@ -14,6 +16,20 @@ exports[`Consent Banner Text should correctly render banner text in the UK 1`] =
 .c0 a:focus,
 .c0 a:hover {
   color: #FFFFFF;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -34,6 +50,8 @@ exports[`Consent Banner Text should correctly render banner text in the UK 1`] =
 
 exports[`Consent Banner Text should correctly render banner text outside the UK 1`] = `
 .c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #BEBEBE;
 }
 
@@ -46,6 +64,20 @@ exports[`Consent Banner Text should correctly render banner text outside the UK 
 .c0 a:focus,
 .c0 a:hover {
   color: #FFFFFF;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -66,6 +98,8 @@ exports[`Consent Banner Text should correctly render banner text outside the UK 
 
 exports[`Consent Banner Text should correctly render banner text with a link in the UK 1`] = `
 .c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #BEBEBE;
 }
 
@@ -78,6 +112,20 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
 .c0 a:focus,
 .c0 a:hover {
   color: #FFFFFF;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -104,6 +152,8 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
 
 exports[`Consent Banner Text should correctly render banner text with a link outside the UK 1`] = `
 .c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
   color: #BEBEBE;
 }
 
@@ -116,6 +166,20 @@ exports[`Consent Banner Text should correctly render banner text with a link out
 .c0 a:focus,
 .c0 a:hover {
   color: #FFFFFF;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 @media (min-width:37.5rem) {

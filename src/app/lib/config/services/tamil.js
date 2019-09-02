@@ -33,7 +33,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'முகப்பு',
   translations: {
+    seeAll: 'See all',
     home: 'முகப்பு',
     currentPage: 'Current page',
     skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',

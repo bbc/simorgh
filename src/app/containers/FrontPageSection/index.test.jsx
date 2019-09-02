@@ -53,6 +53,59 @@ const group = {
   },
 };
 
+const groupWithLink = {
+  type: 'responsive-top-stories-with-links',
+  title: 'Top Stories',
+  items: [
+    {
+      headlines: {
+        headline: 'Top Story 1 headline',
+      },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
+      },
+      summary: 'Summary text 1',
+      timestamp: 1557738768,
+      indexImage: {
+        path: '/cpsprodpb/0A06/production/image1.jpg',
+        height: 1152,
+        width: 2048,
+        altText: 'Image Alt text 1',
+        copyrightHolder: 'Image provider 1',
+      },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000001',
+    },
+    {
+      headlines: {
+        headline: 'Top Story 2 headline',
+      },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
+      },
+      summary: 'Summary text 2',
+      timestamp: 1557738768,
+      indexImage: {
+        path: '/cpsprodpb/0A06/production/image2.jpg',
+        height: 1152,
+        width: 2048,
+        altText: 'Image Alt text 2',
+        copyrightHolder: 'Image provider 2',
+      },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000002',
+    },
+  ],
+  strapline: {
+    name: 'Top Stories',
+    type: 'LINK',
+    links: {
+      highweb: 'https://www.bbc.com/pidgin/sport',
+      desktop: 'https://www.bbc.com/pidgin/sport',
+      mobile: 'https://www.bbc.com/pidgin/sport',
+      enhancedmobile: 'https://www.bbc.com/pidgin/sport',
+    },
+  },
+};
+
 const hasNoStrapline = {
   type: 'responsive-no-strapline',
   title: "We don't need no strapline!",
@@ -158,6 +211,11 @@ describe('FrontPageSection Container', () => {
     );
 
     shouldShallowMatchSnapshot(
+      'should render correctly with a linking strapline',
+      <FrontPageSection group={groupWithLink} sectionNumber={2} />,
+    );
+
+    shouldShallowMatchSnapshot(
       'should render without a bar',
       <FrontPageSection group={group} bar={false} sectionNumber={1} />,
     );
@@ -227,6 +285,18 @@ describe('FrontPageSection Container', () => {
       expect(container.getElementsByTagName('h3')).toHaveLength(2);
     });
 
+    it('should render with a link when is a linking group', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={groupWithLink} sectionNumber={0} />
+        </ServiceContextProvider>,
+      );
+
+      expect(
+        container.querySelectorAll('a[class^=SectionLabelLink'),
+      ).toHaveLength(1);
+    });
+
     it('section should have aria-labelledby attribute referring to the id of the label element', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
@@ -234,7 +304,7 @@ describe('FrontPageSection Container', () => {
         </ServiceContextProvider>,
       );
       const section = container.getElementsByTagName('section')[0];
-      const label = container.getElementsByTagName('h2')[0];
+      const label = container.querySelector('span[class^=Title]');
 
       expect(section.getAttribute('aria-labelledby')).toBeDefined();
       expect(label.id).toBeDefined();
