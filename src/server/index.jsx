@@ -164,7 +164,10 @@ server
   )
   .get('/*', async ({ url, headers, path: urlPath }, res) => {
     try {
-      const { service, isAmp, route, match } = getRouteProps(routes, url);
+      const { service, isAmp, route, match, variant } = getRouteProps(
+        routes,
+        url,
+      );
       const data = await route.getInitialData(match.params);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
@@ -187,6 +190,7 @@ server
           routes,
           service,
           url,
+          variant,
         }),
       );
     } catch ({ message, status }) {

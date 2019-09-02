@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, element, objectOf, string } from 'prop-types';
+import { bool, element, objectOf, string, oneOf } from 'prop-types';
 
 // context providers
 import { DialContextProvider } from '../../contexts/DialContext';
@@ -13,6 +13,7 @@ const WithContexts = Component => {
       bbcOrigin,
       id,
       service,
+      variant,
       isAmp,
       pageType,
       previousPath,
@@ -21,7 +22,7 @@ const WithContexts = Component => {
     return (
       <ToggleContextProvider>
         <DialContextProvider dials={dials}>
-          <ServiceContextProvider service={service}>
+          <ServiceContextProvider service={service} varient={variant}>
             <RequestContextProvider
               bbcOrigin={bbcOrigin}
               id={id}
@@ -46,12 +47,14 @@ const WithContexts = Component => {
     previousPath: string,
     service: string.isRequired,
     dials: objectOf(bool).isRequired,
+    variant: oneOf(['simp', 'trad', 'lat', 'cyr']),
   };
 
   WithContextsContainer.defaultProps = {
     bbcOrigin: null,
     id: null,
     previousPath: null,
+    variant: null,
   };
 
   return WithContextsContainer;

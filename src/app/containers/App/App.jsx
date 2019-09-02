@@ -15,6 +15,7 @@ export const App = ({
   const {
     service,
     isAmp,
+    variant,
     id,
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
@@ -22,6 +23,7 @@ export const App = ({
   const [state, setState] = useState({
     data: initialData,
     service,
+    variant,
     id,
     isAmp,
     pageType,
@@ -38,6 +40,7 @@ export const App = ({
       // Only update on subsequent page renders
       const {
         service: nextService,
+        variant: nextVariant,
         id: nextId,
         isAmp: nextIsAmp,
         route,
@@ -47,6 +50,7 @@ export const App = ({
       setState({
         data: null,
         service: nextService,
+        variant: nextVariant,
         id: nextId,
         isAmp: nextIsAmp,
         pageType: route.pageType,

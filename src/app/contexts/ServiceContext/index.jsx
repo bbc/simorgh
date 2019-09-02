@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, string, oneOf } from 'prop-types';
 import services from '../../lib/config/services/loadableConfig';
 import createLoadableContext from '../utils/createLoadableContext';
 
@@ -26,7 +26,7 @@ Object.keys(services).forEach(service => {
   );
 });
 
-export const ServiceContextProvider = ({ children, service }) => {
+export const ServiceContextProvider = ({ children, service, variant }) => {
   const LoadableServiceContextProvider = loadableContexts[service];
 
   if (!LoadableServiceContextProvider) {
@@ -34,7 +34,7 @@ export const ServiceContextProvider = ({ children, service }) => {
   }
 
   return (
-    <LoadableServiceContextProvider configKey="default">
+    <LoadableServiceContextProvider configKey={variant || 'default'}>
       {children}
     </LoadableServiceContextProvider>
   );
@@ -43,8 +43,10 @@ export const ServiceContextProvider = ({ children, service }) => {
 ServiceContextProvider.propTypes = {
   children: node.isRequired,
   service: string,
+  variant: oneOf(['simp', 'trad', 'lat', 'cyr']),
 };
 
 ServiceContextProvider.defaultProps = {
   service: 'default',
+  variant: null,
 };
