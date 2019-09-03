@@ -23,24 +23,36 @@ const assertCookieExpiryDate = (cookieName, timestamp) => {
 const filterPageTypes = (pageType, service) =>
   config[service].pageTypes[pageType].path !== undefined;
 
-const getPrivacyBanner = service =>
-  cy.contains(appConfig[service].translations.consentBanner.privacy.title);
-const getCookieBanner = service =>
-  cy.contains(appConfig[service].translations.consentBanner.cookie.title);
-const getPrivacyBannerContainer = service => getPrivacyBanner(service).parent();
-const getCookieBannerContainer = service => getCookieBanner(service).parent();
-const getPrivacyBannerAccept = service =>
-  getPrivacyBannerContainer(service)
+const getPrivacyBanner = (service, variant) =>
+  cy.contains(
+    appConfig[service][variant].translations.consentBanner.privacy.title,
+  );
+const getCookieBanner = (service, variant) =>
+  cy.contains(
+    appConfig[service][variant].translations.consentBanner.cookie.title,
+  );
+const getPrivacyBannerContainer = (service, variant) =>
+  getPrivacyBanner(service, variant).parent();
+const getCookieBannerContainer = (service, variant) =>
+  getCookieBanner(service, variant).parent();
+const getPrivacyBannerAccept = (service, variant) =>
+  getPrivacyBannerContainer(service, variant)
     .find('button')
-    .contains(appConfig[service].translations.consentBanner.privacy.accept);
-const getCookieBannerAccept = service =>
-  getCookieBannerContainer(service)
+    .contains(
+      appConfig[service][variant].translations.consentBanner.privacy.accept,
+    );
+const getCookieBannerAccept = (service, variant) =>
+  getCookieBannerContainer(service, variant)
     .find('button')
-    .contains(appConfig[service].translations.consentBanner.cookie.accept);
-const getCookieBannerReject = service =>
-  getCookieBannerContainer(service)
+    .contains(
+      appConfig[service][variant].translations.consentBanner.cookie.accept,
+    );
+const getCookieBannerReject = (service, variant) =>
+  getCookieBannerContainer(service, variant)
     .find('a')
-    .contains(appConfig[service].translations.consentBanner.cookie.reject);
+    .contains(
+      appConfig[service][variant].translations.consentBanner.cookie.reject,
+    );
 
 const ensureCookieExpiryDates = () => {
   const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();
@@ -67,25 +79,27 @@ Object.keys(config)
     Object.keys(config[service].pageTypes)
       .filter(pageType => filterPageTypes(pageType, service))
       .forEach(pageType => {
+        const variant = 'default';
+
         describe(`Canonical Cookie Banner Test for ${service} ${pageType}`, () => {
           it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
             cy.clearCookies();
             visitPage(service, pageType);
 
-            getPrivacyBanner(service).should('be.visible');
-            getCookieBanner(service).should('not.be.visible');
+            getPrivacyBanner(service, variant).should('be.visible');
+            getCookieBanner(service, variant).should('not.be.visible');
 
             assertCookieValues({
               ckns_privacy: 'july2019',
               ckns_policy: '000',
             });
 
-            getPrivacyBannerAccept(service).click();
+            getPrivacyBannerAccept(service, variant).click();
 
-            getCookieBanner(service).should('be.visible');
-            getPrivacyBanner(service).should('not.be.visible');
+            getCookieBanner(service, variant).should('be.visible');
+            getPrivacyBanner(service, variant).should('not.be.visible');
 
-            getCookieBannerAccept(service).click();
+            getCookieBannerAccept(service, variant).click();
 
             assertCookieValues({
               ckns_explicit: '1',
@@ -93,8 +107,8 @@ Object.keys(config)
               ckns_policy: '111',
             });
 
-            getCookieBanner(service).should('not.be.visible');
-            getPrivacyBanner(service).should('not.be.visible');
+            getCookieBanner(service, variant).should('not.be.visible');
+            getPrivacyBanner(service, variant).should('not.be.visible');
 
             ensureCookieExpiryDates();
           });
@@ -103,16 +117,16 @@ Object.keys(config)
             cy.clearCookies();
             visitPage(service, pageType);
 
-            getPrivacyBanner(service).should('be.visible');
-            getCookieBanner(service).should('not.be.visible');
+            getPrivacyBanner(service, variant).should('be.visible');
+            getCookieBanner(service, variant).should('not.be.visible');
 
             assertCookieValues({
               ckns_privacy: 'july2019',
               ckns_policy: '000',
             });
 
-            getPrivacyBannerAccept(service).click();
-            getCookieBannerReject(service).click();
+            getPrivacyBannerAccept(service, variant).click();
+            getCookieBannerReject(service, variant).click();
 
             visitPage(service, pageType);
 
@@ -122,8 +136,8 @@ Object.keys(config)
               ckns_policy: '000',
             });
 
-            getCookieBanner(service).should('not.be.visible');
-            getPrivacyBanner(service).should('not.be.visible');
+            getCookieBanner(service, variant).should('not.be.visible');
+            getPrivacyBanner(service, variant).should('not.be.visible');
 
             ensureCookieExpiryDates();
           });
@@ -133,8 +147,8 @@ Object.keys(config)
             cy.setCookie('ckns_privacy', 'july2019');
             visitPage(service, pageType);
 
-            getPrivacyBanner(service).should('not.be.visible');
-            getCookieBanner(service).should('be.visible');
+            getPrivacyBanner(service, variant).should('not.be.visible');
+            getCookieBanner(service, variant).should('be.visible');
           });
 
           it("should not override the user's default cookie policy", () => {
