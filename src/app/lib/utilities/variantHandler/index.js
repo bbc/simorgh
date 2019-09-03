@@ -5,25 +5,16 @@ const servicesWithVariants = {
 };
 
 // Remove leading slash from variant
-const variantSanitzer = variant => variant && variant.replace('/', '');
+export const variantSanitzer = variant => variant && variant.replace('/', '');
 
-export const variantDefaulter = (service, rawVariant) => {
+// If service has variants, use it or default to first variant in array
+// If service doesnt have variants, return undefined
+export const variantHandler = (service, rawVariant) => {
   const allowedVariants = servicesWithVariants[service];
   const variant = variantSanitzer(rawVariant);
 
   if (allowedVariants) {
     return allowedVariants.includes(variant) ? variant : allowedVariants[0];
-  }
-
-  return variant;
-};
-
-export const variantHandler = (service, rawVariant) => {
-  const allowedVariants = servicesWithVariants[service];
-  const variant = variantDefaulter(service, rawVariant);
-
-  if (allowedVariants && allowedVariants.includes(variant)) {
-    return variant;
   }
 
   return undefined;
