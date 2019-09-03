@@ -444,6 +444,21 @@ describe('Server', () => {
   });
 
   describe('Manifest json', () => {
+    beforeEach(() => {
+      const notFoundDataResponse = {
+        isAmp: false,
+        data: { some: 'data' },
+        service: 'someService',
+        status: 404,
+      };
+
+      mockRouteProps({
+        service: 'someService',
+        isAmp: false,
+        dataResponse: notFoundDataResponse,
+      });
+    });
+
     describe('Services not on allowlist', () => {
       it('should serve a 404 error for service foobar', async () => {
         const { statusCode } = await makeRequest(
