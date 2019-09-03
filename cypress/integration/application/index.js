@@ -51,18 +51,16 @@ describe('Application unknown route error pages', () => {
     ];
     unknownRoutes.forEach(function(url) {
       it('should display a news canonical error page', () => {
+        cy.testResponseCodeAndType(url, 404, 'text/html');
         cy.visit(url, { failOnStatusCode: false });
-        let platform = 'news'
-        if(url.includes('igbo')){
-           platform = 'igbo';
-        }
+        const service = url.includes('igbo') ? 'igbo' : 'news';
         cy.get('h1 span').should(
           'contain',
-          `${appConfig[platform].translations.error[404].statusCode}`,
+          `${appConfig[service].translations.error[404].statusCode}`,
         );
         cy.get('h1').should(
           'contain',
-          `${appConfig[platform].translations.error[404].title}`,
+          `${appConfig[service].translations.error[404].title}`,
         );
       });
     });
