@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
+import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
 import preprocessor from '../../lib/utilities/preprocessor';

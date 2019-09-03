@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
 import LinkContents from '.';
 
 const defaultProps = {

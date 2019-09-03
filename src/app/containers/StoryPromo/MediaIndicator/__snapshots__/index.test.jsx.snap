@@ -71,10 +71,10 @@ exports[`Story Promo Media Indicator with Index Alsos should render a video indi
 
 <span
   aria-hidden="true"
-  className="c0"
+  class="c0"
 >
   <svg
-    className="c1"
+    class="c1"
     focusable="false"
     height="12px"
     viewBox="0 0 32 32"

@@ -2,7 +2,7 @@ import React from 'react';
 import {
   shouldShallowMatchSnapshot,
   suppressPropWarnings,
-} from '../../../../testHelpers';
+} from '@bbc/psammead-test-helpers';
 import { articleDataNews, articleDataPersian } from '../../Article/fixtureData';
 import WithData from '.';
 import frontPageDataPidgin from '../../../../../data/pidgin/frontpage';

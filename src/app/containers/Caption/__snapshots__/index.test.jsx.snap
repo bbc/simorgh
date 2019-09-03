@@ -64,10 +64,10 @@ exports[`should render caption text with example Farsi offscreen text 1`] = `
 }
 
 <figcaption
-  className="c0"
+  class="c0"
 >
   <span
-    className="c1"
+    class="c1"
   >
      ، عنوان
   </span>
@@ -141,10 +141,10 @@ exports[`should render caption text with example News offscreen text 1`] = `
 }
 
 <figcaption
-  className="c0"
+  class="c0"
 >
   <span
-    className="c1"
+    class="c1"
   >
     Caption, 
   </span>
@@ -218,10 +218,10 @@ exports[`should render caption with mutiple paragraphs 1`] = `
 }
 
 <figcaption
-  className="c0"
+  class="c0"
 >
   <span
-    className="c1"
+    class="c1"
   >
     Caption, 
   </span>

@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
+import { isNull } from '@bbc/psammead-test-helpers';
+import loggerMock from '../../../testHelpers/loggerMock';
 import useToggle from '../Toggle/useToggle';
 import { UserContext } from '../../contexts/UserContext';
-import { loggerMock, isNull } from '../../../testHelpers';
 import MPulseBeaconContainer from './index';
 import onClient from '../../lib/utilities/onClient';
 import boomr from './boomr';

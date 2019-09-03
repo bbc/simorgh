@@ -5,7 +5,7 @@ import {
   shouldShallowMatchSnapshot,
   shouldMatchSnapshot,
   isNull,
-} from '../../../../testHelpers';
+} from '@bbc/psammead-test-helpers';
 
 import MediaIndicator from '.';
 

@@ -28,11 +28,11 @@ exports[`should render Copyright with news service context 1`] = `
 }
 
 <p
-  className="c0"
+  class="c0"
   role="text"
 >
   <span
-    className="c1"
+    class="c1"
   >
     Image source, 
   </span>
@@ -68,11 +68,11 @@ exports[`should render Copyright with persian service context 1`] = `
 }
 
 <p
-  className="c0"
+  class="c0"
   role="text"
 >
   <span
-    className="c1"
+    class="c1"
   >
      ، منبع تصویر
   </span>
