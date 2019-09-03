@@ -23,7 +23,7 @@ const WithContexts = Component => {
     return (
       <ToggleContextProvider>
         <DialContextProvider dials={dials}>
-          <ServiceContextProvider service={service} varient={variant}>
+          <ServiceContextProvider service={service} variant={variant}>
             <RequestContextProvider
               bbcOrigin={bbcOrigin}
               id={id}
