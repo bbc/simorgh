@@ -4,17 +4,27 @@ const servicesWithVariants = {
   zhongwen: ['simp', 'trad'],
 };
 
-const variantHandler = (service, variant) => {
+// Remove leading slash from variant
+const variantSanitzer = variant => variant && variant.replace('/', '');
+
+export const variantDefaulter = (service, rawVariant) => {
   const allowedVariants = servicesWithVariants[service];
-  const cleanVariant = variant && variant.replace('/', '');
+  const variant = variantSanitzer(rawVariant);
 
   if (allowedVariants) {
-    return allowedVariants.includes(cleanVariant)
-      ? cleanVariant
-      : allowedVariants[0];
+    return allowedVariants.includes(variant) ? variant : allowedVariants[0];
+  }
+
+  return variant;
+};
+
+export const variantHandler = (service, rawVariant) => {
+  const allowedVariants = servicesWithVariants[service];
+  const variant = variantDefaulter(service, rawVariant);
+
+  if (allowedVariants && allowedVariants.includes(variant)) {
+    return variant;
   }
 
   return undefined;
 };
-
-export default variantHandler;

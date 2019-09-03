@@ -1,7 +1,7 @@
 import { matchRoutes } from 'react-router-config';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import variantHandler from '../../../../lib/utilities/variantHandler';
+import { variantHandler } from '../../../../lib/utilities/variantHandler';
 import { fallbackAmpParam, fallbackServiceParam } from './routeFallbackParams';
 
 const getRouteProps = (routes, url) => {
