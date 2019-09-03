@@ -60,7 +60,7 @@ const service = {
         message:
           'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
         solutions: ['Sabunta shafin', 'Ziyarci shafin daga baya'],
-        callToActionFirst: 'Maimakon haka, ziyarci shafin sashen',
+        callToActionFirst: 'Maimakon haka, ziyarci shafin sashen ',
         callToActionLinkText: 'BBC News Hausa',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/hausa',
