@@ -23,15 +23,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       });
     });
 
-    describe('ATI', () => {
-      it.skip('should have an amp-analytics tag with the ati url', () => {
-        cy.hasAmpAnalyticsAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
-      });
-    });
-
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
         it.skip('should have chartbeat config UID', () => {

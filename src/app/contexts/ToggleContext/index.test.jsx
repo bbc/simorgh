@@ -1,7 +1,29 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '../../../testHelpers';
 import { ComponentUsingContext } from '../../../testHelpers/mockComponents';
-import { ToggleContext, ToggleContextProvider } from './index';
+
+const mockToggleValues = {
+  local: {
+    foobarFeature: {
+      enabled: true,
+    },
+  },
+  test: {
+    foobarFeature: {
+      enabled: true,
+    },
+  },
+  live: {
+    foobarFeature: {
+      enabled: false,
+    },
+  },
+};
+
+jest.mock('../../lib/config/toggles', () => mockToggleValues);
+
+// Require after mock to allow mocking of JS object
+const { ToggleContext, ToggleContextProvider } = require('./index');
 
 describe('ToggleContext', () => {
   shouldMatchSnapshot(
