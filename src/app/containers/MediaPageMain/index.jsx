@@ -5,8 +5,8 @@ import Paragraph from '@bbc/psammead-paragraph';
 
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
-import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const renderBlock = ({ script, service }) => block => {
   const Component = {

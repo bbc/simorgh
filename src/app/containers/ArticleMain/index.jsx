@@ -1,5 +1,5 @@
 import React from 'react';
-import { articleDataPropTypes } from '../../models/propTypes/article';
+import { articleDataPropTypes } from '#models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import headings from '../Headings';
 import text from '../Text';

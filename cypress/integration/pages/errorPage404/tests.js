@@ -1,5 +1,5 @@
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/app/lib/config/services';
+import appConfig from '#app/lib/config/services';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.

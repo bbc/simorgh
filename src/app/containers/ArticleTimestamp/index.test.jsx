@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 import ArticleTimestamp from '.';
-import { isNull, suppressPropWarnings } from '../../../testHelpers';
+import { isNull, suppressPropWarnings } from '#testHelpers';
 import {
   timestampGenerator,
   sameDayTimestampsGenerator,

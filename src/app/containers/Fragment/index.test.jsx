@@ -1,7 +1,7 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '#testHelpers';
 import Fragment from './index';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const CreateFragment = (newsServiceContextStub, text, attributes) => (
   <ServiceContext.Provider value={newsServiceContextStub}>

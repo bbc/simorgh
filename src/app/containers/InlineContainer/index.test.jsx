@@ -1,8 +1,8 @@
 import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '#testHelpers';
 import InlineContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
   id: '113144',

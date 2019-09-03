@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import useToggle from '../Toggle/useToggle';
-import { UserContext } from '../../contexts/UserContext';
-import { loggerMock, isNull } from '../../../testHelpers';
+import { UserContext } from '#contexts/UserContext';
+import { loggerMock, isNull } from '#testHelpers';
 import MPulseBeaconContainer from './index';
-import onClient from '../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import boomr from './boomr';
 
 let container;

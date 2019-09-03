@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { shouldMatchSnapshot } from '#testHelpers';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);
 jest.mock('./index.amp', () => () => <div>Amp Cookie banner</div>);

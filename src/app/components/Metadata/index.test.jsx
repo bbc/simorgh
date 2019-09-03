@@ -1,6 +1,6 @@
 import React from 'react';
 import Metadata from './index';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
 
 const iconSizes = {
   'apple-touch-icon': [

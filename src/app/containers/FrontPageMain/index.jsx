@@ -2,12 +2,12 @@
 import React, { useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
-import { frontPageDataPropTypes } from '../../models/propTypes/frontPage';
+import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import {
   Grid,
   GridItemConstrainedLargeWithTopMargin,
 } from '../../lib/styledGrid';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
 import ATIAnalytics from '../ATIAnalytics';

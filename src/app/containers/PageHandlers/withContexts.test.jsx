@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
 import WithContexts from './withContexts';
-import getOriginContext from '../../contexts/RequestContext/getOriginContext';
-import getStatsDestination from '../../contexts/RequestContext/getStatsDestination';
-import getStatsPageIdentifier from '../../contexts/RequestContext/getStatsPageIdentifier';
-import * as requestContextImports from '../../contexts/RequestContext';
+import getOriginContext from '#contexts/RequestContext/getOriginContext';
+import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
+import getStatsPageIdentifier from '#contexts/RequestContext/getStatsPageIdentifier';
+import * as requestContextImports from '#contexts/RequestContext';
 
 jest.mock('../../contexts/RequestContext/getOriginContext', () => jest.fn());
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
 import NavigationContainer from './index';
-import igboConfig from '../../lib/config/services/igbo';
+import igboConfig from '#lib/config/services/igbo';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');

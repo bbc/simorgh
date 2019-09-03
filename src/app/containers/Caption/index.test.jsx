@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import CaptionContainer from '.';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { blockContainingText } from '../../models/blocks';
+import { shouldMatchSnapshot } from '#testHelpers';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { blockContainingText } from '#models/blocks';
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',

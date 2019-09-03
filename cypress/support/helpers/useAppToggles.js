@@ -1,4 +1,4 @@
-import togglesConfig from '../../../src/app/lib/config/toggles';
+import togglesConfig from '#app/lib/config/toggles';
 
 const useAppToggles = togglesConfig[Cypress.env('APP_ENV')];
 

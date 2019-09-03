@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterContainer from './index';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { shouldMatchSnapshot } from '#testHelpers';
 
 const RealDate = Date;
 
