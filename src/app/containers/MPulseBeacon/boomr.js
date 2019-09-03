@@ -9,6 +9,14 @@ const boomr = (apiKey) => {
   if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
       return;
   }
+  window.BOOMR_config = {
+    Early: {
+      enabled: true,
+    },
+    Akamai: {
+      enabled: false,
+    }
+  };
   window.BOOMR = window.BOOMR || {};
   window.BOOMR.snippetStart = new Date().getTime();
   window.BOOMR.snippetExecuted = true;
