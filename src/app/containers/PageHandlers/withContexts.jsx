@@ -16,6 +16,7 @@ const WithContexts = Component => {
       variant,
       isAmp,
       pageType,
+      pathname,
       previousPath,
       dials,
     } = props;
@@ -30,6 +31,7 @@ const WithContexts = Component => {
               isAmp={isAmp}
               pageType={pageType}
               service={service}
+              pathname={pathname}
               previousPath={previousPath}
             >
               <Component {...props} />

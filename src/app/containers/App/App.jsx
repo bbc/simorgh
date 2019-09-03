@@ -87,6 +87,7 @@ export const App = ({
     ...state,
     bbcOrigin,
     dials,
+    pathname: location.pathname,
     previousPath,
   });
 };
