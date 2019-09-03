@@ -14,6 +14,7 @@ import {
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
   mediaDataRegexPath,
+  mapPageRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
@@ -109,6 +110,13 @@ if (process.env.APP_ENV === 'local') {
       const { service } = params;
 
       const dataFilePath = constructDataFilePath('frontpage', service);
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(mapPageRegexPath, async ({ params }, res, next) => {
+      const { service, assetUri } = params;
+
+      const dataFilePath = constructDataFilePath('mappage', service, assetUri);
 
       sendDataFile(res, dataFilePath, next);
     })
