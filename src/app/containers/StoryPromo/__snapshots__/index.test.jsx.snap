@@ -2403,85 +2403,80 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <div
-        className="c3"
+        class="c3"
       >
         <div
-          className="lazyload-placeholder"
-          style={
-            Object {
-              "height": undefined,
-            }
-          }
+          class="lazyload-placeholder"
         />
       </div>
       <div
-        className="c4"
+        class="c4"
       />
     </div>
   </div>
   <div
-    className="c5"
+    class="c5"
   >
     <h3
-      className="c6"
+      class="c6"
     >
       <a
-        className="c7"
+        class="c7"
         href="https://www.bbc.co.uk"
       >
         A headline
       </a>
     </h3>
     <p
-      className="c8"
+      class="c8"
     >
       Summary text
     </p>
     <time
-      className="c9"
-      dateTime="2019-05-02"
+      class="c9"
+      datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
     <div
-      className="c10"
+      class="c10"
     >
       <h4
-        className="c11"
+        class="c11"
       >
         Related content
       </h4>
       <ul
-        className="c12"
+        class="c12"
         role="list"
       >
         <li
-          className="c13"
+          class="c13"
           role="listitem"
         >
           <a
-            className="c14"
+            class="c14"
             href="/hausa/labarai-48916590"
           >
             <span
-              className="c15"
+              class="c15"
               dir="ltr"
             >
               <span
                 aria-hidden="true"
-                className="c16"
+                class="c16"
               >
                 <svg
-                  className="c17"
+                  class="c17"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 32 32"
@@ -2494,17 +2489,17 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
               </span>
             </span>
             <span
-              className=""
+              class=""
               role="text"
             >
               <span
-                className="c11"
+                class="c11"
               >
                 Vidio
                 , 
               </span>
               <span
-                className="c18"
+                class="c18"
               >
                 APC ba ta isa ta kore ni ba – Buba Galadima
               </span>
@@ -2512,15 +2507,15 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
           </a>
         </li>
         <li
-          className="c13"
+          class="c13"
           role="listitem"
         >
           <a
-            className="c14"
+            class="c14"
             href="/hausa/labarai-42837051"
           >
             <span
-              className="c18"
+              class="c18"
             >
               Yaushe Obasanjo ya fara yi wa shugabannin kasa baki?
             </span>

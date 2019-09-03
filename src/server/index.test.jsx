@@ -5,10 +5,7 @@ import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import Document from './Document/component';
-import getDials from './getDials';
 import { localBaseUrl } from '../testHelpers/config';
-
-jest.mock('./getDials');
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -60,12 +57,12 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
   getStyleElement: jest.fn().mockReturnValue(<style />),
 }));
 
+const makeRequest = async path => request(server).get(path);
+
 describe('Server', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-
-  const makeRequest = async path => request(server).get(path);
 
   describe('/status', () => {
     it('should respond with a 200', async () => {
@@ -76,6 +73,21 @@ describe('Server', () => {
 
   describe('Manifest json', () => {
     describe('Services not on allowlist', () => {
+      beforeEach(() => {
+        const notFoundDataResponse = {
+          isAmp: false,
+          data: { some: 'data' },
+          service: 'someService',
+          status: 404,
+        };
+
+        mockRouteProps({
+          service: 'someService',
+          isAmp: false,
+          dataResponse: notFoundDataResponse,
+        });
+      });
+
       it('should serve a 404 error for service foobar', async () => {
         const { statusCode } = await makeRequest(
           '/foobar/articles/manifest.json',
@@ -122,6 +134,21 @@ describe('Server', () => {
       });
 
       describe('with non-existent data', () => {
+        beforeEach(() => {
+          const notFoundDataResponse = {
+            isAmp: false,
+            data: { some: 'data' },
+            service: 'someService',
+            status: 404,
+          };
+
+          mockRouteProps({
+            service: 'someService',
+            isAmp: false,
+            dataResponse: notFoundDataResponse,
+          });
+        });
+
         it('should respond with a 404', async () => {
           const { statusCode } = await makeRequest('/ERROR.json');
           expect(statusCode).toEqual(404);
@@ -180,9 +207,6 @@ describe('Server', () => {
         });
 
         it('should respond with rendered data', async () => {
-          const dials = { dial: 'value' };
-          getDials.mockResolvedValue(dials);
-
           const { text, status } = await makeRequest(
             `/${service}/articles/${id}`,
           );
@@ -213,20 +237,12 @@ describe('Server', () => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={dials}
             />,
           );
 
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
-        });
-
-        it('should respond successfully even if dials fetch fails', async () => {
-          getDials.mockRejectedValue(new Error('Fetch fail'));
-
-          const { status } = await makeRequest('/news/articles/c0000000001o');
-          expect(status).toBe(200);
         });
       });
 
@@ -301,9 +317,6 @@ describe('Server', () => {
         });
 
         it('should respond with rendered data', async () => {
-          const dials = { dial: 'value' };
-          getDials.mockResolvedValue(dials);
-
           const { text, status } = await makeRequest(`/${service}`);
 
           expect(status).toBe(200);
@@ -332,20 +345,12 @@ describe('Server', () => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={dials}
             />,
           );
 
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
-        });
-
-        it('should respond successfully even if dials fetch fails', async () => {
-          getDials.mockRejectedValue(new Error('Fetch fail'));
-
-          const { status } = await makeRequest('/news/articles/c0000000001o');
-          expect(status).toBe(200);
         });
       });
 
@@ -446,7 +451,6 @@ describe('Server', () => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={{}}
             />,
           );
 
@@ -491,6 +495,64 @@ describe('Server', () => {
         );
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+      });
+    });
+  });
+
+  describe('Unknown routes', () => {
+    const service = 'igbo';
+    const isAmp = false;
+    const dataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'news',
+      status: 404,
+    };
+
+    describe('404 status code', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse,
+        });
+      });
+
+      it('should respond with rendered data', async () => {
+        const { text, status } = await makeRequest(`/${service}/foobar`);
+
+        expect(status).toBe(404);
+
+        expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+          <h1>Mock app</h1>,
+        );
+
+        expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+          <Document
+            app="<h1>Mock app</h1>"
+            assets={[
+              `${localBaseUrl}/static/js/igbo-12345.12345.js`,
+              `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+              `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+              `${localBaseUrl}/static/js/main-12345.12345.js`,
+            ]}
+            assetOrigins={[
+              'https://ichef.bbci.co.uk',
+              'https://gel.files.bbci.co.uk',
+              localBaseUrl,
+              'https://logws1363.ati-host.net?',
+            ]}
+            data={dataResponse}
+            helmet={{ head: 'tags' }}
+            isAmp={isAmp}
+            service={service}
+            styleTags={<style />}
+          />,
+        );
+
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
       });
     });
   });
@@ -555,8 +617,6 @@ describe('Server HTTP Headers', () => {
 
     it('should not log the message', async () => {
       global.console.log = jest.fn();
-
-      const makeRequest = async path => request(server).get(path);
 
       await makeRequest('/status');
 

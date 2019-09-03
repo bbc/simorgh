@@ -8,7 +8,6 @@ global.console.log = jest.fn();
 const defaultProps = {
   isAmp: false,
   pageType: 'article',
-  dials: {},
   service: 'news',
 };
 
