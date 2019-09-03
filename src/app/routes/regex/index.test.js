@@ -9,6 +9,7 @@ import {
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
   mediaRadioAndTvRegexPathsArray,
+  mapPageRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -175,4 +176,10 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
     ];
     shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
   });
+});
+
+describe('mapPageRegexPath', () => {
+  const validRoutes = ['/pidgin/tori-49450859'];
+
+  shouldMatchValidRoutes(validRoutes, mapPageRegexPath);
 });

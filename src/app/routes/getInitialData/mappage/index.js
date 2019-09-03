@@ -1,9 +1,9 @@
 import fetchData from '../utils/fetchData';
 
 const getMediaAssetPageInitialData = props => {
-  const { service, mediaId } = props;
+  const { service, assetUri } = props;
 
-  const url = `http://localhost:7080/${service}/${mediaId}`;
+  const url = `http://localhost:7080/${service}/${assetUri}.json`;
 
   return fetchData({ url });
 };
