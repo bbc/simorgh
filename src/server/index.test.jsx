@@ -83,16 +83,19 @@ describe('Server', () => {
         expect(statusCode).toEqual(404);
       });
     });
+
     describe('Unknown data fetch error', () => {
-      mockRouteProps({
-        id: 'c0000000001o',
-        service: 'news',
-        isAmp: false,
-        dataResponse: Error('Error!'),
-        responseType: 'reject',
+      beforeEach(() => {
+        mockRouteProps({
+          id: 'c0000000001o',
+          service: 'news',
+          isAmp: false,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
       });
 
-      it('should serve a 500 error', async () => {
+      it('should respond with a 500', async () => {
         const { statusCode } = await makeRequest(
           `/news/articles/manifest.json`,
         );
@@ -106,16 +109,19 @@ describe('Server', () => {
       const { statusCode } = await makeRequest('/non/existent/sw.js');
       expect(statusCode).toEqual(404);
     });
+
     describe('Unknown data fetch error', () => {
-      mockRouteProps({
-        id: 'c0000000001o',
-        service: 'news',
-        isAmp: false,
-        dataResponse: Error('Error!'),
-        responseType: 'reject',
+      beforeEach(() => {
+        mockRouteProps({
+          id: 'c0000000001o',
+          service: 'news',
+          isAmp: false,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
       });
 
-      it('should serve a 500 error', async () => {
+      it('should respond with a 500', async () => {
         const { statusCode } = await makeRequest('/news/articles/sw.js');
         expect(statusCode).toEqual(500);
       });
