@@ -49,7 +49,7 @@ const service = {
           'Sabunta shafin',
           'Bincika shafin ta hanyar amfani da gurbin binciken BBC',
         ],
-        callToActionFirst: 'Maimakon haka, ziyarci shafin sashen',
+        callToActionFirst: 'Maimakon haka, ziyarci shafin sashen ',
         callToActionLinkText: 'BBC News Hausa',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/hausa',
