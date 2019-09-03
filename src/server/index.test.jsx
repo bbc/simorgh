@@ -99,7 +99,6 @@ describe('Server', () => {
     describe('Unknown data fetch error', () => {
       beforeEach(() => {
         mockRouteProps({
-          id: 'c0000000001o',
           service: 'news',
           isAmp: false,
           dataResponse: Error('Error!'),
@@ -117,9 +116,26 @@ describe('Server', () => {
   });
 
   describe('Service workers', () => {
-    it('should serve a 404 error if path to service worker is invalid', async () => {
-      const { statusCode } = await makeRequest('/non/existent/sw.js');
-      expect(statusCode).toEqual(404);
+    describe('Non-existent service workers', () => {
+      beforeEach(() => {
+        const notFoundDataResponse = {
+          isAmp: false,
+          data: { some: 'data' },
+          service: 'someService',
+          status: 404,
+        };
+
+        mockRouteProps({
+          service: 'someService',
+          isAmp: false,
+          dataResponse: notFoundDataResponse,
+        });
+      });
+
+      it('should serve a 404 error if path to service worker is invalid', async () => {
+        const { statusCode } = await makeRequest('/non/existent/sw.js');
+        expect(statusCode).toEqual(404);
+      });
     });
 
     describe('Unknown data fetch error', () => {
