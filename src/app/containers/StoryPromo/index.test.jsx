@@ -261,7 +261,6 @@ describe('StoryPromo Container', () => {
       const yorubaContainer = render(
         <WrappedStoryPromo service="yoruba" item={cpsItem} />,
       ).container;
-      console.log(yorubaContainer.getElementsByTagName('time')[0].innerHTML);
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 Èbibi 2019',
       );
