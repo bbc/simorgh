@@ -1,4 +1,5 @@
 import onClient from '../../../lib/utilities/onClient';
+import variantHandler from '../../../lib/utilities/variantHandler';
 import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import filterUnknownContentTypes from '../../../lib/utilities/preprocessor/rules/filterContentType';
@@ -20,9 +21,11 @@ const getFrontpageInitialData = async ({ service, variant = '' }) => {
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
 
-  // NB: If set, variant has a leading '/'
+  const processedVariant = variantHandler(service, variant);
 
-  const url = `${baseUrl}/${service}${variant}.json`;
+  const url = processedVariant
+    ? `${baseUrl}/${service}/${processedVariant}.json`
+    : `${baseUrl}/${service}.json`;
 
   return fetchData({ url, preprocessorRules });
 };

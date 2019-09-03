@@ -1,6 +1,7 @@
 import { matchRoutes } from 'react-router-config';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import variantHandler from '../../../../lib/utilities/variantHandler';
 import { fallbackAmpParam, fallbackServiceParam } from './routeFallbackParams';
 
 const getRouteProps = (routes, url) => {
@@ -15,7 +16,7 @@ const getRouteProps = (routes, url) => {
   const rawVariant = path(['variant'], params);
   const id = path(['id'], params);
 
-  const variant = rawVariant && rawVariant.replace('/', '');
+  const variant = variantHandler(service, rawVariant);
 
   return {
     isAmp: 'amp' in params ? !!amp : fallbackAmpParam(url),
