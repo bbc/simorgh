@@ -262,7 +262,7 @@ describe('StoryPromo Container', () => {
         <WrappedStoryPromo service="yoruba" item={cpsItem} />,
       ).container;
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        '2 Èbibi 2019',
+        '2 Èbibi 2019',
       );
     });
 
