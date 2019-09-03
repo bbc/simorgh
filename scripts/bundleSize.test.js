@@ -172,7 +172,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for Service1 is too small at 422 kB. Please update thresholds in './scripts/bundleSize.js'",
+        "Bundle size for Service1 is too small at 422 kB. Please update thresholds in './scripts/bundleSizeConfig.js'",
       );
     });
   });
@@ -218,7 +218,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for Service2 is too large at 585 kB. Please update thresholds in './scripts/bundleSize.js'",
+        "Bundle size for Service2 is too large at 585 kB. Please update thresholds in './scripts/bundleSizeConfig.js'",
       );
     });
   });
