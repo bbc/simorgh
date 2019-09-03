@@ -42,19 +42,26 @@ describe('Application', () => {
 });
 
 describe('Application unknown route error pages', () => {
-  var unknownRoutes = ['/foobar','/foobar.amp','/igbo/foobar','igbo/foobar.amp',]
-  unknownRoutes.forEach(function(url){
-  it('should display a news canonical error page', () => {
-    cy.visit(url, { failOnStatusCode: false });
-    console.log(appConfig);
-    cy.get('h1 span').should(
-      'contain',
-      `${appConfig['news'].translations.error[404].statusCode}`,
-    );
-    cy.get('h1').should(
-      'contain',
-      `${appConfig['news'].translations.error[404].title}`,
-    );
-  });
-});
+  if (Cypress.env('APP_ENV') === 'local') {
+    var unknownRoutes = [
+      '/foobar',
+      '/foobar.amp',
+      '/igbo/foobar',
+      'igbo/foobar.amp',
+    ];
+    unknownRoutes.forEach(function(url) {
+      it('should display a news canonical error page', () => {
+        cy.visit(url, { failOnStatusCode: false });
+        console.log(appConfig);
+        cy.get('h1 span').should(
+          'contain',
+          `${appConfig['news'].translations.error[404].statusCode}`,
+        );
+        cy.get('h1').should(
+          'contain',
+          `${appConfig['news'].translations.error[404].title}`,
+        );
+      });
+    });
+  }
 });
