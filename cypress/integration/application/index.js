@@ -49,7 +49,7 @@ describe('Application unknown route error pages', () => {
       '/igbo/foobar',
       'igbo/foobar.amp',
     ];
-    unknownRoutes.forEach(function(url) {
+    unknownRoutes.forEach(url => {
       it('should display a news canonical error page', () => {
         cy.testResponseCodeAndType(url, 404, 'text/html');
         cy.visit(url, { failOnStatusCode: false });
