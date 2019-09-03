@@ -38,8 +38,18 @@ class LoggerStream {
   }
 }
 
-const constructDataFilePath = (pageType, service, id) => {
-  const dataPath = pageType === 'frontpage' ? 'index.json' : `${id}.json`;
+const constructDataFilePath = ({ pageType, service, id, variant }) => {
+  let dataPath;
+
+  switch (pageType) {
+    case 'frontpage':
+      dataPath = variant ? `${variant}.json` : `index.json`;
+      break;
+    case 'articles':
+      dataPath = variant ? `${id}/${variant}.json` : `${id}.json`;
+      break;
+    default:
+  }
 
   return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
@@ -99,16 +109,25 @@ if (process.env.APP_ENV === 'local') {
       }),
     )
     .get(articleDataRegexPath, async ({ params }, res, next) => {
-      const { service, id } = params;
+      const { service, id, variant } = params;
 
-      const dataFilePath = constructDataFilePath('articles', service, id);
+      const dataFilePath = constructDataFilePath({
+        pageType: 'articles',
+        service,
+        id,
+        variant,
+      });
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(frontpageDataRegexPath, async ({ params }, res, next) => {
-      const { service } = params;
+      const { service, variant } = params;
 
-      const dataFilePath = constructDataFilePath('frontpage', service);
+      const dataFilePath = constructDataFilePath({
+        pageType: 'frontpage',
+        service,
+        variant,
+      });
 
       sendDataFile(res, dataFilePath, next);
     })

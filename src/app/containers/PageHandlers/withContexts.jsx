@@ -25,7 +25,7 @@ const WithContexts = Component => {
         <DialContextProvider dials={dials}>
           <ServiceContextProvider service={service} variant={variant}>
             <RequestContextProvider
-              bbcOrigin={bbcOrigin}
+              bbcOrigin={bbcOrigin} 
               id={id}
               isAmp={isAmp}
               pageType={pageType}

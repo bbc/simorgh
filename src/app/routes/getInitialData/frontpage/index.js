@@ -15,12 +15,14 @@ const preprocessorRules = [
   filterGroupsWithoutStraplines,
 ];
 
-const getFrontpageInitialData = async ({ service }) => {
+const getFrontpageInitialData = async ({ service, variant = '' }) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
 
-  const url = `${baseUrl}/${service}.json`;
+  // NB: If set, variant has a leading '/'
+
+  const url = `${baseUrl}/${service}${variant}.json`;
 
   return fetchData({ url, preprocessorRules });
 };
