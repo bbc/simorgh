@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`DialContext should provide a dials object 1`] = `
-<span>
-  {"dial":"value"}
-</span>
-`;
