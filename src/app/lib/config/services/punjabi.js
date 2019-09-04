@@ -37,7 +37,7 @@ const service = {
   translations: {
     seeAll: 'See all',
     home: 'ਖ਼ਬਰਾਂ',
-    currentPage: 'Current page',
+    currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
     skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
     error: {
       404: {
