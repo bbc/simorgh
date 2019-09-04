@@ -28,6 +28,7 @@ module.exports = {
             : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: true,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   afrique: {
@@ -61,6 +62,7 @@ module.exports = {
             : '/afrique/bbc_afrique_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   amharic: {
@@ -92,6 +94,7 @@ module.exports = {
             : '/amharic/bbc_amharic_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   arabic: {
@@ -125,6 +128,7 @@ module.exports = {
             : '/arabic/bbc_arabic_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   azeri: {
@@ -150,6 +154,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   bengali: {
@@ -183,6 +188,7 @@ module.exports = {
             : '/bengali/bbc_bangla_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   burmese: {
@@ -216,6 +222,7 @@ module.exports = {
             : '/burmese/bbc_burmese_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   cymrufyw: {
@@ -244,6 +251,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   gahuza: {
@@ -277,6 +285,7 @@ module.exports = {
             : '/gahuza/bbc_gahuza_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   gujarati: {
@@ -302,6 +311,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   hausa: {
@@ -335,6 +345,7 @@ module.exports = {
             : '/hausa/bbc_hausa_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   hindi: {
@@ -368,6 +379,7 @@ module.exports = {
             : '/hindi/bbc_hindi_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   igbo: {
@@ -390,6 +402,7 @@ module.exports = {
       },
       frontPage: { path: '/igbo', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   indonesia: {
@@ -421,6 +434,7 @@ module.exports = {
             : '/indonesia/bbc_indonesian_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   japanese: {
@@ -446,6 +460,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   korean: {
@@ -477,6 +492,7 @@ module.exports = {
             : '/korean/bbc_korean_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   kyrgyz: {
@@ -510,6 +526,7 @@ module.exports = {
             : '/kyrgyz/bbc_kyrgyz_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   marathi: {
@@ -535,6 +552,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   mundo: {
@@ -560,6 +578,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   naidheachdan: {
@@ -588,6 +607,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   nepali: {
@@ -621,6 +641,7 @@ module.exports = {
             : '/nepali/bbc_nepali_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   news: {
@@ -643,6 +664,7 @@ module.exports = {
       },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   pashto: {
@@ -676,6 +698,7 @@ module.exports = {
             : '/pashto/bbc_pashto_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   persian: {
@@ -707,6 +730,7 @@ module.exports = {
             : '/persian/bbc_persian_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   pidgin: {
@@ -755,6 +779,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   punjabi: {
@@ -779,6 +804,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   russian: {
@@ -804,6 +830,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   serbian: {
@@ -813,6 +840,7 @@ module.exports = {
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   sinhala: {
@@ -846,6 +874,7 @@ module.exports = {
             : '/sinhala/bbc_sinhala_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   somali: {
@@ -878,6 +907,7 @@ module.exports = {
             : '/somali/bbc_somali_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   sport: {
@@ -887,6 +917,7 @@ module.exports = {
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   swahili: {
@@ -920,6 +951,7 @@ module.exports = {
             : '/swahili/bbc_swahili_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   tamil: {
@@ -953,6 +985,7 @@ module.exports = {
             : '/tamil/bbc_tamil_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   telugu: {
@@ -978,6 +1011,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   thai: {
@@ -1003,6 +1037,7 @@ module.exports = {
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   tigrinya: {
@@ -1034,6 +1069,7 @@ module.exports = {
             : '/tigrinya/bbc_tigrinya_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   turkce: {
@@ -1059,6 +1095,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   ukchina: {
@@ -1069,6 +1106,7 @@ module.exports = {
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   ukrainian: {
@@ -1094,6 +1132,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   urdu: {
@@ -1127,6 +1166,7 @@ module.exports = {
             : '/urdu/bbc_urdu_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   uzbek: {
@@ -1160,6 +1200,7 @@ module.exports = {
             : '/uzbek/bbc_uzbek_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   vietnamese: {
@@ -1185,6 +1226,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   yoruba: {
@@ -1207,6 +1249,7 @@ module.exports = {
       },
       frontPage: { path: '/yoruba', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   zhongwen: {
@@ -1217,6 +1260,7 @@ module.exports = {
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
 };
