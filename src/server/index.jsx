@@ -101,6 +101,22 @@ if (process.env.APP_ENV === 'local') {
         res.redirect(301, req.url.slice(0, -1));
       else next();
     })
+    .use(({ url }, res, next) => {
+      // TODO, correct this, its a bodge
+      const { service, variant, match } = getRouteProps(routes, url);
+
+      if (
+        !variant &&
+        match &&
+        match.isExact &&
+        ['serbian', 'ukchina', 'zhongwen'].includes(service)
+      ) {
+        const defaultVariant = service === 'serbian' ? '/cyr' : '/simp';
+        res.redirect(302, `${url}${defaultVariant}`);
+      } else {
+        next();
+      }
+    })
     .use(
       expressStaticGzip(publicDirectory, {
         enableBrotli: true,

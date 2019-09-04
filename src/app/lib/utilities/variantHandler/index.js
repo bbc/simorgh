@@ -8,8 +8,8 @@ const servicesWithVariants = {
 export const variantSanitzer = variant => variant && variant.replace('/', '');
 
 // If service has variants, use it or default to first variant in array
-// If service doesnt have variants, return undefined
-export const variantHandler = (service, rawVariant) => {
+// If service doesnt have variants, return 'default'
+export const variantDataKey = (service, rawVariant) => {
   const allowedVariants = servicesWithVariants[service];
   const variant = variantSanitzer(rawVariant);
 
@@ -17,5 +17,5 @@ export const variantHandler = (service, rawVariant) => {
     return allowedVariants.includes(variant) ? variant : allowedVariants[0];
   }
 
-  return undefined;
+  return 'default';
 };
