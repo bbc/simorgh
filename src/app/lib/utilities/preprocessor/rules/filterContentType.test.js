@@ -25,26 +25,14 @@ const cpsItems = [
 
 const TextAssetType = {
   name: 'Test standard link promo',
-  summary: 'This is a standard link promo',
-  indexImage: {},
-  indexThumbnail: {},
-  uri: 'http://this.is.a.test.com/',
   contentType: 'Text',
   assetTypeCode: 'PRO',
-  timestamp: 1527598380040,
-  type: 'link',
 };
 
 const AudioAssetType = {
-  name: 'Test standard link promo',
-  summary: 'This is a standard link promo',
-  indexImage: {},
-  indexThumbnail: {},
-  uri: 'http://this.is.a.test.com/',
+  name: 'Test audio link promo',
   contentType: 'Audio',
   assetTypeCode: 'PRO',
-  timestamp: 1527598380040,
-  type: 'link',
 };
 
 describe('filterUnknownContentTypes', () => {
@@ -285,14 +273,8 @@ describe('filterUnknownContentTypes', () => {
               items: [
                 {
                   name: 'Test assetTypeCode',
-                  summary: 'This is a test',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
                   contentType: 'Text',
                   assetTypeCode: 'OOO',
-                  timestamp: 1527598380040,
-                  type: 'link',
                 },
               ],
             },
@@ -358,9 +340,7 @@ describe('filterUnknownContentTypes', () => {
               items: [
                 {
                   name: 'Test assetTypeCode 1',
-                  summary: 'This is the first test',
-                  indexImage: {},
-                  indexThumbnail: {},
+                  contentType: 'Audio',
                 },
               ],
             },
@@ -389,14 +369,8 @@ describe('filterUnknownContentTypes', () => {
               items: [
                 {
                   name: 'Test assetTypeCode',
-                  summary: 'This is a test',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Text',
-                  assetTypeCode: 'OOO',
-                  timestamp: 1527598380040,
-                  type: 'link',
+                  contentType: 'SomeContent',
+                  assetTypeCode: 'PRO',
                 },
                 TextAssetType,
                 AudioAssetType,
