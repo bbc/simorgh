@@ -123,6 +123,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'ብዙ የተነበቡ',
+    lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
