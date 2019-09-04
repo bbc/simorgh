@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 import ArticleMain from '.';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';

@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import atiPageViewParams from '../../atiUrl';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContext } from '../../../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 
-import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
+import { getPublishedDatetime } from '#lib/analyticsUtils';
 import {
   getLanguage,
   getContentId,

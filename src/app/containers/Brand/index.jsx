@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
 import { bool } from 'prop-types';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandContainer = props => {
   const { product, serviceLocalizedName, brandSVG, service } = useContext(

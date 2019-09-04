@@ -1,9 +1,9 @@
 import React from 'react';
 import { string, node } from 'prop-types';
 import ArticleMain from '.';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
 import {
   articleDataNews,
   articleDataPersian,

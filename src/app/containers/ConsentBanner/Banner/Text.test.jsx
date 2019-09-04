@@ -1,8 +1,8 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../../testHelpers';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
+import { shouldMatchSnapshot } from '#testHelpers';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import BannerText from './Text';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const bannerMessaging = {
   uk: {

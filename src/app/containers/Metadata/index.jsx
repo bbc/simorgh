@@ -1,20 +1,20 @@
 import React, { useContext } from 'react';
 import { shape, oneOfType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import {
   optimoMetadataPropTypes,
   cpsMetadataPropTypes,
   mediaMetadataPropTypes,
-} from '../../models/propTypes/metadata';
+} from '#models/propTypes/metadata';
 import {
   optimoPromoPropTypes,
   cpsPromoPropTypes,
   mediaPromoPropTypes,
-} from '../../models/propTypes/promo';
+} from '#models/propTypes/promo';
 import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];

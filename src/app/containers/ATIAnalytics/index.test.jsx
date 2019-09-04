@@ -1,10 +1,10 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import renderer from 'react-test-renderer';
-import { isNull, suppressPropWarnings } from '../../../testHelpers';
+import { isNull, suppressPropWarnings } from '#testHelpers';
 import { articleDataNews } from '../Article/fixtureData';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 import ATIAnalytics from '.';
 import * as amp from './amp';

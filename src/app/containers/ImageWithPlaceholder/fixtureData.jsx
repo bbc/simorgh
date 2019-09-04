@@ -1,8 +1,8 @@
 import React from 'react';
 import { any, bool, string, number, objectOf } from 'prop-types';
 import FigureContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',

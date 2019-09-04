@@ -1,8 +1,8 @@
 import { useEffect, useContext } from 'react';
-import nodeLogger from '../../lib/logger.node';
-import { UserContext } from '../../contexts/UserContext';
+import nodeLogger from '#lib/logger.node';
+import { UserContext } from '#contexts/UserContext';
 import useToggle from '../Toggle/useToggle';
-import onClient from '../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import boomr from './boomr';
 
 const logger = nodeLogger(__filename);
