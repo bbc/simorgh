@@ -12,9 +12,6 @@ const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
 
 const { error } = console;
 
-let reactErrorsCountPerTestSuite = 0;
-const reactErrorsLimitPerTestSuite = 6; // The goal is to have zero React errors per suite so keep fixing errors and lowering this limit
-
 const didSuppressWarning = message => {
   const { expectedWarnings } = window;
   if (expectedWarnings && Array.isArray(expectedWarnings)) {
@@ -36,18 +33,14 @@ console.error = (message, ...rest) => {
   if (didSuppressWarning(message)) return;
 
   if (REACT_ERRORS_REGEX.test(message)) {
-    reactErrorsCountPerTestSuite += 1;
-
-    if (reactErrorsCountPerTestSuite > reactErrorsLimitPerTestSuite) {
-      throw new Error(
-        [
-          chalk.red.bold(
-            'Test failed because too many React warnings were detected. Please fix the following:',
-          ),
-          chalk.red(message),
-        ].join('\n'),
-      );
-    }
+    throw new Error(
+      [
+        chalk.red.bold(
+          'Test failed because a React warning was detected. Please fix the following:',
+        ),
+        chalk.red(message),
+      ].join('\n'),
+    );
   }
 
   error(message, ...rest);
