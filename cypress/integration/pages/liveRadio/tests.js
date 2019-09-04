@@ -29,6 +29,19 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           },
         );
       });
+
+      it('should render an audio player embed', () => {
+        cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
+          ({ body }) => {
+            if (body.metadata.language === 'en-gb') {
+              const { id, externalId } = body.content.blocks[2];
+              cy.get(
+                `iframe[src=${`/ws/av-embeds/media/${id}/${externalId}`}]`,
+              ).should('be.visible');
+            }
+          },
+        );
+      });
     });
 
     describe('LinkedData', () => {
