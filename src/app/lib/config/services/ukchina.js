@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `zh-cn`,
-  datetimeLocale: `zh-cn`.toLowerCase(),
+  datetimeLocale: `zh-cn`,
   service: 'ukchina',
   serviceName: '英伦网',
   themeColor: `${C_POSTBOX}`,

@@ -18,7 +18,6 @@ const preprocessorRules = [
   filterEmptyGroupItems,
   applySquashTopstories,
 ];
-const dials = { mpulse: false };
 
 storiesOf('Pages|Front Page', module)
   .add('Igbo', () => {
@@ -37,7 +36,6 @@ storiesOf('Pages|Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
-        dials={dials}
       />
     );
   })
@@ -57,7 +55,6 @@ storiesOf('Pages|Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
-        dials={dials}
       />
     );
   })
@@ -77,7 +74,6 @@ storiesOf('Pages|Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
-        dials={dials}
       />
     );
   })
@@ -97,7 +93,6 @@ storiesOf('Pages|Front Page', module)
         loading={false}
         error=""
         pageType="frontPage"
-        dials={dials}
       />
     );
   });

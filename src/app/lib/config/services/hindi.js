@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `hi-IN`,
-  datetimeLocale: `hi-IN`.toLowerCase(),
+  datetimeLocale: `hi-in`,
   service: 'hindi',
   serviceName: 'News हिंदी',
   themeColor: `${C_POSTBOX}`,

@@ -49,7 +49,6 @@ storiesOf('Pages|Media Page', module)
           loading={false}
           error=""
           pageType="media"
-          dials={{ mpulse: false }}
         />
       ),
       Object.keys(liveRadioFixtures),
