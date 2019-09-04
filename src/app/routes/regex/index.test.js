@@ -9,7 +9,7 @@ import {
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
   mediaRadioAndTvRegexPathsArray,
-  mapPageRegexPath,
+  mediaAssetPageRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -178,7 +178,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
   });
 });
 
-describe('mapPageRegexPath', () => {
+describe('mediaAssetPageRegexPath', () => {
   const validRoutes = [
     '/pidgin/tori-49450859',
     '/pidgin/tori-49450859.amp',
@@ -188,7 +188,7 @@ describe('mapPageRegexPath', () => {
     '/punjabi/international-49567825.amp',
   ];
 
-  shouldMatchValidRoutes(validRoutes, mapPageRegexPath);
+  shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
   const inValidRoutes = [
     '/pidgin/tori-494859',
     '/blah/tori-49450859',
@@ -196,5 +196,5 @@ describe('mapPageRegexPath', () => {
     '/pidgin/tori-49450859/',
     '/pidgin/tori-494859.amp',
   ];
-  shouldNotMatchInvalidRoutes(inValidRoutes, mapPageRegexPath);
+  shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageRegexPath);
 });

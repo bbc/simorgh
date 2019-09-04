@@ -29,5 +29,5 @@ export const mediaRadioAndTvRegexPathsArray = buildMediaRoutes(
 
 export const mediaDataRegexPath = buildMediaDataRoutes(servicesWithRadioOrTv);
 
-export const mapPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):amp(${ampRegex})?`;
-export const mapPageDataRegexPath = `${mapPageRegexPath}.json`;
+export const mediaAssetPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):amp(${ampRegex})?`;
+export const mediaAssetPageDataRegexPath = `${mediaAssetPageRegexPath}.json`;

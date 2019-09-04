@@ -10,7 +10,7 @@ import {
   articleRegexPath,
   frontpageRegexPath,
   mediaRadioAndTvRegexPathsArray,
-  mapPageRegexPath,
+  mediaAssetPageRegexPath,
 } from './regex';
 
 const routes = [
@@ -36,7 +36,7 @@ const routes = [
     pageType: 'media',
   },
   {
-    path: mapPageRegexPath,
+    path: mediaAssetPageRegexPath,
     exact: true,
     component: MediaPage,
     getInitialData: getMediaAssetPageInitialData,
