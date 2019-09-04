@@ -22,7 +22,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `gd`,
-  datetimeLocale: `gd`.toLowerCase(),
+  datetimeLocale: `gd`,
   service: 'naidheachdan',
   serviceName: 'Naidheachdan',
   themeColor: `${C_POSTBOX}`,

@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `rw-RW`,
-  datetimeLocale: `rw-RW`.toLowerCase(),
+  datetimeLocale: `rw-rw`,
   service: 'gahuza',
   serviceName: 'News Gahuza',
   themeColor: `${C_POSTBOX}`,
