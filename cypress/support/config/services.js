@@ -729,6 +729,13 @@ module.exports = {
       },
       frontPage: { path: '/pidgin', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/pidgin/tori-49450859'
+            : undefined,
+        smoke: true,
+      },
     },
   },
   portuguese: {
