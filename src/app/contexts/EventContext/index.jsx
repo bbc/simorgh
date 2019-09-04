@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { node } from 'prop-types';
 import { useWindowEvent } from './useWindowEvent';
+import { useHandlerMap } from './useHandlerMap';
 
 export const EventContext = React.createContext({
   useWindowEvent,
@@ -28,22 +29,7 @@ export const EventContextProvider = ({ children }) => {
     useClickTracker,
   };
 
-  useWindowEvent('click', e => {
-    if (e && e.target) {
-      const attrs = Object.keys(handlerMap).filter(attr =>
-        e.target.matches(attr),
-      );
-
-      attrs.forEach(attr => {
-        const handlers = handlerMap[attr] || [];
-        handlers.forEach(handler => {
-          if (typeof handler === 'function') {
-            handler(e);
-          }
-        });
-      });
-    }
-  });
+  useWindowEvent('click', useHandlerMap(handlerMap));
 
   return (
     <EventContext.Provider value={value}>{children}</EventContext.Provider>
