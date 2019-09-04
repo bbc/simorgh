@@ -20,7 +20,7 @@ const mockToggleValues = {
   },
 };
 
-jest.mock('../../lib/config/toggles', () => mockToggleValues);
+jest.mock('#lib/config/toggles', () => mockToggleValues);
 
 // Require after mock to allow mocking of JS object
 const { ToggleContext, ToggleContextProvider } = require('./index');

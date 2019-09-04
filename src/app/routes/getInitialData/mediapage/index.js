@@ -1,5 +1,5 @@
 import fetchData from '../utils/fetchData';
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import getBaseUrl from '../utils/getBaseUrl';
 
 const getMediaPageInitialData = ({ service, serviceId, mediaId }) => {

@@ -14,7 +14,7 @@ const useToggleMock = enabled => ({ enabled });
 
 jest.mock('./boomr', () => jest.fn());
 jest.mock('../Toggle/useToggle', () => jest.fn());
-jest.mock('../../lib/utilities/onClient', () => jest.fn());
+jest.mock('#lib/utilities/onClient', () => jest.fn());
 jest.mock('react', () => {
   const original = jest.requireActual('react');
   return {

@@ -4,8 +4,8 @@ import { shape, bool, string } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
-import { storyItem } from '../../../models/propTypes/storyItem';
-import formatDuration from '../../../lib/utilities/formatDuration';
+import { storyItem } from '#models/propTypes/storyItem';
+import formatDuration from '#lib/utilities/formatDuration';
 
 const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';

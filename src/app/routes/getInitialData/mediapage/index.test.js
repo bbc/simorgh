@@ -1,6 +1,6 @@
 import fetchData from '../utils/fetchData';
 import baseUrl from '../utils/getBaseUrl';
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 
 import getMediaPageInitialData from '.';
 
@@ -13,7 +13,7 @@ jest.mock('../utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
 let onClientMockResponse = true;
-jest.mock('../../../lib/utilities/onClient', () => jest.fn());
+jest.mock('#lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockResponse);
 
 jest.mock('../utils/fetchData', () => jest.fn());

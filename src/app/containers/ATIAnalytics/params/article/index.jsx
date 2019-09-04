@@ -10,7 +10,7 @@ import {
   getPageIdentifier,
   getPromoHeadline,
   getThingAttributes,
-} from '../../../../lib/analyticsUtils/article';
+} from '#lib/analyticsUtils/article';
 
 const ArticleAtiParams = articleData => {
   const { platform, isUK, statsDestination, previousPath, origin } = useContext(

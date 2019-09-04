@@ -10,7 +10,7 @@ import idSanitiser from '#lib/utilities/idSanitiser';
 import {
   GridItemConstrainedMedium,
   GridItemConstrainedLarge,
-} from '../../lib/styledGrid';
+} from '#lib/styledGrid';
 
 const Headings = {
   headline: Headline,
