@@ -47,11 +47,8 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
               .tz(firstPublished, `${appConfig[service].timezone}`)
               .locale(language)
               .format('D MMMM YYYY');
-
-            // exempt pashto as we do have currently their locale implementation
-            if (service !== 'pashto') {
-              if (lastPublished === firstPublished)
-                cy.get('time').should('contain', updatedTimestamp);
+            if (lastPublished === firstPublished) {
+              cy.get('time').should('contain', updatedTimestamp);
             } else {
               cy.get('time')
                 .eq(0)
@@ -60,7 +57,8 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
                 .eq(1)
                 .should(
                   'contain',
-                  `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+                  `${`${appConfig[service].articleTimestampPrefix}` +
+                    ' '}${updatedTimestamp}`,
                 );
             }
           },
