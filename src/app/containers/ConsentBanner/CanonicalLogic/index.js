@@ -6,6 +6,7 @@ const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
 const COOKIE_EXPIRY = 365;
 const COOKIE_BANNER_APPROVED = '1';
+const EXPLICIT_COOKIE_ACCEPTED_VALUES = ['1', '2'];
 const POLICY_APPROVED = '111';
 const POLICY_DENIED = '000';
 const PRIVACY_COOKIE_CURRENT = 'july2019';
@@ -28,7 +29,7 @@ const showPrivacyBanner = () => {
   );
 };
 const showCookieBanner = () =>
-  Cookie.get(EXPLICIT_COOKIE) !== COOKIE_BANNER_APPROVED;
+  !EXPLICIT_COOKIE_ACCEPTED_VALUES.includes(Cookie.get(EXPLICIT_COOKIE));
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
 const setSeenPrivacyBanner = () =>
