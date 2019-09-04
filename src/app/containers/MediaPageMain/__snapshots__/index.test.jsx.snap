@@ -167,7 +167,6 @@ exports[`Media Page Main should match snapshot 1`] = `
     id="metadata"
   />
   <main
-    id="main"
     role="main"
   >
     <div
