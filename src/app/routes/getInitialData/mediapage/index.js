@@ -1,4 +1,5 @@
 import fetchData from '../utils/fetchData';
+import addIdsToBlocks from './addIdsToBlocks';
 
 const getMediaPageInitialData = props => {
   const { service, mediaId } = props;
@@ -10,7 +11,10 @@ const getMediaPageInitialData = props => {
 
   const url = `http://localhost:7080/${service}/${serviceId}/${mediaId}.json`;
 
-  return fetchData({ url });
+  return fetchData({
+    url,
+    preprocessorRules: [addIdsToBlocks],
+  });
 };
 
 export default getMediaPageInitialData;
