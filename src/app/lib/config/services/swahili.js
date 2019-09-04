@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `sw-KE`,
-  datetimeLocale: `sw-KE`.toLowerCase(),
+  datetimeLocale: `sw-ke`,
   service: 'swahili',
   serviceName: 'News Swahili',
   themeColor: `${C_POSTBOX}`,

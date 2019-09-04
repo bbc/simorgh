@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `uz-UZ`,
-  datetimeLocale: `uz-UZ`.toLowerCase(),
+  datetimeLocale: `uz-uz`,
   service: 'uzbek',
   serviceName: "News O'zbek",
   themeColor: `${C_POSTBOX}`,
