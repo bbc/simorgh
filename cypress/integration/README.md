@@ -29,6 +29,7 @@ Key points:
      - We recommend using conditional logic to select just the services/pagetypes that are necessary. e.g. only run ATI analytics tests on `afaanoromoo, cymrufyw, japanese, naidheachdan, news` instead of all 44 services, since these cover all variants. 
    - **testsThatFollowSmokeTestConfig** - this is where most tests will go. These will only run on PRs if the `smoke` value is `true` for that service/pageType combination. [services config file](../support/config)
    - **testsThatNeverRunDuringSmokeTesting** - this is for tests that are very CPU intensive, long running or low priority. It's a good place for testing layout or page-width variants.
+   - Similarly the same kind of logic applies to the tests that run for all pages, and the naming conventions appends ForAllPages, ForAllCanonicalPages or ForAllPages e.g. **testsThatNeverRunDuringSmokeTestingForAllPages**
 
 
 NB Despite all these rules, we don't favour highly abstracted tests, duplication of tests is preferred where it gives the same test coverage and enhances readability.
@@ -36,3 +37,7 @@ NB Despite all these rules, we don't favour highly abstracted tests, duplication
 ## [Special Features](./specialFeatures)
 There are features on pages that cannot be tested in one page visit. The only such example is cookie banner/GDPR logic testing. It is not envisaged that any other tests would be added here.
 
+## Consequences of smoke testing
+As a subset of the integration tests are run at all time outside of a cron job, there is a chance of tests failing in the cron job but not failing anywhere else. This will usually be a result of a branch being merged into the default (latest) branch, but can also be due to changes in data in the environment the tests fail in (fixture data locally, test and live env data in those environments respectively).
+
+Investigations of such failures are handled by an internal 'Core pod', it is their discretion whether to patch it themselves, ask the implementor who introduced the regression to fix their own work or they may choose to revert the PR. You will not be consulted about the decision to revert, but you will be promptly notified. The stability of latest is more important than any single PR as dozens of people's work depends on it. But, as a general rule we always try to fix-forwards as we wish to 'move fast and break things', but hopefully not in the same way twice.
