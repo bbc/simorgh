@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoContainer from '.';
-import fixture from '../../../../data/pidgin/frontpage';
+import fixture from '../../../../data/azeri/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 const mediaFixture = type =>
@@ -36,6 +36,7 @@ firstFixture.timestamp = Date.now();
 const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
 const standardPromo = promoFixture('Text');
+const audioPromo = promoFixture('Audio');
 
 const getStoryPromo = platform => item => (
   <ServiceContextProvider service="news">
@@ -58,11 +59,13 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('canonical', () => getCanonicalStoryPromo(firstFixture))
   .add('audio promo', () => getCanonicalStoryPromo(audioFixture))
   .add('video promo', () => getCanonicalStoryPromo(videoFixture))
-  .add('standard link promo', () => getCanonicalStoryPromo(standardPromo));
+  .add('standard link promo', () => getCanonicalStoryPromo(standardPromo))
+  .add('audio link promo', () => getCanonicalStoryPromo(audioPromo));
 
 storiesOf('Containers|Story Promo/AMP', module)
   .addDecorator(AmpDecorator)
   .add('amp', () => getAmpStoryPromo(firstFixture))
   .add('audio promo - amp', () => getAmpStoryPromo(audioFixture))
   .add('video promo - amp', () => getAmpStoryPromo(videoFixture))
-  .add('standard link promo', () => getAmpStoryPromo(standardPromo));
+  .add('standard link promo', () => getAmpStoryPromo(standardPromo))
+  .add('audio link promo', () => getAmpStoryPromo(audioPromo));
