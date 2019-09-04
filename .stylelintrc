@@ -1,5 +1,15 @@
 {
-  "processors": ["stylelint-processor-styled-components"],
+  "processors": [
+    [
+      "stylelint-processor-styled-components", {
+        "parserPlugins": [
+          "dynamicImport",
+          "jsx",
+          "throwExpressions"
+        ]
+      }
+    ]
+  ],
   "extends": [
     "stylelint-config-recommended",
     "stylelint-config-styled-components"
