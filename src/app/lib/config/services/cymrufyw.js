@@ -22,7 +22,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `cy`,
-  datetimeLocale: `cy`.toLowerCase(),
+  datetimeLocale: `cy`,
   service: 'cymrufyw',
   serviceName: 'Cymru Fyw',
   themeColor: `${C_POSTBOX}`,
