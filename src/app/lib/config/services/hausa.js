@@ -14,12 +14,12 @@ const service = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
   defaultImageAltText: 'BBC News Hausa',
   dir: `ltr`,
-  externalLinkText: ', external',
-  imageCaptionOffscreenText: 'Image caption, ',
-  videoCaptionOffscreenText: 'Video caption, ',
-  audioCaptionOffscreenText: 'Audio caption',
+  externalLinkText: ', adireshin waje',
+  imageCaptionOffscreenText: 'Bayanan hoto, ',
+  videoCaptionOffscreenText: 'Bayanan bidiyo, ',
+  audioCaptionOffscreenText: 'Bayanan sauti',
   defaultCaptionOffscreenText: 'Caption, ',
-  imageCopyrightOffscreenText: 'Image source, ',
+  imageCopyrightOffscreenText: 'Asalin hoton, ',
   locale: `ha-GH`,
   datetimeLocale: `ha-gh`,
   service: 'hausa',
@@ -41,29 +41,27 @@ const service = {
     error: {
       404: {
         statusCode: '404',
-        title: '404 - Ba a samu shafin ba',
+        title: '404 - Ba za a samu wannan shafin ba',
         message:
-          'Mai yiwuwa ba ku rubuta adireshin daidai ba. Sake duba adireshin da kuma rubutun.',
+          'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'Sake duba adireshin',
+          'Sabunta shafin',
+          'Bincika shafin ta hanyar amfani da gurbin binciken BBC',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'Labaran Duniya',
+        callToActionFirst: 'Maimakon haka, ziyarci shafin sashen ',
+        callToActionLinkText: 'BBC News Hausa',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/hausa',
       },
       500: {
         statusCode: '500',
-        title: '500 - Kuskure',
-        message: 'An samu kuskure. A sabunta shafi.',
-        solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
-        ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'Labaran Duniya',
+        title: "500 - Matsalar na'ura",
+        message:
+          'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
+        solutions: ['Sabunta shafin', 'Ziyarci shafin daga baya'],
+        callToActionFirst: 'Maimakon haka, ziyarci shafin sashen ',
+        callToActionLinkText: 'BBC News Hausa',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/hausa',
       },
@@ -134,11 +132,11 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Wanda aka fi karantawa',
+    lastUpdated: 'Na baya-bayan nan ',
+  },
   footer: {
-    externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
-    },
     links: [
       {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -149,10 +147,6 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
@@ -161,15 +155,15 @@ const service = {
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
         href: 'https://www.bbc.com/contact/',
         text: 'Contact the BBC',
       },
     ],
     copyrightText: 'BBC. BBC ba tada alhaki game da shafukan da ba nata ba',
+    externalLink: {
+      href: 'https://www.bbc.co.uk/help/web/links/',
+      text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
+    },
   },
   fonts: [],
   timezone: 'Europe/London',
