@@ -1,8 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useContext } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '../../lib/utilities/usePrevious';
+import { EventContext } from '../../contexts/EventContext';
 
 export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const {
@@ -25,6 +26,14 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   });
 
   const isInitialMount = useRef(true);
+
+  const { useClickTracker } = useContext(EventContext);
+
+  useClickTracker('h1', e => console.log({ elem: 'h1', e }));
+
+  useClickTracker('h1', e => console.log({ elem: 'h1', e }));
+
+  useClickTracker('div', e => console.log({ elem: 'div', e }));
 
   useEffect(() => {
     if (isInitialMount.current) {

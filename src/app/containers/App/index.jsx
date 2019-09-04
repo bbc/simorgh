@@ -6,11 +6,14 @@
 import React from 'react';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
 import App from './App';
+import { EventContextProvider } from '../../contexts/EventContext'
 
 export const ClientApp = props => (
-  <BrowserRouter {...props}>
-    <App initialData={props.data} routes={props.routes} />
-  </BrowserRouter>
+  <EventContextProvider>
+    <BrowserRouter {...props}>
+      <App initialData={props.data} routes={props.routes} />
+    </BrowserRouter>
+  </EventContextProvider>
 );
 
 export const ServerApp = props => (
