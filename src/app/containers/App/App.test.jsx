@@ -28,16 +28,19 @@ describe('App', () => {
     <h1>{initialData.pageData}</h1>,
   );
 
-  beforeAll(() => {
-    wrapper = mount(
+  const mountApp = pathname =>
+    mount(
       <App
-        location={{ pathname: 'pathnameOne' }}
+        location={{ pathname }}
         routes={[]}
         initialData={initialData}
         bbcOrigin="https://www.bbc.co.uk"
         history={history}
       />,
     );
+
+  beforeAll(() => {
+    wrapper = mountApp('pathnameOne');
   });
 
   it('should return rendered routes', () => {
@@ -52,6 +55,7 @@ describe('App', () => {
       loading: false,
       pageType: 'article',
       service: 'news',
+      pathname: 'pathnameOne',
       previousPath: null,
     });
     expect(wrapper).toMatchSnapshot();
@@ -85,7 +89,7 @@ describe('App', () => {
           route.getInitialData.mockImplementation(() => Promise.reject(error));
 
           await act(async () => {
-            wrapper.setProps({ location: { pathname: 'pathnameThree' } });
+            wrapper.setProps({ location: { pathname: 'pathnameTwo' } });
           });
 
           await route.getInitialData;
@@ -104,6 +108,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'news',
+              pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
             },
           );
@@ -120,6 +125,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'news',
+              pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
             },
           );
@@ -128,7 +134,7 @@ describe('App', () => {
 
       describe('successful fetch of route, match, and initial props', () => {
         it('should call set state with new data', async () => {
-          const pathname = 'pathnameFour';
+          const pathname = 'pathnameThree';
           const data = 'Really cool data';
 
           route.getInitialData.mockImplementation(() => Promise.resolve(data));
@@ -156,7 +162,8 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'news',
-              previousPath: 'pathnameThree',
+              pathname: 'pathnameThree',
+              previousPath: 'pathnameTwo',
             },
           );
 
@@ -173,7 +180,8 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'news',
-              previousPath: 'pathnameThree',
+              pathname: 'pathnameThree',
+              previousPath: 'pathnameTwo',
             },
           );
         });
