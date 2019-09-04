@@ -1,5 +1,5 @@
 import config from '../../../support/config/services';
-import appConfig from '#app/lib/config/services';
+import appConfig from '#lib/config/services';
 import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
