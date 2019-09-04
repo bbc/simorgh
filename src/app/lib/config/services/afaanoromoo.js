@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `om-ET`,
-  datetimeLocale: `om-ET`.toLowerCase(),
+  datetimeLocale: `om-et`,
   service: 'afaanoromoo',
   serviceName: 'News Afaan Oromoo',
   themeColor: `${C_POSTBOX}`,

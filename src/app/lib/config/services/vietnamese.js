@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `vi-VN`,
-  datetimeLocale: `vi-VN`.toLowerCase(),
+  datetimeLocale: `vi-vn`,
   service: 'vietnamese',
   serviceName: 'BBC News Tiếng Việt',
   themeColor: `${C_POSTBOX}`,

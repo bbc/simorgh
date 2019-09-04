@@ -22,7 +22,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `ta-IN`,
-  datetimeLocale: `ta-IN`.toLowerCase(),
+  datetimeLocale: `ta-in`,
   service: 'tamil',
   serviceName: 'News தமிழ்',
   themeColor: `${C_POSTBOX}`,

@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Asalin hoton, ',
   locale: `ha-GH`,
-  datetimeLocale: `ha-GH`.toLowerCase(),
+  datetimeLocale: `ha-gh`,
   service: 'hausa',
   serviceName: 'News Hausa',
   themeColor: `${C_POSTBOX}`,

@@ -22,7 +22,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `my-MM`,
-  datetimeLocale: `my-MM`.toLowerCase(),
+  datetimeLocale: `my-mm`,
   service: 'burmese',
   serviceName: 'မြန်မာ',
   themeColor: `${C_POSTBOX}`,

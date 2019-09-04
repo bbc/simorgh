@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `ky-KG`,
-  datetimeLocale: `ky-KG`.toLowerCase(),
+  datetimeLocale: `ky-kg`,
   service: 'kyrgyz',
   serviceName: 'News Кыргыз КызMATы',
   themeColor: `${C_POSTBOX}`,

@@ -25,7 +25,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `ti-ET`,
-  datetimeLocale: `ti-ET`.toLowerCase(),
+  datetimeLocale: `ti-et`,
   service: 'tigrinya',
   serviceName: 'News ትግርኛ',
   themeColor: `${C_POSTBOX}`,

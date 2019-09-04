@@ -25,7 +25,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `bn-BD`,
-  datetimeLocale: `bn-BD`.toLowerCase(),
+  datetimeLocale: `bn-bd`,
   service: 'bengali',
   serviceName: 'News বাংলা',
   themeColor: `${C_POSTBOX}`,

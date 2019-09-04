@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `zh_CN`,
-  datetimeLocale: `zh_CN`.toLowerCase(),
+  datetimeLocale: `zh_cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
   themeColor: `${C_POSTBOX}`,
