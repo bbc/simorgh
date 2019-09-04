@@ -7,17 +7,27 @@ import pick from 'ramda/src/pick';
 import { storyItem } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
-const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
-  const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
-  const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
-  const hasMediaInfo = pathOr(null, ['media'], item);
+const getMediaType = item => {
+  const mediaContentTypes = ['audio'];
+  const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
 
-  // Only build a media indicator if this is a photo gallery or media item
-  if (!isPGL && (!isMedia || !hasMediaInfo)) {
-    return null;
+  if (isAssetTypeCode !== null) {
+    const type = pathOr(null, ['contentType'], item).toLowerCase();
+    return mediaContentTypes.includes(type) ? type : null;
   }
 
-  const type = isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
+  const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
+  const isCpsMedia = pathOr(null, ['cpsType'], item) === 'MAP';
+  const hasMediaInfo = pathOr(null, ['media'], item);
+
+  if (!isPGL && (!isCpsMedia || !hasMediaInfo)) {
+    return null;
+  }
+  return isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
+};
+
+const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
+  const type = getMediaType(item);
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
