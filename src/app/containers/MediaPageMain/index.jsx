@@ -16,6 +16,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 const HEADING_BLOCK = 'heading';
 const PARAGRAPH_BLOCK = 'paragraph';
 const LIVE_RADIO_BLOCK = 'liveradio';
+const SKIP_LINK_ANCHOR = 'content';
 
 const MediaPageMain = ({ pageData, service }) => {
   const { script } = useContext(ServiceContext);
@@ -31,7 +32,9 @@ const MediaPageMain = ({ pageData, service }) => {
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
-            {blocks.map(({ id, text, type, live, externalId }) => {
+            {blocks.map(({ id, text, type, live, externalId }, index) => {
+              const isFirstBlock = index === 0;
+              const idAttribute = isFirstBlock ? SKIP_LINK_ANCHOR : null;
               const blockType = live ? LIVE_RADIO_BLOCK : type;
 
               switch (blockType) {
@@ -41,7 +44,7 @@ const MediaPageMain = ({ pageData, service }) => {
                       key={id}
                       script={script}
                       service={service}
-                      id="content"
+                      id={idAttribute}
                     >
                       {text}
                     </Headline>
@@ -49,7 +52,12 @@ const MediaPageMain = ({ pageData, service }) => {
 
                 case PARAGRAPH_BLOCK:
                   return (
-                    <Paragraph key={id} script={script} service={service}>
+                    <Paragraph
+                      key={id}
+                      script={script}
+                      service={service}
+                      id={idAttribute}
+                    >
                       {text}
                     </Paragraph>
                   );
@@ -65,6 +73,7 @@ const MediaPageMain = ({ pageData, service }) => {
                       key={id}
                       showPlaceholder={false}
                       src={`/ws/av-embeds/media/${externalId}/${id}`}
+                      id={idAttribute}
                     />
                   );
                 }
