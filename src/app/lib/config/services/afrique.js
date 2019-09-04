@@ -14,7 +14,7 @@ const service = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
   defaultImageAltText: 'BBC News Afrique',
   dir: `ltr`,
-  externalLinkText: ', external',
+  externalLinkText: ', lien externe',
   imageCaptionOffscreenText: 'Image caption, ',
   videoCaptionOffscreenText: 'Video caption, ',
   audioCaptionOffscreenText: 'Audio caption',
@@ -70,49 +70,50 @@ const service = {
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title:
+          'Nous avons mis à jour nos politiques de confidentialité et de cookies',
         description: {
           uk: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              "Nous avons apporté d'importants changements à notre politique de confidentialité et de cookies et nous voulons que vous sachiez ce que cela signifie pour vous et vos données.",
             linkText: null,
             last: null,
             linkUrl: null,
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              "Nous avons apporté d'importants changements à notre politique de confidentialité et de cookies et nous voulons que vous sachiez ce que cela signifie pour vous et vos données.",
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
         accept: 'OK',
-        reject: "Find out what's changed",
+        reject: 'Découvrez ce qui a changé',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'Faites-nous savoir que vous acceptez les cookies',
         description: {
           uk: {
-            first: 'We use ',
+            first: 'Nous utilisons ',
             linkText: 'cookies',
             last:
-              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
+            first: 'Nous et nos partenaires utilisons des technologies, comme ',
             linkText: 'cookies',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              ", et collectons des données de navigation pour vous offrir la meilleure expérience en ligne et pour personnaliser le contenu et la publicité qui vous sont présentés. Veuillez nous faire savoir si vous êtes d'accord.",
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: "Oui, j'accepte",
+        reject: 'Non, dirigez-moi vers les réglages',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
@@ -133,6 +134,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Les plus lus',
+    lastUpdated: 'Dernière mise à jour: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -148,20 +153,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',

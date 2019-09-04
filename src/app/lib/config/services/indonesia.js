@@ -125,6 +125,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Paling banyak dibaca',
+    lastUpdated: 'Terakhir diperbarui: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
