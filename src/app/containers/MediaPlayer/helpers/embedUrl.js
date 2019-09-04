@@ -9,7 +9,7 @@ const buildBaseUrl = origin => {
 };
 
 const embedUrl = ({ origin, assetId, vpid, isAmp = false }) => {
-  const avRoute = 'ws/av-embeds';
+  const avRoute = 'ws/av-embeds/articles';
   const baseUrl = buildBaseUrl(origin);
   const parts = [baseUrl, avRoute, assetId, vpid];
 
