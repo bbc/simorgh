@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `sr-Latn`,
-  datetimeLocale: `sr-Latn`.toLowerCase(),
+  datetimeLocale: `sr-latn`,
   service: 'serbian',
   serviceName: 'News na srpskom',
   themeColor: `${C_POSTBOX}`,
