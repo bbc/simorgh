@@ -25,7 +25,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `am-ET`,
-  datetimeLocale: `am-ET`.toLowerCase(),
+  datetimeLocale: 'am-et',
   service: 'amharic',
   serviceName: 'News አማርኛ',
   themeColor: `${C_POSTBOX}`,
