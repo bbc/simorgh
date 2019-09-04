@@ -1,8 +1,8 @@
 import React from 'react';
 import MediaPageMain from '.';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import amharicConfig from '../../lib/config/services/amharic';
-import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
+import amharicConfig from '#lib/config/services/amharic';
+import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 
 const liveRadioScaffoldProps = {
   service: 'amharic',

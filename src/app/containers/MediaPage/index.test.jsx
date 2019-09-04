@@ -1,7 +1,7 @@
 import React from 'react';
 import MediaPage from '.';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
+import { shouldMatchSnapshot } from '#testHelpers';
+import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 
 const liveRadioScaffoldProps = {
   isAmp: false,

@@ -4,11 +4,11 @@ import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 
 import MediaPage from '.';
-import indonesia from '../../../../data/indonesia/bbc_indonesian_radio/liveradio.json';
-import korean from '../../../../data/korean/bbc_korean_radio/liveradio.json';
-import tigrinya from '../../../../data/tigrinya/bbc_tigrinya_radio/liveradio.json';
-import afaanoromoo from '../../../../data/afaanoromoo/bbc_afaanoromoo_radio/liveradio.json';
-import amharic from '../../../../data/amharic/bbc_amharic_radio/liveradio.json';
+import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
+import korean from '#data/korean/bbc_korean_radio/liveradio.json';
+import tigrinya from '#data/tigrinya/bbc_tigrinya_radio/liveradio.json';
+import afaanoromoo from '#data/afaanoromoo/bbc_afaanoromoo_radio/liveradio.json';
+import amharic from '#data/amharic/bbc_amharic_radio/liveradio.json';
 
 const liveRadioFixtures = {
   indonesia,
