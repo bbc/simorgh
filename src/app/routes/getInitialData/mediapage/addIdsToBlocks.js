@@ -4,7 +4,7 @@ import map from 'ramda/src/map';
 import merge from 'ramda/src/merge';
 import uuid from 'uuid';
 
-const addIdToBlock = merge({ id: uuid() });
+const addIdToBlock = block => merge({ id: uuid() }, block);
 
 const getBlocks = path(['content', 'blocks']);
 
