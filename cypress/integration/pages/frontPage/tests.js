@@ -1,6 +1,6 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-const serviceHasIndexAlsos = service => service === 'mundo';
+const serviceHasIndexAlsos = service => service === 'thai';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
