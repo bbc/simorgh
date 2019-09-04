@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`withData HOC with missing pageData should return the errorMain component 1`] = `
+<h1>
+  This is an error.
+</h1>
+`;
+
+exports[`withData HOC with no data should return the errorMain component and 500 status 1`] = `
+<h1>
+  This is an error.
+</h1>
+`;
+
+exports[`withData HOC with non 200 status should return the errorMain component 1`] = `
+<h1>
+  This is an error.
+</h1>
+`;
+
+exports[`withData HOC with valid articles data but different home service other than locale service should return the errorMain component 1`] = `
+<h1>
+  This is an error.
+</h1>
+`;
+
 exports[`withData HOC with valid articles data should return the passed in component 1`] = `
 <h1>
   Hola

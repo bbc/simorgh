@@ -21,20 +21,32 @@ describe('TextContainer', () => {
       },
     });
 
-    const paragraphBlock = blocks => ({
+    const paragraphBlock = (id = null, blocks) => ({
+      id,
       type: 'paragraph',
       model: {
+        id,
         blocks,
       },
     });
 
     const data = {
       blocks: [
-        paragraphBlock([fragmentBlock('This is a 1st paragraph block.')]),
-        paragraphBlock([fragmentBlock('This is a 2nd paragraph block.')]),
-        paragraphBlock([fragmentBlock('This is a 3rd paragraph block.')]),
-        paragraphBlock([fragmentBlock('This is a 4th paragraph block..')]),
-        paragraphBlock([fragmentBlock('This is a 5th paragraph block.')]),
+        paragraphBlock('mock-id-1', [
+          fragmentBlock('This is a 1st paragraph block.'),
+        ]),
+        paragraphBlock('mock-id-2', [
+          fragmentBlock('This is a 2nd paragraph block.'),
+        ]),
+        paragraphBlock('mock-id-3', [
+          fragmentBlock('This is a 3rd paragraph block.'),
+        ]),
+        paragraphBlock('mock-id-4', [
+          fragmentBlock('This is a 4th paragraph block..'),
+        ]),
+        paragraphBlock('mock-id-5', [
+          fragmentBlock('This is a 5th paragraph block.'),
+        ]),
       ],
     };
 
