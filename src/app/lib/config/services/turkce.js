@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `tr-TR`,
-  datetimeLocale: `tr-TR`.toLowerCase(),
+  datetimeLocale: `tr-tr`,
   service: 'turkce',
   serviceName: 'News Türkçe',
   themeColor: `${C_POSTBOX}`,
