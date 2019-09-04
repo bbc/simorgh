@@ -1,4 +1,4 @@
-import { shouldMatchSnapshot } from '../../../../testHelpers';
+import { shouldMatchSnapshot } from '#testHelpers';
 import { getIconLinks } from './iconLinks';
 
 const iconSizes = {

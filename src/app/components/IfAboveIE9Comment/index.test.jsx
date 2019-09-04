@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '#testHelpers';
 import IfAboveIE9 from '.';
 
 describe('Timestamp', () => {

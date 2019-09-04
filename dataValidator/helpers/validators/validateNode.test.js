@@ -1,4 +1,4 @@
-import { textBlock as modelTextBlock } from '../../../src/app/models/blocks';
+import { textBlock as modelTextBlock } from '#models/blocks';
 
 global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests

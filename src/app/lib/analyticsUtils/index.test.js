@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '../utilities/onClient';
-import { setWindowValue, resetWindowValue } from '../../../testHelpers';
+import { setWindowValue, resetWindowValue } from '#testHelpers';
 
 let isOnClient = true;
 

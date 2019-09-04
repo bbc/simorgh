@@ -1,6 +1,6 @@
 import React from 'react';
 import DefaultPageWrapper from './defaultPageWrapper';
-import { shouldShallowMatchSnapshot } from '../../testHelpers';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
 
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import { ComponentUsingContext } from '../../../testHelpers/mockComponents';
+import { shouldMatchSnapshot } from '#testHelpers';
+import { ComponentUsingContext } from '#testHelpers/mockComponents';
 
 const mockToggleValues = {
   local: {

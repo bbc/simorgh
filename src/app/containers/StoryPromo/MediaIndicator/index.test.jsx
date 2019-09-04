@@ -5,7 +5,7 @@ import {
   shouldShallowMatchSnapshot,
   shouldMatchSnapshot,
   isNull,
-} from '../../../../testHelpers';
+} from '#testHelpers';
 
 import MediaIndicator from '.';
 
