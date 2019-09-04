@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `uk-UA`,
-  datetimeLocale: `uk-UA`.toLowerCase(),
+  datetimeLocale: `uk-ua`,
   service: 'ukrainian',
   serviceName: 'Україна',
   themeColor: `${C_POSTBOX}`,
