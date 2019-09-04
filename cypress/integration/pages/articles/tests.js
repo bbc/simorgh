@@ -48,8 +48,8 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
               .locale(language)
               .format('D MMMM YYYY');
 
-            // exempt pashto && arabic as we do have currently their locale implementation
-            if (!['pashto', 'arabic'].includes(service)) {
+            // exempt pashto as we do have currently their locale implementation
+            if (service !== 'pashto') {
               if (lastPublished === firstPublished)
                 cy.get('time').should('contain', updatedTimestamp);
             } else {
