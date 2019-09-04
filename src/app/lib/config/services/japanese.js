@@ -22,7 +22,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `ja-JP`,
-  datetimeLocale: `ja-JP`.toLowerCase(),
+  datetimeLocale: `ja-jp`,
   service: 'japanese',
   serviceName: 'ニュース',
   themeColor: `${C_POSTBOX}`,

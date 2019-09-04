@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `ko-KO`,
-  datetimeLocale: `ko-KO`.toLowerCase(),
+  datetimeLocale: `ko-ko`,
   service: 'korean',
   serviceName: 'News 코리아',
   themeColor: `${C_POSTBOX}`,

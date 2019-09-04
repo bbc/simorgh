@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `pt-BR`,
-  datetimeLocale: `pt-BR`.toLowerCase(),
+  datetimeLocale: `pt-br`,
   service: 'portuguese',
   serviceName: 'News Brasil',
   themeColor: `${C_POSTBOX}`,
