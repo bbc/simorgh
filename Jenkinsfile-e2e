@@ -54,6 +54,7 @@ node {
 
               if (env.BRANCH_NAME == 'latest') {
                 notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, '#simorgh-alarms-live')
                 stageHasFailed = true
               }
 
@@ -75,6 +76,7 @@ node {
 
               if (env.BRANCH_NAME == 'latest') {
                 notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, '#simorgh-alarms-live')
                 stageHasFailed = true
               }
 
@@ -96,6 +98,7 @@ node {
 
               if (env.BRANCH_NAME == 'latest') {
                 notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters. '#simorgh-alarms-test')
                 stageHasFailed = true
               }
 
@@ -123,7 +126,7 @@ node {
                   colour: 'good',
                   emoji: '🤟'
                 ]
-                notifySlack(messageParameters, '#si_repo-simorgh')
+                // notifySlack(messageParameters, '#si_repo-simorgh')
                 break
               case 'UNSTABLE':
                 def messageParameters = [
