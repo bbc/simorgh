@@ -116,7 +116,11 @@ if (process.env.APP_ENV === 'local') {
     .get(mapPageDataRegexPath, async ({ params }, res, next) => {
       const { service, assetUri } = params;
 
-      const dataFilePath = constructDataFilePath('mappage', service, assetUri);
+      const dataFilePath = constructDataFilePath(
+        'mediaassetpage',
+        service,
+        assetUri,
+      );
 
       sendDataFile(res, dataFilePath, next);
     })

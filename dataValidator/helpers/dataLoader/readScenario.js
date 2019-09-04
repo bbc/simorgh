@@ -15,7 +15,7 @@ const ifDirectoryThenValidateNestedFiles = fullFileName => {
 const readScenario = (fileName, dirName) => {
   const fullFileName = `${dirName}/${fileName}`;
 
-  const ignoreDirs = ['onward-journeys', 'frontpage', 'most'];
+  const ignoreDirs = ['onward-journeys', 'frontpage', 'most', 'mediaassetpage'];
 
   if (!ignoreDirs.includes(fileName)) {
     ifDirectoryThenValidateNestedFiles(fullFileName);

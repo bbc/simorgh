@@ -525,6 +525,14 @@ describe('Server', () => {
     });
   });
 
+  describe('media asset pages - CPS MAP', () => {
+    it('should respond with json', async () => {
+      const { body } = await makeRequest('/yoruba/media-42985961.json');
+      expect(body).toEqual(
+        expect.objectContaining({ content: expect.any(Object) }),
+      );
+    });
+  });
   describe('Unknown routes', () => {
     const service = 'igbo';
     const isAmp = false;

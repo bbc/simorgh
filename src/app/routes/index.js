@@ -5,7 +5,7 @@ import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
 import getMediaPageInitialData from './getInitialData/mediapage';
-import getMediaAssetPageInitialData from './getInitialData/mappage';
+import getMediaAssetPageInitialData from './getInitialData/mediaassetpage';
 import {
   articleRegexPath,
   frontpageRegexPath,
