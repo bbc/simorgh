@@ -19,13 +19,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         );
       });
 
-      it('should render an H2, which contains/displays a styled subheading', () => {
+      it('should render a paragraph, which contains/displays a styled summary', () => {
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
-              const { subheadline } = body.content.blocks[1];
-              cy.get('h2').should('contain', subheadline);
-            }
+            const { text } = body.content.blocks[1];
+            cy.get('[role="main"] p').should('contain', text);
           },
         );
       });
@@ -33,12 +31,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
       it('should render an audio player embed', () => {
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
-              const { id, externalId } = body.content.blocks[2];
-              cy.get(
-                `iframe[src=${`/ws/av-embeds/media/${id}/${externalId}`}]`,
-              ).should('be.visible');
-            }
+            const { id, externalId } = body.content.blocks[2];
+            cy.get(
+              `[src="${`/ws/av-embeds/media/${externalId}/${id}`}"]`,
+            ).should('be.visible');
           },
         );
       });
