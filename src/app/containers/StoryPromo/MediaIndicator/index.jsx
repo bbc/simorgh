@@ -9,9 +9,9 @@ import formatDuration from '../../../lib/utilities/formatDuration';
 
 const getMediaType = item => {
   const mediaContentTypes = ['audio'];
-  const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
+  const isAssetTypeMedia = pathOr(null, ['assetTypeCode'], item);
 
-  if (isAssetTypeCode !== null) {
+  if (isAssetTypeMedia) {
     const type = pathOr(null, ['contentType'], item).toLowerCase();
     return mediaContentTypes.includes(type) ? type : null;
   }
@@ -20,6 +20,7 @@ const getMediaType = item => {
   const isCpsMedia = pathOr(null, ['cpsType'], item) === 'MAP';
   const hasMediaInfo = pathOr(null, ['media'], item);
 
+  // Only build a media indicator if this is a photo gallery or media item
   if (!isPGL && (!isCpsMedia || !hasMediaInfo)) {
     return null;
   }
@@ -48,7 +49,7 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   }
 
   return (
-    <MediaIndicatorComp type={type} service={service} indexAlsos={indexAlsos} />
+    type && <MediaIndicatorComp type={type} service={service} indexAlsos={indexAlsos} />
   );
 };
 
