@@ -23,19 +23,29 @@ const cpsItems = [
   },
 ];
 
-const assetTypeCodeItems = [
-  {
-    name: 'Test standard link promo',
-    summary: 'This is a standard link promo',
-    indexImage: {},
-    indexThumbnail: {},
-    uri: 'http://this.is.a.test.com/',
-    contentType: 'Text',
-    assetTypeCode: 'PRO',
-    timestamp: 1527598380040,
-    type: 'link',
-  },
-];
+const TextAssetType = {
+  name: 'Test standard link promo',
+  summary: 'This is a standard link promo',
+  indexImage: {},
+  indexThumbnail: {},
+  uri: 'http://this.is.a.test.com/',
+  contentType: 'Text',
+  assetTypeCode: 'PRO',
+  timestamp: 1527598380040,
+  type: 'link',
+};
+
+const AudioAssetType = {
+  name: 'Test standard link promo',
+  summary: 'This is a standard link promo',
+  indexImage: {},
+  indexThumbnail: {},
+  uri: 'http://this.is.a.test.com/',
+  contentType: 'Audio',
+  assetTypeCode: 'PRO',
+  timestamp: 1527598380040,
+  type: 'link',
+};
 
 describe('filterUnknownContentTypes', () => {
   it('should no-op when no groups', () => {
@@ -79,7 +89,7 @@ describe('filterUnknownContentTypes', () => {
       content: {
         groups: [
           {
-            items: cpsItems.concat(assetTypeCodeItems),
+            items: cpsItems.concat(TextAssetType),
           },
         ],
       },
@@ -88,7 +98,7 @@ describe('filterUnknownContentTypes', () => {
       content: {
         groups: [
           {
-            items: cpsItems.concat(assetTypeCodeItems),
+            items: cpsItems.concat(TextAssetType),
           },
         ],
       },
@@ -307,7 +317,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: assetTypeCodeItems,
+              items: AudioAssetType,
             },
           ],
         },
@@ -316,7 +326,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: assetTypeCodeItems,
+              items: AudioAssetType,
             },
           ],
         },
@@ -328,58 +338,12 @@ describe('filterUnknownContentTypes', () => {
     it('should work on all groups in the data', () => {
       const data = {
         content: {
-          groups: [
-            {
-              name: 'Test assetTypeCode 1',
-              summary: 'This is the first test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380090,
-              type: 'link',
-            },
-            {
-              name: 'Test assetTypeCode 2',
-              summary: 'This is another test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380040,
-              type: 'link',
-            },
-          ],
+          groups: [AudioAssetType, TextAssetType],
         },
       };
       const expected = {
         content: {
-          groups: [
-            {
-              name: 'Test assetTypeCode 1',
-              summary: 'This is the first test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380090,
-              type: 'link',
-            },
-            {
-              name: 'Test assetTypeCode 2',
-              summary: 'This is another test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380040,
-              type: 'link',
-            },
-          ],
+          groups: [AudioAssetType, TextAssetType],
         },
       };
 
@@ -434,28 +398,8 @@ describe('filterUnknownContentTypes', () => {
                   timestamp: 1527598380040,
                   type: 'link',
                 },
-                {
-                  name: 'Test standard link promo',
-                  summary: 'This is a standard link promo',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Text',
-                  assetTypeCode: 'PRO',
-                  timestamp: 1527598380040,
-                  type: 'link',
-                },
-                {
-                  name: 'Test audio link promo',
-                  summary: 'This is an audio link promo',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Audio',
-                  assetTypeCode: 'PRO',
-                  timestamp: 1469005433000,
-                  type: 'link',
-                },
+                TextAssetType,
+                AudioAssetType,
               ],
             },
           ],
@@ -465,19 +409,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: [
-                {
-                  name: 'Test standard link promo',
-                  summary: 'This is a standard link promo',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Text',
-                  assetTypeCode: 'PRO',
-                  timestamp: 1527598380040,
-                  type: 'link',
-                },
-              ],
+              items: [TextAssetType, AudioAssetType],
             },
           ],
         },
