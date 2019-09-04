@@ -128,6 +128,10 @@ const pidgin = {
       },
     },
   },
+  mostRead: {
+    header: 'De one we dem de read well well',
+    lastUpdated: 'De one we dem update for ',
+  },
   navigation: [
     {
       title: 'Home',

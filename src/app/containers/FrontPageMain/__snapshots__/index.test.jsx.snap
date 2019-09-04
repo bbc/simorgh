@@ -92,6 +92,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
         "lang": "ig",
         "locale": "ig",
         "manifestPath": "/manifest.json",
+        "mostRead": Object {
+          "header": "Akachasị Gụọ",
+          "lastUpdated": "Emelitere ikpeazụ na ",
+        },
         "navigation": Array [
           Object {
             "title": "Akụkọ",
