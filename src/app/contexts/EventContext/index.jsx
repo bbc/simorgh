@@ -19,7 +19,10 @@ export const EventContextProvider = ({ children }) => {
       }));
 
       return function cleanup() {
-        setHandlerMap(handlerMap);
+        setHandlerMap(_map => ({
+          ..._map,
+          [attr]: (_map[attr] || []).filter(h => h !== handler),
+        }));
       };
     }, []);
   };
