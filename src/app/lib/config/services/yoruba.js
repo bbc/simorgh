@@ -128,6 +128,10 @@ const yoruba = {
       },
     },
   },
+  mostRead: {
+    header: 'Èyítí A Ń Kà Jùlọ',
+    lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní ',
+  },
   navigation: [
     {
       title: 'Ìròyìn',
