@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `id-ID`,
-  datetimeLocale: `id-ID`.toLowerCase(),
+  datetimeLocale: `id-id`,
   service: 'indonesia',
   serviceName: 'News Indonesia',
   themeColor: `${C_POSTBOX}`,
@@ -125,6 +125,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Paling banyak dibaca',
+    lastUpdated: 'Terakhir diperbarui: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
