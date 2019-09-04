@@ -162,7 +162,7 @@ const service = {
     copyrightText: 'BBC. BBC ba tada alhaki game da shafukan da ba nata ba',
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
     },
   },
   fonts: [],

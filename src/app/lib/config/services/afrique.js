@@ -71,7 +71,7 @@ const service = {
     consentBanner: {
       privacy: {
         title:
-          'Nous avons mis à jour nos politiques de confidentialité et  de cookies',
+          'Nous avons mis à jour nos politiques de confidentialité et de cookies',
         description: {
           uk: {
             first:
