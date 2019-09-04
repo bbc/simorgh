@@ -33,7 +33,7 @@ const defaultToggleState = {
 const mockToggleDispatch = jest.fn();
 
 describe('with pageWrapper', () => {
-  const PageWrapperContainer = () => <h1>Holla</h1>;
+  const PageWrapperContainer = () => <h1>Hola</h1>;
   const PageWrapperHOC = WithPageWrapper(PageWrapperContainer);
   shouldMatchSnapshot(
     `should render correctly`,

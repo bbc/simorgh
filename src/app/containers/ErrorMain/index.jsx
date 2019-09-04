@@ -44,7 +44,6 @@ const ErrorMain = ({ status }) => {
     translations,
   } = useContext(ServiceContext);
   const messaging = translations.error[status] || translations.error[500];
-
   return (
     <>
       <ErrorMetadata
