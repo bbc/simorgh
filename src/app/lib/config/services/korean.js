@@ -122,6 +122,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'TOP 뉴스',
+    lastUpdated: '최종 송고일',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
