@@ -35,6 +35,17 @@ const assetTypeCodeItems = [
     timestamp: 1527598380040,
     type: 'link',
   },
+  {
+    name: 'Test standard feature promo',
+    summary: 'This is a standard feature promo',
+    indexImage: {},
+    indexThumbnail: {},
+    uri: 'http://this.is.a.test.com/',
+    contentType: 'Feature',
+    assetTypeCode: 'PRO',
+    timestamp: 1527598380040,
+    type: 'link',
+  },
 ];
 
 describe('filterUnknownContentTypes', () => {
@@ -351,6 +362,17 @@ describe('filterUnknownContentTypes', () => {
               timestamp: 1527598380040,
               type: 'link',
             },
+            {
+              name: 'Test featureTypeCode 2',
+              summary: 'This is a test feature',
+              indexImage: {},
+              indexThumbnail: {},
+              uri: 'http://this.is.a.test.com/',
+              contentType: 'Feature',
+              assetTypeCode: 'PRO',
+              timestamp: 1527598380030,
+              type: 'link',
+            },
           ],
         },
       };
@@ -377,6 +399,17 @@ describe('filterUnknownContentTypes', () => {
               contentType: 'Text',
               assetTypeCode: 'PRO',
               timestamp: 1527598380040,
+              type: 'link',
+            },
+            {
+              name: 'Test featureTypeCode 2',
+              summary: 'This is a test feature',
+              indexImage: {},
+              indexThumbnail: {},
+              uri: 'http://this.is.a.test.com/',
+              contentType: 'Feature',
+              assetTypeCode: 'PRO',
+              timestamp: 1527598380030,
               type: 'link',
             },
           ],
