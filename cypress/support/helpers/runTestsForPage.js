@@ -45,7 +45,9 @@ const runTestsForPage = ({
           });
         });
 
-        const testData = { service, pageType, variant: 'default' };
+        const variant = config[service].variant || 'default';
+
+        const testData = { service, pageType, variant };
 
         // Enables overriding of the smoke test values in the config/services.js file
         testsThatAlwaysRunForAllPages(testData);
@@ -81,7 +83,9 @@ const runTestsForPage = ({
           });
         });
 
-        const testData = { service, pageType, variant: 'default' };
+        const variant = config[service].variant || 'default';
+
+        const testData = { service, pageType, variant };
 
         // Enables overriding of the smoke test values in the config/services.js file
         testsThatAlwaysRunForAllPages(testData);

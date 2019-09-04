@@ -801,10 +801,24 @@ module.exports = {
   },
   serbian: {
     font: undefined,
+    isWorldService: true,
+    variant: 'lat',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/c805k05kr73o/lat',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/cabcdefghijo/lat',
+        smoke: true,
+      },
+      frontPage: { path: '/serbian/lat', smoke: true },
       liveRadio: { path: undefined, smoke: false },
     },
   },
@@ -1057,10 +1071,23 @@ module.exports = {
   ukchina: {
     font: undefined,
     isWorldService: true,
+    variant: 'simp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/simp',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/cabcdefghijo/simp',
+        smoke: true,
+      },
+      frontPage: { path: '/ukchina/simp', smoke: true },
       liveRadio: { path: undefined, smoke: false },
     },
   },
@@ -1205,10 +1232,23 @@ module.exports = {
   zhongwen: {
     font: undefined,
     isWorldService: true,
+    variant: 'simp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/simp',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/cabcdefghijo/simp',
+        smoke: true,
+      },
+      frontPage: { path: '/zhongwen/simp', smoke: true },
       liveRadio: { path: undefined, smoke: false },
     },
   },
