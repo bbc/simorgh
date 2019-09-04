@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import WithError from '.';
 
 describe('withError HOC', () => {
@@ -7,16 +7,13 @@ describe('withError HOC', () => {
   const ErrorHOC = WithError(Component);
 
   describe('with error', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       `should return the errorMain component`,
       <ErrorHOC error={new Error('This is an error.')} />,
     );
   });
 
   describe('with no error', () => {
-    shouldShallowMatchSnapshot(
-      `should return the passed in component`,
-      <ErrorHOC />,
-    );
+    shouldMatchSnapshot(`should return the passed in component`, <ErrorHOC />);
   });
 });

@@ -62,4 +62,8 @@ exports[`Fragment with italic attributes should render text wrapped in an italic
 </i>
 `;
 
-exports[`Fragment with no attributes should render just text 1`] = `This is some text with no attributes`;
+exports[`Fragment with no attributes should render just text 1`] = `
+<div>
+  This is some text with no attributes
+</div>
+`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import Blocks from './index';
 import { blockContainingText, singleTextBlock } from '../../models/blocks';
 
@@ -47,26 +47,26 @@ describe('Blocks', () => {
   };
 
   const blocks = [
-    blockContainingText('headline', 'This is a headline!'),
-    blockContainingText('subheadline', 'This is a subheadline!'),
+    blockContainingText('mock-id-1', 'headline', 'This is a headline!'),
+    blockContainingText('mock-id-2', 'subheadline', 'This is a subheadline!'),
     singleTextBlock('This is some text content!'),
   ];
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render correctly',
     <Blocks blocks={blocks} componentsToRender={componentsToRender} />,
   );
 
   describe('with mixed set of known and unknown blocks', () => {
     const mixedBlocks = [
-      blockContainingText('headline', 'This is a headline!'),
-      blockContainingText('subheadline', 'This is a subheadline!'),
+      blockContainingText('mock-id-1', 'headline', 'This is a headline!'),
+      blockContainingText('mock-id-2', 'subheadline', 'This is a subheadline!'),
       singleTextBlock('This is some text content!'),
       unknownTestBlock,
       parentBlockNotAllowed,
     ];
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render known blocks; unknown blocks rendered null',
       <Blocks blocks={mixedBlocks} componentsToRender={componentsToRender} />,
     );
@@ -75,7 +75,7 @@ describe('Blocks', () => {
   describe('with unknown blocks', () => {
     const unknownBlocks = [unknownTestBlock, parentBlockNotAllowed];
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly as null',
       <Blocks blocks={unknownBlocks} componentsToRender={componentsToRender} />,
     );

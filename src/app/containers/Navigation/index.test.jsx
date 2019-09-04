@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import NavigationContainer from './index';
 import igboConfig from '../../lib/config/services/igbo';
 
@@ -24,7 +24,7 @@ describe('Navigation Container', () => {
   });
 
   describe('snapshots', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render a Navigation with igbo links correctly',
       <NavigationContainer />,
     );

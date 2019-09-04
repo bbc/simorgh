@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
 import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
@@ -40,7 +40,7 @@ const FrontPageMainWithContext = props => (
 
 describe('FrontPageMain', () => {
   describe('snapshots', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render a pidgin frontpage correctly',
       <FrontPageMainWithContext frontPageData={processedPidgin} />,
     );

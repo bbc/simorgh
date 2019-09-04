@@ -12,4 +12,4 @@ exports[`ToggleContainer should render fallback component should match snapshot 
 </p>
 `;
 
-exports[`ToggleContainer should render null should match snapshot 1`] = `null`;
+exports[`ToggleContainer should render null should match snapshot 1`] = `<div />`;

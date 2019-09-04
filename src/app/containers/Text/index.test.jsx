@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  shouldShallowMatchSnapshot,
+  shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
@@ -38,9 +38,6 @@ describe('TextContainer', () => {
       ],
     };
 
-    shouldShallowMatchSnapshot(
-      'should render correctly',
-      <TextContainer {...data} />,
-    );
+    shouldMatchSnapshot('should render correctly', <TextContainer {...data} />);
   });
 });

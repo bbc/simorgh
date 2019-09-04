@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  shouldShallowMatchSnapshot,
+  shouldMatchSnapshot,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import { articleDataNews, articleDataPersian } from '../../Article/fixtureData';
@@ -53,7 +53,7 @@ describe('withData HOC', () => {
 
   describe('with no data', () => {
     suppressPropWarnings(['data.dials', 'undefined']);
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the errorMain component and 500 status',
       <WithDataHOC {...noDataProps} />,
     );
@@ -61,20 +61,20 @@ describe('withData HOC', () => {
 
   describe('with missing pageData', () => {
     suppressPropWarnings(['data.pageData', 'undefined']);
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the errorMain component',
       <WithDataHOC {...noAssetData} />,
     );
   });
 
   describe('with valid articles data', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the passed in component',
       <WithDataHOC {...validNewsProps} />,
     );
 
     describe('but different home service other than locale service', () => {
-      shouldShallowMatchSnapshot(
+      shouldMatchSnapshot(
         'should return the errorMain component',
         <WithDataHOC {...validPersianProps} />,
       );
@@ -82,14 +82,14 @@ describe('withData HOC', () => {
   });
 
   describe('with valid front-pages data', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the passed in component',
       <WithDataHOC {...validFrontPagesProps} />,
     );
   });
 
   describe('with non 200 status', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the errorMain component',
       <WithDataHOC {...non200StatusProps} />,
     );

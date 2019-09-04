@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import Metadata from './index';
 
 const iconSizes = {
@@ -75,7 +75,7 @@ const metadataSnapshotTest = (
       showArticleTags,
     };
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
       <Metadata {...metadataProps} iconSizes={iconSizes} />,
     );

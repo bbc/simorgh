@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import DefaultPageWrapper from './defaultPageWrapper';
 
 describe('defaultPageWrapper', () => {
@@ -7,7 +7,7 @@ describe('defaultPageWrapper', () => {
     children: <h2>Child element</h2>,
   };
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render default page wrapper with children',
     <DefaultPageWrapper {...propsWithChildren} />,
   );

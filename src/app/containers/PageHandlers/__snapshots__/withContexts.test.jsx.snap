@@ -1,29 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withContexts HOC should return all context providers 1`] = `
-<ToggleContextProvider>
-  <ServiceContextProvider
-    service="news"
-  >
-    <RequestContextProvider
-      bbcOrigin="https://www.bbc.com"
-      id="c0000000000o"
-      isAmp={true}
-      pageType="article"
-      previousPath={null}
-      service="news"
-    >
-      <UserContextProvider>
-        <Component
-          bbcOrigin="https://www.bbc.com"
-          id="c0000000000o"
-          isAmp={true}
-          pageType="article"
-          previousPath={null}
-          service="news"
-        />
-      </UserContextProvider>
-    </RequestContextProvider>
-  </ServiceContextProvider>
-</ToggleContextProvider>
+<h1>
+  All the contexts!!
+</h1>
 `;

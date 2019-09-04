@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPlayer Fails and returns early when component is toggled off 1`] = `null`;
+exports[`MediaPlayer Fails and returns early when component is toggled off 1`] = `<div />`;
 
-exports[`MediaPlayer Fails and returns early when there is no versionId 1`] = `null`;
+exports[`MediaPlayer Fails and returns early when there is no versionId 1`] = `<div />`;
 
 exports[`MediaPlayer is called correctly Calls the AMP player when platform is AMP 1`] = `
 .c1 {

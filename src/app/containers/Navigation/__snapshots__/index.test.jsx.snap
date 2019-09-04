@@ -1,1117 +1,306 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navigation Container snapshots should render a Navigation with igbo links correctly 1`] = `
-<Navigation
-  script={
-    Object {
-      "atlas": Object {
-        "groupA": Object {
-          "fontSize": "78",
-          "lineHeight": "84",
-        },
-        "groupB": Object {
-          "fontSize": "96",
-          "lineHeight": "104",
-        },
-        "groupD": Object {
-          "fontSize": "140",
-          "lineHeight": "148",
-        },
-      },
-      "bodyCopy": Object {
-        "groupA": Object {
-          "fontSize": "15",
-          "lineHeight": "20",
-        },
-        "groupB": Object {
-          "fontSize": "16",
-          "lineHeight": "22",
-        },
-        "groupD": Object {
-          "fontSize": "16",
-          "lineHeight": "22",
-        },
-      },
-      "brevier": Object {
-        "groupA": Object {
-          "fontSize": "14",
-          "lineHeight": "18",
-        },
-        "groupB": Object {
-          "fontSize": "14",
-          "lineHeight": "18",
-        },
-        "groupD": Object {
-          "fontSize": "13",
-          "lineHeight": "16",
-        },
-      },
-      "canon": Object {
-        "groupA": Object {
-          "fontSize": "28",
-          "lineHeight": "32",
-        },
-        "groupB": Object {
-          "fontSize": "32",
-          "lineHeight": "36",
-        },
-        "groupD": Object {
-          "fontSize": "44",
-          "lineHeight": "48",
-        },
-      },
-      "doublePica": Object {
-        "groupA": Object {
-          "fontSize": "18",
-          "lineHeight": "22",
-        },
-        "groupB": Object {
-          "fontSize": "20",
-          "lineHeight": "24",
-        },
-        "groupD": Object {
-          "fontSize": "24",
-          "lineHeight": "28",
-        },
-      },
-      "elephant": Object {
-        "groupA": Object {
-          "fontSize": "60",
-          "lineHeight": "64",
-        },
-        "groupB": Object {
-          "fontSize": "78",
-          "lineHeight": "84",
-        },
-        "groupD": Object {
-          "fontSize": "116",
-          "lineHeight": "124",
-        },
-      },
-      "foolscap": Object {
-        "groupA": Object {
-          "fontSize": "32",
-          "lineHeight": "36",
-        },
-        "groupB": Object {
-          "fontSize": "40",
-          "lineHeight": "44",
-        },
-        "groupD": Object {
-          "fontSize": "56",
-          "lineHeight": "60",
-        },
-      },
-      "greatPrimer": Object {
-        "groupA": Object {
-          "fontSize": "18",
-          "lineHeight": "22",
-        },
-        "groupB": Object {
-          "fontSize": "18",
-          "lineHeight": "22",
-        },
-        "groupD": Object {
-          "fontSize": "20",
-          "lineHeight": "24",
-        },
-      },
-      "imperial": Object {
-        "groupA": Object {
-          "fontSize": "50",
-          "lineHeight": "54",
-        },
-        "groupB": Object {
-          "fontSize": "64",
-          "lineHeight": "72",
-        },
-        "groupD": Object {
-          "fontSize": "96",
-          "lineHeight": "104",
-        },
-      },
-      "longPrimer": Object {
-        "groupA": Object {
-          "fontSize": "15",
-          "lineHeight": "18",
-        },
-        "groupB": Object {
-          "fontSize": "15",
-          "lineHeight": "18",
-        },
-        "groupD": Object {
-          "fontSize": "14",
-          "lineHeight": "18",
-        },
-      },
-      "minion": Object {
-        "groupA": Object {
-          "fontSize": "12",
-          "lineHeight": "16",
-        },
-        "groupB": Object {
-          "fontSize": "12",
-          "lineHeight": "16",
-        },
-        "groupD": Object {
-          "fontSize": "12",
-          "lineHeight": "16",
-        },
-      },
-      "paragon": Object {
-        "groupA": Object {
-          "fontSize": "20",
-          "lineHeight": "24",
-        },
-        "groupB": Object {
-          "fontSize": "22",
-          "lineHeight": "26",
-        },
-        "groupD": Object {
-          "fontSize": "28",
-          "lineHeight": "32",
-        },
-      },
-      "pica": Object {
-        "groupA": Object {
-          "fontSize": "15",
-          "lineHeight": "20",
-        },
-        "groupB": Object {
-          "fontSize": "16",
-          "lineHeight": "20",
-        },
-        "groupD": Object {
-          "fontSize": "16",
-          "lineHeight": "20",
-        },
-      },
-      "royal": Object {
-        "groupA": Object {
-          "fontSize": "40",
-          "lineHeight": "44",
-        },
-        "groupB": Object {
-          "fontSize": "52",
-          "lineHeight": "60",
-        },
-        "groupD": Object {
-          "fontSize": "76",
-          "lineHeight": "84",
-        },
-      },
-      "trafalgar": Object {
-        "groupA": Object {
-          "fontSize": "20",
-          "lineHeight": "24",
-        },
-        "groupB": Object {
-          "fontSize": "24",
-          "lineHeight": "28",
-        },
-        "groupD": Object {
-          "fontSize": "32",
-          "lineHeight": "36",
-        },
-      },
-    }
+.c7 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c0 {
+  background-color: #B80000;
+}
+
+.c1 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c2 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #ffffff;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c2:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: -3rem;
+  left: 0.5rem;
+}
+
+.c3 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.c4 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 80rem;
+  border-bottom: 0.0625rem solid #eab3b3;
+  z-index: -1;
+  left: 0;
+}
+
+.c5 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+.c5:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
+}
+
+.c5:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+.c8:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c8:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c6::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
-  service="igbo"
-  skipLinkText="Wụga n’ọdịnaya"
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2:focus {
+    top: -4rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2:focus {
+    left: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c5 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c8 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+<nav
+  class="c0"
+  role="navigation"
 >
-  <NavigationUl>
-    <NavigationLi
-      active={true}
-      currentPageText="Peegi ị nọ ugbua"
-      dir="ltr"
-      script={
-        Object {
-          "atlas": Object {
-            "groupA": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupB": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-            "groupD": Object {
-              "fontSize": "140",
-              "lineHeight": "148",
-            },
-          },
-          "bodyCopy": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "20",
-            },
-            "groupB": Object {
-              "fontSize": "16",
-              "lineHeight": "22",
-            },
-            "groupD": Object {
-              "fontSize": "16",
-              "lineHeight": "22",
-            },
-          },
-          "brevier": Object {
-            "groupA": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-            "groupB": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-            "groupD": Object {
-              "fontSize": "13",
-              "lineHeight": "16",
-            },
-          },
-          "canon": Object {
-            "groupA": Object {
-              "fontSize": "28",
-              "lineHeight": "32",
-            },
-            "groupB": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupD": Object {
-              "fontSize": "44",
-              "lineHeight": "48",
-            },
-          },
-          "doublePica": Object {
-            "groupA": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupB": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupD": Object {
-              "fontSize": "24",
-              "lineHeight": "28",
-            },
-          },
-          "elephant": Object {
-            "groupA": Object {
-              "fontSize": "60",
-              "lineHeight": "64",
-            },
-            "groupB": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupD": Object {
-              "fontSize": "116",
-              "lineHeight": "124",
-            },
-          },
-          "foolscap": Object {
-            "groupA": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupB": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupD": Object {
-              "fontSize": "56",
-              "lineHeight": "60",
-            },
-          },
-          "greatPrimer": Object {
-            "groupA": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupB": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupD": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-          },
-          "imperial": Object {
-            "groupA": Object {
-              "fontSize": "50",
-              "lineHeight": "54",
-            },
-            "groupB": Object {
-              "fontSize": "64",
-              "lineHeight": "72",
-            },
-            "groupD": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-          },
-          "longPrimer": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "18",
-            },
-            "groupB": Object {
-              "fontSize": "15",
-              "lineHeight": "18",
-            },
-            "groupD": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-          },
-          "minion": Object {
-            "groupA": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-            "groupB": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-            "groupD": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-          },
-          "paragon": Object {
-            "groupA": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupB": Object {
-              "fontSize": "22",
-              "lineHeight": "26",
-            },
-            "groupD": Object {
-              "fontSize": "28",
-              "lineHeight": "32",
-            },
-          },
-          "pica": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "20",
-            },
-            "groupB": Object {
-              "fontSize": "16",
-              "lineHeight": "20",
-            },
-            "groupD": Object {
-              "fontSize": "16",
-              "lineHeight": "20",
-            },
-          },
-          "royal": Object {
-            "groupA": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupB": Object {
-              "fontSize": "52",
-              "lineHeight": "60",
-            },
-            "groupD": Object {
-              "fontSize": "76",
-              "lineHeight": "84",
-            },
-          },
-          "trafalgar": Object {
-            "groupA": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupB": Object {
-              "fontSize": "24",
-              "lineHeight": "28",
-            },
-            "groupD": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-          },
-        }
-      }
-      service="igbo"
-      url="/igbo"
+  <div
+    class="c1"
+  >
+    <a
+      class="c2"
+      href="#content"
     >
-      Akụkọ
-    </NavigationLi>
-    <NavigationLi
-      active={false}
-      currentPageText="Peegi ị nọ ugbua"
-      dir="ltr"
-      script={
-        Object {
-          "atlas": Object {
-            "groupA": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupB": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-            "groupD": Object {
-              "fontSize": "140",
-              "lineHeight": "148",
-            },
-          },
-          "bodyCopy": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "20",
-            },
-            "groupB": Object {
-              "fontSize": "16",
-              "lineHeight": "22",
-            },
-            "groupD": Object {
-              "fontSize": "16",
-              "lineHeight": "22",
-            },
-          },
-          "brevier": Object {
-            "groupA": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-            "groupB": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-            "groupD": Object {
-              "fontSize": "13",
-              "lineHeight": "16",
-            },
-          },
-          "canon": Object {
-            "groupA": Object {
-              "fontSize": "28",
-              "lineHeight": "32",
-            },
-            "groupB": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupD": Object {
-              "fontSize": "44",
-              "lineHeight": "48",
-            },
-          },
-          "doublePica": Object {
-            "groupA": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupB": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupD": Object {
-              "fontSize": "24",
-              "lineHeight": "28",
-            },
-          },
-          "elephant": Object {
-            "groupA": Object {
-              "fontSize": "60",
-              "lineHeight": "64",
-            },
-            "groupB": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupD": Object {
-              "fontSize": "116",
-              "lineHeight": "124",
-            },
-          },
-          "foolscap": Object {
-            "groupA": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupB": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupD": Object {
-              "fontSize": "56",
-              "lineHeight": "60",
-            },
-          },
-          "greatPrimer": Object {
-            "groupA": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupB": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupD": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-          },
-          "imperial": Object {
-            "groupA": Object {
-              "fontSize": "50",
-              "lineHeight": "54",
-            },
-            "groupB": Object {
-              "fontSize": "64",
-              "lineHeight": "72",
-            },
-            "groupD": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-          },
-          "longPrimer": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "18",
-            },
-            "groupB": Object {
-              "fontSize": "15",
-              "lineHeight": "18",
-            },
-            "groupD": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-          },
-          "minion": Object {
-            "groupA": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-            "groupB": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-            "groupD": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-          },
-          "paragon": Object {
-            "groupA": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupB": Object {
-              "fontSize": "22",
-              "lineHeight": "26",
-            },
-            "groupD": Object {
-              "fontSize": "28",
-              "lineHeight": "32",
-            },
-          },
-          "pica": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "20",
-            },
-            "groupB": Object {
-              "fontSize": "16",
-              "lineHeight": "20",
-            },
-            "groupD": Object {
-              "fontSize": "16",
-              "lineHeight": "20",
-            },
-          },
-          "royal": Object {
-            "groupA": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupB": Object {
-              "fontSize": "52",
-              "lineHeight": "60",
-            },
-            "groupD": Object {
-              "fontSize": "76",
-              "lineHeight": "84",
-            },
-          },
-          "trafalgar": Object {
-            "groupA": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupB": Object {
-              "fontSize": "24",
-              "lineHeight": "28",
-            },
-            "groupD": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-          },
-        }
-      }
-      service="igbo"
-      url="/igbo/egwuregwu"
+      Wụga n’ọdịnaya
+    </a>
+    <ul
+      class="c3"
+      role="list"
     >
-      Egwuregwu
-    </NavigationLi>
-    <NavigationLi
-      active={false}
-      currentPageText="Peegi ị nọ ugbua"
-      dir="ltr"
-      script={
-        Object {
-          "atlas": Object {
-            "groupA": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupB": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-            "groupD": Object {
-              "fontSize": "140",
-              "lineHeight": "148",
-            },
-          },
-          "bodyCopy": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "20",
-            },
-            "groupB": Object {
-              "fontSize": "16",
-              "lineHeight": "22",
-            },
-            "groupD": Object {
-              "fontSize": "16",
-              "lineHeight": "22",
-            },
-          },
-          "brevier": Object {
-            "groupA": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-            "groupB": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-            "groupD": Object {
-              "fontSize": "13",
-              "lineHeight": "16",
-            },
-          },
-          "canon": Object {
-            "groupA": Object {
-              "fontSize": "28",
-              "lineHeight": "32",
-            },
-            "groupB": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupD": Object {
-              "fontSize": "44",
-              "lineHeight": "48",
-            },
-          },
-          "doublePica": Object {
-            "groupA": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupB": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupD": Object {
-              "fontSize": "24",
-              "lineHeight": "28",
-            },
-          },
-          "elephant": Object {
-            "groupA": Object {
-              "fontSize": "60",
-              "lineHeight": "64",
-            },
-            "groupB": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupD": Object {
-              "fontSize": "116",
-              "lineHeight": "124",
-            },
-          },
-          "foolscap": Object {
-            "groupA": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupB": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupD": Object {
-              "fontSize": "56",
-              "lineHeight": "60",
-            },
-          },
-          "greatPrimer": Object {
-            "groupA": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupB": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupD": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-          },
-          "imperial": Object {
-            "groupA": Object {
-              "fontSize": "50",
-              "lineHeight": "54",
-            },
-            "groupB": Object {
-              "fontSize": "64",
-              "lineHeight": "72",
-            },
-            "groupD": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-          },
-          "longPrimer": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "18",
-            },
-            "groupB": Object {
-              "fontSize": "15",
-              "lineHeight": "18",
-            },
-            "groupD": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-          },
-          "minion": Object {
-            "groupA": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-            "groupB": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-            "groupD": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-          },
-          "paragon": Object {
-            "groupA": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupB": Object {
-              "fontSize": "22",
-              "lineHeight": "26",
-            },
-            "groupD": Object {
-              "fontSize": "28",
-              "lineHeight": "32",
-            },
-          },
-          "pica": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "20",
-            },
-            "groupB": Object {
-              "fontSize": "16",
-              "lineHeight": "20",
-            },
-            "groupD": Object {
-              "fontSize": "16",
-              "lineHeight": "20",
-            },
-          },
-          "royal": Object {
-            "groupA": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupB": Object {
-              "fontSize": "52",
-              "lineHeight": "60",
-            },
-            "groupD": Object {
-              "fontSize": "76",
-              "lineHeight": "84",
-            },
-          },
-          "trafalgar": Object {
-            "groupA": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupB": Object {
-              "fontSize": "24",
-              "lineHeight": "28",
-            },
-            "groupD": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-          },
-        }
-      }
-      service="igbo"
-      url="/igbo/media/video"
-    >
-      Ihe nkiri
-    </NavigationLi>
-    <NavigationLi
-      active={false}
-      currentPageText="Peegi ị nọ ugbua"
-      dir="ltr"
-      script={
-        Object {
-          "atlas": Object {
-            "groupA": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupB": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-            "groupD": Object {
-              "fontSize": "140",
-              "lineHeight": "148",
-            },
-          },
-          "bodyCopy": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "20",
-            },
-            "groupB": Object {
-              "fontSize": "16",
-              "lineHeight": "22",
-            },
-            "groupD": Object {
-              "fontSize": "16",
-              "lineHeight": "22",
-            },
-          },
-          "brevier": Object {
-            "groupA": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-            "groupB": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-            "groupD": Object {
-              "fontSize": "13",
-              "lineHeight": "16",
-            },
-          },
-          "canon": Object {
-            "groupA": Object {
-              "fontSize": "28",
-              "lineHeight": "32",
-            },
-            "groupB": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupD": Object {
-              "fontSize": "44",
-              "lineHeight": "48",
-            },
-          },
-          "doublePica": Object {
-            "groupA": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupB": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupD": Object {
-              "fontSize": "24",
-              "lineHeight": "28",
-            },
-          },
-          "elephant": Object {
-            "groupA": Object {
-              "fontSize": "60",
-              "lineHeight": "64",
-            },
-            "groupB": Object {
-              "fontSize": "78",
-              "lineHeight": "84",
-            },
-            "groupD": Object {
-              "fontSize": "116",
-              "lineHeight": "124",
-            },
-          },
-          "foolscap": Object {
-            "groupA": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-            "groupB": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupD": Object {
-              "fontSize": "56",
-              "lineHeight": "60",
-            },
-          },
-          "greatPrimer": Object {
-            "groupA": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupB": Object {
-              "fontSize": "18",
-              "lineHeight": "22",
-            },
-            "groupD": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-          },
-          "imperial": Object {
-            "groupA": Object {
-              "fontSize": "50",
-              "lineHeight": "54",
-            },
-            "groupB": Object {
-              "fontSize": "64",
-              "lineHeight": "72",
-            },
-            "groupD": Object {
-              "fontSize": "96",
-              "lineHeight": "104",
-            },
-          },
-          "longPrimer": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "18",
-            },
-            "groupB": Object {
-              "fontSize": "15",
-              "lineHeight": "18",
-            },
-            "groupD": Object {
-              "fontSize": "14",
-              "lineHeight": "18",
-            },
-          },
-          "minion": Object {
-            "groupA": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-            "groupB": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-            "groupD": Object {
-              "fontSize": "12",
-              "lineHeight": "16",
-            },
-          },
-          "paragon": Object {
-            "groupA": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupB": Object {
-              "fontSize": "22",
-              "lineHeight": "26",
-            },
-            "groupD": Object {
-              "fontSize": "28",
-              "lineHeight": "32",
-            },
-          },
-          "pica": Object {
-            "groupA": Object {
-              "fontSize": "15",
-              "lineHeight": "20",
-            },
-            "groupB": Object {
-              "fontSize": "16",
-              "lineHeight": "20",
-            },
-            "groupD": Object {
-              "fontSize": "16",
-              "lineHeight": "20",
-            },
-          },
-          "royal": Object {
-            "groupA": Object {
-              "fontSize": "40",
-              "lineHeight": "44",
-            },
-            "groupB": Object {
-              "fontSize": "52",
-              "lineHeight": "60",
-            },
-            "groupD": Object {
-              "fontSize": "76",
-              "lineHeight": "84",
-            },
-          },
-          "trafalgar": Object {
-            "groupA": Object {
-              "fontSize": "20",
-              "lineHeight": "24",
-            },
-            "groupB": Object {
-              "fontSize": "24",
-              "lineHeight": "28",
-            },
-            "groupD": Object {
-              "fontSize": "32",
-              "lineHeight": "36",
-            },
-          },
-        }
-      }
-      service="igbo"
-      url="/igbo/popular/read"
-    >
-      Nke ka ewuewu
-    </NavigationLi>
-  </NavigationUl>
-</Navigation>
+      <li
+        class="c4"
+        dir="ltr"
+        role="listitem"
+      >
+        <a
+          class="c5"
+          href="/igbo"
+        >
+          <span
+            class="c6"
+            role="text"
+          >
+            <span
+              class="c7"
+            >
+              Peegi ị nọ ugbua
+              , 
+            </span>
+            Akụkọ
+          </span>
+        </a>
+      </li>
+      <li
+        class="c4"
+        dir="ltr"
+        role="listitem"
+      >
+        <a
+          class="c8"
+          href="/igbo/egwuregwu"
+        >
+          Egwuregwu
+        </a>
+      </li>
+      <li
+        class="c4"
+        dir="ltr"
+        role="listitem"
+      >
+        <a
+          class="c8"
+          href="/igbo/media/video"
+        >
+          Ihe nkiri
+        </a>
+      </li>
+      <li
+        class="c4"
+        dir="ltr"
+        role="listitem"
+      >
+        <a
+          class="c8"
+          href="/igbo/popular/read"
+        >
+          Nke ka ewuewu
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 `;

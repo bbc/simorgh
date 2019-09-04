@@ -3,11 +3,11 @@
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ClientApp, ServerApp } from '.';
 
 describe('ClientApp', () => {
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render correctly',
     <ClientApp data="someData!" routes={['someRoute']} />,
   );
@@ -15,7 +15,7 @@ describe('ClientApp', () => {
 
 describe('ServerApp', () => {
   describe('no passed routerContext', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
       <ServerApp
         location="someUrl"
@@ -26,7 +26,7 @@ describe('ServerApp', () => {
     );
   });
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render correctly',
     <ServerApp
       location="someUrl"

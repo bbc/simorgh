@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  shouldShallowMatchSnapshot,
+  shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
@@ -77,12 +77,12 @@ describe('Image', () => {
       isNull('should return null', <ImageContainer {...dataWithoutAltText} />);
     });
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text',
       <ImageContainer {...data} />,
     );
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render a lazyload container instead of an image if the image is after the 3rd block',
       <ImageContainer position={[4]} {...data} />,
     );
@@ -95,7 +95,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text and offscreen copyright',
       <ImageContainer {...dataWithNonBbcCopyright} />,
     );
@@ -112,7 +112,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text and caption',
       <ImageContainer {...dataWithCaption} />,
     );
@@ -125,7 +125,7 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with other originCode - this would be a broken image',
       <ImageContainer {...dataWithOtherOriginCode} />,
     );

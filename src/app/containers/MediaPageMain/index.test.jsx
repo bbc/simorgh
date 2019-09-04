@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MediaPageMain from '.';
 import amharicConfig from '../../lib/config/services/amharic';
 import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
@@ -28,7 +28,7 @@ useContext.mockReturnValue(amharicConfig);
 
 describe('Media Page Main', () => {
   describe('snapshots', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should match scaffold snapshot',
       <MediaPageMain {...liveRadioScaffoldProps} />,
     );

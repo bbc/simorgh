@@ -2,6 +2,14 @@
 
 exports[`Timestamp should render if not IE9 comment 1`] = `
 <div>
-  <!--[if !IE]&gt;&lt;!-->
+  <div>
+    <!--[if !IE]&gt;&lt;!-->
+  </div>
+  <h1>
+    I can not be seen on IE9
+  </h1>
+  <div>
+    <!--&lt;![endif]-->
+  </div>
 </div>
 `;

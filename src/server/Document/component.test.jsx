@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallowRender } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import DocumentComponent from './component';
 
 describe('Document Component', () => {
@@ -36,7 +36,7 @@ describe('Document Component', () => {
   const styleTagsAmp = <style amp-custom="">{'html { color: red; }'}</style>;
 
   const shallowDocument = ({ service, isAmp }) =>
-    shallowRender(
+    shouldMatchSnapshot(
       <DocumentComponent
         assets={assets}
         assetOrigins={assetOrigins}

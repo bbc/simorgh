@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, node } from 'prop-types';
-import { shouldShallowMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
@@ -33,21 +33,21 @@ Context.propTypes = {
 };
 
 describe('ArticleMain', () => {
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a news article correctly',
     <Context service="news">
       <ArticleMain articleData={articleDataNews} />
     </Context>,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a persian article correctly',
     <Context service="persian">
       <ArticleMain articleData={articleDataPersian} />
     </Context>,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a pidgin article correctly (with navigation)',
     <Context service="pidgin">
       <ArticleMain articleData={articleDataPidgin} />
