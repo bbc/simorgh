@@ -1,21 +1,18 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import { shape, bool, string } from 'prop-types';
+import { shape, bool, string, oneOfType } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 import pathOr from 'ramda/src/pathOr';
-import pick from 'ramda/src/pick';
-import { storyItem } from '../../../models/propTypes/storyItem';
+import { storyItem, linkPromo } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
-const getMediaType = item => {
+const getAssetContentTypes = item => {
   const mediaContentTypes = ['audio'];
-  const isAssetTypeMedia = pathOr(null, ['assetTypeCode'], item);
+  const type = pathOr(null, ['contentType'], item).toLowerCase();
+  return mediaContentTypes.includes(type) ? type : null;
+};
 
-  if (isAssetTypeMedia) {
-    const type = pathOr(null, ['contentType'], item).toLowerCase();
-    return mediaContentTypes.includes(type) ? type : null;
-  }
-
+const getCpsMediaTypes = item => {
   const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
   const isCpsMedia = pathOr(null, ['cpsType'], item) === 'MAP';
   const hasMediaInfo = pathOr(null, ['media'], item);
@@ -25,6 +22,11 @@ const getMediaType = item => {
     return null;
   }
   return isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
+};
+
+const getMediaType = item => {
+  const isAssetTypeMedia = pathOr(null, ['assetTypeCode'], item);
+  return isAssetTypeMedia ? getAssetContentTypes(item) : getCpsMediaTypes(item);
 };
 
 const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
@@ -49,12 +51,18 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   }
 
   return (
-    type && <MediaIndicatorComp type={type} service={service} indexAlsos={indexAlsos} />
+    type && (
+      <MediaIndicatorComp
+        type={type}
+        service={service}
+        indexAlsos={indexAlsos}
+      />
+    )
   );
 };
 
 MediaIndicator.propTypes = {
-  item: shape(pick(['cpsType', 'media'], storyItem)).isRequired,
+  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   topStory: bool,
   service: string.isRequired,
   indexAlsos: bool,
