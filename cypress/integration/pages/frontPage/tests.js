@@ -83,6 +83,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('have.length.of.at.least', 1)
               .should('be.visible');
           });
+
           cy.viewport(320, 480);
           cy.get('section').within(() => {
             cy.get('img')
@@ -95,15 +96,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('have.attr', 'href');
             cy.get('p')
               .eq(0)
-              .should('be.visible');
-            cy.get('p')
-              .eq(1)
-              .should('be.hidden');
-            cy.get('p')
-              .eq(2)
-              .should('be.hidden');
-            cy.get('p')
-              .eq(3)
               .should('be.hidden');
             cy.get('time')
               .should('have.length.of.at.least', 1)
