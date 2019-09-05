@@ -20,6 +20,7 @@ const ContextWrap = ({ pageType, platform, children }) => (
       isAmp={platform === 'amp'}
       pageType={pageType}
       service="news"
+      pathname="/pathname"
     >
       {children}
     </RequestContextProvider>

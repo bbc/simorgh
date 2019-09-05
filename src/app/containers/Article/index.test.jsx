@@ -9,6 +9,7 @@ const defaultProps = {
   isAmp: false,
   pageType: 'article',
   service: 'news',
+  pathname: '/pathname',
 };
 
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {

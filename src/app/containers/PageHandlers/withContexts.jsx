@@ -15,6 +15,7 @@ const WithContexts = Component => {
       service,
       isAmp,
       pageType,
+      pathname,
       previousPath,
       variant,
     } = props;
@@ -27,6 +28,7 @@ const WithContexts = Component => {
             isAmp={isAmp}
             pageType={pageType}
             service={service}
+            pathname={pathname}
             previousPath={previousPath}
           >
             <UserContextProvider>

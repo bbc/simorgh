@@ -7,6 +7,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    pathname="/pathname"
     previousPath={null}
     service="news"
   >
@@ -168,6 +169,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    pathname="/pathname"
     previousPath={null}
     service="persian"
   >
@@ -286,6 +288,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
     id="c0000000000o"
     isAmp={false}
     pageType="article"
+    pathname="/pathname"
     previousPath={null}
     service="pidgin"
   >

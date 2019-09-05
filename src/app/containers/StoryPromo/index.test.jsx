@@ -185,6 +185,7 @@ const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
       isAmp={platform === 'amp'}
       pageType="article"
       service={service}
+      pathname="/pathname"
     >
       <StoryPromo {...props} />
     </RequestContextProvider>

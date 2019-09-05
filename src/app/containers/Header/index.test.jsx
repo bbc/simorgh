@@ -35,6 +35,7 @@ const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
         pageType={pageType}
         service={service}
         bbcOrigin="https://www.test.bbc.com"
+        pathname="/pathname"
       >
         <HeaderContainer />
       </RequestContextProvider>
