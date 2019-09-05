@@ -83,7 +83,6 @@ node {
                   emoji: '🤟'
                 ]
                 notifySlack(messageParameters, '#si_repo-simorgh')
-                notifySlack(messageParameters, '#simorgh-alarms-test')
                 break
               case 'UNSTABLE':
                 def messageParameters = [
@@ -94,7 +93,6 @@ node {
                   emoji: '😱',
                 ]
                 notifySlack(messageParameters, '#si_repo-simorgh')
-                notifySlack(messageParameters, '#simorgh-alarms-test')
                 break
               case 'ABORTED':
                 def messageParameters = [
@@ -105,7 +103,6 @@ node {
                   emoji: '🙀',
                 ]
                 notifySlack(messageParameters, '#si_repo-simorgh')
-                notifySlack(messageParameters, '#simorgh-alarms-test')
                 break
               default:
                 if (stageHasFailed == false) {
@@ -117,7 +114,6 @@ node {
                     emoji: '😱',
                   ]
                   notifySlack(messageParameters, '#si_repo-simorgh')
-                  notifySlack(messageParameters, '#simorgh-alarms-test')
                 }
                 break
             }
