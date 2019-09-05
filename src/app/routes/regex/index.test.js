@@ -186,6 +186,8 @@ describe('mediaAssetPageRegexPath', () => {
     '/yoruba/media-49450859.amp',
     '/punjabi/international-49567825',
     '/punjabi/international-49567825.amp',
+    '/kyrgyz/sapar-tv-48695523',
+    '/mundo/test_underscore-12345678',
   ];
 
   shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
