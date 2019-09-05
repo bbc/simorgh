@@ -1,7 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 
 const whitelist = ['STY', 'MAP', 'PGL', 'LIV', 'PRO'];
-const contentTypes = ['Text']; // For now we are just supporting standard link promos
+const contentTypes = ['Text', 'Video'];
 
 const filterUnknownContentTypes = data => {
   const groups = pathOr(null, ['content', 'groups'], data);
