@@ -52,15 +52,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
             .should('have.attr', 'role', 'main');
         });
       });
-
-      describe('Footer', () => {
-        it('footer rendered', () => {
-          cy.get('footer')
-            .should('have.length', 1)
-            .should('have.attr', 'role', 'contentinfo')
-            .should('be.visible');
-        });
-      });
     });
   });
 };
