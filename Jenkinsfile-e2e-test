@@ -40,35 +40,13 @@ node {
           stage ('Install & Setup') {
             sh 'make install'
           }
-          stage ('Live E2Es') {
+          stage ('Test E2Es') {
             try {
-              sh 'make liveE2Es'
+              sh 'make testE2Es'
             } catch (Throwable e) {
               def messageParameters = [
                 buildStatus: 'Failed',
-                env: 'LIVE',
-                branch: env.BRANCH_NAME,
-                colour: 'danger',
-                emoji: '😱',
-              ]
-
-              if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters, '#si_repo-simorgh')
-                notifySlack(messageParameters, '#simorgh-alarms-live')
-                stageHasFailed = true
-              }
-
-              currentBuild.result = 'FAILURE'
-              throw e
-            }
-          }
-          stage ('Local Prod Tests') {
-            try {
-              sh 'CYPRESS_SMOKE=false npm run build && npm run test:ci;'
-            } catch (Throwable e) {
-              def messageParameters = [
-                buildStatus: 'Failed',
-                env: 'LOCAL',
+                env: 'TEST',
                 branch: env.BRANCH_NAME,
                 colour: 'danger',
                 emoji: '😱',
@@ -104,7 +82,8 @@ node {
                   colour: 'good',
                   emoji: '🤟'
                 ]
-                // notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, '#simorgh-alarms-live')
                 break
               case 'UNSTABLE':
                 def messageParameters = [
@@ -115,6 +94,7 @@ node {
                   emoji: '😱',
                 ]
                 notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, '#simorgh-alarms-live')
                 break
               case 'ABORTED':
                 def messageParameters = [
@@ -125,6 +105,7 @@ node {
                   emoji: '🙀',
                 ]
                 notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, '#simorgh-alarms-live')
                 break
               default:
                 if (stageHasFailed == false) {
@@ -136,6 +117,7 @@ node {
                     emoji: '😱',
                   ]
                   notifySlack(messageParameters, '#si_repo-simorgh')
+                  notifySlack(messageParameters, '#simorgh-alarms-live')
                 }
                 break
             }
