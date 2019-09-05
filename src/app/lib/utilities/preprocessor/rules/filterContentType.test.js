@@ -23,19 +23,29 @@ const cpsItems = [
   },
 ];
 
-const assetTypeCodeItems = [
-  {
-    name: 'Test standard link promo',
-    summary: 'This is a standard link promo',
-    indexImage: {},
-    indexThumbnail: {},
-    uri: 'http://this.is.a.test.com/',
-    contentType: 'Text',
-    assetTypeCode: 'PRO',
-    timestamp: 1527598380040,
-    type: 'link',
-  },
-];
+const TextAssetType = {
+  name: 'Test standard link promo',
+  summary: 'This is a standard link promo',
+  indexImage: {},
+  indexThumbnail: {},
+  uri: 'http://this.is.a.test.com/',
+  contentType: 'Text',
+  assetTypeCode: 'PRO',
+  timestamp: 1527598380040,
+  type: 'link',
+};
+
+const VideoAssetType = {
+  name: 'Test standard link promo',
+  summary: 'This is a standard link promo',
+  indexImage: {},
+  indexThumbnail: {},
+  uri: 'http://this.is.a.test.com/',
+  contentType: 'Video',
+  assetTypeCode: 'PRO',
+  timestamp: 1527598380040,
+  type: 'link',
+};
 
 describe('filterUnknownContentTypes', () => {
   it('should no-op when no groups', () => {
@@ -79,7 +89,7 @@ describe('filterUnknownContentTypes', () => {
       content: {
         groups: [
           {
-            items: cpsItems.concat(assetTypeCodeItems),
+            items: cpsItems.concat(TextAssetType),
           },
         ],
       },
@@ -88,7 +98,7 @@ describe('filterUnknownContentTypes', () => {
       content: {
         groups: [
           {
-            items: cpsItems.concat(assetTypeCodeItems),
+            items: cpsItems.concat(TextAssetType),
           },
         ],
       },
@@ -307,7 +317,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: assetTypeCodeItems,
+              items: VideoAssetType,
             },
           ],
         },
@@ -316,7 +326,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: assetTypeCodeItems,
+              items: VideoAssetType,
             },
           ],
         },
@@ -328,58 +338,12 @@ describe('filterUnknownContentTypes', () => {
     it('should work on all groups in the data', () => {
       const data = {
         content: {
-          groups: [
-            {
-              name: 'Test assetTypeCode 1',
-              summary: 'This is the first test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380090,
-              type: 'link',
-            },
-            {
-              name: 'Test assetTypeCode 2',
-              summary: 'This is another test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380040,
-              type: 'link',
-            },
-          ],
+          groups: [VideoAssetType, TextAssetType],
         },
       };
       const expected = {
         content: {
-          groups: [
-            {
-              name: 'Test assetTypeCode 1',
-              summary: 'This is the first test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380090,
-              type: 'link',
-            },
-            {
-              name: 'Test assetTypeCode 2',
-              summary: 'This is another test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380040,
-              type: 'link',
-            },
-          ],
+          groups: [VideoAssetType, TextAssetType],
         },
       };
 
@@ -418,6 +382,20 @@ describe('filterUnknownContentTypes', () => {
     });
 
     it('should leave items with known assetTypeCode and contentType', () => {
+      const data = {
+        content: {
+          groups: [
+            {
+              items: [VideoAssetType],
+            },
+          ],
+        },
+      };
+
+      expect(filterUnknownContentTypes(data)).toEqual(data);
+    });
+
+    it('should keep items with known contentTypes', () => {
       const data = {
         content: {
           groups: [
