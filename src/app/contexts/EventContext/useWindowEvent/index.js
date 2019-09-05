@@ -1,13 +1,18 @@
 import { useEffect } from 'react';
 
-export const useWindowEvent = (event, handler, passive = false) => {
+export const useWindowEvent = (
+  event,
+  handler,
+  passive = false,
+  _window = window,
+) => {
   useEffect(() => {
     // initiate the event handler
-    window.addEventListener(event, handler, passive);
+    _window.addEventListener(event, handler, passive);
 
     // this will clean up the event every time the component is re-rendered
     return function cleanup() {
-      window.removeEventListener(event, handler);
+      _window.removeEventListener(event, handler);
     };
   });
 };
