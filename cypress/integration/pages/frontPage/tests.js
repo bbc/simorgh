@@ -1,6 +1,6 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-const serviceHasIndexAlsos = service => service === 'thai';
+const serviceHasIndexAlsos = service => service === 'mundo';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -92,17 +92,21 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             cy.get('section li')
               .eq(0)
               .within(() => {
-                cy.get('div div div a')
-                  .eq(0)
-                  .within(() => {
-                    cy.get('span').then($el => {
-                      if ($el.length > 1) {
-                        cy.get('svg').should('be.visible');
-                      } else {
-                        expect($el).not.to.have.descendants('svg');
-                      }
-                    });
-                  });
+                cy.get('div div').then($el => {
+                  if ($el.length > 5) {
+                    cy.get('div div div a')
+                      .eq(0)
+                      .within(() => {
+                        cy.get('span').then($span => {
+                          if ($span.length > 1) {
+                            cy.get('svg').should('be.visible');
+                          } else {
+                            expect($el).not.to.have.descendants('svg');
+                          }
+                        });
+                      });
+                  }
+                });
               });
           });
         }
