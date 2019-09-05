@@ -60,7 +60,7 @@ Object.keys(config)
               visitPage(service, pageType);
             });
 
-            const variant = 'default';
+            const { variant } = config[service];
 
             it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
               getPrivacyBanner(service, variant).should('be.visible');

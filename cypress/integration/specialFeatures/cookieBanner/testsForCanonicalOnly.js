@@ -79,7 +79,7 @@ Object.keys(config)
     Object.keys(config[service].pageTypes)
       .filter(pageType => filterPageTypes(pageType, service))
       .forEach(pageType => {
-        const variant = 'default';
+        const { variant } = config[service];
 
         describe(`Canonical Cookie Banner Test for ${service} ${pageType}`, () => {
           it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
