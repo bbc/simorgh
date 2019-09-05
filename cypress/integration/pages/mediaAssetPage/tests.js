@@ -31,11 +31,13 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
             .should('be.visible');
         });
 
-        it('should have element nav div with class', () => {
-          cy.get('header')
-            .find('nav')
-            .find('div')
-            .should('have.attr', 'class');
+        it('should have element visible navigation', () => {
+          cy.get('nav')
+            .should('have.lengthOf', 1)
+            .should('be.visible')
+            .find('a[class^="StyledNav"]')
+            .should('have.lengthOf', 1)
+            .should('have.attr', 'href', '#content');
         });
       });
 
