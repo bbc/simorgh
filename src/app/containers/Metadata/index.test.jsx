@@ -10,8 +10,16 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 import frontPageData from '../../../../data/igbo/frontpage/index.json';
 import liveRadioPageData from '../../../../data/korean/bbc_korean_radio/liveradio.json';
 
-const Container = (service, bbcOrigin, platform, data, id, pageType) => {
-  const serviceConfig = services[service];
+const Container = (
+  service,
+  bbcOrigin,
+  platform,
+  data,
+  id,
+  pageType,
+  pathname,
+) => {
+  const serviceConfig = services[service].default;
 
   return (
     <ServiceContextProvider {...serviceConfig}>
@@ -20,6 +28,7 @@ const Container = (service, bbcOrigin, platform, data, id, pageType) => {
         id={id}
         isAmp={platform === 'amp'}
         pageType={pageType}
+        pathname={pathname}
         service={service}
       >
         <MetadataContainer {...articleDataNews} {...data} />
@@ -126,6 +135,7 @@ describe('Metadata Container', () => {
           articleDataNews,
           'c0000000001o',
           'article',
+          '/news/articles/c0000000001o',
         ),
       );
 
@@ -160,7 +170,7 @@ describe('Metadata Container', () => {
           '2018-01-01T12:01:00.000Z',
           '2018-01-01T13:00:00.000Z',
           'Article Headline for SEO',
-          services.news,
+          services.news.default,
           'article',
           'news',
           true,
@@ -200,6 +210,7 @@ describe('Metadata Container', () => {
           articleDataNews,
           'c0000000001o',
           'article',
+          '/news/articles/c0000000001o',
         ),
       );
 
@@ -234,7 +245,7 @@ describe('Metadata Container', () => {
           '2018-01-01T12:01:00.000Z',
           '2018-01-01T13:00:00.000Z',
           'Article Headline for SEO',
-          services.news,
+          services.news.default,
           'article',
           'news',
           true,
@@ -274,6 +285,7 @@ describe('Metadata Container', () => {
           articleDataPersian,
           'c4vlle3q337o',
           'article',
+          '/persian/articles/c4vlle3q337o',
         ),
       );
 
@@ -295,7 +307,7 @@ describe('Metadata Container', () => {
           '2018-01-01T12:01:00.000Z',
           '2018-01-01T13:00:00.000Z',
           'سرصفحه مقاله',
-          services.persian,
+          services.persian.default,
           'article',
           'persian',
           true,
@@ -324,6 +336,7 @@ describe('Metadata Container', () => {
           articleDataPersian,
           'c4vlle3q337o',
           'article',
+          '/persian/articles/c4vlle3q337o',
         ),
       );
 
@@ -345,7 +358,7 @@ describe('Metadata Container', () => {
           '2018-01-01T12:01:00.000Z',
           '2018-01-01T13:00:00.000Z',
           'سرصفحه مقاله',
-          services.persian,
+          services.persian.default,
           'article',
           'persian',
           true,
@@ -374,6 +387,7 @@ describe('Metadata Container', () => {
           frontPageData,
           null,
           'frontPage',
+          '/igbo',
         ),
       );
 
@@ -400,7 +414,7 @@ describe('Metadata Container', () => {
           null,
           null,
           'Ogbako',
-          services.igbo,
+          services.igbo.default,
           'website',
           'igbo',
           false,
@@ -430,6 +444,7 @@ describe('Metadata Container', () => {
         liveRadioPageData,
         null,
         'media',
+        '/korean/bbc_korean_radio/liveradio',
       ),
     );
 
@@ -451,7 +466,7 @@ describe('Metadata Container', () => {
         null,
         null,
         'BBC News 코리아 라디오',
-        services.korean,
+        services.korean.default,
         'website',
         'korean',
         false,

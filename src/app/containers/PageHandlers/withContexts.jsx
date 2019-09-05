@@ -47,6 +47,7 @@ const WithContexts = Component => {
     id: string,
     isAmp: bool.isRequired,
     pageType: string.isRequired,
+    pathname: string.isRequired,
     previousPath: string,
     service: string.isRequired,
     dials: objectOf(bool).isRequired,

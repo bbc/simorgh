@@ -24,7 +24,7 @@ jest.mock('react', () => {
 });
 
 const { useContext } = jest.requireMock('react');
-useContext.mockReturnValue(amharicConfig);
+useContext.mockReturnValue(amharicConfig.default);
 
 describe('Media Page Main', () => {
   describe('snapshots', () => {

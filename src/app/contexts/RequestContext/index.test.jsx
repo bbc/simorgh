@@ -4,6 +4,7 @@ import * as getStatsDestination from './getStatsDestination';
 import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
+import * as getMetaUrls from './getMetaUrls';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
@@ -24,11 +25,20 @@ jest.mock('./getStatsDestination');
 jest.mock('./getStatsPageIdentifier');
 jest.mock('./getOriginContext');
 jest.mock('./getEnv');
+jest.mock('./getMetaUrls');
 
 getStatsDestination.default.mockReturnValue('getStatsDestination');
 getStatsPageIdentifier.default.mockReturnValue('getStatsPageIdentifier');
 getOriginContext.default.mockReturnValue({ isUK: true, origin: 'origin' });
 getEnv.default.mockReturnValue('getEnv');
+getMetaUrls.default.mockReturnValue({
+  canonicalLink: 'canonicalLink',
+  ampLink: 'ampLink',
+  canonicalUkLink: 'canonicalUkLink',
+  ampUkLink: 'ampUkLink',
+  canonicalNonUkLink: 'canonicalNonUkLink',
+  ampNonUkLink: 'ampNonUkLink',
+});
 
 const input = {
   bbcOrigin: 'bbcOrigin',
@@ -36,6 +46,7 @@ const input = {
   isAmp: true,
   pageType: 'frontPage',
   service: 'service',
+  pathname: '/current-path',
   previousPath: '/previous-path',
 };
 
@@ -49,6 +60,12 @@ const expectedOutput = {
   statsDestination: 'getStatsDestination',
   statsPageIdentifier: 'getStatsPageIdentifier',
   previousPath: '/previous-path',
+  canonicalLink: 'canonicalLink',
+  ampLink: 'ampLink',
+  canonicalUkLink: 'canonicalUkLink',
+  ampUkLink: 'ampUkLink',
+  canonicalNonUkLink: 'canonicalNonUkLink',
+  ampNonUkLink: 'ampNonUkLink',
 };
 
 describe('RequestContext', () => {
@@ -78,6 +95,8 @@ describe('RequestContext', () => {
     expect(getOriginContext.default).toHaveBeenCalledWith('bbcOrigin');
 
     expect(getEnv.default).toHaveBeenCalledWith('origin');
+
+    expect(getMetaUrls.default).toHaveBeenCalledWith('origin', '/current-path');
 
     expect(React.useContext).toHaveReturnedWith(expectedOutput);
   });

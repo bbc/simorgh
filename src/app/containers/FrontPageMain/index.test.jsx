@@ -32,7 +32,7 @@ const requestContextData = {
 
 const FrontPageMainWithContext = props => (
   <RequestContext.Provider value={requestContextData}>
-    <ServiceContext.Provider value={igboConfig}>
+    <ServiceContext.Provider value={igboConfig.default}>
       <FrontPageMain {...props} />
     </ServiceContext.Provider>
   </RequestContext.Provider>

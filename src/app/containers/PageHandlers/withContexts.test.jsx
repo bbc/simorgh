@@ -38,6 +38,7 @@ describe('withContexts HOC', () => {
     service: 'news',
     isAmp: true,
     pageType: 'article',
+    pathname: '/pathname',
     dials,
   };
 
@@ -65,6 +66,7 @@ describe('withContexts HOC', () => {
           service: 'news',
           isAmp: true,
           pageType,
+          pathname: '/pathname',
           dials,
         };
 
