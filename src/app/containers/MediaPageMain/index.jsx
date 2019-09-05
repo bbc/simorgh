@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, shape, object, bool, arrayOf } from 'prop-types';
+import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -32,10 +32,11 @@ const MediaPageMain = ({ pageData, service }) => {
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
-            {blocks.map(({ uuid, id, text, type, live, externalId }, index) => {
+            {blocks.map(({ uuid, id, text, type, externalId }, index) => {
               const isFirstBlock = index === 0;
               const idAttr = isFirstBlock ? SKIP_LINK_ANCHOR_ID : null;
-              const blockType = live ? LIVE_RADIO_BLOCK : type;
+              const blockType =
+                id === LIVE_RADIO_BLOCK ? LIVE_RADIO_BLOCK : type;
 
               switch (blockType) {
                 case HEADING_BLOCK:
@@ -102,7 +103,6 @@ MediaPageMain.propTypes = {
           externalId: string,
           text: string,
           type: string,
-          live: bool,
         }),
       ),
     }),
