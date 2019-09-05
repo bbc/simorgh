@@ -38,7 +38,10 @@ const service = {
   script: arabic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle:
+    'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
   translations: {
+    seeAll: 'See all',
     home: 'صفحۂ اول',
     currentPage: 'Current page',
     skipLinkText: 'مواد پر جائیں',
@@ -126,10 +129,14 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'سب سے زیادہ پڑھی جانے والی',
+    lastUpdated: 'آخری اپ ڈیٹ ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
     },
     links: [
       {
@@ -138,27 +145,19 @@ const service = {
       },
       {
         href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
-      },
-      {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        text: 'استعمال کے ضوابط',
       },
       {
         href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        text: 'پرائیویسی پالیسی',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
         href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        text: 'بی بی سی سے رابطہ کریں',
       },
     ],
     copyrightText:

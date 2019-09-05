@@ -75,6 +75,7 @@ const Metadata = ({
   iconSizes,
 }) => {
   const htmlAttributes = { dir, lang };
+  const pageTitle = `${title} - ${brandName}`;
 
   if (isAmp) {
     htmlAttributes.amp = ''; // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
@@ -90,9 +91,7 @@ const Metadata = ({
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
-      <title>
-        {title} - {brandName}
-      </title>
+      <title>{pageTitle}</title>
       <link rel="canonical" href={canonicalLink} />
       {alternateLinks.map(alternate => (
         <link
@@ -124,7 +123,7 @@ const Metadata = ({
       <meta name="og:image:alt" content={defaultImageAltText} />
       <meta name="og:locale" content={locale} />
       <meta name="og:site_name" content={brandName} />
-      <meta name="og:title" content={title} />
+      <meta name="og:title" content={pageTitle} />
       <meta name="og:type" content={type} />
       <meta name="og:url" content={canonicalLink} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -133,7 +132,7 @@ const Metadata = ({
       <meta name="twitter:image:alt" content={defaultImageAltText} />
       <meta name="twitter:image:src" content={defaultImage} />
       <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={pageTitle} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       {getIconLinks(service, iconSizes)}
       <link

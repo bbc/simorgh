@@ -1,6 +1,31 @@
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
-import tests from './tests';
-import testsForAMPOnly from './testsForAMPOnly';
-import testsForCanonicalOnly from './testsForCanonicalOnly';
+import {
+  testsThatAlwaysRun,
+  testsThatFollowSmokeTestConfig,
+  testsThatNeverRunDuringSmokeTesting,
+} from './tests';
+import {
+  testsThatAlwaysRunForAMPOnly,
+  testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatNeverRunDuringSmokeTestingForAMPOnly,
+} from './testsForAMPOnly';
+import {
+  testsThatAlwaysRunForCanonicalOnly,
+  testsThatFollowSmokeTestConfigForCanonicalOnly,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
+} from './testsForCanonicalOnly';
 
-runTestsForPage('errorPage404', tests, testsForAMPOnly, testsForCanonicalOnly);
+const testsForPage = {
+  pageType: 'errorPage404',
+  testsThatAlwaysRun,
+  testsThatAlwaysRunForCanonicalOnly,
+  testsThatAlwaysRunForAMPOnly,
+  testsThatFollowSmokeTestConfig,
+  testsThatFollowSmokeTestConfigForCanonicalOnly,
+  testsThatFollowSmokeTestConfigForAMPOnly,
+  testsThatNeverRunDuringSmokeTesting,
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
+  testsThatNeverRunDuringSmokeTestingForAMPOnly,
+};
+
+runTestsForPage(testsForPage);

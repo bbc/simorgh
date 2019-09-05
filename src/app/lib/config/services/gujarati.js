@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `gu-IN`,
-  datetimeLocale: `gu-IN`.toLowerCase(),
+  datetimeLocale: `gu-in`,
   service: 'gujarati',
   serviceName: 'News ગુજરાતી',
   themeColor: `${C_POSTBOX}`,
@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'સમાચાર',
   translations: {
+    seeAll: 'See all',
     home: 'સમાચાર',
     currentPage: 'Current page',
     skipLinkText: 'સામગ્રી પર જાઓ',
@@ -127,6 +129,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -142,20 +148,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',

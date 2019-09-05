@@ -25,7 +25,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `ti-ET`,
-  datetimeLocale: `ti-ET`.toLowerCase(),
+  datetimeLocale: `ti-et`,
   service: 'tigrinya',
   serviceName: 'News ትግርኛ',
   themeColor: `${C_POSTBOX}`,
@@ -36,7 +36,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'ዜና',
   translations: {
+    seeAll: 'See all',
     home: 'ዜና',
     currentPage: 'Current page',
     skipLinkText: 'እቲ ትሕዝቶ ዝለል',
@@ -125,6 +127,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -140,20 +146,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',

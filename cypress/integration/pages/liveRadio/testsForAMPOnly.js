@@ -1,8 +1,18 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
-const tests = ({ service }) =>
-  describe('Amp Tests', () => {
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {});
+};
+
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfigForAMPOnly = ({
+  service,
+  pageType,
+}) =>
+  describe(`Amp Tests for ${service} ${pageType}`, () => {
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
         cy.testResponseCodeAndType(
@@ -13,11 +23,15 @@ const tests = ({ service }) =>
       });
     });
 
-    describe('ATI', () => {
-      it.skip('should have an amp-analytics tag with the ati url', () => {
-        cy.hasAmpAnalyticsAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
+    describe('live radio body', () => {
+      it('should render an audio player embed', () => {
+        cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
+          ({ body }) => {
+            const { id, externalId } = body.content.blocks[2];
+            cy.get(
+              `amp-iframe[src="${`/ws/av-embeds/media/${externalId}/${id}`}"]`,
+            ).should('be.visible');
+          },
         );
       });
     });
@@ -39,12 +53,21 @@ const tests = ({ service }) =>
       // .eq(2) gets the amp <script> as:
       // the first loaded is a Cypress <script>
       // the second loaded is the Schema.org metadata script
+
       cy.get('head script')
         .eq(2)
-        .should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
+        .should(
+          'have.attr',
+          'src',
+          'https://cdn.ampproject.org/v0/amp-iframe-0.1.js',
+        );
 
       cy.get('head script')
         .eq(3)
+        .should('have.attr', 'src', 'https://cdn.ampproject.org/v0.js');
+
+      cy.get('head script')
+        .eq(4)
         .should(
           'have.attr',
           'src',
@@ -52,7 +75,7 @@ const tests = ({ service }) =>
         );
 
       cy.get('head script')
-        .eq(4)
+        .eq(5)
         .should(
           'have.attr',
           'src',
@@ -60,7 +83,7 @@ const tests = ({ service }) =>
         );
 
       cy.get('head script')
-        .eq(5)
+        .eq(6)
         .should(
           'have.attr',
           'src',
@@ -87,4 +110,10 @@ const tests = ({ service }) =>
     });
   });
 
-export default tests;
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
+};
