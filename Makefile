@@ -11,7 +11,7 @@ developmentTests:
 	npm run test;
 	npx chromatic test run  --build-script-name build:storybook || true
 
-productionTests:
+productionTests: 
 	npm run build && npm run test:ci;
 
 testE2Es:
