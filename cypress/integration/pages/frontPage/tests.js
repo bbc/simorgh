@@ -1,5 +1,7 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
+
+// Defaulting to false for now whilst we look to improve the index also's test coverage to cater for the varying scenarios: https://github.com/bbc/simorgh/issues/3586
 const serviceHasIndexAlsos = () => false;
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
