@@ -1,5 +1,7 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
+const serviceHasIndexAlsos = service => service === 'thai';
+
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
@@ -56,6 +58,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('have.length.of.at.least', 1)
               .should('be.visible');
           });
+
           cy.viewport(320, 480);
           cy.get('section').within(() => {
             cy.get('img')
@@ -68,21 +71,33 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('have.attr', 'href');
             cy.get('p')
               .eq(0)
-              .should('be.visible');
-            cy.get('p')
-              .eq(1)
-              .should('be.hidden');
-            cy.get('p')
-              .eq(2)
-              .should('be.hidden');
-            cy.get('p')
-              .eq(3)
               .should('be.hidden');
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
           });
         });
+
+        if (serviceHasIndexAlsos(service)) {
+          it('should contain Index Alsos at a mobile view', () => {
+            cy.viewport('iphone-5');
+            cy.get('section li')
+              .eq(0)
+              .within(() => {
+                cy.get('div div div a')
+                  .eq(0)
+                  .within(() => {
+                    cy.get('span').then($el => {
+                      if ($el.length > 1) {
+                        cy.get('svg').should('be.visible');
+                      } else {
+                        expect($el).not.to.have.descendants('svg');
+                      }
+                    });
+                  });
+              });
+          });
+        }
       });
     });
   });
