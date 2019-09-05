@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, shape, object, bool } from 'prop-types';
+import { string, shape, object, bool, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -95,12 +95,17 @@ MediaPageMain.propTypes = {
       name: string,
     }),
     content: shape({
-      id: string,
-      externalId: string,
-      text: string,
-      type: string,
-      live: bool,
-    }).isRequired,
+      blocks: arrayOf(
+        shape({
+          uuid: string,
+          id: string,
+          externalId: string,
+          text: string,
+          type: string,
+          live: bool,
+        }),
+      ),
+    }),
   }).isRequired,
 };
 
