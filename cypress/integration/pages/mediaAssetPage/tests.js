@@ -56,6 +56,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   });
 };
 
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
   describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };
