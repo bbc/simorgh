@@ -32,7 +32,7 @@ const MediaPageMain = ({ pageData, service }) => {
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
-            {blocks.map(({ id, text, type, live, externalId }, index) => {
+            {blocks.map(({ uuid, id, text, type, live, externalId }, index) => {
               const isFirstBlock = index === 0;
               const idAttr = isFirstBlock ? SKIP_LINK_ANCHOR_ID : null;
               const blockType = live ? LIVE_RADIO_BLOCK : type;
@@ -47,7 +47,7 @@ const MediaPageMain = ({ pageData, service }) => {
 
                   return (
                     <TextBlock
-                      key={id}
+                      key={uuid}
                       script={script}
                       service={service}
                       id={idAttr}
@@ -65,7 +65,7 @@ const MediaPageMain = ({ pageData, service }) => {
 
                   return (
                     <MediaPlayer
-                      key={id}
+                      key={uuid}
                       showPlaceholder={false}
                       src={`/ws/av-embeds/media/${externalId}/${id}`}
                       id={idAttr}
