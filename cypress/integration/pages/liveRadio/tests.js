@@ -27,17 +27,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           },
         );
       });
-
-      it('should render an audio player embed', () => {
-        cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
-          ({ body }) => {
-            const { id, externalId } = body.content.blocks[2];
-            cy.get(
-              `[src="${`/ws/av-embeds/media/${externalId}/${id}`}"]`,
-            ).should('be.visible');
-          },
-        );
-      });
     });
 
     describe('LinkedData', () => {
