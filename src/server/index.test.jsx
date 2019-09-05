@@ -5,14 +5,8 @@ import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import Document from './Document/component';
-import getDials from './getDials';
 import { localBaseUrl } from '../testHelpers/config';
 
-jest.mock('./getDials');
-
-jest.mock('./styles', () => ({
-  getStyleTag: jest.fn().mockImplementation(() => <style />),
-}));
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
 
@@ -63,11 +57,16 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
   getStyleElement: jest.fn().mockReturnValue(<style />),
 }));
 
+jest.mock('./styles', () => ({
+  getStyleTag: jest.fn().mockImplementation(() => <style />),
+}));
+
 const makeRequest = async path => request(server).get(path);
 
 const testFrontPages = ({ platform, service }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
+  const serviceURL = `/${service}${extension}`;
 
   describe(`/{service}${extension}`, () => {
     const successDataResponse = {
@@ -84,8 +83,6 @@ const testFrontPages = ({ platform, service }) => {
       status: 404,
     };
 
-    const serviceURL = `/${service}${extension}`;
-
     describe('Successful render', () => {
       describe('200 status code', () => {
         beforeEach(() => {
@@ -97,9 +94,6 @@ const testFrontPages = ({ platform, service }) => {
         });
 
         it('should respond with rendered data', async () => {
-          const dials = { dial: 'value' };
-          getDials.mockResolvedValue(dials);
-
           const { text, status } = await makeRequest(serviceURL);
 
           expect(status).toBe(200);
@@ -128,20 +122,12 @@ const testFrontPages = ({ platform, service }) => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={dials}
             />,
           );
 
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
-        });
-
-        it('should respond successfully even if dials fetch fails', async () => {
-          getDials.mockRejectedValue(new Error('Fetch fail'));
-
-          const { status } = await makeRequest(serviceURL);
-          expect(status).toBe(200);
         });
       });
 
@@ -217,9 +203,6 @@ const testArticles = ({ platform, service }) => {
         });
 
         it('should respond with rendered data', async () => {
-          const dials = { dial: 'value' };
-          getDials.mockResolvedValue(dials);
-
           const { text, status } = await makeRequest(articleURL);
 
           expect(status).toBe(200);
@@ -248,20 +231,12 @@ const testArticles = ({ platform, service }) => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={dials}
             />,
           );
 
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
-        });
-
-        it('should respond successfully even if dials fetch fails', async () => {
-          getDials.mockRejectedValue(new Error('Fetch fail'));
-
-          const { status } = await makeRequest(articleURL);
-          expect(status).toBe(200);
         });
       });
 
@@ -308,7 +283,6 @@ const testArticles = ({ platform, service }) => {
 const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
   describe(`${platform} media page - live radio`, () => {
     const isAmp = platform === 'amp';
-
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -365,7 +339,6 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
               isAmp={isAmp}
               service={service}
               styleTags={<style />}
-              dials={{}}
             />,
           );
 
@@ -386,7 +359,7 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
       });
 
       it('should respond with a rendered 404', async () => {
-        const { status, text } = await makeRequest(`/${service}${extension}`);
+        const { status, text } = await makeRequest(`/${service}`);
         expect(status).toBe(404);
         expect(text).toEqual(
           '<!doctype html><html><body><h1>Mock app</h1></body></html>',
@@ -413,24 +386,6 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
   });
 };
 
-const testData = ({ title, validDataUrl, invalidDataUrl }) => {
-  describe(title, () => {
-    it('should respond with JSON', async () => {
-      const { body } = await makeRequest(validDataUrl);
-      expect(body).toEqual(
-        expect.objectContaining({ content: expect.any(Object) }),
-      );
-    });
-
-    describe('with non-existent data', () => {
-      it('should respond with a 404', async () => {
-        const { statusCode } = await makeRequest(invalidDataUrl);
-        expect(statusCode).toEqual(404);
-      });
-    });
-  });
-};
-
 describe('Server', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -444,22 +399,22 @@ describe('Server', () => {
   });
 
   describe('Manifest json', () => {
-    beforeEach(() => {
-      const notFoundDataResponse = {
-        isAmp: false,
-        data: { some: 'data' },
-        service: 'someService',
-        status: 404,
-      };
-
-      mockRouteProps({
-        service: 'someService',
-        isAmp: false,
-        dataResponse: notFoundDataResponse,
-      });
-    });
-
     describe('Services not on allowlist', () => {
+      beforeEach(() => {
+        const notFoundDataResponse = {
+          isAmp: false,
+          data: { some: 'data' },
+          service: 'someService',
+          status: 404,
+        };
+
+        mockRouteProps({
+          service: 'someService',
+          isAmp: false,
+          dataResponse: notFoundDataResponse,
+        });
+      });
+
       it('should serve a 404 error for service foobar', async () => {
         const { statusCode } = await makeRequest(
           '/foobar/articles/manifest.json',
@@ -470,37 +425,90 @@ describe('Server', () => {
   });
 
   describe('Data', () => {
-    testData({
-      title: 'for articles',
-      validDataUrl: '/news/articles/c0g992jmmkko.json',
-      invalidDataUrl: '/news/articles/cERROR00025o.json',
+    describe('for articles', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest('/news/articles/c0g992jmmkko.json');
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest(
+            '/news/articles/cERROR00025o.json',
+          );
+          expect(statusCode).toEqual(404);
+        });
+      });
+
+      describe('Trailing slash redirects', () => {
+        it('should respond with a 301', async () => {
+          const { statusCode } = await makeRequest(
+            '/news/articles/c6v11qzyv8po/',
+          );
+          expect(statusCode).toEqual(301);
+        });
+      });
     });
 
-    testData({
-      title: 'for frontpages',
-      validDataUrl: '/igbo.json',
-      invalidDataUrl: '/ERROR.json',
+    describe('for front pages', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest('/igbo.json');
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+
+      describe('with non-existent data', () => {
+        beforeEach(() => {
+          const notFoundDataResponse = {
+            isAmp: false,
+            data: { some: 'data' },
+            service: 'someService',
+            status: 404,
+          };
+
+          mockRouteProps({
+            service: 'someService',
+            isAmp: false,
+            dataResponse: notFoundDataResponse,
+          });
+        });
+
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest('/ERROR.json');
+          expect(statusCode).toEqual(404);
+        });
+      });
     });
 
-    testData({
-      title: 'for media page - live radio',
-      validDataUrl: '/korean/bbc_korean_radio/liveradio.json',
-      invalidDataUrl: '/korean/bbc_korean_radio/ERROR.json',
+    describe('for media page - live radio', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest(
+          '/korean/bbc_korean_radio/liveradio.json',
+        );
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest(
+            '/korean/bbc_korean_radio/ERROR.json',
+          );
+          expect(statusCode).toEqual(404);
+        });
+      });
     });
   });
-
-  describe('Trailing slash redirects', () => {
-    it('should respond with a 301', async () => {
-      const { statusCode } = await makeRequest('/news/articles/c6v11qzyv8po/');
-      expect(statusCode).toEqual(301);
-    });
-  });
-
-  testArticles({ platform: 'amp', service: 'news' });
-  testArticles({ platform: 'canonical', service: 'news' });
 
   testFrontPages({ platform: 'canonical', service: 'igbo' });
   testFrontPages({ platform: 'amp', service: 'igbo' });
+
+  testArticles({ platform: 'amp', service: 'news' });
+  testArticles({ platform: 'canonical', service: 'news' });
 
   testMediaPages({
     platform: 'amp',
@@ -513,6 +521,64 @@ describe('Server', () => {
     service: 'korean',
     serviceId: 'bbc_korean_radio',
     mediaId: 'liveradio',
+  });
+
+  describe('Unknown routes', () => {
+    const service = 'igbo';
+    const isAmp = false;
+    const dataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'news',
+      status: 404,
+    };
+
+    describe('404 status code', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse,
+        });
+      });
+
+      it('should respond with rendered data', async () => {
+        const { text, status } = await makeRequest(`/${service}/foobar`);
+
+        expect(status).toBe(404);
+
+        expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+          <h1>Mock app</h1>,
+        );
+
+        expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+          <Document
+            app="<h1>Mock app</h1>"
+            assets={[
+              `${localBaseUrl}/static/js/igbo-12345.12345.js`,
+              `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+              `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+              `${localBaseUrl}/static/js/main-12345.12345.js`,
+            ]}
+            assetOrigins={[
+              'https://ichef.bbci.co.uk',
+              'https://gel.files.bbci.co.uk',
+              localBaseUrl,
+              'https://logws1363.ati-host.net?',
+            ]}
+            data={dataResponse}
+            helmet={{ head: 'tags' }}
+            isAmp={isAmp}
+            service={service}
+            styleTags={<style />}
+          />,
+        );
+
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
+      });
+    });
   });
 });
 
