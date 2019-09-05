@@ -19,11 +19,14 @@ export const ConsentBanner = props => {
 
   useClickTracker(
     'header *',
-    useCallback(e => {
-      console.log({ message: 'data-consent-banner', e });
+    useCallback(
+      e => {
+        console.log({ message: 'data-consent-banner', e });
 
-      sendBeacon(atiUrl);
-    }, []),
+        sendBeacon(atiUrl);
+      },
+      [atiUrl],
+    ),
   );
 
   const { platform } = requestContext;
