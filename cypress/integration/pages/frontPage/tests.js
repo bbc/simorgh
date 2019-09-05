@@ -1,3 +1,5 @@
+import config from '../../../support/config/services';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 const serviceHasIndexAlsos = service => service === 'thai';
@@ -88,6 +90,16 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         if (serviceHasIndexAlsos(service)) {
           it('should contain Index Alsos at a mobile view', () => {
+            cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
+              ({ body }) => {
+                const topstories = body.content.groups[0];
+
+                // check if topstories contains related items
+                if (topstories.hasOwnProperty('relatedItems')) {
+                  // run test here
+                }
+              },
+            );
             cy.viewport('iphone-5');
             cy.get('section li')
               .eq(0)
