@@ -407,7 +407,7 @@ module.exports = {
           Cypress.env('APP_ENV') === 'local'
             ? '/igbo/media-42986440'
             : undefined,
-        smoke: true,
+        smoke: false,
       },
     },
   },
@@ -815,7 +815,7 @@ module.exports = {
           Cypress.env('APP_ENV') === 'local'
             ? '/punjabi/international-49567825'
             : undefined,
-        smoke: true,
+        smoke: false,
       },
     },
   },
@@ -1054,7 +1054,7 @@ module.exports = {
           Cypress.env('APP_ENV') === 'local'
             ? '/thai/international-49514085'
             : undefined,
-        smoke: true,
+        smoke: false,
       },
     },
   },
@@ -1272,7 +1272,7 @@ module.exports = {
           Cypress.env('APP_ENV') === 'local'
             ? '/yoruba/media-42985961'
             : undefined,
-        smoke: true,
+        smoke: false,
       },
     },
   },
