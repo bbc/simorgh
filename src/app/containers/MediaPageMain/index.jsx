@@ -16,7 +16,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 const HEADING_BLOCK = 'heading';
 const PARAGRAPH_BLOCK = 'paragraph';
 const LIVE_RADIO_BLOCK = 'liveradio';
-const SKIP_LINK_ANCHOR = 'content';
+const SKIP_LINK_ANCHOR_ID = 'content';
 
 const MediaPageMain = ({ pageData, service }) => {
   const { script } = useContext(ServiceContext);
@@ -34,33 +34,28 @@ const MediaPageMain = ({ pageData, service }) => {
           <GridItemConstrainedMedium>
             {blocks.map(({ id, text, type, live, externalId }, index) => {
               const isFirstBlock = index === 0;
-              const idAttribute = isFirstBlock ? SKIP_LINK_ANCHOR : null;
+              const idAttr = isFirstBlock ? SKIP_LINK_ANCHOR_ID : null;
               const blockType = live ? LIVE_RADIO_BLOCK : type;
 
               switch (blockType) {
                 case HEADING_BLOCK:
-                  return (
-                    <Headline
-                      key={id}
-                      script={script}
-                      service={service}
-                      id={idAttribute}
-                    >
-                      {text}
-                    </Headline>
-                  );
+                case PARAGRAPH_BLOCK: {
+                  const TextBlock = {
+                    [HEADING_BLOCK]: Headline,
+                    [PARAGRAPH_BLOCK]: Paragraph,
+                  }[blockType];
 
-                case PARAGRAPH_BLOCK:
                   return (
-                    <Paragraph
+                    <TextBlock
                       key={id}
                       script={script}
                       service={service}
-                      id={idAttribute}
+                      id={idAttr}
                     >
                       {text}
-                    </Paragraph>
+                    </TextBlock>
                   );
+                }
 
                 case LIVE_RADIO_BLOCK: {
                   const MediaPlayer = {
@@ -73,7 +68,7 @@ const MediaPageMain = ({ pageData, service }) => {
                       key={id}
                       showPlaceholder={false}
                       src={`/ws/av-embeds/media/${externalId}/${id}`}
-                      id={idAttribute}
+                      id={idAttr}
                     />
                   );
                 }
