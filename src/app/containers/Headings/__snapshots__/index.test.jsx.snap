@@ -4,10 +4,10 @@ exports[`Headings with headline data should render correctly 1`] = `
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
 }
@@ -78,10 +78,10 @@ exports[`Headings with plain text headline should render h1 containing correct t
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
 }
@@ -152,10 +152,10 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 .c1 {
   font-size: 1.25rem;
   line-height: 1.5rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -240,10 +240,10 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
 }
@@ -316,10 +316,10 @@ exports[`Headings with rich text headline with italic text should render h1 with
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
 }
@@ -402,10 +402,10 @@ exports[`Headings with rich text should render headline with bold & italic text 
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
 }
@@ -490,10 +490,10 @@ exports[`Headings with rich text should render headline with italic & bold text 
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
 }
@@ -578,10 +578,10 @@ exports[`Headings with rich text with different attributes should render headlin
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
 }
@@ -666,10 +666,10 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 .c1 {
   font-size: 1.25rem;
   line-height: 1.5rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 1.5rem 0;
 }
