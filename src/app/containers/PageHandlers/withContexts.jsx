@@ -1,11 +1,11 @@
 import React from 'react';
-import { bool, element, objectOf, string, oneOf } from 'prop-types';
+import { bool, element, string, oneOf } from 'prop-types';
 
 // context providers
-import { DialContextProvider } from '../../contexts/DialContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { UserContextProvider } from '../../contexts/UserContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
@@ -13,31 +13,27 @@ const WithContexts = Component => {
       bbcOrigin,
       id,
       service,
-      variant,
       isAmp,
       pageType,
-      pathname,
       previousPath,
-      dials,
+      variant,
     } = props;
-
     return (
       <ToggleContextProvider>
-        <DialContextProvider dials={dials}>
-          <ServiceContextProvider service={service} variant={variant}>
-            <RequestContextProvider
-              bbcOrigin={bbcOrigin}
-              id={id}
-              isAmp={isAmp}
-              pageType={pageType}
-              service={service}
-              pathname={pathname}
-              previousPath={previousPath}
-            >
+        <ServiceContextProvider service={service} variant={variant}>
+          <RequestContextProvider
+            bbcOrigin={bbcOrigin}
+            id={id}
+            isAmp={isAmp}
+            pageType={pageType}
+            service={service}
+            previousPath={previousPath}
+          >
+            <UserContextProvider>
               <Component {...props} />
-            </RequestContextProvider>
-          </ServiceContextProvider>
-        </DialContextProvider>
+            </UserContextProvider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
       </ToggleContextProvider>
     );
   };
@@ -50,7 +46,6 @@ const WithContexts = Component => {
     pathname: string.isRequired,
     previousPath: string,
     service: string.isRequired,
-    dials: objectOf(bool).isRequired,
     variant: oneOf(['simp', 'trad', 'lat', 'cyr']),
   };
 

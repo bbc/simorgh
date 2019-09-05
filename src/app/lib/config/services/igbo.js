@@ -132,6 +132,10 @@ const igbo = {
         },
       },
     },
+    mostRead: {
+      header: 'Akachasị Gụọ',
+      lastUpdated: 'Emelitere ikpeazụ na ',
+    },
     navigation: [
       {
         title: 'Akụkọ',

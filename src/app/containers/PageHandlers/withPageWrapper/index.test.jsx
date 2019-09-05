@@ -2,6 +2,7 @@ import React from 'react';
 import { shouldMatchSnapshot } from '../../../../testHelpers';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { UserContextProvider } from '../../../contexts/UserContext';
 import { ToggleContext } from '../../../contexts/ToggleContext';
 import WithPageWrapper from '.';
 
@@ -10,6 +11,11 @@ const dataProps = {
   service: 'news',
   route: { pageType: 'article' },
 };
+
+// eslint-disable-next-line react/prop-types
+jest.mock('../../../Layouts/defaultPageWrapper', () => ({ children }) => (
+  <div id="defaultPageWrapper">{children}</div>
+));
 
 const defaultToggleState = {
   test: {
@@ -44,7 +50,9 @@ describe('with pageWrapper', () => {
           service="news"
           bbcOrigin="https://www.test.bbc.com"
         >
-          <PageWrapperHOC {...dataProps} />
+          <UserContextProvider>
+            <PageWrapperHOC {...dataProps} />
+          </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>,

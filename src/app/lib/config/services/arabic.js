@@ -137,10 +137,14 @@ const service = {
       },
     },
     brandSVG,
+    mostRead: {
+      header: 'الأكثر قراءة',
+      lastUpdated: 'آخر تحديث ',
+    },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [
         {
@@ -149,27 +153,19 @@ const service = {
         },
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
-        },
-        {
-          href: 'https://www.bbc.co.uk/aboutthebbc/',
-          text: 'About the BBC',
+          text: 'شروط الاستخدام',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'سياسة الخصوصية',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/accessibility/',
-          text: 'Accessibility Help',
-        },
-        {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'اتصل بـ بي بي سي',
         },
       ],
       copyrightText: 'بي بي سي. بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',

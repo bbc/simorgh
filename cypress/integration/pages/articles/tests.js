@@ -38,8 +38,7 @@ export const testsThatAlwaysRun = ({ service, pageType, variant }) => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             const { language } = body.metadata.passport;
-            const { lastPublished } = body.metadata;
-            const { firstPublished } = body.metadata;
+            const { lastPublished, firstPublished } = body.metadata;
             const updatedTimestamp = moment
               .tz(lastPublished, `${appConfig[service][variant].timezone}`)
               .locale(language)
@@ -48,23 +47,21 @@ export const testsThatAlwaysRun = ({ service, pageType, variant }) => {
               .tz(firstPublished, `${appConfig[service][variant].timezone}`)
               .locale(language)
               .format('D MMMM YYYY');
+
             // exempt pashto && arabic as we do have currently their locale implementation
             if (!['pashto', 'arabic'].includes(service)) {
-              cy.get('time').then($time => {
-                if (lastPublished === firstPublished) {
-                  cy.get($time).should('contain', updatedTimestamp);
-                } else {
-                  cy.get($time)
-                    .eq(0)
-                    .should('contain', firstTimestamp);
-                  cy.get($time)
-                    .eq(1)
-                    .should(
-                      'contain',
-                      `${appConfig[service][variant].articleTimestampPrefix}${updatedTimestamp}`,
-                    );
-                }
-              });
+              if (lastPublished === firstPublished)
+                cy.get('time').should('contain', updatedTimestamp);
+            } else {
+              cy.get('time')
+                .eq(0)
+                .should('contain', firstTimestamp);
+              cy.get('time')
+                .eq(1)
+                .should(
+                  'contain',
+                  `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+                );
             }
           },
         );

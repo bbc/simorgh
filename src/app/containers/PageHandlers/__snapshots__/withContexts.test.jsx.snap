@@ -2,17 +2,19 @@
 
 exports[`withContexts HOC should return all context providers 1`] = `
 <ToggleContextProvider>
-  <DialContextProvider
-    dials={
-      Object {
-        "mpulse": false,
-      }
-    }
+  <ServiceContextProvider
+    service="news"
   >
-    <ServiceContextProvider
+    <RequestContextProvider
+      bbcOrigin="https://www.bbc.com"
+      id="c0000000000o"
+      isAmp={true}
+      pageType="article"
+      previousPath={null}
       service="news"
       variant={null}
     >
+<<<<<<< HEAD
       <RequestContextProvider
         bbcOrigin="https://www.bbc.com"
         id="c0000000000o"
@@ -22,13 +24,11 @@ exports[`withContexts HOC should return all context providers 1`] = `
         previousPath={null}
         service="news"
       >
+=======
+      <UserContextProvider>
+>>>>>>> d9ca235020a93168972fe2b7a1b4788548232a4e
         <Component
           bbcOrigin="https://www.bbc.com"
-          dials={
-            Object {
-              "mpulse": false,
-            }
-          }
           id="c0000000000o"
           isAmp={true}
           pageType="article"
@@ -37,8 +37,8 @@ exports[`withContexts HOC should return all context providers 1`] = `
           service="news"
           variant={null}
         />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </DialContextProvider>
+      </UserContextProvider>
+    </RequestContextProvider>
+  </ServiceContextProvider>
 </ToggleContextProvider>
 `;

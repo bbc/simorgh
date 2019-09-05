@@ -425,7 +425,7 @@ module.exports = {
   },
   japanese: {
     font: undefined,
-    isWorldService: true,
+    isWorldService: false,
     pageTypes: {
       articles: {
         path:

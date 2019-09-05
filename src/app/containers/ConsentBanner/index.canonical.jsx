@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Banner from './Banner/index.canonical';
 import consentBannerUtilities from './CanonicalLogic';
+import { UserContext } from '../../contexts/UserContext';
 
 const Canonical = () => {
+  const { updateCookiePolicy } = useContext(UserContext);
   const [showPrivacy, setShowPrivacyBanner] = useState(false);
   const [showCookie, setShowCookieBanner] = useState(false);
 
@@ -16,6 +18,11 @@ const Canonical = () => {
 
   useEffect(runInitial, []);
 
+  const onCookieAccept = () => {
+    cookieOnAllow();
+    updateCookiePolicy();
+  };
+
   return (
     <>
       {showPrivacy ? (
@@ -28,7 +35,7 @@ const Canonical = () => {
       {!showPrivacy && showCookie ? (
         <Banner
           type="cookie"
-          onAccept={cookieOnAllow}
+          onAccept={onCookieAccept}
           onReject={cookieOnReject}
         />
       ) : null}

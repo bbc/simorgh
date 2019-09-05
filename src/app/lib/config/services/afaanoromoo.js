@@ -23,7 +23,7 @@ const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `om-ET`,
-    datetimeLocale: `om-ET`.toLowerCase(),
+    datetimeLocale: `om-et`,
     service: 'afaanoromoo',
     serviceName: 'News Afaan Oromoo',
     themeColor: `${C_POSTBOX}`,
@@ -127,6 +127,10 @@ const service = {
       },
     },
     brandSVG,
+    mostRead: {
+      header: 'Most read',
+      lastUpdated: 'Yeroo dhuma kan haaromfame: ',
+    },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',

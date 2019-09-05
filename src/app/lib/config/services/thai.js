@@ -127,6 +127,10 @@ const service = {
       },
     },
     brandSVG,
+    mostRead: {
+      header: 'ได้รับความนิยมสูงสุด',
+      lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา ',
+    },
     navigation: [
       {
         title: 'หน้าแรก',

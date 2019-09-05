@@ -22,7 +22,7 @@ const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `ko-KO`,
-    datetimeLocale: `ko-KO`.toLowerCase(),
+    datetimeLocale: `ko-ko`,
     service: 'korean',
     serviceName: 'News 코리아',
     themeColor: `${C_POSTBOX}`,
@@ -123,6 +123,10 @@ const service = {
       },
     },
     brandSVG,
+    mostRead: {
+      header: 'TOP 뉴스',
+      lastUpdated: '최종 송고일',
+    },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
