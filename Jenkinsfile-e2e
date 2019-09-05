@@ -104,7 +104,7 @@ node {
                   colour: 'good',
                   emoji: '🤟'
                 ]
-                // notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, '#si_repo-simorgh')
                 break
               case 'UNSTABLE':
                 def messageParameters = [
