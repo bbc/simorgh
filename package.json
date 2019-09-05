@@ -153,7 +153,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
-    "husky": "^3.0.4",
+    "husky": "^3.0.5",
     "inspectpack": "^4.2.2",
     "jest": "^24.9.0",
     "jest-fetch-mock": "^2.1.1",
