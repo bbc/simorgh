@@ -35,36 +35,37 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
     if (serviceHasTimestamp(service)) {
       it('should render a formatted timestamp', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            const { language } = body.metadata.passport;
-            const { lastPublished, firstPublished } = body.metadata;
-            const updatedTimestamp = moment
-              .tz(lastPublished, `${appConfig[service].timezone}`)
-              .locale(language)
-              .format('D MMMM YYYY');
-            const firstTimestamp = moment
-              .tz(firstPublished, `${appConfig[service].timezone}`)
-              .locale(language)
-              .format('D MMMM YYYY');
-
-            // exempt pashto && arabic as we do have currently their locale implementation
-            if (!['pashto', 'arabic'].includes(service)) {
-              if (lastPublished === firstPublished)
-                cy.get('time').should('contain', updatedTimestamp);
-            } else {
-              cy.get('time')
-                .eq(0)
-                .should('contain', firstTimestamp);
-              cy.get('time')
-                .eq(1)
-                .should(
-                  'contain',
-                  `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
-                );
-            }
-          },
+        cy.request(`${config[service].pageTypes.articles.path}.json`).as(
+          'comments',
         );
+        cy.get('@comments').should(response => {
+          const { language } = response.body.metadata.passport;
+          const { lastPublished, firstPublished } = response.body.metadata;
+          const updatedTimestamp = moment
+            .tz(lastPublished, `${appConfig[service].timezone}`)
+            .locale(language)
+            .format('D MMMM YYYY');
+          const firstTimestamp = moment
+            .tz(firstPublished, `${appConfig[service].timezone}`)
+            .locale(language)
+            .format('D MMMM YYYY');
+
+          // exempt pashto && arabic as we do have currently their locale implementation
+          if (!['pashto', 'arabic'].includes(service)) {
+            if (lastPublished === firstPublished)
+              cy.get('time').should('contain', updatedTimestamp);
+          } else {
+            cy.get('time')
+              .eq(0)
+              .should('contain', firstTimestamp);
+            cy.get('time')
+              .eq(1)
+              .should(
+                'contain',
+                `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+              );
+          }
+        });
       });
     }
   });
