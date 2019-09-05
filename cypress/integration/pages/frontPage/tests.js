@@ -19,10 +19,10 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
               .tz(timestamp, `${appConfig[service].timezone}`)
               .locale(language)
               .format('D MMMM YYYY');
-            cy.get('section li')
+            cy.get('section')
               .eq(0)
               .within(() => {
-                cy.get('time').should('contain', formattedTimestamp);
+                cy.get('div div time').should('contain', formattedTimestamp);
               });
           },
         );
