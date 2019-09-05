@@ -4,7 +4,10 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
+import { latin } from '@bbc/gel-foundations/dist/scripts';
+import news from '@bbc/psammead-assets/dist/svgs/news';
 import TextContainer from './index';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
@@ -13,7 +16,8 @@ describe('TextContainer', () => {
   });
 
   describe('with data', () => {
-    const fragmentBlock = (text, attributes = []) => ({
+    const fragmentBlock = (id = null, text, attributes = []) => ({
+      id,
       type: 'fragment',
       model: {
         text,
@@ -33,23 +37,28 @@ describe('TextContainer', () => {
     const data = {
       blocks: [
         paragraphBlock('mock-id-1', [
-          fragmentBlock('This is a 1st paragraph block.'),
+          fragmentBlock('mock-id-1.1', 'This is a 1st paragraph block.'),
         ]),
         paragraphBlock('mock-id-2', [
-          fragmentBlock('This is a 2nd paragraph block.'),
+          fragmentBlock('mock-id-2.1', 'This is a 2nd paragraph block.'),
         ]),
         paragraphBlock('mock-id-3', [
-          fragmentBlock('This is a 3rd paragraph block.'),
+          fragmentBlock('mock-id-3.1', 'This is a 3rd paragraph block.'),
         ]),
         paragraphBlock('mock-id-4', [
-          fragmentBlock('This is a 4th paragraph block..'),
+          fragmentBlock('mock-key-4.1', 'This is a 4th paragraph block..'),
         ]),
         paragraphBlock('mock-id-5', [
-          fragmentBlock('This is a 5th paragraph block.'),
+          fragmentBlock('mock-id-5.1', 'This is a 5th paragraph block.'),
         ]),
       ],
     };
 
-    shouldMatchSnapshot('should render correctly', <TextContainer {...data} />);
+    shouldMatchSnapshot(
+      'should render correctly',
+      <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
+        <TextContainer {...data} />
+      </ServiceContext.Provider>,
+    );
   });
 });

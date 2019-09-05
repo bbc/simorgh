@@ -58,6 +58,14 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 .c0 {
   position: relative;
   margin-top: 2rem;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }
 
 .c2 {
@@ -114,14 +122,12 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 .c16 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  color: #222222;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -129,12 +135,10 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 .c23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -142,10 +146,10 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 .c18 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -153,10 +157,10 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 .c24 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -287,19 +291,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
-    -webkit-clip: rect(1px,1px,1px,1px);
-    clip: rect(1px,1px,1px,1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c8 {
     padding: 1rem 0 1rem;
@@ -322,7 +313,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:37.5rem) {
   .c10 {
-    width: 33.33%;
+    width: 50%;
     margin-bottom: 0;
   }
 }
@@ -364,20 +355,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
@@ -392,22 +369,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:37.5rem) {
   .c16 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -443,6 +406,13 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   .c18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c18 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -469,7 +439,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:37.5rem) {
   .c15 {
-    width: 66.67%;
+    width: 50%;
   }
 }
 
@@ -785,12 +755,10 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 .c15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -798,10 +766,10 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 .c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -963,20 +931,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   .c13 {
     position: absolute;
     bottom: 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -1257,6 +1211,14 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 .c0 {
   position: relative;
   margin-top: 2rem;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }
 
 .c2 {
@@ -1286,14 +1248,12 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 }
 
 .c14 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  color: #222222;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1301,10 +1261,10 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 .c16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1428,19 +1388,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
-    -webkit-clip: rect(1px,1px,1px,1px);
-    clip: rect(1px,1px,1px,1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
-  }
-}
-
 @supports (grid-template-columns:fit-content(200px)) {
   .c7 {
     display: grid;
@@ -1451,7 +1398,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 
 @media (min-width:37.5rem) {
   .c8 {
-    width: 33.33%;
+    width: 50%;
     margin-bottom: 0;
   }
 }
@@ -1472,20 +1419,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c14 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
@@ -1500,8 +1433,8 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 
 @media (min-width:37.5rem) {
   .c14 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1519,9 +1452,16 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c16 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c13 {
-    width: 66.67%;
+    width: 50%;
   }
 }
 
@@ -1753,12 +1693,10 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 .c14 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1766,10 +1704,10 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 .c16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
 }
@@ -1916,20 +1854,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   .c12 {
     position: absolute;
     bottom: 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 

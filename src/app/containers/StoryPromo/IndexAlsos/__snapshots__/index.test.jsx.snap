@@ -73,13 +73,6 @@ exports[`Index Alsos should render multiple correctly 1`] = `
   color: #6E6E73;
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c4 {
     font-size: 0.875rem;
@@ -237,13 +230,6 @@ exports[`Index Alsos should render one correctly 1`] = `
 
 .c3:visited {
   color: #6E6E73;
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
