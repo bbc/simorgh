@@ -42,6 +42,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         it('should contain at least one story promo', () => {
+          cy.viewport(320, 480);
           cy.get('section').within(() => {
             cy.get('img')
               .should('have.length.of.at.least', 1)
@@ -58,7 +59,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('have.length.of.at.least', 1)
               .should('be.visible');
           });
-          cy.viewport(320, 480);
           cy.get('section').within(() => {
             cy.get('img')
               .should('have.length.of.at.least', 1)
