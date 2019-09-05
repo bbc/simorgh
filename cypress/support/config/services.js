@@ -402,7 +402,13 @@ module.exports = {
       },
       frontPage: { path: '/igbo', smoke: false },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/igbo/media-42986440'
+            : undefined,
+        smoke: true,
+      },
     },
   },
   indonesia: {
@@ -804,7 +810,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/punjabi/international-49567825'
+            : undefined,
+        smoke: true,
+      },
     },
   },
   russian: {
@@ -1037,7 +1049,13 @@ module.exports = {
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/thai/international-49514085'
+            : undefined,
+        smoke: true,
+      },
     },
   },
   tigrinya: {
@@ -1249,7 +1267,13 @@ module.exports = {
       },
       frontPage: { path: '/yoruba', smoke: false },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/yoruba/media-42985961'
+            : undefined,
+        smoke: true,
+      },
     },
   },
   zhongwen: {
