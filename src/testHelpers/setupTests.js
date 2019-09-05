@@ -51,7 +51,7 @@ afterAll(() => {
     throw new Error(
       [
         chalk.red.bold(
-          'Test suite failed because a React warning(s) was detected.',
+          'Test suite failed because React warning(s) detected.',
         ),
         errors.map(err => chalk.red(...err)),
       ].join('\n'),
