@@ -1,0 +1,39 @@
+import atiPageViewParams from '../../atiUrl';
+import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
+import {
+  getContentId,
+  getLanguage,
+  getPageIdentifier,
+  getPageTitle,
+} from '../../../../lib/analyticsUtils/frontpage';
+
+export const buildFrontPageATIParams = (
+  frontpageData,
+  requestContext,
+  serviceContext,
+) => {
+  const { platform, statsDestination } = requestContext;
+  const {
+    atiAnalyticsAppName,
+    atiAnalyticsProducerId,
+    brandName,
+    service,
+  } = serviceContext;
+
+  return atiPageViewParams({
+    appName: atiAnalyticsAppName,
+    contentId: getContentId(frontpageData),
+    contentType: 'index-home',
+    language: getLanguage(frontpageData),
+    pageIdentifier: getPageIdentifier(frontpageData),
+    pageTitle: getPageTitle(frontpageData, brandName),
+    producerId: atiAnalyticsProducerId,
+    timePublished: getPublishedDatetime('firstPublished', frontpageData),
+    timeUpdated: getPublishedDatetime('lastPublished', frontpageData),
+    platform,
+    service,
+    statsDestination,
+  });
+};
+
+export default buildFrontPageATIParams;

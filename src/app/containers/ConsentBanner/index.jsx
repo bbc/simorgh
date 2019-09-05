@@ -5,17 +5,20 @@ import Amp from './index.amp';
 import { EventContext } from '../../contexts/EventContext';
 import { buildATIParams } from '../ATIAnalytics/params';
 import sendBeacon from '../../lib/analyticsUtils/sendBeacon';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
-const ConsentBanner = props => {
-  const { pageType, platform } = useContext(RequestContext);
+export const ConsentBanner = props => {
+  const requestContext = useContext(RequestContext);
+  const serviceContext = useContext(ServiceContext);
+  const eventContext = useContext(EventContext);
 
-  const { useClickTracker } = useContext(EventContext);
-
-  const query = buildATIParams({ pageType, data: props });
+  const query = buildATIParams(props, requestContext, serviceContext);
   const atiUrl = process.env.SIMORGH_ATI_BASE_URL + query;
 
+  const { useClickTracker } = eventContext;
+
   useClickTracker(
-    '[data-consent-banner] *',
+    'header *',
     useCallback(e => {
       console.log({ message: 'data-consent-banner', e });
 
@@ -23,11 +26,9 @@ const ConsentBanner = props => {
     }, []),
   );
 
-  return (
-    <div data-consent-banner>
-      {platform === 'amp' ? <Amp /> : <Canonical />}
-    </div>
-  );
+  const { platform } = requestContext;
+
+  return platform === 'amp' ? <Amp /> : <Canonical />;
 };
 
 export default ConsentBanner;

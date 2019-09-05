@@ -1,12 +1,14 @@
-import getArticleAtiParams from './article';
-import getFrontPageAtiParams from './frontpage';
-import getMediaPageAtiParams from './media';
+import { buildArticleATIParams } from './article/buildParams';
+import { buildFrontPageATIParams } from './frontpage/buildParams';
+import { buildMediaATIParams } from './media/buildParams';
 
-export const buildATIParams = ({ pageType, data }) => {
+export const buildATIParams = (data, requestContext, serviceContext) => {
+  const { pageType } = requestContext;
+
   const pageTypeHandlers = {
-    article: getArticleAtiParams,
-    frontPage: getFrontPageAtiParams,
-    media: getMediaPageAtiParams,
+    article: buildArticleATIParams,
+    frontPage: buildFrontPageATIParams,
+    media: buildMediaATIParams,
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
@@ -14,7 +16,7 @@ export const buildATIParams = ({ pageType, data }) => {
     return null;
   }
 
-  return pageTypeHandlers[pageType](data);
+  return pageTypeHandlers[pageType](data, requestContext, serviceContext);
 };
 
 export default buildATIParams;

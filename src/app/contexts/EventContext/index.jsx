@@ -44,3 +44,5 @@ EventContextProvider.propTypes = {
 };
 
 EventContextProvider.defaultProps = {};
+
+export default EventContextProvider;
