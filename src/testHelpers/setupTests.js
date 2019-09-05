@@ -10,7 +10,8 @@ const REACT_ERRORS = [
 ];
 const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
 
-const { error } = console;
+let TEST_SUITE_HAS_REACT_ERROR = false;
+let errors = [];
 
 const didSuppressWarning = message => {
   const { expectedWarnings } = window;
@@ -33,15 +34,27 @@ console.error = (message, ...rest) => {
   if (didSuppressWarning(message)) return;
 
   if (REACT_ERRORS_REGEX.test(message)) {
+    TEST_SUITE_HAS_REACT_ERROR = true;
+    errors.push([message, ...rest, '\n\n']);
+  }
+
+  // error(message, ...rest);
+};
+
+beforeAll(() => {
+  TEST_SUITE_HAS_REACT_ERROR = false;
+  errors = [];
+});
+
+afterAll(() => {
+  if (TEST_SUITE_HAS_REACT_ERROR) {
     throw new Error(
       [
         chalk.red.bold(
-          'Test failed because a React warning was detected. Please fix the following:',
+          'Test suite failed because a React warning(s) was detected.',
         ),
-        chalk.red(message),
+        errors.map(err => chalk.red(...err)),
       ].join('\n'),
     );
   }
-
-  error(message, ...rest);
-};
+});
