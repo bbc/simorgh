@@ -21,7 +21,8 @@ const getCpsMediaTypes = item => {
   if (!isPGL && (!isCpsMedia || !hasMediaInfo)) {
     return null;
   }
-  return isPGL ? 'photogallery' : path(['media', 'format'], item);
+  const type = isPGL ? 'photogallery' : path(['media', 'format'], item);
+  return type || null;
 };
 
 const getMediaType = item => {
@@ -40,13 +41,15 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
     const durationString = formatDuration(duration);
     const isoDuration = duration.toISOString();
     return (
-      <MediaIndicatorComp
-        duration={durationString}
-        datetime={isoDuration}
-        type={type}
-        topStory={topStory}
-        service={service}
-      />
+      type && (
+        <MediaIndicatorComp
+          duration={durationString}
+          datetime={isoDuration}
+          type={type}
+          topStory={topStory}
+          service={service}
+        />
+      )
     );
   }
 
