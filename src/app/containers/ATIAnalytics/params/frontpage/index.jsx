@@ -1,38 +1,13 @@
 import { useContext } from 'react';
-import atiPageViewParams from '../../atiUrl';
 import { RequestContext } from '../../../../contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
-import {
-  getContentId,
-  getLanguage,
-  getPageIdentifier,
-  getPageTitle,
-} from '../../../../lib/analyticsUtils/frontpage';
+import { buildFrontPageATIParams } from './buildParams';
 
 const FrontPageAtiParams = frontpageData => {
-  const { platform, statsDestination } = useContext(RequestContext);
-  const {
-    atiAnalyticsAppName,
-    atiAnalyticsProducerId,
-    brandName,
-    service,
-  } = useContext(ServiceContext);
+  const requestContext = useContext(RequestContext);
+  const serviceContext = useContext(ServiceContext);
 
-  return atiPageViewParams({
-    appName: atiAnalyticsAppName,
-    contentId: getContentId(frontpageData),
-    contentType: 'index-home',
-    language: getLanguage(frontpageData),
-    pageIdentifier: getPageIdentifier(frontpageData),
-    pageTitle: getPageTitle(frontpageData, brandName),
-    producerId: atiAnalyticsProducerId,
-    timePublished: getPublishedDatetime('firstPublished', frontpageData),
-    timeUpdated: getPublishedDatetime('lastPublished', frontpageData),
-    platform,
-    service,
-    statsDestination,
-  });
+  return buildFrontPageATIParams(frontpageData, requestContext, serviceContext);
 };
 
 export default FrontPageAtiParams;
