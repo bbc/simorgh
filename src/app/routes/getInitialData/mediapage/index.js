@@ -1,4 +1,5 @@
 import fetchData from '../utils/fetchData';
+import addIdsToBlocks from './addIdsToBlocks';
 import onClient from '../../../lib/utilities/onClient';
 import getBaseUrl from '../utils/getBaseUrl';
 
@@ -9,7 +10,10 @@ const getMediaPageInitialData = ({ service, serviceId, mediaId }) => {
 
   const url = `${baseUrl}/${service}/${serviceId}/${mediaId}.json`;
 
-  return fetchData({ url });
+  return fetchData({
+    url,
+    preprocessorRules: [addIdsToBlocks],
+  });
 };
 
 export default getMediaPageInitialData;
