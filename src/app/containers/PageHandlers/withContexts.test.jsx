@@ -6,6 +6,7 @@ import getOriginContext from '../../contexts/RequestContext/getOriginContext';
 import getStatsDestination from '../../contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '../../contexts/RequestContext/getStatsPageIdentifier';
 import * as requestContextImports from '../../contexts/RequestContext';
+import * as serviceContextImports from '../../contexts/ServiceContext';
 
 jest.mock('../../contexts/RequestContext/getOriginContext', () => jest.fn());
 
@@ -46,11 +47,19 @@ describe('withContexts HOC', () => {
 
   describe('assertions', () => {
     let requestContextSpy;
+    let serviceContextSpy;
     beforeEach(() => {
       requestContextSpy = jest.spyOn(
         requestContextImports,
         'RequestContextProvider',
       );
+
+      serviceContextSpy = jest.spyOn(
+        serviceContextImports,
+        'ServiceContextProvider',
+      );
+
+      jest.clearAllMocks();
     });
 
     const pageTypes = ['article', 'frontPage', 'chicken'];
@@ -75,7 +84,34 @@ describe('withContexts HOC', () => {
           }),
           {},
         );
+        expect(serviceContextSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            variant: null,
+          }),
+          {},
+        );
       });
+    });
+
+    it(`should pass variant to the service context provider`, () => {
+      const fixture = {
+        bbcOrigin: 'https://www.bbc.com',
+        id: 'c0000000000o',
+        service: 'zhongwen',
+        isAmp: true,
+        pageType: 'article',
+        pathname: '/pathname',
+        variant: 'trad',
+      };
+
+      render(<ContextsHOC {...fixture} />);
+
+      expect(serviceContextSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          variant: 'trad',
+        }),
+        {},
+      );
     });
   });
 });
