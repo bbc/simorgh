@@ -127,15 +127,17 @@ describe('Consent Banner Utilities', () => {
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
     });
 
-    it('does not show the cookie banner when EXPLICIT_COOKIE is 1', () => {
-      setCookieGetMock({ explicit: '1' });
+    it('does not show the cookie banner when EXPLICIT_COOKIE is 1 or 2', () => {
+      ['1', '2'].forEach(value => {
+        setCookieGetMock({ explicit: value });
 
-      const { runInitial } = getConsentBannerUtilities();
+        const { runInitial } = getConsentBannerUtilities();
 
-      runInitial();
+        runInitial();
 
-      expect(Cookie.set).toHaveBeenCalledTimes(0);
-      expect(setShowCookieBannerMock).not.toHaveBeenCalled();
+        expect(Cookie.set).toHaveBeenCalledTimes(0);
+        expect(setShowCookieBannerMock).not.toHaveBeenCalled();
+      });
     });
 
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and PRIVACY_COOKIE is set', () => {

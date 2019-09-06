@@ -82,27 +82,6 @@ node {
               throw e
             }
           }
-          stage ('Test E2Es') {
-            try {
-              sh 'make testE2Es'
-            } catch (Throwable e) {
-              def messageParameters = [
-                buildStatus: 'Failed',
-                env: 'TEST',
-                branch: env.BRANCH_NAME,
-                colour: 'danger',
-                emoji: '😱',
-              ]
-
-              if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters)
-                stageHasFailed = true
-              }
-
-              currentBuild.result = 'FAILURE'
-              throw e
-            }
-          }
         } catch (Throwable e) {
           echo "The pipeline has failed with the error: ${e}"
           currentBuild.result = 'FAILURE'

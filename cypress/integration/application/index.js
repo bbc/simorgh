@@ -1,4 +1,5 @@
 import config from '../../support/config/services';
+import appConfig from '../../../src/app/lib/config/services';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
@@ -38,4 +39,30 @@ describe('Application', () => {
       'application/javascript',
     );
   });
+});
+
+describe('Application unknown route error pages', () => {
+  if (Cypress.env('APP_ENV') === 'local') {
+    const unknownRoutes = [
+      '/foobar',
+      '/foobar.amp',
+      '/igbo/foobar',
+      'igbo/foobar.amp',
+    ];
+    unknownRoutes.forEach(url => {
+      it('should display a news canonical error page', () => {
+        cy.testResponseCodeAndType(url, 404, 'text/html');
+        cy.visit(url, { failOnStatusCode: false });
+        const service = url.includes('igbo') ? 'igbo' : 'news';
+        cy.get('h1 span').should(
+          'contain',
+          `${appConfig[service].translations.error[404].statusCode}`,
+        );
+        cy.get('h1').should(
+          'contain',
+          `${appConfig[service].translations.error[404].title}`,
+        );
+      });
+    });
+  }
 });
