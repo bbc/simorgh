@@ -76,11 +76,11 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   color: #333;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
 }
 
 .c14:focus {
@@ -794,11 +794,11 @@ exports[`Header should render correctly for WS media page 1`] = `
   color: #333;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
 }
 
 .c8:focus {
@@ -1280,11 +1280,11 @@ exports[`Header should render correctly for news article 1`] = `
   color: #333;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
 }
 
 .c8:focus {
