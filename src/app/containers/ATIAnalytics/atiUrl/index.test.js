@@ -1,6 +1,6 @@
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
 
-const atiPageViewParams = require('.').default;
+const atiUrlBuilder = require('.');
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -36,7 +36,7 @@ describe('getThingAttributes', () => {
       mockAndSet(func, null);
     });
 
-    const queryParams = atiPageViewParams({});
+    const queryParams = atiUrlBuilder.buildATIPageTrackUrl({});
     const queryParamsArray = splitUrl(queryParams);
     const expectedValues = [];
 
@@ -48,7 +48,7 @@ describe('getThingAttributes', () => {
       mockAndSet(func, null);
     });
 
-    const queryParams = atiPageViewParams({
+    const queryParams = atiUrlBuilder.buildATIPageTrackUrl({
       appName: 'appName',
       contentId: 'contentId',
       contentType: 'contentType',
@@ -86,7 +86,7 @@ describe('getThingAttributes', () => {
       mockAndSet(func, func.name);
     });
 
-    const queryParams = atiPageViewParams({
+    const queryParams = atiUrlBuilder.buildATIPageTrackUrl({
       pageTitle: 'pageTitle',
       platform: 'platform',
       service: 'service',

@@ -140,3 +140,45 @@ export const getPublishedDatetime = (attribute, data) => {
     ? getISODate(publishedDatetime)
     : null;
 };
+
+export const getProducer = service => {
+  const producers = {
+    igbo: '53',
+    news: '64',
+    persian: '69',
+    pidgin: '70',
+    thai: '90',
+    yoruba: '107',
+  };
+
+  return producers[service] || 0;
+};
+
+export const getAtiUrl = (data = []) => {
+  const cleanedValues = data.filter(({ value }) => value);
+
+  const parsedAtiValues = cleanedValues.map(({ key, value, wrap }) =>
+    wrap ? `${key}=[${value}]` : `${key}=${value}`,
+  );
+
+  return parsedAtiValues.join('&');
+};
+
+export const getClickInfo = (elem, { service, component }) => {
+  /*
+    https://paper.dropbox.com/doc/Event-tracking--AjJpWibjeQPWsoRLFdZW13Y9Ag-3i47TvVb9IJBMJFcL8D6u
+    for click events we need to know:
+      * campaings = [service-name]-[component], e.g. yoruba-navigation
+      * creation (label) = [component]-[item], e.g. navigation-ere_idaraya
+      * creation (type) = [event-type], e.g. click or background
+      * url = the destination link
+      * format = [PAR=container-[component-name]::name~CHD=slot] = [PAR=container-navigation::name~CHD=1]
+         ^ for format, currently using the name of the component clicked as slot
+    */
+  const eventComponentInfo = elem.dataset.info || 'brand-top'; // psammead components need to be updated with 'data' attrs
+  const cleanCompInfo = eventComponentInfo.split('/').join('-');
+  const format = `PAR=container-${component}::name~CHD=${cleanCompInfo.toLowerCase()}`;
+  const url = elem.href || '/';
+
+  return `PUB-[${service}-${component}]-[click]-[]-[${format}]-[]-[]-[]-[${url}]`;
+};

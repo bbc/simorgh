@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import * as atiPageViewParams from '../../atiUrl';
+import * as atiUrlBuilder from '../../atiUrl';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../../../contexts/RequestContext';
 
@@ -35,7 +35,7 @@ describe('MediaAtiParams', () => {
 
     it('should call atiPageViewParams', () => {
       const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiPageViewParams.default = mock;
+      atiUrlBuilder.buildATIPageTrackUrl = mock;
 
       render(Component(serviceContextStub, requestContextStub));
 

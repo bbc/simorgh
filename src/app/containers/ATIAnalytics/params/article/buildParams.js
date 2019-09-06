@@ -1,4 +1,4 @@
-import atiPageViewParams from '../../atiUrl';
+import { buildATIPageTrackUrl } from '../../atiUrl';
 
 import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 import {
@@ -19,7 +19,7 @@ export const buildArticleATIParams = (
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service } =
     serviceContext || {};
 
-  return atiPageViewParams({
+  return {
     appName: atiAnalyticsAppName,
     contentId: getContentId(articleData),
     contentType: 'article',
@@ -37,7 +37,17 @@ export const buildArticleATIParams = (
     statsDestination,
     previousPath,
     origin,
-  });
+  };
+};
+
+export const buildArticleATIUrl = (
+  articleData,
+  requestContext,
+  serviceContext,
+) => {
+  return buildATIPageTrackUrl(
+    buildArticleATIParams(articleData, requestContext, serviceContext),
+  );
 };
 
 export default buildArticleATIParams;

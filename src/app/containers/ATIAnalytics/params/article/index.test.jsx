@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from '.';
-import * as atiPageViewParams from '../../atiUrl';
+import * as atiUrlBuilder from '../../atiUrl';
 import * as commonTestUtils from '../../../../lib/analyticsUtils';
 import * as testUtils from '../../../../lib/analyticsUtils/article';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -56,7 +56,7 @@ describe('ArticleAtiParams', () => {
 
     it('should call atiPageViewParams with the params from the Contexts', () => {
       const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiPageViewParams.default = mock;
+      atiUrlBuilder.buildATIPageTrackUrl = mock;
 
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 

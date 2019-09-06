@@ -1,4 +1,4 @@
-import atiPageViewParams from '../../atiUrl';
+import { buildATIPageTrackUrl } from '../../atiUrl';
 import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 import {
   getContentId,
@@ -20,7 +20,7 @@ export const buildFrontPageATIParams = (
     service,
   } = serviceContext;
 
-  return atiPageViewParams({
+  return {
     appName: atiAnalyticsAppName,
     contentId: getContentId(frontpageData),
     contentType: 'index-home',
@@ -33,7 +33,17 @@ export const buildFrontPageATIParams = (
     platform,
     service,
     statsDestination,
-  });
+  };
+};
+
+export const buildFrontPageATIUrl = (
+  frontpageData,
+  requestContext,
+  serviceContext,
+) => {
+  return buildATIPageTrackUrl(
+    buildFrontPageATIParams(frontpageData, requestContext, serviceContext),
+  );
 };
 
 export default buildFrontPageATIParams;
