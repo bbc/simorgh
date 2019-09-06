@@ -79,7 +79,26 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         if (serviceHasIndexAlsos(service)) {
-          it('should contain Index Alsos at a mobile view', () => {
+          it('should contain Index Alsos', () => {
+            cy.get('section li')
+              .eq(0)
+              .within(() => {
+                cy.get('div div').then($el => {
+                  if ($el.text().includes('Related content')) {
+                    cy.get('div div div a')
+                      .eq(0)
+                      .within(() => {
+                        cy.get('span').then($span => {
+                          if ($span.length > 1) {
+                            cy.get('svg').should('be.visible');
+                          } else {
+                            expect($el).not.to.have.descendants('svg');
+                          }
+                        });
+                      });
+                  }
+                });
+              });
             cy.viewport('iphone-5');
             cy.get('section li')
               .eq(0)
