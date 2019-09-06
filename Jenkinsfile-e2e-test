@@ -40,34 +40,13 @@ node {
           stage ('Install & Setup') {
             sh 'make install'
           }
-          stage ('Live E2Es') {
+          stage ('Test E2Es') {
             try {
-              sh 'make liveE2Es'
+              sh 'make testE2Es'
             } catch (Throwable e) {
               def messageParameters = [
                 buildStatus: 'Failed',
-                env: 'LIVE',
-                branch: env.BRANCH_NAME,
-                colour: 'danger',
-                emoji: '😱',
-              ]
-
-              if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters)
-                stageHasFailed = true
-              }
-
-              currentBuild.result = 'FAILURE'
-              throw e
-            }
-          }
-          stage ('Local Prod Tests') {
-            try {
-              sh 'CYPRESS_SMOKE=false npm run build && npm run test:ci;'
-            } catch (Throwable e) {
-              def messageParameters = [
-                buildStatus: 'Failed',
-                env: 'LOCAL',
+                env: 'TEST',
                 branch: env.BRANCH_NAME,
                 colour: 'danger',
                 emoji: '😱',
