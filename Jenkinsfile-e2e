@@ -5,6 +5,12 @@ def nodeImage = "329802642264.dkr.ecr.eu-west-1.amazonaws.com/bbc-news/node-10-l
 // Run latest every 1 hour
 def cron_string = env.BRANCH_NAME == "latest" ? "0 */1 * * *" : ""
 
+def channels = [
+  simorgh: "#si_repo-simorgh",
+  testAlarms: "#simorgh-alarms-test",
+  liveAlarms:  "#simorgh-alarms-live"
+];
+
 def notifySlack(messageParameters, targetChannel) {
   def message = "${messageParameters.emoji} Simorgh E2Es \n*Status:* ${messageParameters.buildStatus} \n*Env:* ${messageParameters.env} \n*Branch:* ${messageParameters.branch} \n*Pipeline:* ${env.BUILD_URL}"
 
@@ -53,8 +59,8 @@ node {
               ]
 
               if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters, '#si_repo-simorgh')
-                notifySlack(messageParameters, '#simorgh-alarms-live')
+                notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, channels.liveAlarms)
                 stageHasFailed = true
               }
 
@@ -75,8 +81,8 @@ node {
               ]
 
               if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters, '#si_repo-simorgh')
-                notifySlack(messageParameters, '#simorgh-alarms-live')
+                notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, channels.liveAlarms)
                 stageHasFailed = true
               }
 
@@ -97,8 +103,8 @@ node {
               ]
 
               if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters, '#si_repo-simorgh')
-                notifySlack(messageParameters. '#simorgh-alarms-test')
+                notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters. channels.testAlarms)
                 stageHasFailed = true
               }
 
@@ -136,7 +142,7 @@ node {
                   colour: 'danger',
                   emoji: '😱',
                 ]
-                notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, channels.simorgh)
                 break
               case 'ABORTED':
                 def messageParameters = [
@@ -146,7 +152,7 @@ node {
                   colour: 'warning',
                   emoji: '🙀',
                 ]
-                notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, channels.simorgh)
                 break
               default:
                 if (stageHasFailed == false) {
@@ -157,7 +163,7 @@ node {
                     colour: 'danger',
                     emoji: '😱',
                   ]
-                  notifySlack(messageParameters, '#si_repo-simorgh')
+                  notifySlack(messageParameters, channels.simorgh)
                 }
                 break
             }
