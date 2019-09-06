@@ -111,7 +111,6 @@ node {
                   emoji: '🤟'
                 ]
                 notifySlack(messageParameters, channels.simorgh)
-                notifySlack(messageParameters, channels.liveAlarms)
                 break
               case 'UNSTABLE':
                 def messageParameters = [
