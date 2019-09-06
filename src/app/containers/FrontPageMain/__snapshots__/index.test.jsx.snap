@@ -615,6 +615,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   }
 }
 
+@media (min-width:37.5rem) {
+  .c11:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11:first-child {
+    padding-top: 1.5rem;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c12 {
     display: grid;
