@@ -10,9 +10,9 @@ storiesOf('Containers|Copyright', module)
   .addDecorator(withKnobs)
   .add(
     'default',
-    inputProvider(
-      null,
-      ({ service }) => {
+    inputProvider({
+      // eslint-disable-next-line react/prop-types
+      componentFunction: ({ service }) => {
         const imageCaptionText =
           services[service].imageCopyrightOffscreenText || 'Image source, ';
 
@@ -27,6 +27,6 @@ storiesOf('Containers|Copyright', module)
           </ServiceContext.Provider>
         );
       },
-      Object.keys(services),
-    ),
+      services: Object.keys(services),
+    }),
   );
