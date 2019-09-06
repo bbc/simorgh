@@ -38,7 +38,8 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).as(
           'comments',
         );
-        cy.get('@comments').should(response => {
+        cy.get('@comments').then(response => {
+          console.log(response.body.metadata.passport);
           const { language } = response.body.metadata.passport;
           const { lastPublished, firstPublished } = response.body.metadata;
           const updatedTimestamp = moment
@@ -93,42 +94,41 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     });
 
     describe(`Article Body`, () => {
-      it('should render a H1, which contains/displays a styled headline', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            const headlineData = getBlockData('headline', body);
-            cy.get('h1').should(
-              'contain',
-              headlineData.model.blocks[0].model.blocks[0].model.text,
-            );
-          },
+      before(() => {
+        cy.request(`${config[service].pageTypes.articles.path}.json`).as(
+          'comments',
         );
+      });
+      it('should render a H1, which contains/displays a styled headline', () => {
+        cy.get('@comments').then(response => {
+          const headlineData = getBlockData('headline', response.body);
+          cy.get('h1').should(
+            'contain',
+            headlineData.model.blocks[0].model.blocks[0].model.text,
+          );
+        });
       });
 
       it('should render an H2, which contains/displays a styled subheading', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
-              const subheadingData = getBlockData('subheadline', body);
-              cy.get('h2').should(
-                'contain',
-                subheadingData.model.blocks[0].model.blocks[0].model.text,
-              );
-            }
-          },
-        );
+        cy.get('@comments').then(response => {
+          if (response.body.metadata.language === 'en-gb') {
+            const subheadingData = getBlockData('subheadline', response.body);
+            cy.get('h2').should(
+              'contain',
+              subheadingData.model.blocks[0].model.blocks[0].model.text,
+            );
+          }
+        });
       });
 
       it('should render a paragraph, which contains/displays styled text', () => {
         if (serviceHasCorrectlyRenderedParagraphs(service)) {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const paragraphData = getBlockData('text', body);
-              const { text } = paragraphData.model.blocks[0].model;
+          cy.get('@comments').then(response => {
+            const paragraphData = getBlockData('text', response.body);
+            const { text } = paragraphData.model.blocks[0].model;
 
-              cy.get('p').should('contain', text);
-            },
-          );
+            cy.get('p').should('contain', text);
+          });
         }
       });
 
