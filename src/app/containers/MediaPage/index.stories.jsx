@@ -35,9 +35,9 @@ storiesOf('Pages|Media Page', module)
   .addDecorator(withKnobs)
   .add(
     'default',
-    inputProvider(
-      null,
-      ({ service }) => (
+    inputProvider({
+      // eslint-disable-next-line react/prop-types
+      componentFunction: ({ service }) => (
         <MediaPage
           match={matchFixtures(service)}
           data={{
@@ -51,7 +51,7 @@ storiesOf('Pages|Media Page', module)
           pageType="media"
         />
       ),
-      Object.keys(liveRadioFixtures),
-      { defaultService: 'indonesia' },
-    ),
+      service: Object.keys(liveRadioFixtures),
+      options: { defaultService: 'indonesia' },
+    }),
   );
