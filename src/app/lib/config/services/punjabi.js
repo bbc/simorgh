@@ -173,6 +173,10 @@ const service = {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'ਕੁਕੀਜ਼',
       },
+      {
+        href: 'https://www.bbc.com/punjabi/institutional-42227903',
+        text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
+      },
     ],
     copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
   },
