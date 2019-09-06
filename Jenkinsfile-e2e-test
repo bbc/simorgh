@@ -99,6 +99,7 @@ node {
                   emoji: '😱',
                 ]
                 notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, simorgh.testAlarms)
                 break
               case 'ABORTED':
                 def messageParameters = [
@@ -109,6 +110,7 @@ node {
                   emoji: '🙀',
                 ]
                 notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, simorgh.testAlarms)
                 break
               default:
                 if (stageHasFailed == false) {
@@ -120,6 +122,7 @@ node {
                     emoji: '😱',
                   ]
                   notifySlack(messageParameters, channels.simorgh)
+                  notifySlack(messageParameters, simorgh.testAlarms)
                 }
                 break
             }
