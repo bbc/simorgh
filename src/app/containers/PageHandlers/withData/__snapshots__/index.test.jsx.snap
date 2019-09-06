@@ -1693,6 +1693,26 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
               },
               Object {
                 "assetTypeCode": "PRO",
+                "contentType": "Audio",
+                "indexImage": Object {
+                  "altText": "A lone Koala perches in a eucalyptus tree",
+                  "caption": "Koalas are from Australia",
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "href": "http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg",
+                  "id": "63692548",
+                  "path": "/cpsdevpb/14A31/test/_63692548_000327537-1.jpg",
+                  "subType": "index",
+                  "width": 976,
+                },
+                "name": "Audio promo",
+                "summary": "Summary",
+                "timestamp": 1565097889000,
+                "type": "link",
+                "uri": "http://www.bbc.com/azeri",
+              },
+              Object {
+                "assetTypeCode": "PRO",
                 "contentType": "Text",
                 "indexImage": Object {
                   "altText": "Rashidi",

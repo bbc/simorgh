@@ -4,12 +4,11 @@ import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import StoryPromoContainer from '.';
-import pidginFixtureData from '../../../../data/pidgin/frontpage';
-import azeriFixtureData from '../../../../data/azeri/frontpage';
+import fixture from '../../../../data/pidgin/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 const mediaFixture = type =>
-  pathOr(null, ['content', 'groups'], pidginFixtureData)
+  pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
     .find(
       item =>
@@ -18,7 +17,7 @@ const mediaFixture = type =>
     );
 
 const promoFixture = type =>
-  pathOr(null, ['content', 'groups'], azeriFixtureData)
+  pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
     .find(
       item =>
@@ -29,7 +28,7 @@ const promoFixture = type =>
 const firstFixture = pathOr(
   null,
   ['content', 'groups', '0', 'items', '0'],
-  pidginFixtureData,
+  fixture,
 );
 
 firstFixture.timestamp = Date.now();
