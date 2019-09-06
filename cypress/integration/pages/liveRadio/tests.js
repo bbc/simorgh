@@ -19,13 +19,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         );
       });
 
-      it('should render an H2, which contains/displays a styled subheading', () => {
+      it('should render a paragraph, which contains/displays a styled summary', () => {
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
-              const { subheadline } = body.content.blocks[1];
-              cy.get('h2').should('contain', subheadline);
-            }
+            const { text } = body.content.blocks[1];
+            cy.get('[role="main"] p').should('contain', text);
           },
         );
       });
