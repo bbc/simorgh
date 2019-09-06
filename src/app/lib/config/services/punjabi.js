@@ -151,6 +151,10 @@ const service = {
         title: 'ਕੌਮਾਂਤਰੀ',
         url: '/punjabi/international',
       },
+      {
+        href: 'https://www.bbc.com/punjabi/institutional-42227903',
+        text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
+      },
     ],
     footer: {
       externalLink: {
