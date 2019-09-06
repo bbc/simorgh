@@ -1,8 +1,13 @@
+import baseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import getMediaAssetPageInitialData from '.';
 
 const mockData = { service: 'pidgin', status: 200, pageData: {} };
-const mockBaseUrl = 'http://localhost:7080';
+
+const mockBaseUrl = 'https://www.SIMORGH_BASE_URL.com';
+
+jest.mock('../utils/getBaseUrl', () => jest.fn());
+baseUrl.mockImplementation(() => mockBaseUrl);
 
 jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => mockData);
