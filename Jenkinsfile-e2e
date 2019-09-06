@@ -105,17 +105,17 @@ node {
               case 'SUCCESS':
                 def messageParameters = [
                   buildStatus: 'SUCCESS',
-                  env: 'ALL',
+                  env: 'Local and Production',
                   branch: env.BRANCH_NAME,
                   colour: 'good',
                   emoji: '🤟'
                 ]
-                notifySlack(messageParameters, '#si_repo-simorgh')
+                notifySlack(messageParameters, channels.simorgh)
                 break
               case 'UNSTABLE':
                 def messageParameters = [
                   buildStatus: 'UNSTABLE',
-                  env: 'ALL',
+                  env: 'Local and Production',
                   branch: env.BRANCH_NAME,
                   colour: 'danger',
                   emoji: '😱',
@@ -125,7 +125,7 @@ node {
               case 'ABORTED':
                 def messageParameters = [
                   buildStatus: 'ABORTED',
-                  env: 'ALL',
+                  env: 'Local and Production',
                   branch: env.BRANCH_NAME,
                   colour: 'warning',
                   emoji: '🙀',
@@ -136,7 +136,7 @@ node {
                 if (stageHasFailed == false) {
                   def messageParameters = [
                     buildStatus: 'Unknown build failure',
-                    env: 'ALL',
+                    env: 'Local and Production',
                     branch: env.BRANCH_NAME,
                     colour: 'danger',
                     emoji: '😱',
