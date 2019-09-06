@@ -4,10 +4,8 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/dist/scripts';
-import news from '@bbc/psammead-assets/dist/svgs/news';
 import TextContainer from './index';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
@@ -56,9 +54,9 @@ describe('TextContainer', () => {
 
     shouldMatchSnapshot(
       'should render correctly',
-      <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
+      <ServiceContextProvider service="news">
         <TextContainer {...data} />
-      </ServiceContext.Provider>,
+      </ServiceContextProvider>,
     );
   });
 });

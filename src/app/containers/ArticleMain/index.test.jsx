@@ -9,24 +9,28 @@ import {
   articleDataPersian,
   articleDataPidgin,
 } from '../Article/fixtureData';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
 const Context = ({ service, children }) => (
-  <ToggleContextProvider>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      service={service}
-    >
-      {children}
-    </RequestContextProvider>
-  </ToggleContextProvider>
+  <ServiceContextProvider service="news">
+    <ToggleContextProvider>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="article"
+        service={service}
+      >
+        {children}
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </ServiceContextProvider>
 );
+
 Context.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
