@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { cleanup, render, waitForElement } from '@testing-library/react';
-import services from '../../lib/config/services/loadableConfig';
+import services from '../../lib/config/services';
 import * as createLoadableContext from '../utils/createLoadableContext';
 
 // Unmock service context which is mocked globally in jest-setup.js
@@ -30,8 +30,8 @@ describe('ServiceContextProvider', () => {
       jest.unmock('../utils/createLoadableContext');
     });
 
-    Object.keys(services).forEach(service =>
-      it(`should have a brand name for ${service}`, async () => {
+    const testForServiceAndVarient = (service, variant) => {
+      it(`should have a brand name for ${service} and variant ${variant}`, async () => {
         // eslint-disable-next-line global-require
         const { ServiceContext, ServiceContextProvider } = require('./index');
 
@@ -41,17 +41,33 @@ describe('ServiceContextProvider', () => {
           return <span>{brandName}</span>;
         };
 
+        const serviceContextProps = {
+          service,
+          // Dont pass variant if its 'default', this better mirrors the
+          // behaviour in the production app, where varient is unset for
+          // services with only a 'default' variant
+          variant: variant === 'default' ? null : variant,
+        };
+
         const { container } = render(
-          <ServiceContextProvider service={service}>
+          <ServiceContextProvider {...serviceContextProps}>
             <Component />
           </ServiceContextProvider>,
         );
 
         await waitForElement(() => container.querySelector('span'));
 
-        expect(container.innerHTML).toMatchSnapshot();
-      }),
-    );
+        expect(container.firstChild.innerHTML).toEqual(
+          services[service][variant].brandName,
+        );
+      });
+    };
+
+    Object.keys(services).forEach(service => {
+      Object.keys(services[service]).forEach(variant =>
+        testForServiceAndVarient(service, variant),
+      );
+    });
 
     it(`should return null for foobar service`, async () => {
       // eslint-disable-next-line global-require
