@@ -4,15 +4,15 @@ export const useWindowEvent = (
   event,
   handler,
   passive = false,
-  _window = window,
+  _window = null,
 ) => {
   useEffect(() => {
     // initiate the event handler
-    _window.addEventListener(event, handler, passive);
+    (_window || window).addEventListener(event, handler, passive);
 
     // this will clean up the event every time the component is re-rendered
     return function cleanup() {
-      _window.removeEventListener(event, handler);
+      (_window || window).removeEventListener(event, handler);
     };
   });
 };

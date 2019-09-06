@@ -57,6 +57,16 @@ jest.mock('../PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
+jest.mock('../PageHandlers/withContexts', () => Component => {
+  const ContextsContainer = props => (
+    <div id="ContextsContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return ContextsContainer;
+});
+
 jest.mock('../FrontPageMain', () => {
   return jest.fn().mockReturnValue(<div>FrontPageMain</div>);
 });
