@@ -14,7 +14,7 @@ describe('App', () => {
   let wrapper;
   const initialData = { pageData: 'Some initial data' };
   const error = 'Error!';
-  const match = { params: { service: 'news', amp: false } };
+  const match = { params: { service: 'news', amp: false, variant: '/simp' } };
   const history = { action: 'POP' };
 
   const route = {
@@ -28,19 +28,16 @@ describe('App', () => {
     <h1>{initialData.pageData}</h1>,
   );
 
-  const mountApp = pathname =>
-    mount(
+  beforeAll(() => {
+    wrapper = mount(
       <App
-        location={{ pathname }}
+        location={{ pathname: 'pathnameOne' }}
         routes={[]}
         initialData={initialData}
         bbcOrigin="https://www.bbc.co.uk"
         history={history}
       />,
     );
-
-  beforeAll(() => {
-    wrapper = mountApp('pathnameOne');
   });
 
   it('should return rendered routes', () => {
@@ -57,6 +54,7 @@ describe('App', () => {
       service: 'news',
       pathname: 'pathnameOne',
       previousPath: null,
+      variant: 'simp',
     });
     expect(wrapper).toMatchSnapshot();
   });
@@ -110,6 +108,7 @@ describe('App', () => {
               service: 'news',
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
+              variant: 'simp',
             },
           );
 
@@ -127,6 +126,7 @@ describe('App', () => {
               service: 'news',
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
+              variant: 'simp',
             },
           );
         });
@@ -164,6 +164,7 @@ describe('App', () => {
               service: 'news',
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
+              variant: 'simp',
             },
           );
 
@@ -182,6 +183,7 @@ describe('App', () => {
               service: 'news',
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
+              variant: 'simp',
             },
           );
         });
