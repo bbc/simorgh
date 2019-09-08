@@ -1,5 +1,5 @@
 const servicesWithVariants = {
-  serbian: ['cyr', 'lat'],
+  serbian: ['lat', 'cyr'],
   ukchina: ['simp', 'trad'],
   zhongwen: ['simp', 'trad'],
 };
