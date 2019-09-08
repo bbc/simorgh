@@ -20,7 +20,7 @@ describe('variantDataKey', () => {
   });
 
   it('should return service default when unknown variant passed for service with variants', () => {
-    expect(variantDataKey('serbian', 'simp')).toEqual('cyr');
+    expect(variantDataKey('serbian', 'simp')).toEqual('lat');
   });
 
   it('should return "default" when service without variants is passed', () => {
