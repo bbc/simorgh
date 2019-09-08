@@ -38,7 +38,14 @@ jest.mock('react-helmet', () => ({
 
 jest.mock('../app/routes/getInitialData/utils/getRouteProps');
 
-const mockRouteProps = ({ id, service, isAmp, dataResponse, responseType, variant }) => {
+const mockRouteProps = ({
+  id,
+  service,
+  isAmp,
+  dataResponse,
+  responseType,
+  variant,
+}) => {
   const getInitialData =
     responseType === 'reject'
       ? jest.fn().mockRejectedValueOnce(dataResponse)
