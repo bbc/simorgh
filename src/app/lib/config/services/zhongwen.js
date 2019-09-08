@@ -4,7 +4,6 @@ import { zhongwen as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const baseServiceConfig = {
-  lang: `zh_CN`,
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-zhongwen',
@@ -20,7 +19,6 @@ const baseServiceConfig = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `zh_CN`,
   datetimeLocale: `zh_cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
@@ -168,9 +166,13 @@ const baseServiceConfig = {
 const service = {
   simp: {
     ...baseServiceConfig,
+    lang: `zh-Hans`,
+    locale: `zh-Hans`,
   },
   trad: {
     ...baseServiceConfig,
+    lang: `zh-Hant`,
+    locale: `zh-Hant`,
   },
 };
 

@@ -1,10 +1,9 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin, cyrillic } from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const baseServiceConfig = {
-  lang: `sr-Latn`,
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-serbian',
@@ -20,7 +19,6 @@ const baseServiceConfig = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `sr-Latn`,
   datetimeLocale: `sr-Latn`.toLowerCase(),
   service: 'serbian',
   serviceName: 'News na srpskom',
@@ -29,7 +27,6 @@ const baseServiceConfig = {
   twitterSite: '@bbcnasrpskom',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'Početna strana',
@@ -169,9 +166,15 @@ const baseServiceConfig = {
 const service = {
   lat: {
     ...baseServiceConfig,
+    lang: `sr-Latn`,
+    locale: `sr-Latn`,
+    script: latin,
   },
   cyr: {
     ...baseServiceConfig,
+    lang: `sr-Cyrl`,
+    locale: `sr-Cyrl`,
+    script: cyrillic,
   },
 };
 
