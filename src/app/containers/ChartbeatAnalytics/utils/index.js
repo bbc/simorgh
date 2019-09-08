@@ -1,7 +1,7 @@
 import Cookie from 'js-cookie';
-import onClient from '../../utilities/onClient';
-import { getPromoHeadline } from '../article';
-import { getPageTitle } from '../frontpage';
+import onClient from '../../../lib/utilities/onClient';
+import { getPromoHeadline } from '../../../lib/analyticsUtils/article';
+import { getPageTitle } from '../../../lib/analyticsUtils/frontpage';
 
 const ID_COOKIE = 'ckns_sylphid';
 

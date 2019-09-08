@@ -1,61 +1,61 @@
-import React, { useContext } from 'react';
-import useToggle from '../Toggle/useToggle';
-import AmpChartbeatBeacon from './amp';
-import CanonicalChartbeatBeacon from './canonical';
+import { useContext, useEffect } from 'react';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { UserContext } from '../../contexts/UserContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import { pageDataPropType } from '../../models/propTypes/data';
 import { getReferrer } from '../../lib/analyticsUtils';
 import onClient from '../../lib/utilities/onClient';
 import {
   chartbeatUID,
-  chartbeatSource,
   useCanonical,
   getSylphidCookie,
   getDomain,
   buildSections,
   getType,
   getTitle,
-} from '../../lib/analyticsUtils/chartbeat';
+} from './utils';
 
 const ChartbeatAnalytics = ({ data }) => {
   const { service, brandName } = useContext(ServiceContext);
-  const { enabled } = useToggle('chartbeatAnalytics');
+  const { useChartbeat } = useContext(UserContext);
   const { env, platform, pageType, previousPath, origin } = useContext(
     RequestContext,
   );
 
-  if (!enabled) {
-    return null;
-  }
+  useEffect(() => {
+    const referrer = getReferrer(platform, origin, previousPath);
+    const title = getTitle(pageType, data, brandName);
+    const domain = env !== 'live' ? getDomain('test') : getDomain(service);
+    const sections = buildSections(service, pageType);
+    const cookie = getSylphidCookie();
+    const type = getType(pageType);
+    const isAmp = platform === 'amp';
+    const currentPath = onClient() && window.location.pathname;
+    const config = {
+      domain,
+      sections,
+      uid: chartbeatUID,
+      title,
+      virtualReferrer: referrer,
+      ...(isAmp && { contentType: type }),
+      ...(!isAmp && { type, useCanonical, path: currentPath }),
+      ...(cookie && { idSync: { bbc_hid: cookie } }),
+    };
 
-  const referrer = getReferrer(platform, origin, previousPath);
-  const title = getTitle(pageType, data, brandName);
-  const domain = env !== 'live' ? getDomain('test') : getDomain(service);
-  const sections = buildSections(service, pageType);
-  const cookie = getSylphidCookie();
-  const type = getType(pageType);
-  const isAmp = platform === 'amp';
-  const currentPath = onClient() && window.location.pathname;
-  const config = {
-    domain,
-    sections,
-    uid: chartbeatUID,
-    title,
-    virtualReferrer: referrer,
-    ...(isAmp && { contentType: type }),
-    ...(!isAmp && { type, useCanonical, path: currentPath }),
-    ...(cookie && { idSync: { bbc_hid: cookie } }),
-  };
+    useChartbeat(config);
+  }, [
+    brandName,
+    data,
+    env,
+    origin,
+    pageType,
+    platform,
+    previousPath,
+    service,
+    useChartbeat,
+  ]);
 
-  return isAmp ? (
-    <AmpChartbeatBeacon chartbeatConfig={config} />
-  ) : (
-    <CanonicalChartbeatBeacon
-      chartbeatConfig={config}
-      chartbeatSource={chartbeatSource}
-    />
-  );
+  return null;
 };
 
 ChartbeatAnalytics.propTypes = {
