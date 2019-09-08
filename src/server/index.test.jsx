@@ -5,7 +5,9 @@ import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import Document from './Document/component';
+import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
+import * as renderDocument from './Document';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -36,7 +38,7 @@ jest.mock('react-helmet', () => ({
 
 jest.mock('../app/routes/getInitialData/utils/getRouteProps');
 
-const mockRouteProps = ({ id, service, isAmp, dataResponse, responseType }) => {
+const mockRouteProps = ({ id, service, isAmp, dataResponse, responseType, variant }) => {
   const getInitialData =
     responseType === 'reject'
       ? jest.fn().mockRejectedValueOnce(dataResponse)
@@ -45,9 +47,10 @@ const mockRouteProps = ({ id, service, isAmp, dataResponse, responseType }) => {
   getRouteProps.mockReturnValue({
     isAmp,
     service,
+    variant,
     route: { getInitialData },
     match: {
-      params: { id, service },
+      params: { id, service, variant: variant ? `/${variant}` : undefined },
     },
   });
 };
@@ -61,12 +64,14 @@ jest.mock('./styles', () => ({
   getStyleTag: jest.fn().mockImplementation(() => <style />),
 }));
 
+const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
+
 const makeRequest = async path => request(server).get(path);
 
-const testFrontPages = ({ platform, service }) => {
+const testFrontPages = ({ platform, service, variant }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
-  const serviceURL = `/${service}${extension}`;
+  const serviceURL = `/${service}${variant ? `/${variant}` : ''}${extension}`;
 
   describe(`/{service}${extension}`, () => {
     const successDataResponse = {
@@ -74,6 +79,7 @@ const testFrontPages = ({ platform, service }) => {
       data: { some: 'data' },
       service: 'someService',
       status: 200,
+      variant,
     };
 
     const notFoundDataResponse = {
@@ -81,6 +87,7 @@ const testFrontPages = ({ platform, service }) => {
       data: { some: 'data' },
       service: 'someService',
       status: 404,
+      variant,
     };
 
     describe('Successful render', () => {
@@ -90,6 +97,7 @@ const testFrontPages = ({ platform, service }) => {
             service,
             isAmp,
             dataResponse: successDataResponse,
+            variant,
           });
         });
 
@@ -106,7 +114,7 @@ const testFrontPages = ({ platform, service }) => {
             <Document
               app="<h1>Mock app</h1>"
               assets={[
-                `${localBaseUrl}/static/js/igbo-12345.12345.js`,
+                `${localBaseUrl}/static/js/${service}-12345.12345.js`,
                 `${localBaseUrl}/static/js/vendor-54321.12345.js`,
                 `${localBaseUrl}/static/js/vendor-12345.12345.js`,
                 `${localBaseUrl}/static/js/main-12345.12345.js`,
@@ -125,6 +133,16 @@ const testFrontPages = ({ platform, service }) => {
             />,
           );
 
+          expect(renderDocumentSpy).toHaveBeenCalledWith({
+            bbcOrigin: undefined,
+            data: successDataResponse,
+            isAmp,
+            service,
+            routes,
+            url: serviceURL,
+            variant,
+          });
+
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
@@ -137,6 +155,7 @@ const testFrontPages = ({ platform, service }) => {
             service,
             isAmp,
             dataResponse: notFoundDataResponse,
+            variant,
           });
         });
 
@@ -157,6 +176,7 @@ const testFrontPages = ({ platform, service }) => {
           isAmp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
+          variant,
         });
       });
 
@@ -169,7 +189,7 @@ const testFrontPages = ({ platform, service }) => {
   });
 };
 
-const testArticles = ({ platform, service }) => {
+const testArticles = ({ platform, service, variant }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
 
@@ -199,6 +219,7 @@ const testArticles = ({ platform, service }) => {
             service,
             isAmp,
             dataResponse: successDataResponse,
+            variant,
           });
         });
 
@@ -215,7 +236,7 @@ const testArticles = ({ platform, service }) => {
             <Document
               app="<h1>Mock app</h1>"
               assets={[
-                `${localBaseUrl}/static/js/news-12345.12345.js`,
+                `${localBaseUrl}/static/js/${service}-12345.12345.js`,
                 `${localBaseUrl}/static/js/vendor-54321.12345.js`,
                 `${localBaseUrl}/static/js/vendor-12345.12345.js`,
                 `${localBaseUrl}/static/js/main-12345.12345.js`,
@@ -234,6 +255,16 @@ const testArticles = ({ platform, service }) => {
             />,
           );
 
+          expect(renderDocumentSpy).toHaveBeenCalledWith({
+            bbcOrigin: undefined,
+            data: successDataResponse,
+            isAmp,
+            service,
+            routes,
+            url: articleURL,
+            variant,
+          });
+
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
@@ -247,6 +278,7 @@ const testArticles = ({ platform, service }) => {
             service,
             isAmp,
             dataResponse: notFoundDataResponse,
+            variant,
           });
         });
 
@@ -268,6 +300,7 @@ const testArticles = ({ platform, service }) => {
           isAmp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
+          variant,
         });
       });
 
@@ -341,6 +374,15 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
               styleTags={<style />}
             />,
           );
+
+          expect(renderDocumentSpy).toHaveBeenCalledWith({
+            bbcOrigin: undefined,
+            data: successDataResponse,
+            isAmp,
+            service,
+            routes,
+            url: mediaPageURL,
+          });
 
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
@@ -506,9 +548,17 @@ describe('Server', () => {
 
   testFrontPages({ platform: 'canonical', service: 'igbo' });
   testFrontPages({ platform: 'amp', service: 'igbo' });
+  testFrontPages({
+    platform: 'canonical',
+    service: 'ukchina',
+    variant: 'simp',
+  });
+  testFrontPages({ platform: 'amp', service: 'serbian', variant: 'lat' });
 
   testArticles({ platform: 'amp', service: 'news' });
   testArticles({ platform: 'canonical', service: 'news' });
+  testArticles({ platform: 'amp', service: 'zhongwen', variant: 'trad' });
+  testArticles({ platform: 'canonical', service: 'zhongwen', variant: 'simp' });
 
   testMediaPages({
     platform: 'amp',
