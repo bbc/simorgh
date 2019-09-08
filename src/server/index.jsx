@@ -37,6 +37,15 @@ class LoggerStream {
   }
 }
 
+const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
+  const dataPath =
+    pageType === 'frontpage'
+      ? `${variant || 'index'}.json`
+      : `${id}${variant}.json`;
+
+  return path.join(process.cwd(), 'data', service, pageType, dataPath);
+};
+
 const server = express();
 
 /*
@@ -78,22 +87,6 @@ const sendDataFile = (res, dataFilePath, next) => {
 };
 
 if (process.env.APP_ENV === 'local') {
-  const constructDataFilePath = ({ pageType, service, id, variant }) => {
-    let dataPath;
-
-    switch (pageType) {
-      case 'frontpage':
-        dataPath = variant ? `${variant}.json` : `index.json`;
-        break;
-      case 'articles':
-        dataPath = variant ? `${id}/${variant}.json` : `${id}.json`;
-        break;
-      default:
-    }
-
-    return path.join(process.cwd(), 'data', service, pageType, dataPath);
-  };
-
   server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)
