@@ -16,7 +16,7 @@ const preprocessorRules = [
   filterGroupsWithoutStraplines,
 ];
 
-const getFrontpageInitialData = async ({ service, variant = '' }) => {
+const getFrontpageInitialData = async ({ service, variant }) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
