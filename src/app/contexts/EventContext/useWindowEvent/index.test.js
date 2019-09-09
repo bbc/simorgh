@@ -27,25 +27,9 @@ describe('useWindowEvent', () => {
   it('should trigger window click handler', () => {
     useEffect.mockImplementation(fn => fn());
 
-    const mockWindow = {
-      events: {},
-      addEventListener(name, handler) {
-        this.events[name] = this.events[name] || [];
-        this.events[name].push(handler);
-      },
-      dispatchEvent(event) {
-        (this.events[(event || {}).name] || []).forEach(handler => {
-          if (typeof handler === 'function') {
-            handler();
-          }
-        });
-      },
-    };
-    useWindowEvent('click', fn1, false, mockWindow);
+    useWindowEvent('click', fn1, false);
 
-    mockWindow.dispatchEvent({
-      name: 'click',
-    });
+    window.dispatchEvent(new Event('click'));
 
     expect(fn1).toHaveBeenCalled();
   });
