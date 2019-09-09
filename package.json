@@ -77,7 +77,7 @@
     "@bbc/psammead-story-promo-list": "^2.1.8",
     "@bbc/psammead-styles": "^2.1.2",
     "@bbc/psammead-timestamp-container": "^2.4.11",
-    "@bbc/psammead-visually-hidden-text": "^1.2.1",
+    "@bbc/psammead-visually-hidden-text": "^1.2.2",
     "compression": "^1.7.3",
     "core-js": "^3.2.1",
     "dotenv": "^8.1.0",
