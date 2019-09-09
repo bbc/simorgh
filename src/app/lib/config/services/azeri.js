@@ -38,6 +38,7 @@ const service = {
     home: 'Xəbərlər',
     currentPage: 'Hazırda olduğunuz səhifə',
     skipLinkText: 'Mətnə keçid',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
