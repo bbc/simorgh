@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { mount } from 'enzyme';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 import LinkedData from '../../components/LinkedData';
 import Metadata from '../../components/Metadata';
@@ -9,6 +11,15 @@ import services from '../../lib/config/services/index';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import frontPageData from '../../../../data/igbo/frontpage/index.json';
 import liveRadioPageData from '../../../../data/korean/bbc_korean_radio/liveradio.json';
+
+const MockHelmet = ({ children }) => <>{children}</>;
+MockHelmet.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
+jest.mock('react-helmet', () => props => <MockHelmet {...props} />);
 
 const Container = (service, bbcOrigin, platform, data, id, pageType) => {
   const serviceConfig = services[service];
@@ -195,6 +206,18 @@ describe('Metadata Container', () => {
       );
     });
 
+    shouldMatchSnapshot(
+      'should match snapshot for Canonical News & international origin',
+      Container(
+        'news',
+        dotComOrigin,
+        'canonical',
+        articleDataNews,
+        'c0000000001o',
+        'article',
+      ),
+    );
+
     it('should be correct for AMP News & UK origin', () => {
       const Wrapper = mount(
         Container(
@@ -274,6 +297,18 @@ describe('Metadata Container', () => {
       );
     });
 
+    shouldMatchSnapshot(
+      'should match snapshot for AMP News & UK origin',
+      Container(
+        'news',
+        dotCoDotUKOrigin,
+        'amp',
+        articleDataNews,
+        'c0000000001o',
+        'article',
+      ),
+    );
+
     it('should be correct for Persian News & international origin', () => {
       const Wrapper = mount(
         Container(
@@ -324,6 +359,18 @@ describe('Metadata Container', () => {
       );
     });
 
+    shouldMatchSnapshot(
+      'should match snapshot for Persian News & international origin',
+      Container(
+        'persian',
+        dotComOrigin,
+        'canonical',
+        articleDataPersian,
+        'c4vlle3q337o',
+        'article',
+      ),
+    );
+
     it('should be correct for Persian News & UK origin', () => {
       const Wrapper = mount(
         Container(
@@ -373,6 +420,18 @@ describe('Metadata Container', () => {
         }),
       );
     });
+
+    shouldMatchSnapshot(
+      'should match snapshot for Persian News & UK origin',
+      Container(
+        'persian',
+        dotCoDotUKOrigin,
+        'amp',
+        articleDataPersian,
+        'c4vlle3q337o',
+        'article',
+      ),
+    );
 
     it('should be correct for WS Frontpages', () => {
       const Wrapper = mount(
@@ -429,6 +488,18 @@ describe('Metadata Container', () => {
         }),
       );
     });
+
+    shouldMatchSnapshot(
+      'should match snapshot for WS Frontpages',
+      Container(
+        'igbo',
+        dotComOrigin,
+        'canonical',
+        frontPageData,
+        null,
+        'frontPage',
+      ),
+    );
   });
 
   it('should be correct for WS Media liveradio', () => {
@@ -480,4 +551,16 @@ describe('Metadata Container', () => {
       }),
     );
   });
+
+  shouldMatchSnapshot(
+    'should match snapshot for WS Media liveradio',
+    Container(
+      'korean',
+      dotComOrigin,
+      'canonical',
+      liveRadioPageData,
+      null,
+      'media',
+    ),
+  );
 });
