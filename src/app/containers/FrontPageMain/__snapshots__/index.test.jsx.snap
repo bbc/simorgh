@@ -421,6 +421,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             "photogallery": "Image gallery",
             "video": "Vidio",
           },
+          "relatedContent": "Related content",
           "seeAll": "Lee ha niile",
           "skipLinkText": "Wụga n’ọdịnaya",
         },
