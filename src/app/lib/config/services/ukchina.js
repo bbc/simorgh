@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `zh-cn`,
-  datetimeLocale: `zh-cn`.toLowerCase(),
+  datetimeLocale: `zh-cn`,
   service: 'ukchina',
   serviceName: '英伦网',
   themeColor: `${C_POSTBOX}`,
@@ -32,10 +32,13 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: '主页',
   translations: {
+    seeAll: 'See all',
     home: 'Home',
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
@@ -121,6 +124,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -136,20 +143,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',

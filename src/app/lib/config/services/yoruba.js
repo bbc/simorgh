@@ -13,6 +13,7 @@ const yoruba = {
   atiAnalyticsProducerId: '107',
   brandName: 'BBC News Yorùbá',
   locale: 'yo',
+  // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'yo',
   datetimeLocale: 'yo',
   service: 'yoruba',
@@ -25,6 +26,7 @@ const yoruba = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Àbáwọlé',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
@@ -32,9 +34,11 @@ const yoruba = {
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
   translations: {
+    seeAll: 'Wo gbogbo ẹ̀',
     home: 'Ìròyìn',
     currentPage: 'Ojú ewé to wà yìí',
     skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
@@ -124,6 +128,10 @@ const yoruba = {
         subtitle: 'Placeholder subtitle',
       },
     },
+  },
+  mostRead: {
+    header: 'Èyítí A Ń Kà Jùlọ',
+    lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní ',
   },
   navigation: [
     {

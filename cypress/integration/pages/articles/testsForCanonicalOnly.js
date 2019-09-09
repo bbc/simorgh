@@ -4,19 +4,20 @@ import config from '../../../support/config/services';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
 
-const tests = ({ service }) =>
-  describe(`Canonical Tests`, () => {
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
+  describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
+};
+
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
+  service,
+  pageType,
+}) =>
+  describe(`Canonical Tests for ${service} ${pageType}`, () => {
     it('should not have an AMP attribute on the main article', () => {
       cy.get('html').should('not.have.attr', 'amp');
-    });
-
-    describe('ATI', () => {
-      it('should have a noscript tag with an 1px image with the ati url', () => {
-        cy.hasNoscriptImgAtiUrl(
-          envConfig.atiUrl,
-          config[service].isWorldService ? envConfig.atiAnalyticsWSBucket : '',
-        );
-      });
     });
 
     describe('Chartbeat', () => {
@@ -69,4 +70,10 @@ const tests = ({ service }) =>
     }
   });
 
-export default tests;
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
+};

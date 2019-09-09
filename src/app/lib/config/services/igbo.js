@@ -13,6 +13,7 @@ const igbo = {
   atiAnalyticsProducerId: '53',
   brandName: 'BBC News Ìgbò',
   locale: 'ig',
+  // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'ig',
   datetimeLocale: 'ig',
   service: 'igbo',
@@ -25,6 +26,7 @@ const igbo = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Ogbako',
   fonts: [],
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
@@ -32,9 +34,11 @@ const igbo = {
   twitterCreator: '@BBCNews', // to be updated
   twitterSite: '@BBCNews', // to be updated
   translations: {
+    seeAll: 'Lee ha niile',
     home: 'Akụkọ',
     currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
+    relatedContent: 'Related content',
     error: {
       home: 'Akụkọ',
       currentPage: 'Current page',
@@ -127,6 +131,10 @@ const igbo = {
         subtitle: 'Placeholder subtitle',
       },
     },
+  },
+  mostRead: {
+    header: 'Akachasị Gụọ',
+    lastUpdated: 'Emelitere ikpeazụ na ',
   },
   navigation: [
     {

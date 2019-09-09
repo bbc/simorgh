@@ -1,8 +1,65 @@
 import envConfig from '../../support/config/envs';
+import config from '../../support/config/services';
 
-const testsForAllCanonicalPages = ({ service, pageType }) => {
+const serviceIsGNL = service => service === 'japanese';
+const serviceIsWS = service => service === 'persian';
+const serviceIsPS = service => service === 'news';
+
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+export const testsThatAlwaysRunForAllCanonicalPages = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToAlwaysRunForCanonicalPages to run for ${service} ${pageType}`, () => {});
+};
+
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
+  service,
+  pageType,
+}) => {
   if (pageType !== 'errorPage404') {
-    describe('Canonical Scripts', () => {
+    describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
+      if (Cypress.env('SMOKE')) {
+        describe('ATI', () => {
+          it('should have an amp-analytics tag with the ati url smoke', () => {
+            if (serviceIsGNL(service)) {
+              cy.hasNoscriptImgAtiUrl(
+                envConfig.atiUrl,
+                23453464573456435634563456,
+              );
+            } else if (serviceIsWS(service)) {
+              cy.hasNoscriptImgAtiUrl(
+                envConfig.atiUrl,
+                envConfig.atiAnalyticsWSBucket,
+              );
+            } else if (serviceIsPS(service)) {
+              cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
+            }
+          });
+        });
+      } else if (serviceIsGNL(service)) {
+        describe('ATI', () => {
+          it('should have an amp-analytics tag with the ati url', () => {
+            cy.hasNoscriptImgAtiUrl(
+              envConfig.atiUrl,
+              envConfig.atiAnalyticsGNLBucket,
+            );
+          });
+        });
+      } else if (config[service].isWorldService) {
+        it('should have an amp-analytics tag with the ati url', () => {
+          cy.hasNoscriptImgAtiUrl(
+            envConfig.atiUrl,
+            envConfig.atiAnalyticsWSBucket,
+          );
+        });
+      } else {
+        it('should have an amp-analytics tag with the ati url', () => {
+          cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
+        });
+      }
       it('should only have expected bundle script tags', () => {
         cy.get('script[src]').each($p => {
           if ($p.attr('src').includes(envConfig.assetOrigin)) {
@@ -48,4 +105,10 @@ const testsForAllCanonicalPages = ({ service, pageType }) => {
   });
 };
 
-export default testsForAllCanonicalPages;
+// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
+export const testsThatNeverRunDuringSmokeTestingForAllCanonicalPages = ({
+  service,
+  pageType,
+}) => {
+  describe(`No testsToNeverSmokeTestForCanonicalPages to run for ${service} ${pageType}`, () => {});
+};

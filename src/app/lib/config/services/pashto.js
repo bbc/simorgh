@@ -37,10 +37,13 @@ const service = {
   script: arabic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'کور پاڼه',
   translations: {
+    seeAll: 'See all',
     home: 'کور پاڼه',
     currentPage: 'Current page',
     skipLinkText: 'مطلب ته ورشئ',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '۴۰۴',
@@ -132,10 +135,14 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'ډېر لوستل شوي',
+    lastUpdated: 'د خپرېدو نیټه ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.',
     },
     links: [
       {
@@ -144,27 +151,19 @@ const service = {
       },
       {
         href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
-      },
-      {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
+        text: 'د کارولو شرايط',
       },
       {
         href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        text: 'د محرميت تگلاره',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
-      },
-      {
         href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        text: 'زموږ سره اړیکي',
       },
     ],
     copyrightText: 'بی بی سی. بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده',

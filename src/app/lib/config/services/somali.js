@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `so-SO`,
-  datetimeLocale: `so-SO`.toLowerCase(),
+  datetimeLocale: `so-so`,
   service: 'somali',
   serviceName: 'News Somali',
   themeColor: `${C_POSTBOX}`,
@@ -32,10 +32,13 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Somali',
   translations: {
+    seeAll: 'See all',
     home: 'War',
     currentPage: 'Current page',
     skipLinkText: 'U gudub qaybta macluumaadka',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
@@ -132,6 +135,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Ugu akhris badan',
+    lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -147,20 +154,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',

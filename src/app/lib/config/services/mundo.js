@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `es-005`,
-  datetimeLocale: `es-005`.toLowerCase(),
+  datetimeLocale: `es-005`,
   service: 'mundo',
   serviceName: 'News Mundo',
   themeColor: `${C_POSTBOX}`,
@@ -32,10 +32,13 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Noticias',
   translations: {
+    seeAll: 'See all',
     home: 'Noticias',
     currentPage: 'Current page',
     skipLinkText: 'Ir al contenido',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
@@ -122,6 +125,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -137,20 +144,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',
