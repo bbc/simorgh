@@ -38,6 +38,7 @@ const service = {
     home: 'Oduu',
     currentPage: 'Current page',
     skipLinkText: 'Qabiyyeetti darbi',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
