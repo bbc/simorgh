@@ -116,7 +116,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         // test limited to a single service
-        it('should contain Index Alsos at a mobile view', () => {
+        it('should contain Index Alsos at a mobile and desktop view, if relatedItems block exists', () => {
           const serviceHasIndexAlsos = () => {
             cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
               ({ body }) => {
@@ -132,6 +132,21 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           };
 
           if (serviceHasIndexAlsos() && service === 'thai') {
+            cy.get('section li')
+              .eq(0)
+              .within(() => {
+                cy.get('div div div a')
+                  .eq(0)
+                  .within(() => {
+                    cy.get('span').then($el => {
+                      if ($el.length > 1) {
+                        cy.get('svg').should('be.visible');
+                      } else {
+                        expect($el).not.to.have.descendants('svg');
+                      }
+                    });
+                  });
+              });
             cy.viewport('iphone-5');
             cy.get('section li')
               .eq(0)
