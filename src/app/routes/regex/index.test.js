@@ -9,6 +9,7 @@ import {
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
   mediaRadioAndTvRegexPathsArray,
+  mediaAssetPageRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -174,5 +175,27 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/blah/bbc_hausa_radio/livetv',
     ];
     shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
+  });
+  describe('mediaAssetPageRegexPath', () => {
+    const validRoutes = [
+      '/pidgin/tori-49450859',
+      '/pidgin/tori-49450859.amp',
+      '/yoruba/media-49450859',
+      '/yoruba/media-49450859.amp',
+      '/punjabi/international-49567825',
+      '/punjabi/international-49567825.amp',
+      '/kyrgyz/sapar-tv-48695523',
+      '/mundo/test_underscore-12345678',
+    ];
+
+    shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
+    const inValidRoutes = [
+      '/pidgin/tori-494859',
+      '/blah/tori-49450859',
+      '/pidgin/tori-49450859/.amp',
+      '/pidgin/tori-49450859/',
+      '/pidgin/tori-494859.amp',
+    ];
+    shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageRegexPath);
   });
 });
