@@ -1557,6 +1557,35 @@
             "assetTypeCode": "PRO",
             "timestamp": 1528978790000,
             "type": "link"
+          },
+          {
+            "name": "Gallery promo",
+            "summary": "Summary",
+            "indexImage": {
+              "id": "99913057",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12517/production/_99913057_mediaitem99764260.jpg",
+              "path": "/cpsprodpb/12517/production/_99913057_mediaitem99764260.jpg",
+              "height": 261,
+              "width": 464,
+              "altText": "Alt text",
+              "copyrightHolder": "BBC"
+            },
+            "indexThumbnail": {
+              "id": "99913055",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/D6F7/production/_99913055_mediaitem99764260.jpg",
+              "path": "/cpsprodpb/D6F7/production/_99913055_mediaitem99764260.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Alt text",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.com/arabic/42791340",
+            "contentType": "Gallery",
+            "assetTypeCode": "PRO",
+            "timestamp": 1516633229000,
+            "type": "link"
           }
         ],
         "strapline": {
