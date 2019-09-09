@@ -89,7 +89,7 @@ describe('FrontPageContainer', () => {
         });
 
         const { useContext, useReducer, useState } = jest.requireMock('react');
-        useContext.mockReturnValue({ ...igboConfig.default, lang: 'ig' });
+        useContext.mockReturnValue(igboConfig.default);
         FrontPageComponent = jest.requireActual('.').default;
         useReducer.mockReturnValue([toggleReducer, defaultToggles]);
         useState.mockImplementation(input => [input, () => {}]);

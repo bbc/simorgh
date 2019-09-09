@@ -162,7 +162,7 @@ The World Service front pages follow the article format for AMP too, being avail
 Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
 
 - [http://localhost.bbc.com:7080/zhongwen/simp](http://localhost.bbc.com:7080/zhongwen/simp)
-- [http://localhost.bbc.com:7080/zhongwensimp.amp](http://localhost.bbc.com:7080/zhongwen/simp.amp).
+- [http://localhost.bbc.com:7080/zhongwen/simp.amp](http://localhost.bbc.com:7080/zhongwen/simp.amp).
 
 ### Other page types
 
