@@ -19,7 +19,7 @@ import {
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
  */
 
-export const buildATIPageTrackUrl = ({
+export const buildATIPageTrackPath = ({
   appName,
   contentId,
   contentType,

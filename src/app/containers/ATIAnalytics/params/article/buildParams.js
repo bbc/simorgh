@@ -1,4 +1,4 @@
-import { buildATIPageTrackUrl } from '../../atiUrl';
+import { buildATIPageTrackPath } from '../../atiUrl';
 
 import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 import {
@@ -45,7 +45,7 @@ export const buildArticleATIUrl = (
   requestContext,
   serviceContext,
 ) => {
-  return buildATIPageTrackUrl(
+  return buildATIPageTrackPath(
     buildArticleATIParams(articleData, requestContext, serviceContext),
   );
 };

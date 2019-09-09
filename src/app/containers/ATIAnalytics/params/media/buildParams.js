@@ -1,5 +1,5 @@
 import path from 'ramda/src/path';
-import { buildATIPageTrackUrl } from '../../atiUrl';
+import { buildATIPageTrackPath } from '../../atiUrl';
 
 export const buildMediaATIParams = (
   pageData,
@@ -30,7 +30,7 @@ export const buildMediaATIParams = (
 };
 
 export const buildMediaATIUrl = (pageData, requestContext, serviceContext) => {
-  return buildATIPageTrackUrl(
+  return buildATIPageTrackPath(
     buildMediaATIParams(pageData, requestContext, serviceContext),
   );
 };

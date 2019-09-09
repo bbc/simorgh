@@ -35,7 +35,7 @@ describe('MediaAtiParams', () => {
 
     it('should call atiPageViewParams', () => {
       const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiUrlBuilder.buildATIPageTrackUrl = mock;
+      atiUrlBuilder.buildATIPageTrackPath = mock;
 
       render(Component(serviceContextStub, requestContextStub));
 
