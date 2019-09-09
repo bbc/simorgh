@@ -40,6 +40,7 @@ const service = {
     home: 'ပင်မစာမျက်နှာ',
     currentPage: 'Current page',
     skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားပါ',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
