@@ -43,6 +43,7 @@ const service = {
     home: 'کور پاڼه',
     currentPage: 'Current page',
     skipLinkText: 'مطلب ته ورشئ',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '۴۰۴',

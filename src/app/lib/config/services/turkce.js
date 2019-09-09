@@ -38,6 +38,7 @@ const service = {
     home: 'Haberler',
     currentPage: 'Current page',
     skipLinkText: 'Siteye gir',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
