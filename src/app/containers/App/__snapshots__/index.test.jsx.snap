@@ -1,25 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClientApp should render correctly 1`] = `
-<EventContextProvider>
-  <BrowserRouter
-    data="someData!"
+<BrowserRouter
+  data="someData!"
+  routes={
+    Array [
+      "someRoute",
+    ]
+  }
+>
+  <withRouter(App)
+    initialData="someData!"
     routes={
       Array [
         "someRoute",
       ]
     }
-  >
-    <withRouter(App)
-      initialData="someData!"
-      routes={
-        Array [
-          "someRoute",
-        ]
-      }
-    />
-  </BrowserRouter>
-</EventContextProvider>
+  />
+</BrowserRouter>
 `;
 
 exports[`ServerApp no passed routerContext should render correctly 1`] = `
