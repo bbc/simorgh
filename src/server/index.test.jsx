@@ -57,7 +57,334 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
   getStyleElement: jest.fn().mockReturnValue(<style />),
 }));
 
+jest.mock('./styles', () => ({
+  getStyleTag: jest.fn().mockImplementation(() => <style />),
+}));
+
 const makeRequest = async path => request(server).get(path);
+
+const testFrontPages = ({ platform, service }) => {
+  const isAmp = platform === 'amp';
+  const extension = isAmp ? '.amp' : '';
+  const serviceURL = `/${service}${extension}`;
+
+  describe(`/{service}${extension}`, () => {
+    const successDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+          });
+        });
+
+        it('should respond with rendered data', async () => {
+          const { text, status } = await makeRequest(serviceURL);
+
+          expect(status).toBe(200);
+
+          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+            <h1>Mock app</h1>,
+          );
+
+          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+            <Document
+              app="<h1>Mock app</h1>"
+              assets={[
+                `${localBaseUrl}/static/js/igbo-12345.12345.js`,
+                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+                `${localBaseUrl}/static/js/main-12345.12345.js`,
+              ]}
+              assetOrigins={[
+                'https://ichef.bbci.co.uk',
+                'https://gel.files.bbci.co.uk',
+                localBaseUrl,
+                'https://logws1363.ati-host.net?',
+              ]}
+              data={successDataResponse}
+              helmet={{ head: 'tags' }}
+              isAmp={isAmp}
+              service={service}
+              styleTags={<style />}
+            />,
+          );
+
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+
+      describe('404 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            service,
+            isAmp,
+            dataResponse: notFoundDataResponse,
+          });
+        });
+
+        it('should respond with a rendered 404', async () => {
+          const { status, text } = await makeRequest(serviceURL);
+          expect(status).toBe(404);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+    });
+
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(serviceURL);
+        expect(status).toEqual(500);
+        expect(text).toEqual('Error!');
+      });
+    });
+  });
+};
+
+const testArticles = ({ platform, service }) => {
+  const isAmp = platform === 'amp';
+  const extension = isAmp ? '.amp' : '';
+
+  describe(`/{service}/articles/{optimoID}${extension}`, () => {
+    const successDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    const id = `c0000000001o`;
+    const articleURL = `/${service}/articles/${id}${extension}`;
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            id,
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+          });
+        });
+
+        it('should respond with rendered data', async () => {
+          const { text, status } = await makeRequest(articleURL);
+
+          expect(status).toBe(200);
+
+          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+            <h1>Mock app</h1>,
+          );
+
+          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+            <Document
+              app="<h1>Mock app</h1>"
+              assets={[
+                `${localBaseUrl}/static/js/news-12345.12345.js`,
+                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+                `${localBaseUrl}/static/js/main-12345.12345.js`,
+              ]}
+              assetOrigins={[
+                'https://ichef.bbci.co.uk',
+                'https://gel.files.bbci.co.uk',
+                localBaseUrl,
+                'https://logws1363.ati-host.net?',
+              ]}
+              data={successDataResponse}
+              helmet={{ head: 'tags' }}
+              isAmp={isAmp}
+              service={service}
+              styleTags={<style />}
+            />,
+          );
+
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+
+      describe('404 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            id,
+            service,
+            isAmp,
+            dataResponse: notFoundDataResponse,
+          });
+        });
+
+        it('should respond with a rendered 404', async () => {
+          const { status, text } = await makeRequest(articleURL);
+          expect(status).toBe(404);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+    });
+
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          id,
+          service,
+          isAmp,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(articleURL);
+        expect(status).toEqual(500);
+        expect(text).toEqual('Error!');
+      });
+    });
+  });
+};
+
+const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
+  describe(`${platform} media page - live radio`, () => {
+    const isAmp = platform === 'amp';
+    const successDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    const extension = isAmp ? '.amp' : '';
+    const mediaPageURL = `/${service}/${serviceId}/${mediaId}${extension}`;
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+          });
+        });
+
+        it('should respond with rendered data', async () => {
+          const { text, status } = await makeRequest(mediaPageURL);
+
+          expect(status).toBe(200);
+
+          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+            <h1>Mock app</h1>,
+          );
+
+          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+            <Document
+              app="<h1>Mock app</h1>"
+              assets={[
+                `${localBaseUrl}/static/js/korean-12345.12345.js`,
+                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+                `${localBaseUrl}/static/js/main-12345.12345.js`,
+              ]}
+              assetOrigins={[
+                'https://ichef.bbci.co.uk',
+                'https://gel.files.bbci.co.uk',
+                localBaseUrl,
+                'https://logws1363.ati-host.net?',
+              ]}
+              data={successDataResponse}
+              helmet={{ head: 'tags' }}
+              isAmp={isAmp}
+              service={service}
+              styleTags={<style />}
+            />,
+          );
+
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+    });
+
+    describe('404 status code', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: notFoundDataResponse,
+        });
+      });
+
+      it('should respond with a rendered 404', async () => {
+        const { status, text } = await makeRequest(`/${service}`);
+        expect(status).toBe(404);
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
+      });
+    });
+
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(mediaPageURL);
+        expect(status).toEqual(500);
+        expect(text).toEqual('Error!');
+      });
+    });
+  });
+};
 
 describe('Server', () => {
   beforeEach(() => {
@@ -177,326 +504,23 @@ describe('Server', () => {
     });
   });
 
-  describe('/{service}/articles/{optimoID}', () => {
-    const isAmp = false;
-    const successDataResponse = {
-      isAmp,
-      data: { some: 'data' },
-      service: 'someService',
-      status: 200,
-    };
+  testFrontPages({ platform: 'canonical', service: 'igbo' });
+  testFrontPages({ platform: 'amp', service: 'igbo' });
 
-    const notFoundDataResponse = {
-      isAmp,
-      data: { some: 'data' },
-      service: 'someService',
-      status: 404,
-    };
-    const id = 'c0000000001o';
-    const service = 'news';
+  testArticles({ platform: 'amp', service: 'news' });
+  testArticles({ platform: 'canonical', service: 'news' });
 
-    describe('Successful render', () => {
-      describe('200 status code', () => {
-        beforeEach(() => {
-          mockRouteProps({
-            id,
-            service,
-            isAmp,
-            dataResponse: successDataResponse,
-          });
-        });
-
-        it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest(
-            `/${service}/articles/${id}`,
-          );
-
-          expect(status).toBe(200);
-
-          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-            <h1>Mock app</h1>,
-          );
-
-          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-            <Document
-              app="<h1>Mock app</h1>"
-              assets={[
-                `${localBaseUrl}/static/js/news-12345.12345.js`,
-                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-                `${localBaseUrl}/static/js/main-12345.12345.js`,
-              ]}
-              assetOrigins={[
-                'https://ichef.bbci.co.uk',
-                'https://gel.files.bbci.co.uk',
-                localBaseUrl,
-                'https://logws1363.ati-host.net?',
-              ]}
-              data={successDataResponse}
-              helmet={{ head: 'tags' }}
-              isAmp={isAmp}
-              service={service}
-              styleTags={<style />}
-            />,
-          );
-
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
-      });
-
-      describe('404 status code', () => {
-        beforeEach(() => {
-          mockRouteProps({
-            id,
-            service,
-            isAmp,
-            dataResponse: notFoundDataResponse,
-          });
-        });
-
-        it('should respond with a rendered 404', async () => {
-          const { status, text } = await makeRequest(
-            `/${service}/articles/${id}`,
-          );
-          expect(status).toBe(404);
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
-      });
-    });
-
-    describe('Unknown error within the data fetch, react router or its dependencies', () => {
-      beforeEach(() => {
-        mockRouteProps({
-          id,
-          service,
-          isAmp,
-          dataResponse: Error('Error!'),
-          responseType: 'reject',
-        });
-      });
-
-      it('should respond with a 500', async () => {
-        const { status, text } = await makeRequest(
-          `/${service}/articles/${id}`,
-        );
-        expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
-      });
-    });
+  testMediaPages({
+    platform: 'amp',
+    service: 'korean',
+    serviceId: 'bbc_korean_radio',
+    mediaId: 'liveradio',
   });
-
-  describe('/{service}', () => {
-    const service = 'igbo';
-    const isAmp = false;
-    const successDataResponse = {
-      isAmp,
-      data: { some: 'data' },
-      service: 'someService',
-      status: 200,
-    };
-
-    const notFoundDataResponse = {
-      isAmp,
-      data: { some: 'data' },
-      service: 'someService',
-      status: 404,
-    };
-
-    describe('Successful render', () => {
-      describe('200 status code', () => {
-        beforeEach(() => {
-          mockRouteProps({
-            service,
-            isAmp,
-            dataResponse: successDataResponse,
-          });
-        });
-
-        it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest(`/${service}`);
-
-          expect(status).toBe(200);
-
-          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-            <h1>Mock app</h1>,
-          );
-
-          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-            <Document
-              app="<h1>Mock app</h1>"
-              assets={[
-                `${localBaseUrl}/static/js/igbo-12345.12345.js`,
-                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-                `${localBaseUrl}/static/js/main-12345.12345.js`,
-              ]}
-              assetOrigins={[
-                'https://ichef.bbci.co.uk',
-                'https://gel.files.bbci.co.uk',
-                localBaseUrl,
-                'https://logws1363.ati-host.net?',
-              ]}
-              data={successDataResponse}
-              helmet={{ head: 'tags' }}
-              isAmp={isAmp}
-              service={service}
-              styleTags={<style />}
-            />,
-          );
-
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
-      });
-
-      describe('404 status code', () => {
-        beforeEach(() => {
-          mockRouteProps({
-            service,
-            isAmp,
-            dataResponse: notFoundDataResponse,
-          });
-        });
-
-        it('should respond with a rendered 404', async () => {
-          const { status, text } = await makeRequest(`/${service}`);
-          expect(status).toBe(404);
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
-      });
-    });
-
-    describe('Unknown error within the data fetch, react router or its dependencies', () => {
-      beforeEach(() => {
-        mockRouteProps({
-          service,
-          isAmp,
-          dataResponse: Error('Error!'),
-          responseType: 'reject',
-        });
-      });
-
-      it('should respond with a 500', async () => {
-        const { status, text } = await makeRequest(`/${service}`);
-        expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
-      });
-    });
-  });
-
-  describe('media page - live radio', () => {
-    const service = 'korean';
-    const serviceId = 'bbc_korean_radio';
-    const mediaId = 'liveradio';
-    const isAmp = false;
-    const successDataResponse = {
-      isAmp,
-      data: { some: 'data' },
-      service: 'someService',
-      status: 200,
-    };
-
-    const notFoundDataResponse = {
-      isAmp,
-      data: { some: 'data' },
-      service: 'someService',
-      status: 404,
-    };
-
-    describe('Successful render', () => {
-      describe('200 status code', () => {
-        beforeEach(() => {
-          mockRouteProps({
-            service,
-            isAmp,
-            dataResponse: successDataResponse,
-          });
-        });
-
-        it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest(
-            `/${service}/${serviceId}/${mediaId}`,
-          );
-
-          expect(status).toBe(200);
-
-          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-            <h1>Mock app</h1>,
-          );
-
-          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-            <Document
-              app="<h1>Mock app</h1>"
-              assets={[
-                `${localBaseUrl}/static/js/korean-12345.12345.js`,
-                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-                `${localBaseUrl}/static/js/main-12345.12345.js`,
-              ]}
-              assetOrigins={[
-                'https://ichef.bbci.co.uk',
-                'https://gel.files.bbci.co.uk',
-                localBaseUrl,
-                'https://logws1363.ati-host.net?',
-              ]}
-              data={successDataResponse}
-              helmet={{ head: 'tags' }}
-              isAmp={isAmp}
-              service={service}
-              styleTags={<style />}
-            />,
-          );
-
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
-      });
-    });
-
-    describe('404 status code', () => {
-      beforeEach(() => {
-        mockRouteProps({
-          service,
-          isAmp,
-          dataResponse: notFoundDataResponse,
-        });
-      });
-
-      it('should respond with a rendered 404', async () => {
-        const { status, text } = await makeRequest(`/${service}`);
-        expect(status).toBe(404);
-        expect(text).toEqual(
-          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-        );
-      });
-    });
-
-    describe('Unknown error within the data fetch, react router or its dependencies', () => {
-      beforeEach(() => {
-        mockRouteProps({
-          service,
-          isAmp,
-          dataResponse: Error('Error!'),
-          responseType: 'reject',
-        });
-      });
-
-      it('should respond with a 500', async () => {
-        const { status, text } = await makeRequest(
-          `/${service}/${serviceId}/${mediaId}`,
-        );
-        expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
-      });
-    });
+  testMediaPages({
+    platform: 'canonical',
+    service: 'korean',
+    serviceId: 'bbc_korean_radio',
+    mediaId: 'liveradio',
   });
 
   describe('media asset pages - CPS MAP', () => {

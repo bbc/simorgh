@@ -35,7 +35,7 @@ const service = {
   script: thai,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  frontPageTitle: 'ข่าว ข่าวสด วัน นี้ ข่าว ล่าสุด วีดีโอ',
+  frontPageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
   translations: {
     home: 'หน้าแรก',
     currentPage: 'หน้าปัจจุบัน',
