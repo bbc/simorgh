@@ -7,7 +7,7 @@ import { buildATIClickParams } from '../ATIAnalytics/params';
 import { sendEventBeacon } from '../ATIAnalytics/beacon';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-export const ConsentBanner = props => {
+const ConsentBanner = props => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const eventContext = useContext(EventContext);
