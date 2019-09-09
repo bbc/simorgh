@@ -38,6 +38,7 @@ const igbo = {
     home: 'Akụkọ',
     currentPage: 'Peegi ị nọ ugbua',
     skipLinkText: 'Wụga n’ọdịnaya',
+    relatedContent: 'Related content',
     error: {
       home: 'Akụkọ',
       currentPage: 'Current page',
