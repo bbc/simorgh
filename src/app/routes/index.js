@@ -5,10 +5,13 @@ import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
 import getMediaPageInitialData from './getInitialData/mediapage';
+import getMediaAssetPageInitialData from './getInitialData/mediaAssetPage';
+
 import {
   articleRegexPath,
   frontpageRegexPath,
   mediaRadioAndTvRegexPathsArray,
+  mediaAssetPageRegexPath,
 } from './regex';
 
 const routes = [
@@ -32,6 +35,13 @@ const routes = [
     component: MediaPage,
     getInitialData: getMediaPageInitialData,
     pageType: 'media',
+  },
+  {
+    path: mediaAssetPageRegexPath,
+    exact: true,
+    component: MediaPage,
+    getInitialData: getMediaAssetPageInitialData,
+    pageType: 'MAP',
   },
   {
     component: ErrorPage,
