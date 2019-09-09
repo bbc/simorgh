@@ -30,7 +30,7 @@ describe('ServiceContextProvider', () => {
       jest.unmock('../utils/createLoadableContext');
     });
 
-    const testForServiceAndVarient = (service, variant) => {
+    const testForServiceAndVariant = (service, variant) => {
       it(`should have a brand name for ${service} and variant ${variant}`, async () => {
         // eslint-disable-next-line global-require
         const { ServiceContext, ServiceContextProvider } = require('./index');
@@ -44,7 +44,7 @@ describe('ServiceContextProvider', () => {
         const serviceContextProps = {
           service,
           // Dont pass variant if its 'default', this better mirrors the
-          // behaviour in the production app, where varient is unset for
+          // behaviour in the production app, where variant is unset for
           // services with only a 'default' variant
           variant: variant === 'default' ? null : variant,
         };
@@ -65,7 +65,7 @@ describe('ServiceContextProvider', () => {
 
     Object.keys(services).forEach(service => {
       Object.keys(services[service]).forEach(variant =>
-        testForServiceAndVarient(service, variant),
+        testForServiceAndVariant(service, variant),
       );
     });
 

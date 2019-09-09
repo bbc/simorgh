@@ -161,13 +161,13 @@ const baseServiceConfig = {
 const service = {
   simp: {
     ...baseServiceConfig,
-    lang: `zh-Hans`,
-    locale: `zh-Hans`,
+    lang: `zh-hans`,
+    locale: `zh-hans`,
   },
   trad: {
     ...baseServiceConfig,
-    lang: `zh-Hant`,
-    locale: `zh-Hant`,
+    lang: `zh-hant`,
+    locale: `zh-hant`,
   },
 };
 

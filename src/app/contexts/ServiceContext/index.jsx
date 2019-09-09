@@ -1,8 +1,9 @@
 import React from 'react';
-import { node, string, oneOf } from 'prop-types';
+import { node, string } from 'prop-types';
 import services from '../../lib/config/services/loadableConfig';
 import createLoadableContext from '../utils/createLoadableContext';
 import { variantDataKey } from '../../lib/utilities/variantHandler';
+import variantPropType from '../../models/propTypes/variants';
 
 /* Create ServiceContext using the default service */
 export const ServiceContext = React.createContext({});
@@ -46,7 +47,7 @@ export const ServiceContextProvider = ({ children, service, variant }) => {
 ServiceContextProvider.propTypes = {
   children: node.isRequired,
   service: string,
-  variant: oneOf(['simp', 'trad', 'lat', 'cyr']),
+  variant: variantPropType,
 };
 
 ServiceContextProvider.defaultProps = {

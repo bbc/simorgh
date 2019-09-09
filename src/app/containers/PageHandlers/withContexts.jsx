@@ -1,5 +1,6 @@
 import React from 'react';
-import { bool, element, string, oneOf } from 'prop-types';
+import { bool, element, string } from 'prop-types';
+import variantPropType from '../../models/propTypes/variants';
 
 // context providers
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -48,7 +49,7 @@ const WithContexts = Component => {
     pathname: string.isRequired,
     previousPath: string,
     service: string.isRequired,
-    variant: oneOf(['simp', 'trad', 'lat', 'cyr']),
+    variant: variantPropType,
   };
 
   WithContextsContainer.defaultProps = {
