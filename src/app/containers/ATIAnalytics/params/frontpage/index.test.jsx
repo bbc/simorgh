@@ -91,7 +91,10 @@ describe('FrontPageAtiParams', () => {
       expect(testUtils.getLanguage).toHaveBeenCalledWith(mockFPData);
 
       expect(testUtils.getPageIdentifier).toHaveBeenCalledTimes(1);
-      expect(testUtils.getPageIdentifier).toHaveBeenCalledWith(mockFPData);
+      expect(testUtils.getPageIdentifier).toHaveBeenCalledWith(
+        mockFPData,
+        'SERVICE',
+      );
 
       expect(testUtils.getPageTitle).toHaveBeenCalledTimes(1);
       expect(testUtils.getPageTitle).toHaveBeenCalledWith(

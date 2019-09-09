@@ -25,7 +25,7 @@ export const buildFrontPageATIParams = (
     contentId: getContentId(frontpageData),
     contentType: 'index-home',
     language: getLanguage(frontpageData),
-    pageIdentifier: getPageIdentifier(frontpageData),
+    pageIdentifier: getPageIdentifier(frontpageData, service),
     pageTitle: getPageTitle(frontpageData, brandName),
     producerId: atiAnalyticsProducerId,
     timePublished: getPublishedDatetime('firstPublished', frontpageData),
