@@ -65,3 +65,20 @@ export const getTitle = (pageType, pageData, brandName) => {
       return null;
   }
 };
+
+export const trackPage = values => {
+  if (typeof window !== 'undefined' && window.pSUPERFLY) {
+    // eslint-disable-next-line no-underscore-dangle
+    const currentConfig = window._sf_async_config;
+    const shouldUpdate = currentConfig.path !== values.path;
+    if (shouldUpdate) {
+      console.log('tracking page');
+      console.log('values', values);
+      /*
+        This function is always called to update config values on page changes
+        https://chartbeat.zendesk.com/hc/en-us/articles/210271287-Handling-virtual-page-changes
+      */
+      window.pSUPERFLY.virtualPage(values);
+    }
+  }
+};
