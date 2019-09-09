@@ -5,11 +5,17 @@ def nodeImage = "329802642264.dkr.ecr.eu-west-1.amazonaws.com/bbc-news/node-10-l
 // Run latest every 1 hour
 def cron_string = env.BRANCH_NAME == "latest" ? "0 */1 * * *" : ""
 
-def notifySlack(messageParameters) {
+def channels = [
+  simorgh: "#si_repo-simorgh",
+  testAlarms: "#simorgh-alarms-test",
+  liveAlarms:  "#simorgh-alarms-live"
+];
+
+def notifySlack(messageParameters, targetChannel) {
   def message = "${messageParameters.emoji} Simorgh E2Es \n*Status:* ${messageParameters.buildStatus} \n*Env:* ${messageParameters.env} \n*Branch:* ${messageParameters.branch} \n*Pipeline:* ${env.BUILD_URL}"
 
   slackSend(
-    channel: '#si_repo-simorgh',
+    channel: targetChannel,
     color: messageParameters.colour,
     message: message
   )
@@ -53,7 +59,8 @@ node {
               ]
 
               if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters)
+                notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, channels.liveAlarms)
                 stageHasFailed = true
               }
 
@@ -74,7 +81,8 @@ node {
               ]
 
               if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters)
+                notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, channels.liveAlarms)
                 stageHasFailed = true
               }
 
@@ -97,43 +105,46 @@ node {
               case 'SUCCESS':
                 def messageParameters = [
                   buildStatus: 'SUCCESS',
-                  env: 'ALL',
+                  env: 'Local and Production',
                   branch: env.BRANCH_NAME,
                   colour: 'good',
                   emoji: '🤟'
                 ]
-                notifySlack(messageParameters)
+                notifySlack(messageParameters, channels.simorgh)
                 break
               case 'UNSTABLE':
                 def messageParameters = [
                   buildStatus: 'UNSTABLE',
-                  env: 'ALL',
+                  env: 'Local and Production',
                   branch: env.BRANCH_NAME,
                   colour: 'danger',
                   emoji: '😱',
                 ]
-                notifySlack(messageParameters)
+                notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, channels.liveAlarms)
                 break
               case 'ABORTED':
                 def messageParameters = [
                   buildStatus: 'ABORTED',
-                  env: 'ALL',
+                  env: 'Local and Production',
                   branch: env.BRANCH_NAME,
                   colour: 'warning',
                   emoji: '🙀',
                 ]
-                notifySlack(messageParameters)
+                notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, channels.liveAlarms)
                 break
               default:
                 if (stageHasFailed == false) {
                   def messageParameters = [
                     buildStatus: 'Unknown build failure',
-                    env: 'ALL',
+                    env: 'Local and Production',
                     branch: env.BRANCH_NAME,
                     colour: 'danger',
                     emoji: '😱',
                   ]
-                  notifySlack(messageParameters)
+                  notifySlack(messageParameters, channels.simorgh)
+                  notifySlack(messageParameters, channels.liveAlarms)
                 }
                 break
             }
