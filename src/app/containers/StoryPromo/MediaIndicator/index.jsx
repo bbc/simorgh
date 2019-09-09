@@ -11,9 +11,10 @@ import formatDuration from '../../../lib/utilities/formatDuration';
 const getAssetContentTypes = item => {
   const mediaContentTypes = ['video'];
   let type = pathOr(null, ['contentType'], item);
-  if (type != null) {
-    type = type.toLowerCase();
+  if (!type) {
+    return null;
   }
+  type = type.toLowerCase();
   return mediaContentTypes.includes(type) ? type : null;
 };
 
