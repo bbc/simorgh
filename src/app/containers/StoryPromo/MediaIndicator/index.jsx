@@ -2,30 +2,45 @@ import React from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
+import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import { storyItem } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
-const contentIndicator = item => {
-  const contentTypes = ['video'];
-  const itemType = pathOr(null, ['contentType'], item);
-  return contentTypes.includes(itemType);
+const getAssetContentTypes = item => {
+  const mediaContentTypes = ['video'];
+  let type = pathOr(null, ['contentType'], item);
+  if (type) {
+    type = type.toLowerCase();
+  }
+  return mediaContentTypes.includes(type) ? type : null;
 };
 
-const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
-  const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
-  const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
-  const hasMediaInfo = pathOr(null, ['media'], item);
+const getCpsMediaTypes = item => {
+  const isPGL = path(['cpsType'], item) === 'PGL';
+  const isMedia = path(['cpsType'], item) === 'MAP';
+  const hasMediaInfo = path(['media'], item);
 
   // Only build a media indicator if this is a photo gallery or media item
   if (!isPGL && (!isMedia || !hasMediaInfo)) {
     return null;
   }
+  const type = isPGL ? 'photogallery' : path(['media', 'format'], item);
+  return type || null;
+};
 
-  const type = isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
-  const assetType = pathOr(null, ['assetTypeCode'], item);
-  const displayContent = assetType === 'PRO' && contentIndicator;
+const getMediaType = item => {
+  const isAssetTypeMedia = path(['assetTypeCode'], item);
+  return isAssetTypeMedia ? getAssetContentTypes(item) : getCpsMediaTypes(item);
+};
+
+const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
+  const type = getMediaType(item);
+
+  if (!type) {
+    return null;
+  }
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
@@ -46,13 +61,7 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   }
 
   return (
-    displayContent && (
-      <MediaIndicatorComp
-        type={type}
-        service={service}
-        indexAlsos={indexAlsos}
-      />
-    )
+    <MediaIndicatorComp type={type} service={service} indexAlsos={indexAlsos} />
   );
 };
 
