@@ -40,6 +40,7 @@ const service = {
       home: 'Hafan',
       currentPage: 'Current page',
       skipLinkText: `Neidio i'r cynnwys`,
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',

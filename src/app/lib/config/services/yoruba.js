@@ -35,10 +35,11 @@ const yoruba = {
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
     translations: {
+      seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
-      seeAll: 'Wo gbogbo ẹ̀',
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',

@@ -43,6 +43,7 @@ const service = {
       home: 'ዜና',
       currentPage: 'Current page',
       skipLinkText: 'እቲ ትሕዝቶ ዝለል',
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',

@@ -38,10 +38,11 @@ const service = {
     swPath: '/sw.js',
     frontPageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
     translations: {
+      seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
-      seeAll: 'ดูทั้งหมด',
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',

@@ -42,6 +42,7 @@ const service = {
       home: 'ዜና',
       currentPage: 'Current page',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',

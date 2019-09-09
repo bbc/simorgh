@@ -40,6 +40,7 @@ const service = {
       home: 'ホーム',
       currentPage: 'Current page',
       skipLinkText: 'コンテンツへ移動',
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',

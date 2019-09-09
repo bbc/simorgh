@@ -39,6 +39,7 @@ const service = {
       home: 'Habari',
       currentPage: 'Ukurasa uliopo',
       skipLinkText: 'Ruka hadi maelezo',
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',

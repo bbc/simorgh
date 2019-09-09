@@ -43,6 +43,7 @@ const service = {
       home: 'මුල් පිටුව',
       currentPage: 'Current page',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',

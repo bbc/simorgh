@@ -40,6 +40,7 @@ const service = {
       home: 'ਖ਼ਬਰਾਂ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
+      relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',
@@ -151,10 +152,6 @@ const service = {
         title: 'ਕੌਮਾਂਤਰੀ',
         url: '/punjabi/international',
       },
-      {
-        href: 'https://www.bbc.com/punjabi/institutional-42227903',
-        text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
-      },
     ],
     footer: {
       externalLink: {
@@ -177,6 +174,10 @@ const service = {
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'ਕੁਕੀਜ਼',
+        },
+        {
+          href: 'https://www.bbc.com/punjabi/institutional-42227903',
+          text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
         },
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
