@@ -116,7 +116,7 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.6.0",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@bbc/psammead-test-helpers": "^2.0.1",
     "@bbc/psammead-storybook-helpers": "^6.0.0",
