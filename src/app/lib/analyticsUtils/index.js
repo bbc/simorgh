@@ -164,7 +164,7 @@ export const getAtiUrl = (data = []) => {
   return parsedAtiValues.join('&');
 };
 
-export const getClickInfo = (elem, { service, component }) => {
+export const getClickInfo = (elem, { service, component, label, type }) => {
   /*
     https://paper.dropbox.com/doc/Event-tracking--AjJpWibjeQPWsoRLFdZW13Y9Ag-3i47TvVb9IJBMJFcL8D6u
     for click events we need to know:
@@ -180,5 +180,5 @@ export const getClickInfo = (elem, { service, component }) => {
   const format = `PAR=container-${component}::name~CHD=${cleanCompInfo.toLowerCase()}`;
   const url = elem.href || '/';
 
-  return `PUB-[${service}-${component}]-[click]-[]-[${format}]-[]-[]-[]-[${url}]`;
+  return `PUB-[${service}-${component}]-[=${type}]-[${label}]-[${format}]-[]-[]-[]-[${url}]`;
 };

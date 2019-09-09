@@ -4,9 +4,8 @@ import Canonical from './index.canonical';
 import Amp from './index.amp';
 import { EventContext } from '../../contexts/EventContext';
 import { buildATIClickParams } from '../ATIAnalytics/params';
-import sendBeacon from '../../lib/analyticsUtils/sendBeacon';
+import { sendEventBeacon } from '../ATIAnalytics/beacon';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { buildATIEventTrackUrl } from '../ATIAnalytics/atiUrl';
 
 export const ConsentBanner = props => {
   const requestContext = useContext(RequestContext);
@@ -18,12 +17,6 @@ export const ConsentBanner = props => {
   useClickTracker('header *', e => {
     const params = buildATIClickParams(props, requestContext, serviceContext);
 
-    const atiUrl = buildATIEventTrackUrl({
-      ...params,
-      element: e.target,
-      component: 'consent-banner',
-    });
-
     console.log({
       message: 'data-consent-banner',
       e,
@@ -33,7 +26,13 @@ export const ConsentBanner = props => {
       props,
     });
 
-    sendBeacon(atiUrl);
+    sendEventBeacon({
+      ...params,
+      element: e.target,
+      component: 'cookie-banner',
+      type: 'click',
+      label: 'cookie-accept',
+    });
   });
 
   const { platform } = requestContext;

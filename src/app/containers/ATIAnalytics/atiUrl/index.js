@@ -154,6 +154,8 @@ export const buildATIEventTrackUrl = ({
   statsDestination,
   element,
   component,
+  label,
+  type,
 }) => {
   const eventTrackingBeaconValues = [
     {
@@ -201,7 +203,12 @@ export const buildATIEventTrackUrl = ({
     {
       key: 'ati',
       description: 'event publisher',
-      value: getClickInfo(element, { service, component }),
+      value: getClickInfo(element, {
+        service,
+        component,
+        label: label || '',
+        type: type || '',
+      }),
     },
   ];
 
