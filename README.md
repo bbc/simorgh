@@ -258,9 +258,9 @@ CYPRESS_APP_ENV=test CYPRESS_UK=true CYPRESS_SMOKE=true npm run cypress
 ```
 
 #### Running e2e outside EU
-**This affects developers based out of the EU (but may affect you if you're using a VPN routing through a country in the EU)**
+**This affects developers based out of the EU (but may affect you if you're using a VPN routing through a country not in the EU)**
 
-Running Cypress tests outside the EU will not show the EU consent banners, and this may cause some tests to fail. Set `CYPRESS_SKIP_EU=true` to prevent these tests from failing when outside the EU.
+Running Cypress tests outside the EU will not show the EU consent banners on AMP, and this may cause some tests to fail. Set `CYPRESS_SKIP_EU=true` to prevent these tests from running when outside the EU.
 
 An example command will be:
 ```
