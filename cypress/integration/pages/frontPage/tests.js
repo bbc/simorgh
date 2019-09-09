@@ -1,9 +1,5 @@
 import config from '../../../support/config/services';
 
-// For testing important features that differ between services, e.g. Timestamps.
-// We recommend using inline conditional logic to limit tests to services which differ.
-const serviceHasIndexAlsos = service => service === 'thai';
-
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
@@ -88,18 +84,23 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
         });
 
-        if (serviceHasIndexAlsos(service)) {
-          it('should contain Index Alsos at a mobile view', () => {
+        // test limited to a single service
+        it('should contain Index Alsos at a mobile view', () => {
+          const serviceHasIndexAlsos = () => {
             cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
               ({ body }) => {
                 const topstories = body.content.groups[0];
+                const relatedItemsExists = Object.prototype.hasOwnProperty.call(
+                  topstories,
+                  'relatedItems',
+                ); // if relatedItems exists, IndexAlsos should be visible
 
-                // check if topstories contains related items
-                if (topstories.hasOwnProperty('relatedItems')) {
-                  // run test here
-                }
+                return relatedItemsExists;
               },
             );
+          };
+
+          if (serviceHasIndexAlsos() && service === 'thai') {
             cy.viewport('iphone-5');
             cy.get('section li')
               .eq(0)
@@ -116,8 +117,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                     });
                   });
               });
-          });
-        }
+          }
+        });
       });
     });
   });
