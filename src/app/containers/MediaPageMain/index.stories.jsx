@@ -42,9 +42,9 @@ storiesOf('Containers|Media', module)
   .addDecorator(withKnobs)
   .add(
     'default',
-    inputProvider(
-      null,
-      ({ service }) => {
+    inputProvider({
+      // eslint-disable-next-line react/prop-types
+      componentFunction: ({ service }) => {
         return (
           <ToggleContextProvider>
             <ServiceContextProvider service={service}>
@@ -63,7 +63,7 @@ storiesOf('Containers|Media', module)
           </ToggleContextProvider>
         );
       },
-      validServices,
-      { defaultService: 'indonesia' },
-    ),
+      services: validServices,
+      options: { defaultService: 'indonesia' },
+    }),
   );
