@@ -39,6 +39,7 @@ const service = {
     home: 'मुख पृष्ठ',
     currentPage: 'Current page',
     skipLinkText: 'यो सामग्री स्कीप गर्नुहोस्',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

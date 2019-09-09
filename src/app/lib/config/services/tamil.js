@@ -39,6 +39,7 @@ const service = {
     home: 'முகப்பு',
     currentPage: 'Current page',
     skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

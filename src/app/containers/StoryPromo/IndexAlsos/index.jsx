@@ -41,14 +41,14 @@ const buildIndexAlsosMediaIndicator = (cpsType, mediaType, service) => {
  */
 const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
   const {
-    translations: { media: mediaTranslations },
+    translations: { media: mediaTranslations, relatedContent },
   } = useContext(ServiceContext);
 
   const IndexAlsosWrapper = alsoItems.length > 1 ? IndexAlsosUl : Fragment;
   const IndexAlsoItem = alsoItems.length > 1 ? IndexAlsosLi : IndexAlso;
 
   return (
-    <IndexAlsos offScreenText="Related content">
+    <IndexAlsos offScreenText={relatedContent}>
       <IndexAlsosWrapper>
         {alsoItems.slice(0, MAX_NUM_INDEX_ALSOS).map(item => {
           const { id, cpsType, mediaType } = item;
