@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `om-ET`,
-  datetimeLocale: `om-ET`.toLowerCase(),
+  datetimeLocale: `om-et`,
   service: 'afaanoromoo',
   serviceName: 'News Afaan Oromoo',
   themeColor: `${C_POSTBOX}`,
@@ -32,43 +32,46 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Oduu',
   translations: {
+    seeAll: 'Hunda ilaali',
     home: 'Oduu',
     currentPage: 'Current page',
     skipLinkText: 'Qabiyyeetti darbi',
     error: {
       404: {
         statusCode: '404',
-        title: '404 - Fuulli kun hin argamne',
+        title: 'Fuulli argamuu hin dandeenye',
         message:
-          'Tarii kun kan uumame sababa maqaa marsariitii doggoggorteefi. Maaloo maqichaa fi qubee sirreeffadhu',
+          'Dhiifama, fuula ati barbaaddaa jirtu siif fiduu hin dandeenye. maaloo yaali.',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'url sna dabalii ilaali',
+          'Barbaadduu kee keessaan furtuu haaromsituu cuqaasuu',
+          "Bo'aa barbaacha kan BBC fayyadamuun fuula kana barbaaduu",
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC Afaan Oromoo Fuula duraa',
+        callToActionFirst: 'Akka filannootti, maaloo fuula duraa ',
+        callToActionLinkText: 'BBC Afaan Oromoo daawwadhu',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/afaanoromoo',
       },
       500: {
         statusCode: '500',
-        title: '500 - Dogogorawwaan',
-        message: 'Dogoggorri uumameera. Maaloo fuulicha haaressi',
+        title: 'Dogogora keessoo haadhoo',
+        message:
+          'Dhiifama, fuula ati barbaaddaa jirtu siif fiduu hin dandeenye. maaloo yaali.',
         solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
+          'Barbaadduu kee keessaan furtuu haaromsituu cuqaasuu',
+          'Ammas gara boodaarra ni deebiya',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC Afaan Oromoo Fuula duraa',
+        callToActionFirst: 'Akka filannootti, maaloo fuula duraa ',
+        callToActionLinkText: 'BBC Afaan Oromoo daawwadhu',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/afaanoromoo',
       },
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: 'Imaammata mateenyaafi kuus-yadannoo keenyaa haaromsiineera.',
         description: {
           uk: {
             first:
@@ -79,18 +82,18 @@ const service = {
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              "Imaammata mateenyaafi kuus-yaadannoo keenyaarratti jijjirama barbaachisaa muraasa kan taasifne yoo ta'u, kunis siifi daataa keetiif maal jechu akka ta'e akka bartu barbaadna.",
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
-        accept: 'OK',
-        reject: "Find out what's changed",
+        accept: 'TOLE',
+        reject: 'Maaltu akka jijjirame bari',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'Kuus-yaadannoo waliin waliigalu kee haa beeknu',
         description: {
           uk: {
             first: 'We use ',
@@ -101,16 +104,16 @@ const service = {
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
-            linkText: 'cookies',
+            first: 'Kan nuti ',
+            linkText: 'kuus-yaadannoo',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: 'Eyyee, walii nan gala.',
+        reject: 'Lakki, gara bakka itti argamuutti na geessi',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
@@ -122,6 +125,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Yeroo dhuma kan haaromfame: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

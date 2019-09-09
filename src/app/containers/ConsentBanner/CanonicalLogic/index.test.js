@@ -7,9 +7,9 @@ let Cookie;
 let setCookieOvenMock;
 const setShowPrivacyBannerMock = jest.fn();
 const setShowCookieBannerMock = jest.fn();
-
+const PRIVACY_COOKIE_CURRENT = 'july2019';
 const setCookieGetMock = ({
-  privacy = '1',
+  privacy = PRIVACY_COOKIE_CURRENT,
   explicit = '1',
   policy = '111',
 }) => {
@@ -51,8 +51,8 @@ describe('Consent Banner Utilities', () => {
   });
 
   describe('runInitial', () => {
-    it('does not show the privacy banner when PRIVACY_COOKIE is 1', () => {
-      setCookieGetMock({ privacy: '1' });
+    it('does not show the privacy banner when PRIVACY_COOKIE is current policy value', () => {
+      setCookieGetMock({ privacy: PRIVACY_COOKIE_CURRENT });
 
       const { runInitial } = getConsentBannerUtilities();
 
@@ -62,7 +62,18 @@ describe('Consent Banner Utilities', () => {
       expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
     });
 
-    it('sets PRIVACY_COOKIE and shows privacy banner when cookie is 0', () => {
+    it('does not show the privacy banner when PRIVACY_COOKIE is anythingelse', () => {
+      setCookieGetMock({ privacy: 'anythingelse' });
+
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(Cookie.set).toHaveBeenCalledTimes(0);
+      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
+    });
+
+    it('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 0', () => {
       setCookieGetMock({ privacy: '0' });
 
       const { runInitial } = getConsentBannerUtilities();
@@ -70,9 +81,31 @@ describe('Consent Banner Utilities', () => {
       runInitial();
 
       expect(Cookie.set).toHaveBeenCalledTimes(1);
-      expect(Cookie.set).toHaveBeenCalledWith(PRIVACY_COOKIE, '1', {
-        expires: 365,
-      });
+      expect(Cookie.set).toHaveBeenCalledWith(
+        PRIVACY_COOKIE,
+        PRIVACY_COOKIE_CURRENT,
+        {
+          expires: 365,
+        },
+      );
+      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
+    });
+
+    it('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 1', () => {
+      setCookieGetMock({ privacy: '1' });
+
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(Cookie.set).toHaveBeenCalledTimes(1);
+      expect(Cookie.set).toHaveBeenCalledWith(
+        PRIVACY_COOKIE,
+        PRIVACY_COOKIE_CURRENT,
+        {
+          expires: 365,
+        },
+      );
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
     });
 
@@ -84,21 +117,27 @@ describe('Consent Banner Utilities', () => {
       runInitial();
 
       expect(Cookie.set).toHaveBeenCalledTimes(1);
-      expect(Cookie.set).toHaveBeenCalledWith(PRIVACY_COOKIE, '1', {
-        expires: 365,
-      });
+      expect(Cookie.set).toHaveBeenCalledWith(
+        PRIVACY_COOKIE,
+        PRIVACY_COOKIE_CURRENT,
+        {
+          expires: 365,
+        },
+      );
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
     });
 
-    it('does not show the cookie banner when EXPLICIT_COOKIE is 1', () => {
-      setCookieGetMock({ explicit: '1' });
+    it('does not show the cookie banner when EXPLICIT_COOKIE is 1 or 2', () => {
+      ['1', '2'].forEach(value => {
+        setCookieGetMock({ explicit: value });
 
-      const { runInitial } = getConsentBannerUtilities();
+        const { runInitial } = getConsentBannerUtilities();
 
-      runInitial();
+        runInitial();
 
-      expect(Cookie.set).toHaveBeenCalledTimes(0);
-      expect(setShowCookieBannerMock).not.toHaveBeenCalled();
+        expect(Cookie.set).toHaveBeenCalledTimes(0);
+        expect(setShowCookieBannerMock).not.toHaveBeenCalled();
+      });
     });
 
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and PRIVACY_COOKIE is set', () => {

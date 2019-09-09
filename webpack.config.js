@@ -33,7 +33,17 @@ module.exports = (shell = {}) => {
   const baseConfig = {
     mode: IS_PROD ? 'production' : 'development',
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
-    resolve: { extensions: ['.js', '.jsx'] }, // resolves `import '../Foo'` to `../Foo/index.jsx`
+    resolve: {
+      extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
+      alias: {
+        '#app': resolvePath('src/app'),
+        '#contexts': resolvePath('src/app/contexts'),
+        '#data': resolvePath('data/'),
+        '#lib': resolvePath('src/app/lib/'),
+        '#models': resolvePath('src/app/models/'),
+        '#testHelpers': resolvePath('src/testHelpers/'),
+      },
+    },
     devServer: {
       stats,
     },
@@ -93,7 +103,7 @@ module.exports = (shell = {}) => {
           : {},
       ],
     },
-    // Bundle sizes are monitored by `./scripts/bundleSize.sh`
+    // Bundle sizes are monitored by `./scripts/bundleSize.js`
     performance: {
       hints: false,
     },

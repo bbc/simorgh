@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `rw-RW`,
-  datetimeLocale: `rw-RW`.toLowerCase(),
+  datetimeLocale: `rw-rw`,
   service: 'gahuza',
   serviceName: 'News Gahuza',
   themeColor: `${C_POSTBOX}`,
@@ -32,7 +32,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: "Urupapuro rw'itangiriro",
   translations: {
+    seeAll: 'Raba vyose',
     home: `Urupapuro rw'itangiriro`,
     currentPage: 'Current page',
     skipLinkText: 'Simbira ku birimwo',
@@ -127,6 +129,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Ibisomwa cane',
+    lastUpdated: 'Ibiheruka kuvugururwa: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -142,20 +148,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',

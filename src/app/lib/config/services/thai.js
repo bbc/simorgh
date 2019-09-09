@@ -6,6 +6,8 @@ import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 
 const service = {
   lang: `th`,
+  // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+  isoLang: `th`,
   articleAuthor: `https://www.facebook.com/BBCThai`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-thai',
@@ -33,10 +35,12 @@ const service = {
   script: thai,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
   translations: {
     home: 'หน้าแรก',
     currentPage: 'หน้าปัจจุบัน',
     skipLinkText: 'ข้ามไปยังเนื้อหา',
+    seeAll: 'ดูทั้งหมด',
     error: {
       404: {
         statusCode: '404',
@@ -122,6 +126,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'ได้รับความนิยมสูงสุด',
+    lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา ',
+  },
   navigation: [
     {
       title: 'หน้าแรก',

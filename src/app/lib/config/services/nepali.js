@@ -22,7 +22,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `ne-NP`,
-  datetimeLocale: `ne-NP`.toLowerCase(),
+  datetimeLocale: `ne-np`,
   service: 'nepali',
   serviceName: 'News नेपाली',
   themeColor: `${C_POSTBOX}`,
@@ -33,7 +33,9 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'मुख पृष्ठ',
   translations: {
+    seeAll: 'See all',
     home: 'मुख पृष्ठ',
     currentPage: 'Current page',
     skipLinkText: 'यो सामग्री स्कीप गर्नुहोस्',
@@ -128,6 +130,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -143,20 +149,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',

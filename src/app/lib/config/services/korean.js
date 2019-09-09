@@ -21,7 +21,7 @@ const service = {
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
   locale: `ko-KO`,
-  datetimeLocale: `ko-KO`.toLowerCase(),
+  datetimeLocale: `ko-ko`,
   service: 'korean',
   serviceName: 'News 코리아',
   themeColor: `${C_POSTBOX}`,
@@ -32,43 +32,43 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: '홈페이지',
   translations: {
+    seeAll: '모든 기사 보기',
     home: '뉴스',
     currentPage: 'Current page',
     skipLinkText: '내용으로 건너뛰기',
     error: {
       404: {
         statusCode: '404',
-        title: '404 - 페이지를 찾을 수 없습니다',
+        title: '페이지를 찾을 수 없습니다',
         message:
-          '웹사이트 주소를 잘못 입력하셨을 수 있습니다. 주소와 철자를 확인해 주십시오.',
+          '죄송합니다. 찾으시는 페이지를 가져올 수 없습니다. 이 중 하나를 해보세요:',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'URL 주소 재확인',
+          '웹브라우저의 새로 고침 버튼 누르기',
+          'BBC 검색 기능을 이용해 해당 페이지 찾아보기',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC 뉴스 홈 페이지',
-        callToActionLast: '',
+        callToActionFirst: '',
+        callToActionLinkText: 'BBC News 코리아',
+        callToActionLast: ' 홈페이지를 방문해보세요',
         callToActionLinkUrl: 'https://www.bbc.com/korean',
       },
       500: {
         statusCode: '500',
-        title: '500 - 오류',
-        message: '오류가 발생했습니다. 페이지를 새로 고쳐 주십시오.',
-        solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
-        ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC 뉴스 홈 페이지',
-        callToActionLast: '',
+        title: '내부 서버 에러',
+        message:
+          '죄송합니다. 찾으시는 페이지를 가져올 수 없습니다. 이 중 하나를 해보세요:',
+        solutions: ['웹브라우저의 새로 고침 버튼 누르기', '다시 시도해 보기'],
+        callToActionFirst: '',
+        callToActionLinkText: 'BBC News 코리아',
+        callToActionLast: ' 홈페이지를 방문해보세요',
         callToActionLinkUrl: 'https://www.bbc.com/korean',
       },
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: '개인정보와 쿠키 처리방침을 변경했습니다',
         description: {
           uk: {
             first:
@@ -79,18 +79,18 @@ const service = {
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다.',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
-        accept: 'OK',
-        reject: "Find out what's changed",
+        accept: '알겠습니다',
+        reject: '변경사항을 확인하세요',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: '쿠키생성에 동의하시나요',
         description: {
           uk: {
             first: 'We use ',
@@ -101,16 +101,16 @@ const service = {
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
-            linkText: 'cookies',
+            first: 'BBC와 파트너사는 ',
+            linkText: '쿠키',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              '웹브라우징 데이터 수집 같은 기술을 통해 이용자에게 최적의 온라인 경험을 제공하고 개인에 맞춤화된 콘텐츠와 광고를 노출하고자 합니다. 이에 동의하는지 알려주세요.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: '네, 동의합니다',
+        reject: '아니요, 재 세팅 하겠습니다',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
@@ -122,6 +122,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'TOP 뉴스',
+    lastUpdated: '최종 송고일',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',

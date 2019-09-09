@@ -1,6 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 
 const whitelist = ['STY', 'MAP', 'PGL', 'LIV', 'PRO'];
+const contentTypes = ['Text']; // For now we are just supporting standard link promos
 
 const filterUnknownContentTypes = data => {
   const groups = pathOr(null, ['content', 'groups'], data);
@@ -14,11 +15,15 @@ const filterUnknownContentTypes = data => {
     const newGroup = group;
 
     if (Array.isArray(group.items)) {
-      newGroup.items = group.items.filter(
-        item =>
-          (item.assetTypeCode || item.cpsType) &&
-          whitelist.includes(item.cpsType || item.assetTypeCode),
-      );
+      newGroup.items = group.items.filter(item => {
+        const itemType = item.assetTypeCode || item.cpsType;
+        const validItemType = whitelist.includes(itemType);
+        const validContentType =
+          item.assetTypeCode !== 'PRO' ||
+          contentTypes.includes(item.contentType);
+
+        return itemType && validItemType && validContentType;
+      });
     }
 
     return newGroup;
