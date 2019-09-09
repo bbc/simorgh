@@ -1,11 +1,11 @@
 import * as moment from 'moment-timezone';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/app/lib/config/services';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-
-// Defaulting to false for now whilst we look to improve the index also's test coverage to cater for the varying scenarios: https://github.com/bbc/simorgh/issues/3586
 const serviceHasTimestamp = service => service === 'thai';
+const serviceHasIndexAlsos = service => service === 'thai';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
@@ -117,7 +117,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         // test limited to a single service
         it('should contain Index Alsos at a mobile and desktop view, if relatedItems block exists', () => {
-          const serviceHasIndexAlsos = () => {
+          const serviceHasRelatedItems = () => {
             cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
               ({ body }) => {
                 const topstories = body.content.groups[0];
@@ -131,7 +131,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             );
           };
 
-          if (serviceHasIndexAlsos() && service === 'thai') {
+          if (serviceHasIndexAlsos(service) && serviceHasRelatedItems()) {
             cy.get('section li')
               .eq(0)
               .within(() => {
