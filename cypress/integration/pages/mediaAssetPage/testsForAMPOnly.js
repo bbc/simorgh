@@ -1,5 +1,4 @@
 import config from '../../../support/config/services';
-import envConfig from '../../../support/config/envs';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -21,14 +20,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           'text/html',
         );
       });
-    });
-
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it.skip('should have chartbeat config UID', () => {
-          cy.hasAmpChartbeatConfigUid();
-        });
-      }
     });
 
     // TODO - Refactor or review this. Can it be a puppeteer test?
