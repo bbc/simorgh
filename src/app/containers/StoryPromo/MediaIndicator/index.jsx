@@ -7,6 +7,12 @@ import pick from 'ramda/src/pick';
 import { storyItem } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
+const contentIndicator = item => {
+  const contentTypes = ['video'];
+  const itemType = pathOr(null, ['contentType'], item);
+  return contentTypes.includes(itemType);
+};
+
 const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   const isPGL = pathOr(null, ['cpsType'], item) === 'PGL';
   const isMedia = pathOr(null, ['cpsType'], item) === 'MAP';
@@ -18,6 +24,8 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   }
 
   const type = isPGL ? 'photogallery' : pathOr(null, ['media', 'format'], item);
+  const assetType = pathOr(null, ['assetTypeCode'], item);
+  const displayContent = assetType === 'PRO' && contentIndicator;
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
@@ -38,7 +46,13 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   }
 
   return (
-    <MediaIndicatorComp type={type} service={service} indexAlsos={indexAlsos} />
+    displayContent && (
+      <MediaIndicatorComp
+        type={type}
+        service={service}
+        indexAlsos={indexAlsos}
+      />
+    )
   );
 };
 
