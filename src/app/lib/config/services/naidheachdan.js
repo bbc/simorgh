@@ -39,6 +39,7 @@ const service = {
     home: 'Alba',
     currentPage: 'Current page',
     skipLinkText: 'Air adhart',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
