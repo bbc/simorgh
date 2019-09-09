@@ -6,6 +6,7 @@ import {
   F_NOTO_SANS_ETHIOPIC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `am`,
@@ -179,4 +180,4 @@ const service = {
   timezone: 'Africa/Addis_Ababa',
 };
 
-export default service;
+export default withContext(service);

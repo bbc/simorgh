@@ -3,6 +3,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import { burmese as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_PADAUK_BOLD, F_PADAUK_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `my`,
@@ -176,4 +177,4 @@ const service = {
   timezone: 'Europe/London',
 };
 
-export default service;
+export default withContext(service);

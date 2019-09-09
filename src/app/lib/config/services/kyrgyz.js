@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `ky`,
@@ -172,4 +173,4 @@ const service = {
   timezone: 'Europe/London',
 };
 
-export default service;
+export default withContext(service);

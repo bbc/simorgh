@@ -3,6 +3,7 @@ import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/pcm';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const pidgin = {
   lang: 'pcm',
@@ -203,4 +204,4 @@ const pidgin = {
   timezone: 'Africa/Lagos',
 };
 
-export default pidgin;
+export default withContext(pidgin);

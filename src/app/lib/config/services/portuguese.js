@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `pt-BR`,
@@ -163,4 +164,4 @@ const service = {
   timezone: 'America/Sao_Paulo',
 };
 
-export default service;
+export default withContext(service);

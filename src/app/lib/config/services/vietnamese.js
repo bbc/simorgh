@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { vietnamese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `vi`,
@@ -163,4 +164,4 @@ const service = {
   timezone: 'Asia/Ho_Chi_Minh',
 };
 
-export default service;
+export default withContext(service);

@@ -3,6 +3,7 @@ import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/yo';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const yoruba = {
   lang: 'yo',
@@ -181,4 +182,4 @@ const yoruba = {
   timezone: 'Africa/Lagos',
 };
 
-export default yoruba;
+export default withContext(yoruba);

@@ -3,6 +3,7 @@ import { nepali } from '@bbc/gel-foundations/scripts';
 import { punjabi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/psammead-locales/moment/pa-in';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `pa`,
@@ -185,4 +186,4 @@ const service = {
   timezone: 'Asia/Kolkata',
 };
 
-export default service;
+export default withContext(service);

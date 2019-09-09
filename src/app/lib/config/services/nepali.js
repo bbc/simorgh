@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { nepali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `ne`,
@@ -169,4 +170,4 @@ const service = {
   timezone: 'Asia/Kathmandu',
 };
 
-export default service;
+export default withContext(service);

@@ -3,6 +3,7 @@ import { thai } from '@bbc/gel-foundations/scripts';
 import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
 import 'moment/locale/th';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `th`,
@@ -195,4 +196,4 @@ const service = {
   timezone: 'Asia/Bangkok',
 };
 
-export default service;
+export default withContext(service);

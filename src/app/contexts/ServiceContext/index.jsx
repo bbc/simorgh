@@ -26,6 +26,10 @@ Object.keys(services).forEach(service => {
   );
 });
 
+export const withContext = data => ({ children }) => (
+  <ServiceContext.Provider value={data}>{children}</ServiceContext.Provider>
+);
+
 export const ServiceContextProvider = ({ children, service }) => {
   const LoadableServiceContextProvider = loadableContexts[service];
 

@@ -3,6 +3,7 @@ import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const igbo = {
   lang: 'ig',
@@ -187,4 +188,4 @@ const igbo = {
   timezone: 'Africa/Lagos',
 };
 
-export default igbo;
+export default withContext(igbo);

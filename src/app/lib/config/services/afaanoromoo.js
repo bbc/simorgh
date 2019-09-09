@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `om`,
@@ -181,4 +182,4 @@ const service = {
   timezone: 'Africa/Addis_Ababa',
 };
 
-export default service;
+export default withContext(service);

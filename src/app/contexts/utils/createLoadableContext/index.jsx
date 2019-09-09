@@ -5,10 +5,8 @@ const createLoadableContext = (Context, loadableConfig) =>
   Loadable({
     ...loadableConfig,
     loading: () => null,
-    render(loaded, { children }) {
-      return (
-        <Context.Provider value={loaded.default}>{children}</Context.Provider>
-      );
+    render(Loaded, { children }) {
+      return <Loaded.default>{children}</Loaded.default>;
     },
   });
 

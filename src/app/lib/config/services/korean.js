@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `ko`,
@@ -179,4 +180,4 @@ const service = {
   timezone: 'Asia/Seoul',
 };
 
-export default service;
+export default withContext(service);

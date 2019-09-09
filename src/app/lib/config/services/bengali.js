@@ -6,6 +6,7 @@ import {
   F_SHONAR_BANGLA_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `bn`,
@@ -172,4 +173,4 @@ const service = {
   timezone: 'Asia/Dhaka',
 };
 
-export default service;
+export default withContext(service);

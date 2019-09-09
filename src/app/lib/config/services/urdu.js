@@ -7,6 +7,7 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/ur';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: 'ur',
@@ -168,4 +169,4 @@ const service = {
   timezone: 'Asia/Karachi',
 };
 
-export default service;
+export default withContext(service);

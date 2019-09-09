@@ -7,6 +7,7 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const persian = {
   lang: 'fa',
@@ -190,4 +191,4 @@ const persian = {
   fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
 };
 
-export default persian;
+export default withContext(persian);

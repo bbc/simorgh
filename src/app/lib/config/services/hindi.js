@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { hindi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `hi`,
@@ -174,4 +175,4 @@ const service = {
   timezone: 'Asia/Kolkata',
 };
 
-export default service;
+export default withContext(service);

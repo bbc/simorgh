@@ -2,6 +2,7 @@ import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: `id`,
@@ -215,4 +216,4 @@ const service = {
   timezone: 'Asia/Jakarta',
 };
 
-export default service;
+export default withContext(service);

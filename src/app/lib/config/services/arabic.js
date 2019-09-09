@@ -7,6 +7,7 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ar';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: 'ar',
@@ -175,4 +176,4 @@ const service = {
   timezone: 'Europe/London',
 };
 
-export default service;
+export default withContext(service);

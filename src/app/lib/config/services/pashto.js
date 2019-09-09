@@ -6,6 +6,7 @@ import {
   F_NASSIM_PASHTO_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import { withContext } from '../../../contexts/ServiceContext';
 
 const service = {
   lang: 'ps',
@@ -172,4 +173,4 @@ const service = {
   timezone: 'Europe/London',
 };
 
-export default service;
+export default withContext(service);
