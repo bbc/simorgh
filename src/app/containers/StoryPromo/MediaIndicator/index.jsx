@@ -33,6 +33,10 @@ const getMediaType = item => {
 const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   const type = getMediaType(item);
 
+  if (!type) {
+    return null;
+  }
+
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = path(['media', 'versions', 0, 'duration'], item);
 
@@ -41,26 +45,18 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
     const durationString = formatDuration(duration);
     const isoDuration = duration.toISOString();
     return (
-      type && (
-        <MediaIndicatorComp
-          duration={durationString}
-          datetime={isoDuration}
-          type={type}
-          topStory={topStory}
-          service={service}
-        />
-      )
+      <MediaIndicatorComp
+        duration={durationString}
+        datetime={isoDuration}
+        type={type}
+        topStory={topStory}
+        service={service}
+      />
     );
   }
 
   return (
-    type && (
-      <MediaIndicatorComp
-        type={type}
-        service={service}
-        indexAlsos={indexAlsos}
-      />
-    )
+    <MediaIndicatorComp type={type} service={service} indexAlsos={indexAlsos} />
   );
 };
 
