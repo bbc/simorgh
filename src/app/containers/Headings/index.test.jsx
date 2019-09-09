@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import {
   shouldMatchSnapshot,
@@ -16,8 +16,6 @@ const HeadingsContainerWithContext = data => (
     <HeadingsContainer {...data} />
   </ServiceContext.Provider>
 );
-
-const getId = enzymeWrapper => enzymeWrapper[0].children[0].attribs.id;
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {
@@ -99,8 +97,10 @@ describe('Headings', () => {
       );
 
       it('should have an id for the skiplink with value "content"', () => {
-        const headlineHeading = render(HeadingsContainerWithContext(data));
-        expect(getId(headlineHeading)).toBe('content');
+        const { container } = render(HeadingsContainerWithContext(data));
+        expect(container.querySelector('h1').getAttribute('id')).toEqual(
+          'content',
+        );
       });
     });
 
@@ -116,8 +116,10 @@ describe('Headings', () => {
       );
 
       it('should have an id of sanitised text', () => {
-        const subheadlineHeading = render(HeadingsContainerWithContext(data));
-        expect(getId(subheadlineHeading)).toBe('Plain-subheadline');
+        const { container } = render(HeadingsContainerWithContext(data));
+        expect(container.querySelector('h2').getAttribute('id')).toEqual(
+          'Plain-subheadline',
+        );
       });
     });
   });
