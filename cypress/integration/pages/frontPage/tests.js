@@ -24,7 +24,7 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
             cy.get('section')
               .eq(0)
               .within(() => {
-                cy.get('div div time').should('contain', formattedTimestamp);
+                cy.get('time').should('contain', formattedTimestamp);
               });
           },
         );
