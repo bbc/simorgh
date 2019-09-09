@@ -6,6 +6,10 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ClientApp, ServerApp } from '.';
 
+jest.mock('react-router-dom', () => ({
+  BrowserRouter: props => <div {...props} />,
+}));
+
 describe('ClientApp', () => {
   shouldMatchSnapshot(
     'should render correctly',

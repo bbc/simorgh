@@ -22,3 +22,5 @@ export const ServerApp = props => (
     />
   </StaticRouter>
 );
+
+//assertion testing and remove snapshots and test props being passed in
