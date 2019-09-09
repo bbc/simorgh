@@ -5,7 +5,7 @@ import {
   F_NASSIM_PERSIAN_REGULAR,
   F_NASSIM_PERSIAN_BOLD,
 } from '@bbc/psammead-styles/fonts';
-import '@bbc/psammead-locales/moment/fa';
+import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const persian = {
