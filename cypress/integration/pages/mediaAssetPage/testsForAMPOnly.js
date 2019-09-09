@@ -31,10 +31,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       }
     });
 
-    it('should have AMP attribute', () => {
-      cy.get('html').should('have.attr', 'amp');
-    });
-
     // TODO - Refactor or review this. Can it be a puppeteer test?
     it('should load the AMP framework', () => {
       // .eq(2) gets the amp <script> as:
