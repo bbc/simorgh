@@ -47,6 +47,7 @@ const news = {
     home: 'Home',
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
