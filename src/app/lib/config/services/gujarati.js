@@ -38,6 +38,7 @@ const service = {
     home: 'સમાચાર',
     currentPage: 'Current page',
     skipLinkText: 'સામગ્રી પર જાઓ',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

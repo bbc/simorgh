@@ -1,7 +1,34 @@
+import * as moment from 'moment-timezone';
 import config from '../../../support/config/services';
+import appConfig from '../../../../src/app/lib/config/services';
+// For testing important features that differ between services, e.g. Timestamps.
+// We recommend using inline conditional logic to limit tests to services which differ.
+
+// Defaulting to false for now whilst we look to improve the index also's test coverage to cater for the varying scenarios: https://github.com/bbc/simorgh/issues/3586
+const serviceHasTimestamp = service => service === 'thai';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
+  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
+    if (serviceHasTimestamp(service)) {
+      it('should render a formatted timestamp in the top story', () => {
+        cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
+          ({ body }) => {
+            const { language } = body.metadata;
+            const { timestamp } = body.content.groups[0].items[0];
+            const formattedTimestamp = moment
+              .tz(timestamp, `${appConfig[service].timezone}`)
+              .locale(language)
+              .format('D MMMM YYYY');
+            cy.get('section')
+              .eq(0)
+              .within(() => {
+                cy.get('time').should('contain', formattedTimestamp);
+              });
+          },
+        );
+      });
+    }
+  });
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
@@ -49,13 +76,20 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-            cy.get('p')
-              .should('have.length.of.at.least', 1)
-              .should('be.visible');
+
+            cy.get('p').then($el => {
+              if ($el.length > 0) {
+                cy.get('p')
+                  .should('have.length.of.at.least', 1)
+                  .should('be.visible');
+              }
+            });
+
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
           });
+
           cy.viewport(320, 480);
           cy.get('section').within(() => {
             cy.get('img')
@@ -66,18 +100,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-            cy.get('p')
-              .eq(0)
-              .should('be.visible');
-            cy.get('p')
-              .eq(1)
-              .should('be.hidden');
-            cy.get('p')
-              .eq(2)
-              .should('be.hidden');
-            cy.get('p')
-              .eq(3)
-              .should('be.hidden');
+
+            cy.get('p').then($el => {
+              if ($el.length > 0) {
+                cy.get('p')
+                  .eq(0)
+                  .should('be.hidden');
+              }
+            });
+
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
