@@ -1,6 +1,6 @@
 import React from 'react';
 import { create, act } from 'react-test-renderer';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CanonicalATIAnalytics from '.';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
@@ -29,11 +29,11 @@ describe('Canonical ATI Analytics', () => {
   });
 
   it('should render a noscript image for non-JS users', () => {
-    const renderedATI = render(
+    const { renderedATI } = render(
       <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
     );
 
-    expect(renderedATI.html()).toBe(
+    expect(renderedATI).toMatchSnapshot(
       `<img height="1px" width="1px" alt="" style="position:absolute" src="https://foobar.com?key=value&amp;key2=value2"/>`,
     );
   });

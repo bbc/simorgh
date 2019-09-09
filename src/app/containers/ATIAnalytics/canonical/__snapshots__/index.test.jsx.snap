@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Canonical ATI Analytics should render a noscript image for non-JS users: <img height="1px" width="1px" alt="" style="position:absolute" src="https://foobar.com?key=value&amp;key2=value2"/> 1`] = `undefined`;
+
 exports[`Canonical ATI Analytics should render correctly 1`] = `<noscript />`;
