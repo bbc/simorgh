@@ -115,7 +115,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
         });
 
-        // test limited to a single service
         it('should contain Index Alsos at a mobile and desktop view, if relatedItems block exists', () => {
           const serviceHasRelatedItems = () => {
             cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
