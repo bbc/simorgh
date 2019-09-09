@@ -164,6 +164,52 @@ const service = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: '主页',
+      url: '/zhongwen/simp',
+    },
+    {
+      title: '国际',
+      url: '/zhongwen/simp/world',
+    },
+    {
+      title: '两岸',
+      url: '/zhongwen/simp/chinese_news',
+    },
+    {
+      title: '英国',
+      url: '/zhongwen/simp/uk',
+    },
+    {
+      title: '评论',
+      url: '/zhongwen/simp/indepth',
+    },
+    {
+      title: '科技',
+      url: '/zhongwen/simp/science',
+    },
+    {
+      title: '财经',
+      url: '/zhongwen/simp/business',
+    },
+    {
+      title: '图辑',
+      url: '/zhongwen/simp/media/photogalleries',
+    },
+    {
+      title: '音频材料',
+      url: '/zhongwen/simp/media/audio',
+    },
+    {
+      title: '视频材料',
+      url: '/zhongwen/simp/media/video',
+    },
+    {
+      title: 'BBC英伦网',
+      url: 'http://www.bbc.co.uk/ukchina/simp',
+    },
+  ],
 };
 
 export default service;

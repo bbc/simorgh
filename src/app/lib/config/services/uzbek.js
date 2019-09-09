@@ -169,6 +169,56 @@ const service = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: 'Бош саҳифа',
+      url: '/uzbek',
+    },
+    {
+      title: 'Lotinda',
+      url: '/uzbek/lotin',
+    },
+    {
+      title: 'Ўзбекистон',
+      url: '/uzbek/uzbekistan',
+    },
+    {
+      title: 'Минтақа',
+      url: '/uzbek/central_asia',
+    },
+    {
+      title: 'Дунё',
+      url: '/uzbek/world',
+    },
+    {
+      title: 'Спорт',
+      url: '/uzbek/sport',
+    },
+    {
+      title: 'Маданият',
+      url: '/uzbek/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
+    },
+    {
+      title: 'Илм-Фан',
+      url: '/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+    },
+    {
+      title: 'Технология',
+      url: '/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+    },
+    {
+      title: 'Аудио',
+      url: '/uzbek/media/audio',
+    },
+    {
+      title: 'Видео',
+      url: '/uzbek/media/video',
+    },
+    {
+      title: 'Суратлар',
+      url: '/uzbek/media/photogalleries',
+    },
+  ],
 };
 
 export default service;

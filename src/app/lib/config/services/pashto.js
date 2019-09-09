@@ -170,6 +170,48 @@ const service = {
   },
   fonts: [F_NASSIM_PASHTO_REGULAR, F_NASSIM_PASHTO_BOLD],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: 'کور پاڼه',
+      url: '/pashto',
+    },
+    {
+      title: 'افغانستان',
+      url: '/pashto/afghanistan',
+    },
+    {
+      title: 'پښتونخوا',
+      url: '/pashto/pakhtunkhwa',
+    },
+    {
+      title: 'نړۍ',
+      url: '/pashto/world',
+    },
+    {
+      title: 'ښځې',
+      url: '/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
+    },
+    {
+      title: 'لوبې',
+      url: '/pashto/sport',
+    },
+    {
+      title: 'ويډيوګانې',
+      url: '/pashto/media/video',
+    },
+    {
+      title: 'انځورونه',
+      url: '/pashto/media/photogalleries',
+    },
+    {
+      title: 'ځانګړې پاڼې',
+      url: '/pashto/in_depth',
+    },
+    {
+      title: 'کالم',
+      url: '/pashto/columns',
+    },
+  ],
 };
 
 export default service;

@@ -160,6 +160,28 @@ const service = {
   },
   fonts: [],
   timezone: 'Asia/Tokyo',
+  navigation: [
+    {
+      title: 'ホーム',
+      url: '/japanese',
+    },
+    {
+      title: '読み物・解説',
+      url: '/japanese/features_and_analysis',
+    },
+    {
+      title: 'ビデオ',
+      url: '/japanese/video',
+    },
+    {
+      title: 'ワールドニュースTV',
+      url: 'https://www.bbcworldnews-japan.com/',
+    },
+    {
+      title: 'BBC News',
+      url: '/news',
+    },
+  ],
 };
 
 export default service;

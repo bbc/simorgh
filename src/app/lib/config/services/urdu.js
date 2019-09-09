@@ -166,6 +166,52 @@ const service = {
   },
   fonts: [F_NASSIM_URDU_REGULAR, F_NASSIM_URDU_BOLD],
   timezone: 'Asia/Karachi',
+  navigation: [
+    {
+      title: 'صفحۂ اول',
+      url: '/urdu',
+    },
+    {
+      title: 'پاکستان',
+      url: '/urdu/pakistan',
+    },
+    {
+      title: 'آس پاس',
+      url: '/urdu/regional',
+    },
+    {
+      title: 'ورلڈ',
+      url: '/urdu/world',
+    },
+    {
+      title: 'کھیل',
+      url: '/urdu/sport',
+    },
+    {
+      title: 'فن فنکار',
+      url: '/urdu/entertainment',
+    },
+    {
+      title: 'سائنس',
+      url: '/urdu/science',
+    },
+    {
+      title: 'آڈیو',
+      url: '/urdu/media/audio',
+    },
+    {
+      title: 'ویڈیو',
+      url: '/urdu/media/video',
+    },
+    {
+      title: 'پنجابی ويڈیو',
+      url: '/urdu/punjabi_video',
+    },
+    {
+      title: 'تصاویر',
+      url: '/urdu/media/photogalleries',
+    },
+  ],
 };
 
 export default service;

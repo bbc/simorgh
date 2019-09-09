@@ -172,6 +172,48 @@ const service = {
   },
   fonts: [],
   timezone: 'Asia/Kolkata',
+  navigation: [
+    {
+      title: 'होम पेज',
+      url: '/hindi',
+    },
+    {
+      title: 'भारत',
+      url: '/hindi/india',
+    },
+    {
+      title: 'विदेश',
+      url: '/hindi/international',
+    },
+    {
+      title: 'मनोरंजन',
+      url: '/hindi/entertainment',
+    },
+    {
+      title: 'खेल',
+      url: '/hindi/sport',
+    },
+    {
+      title: 'विज्ञान-टेक्नॉलॉजी',
+      url: '/hindi/science',
+    },
+    {
+      title: 'सोशल',
+      url: '/hindi/social',
+    },
+    {
+      title: 'वीडियो',
+      url: '/hindi/media/video',
+    },
+    {
+      title: 'तस्वीरें',
+      url: '/hindi/media/photogalleries',
+    },
+    {
+      title: 'बीबीसी स्पेशल',
+      url: '/hindi/in_depth',
+    },
+  ],
 };
 
 export default service;

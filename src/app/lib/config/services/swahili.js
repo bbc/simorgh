@@ -171,6 +171,32 @@ const service = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: 'Habari',
+      url: '/swahili',
+    },
+    {
+      title: 'Michezo',
+      url: '/swahili/michezo',
+    },
+    {
+      title: 'Video',
+      url: '/swahili/media/video',
+    },
+    {
+      title: 'Sauti',
+      url: '/swahili/media/audio',
+    },
+    {
+      title: 'Vipindi vya Redio',
+      url: '/swahili/kwa_kina/redio',
+    },
+    {
+      title: 'Picha',
+      url: '/swahili/media/photogalleries',
+    },
+  ],
 };
 
 export default service;

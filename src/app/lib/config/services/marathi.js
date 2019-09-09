@@ -166,6 +166,33 @@ const service = {
   },
   fonts: [],
   timezone: 'Asia/Kolkata',
+  navigation: [
+    {
+      title: 'बातम्या',
+      url: '/marathi',
+    },
+    {
+      title: 'महाराष्ट्र विधानसभा निवडणूक',
+      url:
+        '/marathi/topics/efb6916d-97ac-41e3-8acf-4658102a2a0a?ocid=wsmarathi.bbc-site-referral.organic-post.topic.maharashtra-assembly-election.prod',
+    },
+    {
+      title: 'व्हीडिओ',
+      url: '/marathi/media/video',
+    },
+    {
+      title: 'लोकप्रिय',
+      url: '/marathi/popular/read',
+    },
+    {
+      title: 'भारत',
+      url: '/marathi/india',
+    },
+    {
+      title: 'आंतरराष्ट्रीय',
+      url: '/marathi/international',
+    },
+  ],
 };
 
 export default service;

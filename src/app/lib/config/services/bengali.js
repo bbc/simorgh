@@ -170,6 +170,28 @@ const service = {
   },
   fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
   timezone: 'Asia/Dhaka',
+  navigation: [
+    {
+      title: 'মূলপাতা',
+      url: '/bengali',
+    },
+    {
+      title: 'খবর',
+      url: '/bengali/news',
+    },
+    {
+      title: 'অডিও',
+      url: '/bengali/media/audio',
+    },
+    {
+      title: 'ভিডিও',
+      url: '/bengali/media/video',
+    },
+    {
+      title: 'ফটো গ্যালারি',
+      url: '/bengali/media/photogalleries',
+    },
+  ],
 };
 
 export default service;

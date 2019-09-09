@@ -161,6 +161,44 @@ const service = {
   },
   fonts: [],
   timezone: 'Asia/Istanbul',
+  navigation: [
+    {
+      title: 'Haberler',
+      url: '/turkce',
+    },
+    {
+      title: 'Video',
+      url: '/turkce/media/video',
+    },
+    {
+      title: 'Fotoğraf',
+      url: '/turkce/media/photogalleries',
+    },
+    {
+      title: 'Dergi',
+      url: '/turkce/dergi',
+    },
+    {
+      title: 'Spor',
+      url: '/turkce/spor',
+    },
+    {
+      title: 'Ekonomi',
+      url: '/turkce/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+    },
+    {
+      title: 'Bilim',
+      url: '/turkce/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+    },
+    {
+      title: 'Teknoloji',
+      url: '/turkce/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+    },
+    {
+      title: 'Sağlık',
+      url: '/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+    },
+  ],
 };
 
 export default service;

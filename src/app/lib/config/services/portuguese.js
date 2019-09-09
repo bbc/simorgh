@@ -161,6 +161,52 @@ const service = {
   },
   fonts: [],
   timezone: 'America/Sao_Paulo',
+  navigation: [
+    {
+      title: 'Notícias',
+      url: '/portuguese',
+    },
+    {
+      title: 'Brasil',
+      url: '/portuguese/brasil',
+    },
+    {
+      title: 'Internacional',
+      url: '/portuguese/internacional',
+    },
+    {
+      title: 'Economia',
+      url: '/portuguese/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+    },
+    {
+      title: 'Saúde',
+      url: '/portuguese/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+    },
+    {
+      title: 'Ciência',
+      url: '/portuguese/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+    },
+    {
+      title: 'Tecnologia',
+      url: '/portuguese/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+    },
+    {
+      title: 'Aprenda Inglês',
+      url: '/portuguese/aprenda_ingles',
+    },
+    {
+      title: '#SalaSocial',
+      url: '/portuguese/salasocial',
+    },
+    {
+      title: 'Galeria de Fotos',
+      url: '/portuguese/media/photogalleries',
+    },
+    {
+      title: 'Vídeos',
+      url: '/portuguese/media/video',
+    },
+  ],
 };
 
 export default service;

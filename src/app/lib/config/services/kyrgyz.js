@@ -170,6 +170,44 @@ const service = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: 'Башталгыч бет',
+      url: '/kyrgyz',
+    },
+    {
+      title: 'Кыргызстан',
+      url: '/kyrgyz/kyrgyzstan',
+    },
+    {
+      title: 'Дүйнө',
+      url: '/kyrgyz/world',
+    },
+    {
+      title: 'Сапар TV',
+      url: '/kyrgyz/sapartv',
+    },
+    {
+      title: 'Видео',
+      url: '/kyrgyz/media/video',
+    },
+    {
+      title: 'Маданият/Илим',
+      url: '/kyrgyz/entertainment',
+    },
+    {
+      title: 'Журнал',
+      url: '/kyrgyz/magazine',
+    },
+    {
+      title: 'Аудио',
+      url: '/kyrgyz/media/audio',
+    },
+    {
+      title: 'Блог',
+      url: '/kyrgyz/blog',
+    },
+  ],
 };
 
 export default service;
