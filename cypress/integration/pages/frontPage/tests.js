@@ -140,13 +140,13 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                             );
                           });
 
-                        cy.get('div').within(() => {
-                          if (topstories.relatedItems.lenght > 1) {
-                            cy.get('ul li a');
-                          }
-
-                          cy.get('a span');
-                        });
+                        if (topstories.relatedItems.length > 1) {
+                          cy.get('ul li a');
+                        } else {
+                          cy.get('div').within(() => {
+                            cy.get('a span');
+                          });
+                        }
                       });
                   });
               }
