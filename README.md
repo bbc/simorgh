@@ -243,6 +243,13 @@ npm run test:e2e:interactive
 
 This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
+To run only a particular spec, ensure Simorgh is already running in another tab and then run (for example):
+
+```
+npx cypress run --spec cypress/integration/pages/articles/index.js
+```
+
+
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 
 #### Running e2e in the UK against LIVE
