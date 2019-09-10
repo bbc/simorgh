@@ -121,7 +121,7 @@ describe('Story Promo Media Indicator', () => {
     <MediaIndicator item={noDurationItem} service="news" />,
   );
 
-  shouldShallowMatchSnapshot(
+  isNull(
     'should not render if item media object has no format',
     <MediaIndicator item={noMediaFormat} service="news" />,
   );
