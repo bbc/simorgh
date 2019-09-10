@@ -38,6 +38,7 @@ const service = {
     home: 'Tin chính',
     currentPage: 'Current page',
     skipLinkText: 'Bỏ qua để xem nội dung',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

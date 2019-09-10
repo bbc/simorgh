@@ -1,7 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 
 const whitelist = ['STY', 'MAP', 'PGL', 'LIV', 'PRO'];
-const contentTypes = ['Text', 'Feature'];
+const contentTypes = ['Text', 'Feature', 'Audio'];
 
 const filterUnknownContentTypes = data => {
   const groups = pathOr(null, ['content', 'groups'], data);
