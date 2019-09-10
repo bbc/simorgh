@@ -10,6 +10,7 @@ import {
   frontpageSwRegexPath,
   mediaRadioAndTvRegexPathsArray,
   mediaAssetPageRegexPath,
+  mediaAssetPageDataRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -197,5 +198,23 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/pidgin/tori-494859.amp',
     ];
     shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageRegexPath);
+  });
+
+  describe('mediaAssetPageDataRegexPath', () => {
+    const validRoutes = [
+      '/pidgin/tori-49450859.json',
+      '/kyrgyz/sapar-tv-48695523.json',
+      '/mundo/test_underscore-12345678.json',
+    ];
+
+    shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
+    const inValidRoutes = [
+      '/pidgin/tori-494859.json',
+      '/blah/tori-49450859',
+      '/pidgin/tori-49450859/.amp',
+      '/pidgin/tori-49450859/',
+      '/pidgin/tori-494859.amp.json',
+    ];
+    shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageDataRegexPath);
   });
 });
