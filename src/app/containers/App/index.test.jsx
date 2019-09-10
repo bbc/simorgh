@@ -13,12 +13,9 @@ App.mockImplementation(props => <div {...props} />);
 
 jest.mock('react-router-dom', () => ({
   BrowserRouter: jest.fn(),
-}));
-BrowserRouter.mockImplementation(({ children }) => <div>{children}</div>);
-
-jest.mock('react-router-dom', () => ({
   StaticRouter: jest.fn(),
 }));
+BrowserRouter.mockImplementation(({ children }) => <div>{children}</div>);
 StaticRouter.mockImplementation(({ children }) => <div>{children}</div>);
 
 describe('ClientApp', () => {
@@ -46,14 +43,13 @@ describe('ServerApp', () => {
       <ServerApp
         data="somePassedData"
         routes={['someRoute']}
-        location="someUrl"
-        Y
+        bbcOrigin="https://www.bbc.com"
         context={{}}
       />,
     );
     expect(App).toHaveBeenCalledWith(
       {
-        initialData: 'someData!',
+        initialData: 'somePassedData',
         routes: ['someRoute'],
         bbcOrigin: 'https://www.bbc.com',
       },
@@ -62,7 +58,7 @@ describe('ServerApp', () => {
     expect(StaticRouter).toHaveBeenCalledWith(
       {
         children: expect.anything(),
-        data: 'someData!',
+        data: 'somePassedData',
         routes: ['someRoute'],
         bbcOrigin: 'https://www.bbc.com',
       },
