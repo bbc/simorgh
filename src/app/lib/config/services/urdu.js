@@ -36,7 +36,7 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: arabic,
-  manifestPath: '/manifest.json',
+  manifestPath: '/urdu/manifest.json',
   swPath: '/sw.js',
   frontPageTitle:
     'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',

@@ -34,7 +34,7 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/manifest.json',
+  manifestPath: '/bengali/manifest.json',
   swPath: '/sw.js',
   frontPageTitle:
     'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',

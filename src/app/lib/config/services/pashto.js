@@ -35,7 +35,7 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: arabic,
-  manifestPath: '/manifest.json',
+  manifestPath: '/pashto/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'کور پاڼه',
   translations: {

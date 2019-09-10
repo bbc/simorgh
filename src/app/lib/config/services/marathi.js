@@ -30,7 +30,7 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/manifest.json',
+  manifestPath: '/marathi/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'बातम्या',
   translations: {

@@ -36,7 +36,7 @@ const service = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: arabic,
-  manifestPath: '/manifest.json',
+  manifestPath: '/arabic/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'الرئيسية',
   translations: {
