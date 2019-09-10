@@ -15,6 +15,9 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
     });
   }, [title, path, virtualReferrer]);
 
+  const hasChartbeatScriptLoaded =
+    typeof window !== 'undefined' && window.pSUPERFLY;
+
   return (
     <Helmet>
       <script async type="text/javascript">
@@ -28,7 +31,9 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
         })();
       `}
       </script>
-      <script async type="text/javascript" src={chartbeatSource} />
+      {!hasChartbeatScriptLoaded && (
+        <script async type="text/javascript" src={chartbeatSource} />
+      )}
     </Helmet>
   );
 };
