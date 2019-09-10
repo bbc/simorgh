@@ -5,6 +5,7 @@ import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
+import variantPropType from '../../models/propTypes/variants';
 
 export const RequestContext = React.createContext('default');
 
@@ -17,6 +18,7 @@ export const RequestContextProvider = ({
   service,
   previousPath,
   pathname,
+  variant,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
@@ -42,6 +44,7 @@ export const RequestContextProvider = ({
     statsDestination,
     statsPageIdentifier,
     previousPath,
+    variant,
     ...getMetaUrls(origin, pathname),
   };
 
@@ -59,10 +62,12 @@ RequestContextProvider.propTypes = {
   service: string.isRequired,
   pathname: string.isRequired,
   previousPath: string,
+  variant: variantPropType,
 };
 
 RequestContextProvider.defaultProps = {
   bbcOrigin: null,
   id: null,
   previousPath: null,
+  variant: null,
 };

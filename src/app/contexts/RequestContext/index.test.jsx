@@ -48,6 +48,7 @@ const input = {
   service: 'service',
   pathname: '/current-path',
   previousPath: '/previous-path',
+  variant: 'simp',
 };
 
 const expectedOutput = {
@@ -57,6 +58,7 @@ const expectedOutput = {
   origin: 'origin',
   pageType: input.pageType,
   platform: 'amp',
+  variant: 'simp',
   statsDestination: 'getStatsDestination',
   statsPageIdentifier: 'getStatsPageIdentifier',
   previousPath: '/previous-path',

@@ -31,6 +31,7 @@ const WithContexts = Component => {
             service={service}
             pathname={pathname}
             previousPath={previousPath}
+            variant={variant}
           >
             <UserContextProvider>
               <Component {...props} />

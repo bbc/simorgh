@@ -112,6 +112,12 @@ describe('withContexts HOC', () => {
         }),
         {},
       );
+      expect(requestContextSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          variant: 'trad',
+        }),
+        {},
+      );
     });
   });
 });
