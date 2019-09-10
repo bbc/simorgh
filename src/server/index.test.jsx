@@ -554,6 +554,22 @@ describe('Server', () => {
         });
       });
     });
+    describe('for media asset pages', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest('/pidgin/tori-49450859.json');
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest(
+            '/pidgin/tori-00000000.json',
+          );
+          expect(statusCode).toEqual(404);
+        });
+      });
+    });
   });
 
   testFrontPages({ platform: 'canonical', service: 'igbo' });

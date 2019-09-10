@@ -14,6 +14,7 @@ import {
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
   mediaDataRegexPath,
+  mediaAssetPageDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
@@ -135,6 +136,17 @@ if (process.env.APP_ENV === 'local') {
       );
 
       sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+    .get(mediaAssetPageDataRegexPath, async ({ params }, res, next) => {
+      const { service, assetUri } = params;
+
+      const dataFilePath = constructDataFilePath(
+        'mediaAssetPage',
+        service,
+        assetUri,
+      );
+
+      sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
