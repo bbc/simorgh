@@ -1,63 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD
-exports[`Story Promo Media Indicator should not render if item media object has no format 1`] = `
-.c0 {
-  padding: 0.5rem 0.25rem;
-  background-color: #FFFFFF;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: #222222;
-  height: 2rem;
-}
+exports[`Story Promo Media Indicator should not render if item media object has no format 1`] = `<div />`;
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.c2 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-}
-
-@media (max-width:24.9375rem) {
-  .c0 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-<div
-  aria-hidden="true"
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <time
-      class="c2"
-      datetime="PT1H33M20S"
-    >
-      1:33:20
-    </time>
-  </div>
-</div>
-`;
-
-=======
->>>>>>> 9886302529cfbbcd636ace067ce7097a92b67060
 exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
 .c2 {
   vertical-align: middle;

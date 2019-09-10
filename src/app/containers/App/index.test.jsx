@@ -6,10 +6,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
 import { ClientApp, ServerApp } from '.';
+// eslint-disable-next-line import/no-named-as-default
 import App from './App';
 
-jest.mock('./App', () => jest.fn());
-App.mockImplementation(props => <div {...props} />);
+jest.mock('./App', () => jest.fn(() => <div />));
 
 jest.mock('react-router-dom', () => ({
   BrowserRouter: jest.fn(),
@@ -33,13 +33,11 @@ describe('ClientApp', () => {
       },
       {},
     );
-    // expect(BrowserRouter.mock.calls[0][0].children).toBeInstanceOf(App);
   });
 });
 
 describe('ServerApp', () => {
   beforeEach(() => {
-    // clear `route.getInitialData` and `reactRouterConfig.renderRoutes` mocks
     jest.clearAllMocks();
   });
 
