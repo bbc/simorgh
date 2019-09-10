@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'helmet';
 import renderDocument from '.';
 import { ServerApp } from '../../app/containers/App';
 import DocumentComponent from './component';
@@ -8,8 +7,12 @@ jest.mock('./component', () => jest.fn());
 jest.mock('../../app/containers/App', () => ({
   ServerApp: jest.fn(),
 }));
-jest.mock('Helmet', () => jest.fn());
-Helmet.renderStatic = jest.fn();
+jest.mock('react-helmet', () => ({
+  Helmet: {
+    renderStatic: jest.fn(),
+  },
+}));
+
 ServerApp.mockImplementation(() => <div />);
 DocumentComponent.mockImplementation(() => <div />);
 
@@ -24,6 +27,6 @@ describe('render document', () => {
         service: 'news',
         url: '/',
       }),
-    ).rejects.toEqual('hello');
+    ).resolves.toEqual('<!doctype html><div></div>');
   });
 });
