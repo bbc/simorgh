@@ -8,12 +8,11 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 import frontPageData from '../../../../data/igbo/frontpage/index.json';
 import liveRadioPageData from '../../../../data/korean/bbc_korean_radio/liveradio.json';
 
-const MockHelmet = props => <helmet-head {...props} />;
 // eslint-disable-next-line react/prop-types
 jest.mock('react-helmet', () => ({ htmlAttributes, ...props }) => (
   <>
     {htmlAttributes && <helmet-html-attributes {...htmlAttributes} />}
-    <MockHelmet {...props} />
+    <helmet-head {...props} />
   </>
 ));
 
