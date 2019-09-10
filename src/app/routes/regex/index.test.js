@@ -177,7 +177,6 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
     ];
     shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
   });
-
   describe('mediaAssetPageRegexPath', () => {
     const validRoutes = [
       '/pidgin/tori-49450859',
