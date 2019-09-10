@@ -5,7 +5,7 @@ import appConfig from '../../../../src/app/lib/config/services';
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 const serviceHasTimestamp = service => service === 'thai';
-const serviceHasIndexAlsos = service => service === 'thai';
+// const serviceHasIndexAlsos = service => service === 'afaanoromoo';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
@@ -116,48 +116,42 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         it('should contain Index Alsos at a mobile and desktop view, if relatedItems block exists', () => {
-          const serviceHasRelatedItems = () => {
-            cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
-              ({ body }) => {
-                const topstories = body.content.groups[0];
-                return 'relatedItems' in topstories;
-              },
-            );
-          };
+          cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
+            ({ body }) => {
+              const topstories = body.content.groups[0].items[0];
+              const relatedItemsExists = Object.prototype.hasOwnProperty.call(
+                topstories,
+                'relatedItems',
+              );
 
-          if (serviceHasIndexAlsos(service) && serviceHasRelatedItems()) {
-            cy.get('section li')
-              .eq(0)
-              .within(() => {
-                cy.get('div div div a')
+              if (relatedItemsExists) {
+                cy.viewport('iphone-5');
+                cy.get('[aria-labelledby="Top-stories"]')
                   .eq(0)
                   .within(() => {
-                    cy.get('span').then($el => {
-                      if ($el.length > 1) {
-                        cy.get('svg').should('be.visible');
-                      } else {
-                        expect($el).not.to.have.descendants('svg');
-                      }
-                    });
+                    cy.get('div')
+                      .eq(10)
+                      .within(() => {
+                        cy.get('h4')
+                          .eq(0)
+                          .then($el => {
+                            expect($el.text()).includes(
+                              `${appConfig[service].translations.relatedContent}`,
+                            );
+                          });
+
+                        cy.get('div').within(() => {
+                          if (topstories.relatedItems.lenght > 1) {
+                            cy.get('ul li a');
+                          }
+
+                          cy.get('a span');
+                        });
+                      });
                   });
-              });
-            cy.viewport('iphone-5');
-            cy.get('section li')
-              .eq(0)
-              .within(() => {
-                cy.get('div div div a')
-                  .eq(0)
-                  .within(() => {
-                    cy.get('span').then($el => {
-                      if ($el.length > 1) {
-                        cy.get('svg').should('be.visible');
-                      } else {
-                        expect($el).not.to.have.descendants('svg');
-                      }
-                    });
-                  });
-              });
-          }
+              }
+            },
+          );
         });
       });
     });
