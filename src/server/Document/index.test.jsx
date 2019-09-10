@@ -14,7 +14,7 @@ jest.mock('react-helmet', () => ({
 }));
 
 ServerApp.mockImplementation(() => <div />);
-DocumentComponent.mockImplementation(() => <div />);
+DocumentComponent.mockImplementation(() => <html lang="en-GB" />);
 
 describe('render document', () => {
   it('resolves', () => {
@@ -27,6 +27,6 @@ describe('render document', () => {
         service: 'news',
         url: '/',
       }),
-    ).resolves.toEqual('<!doctype html><div></div>');
+    ).resolves.toEqual('<!doctype html><html lang="en-GB"></html>');
   });
 });
