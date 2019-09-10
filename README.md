@@ -246,7 +246,7 @@ This loads a user interface which easily allows for indivdual tests to be run al
 To run only a particular spec, ensure Simorgh is already running in another tab and then run (for example):
 
 ```
-$(npm bin)/cypress run --spec cypress/integration/pages/articles/index.js
+npx cypress run --spec cypress/integration/pages/articles/index.js
 ```
 
 
