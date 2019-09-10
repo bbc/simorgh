@@ -193,8 +193,8 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 
 @media (min-width:37.5rem) {
   .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -557,8 +557,8 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 
 @media (min-width:37.5rem) {
   .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -914,8 +914,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 @media (min-width:37.5rem) {
   .c9 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1262,8 +1262,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 
 @media (min-width:37.5rem) {
   .c9 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2099,8 +2099,8 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2396,8 +2396,8 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2746,8 +2746,8 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -3099,8 +3099,8 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -3358,8 +3358,8 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -3615,8 +3615,8 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -3874,8 +3874,8 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -4182,8 +4182,8 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 
 @media (min-width:37.5rem) {
   .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -4543,8 +4543,8 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 
 @media (min-width:37.5rem) {
   .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
