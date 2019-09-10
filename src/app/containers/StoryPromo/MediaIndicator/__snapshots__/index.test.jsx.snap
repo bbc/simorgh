@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`Story Promo Media Indicator should not render if item media object has no format 1`] = `
 .c0 {
   padding: 0.5rem 0.25rem;
@@ -55,6 +56,8 @@ exports[`Story Promo Media Indicator should not render if item media object has 
 </div>
 `;
 
+=======
+>>>>>>> 9886302529cfbbcd636ace067ce7097a92b67060
 exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
 .c2 {
   vertical-align: middle;
