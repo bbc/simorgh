@@ -2,7 +2,7 @@
 const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const LoadablePlugin = require('@loadable/webpack-plugin')
+const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const { DuplicatesPlugin } = require('inspectpack/plugin');
@@ -126,7 +126,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/,
       }),
-      new LoadablePlugin()
+      new LoadablePlugin(),
     ],
   };
 
