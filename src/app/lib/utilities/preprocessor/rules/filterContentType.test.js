@@ -28,7 +28,7 @@ const TextAssetType = {
   contentType: 'Text',
   assetTypeCode: 'PRO',
 };
-  
+
 const VideoAssetType = {
   name: 'Test standard link promo',
   summary: 'This is a standard link promo',
@@ -39,6 +39,7 @@ const VideoAssetType = {
   assetTypeCode: 'PRO',
   timestamp: 1527598380040,
   type: 'link',
+};
 
 const AudioAssetType = {
   name: 'Test audio link promo',
