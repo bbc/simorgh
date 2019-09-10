@@ -46,7 +46,7 @@ describe('createLoadableContext', () => {
       </LoadableServiceProvider>,
     );
 
-    const expectedFixtureText = 'valueFromSimpVarientFixtureData';
+    const expectedFixtureText = 'valueFromSimpVariantFixtureData';
 
     await waitForElement(() => getByText(expectedFixtureText));
 

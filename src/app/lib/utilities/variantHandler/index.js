@@ -5,13 +5,12 @@ const servicesWithVariants = {
 };
 
 // Remove leading slash from variant
-export const variantSanitzer = variant => variant && variant.replace('/', '');
+export const variantSanitiser = variant => variant && variant.replace('/', '');
 
 // If service has variants, use it or default to first variant in array
 // If service doesnt have variants, return 'default'
-export const variantDataKey = (service, rawVariant) => {
+export const getVariant = ({ service, variant }) => {
   const allowedVariants = servicesWithVariants[service];
-  const variant = variantSanitzer(rawVariant);
 
   if (allowedVariants) {
     return allowedVariants.includes(variant) ? variant : allowedVariants[0];

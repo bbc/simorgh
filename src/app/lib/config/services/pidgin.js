@@ -17,7 +17,7 @@ const pidgin = {
     // there is no valid ISO 639-1 code for Pidgin
     isoLang: null,
     datetimeLocale: 'pcm',
-    service: 'pidgin',  
+    service: 'pidgin',
     serviceName: 'Pidgin',
     serviceLocalizedName: 'Pidgin',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',

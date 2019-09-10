@@ -1,7 +1,7 @@
 const fooService = {
   foobar: 'valueFromFixtureData',
   simp: {
-    foobar: 'valueFromSimpVarientFixtureData',
+    foobar: 'valueFromSimpVariantFixtureData',
   },
 };
 

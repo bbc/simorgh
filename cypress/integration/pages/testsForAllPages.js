@@ -172,7 +172,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = '';
                     title = '';
                 }
-                /* Note that if updating these, also do the same for errorPage404/test.js */
+                /* Note that if updating these, also do the same for errorPage404/tests.js */
                 const pageTitle = `${title} - ${appConfig[service][variant].brandName}`;
 
                 cy.get('head').within(() => {

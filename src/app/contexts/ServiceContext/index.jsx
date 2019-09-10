@@ -2,7 +2,7 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import services from '../../lib/config/services/loadableConfig';
 import createLoadableContext from '../utils/createLoadableContext';
-import { variantDataKey } from '../../lib/utilities/variantHandler';
+import { getVariant } from '../../lib/utilities/variantHandler';
 import variantPropType from '../../models/propTypes/variants';
 
 /* Create ServiceContext using the default service */
@@ -37,7 +37,7 @@ export const ServiceContextProvider = ({ children, service, variant }) => {
 
   return (
     <LoadableServiceContextProvider
-      configKey={variantDataKey(service, variant)}
+      configKey={getVariant({ service, variant })}
     >
       {children}
     </LoadableServiceContextProvider>
