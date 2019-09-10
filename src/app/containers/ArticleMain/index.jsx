@@ -1,6 +1,8 @@
 import React from 'react';
+import path from 'ramda/src/path';
 import { articleDataPropTypes } from '../../models/propTypes/article';
 import MetadataContainer from '../Metadata';
+import ArticleMetadata from '../ArticleMetadata';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
@@ -30,6 +32,13 @@ const ArticleMain = ({ articleData }) => {
       <ATIAnalytics data={articleData} />
       <ChartbeatAnalytics data={articleData} />
       <MetadataContainer metadata={metadata} promo={promo} />
+      <ArticleMetadata
+        firstPublished={path('firstPublished', metadata)}
+        lastPublished={path('lastPublished', metadata)}
+        articleSection={path('passport', 'genre', metadata)}
+        aboutTags={path('tags', 'about', metadata)}
+        mentionsTags={path('tags', 'mentions', metadata)}
+      />
       <main role="main">
         <GhostGrid>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />

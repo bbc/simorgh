@@ -92,11 +92,6 @@ const presetThings = {
   ],
 };
 
-const emptyThings = {
-  about: null,
-  mentions: null,
-};
-
 export const articleDataNews = articleDataBuilder(
   'c0000000001o',
   'News',
@@ -120,7 +115,6 @@ export const articleDataPersian = articleDataBuilder(
   'سرصفحه مقاله',
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
-  emptyThings,
 );
 
 export const articleDataPidgin = articleDataBuilder(
@@ -133,5 +127,4 @@ export const articleDataPidgin = articleDataBuilder(
   'Article Headline for SEO in Pidgin',
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
-  emptyThings,
 );
