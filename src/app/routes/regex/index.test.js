@@ -210,9 +210,9 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
     shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
     const inValidRoutes = [
       '/pidgin/tori-494859.json',
-      '/blah/tori-49450859',
-      '/pidgin/tori-49450859/.amp',
-      '/pidgin/tori-49450859/',
+      '/blah/tori-49450859.json',
+      '/pidgin/tori-49450859',
+      '/pidgin/tori-49450859/.json',
       '/pidgin/tori-494859.amp.json',
     ];
     shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageDataRegexPath);
