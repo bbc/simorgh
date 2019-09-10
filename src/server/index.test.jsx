@@ -512,7 +512,7 @@ describe('Server', () => {
       describe('with non-existent data', () => {
         it('should respond with a 404', async () => {
           const { statusCode } = await makeRequest(
-            '/pidgin/tori-49450850.json',
+            '/pidgin/tori-00000000.json',
           );
           expect(statusCode).toEqual(404);
         });
