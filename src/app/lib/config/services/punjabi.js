@@ -39,6 +39,7 @@ const service = {
     home: 'ਖ਼ਬਰਾਂ',
     currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
     skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

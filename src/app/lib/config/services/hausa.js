@@ -38,6 +38,7 @@ const service = {
     home: 'Labaran Duniya',
     currentPage: 'Current page',
     skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
