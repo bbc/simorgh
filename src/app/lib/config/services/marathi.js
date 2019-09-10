@@ -173,8 +173,7 @@ const service = {
     },
     {
       title: 'महाराष्ट्र विधानसभा निवडणूक',
-      url:
-        '/marathi/topics/efb6916d-97ac-41e3-8acf-4658102a2a0a?ocid=wsmarathi.bbc-site-referral.organic-post.topic.maharashtra-assembly-election.prod',
+      url: '/marathi/topics/efb6916d-97ac-41e3-8acf-4658102a2a0a',
     },
     {
       title: 'व्हीडिओ',
