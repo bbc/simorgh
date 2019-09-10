@@ -693,8 +693,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:37.5rem) {
   .c19 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -714,8 +714,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:37.5rem) {
   .c36 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 

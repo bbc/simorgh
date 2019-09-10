@@ -381,8 +381,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:37.5rem) {
   .c16 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -402,8 +402,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:37.5rem) {
   .c23 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -974,8 +974,8 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:37.5rem) {
   .c15 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1457,8 +1457,8 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 
 @media (min-width:37.5rem) {
   .c14 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -1909,8 +1909,8 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:37.5rem) {
   .c14 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
