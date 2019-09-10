@@ -3,40 +3,96 @@
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
+import { StaticRouter, BrowserRouter } from 'react-router-dom';
 import { ClientApp, ServerApp } from '.';
+import App from './App';
+
+jest.mock('./App', () => jest.fn());
+App.mockImplementation(props => <div {...props} />);
 
 jest.mock('react-router-dom', () => ({
-  BrowserRouter: props => <div {...props} />,
+  BrowserRouter: jest.fn(),
 }));
+BrowserRouter.mockImplementation(({ children }) => <div>{children}</div>);
+
+jest.mock('react-router-dom', () => ({
+  StaticRouter: jest.fn(),
+}));
+StaticRouter.mockImplementation(({ children }) => <div>{children}</div>);
 
 describe('ClientApp', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <ClientApp data="someData!" routes={['someRoute']} />,
-  );
+  it('should render correctly', () => {
+    render(<ClientApp data="someData!" routes={['someRoute']} />);
+    expect(App).toHaveBeenCalledWith(
+      { initialData: 'someData!', routes: ['someRoute'] },
+      {},
+    );
+    expect(BrowserRouter).toHaveBeenCalledWith(
+      {
+        children: expect.anything(),
+        data: 'someData!',
+        routes: ['someRoute'],
+      },
+      {},
+    );
+    // expect(BrowserRouter.mock.calls[0][0].children).toBeInstanceOf(App);
+  });
 });
 
 describe('ServerApp', () => {
-  describe('no passed routerContext', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
+  it('no passed routerContext', () => {
+    render(
       <ServerApp
-        location="someUrl"
-        routes={['someRoute']}
         data="somePassedData"
+        routes={['someRoute']}
+        location="someUrl"
+        Y
         context={{}}
       />,
     );
+    expect(App).toHaveBeenCalledWith(
+      {
+        initialData: 'someData!',
+        routes: ['someRoute'],
+        bbcOrigin: 'https://www.bbc.com',
+      },
+      {},
+    );
+    expect(StaticRouter).toHaveBeenCalledWith(
+      {
+        children: expect.anything(),
+        data: 'someData!',
+        routes: ['someRoute'],
+        bbcOrigin: 'https://www.bbc.com',
+      },
+      {},
+    );
   });
-
-  shouldMatchSnapshot(
-    'should render correctly',
-    <ServerApp
-      location="someUrl"
-      routes={['someRoute']}
-      data="somePassedData"
-      context={{ context: 'someRouterContext' }}
-    />,
-  );
 });
+
+// it('should render correctly', () => {
+//   render(
+//     <ServerApp
+//       location="someUrl"
+//       routes={['someRoute']}
+//       data="somePassedData"
+//       context={{ context: 'someRouterContext' }}
+//     />,
+//   );
+
+//   expect(App).toHaveBeenCalledWith(
+//     { initialData: 'someData!', routes: ['someRoute'] },
+//     {},
+//   );
+//   expect(StaticRouter).toHaveBeenCalledWith(
+//     {
+//       children: expect.anything(),
+//       data: 'somePassedData!',
+//       routes: ['someRoute'],
+//     },
+//     {},
+//   );
+
+//   // expect(BrowserRouter.mock.calls[0][0].children).toBeInstanceOf(App);
+// });

@@ -57,6 +57,34 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  //   // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+  // exports[`App should return rendered routes 1`] = `
+  // <App
+  //   bbcOrigin="https://www.bbc.co.uk"
+  //   history={
+  //     Object {
+  //       "action": "POP",
+  //     }
+  //   }
+  //   initialData={
+  //     Object {
+  //       "pageData": "Some initial data",
+  //     }
+  //   }
+  //   location={
+  //     Object {
+  //       "pathname": "pathnameOne",
+  //     }
+  //   }
+  //   routes={Array []}
+  // >
+  //   <h1>
+  //     Some initial data
+  //   </h1>
+  // </App>
+  // `;
+
   describe('componentDidUpdate', () => {
     describe('same location', () => {
       it('should not call set state with new data', () => {
