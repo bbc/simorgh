@@ -38,6 +38,7 @@ const pidgin = {
     home: 'Home',
     currentPage: 'Page where you dey',
     skipLinkText: 'Waka go wetin de inside',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
