@@ -806,7 +806,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/punjabi',
+        path: '/punjabi',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
