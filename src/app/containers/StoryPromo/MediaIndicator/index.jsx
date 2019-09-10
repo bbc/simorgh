@@ -7,14 +7,9 @@ import pathOr from 'ramda/src/pathOr';
 import { storyItem, linkPromo } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
-
 const getAssetContentTypes = item => {
   const mediaContentTypes = ['video', 'audio'];
-  let type = pathOr(null, ['contentType'], item);
-  if (!type) {
-    return null;
-  }
-  type = type.toLowerCase();
+  const type = pathOr('', ['contentType'], item).toLowerCase();
   return mediaContentTypes.includes(type) ? type : null;
 };
 
