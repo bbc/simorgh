@@ -192,7 +192,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
 
-    // Accroding to CPS a valid assetUri should have 8 digits or more
+    // According to CPS a valid assetUri should have 8 digits or more
     const inValidRoutes = [
       '/pidgin/test-494859',
       '/blah/test-49450859',
@@ -212,7 +212,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
 
-    // Accroding to CPS a valid assetUri should have 8 digits or more
+    // According to CPS a valid assetUri should have 8 digits or more
     const inValidRoutes = [
       '/pidgin/test-494859.json',
       '/blah/test-49450859.json',
