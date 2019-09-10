@@ -38,13 +38,17 @@ describe('ClientApp', () => {
 });
 
 describe('ServerApp', () => {
+  beforeEach(() => {
+    // clear `route.getInitialData` and `reactRouterConfig.renderRoutes` mocks
+    jest.clearAllMocks();
+  });
+
   it('no passed routerContext', () => {
     render(
       <ServerApp
         data="somePassedData"
         routes={['someRoute']}
         bbcOrigin="https://www.bbc.com"
-        context={{}}
       />,
     );
     expect(App).toHaveBeenCalledWith(
@@ -65,30 +69,33 @@ describe('ServerApp', () => {
       {},
     );
   });
+  it('should render correctly', () => {
+    render(
+      <ServerApp
+        data="somePassedData"
+        routes={['someRoute']}
+        bbcOrigin="https://www.bbc.com"
+        context={{ context: 'someRouterContext' }}
+      />,
+    );
+    expect(App).toHaveBeenCalledWith(
+      {
+        initialData: 'somePassedData',
+        routes: ['someRoute'],
+        bbcOrigin: 'https://www.bbc.com',
+        context: 'someRouterContext',
+      },
+      {},
+    );
+    expect(StaticRouter).toHaveBeenCalledWith(
+      {
+        children: expect.anything(),
+        data: 'somePassedData',
+        routes: ['someRoute'],
+        bbcOrigin: 'https://www.bbc.com',
+        context: 'someRouterContext',
+      },
+      {},
+    );
+  });
 });
-
-// it('should render correctly', () => {
-//   render(
-//     <ServerApp
-//       location="someUrl"
-//       routes={['someRoute']}
-//       data="somePassedData"
-//       context={{ context: 'someRouterContext' }}
-//     />,
-//   );
-
-//   expect(App).toHaveBeenCalledWith(
-//     { initialData: 'someData!', routes: ['someRoute'] },
-//     {},
-//   );
-//   expect(StaticRouter).toHaveBeenCalledWith(
-//     {
-//       children: expect.anything(),
-//       data: 'somePassedData!',
-//       routes: ['someRoute'],
-//     },
-//     {},
-//   );
-
-//   // expect(BrowserRouter.mock.calls[0][0].children).toBeInstanceOf(App);
-// });
