@@ -120,12 +120,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
               ({ body }) => {
                 const topstories = body.content.groups[0];
-                const relatedItemsExists = Object.prototype.hasOwnProperty.call(
-                  topstories,
-                  'relatedItems',
-                ); // if relatedItems exists, IndexAlsos should be visible
-
-                return relatedItemsExists;
+                return 'relatedItems' in topstories;
               },
             );
           };
