@@ -10,15 +10,15 @@ storiesOf('Containers|Brand', module)
   .addDecorator(withKnobs)
   .add(
     'default',
-    inputProvider(
-      null,
-      ({ service }) => {
+    inputProvider({
+      // eslint-disable-next-line react/prop-types
+      componentFunction: ({ service }) => {
         return (
           <ServiceContextProvider service={service}>
             <BrandContainer />
           </ServiceContextProvider>
         );
       },
-      Object.keys(services),
-    ),
+      services: Object.keys(services),
+    }),
   );

@@ -1,36 +1,27 @@
 import React from 'react';
+import { latin } from '@bbc/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import MediaPageMain from '.';
 import { shouldShallowMatchSnapshot } from '#testHelpers';
 import amharicConfig from '#lib/config/services/amharic';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
+import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
 
-const liveRadioScaffoldProps = {
-  service: 'amharic',
-  pageData: amharicPageData,
-  match: {
-    params: {
-      serviceId: 'bbc_amharic_radio',
-      mediaId: 'liveradio',
-    },
-  },
-};
+jest.mock('../Metadata', () => () => <div id="metadata" />);
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-
-const { useContext } = jest.requireMock('react');
-useContext.mockReturnValue(amharicConfig);
+const pageData = addIdsToBlocks(amharicPageData);
 
 describe('Media Page Main', () => {
-  describe('snapshots', () => {
-    shouldShallowMatchSnapshot(
-      'should match scaffold snapshot',
-      <MediaPageMain {...liveRadioScaffoldProps} />,
-    );
-  });
+  shouldMatchSnapshot(
+    'should match snapshot',
+    <ServiceContext.Provider value={{ script: latin }}>
+      <RequestContext.Provider
+        value={{ platform: 'canonical', pageType: 'media' }}
+      >
+        <MediaPageMain service="amharic" pageData={pageData} />
+      </RequestContext.Provider>
+    </ServiceContext.Provider>,
+  );
 });

@@ -12,9 +12,9 @@ storiesOf('Containers|Header', module)
   .addDecorator(withKnobs)
   .add(
     'default',
-    inputProvider(
-      null,
-      ({ service }) => {
+    inputProvider({
+      // eslint-disable-next-line react/prop-types
+      componentFunction: ({ service }) => {
         return (
           <ToggleContextProvider>
             <ServiceContextProvider service={service}>
@@ -30,6 +30,6 @@ storiesOf('Containers|Header', module)
           </ToggleContextProvider>
         );
       },
-      Object.keys(services),
-    ),
+      services: Object.keys(services),
+    }),
   );

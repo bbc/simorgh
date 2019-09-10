@@ -1,7 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { nepali } from '@bbc/gel-foundations/scripts';
 import { punjabi as brandSVG } from '@bbc/psammead-assets/svgs';
-import 'moment/locale/pa-in';
+import '@bbc/psammead-locales/moment/pa-in';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
@@ -39,6 +39,7 @@ const service = {
     home: 'ਖ਼ਬਰਾਂ',
     currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
     skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
@@ -154,32 +155,31 @@ const service = {
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
-      text: 'Read about our approach to external linking.',
+      text: 'ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ',
     },
     links: [
       {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        href: 'https://www.bbc.com/punjabi/institutional-49282853',
+        text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
       },
       {
         href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        text: 'ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ',
       },
       {
         href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        text: 'ਨਿੱਜਤਾ ਪਾਲਿਸੀ',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
+        text: 'ਕੁਕੀਜ਼',
       },
       {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/punjabi/institutional-42227903',
+        text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
       },
     ],
-    copyrightText:
-      'BBC. BBC ਬਾਹਰੀ ਇੰਟਰਨੈੱਟ ਸਾਈਟਾਂ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
+    copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
   },
   fonts: [],
   timezone: 'Asia/Kolkata',
