@@ -38,6 +38,7 @@ const service = {
     home: 'Башталгыч бет',
     currentPage: 'Current page',
     skipLinkText: 'Сайтка өтүү',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

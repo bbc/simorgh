@@ -27,7 +27,8 @@ const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
-const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
+const serviceHasTimestamp = service =>
+  ['news', 'urdu', 'persian'].includes(service);
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -47,11 +48,8 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
               .tz(firstPublished, `${appConfig[service].timezone}`)
               .locale(language)
               .format('D MMMM YYYY');
-
-            // exempt pashto && arabic as we do have currently their locale implementation
-            if (!['pashto', 'arabic'].includes(service)) {
-              if (lastPublished === firstPublished)
-                cy.get('time').should('contain', updatedTimestamp);
+            if (lastPublished === firstPublished) {
+              cy.get('time').should('contain', updatedTimestamp);
             } else {
               cy.get('time')
                 .eq(0)
@@ -60,7 +58,8 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
                 .eq(1)
                 .should(
                   'contain',
-                  `${appConfig[service].articleTimestampPrefix}${updatedTimestamp}`,
+                  `${`${appConfig[service].articleTimestampPrefix}` +
+                    ' '}${updatedTimestamp}`,
                 );
             }
           },
