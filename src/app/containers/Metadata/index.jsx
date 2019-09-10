@@ -34,14 +34,6 @@ const pageTypeMetadata = {
   },
 };
 
-/* An array of each thingLabel from tags.about & tags.mention */
-const allTags = tags => {
-  const { about, mentions } = tags;
-  const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
-  const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
-  return aboutTags.concat(mentionTags);
-};
-
 const getTitle = promo =>
   pathOr(null, ['headlines', 'seoHeadline'], promo)
     ? pathOr(null, ['headlines', 'seoHeadline'], promo)
@@ -81,14 +73,6 @@ const getLink = ({
   return link;
 };
 
-const getTimeTags = (timeTag, pageType) => {
-  if (pageType !== 'article') {
-    return null;
-  }
-
-  return new Date(timeTag).toISOString();
-};
-
 const getAppleTouchUrl = service => {
   const assetsPath = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH || '/';
   const separatorSlash = assetsPath[assetsPath.length - 1] !== '/' ? '/' : '';
@@ -107,7 +91,6 @@ const MetadataContainer = ({ metadata, promo }) => {
   const {
     service,
     brandName,
-    articleAuthor,
     defaultImage,
     defaultImageAltText,
     dir,
@@ -127,9 +110,6 @@ const MetadataContainer = ({ metadata, promo }) => {
   }
 
   const id = aresArticleId.split(':').pop();
-
-  const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
-  const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
 
   const canonicalLink = getLink({
     origin,
@@ -208,8 +188,8 @@ const MetadataContainer = ({ metadata, promo }) => {
       <LinkedData
         brandName={brandName}
         canonicalLink={canonicalLink}
-        firstPublished={timeFirstPublished}
-        lastUpdated={timeLastPublished}
+        // firstPublished={timeFirstPublished}
+        // lastUpdated={timeLastPublished}
         logoUrl={defaultImage}
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
@@ -222,8 +202,6 @@ const MetadataContainer = ({ metadata, promo }) => {
         alternateLinks={alternateLinks}
         ampLink={ampLink}
         appleTouchIcon={appleTouchIcon}
-        articleAuthor={articleAuthor}
-        articleSection={pathOr(null, ['passport', 'genre'], metadata)}
         brandName={brandName}
         canonicalLink={canonicalLink}
         defaultImage={defaultImage}
@@ -237,16 +215,12 @@ const MetadataContainer = ({ metadata, promo }) => {
           pathOr(null, ['language'], metadata)
         }
         locale={locale}
-        metaTags={allTags(metadata.tags)}
         themeColor={themeColor}
-        timeFirstPublished={timeFirstPublished}
-        timeLastPublished={timeLastPublished}
         title={title}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
         type={pathOr(null, [pageType, 'openGraph'], pageTypeMetadata)}
         service={service}
-        showArticleTags={pageType === 'article'}
         iconSizes={iconSizes}
       />
     </>
