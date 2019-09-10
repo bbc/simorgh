@@ -1,6 +1,7 @@
 import React from 'react';
-jest.unmock('react-helmet');
 import AmpDecorator from './index';
+
+jest.unmock('react-helmet');
 
 describe('AmpDecorator', () => {
   it('should render correctly', () => {
