@@ -1,25 +1,19 @@
 import React, { useContext } from 'react';
 import { string, shape, number, bool, oneOf, oneOfType } from 'prop-types';
 import useToggle from '../../../containers/Toggle/useToggle';
-import AmpChartbeatBeacon from './amp';
-import CanonicalChartbeatBeacon from './canonical';
+import CanonicalChartbeatBeacon from '../../../containers/ChartbeatAnalytics/canonical';
 import { RequestContext } from '../../RequestContext';
 
 const Chartbeat = ({ config }) => {
   const { enabled } = useToggle('chartbeatAnalytics');
   const { platform } = useContext(RequestContext);
+  const isAmp = platform === 'amp';
 
-  if (!enabled || !config) {
+  if (!enabled || !config || isAmp) {
     return null;
   }
 
-  const isAmp = platform === 'amp';
-
-  return isAmp ? (
-    <AmpChartbeatBeacon chartbeatConfig={config} />
-  ) : (
-    <CanonicalChartbeatBeacon chartbeatConfig={config} />
-  );
+  return <CanonicalChartbeatBeacon chartbeatConfig={config} />;
 };
 
 Chartbeat.propTypes = {

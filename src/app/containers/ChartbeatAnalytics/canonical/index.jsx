@@ -9,7 +9,10 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
 
   useEffect(() => {
     if (chartbeatConfigRef.current !== chartbeatConfig) {
-      console.log('CHARTBEAT CANONICAL pSUPERFLY virtualPage - ', chartbeatConfig.title);
+      console.log(
+        'CHARTBEAT CANONICAL pSUPERFLY virtualPage - ',
+        chartbeatConfig.title,
+      );
       window.pSUPERFLY && window.pSUPERFLY.virtualPage(chartbeatConfig);
     }
   }, [chartbeatConfig, chartbeatConfigRef]);

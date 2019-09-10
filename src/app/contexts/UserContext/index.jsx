@@ -7,11 +7,11 @@ export const UserContext = React.createContext({});
 
 export const UserContextProvider = ({ children }) => {
   const [cookiePolicy, setCookiePolicy] = useState(getCookiePolicy());
-  const [chartbeatConfig, useChartbeat] = useState(null);
+  const [chartbeatConfig, sendCanonicalChartbeatBeacon] = useState(null);
 
   const value = {
     cookiePolicy,
-    useChartbeat,
+    sendCanonicalChartbeatBeacon,
     updateCookiePolicy: () => setCookiePolicy(getCookiePolicy()),
     personalisationEnabled: personalisationEnabled(cookiePolicy),
   };

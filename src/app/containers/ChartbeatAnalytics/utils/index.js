@@ -2,6 +2,7 @@ import Cookie from 'js-cookie';
 import onClient from '../../../lib/utilities/onClient';
 import { getPromoHeadline } from '../../../lib/analyticsUtils/article';
 import { getPageTitle } from '../../../lib/analyticsUtils/frontpage';
+import { getReferrer } from '../../../lib/analyticsUtils';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -64,4 +65,34 @@ export const getTitle = (pageType, pageData, brandName) => {
     default:
       return null;
   }
+};
+
+export const getConfig = ({
+  platform,
+  previousPath,
+  pageType,
+  data,
+  brandName,
+  env,
+  service,
+  origin,
+}) => {
+  const referrer = getReferrer(platform, origin, previousPath);
+  const title = getTitle(pageType, data, brandName);
+  const domain = env !== 'live' ? getDomain('test') : getDomain(service);
+  const sections = buildSections(service, pageType);
+  const cookie = getSylphidCookie();
+  const type = getType(pageType);
+  const isAmp = platform === 'amp';
+  const currentPath = onClient() && window.location.pathname;
+  return {
+    domain,
+    sections,
+    uid: chartbeatUID,
+    title,
+    virtualReferrer: referrer,
+    ...(isAmp && { contentType: type }),
+    ...(!isAmp && { type, useCanonical, path: currentPath }),
+    ...(cookie && { idSync: { bbc_hid: cookie } }),
+  };
 };
