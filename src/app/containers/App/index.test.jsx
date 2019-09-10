@@ -43,39 +43,12 @@ describe('ServerApp', () => {
     jest.clearAllMocks();
   });
 
-  it('no passed routerContext', () => {
-    render(
-      <ServerApp
-        data="somePassedData"
-        routes={['someRoute']}
-        bbcOrigin="https://www.bbc.com"
-      />,
-    );
-    expect(App).toHaveBeenCalledWith(
-      {
-        initialData: 'somePassedData',
-        routes: ['someRoute'],
-        bbcOrigin: 'https://www.bbc.com',
-      },
-      {},
-    );
-    expect(StaticRouter).toHaveBeenCalledWith(
-      {
-        children: expect.anything(),
-        data: 'somePassedData',
-        routes: ['someRoute'],
-        bbcOrigin: 'https://www.bbc.com',
-      },
-      {},
-    );
-  });
   it('should render correctly', () => {
     render(
       <ServerApp
         data="somePassedData"
         routes={['someRoute']}
         bbcOrigin="https://www.bbc.com"
-        context={{ context: 'someRouterContext' }}
       />,
     );
     expect(App).toHaveBeenCalledWith(
@@ -83,7 +56,6 @@ describe('ServerApp', () => {
         initialData: 'somePassedData',
         routes: ['someRoute'],
         bbcOrigin: 'https://www.bbc.com',
-        context: 'someRouterContext',
       },
       {},
     );
@@ -93,7 +65,6 @@ describe('ServerApp', () => {
         data: 'somePassedData',
         routes: ['someRoute'],
         bbcOrigin: 'https://www.bbc.com',
-        context: 'someRouterContext',
       },
       {},
     );
