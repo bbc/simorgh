@@ -190,30 +190,34 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
     ];
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
+
+    // Accroding to CPS a valid assetUri should have 8 digits or more
     const inValidRoutes = [
-      '/pidgin/tori-494859',
-      '/blah/tori-49450859',
-      '/pidgin/tori-49450859/.amp',
-      '/pidgin/tori-49450859/',
-      '/pidgin/tori-494859.amp',
+      '/pidgin/test-494859',
+      '/blah/test-49450859',
+      '/pidgin/test-49450859/.amp',
+      '/pidgin/test-49450859/',
+      '/pidgin/test-494859.amp',
     ];
     shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageRegexPath);
   });
 
   describe('mediaAssetPageDataRegexPath', () => {
     const validRoutes = [
-      '/pidgin/tori-49450859.json',
-      '/kyrgyz/sapar-tv-48695523.json',
+      '/pidgin/test-49450859.json',
+      '/kyrgyz/test-tv-48695523.json',
       '/mundo/test_underscore-12345678.json',
     ];
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
+
+    // Accroding to CPS a valid assetUri should have 8 digits or more
     const inValidRoutes = [
-      '/pidgin/tori-494859.json',
-      '/blah/tori-49450859.json',
-      '/pidgin/tori-49450859',
-      '/pidgin/tori-49450859/.json',
-      '/pidgin/tori-494859.amp.json',
+      '/pidgin/test-494859.json',
+      '/blah/test-49450859.json',
+      '/pidgin/test-49450859',
+      '/pidgin/test-49450859/.json',
+      '/pidgin/test-494859.amp.json',
     ];
     shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageDataRegexPath);
   });
