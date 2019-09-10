@@ -8,11 +8,6 @@ export const sendEventBeacon = async ({
   label,
   ...params
 }) => {
-  const preAtiEventUrl = buildATIEventTrackUrl({
-    ...params,
-    element,
-    component,
-  });
   const atiEventUrl = buildATIEventTrackUrl({
     ...params,
     element,
@@ -21,7 +16,7 @@ export const sendEventBeacon = async ({
     label,
   });
 
-  await Promise.all([sendBeacon(preAtiEventUrl), sendBeacon(atiEventUrl)]);
+  await sendBeacon(atiEventUrl);
 };
 
 export default sendEventBeacon;
