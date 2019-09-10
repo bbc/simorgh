@@ -94,6 +94,36 @@ If error is set to true the Error component is returned, giving the user a visua
 
 Assuming the other HOC's have returned the original Article or FrontPage container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
 
+### Adding a new Page type
+
+When adding a new page type there are several parts required.
+
+1) Fixture data should be added to `/data/{{service}}/{{pageType}}/`
+  - This should be done for each service using the page type. 
+  - [Fixture data example](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/data/igbo/frontpage/index.json)
+  - Gotcha's: 
+    - The value in the test `should call readScenario for every file in the /data directory` will need to be updated in `dataValidator/helpers/dataLoader/asyncValidateDir.test.js` for each fixture you add. 
+    - The new page type should be added to `ignoreDirectories` in `dataValidator/helpers/dataLoader/readScenario.js`
+2) Serving the fixture data on local development
+  - The fixture data for the page type should be available on the same route as the page with a `.json` suffix
+    - EG: The `localhost.bbc.com:7080/igbo.json` should have the data to build the index page `localhost.bbc.com:7080/igbo`
+  - To match the correct route we will need a new regex [here](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/routes/regex/index.js)
+  - Then we need to add an Express route similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/server/index.jsx#L107-L113)
+3) Create a new container for the page type
+  - Similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/containers/FrontPage/index.jsx) we require a container that will act as the entry point for the page routing
+4) Add a new getInitalData method for the new page type
+  - [getInitalData example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/frontpage/index.js)
+  - If required for the new page type this is where any pre-processing rules should be added. These are needed for use cases where we want to manipulate the data before it is received by the container for the page.
+    - EG: On the articles routes [unique ID's](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/article/index.js#L19) are added to each block in the payload
+5) Add a new route to the react router config
+  - This should be done for AMP and Canoical pages together
+  - [Route example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/index.js#L22-L28)
+6) Add Cypress E2E tests for the new page type
+  - This requires config in `cypress/support/config/services.js` for every service (even if to set the new page type to undefined)
+  - If required bespoke tests for the page type should be added inside of `cypress/integration/pages/`
+ 
+NB: With this many steps it is suggested to have multiple PRs when adding a new page type as to not have a singular huge PR.
+
 ## Before Installation
 
 Please read:
