@@ -1,7 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { nepali } from '@bbc/gel-foundations/scripts';
 import { punjabi as brandSVG } from '@bbc/psammead-assets/svgs';
-import 'moment/locale/pa-in';
+import '@bbc/psammead-locales/moment/pa-in';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
 const service = {
@@ -39,6 +39,7 @@ const service = {
     home: 'ਖ਼ਬਰਾਂ',
     currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
     skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

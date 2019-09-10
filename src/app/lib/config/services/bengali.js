@@ -43,6 +43,7 @@ const service = {
     home: 'মূলপাতা',
     currentPage: 'Current page',
     skipLinkText: 'সরাসরি কনটেন্টে যান',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

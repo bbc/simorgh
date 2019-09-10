@@ -38,6 +38,7 @@ const service = {
     home: 'Berita',
     currentPage: 'Current page',
     skipLinkText: 'Langsung ke konten',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',

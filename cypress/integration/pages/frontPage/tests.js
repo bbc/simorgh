@@ -1,6 +1,8 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-const serviceHasIndexAlsos = service => service === 'thai';
+
+// Defaulting to false for now whilst we look to improve the index also's test coverage to cater for the varying scenarios: https://github.com/bbc/simorgh/issues/3586
+const serviceHasIndexAlsos = () => false;
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -51,9 +53,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-            cy.get('p')
-              .should('have.length.of.at.least', 1)
-              .should('be.visible');
+
+            cy.get('p').then($el => {
+              if ($el.length > 0) {
+                cy.get('p')
+                  .should('have.length.of.at.least', 1)
+                  .should('be.visible');
+              }
+            });
+
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
@@ -69,9 +77,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-            cy.get('p')
-              .eq(0)
-              .should('be.hidden');
+
+            cy.get('p').then($el => {
+              if ($el.length > 0) {
+                cy.get('p')
+                  .eq(0)
+                  .should('be.hidden');
+              }
+            });
+
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');

@@ -38,6 +38,7 @@ const service = {
     home: `Urupapuro rw'itangiriro`,
     currentPage: 'Current page',
     skipLinkText: 'Simbira ku birimwo',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
