@@ -1,5 +1,4 @@
 import React from 'react';
-// import express from 'express';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
@@ -8,13 +7,14 @@ import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import Document from './Document/component';
 import { localBaseUrl } from '../testHelpers/config';
 
-const express = require('express');
-
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
 
+const getPath = require('path');
+const express = require('express');
 const server = require('./index').default;
-const spy = jest.spyOn(express.response, "sendFile");
+
+const spy = jest.spyOn(express.response, 'sendFile');
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   const headerKeys = Object.keys(headers);
@@ -405,8 +405,10 @@ describe('Server', () => {
   describe('Service workers', () => {
     // sends SW file for paths matching regex
     it('should serve a 200 for existing service workers', async () => {
-      const response = await makeRequest('/news/articles/sw.js');
-      expect(spy.mock.calls[0][0]).toEqual(__dirname + '/public/sw.js');
+      await makeRequest('/news/articles/sw.js');
+      expect(spy.mock.calls[0][0]).toEqual(
+        getPath.join(__dirname, '/public/sw.js'),
+      );
     });
 
     it('should serve a 500 for non-existing service workers', async () => {
