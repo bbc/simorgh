@@ -430,7 +430,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       }
     }
   >
-    <FrontPageMain
+    <FrontPageMainWithAnalytics
       frontPageData={
         Object {
           "content": Object {
