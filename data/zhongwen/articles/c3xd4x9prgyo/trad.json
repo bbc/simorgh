@@ -6,14 +6,14 @@
     },
     "type": "article",
     "createdBy": "Zhongwen",
-    "language": "zh-hans",
+    "language": "zh-hant",
     "lastUpdated": 1562943154400,
     "firstPublished": 1562943152251,
     "lastPublished": 1562943152251,
     "options": {},
     "analyticsLabels": {},
     "passport": {
-      "language": "zh-hans",
+      "language": "zh-hant",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen"
     },
     "tags": {},
@@ -39,12 +39,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典",
+                        "text": "TRAD - 花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典",
+                              "text": "TRAD - 花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典",
                               "attributes": []
                             }
                           }
