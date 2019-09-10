@@ -37,6 +37,7 @@ const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
 const standardPromo = promoFixture('Text');
 const videoPromo = promoFixture('Video');
+const audioPromo = promoFixture('Audio');
 
 const getStoryPromo = platform => item => (
   <ServiceContextProvider service="news">
@@ -60,7 +61,8 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('audio promo', () => getCanonicalStoryPromo(audioFixture))
   .add('video promo', () => getCanonicalStoryPromo(videoFixture))
   .add('standard link promo', () => getCanonicalStoryPromo(standardPromo))
-  .add('video link promo', () => getCanonicalStoryPromo(videoPromo));
+  .add('video link promo', () => getCanonicalStoryPromo(videoPromo))
+  .add('audio link promo', () => getCanonicalStoryPromo(audioPromo));
 
 storiesOf('Containers|Story Promo/AMP', module)
   .addDecorator(AmpDecorator)
@@ -68,4 +70,5 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('audio promo - amp', () => getAmpStoryPromo(audioFixture))
   .add('video promo - amp', () => getAmpStoryPromo(videoFixture))
   .add('standard link promo', () => getAmpStoryPromo(standardPromo))
-  .add('video link promo', () => getAmpStoryPromo(videoPromo));
+  .add('video link promo', () => getAmpStoryPromo(videoPromo))
+  .add('audio link promo', () => getAmpStoryPromo(audioPromo));

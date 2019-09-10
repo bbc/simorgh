@@ -1,15 +1,15 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import { shape, bool, string } from 'prop-types';
+import { shape, bool, string, oneOfType } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import pick from 'ramda/src/pick';
-import { storyItem } from '../../../models/propTypes/storyItem';
+import { storyItem, linkPromo } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
+
 const getAssetContentTypes = item => {
-  const mediaContentTypes = ['video'];
+  const mediaContentTypes = ['video', 'audio'];
   let type = pathOr(null, ['contentType'], item);
   if (!type) {
     return null;
@@ -20,11 +20,11 @@ const getAssetContentTypes = item => {
 
 const getCpsMediaTypes = item => {
   const isPGL = path(['cpsType'], item) === 'PGL';
-  const isMedia = path(['cpsType'], item) === 'MAP';
+  const isCpsMedia = path(['cpsType'], item) === 'MAP';
   const hasMediaInfo = path(['media'], item);
 
   // Only build a media indicator if this is a photo gallery or media item
-  if (!isPGL && (!isMedia || !hasMediaInfo)) {
+  if (!isPGL && (!isCpsMedia || !hasMediaInfo)) {
     return null;
   }
   const type = isPGL ? 'photogallery' : path(['media', 'format'], item);
@@ -44,7 +44,7 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   }
 
   // Always gets the first version. Smarter logic may be needed in the future.
-  const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
+  const rawDuration = path(['media', 'versions', 0, 'duration'], item);
 
   if (rawDuration) {
     const duration = moment.duration(rawDuration, 'seconds');
@@ -67,7 +67,7 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
 };
 
 MediaIndicator.propTypes = {
-  item: shape(pick(['cpsType', 'media'], storyItem)).isRequired,
+  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   topStory: bool,
   service: string.isRequired,
   indexAlsos: bool,

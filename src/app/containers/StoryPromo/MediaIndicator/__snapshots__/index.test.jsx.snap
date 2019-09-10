@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Story Promo Media Indicator should not render if item media object has no format 1`] = `null`;
-
 exports[`Story Promo Media Indicator should render a photo gallery item correctly 1`] = `
 <MediaIndicator
   datetime={null}
