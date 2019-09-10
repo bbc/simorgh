@@ -27,8 +27,7 @@ const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
-const serviceHasTimestamp = service =>
-  ['news', 'urdu', 'pashto'].includes(service);
+const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
