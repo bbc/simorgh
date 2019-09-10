@@ -125,6 +125,30 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               );
 
               if (relatedItemsExists) {
+                cy.get('[aria-labelledby="Top-stories"]')
+                  .eq(0)
+                  .within(() => {
+                    cy.get('div')
+                      .eq(10)
+                      .within(() => {
+                        cy.get('h4')
+                          .eq(0)
+                          .then($el => {
+                            expect($el.text()).includes(
+                              `${appConfig[service].translations.relatedContent}`,
+                            );
+                          });
+
+                        if (topstories.relatedItems.length > 1) {
+                          cy.get('ul li a');
+                        } else {
+                          cy.get('div').within(() => {
+                            cy.get('a span');
+                          });
+                        }
+                      });
+                  });
+
                 cy.viewport('iphone-5');
                 cy.get('[aria-labelledby="Top-stories"]')
                   .eq(0)
