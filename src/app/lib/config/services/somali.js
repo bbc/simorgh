@@ -38,6 +38,7 @@ const service = {
     home: 'War',
     currentPage: 'Current page',
     skipLinkText: 'U gudub qaybta macluumaadka',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
