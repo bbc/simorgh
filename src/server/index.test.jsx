@@ -51,13 +51,16 @@ const mockRouteProps = ({
       ? jest.fn().mockRejectedValueOnce(dataResponse)
       : jest.fn().mockResolvedValueOnce(dataResponse);
 
+  // Add a leading slash to match what is received from the application routing regex.
+  const mockVariantParam = variant ? `/${variant}` : undefined;
+
   getRouteProps.mockReturnValue({
     isAmp,
     service,
     variant,
     route: { getInitialData },
     match: {
-      params: { id, service, variant: variant ? `/${variant}` : undefined },
+      params: { id, service, variant: mockVariantParam },
     },
   });
 };
