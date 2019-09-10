@@ -96,10 +96,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
             ({ body }) => {
               const topstories = body.content.groups[0].items[0];
-              const relatedItemsExists = Object.prototype.hasOwnProperty.call(
-                topstories,
-                'relatedItems',
-              );
+              const relatedItemsExists = 'relatedItems' in topstories;
 
               const runIndexAlsoTests = () => {
                 cy.get('[aria-labelledby="Top-stories"]')
@@ -117,10 +114,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                           });
 
                         if (topstories.relatedItems.length > 1) {
-                          cy.get('ul li a');
+                          cy.get('ul li a').should('be.visible');
                         } else {
                           cy.get('div').within(() => {
-                            cy.get('a span');
+                            cy.get('a span').should('be.visible');
                           });
                         }
                       });
