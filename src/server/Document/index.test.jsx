@@ -16,8 +16,8 @@ jest.mock('react-helmet', () => ({
 ServerApp.mockImplementation(() => <div />);
 DocumentComponent.mockImplementation(() => <html lang="en-GB" />);
 
-describe('render document', () => {
-  it('resolves', () => {
+describe('Render Document', () => {
+  it('returns html when given the correct props', () => {
     expect(
       renderDocument({
         bbcOrigin: 'https://www.test.bbc.co.uk',
