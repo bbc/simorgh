@@ -38,6 +38,7 @@ const service = {
     home: 'Noticias',
     currentPage: 'Current page',
     skipLinkText: 'Ir al contenido',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
