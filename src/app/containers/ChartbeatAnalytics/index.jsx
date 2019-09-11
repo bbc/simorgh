@@ -18,7 +18,6 @@ const ChartbeatAnalytics = ({ data }) => {
     sendCanonicalChartbeatBeacon(
       getConfig({
         platform,
-        previousPath,
         pageType,
         data,
         brandName,
@@ -34,7 +33,6 @@ const ChartbeatAnalytics = ({ data }) => {
     origin,
     pageType,
     platform,
-    previousPath,
     service,
     sendCanonicalChartbeatBeacon,
   ]);
@@ -44,13 +42,13 @@ const ChartbeatAnalytics = ({ data }) => {
       <AmpChartbeatBeacon
         chartbeatConfig={getConfig({
           platform,
-          previousPath,
           pageType,
           data,
           brandName,
           env,
           service,
           origin,
+          previousPath,
         })}
       />
     )

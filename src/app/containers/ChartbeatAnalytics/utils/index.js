@@ -69,13 +69,13 @@ export const getTitle = (pageType, pageData, brandName) => {
 
 export const getConfig = ({
   platform,
-  previousPath,
   pageType,
   data,
   brandName,
   env,
   service,
   origin,
+  previousPath,
 }) => {
   const referrer = getReferrer(platform, origin, previousPath);
   const title = getTitle(pageType, data, brandName);
@@ -90,9 +90,13 @@ export const getConfig = ({
     sections,
     uid: chartbeatUID,
     title,
-    virtualReferrer: referrer,
-    ...(isAmp && { contentType: type }),
-    ...(!isAmp && { type, useCanonical, path: currentPath }),
+    ...(isAmp && { contentType: type, virtualReferrer: referrer }),
+    ...(!isAmp && {
+      type,
+      useCanonical,
+      path: currentPath,
+      virtualReferrer: `${origin}/referrer`,
+    }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };
 };
