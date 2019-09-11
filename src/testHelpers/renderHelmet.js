@@ -19,25 +19,22 @@ const noop = () => {};
 export default async component => {
   render(component);
 
-  return (
-    waitForDomChange(document.querySelector('html'))
-      // eslint-disable-next-line no-console
-      .catch(noop) // handle a waitForDomChange timeout
-      .then(() => {
-        const htmlElement = document.querySelector('html');
+  return waitForDomChange(document.querySelector('html'))
+    .catch(noop) // handle a waitForDomChange timeout
+    .then(() => {
+      const htmlElement = document.querySelector('html');
 
-        const helmetElements = document.querySelectorAll(
-          '[data-react-helmet="true"]',
-        );
+      const helmetElements = document.querySelectorAll(
+        '[data-react-helmet="true"]',
+      );
 
-        const removeHelmetAttributes = el =>
-          el.removeAttribute('data-react-helmet'); // remove react-helmet attribute noise from elements
+      const removeHelmetAttributes = el =>
+        el.removeAttribute('data-react-helmet'); // remove react-helmet attribute noise from elements
 
-        removeHelmetAttributes(htmlElement); // remove react-helmet attribute noise from elements
+      removeHelmetAttributes(htmlElement); // remove react-helmet attribute noise from elements
 
-        Array.from(helmetElements).forEach(removeHelmetAttributes);
+      Array.from(helmetElements).forEach(removeHelmetAttributes);
 
-        return document.querySelector('html');
-      })
-  );
+      return document.querySelector('html');
+    });
 };
