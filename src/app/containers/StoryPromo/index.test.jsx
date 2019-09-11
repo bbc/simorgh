@@ -143,8 +143,8 @@ const standardLinkItem = {
 };
 
 const featureLinkItem = {
-  name: 'Standard promo with summary',
-  summary: 'Summary text',
+  name: 'Feature promo with summary',
+  summary: 'Summary text for feature Promo',
   indexImage: {
     id: 63692548,
     subType: 'index',

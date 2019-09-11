@@ -1661,13 +1661,13 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
         className="c7"
         href="http://www.bbc.com/azeri"
       >
-        Standard promo with summary
+        Feature promo with summary
       </a>
     </h3>
     <p
       className="c8"
     >
-      Summary text
+      Summary text for feature Promo
     </p>
     <time
       className="c9"
@@ -1918,13 +1918,13 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
         className="c7"
         href="http://www.bbc.com/azeri"
       >
-        Standard promo with summary
+        Feature promo with summary
       </a>
     </h3>
     <p
       className="c8"
     >
-      Summary text
+      Summary text for feature Promo
     </p>
     <time
       className="c9"
