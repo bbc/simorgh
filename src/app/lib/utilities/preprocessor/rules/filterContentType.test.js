@@ -2,6 +2,10 @@ import filterUnknownContentTypes from './filterContentType';
 import azeriFixtureData from '../../../../../../data/azeri/frontpage/index.json';
 import igboFixtureData from '../../../../../../data/igbo/frontpage/index.json';
 
+/*
+ * CPS types
+ */
+
 const cpsItems = [
   {
     headlines: {
@@ -22,6 +26,10 @@ const cpsItems = [
     cpsType: 'LIV',
   },
 ];
+
+/*
+ * Asset types
+ */
 
 const TextAssetType = {
   name: 'Test standard link promo',
