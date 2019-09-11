@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { string, bool, arrayOf, shape } from 'prop-types';
 import { C_PEBBLE } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING_HLF,
@@ -181,38 +182,51 @@ const Table = styled.table`
   }
 `;
 
-const stories = storiesOf('Moment Locales', module);
-const showEditorialMoment = boolean('Show editorial moment version', false);
-const showMoment = (arrayOfMoments, locale) => {
-  arrayOfMoments.map(({ what, func }, index) => (
-    /* eslint-disable react/no-array-index-key */
-    <tr key={index}>
-      <td>{what}</td>
-      <td>{func('en-gb')}</td>
-      <td>{func(locale)}</td>
-    </tr>
-  ))
+const ShowMoment = ({ name, locale, showEditorialVersion }) => {
+  const arrayOfMoments = showEditorialVersion ? editorialFuncs : funcs;
+  return (
+    <Table>
+      <tbody>
+        <tr>
+          <th>key</th>
+          <th>British English</th>
+          <th>{name}</th>
+        </tr>
+        {arrayOfMoments.map(({ what, func }, index) => (
+          /* eslint-disable react/no-array-index-key */
+          <tr key={index}>
+            <td>{what}</td>
+            <td>{func('en-gb')}</td>
+            <td>{func(locale)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
+  );
 };
 
+ShowMoment.propTypes = {
+  name: string.isRequired,
+  locale: arrayOf(
+    shape({
+      name: string.isRequired,
+      locale: string.isRequired,
+    }),
+  ).isRequired,
+  showEditorialVersion: bool.isRequired,
+};
+
+const stories = storiesOf('Moment Locales', module);
+
 locales.forEach(({ name, locale }) => {
-  stories
-    .addDecorator(withKnobs)
-    .add(`${name} - ${locale}`, () => (
-      <Table>
-        <tbody>
-          <tr>
-            <th>key</th>
-            <th>British English</th>
-            <th>{name}</th>
-          </tr>
-          {console.log('Boolean ---', showEditorialMoment)}
-          {
-            showEditorialMoment ?
-            showMoment(editorialFuncs, locale)
-            :
-            showMoment(funcs.concat(editorialFuncs), locale)
-          }
-        </tbody>
-      </Table>
-  ));
+  stories.addDecorator(withKnobs).add(`${name} - ${locale}`, () => {
+    const showEditorVersion = boolean('Show editorial moment version', false);
+    return (
+      <ShowMoment
+        name={name}
+        locale={locale}
+        showEditorialVersion={showEditorVersion}
+      />
+    );
+  });
 });
