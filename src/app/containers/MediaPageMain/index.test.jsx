@@ -4,8 +4,6 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import MediaPageMain from '.';
-import { shouldShallowMatchSnapshot } from '#testHelpers';
-import amharicConfig from '#lib/config/services/amharic';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
 
