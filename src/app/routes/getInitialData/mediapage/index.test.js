@@ -6,7 +6,7 @@ import addIdsToBlocks from './addIdsToBlocks';
 
 jest.mock('./addIdsToBlocks');
 jest.mock('../utils/getBaseUrl');
-jest.mock('../../../lib/utilities/onClient');
+jest.mock('#lib/utilities/onClient');
 jest.mock('../utils/fetchData');
 
 const mockData = { service: 'amharic', status: 200, pageData: {} };
@@ -17,8 +17,8 @@ process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
 
 addIdsToBlocks.mockImplementation(() => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
-let onClientMockResponse = true;
-jest.mock('#lib/utilities/onClient', () => jest.fn());
+onClient.mockImplementation(() => onClientMockResponse);
+fetchData.mockImplementation(() => mockData);
 
 const defaultParams = {
   service: 'amharic',
