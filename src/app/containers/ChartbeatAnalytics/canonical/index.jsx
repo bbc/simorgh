@@ -9,19 +9,10 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
 
   useEffect(() => {
     if (chartbeatConfigRef.current !== chartbeatConfig) {
-      console.log(
-        'CHARTBEAT CANONICAL pSUPERFLY virtualPage - ',
-        chartbeatConfig.title,
-      );
+      // eslint-disable-next-line no-unused-expressions
       window.pSUPERFLY && window.pSUPERFLY.virtualPage(chartbeatConfig);
     }
   }, [chartbeatConfig, chartbeatConfigRef]);
-
-  useEffect(() => {
-    console.log('MOUNT CHARTBEAT -', chartbeatConfigRef.current.title);
-
-    return () => console.log('UNMOUNT CHARTBEAT - *THIS SHOULDNT HAPPEN*');
-  }, [chartbeatConfigRef]);
 
   return (
     <Helmet>

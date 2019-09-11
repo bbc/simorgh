@@ -5,7 +5,7 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
 import ChartbeatAnalytics from '.';
-import * as testUtils from '../../lib/analyticsUtils/chartbeat';
+import * as testUtils from './utils';
 import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
