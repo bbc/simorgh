@@ -9,6 +9,7 @@ const service = {
   articleTimestampPrefix: 'Yeniləndi',
   atiAnalyticsAppName: 'news-azeri',
   atiAnalyticsProducerId: '6',
+  serviceLocalizedName: 'Azərbaycanca',
   brandName: 'BBC News Azərbaycanca',
   product: 'BBC News Azərbaycanca',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png',

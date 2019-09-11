@@ -12,6 +12,7 @@ const service = {
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-thai',
   atiAnalyticsProducerId: '90',
+  serviceLocalizedName: 'บีบีซีไทย',
   brandName: 'BBC News บีบีซีไทย',
   product: 'BBC News บีบีซีไทย',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
