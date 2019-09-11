@@ -8,11 +8,10 @@ import { storyItem, linkPromo } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
 const getAssetContentTypes = item => {
-  const mediaContentTypes = ['video', 'audio', 'gallery'];
+  const mediaContentTypes = ['audio', 'video', 'gallery'];
   const type = pathOr('', ['contentType'], item).toLowerCase();
-  const validContentType = mediaContentTypes.includes(type) ? type : null;
 
-  if (validContentType) {
+  if (mediaContentTypes.includes(type)) {
     return type === 'gallery' ? 'photogallery' : type;
   }
   return null;
