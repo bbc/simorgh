@@ -8,7 +8,8 @@ export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
-}) => describe(`No testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {});
+}) =>
+  describe(`No testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {});
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
