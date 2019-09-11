@@ -1,9 +1,5 @@
-const webpack = require('webpack');
-const path = require('path');
-const fs = require('fs');
-
-const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
+const webpack = require('../../../../Library/Caches/typescript/2.9/node_modules/@types/webpack');
+const { webpackDirAlias } = require('../dirAlias');
 
 module.exports = {
   plugins: [
@@ -25,13 +21,6 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
-    alias: {
-      '#app': resolvePath('src/app'),
-      '#contexts': resolvePath('src/app/contexts'),
-      '#data': resolvePath('data/'),
-      '#lib': resolvePath('src/app/lib/'),
-      '#models': resolvePath('src/app/models/'),
-      '#testHelpers': resolvePath('src/testHelpers/'),
-    },
+    alias: webpackDirAlias,
   },
 };
