@@ -2765,7 +2765,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+@media (max-width:62.9375rem) {
   .c8 {
     display: none;
     visibility: hidden;
