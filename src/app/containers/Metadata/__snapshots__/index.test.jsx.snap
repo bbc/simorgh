@@ -1006,6 +1006,10 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       rel="alternate"
     />
     <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      rel="canonical"
+    />
+    <link
       href="https://www.bbc.com/news/articles/c0000000001o.amp"
       hreflang="x-default"
       rel="alternate"
@@ -1135,6 +1139,18 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       name="article:tag"
     />
     <meta
+      content="BBC News"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News"
+      name="application-name"
+    />
+    <meta
+      content="Article summary."
+      name="description"
+    />
+    <meta
       content="100004154058350"
       name="fb:admins"
     />
@@ -1151,18 +1167,170 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       name="msapplication-TileColor"
     />
     <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="Article summary."
+      name="og:description"
+    />
+    <meta
+      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News"
+      name="og:image:alt"
+    />
+    <meta
+      content="en_GB"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News"
+      name="og:site_name"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News"
+      name="og:title"
+    />
+    <meta
       content="article"
       name="og:type"
     />
     <meta
+      content="https://www.bbc.com/news/articles/c0000000001o"
+      name="og:url"
+    />
+    <meta
       content="summary_large_image"
       name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="Article summary."
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News"
+      name="twitter:title"
     />
     <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
     </script>
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://foo.com/static/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
     <link
       href="https://www.bbc.com/persian/articles/c4vlle3q337o"
       rel="canonical"
@@ -1237,6 +1405,54 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
       rel="apple-touch-startup-image"
     />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
+    />
     <meta
       content="BBC News فارسی"
       name="apple-mobile-web-app-title"
@@ -1248,6 +1464,22 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
     <meta
       content="خلاصه مقاله"
       name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
     />
     <meta
       content="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
@@ -1278,8 +1510,16 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       name="og:title"
     />
     <meta
+      content="article"
+      name="og:type"
+    />
+    <meta
       content="https://www.bbc.com/persian/articles/c4vlle3q337o"
       name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
     />
     <meta
       content="@bbcpersian"
@@ -1305,6 +1545,11 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
+    </script>
     <script
       type="application/ld+json"
     >
@@ -1897,6 +2142,10 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       rel="alternate"
     />
     <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      rel="canonical"
+    />
+    <link
       href="https://www.bbc.com/news/articles/c0000000001o.amp"
       hreflang="x-default"
       rel="alternate"
@@ -1910,336 +2159,6 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
       hreflang="en-gb"
       rel="alternate"
-    />
-    <link
-      href="https://foo.com/static/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="Royal Wedding 2018"
-      name="article:tag"
-    />
-    <meta
-      content="Duchess of Sussex"
-      name="article:tag"
-    />
-    <meta
-      content="Queen Victoria"
-      name="article:tag"
-    />
-    <meta
-      content="100004154058350"
-      name="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      name="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="article"
-      name="og:type"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
-    </script>
-    <link
-      href="https://www.bbc.com/persian/articles/c4vlle3q337o"
-      rel="canonical"
-    />
-    <link
-      href="https://www.bbc.com/persian/articles/c4vlle3q337o.amp"
-      rel="amphtml"
-    />
-    <link
-      href="https://foo.com/static/persian/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="application-name"
-    />
-    <meta
-      content="خلاصه مقاله"
-      name="description"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="خلاصه مقاله"
-      name="og:description"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
-      name="og:image"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="og:image:alt"
-    />
-    <meta
-      content="fa"
-      name="og:locale"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="og:site_name"
-    />
-    <meta
-      content="سرصفحه مقاله - BBC News فارسی"
-      name="og:title"
-    />
-    <meta
-      content="https://www.bbc.com/persian/articles/c4vlle3q337o"
-      name="og:url"
-    />
-    <meta
-      content="@bbcpersian"
-      name="twitter:creator"
-    />
-    <meta
-      content="خلاصه مقاله"
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@bbcpersian"
-      name="twitter:site"
-    />
-    <meta
-      content="سرصفحه مقاله - BBC News فارسی"
-      name="twitter:title"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/persian/articles/c4vlle3q337o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/persian/articles/c4vlle3q337o","name":"سرصفحه مقاله"},"headline":"سرصفحه مقاله","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-  </head>
-  <body>
-    <div />
-  </body>
-</html>
-`;
-
-exports[`Metadata Container LinkedData and Metadata components called with correct props should match snapshot for WS Frontpages 1`] = `
-<html
-  amp=""
-  dir="ltr"
-  lang="ig"
->
-  <head>
-    <title>
-      Ogbako - BBC News Ìgbò
-    </title>
-    <link
-      href="https://www.bbc.com/news/articles/c0000000001o"
-      rel="canonical"
-    />
-    <link
-      href="https://www.bbc.com/news/articles/c0000000001o"
-      hreflang="x-default"
-      rel="alternate"
-    />
-    <link
-      href="https://www.bbc.com/news/articles/c0000000001o"
-      hreflang="en"
-      rel="alternate"
-    />
-    <link
-      href="https://www.bbc.co.uk/news/articles/c0000000001o"
-      hreflang="en-gb"
-      rel="alternate"
-    />
-    <link
-      href="https://www.bbc.com/news/articles/c0000000001o.amp"
-      rel="amphtml"
     />
     <link
       href="https://foo.com/static/news/images/icons/icon-192x192.png"
@@ -2549,6 +2468,336 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       rel="apple-touch-startup-image"
     />
     <link
+      href="https://www.bbc.com/persian/articles/c4vlle3q337o"
+      rel="canonical"
+    />
+    <link
+      href="https://www.bbc.com/persian/articles/c4vlle3q337o.amp"
+      rel="amphtml"
+    />
+    <link
+      href="https://foo.com/static/persian/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
+    />
+    <meta
+      content="BBC News فارسی"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News فارسی"
+      name="application-name"
+    />
+    <meta
+      content="خلاصه مقاله"
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="خلاصه مقاله"
+      name="og:description"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News فارسی"
+      name="og:image:alt"
+    />
+    <meta
+      content="fa"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News فارسی"
+      name="og:site_name"
+    />
+    <meta
+      content="سرصفحه مقاله - BBC News فارسی"
+      name="og:title"
+    />
+    <meta
+      content="article"
+      name="og:type"
+    />
+    <meta
+      content="https://www.bbc.com/persian/articles/c4vlle3q337o"
+      name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@bbcpersian"
+      name="twitter:creator"
+    />
+    <meta
+      content="خلاصه مقاله"
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News فارسی"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@bbcpersian"
+      name="twitter:site"
+    />
+    <meta
+      content="سرصفحه مقاله - BBC News فارسی"
+      name="twitter:title"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
+    </script>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/persian/articles/c4vlle3q337o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/persian/articles/c4vlle3q337o","name":"سرصفحه مقاله"},"headline":"سرصفحه مقاله","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div />
+  </body>
+</html>
+`;
+
+exports[`Metadata Container LinkedData and Metadata components called with correct props should match snapshot for WS Frontpages 1`] = `
+<html
+  amp=""
+  dir="ltr"
+  lang="ig"
+>
+  <head>
+    <title>
+      Ogbako - BBC News Ìgbò
+    </title>
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      rel="canonical"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      rel="amphtml"
+    />
+    <link
+      href="https://foo.com/static/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
@@ -2597,6 +2846,18 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       name="article:tag"
     />
     <meta
+      content="BBC News"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News"
+      name="application-name"
+    />
+    <meta
+      content="Article summary."
+      name="description"
+    />
+    <meta
       content="100004154058350"
       name="fb:admins"
     />
@@ -2613,18 +2874,415 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       name="msapplication-TileColor"
     />
     <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="Article summary."
+      name="og:description"
+    />
+    <meta
+      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News"
+      name="og:image:alt"
+    />
+    <meta
+      content="en_GB"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News"
+      name="og:site_name"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News"
+      name="og:title"
+    />
+    <meta
       content="article"
       name="og:type"
     />
     <meta
+      content="https://www.bbc.com/news/articles/c0000000001o"
+      name="og:url"
+    />
+    <meta
       content="summary_large_image"
       name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="Article summary."
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News"
+      name="twitter:title"
     />
     <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
     </script>
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      rel="canonical"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://foo.com/static/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
+    <meta
+      content="BBC News"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News"
+      name="application-name"
+    />
+    <meta
+      content="Article summary."
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="Article summary."
+      name="og:description"
+    />
+    <meta
+      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News"
+      name="og:image:alt"
+    />
+    <meta
+      content="en_GB"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News"
+      name="og:site_name"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="article"
+      name="og:type"
+    />
+    <meta
+      content="https://www.bbc.com/news/articles/c0000000001o"
+      name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="Article summary."
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News"
+      name="twitter:title"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
+    </script>
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://foo.com/static/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
     <link
       href="https://www.bbc.com/persian/articles/c4vlle3q337o"
       rel="canonical"
@@ -2699,6 +3357,54 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
       rel="apple-touch-startup-image"
     />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
+    />
     <meta
       content="BBC News فارسی"
       name="apple-mobile-web-app-title"
@@ -2710,6 +3416,22 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
     <meta
       content="خلاصه مقاله"
       name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
     />
     <meta
       content="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
@@ -2740,8 +3462,16 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       name="og:title"
     />
     <meta
+      content="article"
+      name="og:type"
+    />
+    <meta
       content="https://www.bbc.com/persian/articles/c4vlle3q337o"
       name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
     />
     <meta
       content="@bbcpersian"
@@ -2767,6 +3497,11 @@ exports[`Metadata Container LinkedData and Metadata components called with corre
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
+    </script>
     <script
       type="application/ld+json"
     >
@@ -3759,6 +4494,10 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
       rel="alternate"
     />
     <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      rel="canonical"
+    />
+    <link
       href="https://www.bbc.com/news/articles/c0000000001o.amp"
       hreflang="x-default"
       rel="alternate"
@@ -3888,6 +4627,18 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
       name="article:tag"
     />
     <meta
+      content="BBC News"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News"
+      name="application-name"
+    />
+    <meta
+      content="Article summary."
+      name="description"
+    />
+    <meta
       content="100004154058350"
       name="fb:admins"
     />
@@ -3904,18 +4655,170 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
       name="msapplication-TileColor"
     />
     <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="Article summary."
+      name="og:description"
+    />
+    <meta
+      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News"
+      name="og:image:alt"
+    />
+    <meta
+      content="en_GB"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News"
+      name="og:site_name"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News"
+      name="og:title"
+    />
+    <meta
       content="article"
       name="og:type"
     />
     <meta
+      content="https://www.bbc.com/news/articles/c0000000001o"
+      name="og:url"
+    />
+    <meta
       content="summary_large_image"
       name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="Article summary."
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="Article Headline for SEO - BBC News"
+      name="twitter:title"
     />
     <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
     </script>
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.com/news/articles/c0000000001o.amp"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.bbc.co.uk/news/articles/c0000000001o.amp"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="https://foo.com/static/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
     <link
       href="https://www.bbc.com/persian/articles/c4vlle3q337o"
       rel="canonical"
@@ -3990,6 +4893,54 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
       href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
       rel="apple-touch-startup-image"
     />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
+    />
     <meta
       content="BBC News فارسی"
       name="apple-mobile-web-app-title"
@@ -4001,6 +4952,22 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
     <meta
       content="خلاصه مقاله"
       name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
     />
     <meta
       content="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
@@ -4031,8 +4998,16 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
       name="og:title"
     />
     <meta
+      content="article"
+      name="og:type"
+    />
+    <meta
       content="https://www.bbc.com/persian/articles/c4vlle3q337o"
       name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
     />
     <meta
       content="@bbcpersian"
@@ -4058,6 +5033,11 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.bbc.com/news/articles/c0000000001o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/news/articles/c0000000001o","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
+    </script>
     <script
       type="application/ld+json"
     >
