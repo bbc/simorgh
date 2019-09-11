@@ -14,22 +14,30 @@
 
 import { render, waitForDomChange } from '@testing-library/react';
 
+const noop = () => {};
+
 export default async component => {
   render(component);
 
-  await waitForDomChange();
+  return (
+    waitForDomChange(document.querySelector('html'))
+      // eslint-disable-next-line no-console
+      .catch(noop) // handle a waitForDomChange timeout
+      .then(() => {
+        const htmlElement = document.querySelector('html');
 
-  const htmlElement = document.querySelector('html');
+        const helmetElements = document.querySelectorAll(
+          '[data-react-helmet="true"]',
+        );
 
-  const helmetElements = document.querySelectorAll(
-    '[data-react-helmet="true"]',
+        const removeHelmetAttributes = el =>
+          el.removeAttribute('data-react-helmet'); // remove react-helmet attribute noise from elements
+
+        removeHelmetAttributes(htmlElement); // remove react-helmet attribute noise from elements
+
+        Array.from(helmetElements).forEach(removeHelmetAttributes);
+
+        return document.querySelector('html');
+      })
   );
-
-  const removeHelmetAttributes = el => el.removeAttribute('data-react-helmet'); // remove react-helmet attribute noise from elements
-
-  removeHelmetAttributes(htmlElement); // remove react-helmet attribute noise from elements
-
-  Array.from(helmetElements).forEach(removeHelmetAttributes);
-
-  return document.querySelector('html');
 };
