@@ -17,16 +17,16 @@ ServerApp.mockImplementation(() => <div />);
 DocumentComponent.mockImplementation(() => <html lang="en-GB" />);
 
 describe('Render Document', () => {
-  it('returns html when given the correct props', () => {
-    expect(
-      renderDocument({
-        bbcOrigin: 'https://www.test.bbc.co.uk',
-        data: { test: 'data' },
-        isAmp: false,
-        routes: ['someRoute'],
-        service: 'news',
-        url: '/',
-      }),
-    ).resolves.toEqual('<!doctype html><html lang="en-GB"></html>');
+  it('should render corretly', () => {
+    renderDocument({
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      data: { test: 'data' },
+      isAmp: false,
+      routes: ['someRoute'],
+      service: 'news',
+      url: '/',
+    }).then(document => {
+      expect(document).toMatchSnapshot();
+    });
   });
 });
