@@ -74,4 +74,4 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('standard link promo - amp', () => getAmpStoryPromo(standardPromo))
   .add('video link promo - amp', () => getAmpStoryPromo(videoPromo))
   .add('audio link promo - amp', () => getAmpStoryPromo(audioPromo))
-  .add('gallery link promo - amp', () => getCanonicalStoryPromo(galleryPromo));
+  .add('gallery link promo - amp', () => getAmpStoryPromo(galleryPromo));
