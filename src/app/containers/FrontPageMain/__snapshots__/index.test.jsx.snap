@@ -1593,8 +1593,27 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
                   },
                   Object {
                     "assetTypeCode": "PRO",
-                    "contentType": "Text",
+                    "contentType": "Video",
                     "id": "mockid-6",
+                    "indexImage": Object {
+                      "altText": "all-time African XI promo image",
+                      "copyrightHolder": "BBC",
+                      "height": 549,
+                      "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+                      "id": "101952925",
+                      "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+                      "subType": "index",
+                      "width": 976,
+                    },
+                    "name": "Select your best ever African 11 players for World Cup - Video",
+                    "timestamp": 1528978068000,
+                    "type": "link",
+                    "uri": "https://www.bbc.com/pidgin/sport-44425543",
+                  },
+                  Object {
+                    "assetTypeCode": "PRO",
+                    "contentType": "Text",
+                    "id": "mockid-7",
                     "indexImage": Object {
                       "altText": "Sane",
                       "copyrightHolder": "Getty Images",
