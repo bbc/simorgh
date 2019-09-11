@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import renderHelmet from '../../../testHelpers/renderHelmet';
 import MetadataContainer from './index';
 import LinkedData from '../../components/LinkedData';
 import Metadata from '../../components/Metadata';
@@ -197,17 +197,20 @@ describe('Metadata Container', () => {
       );
     });
 
-    shouldMatchSnapshot(
-      'should match snapshot for Canonical News & international origin',
-      getContainer({
-        service: 'news',
-        bbcOrigin: dotComOrigin,
-        platform: 'canonical',
-        data: articleDataNews,
-        id: 'c0000000001o',
-        pageType: 'article',
-      }),
-    );
+    it('should match snapshot for Canonical News & international origin', async () => {
+      const html = await renderHelmet(
+        getContainer({
+          service: 'news',
+          bbcOrigin: dotComOrigin,
+          platform: 'canonical',
+          data: articleDataNews,
+          id: 'c0000000001o',
+          pageType: 'article',
+        }),
+      );
+
+      expect(html).toMatchSnapshot();
+    });
 
     it('should be correct for AMP News & UK origin', () => {
       const Wrapper = mount(
@@ -288,17 +291,20 @@ describe('Metadata Container', () => {
       );
     });
 
-    shouldMatchSnapshot(
-      'should match snapshot for AMP News & UK origin',
-      getContainer({
-        service: 'news',
-        bbcOrigin: dotCoDotUKOrigin,
-        platform: 'amp',
-        data: articleDataNews,
-        id: 'c0000000001o',
-        pageType: 'article',
-      }),
-    );
+    it('should match snapshot for AMP News & UK origin', async () => {
+      const html = await renderHelmet(
+        getContainer({
+          service: 'news',
+          bbcOrigin: dotCoDotUKOrigin,
+          platform: 'amp',
+          data: articleDataNews,
+          id: 'c0000000001o',
+          pageType: 'article',
+        }),
+      );
+
+      expect(html).toMatchSnapshot();
+    });
 
     it('should be correct for Persian News & international origin', () => {
       const Wrapper = mount(
@@ -350,17 +356,20 @@ describe('Metadata Container', () => {
       );
     });
 
-    shouldMatchSnapshot(
-      'should match snapshot for Persian News & international origin',
-      getContainer({
-        service: 'persian',
-        bbcOrigin: dotComOrigin,
-        platform: 'canonical',
-        data: articleDataPersian,
-        id: 'c4vlle3q337o',
-        pageType: 'article',
-      }),
-    );
+    it('should match snapshot for Persian News & international origin', async () => {
+      const html = await renderHelmet(
+        getContainer({
+          service: 'persian',
+          bbcOrigin: dotComOrigin,
+          platform: 'canonical',
+          data: articleDataPersian,
+          id: 'c4vlle3q337o',
+          pageType: 'article',
+        }),
+      );
+
+      expect(html).toMatchSnapshot();
+    });
 
     it('should be correct for Persian News & UK origin', () => {
       const Wrapper = mount(
@@ -412,17 +421,20 @@ describe('Metadata Container', () => {
       );
     });
 
-    shouldMatchSnapshot(
-      'should match snapshot for Persian News & UK origin',
-      getContainer({
-        service: 'persian',
-        bbcOrigin: dotCoDotUKOrigin,
-        platform: 'amp',
-        data: articleDataPersian,
-        id: 'c4vlle3q337o',
-        pageType: 'article',
-      }),
-    );
+    it('should match snapshot for Persian News & UK origin', async () => {
+      const html = await renderHelmet(
+        getContainer({
+          service: 'persian',
+          bbcOrigin: dotCoDotUKOrigin,
+          platform: 'amp',
+          data: articleDataPersian,
+          id: 'c4vlle3q337o',
+          pageType: 'article',
+        }),
+      );
+
+      expect(html).toMatchSnapshot();
+    });
 
     it('should be correct for WS Frontpages', () => {
       const Wrapper = mount(
@@ -480,17 +492,20 @@ describe('Metadata Container', () => {
       );
     });
 
-    shouldMatchSnapshot(
-      'should match snapshot for WS Frontpages',
-      getContainer({
-        service: 'igbo',
-        bbcOrigin: dotComOrigin,
-        platform: 'canonical',
-        data: frontPageData,
-        id: null,
-        pageType: 'frontPage',
-      }),
-    );
+    it('should match snapshot for WS Frontpages', async () => {
+      const html = await renderHelmet(
+        getContainer({
+          service: 'igbo',
+          bbcOrigin: dotComOrigin,
+          platform: 'canonical',
+          data: frontPageData,
+          id: null,
+          pageType: 'frontPage',
+        }),
+      );
+
+      expect(html).toMatchSnapshot();
+    });
   });
 
   it('should be correct for WS Media liveradio', () => {
@@ -543,15 +558,18 @@ describe('Metadata Container', () => {
     );
   });
 
-  shouldMatchSnapshot(
-    'should match snapshot for WS Media liveradio',
-    getContainer({
-      service: 'korean',
-      bbcOrigin: dotComOrigin,
-      platform: 'canonical',
-      data: liveRadioPageData,
-      id: null,
-      pageType: 'media',
-    }),
-  );
+  it('should match snapshot for WS Media liveradio', async () => {
+    const html = await renderHelmet(
+      getContainer({
+        service: 'korean',
+        bbcOrigin: dotComOrigin,
+        platform: 'canonical',
+        data: liveRadioPageData,
+        id: null,
+        pageType: 'media',
+      }),
+    );
+
+    expect(html).toMatchSnapshot();
+  });
 });

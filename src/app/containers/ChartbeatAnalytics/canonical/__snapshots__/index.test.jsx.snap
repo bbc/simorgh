@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CanonicalChartbeatAnalytics should return the helmet wrapper with the script snippet 1`] = `
-<helmet-head>
-  <script
-    async=""
-    type="text/javascript"
-  >
-    
+<html>
+  <head>
+    <script
+      async="true"
+      type="text/javascript"
+    >
+      
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
@@ -15,11 +16,15 @@ exports[`CanonicalChartbeatAnalytics should return the helmet wrapper with the s
           }
         })();
       
-  </script>
-  <script
-    async=""
-    src="//chartbeat.js"
-    type="text/javascript"
-  />
-</helmet-head>
+    </script>
+    <script
+      async="true"
+      src="//chartbeat.js"
+      type="text/javascript"
+    />
+  </head>
+  <body>
+    <div />
+  </body>
+</html>
 `;

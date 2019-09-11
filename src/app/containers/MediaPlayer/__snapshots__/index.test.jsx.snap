@@ -57,17 +57,9 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
 <div
   className="c0"
 >
-  <helmet-head />
   <div
     className="c1"
   >
-    <helmet-head>
-      <script
-        async={true}
-        custom-element="amp-iframe"
-        src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
-      />
-    </helmet-head>
     <amp-iframe
       allowfullscreen={true}
       frameborder="0"
@@ -153,7 +145,6 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
 <div
   className="c0"
 >
-  <helmet-head />
   <div
     className="c1"
   >
@@ -243,7 +234,6 @@ exports[`MediaPlayer is called correctly Calls the canonical player when platfor
 <div
   className="c0"
 >
-  <helmet-head />
   <div
     className="c1"
   >

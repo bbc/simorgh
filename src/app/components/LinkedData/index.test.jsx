@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import renderHelmet from '../../../testHelpers/renderHelmet';
 import LinkData from '.';
 
 describe('LinkData', () => {
@@ -57,18 +57,18 @@ describe('LinkData', () => {
     logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
   };
 
-  shouldMatchSnapshot(
-    'should correctly render metadata for links',
-    <LinkData {...props} />,
-  );
+  it('should correctly render metadata for links', async () => {
+    const html = await renderHelmet(<LinkData {...props} />);
+    expect(html).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render metadata with no about tags for links',
-    <LinkData {...propsWithNoAbout} />,
-  );
+  it('should correctly render metadata with no about tags for links', async () => {
+    const html = await renderHelmet(<LinkData {...propsWithNoAbout} />);
+    expect(html).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render metadata for frontpages',
-    <LinkData {...propsForFrontpage} />,
-  );
+  it('should correctly render metadata for frontpages', async () => {
+    const html = await renderHelmet(<LinkData {...propsForFrontpage} />);
+    expect(html).toMatchSnapshot();
+  });
 });

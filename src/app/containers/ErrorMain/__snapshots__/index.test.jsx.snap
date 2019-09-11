@@ -1,223 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for 404 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
+<html
+  dir="ltr"
+  lang="en-GB"
+>
+  <head>
+    <style
+      data-styled=""
+      data-styled-version="4.3.2"
+    >
+      
+      
+/* sc-component-id: Headline-sc-1kh1qhu-0 */
 
-.c5:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
+      
+/* sc-component-id: SubHeading-sc-1kh1qhu-1 */
 
-.c5:focus,
-.c5:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
+      
+/* sc-component-id: InlineLink-hkwpaz-0 */
+.idscKS{color:#222222;border-bottom:1px solid #B80000;-webkit-text-decoration:none;text-decoration:none;} .idscKS:visited{color:#6E6E73;border-bottom:1px solid #6E6E73;} .idscKS:focus,.idscKS:hover{border-bottom:2px solid #B80000;color:#B80000;}
+      
+/* sc-component-id: Paragraph-k859h4-0 */
+.dSVJxu{font-size:0.9375rem;line-height:1.25rem;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}} @media (min-width:37.5rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}}
+      
+/* sc-component-id: Grid-sc-12lwanc-0 */
 
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
+      
+/* sc-component-id: GhostGrid-sc-12lwanc-1 */
+.gfRQD{margin:0 auto;background:#FDFDFD;padding-bottom:2rem;} @media (max-width:37.4375rem){.gfRQD{grid-column-gap:0.5rem;}} @media (min-width:37.5rem){.gfRQD{grid-column-gap:1rem;}} @media (max-width:62.9375rem){.gfRQD{grid-template-columns:repeat(6,1fr);}} @media (min-width:63rem) and (max-width:80rem){.gfRQD{grid-template-columns:1fr repeat(8,minmax(0,6.75rem)) 1fr;max-width:45.5rem;}} @media (min-width:80rem){.gfRQD{grid-template-columns:1fr repeat(20,minmax(0,2.95rem)) 1fr;max-width:46.4rem;}} @supports (display:grid){.gfRQD{display:grid;max-width:initial;margin:initial;}}
+      
+/* sc-component-id: GridItemConstrainedSmall-sc-12lwanc-2 */
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
+      
+/* sc-component-id: GridItemConstrainedMedium-sc-12lwanc-3 */
 
-.c3 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
+      
+/* sc-component-id: GridItemConstrainedLarge-sc-12lwanc-4 */
 
-.c2 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
+      
+/* sc-component-id: GridItemConstrainedLargeNoMargin-sc-12lwanc-5 */
 
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
+      
+/* sc-component-id: GridItemConstrainedLargeWithTopMargin-sc-12lwanc-6 */
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildSmall-sc-12lwanc-7 */
 
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildMedium-sc-12lwanc-8 */
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildLarge-sc-12lwanc-9 */
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
+      
+/* sc-component-id: NestedGridParentLarge-sc-12lwanc-10 */
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
+      
+/* sc-component-id: NestedGridParentMedium-sc-12lwanc-11 */
 
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
+      
+/* sc-component-id: NestedGridParentSmall-sc-12lwanc-12 */
 
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
+      
+/* sc-component-id: PopOutAtGroup5-sc-12lwanc-13 */
 
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
-}
-
-<div>
-  <helmet-html-attributes
-    dir="ltr"
-    lang="en-GB"
-  />
-  <helmet-head>
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noindex,nofollow"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
+      
+/* sc-component-id: StatusCode-g0hf6i-0 */
+.cduvLS{font-size:1.25rem;line-height:1.5rem;color:#B80000;display:block;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:600;padding-bottom:0.5rem;} @media (min-width:20rem) and (max-width:37.4375rem){.cduvLS{font-size:1.375rem;line-height:1.625rem;}} @media (min-width:37.5rem){.cduvLS{font-size:1.75rem;line-height:2rem;}}
+      
+/* sc-component-id: ShortHeadline-g0hf6i-1 */
+.huSRTn{font-size:1.75rem;line-height:2rem;font-family:ReithSerif,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;color:#3F3F42;margin:0;padding:2rem 0;padding:2.5rem 0 2.5rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.huSRTn{font-size:2rem;line-height:2.25rem;}} @media (min-width:37.5rem){.huSRTn{font-size:2.75rem;line-height:3rem;}} @media (min-width:37.5rem){.huSRTn{padding:2.5rem 0;}}
+      
+/* sc-component-id: LongGridItemConstrainedMedium-g0hf6i-2 */
+.fwTCzs{grid-column:1 / span 6;padding-bottom:4rem;} @media (max-width:25rem){.fwTCzs{padding:0 0.5rem;}} @media (min-width:25rem) and (max-width:62.9375rem){.fwTCzs{padding:0 1rem;}} @media (max-width:37.4375rem){} @media (min-width:37.5rem){.fwTCzs{grid-column:1 / span 5;max-width:83.33%;}} @media (min-width:63rem) and (max-width:80rem){.fwTCzs{grid-column:3 / span 5;max-width:37.75rem;}} @media (min-width:80rem){.fwTCzs{grid-column:6 / span 10;max-width:38.5rem;}} @supports (display:grid){.fwTCzs{max-width:initial;}}
+    </style>
     <title>
       Page cannot be found - BBC News
     </title>
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
     <meta
       content="Page cannot be found"
       name="og:description"
@@ -234,290 +118,293 @@ exports[`ErrorMain should correctly render for 404 1`] = `
       content="Page cannot be found - BBC News"
       name="twitter:title"
     />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-  </helmet-head>
-  <main
-    role="main"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="c1"
+  </head>
+  <body>
+    <div>
+      <main
+        role="main"
       >
-        <h1
-          class="c2"
-          id="content"
+        <div
+          class="GhostGrid-sc-12lwanc-1 gfRQD"
         >
-          <span
-            class="c3"
+          <div
+            class="GridItemConstrainedMedium-sc-12lwanc-3 LongGridItemConstrainedMedium-g0hf6i-2 fwTCzs"
           >
-            404
-          </span>
-          Page cannot be found
-        </h1>
-        <p
-          class="c4"
-        >
-          Sorry, we're unable to bring you the page you're looking for. Please try:
-        </p>
-        <ul>
-          <li
-            class="c4"
-          >
-            Double checking the url
-          </li>
-          <li
-            class="c4"
-          >
-            Hitting the refresh button in your browser
-          </li>
-          <li
-            class="c4"
-          >
-            Searching for this page using the BBC search bar
-          </li>
-        </ul>
-        <p
-          class="c4"
-        >
-          Alternatively, please visit the 
-          <a
-            class="c5"
-            href="https://www.bbc.com/news"
-          >
-            BBC News homepage.
-          </a>
-          
-        </p>
-      </div>
+            <h1
+              class="Headline-sc-1kh1qhu-0 ShortHeadline-g0hf6i-1 huSRTn"
+              id="content"
+            >
+              <span
+                class="StatusCode-g0hf6i-0 cduvLS"
+              >
+                404
+              </span>
+              Page cannot be found
+            </h1>
+            <p
+              class="Paragraph-k859h4-0 dSVJxu"
+            >
+              Sorry, we're unable to bring you the page you're looking for. Please try:
+            </p>
+            <ul>
+              <li
+                class="Paragraph-k859h4-0 dSVJxu"
+              >
+                Double checking the url
+              </li>
+              <li
+                class="Paragraph-k859h4-0 dSVJxu"
+              >
+                Hitting the refresh button in your browser
+              </li>
+              <li
+                class="Paragraph-k859h4-0 dSVJxu"
+              >
+                Searching for this page using the BBC search bar
+              </li>
+            </ul>
+            <p
+              class="Paragraph-k859h4-0 dSVJxu"
+            >
+              Alternatively, please visit the 
+              <a
+                class="InlineLink-hkwpaz-0 idscKS"
+                href="https://www.bbc.com/news"
+              >
+                BBC News homepage.
+              </a>
+              
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
-  </main>
-</div>
+  </body>
+</html>
 `;
 
 exports[`ErrorMain should correctly render for 404 for persian 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
+<html
+  dir="rtl"
+  lang="fa"
+>
+  <head>
+    <style
+      data-styled=""
+      data-styled-version="4.3.2"
+    >
+      
+      
+/* sc-component-id: Headline-sc-1kh1qhu-0 */
 
-.c5:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
+      
+/* sc-component-id: SubHeading-sc-1kh1qhu-1 */
 
-.c5:focus,
-.c5:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
+      
+/* sc-component-id: InlineLink-hkwpaz-0 */
+.idscKS{color:#222222;border-bottom:1px solid #B80000;-webkit-text-decoration:none;text-decoration:none;} .idscKS:visited{color:#6E6E73;border-bottom:1px solid #6E6E73;} .idscKS:focus,.idscKS:hover{border-bottom:2px solid #B80000;color:#B80000;}
+      
+/* sc-component-id: Paragraph-k859h4-0 */
+.dSVJxu{font-size:0.9375rem;line-height:1.25rem;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}} @media (min-width:37.5rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}}.jfPMLX{font-size:1.125rem;line-height:1.75rem;font-family:"BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.jfPMLX{font-size:1.375rem;line-height:2rem;}} @media (min-width:37.5rem){.jfPMLX{font-size:1.375rem;line-height:2rem;}}
+      
+/* sc-component-id: Grid-sc-12lwanc-0 */
 
-.c4 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
+      
+/* sc-component-id: GhostGrid-sc-12lwanc-1 */
+.gfRQD{margin:0 auto;background:#FDFDFD;padding-bottom:2rem;} @media (max-width:37.4375rem){.gfRQD{grid-column-gap:0.5rem;}} @media (min-width:37.5rem){.gfRQD{grid-column-gap:1rem;}} @media (max-width:62.9375rem){.gfRQD{grid-template-columns:repeat(6,1fr);}} @media (min-width:63rem) and (max-width:80rem){.gfRQD{grid-template-columns:1fr repeat(8,minmax(0,6.75rem)) 1fr;max-width:45.5rem;}} @media (min-width:80rem){.gfRQD{grid-template-columns:1fr repeat(20,minmax(0,2.95rem)) 1fr;max-width:46.4rem;}} @supports (display:grid){.gfRQD{display:grid;max-width:initial;margin:initial;}}
+      
+/* sc-component-id: GridItemConstrainedSmall-sc-12lwanc-2 */
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
+      
+/* sc-component-id: GridItemConstrainedMedium-sc-12lwanc-3 */
 
-.c3 {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
+      
+/* sc-component-id: GridItemConstrainedLarge-sc-12lwanc-4 */
 
-.c2 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
+      
+/* sc-component-id: GridItemConstrainedLargeNoMargin-sc-12lwanc-5 */
 
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
+      
+/* sc-component-id: GridItemConstrainedLargeWithTopMargin-sc-12lwanc-6 */
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildSmall-sc-12lwanc-7 */
 
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildMedium-sc-12lwanc-8 */
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildLarge-sc-12lwanc-9 */
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
+      
+/* sc-component-id: NestedGridParentLarge-sc-12lwanc-10 */
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
+      
+/* sc-component-id: NestedGridParentMedium-sc-12lwanc-11 */
 
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
+      
+/* sc-component-id: NestedGridParentSmall-sc-12lwanc-12 */
 
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
+      
+/* sc-component-id: PopOutAtGroup5-sc-12lwanc-13 */
 
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
-}
-
-<div>
-  <helmet-html-attributes
-    dir="rtl"
-    lang="fa"
-  />
-  <helmet-head>
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noindex,nofollow"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
+      
+/* sc-component-id: StatusCode-g0hf6i-0 */
+.cduvLS{font-size:1.25rem;line-height:1.5rem;color:#B80000;display:block;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:600;padding-bottom:0.5rem;} @media (min-width:20rem) and (max-width:37.4375rem){.cduvLS{font-size:1.375rem;line-height:1.625rem;}} @media (min-width:37.5rem){.cduvLS{font-size:1.75rem;line-height:2rem;}}.gRNozr{font-size:1.5rem;line-height:1.875rem;color:#B80000;display:block;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:600;padding-bottom:0.5rem;} @media (min-width:20rem) and (max-width:37.4375rem){.gRNozr{font-size:1.75rem;line-height:2.5rem;}} @media (min-width:37.5rem){.gRNozr{font-size:2rem;line-height:2.5rem;}}
+      
+/* sc-component-id: ShortHeadline-g0hf6i-1 */
+.huSRTn{font-size:1.75rem;line-height:2rem;font-family:ReithSerif,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;color:#3F3F42;margin:0;padding:2rem 0;padding:2.5rem 0 2.5rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.huSRTn{font-size:2rem;line-height:2.25rem;}} @media (min-width:37.5rem){.huSRTn{font-size:2.75rem;line-height:3rem;}} @media (min-width:37.5rem){.huSRTn{padding:2.5rem 0;}}.kufAEl{font-size:2rem;line-height:2.625rem;font-family:"BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;font-weight:700;font-style:normal;color:#3F3F42;margin:0;padding:2rem 0;padding:2.5rem 0 2.5rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.kufAEl{font-size:2.375rem;line-height:2.875rem;}} @media (min-width:37.5rem){.kufAEl{font-size:2.75rem;line-height:3.375rem;}} @media (min-width:37.5rem){.kufAEl{padding:2.5rem 0;}}
+      
+/* sc-component-id: LongGridItemConstrainedMedium-g0hf6i-2 */
+.fwTCzs{grid-column:1 / span 6;padding-bottom:4rem;} @media (max-width:25rem){.fwTCzs{padding:0 0.5rem;}} @media (min-width:25rem) and (max-width:62.9375rem){.fwTCzs{padding:0 1rem;}} @media (max-width:37.4375rem){} @media (min-width:37.5rem){.fwTCzs{grid-column:1 / span 5;max-width:83.33%;}} @media (min-width:63rem) and (max-width:80rem){.fwTCzs{grid-column:3 / span 5;max-width:37.75rem;}} @media (min-width:80rem){.fwTCzs{grid-column:6 / span 10;max-width:38.5rem;}} @supports (display:grid){.fwTCzs{max-width:initial;}}
+    </style>
     <title>
       این صفحه پیدا نشد - BBC News فارسی
     </title>
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="Page cannot be found"
+      name="og:description"
+    />
+    <meta
+      content="Page cannot be found - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Page cannot be found"
+      name="twitter:description"
+    />
+    <meta
+      content="Page cannot be found - BBC News"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="Internal server error"
+      name="og:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Internal server error"
+      name="twitter:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="Internal server error"
+      name="og:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Internal server error"
+      name="twitter:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
     <meta
       content="این صفحه پیدا نشد"
       name="og:description"
@@ -534,268 +421,154 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
       content="این صفحه پیدا نشد - BBC News فارسی"
       name="twitter:title"
     />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-  </helmet-head>
-  <main
-    role="main"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="c1"
+  </head>
+  <body>
+    <div>
+      <main
+        role="main"
       >
-        <h1
-          class="c2"
-          id="content"
+        <div
+          class="GhostGrid-sc-12lwanc-1 gfRQD"
         >
-          <span
-            class="c3"
+          <div
+            class="GridItemConstrainedMedium-sc-12lwanc-3 LongGridItemConstrainedMedium-g0hf6i-2 fwTCzs"
           >
-            ۴۰۴
-          </span>
-          این صفحه پیدا نشد
-        </h1>
-        <p
-          class="c4"
-        >
-          متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:
-        </p>
-        <ul>
-          <li
-            class="c4"
-          >
-            آدرس صفحه مورد نظر را دوباره بررسی کنید
-          </li>
-          <li
-            class="c4"
-          >
-            با مرورگر خود صفحه را ریفرش (refresh) کنید
-          </li>
-          <li
-            class="c4"
-          >
-            در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید
-          </li>
-        </ul>
-        <p
-          class="c4"
-        >
-          برای یافتن اطلاعات مورد نظر به 
-          <a
-            class="c5"
-            href="https://www.bbc.com/persian"
-          >
-            صفحه اصلی بی بی سی فارسی
-          </a>
-           بروید
-        </p>
-      </div>
+            <h1
+              class="Headline-sc-1kh1qhu-0 ShortHeadline-g0hf6i-1 kufAEl"
+              id="content"
+            >
+              <span
+                class="StatusCode-g0hf6i-0 gRNozr"
+              >
+                ۴۰۴
+              </span>
+              این صفحه پیدا نشد
+            </h1>
+            <p
+              class="Paragraph-k859h4-0 jfPMLX"
+            >
+              متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:
+            </p>
+            <ul>
+              <li
+                class="Paragraph-k859h4-0 jfPMLX"
+              >
+                آدرس صفحه مورد نظر را دوباره بررسی کنید
+              </li>
+              <li
+                class="Paragraph-k859h4-0 jfPMLX"
+              >
+                با مرورگر خود صفحه را ریفرش (refresh) کنید
+              </li>
+              <li
+                class="Paragraph-k859h4-0 jfPMLX"
+              >
+                در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید
+              </li>
+            </ul>
+            <p
+              class="Paragraph-k859h4-0 jfPMLX"
+            >
+              برای یافتن اطلاعات مورد نظر به 
+              <a
+                class="InlineLink-hkwpaz-0 idscKS"
+                href="https://www.bbc.com/persian"
+              >
+                صفحه اصلی بی بی سی فارسی
+              </a>
+               بروید
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
-  </main>
-</div>
+  </body>
+</html>
 `;
 
 exports[`ErrorMain should correctly render for 500 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
+<html
+  dir="ltr"
+  lang="en-GB"
+>
+  <head>
+    <style
+      data-styled=""
+      data-styled-version="4.3.2"
+    >
+      
+      
+/* sc-component-id: Headline-sc-1kh1qhu-0 */
 
-.c5:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
+      
+/* sc-component-id: SubHeading-sc-1kh1qhu-1 */
 
-.c5:focus,
-.c5:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
+      
+/* sc-component-id: InlineLink-hkwpaz-0 */
+.idscKS{color:#222222;border-bottom:1px solid #B80000;-webkit-text-decoration:none;text-decoration:none;} .idscKS:visited{color:#6E6E73;border-bottom:1px solid #6E6E73;} .idscKS:focus,.idscKS:hover{border-bottom:2px solid #B80000;color:#B80000;}
+      
+/* sc-component-id: Paragraph-k859h4-0 */
+.dSVJxu{font-size:0.9375rem;line-height:1.25rem;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}} @media (min-width:37.5rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}}
+      
+/* sc-component-id: Grid-sc-12lwanc-0 */
 
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
+      
+/* sc-component-id: GhostGrid-sc-12lwanc-1 */
+.gfRQD{margin:0 auto;background:#FDFDFD;padding-bottom:2rem;} @media (max-width:37.4375rem){.gfRQD{grid-column-gap:0.5rem;}} @media (min-width:37.5rem){.gfRQD{grid-column-gap:1rem;}} @media (max-width:62.9375rem){.gfRQD{grid-template-columns:repeat(6,1fr);}} @media (min-width:63rem) and (max-width:80rem){.gfRQD{grid-template-columns:1fr repeat(8,minmax(0,6.75rem)) 1fr;max-width:45.5rem;}} @media (min-width:80rem){.gfRQD{grid-template-columns:1fr repeat(20,minmax(0,2.95rem)) 1fr;max-width:46.4rem;}} @supports (display:grid){.gfRQD{display:grid;max-width:initial;margin:initial;}}
+      
+/* sc-component-id: GridItemConstrainedSmall-sc-12lwanc-2 */
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
+      
+/* sc-component-id: GridItemConstrainedMedium-sc-12lwanc-3 */
 
-.c3 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
+      
+/* sc-component-id: GridItemConstrainedLarge-sc-12lwanc-4 */
 
-.c2 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
+      
+/* sc-component-id: GridItemConstrainedLargeNoMargin-sc-12lwanc-5 */
 
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
+      
+/* sc-component-id: GridItemConstrainedLargeWithTopMargin-sc-12lwanc-6 */
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildSmall-sc-12lwanc-7 */
 
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildMedium-sc-12lwanc-8 */
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildLarge-sc-12lwanc-9 */
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
+      
+/* sc-component-id: NestedGridParentLarge-sc-12lwanc-10 */
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
+      
+/* sc-component-id: NestedGridParentMedium-sc-12lwanc-11 */
 
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
+      
+/* sc-component-id: NestedGridParentSmall-sc-12lwanc-12 */
 
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
+      
+/* sc-component-id: PopOutAtGroup5-sc-12lwanc-13 */
 
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
-}
-
-<div>
-  <helmet-html-attributes
-    dir="ltr"
-    lang="en-GB"
-  />
-  <helmet-head>
+      
+/* sc-component-id: StatusCode-g0hf6i-0 */
+.cduvLS{font-size:1.25rem;line-height:1.5rem;color:#B80000;display:block;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:600;padding-bottom:0.5rem;} @media (min-width:20rem) and (max-width:37.4375rem){.cduvLS{font-size:1.375rem;line-height:1.625rem;}} @media (min-width:37.5rem){.cduvLS{font-size:1.75rem;line-height:2rem;}}
+      
+/* sc-component-id: ShortHeadline-g0hf6i-1 */
+.huSRTn{font-size:1.75rem;line-height:2rem;font-family:ReithSerif,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;color:#3F3F42;margin:0;padding:2rem 0;padding:2.5rem 0 2.5rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.huSRTn{font-size:2rem;line-height:2.25rem;}} @media (min-width:37.5rem){.huSRTn{font-size:2.75rem;line-height:3rem;}} @media (min-width:37.5rem){.huSRTn{padding:2.5rem 0;}}
+      
+/* sc-component-id: LongGridItemConstrainedMedium-g0hf6i-2 */
+.fwTCzs{grid-column:1 / span 6;padding-bottom:4rem;} @media (max-width:25rem){.fwTCzs{padding:0 0.5rem;}} @media (min-width:25rem) and (max-width:62.9375rem){.fwTCzs{padding:0 1rem;}} @media (max-width:37.4375rem){} @media (min-width:37.5rem){.fwTCzs{grid-column:1 / span 5;max-width:83.33%;}} @media (min-width:63rem) and (max-width:80rem){.fwTCzs{grid-column:3 / span 5;max-width:37.75rem;}} @media (min-width:80rem){.fwTCzs{grid-column:6 / span 10;max-width:38.5rem;}} @supports (display:grid){.fwTCzs{max-width:initial;}}
+    </style>
+    <title>
+      Internal server error - BBC News
+    </title>
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
     <meta
       content="IE=edge"
       http-equiv="X-UA-Compatible"
@@ -815,9 +588,46 @@ exports[`ErrorMain should correctly render for 500 1`] = `
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
     />
-    <title>
-      Internal server error - BBC News
-    </title>
+    <meta
+      content="Page cannot be found"
+      name="og:description"
+    />
+    <meta
+      content="Page cannot be found - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Page cannot be found"
+      name="twitter:description"
+    />
+    <meta
+      content="Page cannot be found - BBC News"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
     <meta
       content="Internal server error"
       name="og:description"
@@ -834,558 +644,149 @@ exports[`ErrorMain should correctly render for 500 1`] = `
       content="Internal server error - BBC News"
       name="twitter:title"
     />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-  </helmet-head>
-  <main
-    role="main"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="c1"
+  </head>
+  <body>
+    <div>
+      <main
+        role="main"
       >
-        <h1
-          class="c2"
-          id="content"
+        <div
+          class="GhostGrid-sc-12lwanc-1 gfRQD"
         >
-          <span
-            class="c3"
+          <div
+            class="GridItemConstrainedMedium-sc-12lwanc-3 LongGridItemConstrainedMedium-g0hf6i-2 fwTCzs"
           >
-            500
-          </span>
-          Internal server error
-        </h1>
-        <p
-          class="c4"
-        >
-          Sorry, we're currently unable to bring you the page you're looking for. Please try:
-        </p>
-        <ul>
-          <li
-            class="c4"
-          >
-            Hitting the refresh button in your browser
-          </li>
-          <li
-            class="c4"
-          >
-            Coming back again later
-          </li>
-        </ul>
-        <p
-          class="c4"
-        >
-          Alternatively, please visit the 
-          <a
-            class="c5"
-            href="https://www.bbc.com/news"
-          >
-            BBC News homepage.
-          </a>
-          
-        </p>
-      </div>
+            <h1
+              class="Headline-sc-1kh1qhu-0 ShortHeadline-g0hf6i-1 huSRTn"
+              id="content"
+            >
+              <span
+                class="StatusCode-g0hf6i-0 cduvLS"
+              >
+                500
+              </span>
+              Internal server error
+            </h1>
+            <p
+              class="Paragraph-k859h4-0 dSVJxu"
+            >
+              Sorry, we're currently unable to bring you the page you're looking for. Please try:
+            </p>
+            <ul>
+              <li
+                class="Paragraph-k859h4-0 dSVJxu"
+              >
+                Hitting the refresh button in your browser
+              </li>
+              <li
+                class="Paragraph-k859h4-0 dSVJxu"
+              >
+                Coming back again later
+              </li>
+            </ul>
+            <p
+              class="Paragraph-k859h4-0 dSVJxu"
+            >
+              Alternatively, please visit the 
+              <a
+                class="InlineLink-hkwpaz-0 idscKS"
+                href="https://www.bbc.com/news"
+              >
+                BBC News homepage.
+              </a>
+              
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
-  </main>
-</div>
+  </body>
+</html>
 `;
 
 exports[`ErrorMain should correctly render for 500 for persian 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
+<html
+  dir="rtl"
+  lang="fa"
+>
+  <head>
+    <style
+      data-styled=""
+      data-styled-version="4.3.2"
+    >
+      
+      
+/* sc-component-id: Headline-sc-1kh1qhu-0 */
 
-.c5:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
+      
+/* sc-component-id: SubHeading-sc-1kh1qhu-1 */
 
-.c5:focus,
-.c5:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
+      
+/* sc-component-id: InlineLink-hkwpaz-0 */
+.idscKS{color:#222222;border-bottom:1px solid #B80000;-webkit-text-decoration:none;text-decoration:none;} .idscKS:visited{color:#6E6E73;border-bottom:1px solid #6E6E73;} .idscKS:focus,.idscKS:hover{border-bottom:2px solid #B80000;color:#B80000;}
+      
+/* sc-component-id: Paragraph-k859h4-0 */
+.dSVJxu{font-size:0.9375rem;line-height:1.25rem;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}} @media (min-width:37.5rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}}.jfPMLX{font-size:1.125rem;line-height:1.75rem;font-family:"BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.jfPMLX{font-size:1.375rem;line-height:2rem;}} @media (min-width:37.5rem){.jfPMLX{font-size:1.375rem;line-height:2rem;}}
+      
+/* sc-component-id: Grid-sc-12lwanc-0 */
 
-.c4 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
+      
+/* sc-component-id: GhostGrid-sc-12lwanc-1 */
+.gfRQD{margin:0 auto;background:#FDFDFD;padding-bottom:2rem;} @media (max-width:37.4375rem){.gfRQD{grid-column-gap:0.5rem;}} @media (min-width:37.5rem){.gfRQD{grid-column-gap:1rem;}} @media (max-width:62.9375rem){.gfRQD{grid-template-columns:repeat(6,1fr);}} @media (min-width:63rem) and (max-width:80rem){.gfRQD{grid-template-columns:1fr repeat(8,minmax(0,6.75rem)) 1fr;max-width:45.5rem;}} @media (min-width:80rem){.gfRQD{grid-template-columns:1fr repeat(20,minmax(0,2.95rem)) 1fr;max-width:46.4rem;}} @supports (display:grid){.gfRQD{display:grid;max-width:initial;margin:initial;}}
+      
+/* sc-component-id: GridItemConstrainedSmall-sc-12lwanc-2 */
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
+      
+/* sc-component-id: GridItemConstrainedMedium-sc-12lwanc-3 */
 
-.c3 {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
+      
+/* sc-component-id: GridItemConstrainedLarge-sc-12lwanc-4 */
 
-.c2 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
+      
+/* sc-component-id: GridItemConstrainedLargeNoMargin-sc-12lwanc-5 */
 
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
+      
+/* sc-component-id: GridItemConstrainedLargeWithTopMargin-sc-12lwanc-6 */
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildSmall-sc-12lwanc-7 */
 
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildMedium-sc-12lwanc-8 */
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
+      
+/* sc-component-id: NestedGridItemChildLarge-sc-12lwanc-9 */
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
+      
+/* sc-component-id: NestedGridParentLarge-sc-12lwanc-10 */
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
+      
+/* sc-component-id: NestedGridParentMedium-sc-12lwanc-11 */
 
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
+      
+/* sc-component-id: NestedGridParentSmall-sc-12lwanc-12 */
 
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
+      
+/* sc-component-id: PopOutAtGroup5-sc-12lwanc-13 */
 
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
-}
-
-<div>
-  <helmet-html-attributes
-    dir="rtl"
-    lang="fa"
-  />
-  <helmet-head>
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noindex,nofollow"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
+      
+/* sc-component-id: StatusCode-g0hf6i-0 */
+.cduvLS{font-size:1.25rem;line-height:1.5rem;color:#B80000;display:block;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:600;padding-bottom:0.5rem;} @media (min-width:20rem) and (max-width:37.4375rem){.cduvLS{font-size:1.375rem;line-height:1.625rem;}} @media (min-width:37.5rem){.cduvLS{font-size:1.75rem;line-height:2rem;}}.gRNozr{font-size:1.5rem;line-height:1.875rem;color:#B80000;display:block;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:600;padding-bottom:0.5rem;} @media (min-width:20rem) and (max-width:37.4375rem){.gRNozr{font-size:1.75rem;line-height:2.5rem;}} @media (min-width:37.5rem){.gRNozr{font-size:2rem;line-height:2.5rem;}}
+      
+/* sc-component-id: ShortHeadline-g0hf6i-1 */
+.huSRTn{font-size:1.75rem;line-height:2rem;font-family:ReithSerif,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;color:#3F3F42;margin:0;padding:2rem 0;padding:2.5rem 0 2.5rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.huSRTn{font-size:2rem;line-height:2.25rem;}} @media (min-width:37.5rem){.huSRTn{font-size:2.75rem;line-height:3rem;}} @media (min-width:37.5rem){.huSRTn{padding:2.5rem 0;}}.kufAEl{font-size:2rem;line-height:2.625rem;font-family:"BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;font-weight:700;font-style:normal;color:#3F3F42;margin:0;padding:2rem 0;padding:2.5rem 0 2.5rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.kufAEl{font-size:2.375rem;line-height:2.875rem;}} @media (min-width:37.5rem){.kufAEl{font-size:2.75rem;line-height:3.375rem;}} @media (min-width:37.5rem){.kufAEl{padding:2.5rem 0;}}
+      
+/* sc-component-id: LongGridItemConstrainedMedium-g0hf6i-2 */
+.fwTCzs{grid-column:1 / span 6;padding-bottom:4rem;} @media (max-width:25rem){.fwTCzs{padding:0 0.5rem;}} @media (min-width:25rem) and (max-width:62.9375rem){.fwTCzs{padding:0 1rem;}} @media (max-width:37.4375rem){} @media (min-width:37.5rem){.fwTCzs{grid-column:1 / span 5;max-width:83.33%;}} @media (min-width:63rem) and (max-width:80rem){.fwTCzs{grid-column:3 / span 5;max-width:37.75rem;}} @media (min-width:80rem){.fwTCzs{grid-column:6 / span 10;max-width:38.5rem;}} @supports (display:grid){.fwTCzs{max-width:initial;}}
+    </style>
     <title>
       خطا در سرور داخلی - BBC News فارسی
     </title>
-    <meta
-      content="خطا در سرور داخلی"
-      name="og:description"
-    />
-    <meta
-      content="خطا در سرور داخلی - BBC News فارسی"
-      name="og:title"
-    />
-    <meta
-      content="خطا در سرور داخلی"
-      name="twitter:description"
-    />
-    <meta
-      content="خطا در سرور داخلی - BBC News فارسی"
-      name="twitter:title"
-    />
     <link
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
     />
-  </helmet-head>
-  <main
-    role="main"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="c1"
-      >
-        <h1
-          class="c2"
-          id="content"
-        >
-          <span
-            class="c3"
-          >
-            ۵۰۰
-          </span>
-          خطا در سرور داخلی
-        </h1>
-        <p
-          class="c4"
-        >
-          متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:
-        </p>
-        <ul>
-          <li
-            class="c4"
-          >
-            با مرورگر خود صفحه را ریفرش (refresh) کنید
-          </li>
-          <li
-            class="c4"
-          >
-            بعدا دوباره امتحان کنید
-          </li>
-        </ul>
-        <p
-          class="c4"
-        >
-          روش دیگر، لطفآ به 
-          <a
-            class="c5"
-            href="https://www.bbc.com/persian"
-          >
-            صفحه اصلی بی بی سی فارسی
-          </a>
-           بازدید کنید
-        </p>
-      </div>
-    </div>
-  </main>
-</div>
-`;
-
-exports[`ErrorMain should correctly render for other status code 1`] = `
-.c5 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c5:focus,
-.c5:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
-
-.c2 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
-}
-
-<div>
-  <helmet-html-attributes
-    dir="ltr"
-    lang="en-GB"
-  />
-  <helmet-head>
     <meta
       content="IE=edge"
       http-equiv="X-UA-Compatible"
@@ -1405,9 +806,46 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
     />
-    <title>
-      Internal server error - BBC News
-    </title>
+    <meta
+      content="Page cannot be found"
+      name="og:description"
+    />
+    <meta
+      content="Page cannot be found - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Page cannot be found"
+      name="twitter:description"
+    />
+    <meta
+      content="Page cannot be found - BBC News"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
     <meta
       content="Internal server error"
       name="og:description"
@@ -1429,58 +867,435 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
       rel="shortcut icon"
       type="image/x-icon"
     />
-  </helmet-head>
-  <main
-    role="main"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="c1"
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="Internal server error"
+      name="og:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Internal server error"
+      name="twitter:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="این صفحه پیدا نشد"
+      name="og:description"
+    />
+    <meta
+      content="این صفحه پیدا نشد - BBC News فارسی"
+      name="og:title"
+    />
+    <meta
+      content="این صفحه پیدا نشد"
+      name="twitter:description"
+    />
+    <meta
+      content="این صفحه پیدا نشد - BBC News فارسی"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="خطا در سرور داخلی"
+      name="og:description"
+    />
+    <meta
+      content="خطا در سرور داخلی - BBC News فارسی"
+      name="og:title"
+    />
+    <meta
+      content="خطا در سرور داخلی"
+      name="twitter:description"
+    />
+    <meta
+      content="خطا در سرور داخلی - BBC News فارسی"
+      name="twitter:title"
+    />
+  </head>
+  <body>
+    <div>
+      <main
+        role="main"
       >
-        <h1
-          class="c2"
-          id="content"
+        <div
+          class="GhostGrid-sc-12lwanc-1 gfRQD"
         >
-          <span
-            class="c3"
+          <div
+            class="GridItemConstrainedMedium-sc-12lwanc-3 LongGridItemConstrainedMedium-g0hf6i-2 fwTCzs"
           >
-            500
-          </span>
-          Internal server error
-        </h1>
-        <p
-          class="c4"
-        >
-          Sorry, we're currently unable to bring you the page you're looking for. Please try:
-        </p>
-        <ul>
-          <li
-            class="c4"
-          >
-            Hitting the refresh button in your browser
-          </li>
-          <li
-            class="c4"
-          >
-            Coming back again later
-          </li>
-        </ul>
-        <p
-          class="c4"
-        >
-          Alternatively, please visit the 
-          <a
-            class="c5"
-            href="https://www.bbc.com/news"
-          >
-            BBC News homepage.
-          </a>
-          
-        </p>
-      </div>
+            <h1
+              class="Headline-sc-1kh1qhu-0 ShortHeadline-g0hf6i-1 kufAEl"
+              id="content"
+            >
+              <span
+                class="StatusCode-g0hf6i-0 gRNozr"
+              >
+                ۵۰۰
+              </span>
+              خطا در سرور داخلی
+            </h1>
+            <p
+              class="Paragraph-k859h4-0 jfPMLX"
+            >
+              متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:
+            </p>
+            <ul>
+              <li
+                class="Paragraph-k859h4-0 jfPMLX"
+              >
+                با مرورگر خود صفحه را ریفرش (refresh) کنید
+              </li>
+              <li
+                class="Paragraph-k859h4-0 jfPMLX"
+              >
+                بعدا دوباره امتحان کنید
+              </li>
+            </ul>
+            <p
+              class="Paragraph-k859h4-0 jfPMLX"
+            >
+              روش دیگر، لطفآ به 
+              <a
+                class="InlineLink-hkwpaz-0 idscKS"
+                href="https://www.bbc.com/persian"
+              >
+                صفحه اصلی بی بی سی فارسی
+              </a>
+               بازدید کنید
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
-  </main>
-</div>
+  </body>
+</html>
+`;
+
+exports[`ErrorMain should correctly render for other status code 1`] = `
+<html
+  dir="ltr"
+  lang="en-GB"
+>
+  <head>
+    <style
+      data-styled=""
+      data-styled-version="4.3.2"
+    >
+      
+      
+/* sc-component-id: Headline-sc-1kh1qhu-0 */
+
+      
+/* sc-component-id: SubHeading-sc-1kh1qhu-1 */
+
+      
+/* sc-component-id: InlineLink-hkwpaz-0 */
+.idscKS{color:#222222;border-bottom:1px solid #B80000;-webkit-text-decoration:none;text-decoration:none;} .idscKS:visited{color:#6E6E73;border-bottom:1px solid #6E6E73;} .idscKS:focus,.idscKS:hover{border-bottom:2px solid #B80000;color:#B80000;}
+      
+/* sc-component-id: Paragraph-k859h4-0 */
+.dSVJxu{font-size:0.9375rem;line-height:1.25rem;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}} @media (min-width:37.5rem){.dSVJxu{font-size:1rem;line-height:1.375rem;}}
+      
+/* sc-component-id: Grid-sc-12lwanc-0 */
+
+      
+/* sc-component-id: GhostGrid-sc-12lwanc-1 */
+.gfRQD{margin:0 auto;background:#FDFDFD;padding-bottom:2rem;} @media (max-width:37.4375rem){.gfRQD{grid-column-gap:0.5rem;}} @media (min-width:37.5rem){.gfRQD{grid-column-gap:1rem;}} @media (max-width:62.9375rem){.gfRQD{grid-template-columns:repeat(6,1fr);}} @media (min-width:63rem) and (max-width:80rem){.gfRQD{grid-template-columns:1fr repeat(8,minmax(0,6.75rem)) 1fr;max-width:45.5rem;}} @media (min-width:80rem){.gfRQD{grid-template-columns:1fr repeat(20,minmax(0,2.95rem)) 1fr;max-width:46.4rem;}} @supports (display:grid){.gfRQD{display:grid;max-width:initial;margin:initial;}}
+      
+/* sc-component-id: GridItemConstrainedSmall-sc-12lwanc-2 */
+
+      
+/* sc-component-id: GridItemConstrainedMedium-sc-12lwanc-3 */
+
+      
+/* sc-component-id: GridItemConstrainedLarge-sc-12lwanc-4 */
+
+      
+/* sc-component-id: GridItemConstrainedLargeNoMargin-sc-12lwanc-5 */
+
+      
+/* sc-component-id: GridItemConstrainedLargeWithTopMargin-sc-12lwanc-6 */
+
+      
+/* sc-component-id: NestedGridItemChildSmall-sc-12lwanc-7 */
+
+      
+/* sc-component-id: NestedGridItemChildMedium-sc-12lwanc-8 */
+
+      
+/* sc-component-id: NestedGridItemChildLarge-sc-12lwanc-9 */
+
+      
+/* sc-component-id: NestedGridParentLarge-sc-12lwanc-10 */
+
+      
+/* sc-component-id: NestedGridParentMedium-sc-12lwanc-11 */
+
+      
+/* sc-component-id: NestedGridParentSmall-sc-12lwanc-12 */
+
+      
+/* sc-component-id: PopOutAtGroup5-sc-12lwanc-13 */
+
+      
+/* sc-component-id: StatusCode-g0hf6i-0 */
+.cduvLS{font-size:1.25rem;line-height:1.5rem;color:#B80000;display:block;font-family:ReithSans,Helvetica,Arial,sans-serif;font-weight:600;padding-bottom:0.5rem;} @media (min-width:20rem) and (max-width:37.4375rem){.cduvLS{font-size:1.375rem;line-height:1.625rem;}} @media (min-width:37.5rem){.cduvLS{font-size:1.75rem;line-height:2rem;}}
+      
+/* sc-component-id: ShortHeadline-g0hf6i-1 */
+.huSRTn{font-size:1.75rem;line-height:2rem;font-family:ReithSerif,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;color:#3F3F42;margin:0;padding:2rem 0;padding:2.5rem 0 2.5rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.huSRTn{font-size:2rem;line-height:2.25rem;}} @media (min-width:37.5rem){.huSRTn{font-size:2.75rem;line-height:3rem;}} @media (min-width:37.5rem){.huSRTn{padding:2.5rem 0;}}
+      
+/* sc-component-id: LongGridItemConstrainedMedium-g0hf6i-2 */
+.fwTCzs{grid-column:1 / span 6;padding-bottom:4rem;} @media (max-width:25rem){.fwTCzs{padding:0 0.5rem;}} @media (min-width:25rem) and (max-width:62.9375rem){.fwTCzs{padding:0 1rem;}} @media (max-width:37.4375rem){} @media (min-width:37.5rem){.fwTCzs{grid-column:1 / span 5;max-width:83.33%;}} @media (min-width:63rem) and (max-width:80rem){.fwTCzs{grid-column:3 / span 5;max-width:37.75rem;}} @media (min-width:80rem){.fwTCzs{grid-column:6 / span 10;max-width:38.5rem;}} @supports (display:grid){.fwTCzs{max-width:initial;}}
+    </style>
+    <title>
+      Internal server error - BBC News
+    </title>
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="Page cannot be found"
+      name="og:description"
+    />
+    <meta
+      content="Page cannot be found - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Page cannot be found"
+      name="twitter:description"
+    />
+    <meta
+      content="Page cannot be found - BBC News"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="Internal server error"
+      name="og:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Internal server error"
+      name="twitter:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="twitter:title"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noindex,nofollow"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="Internal server error"
+      name="og:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="og:title"
+    />
+    <meta
+      content="Internal server error"
+      name="twitter:description"
+    />
+    <meta
+      content="Internal server error - BBC News"
+      name="twitter:title"
+    />
+  </head>
+  <body>
+    <div>
+      <main
+        role="main"
+      >
+        <div
+          class="GhostGrid-sc-12lwanc-1 gfRQD"
+        >
+          <div
+            class="GridItemConstrainedMedium-sc-12lwanc-3 LongGridItemConstrainedMedium-g0hf6i-2 fwTCzs"
+          >
+            <h1
+              class="Headline-sc-1kh1qhu-0 ShortHeadline-g0hf6i-1 huSRTn"
+              id="content"
+            >
+              <span
+                class="StatusCode-g0hf6i-0 cduvLS"
+              >
+                500
+              </span>
+              Internal server error
+            </h1>
+            <p
+              class="Paragraph-k859h4-0 dSVJxu"
+            >
+              Sorry, we're currently unable to bring you the page you're looking for. Please try:
+            </p>
+            <ul>
+              <li
+                class="Paragraph-k859h4-0 dSVJxu"
+              >
+                Hitting the refresh button in your browser
+              </li>
+              <li
+                class="Paragraph-k859h4-0 dSVJxu"
+              >
+                Coming back again later
+              </li>
+            </ul>
+            <p
+              class="Paragraph-k859h4-0 dSVJxu"
+            >
+              Alternatively, please visit the 
+              <a
+                class="InlineLink-hkwpaz-0 idscKS"
+                href="https://www.bbc.com/news"
+              >
+                BBC News homepage.
+              </a>
+              
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
 `;

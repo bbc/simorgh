@@ -4,8 +4,6 @@ import Helmet from 'react-helmet';
 import ManifestContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-jest.unmock('react-helmet');
-
 const contextStub = {
   manifestPath: '/manifest.json',
   service: 'news',
