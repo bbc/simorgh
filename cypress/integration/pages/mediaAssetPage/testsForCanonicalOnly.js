@@ -5,10 +5,11 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
+export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
-}) => describe(`Canonical Tests for ${service} ${pageType}`, () => {});
+}) =>
+  describe(`No testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {});
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
