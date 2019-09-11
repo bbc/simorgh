@@ -404,7 +404,7 @@ describe('Server', () => {
 
   describe('Service workers', () => {
     // sends SW file for paths matching regex
-    it('should serve a 200 for existing service workers', async () => {
+    it('should serve a file for existing service workers', async () => {
       await makeRequest('/news/articles/sw.js');
       expect(spy.mock.calls[0][0]).toEqual(
         getPath.join(__dirname, '/public/sw.js'),
@@ -413,6 +413,7 @@ describe('Server', () => {
 
     it('should serve a 500 for non-existing service workers', async () => {
       const { statusCode } = await makeRequest('/some-service/articles/sw.js');
+      expect(spy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
   });
@@ -438,6 +439,7 @@ describe('Server', () => {
         const { statusCode } = await makeRequest(
           '/foobar/articles/manifest.json',
         );
+        console.log('>>>>>>', spy.mock);
         expect(statusCode).toEqual(404);
       });
     });
