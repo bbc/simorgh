@@ -2,9 +2,9 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import IfAboveIE9 from '.';
 
-describe('Timestamp', () => {
+describe('Children', () => {
   shouldMatchSnapshot(
-    'should render if not IE9 comment',
+    'should render if not IE9',
     <IfAboveIE9>
       <h1>I can not be seen on IE9</h1>
     </IfAboveIE9>,

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Timestamp should render if not IE9 comment 1`] = `
+exports[`Children should render if not IE9 1`] = `
 <div>
   <div>
     <!--[if !IE]&gt;&lt;!-->
