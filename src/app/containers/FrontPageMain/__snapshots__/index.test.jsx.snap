@@ -733,7 +733,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   }
 }
 
-@media (max-width:62.9375rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c22 {
     display: none;
     visibility: hidden;

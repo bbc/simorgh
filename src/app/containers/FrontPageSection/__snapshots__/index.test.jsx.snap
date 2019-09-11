@@ -421,7 +421,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
-@media (max-width:62.9375rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c18 {
     display: none;
     visibility: hidden;
@@ -1476,7 +1476,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
-@media (max-width:62.9375rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c16 {
     display: none;
     visibility: hidden;
