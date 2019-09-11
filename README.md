@@ -243,6 +243,13 @@ npm run test:e2e:interactive
 
 This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
+To run only a particular spec, ensure Simorgh is already running in another tab and then run (for example):
+
+```
+npx cypress run --spec cypress/integration/pages/articles/index.js
+```
+
+
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 
 #### Running e2e in the UK against LIVE
@@ -255,6 +262,16 @@ Here is an example command:
 
 ```
 CYPRESS_APP_ENV=test CYPRESS_UK=true CYPRESS_SMOKE=true npm run cypress
+```
+
+#### Running e2e outside EU
+**This affects developers based out of the EU (but may affect you if you're using a VPN routing through a country not in the EU)**
+
+Running Cypress tests outside the EU will not show the EU consent banners on AMP, and this may cause some tests to fail. Set `CYPRESS_SKIP_EU=true` to prevent these tests from running when outside the EU.
+
+An example command will be:
+```
+CYPRESS_SKIP_EU=true npm run cypress:interactive
 ```
 
 The following command runs both simorgh and cypress:
