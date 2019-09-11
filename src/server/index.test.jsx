@@ -411,7 +411,7 @@ describe('Server', () => {
       );
     });
 
-    it('should serve a 500 for non-existing service workers', async () => {
+    it('should not serve a file for non-existing service workers', async () => {
       const { statusCode } = await makeRequest('/some-service/articles/sw.js');
       expect(spy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
@@ -419,29 +419,18 @@ describe('Server', () => {
   });
 
   describe('Manifest json', () => {
-    describe('Services not on allowlist', () => {
-      beforeEach(() => {
-        const notFoundDataResponse = {
-          isAmp: false,
-          data: { some: 'data' },
-          service: 'someService',
-          status: 404,
-        };
+    // sends manifest file for paths matching regex
+    it('should serve a file for valid service paths', async () => {
+      await makeRequest('/news/articles/manifest.json');
+      expect(spy.mock.calls[0][0]).toEqual(
+        getPath.join(__dirname, '/public/news/manifest.json'),
+      );
+    });
 
-        mockRouteProps({
-          service: 'someService',
-          isAmp: false,
-          dataResponse: notFoundDataResponse,
-        });
-      });
-
-      it('should serve a 404 error for service foobar', async () => {
-        const { statusCode } = await makeRequest(
-          '/foobar/articles/manifest.json',
-        );
-        console.log('>>>>>>', spy.mock);
-        expect(statusCode).toEqual(404);
-      });
+    it('should not serve a manifest file for non-existing services', async () => {
+      const { statusCode } = await makeRequest('/some-service/manifest.json');
+      expect(spy.mock.calls.length).toEqual(0);
+      expect(statusCode).toEqual(500);
     });
   });
 
