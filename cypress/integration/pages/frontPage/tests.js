@@ -92,13 +92,13 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
         });
 
-        it('should contain Index Alsos at a mobile and desktop view, if relatedItems block exists', () => {
+        it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
             ({ body }) => {
               const topstories = body.content.groups[0].items[0];
               const relatedItemsExists = 'relatedItems' in topstories;
 
-              const runIndexAlsoTests = () => {
+              if (relatedItemsExists && serviceHasIndexAlsos(service)) {
                 cy.get('[aria-labelledby="Top-stories"]')
                   .eq(0)
                   .within(() => {
@@ -122,13 +122,12 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                         }
                       });
                   });
-              };
 
-              if (relatedItemsExists && serviceHasIndexAlsos(service)) {
-                runIndexAlsoTests();
-
-                cy.viewport('iphone-5');
-                runIndexAlsoTests();
+                cy.get('section')
+                  .eq(1)
+                  .within(() => {
+                    cy.get('[data-cy=index-alsos]').should('not.exist');
+                  });
               }
             },
           );
