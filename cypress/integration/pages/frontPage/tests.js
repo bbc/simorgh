@@ -53,9 +53,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-            cy.get('p')
-              .should('have.length.of.at.least', 1)
-              .should('be.visible');
+
+            cy.get('p').then($el => {
+              if ($el.length > 0) {
+                cy.get('p')
+                  .should('have.length.of.at.least', 1)
+                  .should('be.visible');
+              }
+            });
+
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');
@@ -71,9 +77,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-            cy.get('p')
-              .eq(0)
-              .should('be.hidden');
+
+            cy.get('p').then($el => {
+              if ($el.length > 0) {
+                cy.get('p')
+                  .eq(0)
+                  .should('be.hidden');
+              }
+            });
+
             cy.get('time')
               .should('have.length.of.at.least', 1)
               .should('be.visible');

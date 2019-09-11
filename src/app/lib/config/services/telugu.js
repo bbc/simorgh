@@ -39,6 +39,7 @@ const service = {
     home: 'వార్తలు',
     currentPage: 'Current page',
     skipLinkText: 'కంటెంట్‌కు దాటవేయండి',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
