@@ -1,14 +1,31 @@
 import React from 'react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import DefaultPageWrapper from './defaultPageWrapper';
-import { shouldShallowMatchSnapshot } from '../../testHelpers';
+import { ServiceContextProvider } from '../contexts/ServiceContext';
+import { ToggleContext } from '../contexts/ToggleContext';
+import { RequestContext } from '../contexts/RequestContext';
 
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
     children: <h2>Child element</h2>,
   };
 
-  shouldShallowMatchSnapshot(
+  const defaultToggles = {
+    test: {
+      mpulse: {
+        enabled: true, // or maybe false
+      },
+    },
+  };
+
+  shouldMatchSnapshot(
     'should render default page wrapper with children',
-    <DefaultPageWrapper {...propsWithChildren} />,
+    <ServiceContextProvider service="news">
+      <RequestContext.Provider value={{ env: 'test' }}>
+        <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
+          <DefaultPageWrapper {...propsWithChildren} />,
+        </ToggleContext.Provider>
+      </RequestContext.Provider>
+    </ServiceContextProvider>,
   );
 });
