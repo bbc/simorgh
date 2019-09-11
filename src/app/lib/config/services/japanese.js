@@ -10,7 +10,8 @@ const service = {
   atiAnalyticsAppName: 'news-japanese',
   atiAnalyticsProducerId: '56',
   brandName: 'BBCニュース',
-  product: 'BBCニュース',
+  product: 'BBC',
+  serviceLocalizedName: 'ニュース',
   defaultImage:
     'https://news.files.bbci.co.uk/ws/img/logos/twitter/bbc_japan_1024.png',
   defaultImageAltText: 'BBCニュース',
