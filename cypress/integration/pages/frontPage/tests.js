@@ -82,7 +82,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               if ($el.length > 0) {
                 cy.get('p')
                   .eq(0)
-                  .should('be.hidden');
+                  .should('be.visible');
               }
             });
 
