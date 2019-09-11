@@ -3,12 +3,13 @@ import moment from 'moment-timezone';
 import { shape, bool, string, oneOfType } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { storyItem, linkPromo } from '../../../models/propTypes/storyItem';
 import formatDuration from '../../../lib/utilities/formatDuration';
 
 const getAssetContentTypes = item => {
   const mediaContentTypes = ['video', 'audio', 'gallery'];
-  const type = path(['contentType'], item) && item.contentType.toLowerCase();
+  const type = pathOr('', ['contentType'], item).toLowerCase();
   const validContentType = mediaContentTypes.includes(type) ? type : null;
 
   if (validContentType) {
