@@ -14,7 +14,7 @@ import * as frontPageUtils from '../../../lib/analyticsUtils/frontpage';
 
 let isOnClient = false;
 
-jest.mock('../../utilities/onClient', () => jest.fn());
+jest.mock('../../../lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 describe('Chartbeat utilities', () => {

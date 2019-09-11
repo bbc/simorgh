@@ -5,27 +5,31 @@ import { RequestContext } from '../../contexts/RequestContext';
 import { pageDataPropType } from '../../models/propTypes/data';
 import AmpChartbeatBeacon from './amp';
 import { getConfig } from './utils';
+import useToggle from '../Toggle/useToggle';
 
 const ChartbeatAnalytics = ({ data }) => {
   const { service, brandName } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
+  const { enabled } = useToggle('chartbeatAnalytics');
   const { env, platform, pageType, previousPath, origin } = useContext(
     RequestContext,
   );
-  const isAmp = platform === 'amp';
+  const isEnabledForAmp = platform === 'amp' && enabled;
 
   useEffect(() => {
-    sendCanonicalChartbeatBeacon(
-      getConfig({
-        platform,
-        pageType,
-        data,
-        brandName,
-        env,
-        service,
-        origin,
-      }),
-    );
+    if (platform !== 'amp') {
+      sendCanonicalChartbeatBeacon(
+        getConfig({
+          platform,
+          pageType,
+          data,
+          brandName,
+          env,
+          service,
+          origin,
+        }),
+      );
+    }
   }, [
     brandName,
     data,
@@ -38,7 +42,7 @@ const ChartbeatAnalytics = ({ data }) => {
   ]);
 
   return (
-    isAmp && (
+    isEnabledForAmp && (
       <AmpChartbeatBeacon
         chartbeatConfig={getConfig({
           platform,

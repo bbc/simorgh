@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { UserContext, UserContextProvider } from '.';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
+import * as chartbeat from './Chartbeat';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');
@@ -16,6 +17,11 @@ jest.mock('./cookies', () => ({
   getCookiePolicy: jest.fn(),
   personalisationEnabled: jest.fn(),
 }));
+
+jest.mock('./Chartbeat', () => 'Chartbeat');
+
+const mockChartbeat = jest.fn().mockReturnValue('chartbeat');
+chartbeat.default = mockChartbeat;
 
 const DummyComponent = () => {
   useContext(UserContext);
@@ -51,6 +57,7 @@ describe('UserContext', () => {
       cookiePolicy: '111',
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),
+      sendCanonicalChartbeatBeacon: expect.any(Function),
     });
   });
 });
