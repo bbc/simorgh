@@ -27,6 +27,7 @@ const baseServiceConfig = {
   twitterSite: '@bbcnasrpskom',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'Početna strana',
@@ -35,6 +36,7 @@ const baseServiceConfig = {
     home: 'Home',
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
@@ -121,6 +123,10 @@ const baseServiceConfig = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -136,20 +142,12 @@ const baseServiceConfig = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',

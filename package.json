@@ -38,7 +38,7 @@
       "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && npm run test:unit -- --changedSince=latest && apache2-license-checker"
     }
   },
-"repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/bbc/simorgh.git"
   },
