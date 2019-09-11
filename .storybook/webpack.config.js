@@ -1,4 +1,4 @@
-const webpack = require('../../../../Library/Caches/typescript/2.9/node_modules/@types/webpack');
+const webpack = require('webpack');
 const { webpackDirAlias } = require('../dirAlias');
 
 module.exports = {
