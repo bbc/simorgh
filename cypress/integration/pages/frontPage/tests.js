@@ -102,7 +102,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                 cy.get('[aria-labelledby="Top-stories"]')
                   .eq(0)
                   .within(() => {
-                    cy.get('[data-cy=index-alsos]')
+                    cy.get('div[class^="StyledIndexAlsos"]')
                       .eq(0)
                       .within(() => {
                         cy.get('h4')
@@ -126,7 +126,9 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                 cy.get('section')
                   .eq(1)
                   .within(() => {
-                    cy.get('[data-cy=index-alsos]').should('not.exist');
+                    cy.get('div[class^="StyledIndexAlsos"]').should(
+                      'not.exist',
+                    );
                   });
               }
             },
