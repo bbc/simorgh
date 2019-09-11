@@ -29,6 +29,18 @@ const TextAssetType = {
   assetTypeCode: 'PRO',
 };
 
+const VideoAssetType = {
+  name: 'Test standard link promo',
+  summary: 'This is a standard link promo',
+  indexImage: {},
+  indexThumbnail: {},
+  uri: 'http://this.is.a.test.com/',
+  contentType: 'Video',
+  assetTypeCode: 'PRO',
+  timestamp: 1527598380040,
+  type: 'link',
+};
+
 const AudioAssetType = {
   name: 'Test audio link promo',
   contentType: 'Audio',
@@ -326,12 +338,22 @@ describe('filterUnknownContentTypes', () => {
     it('should work on all groups in the data', () => {
       const data = {
         content: {
-          groups: [AudioAssetType, TextAssetType, FeatureAssetType],
+          groups: [
+            VideoAssetType,
+            TextAssetType,
+            AudioAssetType,
+            FeatureAssetType,
+          ],
         },
       };
       const expected = {
         content: {
-          groups: [AudioAssetType, TextAssetType, FeatureAssetType],
+          groups: [
+            VideoAssetType,
+            TextAssetType,
+            AudioAssetType,
+            FeatureAssetType,
+          ],
         },
       };
 
@@ -368,6 +390,20 @@ describe('filterUnknownContentTypes', () => {
     });
 
     it('should leave items with known assetTypeCode and contentType', () => {
+      const data = {
+        content: {
+          groups: [
+            {
+              items: [VideoAssetType],
+            },
+          ],
+        },
+      };
+
+      expect(filterUnknownContentTypes(data)).toEqual(data);
+    });
+
+    it('should keep items with known contentTypes', () => {
       const data = {
         content: {
           groups: [

@@ -1579,6 +1579,24 @@
             "type": "link"
           },
           {
+            "name": "Select your best ever African 11 players for World Cup - Video",
+            "indexImage": {
+              "id": "101952925",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+              "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+              "height": 549,
+              "width": 976,
+              "altText": "all-time African XI promo image",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44425543",
+            "contentType": "Video",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978068000,
+            "type": "link"
+          },
+          {
             "name": "World Cup 2018: Di top stars wey no dey go World Cup",
             "indexImage": {
               "id": "101890910",
