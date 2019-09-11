@@ -25,12 +25,12 @@ exports[`InlineContainer should render correctly 1`] = `
 }
 
 <span
-  className="c0"
+  class="c0"
   lang="fa"
 >
   <a
     aria-label="چیسربرگر"
-    className="c1"
+    class="c1"
     href="https://google.com"
   >
     چیسربرگر
