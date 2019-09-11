@@ -2,7 +2,7 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import IfAboveIE9 from '.';
 
-describe('Children', () => {
+describe('IfAboveIE9Comment', () => {
   shouldMatchSnapshot(
     'should render if not IE9',
     <IfAboveIE9>
