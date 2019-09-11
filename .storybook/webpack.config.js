@@ -1,4 +1,9 @@
 const webpack = require('webpack');
+const path = require('path');
+const fs = require('fs');
+
+const appDirectory = fs.realpathSync(process.cwd());
+const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   plugins: [
@@ -18,4 +23,15 @@ module.exports = {
       },
     ),
   ],
+  resolve: {
+    extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
+    alias: {
+      '#app': resolvePath('src/app'),
+      '#contexts': resolvePath('src/app/contexts'),
+      '#data': resolvePath('data/'),
+      '#lib': resolvePath('src/app/lib/'),
+      '#models': resolvePath('src/app/models/'),
+      '#testHelpers': resolvePath('src/testHelpers/'),
+    },
+  },
 };
