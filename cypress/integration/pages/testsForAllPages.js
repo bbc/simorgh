@@ -1,6 +1,6 @@
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
-import appConfig from '#lib/config/services';
+import appConfig from '../../../src/app/lib/config/services';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
