@@ -49,6 +49,7 @@ describe('with pageWrapper', () => {
           pageType="article"
           service="news"
           bbcOrigin="https://www.test.bbc.com"
+          pathname="/pathname"
         >
           <UserContextProvider>
             <PageWrapperHOC {...dataProps} />
