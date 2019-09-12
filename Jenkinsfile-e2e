@@ -43,6 +43,9 @@ node {
       cleanWs() // Clean the workspace
       checkout scm // Checkout from git
       docker.image("${nodeImage}").inside('--ipc host') {
+        parameters {
+          string(name: 'APPLICATION_BRANCH', defaultValue: 'latest', description: 'Which simorgh branch do you want to build?')
+        }
         try {
           stage ('Install & Setup') {
             sh 'make install'
