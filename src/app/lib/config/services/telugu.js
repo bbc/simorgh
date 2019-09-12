@@ -168,6 +168,28 @@ const service = {
     },
     fonts: [F_MALLANNA_REGULAR],
     timezone: 'Asia/Kolkata',
+    navigation: [
+      {
+        title: 'వార్తలు',
+        url: '/telugu',
+      },
+      {
+        title: 'వీడియో',
+        url: '/telugu/media/video',
+      },
+      {
+        title: 'ఎక్కువ మంది చదివినవి',
+        url: '/telugu/popular/read',
+      },
+      {
+        title: 'జాతీయం',
+        url: '/telugu/india',
+      },
+      {
+        title: 'అంతర్జాతీయం',
+        url: '/telugu/international',
+      },
+    ],
   },
 };
 
