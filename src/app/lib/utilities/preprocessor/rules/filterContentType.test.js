@@ -76,6 +76,12 @@ const GalleryAssetType = {
   type: 'link',
 };
 
+const FeatureAssetType = {
+  name: 'Test feature link promo',
+  contentType: 'Feature',
+  assetTypeCode: 'PRO',
+};
+
 describe('filterUnknownContentTypes', () => {
   it('should no-op when no groups', () => {
     const data = {
@@ -363,6 +369,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             TextAssetType,
+            FeatureAssetType,
             AudioAssetType,
             VideoAssetType,
             GalleryAssetType,
@@ -373,6 +380,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             TextAssetType,
+            FeatureAssetType,
             AudioAssetType,
             VideoAssetType,
             GalleryAssetType,
@@ -439,6 +447,7 @@ describe('filterUnknownContentTypes', () => {
                 },
                 TextAssetType,
                 AudioAssetType,
+                FeatureAssetType,
               ],
             },
           ],
@@ -448,7 +457,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: [TextAssetType, AudioAssetType],
+              items: [TextAssetType, AudioAssetType, FeatureAssetType],
             },
           ],
         },
