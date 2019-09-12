@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import FrontPageMainWithAnalytics from '.';
+import FrontPageMain from '.';
 import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
 import igboConfig from '../../lib/config/services/igbo';
@@ -33,7 +33,7 @@ const requestContextData = {
 const FrontPageMainWithContext = props => (
   <RequestContext.Provider value={requestContextData}>
     <ServiceContext.Provider value={igboConfig}>
-      <FrontPageMainWithAnalytics {...props} />
+      <FrontPageMain {...props} />
     </ServiceContext.Provider>
   </RequestContext.Provider>
 );
