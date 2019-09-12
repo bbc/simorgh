@@ -7,15 +7,13 @@ import DocumentComponent from './component';
 
 const sheet = new ServerStyleSheet();
 
-jest.mock('styled-components', function() {
+jest.mock('styled-components', () => {
   return {
-    serverStyleSheet: jest.fn().mockImplementation(function() {
-      return {
-        collectStyles: function() {
-          jest.fn();
-        },
-      };
-    }),
+    ServerStyleSheet: jest.fn().mockImplementation(() => ({
+      collectStyles: () => {
+        jest.fn();
+      },
+    })),
   };
 });
 jest.mock('./component', () => jest.fn());
