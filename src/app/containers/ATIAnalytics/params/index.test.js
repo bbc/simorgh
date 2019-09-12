@@ -44,16 +44,31 @@ describe('ATIAnalytics params', () => {
     it('should call buildArticleATIUrl function', () => {
       buildATIUrl({}, { pageType: 'article' }, {});
       expect(buildArticleATIUrl).toHaveBeenCalledTimes(1);
+      expect(buildArticleATIUrl).toHaveBeenCalledWith(
+        {},
+        { pageType: 'article' },
+        {},
+      );
     });
 
     it('should call buildFrontPageATIUrl function', () => {
       buildATIUrl({}, { pageType: 'frontPage' }, {});
       expect(buildFrontPageATIUrl).toHaveBeenCalledTimes(1);
+      expect(buildFrontPageATIUrl).toHaveBeenCalledWith(
+        {},
+        { pageType: 'frontPage' },
+        {},
+      );
     });
 
     it('should call buildMediaATIUrl function', () => {
       buildATIUrl({}, { pageType: 'media' }, {});
       expect(buildMediaATIUrl).toHaveBeenCalledTimes(1);
+      expect(buildMediaATIUrl).toHaveBeenCalledWith(
+        {},
+        { pageType: 'media' },
+        {},
+      );
     });
   });
 
