@@ -1,23 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Timestamp should render if not IE9 comment 1`] = `
-Array [
-  <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<!--[if !IE]><!-->",
-      }
-    }
-  />,
+exports[`IfAboveIE9Comment should render if not IE9 1`] = `
+<div>
+  <div>
+    <!--[if !IE]&gt;&lt;!-->
+  </div>
   <h1>
     I can not be seen on IE9
-  </h1>,
-  <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<!--<![endif]-->",
-      }
-    }
-  />,
-]
+  </h1>
+  <div>
+    <!--&lt;![endif]-->
+  </div>
+</div>
 `;
