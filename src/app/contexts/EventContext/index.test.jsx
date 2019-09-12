@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { func } from 'prop-types';
 import { useWindowEvent } from './useWindowEvent';
 import { useHandlerMap } from './useHandlerMap';
@@ -113,6 +113,49 @@ describe('EventContext', () => {
       expect(useEffect).toHaveBeenCalled();
       expect(container).toMatchSnapshot();
       expect(handler).toHaveBeenCalled();
+    });
+
+    describe('cleanup()', () => {
+      let jestHandlerMap = {};
+      let jestCleanup = () => {};
+      const ClickCleanupComponent = ({ handler }) => {
+        const { useClickTracker, handlerMap } = useContext(EventContext);
+        const cleanup = useClickTracker('my-test-component', handler);
+        jestCleanup = cleanup;
+        jestHandlerMap = handlerMap;
+        return (
+          <ul>
+            {Object.entries(handlerMap).map(([key, values]) => (
+              <li key={key}>
+                {key}:{values.map(v => v.toString()).join('\n')}
+              </li>
+            ))}
+          </ul>
+        );
+      };
+
+      ClickCleanupComponent.propTypes = {
+        handler: func.isRequired,
+      };
+
+      it('should cleanup', () => {
+        const handler = jest.fn();
+        render(
+          <EventContextProvider>
+            <ClickCleanupComponent handler={handler} />
+          </EventContextProvider>,
+        );
+
+        expect(jestHandlerMap).toEqual({
+          'my-test-component': [handler],
+        });
+
+        act(() => jestCleanup());
+
+        expect(jestHandlerMap).toEqual({
+          'my-test-component': [],
+        });
+      });
     });
   });
 });

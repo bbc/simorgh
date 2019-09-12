@@ -12,19 +12,21 @@ export const EventContextProvider = ({ children }) => {
   const [handlerMap, setHandlerMap] = useState({});
 
   const useClickTracker = (selector, handler) => {
+    const cleanup = () => {
+      setHandlerMap(_map => ({
+        ..._map,
+        [selector]: (_map[selector] || []).filter(h => h !== handler),
+      }));
+    };
     useEffect(() => {
       setHandlerMap(_map => ({
         ..._map,
         [selector]: [...(_map[selector] || []), handler],
       }));
 
-      return function cleanup() {
-        setHandlerMap(_map => ({
-          ..._map,
-          [selector]: (_map[selector] || []).filter(h => h !== handler),
-        }));
-      };
-    }, []);
+      return cleanup;
+    }, [children]);
+    return cleanup;
   };
 
   const value = {
