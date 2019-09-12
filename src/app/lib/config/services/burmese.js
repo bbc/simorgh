@@ -175,6 +175,44 @@ const service = {
     },
     fonts: [F_PADAUK_BOLD, F_PADAUK_REGULAR],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'ပင်မစာမျက်နှာ',
+        url: '/burmese',
+      },
+      {
+        title: 'မြန်မာ့ရေးရာ',
+        url: '/burmese/burma',
+      },
+      {
+        title: 'နိုင်ငံတကာ',
+        url: '/burmese/world',
+      },
+      {
+        title: 'ဆောင်းပါး',
+        url: '/burmese/in_depth',
+      },
+      {
+        title: 'အားကစား',
+        url: '/burmese/sport',
+      },
+      {
+        title: 'ကုန်သွယ်စီးပွား',
+        url: '/burmese/economy',
+      },
+      {
+        title: 'အသံဖိုင်များ',
+        url: '/burmese/media/audio',
+      },
+      {
+        title: 'ဗီဒီယိုများ',
+        url: '/burmese/media/video',
+      },
+      {
+        title: 'ဓာတ်ပုံများ',
+        url: '/burmese/media/photogalleries',
+      },
+    ],
   },
 };
 
