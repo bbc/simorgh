@@ -1,6 +1,6 @@
 import React from 'react';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '#testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import Inline from './index';
 
 describe('Inline', () => {

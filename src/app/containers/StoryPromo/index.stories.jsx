@@ -37,6 +37,7 @@ const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
 const standardPromo = promoFixture('Text');
 const videoPromo = promoFixture('Video');
+const featurePromo = promoFixture('Feature');
 const audioPromo = promoFixture('Audio');
 
 const getStoryPromo = platform => item => (
@@ -61,6 +62,7 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('audio fixture', () => getCanonicalStoryPromo(audioFixture))
   .add('video fixture', () => getCanonicalStoryPromo(videoFixture))
   .add('standard link promo', () => getCanonicalStoryPromo(standardPromo))
+  .add('feature link promo', () => getCanonicalStoryPromo(featurePromo))
   .add('video link promo', () => getCanonicalStoryPromo(videoPromo))
   .add('audio link promo', () => getCanonicalStoryPromo(audioPromo));
 
@@ -71,4 +73,5 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('video fixture - amp', () => getAmpStoryPromo(videoFixture))
   .add('standard link promo - amp', () => getAmpStoryPromo(standardPromo))
   .add('video link promo - amp', () => getAmpStoryPromo(videoPromo))
+  .add('feature link promo - amp', () => getAmpStoryPromo(featurePromo))
   .add('audio link promo - amp', () => getAmpStoryPromo(audioPromo));
