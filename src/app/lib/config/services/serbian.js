@@ -1,10 +1,9 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin, cyrillic } from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
-const service = {
-  lang: `sr-Latn`,
+const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-serbian',
@@ -20,7 +19,6 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `sr-Latn`,
   datetimeLocale: `sr-latn`,
   service: 'serbian',
   serviceName: 'News na srpskom',
@@ -161,6 +159,21 @@ const service = {
   },
   fonts: [],
   timezone: 'Europe/London',
+};
+
+const service = {
+  lat: {
+    ...baseServiceConfig,
+    lang: `sr-latn`,
+    locale: `sr-latn`,
+    script: latin,
+  },
+  cyr: {
+    ...baseServiceConfig,
+    lang: `sr-cyrl`,
+    locale: `sr-cyrl`,
+    script: cyrillic,
+  },
 };
 
 export default service;
