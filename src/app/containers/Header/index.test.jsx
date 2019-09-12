@@ -35,6 +35,7 @@ const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
         pageType={pageType}
         service={service}
         bbcOrigin="https://www.test.bbc.com"
+        pathname="/pathname"
       >
         <HeaderContainer />
       </RequestContextProvider>
@@ -53,7 +54,7 @@ describe(`Header`, () => {
     HeaderContainerWithContext({
       pageType: 'article',
       service: 'news',
-      serviceContext: pidginServiceConfig,
+      serviceContext: pidginServiceConfig.default,
     }),
   );
   shouldMatchSnapshot(
@@ -61,7 +62,7 @@ describe(`Header`, () => {
     HeaderContainerWithContext({
       pageType: 'frontPage',
       service: 'pidgin',
-      serviceContext: pidginServiceConfig,
+      serviceContext: pidginServiceConfig.default,
     }),
   );
   shouldMatchSnapshot(
@@ -69,7 +70,7 @@ describe(`Header`, () => {
     HeaderContainerWithContext({
       pageType: 'media',
       service: 'pidgin',
-      serviceContext: pidginServiceConfig,
+      serviceContext: pidginServiceConfig.default,
     }),
   );
 });

@@ -19,6 +19,7 @@ describe('MediaAtiParams', () => {
     bbcOrigin: 'https://www.test.bbc.co.uk',
     isAmp: false,
     pageType: 'media',
+    pathname: '/pathname',
     service: 'SERVICE',
   };
   const serviceContextStub = {

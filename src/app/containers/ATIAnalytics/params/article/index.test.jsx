@@ -44,6 +44,7 @@ describe('ArticleAtiParams', () => {
     id: 'c0000000000o',
     isAmp: false,
     pageType: 'article',
+    pathname: '/pathname',
     previousPath: '/previous-path',
     service: 'news',
   };

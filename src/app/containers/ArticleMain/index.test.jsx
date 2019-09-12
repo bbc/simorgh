@@ -21,6 +21,7 @@ const Context = ({ service, children }) => (
       id="c0000000000o"
       isAmp={false}
       pageType="article"
+      pathname="/pathname"
       service={service}
     >
       {children}

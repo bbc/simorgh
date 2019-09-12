@@ -3,11 +3,10 @@ import { render, cleanup } from '@testing-library/react';
 import FrontPageMain from '.';
 import { shouldShallowMatchSnapshot } from '#testHelpers';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
-import igboConfig from '#lib/config/services/igbo';
 import preprocessor from '#lib/utilities/preprocessor';
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
-import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const processedPidgin = preprocessor(frontPageDataPidgin, [addIdsToItems]);
 
@@ -27,15 +26,18 @@ jest.mock('../ChartbeatAnalytics', () => {
 });
 
 const requestContextData = {
+  isAmp: false,
+  service: 'igbo',
   pageType: 'frontPage',
+  pathname: '/pathname',
 };
 
 const FrontPageMainWithContext = props => (
-  <RequestContext.Provider value={requestContextData}>
-    <ServiceContext.Provider value={igboConfig}>
+  <RequestContextProvider {...requestContextData}>
+    <ServiceContextProvider service="igbo">
       <FrontPageMain {...props} />
-    </ServiceContext.Provider>
-  </RequestContext.Provider>
+    </ServiceContextProvider>
+  </RequestContextProvider>
 );
 
 describe('FrontPageMain', () => {

@@ -33,6 +33,7 @@ const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
     pageType={pageType}
     service="news"
     bbcOrigin={origin}
+    pathname="/pathname"
   >
     <ServiceContextProvider service="news">
       <ToggleContext.Provider

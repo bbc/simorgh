@@ -27,6 +27,7 @@ const ContextWrapper = ({ platform, children, toggleState }) => (
     platform={platform}
     id="foo"
     pageType="article"
+    pathname="/pathname"
   >
     <ToggleContext.Provider
       value={{ toggleState, toggleDispatch: mockToggleDispatch }}

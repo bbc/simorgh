@@ -198,7 +198,7 @@ const { useContext } = jest.requireMock('react');
 describe('FrontPageSection Container', () => {
   describe('snapshots', () => {
     beforeEach(() => {
-      useContext.mockReturnValue(newsConfig);
+      useContext.mockReturnValue(newsConfig.default);
     });
 
     afterEach(() => {
@@ -233,7 +233,7 @@ describe('FrontPageSection Container', () => {
 
     beforeEach(() => {
       jest.spyOn(SectionLabel, 'default');
-      useContext.mockReturnValue(newsConfig);
+      useContext.mockReturnValue(newsConfig.default);
     });
 
     it('should be called with true when sectionNumber === 0', () => {

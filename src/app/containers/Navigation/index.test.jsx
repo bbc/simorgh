@@ -16,7 +16,7 @@ const { useContext } = jest.requireMock('react');
 
 describe('Navigation Container', () => {
   beforeEach(() => {
-    useContext.mockReturnValue(igboConfig);
+    useContext.mockReturnValue(igboConfig.default);
   });
 
   afterEach(() => {

@@ -16,7 +16,7 @@ const { useContext } = jest.requireMock('react');
 
 describe('Index Alsos', () => {
   beforeEach(() => {
-    useContext.mockReturnValue(hausaConfig);
+    useContext.mockReturnValue(hausaConfig.default);
   });
 
   afterEach(() => {
