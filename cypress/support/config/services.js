@@ -892,7 +892,13 @@ module.exports = {
             : '/serbian/articles/cabcdefghijo/lat',
         smoke: true,
       },
-      frontPage: { path: '/serbian/lat', smoke: true },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/lat',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -1186,7 +1192,13 @@ module.exports = {
             : '/ukchina/articles/cabcdefghijo/simp',
         smoke: true,
       },
-      frontPage: { path: '/ukchina/simp', smoke: true },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/simp',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -1364,7 +1376,13 @@ module.exports = {
             : '/zhongwen/articles/cabcdefghijo/simp',
         smoke: true,
       },
-      frontPage: { path: '/zhongwen/simp', smoke: true },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/simp',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
