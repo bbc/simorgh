@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { renderHook } from '@testing-library/react-hooks';
 import { useWindowEvent } from './index';
 
 jest.mock('react', () => {
@@ -9,28 +10,35 @@ jest.mock('react', () => {
   };
 });
 
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 describe('useWindowEvent', () => {
   const fn1 = jest.fn();
 
-  describe('mock useEffect', () => {
-    const mockUseEffect = jest.fn(fn => fn);
-
-    useEffect.mockImplementation(mockUseEffect);
-
-    it('should call useEffect', () => {
-      useWindowEvent('click', fn1);
-
-      expect(mockUseEffect).toHaveBeenCalled();
-    });
-  });
-
   it('should trigger window click handler', () => {
-    useEffect.mockImplementation(fn => fn());
-
-    useWindowEvent('click', fn1, false);
+    useWindowEvent('click', fn1, false)();
 
     window.dispatchEvent(new Event('click'));
 
     expect(fn1).toHaveBeenCalled();
+  });
+
+  it('should cleanup', () => {
+    const fn2 = jest.fn();
+    const { unmount } = renderHook(() => {
+      useEffect(useWindowEvent('click', fn2, false));
+    });
+
+    window.dispatchEvent(new Event('click'));
+
+    expect(fn2).toHaveBeenCalledTimes(1);
+
+    unmount();
+
+    window.dispatchEvent(new Event('click'));
+
+    expect(fn2).toHaveBeenCalledTimes(1);
   });
 });

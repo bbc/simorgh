@@ -35,7 +35,7 @@ export const EventContextProvider = ({ children }) => {
     handlerMap,
   };
 
-  useWindowEvent('click', useHandlerMap(handlerMap));
+  useEffect(useWindowEvent('click', useHandlerMap(handlerMap)));
 
   return (
     <EventContext.Provider value={value}>{children}</EventContext.Provider>
