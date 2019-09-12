@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import renderer from 'react-test-renderer';
-import { isNull, suppressPropWarnings } from '../../../testHelpers';
+import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '../Article/fixtureData';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -20,6 +20,7 @@ const ContextWrap = ({ pageType, platform, children }) => (
       isAmp={platform === 'amp'}
       pageType={pageType}
       service="news"
+      pathname="/pathname"
     >
       {children}
     </RequestContextProvider>

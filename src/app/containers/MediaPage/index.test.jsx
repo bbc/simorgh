@@ -1,12 +1,13 @@
 import React from 'react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MediaPage from '.';
-import { shouldMatchSnapshot } from '../../../testHelpers';
 import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
 
 const liveRadioScaffoldProps = {
   isAmp: false,
   pageType: 'media',
   service: 'amharic',
+  pathname: '/pathname',
   match: {
     params: {
       serviceId: 'bbc_amharic_radio',

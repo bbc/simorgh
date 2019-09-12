@@ -74,6 +74,30 @@ describe('getArticleInitialData', () => {
     });
   });
 
+  it('fetches data and returns expected object with variant', async () => {
+    await getArticleInitialData({
+      ...defaultContext,
+      variant: 'variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/news/articles/c0000000001o/variant.json',
+      preprocessorRules,
+    });
+  });
+
+  it('fetches data and returns expected object with variant with leading slash', async () => {
+    await getArticleInitialData({
+      ...defaultContext,
+      variant: '/variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/news/articles/c0000000001o/variant.json',
+      preprocessorRules,
+    });
+  });
+
   describe('When not on client', () => {
     beforeEach(() => {
       onClientMockResponse = false;
@@ -90,6 +114,19 @@ describe('getArticleInitialData', () => {
       expect(response).toEqual({
         pageData: 'foo',
         status: 123,
+      });
+    });
+
+    it('fetches data from SIMORGH_BASE_URL enviroment variable origin with variant', async () => {
+      await getArticleInitialData({
+        ...defaultContext,
+        variant: 'variant',
+      });
+
+      expect(fetchData).toHaveBeenCalledWith({
+        url:
+          'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o/variant.json',
+        preprocessorRules,
       });
     });
   });
