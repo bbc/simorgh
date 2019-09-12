@@ -8,15 +8,31 @@ export const sendEventBeacon = async ({
   label,
   ...params
 }) => {
-  const atiEventUrl = buildATIEventTrackUrl({
+  const impressionProps = {
     ...params,
     element,
     component,
+  };
+  const viewProps = {
+    ...impressionProps,
     type,
     label,
+  };
+  await Promise.all([
+    sendBeacon(buildATIEventTrackUrl(impressionProps)), // impression event
+    sendBeacon(buildATIEventTrackUrl(viewProps)), // actual event
+  ]);
+};
+
+export const sendViewBeacon = async ({ element, component, ...params }) => {
+  const atiViewUrl = buildATIEventTrackUrl({
+    ...params,
+    element,
+    component,
+    type: 'viewed',
   });
 
-  await sendBeacon(atiEventUrl);
+  await sendBeacon(atiViewUrl);
 };
 
 export default sendEventBeacon;
