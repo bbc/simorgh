@@ -7,6 +7,7 @@ import {
   buildSections,
   getType,
   getTitle,
+  getConfig,
 } from '.';
 import onClient from '../../../lib/utilities/onClient';
 import * as articleUtils from '../../../lib/analyticsUtils/article';
@@ -227,6 +228,65 @@ describe('Chartbeat utilities', () => {
       const brandName = 'BBC News';
 
       expect(getTitle(pageType, pageData, brandName)).toBe(null);
+    });
+  });
+
+  describe('Chartbeat Config', () => {
+    isOnClient = true;
+    it('should return config  for amp pages when page type is article and env is live', () => {
+      const fixtureData = {
+        platform: 'amp',
+        pageType: 'article',
+        data: {},
+        brandName: '',
+        env: 'live',
+        service: 'news',
+        origin: 'bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        contentType: 'New Article',
+        domain: 'bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        sections: 'News, News - ART',
+        title: 'This is an article title',
+        uid: 50924,
+        virtualReferrer: `\${documentReferrer}`,
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it('should return config  for canonical pages when page type is frontPage and env is not live', () => {
+      const fixtureData = {
+        platform: 'canonical',
+        pageType: 'frontPage',
+        data: {},
+        brandName: 'BBC-News',
+        env: 'test',
+        service: 'news',
+        origin: 'test.bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections: 'News, News - IDX',
+        title: 'This is an index page title',
+        type: 'Index',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: 'test.bbc.com/referrer',
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
   });
 });
