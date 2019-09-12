@@ -2,6 +2,7 @@ module.exports = {
   afaanoromoo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -34,6 +35,7 @@ module.exports = {
   afrique: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -68,6 +70,7 @@ module.exports = {
   amharic: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -100,6 +103,7 @@ module.exports = {
   arabic: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -134,6 +138,7 @@ module.exports = {
   azeri: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -160,6 +165,7 @@ module.exports = {
   bengali: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -194,6 +200,7 @@ module.exports = {
   burmese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -228,6 +235,7 @@ module.exports = {
   cymrufyw: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -257,6 +265,7 @@ module.exports = {
   gahuza: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -291,6 +300,7 @@ module.exports = {
   gujarati: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -317,6 +327,7 @@ module.exports = {
   hausa: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -351,6 +362,7 @@ module.exports = {
   hindi: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -385,6 +397,7 @@ module.exports = {
   igbo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -414,6 +427,7 @@ module.exports = {
   indonesia: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -446,6 +460,7 @@ module.exports = {
   japanese: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -472,6 +487,7 @@ module.exports = {
   korean: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -504,6 +520,7 @@ module.exports = {
   kyrgyz: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -538,6 +555,7 @@ module.exports = {
   marathi: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -564,6 +582,7 @@ module.exports = {
   mundo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -590,6 +609,7 @@ module.exports = {
   naidheachdan: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -619,6 +639,7 @@ module.exports = {
   nepali: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -653,6 +674,7 @@ module.exports = {
   news: {
     font: 'Reith',
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -676,6 +698,7 @@ module.exports = {
   pashto: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -710,6 +733,7 @@ module.exports = {
   persian: {
     font: 'Nassim',
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -742,6 +766,7 @@ module.exports = {
   pidgin: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -771,6 +796,7 @@ module.exports = {
   portuguese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: { path: undefined, smoke: false },
       errorPage404: {
@@ -790,6 +816,7 @@ module.exports = {
   },
   punjabi: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -822,6 +849,7 @@ module.exports = {
   russian: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -847,10 +875,30 @@ module.exports = {
   },
   serbian: {
     font: undefined,
+    isWorldService: true,
+    variant: 'lat',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/c805k05kr73o/lat',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/cabcdefghijo/lat',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/lat',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -858,6 +906,7 @@ module.exports = {
   sinhala: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -891,6 +940,7 @@ module.exports = {
   },
   somali: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -924,6 +974,7 @@ module.exports = {
   },
   sport: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: { path: undefined, smoke: false },
       errorPage404: { path: undefined, smoke: false },
@@ -935,6 +986,7 @@ module.exports = {
   swahili: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -969,6 +1021,7 @@ module.exports = {
   tamil: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1003,6 +1056,7 @@ module.exports = {
   telugu: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1029,6 +1083,7 @@ module.exports = {
   thai: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1061,6 +1116,7 @@ module.exports = {
   tigrinya: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1093,6 +1149,7 @@ module.exports = {
   turkce: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1119,10 +1176,29 @@ module.exports = {
   ukchina: {
     font: undefined,
     isWorldService: true,
+    variant: 'simp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/simp',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/cabcdefghijo/simp',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/simp',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -1130,6 +1206,7 @@ module.exports = {
   ukrainian: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1156,6 +1233,7 @@ module.exports = {
   urdu: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1190,6 +1268,7 @@ module.exports = {
   uzbek: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1224,6 +1303,7 @@ module.exports = {
   vietnamese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1250,6 +1330,7 @@ module.exports = {
   yoruba: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1279,10 +1360,29 @@ module.exports = {
   zhongwen: {
     font: undefined,
     isWorldService: true,
+    variant: 'simp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/simp',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/cabcdefghijo/simp',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/simp',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },

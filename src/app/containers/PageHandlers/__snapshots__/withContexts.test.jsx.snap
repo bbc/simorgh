@@ -4,14 +4,17 @@ exports[`withContexts HOC should return all context providers 1`] = `
 <ToggleContextProvider>
   <ServiceContextProvider
     service="news"
+    variant={null}
   >
     <RequestContextProvider
       bbcOrigin="https://www.bbc.com"
       id="c0000000000o"
       isAmp={true}
       pageType="article"
+      pathname="/pathname"
       previousPath={null}
       service="news"
+      variant={null}
     >
       <UserContextProvider>
         <Component
@@ -19,8 +22,10 @@ exports[`withContexts HOC should return all context providers 1`] = `
           id="c0000000000o"
           isAmp={true}
           pageType="article"
+          pathname="/pathname"
           previousPath={null}
           service="news"
+          variant={null}
         />
       </UserContextProvider>
     </RequestContextProvider>

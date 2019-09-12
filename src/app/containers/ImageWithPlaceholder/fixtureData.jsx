@@ -16,8 +16,7 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
       service="news"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
+      pathname="/pathname"
       pageType="frontPage"
     >
       <FigureContainer {...otherProps} />
