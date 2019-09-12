@@ -26,7 +26,7 @@ describe('Render Document', () => {
       service: 'news',
       url: '/',
     }).then(document => {
-      expect(document).toMatchSnapshot();
+      expect(document).toEqual('<!doctype html><html lang="en-GB"></html>');
     });
   });
 });
