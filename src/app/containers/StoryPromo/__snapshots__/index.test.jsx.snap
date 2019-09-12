@@ -2099,8 +2099,8 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -2739,15 +2739,15 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.75rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -3874,8 +3874,8 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
