@@ -16,6 +16,7 @@ describe('Consent Banner Container', () => {
       isAmp
       pageType="article"
       service="news"
+      pathname="/pathname"
     >
       <ConsentBanner />
     </RequestContextProvider>,
@@ -29,6 +30,7 @@ describe('Consent Banner Container', () => {
       isAmp={false}
       pageType="article"
       service="news"
+      pathname="/pathname"
     >
       <ConsentBanner />
     </RequestContextProvider>,

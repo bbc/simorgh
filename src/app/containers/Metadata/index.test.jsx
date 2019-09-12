@@ -25,9 +25,18 @@ const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
 
-// eslint-disable-next-line react/prop-types
-const getContainer = ({ service, bbcOrigin, platform, data, id, pageType }) => {
-  const serviceConfig = services[service];
+const getContainer = ({
+  /* eslint-disable react/prop-types */
+  service,
+  bbcOrigin,
+  platform,
+  data,
+  id,
+  pageType,
+  pathname,
+  /* eslint-enable react/prop-types */
+}) => {
+  const serviceConfig = services[service].default;
 
   return (
     <ServiceContextProvider {...serviceConfig}>
@@ -36,6 +45,7 @@ const getContainer = ({ service, bbcOrigin, platform, data, id, pageType }) => {
         id={id}
         isAmp={platform === 'amp'}
         pageType={pageType}
+        pathname={pathname}
         service={service}
       >
         <MetadataContainer {...articleDataNews} {...data} />
@@ -135,6 +145,7 @@ describe('Metadata Container', () => {
           data: articleDataNews,
           id: 'c0000000001o',
           pageType: 'article',
+          pathname: '/news/articles/c0000000001o',
         }),
       );
 
@@ -173,7 +184,7 @@ describe('Metadata Container', () => {
           timeFirstPublished: '2018-01-01T12:01:00.000Z',
           timeLastPublished: '2018-01-01T13:00:00.000Z',
           title: 'Article Headline for SEO',
-          serviceConfig: services.news,
+          serviceConfig: services.news.default,
           type: 'article',
           service: 'news',
           showArticleTags: true,
@@ -214,6 +225,7 @@ describe('Metadata Container', () => {
         data: articleDataNews,
         id: 'c0000000001o',
         pageType: 'article',
+        pathname: '/news/articles/c0000000001o',
       }),
     );
 
@@ -226,6 +238,7 @@ describe('Metadata Container', () => {
           data: articleDataNews,
           id: 'c0000000001o',
           pageType: 'article',
+          pathname: '/news/articles/c0000000001o.amp',
         }),
       );
 
@@ -264,7 +277,7 @@ describe('Metadata Container', () => {
           timeFirstPublished: '2018-01-01T12:01:00.000Z',
           timeLastPublished: '2018-01-01T13:00:00.000Z',
           title: 'Article Headline for SEO',
-          serviceConfig: services.news,
+          serviceConfig: services.news.default,
           type: 'article',
           service: 'news',
           showArticleTags: true,
@@ -305,6 +318,7 @@ describe('Metadata Container', () => {
         data: articleDataNews,
         id: 'c0000000001o',
         pageType: 'article',
+        pathname: '/news/articles/c0000000001o.amp',
       }),
     );
 
@@ -317,6 +331,7 @@ describe('Metadata Container', () => {
           data: articleDataPersian,
           id: 'c4vlle3q337o',
           pageType: 'article',
+          pathname: '/persian/articles/c4vlle3q337o',
         }),
       );
 
@@ -338,7 +353,7 @@ describe('Metadata Container', () => {
           timeFirstPublished: '2018-01-01T12:01:00.000Z',
           timeLastPublished: '2018-01-01T13:00:00.000Z',
           title: 'سرصفحه مقاله',
-          serviceConfig: services.persian,
+          serviceConfig: services.persian.default,
           type: 'article',
           service: 'persian',
           showArticleTags: true,
@@ -367,6 +382,7 @@ describe('Metadata Container', () => {
         data: articleDataPersian,
         id: 'c4vlle3q337o',
         pageType: 'article',
+        pathname: '/persian/articles/c4vlle3q337o',
       }),
     );
 
@@ -379,6 +395,7 @@ describe('Metadata Container', () => {
           data: articleDataPersian,
           id: 'c4vlle3q337o',
           pageType: 'article',
+          pathname: '/persian/articles/c4vlle3q337o.amp',
         }),
       );
 
@@ -400,7 +417,7 @@ describe('Metadata Container', () => {
           timeFirstPublished: '2018-01-01T12:01:00.000Z',
           timeLastPublished: '2018-01-01T13:00:00.000Z',
           title: 'سرصفحه مقاله',
-          serviceConfig: services.persian,
+          serviceConfig: services.persian.default,
           type: 'article',
           service: 'persian',
           showArticleTags: true,
@@ -429,6 +446,7 @@ describe('Metadata Container', () => {
         data: articleDataPersian,
         id: 'c4vlle3q337o',
         pageType: 'article',
+        pathname: '/persian/articles/c4vlle3q337o.amp',
       }),
     );
 
@@ -441,6 +459,7 @@ describe('Metadata Container', () => {
           data: frontPageData,
           id: null,
           pageType: 'frontPage',
+          pathname: '/igbo',
         }),
       );
 
@@ -468,7 +487,7 @@ describe('Metadata Container', () => {
           timeFirstPublished: null,
           timeLastPublished: null,
           title: 'Ogbako',
-          serviceConfig: services.igbo,
+          serviceConfig: services.igbo.default,
           type: 'website',
           service: 'igbo',
           showArticleTags: false,
@@ -497,6 +516,7 @@ describe('Metadata Container', () => {
         data: frontPageData,
         id: null,
         pageType: 'frontPage',
+        pathname: '/igbo',
       }),
     );
   });
@@ -510,6 +530,7 @@ describe('Metadata Container', () => {
         data: liveRadioPageData,
         id: null,
         pageType: 'media',
+        pathname: '/korean/bbc_korean_radio/liveradio',
       }),
     );
 
@@ -531,7 +552,7 @@ describe('Metadata Container', () => {
         timeFirstPublished: null,
         timeLastPublished: null,
         title: 'BBC News 코리아 라디오',
-        serviceConfig: services.korean,
+        serviceConfig: services.korean.default,
         type: 'website',
         service: 'korean',
         showArticleTags: false,
@@ -560,6 +581,7 @@ describe('Metadata Container', () => {
       data: liveRadioPageData,
       id: null,
       pageType: 'media',
+      pathname: '/korean/bbc_korean_radio/liveradio',
     }),
   );
 });

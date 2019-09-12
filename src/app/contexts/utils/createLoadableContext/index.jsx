@@ -5,10 +5,10 @@ const createLoadableContext = (Context, loadableConfig) =>
   Loadable({
     ...loadableConfig,
     loading: () => null,
-    render(loaded, { children }) {
-      return (
-        <Context.Provider value={loaded.default}>{children}</Context.Provider>
-      );
+    render(loaded, { children, configKey }) {
+      const value = configKey ? loaded.default[configKey] : loaded.default;
+
+      return <Context.Provider value={value}>{children}</Context.Provider>;
     },
   });
 
