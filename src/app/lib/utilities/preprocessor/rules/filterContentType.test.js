@@ -47,6 +47,12 @@ const AudioAssetType = {
   assetTypeCode: 'PRO',
 };
 
+const FeatureAssetType = {
+  name: 'Test feature link promo',
+  contentType: 'Feature',
+  assetTypeCode: 'PRO',
+};
+
 describe('filterUnknownContentTypes', () => {
   it('should no-op when no groups', () => {
     const data = {
@@ -332,12 +338,22 @@ describe('filterUnknownContentTypes', () => {
     it('should work on all groups in the data', () => {
       const data = {
         content: {
-          groups: [VideoAssetType, TextAssetType, AudioAssetType],
+          groups: [
+            VideoAssetType,
+            TextAssetType,
+            AudioAssetType,
+            FeatureAssetType,
+          ],
         },
       };
       const expected = {
         content: {
-          groups: [VideoAssetType, TextAssetType, AudioAssetType],
+          groups: [
+            VideoAssetType,
+            TextAssetType,
+            AudioAssetType,
+            FeatureAssetType,
+          ],
         },
       };
 
@@ -400,6 +416,7 @@ describe('filterUnknownContentTypes', () => {
                 },
                 TextAssetType,
                 AudioAssetType,
+                FeatureAssetType,
               ],
             },
           ],
@@ -409,7 +426,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: [TextAssetType, AudioAssetType],
+              items: [TextAssetType, AudioAssetType, FeatureAssetType],
             },
           ],
         },
