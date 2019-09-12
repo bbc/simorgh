@@ -5,23 +5,23 @@ import { useHandlerMap } from './useHandlerMap';
 
 export const EventContext = React.createContext({
   useWindowEvent,
-  useClickTracker: () => {},
+  useClickTracker: (selector, handler) => ({ selector, handler }),
 });
 
 export const EventContextProvider = ({ children }) => {
   const [handlerMap, setHandlerMap] = useState({});
 
-  const useClickTracker = (attr, handler) => {
+  const useClickTracker = (selector, handler) => {
     useEffect(() => {
       setHandlerMap(_map => ({
         ..._map,
-        [attr]: [...(_map[attr] || []), handler],
+        [selector]: [...(_map[selector] || []), handler],
       }));
 
       return function cleanup() {
         setHandlerMap(_map => ({
           ..._map,
-          [attr]: (_map[attr] || []).filter(h => h !== handler),
+          [selector]: (_map[selector] || []).filter(h => h !== handler),
         }));
       };
     }, []);
@@ -30,6 +30,7 @@ export const EventContextProvider = ({ children }) => {
   const value = {
     useWindowEvent,
     useClickTracker,
+    handlerMap,
   };
 
   useWindowEvent('click', useHandlerMap(handlerMap));
