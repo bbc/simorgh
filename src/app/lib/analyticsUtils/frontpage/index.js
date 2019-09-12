@@ -1,12 +1,10 @@
 import pathOr from 'ramda/src/pathOr';
 
 export const getPageIdentifier = (frontpageData, service) => {
-  return (
-    pathOr(
-      null,
-      ['metadata', 'analyticsLabels', 'counterName'],
-      frontpageData,
-    ) || `${service || 'unknown'}.page`
+  return pathOr(
+    `${service || 'unknown'}.page`,
+    ['metadata', 'analyticsLabels', 'counterName'],
+    frontpageData,
   );
 };
 
