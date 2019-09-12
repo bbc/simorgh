@@ -10,25 +10,46 @@ const Component = () => {
   return <span>{foobar}</span>;
 };
 
-afterEach(() => {
-  cleanup();
-});
+describe('createLoadableContext', () => {
+  afterEach(() => {
+    cleanup();
+  });
 
-it(`should pass fixture data as context from dynamic service`, async () => {
-  const LoadableServiceProvider = createLoadableContext(
-    ServiceContext,
-    dynamicServiceFixtureData.fooService,
-  );
+  it(`should pass fixture data as context from dynamic service`, async () => {
+    const LoadableServiceProvider = createLoadableContext(
+      ServiceContext,
+      dynamicServiceFixtureData.fooService,
+    );
 
-  const { getByText } = render(
-    <LoadableServiceProvider>
-      <Component />
-    </LoadableServiceProvider>,
-  );
+    const { getByText } = render(
+      <LoadableServiceProvider>
+        <Component />
+      </LoadableServiceProvider>,
+    );
 
-  const expectedFixtureText = 'valueFromFixtureData';
+    const expectedFixtureText = 'valueFromFixtureData';
 
-  await waitForElement(() => getByText(expectedFixtureText));
+    await waitForElement(() => getByText(expectedFixtureText));
 
-  expect(getByText(expectedFixtureText)).toBeTruthy();
+    expect(getByText(expectedFixtureText)).toBeTruthy();
+  });
+
+  it(`should pass configKey and use to access fixture data`, async () => {
+    const LoadableServiceProvider = createLoadableContext(
+      ServiceContext,
+      dynamicServiceFixtureData.fooService,
+    );
+
+    const { getByText } = render(
+      <LoadableServiceProvider configKey="simp">
+        <Component />
+      </LoadableServiceProvider>,
+    );
+
+    const expectedFixtureText = 'valueFromSimpVariantFixtureData';
+
+    await waitForElement(() => getByText(expectedFixtureText));
+
+    expect(getByText(expectedFixtureText)).toBeTruthy();
+  });
 });
