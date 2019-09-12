@@ -29,9 +29,27 @@ const TextAssetType = {
   assetTypeCode: 'PRO',
 };
 
+const VideoAssetType = {
+  name: 'Test standard link promo',
+  summary: 'This is a standard link promo',
+  indexImage: {},
+  indexThumbnail: {},
+  uri: 'http://this.is.a.test.com/',
+  contentType: 'Video',
+  assetTypeCode: 'PRO',
+  timestamp: 1527598380040,
+  type: 'link',
+};
+
 const AudioAssetType = {
   name: 'Test audio link promo',
   contentType: 'Audio',
+  assetTypeCode: 'PRO',
+};
+
+const FeatureAssetType = {
+  name: 'Test feature link promo',
+  contentType: 'Feature',
   assetTypeCode: 'PRO',
 };
 
@@ -320,12 +338,22 @@ describe('filterUnknownContentTypes', () => {
     it('should work on all groups in the data', () => {
       const data = {
         content: {
-          groups: [AudioAssetType, TextAssetType],
+          groups: [
+            VideoAssetType,
+            TextAssetType,
+            AudioAssetType,
+            FeatureAssetType,
+          ],
         },
       };
       const expected = {
         content: {
-          groups: [AudioAssetType, TextAssetType],
+          groups: [
+            VideoAssetType,
+            TextAssetType,
+            AudioAssetType,
+            FeatureAssetType,
+          ],
         },
       };
 
@@ -366,6 +394,20 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
+              items: [VideoAssetType],
+            },
+          ],
+        },
+      };
+
+      expect(filterUnknownContentTypes(data)).toEqual(data);
+    });
+
+    it('should keep items with known contentTypes', () => {
+      const data = {
+        content: {
+          groups: [
+            {
               items: [
                 {
                   name: 'Test assetTypeCode',
@@ -374,6 +416,7 @@ describe('filterUnknownContentTypes', () => {
                 },
                 TextAssetType,
                 AudioAssetType,
+                FeatureAssetType,
               ],
             },
           ],
@@ -383,7 +426,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: [TextAssetType, AudioAssetType],
+              items: [TextAssetType, AudioAssetType, FeatureAssetType],
             },
           ],
         },
