@@ -9,7 +9,6 @@ const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
 
 const variantRegex = '/simp|/trad|/cyr|/lat';
 
-
 export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
 export const articleDataRegexPath = `${articleRegexPath}.json`;
