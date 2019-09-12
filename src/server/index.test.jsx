@@ -10,7 +10,11 @@ import { localBaseUrl } from '../testHelpers/config';
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
 
+const path = require('path');
+const express = require('express');
 const server = require('./index').default;
+
+const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   const headerKeys = Object.keys(headers);
@@ -61,7 +65,7 @@ jest.mock('./styles', () => ({
   getStyleTag: jest.fn().mockImplementation(() => <style />),
 }));
 
-const makeRequest = async path => request(server).get(path);
+const makeRequest = async requestPath => request(server).get(requestPath);
 
 const testFrontPages = ({ platform, service }) => {
   const isAmp = platform === 'amp';
@@ -398,29 +402,33 @@ describe('Server', () => {
     });
   });
 
+  describe('Service workers', () => {
+    it('should serve a file for existing service workers', async () => {
+      await makeRequest('/news/articles/sw.js');
+      expect(sendFileSpy.mock.calls[0][0]).toEqual(
+        path.join(__dirname, '/public/sw.js'),
+      );
+    });
+
+    it('should not serve a file for non-existing service workers', async () => {
+      const { statusCode } = await makeRequest('/some-service/articles/sw.js');
+      expect(sendFileSpy.mock.calls.length).toEqual(0);
+      expect(statusCode).toEqual(500);
+    });
+  });
+
   describe('Manifest json', () => {
-    describe('Services not on allowlist', () => {
-      beforeEach(() => {
-        const notFoundDataResponse = {
-          isAmp: false,
-          data: { some: 'data' },
-          service: 'someService',
-          status: 404,
-        };
+    it('should serve a file for valid service paths', async () => {
+      await makeRequest('/news/articles/manifest.json');
+      expect(sendFileSpy.mock.calls[0][0]).toEqual(
+        path.join(__dirname, '/public/news/manifest.json'),
+      );
+    });
 
-        mockRouteProps({
-          service: 'someService',
-          isAmp: false,
-          dataResponse: notFoundDataResponse,
-        });
-      });
-
-      it('should serve a 404 error for service foobar', async () => {
-        const { statusCode } = await makeRequest(
-          '/foobar/articles/manifest.json',
-        );
-        expect(statusCode).toEqual(404);
-      });
+    it('should not serve a manifest file for non-existing services', async () => {
+      const { statusCode } = await makeRequest('/some-service/manifest.json');
+      expect(sendFileSpy.mock.calls.length).toEqual(0);
+      expect(statusCode).toEqual(500);
     });
   });
 
