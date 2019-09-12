@@ -36,11 +36,11 @@ describe('getThingAttributes', () => {
       mockAndSet(func, null);
     });
 
-    const queryParams = buildATIPageTrackPath({});
-    const queryParamsArray = splitUrl(queryParams);
+    const atiPath = buildATIPageTrackPath({});
+    const atiPathArray = splitUrl(atiPath);
     const expectedValues = [];
 
-    expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
+    expectedValues.forEach(value => expect(atiPathArray).toContain(value));
   });
 
   it('should take in optional props and add them as correct query params', () => {
