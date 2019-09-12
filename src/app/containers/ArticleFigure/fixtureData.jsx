@@ -160,6 +160,7 @@ const GenerateFixtureData = ({
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pageType="article"
+      pathname="/pathname"
       service="news"
     >
       <FigureContainer
