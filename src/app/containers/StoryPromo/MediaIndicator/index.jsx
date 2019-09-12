@@ -10,10 +10,16 @@ import formatDuration from '../../../lib/utilities/formatDuration';
 const getAssetContentTypes = item => {
   const mediaContentTypes = ['audio', 'video', 'gallery'];
   const type = pathOr('', ['contentType'], item).toLowerCase();
+  const typeMapping = {
+    audio: 'audio',
+    gallery: 'photogallery',
+    video: 'video',
+  };
 
   if (mediaContentTypes.includes(type)) {
-    return type === 'gallery' ? 'photogallery' : type;
+    return typeMapping[type];
   }
+
   return null;
 };
 
