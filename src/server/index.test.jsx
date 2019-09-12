@@ -403,7 +403,6 @@ describe('Server', () => {
   });
 
   describe('Service workers', () => {
-    // sends SW file for paths matching regex
     it('should serve a file for existing service workers', async () => {
       await makeRequest('/news/articles/sw.js');
       expect(sendFileSpy.mock.calls[0][0]).toEqual(
@@ -419,7 +418,6 @@ describe('Server', () => {
   });
 
   describe('Manifest json', () => {
-    // sends manifest file for paths matching regex
     it('should serve a file for valid service paths', async () => {
       await makeRequest('/news/articles/manifest.json');
       expect(sendFileSpy.mock.calls[0][0]).toEqual(
