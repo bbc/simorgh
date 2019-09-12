@@ -70,11 +70,10 @@ const DECEMBER = 1576368000000;
 const editorialWhitelist = [
   'LL',
   'January',
-  'Febuary',
+  'February',
   'March',
   'April',
-  'May',
-  'April',
+  'May (long)',
   'June',
   'July',
   'August',
