@@ -190,6 +190,80 @@ const persian = {
     },
     timezone: 'Europe/London',
     fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
+    navigation: [
+      {
+        title: 'صفحه اول',
+        url: '/persian',
+      },
+      {
+        title: 'پخش زنده',
+        url: '/persian/media-49522521',
+      },
+      {
+        title: 'ویدیو',
+        url: '/persian/media/video',
+      },
+      {
+        title: 'تلویزیون',
+        url: '/persian/tv-and-radio-37434377',
+      },
+      {
+        title: 'رادیو',
+        url: '/persian/tv-and-radio-37434376',
+      },
+      {
+        title: 'ايران',
+        url: '/persian/iran',
+      },
+      {
+        title: 'افغانستان',
+        url: '/persian/afghanistan',
+      },
+      {
+        title: 'جهان',
+        url: '/persian/world',
+      },
+      {
+        title: 'هنر',
+        url: '/persian/arts',
+      },
+      {
+        title: 'ورزش',
+        url: '/persian/sport',
+      },
+      {
+        title: 'اقتصاد',
+        url: '/persian/business',
+      },
+      {
+        title: 'دانش',
+        url: '/persian/science',
+      },
+      {
+        title: 'شما',
+        url: '/persian/interactivity',
+      },
+      {
+        title: 'عکس',
+        url: '/persian/media/photogalleries',
+      },
+      {
+        title: 'ناظران می‌گویند...',
+        url: '/persian/blogs/viewpoints',
+      },
+      {
+        title: 'صفحات ویژه',
+        url: '/persian/world-37434378',
+      },
+      {
+        title: 'وبلاگ‌ها',
+        url: '/persian/services/2012/01/000000_blogs_list',
+      },
+      {
+        title: 'آموزش زبان انگلیسی',
+        url: '/persian/learningenglish',
+      },
+    ],
   },
 };
 

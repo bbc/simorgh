@@ -157,6 +157,36 @@ const baseServiceConfig = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: '主页',
+      url: '/ukchina/simp',
+    },
+    {
+      title: 'BBC精选',
+      url: '/ukchina/simp/horizon',
+    },
+    {
+      title: '英伦风采',
+      url: '/ukchina/simp/cool_britannia',
+    },
+    {
+      title: '记者来鸿',
+      url: '/ukchina/simp/fooc',
+    },
+    {
+      title: '英国体坛',
+      url: '/ukchina/simp/sport',
+    },
+    {
+      title: '视频内容',
+      url: '/ukchina/simp/media/video',
+    },
+    {
+      title: '图辑精选',
+      url: '/ukchina/simp/media/photogalleries',
+    },
+  ],
 };
 
 const service = {

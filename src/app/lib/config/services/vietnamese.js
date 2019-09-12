@@ -163,6 +163,52 @@ const service = {
     },
     fonts: [],
     timezone: 'Asia/Ho_Chi_Minh',
+    navigation: [
+      {
+        title: 'Tin chính',
+        url: '/vietnamese',
+      },
+      {
+        title: 'Việt Nam',
+        url: '/vietnamese/vietnam',
+      },
+      {
+        title: 'Thế giới',
+        url: '/vietnamese/world',
+      },
+      {
+        title: 'Diễn đàn',
+        url: '/vietnamese/forum',
+      },
+      {
+        title: 'Kinh tế',
+        url: '/vietnamese/business',
+      },
+      {
+        title: 'Nhịp sống mới',
+        url: '/vietnamese/magazine',
+      },
+      {
+        title: 'Thể thao',
+        url: '/vietnamese/sport',
+      },
+      {
+        title: 'Học tiếng Anh',
+        url: '/vietnamese/english',
+      },
+      {
+        title: 'Hình ảnh',
+        url: '/vietnamese/media/photogalleries',
+      },
+      {
+        title: 'Audio',
+        url: '/vietnamese/media/audio',
+      },
+      {
+        title: 'Video',
+        url: '/vietnamese/media/video',
+      },
+    ],
   },
 };
 

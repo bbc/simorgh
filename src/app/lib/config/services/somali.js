@@ -172,6 +172,44 @@ const service = {
     },
     fonts: [],
     timezone: 'Africa/Mogadishu',
+    navigation: [
+      {
+        title: 'War',
+        url: '/somali',
+      },
+      {
+        title: 'Warar dheeraad ah',
+        url: '/somali/war',
+      },
+      {
+        title: 'Ganacsi',
+        url: '/somali/topics/2f2db234-3c2d-40a4-b4ac-eea661faadd0',
+      },
+      {
+        title: 'Cayaaraha',
+        url: '/somali/cayaaraha',
+      },
+      {
+        title: 'Aqoon Guud',
+        url: '/somali/aqoon_guud',
+      },
+      {
+        title: 'Maqal',
+        url: '/somali/media/audio',
+      },
+      {
+        title: 'Muuqaal',
+        url: '/somali/media/video',
+      },
+      {
+        title: 'Barnaamijyada Idaacadda',
+        url: '/somali/ka_qayb_gal/programmes',
+      },
+      {
+        title: 'Sawirro',
+        url: '/somali/media/photogalleries',
+      },
+    ],
   },
 };
 

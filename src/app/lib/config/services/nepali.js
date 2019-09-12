@@ -168,6 +168,28 @@ const service = {
     },
     fonts: [],
     timezone: 'Asia/Kathmandu',
+    navigation: [
+      {
+        title: 'मुख पृष्ठ',
+        url: '/nepali',
+      },
+      {
+        title: 'समाचार',
+        url: '/nepali/news',
+      },
+      {
+        title: 'पछिल्लो कार्यक्रम',
+        url: '/nepali/multimedia/radio_programmes',
+      },
+      {
+        title: 'तस्वीरहरु',
+        url: '/nepali/media/photogalleries',
+      },
+      {
+        title: 'भिडियो',
+        url: '/nepali/media/video',
+      },
+    ],
   },
 };
 
