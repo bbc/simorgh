@@ -62,6 +62,30 @@ describe('getFrontpageInitialData', () => {
     });
   });
 
+  it('fetches data and returns expected object with variant', async () => {
+    await getFrontpageInitialData({
+      ...defaultContext,
+      variant: 'variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/news/variant.json',
+      preprocessorRules,
+    });
+  });
+
+  it('fetches data and returns expected object with variant with leading slash', async () => {
+    await getFrontpageInitialData({
+      ...defaultContext,
+      variant: '/variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/news/variant.json',
+      preprocessorRules,
+    });
+  });
+
   describe('When on amp', () => {
     beforeEach(() => {
       defaultContext.amp = true;

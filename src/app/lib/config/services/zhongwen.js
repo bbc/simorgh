@@ -3,8 +3,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import { zhongwen as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
-const service = {
-  lang: `zh_CN`,
+const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-zhongwen',
@@ -20,7 +19,6 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `zh_CN`,
   datetimeLocale: `zh_cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
@@ -210,6 +208,19 @@ const service = {
       url: 'http://www.bbc.co.uk/ukchina/simp',
     },
   ],
+};
+
+const service = {
+  simp: {
+    ...baseServiceConfig,
+    lang: `zh-hans`,
+    locale: `zh-hans`,
+  },
+  trad: {
+    ...baseServiceConfig,
+    lang: `zh-hant`,
+    locale: `zh-hant`,
+  },
 };
 
 export default service;

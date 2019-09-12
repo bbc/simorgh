@@ -52,35 +52,6 @@ const getDescription = (metadata, promo) =>
   pathOr(null, ['headlines', 'seoHeadline'], promo) ||
   pathOr(null, ['summary'], metadata);
 
-const getLink = ({
-  origin,
-  metadata,
-  promo,
-  service,
-  pageType,
-  linkType = '',
-}) => {
-  // https://github.com/bbc/simorgh/pull/1945 canonical links should use '.com'. However, AMP links use respect current origin
-  const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
-  let link;
-
-  if (pageType === 'article') {
-    const id = metadata.id.split(':').pop();
-    link = `${linkOrigin}/${service}/articles/${id}`;
-  } else if (pageType === 'frontPage') {
-    link = `${linkOrigin}/${service}`;
-  } else {
-    // different payload formats have the uri in various places
-    link = `${linkOrigin}${promo.uri || metadata.locators.assetUri}`;
-  }
-
-  if (linkType === 'amp') {
-    link = `${link}.amp`;
-  }
-
-  return link;
-};
-
 const getTimeTags = (timeTag, pageType) => {
   if (pageType !== 'article') {
     return null;
@@ -103,7 +74,16 @@ const getAppleTouchUrl = service => {
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
-  const { origin, pageType, platform } = useContext(RequestContext);
+  const {
+    pageType,
+    platform,
+    canonicalLink,
+    ampLink,
+    canonicalUkLink,
+    ampUkLink,
+    canonicalNonUkLink,
+    ampNonUkLink,
+  } = useContext(RequestContext);
   const {
     service,
     brandName,
@@ -126,31 +106,9 @@ const MetadataContainer = ({ metadata, promo }) => {
     return null;
   }
 
-  const id = aresArticleId.split(':').pop();
-
   const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
   const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
 
-  const canonicalLink = getLink({
-    origin,
-    metadata,
-    promo,
-    service,
-    pageType,
-    linkType: 'canonical',
-  });
-  const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
-  const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
-  const ampLink = getLink({
-    origin,
-    metadata,
-    promo,
-    service,
-    pageType,
-    linkType: 'amp',
-  });
-  const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
-  const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
 
@@ -158,15 +116,15 @@ const MetadataContainer = ({ metadata, promo }) => {
 
   const alternateLinksEnglishSites = [
     {
-      href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'x-default',
     },
     {
-      href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'en',
     },
     {
-      href: isAmp ? ampLinkUK : canonicalLinkUK,
+      href: isAmp ? ampUkLink : canonicalUkLink,
       hrefLang: 'en-gb',
     },
   ];
@@ -207,7 +165,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     <>
       <LinkedData
         brandName={brandName}
-        canonicalLink={canonicalLink}
+        canonicalLink={canonicalNonUkLink}
         firstPublished={timeFirstPublished}
         lastUpdated={timeLastPublished}
         logoUrl={defaultImage}
@@ -225,7 +183,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         articleAuthor={articleAuthor}
         articleSection={pathOr(null, ['passport', 'genre'], metadata)}
         brandName={brandName}
-        canonicalLink={canonicalLink}
+        canonicalLink={canonicalNonUkLink}
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
         description={getDescription(metadata, promo)}

@@ -45,7 +45,9 @@ describe('articleRegexPath', () => {
     '/news/articles/c5jje4ejkqvo',
     '/news/articles/c5jje4ejkqvo.amp',
     '/persian/articles/c7eel0lmr4do',
-    '/news/articles/c7eel0lmr4do.amp',
+    '/news/articles/c5jje4ejkqvo/simp',
+    '/news/articles/c5jje4ejkqvo/trad.amp',
+    '/persian/articles/c7eel0lmr4do/lat',
   ];
   shouldMatchValidRoutes(validRoutes, articleRegexPath);
 
@@ -56,6 +58,8 @@ describe('articleRegexPath', () => {
     '/news/articles/c12o',
     '/news/articles/c5jje4ejkqv',
     '/news/articles/',
+    '/news/articles/c5jje4ejkqvo/foobar',
+    '/news/articles/c5jje4ejkqvo/.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleRegexPath);
 });
@@ -64,6 +68,8 @@ describe('articleDataRegexPath', () => {
   const validRoutes = [
     '/news/articles/c5jje4ejkqvo.json',
     '/persian/articles/c7eel0lmr4do.json',
+    '/news/articles/c5jje4ejkqvo/lat.json',
+    '/persian/articles/c7eel0lmr4do/trad.json',
   ];
   shouldMatchValidRoutes(validRoutes, articleDataRegexPath);
 
@@ -71,23 +77,50 @@ describe('articleDataRegexPath', () => {
     '/news/articles/c5jje4ejkqvo',
     '/persian/articles/c7eel0lmr4do',
     '/iplayer/articles/c7eel0lmr4do.json',
+    '/persian/articles/c7eel0lmr4do/.json',
+    '/persian/articles/c7eel0lmr4do/foobar.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleDataRegexPath);
 });
 
 describe('frontpageRegexPath', () => {
-  const validRoutes = ['/news', '/persian', '/news.amp', '/persian.amp'];
+  const validRoutes = [
+    '/news',
+    '/persian',
+    '/news.amp',
+    '/persian.amp',
+    '/news/simp',
+    '/persian/trad',
+    '/news/lat.amp',
+    '/persian/cyr.amp',
+  ];
   shouldMatchValidRoutes(validRoutes, frontpageRegexPath);
 
-  const invalidRoutes = ['/news/home', '/persian/c5jje4ejkqvo.amp', '/iplayer'];
+  const invalidRoutes = [
+    '/news/home',
+    '/persian/c5jje4ejkqvo.amp',
+    '/iplayer',
+    '/news/foobar',
+    '/news/foobar.amp',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageRegexPath);
 });
 
 describe('frontpageDataRegexPath', () => {
-  const validRoutes = ['/news.json', '/persian.json'];
+  const validRoutes = [
+    '/news.json',
+    '/persian.json',
+    '/news/cyr.json',
+    '/persian/trad.json',
+  ];
   shouldMatchValidRoutes(validRoutes, frontpageDataRegexPath);
 
-  const invalidRoutes = ['/news/data.json', '/iplayer.json'];
+  const invalidRoutes = [
+    '/news/data.json',
+    '/iplayer.json',
+    '/news/foobar.json',
+    '/persian/.json',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageDataRegexPath);
 });
 
@@ -95,7 +128,11 @@ describe('swRegexPath', () => {
   const validRoutes = ['/news/articles/sw.js', '/persian/articles/sw.js'];
   shouldMatchValidRoutes(validRoutes, articleSwRegexPath);
 
-  const invalidRoutes = ['/news/sw.js', '/persian/articles/sw'];
+  const invalidRoutes = [
+    '/news/sw.js',
+    '/persian/articles/sw',
+    '/news/trad/sw.js',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleSwRegexPath);
 });
 
@@ -106,7 +143,11 @@ describe('manifestRegexPath', () => {
   ];
   shouldMatchValidRoutes(validRoutes, articleManifestRegexPath);
 
-  const invalidRoutes = ['/news/manifest.json', '/persian/articles/manifest'];
+  const invalidRoutes = [
+    '/news/manifest.json',
+    '/persian/articles/manifest',
+    '/news/simp/sw.js',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleManifestRegexPath);
 });
 
@@ -114,7 +155,11 @@ describe('frontpageSwRegexPath', () => {
   const validRoutes = ['/news/sw.js', '/persian/sw.js'];
   shouldMatchValidRoutes(validRoutes, frontpageSwRegexPath);
 
-  const invalidRoutes = ['/news/articles/sw.js', '/persian/sw'];
+  const invalidRoutes = [
+    '/news/articles/sw.js',
+    '/persian/sw',
+    '/persian/simp/sw.js',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageSwRegexPath);
 });
 
@@ -122,7 +167,11 @@ describe('frontpageManifestRegexPath', () => {
   const validRoutes = ['/news/manifest.json', '/persian/manifest.json'];
   shouldMatchValidRoutes(validRoutes, frontpageManifestRegexPath);
 
-  const invalidRoutes = ['/foobar/manifest.json', '/foobar/manifest'];
+  const invalidRoutes = [
+    '/foobar/manifest.json',
+    '/foobar/manifest',
+    '/news/trad/sw.js',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageManifestRegexPath);
 });
 
@@ -191,7 +240,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
 
-    // Accroding to CPS a valid assetUri should have 8 digits or more
+    // According to CPS a valid assetUri should have 8 digits or more
     const inValidRoutes = [
       '/pidgin/test-494859',
       '/blah/test-49450859',
@@ -211,7 +260,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
 
-    // Accroding to CPS a valid assetUri should have 8 digits or more
+    // According to CPS a valid assetUri should have 8 digits or more
     const inValidRoutes = [
       '/pidgin/test-494859.json',
       '/blah/test-49450859.json',

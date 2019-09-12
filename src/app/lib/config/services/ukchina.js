@@ -3,8 +3,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
-const service = {
-  lang: `zh-cn`,
+const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-ukchina',
@@ -20,7 +19,6 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `zh-cn`,
   datetimeLocale: `zh-cn`,
   service: 'ukchina',
   serviceName: '英伦网',
@@ -189,6 +187,19 @@ const service = {
       url: '/ukchina/simp/media/photogalleries',
     },
   ],
+};
+
+const service = {
+  simp: {
+    ...baseServiceConfig,
+    lang: `zh-hans`,
+    locale: `zh-hans`,
+  },
+  trad: {
+    ...baseServiceConfig,
+    lang: `zh-hant`,
+    locale: `zh-hant`,
+  },
 };
 
 export default service;
