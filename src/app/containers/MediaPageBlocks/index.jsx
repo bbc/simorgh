@@ -3,10 +3,10 @@ import pathOr from 'ramda/src/pathOr';
 import { string, shape, arrayOf } from 'prop-types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-import HeadingBlock from './blocks/heading';
-import LiveRadioBlock from './blocks/liveradio';
-import ParagraphBlock from './blocks/paragraph';
-import UnknownBlock from './blocks/unknown';
+import HeadingBlock from './Blocks/Heading';
+import LiveRadioBlock from './Blocks/LiveRadio';
+import ParagraphBlock from './Blocks/Paragraph';
+import UnknownBlock from './Blocks/Unknown';
 
 const blockMap = {
   heading: HeadingBlock,

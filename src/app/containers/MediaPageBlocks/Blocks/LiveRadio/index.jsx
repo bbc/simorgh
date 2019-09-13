@@ -3,7 +3,7 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
-import { RequestContext } from '../../../contexts/RequestContext';
+import { RequestContext } from '../../../../contexts/RequestContext';
 
 // eslint-disable-next-line react/prop-types
 const HeadingContainer = ({ uuid, idAttr, externalId, id }) => {
