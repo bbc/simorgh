@@ -167,6 +167,28 @@ const service = {
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
+    navigation: [
+      {
+        title: 'સમાચાર',
+        url: '/gujarati',
+      },
+      {
+        title: 'વીડિયો',
+        url: '/gujarati/media/video',
+      },
+      {
+        title: 'લોકપ્રિય',
+        url: '/gujarati/popular/read',
+      },
+      {
+        title: 'ભારત',
+        url: '/gujarati/india',
+      },
+      {
+        title: 'આંતરરાષ્ટ્રીય',
+        url: '/gujarati/international',
+      },
+    ],
   },
 };
 

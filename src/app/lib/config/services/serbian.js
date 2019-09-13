@@ -159,6 +159,32 @@ const baseServiceConfig = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: 'Početna strana',
+      url: '/serbian/lat',
+    },
+    {
+      title: 'Srbija',
+      url: '/serbian/lat/srbija',
+    },
+    {
+      title: 'Balkan',
+      url: '/serbian/lat/balkan',
+    },
+    {
+      title: 'Svet',
+      url: '/serbian/lat/svet',
+    },
+    {
+      title: 'Video',
+      url: '/serbian/lat/media/video',
+    },
+    {
+      title: 'Najpopularnije',
+      url: '/serbian/lat/popular/read',
+    },
+  ],
 };
 
 const service = {
