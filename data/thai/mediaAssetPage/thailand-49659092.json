@@ -211,7 +211,7 @@
          },
          {
             "text":"สำหรับวุฒิการศึกษาที่ ร.อ.ธรรมนัส นำมาแสดงต่อสื่อมวลชนเป็นวุฒิการศึกษาที่ระบุถึงชื่อมหาวิทยาลัย <link><caption>inline link example</caption><url href=\"https://www.bbc.co.uk/news/av/stories-49021903/flat-earth-how-did-youtube-help-spread-a-conspiracy-theory\" platform=\"highweb\"/></link> สถานที่ตั้ง และเกรดเฉลี่ย 3.79 โดย ร.อ.ธรรมนัส ยังบอกว่า ขณะนี้ตนเองยังได้ศึกษาระดับปริญญาเอกอยู่ที่มหาวิทยาลัยสวนสุนันทาอีกด้วย",
-            "markupType":"plain_text",
+            "markupType":"candy_xml",
             "type":"paragraph"
          },
          {
