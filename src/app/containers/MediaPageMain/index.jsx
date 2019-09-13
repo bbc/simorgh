@@ -11,6 +11,7 @@ import LiveRadioBlock from './blocks/liveradio';
 import ParagraphBlock from './blocks/paragraph';
 import ImageBlock from './blocks/image';
 import TimestampBlock from './blocks/timestamp';
+import SocialEmbedContainer from './blocks/embed'
 
 const blockMap = {
   heading: HeadingBlock,
@@ -18,6 +19,7 @@ const blockMap = {
   liveradio: LiveRadioBlock,
   image: ImageBlock,
   timestamp: TimestampBlock,
+  social_embed: SocialEmbedContainer,
 };
 
 const LIVE_RADIO_BLOCK = 'liveradio';
