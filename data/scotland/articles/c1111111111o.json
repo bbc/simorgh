@@ -13,7 +13,6 @@
     "passport": {
       "language": "en-gb",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Scotland",
-      "category": null,
       "genre": null
     },
     "tags": {},
