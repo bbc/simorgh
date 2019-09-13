@@ -9,13 +9,13 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import HeadingBlock from './blocks/heading';
 import LiveRadioBlock from './blocks/liveradio';
 import ParagraphBlock from './blocks/paragraph';
-import Timestamp from '../ArticleTimestamp';
+import TimestampBlock from './blocks/timestamp';
 
 const blockMap = {
   heading: HeadingBlock,
   paragraph: ParagraphBlock,
   liveradio: LiveRadioBlock,
-  timestamp: Timestamp,
+  timestamp: TimestampBlock,
 };
 
 const LIVE_RADIO_BLOCK = 'liveradio';
