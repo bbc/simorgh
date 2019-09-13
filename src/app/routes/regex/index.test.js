@@ -228,6 +228,8 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
   });
   describe('mediaAssetPageRegexPath', () => {
     const validRoutes = [
+      '/pidgin/12345678',
+      '/pidgin/12345678.amp',
       '/pidgin/tori-49450859',
       '/pidgin/tori-49450859.amp',
       '/yoruba/media-49450859',
@@ -240,8 +242,11 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
 
-    // According to CPS a valid assetUri should have 8 digits or more
+    // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
     const inValidRoutes = [
+      '/pidgin/1234567',
+      '/pidgin/12345678/.amp',
+      '/blah/12345678',
       '/pidgin/test-494859',
       '/blah/test-49450859',
       '/pidgin/test-49450859/.amp',
@@ -253,6 +258,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
 
   describe('mediaAssetPageDataRegexPath', () => {
     const validRoutes = [
+      '/pidgin/12345678.json',
       '/pidgin/test-49450859.json',
       '/kyrgyz/test-tv-48695523.json',
       '/mundo/test_underscore-12345678.json',
@@ -260,8 +266,10 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
 
-    // According to CPS a valid assetUri should have 8 digits or more
+    // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
     const inValidRoutes = [
+      '/pidgin/1234567.json',
+      '/pidgin/12345678',
       '/pidgin/test-494859.json',
       '/blah/test-49450859.json',
       '/pidgin/test-49450859',

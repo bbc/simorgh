@@ -5,8 +5,9 @@ import buildMediaRoutes, { buildMediaDataRoutes } from '../buildMediaRoutes';
 const serviceRegex = Object.keys(services).join('|');
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
+const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
+
 const variantRegex = '/simp|/trad|/cyr|/lat';
-const assetUriRegex = '[a-z-_]+-[0-9]{8,}';
 
 export const articleRegexPath = `/:service(${serviceRegex})/articles/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
