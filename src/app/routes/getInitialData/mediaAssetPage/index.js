@@ -3,8 +3,13 @@ import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import addHeadingToSTY from '../../../lib/utilities/preprocessor/rules/addHeadingToSTY';
 import addTimestampToSTY from '../../../lib/utilities/preprocessor/rules/addTimestampToSTY';
+import addAttributesToSTYTextBlocks from '../../../lib/utilities/preprocessor/rules/addAttributesToSTYTextBlocks';
 
-const preprocessorRules = [addTimestampToSTY, addHeadingToSTY];
+const preprocessorRules = [
+  addTimestampToSTY,
+  addHeadingToSTY,
+  addAttributesToSTYTextBlocks,
+];
 
 const getMediaAssetPageInitialData = props => {
   const { service, assetUri } = props;
