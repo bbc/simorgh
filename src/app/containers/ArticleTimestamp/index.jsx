@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react';
-import { number } from 'prop-types';
+import { number, bool } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import { PopOutGridItemMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -11,7 +11,11 @@ import {
   isValidDateTime,
 } from './helpers';
 
-const ArticleTimestamp = ({ firstPublished, lastPublished, withGridWrapper = true }) => {
+const ArticleTimestamp = ({
+  firstPublished,
+  lastPublished,
+  withGridWrapper,
+}) => {
   const {
     articleTimestampPrefix,
     datetimeLocale,
@@ -60,6 +64,11 @@ const ArticleTimestamp = ({ firstPublished, lastPublished, withGridWrapper = tru
 ArticleTimestamp.propTypes = {
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
+  withGridWrapper: bool,
+};
+
+ArticleTimestamp.defaultProps = {
+  withGridWrapper: true,
 };
 
 export default ArticleTimestamp;

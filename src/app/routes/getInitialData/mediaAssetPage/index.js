@@ -4,10 +4,7 @@ import fetchData from '../utils/fetchData';
 import addHeadingToSTY from '../../../lib/utilities/preprocessor/rules/addHeadingToSTY';
 import addTimestampToSTY from '../../../lib/utilities/preprocessor/rules/addTimestampToSTY';
 
-const preprocessorRules = [
-  addTimestampToSTY,
-  addHeadingToSTY,
-];
+const preprocessorRules = [addTimestampToSTY, addHeadingToSTY];
 
 const getMediaAssetPageInitialData = props => {
   const { service, assetUri } = props;
