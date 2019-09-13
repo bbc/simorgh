@@ -1,6 +1,13 @@
 import onClient from '../../../lib/utilities/onClient';
 import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
+import addHeadingToSTY from '../../../lib/utilities/preprocessor/rules/addHeadingToSTY';
+import addTimestampToSTY from '../../../lib/utilities/preprocessor/rules/addTimestampToSTY';
+
+const preprocessorRules = [
+  addTimestampToSTY,
+  addHeadingToSTY,
+];
 
 const getMediaAssetPageInitialData = props => {
   const { service, assetUri } = props;
@@ -11,7 +18,7 @@ const getMediaAssetPageInitialData = props => {
 
   const url = `${baseUrl}/${service}/${assetUri}.json`;
 
-  return fetchData({ url });
+  return fetchData({ url, preprocessorRules });
 };
 
 export default getMediaAssetPageInitialData;
