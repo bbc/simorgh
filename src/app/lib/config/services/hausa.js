@@ -169,6 +169,40 @@ const service = {
     },
     fonts: [],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'Labaran Duniya',
+        url: '/hausa',
+      },
+      {
+        title: 'Wasanni',
+        url: '/hausa/wasanni',
+      },
+      {
+        title: 'Mujalla',
+        url: '/hausa/mujalla',
+      },
+      {
+        title: 'Cikakkun Rahotanni',
+        url: '/hausa/rahotanni',
+      },
+      {
+        title: 'Bidiyo',
+        url: '/hausa/media/video',
+      },
+      {
+        title: 'Shirye-shirye na Musamman',
+        url: '/hausa/shirye_shirye_na_musamman',
+      },
+      {
+        title: 'Shirye-shiryen rediyo',
+        url: '/hausa/media-43322903',
+      },
+      {
+        title: 'Hotuna',
+        url: '/hausa/media/photogalleries',
+      },
+    ],
   },
 };
 

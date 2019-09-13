@@ -173,6 +173,56 @@ const service = {
     },
     fonts: [F_LATHA_BOLD, F_LATHA_REGULAR],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'முகப்பு',
+        url: '/tamil',
+      },
+      {
+        title: 'உலகம்',
+        url: '/tamil/global',
+      },
+      {
+        title: 'இலங்கை',
+        url: '/tamil/sri_lanka',
+      },
+      {
+        title: 'இந்தியா',
+        url: '/tamil/india',
+      },
+      {
+        title: 'அறிவியல்',
+        url: '/tamil/science',
+      },
+      {
+        title: 'விளையாட்டு',
+        url: '/tamil/sport',
+      },
+      {
+        title: 'கலை & கலாச்சாரம்',
+        url: '/tamil/arts_and_culture',
+      },
+      {
+        title: 'சினிமா',
+        url: '/tamil/topics/2611f753-ece7-47ea-9782-f912bc1e4088',
+      },
+      {
+        title: 'ஒலி',
+        url: '/tamil/media/audio',
+      },
+      {
+        title: 'ஒளி',
+        url: '/tamil/media/video',
+      },
+      {
+        title: 'படத்தொகுப்பு',
+        url: '/tamil/media/photogalleries',
+      },
+      {
+        title: 'முந்தைய தொலைக்காட்சி நிகழ்ச்சிகள்',
+        url: '/tamil/media-38734063',
+      },
+    ],
   },
 };
 
