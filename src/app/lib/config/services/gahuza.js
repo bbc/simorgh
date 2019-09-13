@@ -166,6 +166,28 @@ const service = {
     },
     fonts: [],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: "Urupapuro rw'itangiriro",
+        url: '/gahuza',
+      },
+      {
+        title: 'Amakuru',
+        url: '/gahuza/amakuru',
+      },
+      {
+        title: 'Imikino',
+        url: '/gahuza/imikino',
+      },
+      {
+        title: 'Umviriza',
+        url: '/gahuza/media/audio',
+      },
+      {
+        title: 'Video',
+        url: '/gahuza/media/video',
+      },
+    ],
   },
 };
 

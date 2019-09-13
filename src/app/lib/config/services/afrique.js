@@ -173,6 +173,56 @@ const service = {
     },
     fonts: [],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'Accueil',
+        url: '/afrique',
+      },
+      {
+        title: 'Afrique',
+        url: '/afrique/region',
+      },
+      {
+        title: 'Monde',
+        url: '/afrique/monde',
+      },
+      {
+        title: 'Sports',
+        url: '/afrique/sports',
+      },
+      {
+        title: 'Economie',
+        url: '/afrique/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+      },
+      {
+        title: 'Culture',
+        url: '/afrique/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
+      },
+      {
+        title: 'Au féminin',
+        url: '/afrique/38058576',
+      },
+      {
+        title: 'Technologie',
+        url: '/afrique/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+      },
+      {
+        title: 'Santé',
+        url: '/afrique/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+      },
+      {
+        title: 'Vidéos',
+        url: '/afrique/media/video',
+      },
+      {
+        title: 'En images',
+        url: '/afrique/media/photogalleries',
+      },
+      {
+        title: 'Nos émissions',
+        url: '/afrique/nos_emissions/radio',
+      },
+    ],
   },
 };
 
