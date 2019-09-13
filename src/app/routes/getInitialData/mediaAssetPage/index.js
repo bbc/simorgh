@@ -3,8 +3,9 @@ import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import addHeadingToSTY from '../../../lib/utilities/preprocessor/rules/addHeadingToSTY';
 import addTimestampToSTY from '../../../lib/utilities/preprocessor/rules/addTimestampToSTY';
+import listCandy from '../../../lib/utilities/preprocessor/rules/listCandy';
 
-const preprocessorRules = [addTimestampToSTY, addHeadingToSTY];
+const preprocessorRules = [addTimestampToSTY, addHeadingToSTY, listCandy];
 
 const getMediaAssetPageInitialData = props => {
   const { service, assetUri } = props;

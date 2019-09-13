@@ -12,6 +12,7 @@ import LiveRadioBlock from './blocks/liveradio';
 import ParagraphBlock from './blocks/paragraph';
 import ImageBlock from './blocks/image';
 import TimestampBlock from './blocks/timestamp';
+import ListBlock from './blocks/list';
 
 const blockMap = {
   heading: HeadingBlock,
@@ -20,6 +21,7 @@ const blockMap = {
   image: ImageBlock,
   timestamp: TimestampBlock,
   crosshead: SubHeadingBlock,
+  list: ListBlock,
 };
 
 const LIVE_RADIO_BLOCK = 'liveradio';
