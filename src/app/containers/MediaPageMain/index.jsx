@@ -9,7 +9,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import HeadingBlock from './blocks/heading';
 import LiveRadioBlock from './blocks/liveradio';
 import ParagraphBlock from './blocks/paragraph';
-import ImageBlock from './blocks/image'
+import ImageBlock from './blocks/image';
 import TimestampBlock from './blocks/timestamp';
 
 const blockMap = {

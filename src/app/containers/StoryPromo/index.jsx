@@ -22,7 +22,7 @@ import MediaIndicator from './MediaIndicator';
 import isTenHoursAgo from '../../lib/utilities/isTenHoursAgo';
 import IndexAlsos from './IndexAlsos';
 
-const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
+export const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
     return null;
   }
@@ -194,4 +194,4 @@ StoryPromo.defaultProps = {
   topStory: false,
 };
 
-export {StoryPromo, StoryPromoImage};
+export default StoryPromo;
