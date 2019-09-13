@@ -102,7 +102,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                 cy.get('[aria-labelledby="Top-stories"]')
                   .eq(0)
                   .within(() => {
-                    cy.get('div[class^="StyledIndexAlsos"]')
+                    cy.get('div[data-e2e=index-alsos]')
                       .eq(0)
                       .within(() => {
                         cy.get('h4')
