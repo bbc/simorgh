@@ -7,9 +7,9 @@ const ImageContainer = ({ uuid, path, height, width }) => {
   return (
     <StoryPromoImage
       key={uuid}
-      topStory="false"
+      topStory={false}
       imageValues={imageValues}
-      lazyLoad="true"
+      lazyLoad
     />
   );
 };
