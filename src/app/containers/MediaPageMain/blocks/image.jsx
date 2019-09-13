@@ -7,6 +7,6 @@ const ImageContainer = ({ uuid, path, height, width }) => {
     return (
         <StoryPromoImage key={uuid} topStory="false" imageValues={imageValues} lazyLoad="true"/>
     )
-    };
+};
 
 export default HeadingContainer;
