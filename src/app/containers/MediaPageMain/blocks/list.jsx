@@ -1,15 +1,21 @@
 import React from 'react';
-import path from 'ramda/src/path';
+import InlineLink from '@bbc/psammead-inline-link';
+import Paragraph from '@bbc/psammead-paragraph';
 
 // eslint-disable-next-line react/prop-types
 const ListContainer = ({ items }) => {
-
-
-
   return (
     <ul>
       {items.map(({ text }) => (
-        <li>{text}</li>
+        <Paragraph as="li">
+          {text.map(({ href, text: textText }) => {
+            if (href) {
+              return <InlineLink href={href}>{textText}</InlineLink>;
+            }
+
+            return textText;
+          })}
+        </Paragraph>
       ))}
     </ul>
   );
