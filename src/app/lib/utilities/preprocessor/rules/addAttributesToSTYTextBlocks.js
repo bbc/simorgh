@@ -19,15 +19,13 @@ const addAttributesText = textXml => {
 
 const addAttributesToSTYTextBlocks = jsonRaw => {
   const blocks = pathOr(null, ['content', 'blocks'], jsonRaw);
-  let introductionBolded = false;
 
   const processedBlocks = blocks.map(block => {
     if (block.type !== 'paragraph') return block;
 
     let wrappedText = `<text>${block.text}</text>`;
-    if (!introductionBolded)
+    if (block.role === 'introduction')
       wrappedText = `<text><bold>${block.text}</bold></text>`;
-    introductionBolded = true;
 
     const newParagraphBlock = {
       textBlocks: addAttributesText(wrappedText),
