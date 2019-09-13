@@ -167,6 +167,28 @@ const service = {
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
+    navigation: [
+      {
+        title: 'बातम्या',
+        url: '/marathi',
+      },
+      {
+        title: 'व्हीडिओ',
+        url: '/marathi/media/video',
+      },
+      {
+        title: 'लोकप्रिय',
+        url: '/marathi/popular/read',
+      },
+      {
+        title: 'भारत',
+        url: '/marathi/india',
+      },
+      {
+        title: 'आंतरराष्ट्रीय',
+        url: '/marathi/international',
+      },
+    ],
   },
 };
 

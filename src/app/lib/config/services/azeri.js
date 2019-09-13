@@ -163,6 +163,36 @@ const service = {
     },
     fonts: [],
     timezone: 'Asia/baku',
+    navigation: [
+      {
+        title: 'Xəbərlər',
+        url: '/azeri',
+      },
+      {
+        title: 'Azərbaycan',
+        url: '/azeri/azerbaijan',
+      },
+      {
+        title: 'Region',
+        url: '/azeri/region',
+      },
+      {
+        title: 'Beynəlxalq',
+        url: '/azeri/international',
+      },
+      {
+        title: 'Dərgi',
+        url: '/azeri/magazine',
+      },
+      {
+        title: 'Fotoqalereya',
+        url: '/azeri/media/photogalleries',
+      },
+      {
+        title: 'Video',
+        url: '/azeri/media/video',
+      },
+    ],
   },
 };
 
