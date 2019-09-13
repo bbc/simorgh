@@ -14,6 +14,8 @@ const HeadingContainer = ({ uuid, idAttr, externalId, id }) => {
     amp: AmpMediaPlayer,
   }[platform];
 
+  if (!MediaPlayer || !externalId || !id) return null;
+
   return (
     <MediaPlayer
       key={uuid}
