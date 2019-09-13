@@ -1,26 +1,26 @@
 import React, { useContext } from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
-import { Headline } from '@bbc/psammead-headings';
-import Paragraph from '@bbc/psammead-paragraph';
-import {
-  CanonicalMediaPlayer,
-  AmpMediaPlayer,
-} from '@bbc/psammead-media-player';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
 
-const HEADING_BLOCK = 'heading';
-const PARAGRAPH_BLOCK = 'paragraph';
+import HeadingBlock from './blocks/heading';
+import LiveRadioBlock from './blocks/liveradio';
+import ParagraphBlock from './blocks/paragraph';
+
+const blockMap = {
+  heading: HeadingBlock,
+  paragraph: ParagraphBlock,
+  liveradio: LiveRadioBlock,
+};
+
 const LIVE_RADIO_BLOCK = 'liveradio';
 const SKIP_LINK_ANCHOR_ID = 'content';
 
 const MediaPageMain = ({ pageData, service }) => {
   const { script } = useContext(ServiceContext);
-  const { platform } = useContext(RequestContext);
   const blocks = path(['content', 'blocks'], pageData);
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -32,50 +32,31 @@ const MediaPageMain = ({ pageData, service }) => {
       <main role="main">
         <Grid>
           <GridItemConstrainedMedium>
-            {blocks.map(({ uuid, id, text, type, externalId }, index) => {
+            {blocks.map((props, index) => {
+              const { uuid, id, type } = props;
               const isFirstBlock = index === 0;
               const idAttr = isFirstBlock ? SKIP_LINK_ANCHOR_ID : null;
               const blockType =
                 id === LIVE_RADIO_BLOCK ? LIVE_RADIO_BLOCK : type;
 
-              switch (blockType) {
-                case HEADING_BLOCK:
-                case PARAGRAPH_BLOCK: {
-                  const TextBlock = {
-                    [HEADING_BLOCK]: Headline,
-                    [PARAGRAPH_BLOCK]: Paragraph,
-                  }[blockType];
+              const Block = blockMap[blockType];
 
-                  return (
-                    <TextBlock
-                      key={uuid}
-                      script={script}
-                      service={service}
-                      id={idAttr}
-                    >
-                      {text}
-                    </TextBlock>
-                  );
-                }
-
-                case LIVE_RADIO_BLOCK: {
-                  const MediaPlayer = {
-                    canonical: CanonicalMediaPlayer,
-                    amp: AmpMediaPlayer,
-                  }[platform];
-
-                  return (
-                    <MediaPlayer
-                      key={uuid}
-                      showPlaceholder={false}
-                      src={`/ws/av-embeds/media/${externalId}/${id}`}
-                      id={idAttr}
-                    />
-                  );
-                }
-                default:
-                  return null;
+              if (!Block) {
+                // eslint-disable-next-line jsx-a11y/accessible-emoji
+                return <p>⁉️ What is a {blockType} ⁉️</p>;
               }
+
+              return (
+                <Block
+                  {...{
+                    ...props,
+                    idAttr,
+                    key: uuid,
+                    script,
+                    service,
+                  }}
+                />
+              );
             })}
           </GridItemConstrainedMedium>
         </Grid>
