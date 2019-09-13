@@ -1,10 +1,20 @@
 import React from 'react';
 import ParagraphComponent from '@bbc/psammead-paragraph';
+import FragmentContainer from '../../Fragment';
 
-// eslint-disable-next-line react/prop-types
-const ParagraphContainer = ({ uuid, script, service, idAttr, text }) => (
+/* eslint-disable */ 
+// TO DO figure out prop type warnings
+const ParagraphContainer = ({
+  uuid,
+  script,
+  service,
+  idAttr,
+  textBlocks,
+}) => (
   <ParagraphComponent key={uuid} script={script} service={service} id={idAttr}>
-    {text}
+    {textBlocks.map(({ text, attributes }) => (
+      <FragmentContainer text={text} attributes={attributes} />
+    ))}
   </ParagraphComponent>
 );
 

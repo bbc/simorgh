@@ -1,6 +1,10 @@
 import baseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import getMediaAssetPageInitialData from '.';
+import addHeadingToSTY from '../../../lib/utilities/preprocessor/rules/addHeadingToSTY';
+import addTimestampToSTY from '../../../lib/utilities/preprocessor/rules/addTimestampToSTY';
+import addAttributesToSTYTextBlocks from '../../../lib/utilities/preprocessor/rules/addAttributesToSTYTextBlocks';
+import listCandy from '../../../lib/utilities/preprocessor/rules/listCandy';
 
 const mockData = { service: 'pidgin', status: 200, pageData: {} };
 
@@ -21,6 +25,12 @@ describe('getMediaAssetPageInitialData', () => {
 
     expect(fetchData).toBeCalledWith({
       url: `${mockBaseUrl}/pidgin/tori-49450859.json`,
+      preprocessorRules: [
+        addTimestampToSTY,
+        addHeadingToSTY,
+        addAttributesToSTYTextBlocks,
+        listCandy,
+      ],
     });
   });
   it('should return the expected page data', async () => {

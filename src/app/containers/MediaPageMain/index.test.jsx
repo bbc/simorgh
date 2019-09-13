@@ -6,10 +6,14 @@ import { RequestContext } from '../../contexts/RequestContext';
 import MediaPageMain from '.';
 import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
 import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
+import preprocessor from '../../lib/utilities/preprocessor';
+import addAttributesToSTYTextBlocks from '../../lib/utilities/preprocessor/rules/addAttributesToSTYTextBlocks';
 
 jest.mock('../Metadata', () => () => <div id="metadata" />);
 
-const pageData = addIdsToBlocks(amharicPageData);
+const pageData = preprocessor(addIdsToBlocks(amharicPageData), [
+  addAttributesToSTYTextBlocks,
+]);
 
 describe('Media Page Main', () => {
   shouldMatchSnapshot(
