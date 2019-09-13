@@ -18,7 +18,7 @@ const ListContainer = ({ items }) => {
               );
             }
 
-            return <Fragment key={textId}>textText</Fragment>;
+            return <Fragment key={textId}>{textText}</Fragment>;
           })}
         </Paragraph>
       ))}
