@@ -18,7 +18,7 @@ const serviceDataSets = {
   thai: thaiData,
 };
 
-const stories = storiesOf('Containers|Main|Front Page', module);
+const stories = storiesOf('Main|Front Page', module);
 
 Object.keys(serviceDataSets).forEach(service => {
   stories.add(`Front Page - ${service}`, () => (
