@@ -2879,6 +2879,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
     </time>
     <div
       className="c10"
+      data-e2e="index-alsos"
     >
       <h4
         className="c11"
