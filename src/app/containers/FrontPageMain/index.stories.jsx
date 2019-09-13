@@ -21,7 +21,7 @@ const serviceDataSets = {
 const stories = storiesOf('Containers|Main|Front Page', module);
 
 Object.keys(serviceDataSets).forEach(service => {
-  stories.add(`Frontpage main - ${service}`, () => (
+  stories.add(`Front Page - ${service}`, () => (
     <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
