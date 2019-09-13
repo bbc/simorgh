@@ -9,17 +9,18 @@ import services from '../../../lib/config/services';
  */
 export const ServiceContext = React.createContext(services.default);
 
-export const ServiceContextProvider = ({ children, service }) => (
-  <ServiceContext.Provider value={services[service]}>
+export const ServiceContextProvider = ({ children, service, variant }) => (
+  <ServiceContext.Provider value={services[service][variant]}>
     {children}
   </ServiceContext.Provider>
 );
 
 ServiceContextProvider.propTypes = {
   children: node.isRequired,
-  service: string,
+  service: string.isRequired,
+  variant: string,
 };
 
 ServiceContextProvider.defaultProps = {
-  service: 'default',
+  variant: 'default',
 };

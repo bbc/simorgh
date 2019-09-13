@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleContainer from './index';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
@@ -9,6 +9,7 @@ const defaultProps = {
   isAmp: false,
   pageType: 'article',
   service: 'news',
+  pathname: '/pathname',
 };
 
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {

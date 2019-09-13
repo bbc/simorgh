@@ -42,6 +42,38 @@ describe('getRouteProps', () => {
         service: 'news',
       });
     });
+
+    it('should return service, isAmp, route and match with variants', async () => {
+      reactRouterConfig.matchRoutes.mockReturnValue([
+        {
+          route: { route: 'data' },
+          match: {
+            params: { service: 'news', amp: undefined, variant: '/simp' },
+          },
+        },
+      ]);
+
+      const methodCall = await getRouteProps([], 'url');
+
+      expect(routeFallbackParams.fallbackAmpParam).not.toHaveBeenCalled();
+      expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
+
+      expect(methodCall).toEqual({
+        isAmp: false,
+        match: {
+          params: {
+            amp: undefined,
+            service: 'news',
+            variant: '/simp',
+          },
+        },
+        route: {
+          route: 'data',
+        },
+        service: 'news',
+        variant: 'simp',
+      });
+    });
   });
 
   describe('valid amp route', () => {
