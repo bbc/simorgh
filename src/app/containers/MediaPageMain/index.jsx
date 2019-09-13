@@ -9,11 +9,13 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import HeadingBlock from './blocks/heading';
 import LiveRadioBlock from './blocks/liveradio';
 import ParagraphBlock from './blocks/paragraph';
+import Image from './blocks/image'
 
 const blockMap = {
   heading: HeadingBlock,
   paragraph: ParagraphBlock,
   liveradio: LiveRadioBlock,
+  image: Image,
 };
 
 const LIVE_RADIO_BLOCK = 'liveradio';
