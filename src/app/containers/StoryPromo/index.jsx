@@ -194,4 +194,4 @@ StoryPromo.defaultProps = {
   topStory: false,
 };
 
-export default StoryPromo;
+export {StoryPromo, StoryPromoImage};
