@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
 
@@ -6,14 +6,19 @@ import Paragraph from '@bbc/psammead-paragraph';
 const ListContainer = ({ items }) => {
   return (
     <ul>
-      {items.map(({ text }) => (
-        <Paragraph as="li">
-          {text.map(({ href, text: textText }) => {
+      {/* eslint-disable-next-line react/prop-types */}
+      {items.map(({ text, id }) => (
+        <Paragraph as="li" key={id}>
+          {text.map(({ href, text: textText, textId }) => {
             if (href) {
-              return <InlineLink href={href}>{textText}</InlineLink>;
+              return (
+                <InlineLink key={textId} href={href}>
+                  {textText}
+                </InlineLink>
+              );
             }
 
-            return textText;
+            return <Fragment key={textId}>textText</Fragment>;
           })}
         </Paragraph>
       ))}

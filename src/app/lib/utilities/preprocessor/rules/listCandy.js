@@ -1,6 +1,7 @@
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import convert from 'xml-js';
+import uuid from 'uuid';
 
 const listCandy = jsonRaw => {
   const blocks = path(['content', 'blocks'], jsonRaw);
@@ -22,6 +23,7 @@ const listCandy = jsonRaw => {
             {
               text,
               attributes: [],
+              id: uuid(),
             },
           ],
         };
@@ -45,6 +47,7 @@ const listCandy = jsonRaw => {
                 ['elements', 0, 'elements', 1, 'elements', 0, 'href'],
                 jsonXml,
               ),
+              id: uuid(),
             },
           ],
         };
