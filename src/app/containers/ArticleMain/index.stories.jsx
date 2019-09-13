@@ -15,7 +15,7 @@ import articleData from '../../../../data/news/articles/c5jje4ejkqvo';
 
 storiesOf('Containers|Main|Article', module)
   .addDecorator(withKnobs)
-  .add('Articles Main', () => (
+  .add('Articles', () => (
     <ToggleContextProvider>
       <ServiceContextProvider service="news">
         <RequestContextProvider isAmp={false} pageType="article" service="news">
