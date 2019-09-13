@@ -13,7 +13,7 @@ const addHeadingToSTY = jsonRaw => {
   }
 
   const newBlock = {
-    text: 'رادیو فارسی بی‌بی‌سی',
+    text: headlineText,
     markupType: 'plain_text',
     type: 'heading',
   };
