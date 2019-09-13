@@ -7,6 +7,7 @@ import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 import HeadingBlock from './blocks/heading';
+import SubHeadingBlock from './blocks/subheading';
 import LiveRadioBlock from './blocks/liveradio';
 import ParagraphBlock from './blocks/paragraph';
 import ImageBlock from './blocks/image';
@@ -18,6 +19,7 @@ const blockMap = {
   liveradio: LiveRadioBlock,
   image: ImageBlock,
   timestamp: TimestampBlock,
+  crosshead: SubHeadingBlock,
 };
 
 const LIVE_RADIO_BLOCK = 'liveradio';
