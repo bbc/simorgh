@@ -10,8 +10,8 @@ const addTimestampToSTY = jsonRaw => {
   }
 
   const newBlock = {
-    firstPublished,
-    lastPublished,
+    firstPublished: firstPublished * 1000,
+    lastPublished: lastPublished * 1000,
     type: 'timestamp',
   };
 
