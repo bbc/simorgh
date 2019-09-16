@@ -1,440 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`defaultPageWrapper should render default page wrapper with children 1`] = `
-.c11 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c7 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c6 {
-  background-color: #B80000;
-  height: 3.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-.c12 {
-  background-color: #B80000;
-  height: 3.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-top: 0.0625rem solid transparent;
-}
-
-.c9 {
-  display: inline-block;
-  width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-}
-
-.c10 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 1rem;
-  padding-bottom: 0.75rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-}
-
-.c8:hover .c10,
-.c8:focus .c10 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c0 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-.c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c1::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.c2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.c4 li + li {
-  padding-top: 0.5rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-.c3 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3 a:focus,
-.c3 a:hover {
-  color: #FFFFFF;
-}
-
-.c5 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c5 button:focus,
-.c5 button:hover {
-  color: #FFFFFF;
-}
-
-.c5 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 a:focus,
-.c5 a:hover {
-  color: #FFFFFF;
-}
-
-.c18 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: block;
-}
-
-.c21 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline;
-}
-
-.c17:hover .c19,
-.c17:focus .c19 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c15 {
-  border-bottom: 1px solid #3F3F42;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0 0.5rem;
-}
-
-.c15 > li:first-child {
-  border-bottom: 1px solid #3F3F42;
-  padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
-  grid-column: 1/-1;
-}
-
-.c16 {
-  min-width: 50%;
-}
-
-.c13 {
-  background-color: #222222;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c14 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c20 {
-  color: #FFFFFF;
-  margin: 0;
-  padding: 1rem 0;
-}
-
-@media (min-width:25rem) {
-  .c6 {
-    height: 5rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c12 {
-    height: 5rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c10 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c10 {
-    fill: windowText;
-  }
-}
-
-@media (min-width:25rem) {
-  .c0 {
-    padding: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    width: 18%;
-    float: right;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    margin: 0;
-    float: left;
-    width: 53%;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 button {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c15 {
-    display: grid;
-    grid-auto-flow: column;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c15 {
-    grid-auto-flow: row;
-  }
-}
-
-@media (min-width:15rem) and (max-width:37.4375rem) {
-  .c15 {
-    grid-column-gap: 0.5rem;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat( 4,auto );
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c15 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat( 3,auto );
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c15 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat( 3,auto );
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat( 3,auto );
-  }
-}
-
-@supports not (grid-template-columns:fit-content(200px)) {
-  .c15 > li:first-child {
-    width: 100%;
-  }
-}
-
-@supports not (grid-template-columns:fit-content(200px)) {
-  .c16 {
-    display: inline-block;
-  }
-}
-
-@media (max-width:25rem) {
-  .c13 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 0.8125rem;
-  }
-}
-
+exports[`defaultPageWrapper DefaultPageWrapper should render correctly 1`] = `
 <div>
   <header
     role="banner"
   >
     <div
-      class="c0"
+      class="Wrapper-sc-7g3fro-0 gIWVBy"
       dir="ltr"
     >
       <div
-        class="c1"
+        class="CenterWrapper-sc-7g3fro-1 ggwfud"
         dir="ltr"
       >
         <h2
-          class="c2"
+          class="Title-sc-7g3fro-2 iqsZpo"
           dir="ltr"
         >
           We've updated our Privacy and Cookies Policy
         </h2>
         <p
-          class="c3"
+          class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
           dir="ltr"
         >
           We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
         </p>
         <ul
-          class="c4"
+          class="Options-sc-7g3fro-3 jLugbT"
           dir="ltr"
         >
           <li
-            class="c5"
+            class="ListItem-sc-7g3fro-5 iOzCnw"
             dir="ltr"
           >
             <button
@@ -444,7 +40,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </button>
           </li>
           <li
-            class="c5"
+            class="ListItem-sc-7g3fro-5 iOzCnw"
             dir="ltr"
           >
             <a
@@ -457,18 +53,18 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
       </div>
     </div>
     <div
-      class="c6"
+      class="Banner-m3awbo-1 bwYzxk"
     >
       <div
-        class="c7"
+        class="SvgWrapper-m3awbo-0 fdmjpW"
       >
         <a
-          class="c8 c9"
+          class="StyledLink-m3awbo-2 ieYTOK"
           href="/news"
         >
           <svg
             aria-hidden="true"
-            class="c10"
+            class="BrandSvg-m3awbo-3 ccgFAZ"
             focusable="false"
             height="24"
             viewBox="0 0 167.95 24"
@@ -492,7 +88,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </g>
           </svg>
           <span
-            class="c11"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
           >
             BBC News
           </span>
@@ -507,18 +103,18 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     role="contentinfo"
   >
     <div
-      class="c12"
+      class="Banner-m3awbo-1 fMHHot"
     >
       <div
-        class="c7"
+        class="SvgWrapper-m3awbo-0 fdmjpW"
       >
         <a
-          class="c8 c9"
+          class="StyledLink-m3awbo-2 ieYTOK"
           href="/news"
         >
           <svg
             aria-hidden="true"
-            class="c10"
+            class="BrandSvg-m3awbo-3 ccgFAZ"
             focusable="false"
             height="24"
             viewBox="0 0 167.95 24"
@@ -542,7 +138,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </g>
           </svg>
           <span
-            class="c11"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
           >
             BBC News
           </span>
@@ -550,115 +146,115 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
       </div>
     </div>
     <div
-      class="c13"
+      class="SitewideLinksWrapper-sc-1gggobt-0 iGoLNb"
     >
       <div
-        class="c14"
+        class="ConstrainedWrapper-sc-1gggobt-1 gZsHvP"
       >
         <ul
-          class="c15"
+          class="StyledList-sc-2e1ekc-0 jVnICw"
           role="list"
         >
           <li
-            class="c16"
+            class="StyledListItem-sc-2e1ekc-1 cBsWLN"
             role="listitem"
           >
             <a
-              class="c17 c18"
+              class="StyledLink-nhmg8j-0 dHbSzF"
               href="https://www.bbc.com/news/help-41670342"
             >
               <span
-                class="c19"
+                class="StyleLinkText-nhmg8j-1 fPnERB"
               >
                 Why you can trust the BBC
               </span>
             </a>
           </li>
           <li
-            class="c16"
+            class="StyledListItem-sc-2e1ekc-1 cBsWLN"
             role="listitem"
           >
             <a
-              class="c17 c18"
+              class="StyledLink-nhmg8j-0 dHbSzF"
               href="https://www.bbc.com/terms"
             >
               <span
-                class="c19"
+                class="StyleLinkText-nhmg8j-1 fPnERB"
               >
                 Terms of Use
               </span>
             </a>
           </li>
           <li
-            class="c16"
+            class="StyledListItem-sc-2e1ekc-1 cBsWLN"
             role="listitem"
           >
             <a
-              class="c17 c18"
+              class="StyledLink-nhmg8j-0 dHbSzF"
               href="https://www.bbc.co.uk/aboutthebbc/"
             >
               <span
-                class="c19"
+                class="StyleLinkText-nhmg8j-1 fPnERB"
               >
                 About the BBC
               </span>
             </a>
           </li>
           <li
-            class="c16"
+            class="StyledListItem-sc-2e1ekc-1 cBsWLN"
             role="listitem"
           >
             <a
-              class="c17 c18"
+              class="StyledLink-nhmg8j-0 dHbSzF"
               href="https://www.bbc.com/privacy/"
             >
               <span
-                class="c19"
+                class="StyleLinkText-nhmg8j-1 fPnERB"
               >
                 Privacy Policy
               </span>
             </a>
           </li>
           <li
-            class="c16"
+            class="StyledListItem-sc-2e1ekc-1 cBsWLN"
             role="listitem"
           >
             <a
-              class="c17 c18"
+              class="StyledLink-nhmg8j-0 dHbSzF"
               href="https://www.bbc.com/usingthebbc/cookies/"
             >
               <span
-                class="c19"
+                class="StyleLinkText-nhmg8j-1 fPnERB"
               >
                 Cookies
               </span>
             </a>
           </li>
           <li
-            class="c16"
+            class="StyledListItem-sc-2e1ekc-1 cBsWLN"
             role="listitem"
           >
             <a
-              class="c17 c18"
+              class="StyledLink-nhmg8j-0 dHbSzF"
               href="https://www.bbc.com/accessibility/"
             >
               <span
-                class="c19"
+                class="StyleLinkText-nhmg8j-1 fPnERB"
               >
                 Accessibility Help
               </span>
             </a>
           </li>
           <li
-            class="c16"
+            class="StyledListItem-sc-2e1ekc-1 cBsWLN"
             role="listitem"
           >
             <a
-              class="c17 c18"
+              class="StyledLink-nhmg8j-0 dHbSzF"
               href="https://www.bbc.com/contact/"
             >
               <span
-                class="c19"
+                class="StyleLinkText-nhmg8j-1 fPnERB"
               >
                 Contact the BBC
               </span>
@@ -666,7 +262,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           </li>
         </ul>
         <p
-          class="c20"
+          class="StyledParagraph-sc-1gggobt-2 jQPFnr"
         >
           <span
             lang="en-GB"
@@ -677,11 +273,11 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           2019 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="c17 c21"
+            class="StyledLink-nhmg8j-0 jHQlUp"
             href="https://www.bbc.co.uk/help/web/links/"
           >
             <span
-              class="c19"
+              class="StyleLinkText-nhmg8j-1 fPnERB"
             >
               Read about our approach to external linking.
             </span>
