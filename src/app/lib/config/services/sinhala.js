@@ -172,6 +172,40 @@ const service = {
     },
     fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'මුල් පිටුව',
+        url: '/sinhala',
+      },
+      {
+        title: 'ශ්‍රී ලංකා',
+        url: '/sinhala/sri_lanka',
+      },
+      {
+        title: 'ලෝකය',
+        url: '/sinhala/world',
+      },
+      {
+        title: 'ක්‍රීඩා',
+        url: '/sinhala/sport',
+      },
+      {
+        title: 'ලලනා',
+        url: '/sinhala/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
+      },
+      {
+        title: 'යෞවන',
+        url: '/sinhala/topics/f6ec89fd-3823-498e-a888-572e96f791b2',
+      },
+      {
+        title: 'විද්‍යාව',
+        url: '/sinhala/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+      },
+      {
+        title: 'වීඩියෝ',
+        url: '/sinhala/media/video',
+      },
+    ],
   },
 };
 

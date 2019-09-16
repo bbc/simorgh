@@ -163,6 +163,16 @@ const service = {
     },
     fonts: [],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'Alba',
+        url: '/naidheachdan',
+      },
+      {
+        title: 'Scotland News',
+        url: '/news/scotland',
+      },
+    ],
   },
 };
 
