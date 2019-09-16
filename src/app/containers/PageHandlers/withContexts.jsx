@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, element, string } from 'prop-types';
-import variantPropType from '../../models/propTypes/variants';
+import variantPropType from '#models/propTypes/variants';
 
 // context providers
 import { ServiceContextProvider } from '#contexts/ServiceContext';
