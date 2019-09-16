@@ -3,8 +3,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
-const service = {
-  lang: `zh-cn`,
+const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-ukchina',
@@ -20,7 +19,6 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `zh-cn`,
   datetimeLocale: `zh-cn`,
   service: 'ukchina',
   serviceName: '英伦网',
@@ -159,6 +157,49 @@ const service = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: '主页',
+      url: '/ukchina/simp',
+    },
+    {
+      title: 'BBC精选',
+      url: '/ukchina/simp/horizon',
+    },
+    {
+      title: '英伦风采',
+      url: '/ukchina/simp/cool_britannia',
+    },
+    {
+      title: '记者来鸿',
+      url: '/ukchina/simp/fooc',
+    },
+    {
+      title: '英国体坛',
+      url: '/ukchina/simp/sport',
+    },
+    {
+      title: '视频内容',
+      url: '/ukchina/simp/media/video',
+    },
+    {
+      title: '图辑精选',
+      url: '/ukchina/simp/media/photogalleries',
+    },
+  ],
+};
+
+const service = {
+  simp: {
+    ...baseServiceConfig,
+    lang: `zh-hans`,
+    locale: `zh-hans`,
+  },
+  trad: {
+    ...baseServiceConfig,
+    lang: `zh-hant`,
+    locale: `zh-hant`,
+  },
 };
 
 export default service;
