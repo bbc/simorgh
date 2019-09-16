@@ -24,11 +24,15 @@ export const getPassportHome = pageData => {
 };
 
 export const isValidPassportHome = (passportHome, service) => {
+  if (!passportHome) return true;
+
   const overrides = {
-    brasil: 'portuguese',
+    portuguese: ['brasil'],
   };
 
-  const isValidOverride = overrides[passportHome] === service;
+  if (overrides[service]) {
+    return overrides[service].includes(passportHome);
+  }
 
-  return isValidOverride || (passportHome ? passportHome === service : true);
+  return passportHome === service;
 };
