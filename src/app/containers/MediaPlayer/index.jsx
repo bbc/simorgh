@@ -1,10 +1,12 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import styled from 'styled-components';
-import AmpMediaPlayer from './amp';
-import CanonicalMediaPlayer from './canonical';
+import {
+  CanonicalMediaPlayer,
+  AmpMediaPlayer,
+} from '@bbc/psammead-media-player';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
+import getPlaceholderSrc from './helpers/placeholder';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -14,33 +16,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '../../models/propTypes';
 
-const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
-const portraitRatio = '177.78%'; // (16/9)*100 = 9:16
-const StyledContainer = styled.div`
-  padding-top: ${({ orientation }) =>
-    orientation === 'Portrait' ? portraitRatio : landscapeRatio};
-  position: relative;
-  overflow: hidden;
-`;
-
-const placeholderImage = src => {
-  const parts = src.split('/');
-  const [domain, media, imgService, width, ...extraParts] = parts;
-  const definedWidth = width.replace('$width', '512');
-  const domainWithProtocol = `https://${domain}`;
-
-  const newUrl = [
-    domainWithProtocol,
-    media,
-    imgService,
-    definedWidth,
-    ...extraParts,
-  ];
-
-  return newUrl.join('/');
-};
-
-const MediaPlayerContainer = ({ blocks }) => {
+const MediaPlayerContainer = ({ blocks, placeholder }) => {
   const { id, platform, origin } = React.useContext(RequestContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
@@ -70,8 +46,7 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null; // this should be the holding image with an error overlay
   }
 
-  const Player = isAmp ? AmpMediaPlayer : CanonicalMediaPlayer;
-  const placeholderSrc = placeholderImage(imageUrl);
+  const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
     vpid: versionId,
     assetId: id,
@@ -82,14 +57,23 @@ const MediaPlayerContainer = ({ blocks }) => {
   return (
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
-      <StyledContainer>
-        <Player placeholderSrc={placeholderSrc} embedSrc={embedSource} />
-      </StyledContainer>
+      {isAmp ? (
+        <AmpMediaPlayer src={embedSource} placeholderSrc={placeholderSrc} />
+      ) : (
+        <CanonicalMediaPlayer
+          src={embedSource}
+          placeholder={placeholder}
+          placeholderSrc={placeholder ? placeholderSrc : ''}
+        />
+      )}
     </GridItemConstrainedMedium>
   );
 };
 
 MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
-MediaPlayerContainer.defaultProps = emptyBlockArrayDefaultProps;
+MediaPlayerContainer.defaultProps = {
+  ...emptyBlockArrayDefaultProps,
+  placeholder: true,
+};
 
 export default MediaPlayerContainer;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react/pure';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import GlobalStyles from '.';
 

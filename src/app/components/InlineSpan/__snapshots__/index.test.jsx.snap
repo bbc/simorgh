@@ -7,7 +7,8 @@ exports[`Inline english inline span in persian service article 1`] = `
 }
 
 <span
-  className="c0"
+  class="c0"
+  lang="en"
 >
   This is text in a Inline.
 </span>
@@ -20,7 +21,8 @@ exports[`Inline persian inline span in english service article 1`] = `
 }
 
 <span
-  className="c0"
+  class="c0"
+  lang="fa"
 >
   بعض محتوى النص
 </span>

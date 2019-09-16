@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
+exports[`Media Page Main should match snapshot 1`] = `
 .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
 }
@@ -15,12 +15,28 @@ exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
 .c3 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #3F3F42;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.c4 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
 }
 
 .c0 {
@@ -145,49 +161,44 @@ exports[`Media Page Main snapshots should match scaffold snapshot 1`] = `
   }
 }
 
-<main
-  role="main"
->
+<div>
+  <noscript />
   <div
-    className="c0"
+    id="metadata"
+  />
+  <main
+    role="main"
   >
     <div
-      className="c1"
+      class="c0"
     >
-      <h1
-        className="c2"
+      <div
+        class="c1"
       >
-        ያድምጡ
-      </h1>
-      <p
-        className="c3"
-      >
-        ዝግጅቶቻችንን
-      </p>
-      <ul>
-        <li>
-          <strong>
-            Service
-          </strong>
-          : 
-          amharic
-        </li>
-        <li>
-          <strong>
-            Brand
-          </strong>
-          : 
-          bbc_amharic_radio
-        </li>
-        <li>
-          <strong>
-            MediaId
-          </strong>
-          : 
-          liveradio
-        </li>
-      </ul>
+        <h1
+          class="c2"
+          id="content"
+        >
+          ያድምጡ
+        </h1>
+        <p
+          class="c3"
+        >
+          ዝግጅቶቻችንን
+        </p>
+        <div
+          class="c4"
+        >
+          <iframe
+            allow="autoplay; fullscreen"
+            allowfullscreen=""
+            class="c5"
+            scrolling="no"
+            src="/ws/av-embeds/media/bbc_amharic_radio/liveradio"
+          />
+        </div>
+      </div>
     </div>
-  </div>
-</main>
+  </main>
+</div>
 `;

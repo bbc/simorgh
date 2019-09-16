@@ -15,7 +15,9 @@ Simorgh will be used across the BBC World Service News websites ([some are alrea
 We lean heavily on the component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain. This library is also open source and used even more widely across the BBC.
 
 ## Documentation index
+
 Please familiarise yourself with our:
+
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
@@ -23,6 +25,7 @@ Please familiarise yourself with our:
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md) (you are here)
 
 ## Simorgh Overview
+
 ### A High Level User Journey
 
 #### The initial page load - Server Side Render (SSR)
@@ -68,6 +71,7 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withData
 
 #### withContexts
+
 The withContexts HOC is a wrapper that provides access to the different context providers available in the application. Any child component inside of these context providers has access to the context data via the useContexts hook.
 
 #### withPageWrapper
@@ -90,10 +94,41 @@ If error is set to true the Error component is returned, giving the user a visua
 
 Assuming the other HOC's have returned the original Article or FrontPage container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
 
+### Adding a new Page type
+
+When adding a new page type there are several parts required.
+
+#### 1) Fixture data should be added to `/data/{{service}}/{{pageType}}/`
+  - This should be done for each service using the page type. 
+  - [Fixture data example](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/data/igbo/frontpage/index.json)
+  - Gotcha's: 
+    - The value in the test "should call readScenario for every file in the /data directory" will need to be updated in `dataValidator/helpers/dataLoader/asyncValidateDir.test.js` for each fixture you add. 
+    - The new page type should be added to `ignoreDirectories` in `dataValidator/helpers/dataLoader/readScenario.js`
+#### 2) Serving the fixture data on local development
+  - The fixture data for the page type should be available on the same route as the page with a `.json` suffix
+    - EG: The `localhost.bbc.com:7080/igbo.json` should have the data to build the index page `localhost.bbc.com:7080/igbo`
+  - To match the correct route we will need a new regex [here](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/routes/regex/index.js)
+  - Then we need to add an Express route similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/server/index.jsx#L107-L113)
+#### 3) Create a new container for the page type
+  - Similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/containers/FrontPage/index.jsx) we require a container that will act as the entry point for the page routing
+#### 4) Add a new getInitalData method for the new page type
+  - [getInitalData example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/frontpage/index.js)
+  - If required for the new page type this is where any pre-processing rules should be added. These are needed for use cases where we want to manipulate the data before it is received by the container for the page.
+    - EG: On the articles routes [unique ID's](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/article/index.js#L19) are added to each block in the payload
+#### 5) Add a new route to the react router config
+  - This should be done for AMP and Canoical pages together
+  - [Route example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/index.js#L22-L28)
+#### 6) Add Cypress E2E tests for the new page type
+  - This requires config in `cypress/support/config/services.js` for every service (even if to set the new page type to undefined)
+  - If required bespoke tests for the page type should be added inside of `cypress/integration/pages/`
+ 
+NB: With this many steps it is suggested to have multiple PRs when adding a new page type as to not have a singular huge PR. However, if Cypress tests (#6) are not added in the same PR as the page routing (#5) they should immediately follow the page routing PR, ideally these should be handled in a single PR.
 
 ## Before Installation
+
 Please read:
 [CONTRIBUTING.md](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
+
 ## Installation
 
 Install Node. [https://nodejs.org/en/](https://nodejs.org/en/). We use the version specified in `.nvmrc` and if you have a node version manager (nvm) you can run the following script to automatically change to the project supported version.
@@ -118,7 +153,7 @@ To run this application locally, with hot-reloading, run
 npm run dev
 ```
 
-The application will start on [http://localhost.bbc.com:7080](http://localhost.bbc.com:7080). 
+The application will start on [http://localhost.bbc.com:7080](http://localhost.bbc.com:7080).
 
 ### Article pages
 
@@ -136,6 +171,12 @@ We are also serving AMP HTML pages at the route `/news/articles/:id.amp` [https:
 - [http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp](http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp)
 - [http://localhost.bbc.com:7080/persian/articles/c4vlle3q337o.amp](http://localhost.bbc.com:7080/persian/articles/c4vlle3q337o.amp).
 
+Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
+
+- [http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp)
+- [http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp).
+
+
 ### Front pages
 
 World Service front pages are served in the format `/:service` where `service` represents a World Service site:
@@ -148,7 +189,13 @@ The World Service front pages follow the article format for AMP too, being avail
 - [http://localhost.bbc.com:7080/igbo.amp](http://localhost.bbc.com:7080/igbo.amp)
 - [http://localhost.bbc.com:7080/pidgin.amp](http://localhost.bbc.com:7080/pidgin.amp)
 
+Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
+
+- [http://localhost.bbc.com:7080/zhongwen/simp](http://localhost.bbc.com:7080/zhongwen/simp)
+- [http://localhost.bbc.com:7080/zhongwen/simp.amp](http://localhost.bbc.com:7080/zhongwen/simp.amp).
+
 ### Other page types
+
 You can find other pages types by looking through our routes and their associates regexes, but we suggest you start with the above then have a look at the core of the application to understand and find the other routes.
 
 ### Storybook (UI Development Environment/Style Guide)
@@ -176,7 +223,6 @@ To run TEST bundles on localhost:
 
 - In `envConfig/test.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
-  - `COSMOS_DIALS_PATH='/etc/cosmos-dials/dials.json'` to `COSMOS_DIALS_PATH='dials.json'`
 - Then run `rm -rf build && npm run build:test && npm run start`
 - Visit a test article: http://localhost.bbc.com:7080/news/articles/c0g992jmmkko
 
@@ -184,7 +230,6 @@ To run LIVE bundles on localhost:
 
 - In `envConfig/live.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
-  - `COSMOS_DIALS_PATH='/etc/cosmos-dials/dials.json'` to `COSMOS_DIALS_PATH='dials.json'`
 - Then run `rm -rf build && npm run build:live && npm run start`
 - Visit a live article: http://localhost.bbc.com:7080/news/articles/c8xxl4l3dzeo
 
@@ -204,7 +249,7 @@ Some features perform differently dependant on whether a user is located within 
 
 ## Production build on CI
 
-On deployment `npm run build:ci` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
+On deployment `make buildCi` is run in the CI environment which creates bundles for both the `test` and `live` environments. On the two environments the `.env.test` or `.env.live` files overwrite the `.env` file which is used to run the application with the correct bundles.
 
 ### Bundle analysis reports
 
@@ -231,12 +276,25 @@ npm run test:e2e
 ```
 
 It will spin up a production server on port 7080 and run the Cypress tests against that.
+For running tests using interactive, run:
+
+```
+npm run test:e2e:interactive
+```
+
+This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
+
+To run only a particular spec, ensure Simorgh is already running in another tab and then run (for example):
+
+```
+npx cypress run --spec cypress/integration/pages/articles/index.js
+```
+
 
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 
-Cypress can be run interactively using `npm run test:e2e:interactive`. This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
-
 #### Running e2e in the UK against LIVE
+
 **This affects developers based in the UK only (but may affect you if you're using a VPN routing through the UK)**
 
 Cypress .visit() function is locked to visiting a single domain per test. This becomes problematic when you launch the e2e tests from within the UK, due to redirects from `.com` to `.co.uk`. By default cypress tests will run as if they were ran outside of the uk. In order to run these tests from the UK you have to pass in the `UK` Cypress environment variable to the tests. This will replace the URL endings to `.co.uk`, which will allow you to run these tests successfully.
@@ -244,8 +302,27 @@ Cypress .visit() function is locked to visiting a single domain per test. This b
 Here is an example command:
 
 ```
-CYPRESS_APP_ENV=test CYPRESS_UK=true npm run cypress:interactive
+CYPRESS_APP_ENV=test CYPRESS_UK=true CYPRESS_SMOKE=true npm run cypress
 ```
+
+#### Running e2e outside EU
+**This affects developers based out of the EU (but may affect you if you're using a VPN routing through a country not in the EU)**
+
+Running Cypress tests outside the EU will not show the EU consent banners on AMP, and this may cause some tests to fail. Set `CYPRESS_SKIP_EU=true` to prevent these tests from running when outside the EU.
+
+An example command will be:
+```
+CYPRESS_SKIP_EU=true npm run cypress:interactive
+```
+
+The following command runs both simorgh and cypress:
+
+```
+CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true npm run build && npm run test:e2e
+```
+
+CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.
+CYPRESS_SMOKE can be true or false. It is false by default and runs a specific subset of tests.
 
 ### Lighthouse Best Practice tests
 

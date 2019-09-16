@@ -6,26 +6,30 @@ import HeaderContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import services from '../../lib/config/services';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ToggleContextProvider } from '../../contexts/ToggleContext';
 
 storiesOf('Containers|Header', module)
   .addDecorator(withKnobs)
   .add(
     'default',
-    inputProvider(
-      null,
-      ({ service }) => {
+    inputProvider({
+      // eslint-disable-next-line react/prop-types
+      componentFunction: ({ service }) => {
         return (
-          <ServiceContextProvider service={service}>
-            <RequestContextProvider
-              pageType="frontPage"
-              isAmp={false}
-              service={service}
-            >
-              <HeaderContainer />
-            </RequestContextProvider>
-          </ServiceContextProvider>
+          <ToggleContextProvider>
+            <ServiceContextProvider service={service}>
+              <RequestContextProvider
+                isAmp={false}
+                pageType="frontPage"
+                service={service}
+                bbcOrigin="https://www.test.bbc.com"
+              >
+                <HeaderContainer />
+              </RequestContextProvider>
+            </ServiceContextProvider>
+          </ToggleContextProvider>
         );
       },
-      Object.keys(services),
-    ),
+      services: Object.keys(services),
+    }),
   );

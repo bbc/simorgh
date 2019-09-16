@@ -1,65 +1,25 @@
 import React from 'react';
+import { latin } from '@bbc/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import MediaPageMain from '.';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import amharicConfig from '../../lib/config/services/amharic';
+import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
+import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
 
-const liveRadioScaffoldProps = {
-  service: 'amharic',
-  pageData: {
-    metadata: {
-      id: 'bbc_amharic_radio',
-      tags: {},
-    },
-    content: {
-      blocks: [
-        { text: 'ያድምጡ', markupType: 'plain_text', type: 'heading' },
-        { text: 'ዝግጅቶቻችንን', type: 'paragraph' },
-        {
-          id: 'liveradio',
-          subType: 'primary',
-          format: 'audio',
-          externalId: 'bbc_amharic_radio',
-          duration: 'PT0S',
-          caption: '',
-          embedding: false,
-          available: true,
-          live: true,
-          type: 'version',
-        },
-      ],
-    },
-    promo: {
-      subType: 'IDX',
-      name: 'BBC Amharic Radio',
-      uri: '/amharic/bbc_amharic_radio/liveradio',
-      id: 'some-id',
-      type: 'simple',
-    },
-  },
-  match: {
-    params: {
-      serviceId: 'bbc_amharic_radio',
-      mediaId: 'liveradio',
-    },
-  },
-};
+jest.mock('../Metadata', () => () => <div id="metadata" />);
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-
-const { useContext } = jest.requireMock('react');
-useContext.mockReturnValue(amharicConfig);
+const pageData = addIdsToBlocks(amharicPageData);
 
 describe('Media Page Main', () => {
-  describe('snapshots', () => {
-    shouldMatchSnapshot(
-      'should match scaffold snapshot',
-      <MediaPageMain {...liveRadioScaffoldProps} />,
-    );
-  });
+  shouldMatchSnapshot(
+    'should match snapshot',
+    <ServiceContext.Provider value={{ script: latin }}>
+      <RequestContext.Provider
+        value={{ platform: 'canonical', pageType: 'media' }}
+      >
+        <MediaPageMain service="amharic" pageData={pageData} />
+      </RequestContext.Provider>
+    </ServiceContext.Provider>,
+  );
 });

@@ -1,12 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '../../app/components/ResourceHints';
 import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
-import MPulseBeacon from '../../app/containers/MPulseBeacon';
-import { DialContextProvider } from '../../app/contexts/DialContext';
 
 /* eslint-disable react/prop-types */
 const Document = ({
@@ -17,7 +15,6 @@ const Document = ({
   styleTags,
   helmet,
   isAmp,
-  dials,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -27,7 +24,7 @@ const Document = ({
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
   const scripts = (
-    <Fragment>
+    <>
       <IfAboveIE9>
         {assets.map(asset => (
           <script
@@ -39,7 +36,7 @@ const Document = ({
           />
         ))}
       </IfAboveIE9>
-    </Fragment>
+    </>
   );
 
   return (
@@ -52,21 +49,16 @@ const Document = ({
         {links}
         {styleTags}
         {headScript}
-        {scriptsAllowed && (
-          <DialContextProvider dials={dials}>
-            <MPulseBeacon />
-          </DialContextProvider>
-        )}
         {isAmp && (
-          <Fragment>
+          <>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
             <noscript>
               <style amp-boilerplate="">{AMP_NO_SCRIPT}</style>
             </noscript>
-          </Fragment>
+          </>
         )}
         {isAmp && (
-          <Fragment>
+          <>
             <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
             <script
               async
@@ -83,7 +75,7 @@ const Document = ({
               custom-element="amp-analytics"
               src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
             />
-          </Fragment>
+          </>
         )}
       </head>
       <body>

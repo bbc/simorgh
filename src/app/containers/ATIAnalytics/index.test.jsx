@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import renderer from 'react-test-renderer';
-import { isNull } from '../../../testHelpers';
+import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '../Article/fixtureData';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -20,6 +20,7 @@ const ContextWrap = ({ pageType, platform, children }) => (
       isAmp={platform === 'amp'}
       pageType={pageType}
       service="news"
+      pathname="/pathname"
     >
       {children}
     </RequestContextProvider>
@@ -139,8 +140,8 @@ describe('ATI Analytics Container', () => {
     });
   });
 
-  // TODO fix this once bbc/simorgh#3107 has been completed
-  describe.skip('pageType neither article nor frontPage', () => {
+  describe('pageType neither article nor frontPage', () => {
+    suppressPropWarnings(['pageType', 'randomvalue']);
     isNull(
       'should render null',
       <ContextWrap platform="canonical" pageType="randomvalue">

@@ -7,21 +7,18 @@ import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes from '../app/routes';
 import {
-  articleRegexPath,
   articleDataRegexPath,
   articleManifestRegexPath,
   articleSwRegexPath,
-  frontpageRegexPath,
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
-  mediaRadioAndTvRegexPathsArray,
   mediaDataRegexPath,
+  mediaAssetPageDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '../app/lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
-import getDials from './getDials';
 import logResponseTime from './utilities/logResponseTime';
 
 const morgan = require('morgan');
@@ -41,8 +38,11 @@ class LoggerStream {
   }
 }
 
-const constructDataFilePath = (pageType, service, id) => {
-  const dataPath = pageType === 'frontpage' ? 'index.json' : `${id}.json`;
+const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
+  const dataPath =
+    pageType === 'frontpage'
+      ? `${variant || 'index'}.json`
+      : `${id}${variant}.json`;
 
   return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
@@ -102,16 +102,49 @@ if (process.env.APP_ENV === 'local') {
       }),
     )
     .get(articleDataRegexPath, async ({ params }, res, next) => {
-      const { service, id } = params;
+      const { service, id, variant } = params;
 
-      const dataFilePath = constructDataFilePath('articles', service, id);
+      const dataFilePath = constructDataFilePath({
+        pageType: 'articles',
+        service,
+        id,
+        variant,
+      });
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(frontpageDataRegexPath, async ({ params }, res, next) => {
-      const { service } = params;
+      const { service, variant } = params;
 
-      const dataFilePath = constructDataFilePath('frontpage', service);
+      const dataFilePath = constructDataFilePath({
+        pageType: 'frontpage',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(mediaDataRegexPath, async ({ params }, res, next) => {
+      const { service, serviceId, mediaId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        serviceId,
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+    .get(mediaAssetPageDataRegexPath, async ({ params }, res, next) => {
+      const { service, assetUri: id } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'mediaAssetPage',
+        service,
+        id,
+      });
 
       sendDataFile(res, dataFilePath, next);
     })
@@ -120,22 +153,6 @@ if (process.env.APP_ENV === 'local') {
       // without throwing an error due to not being on a bbc domain.
       res.sendStatus(200);
     });
-}
-
-if (['local', 'test'].includes(process.env.APP_ENV)) {
-  server.get(mediaDataRegexPath, async ({ params }, res, next) => {
-    const { service, serviceId, mediaId } = params;
-
-    const dataFilePath = path.join(
-      process.cwd(),
-      'data',
-      service,
-      serviceId,
-      mediaId,
-    );
-
-    sendDataFile(res, `${dataFilePath}.json`, next);
-  });
 }
 
 /*
@@ -165,41 +182,34 @@ server
       });
     },
   )
-  .get(
-    [articleRegexPath, frontpageRegexPath, ...mediaRadioAndTvRegexPathsArray],
-    async ({ url, headers, path: urlPath }, res) => {
-      try {
-        const { service, isAmp, route, match } = getRouteProps(routes, url);
-        const data = await route.getInitialData(match.params);
-        const { status } = data;
-        const bbcOrigin = headers['bbc-origin'];
+  .get('/*', async ({ url, headers, path: urlPath }, res) => {
+    try {
+      const { service, isAmp, route, match, variant } = getRouteProps(
+        routes,
+        url,
+      );
+      const data = await route.getInitialData(match.params);
+      const { status } = data;
+      const bbcOrigin = headers['bbc-origin'];
 
-        let dials = {};
-        try {
-          dials = await getDials();
-        } catch ({ message }) {
-          logger.error(`Error fetching Cosmos dials: ${message}`);
-        }
-        // Preserve initial dial state in window so it is available during hydration
-        data.dials = dials;
-        data.path = urlPath;
+      data.path = urlPath;
 
-        res.status(status).send(
-          await renderDocument({
-            bbcOrigin,
-            data,
-            isAmp,
-            routes,
-            service,
-            url,
-          }),
-        );
-      } catch ({ message, status }) {
-        // Return an internal server error for any uncaught errors
-        logger.error(`status: ${status || 500} - ${message}`);
-        res.status(500).send(message);
-      }
-    },
-  );
+      res.status(status).send(
+        await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        }),
+      );
+    } catch ({ message, status }) {
+      // Return an internal server error for any uncaught errors
+      logger.error(`status: ${status || 500} - ${message}`);
+      res.status(500).send(message);
+    }
+  });
 
 export default server;

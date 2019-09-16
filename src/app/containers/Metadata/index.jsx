@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { shape, oneOfType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -8,10 +8,12 @@ import LinkedData from '../../components/LinkedData';
 import {
   optimoMetadataPropTypes,
   cpsMetadataPropTypes,
+  mediaMetadataPropTypes,
 } from '../../models/propTypes/metadata';
 import {
   optimoPromoPropTypes,
   cpsPromoPropTypes,
+  mediaPromoPropTypes,
 } from '../../models/propTypes/promo';
 import aboutTagsContent from './linkedDataAbout';
 
@@ -24,6 +26,10 @@ const pageTypeMetadata = {
   },
   frontPage: {
     schemaOrg: 'WebPage',
+    openGraph: 'website',
+  },
+  media: {
+    schemaOrg: 'RadioChannel',
     openGraph: 'website',
   },
 };
@@ -45,22 +51,6 @@ const getDescription = (metadata, promo) =>
   pathOr(null, ['summary'], promo) ||
   pathOr(null, ['headlines', 'seoHeadline'], promo) ||
   pathOr(null, ['summary'], metadata);
-
-const getLink = (origin, service, id, pageType, linkType = '') => {
-  // according to https://github.com/bbc/simorgh/pull/1945, canonical links should use .com
-  const linkOrigin = linkType === 'canonical' ? 'https://www.bbc.com' : origin;
-
-  let link =
-    pageType === 'article'
-      ? `${linkOrigin}/${service}/articles/${id}`
-      : `${linkOrigin}/${service}`;
-
-  if (linkType === 'amp') {
-    link = `${link}.amp`;
-  }
-
-  return link;
-};
 
 const getTimeTags = (timeTag, pageType) => {
   if (pageType !== 'article') {
@@ -84,7 +74,16 @@ const getAppleTouchUrl = service => {
 };
 
 const MetadataContainer = ({ metadata, promo }) => {
-  const { origin, pageType, platform } = useContext(RequestContext);
+  const {
+    pageType,
+    platform,
+    canonicalLink,
+    ampLink,
+    canonicalUkLink,
+    ampUkLink,
+    canonicalNonUkLink,
+    ampNonUkLink,
+  } = useContext(RequestContext);
   const {
     service,
     brandName,
@@ -99,6 +98,7 @@ const MetadataContainer = ({ metadata, promo }) => {
     twitterSite,
     publishingPrinciples,
     noBylinesPolicy,
+    frontPageTitle,
   } = useContext(ServiceContext);
   const { id: aresArticleId } = metadata;
 
@@ -106,17 +106,9 @@ const MetadataContainer = ({ metadata, promo }) => {
     return null;
   }
 
-  const id = aresArticleId.split(':').pop();
-
   const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
   const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
 
-  const canonicalLink = getLink(origin, service, id, pageType, 'canonical');
-  const canonicalLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}`;
-  const canonicalLinkNonUK = `https://www.bbc.com/${service}/articles/${id}`;
-  const ampLink = getLink(origin, service, id, pageType, 'amp');
-  const ampLinkUK = `https://www.bbc.co.uk/${service}/articles/${id}.amp`;
-  const ampLinkNonUK = `https://www.bbc.com/${service}/articles/${id}.amp`;
   const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
 
@@ -124,15 +116,15 @@ const MetadataContainer = ({ metadata, promo }) => {
 
   const alternateLinksEnglishSites = [
     {
-      href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'x-default',
     },
     {
-      href: isAmp ? ampLinkNonUK : canonicalLinkNonUK,
+      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'en',
     },
     {
-      href: isAmp ? ampLinkUK : canonicalLinkUK,
+      href: isAmp ? ampUkLink : canonicalUkLink,
       hrefLang: 'en-gb',
     },
   ];
@@ -164,11 +156,16 @@ const MetadataContainer = ({ metadata, promo }) => {
     icon: ['72x72', '96x96', '192x192'],
   };
 
+  const title =
+    pageType === 'frontPage' && frontPageTitle
+      ? frontPageTitle
+      : getTitle(promo);
+
   return (
-    <Fragment>
+    <>
       <LinkedData
         brandName={brandName}
-        canonicalLink={canonicalLink}
+        canonicalLink={canonicalNonUkLink}
         firstPublished={timeFirstPublished}
         lastUpdated={timeLastPublished}
         logoUrl={defaultImage}
@@ -186,7 +183,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         articleAuthor={articleAuthor}
         articleSection={pathOr(null, ['passport', 'genre'], metadata)}
         brandName={brandName}
-        canonicalLink={canonicalLink}
+        canonicalLink={canonicalNonUkLink}
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
         description={getDescription(metadata, promo)}
@@ -202,7 +199,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         themeColor={themeColor}
         timeFirstPublished={timeFirstPublished}
         timeLastPublished={timeLastPublished}
-        title={getTitle(promo)}
+        title={title}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
         type={pathOr(null, [pageType, 'openGraph'], pageTypeMetadata)}
@@ -210,7 +207,7 @@ const MetadataContainer = ({ metadata, promo }) => {
         showArticleTags={pageType === 'article'}
         iconSizes={iconSizes}
       />
-    </Fragment>
+    </>
   );
 };
 
@@ -218,9 +215,13 @@ MetadataContainer.propTypes = {
   metadata: oneOfType([
     shape(cpsMetadataPropTypes),
     shape(optimoMetadataPropTypes),
+    shape(mediaMetadataPropTypes),
   ]).isRequired,
-  promo: oneOfType([shape(cpsPromoPropTypes), shape(optimoPromoPropTypes)])
-    .isRequired,
+  promo: oneOfType([
+    shape(cpsPromoPropTypes),
+    shape(optimoPromoPropTypes),
+    shape(mediaPromoPropTypes),
+  ]).isRequired,
 };
 
 export default MetadataContainer;

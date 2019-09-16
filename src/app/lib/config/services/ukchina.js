@@ -3,11 +3,11 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
-const service = {
-  lang: `zh-cn`,
+const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-ukchina',
+  atiAnalyticsProducerId: '93',
   brandName: 'BBC 英伦网',
   product: 'BBC 英伦网',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png',
@@ -19,8 +19,7 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `zh-cn`,
-  datetimeLocale: `zh-cn`.toLowerCase(),
+  datetimeLocale: `zh-cn`,
   service: 'ukchina',
   serviceName: '英伦网',
   themeColor: `${C_POSTBOX}`,
@@ -31,7 +30,13 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: '主页',
   translations: {
+    seeAll: 'See all',
+    home: 'Home',
+    currentPage: 'Current page',
+    skipLinkText: 'Skip to content',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
@@ -117,6 +122,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -132,20 +141,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',
@@ -156,6 +157,49 @@ const service = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: '主页',
+      url: '/ukchina/simp',
+    },
+    {
+      title: 'BBC精选',
+      url: '/ukchina/simp/horizon',
+    },
+    {
+      title: '英伦风采',
+      url: '/ukchina/simp/cool_britannia',
+    },
+    {
+      title: '记者来鸿',
+      url: '/ukchina/simp/fooc',
+    },
+    {
+      title: '英国体坛',
+      url: '/ukchina/simp/sport',
+    },
+    {
+      title: '视频内容',
+      url: '/ukchina/simp/media/video',
+    },
+    {
+      title: '图辑精选',
+      url: '/ukchina/simp/media/photogalleries',
+    },
+  ],
+};
+
+const service = {
+  simp: {
+    ...baseServiceConfig,
+    lang: `zh-hans`,
+    locale: `zh-hans`,
+  },
+  trad: {
+    ...baseServiceConfig,
+    lang: `zh-hant`,
+    locale: `zh-hant`,
+  },
 };
 
 export default service;

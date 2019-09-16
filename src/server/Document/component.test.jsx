@@ -6,7 +6,6 @@ describe('Document Component', () => {
   const assets = ['http://example.com/file.js'];
   const assetOrigins = ['http://example.com'];
   const data = { test: 'data' };
-  const dials = { dial: true };
 
   const mockHelmetToComponent = element => ({
     toComponent: jest.fn().mockImplementation(() => element),
@@ -47,7 +46,6 @@ describe('Document Component', () => {
         styleTags={isAmp ? styleTagsAmp : styleTags}
         service={service}
         isAmp={isAmp}
-        dials={dials}
       />,
     );
 

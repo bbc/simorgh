@@ -1,14 +1,18 @@
 import baseUrl from '../utils/getBaseUrl';
 import onClient from '../../../lib/utilities/onClient';
 import fetchData from '../utils/fetchData';
-import filterUnknownCpsTypes from '../../../lib/utilities/preprocessor/rules/cpstypes';
+import filterUnknownContentTypes from '../../../lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '../../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../../lib/utilities/preprocessor/rules/topstories';
+import addIdsToItems from '../../../lib/utilities/preprocessor/rules/addIdsToItems';
+import filterGroupsWithoutStraplines from '../../../lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
 
 const preprocessorRules = [
-  filterUnknownCpsTypes,
+  filterUnknownContentTypes,
   filterEmptyGroupItems,
+  addIdsToItems,
   applySquashTopstories,
+  filterGroupsWithoutStraplines,
 ];
 
 process.env.SIMORGH_BASE_URL = 'https://www.SIMORGH_BASE_URL.com';
@@ -55,6 +59,30 @@ describe('getFrontpageInitialData', () => {
     expect(response).toEqual({
       pageData: 'foo',
       status: 123,
+    });
+  });
+
+  it('fetches data and returns expected object with variant', async () => {
+    await getFrontpageInitialData({
+      ...defaultContext,
+      variant: 'variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/news/variant.json',
+      preprocessorRules,
+    });
+  });
+
+  it('fetches data and returns expected object with variant with leading slash', async () => {
+    await getFrontpageInitialData({
+      ...defaultContext,
+      variant: '/variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/news/variant.json',
+      preprocessorRules,
     });
   });
 

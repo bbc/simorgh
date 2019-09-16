@@ -6,18 +6,30 @@
     "js": "http://localhost.bbc.com:7080/static/js/igbo-12345.12345.js"
   },
   "three": {
-    "js": "http://localhost.bbc.com:7080/static/js/serviceName-12345.12345.js"
+    "js": "http://localhost.bbc.com:7080/static/js/korean-12345.12345.js"
   },
   "four": {
-    "js": "http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js"
+    "js": "http://localhost.bbc.com:7080/static/js/serviceName-12345.12345.js"
   },
   "five": {
-    "js": "http://localhost.bbc.com:7080/static/js/main-12345.12345.js"
+    "js": "http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js"
   },
   "six": {
-    "js": "http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js"
+    "js": "http://localhost.bbc.com:7080/static/js/main-12345.12345.js"
   },
   "seven": {
+    "js": "http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js"
+  },
+  "eigth": {
     "js": "http://localhost.bbc.com:7080/static/js/wrongServiceName-54321.12345.js"
+  },
+  "ninth": {
+    "js": "http://localhost.bbc.com:7080/static/js/zhongwen-12345.12345.js"
+  },
+  "tenth": {
+    "js": "http://localhost.bbc.com:7080/static/js/ukchina-12345.12345.js"
+  },
+  "eleventh": {
+    "js": "http://localhost.bbc.com:7080/static/js/serbian-12345.12345.js"
   }
 }

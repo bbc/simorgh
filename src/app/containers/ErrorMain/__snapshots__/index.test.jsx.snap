@@ -22,10 +22,10 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -49,10 +49,10 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
   padding: 2.5rem 0 2.5rem 0;
@@ -201,6 +201,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
@@ -270,10 +271,10 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
-  color: #3F3F42;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -297,10 +298,10 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 .c2 {
   font-size: 2rem;
   line-height: 2.625rem;
-  color: #3F3F42;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
   padding: 2.5rem 0 2.5rem 0;
@@ -449,6 +450,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
@@ -518,10 +520,10 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -545,10 +547,10 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
   padding: 2.5rem 0 2.5rem 0;
@@ -697,6 +699,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
@@ -761,10 +764,10 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
-  color: #3F3F42;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -788,10 +791,10 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 .c2 {
   font-size: 2rem;
   line-height: 2.625rem;
-  color: #3F3F42;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
   padding: 2.5rem 0 2.5rem 0;
@@ -940,6 +943,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"
@@ -1004,10 +1008,10 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #3F3F42;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -1031,10 +1035,10 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
-  color: #3F3F42;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
+  color: #3F3F42;
   margin: 0;
   padding: 2rem 0;
   padding: 2.5rem 0 2.5rem 0;
@@ -1183,6 +1187,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
     >
       <h1
         className="c2"
+        id="content"
       >
         <span
           className="c3"

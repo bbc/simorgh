@@ -14,7 +14,7 @@ const defaultProps = {
   isAmp: false,
   pageType: 'frontPage',
   service: 'news',
-  dials: {},
+  pathname: '/pathname',
 };
 
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {
@@ -84,13 +84,15 @@ describe('FrontPageContainer', () => {
             ...original,
             useContext: jest.fn(),
             useReducer: jest.fn(),
+            useState: jest.fn(),
           };
         });
 
-        const { useContext, useReducer } = jest.requireMock('react');
-        useContext.mockReturnValue({ ...igboConfig, lang: 'ig' });
+        const { useContext, useReducer, useState } = jest.requireMock('react');
+        useContext.mockReturnValue(igboConfig.default);
         FrontPageComponent = jest.requireActual('.').default;
         useReducer.mockReturnValue([toggleReducer, defaultToggles]);
+        useState.mockImplementation(input => [input, () => {}]);
       });
 
       it('should not render frontpage if still loading', () => {
@@ -105,7 +107,7 @@ describe('FrontPageContainer', () => {
 
       it('should render error page when an error occurs', () => {
         const { container } = render(
-          <FrontPageComponent {...defaultProps} error />,
+          <FrontPageComponent {...defaultProps} error={new Error('oh no')} />,
         );
 
         const { textContent } = container.querySelector('main');
@@ -117,14 +119,13 @@ describe('FrontPageContainer', () => {
         const data = {
           pageData: igboData,
           status: 200,
-          dials: {},
         };
 
         const frontPageMainMock = jest.requireMock('../FrontPageMain');
         const { container } = render(
           <FrontPageComponent
             {...defaultProps}
-            error={false}
+            error={null}
             data={data}
             service="igbo"
           />,

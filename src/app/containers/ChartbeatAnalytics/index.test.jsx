@@ -10,6 +10,7 @@ import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
 import { localBaseUrl } from '../../../testHelpers/config';
+import frontPageData from '../../../../data/news/frontpage';
 
 const defaultToggleState = {
   test: {
@@ -32,6 +33,7 @@ const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
     pageType={pageType}
     service="news"
     bbcOrigin={origin}
+    pathname="/pathname"
   >
     <ServiceContextProvider service="news">
       <ToggleContext.Provider
@@ -51,14 +53,12 @@ ContextWrap.propTypes = {
   pageType: string.isRequired,
   origin: string.isRequired,
   platform: string.isRequired,
-  toggleState: shape,
+  toggleState: shape({}),
 };
 
 ContextWrap.defaultProps = {
   toggleState: defaultToggleState,
 };
-
-const mockData = {};
 
 describe('Charbeats Analytics Container', () => {
   it('should call CanonicalCharbeatsBeacon when platform is canonical, and toggle enabled for chartbeat for local', () => {
@@ -79,7 +79,6 @@ describe('Charbeats Analytics Container', () => {
     testUtils.buildSections = jest
       .fn()
       .mockImplementation(() => 'secction1 section2');
-
     const tree = renderer
       .create(
         <ContextWrap
@@ -87,7 +86,7 @@ describe('Charbeats Analytics Container', () => {
           pageType="article"
           origin={localBaseUrl}
         >
-          <ChartbeatAnalytics data={mockData} />
+          <ChartbeatAnalytics data={frontPageData} />
         </ContextWrap>,
       )
       .toJSON();
@@ -98,6 +97,7 @@ describe('Charbeats Analytics Container', () => {
       idSync: {
         bbc_hid: 'cookie',
       },
+      path: '/',
       sections: 'secction1 section2',
       title: 'This is an article',
       type: 'article',
@@ -155,7 +155,7 @@ describe('Charbeats Analytics Container', () => {
           origin="bbc.com"
           toggleState={toggleState}
         >
-          <ChartbeatAnalytics data={mockData} />
+          <ChartbeatAnalytics data={frontPageData} />
         </ContextWrap>,
       )
       .toJSON();
@@ -189,7 +189,7 @@ describe('Charbeats Analytics Container', () => {
     const tree = renderer
       .create(
         <ContextWrap platform="canonical" pageType="article" origin="bbc.com">
-          <ChartbeatAnalytics data={mockData} />
+          <ChartbeatAnalytics data={frontPageData} />
         </ContextWrap>,
       )
       .toJSON();

@@ -1,13 +1,13 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin, cyrillic } from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
-const service = {
-  lang: `sr-Latn`,
+const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-serbian',
+  atiAnalyticsProducerId: '81',
   brandName: 'BBC News na srpskom',
   product: 'BBC News na srpskom',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
@@ -19,8 +19,7 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `sr-Latn`,
-  datetimeLocale: `sr-Latn`.toLowerCase(),
+  datetimeLocale: `sr-latn`,
   service: 'serbian',
   serviceName: 'News na srpskom',
   themeColor: `${C_POSTBOX}`,
@@ -31,7 +30,13 @@ const service = {
   script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
+  frontPageTitle: 'Početna strana',
   translations: {
+    seeAll: 'See all',
+    home: 'Home',
+    currentPage: 'Current page',
+    skipLinkText: 'Skip to content',
+    relatedContent: 'Related content',
     error: {
       404: {
         statusCode: '404',
@@ -118,6 +123,10 @@ const service = {
     },
   },
   brandSVG,
+  mostRead: {
+    header: 'Most read',
+    lastUpdated: 'Last updated: ',
+  },
   footer: {
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -133,20 +142,12 @@ const service = {
         text: 'Terms of Use',
       },
       {
-        href: 'https://www.bbc.co.uk/aboutthebbc/',
-        text: 'About the BBC',
-      },
-      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Privacy Policy',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
         text: 'Cookies',
-      },
-      {
-        href: 'https://www.bbc.com/accessibility/',
-        text: 'Accessibility Help',
       },
       {
         href: 'https://www.bbc.com/contact/',
@@ -158,6 +159,47 @@ const service = {
   },
   fonts: [],
   timezone: 'Europe/London',
+  navigation: [
+    {
+      title: 'Početna strana',
+      url: '/serbian/lat',
+    },
+    {
+      title: 'Srbija',
+      url: '/serbian/lat/srbija',
+    },
+    {
+      title: 'Balkan',
+      url: '/serbian/lat/balkan',
+    },
+    {
+      title: 'Svet',
+      url: '/serbian/lat/svet',
+    },
+    {
+      title: 'Video',
+      url: '/serbian/lat/media/video',
+    },
+    {
+      title: 'Najpopularnije',
+      url: '/serbian/lat/popular/read',
+    },
+  ],
+};
+
+const service = {
+  lat: {
+    ...baseServiceConfig,
+    lang: `sr-latn`,
+    locale: `sr-latn`,
+    script: latin,
+  },
+  cyr: {
+    ...baseServiceConfig,
+    lang: `sr-cyrl`,
+    locale: `sr-cyrl`,
+    script: cyrillic,
+  },
 };
 
 export default service;

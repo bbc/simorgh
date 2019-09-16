@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { string, shape, node } from 'prop-types';
+import { shouldMatchSnapshot } from '../../../testHelpers';
 import MediaPlayerContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
@@ -27,6 +27,7 @@ const ContextWrapper = ({ platform, children, toggleState }) => (
     platform={platform}
     id="foo"
     pageType="article"
+    pathname="/pathname"
   >
     <ToggleContext.Provider
       value={{ toggleState, toggleDispatch: mockToggleDispatch }}
@@ -47,57 +48,50 @@ ContextWrapper.defaultProps = {
 };
 
 describe('MediaPlayer', () => {
-  process.env.SIMORGH_AV_EMBED_BASE_URL = 'https://foobar.com';
+  describe('is called correctly', () => {
+    shouldMatchSnapshot(
+      'Calls the canonical placeholder when platform is canonical',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
+    );
 
-  describe('Calls the correct props', () => {
-    it('Calls the canonical player when platform is canonical', () => {
-      const tree = renderer.create(
-        <ContextWrapper platform="canonical">
-          <MediaPlayerContainer blocks={validVideoFixture} />
-        </ContextWrapper>,
-      );
+    shouldMatchSnapshot(
+      'Calls the canonical player when platform is canonical and placeholder is false',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={validVideoFixture} placeholder={false} />
+      </ContextWrapper>,
+    );
 
-      expect(tree).toMatchSnapshot();
-    });
-
-    it('Calls the AMP player when platform is AMP', () => {
-      const tree = renderer.create(
-        <ContextWrapper platform="amp">
-          <MediaPlayerContainer blocks={validVideoFixture} />
-        </ContextWrapper>,
-      );
-
-      expect(tree).toMatchSnapshot();
-    });
+    shouldMatchSnapshot(
+      'Calls the AMP player when platform is AMP',
+      <ContextWrapper platform="amp">
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
+    );
   });
 
   describe('Fails and returns early when', () => {
-    it('there is no versionId', () => {
-      const tree = renderer.create(
-        <ContextWrapper platform="canonical">
-          <MediaPlayerContainer blocks={missingVpidFixture} />
-        </ContextWrapper>,
-      );
+    shouldMatchSnapshot(
+      'there is no versionId',
+      <ContextWrapper platform="canonical">
+        <MediaPlayerContainer blocks={missingVpidFixture} />
+      </ContextWrapper>,
+    );
 
-      expect(tree).toMatchSnapshot();
-    });
-
-    it('component is toggled off', () => {
-      const toggleState = {
-        test: {
-          mediaPlayer: {
-            enabled: false,
-          },
+    const toggleState = {
+      test: {
+        mediaPlayer: {
+          enabled: false,
         },
-      };
+      },
+    };
 
-      const tree = renderer.create(
-        <ContextWrapper platform="canonical" toggleState={toggleState}>
-          <MediaPlayerContainer blocks={validVideoFixture} />
-        </ContextWrapper>,
-      );
-
-      expect(tree).toMatchSnapshot();
-    });
+    shouldMatchSnapshot(
+      'component is toggled off',
+      <ContextWrapper platform="canonical" toggleState={toggleState}>
+        <MediaPlayerContainer blocks={validVideoFixture} />
+      </ContextWrapper>,
+    );
   });
 });

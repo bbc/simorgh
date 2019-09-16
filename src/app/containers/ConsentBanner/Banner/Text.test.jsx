@@ -2,6 +2,7 @@ import React from 'react';
 import { shouldMatchSnapshot } from '../../../../testHelpers';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import BannerText from './Text';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 const bannerMessaging = {
   uk: {
@@ -27,56 +28,39 @@ const bannerWithLinkMessaging = {
   },
 };
 
-describe('Consent Banner Text', () => {
-  shouldMatchSnapshot(
-    'should correctly render banner text in the UK',
+const bannerTextWithContext = (message, topLevelDomain) => (
+  <ServiceContextProvider service="news">
     <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
+      bbcOrigin={`https://www.test.bbc.${topLevelDomain}`}
       id="c0000000000o"
       isAmp={false}
       pageType="article"
       service="news"
+      pathname="/pathname"
     >
-      <BannerText {...bannerMessaging} />
-    </RequestContextProvider>,
+      <BannerText {...message} />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
+
+describe('Consent Banner Text', () => {
+  shouldMatchSnapshot(
+    'should correctly render banner text in the UK',
+    bannerTextWithContext(bannerMessaging, 'co.uk'),
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text outside the UK',
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      service="news"
-    >
-      <BannerText {...bannerMessaging} />
-    </RequestContextProvider>,
+    bannerTextWithContext(bannerMessaging, 'com'),
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text with a link in the UK',
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      service="news"
-    >
-      <BannerText {...bannerWithLinkMessaging} />
-    </RequestContextProvider>,
+    bannerTextWithContext(bannerWithLinkMessaging, 'co.uk'),
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text with a link outside the UK',
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      service="news"
-    >
-      <BannerText {...bannerWithLinkMessaging} />
-    </RequestContextProvider>,
+    bannerTextWithContext(bannerWithLinkMessaging, 'com'),
   );
 });

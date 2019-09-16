@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withData HOC with missing articleData should return the errorMain component 1`] = `
+exports[`withData HOC with missing pageData should return the errorMain component 1`] = `
 <ErrorMain
   status={200}
 />
@@ -1693,6 +1693,26 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
               },
               Object {
                 "assetTypeCode": "PRO",
+                "contentType": "Audio",
+                "indexImage": Object {
+                  "altText": "A lone Koala perches in a eucalyptus tree",
+                  "caption": "Koalas are from Australia",
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "href": "http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg",
+                  "id": "63692548",
+                  "path": "/cpsdevpb/14A31/test/_63692548_000327537-1.jpg",
+                  "subType": "index",
+                  "width": 976,
+                },
+                "name": "Audio promo",
+                "summary": "Summary",
+                "timestamp": 1565097889000,
+                "type": "link",
+                "uri": "http://www.bbc.com/pidgin",
+              },
+              Object {
+                "assetTypeCode": "PRO",
                 "contentType": "Text",
                 "indexImage": Object {
                   "altText": "Rashidi",
@@ -1730,6 +1750,42 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
               },
               Object {
                 "assetTypeCode": "PRO",
+                "contentType": "Feature",
+                "indexImage": Object {
+                  "altText": "all-time African XI promo image",
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+                  "id": "101952925",
+                  "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+                  "subType": "index",
+                  "width": 976,
+                },
+                "name": "Select your best ever African 11 players for World Cup as a feature",
+                "timestamp": 1528978068001,
+                "type": "link",
+                "uri": "https://www.bbc.com/pidgin/sport-44425543",
+              },
+              Object {
+                "assetTypeCode": "PRO",
+                "contentType": "Video",
+                "indexImage": Object {
+                  "altText": "all-time African XI promo image",
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+                  "id": "101952925",
+                  "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+                  "subType": "index",
+                  "width": 976,
+                },
+                "name": "Select your best ever African 11 players for World Cup - Video",
+                "timestamp": 1528978068000,
+                "type": "link",
+                "uri": "https://www.bbc.com/pidgin/sport-44425543",
+              },
+              Object {
+                "assetTypeCode": "PRO",
                 "contentType": "Text",
                 "indexImage": Object {
                   "altText": "Sane",
@@ -1745,6 +1801,25 @@ Kaffy bin win Guinness world record for “Longest Dance Party\\" for 2006, she 
                 "timestamp": 1528978790000,
                 "type": "link",
                 "uri": "https://www.bbc.com/pidgin/sport-44214129",
+              },
+              Object {
+                "assetTypeCode": "PRO",
+                "contentType": "Gallery",
+                "indexImage": Object {
+                  "altText": "A lone Koala perches in a eucalyptus tree",
+                  "caption": "Koalas are from Australia",
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "href": "http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg",
+                  "id": "63692548",
+                  "path": "/cpsdevpb/14A31/test/_63692548_000327537-1.jpg",
+                  "subType": "index",
+                  "width": 976,
+                },
+                "name": "Gallery promo",
+                "timestamp": 1565192199000,
+                "type": "link",
+                "uri": "http://www.bbc.com/azeri",
               },
             ],
             "semanticGroupName": "Frequency info",

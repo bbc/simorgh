@@ -6,6 +6,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import { pageDataPropType } from '../../models/propTypes/data';
 import { getReferrer } from '../../lib/analyticsUtils';
+import onClient from '../../lib/utilities/onClient';
 import {
   chartbeatUID,
   chartbeatSource,
@@ -35,14 +36,15 @@ const ChartbeatAnalytics = ({ data }) => {
   const cookie = getSylphidCookie();
   const type = getType(pageType);
   const isAmp = platform === 'amp';
+  const currentPath = onClient() && window.location.pathname;
   const config = {
     domain,
     sections,
     uid: chartbeatUID,
     title,
+    virtualReferrer: referrer,
     ...(isAmp && { contentType: type }),
-    ...(!isAmp && { type, useCanonical }),
-    ...(referrer && { virtualReferrer: referrer }),
+    ...(!isAmp && { type, useCanonical, path: currentPath }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };
 

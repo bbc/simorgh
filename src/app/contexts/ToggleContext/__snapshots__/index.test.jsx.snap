@@ -2,6 +2,6 @@
 
 exports[`ToggleContext should provide a toggles object 1`] = `
 <span>
-  {"toggleState":{"test":{"mpulse":{"enabled":false},"mediaPlayer":{"enabled":true},"chartbeatAnalytics":{"enabled":true}},"live":{"mpulse":{"enabled":false},"mediaPlayer":{"enabled":false},"chartbeatAnalytics":{"enabled":false}}}}
+  {"toggleState":{"local":{"foobarFeature":{"enabled":true}},"test":{"foobarFeature":{"enabled":true}},"live":{"foobarFeature":{"enabled":false}}}}
 </span>
 `;

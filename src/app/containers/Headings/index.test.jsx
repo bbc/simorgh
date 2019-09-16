@@ -1,10 +1,14 @@
 import React from 'react';
 import { render } from 'enzyme';
 import { latin } from '@bbc/gel-foundations/scripts';
+import {
+  shouldMatchSnapshot,
+  isNull,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import HeadingsContainer from '.';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { textBlock } from '../../models/blocks';
-import { shouldMatchSnapshot, isNull } from '../../../testHelpers';
 import blocksSingleFragment from './testHelpers';
 
 const HeadingsContainerWithContext = data => (
@@ -74,6 +78,8 @@ const template = (title, text, type) => {
 
 describe('Headings', () => {
   describe('with no data', () => {
+    suppressPropWarnings(['type', 'undefined']);
+    suppressPropWarnings(['blocks', 'supplied']);
     isNull('should not render anything', HeadingsContainerWithContext());
   });
 
@@ -92,9 +98,9 @@ describe('Headings', () => {
         HeadingsContainerWithContext(data),
       );
 
-      it('should not have an id', () => {
+      it('should have an id for the skiplink with value "content"', () => {
         const headlineHeading = render(HeadingsContainerWithContext(data));
-        expect(getId(headlineHeading)).toBe(undefined);
+        expect(getId(headlineHeading)).toBe('content');
       });
     });
 

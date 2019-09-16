@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 import ArticleTimestamp from '.';
-import { isNull } from '../../../testHelpers';
+import { isNull, suppressPropWarnings } from '../../../testHelpers';
 import {
   timestampGenerator,
   sameDayTimestampsGenerator,
@@ -85,7 +85,9 @@ describe('ArticleTimestamp', () => {
   });
 
   describe('with no data', () => {
-    isNull('should return null', <ArticleTimestamp />);
+    suppressPropWarnings(['firstPublished', 'undefined']);
+    suppressPropWarnings(['lastPublished', 'undefined']);
+    isNull('should return null', <WrappedArticleTimestamp />);
   });
 
   describe('with invalid data', () => {
