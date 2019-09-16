@@ -1,6 +1,7 @@
 import React from 'react';
 import DefaultPageWrapper from './defaultPageWrapper';
 import { shouldShallowMatchSnapshot } from '../../testHelpers';
+import { ServiceContextProvider } from '../contexts/ServiceContext';
 
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
@@ -9,6 +10,8 @@ describe('defaultPageWrapper', () => {
 
   shouldShallowMatchSnapshot(
     'should render default page wrapper with children',
-    <DefaultPageWrapper {...propsWithChildren} />,
+    <ServiceContextProvider service="news">
+      <DefaultPageWrapper {...propsWithChildren} />,
+    </ServiceContextProvider>,
   );
 });
