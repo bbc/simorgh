@@ -32,5 +32,3 @@ export const isValidPassportHome = (passportHome, service) => {
 
   return isValidOverride || (passportHome ? passportHome === service : true);
 };
-
-export default getPassportHome;

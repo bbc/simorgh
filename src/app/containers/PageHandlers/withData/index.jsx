@@ -6,7 +6,7 @@ import ErrorMain from '../../ErrorMain';
 import {
   getPassportHome,
   isValidPassportHome,
-} from '../../../lib/utilities/getPassportHome';
+} from '../../../lib/utilities/passport';
 
 // checks for data, status, setting default status if not found
 const constructRenderObject = data => ({
