@@ -70,7 +70,7 @@
     "@bbc/psammead-media-indicator": "^2.5.6",
     "@bbc/psammead-media-player": "^1.0.1-alpha.3",
     "@bbc/psammead-navigation": "^2.2.8",
-    "@bbc/psammead-paragraph": "^2.2.7",
+    "@bbc/psammead-paragraph": "^2.2.8",
     "@bbc/psammead-section-label": "^2.3.11",
     "@bbc/psammead-sitewide-links": "^3.1.6",
     "@bbc/psammead-story-promo": "^2.7.10",
