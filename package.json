@@ -178,7 +178,7 @@
     "webpack": "^4.39.3",
     "webpack-bundle-analyzer": "^3.4.1",
     "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0",
+    "webpack-dev-server": "^3.8.1",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2",
     "yaml-js": "^0.2.3"
