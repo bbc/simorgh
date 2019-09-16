@@ -146,21 +146,17 @@ describe('Charbeats Analytics Container', () => {
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
     testUtils.getConfig = mockGetConfig;
 
-    const tree = renderer
-      .create(
-        <ContextWrap
-          platform="canonical"
-          pageType="article"
-          origin={localBaseUrl}
-        >
-          <ChartbeatAnalytics data={frontPageData} />
-        </ContextWrap>,
-      )
-      .toJSON();
-
+    renderer.create(
+      <ContextWrap
+        platform="canonical"
+        pageType="article"
+        origin={localBaseUrl}
+      >
+        <ChartbeatAnalytics data={frontPageData} />
+      </ContextWrap>,
+    );
     expect(sendCanonicalChartbeatBeacon).toHaveBeenCalledTimes(1);
     expect(sendCanonicalChartbeatBeacon).toHaveBeenCalledWith(expectedConfig);
     expect(testUtils.getConfig).toHaveBeenCalledTimes(1);
-    expect(tree).toMatchSnapshot();
   });
 });
