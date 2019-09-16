@@ -15,9 +15,10 @@ const ChartbeatAnalytics = ({ data }) => {
     RequestContext,
   );
   const isAmpAndEnabled = platform === 'amp' && enabled;
+  const isCanonicalAndEnabled = platform === 'canonical' && enabled;
 
   useEffect(() => {
-    if (platform !== 'amp') {
+    if (isCanonicalAndEnabled) {
       sendCanonicalChartbeatBeacon(
         getConfig({
           platform,
@@ -39,6 +40,7 @@ const ChartbeatAnalytics = ({ data }) => {
     platform,
     service,
     sendCanonicalChartbeatBeacon,
+    isCanonicalAndEnabled,
   ]);
 
   return (
