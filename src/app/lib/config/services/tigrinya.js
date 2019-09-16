@@ -94,27 +94,26 @@ const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'ኩኪታት ክትጥቀሙ ከምዝተሰማማዕኩም ኣፍልጡና',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
-              last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              first: 'ኣብ መርበብ ሓበሬታና ዝሓሸ ኣገልግሎት መታን ክትረኽቡ ኢና ',
+              linkText: 'ኩኪታት',
+              last: ' እንጥቀም። በዞም ኩኪታት እዚኦም ከምእተሰማማዕኩም ኣፍሉጡና።',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'ንሕና ኾነ መሻርኽትና ከም ',
+              linkText: 'ኩኪታት',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                'ዝኣመሰሉ ቴክኖሎጂ ተጠቒምና፡ ነቲ ናትኩም ናይ ኣለሻ ዴታ ብምውህላል ንዓኹም ኣገዳሲ ክኸውን ዝኽእል ትሕዝቶ ወይ መወዓውዒ ንክነርእየኩም ንጥቀመሉ። እንተድኣተሰማሚዕኩም ኣፍልጡና።',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'እወ! እስማማዕ እየ።',
+          reject: 'ኣይፋል፡ ናብ መተዓራረዪ (ሴቲንግ) ውሰደኒ።',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
