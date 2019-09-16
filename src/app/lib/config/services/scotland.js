@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_DARK_SALTIRE, C_WHITE } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import {
@@ -35,7 +35,7 @@ const service = {
     datetimeLocale: 'en-gb',
     service: 'scotland',
     serviceName: 'Scotland',
-    themeColor: `${C_POSTBOX}`,
+    themeColor: `${C_DARK_SALTIRE}`,
     twitterCreator: '@BBCScotland',
     twitterSite: '@BBCScotland',
     noBylinesPolicy: null,
@@ -44,6 +44,10 @@ const service = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
+    theming: {
+      brandBackgroundColour: `${C_DARK_SALTIRE}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       home: 'Home',
       currentPage: 'Current page',
