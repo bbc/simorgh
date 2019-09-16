@@ -47,15 +47,15 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404-ዘይተረኸበ ገፅ',
-          message: 'ኣድራሻ መርበብ ሓበሬታ ብቕኑዕ ዘይተፅሓፈ ከይኸውን፤ኣድራሻን ፊደላትን ዶ ክተረጋግፁ?',
+          title: 'እቲ ገጽ ኣይኽፈትን',
+          message: 'ይቕረታ! እቲ እትእልሾ ዘለኻ ገጽ፡ ክንረኽቦ ኣይከኣልናን። በጃኻ ነዚ ዝስዕብ ፈትን፡',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'እቲ ዩኣርኤል ትኽክል ምዃኑ ኣረጋግጽ',
+            'ኣብ መአለሺኻ ንዘሎ ደጊምካ መፈተኒ መልጎም ጠውቕ',
+            'ነቲ ናይ ቢቢሲ መአለሺ ስፍራ ተጠቒምካ ነዚ ገጽ ክትረኽቦ ፈትን',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'መረባ ዜና ቢቢሲ',
+          callToActionFirst: 'ከም ኣማራጺ ከኣ',
+          callToActionLinkText: '[BBC News ረኣይ።]',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/tigrinya',
         },
