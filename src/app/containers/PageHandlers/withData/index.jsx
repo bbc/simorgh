@@ -3,16 +3,16 @@ import { element, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { dataPropType } from '../../../models/propTypes/data';
 import ErrorMain from '../../ErrorMain';
-import getPassportHome from '../../../lib/utilities/getPassportHome';
+import {
+  getPassportHome,
+  isValidPassportHome,
+} from '../../../lib/utilities/getPassportHome';
 
 // checks for data, status, setting default status if not found
 const constructRenderObject = data => ({
   status: pathOr(null, ['status'], data) || 500,
   pageData: pathOr(null, ['pageData'], data),
 });
-
-const isValidPassportHome = (passportHome, service) =>
-  passportHome ? passportHome === service : true;
 
 // checks for pageData, 200 status and if home service from article data fits the service locale
 const shouldRender = (data, service) => {

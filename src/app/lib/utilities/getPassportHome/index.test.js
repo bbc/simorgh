@@ -1,4 +1,4 @@
-import getPassportHome from '.';
+import { getPassportHome, isValidPassportHome } from '.';
 
 describe('getPassportHome', () => {
   const data = {
@@ -31,5 +31,19 @@ describe('getPassportHome', () => {
     const homeService = getPassportHome(invalidData);
 
     expect(homeService).toEqual(null);
+  });
+});
+
+describe('isValidPassportHome', () => {
+  it('should give true for same value', () => {
+    expect(isValidPassportHome('yoruba', 'yoruba')).toEqual(true);
+  });
+
+  it('should give false for different values', () => {
+    expect(isValidPassportHome('yoruba', 'igbo')).toEqual(false);
+  });
+
+  it('should give true for overrides', () => {
+    expect(isValidPassportHome('brasil', 'portuguese')).toEqual(true);
   });
 });
