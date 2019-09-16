@@ -18,8 +18,6 @@ jest.mock('./cookies', () => ({
   personalisationEnabled: jest.fn(),
 }));
 
-jest.mock('./Chartbeat', () => 'Chartbeat');
-
 const mockChartbeat = jest.fn().mockReturnValue('chartbeat');
 chartbeat.default = mockChartbeat;
 
@@ -45,7 +43,7 @@ describe('UserContext', () => {
     jest.clearAllMocks();
   });
 
-  it('should provide cookie values and state function', () => {
+  it('should provide cookie values, state function and chartbeat config', () => {
     act(() => {
       ReactDOM.render(<DummyComponentWithContext />, container);
     });
@@ -59,5 +57,11 @@ describe('UserContext', () => {
       updateCookiePolicy: expect.any(Function),
       sendCanonicalChartbeatBeacon: expect.any(Function),
     });
+    expect(mockChartbeat).toHaveBeenCalledWith(
+      {
+        config: null,
+      },
+      {},
+    );
   });
 });
