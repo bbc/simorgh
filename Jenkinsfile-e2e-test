@@ -50,6 +50,7 @@ node {
           stage ('Test E2Es') {
             try {
               sh 'make testE2Es'
+              sh 'make test3rdPartyE2Es'
             } catch (Throwable e) {
               def messageParameters = [
                 buildStatus: 'Failed',
