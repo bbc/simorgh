@@ -14,6 +14,7 @@ const defaultProps = {
   isAmp: false,
   pageType: 'frontPage',
   service: 'news',
+  pathname: '/pathname',
 };
 
 jest.mock('../PageHandlers/withContexts', () => Component => {
@@ -98,7 +99,7 @@ describe('FrontPageContainer', () => {
         });
 
         const { useContext, useReducer, useState } = jest.requireMock('react');
-        useContext.mockReturnValue({ ...igboConfig, lang: 'ig' });
+        useContext.mockReturnValue(igboConfig.default);
         FrontPageComponent = jest.requireActual('.').default;
         useReducer.mockReturnValue([toggleReducer, defaultToggles]);
         useState.mockImplementation(input => [input, () => {}]);
