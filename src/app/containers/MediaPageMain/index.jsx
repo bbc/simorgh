@@ -79,10 +79,9 @@ const MediaPageMain = ({ pageData, service }) => {
                   }[platform];
 
                   return (
-                    <MediaPlayerOuterWrapper>
+                    <MediaPlayerOuterWrapper key={uuid}>
                       <MediaPlayerInnerWrapper>
                         <MediaPlayer
-                          key={uuid}
                           showPlaceholder={false}
                           src={`/ws/av-embeds/media/${externalId}/${id}`}
                           id={idAttr}
