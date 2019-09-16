@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
 import styled from 'styled-components';
 import path from 'ramda/src/path';
+import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
 import {
@@ -68,11 +69,9 @@ const MediaPageMain = ({ pageData, service }) => {
                   `;
 
                   const MediaPlayerInnerWrapper = styled.div`
-                    @media (min-width: 49.9375rem) {
-                      flex-shrink: 0;
-                      width: 800px;
-                      max-width: calc(100vw - 2rem);
-                    }
+                    flex-shrink: 0;
+                    width: 50rem;
+                    max-width: calc(100vw - ${GEL_SPACING_QUAD});
                   `;
                   const MediaPlayer = {
                     canonical: CanonicalMediaPlayer,
