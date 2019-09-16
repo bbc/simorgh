@@ -1,20 +1,19 @@
 import React from 'react';
 import * as server from 'react-dom/server';
-import { ServerStyleSheet } from 'styled-components';
 import renderDocument from '.';
 import { ServerApp } from '../../app/containers/App';
 import DocumentComponent from './component';
 
-const sheet = new ServerStyleSheet();
+const mockServerStyleSheet = {
+  collectStyles: jest.fn(),
+  getStyleElement: () => {
+    jest.fn();
+  },
+};
 
 jest.mock('styled-components', () => {
   return {
-    ServerStyleSheet: jest.fn().mockImplementation(() => ({
-      collectStyles: jest.fn(),
-      getStyleElement: () => {
-        jest.fn();
-      },
-    })),
+    ServerStyleSheet: () => mockServerStyleSheet,
   };
 });
 jest.mock('./component', () => jest.fn());
@@ -27,13 +26,16 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
+const { ServerStyleSheet } = require('styled-components');
+
 jest.mock('react-dom/server', () => ({
-  renderToString: jest.fn(),
+  renderToString: jest.fn().mockImplementation(() => 'no'),
   renderToStaticMarkup: jest
     .fn()
     .mockImplementation(() => '<html lang="en-GB"></html>'),
 }));
 
+const sheet = new ServerStyleSheet();
 jest.spyOn(sheet, 'collectStyles');
 jest.spyOn(server, 'renderToString');
 jest.spyOn(server, 'renderToStaticMarkup');
@@ -52,8 +54,37 @@ describe('Render Document', () => {
       url: '/',
     }).then(document => {
       expect(document).toEqual('<!doctype html><html lang="en-GB"></html>');
-      expect(sheet.collectStyles).toHaveBeenCalled();
-      expect(server.renderToStaticMarkup).toHaveBeenCalledWith('ha ha');
+      console.log(document);
+      expect(sheet.collectStyles).toHaveBeenCalledWith(
+        <mockConstructor
+          bbcOrigin="https://www.test.bbc.co.uk"
+          context={{}}
+          data={{ test: 'data' }}
+          isAmp={false}
+          location="/"
+          routes={['someRoute']}
+          service="news"
+        />,
+      );
+      expect(server.renderToStaticMarkup).toHaveBeenCalledWith(
+        <mockConstructor
+          assetOrigins={[
+            'https://ichef.bbci.co.uk',
+            'https://gel.files.bbci.co.uk',
+            undefined,
+            undefined,
+          ]}
+          assets={[
+            'http://localhost.bbc.com:7080/static/js/news-12345.12345.js',
+            'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
+            'http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js',
+            'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
+          ]}
+          data={{ test: 'data' }}
+          isAmp={false}
+          service="news"
+        />,
+      );
       expect(server.renderToString).toHaveBeenCalledWith('no');
       done();
     });
