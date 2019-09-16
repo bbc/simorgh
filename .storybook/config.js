@@ -4,7 +4,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import timemachine from 'timemachine';
-import GlobalStyle from '../src/app/lib/globalStyles';
+import GlobalStyles from '@bbc/psammead-styles/global-styles';
 
 // This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
 timemachine.config({
@@ -21,7 +21,7 @@ function loadStories() {
 addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
   <>
-    <GlobalStyle fonts={Object.values(fontFaces)} />
+    <GlobalStyles fonts={Object.values(fontFaces)} />
     {story()}
   </>
   /* eslint-enable react/jsx-filename-extension */
