@@ -17,6 +17,9 @@ productionTests:
 testE2Es:
 	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
 
+test3rdPartyE2Es:
+    npm run cypress:3rdParty
+
 liveE2Es:
 	CYPRESS_SMOKE=false CYPRESS_APP_ENV=live npm run cypress
 
