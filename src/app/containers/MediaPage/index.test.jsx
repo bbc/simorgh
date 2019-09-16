@@ -7,6 +7,7 @@ const liveRadioScaffoldProps = {
   isAmp: false,
   pageType: 'media',
   service: 'amharic',
+  pathname: '/pathname',
   match: {
     params: {
       serviceId: 'bbc_amharic_radio',

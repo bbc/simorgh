@@ -2,6 +2,10 @@ import filterUnknownContentTypes from './filterContentType';
 import azeriFixtureData from '../../../../../../data/azeri/frontpage/index.json';
 import igboFixtureData from '../../../../../../data/igbo/frontpage/index.json';
 
+/*
+ * CPS types
+ */
+
 const cpsItems = [
   {
     headlines: {
@@ -23,15 +27,25 @@ const cpsItems = [
   },
 ];
 
+/*
+ * Asset types
+ */
+
 const TextAssetType = {
   name: 'Test standard link promo',
   contentType: 'Text',
   assetTypeCode: 'PRO',
 };
 
+const AudioAssetType = {
+  name: 'Test audio link promo',
+  contentType: 'Audio',
+  assetTypeCode: 'PRO',
+};
+
 const VideoAssetType = {
-  name: 'Test standard link promo',
-  summary: 'This is a standard link promo',
+  name: 'Test video link promo',
+  summary: 'This is a video link promo',
   indexImage: {},
   indexThumbnail: {},
   uri: 'http://this.is.a.test.com/',
@@ -41,10 +55,25 @@ const VideoAssetType = {
   type: 'link',
 };
 
-const AudioAssetType = {
-  name: 'Test audio link promo',
-  contentType: 'Audio',
+const GalleryAssetType = {
+  name: 'Test gallery link promo',
+  summary: 'This is a gallery link promo',
+  indexImage: {
+    id: '63692548',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
+    path: '/cpsdevpb/14A31/test/_63692548_000327537-1.jpg',
+    height: 549,
+    width: 976,
+    altText: 'A lone Koala perches in a eucalyptus tree',
+    caption: 'Koalas are from Australia',
+    copyrightHolder: 'BBC',
+  },
+  uri: 'http://www.bbc.com/azeri',
+  contentType: 'Gallery',
   assetTypeCode: 'PRO',
+  timestamp: 1565192199000,
+  type: 'link',
 };
 
 const FeatureAssetType = {
@@ -339,20 +368,22 @@ describe('filterUnknownContentTypes', () => {
       const data = {
         content: {
           groups: [
-            VideoAssetType,
             TextAssetType,
-            AudioAssetType,
             FeatureAssetType,
+            AudioAssetType,
+            VideoAssetType,
+            GalleryAssetType,
           ],
         },
       };
       const expected = {
         content: {
           groups: [
-            VideoAssetType,
             TextAssetType,
-            AudioAssetType,
             FeatureAssetType,
+            AudioAssetType,
+            VideoAssetType,
+            GalleryAssetType,
           ],
         },
       };
