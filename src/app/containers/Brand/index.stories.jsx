@@ -13,9 +13,15 @@ storiesOf('Containers|Brand', module)
     inputProvider({
       // eslint-disable-next-line react/prop-types
       componentFunction: ({ service }) => {
+        // eslint-disable-next-line import/no-dynamic-require,global-require
+        const serviceConfig = require(`../../lib/config/services/${service}`);
+
         return (
           <ServiceContextProvider service={service}>
-            <BrandContainer />
+            <BrandContainer
+              backgroundColour={serviceConfig.default.brandBackgroundColour}
+              logoColour={serviceConfig.default.brandLogoColour}
+            />
           </ServiceContextProvider>
         );
       },
