@@ -121,7 +121,7 @@
     "@bbc/psammead-test-helpers": "^2.0.2",
     "@bbc/psammead-storybook-helpers": "^6.0.1",
     "@storybook/addon-knobs": "^5.1.11",
-    "@storybook/react": "^5.1.11",
+    "@storybook/react": "^5.2.0",
     "@storybook/theming": "^5.1.11",
     "@testing-library/react": "^9.1.4",
     "@testing-library/react-hooks": "^2.0.1",
