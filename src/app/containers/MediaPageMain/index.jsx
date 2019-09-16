@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
+import styled from 'styled-components';
 import path from 'ramda/src/path';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -59,18 +60,36 @@ const MediaPageMain = ({ pageData, service }) => {
                 }
 
                 case LIVE_RADIO_BLOCK: {
+                  const MediaPlayerOuterWrapper = styled.div`
+                    @media (min-width: 63rem) {
+                      display: flex;
+                      justify-content: center;
+                    }
+                  `;
+
+                  const MediaPlayerInnerWrapper = styled.div`
+                    @media (min-width: 49.9375rem) {
+                      flex-shrink: 0;
+                      width: 800px;
+                      max-width: calc(100vw - 2rem);
+                    }
+                  `;
                   const MediaPlayer = {
                     canonical: CanonicalMediaPlayer,
                     amp: AmpMediaPlayer,
                   }[platform];
 
                   return (
-                    <MediaPlayer
-                      key={uuid}
-                      showPlaceholder={false}
-                      src={`/ws/av-embeds/media/${externalId}/${id}`}
-                      id={idAttr}
-                    />
+                    <MediaPlayerOuterWrapper>
+                      <MediaPlayerInnerWrapper>
+                        <MediaPlayer
+                          key={uuid}
+                          showPlaceholder={false}
+                          src={`/ws/av-embeds/media/${externalId}/${id}`}
+                          id={idAttr}
+                        />
+                      </MediaPlayerInnerWrapper>
+                    </MediaPlayerOuterWrapper>
                   );
                 }
                 default:
