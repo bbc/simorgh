@@ -5,6 +5,7 @@ import igboData from '../../../../data/igbo/frontpage';
 import pidginData from '../../../../data/pidgin/frontpage';
 import thaiData from '../../../../data/thai/frontpage';
 import yorubaData from '../../../../data/yoruba/frontpage';
+import punjabiData from '../../../../data/punjabi/frontpage';
 import FrontPageMain from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
@@ -16,6 +17,7 @@ const serviceDataSets = {
   yoruba: yorubaData,
   pidgin: pidginData,
   thai: thaiData,
+  punjabi: punjabiData,
 };
 
 const stories = storiesOf('Main|Front Page', module);

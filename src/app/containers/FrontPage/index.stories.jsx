@@ -5,7 +5,7 @@ import pidginData from '../../../../data/pidgin/frontpage';
 import addIdsToItems from '../../lib/utilities/preprocessor/rules/addIdsToItems';
 import thaiData from '../../../../data/thai/frontpage';
 import yorubaData from '../../../../data/yoruba/frontpage';
-
+import punjabiData from '../../../../data/punjabi/frontpage';
 import filterUnknownContentTypes from '../../lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '../../lib/utilities/preprocessor/rules/topstories';
@@ -24,6 +24,7 @@ const serviceDatasets = {
   yoruba: yorubaData,
   pidgin: pidginData,
   thai: thaiData,
+  punjabi: punjabiData,
 };
 
 const stories = storiesOf('Pages|Front Page', module);
