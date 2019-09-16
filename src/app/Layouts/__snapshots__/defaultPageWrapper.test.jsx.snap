@@ -689,10 +689,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 lang="en-GB"
               >
                 ©
-                 
+
               </span>
               2019 BBC. The BBC is not responsible for the content of external sites.
-               
+
               <a
                 class="c17 c21"
                 href="https://www.bbc.co.uk/help/web/links/"
