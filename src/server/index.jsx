@@ -138,12 +138,13 @@ if (process.env.APP_ENV === 'local') {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(mediaAssetPageDataRegexPath, async ({ params }, res, next) => {
-      const { service, assetUri: id } = params;
+      const { service, assetUri: id, variant } = params;
 
       const dataFilePath = constructDataFilePath({
         pageType: 'mediaAssetPage',
         service,
         id,
+        variant,
       });
 
       sendDataFile(res, dataFilePath, next);
