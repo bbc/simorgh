@@ -882,7 +882,7 @@ module.exports = {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/scotland/articles/c1111111111o',
+            : '/scotland/articles/czwj5l0n210o',
         smoke: false,
       },
       errorPage404: {
