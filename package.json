@@ -175,7 +175,7 @@
     "terser-webpack-plugin": "^2.0.1",
     "timemachine": "^0.3.0",
     "wait-on": "^3.3.0",
-    "webpack": "^4.39.3",
+    "webpack": "^4.40.2",
     "webpack-bundle-analyzer": "^3.4.1",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0",
