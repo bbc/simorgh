@@ -51,77 +51,73 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404-ዘይተረኸበ ገፅ',
-          message: 'ኣድራሻ መርበብ ሓበሬታ ብቕኑዕ ዘይተፅሓፈ ከይኸውን፤ኣድራሻን ፊደላትን ዶ ክተረጋግፁ?',
+          title: 'እቲ ገጽ ኣይኽፈትን',
+          message: 'ይቕረታ! እቲ እትእልሾ ዘለኻ ገጽ፡ ክንረኽቦ ኣይከኣልናን። በጃኻ ነዚ ዝስዕብ ፈትን፡',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'እቲ ዩኣርኤል ትኽክል ምዃኑ ኣረጋግጽ',
+            'ኣብ መአለሺኻ ንዘሎ ደጊምካ መፈተኒ መልጎም ጠውቕ',
+            'ነቲ ናይ ቢቢሲ መአለሺ ስፍራ ተጠቒምካ ነዚ ገጽ ክትረኽቦ ፈትን',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'መረባ ዜና ቢቢሲ',
+          callToActionFirst: 'ከም ኣማራጺ ከኣ ',
+          callToActionLinkText: '[BBC News ረኣይ።]',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/tigrinya',
         },
         500: {
           statusCode: '500',
-          title: 'ጌጋ',
-          message: "ዝተፈጥረ ጌጋ'ሎ፤እቲ ገፅ ክሕደስ ኣለዎ።",
-          solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
-          ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'መረባ ዜና ቢቢሲ',
+          title: 'ውሽጣዊ ጸገም ሰርቨር',
+          message: 'ይቕረታ፡ ነቲ ዝደለኻዮ ገጽ ክነቕርበልካ ኣይከኣልናን። በጃኻ፡ ነዚ ዝስዕብ ፈትን፡',
+          solutions: ['ኣብ መአለሺኻ ንዘሎ ደጊምካ መፈተኒ መልጎም ጠውቕ', 'ጸኒሕካ ደጊምካ ፈትን'],
+          callToActionFirst: 'ከም ኣማራጺ ከኣ ',
+          callToActionLinkText: '[BBC News ረኣይ።]',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/tigrinya',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'ኣብ ፖሊሲ ብሕትውናናን ኩኪታትን ምምሕያሻት ገይርና ኣለና።',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'ኣብ ፖሊሲ ብሕትውናናን ኩኪታትን ብዙሓት ኣገደስቲ ለውጥታት ገይርና ኣለና። እዚ ንዓኹምን ንዴታኹምን እንታይ ማለት ከምዝኾነ ክነፍልጠኩም ንደሊ።',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'ኣብ ፖሊሲ ብሕትውናናን ኩኪታትን ብዙሓት ኣገደስቲ ለውጥታት ገይርና ኣለና። እዚ ንዓኹምን ንዴታኹምን እንታይ ማለት ከምዝኾነ ክነፍልጠኩም ንደሊ።',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'ሕራይ',
+          reject: 'እንታይ ከምዝተለወጠ ረኣዩ',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'ኩኪታት ክትጥቀሙ ከምዝተሰማማዕኩም ኣፍልጡና',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
-              last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              first: 'ኣብ መርበብ ሓበሬታና ዝሓሸ ኣገልግሎት መታን ክትረኽቡ ኢና ',
+              linkText: 'ኩኪታት',
+              last: ' እንጥቀም። በዞም ኩኪታት እዚኦም ከምእተሰማማዕኩም ኣፍሉጡና።',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'ንሕና ኾነ መሻርኽትና ከም ',
+              linkText: 'ኩኪታት',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                'ዝኣመሰሉ ቴክኖሎጂ ተጠቒምና፡ ነቲ ናትኩም ናይ ኣለሻ ዴታ ብምውህላል ንዓኹም ኣገዳሲ ክኸውን ዝኽእል ትሕዝቶ ወይ መወዓውዒ ንክነርእየኩም ንጥቀመሉ። እንተድኣተሰማሚዕኩም ኣፍልጡና።',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'እወ! እስማማዕ እየ።',
+          reject: 'ኣይፋል፡ ናብ መተዓራረዪ (ሴቲንግ) ውሰደኒ።',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
@@ -140,31 +136,31 @@ const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'ንናይ ደገ ርከብ ብዝምልከት፡ ናትና ኣረኣእያ እንታይ ከምዝመስል ኣንብቡ።',
       },
       links: [
         {
           href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
         },
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'ውዕሊ ኣጠቓቕማ',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'ናይ ምሽጥራውነት ፖሊሲ',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'ኩኪታት',
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'ንቢቢሲ የዛርቡ',
         },
       ],
-      copyrightText: 'ቢቢሲ. ቢቢሲ ንትሕዝቶ ካልኦት ገጻት ኢንተርኔት ኣይሕተትን፡',
+      copyrightText: '© 2019 BBC. ቢቢሲ ንናይ ደገ መርበብ ሓበሬታታት ሓላፍነት ኣይወስድን.',
     },
     fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [
