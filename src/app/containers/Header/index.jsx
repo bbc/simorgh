@@ -20,8 +20,8 @@ const HeaderContainer = () => {
       <ConsentBanner />
       <BrandContainer
         borderBottom={borderBottom}
-        brandBackgroundColour={brandBackgroundColour}
-        brandLogoColour={brandLogoColour}
+        backgroundColour={brandBackgroundColour}
+        logoColour={brandLogoColour}
       />
       {showNavBar && <NavigationContainer />}
     </header>
