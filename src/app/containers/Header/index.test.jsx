@@ -37,10 +37,7 @@ const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
         bbcOrigin="https://www.test.bbc.com"
         pathname="/pathname"
       >
-        <HeaderContainer
-          backgroundColour={serviceContext.brandBackgroundColour}
-          logoColour={serviceContext.brandLogoColour}
-        />
+        <HeaderContainer />
       </RequestContextProvider>
     </ServiceContext.Provider>
   </ToggleContext.Provider>

@@ -15,9 +15,6 @@ storiesOf('Containers|Header', module)
     inputProvider({
       // eslint-disable-next-line react/prop-types
       componentFunction: ({ service }) => {
-        // eslint-disable-next-line import/no-dynamic-require,global-require
-        const serviceConfig = require(`../../lib/config/services/${service}`);
-
         return (
           <ToggleContextProvider>
             <ServiceContextProvider service={service}>
@@ -27,10 +24,7 @@ storiesOf('Containers|Header', module)
                 service={service}
                 bbcOrigin="https://www.test.bbc.com"
               >
-                <HeaderContainer
-                  backgroundColour={serviceConfig.default.brandBackgroundColour}
-                  logoColour={serviceConfig.default.brandLogoColour}
-                />
+                <HeaderContainer />
               </RequestContextProvider>
             </ServiceContextProvider>
           </ToggleContextProvider>
