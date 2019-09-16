@@ -14,7 +14,7 @@ const ChartbeatAnalytics = ({ data }) => {
   const { env, platform, pageType, previousPath, origin } = useContext(
     RequestContext,
   );
-  const isEnabledForAmp = platform === 'amp' && enabled;
+  const isAmpAndEnabled = platform === 'amp' && enabled;
 
   useEffect(() => {
     if (platform !== 'amp') {
@@ -42,7 +42,7 @@ const ChartbeatAnalytics = ({ data }) => {
   ]);
 
   return (
-    isEnabledForAmp && (
+    isAmpAndEnabled && (
       <AmpChartbeatBeacon
         chartbeatConfig={getConfig({
           platform,
