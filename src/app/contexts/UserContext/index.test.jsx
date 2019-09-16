@@ -43,7 +43,7 @@ describe('UserContext', () => {
     jest.clearAllMocks();
   });
 
-  it('should provide cookie values, state function and chartbeat config', () => {
+  it('should provide cookie values, state function and render chartbeat', () => {
     act(() => {
       ReactDOM.render(<DummyComponentWithContext />, container);
     });
@@ -57,6 +57,7 @@ describe('UserContext', () => {
       updateCookiePolicy: expect.any(Function),
       sendCanonicalChartbeatBeacon: expect.any(Function),
     });
+    expect(mockChartbeat).toHaveBeenCalledTimes(1);
     expect(mockChartbeat).toHaveBeenCalledWith(
       {
         config: null,
