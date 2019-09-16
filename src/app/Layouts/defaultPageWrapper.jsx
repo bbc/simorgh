@@ -1,10 +1,10 @@
 import React from 'react';
 import { node } from 'prop-types';
+import GlobalStyle from '@bbc/psammead-styles/global-styles';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
-import GlobalStyle from '../lib/globalStyles';
 import MPulseBeacon from '../containers/MPulseBeacon';
 
 const PageWrapper = ({ children }) => (
