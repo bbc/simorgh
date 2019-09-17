@@ -9,6 +9,14 @@ jest.mock('../containers/MPulseBeacon', () => () => (
   <p>I am the mPulse component</p>
 ));
 
+jest.mock('../lib/globalStyles', () => () => (
+  <p>I am the GlobalStyles component</p>
+));
+
+jest.mock('../containers/ServiceWorker', () => () => (
+  <p>I am the ServiceWorker component</p>
+));
+
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
     children: <h2>Child element</h2>,

@@ -415,6 +415,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   <body>
     <div>
       <p>
+        I am the GlobalStyles component
+      </p>
+      <p>
+        I am the ServiceWorker component
+      </p>
+      <p>
         I am the mPulse component
       </p>
       <header
