@@ -5,7 +5,9 @@ import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContext } from '../contexts/ToggleContext';
 import { RequestContext } from '../contexts/RequestContext';
 
-jest.mock('../lib/globalStyles', () => () => <p>I am the mPulse component</p>);
+jest.mock('../containers/MPulseBeacon', () => () => (
+  <p>I am the mPulse component</p>
+));
 
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
