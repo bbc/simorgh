@@ -32,8 +32,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/afaanoromoo/oduu-49490954'
-            : undefined,
+            ? undefined
+            : '/afaanoromoo/oduu-49490954',
         smoke: false,
       },
     },
@@ -73,8 +73,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/afrique/monde-49500638'
-            : undefined,
+            ? undefined
+            : '/afrique/monde-49500638',
         smoke: false,
       },
     },
@@ -112,8 +112,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/amharic/news-49562667'
-            : undefined,
+            ? undefined
+            : '/amharic/news-49562667',
         smoke: false,
       },
     },
@@ -153,8 +153,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/arabic/media-49580542'
-            : undefined,
+            ? undefined
+            : '/arabic/media-49580542',
         smoke: false,
       },
     },
@@ -186,8 +186,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/azeri/region-49364777'
-            : undefined,
+            ? undefined
+            : '/azeri/region-49364777',
         smoke: false,
       },
     },
@@ -227,8 +227,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/bengali/news-49579870'
-            : undefined,
+            ? undefined
+            : '/bengali/news-49579870',
         smoke: false,
       },
     },
@@ -268,8 +268,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/burmese/media-49571787'
-            : undefined,
+            ? undefined
+            : '/burmese/media-49571787',
         smoke: false,
       },
     },
@@ -339,8 +339,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/gahuza/amakuru-49534170'
-            : undefined,
+            ? undefined
+            : '/gahuza/amakuru-49534170',
         smoke: false,
       },
     },
@@ -372,8 +372,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/gujarati/media-49502679'
-            : undefined,
+            ? undefined
+            : '/gujarati/media-49502679',
         smoke: false,
       },
     },
@@ -413,8 +413,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/hausa/labarai-49513456'
-            : undefined,
+            ? undefined
+            : '/hausa/labarai-49513456',
         smoke: false,
       },
     },
@@ -454,8 +454,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/hindi/media-49583110'
-            : undefined,
+            ? undefined
+            : '/hindi/media-49583110',
         smoke: false,
       },
     },
@@ -484,8 +484,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/igbo/media-42986440'
-            : undefined,
+            ? undefined
+            : '/igbo/media-42986440',
         smoke: false,
       },
     },
@@ -523,8 +523,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/indonesia/media-49591990'
-            : undefined,
+            ? undefined
+            : '/indonesia/media-49591990',
         smoke: false,
       },
     },
@@ -556,8 +556,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/japanese/video-49589128'
-            : undefined,
+            ? undefined
+            : '/japanese/video-49589128',
         smoke: false,
       },
     },
@@ -595,8 +595,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/korean/media-49590387'
-            : undefined,
+            ? undefined
+            : '/korean/media-49590387',
         smoke: false,
       },
     },
@@ -636,8 +636,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/kyrgyz/sapar-tv-48695523'
-            : undefined,
+            ? undefined
+            : '/kyrgyz/sapar-tv-48695523',
         smoke: false,
       },
     },
@@ -669,8 +669,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/marathi/india-48062804'
-            : undefined,
+            ? undefined
+            : '/marathi/india-48062804',
         smoke: false,
       },
     },
@@ -702,8 +702,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/mundo/noticias-49546078'
-            : undefined,
+            ? undefined
+            : '/mundo/noticias-49546078',
         smoke: false,
       },
     },
@@ -773,8 +773,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/nepali/news-49613544'
-            : undefined,
+            ? undefined
+            : '/nepali/news-49613544',
         smoke: false,
       },
     },
@@ -838,8 +838,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/pashto/afghanistan-49628873'
-            : undefined,
+            ? undefined
+            : '/pashto/afghanistan-49628873',
         smoke: false,
       },
     },
@@ -879,8 +879,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/persian/world-49653162'
-            : undefined,
+            ? undefined
+            : '/persian/world-49653162',
         smoke: false,
       },
     },
@@ -909,9 +909,9 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/pidgin/tori-49450859'
-            : undefined,
-        smoke: true,
+            ? undefined
+            : '/pidgin/tori-49450859',
+        smoke: false,
       },
     },
   },
@@ -936,8 +936,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/portuguese/geral-49602758'
-            : undefined,
+            ? undefined
+            : '/portuguese/geral-49602758',
         smoke: false,
       },
     },
@@ -968,8 +968,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/punjabi/international-49567825'
-            : undefined,
+            ? undefined
+            : '/punjabi/international-49567825',
         smoke: false,
       },
     },
@@ -1001,8 +1001,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/russian/media-49281069'
-            : undefined,
+            ? undefined
+            : '/russian/media-49281069',
         smoke: false,
       },
     },
@@ -1072,8 +1072,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/sinhala/sri-lanka-49411205'
-            : undefined,
+            ? undefined
+            : '/sinhala/sri-lanka-49411205',
         smoke: false,
       },
     },
@@ -1112,8 +1112,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/somali/media-48870869'
-            : undefined,
+            ? undefined
+            : '/somali/media-48870869',
         smoke: false,
       },
     },
@@ -1164,8 +1164,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/swahili/dira-tv-49602132'
-            : undefined,
+            ? undefined
+            : '/swahili/dira-tv-49602132',
         smoke: false,
       },
     },
@@ -1205,8 +1205,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/tamil/science-49626264'
-            : undefined,
+            ? undefined
+            : '/tamil/science-49626264',
         smoke: false,
       },
     },
@@ -1238,8 +1238,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/swahili/dira-tv-49602132'
-            : undefined,
+            ? undefined
+            : '/swahili/dira-tv-49602132',
         smoke: false,
       },
     },
@@ -1271,8 +1271,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/thai/international-49514085'
-            : undefined,
+            ? undefined
+            : '/thai/international-49514085',
         smoke: false,
       },
     },
@@ -1310,8 +1310,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/tigrinya/news-49562338'
-            : undefined,
+            ? undefined
+            : '/tigrinya/news-49562338',
         smoke: false,
       },
     },
@@ -1343,8 +1343,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/turkce/haberler-dunya-49655644'
-            : undefined,
+            ? undefined
+            : '/turkce/haberler-dunya-49655644',
         smoke: false,
       },
     },
@@ -1406,8 +1406,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/ukrainian/media-49656852'
-            : undefined,
+            ? undefined
+            : '/ukrainian/media-49656852',
         smoke: false,
       },
     },
@@ -1447,8 +1447,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/urdu/pakistan-49644768'
-            : undefined,
+            ? undefined
+            : '/urdu/pakistan-49644768',
         smoke: false,
       },
     },
@@ -1488,8 +1488,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/uzbek/uzbekistan-49192467'
-            : undefined,
+            ? undefined
+            : '/uzbek/uzbekistan-49192467',
         smoke: false,
       },
     },
@@ -1521,8 +1521,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/vietnamese/media-49614583'
-            : undefined,
+            ? undefined
+            : '/vietnamese/media-49614583',
         smoke: false,
       },
     },
@@ -1551,8 +1551,8 @@ module.exports = {
       mediaAssetPage: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? '/yoruba/media-42985961'
-            : undefined,
+            ? undefined
+            : '/yoruba/media-42985961',
         smoke: false,
       },
     },
