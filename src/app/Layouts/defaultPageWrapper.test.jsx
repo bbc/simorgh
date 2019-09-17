@@ -1,9 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import DefaultPageWrapper from './defaultPageWrapper';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContext } from '../contexts/ToggleContext';
 import { RequestContext } from '../contexts/RequestContext';
+
+jest.mock('../lib/globalStyles', () => () => <p>I am the mPulse component</p>);
 
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
@@ -18,18 +20,14 @@ describe('defaultPageWrapper', () => {
     },
   };
 
-  describe('DefaultPageWrapper', () => {
-    it('should render correctly', () => {
-      const { container } = render(
-        <ServiceContextProvider service="news">
-          <RequestContext.Provider value={{ env: 'test' }}>
-            <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-              <DefaultPageWrapper {...propsWithChildren} />,
-            </ToggleContext.Provider>
-          </RequestContext.Provider>
-        </ServiceContextProvider>,
-      );
-      expect(container).toMatchSnapshot();
-    });
-  });
+  shouldMatchSnapshot(
+    'should render default page wrapper with children',
+    <ServiceContextProvider service="news">
+      <RequestContext.Provider value={{ env: 'test' }}>
+        <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
+          <DefaultPageWrapper {...propsWithChildren} />,
+        </ToggleContext.Provider>
+      </RequestContext.Provider>
+    </ServiceContextProvider>,
+  );
 });
