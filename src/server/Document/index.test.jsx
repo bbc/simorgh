@@ -90,6 +90,9 @@ describe('Render Document', () => {
         routes: ['someRoute'],
         service: 'news',
       });
+      expect(
+        server.renderToString.mock.calls[0][0].props.sheet.constructor.name,
+      ).toBe('StyleSheet');
       done();
     });
   });
