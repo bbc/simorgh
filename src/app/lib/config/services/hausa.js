@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `ha`,
     articleAuthor: `https://www.facebook.com/bbchausa?v=wall&ref=mf`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Wanda aka sabunta',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     brandName: 'BBC News Hausa',
@@ -19,7 +19,7 @@ const service = {
     imageCaptionOffscreenText: 'Bayanan hoto, ',
     videoCaptionOffscreenText: 'Bayanan bidiyo, ',
     audioCaptionOffscreenText: 'Bayanan sauti',
-    defaultCaptionOffscreenText: 'Caption, ',
+    defaultCaptionOffscreenText: 'Bayani, ',
     imageCopyrightOffscreenText: 'Asalin hoton, ',
     locale: `ha-GH`,
     datetimeLocale: `ha-gh`,
@@ -37,7 +37,7 @@ const service = {
     translations: {
       seeAll: 'Duba su baki daya',
       home: 'Labaran Duniya',
-      currentPage: 'Current page',
+      currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Related content',
       error: {
@@ -119,7 +119,7 @@ const service = {
       },
       media: {
         audio: 'Sauti',
-        photogallery: 'Hotuna',
+        photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',
         bbc_hausa_radio: {
           title: 'BBC Hausa Rediyo',
@@ -142,26 +142,27 @@ const service = {
       links: [
         {
           href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          text: 'Me yasa za ka aminta da BBC',
         },
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'Sharudan yin amfani',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: "Ka'idojin tsare sirri",
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: "Ka'idoji",
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'Tuntubi BBC',
         },
       ],
-      copyrightText: 'BBC. BBC ba tada alhaki game da shafukan da ba nata ba',
+      copyrightText:
+        'BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba. ',
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
