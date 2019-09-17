@@ -44,7 +44,7 @@ const service = {
     translations: {
       seeAll: 'See all',
       home: 'صفحۂ اول',
-      currentPage: 'Current page',
+      currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'Related content',
       error: {
