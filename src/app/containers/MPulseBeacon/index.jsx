@@ -12,7 +12,7 @@ const logger = nodeLogger(__filename);
 const MPulseBeaconContainer = () => {
   const { enabled } = useToggle('mpulse');
   const { personalisationEnabled } = useContext(UserContext);
-  const { pageType } = useContext(RequestContext);
+  const { pageType, statusCode } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
   const API_KEY = process.env.SIMORGH_MPULSE_API_KEY;
   const isEnabled = enabled && API_KEY && onClient();
@@ -32,9 +32,10 @@ const MPulseBeaconContainer = () => {
       window.SIMORGH_MPULSE_INFO = {
         pageType,
         service,
+        statusCode,
       };
     }
-  }, [isEnabled, personalisationEnabled, pageType, service]);
+  }, [isEnabled, personalisationEnabled, pageType, service, statusCode]);
 
   return null;
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import pathOr from 'ramda/src/pathOr';
 import { bool, node, oneOf, string } from 'prop-types';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
@@ -6,12 +7,14 @@ import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 import variantPropType from '../../models/propTypes/variants';
+import { dataPropType } from '../../models/propTypes/data';
 
 export const RequestContext = React.createContext('default');
 
 export const RequestContextProvider = ({
   children,
   bbcOrigin,
+  data,
   id,
   isAmp,
   pageType,
@@ -33,6 +36,7 @@ export const RequestContextProvider = ({
     service,
     id,
   });
+  const statusCode = pathOr(500, ['status'], data);
 
   const value = {
     env,
@@ -43,6 +47,7 @@ export const RequestContextProvider = ({
     platform,
     statsDestination,
     statsPageIdentifier,
+    statusCode,
     previousPath,
     variant,
     ...getMetaUrls(origin, pathname),
@@ -56,6 +61,7 @@ export const RequestContextProvider = ({
 RequestContextProvider.propTypes = {
   bbcOrigin: string,
   children: node.isRequired,
+  data: dataPropType,
   id: string,
   isAmp: bool.isRequired,
   pageType: oneOf(['article', 'frontPage', 'media', 'error']).isRequired,
@@ -67,6 +73,7 @@ RequestContextProvider.propTypes = {
 
 RequestContextProvider.defaultProps = {
   bbcOrigin: null,
+  data: null,
   id: null,
   previousPath: null,
   variant: null,
