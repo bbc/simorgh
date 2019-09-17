@@ -43,9 +43,9 @@ const service = {
     translations: {
       seeAll: 'See all',
       home: 'کور پاڼه',
-      currentPage: 'Current page',
+      currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
-      relatedContent: 'Related content',
+      relatedContent: 'اسی بارے میں',
       error: {
         404: {
           statusCode: '۴۰۴',
