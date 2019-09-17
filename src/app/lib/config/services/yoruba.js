@@ -128,7 +128,7 @@ const yoruba = {
       media: {
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
-        video: 'Fidio',
+        video: 'Fídíò',
         bbc_yoruba_radio: {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
