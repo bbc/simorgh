@@ -38,7 +38,7 @@ ServerApp.mockImplementation(() => <div />);
 DocumentComponent.mockImplementation(() => <html lang="en-GB" />);
 
 describe('Render Document', () => {
-  it('should render corretly', done => {
+  it('should render correctly', done => {
     renderDocument({
       bbcOrigin: 'https://www.test.bbc.co.uk',
       data: { test: 'data' },
@@ -59,32 +59,37 @@ describe('Render Document', () => {
           service="news"
         />,
       );
-      expect(server.renderToStaticMarkup.mock.calls[0][0].toString()).toBe(
-        (
-          <mockConstructor
-            app="no"
-            assetOrigins={[
-              'https://ichef.bbci.co.uk',
-              'https://gel.files.bbci.co.uk',
-              undefined,
-              undefined,
-            ]}
-            assets={[
-              'http://localhost.bbc.com:7080/static/js/news-12345.12345.js',
-              'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
-              'http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js',
-              'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
-            ]}
-            data={{ test: 'data' }}
-            isAmp={false}
-            service="news"
-            styleTags={[]}
-          />
-        ).toString(),
-      );
-      expect(JSON.stringify(server.renderToString.mock.calls[0][0])).toBe(
-        `{"key":null,"ref":null,"props":{"sheet":{"id":2,"forceServer":false,"target":{},"tagMap":{},"deferred":{},"rehydratedNames":{},"ignoreRehydratedNames":{},"tags":[],"capacity":1,"clones":[]},"children":{"key":null,"ref":null,"props":{"location":"/","routes":["someRoute"],"data":{"test":"data"},"bbcOrigin":"https://www.test.bbc.co.uk","context":{},"service":"news","isAmp":false},"_owner":null,"_store":{}}},"_owner":null,"_store":{}}`,
-      );
+      expect(server.renderToStaticMarkup.mock.calls[0][0].props).toStrictEqual({
+        app: 'no',
+        assetOrigins: [
+          'https://ichef.bbci.co.uk',
+          'https://gel.files.bbci.co.uk',
+          undefined,
+          undefined,
+        ],
+        assets: [
+          'http://localhost.bbc.com:7080/static/js/news-12345.12345.js',
+          'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
+          'http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js',
+          'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
+        ],
+        data: { test: 'data' },
+        helmet: undefined,
+        isAmp: false,
+        service: 'news',
+        styleTags: [],
+      });
+      expect(
+        server.renderToString.mock.calls[0][0].props.children.props,
+      ).toStrictEqual({
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        context: {},
+        data: { test: 'data' },
+        isAmp: false,
+        location: '/',
+        routes: ['someRoute'],
+        service: 'news',
+      });
       done();
     });
   });
