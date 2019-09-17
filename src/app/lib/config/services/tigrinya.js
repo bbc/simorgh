@@ -22,7 +22,7 @@ const service = {
     externalLinkText: ', ደጋዊ',
     imageCaptionOffscreenText: 'መግለጺ ስእሊ, ',
     videoCaptionOffscreenText: 'መግለጺ ቪድዮ, ',
-    audioCaptionOffscreenText: 'መግለጺ ድምጺ',
+    audioCaptionOffscreenText: 'መግለጺ ድምጺ, ',
     defaultCaptionOffscreenText: 'መግለጺ, ',
     imageCopyrightOffscreenText: 'ምንጪ ስእሊ, ',
     locale: `ti-ET`,
