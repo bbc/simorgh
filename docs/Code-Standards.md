@@ -19,7 +19,7 @@ Please familiarise yourself with our:
 
 We have code maintainers across our repos ([Simorgh](https://github.com/bbc/simorgh)/[Psammead](https://github.com/bbc/psammead)), who are responsible for ensuring the quality of the code and are a good source for enquiries.
 
-#### Issue/PR(Pull Request)
+### Issue/PR(Pull Request)
 
 - Each PR should be related to an issue.
 
@@ -27,7 +27,7 @@ We have code maintainers across our repos ([Simorgh](https://github.com/bbc/simo
 
 - Each PR needs review by at least one code maintainers and by 2 engineers in total.
 
-#### Unit Tests
+### Unit Tests
 
 - Unit testing is a mixture of Jest snapshot testing and enzyme assertion testing.
 
@@ -37,11 +37,11 @@ We have code maintainers across our repos ([Simorgh](https://github.com/bbc/simo
 
 - For **containers** or otherwise logic handling code snapshot testing is not desirable and assertion testing is mandatory.
 
-#### Linting standard
+### Linting standard
 
 A combination of the [Airbnb Styleguide](https://github.com/airbnb/javascript/tree/master/react) and [Prettier](https://github.com/prettier/prettier) is used as our linting standards.
 
-#### Automated Processes
+### Automated Processes
 
 - Linting for code
 - AMP validation for pages
@@ -49,13 +49,13 @@ A combination of the [Airbnb Styleguide](https://github.com/airbnb/javascript/tr
 - Lighthouse validation
 - Code Climate Quality tests
 
-#### Manual Processes
+### Manual Processes
 
 - If latest has a broken build, stop what you are doing and fix it.
 - Code reviews take precedence over implementation
 - Accessibility swarms and UX reviews are required for all front-end components
 
-#### Guideline Exceptions
+### Guideline Exceptions
 
 The coding standards are only guidelines and exceptions can be considered depending on the case.
 
@@ -66,3 +66,34 @@ Examples of exceptions:
 - If you have paired on a PR, this can include the person paired with but the reviewer must be a code maintainer
 
 - Alpha components do not require an immediate accessibility swarm or UX review.
+
+## Release guidelines aka non-functional requirements (NFRs) for release
+
+### Before Merge
+
+Unit Testing:
+- Sufficient unit test coverage for any new feature, route or page type
+- A11y tests/swarms (cannot go live on www.bbc.com) without this (this would be ideal but not required at this stage)
+Documentation:
+- Any doc updates/ new documentation for a given page type/feature
+E2E Testing:
+- E2E service config added for a new service/updated for an existing service
+- E2E should be updated and running against localhost and disabled for test and live
+Promoting to test (www.test.bbc.com):
+- All of the above
+- Any new data endpoints need to be available on test (speak to core pod about enabling these)
+- Raise an issue in the is-infra repo requesting the STM change for going to test
+- Ensure any new page type is being tested by lighthouse
+Once on test:
+- E2E config must be updated immediately to ensure the e2e’s are running against the test environment
+
+### Only applicable to BBC staff:
+
+#### Promoting to Stage:
+- All of the above
+- Raise an issue in the is-infra repo requesting the STM change for going to stage
+
+#### Promoting to Live:
+- All of the above
+- No outstanding a11y issues/swarms/tests (these will block going live)
+- Raise an issue in the is-infra repo requesting the STM change for going to live
