@@ -7,6 +7,7 @@ import getStatsDestination from '../../contexts/RequestContext/getStatsDestinati
 import getStatsPageIdentifier from '../../contexts/RequestContext/getStatsPageIdentifier';
 import * as requestContextImports from '../../contexts/RequestContext';
 import * as serviceContextImports from '../../contexts/ServiceContext';
+import fixtureData from '../../../../data/news/frontpage/index.json';
 
 jest.mock('../../contexts/RequestContext/getOriginContext', () => jest.fn());
 
@@ -38,6 +39,7 @@ describe('withContexts HOC', () => {
     isAmp: true,
     pageType: 'article',
     pathname: '/pathname',
+    data: { status: 200, pageData: fixtureData },
   };
 
   shouldShallowMatchSnapshot(

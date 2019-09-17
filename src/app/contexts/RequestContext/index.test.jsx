@@ -5,6 +5,8 @@ import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
+import fixtureData from '../../../../data/news/frontpage/index.json';
+import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
@@ -42,6 +44,7 @@ getMetaUrls.default.mockReturnValue({
 
 const input = {
   bbcOrigin: 'bbcOrigin',
+  data: { status: 200, pageData: fixtureData },
   id: 'id',
   isAmp: true,
   pageType: 'frontPage',
@@ -61,6 +64,7 @@ const expectedOutput = {
   variant: 'simp',
   statsDestination: 'getStatsDestination',
   statsPageIdentifier: 'getStatsPageIdentifier',
+  statusCode: 200,
   previousPath: '/previous-path',
   canonicalLink: 'canonicalLink',
   ampLink: 'ampLink',
@@ -127,6 +131,25 @@ describe('RequestContext', () => {
       expect(React.useContext).toHaveReturnedWith({
         ...expectedOutput,
         platform: 'canonical',
+      });
+    });
+  });
+
+  describe('statusCode', () => {
+    it('should default to 500 when not set in data', () => {
+      suppressPropWarnings(['data.status', 'undefined']);
+
+      const data = { pageData: fixtureData };
+
+      render(
+        <RequestContextProvider {...input} data={data}>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...expectedOutput,
+        statusCode: 500,
       });
     });
   });

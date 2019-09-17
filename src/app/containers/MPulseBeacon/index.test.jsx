@@ -41,7 +41,7 @@ describe('MPulseBeacon', () => {
     document.body.appendChild(container);
 
     serviceContextMock = { service: 'news' };
-    requestContextMock = { pageType: 'article' };
+    requestContextMock = { pageType: 'article', statusCode: 200 };
     userContextMock = { personalisationEnabled: true };
 
     delete window.SIMORGH_MPULSE_INFO;
@@ -69,6 +69,7 @@ describe('MPulseBeacon', () => {
     expect(window.SIMORGH_MPULSE_INFO).toEqual({
       pageType: 'article',
       service: 'news',
+      statusCode: 200,  
     });
   });
 
