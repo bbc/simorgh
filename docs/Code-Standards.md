@@ -52,8 +52,10 @@ Please familiarise yourself with our:
 #### Documentation:
 - Any documentation updates and new documentation for a given page type or feature should be added in the PR that makes the changes.
 #### E2E Testing:
-- E2E service config added for a new service/updated for an existing service
-- E2E should be updated and running against localhost and disabled for test and live
+- E2E tests are mandatory for all routes.
+- E2E service configuration must added for a new service/updated for an existing service
+  - If for a new route that isn't promoted to other environments (see headings below) E2Es must run against localhost only, so you need to disable the testing in the test and live environments.
+  - Do not add smoke testing unless it is absolutely necessary. You should consult at least one code owner when you do, as it increases CI runtime greatly.
 
 ### Only applicable to BBC staff (inline references and links might not be accessible to non-BBC staff)
 
