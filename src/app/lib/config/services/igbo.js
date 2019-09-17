@@ -9,7 +9,7 @@ const igbo = {
     lang: 'ig',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
     brandName: 'BBC News Ìgbò',
@@ -23,6 +23,12 @@ const igbo = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
+    externalLinkText: ', Site na mpụta',
+    imageCaptionOffscreenText: 'Nkọwa foto ',
+    videoCaptionOffscreenText: 'Aha onyonyo ',
+    audioCaptionOffscreenText: 'Aha nkeananụānụ',
+    defaultCaptionOffscreenText: 'Ihe a na-akpọ ya ',
+    imageCopyrightOffscreenText: 'Ebe foto si ',
     brandSVG,
     script: latin,
     manifestPath: '/manifest.json',
@@ -39,14 +45,14 @@ const igbo = {
       home: 'Akụkọ',
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
-      relatedContent: 'Related content',
+      relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       error: {
         home: 'Akụkọ',
         currentPage: 'Current page',
         skipLinkText: 'Wụga n’ọdịnaya',
         404: {
           statusCode: '404',
-          title: 'Ahụghị ibe akwụkwọ a',
+          title: '404 - Ahụghị ibe akwụkwọ a',
           message:
             'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ. Nwalie ọzọ:',
           solutions: [
@@ -61,9 +67,9 @@ const igbo = {
         },
         500: {
           statusCode: '500',
-          title: 'Mperi',
+          title: '500 - Mperi',
           message:
-            'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ. Gbalịa ọzọ:',
+            'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ.Gbalịa ọzọ:',
           solutions: [
             'Kpatụ ọdụmbi Refresh dị na braụza gị aka',
             'Ga alọghachị azụ ma e mechaa',
