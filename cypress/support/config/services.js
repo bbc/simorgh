@@ -29,7 +29,13 @@ module.exports = {
             : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: true,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/afaanoromoo/oduu-49490954'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   afrique: {
@@ -57,14 +63,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/afrique/bbc_afrique_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/afrique/monde-49500638'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   amharic: {
@@ -97,7 +107,13 @@ module.exports = {
             : '/amharic/bbc_amharic_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/amharic/news-49562667'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   arabic: {
@@ -125,14 +141,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/arabic/bbc_arabic_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/arabic/media-49580542'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   azeri: {
@@ -159,7 +179,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/azeri/region-49364777'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   bengali: {
@@ -187,14 +213,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/bengali/bbc_bangla_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/bengali/news-49579870'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   burmese: {
@@ -222,14 +252,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/burmese/bbc_burmese_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/burmese/media-49571787'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   cymrufyw: {
@@ -287,14 +321,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/gahuza/bbc_gahuza_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/gahuza/amakuru-49534170'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   gujarati: {
@@ -321,7 +359,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/gujarati/media-49502679'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   hausa: {
@@ -349,14 +393,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/hausa/bbc_hausa_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/hausa/labarai-49513456'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   hindi: {
@@ -384,14 +432,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/hindi/bbc_hindi_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/hindi/media-49583110'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   igbo: {
@@ -417,7 +469,7 @@ module.exports = {
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? '/igbo/media-42986440'
             : undefined,
         smoke: false,
@@ -454,7 +506,13 @@ module.exports = {
             : '/indonesia/bbc_indonesian_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/indonesia/media-49591990'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   japanese: {
@@ -481,7 +539,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/japanese/video-49589128'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   korean: {
@@ -514,7 +578,13 @@ module.exports = {
             : '/korean/bbc_korean_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/korean/media-49590387'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   kyrgyz: {
@@ -542,14 +612,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/kyrgyz/bbc_kyrgyz_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/kyrgyz/sapar-tv-48695523'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   marathi: {
@@ -576,7 +650,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/marathi/india-48062804'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   mundo: {
@@ -603,7 +683,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/mundo/noticias-49546078'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   naidheachdan: {
@@ -661,14 +747,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/nepali/bbc_nepali_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/nepali/news-49613544'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   news: {
@@ -720,14 +810,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/pashto/bbc_pashto_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/pashto/afghanistan-49628873'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   persian: {
@@ -760,7 +854,13 @@ module.exports = {
             : '/persian/bbc_persian_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/persian/world-49653162'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   pidgin: {
@@ -786,7 +886,7 @@ module.exports = {
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? '/pidgin/tori-49450859'
             : undefined,
         smoke: true,
@@ -811,7 +911,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/portuguese/geral-49602758'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   punjabi: {
@@ -839,7 +945,7 @@ module.exports = {
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? '/punjabi/international-49567825'
             : undefined,
         smoke: false,
@@ -870,7 +976,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/russian/media-49281069'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   serbian: {
@@ -928,14 +1040,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/sinhala/bbc_sinhala_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/sinhala/sri-lanka-49411205'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   somali: {
@@ -962,14 +1078,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/somali/bbc_somali_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/somali/media-48870869'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   sport: {
@@ -1008,14 +1128,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/swahili/bbc_swahili_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/swahili/dira-tv-49602132'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   tamil: {
@@ -1043,14 +1167,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/tamil/bbc_tamil_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/tamil/science-49626264'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   telugu: {
@@ -1077,7 +1205,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/swahili/dira-tv-49602132'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   thai: {
@@ -1106,7 +1240,7 @@ module.exports = {
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? '/thai/international-49514085'
             : undefined,
         smoke: false,
@@ -1143,7 +1277,13 @@ module.exports = {
             : '/tigrinya/bbc_tigrinya_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/tigrinya/news-49562338'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   turkce: {
@@ -1170,7 +1310,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/turkce/haberler-dunya-49655644'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   ukchina: {
@@ -1227,7 +1373,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/ukrainian/media-49656852'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   urdu: {
@@ -1255,14 +1407,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/urdu/bbc_urdu_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/urdu/pakistan-49644768'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   uzbek: {
@@ -1290,14 +1446,18 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/uzbek/bbc_uzbek_radio/liveradio',
         smoke: false,
       },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/uzbek/uzbekistan-49192467'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   vietnamese: {
@@ -1324,7 +1484,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? '/vietnamese/media-49614583'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   yoruba: {
@@ -1350,7 +1516,7 @@ module.exports = {
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? '/yoruba/media-42985961'
             : undefined,
         smoke: false,
