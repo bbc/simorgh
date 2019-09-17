@@ -1,5 +1,6 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
+import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -145,8 +146,7 @@ describe('Charbeats Analytics Container', () => {
 
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
     testUtils.getConfig = mockGetConfig;
-
-    renderer.create(
+    mount(
       <ContextWrap
         platform="canonical"
         pageType="article"
@@ -155,6 +155,7 @@ describe('Charbeats Analytics Container', () => {
         <ChartbeatAnalytics data={frontPageData} />
       </ContextWrap>,
     );
+
     expect(sendCanonicalChartbeatBeacon).toHaveBeenCalledTimes(1);
     expect(sendCanonicalChartbeatBeacon).toHaveBeenCalledWith(expectedConfig);
     expect(testUtils.getConfig).toHaveBeenCalledTimes(1);
