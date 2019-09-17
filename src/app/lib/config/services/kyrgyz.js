@@ -16,12 +16,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
     defaultImageAltText: 'BBC News Кыргыз КызMATы',
     dir: `ltr`,
-    externalLinkText: ', external',
+    externalLinkText: ', Би-Би-Сиден тышкары баракча',
     imageCaptionOffscreenText: 'Image caption, ',
     videoCaptionOffscreenText: 'Video caption, ',
     audioCaptionOffscreenText: 'Audio caption',
     defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
     locale: `ky-KG`,
     datetimeLocale: `ky-kg`,
     service: 'kyrgyz',
@@ -44,7 +44,7 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Барак табылган жок',
+          title: '404 - Баракча табылган жок',
           message:
             'Бул веб-даректи туура эмес тергенден келип чыгышы мүмкүн. Даректи жана анын жазылышын текшерип көрүңүз.',
           solutions: [
