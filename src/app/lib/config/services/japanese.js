@@ -156,7 +156,7 @@ const service = {
           text: 'BBCに連絡する',
         },
       ],
-      copyrightText: 'BBC。BBCは外部サイトの内容に責任を負いません',
+      copyrightText: 'BBC. BBCは外部サイトの内容に責任を負いません。',
     },
     fonts: [],
     timezone: 'Asia/Tokyo',
