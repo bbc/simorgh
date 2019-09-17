@@ -21,7 +21,7 @@ NB there is further documentation colocated with relevant code. The above list i
 
 - Smaller PRs are better, and it's much better for visibility if you open your PRs as draft PRs as early as possible.
 
-- Documentation should be colocated with code wherever possible, and should always be updated. This means having inline comments, or README.md files at the base of the directory where we believe they are helpful. The priority is light-touch documentation in order to keep our documentation easy to keep up-to-date.
+- Documentation should be colocated with code wherever possible, and should always be updated. This means having inline comments, or README.md files at the base of the directory where we believe they are helpful. The priority is light-touch documentation, this helps ensure that our documentation is easy to keep up-to-date.
 
 ## Automated Processes
 
