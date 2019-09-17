@@ -1,10 +1,4 @@
 import services from '../../../src/app/lib/config/services';
-import {
-  ukBasePath,
-  ukBasePathTest,
-  basePath,
-  basePathTest,
-} from '../support/env';
 
 Object.keys(services).forEach(service => {
   const notWSServices = ['news', 'cymrufyw', 'naidheachdan', 'default']; // Not WS
@@ -20,23 +14,11 @@ Object.keys(services).forEach(service => {
 
   describe('WS Redirects', () => {
     it(`should redirect *bbc.com/${service}`, () => {
-      let urlsTotest = [
-        `${ukBasePathTest}${service}`,
-        `${ukBasePathTest}${service}/articles/a0000000000o`,
-        `${ukBasePathTest}${service}/articles/a0000000000o.amp`,
+      const urlsTotest = [
+        `https://www.bbc.co.uk/${service}`,
+        `https://www.bbc.co.uk/${service}/articles/a0000000000o`,
+        `https://www.bbc.co.uk/${service}/articles/a0000000000o.amp`,
       ];
-      let redirectTo = basePathTest;
-      let substringCharCount = 25;
-
-      if (Cypress.env('APP_ENV') === 'live') {
-        urlsTotest = [
-          `${ukBasePath}${service}`,
-          `${ukBasePath}${service}/articles/a0000000000o`,
-          `${ukBasePath}${service}/articles/a0000000000o.amp`,
-        ];
-        redirectTo = basePath;
-        substringCharCount = 20;
-      }
 
       urlsTotest.forEach(urlToTest => {
         const slashLoc = urlToTest.indexOf('/', 8);
@@ -46,11 +28,11 @@ Object.keys(services).forEach(service => {
         }).then(resp => {
           expect(resp.status).to.eq(301);
           // expect first slice to equal https://www.bbc.com/
-          expect(resp.redirectedToUrl.substring(0, substringCharCount)).to.eq(
-            redirectTo,
+          expect(resp.redirectedToUrl.substring(0, 20)).to.eq(
+            'https://www.bbc.com/',
           );
           // expect second slice to equal whatever came in
-          expect(resp.redirectedToUrl.substring(substringCharCount)).to.eq(
+          expect(resp.redirectedToUrl.substring(20)).to.eq(
             urlToTest.substring(slashLoc + 1),
           );
         });
