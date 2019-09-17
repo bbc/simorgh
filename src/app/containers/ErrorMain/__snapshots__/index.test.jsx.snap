@@ -972,14 +972,14 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
       <p
         className="c4"
       >
-        روش دیگر، لطفآ به 
+        برای یافتن اطلاعات مورد نظر به صفحه 
         <a
           className="c5"
           href="https://www.bbc.com/persian"
         >
-          صفحه اصلی بی بی سی فارسی
+          اصلی بی‌بی‌سی فارسی
         </a>
-         بازدید کنید
+         بروید
       </p>
     </div>
   </div>
