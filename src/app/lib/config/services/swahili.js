@@ -43,7 +43,7 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Ukurasa haupatikani',
+          title: 'Ukurasa haupatikani',
           message:
             'Samahani, hatuwezi kukupeleka kwenye ukurasa unaoutafuta. Tafadhali jaribu:',
           solutions: [
@@ -58,7 +58,7 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: '500 - Hitilafu katika server ya ndani',
+          title: 'Hitilafu katika server ya ndani',
           message:
             'Samahani, hatuwezi kukuletea ukurasa unaoutafuta. Tafadhali jaribu:',
           solutions: [
