@@ -9,7 +9,7 @@ const pidgin = {
     lang: 'pcm',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'New Informate',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
     brandName: 'BBC News Pidgin',
@@ -23,6 +23,12 @@ const pidgin = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
     defaultImageAltText: 'BBC News Pidgin',
     dir: 'ltr',
+    externalLinkText: ', outside',
+    imageCaptionOffscreenText: 'Wetin we call dis foto, ',
+    videoCaptionOffscreenText: 'Wetin we call dis Video, ',
+    audioCaptionOffscreenText: 'Wetin we call dis Audio, ',
+    defaultCaptionOffscreenText: 'Wetin we call am, ',
+    imageCopyrightOffscreenText: 'Wia dis foto come from, ',
     brandSVG,
     script: latin,
     manifestPath: '/manifest.json',
@@ -43,7 +49,7 @@ const pidgin = {
       error: {
         404: {
           statusCode: '404',
-          title: 'Dem no see page',
+          title: 'Dem no see page - 404',
           message:
             'Sorry, we no go bring you di page you dey look for. Abeg try:',
           solutions: [
@@ -58,7 +64,7 @@ const pidgin = {
         },
         500: {
           statusCode: '500',
-          title: 'Mistake',
+          title: 'Mistake - 500',
           message:
             'Sorry, we no dey available for now to bring you di page you dey look for. Abeg try:',
           solutions: [
