@@ -129,7 +129,7 @@ describe('Charbeats Analytics Container', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat for local', () => {
+  it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on local', () => {
     const expectedConfig = {
       uid: 50924,
       domain: 'test-domain',
