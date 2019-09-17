@@ -44,4 +44,4 @@ Use the scripts from Simorgh's [package.json](https://github.com/bbc/simorgh/blo
 
 ## Beyond this suite of tests
 
-We have two other cypress test suites. One is just a smoke test of our storybook deployment, see in the repo root under `.storybook/cypress`. The second one is for E2Es of 3rd party systems, the success of those tests may or may not be partially dependent on the simorgh application but they definitely include systems we use in a live environment and may break irrespective of the stability of this application. This is in the repo root under `3rdPartyCypress/`.
+We have one other cypress test suite for E2Es of 3rd party systems, the success of those tests may or may not be partially dependent on the simorgh application but they definitely include systems we use in a live environment and may break irrespective of the stability of this application. This is in the repo root under [3rdPartyCypress/](https://github.com/bbc/simorgh/blob/latest/3rdPartyCypress).
