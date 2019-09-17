@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnewskorean`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: '최종 송고일',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     brandName: 'BBC News 코리아',
@@ -15,12 +15,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
     defaultImageAltText: 'BBC News 코리아',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', 외부 사이트',
+    imageCaptionOffscreenText: '사진 설명 ',
+    videoCaptionOffscreenText: '동영상 설명 ',
+    audioCaptionOffscreenText: '오디오 설명',
+    defaultCaptionOffscreenText: '설명 ',
+    imageCopyrightOffscreenText: '사진 출처 ',
     locale: `ko-KO`,
     datetimeLocale: `ko-ko`,
     service: 'korean',
@@ -37,9 +37,9 @@ const service = {
     translations: {
       seeAll: '모든 기사 보기',
       home: '뉴스',
-      currentPage: 'Current page',
+      currentPage: '현재 페이지',
       skipLinkText: '내용으로 건너뛰기',
-      relatedContent: 'Related content',
+      relatedContent: '관련 기사 더 보기',
       error: {
         404: {
           statusCode: '404',
@@ -119,7 +119,7 @@ const service = {
       },
       media: {
         audio: '오디오',
-        photogallery: '이미지 갤러리',
+        photogallery: '사진 갤러리',
         video: '비디오',
       },
     },
@@ -156,7 +156,7 @@ const service = {
         },
       ],
       copyrightText:
-        'Copyright © 2019 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+        'BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
     },
     fonts: [],
     navigation: [
