@@ -45,7 +45,7 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: 'ページが見つかりません',
+          title: '404 - ページが見つかりません',
           message:
             'お探しのページが見つかりません。こちらを開いてみてください:',
           solutions: [
@@ -60,7 +60,7 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: '内部サーバーエラー',
+          title: '500 - 内部サーバーエラー',
           message: 'エラーが起きました。ページを読み込み直してください',
           solutions: ['ブラウザのページ更新ボタンを押す', '後でまた開く'],
           callToActionFirst: 'あるいは ',
