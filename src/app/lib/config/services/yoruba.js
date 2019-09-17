@@ -7,12 +7,21 @@ import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 const yoruba = {
   default: {
     lang: 'yo',
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     brandName: 'BBC News Yorùbá',
+    product: 'BBC News',
+    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
+    defaultImageAltText: 'BBC News Yorùbá',
+    dir: 'ltr',
+    externalLinkText: ', Láti ìta',
+    imageCaptionOffscreenText: 'Àkọlé àwòrán, ',
+    videoCaptionOffscreenText: 'Àkọlé fídíò, ',
+    audioCaptionOffscreenText: 'Àkọlé fọ́nrán ohùn, ',
+    defaultCaptionOffscreenText: 'Àkọlé, ',
+    imageCopyrightOffscreenText: 'Oríṣun àwòrán, ',
     locale: 'yo',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'yo',
@@ -20,26 +29,21 @@ const yoruba = {
     service: 'yoruba',
     serviceName: 'Yoruba',
     serviceLocalizedName: 'Yorùbá',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
-    defaultImageAltText: 'BBC News Yorùbá',
-    dir: 'ltr',
-    brandSVG,
+    themeColor: `${C_POSTBOX}`,
+    twitterCreator: '@BBCNews', // to be updated
+    twitterSite: '@BBCNews', // to be updated
+    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
-    fonts: [],
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    themeColor: `${C_POSTBOX}`,
-    twitterCreator: '@BBCNews', // to be updated
-    twitterSite: '@BBCNews', // to be updated
     translations: {
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
-      relatedContent: 'Related content',
+      relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
       error: {
         404: {
           statusCode: '404',
@@ -131,25 +135,11 @@ const yoruba = {
         },
       },
     },
+    brandSVG,
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní ',
     },
-    navigation: [
-      {
-        title: 'Ìròyìn',
-        url: '/yoruba',
-      },
-      { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
-      {
-        title: 'Fídíò',
-        url: '/yoruba/media/video',
-      },
-      {
-        title: 'Èyí to gbajúmọ̀ jù',
-        url: '/yoruba/popular/read',
-      },
-    ],
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -180,7 +170,23 @@ const yoruba = {
       copyrightText:
         'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
     },
+    fonts: [],
     timezone: 'Africa/Lagos',
+    navigation: [
+      {
+        title: 'Ìròyìn',
+        url: '/yoruba',
+      },
+      { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
+      {
+        title: 'Fídíò',
+        url: '/yoruba/media/video',
+      },
+      {
+        title: 'Èyí to gbajúmọ̀ jù',
+        url: '/yoruba/popular/read',
+      },
+    ],
   },
 };
 
