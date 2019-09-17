@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import services from '../../lib/config/services';
+import services from '../../../testHelpers/serviceConfigs';
 
 const threeHoursAgo = timestampGenerator({ hours: 3 });
 const fiveHoursAgo = timestampGenerator({ hours: 5 });

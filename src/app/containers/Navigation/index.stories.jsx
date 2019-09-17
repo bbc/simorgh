@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NavigationContainer from '.';
-import services from '../../lib/config/services';
+import services from '../../../testHelpers/serviceConfigs';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 const stories = storiesOf('Containers|Navigation', module);
