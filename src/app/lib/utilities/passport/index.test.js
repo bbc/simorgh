@@ -43,10 +43,6 @@ describe('isValidPassportHome', () => {
     expect(isValidPassportHome('yoruba', 'igbo')).toEqual(false);
   });
 
-  it('should give true for overrides', () => {
-    expect(isValidPassportHome('brasil', 'portuguese')).toEqual(true);
-  });
-
   it('should give true for null passportHome', () => {
     expect(isValidPassportHome(null, 'portuguese')).toEqual(true);
   });

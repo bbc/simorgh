@@ -34,6 +34,7 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
+    passportHomes: ['brasil'],
     translations: {
       seeAll: 'See all',
       home: 'Notícias',

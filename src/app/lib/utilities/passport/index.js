@@ -6,33 +6,17 @@ export const getPassportHome = pageData => {
     ['metadata', 'passport', 'home'],
     pageData,
   );
-  const passportHomeOverride = pathOr(
-    null,
-    ['metadata', 'passportHome'],
-    pageData,
-  );
-  return (
-    passportHomeOverride ||
-    (pageData && homeServiceUrl
-      ? homeServiceUrl
-          .split('/')
-          .slice(-1)
-          .pop()
-          .toLowerCase()
-      : null)
-  );
+  return pageData && homeServiceUrl
+    ? homeServiceUrl
+        .split('/')
+        .slice(-1)
+        .pop()
+        .toLowerCase()
+    : null;
 };
 
 export const isValidPassportHome = (passportHome, service) => {
   if (!passportHome) return true;
-
-  const overrides = {
-    portuguese: ['brasil'],
-  };
-
-  if (overrides[service]) {
-    return overrides[service].includes(passportHome);
-  }
 
   return passportHome === service;
 };
