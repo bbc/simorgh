@@ -156,7 +156,7 @@ const service = {
         },
       ],
       copyrightText:
-        '© 2019 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',
+        'BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',
     },
     fonts: [],
     timezone: 'Asia/Ho_Chi_Minh',

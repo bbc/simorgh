@@ -161,7 +161,7 @@ const service = {
         },
       ],
       copyrightText:
-        'Copyright © 2019 BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
+        'BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
     },
     fonts: [],
     navigation: [
