@@ -59,7 +59,7 @@ describe('MPulseBeacon', () => {
     expect(loggerMock.error).not.toHaveBeenCalled();
   });
 
-  it('should set service and pageType to window', () => {
+  it('should set pageType, service & statusCode to window', () => {
     expect(window.SIMORGH_MPULSE_INFO).toBeUndefined();
 
     act(() => {
