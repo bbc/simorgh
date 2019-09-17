@@ -17,7 +17,7 @@ describe('defaultPageWrapper', () => {
   const defaultToggles = {
     test: {
       mpulse: {
-        enabled: true, // or maybe false
+        enabled: false,
       },
     },
   };
