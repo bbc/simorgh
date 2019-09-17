@@ -130,6 +130,9 @@ describe('Charbeats Analytics Container', () => {
   });
 
   it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on local', () => {
+    const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+    amp.default = mockAmp;
+
     const expectedConfig = {
       uid: 50924,
       domain: 'test-domain',
@@ -159,5 +162,6 @@ describe('Charbeats Analytics Container', () => {
     expect(sendCanonicalChartbeatBeacon).toHaveBeenCalledTimes(1);
     expect(sendCanonicalChartbeatBeacon).toHaveBeenCalledWith(expectedConfig);
     expect(testUtils.getConfig).toHaveBeenCalledTimes(1);
+    expect(mockAmp).not.toHaveBeenCalled();
   });
 });
