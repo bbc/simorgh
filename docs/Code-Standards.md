@@ -46,7 +46,7 @@ Please familiarise yourself with our:
 #### Unit Testing:
 - Unit testing is a mixture of Jest snapshot testing and enzyme assertion testing.
 - We push automated testing as far down the testing pyramid as possible. This means that if something can be tested via unit tests, to ensure we have a test coverage of > 80% on this repo.
-- For strictly **presentational** components Snapshots tests must be present and assertion testing is desirable.
+- For strictly **presentational** components Snapshots tests must be present and assertion testing is desirable. Such types of components should be created in our [component library](https://github.com/bbc/psammead) not in the Simorgh repo.
 - For **containers** or otherwise logic handling code snapshot testing is not desirable and assertion testing is mandatory.
 - A11y tests/swarms (this would be ideal but not required at this stage)
 #### Documentation:
