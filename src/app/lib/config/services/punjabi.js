@@ -17,7 +17,7 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png',
     defaultImageAltText: 'BBC News ਪੰਜਾਬੀ',
     dir: `ltr`,
-    externalLinkText: ', ਬਾਹਰੀ ',
+    externalLinkText: ', ਬਾਹਰੀ',
     imageCaptionOffscreenText: 'ਤਸਵੀਰ ਕੈਪਸ਼ਨ, ',
     videoCaptionOffscreenText: 'ਵੀਡੀਓ ਕੈਪਸ਼ਨ, ',
     audioCaptionOffscreenText: 'ਆਡੀਓ ਕੈਪਸ਼ਨ, ',
@@ -37,15 +37,15 @@ const service = {
     swPath: '/sw.js',
     frontPageTitle: 'ਨਿਊਜ਼',
     translations: {
-      seeAll: 'ดูทั้งหมด',
-      home: 'ਖ਼ਬਰਾਂ',
+      seeAll: 'ਸਭ ਦੋਖੇ',
+      home: 'ਹੋਮ ਪੇਜ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - ਪੇਜ ਨਹੀਂ ਮਿਲ ਰਿਹਾ',
+          title: 'ਪੇਜ ਨਹੀਂ ਮਿਲ ਰਿਹਾ',
           message:
             'ਮੁਆਫ਼ ਕਰੋ, ਅਸੀਂ ਤੁਹਾਨੂੰ ਉਸ ਪੇਜ ਤੱਕ ਨਹੀਂ ਲੈ ਕੇ ਜਾ ਸਕਦੇ, ਜੋ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ',
           solutions: [
@@ -53,14 +53,14 @@ const service = {
             'ਆਪਣੇ ਬ੍ਰਾਊਜ਼ਰ ਦੇ ਰਿਫਰੈਸ਼ ਬਟਨ ਨੂੰ ਦਬਾਓ',
             'ਇਸ ਪੇਜ ਨੂੰ ਬੀਬੀਸੀ ਸਰਚ ਬਾਰ ਰਾਹੀਂ ਲੱਭਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ',
           ],
-          callToActionFirst: 'ਬਦਲ ਵਜੋਂ,  ',
+          callToActionFirst: 'ਬਦਲ ਵਜੋਂ, ',
           callToActionLinkText: 'BBC News ਪੰਜਾਬੀ',
           callToActionLast: ` ਦੇ ਹੋਮ ਪੇਜ 'ਤੇ ਜਾਓ`,
           callToActionLinkUrl: 'https://www.bbc.com/punjabi',
         },
         500: {
           statusCode: '500',
-          title: '500 - ਅੰਦਰੂਨੀ ਸਰਵਰ ਐਰਰ',
+          title: 'ਅੰਦਰੂਨੀ ਸਰਵਰ ਐਰਰ',
           message:
             'ਮੁਆਫ਼ ਕਰੋ, ਅਸੀਂ ਤੁਹਾਨੂੰ ਉਸ ਪੇਜ ਤੱਕ ਨਹੀਂ ਲੈ ਕੇ ਜਾ ਸਕਦੇ, ਜੋ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ। ਇਹ ਕਰੋ:',
           solutions: ['ਆਪਣੇ ਬ੍ਰਾਊਜ਼ਰ ਦੇ ਰਿਫਰੈਸ਼ ਬਟਨ ਨੂੰ ਦਬਾਓ', 'ਬਾਅਦ ਵਿੱਚ ਆਓ'],
@@ -121,7 +121,7 @@ const service = {
       },
       media: {
         audio: 'ਔਡੀਓ',
-        photogallery: 'ਚਿੱਤਰ ਗੈਲਰੀ',
+        photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',
       },
     },
