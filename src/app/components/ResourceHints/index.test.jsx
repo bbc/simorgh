@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ResourceHints from './index';
 
 describe('ResourceHints', () => {
