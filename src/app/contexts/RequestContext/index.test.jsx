@@ -6,7 +6,7 @@ import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
-import fixtureData from '../../../../data/news/frontpage/index.json'
+import fixtureData from '../../../../data/news/frontpage/index.json';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
