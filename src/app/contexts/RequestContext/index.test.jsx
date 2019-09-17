@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { render } from '@testing-library/react';
+import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import * as getStatsDestination from './getStatsDestination';
 import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
-import fixtureData from '../../../../data/news/frontpage/index.json';
-import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
+import fixtureData from '../../../../data/news/frontpage/index.json'
 
 const { RequestContextProvider, RequestContext } = require('./index');
 

@@ -69,7 +69,7 @@ describe('MPulseBeacon', () => {
     expect(window.SIMORGH_MPULSE_INFO).toEqual({
       pageType: 'article',
       service: 'news',
-      statusCode: 200,  
+      statusCode: 200,
     });
   });
 
