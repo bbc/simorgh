@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { string, shape, number, bool, oneOf, oneOfType } from 'prop-types';
+import { shape } from 'prop-types';
 import Helmet from 'react-helmet';
+import { canonicalChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';
 
 const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
 
@@ -33,18 +34,7 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
 };
 
 CanonicalChartbeatBeacon.propTypes = {
-  chartbeatConfig: shape({
-    domain: string.isRequired,
-    sections: string.isRequired,
-    uid: number.isRequired,
-    title: string.isRequired,
-    type: string.isRequired,
-    useCanonical: bool.isRequired,
-    virtualReferrer: oneOfType([string, oneOf([null])]),
-    idSync: shape({
-      bbc_hid: string,
-    }),
-  }).isRequired,
+  chartbeatConfig: shape(canonicalChartbeatPropTypes).isRequired,
 };
 
 export default CanonicalChartbeatBeacon;

@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { string, shape, number, bool, oneOf, oneOfType } from 'prop-types';
+import { shape } from 'prop-types';
 import useToggle from '../../../containers/Toggle/useToggle';
 import CanonicalChartbeatBeacon from '../../../containers/ChartbeatAnalytics/canonical';
 import { RequestContext } from '../../RequestContext';
+import { canonicalChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';
 
 const Chartbeat = ({ config }) => {
   const { enabled } = useToggle('chartbeatAnalytics');
@@ -17,18 +18,7 @@ const Chartbeat = ({ config }) => {
 };
 
 Chartbeat.propTypes = {
-  config: shape({
-    domain: string.isRequired,
-    sections: string.isRequired,
-    uid: number.isRequired,
-    title: string.isRequired,
-    type: string.isRequired,
-    useCanonical: bool.isRequired,
-    virtualReferrer: oneOfType([string, oneOf([null])]),
-    idSync: shape({
-      bbc_hid: string,
-    }),
-  }),
+  config: shape(canonicalChartbeatPropTypes),
 };
 
 Chartbeat.defaultProps = {
