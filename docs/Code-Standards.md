@@ -58,13 +58,13 @@ Please familiarise yourself with our:
   - If for a new route that isn't promoted to other environments (see headings below) E2Es must run against localhost only, so you need to disable the testing in the test and live environments.
   - Do not add smoke testing unless it is absolutely necessary. You should consult at least one code owner when you do, as it increases CI runtime greatly.
 
-### Only applicable to BBC staff (inline references and links might not be accessible to non-BBC staff)
+### Only applicable to BBC staff
 
 #### Promoting to test (www.test.bbc.com):
 - Manually check all requirements for merge have been met.
 - Ensure any new page type is being tested by a11y and lighthouse.
 - Any new data endpoints need to be available on test (speak to core pod about enabling these).
-- Raise an issue in the [simorgh-infrastructure](https://github.com/bbc/simorgh-infrastructure/) repo requesting the STM change for going to test
+- Raise an issue to request the traffic manager (STM) change for going to test in the [simorgh-infrastructure repo](https://github.com/bbc/simorgh-infrastructure/). Note, this is a private repo only accessible to BBC staff. 
 
 ##### Once on test:
 - E2E config must be updated immediately to ensure the e2e’s are running against the test environment.
