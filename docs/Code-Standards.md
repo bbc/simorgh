@@ -55,7 +55,7 @@ Please familiarise yourself with our:
 - E2E service config added for a new service/updated for an existing service
 - E2E should be updated and running against localhost and disabled for test and live
 
-### Only applicable to BBC staff (inline references and links might not be accessible to non-BBC staff)
+### Only applicable to BBC staff
 
 #### Promoting to test (www.test.bbc.com):
 - Manually check all requirements for merge have been met.
