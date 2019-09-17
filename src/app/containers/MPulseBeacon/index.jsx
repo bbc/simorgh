@@ -30,7 +30,6 @@ const MPulseBeaconContainer = () => {
   useEffect(() => {
     if (isEnabled && personalisationEnabled) {
       window.SIMORGH_MPULSE_INFO = {
-        ...window.SIMORGH_MPULSE_INFO,
         pageType,
         service,
       };
