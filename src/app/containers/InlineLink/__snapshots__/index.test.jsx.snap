@@ -21,7 +21,7 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 
 <a
   aria-label="این لینک هست، لینک خارجی"
-  className="c0"
+  class="c0"
   href="https://www.example.com/"
 >
   این لینک هست
@@ -49,7 +49,7 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 
 <a
   aria-label="This is a link, external"
-  className="c0"
+  class="c0"
   href="https://www.example.com/"
 >
   This is a link
@@ -76,8 +76,7 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
 }
 
 <a
-  aria-label={null}
-  className="c0"
+  class="c0"
   href="https://www.bbc.com/news"
 >
   <b>
@@ -106,9 +105,8 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 }
 
 <a
-  className="-Link c0"
+  class="-Link c0"
   href="/news/articles/c0g992jmmkko"
-  onClick={[Function]}
 >
   This is text for an internal link
 </a>
@@ -134,9 +132,8 @@ exports[`InlineLinkContainer link matching routes for SPA should render correctl
 }
 
 <a
-  className="-Link c0"
+  class="-Link c0"
   href="/news/articles/c0g992jmmkko"
-  onClick={[Function]}
 >
   This is text for an internal link
 </a>
