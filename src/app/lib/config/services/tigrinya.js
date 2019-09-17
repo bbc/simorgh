@@ -11,7 +11,7 @@ const service = {
   default: {
     lang: `ti`,
     articleAuthor: `https://www.facebook.com/bbcnewstigrinya`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'ዝተመሓየሸ',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     brandName: 'BBC News ትግርኛ',
@@ -19,12 +19,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
     defaultImageAltText: 'BBC News ትግርኛ',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', ደጋዊ',
+    imageCaptionOffscreenText: 'መግለጺ ስእሊ, ',
+    videoCaptionOffscreenText: 'መግለጺ ቪድዮ, ',
+    audioCaptionOffscreenText: 'መግለጺ ድምጺ',
+    defaultCaptionOffscreenText: 'መግለጺ, ',
+    imageCopyrightOffscreenText: 'ምንጪ ስእሊ, ',
     locale: `ti-ET`,
     datetimeLocale: `ti-et`,
     service: 'tigrinya',
@@ -39,11 +39,11 @@ const service = {
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
     translations: {
-      seeAll: 'See all',
+      seeAll: 'ኩሉ ረኣይ',
       home: 'ዜና',
-      currentPage: 'Current page',
+      currentPage: 'ህሉው ገጽ',
       skipLinkText: 'እቲ ትሕዝቶ ዝለል',
-      relatedContent: 'Related content',
+      relatedContent: 'ተዛማዲ ትሕዝቶ',
       error: {
         404: {
           statusCode: '404',
@@ -126,8 +126,8 @@ const service = {
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'ብበዝሒ ዝተነበበ',
+      lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ: ',
     },
     footer: {
       externalLink: {
