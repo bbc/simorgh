@@ -17,6 +17,8 @@ Please familiarise yourself with our:
 
 - Readability is better than Don't Repeat Yourself (DRY) code. This is especially true in our end-to-end tests where we try to keep the tests (not the logic of how they're run) as simple as possible).
 
+- Smaller PRs are better, and it's much better for visibility if you open your PRs as draft PRs as early as possible.
+
 ## Automated Processes
 
 - Linting of our code: A combination of the [Airbnb Styleguide](https://github.com/airbnb/javascript/tree/master/react) and [Prettier](https://github.com/prettier/prettier) is used as our linting standards.
@@ -41,32 +43,43 @@ Please familiarise yourself with our:
 
 ### Before Merge
 
-Unit Testing:
+#### Unit Testing:
 - Unit testing is a mixture of Jest snapshot testing and enzyme assertion testing.
 - We push automated testing as far down the testing pyramid as possible. This means that if something can be tested via unit tests, to ensure we have a test coverage of > 80% on this repo.
 - For strictly **presentational** components Snapshots tests must be present and assertion testing is desirable.
 - For **containers** or otherwise logic handling code snapshot testing is not desirable and assertion testing is mandatory.
-- A11y tests/swarms (cannot go live on www.bbc.com) without this (this would be ideal but not required at this stage)
-Documentation:
+- A11y tests/swarms (this would be ideal but not required at this stage)
+#### Documentation:
 - Any documentation updates and new documentation for a given page type or feature should be added in the PR that makes the changes.
-E2E Testing:
+#### E2E Testing:
 - E2E service config added for a new service/updated for an existing service
 - E2E should be updated and running against localhost and disabled for test and live
-Promoting to test (www.test.bbc.com):
-- All of the above
-- Any new data endpoints need to be available on test (speak to core pod about enabling these)
-- Raise an issue in the is-infra repo requesting the STM change for going to test
-- Ensure any new page type is being tested by lighthouse
-Once on test:
-- E2E config must be updated immediately to ensure the e2e’s are running against the test environment
 
-### Only applicable to BBC staff:
+### Only applicable to BBC staff (inline references and links might not be accessible to non-BBC staff)
+
+#### Promoting to test (www.test.bbc.com):
+- Manually check all requirements for merge have been met.
+- Ensure any new page type is being tested by a11y and lighthouse.
+- Any new data endpoints need to be available on test (speak to core pod about enabling these).
+- Raise an issue in the [simorgh-infrastructure](https://github.com/bbc/simorgh-infrastructure/) repo requesting the STM change for going to test
+
+##### Once on test:
+- E2E config must be updated immediately to ensure the e2e’s are running against the test environment.
+- Update these wiki pages: [Simorgh Pages](https://github.com/bbc/simorgh/wiki/Simorgh-Pages) and [Simorgh Routing](https://github.com/bbc/simorgh/wiki/Simorgh-Routing).
 
 #### Promoting to Stage:
-- All of the above
-- Raise an issue in the is-infra repo requesting the STM change for going to stage
+- Manually check all requirements for merge have been met.
+- Raise an issue in the is-infra repo requesting the STM change for going to stage.
+
+##### Once on Stage:
+- Update these wiki pages: [Simorgh Pages](https://github.com/bbc/simorgh/wiki/Simorgh-Pages) and [Simorgh Routing](https://github.com/bbc/simorgh/wiki/Simorgh-Routing).
 
 #### Promoting to Live:
-- All of the above
-- No outstanding a11y issues/swarms/tests (these will block going live)
-- Raise an issue in the is-infra repo requesting the STM change for going to live
+- Manually check all requirements for merge have been met.
+- No outstanding a11y issues/swarms/tests (these will block going live).
+- Ensure the page's lighthouse tests pass on test.bbc.com.
+- Raise an issue in the is-infra repo requesting the STM change for going to live.
+
+##### Once on Live:
+- E2E config must be updated immediately to ensure the e2e’s are running against the test environment.
+- Update these wiki pages: [Simorgh Pages](https://github.com/bbc/simorgh/wiki/Simorgh-Pages) and [Simorgh Routing](https://github.com/bbc/simorgh/wiki/Simorgh-Routing).
