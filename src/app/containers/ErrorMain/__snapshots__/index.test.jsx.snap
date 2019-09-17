@@ -473,7 +473,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
         <li
           className="c4"
         >
-          با مرورگر خود صفحه را ریفرش (refresh) کنید
+          با مرورگر خود صفحه را ریفرش (Refresh) کنید
         </li>
         <li
           className="c4"
@@ -484,12 +484,12 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
       <p
         className="c4"
       >
-        برای یافتن اطلاعات مورد نظر به 
+        برای یافتن اطلاعات مورد نظر به صفحه 
         <a
           className="c5"
           href="https://www.bbc.com/persian"
         >
-          صفحه اصلی بی بی سی فارسی
+          اصلی بی‌بی‌سی فارسی
         </a>
          بروید
       </p>
@@ -961,7 +961,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
         <li
           className="c4"
         >
-          با مرورگر خود صفحه را ریفرش (refresh) کنید
+          با مرورگر خود صفحه را ریفرش (Refresh) کنید
         </li>
         <li
           className="c4"
