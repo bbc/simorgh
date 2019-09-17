@@ -33,6 +33,7 @@ Please familiarise yourself with our:
 
 - Open your PRs as early as possible, as draft PRs.
 - Add your issues and PRs to the project "Simorgh".
+- Add labels to your issues and PRs to identify which stream of work they relate to; if in doubt use "simorgh-core-stream".
 - If you have paired on a PR you should co-author commits.
 - If latest has a broken build, stop what you are doing and fix it.
 - Code reviews take precedence over implementation.
