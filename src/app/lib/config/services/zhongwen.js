@@ -28,7 +28,7 @@ const baseServiceConfig = {
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   script: latin,
-  manifestPath: '/zhongwen/manifest.json',
+  manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: '主页',
   translations: {

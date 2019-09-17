@@ -31,7 +31,7 @@ const service = {
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     script: latin,
-    manifestPath: '/portuguese/manifest.json',
+    manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
     translations: {

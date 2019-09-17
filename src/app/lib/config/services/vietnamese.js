@@ -32,7 +32,7 @@ const service = {
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     script: latin,
-    manifestPath: '/vietnamese/manifest.json',
+    manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Tin chính',
     translations: {

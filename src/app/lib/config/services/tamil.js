@@ -32,7 +32,7 @@ const service = {
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     script: latin,
-    manifestPath: '/tamil/manifest.json',
+    manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'முகப்பு',
     translations: {

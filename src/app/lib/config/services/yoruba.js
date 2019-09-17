@@ -25,7 +25,7 @@ const yoruba = {
     dir: 'ltr',
     brandSVG,
     script: latin,
-    manifestPath: '/yoruba/manifest.json',
+    manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
     fonts: [],

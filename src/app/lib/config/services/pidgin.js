@@ -25,7 +25,7 @@ const pidgin = {
     dir: 'ltr',
     brandSVG,
     script: latin,
-    manifestPath: '/pidgin/manifest.json',
+    manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
     fonts: [],

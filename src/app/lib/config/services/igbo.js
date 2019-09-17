@@ -25,7 +25,7 @@ const igbo = {
     dir: 'ltr',
     brandSVG,
     script: latin,
-    manifestPath: '/igbo/manifest.json',
+    manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Ogbako',
     fonts: [],
