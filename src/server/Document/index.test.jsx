@@ -4,29 +4,23 @@ import renderDocument from '.';
 import { ServerApp } from '../../app/containers/App';
 import DocumentComponent from './component';
 
-const mockServerStyleSheet = {
-  collectStyles: jest.fn(),
-  getStyleElement: () => {
-    jest.fn();
-  },
-};
+const { ServerStyleSheet } = jest.requireActual('styled-components');
+const mockSheet = new ServerStyleSheet();
 
 jest.mock('styled-components', () => {
   return {
-    ServerStyleSheet: () => mockServerStyleSheet,
+    ServerStyleSheet: () => mockSheet,
   };
 });
 jest.mock('./component', () => jest.fn());
-jest.mock('../../app/containers/App', () => ({
-  ServerApp: jest.fn(),
-}));
+// jest.mock('../../app/containers/App', () => ({
+//   ServerApp: jest.fn(),
+// }));
 jest.mock('react-helmet', () => ({
   Helmet: {
     renderStatic: jest.fn(),
   },
 }));
-
-const { ServerStyleSheet } = require('styled-components');
 
 jest.mock('react-dom/server', () => ({
   renderToString: jest.fn().mockImplementation(() => 'no'),
@@ -35,12 +29,11 @@ jest.mock('react-dom/server', () => ({
     .mockImplementation(() => '<html lang="en-GB"></html>'),
 }));
 
-const sheet = new ServerStyleSheet();
-jest.spyOn(sheet, 'collectStyles');
+jest.spyOn(mockSheet, 'collectStyles');
 jest.spyOn(server, 'renderToString');
 jest.spyOn(server, 'renderToStaticMarkup');
 
-ServerApp.mockImplementation(() => <div />);
+// ServerApp.mockImplementation(() => <div />);
 DocumentComponent.mockImplementation(() => <html lang="en-GB" />);
 
 describe('Render Document', () => {
@@ -54,9 +47,8 @@ describe('Render Document', () => {
       url: '/',
     }).then(document => {
       expect(document).toEqual('<!doctype html><html lang="en-GB"></html>');
-      console.log(document);
-      expect(sheet.collectStyles).toHaveBeenCalledWith(
-        <mockConstructor
+      expect(mockSheet.collectStyles).toHaveBeenCalledWith(
+        <ServerApp
           bbcOrigin="https://www.test.bbc.co.uk"
           context={{}}
           data={{ test: 'data' }}
@@ -68,6 +60,7 @@ describe('Render Document', () => {
       );
       expect(server.renderToStaticMarkup).toHaveBeenCalledWith(
         <mockConstructor
+          app="no"
           assetOrigins={[
             'https://ichef.bbci.co.uk',
             'https://gel.files.bbci.co.uk',
@@ -83,6 +76,7 @@ describe('Render Document', () => {
           data={{ test: 'data' }}
           isAmp={false}
           service="news"
+          styleTags={[]}
         />,
       );
       expect(server.renderToString).toHaveBeenCalledWith('no');
