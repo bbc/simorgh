@@ -15,7 +15,7 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
-    externalLinkText: ', external',
+    externalLinkText: ', bogag kale',
     imageCaptionOffscreenText: 'Qoraalka sawirka ',
     videoCaptionOffscreenText: 'Qoraalka Muuqaalka ',
     audioCaptionOffscreenText: 'Qoralka Codka ',
@@ -39,11 +39,11 @@ const service = {
       home: 'War',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
-      relatedContent: 'Related content',
+      relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Bogga lama heli karo',
+          title: 'Bogga lama heli karo',
           message:
             'Waan ka xunnahay, ma awoodno inaan kuu soo gudbino bogga aad raadineyso. Fadlan iskuday.',
           solutions: [
@@ -58,7 +58,7 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: '500 - Khalad ka dhacy gudaha server-ka',
+          title: 'Khalad ka dhacy gudaha server-ka',
           message:
             'Waan ka xunnahay, hadda ma awoodno inaan kuu soo gudbinno bogga aad raadineyso. Fadlan iskuday:',
           solutions: [
@@ -144,20 +144,20 @@ const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.',
       },
       links: [
         {
           href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          text: 'Sababta aada ku aamini kartid BBC News',
         },
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'Shuruucda isticmaalka',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'Shuruucda xogta gaarka ah',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -165,11 +165,11 @@ const service = {
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'La xiriir BBC',
         },
       ],
       copyrightText:
-        "BBC. BBC-du mas'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda",
+        'BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
     },
     fonts: [],
     timezone: 'Africa/Mogadishu',
