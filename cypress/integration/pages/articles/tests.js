@@ -27,12 +27,11 @@ const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
-const serviceHasTimestamp = service =>
-  ['news', 'urdu', 'persian'].includes(service);
+const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRun = ({ service, pageType }) => {
+export const testsThatAlwaysRun = ({ service, pageType, variant }) => {
   describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
     if (serviceHasTimestamp(service)) {
       it('should render a formatted timestamp', () => {
@@ -41,11 +40,11 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
             const { language } = body.metadata.passport;
             const { lastPublished, firstPublished } = body.metadata;
             const updatedTimestamp = moment
-              .tz(lastPublished, `${appConfig[service].timezone}`)
+              .tz(lastPublished, `${appConfig[service][variant].timezone}`)
               .locale(language)
               .format('D MMMM YYYY');
             const firstTimestamp = moment
-              .tz(firstPublished, `${appConfig[service].timezone}`)
+              .tz(firstPublished, `${appConfig[service][variant].timezone}`)
               .locale(language)
               .format('D MMMM YYYY');
             if (lastPublished === firstPublished) {
@@ -70,7 +69,11 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  pageType,
+  variant,
+}) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       // Here we should only have metadata tests that are unique to articles pages
@@ -78,7 +81,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         cy.get('meta[name="article:author"]').should(
           'have.attr',
           'content',
-          appConfig[service].articleAuthor,
+          appConfig[service][variant].articleAuthor,
         );
       });
 

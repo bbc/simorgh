@@ -9,6 +9,8 @@ import {
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
   mediaRadioAndTvRegexPathsArray,
+  mediaAssetPageRegexPath,
+  mediaAssetPageDataRegexPath,
 } from './index';
 
 jest.mock('../../lib/config/services', () => ({
@@ -43,7 +45,9 @@ describe('articleRegexPath', () => {
     '/news/articles/c5jje4ejkqvo',
     '/news/articles/c5jje4ejkqvo.amp',
     '/persian/articles/c7eel0lmr4do',
-    '/news/articles/c7eel0lmr4do.amp',
+    '/news/articles/c5jje4ejkqvo/simp',
+    '/news/articles/c5jje4ejkqvo/trad.amp',
+    '/persian/articles/c7eel0lmr4do/lat',
   ];
   shouldMatchValidRoutes(validRoutes, articleRegexPath);
 
@@ -54,6 +58,8 @@ describe('articleRegexPath', () => {
     '/news/articles/c12o',
     '/news/articles/c5jje4ejkqv',
     '/news/articles/',
+    '/news/articles/c5jje4ejkqvo/foobar',
+    '/news/articles/c5jje4ejkqvo/.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleRegexPath);
 });
@@ -62,6 +68,8 @@ describe('articleDataRegexPath', () => {
   const validRoutes = [
     '/news/articles/c5jje4ejkqvo.json',
     '/persian/articles/c7eel0lmr4do.json',
+    '/news/articles/c5jje4ejkqvo/lat.json',
+    '/persian/articles/c7eel0lmr4do/trad.json',
   ];
   shouldMatchValidRoutes(validRoutes, articleDataRegexPath);
 
@@ -69,23 +77,50 @@ describe('articleDataRegexPath', () => {
     '/news/articles/c5jje4ejkqvo',
     '/persian/articles/c7eel0lmr4do',
     '/iplayer/articles/c7eel0lmr4do.json',
+    '/persian/articles/c7eel0lmr4do/.json',
+    '/persian/articles/c7eel0lmr4do/foobar.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleDataRegexPath);
 });
 
 describe('frontpageRegexPath', () => {
-  const validRoutes = ['/news', '/persian', '/news.amp', '/persian.amp'];
+  const validRoutes = [
+    '/news',
+    '/persian',
+    '/news.amp',
+    '/persian.amp',
+    '/news/simp',
+    '/persian/trad',
+    '/news/lat.amp',
+    '/persian/cyr.amp',
+  ];
   shouldMatchValidRoutes(validRoutes, frontpageRegexPath);
 
-  const invalidRoutes = ['/news/home', '/persian/c5jje4ejkqvo.amp', '/iplayer'];
+  const invalidRoutes = [
+    '/news/home',
+    '/persian/c5jje4ejkqvo.amp',
+    '/iplayer',
+    '/news/foobar',
+    '/news/foobar.amp',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageRegexPath);
 });
 
 describe('frontpageDataRegexPath', () => {
-  const validRoutes = ['/news.json', '/persian.json'];
+  const validRoutes = [
+    '/news.json',
+    '/persian.json',
+    '/news/cyr.json',
+    '/persian/trad.json',
+  ];
   shouldMatchValidRoutes(validRoutes, frontpageDataRegexPath);
 
-  const invalidRoutes = ['/news/data.json', '/iplayer.json'];
+  const invalidRoutes = [
+    '/news/data.json',
+    '/iplayer.json',
+    '/news/foobar.json',
+    '/persian/.json',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageDataRegexPath);
 });
 
@@ -93,7 +128,11 @@ describe('swRegexPath', () => {
   const validRoutes = ['/news/articles/sw.js', '/persian/articles/sw.js'];
   shouldMatchValidRoutes(validRoutes, articleSwRegexPath);
 
-  const invalidRoutes = ['/news/sw.js', '/persian/articles/sw'];
+  const invalidRoutes = [
+    '/news/sw.js',
+    '/persian/articles/sw',
+    '/news/trad/sw.js',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleSwRegexPath);
 });
 
@@ -104,7 +143,11 @@ describe('manifestRegexPath', () => {
   ];
   shouldMatchValidRoutes(validRoutes, articleManifestRegexPath);
 
-  const invalidRoutes = ['/news/manifest.json', '/persian/articles/manifest'];
+  const invalidRoutes = [
+    '/news/manifest.json',
+    '/persian/articles/manifest',
+    '/news/simp/sw.js',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleManifestRegexPath);
 });
 
@@ -112,7 +155,11 @@ describe('frontpageSwRegexPath', () => {
   const validRoutes = ['/news/sw.js', '/persian/sw.js'];
   shouldMatchValidRoutes(validRoutes, frontpageSwRegexPath);
 
-  const invalidRoutes = ['/news/articles/sw.js', '/persian/sw'];
+  const invalidRoutes = [
+    '/news/articles/sw.js',
+    '/persian/sw',
+    '/persian/simp/sw.js',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageSwRegexPath);
 });
 
@@ -120,7 +167,11 @@ describe('frontpageManifestRegexPath', () => {
   const validRoutes = ['/news/manifest.json', '/persian/manifest.json'];
   shouldMatchValidRoutes(validRoutes, frontpageManifestRegexPath);
 
-  const invalidRoutes = ['/foobar/manifest.json', '/foobar/manifest'];
+  const invalidRoutes = [
+    '/foobar/manifest.json',
+    '/foobar/manifest',
+    '/news/trad/sw.js',
+  ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageManifestRegexPath);
 });
 
@@ -174,5 +225,57 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/blah/bbc_hausa_radio/livetv',
     ];
     shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
+  });
+  describe('mediaAssetPageRegexPath', () => {
+    const validRoutes = [
+      '/pidgin/12345678',
+      '/pidgin/12345678.amp',
+      '/pidgin/tori-49450859',
+      '/pidgin/tori-49450859.amp',
+      '/yoruba/media-49450859',
+      '/yoruba/media-49450859.amp',
+      '/punjabi/international-49567825',
+      '/punjabi/international-49567825.amp',
+      '/kyrgyz/sapar-tv-48695523',
+      '/mundo/test_underscore-12345678',
+    ];
+
+    shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
+
+    // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
+    const inValidRoutes = [
+      '/pidgin/1234567',
+      '/pidgin/12345678/.amp',
+      '/blah/12345678',
+      '/pidgin/test-494859',
+      '/blah/test-49450859',
+      '/pidgin/test-49450859/.amp',
+      '/pidgin/test-49450859/',
+      '/pidgin/test-494859.amp',
+    ];
+    shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageRegexPath);
+  });
+
+  describe('mediaAssetPageDataRegexPath', () => {
+    const validRoutes = [
+      '/pidgin/12345678.json',
+      '/pidgin/test-49450859.json',
+      '/kyrgyz/test-tv-48695523.json',
+      '/mundo/test_underscore-12345678.json',
+    ];
+
+    shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
+
+    // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
+    const inValidRoutes = [
+      '/pidgin/1234567.json',
+      '/pidgin/12345678',
+      '/pidgin/test-494859.json',
+      '/blah/test-49450859.json',
+      '/pidgin/test-49450859',
+      '/pidgin/test-49450859/.json',
+      '/pidgin/test-494859.amp.json',
+    ];
+    shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageDataRegexPath);
   });
 });

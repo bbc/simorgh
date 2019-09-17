@@ -36,6 +36,10 @@ firstFixture.timestamp = Date.now();
 const audioFixture = mediaFixture('audio');
 const videoFixture = mediaFixture('video');
 const standardPromo = promoFixture('Text');
+const videoPromo = promoFixture('Video');
+const featurePromo = promoFixture('Feature');
+const audioPromo = promoFixture('Audio');
+const galleryPromo = promoFixture('Gallery');
 
 const getStoryPromo = platform => item => (
   <ServiceContextProvider service="news">
@@ -56,13 +60,21 @@ const getAmpStoryPromo = getStoryPromo('amp');
 
 storiesOf('Containers|Story Promo/Canonical', module)
   .add('canonical', () => getCanonicalStoryPromo(firstFixture))
-  .add('audio promo', () => getCanonicalStoryPromo(audioFixture))
-  .add('video promo', () => getCanonicalStoryPromo(videoFixture))
-  .add('standard link promo', () => getCanonicalStoryPromo(standardPromo));
+  .add('audio fixture', () => getCanonicalStoryPromo(audioFixture))
+  .add('video fixture', () => getCanonicalStoryPromo(videoFixture))
+  .add('standard link promo', () => getCanonicalStoryPromo(standardPromo))
+  .add('feature link promo', () => getCanonicalStoryPromo(featurePromo))
+  .add('video link promo', () => getCanonicalStoryPromo(videoPromo))
+  .add('audio link promo', () => getCanonicalStoryPromo(audioPromo))
+  .add('gallery link promo', () => getCanonicalStoryPromo(galleryPromo));
 
 storiesOf('Containers|Story Promo/AMP', module)
   .addDecorator(AmpDecorator)
   .add('amp', () => getAmpStoryPromo(firstFixture))
-  .add('audio promo - amp', () => getAmpStoryPromo(audioFixture))
-  .add('video promo - amp', () => getAmpStoryPromo(videoFixture))
-  .add('standard link promo', () => getAmpStoryPromo(standardPromo));
+  .add('audio fixture - amp', () => getAmpStoryPromo(audioFixture))
+  .add('video fixture - amp', () => getAmpStoryPromo(videoFixture))
+  .add('standard link promo - amp', () => getAmpStoryPromo(standardPromo))
+  .add('video link promo - amp', () => getAmpStoryPromo(videoPromo))
+  .add('feature link promo - amp', () => getAmpStoryPromo(featurePromo))
+  .add('audio link promo - amp', () => getAmpStoryPromo(audioPromo))
+  .add('gallery link promo - amp', () => getAmpStoryPromo(galleryPromo));

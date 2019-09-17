@@ -2,6 +2,7 @@ module.exports = {
   afaanoromoo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -28,11 +29,13 @@ module.exports = {
             : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: true,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   afrique: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -61,11 +64,13 @@ module.exports = {
             : '/afrique/bbc_afrique_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   amharic: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -92,11 +97,13 @@ module.exports = {
             : '/amharic/bbc_amharic_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   arabic: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -125,11 +132,13 @@ module.exports = {
             : '/arabic/bbc_arabic_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   azeri: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -150,11 +159,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   bengali: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -183,11 +194,13 @@ module.exports = {
             : '/bengali/bbc_bangla_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   burmese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -216,11 +229,13 @@ module.exports = {
             : '/burmese/bbc_burmese_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   cymrufyw: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -244,11 +259,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   gahuza: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -277,11 +294,13 @@ module.exports = {
             : '/gahuza/bbc_gahuza_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   gujarati: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -302,11 +321,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   hausa: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -335,11 +356,13 @@ module.exports = {
             : '/hausa/bbc_hausa_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   hindi: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -368,11 +391,13 @@ module.exports = {
             : '/hindi/bbc_hindi_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   igbo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -390,11 +415,19 @@ module.exports = {
       },
       frontPage: { path: '/igbo', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/igbo/media-42986440'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   indonesia: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -421,11 +454,13 @@ module.exports = {
             : '/indonesia/bbc_indonesian_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   japanese: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -446,11 +481,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   korean: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -477,11 +514,13 @@ module.exports = {
             : '/korean/bbc_korean_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   kyrgyz: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -510,11 +549,13 @@ module.exports = {
             : '/kyrgyz/bbc_kyrgyz_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   marathi: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -535,11 +576,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   mundo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -560,11 +603,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   naidheachdan: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -588,11 +633,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   nepali: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -621,11 +668,13 @@ module.exports = {
             : '/nepali/bbc_nepali_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   news: {
     font: 'Reith',
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -643,11 +692,13 @@ module.exports = {
       },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   pashto: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -676,11 +727,13 @@ module.exports = {
             : '/pashto/bbc_pashto_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   persian: {
     font: 'Nassim',
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -707,11 +760,13 @@ module.exports = {
             : '/persian/bbc_persian_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   pidgin: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -729,11 +784,19 @@ module.exports = {
       },
       frontPage: { path: '/pidgin', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/pidgin/tori-49450859'
+            : undefined,
+        smoke: true,
+      },
     },
   },
   portuguese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: { path: undefined, smoke: false },
       errorPage404: {
@@ -748,10 +811,12 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   punjabi: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -768,15 +833,23 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/punjabi',
+        path: '/punjabi',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/punjabi/international-49567825'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   russian: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -797,20 +870,43 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   serbian: {
     font: undefined,
+    isWorldService: true,
+    variant: 'lat',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/c805k05kr73o/lat',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/cabcdefghijo/lat',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/lat',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   sinhala: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -839,10 +935,12 @@ module.exports = {
             : '/sinhala/bbc_sinhala_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   somali: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -871,20 +969,24 @@ module.exports = {
             : '/somali/bbc_somali_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   sport: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: { path: undefined, smoke: false },
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   swahili: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -913,11 +1015,13 @@ module.exports = {
             : '/swahili/bbc_swahili_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   tamil: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -946,11 +1050,13 @@ module.exports = {
             : '/tamil/bbc_tamil_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   telugu: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -971,11 +1077,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   thai: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -996,11 +1104,19 @@ module.exports = {
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/thai/international-49514085'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   tigrinya: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1027,11 +1143,13 @@ module.exports = {
             : '/tigrinya/bbc_tigrinya_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   turkce: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1052,21 +1170,43 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   ukchina: {
     font: undefined,
     isWorldService: true,
+    variant: 'simp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/simp',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/cabcdefghijo/simp',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/simp',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   ukrainian: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1087,11 +1227,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   urdu: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1120,11 +1262,13 @@ module.exports = {
             : '/urdu/bbc_urdu_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   uzbek: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1153,11 +1297,13 @@ module.exports = {
             : '/uzbek/bbc_uzbek_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   vietnamese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1178,11 +1324,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   yoruba: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1200,16 +1348,43 @@ module.exports = {
       },
       frontPage: { path: '/yoruba', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'local'
+            ? '/yoruba/media-42985961'
+            : undefined,
+        smoke: false,
+      },
     },
   },
   zhongwen: {
     font: undefined,
     isWorldService: true,
+    variant: 'simp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/simp',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/cabcdefghijo/simp',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/simp',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
 };

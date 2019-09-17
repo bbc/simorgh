@@ -94,6 +94,36 @@ If error is set to true the Error component is returned, giving the user a visua
 
 Assuming the other HOC's have returned the original Article or FrontPage container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
 
+### Adding a new Page type
+
+When adding a new page type there are several parts required.
+
+#### 1) Fixture data should be added to `/data/{{service}}/{{pageType}}/`
+  - This should be done for each service using the page type. 
+  - [Fixture data example](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/data/igbo/frontpage/index.json)
+  - Gotcha's: 
+    - The value in the test "should call readScenario for every file in the /data directory" will need to be updated in `dataValidator/helpers/dataLoader/asyncValidateDir.test.js` for each fixture you add. 
+    - The new page type should be added to `ignoreDirectories` in `dataValidator/helpers/dataLoader/readScenario.js`
+#### 2) Serving the fixture data on local development
+  - The fixture data for the page type should be available on the same route as the page with a `.json` suffix
+    - EG: The `localhost.bbc.com:7080/igbo.json` should have the data to build the index page `localhost.bbc.com:7080/igbo`
+  - To match the correct route we will need a new regex [here](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/routes/regex/index.js)
+  - Then we need to add an Express route similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/server/index.jsx#L107-L113)
+#### 3) Create a new container for the page type
+  - Similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/containers/FrontPage/index.jsx) we require a container that will act as the entry point for the page routing
+#### 4) Add a new getInitalData method for the new page type
+  - [getInitalData example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/frontpage/index.js)
+  - If required for the new page type this is where any pre-processing rules should be added. These are needed for use cases where we want to manipulate the data before it is received by the container for the page.
+    - EG: On the articles routes [unique ID's](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/article/index.js#L19) are added to each block in the payload
+#### 5) Add a new route to the react router config
+  - This should be done for AMP and Canoical pages together
+  - [Route example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/index.js#L22-L28)
+#### 6) Add Cypress E2E tests for the new page type
+  - This requires config in `cypress/support/config/services.js` for every service (even if to set the new page type to undefined)
+  - If required bespoke tests for the page type should be added inside of `cypress/integration/pages/`
+ 
+NB: With this many steps it is suggested to have multiple PRs when adding a new page type as to not have a singular huge PR. However, if Cypress tests (#6) are not added in the same PR as the page routing (#5) they should immediately follow the page routing PR, ideally these should be handled in a single PR.
+
 ## Before Installation
 
 Please read:
@@ -141,6 +171,12 @@ We are also serving AMP HTML pages at the route `/news/articles/:id.amp` [https:
 - [http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp](http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp)
 - [http://localhost.bbc.com:7080/persian/articles/c4vlle3q337o.amp](http://localhost.bbc.com:7080/persian/articles/c4vlle3q337o.amp).
 
+Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
+
+- [http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp)
+- [http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp).
+
+
 ### Front pages
 
 World Service front pages are served in the format `/:service` where `service` represents a World Service site:
@@ -152,6 +188,11 @@ The World Service front pages follow the article format for AMP too, being avail
 
 - [http://localhost.bbc.com:7080/igbo.amp](http://localhost.bbc.com:7080/igbo.amp)
 - [http://localhost.bbc.com:7080/pidgin.amp](http://localhost.bbc.com:7080/pidgin.amp)
+
+Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
+
+- [http://localhost.bbc.com:7080/zhongwen/simp](http://localhost.bbc.com:7080/zhongwen/simp)
+- [http://localhost.bbc.com:7080/zhongwen/simp.amp](http://localhost.bbc.com:7080/zhongwen/simp.amp).
 
 ### Other page types
 
@@ -243,6 +284,13 @@ npm run test:e2e:interactive
 
 This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
 
+To run only a particular spec, ensure Simorgh is already running in another tab and then run (for example):
+
+```
+npx cypress run --spec cypress/integration/pages/articles/index.js
+```
+
+
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 
 #### Running e2e in the UK against LIVE
@@ -255,6 +303,16 @@ Here is an example command:
 
 ```
 CYPRESS_APP_ENV=test CYPRESS_UK=true CYPRESS_SMOKE=true npm run cypress
+```
+
+#### Running e2e outside EU
+**This affects developers based out of the EU (but may affect you if you're using a VPN routing through a country not in the EU)**
+
+Running Cypress tests outside the EU will not show the EU consent banners on AMP, and this may cause some tests to fail. Set `CYPRESS_SKIP_EU=true` to prevent these tests from running when outside the EU.
+
+An example command will be:
+```
+CYPRESS_SKIP_EU=true npm run cypress:interactive
 ```
 
 The following command runs both simorgh and cypress:

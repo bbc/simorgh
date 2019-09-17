@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 import LinkedData from '../../components/LinkedData';
 import Metadata from '../../components/Metadata';
@@ -10,8 +11,32 @@ import { RequestContextProvider } from '../../contexts/RequestContext';
 import frontPageData from '../../../../data/igbo/frontpage/index.json';
 import liveRadioPageData from '../../../../data/korean/bbc_korean_radio/liveradio.json';
 
-const Container = (service, bbcOrigin, platform, data, id, pageType) => {
-  const serviceConfig = services[service];
+// eslint-disable-next-line react/prop-types
+jest.mock('react-helmet', () => ({ htmlAttributes, ...props }) => (
+  <>
+    {htmlAttributes && <helmet-html-attributes {...htmlAttributes} />}
+    <helmet-head {...props} />
+  </>
+));
+
+const dotComOrigin = 'https://www.bbc.com';
+const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
+
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
+
+const getContainer = ({
+  /* eslint-disable react/prop-types */
+  service,
+  bbcOrigin,
+  platform,
+  data,
+  id,
+  pageType,
+  pathname,
+  /* eslint-enable react/prop-types */
+}) => {
+  const serviceConfig = services[service].default;
 
   return (
     <ServiceContextProvider {...serviceConfig}>
@@ -20,6 +45,7 @@ const Container = (service, bbcOrigin, platform, data, id, pageType) => {
         id={id}
         isAmp={platform === 'amp'}
         pageType={pageType}
+        pathname={pathname}
         service={service}
       >
         <MetadataContainer {...articleDataNews} {...data} />
@@ -28,7 +54,7 @@ const Container = (service, bbcOrigin, platform, data, id, pageType) => {
   );
 };
 
-const metadataProps = (
+const metadataProps = ({
   isAmp,
   alternateLinks,
   ampLink,
@@ -44,7 +70,7 @@ const metadataProps = (
   type,
   service,
   showArticleTags,
-) => ({
+}) => ({
   isAmp,
   alternateLinks,
   ampLink,
@@ -86,17 +112,16 @@ const metadataProps = (
   },
 });
 
-const linkedDataProps = (
+const linkedDataProps = ({
   brandName,
   canonicalLink,
   firstPublished,
   lastUpdated,
-  createdBy,
   logoUrl,
   seoHeadline,
   type,
   about = undefined,
-) => ({
+}) => ({
   brandName,
   canonicalLink,
   firstPublished,
@@ -109,24 +134,19 @@ const linkedDataProps = (
   about,
 });
 
-const dotComOrigin = 'https://www.bbc.com';
-const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
-
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
-
 describe('Metadata Container', () => {
   describe('LinkedData and Metadata components called with correct props', () => {
     it('should be correct for Canonical News & international origin', () => {
       const Wrapper = mount(
-        Container(
-          'news',
-          dotComOrigin,
-          'canonical',
-          articleDataNews,
-          'c0000000001o',
-          'article',
-        ),
+        getContainer({
+          service: 'news',
+          bbcOrigin: dotComOrigin,
+          platform: 'canonical',
+          data: articleDataNews,
+          id: 'c0000000001o',
+          pageType: 'article',
+          pathname: '/news/articles/c0000000001o',
+        }),
       );
 
       expect(
@@ -135,9 +155,9 @@ describe('Metadata Container', () => {
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
-        metadataProps(
-          false,
-          [
+        metadataProps({
+          isAmp: false,
+          alternateLinks: [
             {
               href: 'https://www.bbc.com/news/articles/c0000000001o',
               hrefLang: 'x-default',
@@ -151,32 +171,37 @@ describe('Metadata Container', () => {
               hrefLang: 'en-gb',
             },
           ],
-          'https://www.bbc.com/news/articles/c0000000001o.amp',
-          'https://www.bbc.com/news/articles/c0000000001o',
-          'Article summary.',
-          'ltr',
-          'en-gb',
-          ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
-          '2018-01-01T12:01:00.000Z',
-          '2018-01-01T13:00:00.000Z',
-          'Article Headline for SEO',
-          services.news,
-          'article',
-          'news',
-          true,
-        ),
+          ampLink: 'https://www.bbc.com/news/articles/c0000000001o.amp',
+          canonicalLink: 'https://www.bbc.com/news/articles/c0000000001o',
+          description: 'Article summary.',
+          dir: 'ltr',
+          lang: 'en-gb',
+          metaTags: [
+            'Royal Wedding 2018',
+            'Duchess of Sussex',
+            'Queen Victoria',
+          ],
+          timeFirstPublished: '2018-01-01T12:01:00.000Z',
+          timeLastPublished: '2018-01-01T13:00:00.000Z',
+          title: 'Article Headline for SEO',
+          serviceConfig: services.news.default,
+          type: 'article',
+          service: 'news',
+          showArticleTags: true,
+        }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
-        linkedDataProps(
-          'BBC News',
-          'https://www.bbc.com/news/articles/c0000000001o',
-          '2018-01-01T12:01:00.000Z',
-          '2018-01-01T13:00:00.000Z',
-          'News',
-          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-          'Article Headline for SEO',
-          'Article',
-          [
+        linkedDataProps({
+          brandName: 'BBC News',
+          canonicalLink: 'https://www.bbc.com/news/articles/c0000000001o',
+          firstPublished: '2018-01-01T12:01:00.000Z',
+          lastUpdated: '2018-01-01T13:00:00.000Z',
+          createdBy: 'News',
+          logoUrl:
+            'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+          seoHeadline: 'Article Headline for SEO',
+          type: 'Article',
+          about: [
             {
               '@type': 'Thing',
               name: 'Royal Wedding 2018',
@@ -187,20 +212,34 @@ describe('Metadata Container', () => {
               name: 'Duchess of Sussex',
             },
           ],
-        ),
+        }),
       );
     });
 
+    shouldMatchSnapshot(
+      'should match snapshot for Canonical News & international origin',
+      getContainer({
+        service: 'news',
+        bbcOrigin: dotComOrigin,
+        platform: 'canonical',
+        data: articleDataNews,
+        id: 'c0000000001o',
+        pageType: 'article',
+        pathname: '/news/articles/c0000000001o',
+      }),
+    );
+
     it('should be correct for AMP News & UK origin', () => {
       const Wrapper = mount(
-        Container(
-          'news',
-          dotCoDotUKOrigin,
-          'amp',
-          articleDataNews,
-          'c0000000001o',
-          'article',
-        ),
+        getContainer({
+          service: 'news',
+          bbcOrigin: dotCoDotUKOrigin,
+          platform: 'amp',
+          data: articleDataNews,
+          id: 'c0000000001o',
+          pageType: 'article',
+          pathname: '/news/articles/c0000000001o.amp',
+        }),
       );
 
       expect(
@@ -209,9 +248,9 @@ describe('Metadata Container', () => {
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
-        metadataProps(
-          true,
-          [
+        metadataProps({
+          isAmp: true,
+          alternateLinks: [
             {
               href: 'https://www.bbc.com/news/articles/c0000000001o.amp',
               hrefLang: 'x-default',
@@ -225,32 +264,37 @@ describe('Metadata Container', () => {
               hrefLang: 'en-gb',
             },
           ],
-          'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
-          'https://www.bbc.com/news/articles/c0000000001o',
-          'Article summary.',
-          'ltr',
-          'en-gb',
-          ['Royal Wedding 2018', 'Duchess of Sussex', 'Queen Victoria'],
-          '2018-01-01T12:01:00.000Z',
-          '2018-01-01T13:00:00.000Z',
-          'Article Headline for SEO',
-          services.news,
-          'article',
-          'news',
-          true,
-        ),
+          ampLink: 'https://www.bbc.co.uk/news/articles/c0000000001o.amp',
+          canonicalLink: 'https://www.bbc.com/news/articles/c0000000001o',
+          description: 'Article summary.',
+          dir: 'ltr',
+          lang: 'en-gb',
+          metaTags: [
+            'Royal Wedding 2018',
+            'Duchess of Sussex',
+            'Queen Victoria',
+          ],
+          timeFirstPublished: '2018-01-01T12:01:00.000Z',
+          timeLastPublished: '2018-01-01T13:00:00.000Z',
+          title: 'Article Headline for SEO',
+          serviceConfig: services.news.default,
+          type: 'article',
+          service: 'news',
+          showArticleTags: true,
+        }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
-        linkedDataProps(
-          'BBC News',
-          'https://www.bbc.com/news/articles/c0000000001o',
-          '2018-01-01T12:01:00.000Z',
-          '2018-01-01T13:00:00.000Z',
-          'News',
-          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-          'Article Headline for SEO',
-          'Article',
-          [
+        linkedDataProps({
+          brandName: 'BBC News',
+          canonicalLink: 'https://www.bbc.com/news/articles/c0000000001o',
+          firstPublished: '2018-01-01T12:01:00.000Z',
+          lastUpdated: '2018-01-01T13:00:00.000Z',
+          createdBy: 'News',
+          logoUrl:
+            'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+          seoHeadline: 'Article Headline for SEO',
+          type: 'Article',
+          about: [
             {
               '@type': 'Thing',
               name: 'Royal Wedding 2018',
@@ -261,20 +305,34 @@ describe('Metadata Container', () => {
               name: 'Duchess of Sussex',
             },
           ],
-        ),
+        }),
       );
     });
+
+    shouldMatchSnapshot(
+      'should match snapshot for AMP News & UK origin',
+      getContainer({
+        service: 'news',
+        bbcOrigin: dotCoDotUKOrigin,
+        platform: 'amp',
+        data: articleDataNews,
+        id: 'c0000000001o',
+        pageType: 'article',
+        pathname: '/news/articles/c0000000001o.amp',
+      }),
+    );
 
     it('should be correct for Persian News & international origin', () => {
       const Wrapper = mount(
-        Container(
-          'persian',
-          dotComOrigin,
-          'canonical',
-          articleDataPersian,
-          'c4vlle3q337o',
-          'article',
-        ),
+        getContainer({
+          service: 'persian',
+          bbcOrigin: dotComOrigin,
+          platform: 'canonical',
+          data: articleDataPersian,
+          id: 'c4vlle3q337o',
+          pageType: 'article',
+          pathname: '/persian/articles/c4vlle3q337o',
+        }),
       );
 
       expect(
@@ -283,48 +341,62 @@ describe('Metadata Container', () => {
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
-        metadataProps(
-          false,
-          [],
-          'https://www.bbc.com/persian/articles/c4vlle3q337o.amp',
-          'https://www.bbc.com/persian/articles/c4vlle3q337o',
-          'خلاصه مقاله',
-          'rtl',
-          'fa',
-          [],
-          '2018-01-01T12:01:00.000Z',
-          '2018-01-01T13:00:00.000Z',
-          'سرصفحه مقاله',
-          services.persian,
-          'article',
-          'persian',
-          true,
-        ),
+        metadataProps({
+          isAmp: false,
+          alternateLinks: [],
+          ampLink: 'https://www.bbc.com/persian/articles/c4vlle3q337o.amp',
+          canonicalLink: 'https://www.bbc.com/persian/articles/c4vlle3q337o',
+          description: 'خلاصه مقاله',
+          dir: 'rtl',
+          lang: 'fa',
+          metaTags: [],
+          timeFirstPublished: '2018-01-01T12:01:00.000Z',
+          timeLastPublished: '2018-01-01T13:00:00.000Z',
+          title: 'سرصفحه مقاله',
+          serviceConfig: services.persian.default,
+          type: 'article',
+          service: 'persian',
+          showArticleTags: true,
+        }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
-        linkedDataProps(
-          'BBC News فارسی',
-          'https://www.bbc.com/persian/articles/c4vlle3q337o',
-          '2018-01-01T12:01:00.000Z',
-          '2018-01-01T13:00:00.000Z',
-          'Persian',
-          'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-          'سرصفحه مقاله',
-          'Article',
-        ),
+        linkedDataProps({
+          brandName: 'BBC News فارسی',
+          canonicalLink: 'https://www.bbc.com/persian/articles/c4vlle3q337o',
+          firstPublished: '2018-01-01T12:01:00.000Z',
+          lastUpdated: '2018-01-01T13:00:00.000Z',
+          createdBy: 'Persian',
+          logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+          seoHeadline: 'سرصفحه مقاله',
+          type: 'Article',
+        }),
       );
     });
+
+    shouldMatchSnapshot(
+      'should match snapshot for Persian News & international origin',
+      getContainer({
+        service: 'persian',
+        bbcOrigin: dotComOrigin,
+        platform: 'canonical',
+        data: articleDataPersian,
+        id: 'c4vlle3q337o',
+        pageType: 'article',
+        pathname: '/persian/articles/c4vlle3q337o',
+      }),
+    );
 
     it('should be correct for Persian News & UK origin', () => {
       const Wrapper = mount(
-        Container(
-          'persian',
-          dotCoDotUKOrigin,
-          'amp',
-          articleDataPersian,
-          'c4vlle3q337o',
-          'article',
-        ),
+        getContainer({
+          service: 'persian',
+          bbcOrigin: dotCoDotUKOrigin,
+          platform: 'amp',
+          data: articleDataPersian,
+          id: 'c4vlle3q337o',
+          pageType: 'article',
+          pathname: '/persian/articles/c4vlle3q337o.amp',
+        }),
       );
 
       expect(
@@ -333,48 +405,62 @@ describe('Metadata Container', () => {
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
-        metadataProps(
-          true,
-          [],
-          'https://www.bbc.co.uk/persian/articles/c4vlle3q337o.amp',
-          'https://www.bbc.com/persian/articles/c4vlle3q337o',
-          'خلاصه مقاله',
-          'rtl',
-          'fa',
-          [],
-          '2018-01-01T12:01:00.000Z',
-          '2018-01-01T13:00:00.000Z',
-          'سرصفحه مقاله',
-          services.persian,
-          'article',
-          'persian',
-          true,
-        ),
+        metadataProps({
+          isAmp: true,
+          alternateLinks: [],
+          ampLink: 'https://www.bbc.co.uk/persian/articles/c4vlle3q337o.amp',
+          canonicalLink: 'https://www.bbc.com/persian/articles/c4vlle3q337o',
+          description: 'خلاصه مقاله',
+          dir: 'rtl',
+          lang: 'fa',
+          metaTags: [],
+          timeFirstPublished: '2018-01-01T12:01:00.000Z',
+          timeLastPublished: '2018-01-01T13:00:00.000Z',
+          title: 'سرصفحه مقاله',
+          serviceConfig: services.persian.default,
+          type: 'article',
+          service: 'persian',
+          showArticleTags: true,
+        }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
-        linkedDataProps(
-          'BBC News فارسی',
-          'https://www.bbc.com/persian/articles/c4vlle3q337o',
-          '2018-01-01T12:01:00.000Z',
-          '2018-01-01T13:00:00.000Z',
-          'Persian',
-          'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-          'سرصفحه مقاله',
-          'Article',
-        ),
+        linkedDataProps({
+          brandName: 'BBC News فارسی',
+          canonicalLink: 'https://www.bbc.com/persian/articles/c4vlle3q337o',
+          firstPublished: '2018-01-01T12:01:00.000Z',
+          lastUpdated: '2018-01-01T13:00:00.000Z',
+          createdBy: 'Persian',
+          logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+          seoHeadline: 'سرصفحه مقاله',
+          type: 'Article',
+        }),
       );
     });
 
+    shouldMatchSnapshot(
+      'should match snapshot for Persian News & UK origin',
+      getContainer({
+        service: 'persian',
+        bbcOrigin: dotCoDotUKOrigin,
+        platform: 'amp',
+        data: articleDataPersian,
+        id: 'c4vlle3q337o',
+        pageType: 'article',
+        pathname: '/persian/articles/c4vlle3q337o.amp',
+      }),
+    );
+
     it('should be correct for WS Frontpages', () => {
       const Wrapper = mount(
-        Container(
-          'igbo',
-          dotComOrigin,
-          'canonical',
-          frontPageData,
-          null,
-          'frontPage',
-        ),
+        getContainer({
+          service: 'igbo',
+          bbcOrigin: dotComOrigin,
+          platform: 'canonical',
+          data: frontPageData,
+          id: null,
+          pageType: 'frontPage',
+          pathname: '/igbo',
+        }),
       );
 
       expect(
@@ -383,54 +469,69 @@ describe('Metadata Container', () => {
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
-        metadataProps(
-          false,
-          [
+        metadataProps({
+          isAmp: false,
+          alternateLinks: [
             {
               href: 'https://www.bbc.com/igbo',
               hrefLang: 'ig',
             },
           ],
-          'https://www.bbc.com/igbo.amp',
-          'https://www.bbc.com/igbo',
-          'BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.',
-          'ltr',
-          'ig',
-          [],
-          null,
-          null,
-          'Ogbako',
-          services.igbo,
-          'website',
-          'igbo',
-          false,
-        ),
+          ampLink: 'https://www.bbc.com/igbo.amp',
+          canonicalLink: 'https://www.bbc.com/igbo',
+          description:
+            'BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.',
+          dir: 'ltr',
+          lang: 'ig',
+          metaTags: [],
+          timeFirstPublished: null,
+          timeLastPublished: null,
+          title: 'Ogbako',
+          serviceConfig: services.igbo.default,
+          type: 'website',
+          service: 'igbo',
+          showArticleTags: false,
+        }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
-        linkedDataProps(
-          'BBC News Ìgbò',
-          'https://www.bbc.com/igbo',
-          null,
-          null,
-          'Igbo',
-          'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
-          'Ogbako',
-          'WebPage',
-        ),
+        linkedDataProps({
+          brandName: 'BBC News Ìgbò',
+          canonicalLink: 'https://www.bbc.com/igbo',
+          firstPublished: null,
+          lastUpdated: null,
+          createdBy: 'Igbo',
+          logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+          seoHeadline: 'Ogbako',
+          type: 'WebPage',
+        }),
       );
     });
+
+    shouldMatchSnapshot(
+      'should match snapshot for WS Frontpages',
+      getContainer({
+        service: 'igbo',
+        bbcOrigin: dotComOrigin,
+        platform: 'canonical',
+        data: frontPageData,
+        id: null,
+        pageType: 'frontPage',
+        pathname: '/igbo',
+      }),
+    );
   });
 
   it('should be correct for WS Media liveradio', () => {
     const Wrapper = mount(
-      Container(
-        'korean',
-        dotComOrigin,
-        'canonical',
-        liveRadioPageData,
-        null,
-        'media',
-      ),
+      getContainer({
+        service: 'korean',
+        bbcOrigin: dotComOrigin,
+        platform: 'canonical',
+        data: liveRadioPageData,
+        id: null,
+        pageType: 'media',
+        pathname: '/korean/bbc_korean_radio/liveradio',
+      }),
     );
 
     expect(
@@ -439,35 +540,48 @@ describe('Metadata Container', () => {
       ),
     ).toEqual(true);
     expect(Wrapper.find(Metadata).props()).toEqual(
-      metadataProps(
-        false,
-        [],
-        'https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp',
-        'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
-        '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
-        'ltr',
-        'ko',
-        [],
-        null,
-        null,
-        'BBC News 코리아 라디오',
-        services.korean,
-        'website',
-        'korean',
-        false,
-      ),
+      metadataProps({
+        isAmp: false,
+        alternateLinks: [],
+        ampLink: 'https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp',
+        canonicalLink: 'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
+        description: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
+        dir: 'ltr',
+        lang: 'ko',
+        metaTags: [],
+        timeFirstPublished: null,
+        timeLastPublished: null,
+        title: 'BBC News 코리아 라디오',
+        serviceConfig: services.korean.default,
+        type: 'website',
+        service: 'korean',
+        showArticleTags: false,
+      }),
     );
     expect(Wrapper.find(LinkedData).props()).toEqual(
-      linkedDataProps(
-        'BBC News 코리아',
-        'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
-        null,
-        null,
-        'Korean',
-        'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
-        'BBC News 코리아 라디오',
-        'RadioChannel',
-      ),
+      linkedDataProps({
+        brandName: 'BBC News 코리아',
+        canonicalLink: 'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
+        firstPublished: null,
+        lastUpdated: null,
+        createdBy: 'Korean',
+        logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
+        seoHeadline: 'BBC News 코리아 라디오',
+        type: 'RadioChannel',
+      }),
     );
   });
+
+  shouldMatchSnapshot(
+    'should match snapshot for WS Media liveradio',
+    getContainer({
+      service: 'korean',
+      bbcOrigin: dotComOrigin,
+      platform: 'canonical',
+      data: liveRadioPageData,
+      id: null,
+      pageType: 'media',
+      pathname: '/korean/bbc_korean_radio/liveradio',
+    }),
+  );
 });

@@ -1,36 +1,11 @@
-import * as moment from 'moment-timezone';
-import config from '../../../support/config/services';
-import appConfig from '../../../../src/app/lib/config/services';
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 
 // Defaulting to false for now whilst we look to improve the index also's test coverage to cater for the varying scenarios: https://github.com/bbc/simorgh/issues/3586
 const serviceHasIndexAlsos = () => false;
 
-const serviceHasTimestamp = service => service === 'thai';
-
 export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
-    if (serviceHasTimestamp(service)) {
-      it('should render a formatted timestamp in the top story', () => {
-        cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
-          ({ body }) => {
-            const { language } = body.metadata;
-            const { timestamp } = body.content.groups[0].items[0];
-            const formattedTimestamp = moment
-              .tz(timestamp, `${appConfig[service].timezone}`)
-              .locale(language)
-              .format('D MMMM YYYY');
-            cy.get('section')
-              .eq(0)
-              .within(() => {
-                cy.get('time').should('contain', formattedTimestamp);
-              });
-          },
-        );
-      });
-    }
-  });
+  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
@@ -107,7 +82,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               if ($el.length > 0) {
                 cy.get('p')
                   .eq(0)
-                  .should('be.hidden');
+                  .should('be.visible');
               }
             });
 
