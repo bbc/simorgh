@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import pathToRegexp from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
-import { inlineLinkModelPropTypes } from '../../models/propTypes/inlineLink';
+import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
 import { articleRegexPath } from '../../routes/regex';
 
 const InternalInlineLink = InlineLink.withComponent(Link);
