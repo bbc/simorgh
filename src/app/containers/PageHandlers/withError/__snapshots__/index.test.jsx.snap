@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withError HOC with error should return the errorMain component 1`] = `
-<ErrorMain
-  status={500}
-/>
+<h1>
+  This is an error.
+</h1>
 `;
 
-exports[`withError HOC with no error should return the passed in component 1`] = `<Component />`;
+exports[`withError HOC with no error should return the passed in component 1`] = `
+<h1>
+  Hola
+</h1>
+`;
