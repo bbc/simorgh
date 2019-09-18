@@ -204,6 +204,10 @@ const pidgin = {
           href: 'https://www.bbc.com/pidgin/institutional-42188215',
           text: 'Call BBC',
         },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'As e concern BBC',
+        },
       ],
       copyrightText: 'BBC. De external site no concern BBC.',
     },

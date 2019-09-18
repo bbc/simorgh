@@ -152,11 +152,11 @@ const service = {
           text: 'Sababta aada ku aamini kartid BBC News',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/somali/hayadeed-37098011',
           text: 'Shuruucda isticmaalka',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/somali/hayadeed-37098082',
           text: 'Shuruucda xogta gaarka ah',
         },
         {
@@ -164,8 +164,12 @@ const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/somali/hayadeed-37098613',
           text: 'La xiriir BBC',
+        },
+        {
+          href: 'https://www.bbc.com/somali/hayadeed-37098081',
+          text: 'Ku saabsan BBC',
         },
       ],
       copyrightText:

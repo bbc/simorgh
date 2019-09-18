@@ -178,6 +178,10 @@ const service = {
           href: 'https://www.bbc.com/punjabi/institutional-42227903',
           text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
         },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'BBC ਬਾਰੇ',
+        },
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
     },

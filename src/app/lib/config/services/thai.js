@@ -191,6 +191,10 @@ const service = {
           href: 'https://www.bbc.com/thai/institutional-37981748',
           text: 'ติดต่อบีบีซีี',
         },
+        {
+          href: 'https://www.bbc.com/thai/institutional-38403476',
+          text: 'เกี่ยวกับบีบีซี',
+        },
       ],
       copyrightText:
         'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.',
