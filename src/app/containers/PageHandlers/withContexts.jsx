@@ -1,12 +1,12 @@
 import React from 'react';
 import { bool, element, string, shape, number } from 'prop-types';
-import variantPropType from '../../models/propTypes/variants';
+import variantPropType from '#models/propTypes/variants';
 
 // context providers
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { UserContextProvider } from '../../contexts/UserContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { UserContextProvider } from '#contexts/UserContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {

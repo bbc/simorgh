@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const { webpackDirAlias } = require('../dirAlias');
 
 module.exports = {
   plugins: [
@@ -18,4 +19,8 @@ module.exports = {
       },
     ),
   ],
+  resolve: {
+    extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
+    alias: webpackDirAlias,
+  },
 };

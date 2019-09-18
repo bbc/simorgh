@@ -2,10 +2,10 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from '.';
 import * as atiPageViewParams from '../../atiUrl';
-import * as commonTestUtils from '../../../../lib/analyticsUtils';
-import * as testUtils from '../../../../lib/analyticsUtils/article';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../../contexts/RequestContext';
+import * as commonTestUtils from '#lib/analyticsUtils';
+import * as testUtils from '#lib/analyticsUtils/article';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 describe('ArticleAtiParams', () => {
   const mockArticleData = {

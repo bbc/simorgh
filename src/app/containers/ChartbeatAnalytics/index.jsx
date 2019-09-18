@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import useToggle from '../Toggle/useToggle';
 import AmpChartbeatBeacon from './amp';
 import CanonicalChartbeatBeacon from './canonical';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
-import { pageDataPropType } from '../../models/propTypes/data';
-import { getReferrer } from '../../lib/analyticsUtils';
-import onClient from '../../lib/utilities/onClient';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { pageDataPropType } from '#models/propTypes/data';
+import { getReferrer } from '#lib/analyticsUtils';
+import onClient from '#lib/utilities/onClient';
 import {
   chartbeatUID,
   chartbeatSource,
@@ -16,7 +16,7 @@ import {
   buildSections,
   getType,
   getTitle,
-} from '../../lib/analyticsUtils/chartbeat';
+} from '#lib/analyticsUtils/chartbeat';
 
 const ChartbeatAnalytics = ({ data }) => {
   const { service, brandName } = useContext(ServiceContext);

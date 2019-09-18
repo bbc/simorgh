@@ -3,7 +3,7 @@ import Navigation, {
   NavigationUl,
   NavigationLi,
 } from '@bbc/psammead-navigation';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const NavigationContainer = () => {
   const { script, translations, navigation, service, dir } = useContext(
