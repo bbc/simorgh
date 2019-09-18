@@ -19,10 +19,13 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  plugins.push(["transform-react-remove-prop-types", {
-    mode: 'remove',
-    removeImport: true
-  }]);
+  plugins.push([
+    'transform-react-remove-prop-types',
+    {
+      mode: 'remove',
+      removeImport: true,
+    },
+  ]);
 }
 
 module.exports = {
@@ -56,7 +59,7 @@ module.exports = {
   plugins: plugins,
   overrides: [
     {
-      test: /.*logger.*/,
+      test: /.*logger\..*/,
       sourceType: 'script',
     },
   ],
