@@ -33,7 +33,7 @@ The `sendEventBeacon` is another type of beacon, meant for events such as clicks
 ```js
 const { useClickTracker } = eventContext;
 
-useClickTracker('header *', e => {
+useClickTracker('[data-consent-banner] [data-consent-accept]', e => {
     sendEventBeacon({
         ...params,
         element: e.target,
@@ -42,7 +42,17 @@ useClickTracker('header *', e => {
         label: 'cookie-accept',
     });
 });
+
+useClickTracker('[data-consent-banner] [data-consent-reject]', e => {
+    sendEventBeacon({
+        ...params,
+        element: e.target,
+        component: 'cookie-banner',
+        type: 'click',
+        label: 'cookie-reject',
+    });
+});
 ```
 
-In the above example, we [detect click events](../../contexts/EventContext/README.md) on any element within the `<header />`, and send an event beacon.
+In the above example, we [detect click events](../../contexts/EventContext/README.md) on the element with the `data-consent-accept` and `data-consent-reject` attribute, and send an event beacon.
 

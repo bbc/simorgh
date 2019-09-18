@@ -9,7 +9,7 @@ For this, you will need the `useClickTracker` like:
 ```js
   const { useClickTracker } = useContext(EventContext);
 
-  useClickTracker('header *', e => {
+  useClickTracker('[data-consent-banner]', e => {
     // handle the event
   });
 ```
