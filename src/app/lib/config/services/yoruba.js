@@ -159,6 +159,10 @@ const yoruba = {
           text: 'Ìlànà Lílò',
         },
         {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'Nípa BBC',
+        },
+        {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
           text: 'Òfin Àṣírí',
         },
@@ -169,10 +173,6 @@ const yoruba = {
         {
           href: 'https://www.bbc.com/yoruba/institutional-43091540',
           text: 'Kàn sí BBC',
-        },
-        {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
-          text: 'Nípa BBC',
         },
       ],
       copyrightText:

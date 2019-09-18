@@ -147,6 +147,10 @@ const service = {
           text: 'Điều khoản sử dụng',
         },
         {
+          href: 'https://www.bbc.com/vietnamese/institutional-37623840',
+          text: 'Về BBC',
+        },
+        {
           href: 'https://www.bbc.com/vietnamese/institutional-37623841',
           text: 'Chính sách riêng tư',
         },
@@ -158,10 +162,6 @@ const service = {
         {
           href: 'https://www.bbc.com/vietnamese/institutional-37623842',
           text: 'Liên hệ BBC',
-        },
-        {
-          href: 'https://www.bbc.com/vietnamese/institutional-37623840',
-          text: 'Về BBC',
         },
       ],
       copyrightText:

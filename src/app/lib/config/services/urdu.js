@@ -154,6 +154,10 @@ const service = {
           text: 'استعمال کے ضوابط',
         },
         {
+          href: 'https://www.bbc.com/urdu/institutional-37588280',
+          text: 'بی بی سی کے بارے میں',
+        },
+        {
           href: 'https://www.bbc.com/urdu/institutional-37588282',
           text: 'پرائیویسی پالیسی',
         },
@@ -165,10 +169,6 @@ const service = {
         {
           href: 'https://www.bbc.com/urdu/institutional-37588285',
           text: 'بی بی سی سے رابطہ کریں',
-        },
-        {
-          href: 'https://www.bbc.com/urdu/institutional-37588280',
-          text: 'بی بی سی کے بارے میں',
         },
       ],
       copyrightText:
