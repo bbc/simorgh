@@ -1,7 +1,6 @@
 import React from 'react';
-import { bool, element, string } from 'prop-types';
+import { bool, element, string, shape, number } from 'prop-types';
 import variantPropType from '../../models/propTypes/variants';
-import { dataPropType } from '../../models/propTypes/data';
 
 // context providers
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -23,16 +22,18 @@ const WithContexts = Component => {
       variant,
     } = props;
 
+    const { status } = data;
+
     return (
       <ToggleContextProvider>
         <ServiceContextProvider service={service} variant={variant}>
           <RequestContextProvider
             bbcOrigin={bbcOrigin}
-            data={data}
             id={id}
             isAmp={isAmp}
             pageType={pageType}
             service={service}
+            statusCode={status}
             pathname={pathname}
             previousPath={previousPath}
             variant={variant}
@@ -48,7 +49,9 @@ const WithContexts = Component => {
 
   WithContextsContainer.propTypes = {
     bbcOrigin: string,
-    data: dataPropType,
+    data: shape({
+      status: number.isRequired,
+    }).isRequired,
     id: string,
     isAmp: bool.isRequired,
     pageType: string.isRequired,
@@ -60,7 +63,6 @@ const WithContexts = Component => {
 
   WithContextsContainer.defaultProps = {
     bbcOrigin: null,
-    data: null,
     id: null,
     previousPath: null,
     variant: null,

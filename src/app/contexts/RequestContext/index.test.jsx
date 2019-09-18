@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
 import { render } from '@testing-library/react';
-import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import * as getStatsDestination from './getStatsDestination';
 import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
-import fixtureData from '../../../../data/news/frontpage/index.json';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
@@ -44,11 +42,11 @@ getMetaUrls.default.mockReturnValue({
 
 const input = {
   bbcOrigin: 'bbcOrigin',
-  data: { status: 200, pageData: fixtureData },
   id: 'id',
   isAmp: true,
   pageType: 'frontPage',
   service: 'service',
+  statusCode: 200,
   pathname: '/current-path',
   previousPath: '/previous-path',
   variant: 'simp',
@@ -131,25 +129,6 @@ describe('RequestContext', () => {
       expect(React.useContext).toHaveReturnedWith({
         ...expectedOutput,
         platform: 'canonical',
-      });
-    });
-  });
-
-  describe('statusCode', () => {
-    it('should default to 500 when not set in data', () => {
-      suppressPropWarnings(['data.status', 'undefined']);
-
-      const data = { pageData: fixtureData };
-
-      render(
-        <RequestContextProvider {...input} data={data}>
-          <Component />
-        </RequestContextProvider>,
-      );
-
-      expect(React.useContext).toHaveReturnedWith({
-        ...expectedOutput,
-        statusCode: 500,
       });
     });
   });
