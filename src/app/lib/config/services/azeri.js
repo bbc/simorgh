@@ -74,7 +74,7 @@ const service = {
       },
       consentBanner: {
         privacy: {
-          title: 'Biz Məxfilik və Kukilər (Cookies) Siyasətimizi yeniləmişik',
+          title: 'Biz Məxfilik və Kukilər (Cookies) Siyasətimizi yeniləmişik.',
           description: {
             uk: {
               first:
@@ -139,19 +139,24 @@ const service = {
           text: 'BBC News-a niyə etibar etməlisiniz',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/azeri/institutional-37131047',
           text: 'İstifadə qaydaları',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/azeri/institutional-37131049',
+          text: 'BBC haqqında',
+        },
+        {
+          href: 'https://www.bbc.com/azeri/institutional-37131051',
           text: 'Məxfilik siyasəti',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'bbc.com/azeri/institutional-37131054',
           text: 'BBC ilə Əlaqə',
         },
       ],
