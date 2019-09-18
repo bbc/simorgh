@@ -99,5 +99,3 @@ describe('Render Document', () => {
     });
   });
 });
-
-// getStyleTag
