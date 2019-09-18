@@ -36,6 +36,7 @@ const bannerTextWithContext = (message, topLevelDomain) => (
       isAmp={false}
       pageType="article"
       service="news"
+      statusCode={200}
       pathname="/pathname"
     >
       <BannerText {...message} />

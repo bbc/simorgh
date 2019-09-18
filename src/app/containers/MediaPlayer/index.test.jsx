@@ -24,6 +24,7 @@ const ContextWrapper = ({ platform, children, toggleState }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     service="news"
+    statusCode={200}
     platform={platform}
     id="foo"
     pageType="article"

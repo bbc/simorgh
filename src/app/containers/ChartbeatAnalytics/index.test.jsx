@@ -32,6 +32,7 @@ const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
     isAmp={platform === 'amp'}
     pageType={pageType}
     service="news"
+    statusCode={200}
     bbcOrigin={origin}
     pathname="/pathname"
   >

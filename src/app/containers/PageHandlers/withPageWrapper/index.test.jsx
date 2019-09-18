@@ -48,6 +48,7 @@ describe('with pageWrapper', () => {
           isAmp={false}
           pageType="article"
           service="news"
+          statusCode={200}
           bbcOrigin="https://www.test.bbc.com"
           pathname="/pathname"
         >
