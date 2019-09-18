@@ -153,20 +153,25 @@ const service = {
           text: 'Pourquoi vous pouvez faire confiance à BBC News',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/afrique/institutionelles-36826639',
           text: "Conditions d'utilisation",
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/afrique/institutionelles-36826642',
           text: 'Politique de confidentialité',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/afrique/institutionelles-36826644',
           text: 'Contactez la BBC',
+        },
+        {
+          href: 'https://www.bbc.com/afrique/institutionelles-36826641',
+          text: 'A propos de la BBC',
         },
       ],
       copyrightText:

@@ -158,6 +158,10 @@ const service = {
           href: 'https://www.bbc.com/afaanoromoo/institutional-42228538',
           text: 'BBC qunnami',
         },
+        {
+          href: 'https://www.bbc.com/aboutthebbc',
+          text: "Waa'ee BBC",
+        },
       ],
       copyrightText:
         "BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",

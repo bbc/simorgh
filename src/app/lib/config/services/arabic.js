@@ -156,20 +156,25 @@ const service = {
           text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/arabic/institutional-37731351',
           text: 'شروط الاستخدام',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/arabic/institutional-37731353',
           text: 'سياسة الخصوصية',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/arabic/institutional-37731355',
           text: 'اتصل بـ بي بي سي',
+        },
+        {
+          href: 'https://www.bbc.com/arabic/institutional-37731352',
+          text: 'عن بي بي سي',
         },
       ],
       copyrightText:

@@ -141,11 +141,11 @@ const service = {
           text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com//usingthebbc/terms/',
           text: 'የአጠቃቀም ደንብ',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com//usingthebbc/privacy/',
           text: 'የፕራይቬሲ ፖሊሲ',
         },
         {
@@ -153,8 +153,12 @@ const service = {
           text: 'ኩኪዎች',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/amharic/institutional-42228117',
           text: 'ቢቢሲን ያግኙ',
+        },
+        {
+          href: 'https://www.bbc.com/aboutthebbc',
+          text: 'ስለ ቢቢሲ',
         },
       ],
       copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
