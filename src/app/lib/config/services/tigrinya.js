@@ -144,7 +144,7 @@ const service = {
           text: 'ውዕሊ ኣጠቓቕማ',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'ናይ ምሽጥራውነት ፖሊሲ',
         },
         {
@@ -152,8 +152,12 @@ const service = {
           text: 'ኩኪታት',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/tigrinya/institutional-42228875',
           text: 'ንቢቢሲ የዛርቡ',
+        },
+        {
+          href: 'https://www.bbc.com/aboutthebbc',
+          text: 'ብዛዕባ ቢቢሲ',
         },
       ],
       copyrightText: 'BBC. ቢቢሲ ንናይ ደገ መርበብ ሓበሬታታት ሓላፍነት ኣይወስድን.',
