@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CaptionContainer from '.';
-import { shouldMatchSnapshot } from '#testHelpers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { blockContainingText } from '#models/blocks';
 
@@ -113,64 +113,69 @@ shouldMatchSnapshot(
 
 describe('with offscreen text', () => {
   it('should render the default offscreen text', () => {
-    const renderedWrapper = render(
+    const { container } = render(
       <ServiceContext.Provider value={newsServiceContextStub}>
         <CaptionContainer block={captionBlock} type="caption" />
       </ServiceContext.Provider>,
     );
-    expect(renderedWrapper.find('span').html()).toBe('Caption, ');
+    expect(container.querySelector('span').textContent).toEqual('Caption, ');
   });
 
   it('should render the video offscreen text', () => {
-    const renderedWrapper = render(
+    const { container } = render(
       <ServiceContext.Provider value={newsServiceContextStub}>
         <CaptionContainer block={captionBlock} type="video" />
       </ServiceContext.Provider>,
     );
-    expect(renderedWrapper.find('span').html()).toBe('Video caption, ');
+    expect(container.querySelector('span').textContent).toEqual(
+      'Video caption, ',
+    );
   });
 
   it('should render the image offscreen text', () => {
-    const renderedWrapper = render(
+    const { container } = render(
       <ServiceContext.Provider value={newsServiceContextStub}>
         <CaptionContainer block={captionBlock} type="image" />
       </ServiceContext.Provider>,
     );
-    expect(renderedWrapper.find('span').html()).toBe('Image caption, ');
+    expect(container.querySelector('span').textContent).toEqual(
+      'Image caption, ',
+    );
   });
 
   it('should render the persian image offscreen text', () => {
-    const renderedWrapper = render(
+    const { container } = render(
       <ServiceContext.Provider value={persianServiceContextStub}>
         <CaptionContainer block={captionBlock} type="image" />
       </ServiceContext.Provider>,
     );
-    expect(renderedWrapper.find('span').text()).toBe(' ، عنوان تصویر');
+    expect(container.querySelector('span').textContent).toEqual(
+      ' ، عنوان تصویر',
+    );
   });
 
   it('should render the persian video offscreen text', () => {
-    const renderedWrapper = render(
+    const { container } = render(
       <ServiceContext.Provider value={persianServiceContextStub}>
         <CaptionContainer block={captionBlock} type="image" />
       </ServiceContext.Provider>,
     );
-    expect(renderedWrapper.find('span').text()).toBe(' ، عنوان تصویر');
+    expect(container.querySelector('span').textContent).toEqual(
+      ' ، عنوان تصویر',
+    );
   });
 
   it('should render figcaption with multiple paragraphs', () => {
-    const renderedWrapper = render(
+    const { container } = render(
       CaptionWithContext(
         captionBlock3Paragraphs,
         newsServiceContextStub,
         'caption',
       ),
     );
-    expect(renderedWrapper.find('figcaption p').length).toBe(3);
-    expect(
-      renderedWrapper
-        .find('figcaption p')
-        .first()
-        .html(),
-    ).toBe('This is paragraph 1');
+    expect(container.querySelectorAll('figcaption p').length).toEqual(3);
+    expect(container.querySelector('figcaption p').textContent).toEqual(
+      'This is paragraph 1',
+    );
   });
 });

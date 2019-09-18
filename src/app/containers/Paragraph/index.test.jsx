@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'uuid';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '#testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ParagraphContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 

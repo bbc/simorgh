@@ -5,7 +5,7 @@ exports[`with pageWrapper should render correctly 1`] = `
   id="defaultPageWrapper"
 >
   <h1>
-    Holla
+    Hola
   </h1>
 </div>
 `;

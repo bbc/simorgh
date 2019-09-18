@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '#testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import LinkData from '.';
 
 describe('LinkData', () => {
@@ -57,17 +57,17 @@ describe('LinkData', () => {
     logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
   };
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should correctly render metadata for links',
     <LinkData {...props} />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should correctly render metadata with no about tags for links',
     <LinkData {...propsWithNoAbout} />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should correctly render metadata for frontpages',
     <LinkData {...propsForFrontpage} />,
   );

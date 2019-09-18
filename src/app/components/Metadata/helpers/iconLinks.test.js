@@ -1,4 +1,4 @@
-import { shouldMatchSnapshot } from '#testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { getIconLinks } from './iconLinks';
 
 const iconSizes = {

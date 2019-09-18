@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { UserContextProvider } from '#contexts/UserContext';
@@ -33,7 +33,7 @@ const defaultToggleState = {
 const mockToggleDispatch = jest.fn();
 
 describe('with pageWrapper', () => {
-  const PageWrapperContainer = () => <h1>Holla</h1>;
+  const PageWrapperContainer = () => <h1>Hola</h1>;
   const PageWrapperHOC = WithPageWrapper(PageWrapperContainer);
   shouldMatchSnapshot(
     `should render correctly`,

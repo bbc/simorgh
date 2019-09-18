@@ -1,6 +1,6 @@
 import React from 'react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import Metadata from './index';
-import { shouldShallowMatchSnapshot } from '#testHelpers';
 
 const iconSizes = {
   'apple-touch-icon': [
@@ -75,7 +75,7 @@ const metadataSnapshotTest = (
       showArticleTags,
     };
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
       <Metadata {...metadataProps} iconSizes={iconSizes} />,
     );
