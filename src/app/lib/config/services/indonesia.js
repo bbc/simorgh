@@ -77,7 +77,7 @@ const service = {
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Kami melakukan sejumlah perubahan penting terkait Kebijakan Privasi dan Cookies dan kami ingin memberitahu Anda, apa arti langkah ini bagi Anda dan data Anda.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -98,10 +98,10 @@ const service = {
           title: 'Tolong beritahu kami apakah Anda setuju dengan cookies',
           description: {
             uk: {
-              first: 'We use ',
+              first: 'Kami menggunakan ',
               linkText: 'cookies',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -158,6 +158,10 @@ const service = {
         {
           href: 'https://www.bbc.com/indonesia/institutional-37818427',
           text: 'Hubungi BBC',
+        },
+        {
+          href: 'https://www.bbc.com/indonesia/institutional-37818424',
+          text: 'Mengenai BBC',
         },
       ],
       copyrightText:
