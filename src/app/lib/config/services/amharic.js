@@ -11,7 +11,7 @@ const service = {
   default: {
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnewsamharic`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'ተሻሽሏል ',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
     brandName: 'BBC News አማርኛ',
@@ -19,12 +19,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png',
     defaultImageAltText: 'BBC News አማርኛ',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', ውጫዊ',
+    imageCaptionOffscreenText: 'የምስሉ መግለጫ',
+    videoCaptionOffscreenText: 'የተንቀሳቃሹ ምስል መግለጫ',
+    audioCaptionOffscreenText: 'የድምፅ መግለጫ',
+    defaultCaptionOffscreenText: 'መግለጫ, ',
+    imageCopyrightOffscreenText: 'የፎቶው ባለመብት, ',
     locale: `am-ET`,
     datetimeLocale: 'am-et',
     service: 'amharic',
@@ -39,10 +39,11 @@ const service = {
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
     translations: {
+      seeAll: 'ሁሉንም ይመልከቱ',
       home: 'ዜና',
-      currentPage: 'Current page',
+      currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
-      relatedContent: 'Related content',
+      relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       error: {
         404: {
           statusCode: '404',
@@ -54,7 +55,7 @@ const service = {
             'የቢቢሲን መፈለጊያ ቁልፍ በመጠቀም ይፈልጉ',
           ],
           callToActionFirst: 'እንደ አማራጭም እባክዎ ገፃችን ላይ የሚገኘውን ',
-          callToActionLinkText: '[BBC ድረገፅ ይጎብኙ]',
+          callToActionLinkText: 'BBC News አማርኛ ድረገፅ ይጎብኙ',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },
@@ -64,7 +65,7 @@ const service = {
           message: 'የሚፈልጉትን ገፅ ማምጣት ባለመቻላችን እናዝናለን። እባክዎ እንደገና ይሞክሩ',
           solutions: ['በገፅዎ ላይ ያለውን ሪፍሬሽ የሚለውን ቁልፍ ይጫኑ', 'እንደገና ይመለሱ'],
           callToActionFirst: 'እንደ አማራጭም እባክዎ ገፃችን ላይ የሚገኘውን ',
-          callToActionLinkText: '[BBC ድረገፅ ይጎብ]',
+          callToActionLinkText: 'BBC News አማርኛ ድረገፅ ይጎብኙ',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },
@@ -120,8 +121,8 @@ const service = {
       },
       media: {
         audio: 'ድምጽ',
-        photogallery: 'የምስል ቋት',
-        video: 'ተንቀሳቃሽ ምስል',
+        photogallery: 'የፎቶ መድብሎች',
+        video: 'ቪዲዮ',
       },
     },
     brandSVG,
@@ -132,7 +133,7 @@ const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ፡፡',
+        text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [
         {
@@ -156,7 +157,7 @@ const service = {
           text: 'ቢቢሲን ያግኙ',
         },
       ],
-      copyrightText: 'BBC፡፡ ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም፡፡',
+      copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
     },
     fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [
