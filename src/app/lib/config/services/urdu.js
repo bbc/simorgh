@@ -146,20 +146,25 @@ const service = {
           text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/urdu/institutional-37588278',
           text: 'استعمال کے ضوابط',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/urdu/institutional-37588282',
           text: 'پرائیویسی پالیسی',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/urdu/institutional-37588285',
           text: 'بی بی سی سے رابطہ کریں',
+        },
+        {
+          href: 'https://www.bbc.com/urdu/institutional-37588280',
+          text: 'بی بی سی کے بارے میں',
         },
       ],
       copyrightText:
