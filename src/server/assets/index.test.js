@@ -79,9 +79,9 @@ describe('getAssetsArray', () => {
 
     it('should return the asset origins as an array', async () => {
       const defaultOrigins = [
-        'https://ichef.bbci.co.uk',
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://ichef.bbci.co.uk',
       ];
       process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
         'http://some.statichost.net';
