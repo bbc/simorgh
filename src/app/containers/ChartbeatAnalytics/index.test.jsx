@@ -13,6 +13,11 @@ import { localBaseUrl } from '../../../testHelpers/config';
 import frontPageData from '../../../../data/news/frontpage';
 
 const defaultToggleState = {
+  local: {
+    chartbeatAnalytics: {
+      enabled: false,
+    },
+  },
   test: {
     chartbeatAnalytics: {
       enabled: true,
