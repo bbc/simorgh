@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `fr`,
     articleAuthor: `https://facebook.com/bbcnewsafrique`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Mise à jour ',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     brandName: 'BBC News Afrique',
@@ -16,10 +16,10 @@ const service = {
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
     externalLinkText: ', lien externe',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
+    imageCaptionOffscreenText: 'Légende image, ',
+    videoCaptionOffscreenText: 'Légende vidéo, ',
+    audioCaptionOffscreenText: 'Légende audio, ',
+    defaultCaptionOffscreenText: 'Légende, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `fr`,
     datetimeLocale: `fr`,
@@ -37,35 +37,36 @@ const service = {
     translations: {
       seeAll: 'Tout voir',
       home: 'Accueil',
-      currentPage: 'Current page',
+      currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
-      relatedContent: 'Related content',
+      relatedContent: 'Lire plus',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Page non trouvée',
+          title: 'La page ne peut pas être trouvée',
           message:
-            "Vous avez peut-être mal entré l'adresse internet. Veuillez vérifier l'adresse.",
+            "Désolé, nous ne pouvons pas afficher la page que vous cherchez. Essayez s'il vous plaît :",
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            "Double vérification de l'url",
+            "Cliquez sur le bouton d'actualisation de votre navigateur",
+            "Recherche de cette page à l'aide de la barre de recherche de la BBC",
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: "Page d'accueil BBC",
+          callToActionFirst: 'Vous pouvez également consulter le site Web de ',
+          callToActionLinkText: 'BBC News Afrique',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/afrique',
         },
         500: {
           statusCode: '500',
-          title: '500 - Erreur',
-          message: "Une erreur s'est produite. Veuillez rafraichir la page.",
+          title: 'Erreur interne du serveur',
+          message:
+            "Désolé, nous sommes actuellement dans l'impossibilité d'afficher la page que vous recherchez. Essayez s'il vous plaît :",
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            "Cliquez sur le bouton d'actualisation de votre navigateur",
+            'Revenir plus tard',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: "Page d'accueil BBC",
+          callToActionFirst: 'Vous pouvez également consulter le site Web de ',
+          callToActionLinkText: 'BBC News Afrique',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/afrique',
         },
@@ -123,8 +124,8 @@ const service = {
       },
       media: {
         audio: 'Audio',
-        photogallery: 'En images',
-        video: 'Video',
+        photogallery: 'Galerie de photos',
+        video: 'Vidéo',
         bbc_afrique_radio: {
           title: 'BBC Afrique Radio',
           subtitle: 'Infos, musique et sports',
@@ -144,20 +145,20 @@ const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
         {
           href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          text: 'Pourquoi vous pouvez faire confiance à BBC News',
         },
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: "Conditions d'utilisation",
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'Politique de confidentialité',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -165,11 +166,11 @@ const service = {
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'Contactez la BBC',
         },
       ],
       copyrightText:
-        "BBC. La BBC n'est pas responsable du contenu de sites externes",
+        "BBC. La BBC n'est pas responsable du contenu des sites externes.",
     },
     fonts: [],
     timezone: 'Europe/London',
