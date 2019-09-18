@@ -3,5 +3,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import Unknown from '.';
 
 describe('MediaPageBlocks Unknown', () => {
-  shouldMatchSnapshot('should render correctly', <Unknown blockType="foobar"/>);
+  shouldMatchSnapshot(
+    'should render correctly',
+    <Unknown blockType="foobar" />,
+  );
 });
