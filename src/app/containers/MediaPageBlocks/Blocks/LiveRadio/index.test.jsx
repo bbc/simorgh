@@ -4,7 +4,7 @@ import { RequestContext } from '../../../../contexts/RequestContext';
 import { suppressPropWarnings } from '../../../../../testHelpers';
 import LiveRadio from '.';
 
-describe('MediaPageBlocks Heading', () => {
+describe('MediaPageBlocks LiveRadio', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
     <RequestContext.Provider value={{ platform: 'canonical' }}>
@@ -39,7 +39,7 @@ describe('MediaPageBlocks Heading', () => {
   });
 
   describe('when id isnt provided', () => {
-    suppressPropWarnings(['text', 'undefined']);
+    suppressPropWarnings(['id', 'undefined']);
 
     isNull(
       'should render null',
@@ -50,7 +50,7 @@ describe('MediaPageBlocks Heading', () => {
   });
 
   describe('when externalId isnt provided', () => {
-    suppressPropWarnings(['text', 'undefined']);
+    suppressPropWarnings(['externalId', 'undefined']);
 
     isNull(
       'should render null',

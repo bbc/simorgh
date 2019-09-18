@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPageBlocks Heading should render correctly for amp 1`] = `
+exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
 .c0 {
   padding-top: 56.25%;
   position: relative;
@@ -38,7 +38,7 @@ exports[`MediaPageBlocks Heading should render correctly for amp 1`] = `
 </html>
 `;
 
-exports[`MediaPageBlocks Heading should render correctly for canonical 1`] = `
+exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 .c1 {
   position: absolute;
   top: 0;
