@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import WithContexts from './withContexts';
 import getOriginContext from '../../contexts/RequestContext/getOriginContext';
 import getStatsDestination from '../../contexts/RequestContext/getStatsDestination';
@@ -41,7 +41,7 @@ describe('withContexts HOC', () => {
     data: { status: 200 },
   };
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     `should return all context providers`,
     <ContextsHOC {...props} />,
   );
