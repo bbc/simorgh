@@ -45,7 +45,7 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - ページが見つかりません',
+          title: 'ページが見つかりません',
           message:
             'お探しのページが見つかりません。こちらを開いてみてください:',
           solutions: [
@@ -60,8 +60,9 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: '500 - 内部サーバーエラー',
-          message: 'エラーが起きました。ページを読み込み直してください',
+          title: '内部サーバーエラー',
+          message:
+            '申し訳ありません。お探しのページは現在開くことができません。こちらをお試しください:',
           solutions: ['ブラウザのページ更新ボタンを押す', '後でまた開く'],
           callToActionFirst: 'あるいは ',
           callToActionLinkText: 'BBCニュース　ホームページ',
@@ -71,49 +72,49 @@ const service = {
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: '個人情報とクッキーの方針を更新しました',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                '本サイトの個人情報とクッキーに関する方針に重要な変更を加えました。これがあなたとあなたの情報にどう関わるか、こちらで説明します。',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                '本サイトの個人情報とクッキーに関する方針に重要な変更を加えました。これがあなたとあなたの情報にどう関わるか、こちらで説明します。',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
           accept: 'OK',
-          reject: "Find out what's changed",
+          reject: '変更点を見る',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'クッキー使用に同意するか教えてください',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: '本サイトでは最高のオンライン体験をご提供するため ',
+              linkText: 'クッキー',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' を使用しています。すべてのクッキー使用に同意するか教えてください。',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: '本サイトおよび提携サイトは ',
+              linkText: 'クッキー',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ' などの技術を使用し、あなたに最高のオンライン体験をご提供するためネット閲覧データを集め、あなたにあつらえてパーソナライズしたコンテンツや広告を表示します。これに同意するかお知らせください。',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'はい、同意します',
+          reject: 'いいえ、設定ページを開いてください',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
@@ -140,19 +141,23 @@ const service = {
           text: 'BBCが信頼できる理由',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/japanese/help/terms',
           text: '利用条件',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbcworldnews-japan.com/about_us/',
+          text: 'BBCについて',
+        },
+        {
+          href: 'https://www.bbc.com/japanese/help/privacy',
           text: '個人情報取り扱い方針',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
           text: 'クッキー',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.co.uk/contact',
           text: 'BBCに連絡する',
         },
       ],
@@ -166,12 +171,37 @@ const service = {
         url: '/japanese',
       },
       {
-        title: '読み物・解説',
-        url: '/japanese/features_and_analysis',
+        title: 'ラグビーW杯',
+        url:
+          'https://www.bbc.com/japanese/topics/ef55ff8e-8d36-4473-9f11-3ba9fa9ac787',
+      },
+      {
+        title: '日本',
+        url:
+          'https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b',
+      },
+      {
+        title: 'アジア',
+        url:
+          'https://www.bbc.com/japanese/topics/ba90754a-9033-4e9c-990b-d1139e5070a3',
+      },
+      {
+        title: 'イギリス',
+        url:
+          'https://www.bbc.com/japanese/topics/2e91364c-5c77-4660-b76e-d76202785e64',
+      },
+      {
+        title: 'アメリカ',
+        url:
+          'https://www.bbc.com/japanese/topics/82857f8e-8134-462a-bb32-b7b14f4eab75',
+      },
+      {
+        title: '解説・読み物',
+        url: 'https://www.bbc.com/japanese/features_and_analysis',
       },
       {
         title: 'ビデオ',
-        url: '/japanese/video',
+        url: 'https://www.bbc.com/japanese/video',
       },
       {
         title: 'ワールドニュースTV',
