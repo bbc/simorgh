@@ -33,6 +33,7 @@ import pidgin from './pidgin';
 import portuguese from './portuguese';
 import punjabi from './punjabi';
 import russian from './russian';
+import scotland from './scotland';
 import serbian from './serbian';
 import sinhala from './sinhala';
 import somali from './somali';
@@ -79,6 +80,7 @@ export default {
   portuguese,
   punjabi,
   russian,
+  scotland,
   serbian,
   sinhala,
   somali,
