@@ -39,6 +39,7 @@ describe('FrontPageAtiParams', () => {
     pageType: 'frontPage',
     pathname: '/pathname',
     service: 'SERVICE',
+    statusCode: 200,
   };
   const serviceContextStub = {
     atiAnalyticsAppName: 'news-SERVICE',

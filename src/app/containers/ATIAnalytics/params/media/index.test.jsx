@@ -21,6 +21,7 @@ describe('MediaAtiParams', () => {
     pageType: 'media',
     pathname: '/pathname',
     service: 'SERVICE',
+    statusCode: 200,
   };
   const serviceContextStub = {
     atiAnalyticsAppName: 'news-SERVICE',

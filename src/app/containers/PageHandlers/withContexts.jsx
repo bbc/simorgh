@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, element, string } from 'prop-types';
+import { bool, element, string, shape, number } from 'prop-types';
 import variantPropType from '../../models/propTypes/variants';
 
 // context providers
@@ -13,6 +13,7 @@ const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
       bbcOrigin,
+      data,
       id,
       service,
       isAmp,
@@ -21,6 +22,11 @@ const WithContexts = Component => {
       previousPath,
       variant,
     } = props;
+
+    // Temp fix. This destructuring will become redundant
+    // following https://github.com/bbc/simorgh/issues/3839
+    const { status } = data;
+
     return (
       <ToggleContextProvider>
         <ServiceContextProvider service={service} variant={variant}>
@@ -30,6 +36,7 @@ const WithContexts = Component => {
             isAmp={isAmp}
             pageType={pageType}
             service={service}
+            statusCode={status}
             pathname={pathname}
             previousPath={previousPath}
             variant={variant}
@@ -47,6 +54,9 @@ const WithContexts = Component => {
 
   WithContextsContainer.propTypes = {
     bbcOrigin: string,
+    data: shape({
+      status: number.isRequired,
+    }).isRequired,
     id: string,
     isAmp: bool.isRequired,
     pageType: string.isRequired,
