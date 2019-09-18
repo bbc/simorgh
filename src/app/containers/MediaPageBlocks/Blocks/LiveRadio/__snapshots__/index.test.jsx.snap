@@ -2,7 +2,7 @@
 
 exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
 .c0 {
-  height: 165px;
+  padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
@@ -50,7 +50,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 }
 
 .c0 {
-  height: 165px;
+  padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }

@@ -23,7 +23,7 @@ exports[`Media Page Blocks should match snapshot 1`] = `
 }
 
 .c2 {
-  height: 165px;
+  padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
