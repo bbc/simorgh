@@ -78,7 +78,7 @@ const service = {
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                "Imaammata mateenyaafi kuus-yaadannoo keenyaarratti jijjirama barbaachisaa muraasa kan taasifne yoo ta'u, kunis siifi daataa keetiif maal jechu akka ta'e akka bartu barbaadna.",
               linkText: null,
               last: null,
               linkUrl: null,
@@ -99,18 +99,18 @@ const service = {
           title: 'Kuus-yaadannoo waliin waliigalu kee haa beeknu',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'Kan nuti ',
+              linkText: 'kuus-yaadannoo fayyadamnu',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'Kan nuti ',
+              first: 'Nutiifi michuuwwan keenya tekinikoota kan akka ',
               linkText: 'kuus-yaadannoo',
               last:
-                ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
+                ", akkasumas muuxannoo toora interneetaa hunda caaluufi qabiyyee isaa akka fedha dhuunfaatti ta'u gochuu akkasumallee beekssisni sitti akka mul'atuuf daataa  ittiin barbaadan walitti qaba. Yoo itti walii galta ta'e nu beeksisi maaloo.",
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
