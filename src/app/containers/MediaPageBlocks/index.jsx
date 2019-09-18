@@ -15,7 +15,7 @@ const blockMap = {
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
-const MediaPageMain = ({ blocks }) => {
+const MediaPageBlocks = ({ blocks }) => {
   if (!blocks || !blocks.length) return null;
 
   return blocks.map((props, index) => {
@@ -32,8 +32,6 @@ const MediaPageMain = ({ blocks }) => {
           ...props,
           idAttr,
           key: uuid,
-          script,
-          service,
           blockType,
         }}
       />
@@ -41,7 +39,7 @@ const MediaPageMain = ({ blocks }) => {
   });
 };
 
-MediaPageMain.propTypes = {
+MediaPageBlocks.propTypes = {
   blocks: arrayOf(
     shape({
       uuid: string,
@@ -53,4 +51,4 @@ MediaPageMain.propTypes = {
   ).isRequired,
 };
 
-export default MediaPageMain;
+export default MediaPageBlocks;

@@ -9,6 +9,8 @@ import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks
 
 jest.mock('../Metadata', () => () => <div id="metadata" />);
 
+jest.mock('../MediaPageBlocks', () => props => <div id="blocks" {...props} />);
+
 const pageData = addIdsToBlocks(amharicPageData);
 
 describe('Media Page Main', () => {
