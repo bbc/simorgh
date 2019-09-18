@@ -1,5 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { string, bool } from 'prop-types';
 import DocumentComponent from './component';
 
 describe('Document Component', () => {
@@ -35,34 +36,33 @@ describe('Document Component', () => {
   );
   const styleTagsAmp = <style amp-custom="">{'html { color: red; }'}</style>;
 
-  const testDocumentComponent = ({ service, isAmp, testName }) =>
-    shouldMatchSnapshot(
-      testName,
-      <DocumentComponent
-        assets={assets}
-        assetOrigins={assetOrigins}
-        app={'<h1>App!</h1>'}
-        data={{ ...data }}
-        helmet={helmet}
-        styleTags={isAmp ? styleTagsAmp : styleTags}
-        service={service}
-        isAmp={isAmp}
-      />,
-    );
-
-  expect(
-    testDocumentComponent({
-      service: 'news',
-      isAmp: false,
-      testName: 'should render correctly',
-    }),
+  const testDocumentComponent = ({ service, isAmp }) => (
+    <DocumentComponent
+      assets={assets}
+      assetOrigins={assetOrigins}
+      app={'<h1>App!</h1>'}
+      data={{ ...data }}
+      helmet={helmet}
+      styleTags={isAmp ? styleTagsAmp : styleTags}
+      service={service}
+      isAmp={isAmp}
+    />
   );
 
-  expect(
-    testDocumentComponent({
-      service: 'news',
-      isAmp: true,
-      testName: 'should render AMP version correctly',
-    }),
+  testDocumentComponent.propTypes = {
+    service: string.isRequired,
+    isAmp: bool.isRequired,
+  };
+
+  describe('', () => {
+    shouldMatchSnapshot(
+      'should render correctly',
+      testDocumentComponent('news', false),
+    );
+  });
+
+  shouldMatchSnapshot(
+    'should render AMP version correctly',
+    testDocumentComponent('news', true),
   );
 });
