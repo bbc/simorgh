@@ -1,5 +1,6 @@
 import React from 'react';
-import FooterContainer from './index';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import FooterContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { shouldMatchSnapshot } from '#testHelpers';
 
@@ -35,6 +36,10 @@ const contextStub = {
       height: 24,
       width: 167.95,
     },
+  },
+  theming: {
+    brandBackgroundColour: `${C_POSTBOX}`,
+    brandLogoColour: `${C_WHITE}`,
   },
 };
 

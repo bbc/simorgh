@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { pashto as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
@@ -40,6 +40,10 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'کور پاڼه',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See all',
       home: 'کور پاڼه',
