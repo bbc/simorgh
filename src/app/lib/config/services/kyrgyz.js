@@ -44,7 +44,7 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: 'Баракча табылган жок',
+          title: '404 - Баракча табылган жок',
           message:
             'Бул веб-даректи туура эмес тергенден келип чыгышы мүмкүн. Даректи жана анын жазылышын текшерип көрүңүз.',
           solutions: [
@@ -59,7 +59,7 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: 'Ката',
+          title: '500 - Ички сервердеги ката',
           message: 'Ката келип чыкты. Бетти жаңылап көрүңүз.',
           solutions: [
             'Hitting the refresh button in your browser',
