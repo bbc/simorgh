@@ -9,13 +9,12 @@ import { UserContext } from '../../contexts/UserContext';
 import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';
-import { localBaseUrl } from '../../../testHelpers/config';
 import frontPageData from '../../../../data/news/frontpage';
 
 const defaultToggleState = {
   local: {
     chartbeatAnalytics: {
-      enabled: true,
+      enabled: false,
     },
   },
   test: {
@@ -134,7 +133,7 @@ describe('Charbeats Analytics Container', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on local', () => {
+  it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on test', () => {
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
     amp.default = mockAmp;
 
@@ -158,7 +157,7 @@ describe('Charbeats Analytics Container', () => {
       <ContextWrap
         platform="canonical"
         pageType="article"
-        origin={localBaseUrl}
+        origin="test.bbc.com"
       >
         <ChartbeatAnalytics data={frontPageData} />
       </ContextWrap>,
