@@ -1,54 +1,58 @@
 import React from 'react';
 import { string, node } from 'prop-types';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
 import {
   articleDataNews,
   articleDataPersian,
   articleDataPidgin,
 } from '../Article/fixtureData';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
 const Context = ({ service, children }) => (
-  <ToggleContextProvider>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      pathname="/pathname"
-      service={service}
-    >
-      {children}
-    </RequestContextProvider>
-  </ToggleContextProvider>
+  <ServiceContextProvider service="news">
+    <ToggleContextProvider>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="article"
+        service={service}
+        pathname="/pathname"
+      >
+        {children}
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </ServiceContextProvider>
 );
+
 Context.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
 };
 
 describe('ArticleMain', () => {
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a news article correctly',
     <Context service="news">
       <ArticleMain articleData={articleDataNews} />
     </Context>,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a persian article correctly',
     <Context service="persian">
       <ArticleMain articleData={articleDataPersian} />
     </Context>,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a pidgin article correctly (with navigation)',
     <Context service="pidgin">
       <ArticleMain articleData={articleDataPidgin} />
