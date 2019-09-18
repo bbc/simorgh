@@ -1,13 +1,13 @@
 const toggles = {
   local: {
     chartbeatAnalytics: {
-      enabled: true,
+      enabled: false,
     },
     mediaPlayer: {
       enabled: true,
     },
     mpulse: {
-      enabled: true,
+      enabled: false,
     },
     navOnArticles: {
       enabled: true,

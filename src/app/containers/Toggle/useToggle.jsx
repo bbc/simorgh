@@ -5,7 +5,7 @@ import { ToggleContext } from '../../contexts/ToggleContext';
 
 // This is temporary until we are fetching toggles from a remote endpoint
 const envMapping = {
-  local: 'test',
+  local: 'local',
   test: 'test',
   live: 'live',
 };
