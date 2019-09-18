@@ -1,5 +1,5 @@
 import baseUrl from '../utils/getBaseUrl';
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import fetchData from '../utils/fetchData';
 
 const mockApplyTimestampRules = jest.fn();
@@ -7,17 +7,17 @@ const mockAddIdsToBlocks = jest.fn();
 const mockApplyBlockPositioning = jest.fn();
 
 jest.mock(
-  '../../../lib/utilities/preprocessor/rules/timestamp',
+  '#lib/utilities/preprocessor/rules/timestamp',
   () => mockApplyTimestampRules,
 );
 
 jest.mock(
-  '../../../lib/utilities/preprocessor/rules/addIdsToBlocks',
+  '#lib/utilities/preprocessor/rules/addIdsToBlocks',
   () => mockAddIdsToBlocks,
 );
 
 jest.mock(
-  '../../../lib/utilities/preprocessor/rules/blockPositioning',
+  '#lib/utilities/preprocessor/rules/blockPositioning',
   () => mockApplyBlockPositioning,
 );
 
@@ -34,7 +34,7 @@ jest.mock('../utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
 let onClientMockResponse = true;
-jest.mock('../../../lib/utilities/onClient', () => jest.fn());
+jest.mock('#lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockResponse);
 
 const fetchDataMockResponse = {

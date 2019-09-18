@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import BrandContainer from '../Brand';
 import NavigationContainer from '../Navigation';
-import { RequestContext } from '../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 import ConsentBanner from '../ConsentBanner';
 import useToggle from '../Toggle/useToggle';
 

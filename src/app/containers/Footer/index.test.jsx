@@ -1,8 +1,8 @@
 import React from 'react';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import FooterContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { shouldMatchSnapshot } from '#testHelpers';
 
 const RealDate = Date;
 
