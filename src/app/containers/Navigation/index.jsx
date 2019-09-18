@@ -6,7 +6,7 @@ import Navigation, {
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const NavigationContainer = () => {
-  const { script, translations, navigation, service } = useContext(
+  const { dir, navigation, script, service, translations } = useContext(
     ServiceContext,
   );
   const { currentPage, skipLinkText } = translations;
@@ -16,7 +16,12 @@ const NavigationContainer = () => {
   }
 
   return (
-    <Navigation script={script} skipLinkText={skipLinkText} service={service}>
+    <Navigation
+      dir={dir}
+      script={script}
+      skipLinkText={skipLinkText}
+      service={service}
+    >
       <NavigationUl>
         {navigation.map((item, index) => {
           const { title, url } = item;

@@ -32,6 +32,7 @@ import pidgin from '../app/lib/config/services/pidgin';
 import portuguese from '../app/lib/config/services/portuguese';
 import punjabi from '../app/lib/config/services/punjabi';
 import russian from '../app/lib/config/services/russian';
+import scotland from '../app/lib/config/services/scotland';
 import serbian from '../app/lib/config/services/serbian';
 import sinhala from '../app/lib/config/services/sinhala';
 import somali from '../app/lib/config/services/somali';
@@ -78,6 +79,7 @@ export default {
   portuguese,
   punjabi,
   russian,
+  scotland,
   serbian,
   sinhala,
   somali,

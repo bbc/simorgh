@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
@@ -39,6 +39,10 @@ const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See all',
       home: 'মূলপাতা',
