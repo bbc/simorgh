@@ -1,6 +1,6 @@
 import filterUnknownContentTypes from './filterContentType';
-import azeriFixtureData from '../../../../../../data/azeri/frontpage/index.json';
-import igboFixtureData from '../../../../../../data/igbo/frontpage/index.json';
+import azeriFixtureData from '#data/azeri/frontpage/index.json';
+import igboFixtureData from '#data/igbo/frontpage/index.json';
 
 /*
  * CPS types

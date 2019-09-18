@@ -1,11 +1,11 @@
-import { textBlock as modelTextBlock } from '../../../src/app/models/blocks';
+import { textBlock as modelTextBlock } from '#models/blocks';
 
 global.console.log = jest.fn(); // silence console.log during jest tests
 global.console.time = jest.fn(); // silence console.time during jest tests
 
 const validateNode = require('./validateNode');
 const { getAllSchemas } = require('../interpretSchema/getAllSchemas');
-const data = require('../../../data/news/articles/c0000000001o.json');
+const data = require('#data/news/articles/c0000000001o.json');
 
 const schemas = getAllSchemas();
 const { article } = schemas;
