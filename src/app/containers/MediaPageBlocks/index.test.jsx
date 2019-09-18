@@ -2,10 +2,10 @@ import React from 'react';
 import path from 'ramda/src/path';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import MediaPageBlocks from '.';
-import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
+import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
 
 const pageData = addIdsToBlocks(amharicPageData);

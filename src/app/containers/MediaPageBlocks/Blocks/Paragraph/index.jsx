@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import ParagraphComponent from '@bbc/psammead-paragraph';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const ParagraphContainer = ({ idAttr, text }) => {
   const { script, service } = useContext(ServiceContext);

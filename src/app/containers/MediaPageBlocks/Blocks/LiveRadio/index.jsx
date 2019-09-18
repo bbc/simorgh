@@ -4,7 +4,7 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
-import { RequestContext } from '../../../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform } = useContext(RequestContext);

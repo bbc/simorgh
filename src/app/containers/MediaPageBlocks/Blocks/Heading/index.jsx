@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const HeadingContainer = ({ idAttr, text }) => {
   const { script, service } = useContext(ServiceContext);

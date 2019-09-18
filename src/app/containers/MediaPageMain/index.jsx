@@ -3,7 +3,7 @@ import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
-import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MediaPageBlocks from '../MediaPageBlocks';
 
 const MediaPageMain = ({ pageData }) => {

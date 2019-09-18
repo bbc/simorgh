@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
-import { RequestContext } from '../../../../contexts/RequestContext';
-import { suppressPropWarnings } from '../../../../../testHelpers';
+import { RequestContext } from '#contexts/RequestContext';
+import { suppressPropWarnings } from '#testHelpers';
 import LiveRadio from '.';
 
 describe('MediaPageBlocks LiveRadio', () => {
