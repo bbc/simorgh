@@ -47,6 +47,7 @@ const getContainer = ({
         pageType={pageType}
         pathname={pathname}
         service={service}
+        statusCode={200}
       >
         <MetadataContainer {...articleDataNews} {...data} />
       </RequestContextProvider>
