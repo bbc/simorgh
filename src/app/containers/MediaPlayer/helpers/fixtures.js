@@ -1,4 +1,4 @@
-import { singleTextBlock } from '../../../models/blocks';
+import { singleTextBlock } from '#models/blocks';
 
 const captionBlock = {
   model: {

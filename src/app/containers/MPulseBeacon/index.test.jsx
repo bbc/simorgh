@@ -2,20 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import useToggle from '../Toggle/useToggle';
-import { loggerMock, isNull } from '../../../testHelpers';
+import { loggerMock, isNull } from '#testHelpers';
 import MPulseBeaconContainer from './index';
-import onClient from '../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import boomr from './boomr';
-import { UserContext } from '../../contexts/UserContext';
-import { RequestContext } from '../../contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { UserContext } from '#contexts/UserContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 let container;
 const useToggleMock = enabled => ({ enabled });
 
 jest.mock('./boomr', () => jest.fn());
 jest.mock('../Toggle/useToggle', () => jest.fn());
-jest.mock('../../lib/utilities/onClient', () => jest.fn());
+jest.mock('#lib/utilities/onClient', () => jest.fn());
 
 let serviceContextMock;
 let requestContextMock;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MediaPage from '.';
-import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
+import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 
 const liveRadioScaffoldProps = {
   isAmp: false,
