@@ -6,11 +6,11 @@ import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
-import groupShape from '../../models/propTypes/frontPageGroup';
-import { storyItem } from '../../models/propTypes/storyItem';
-import idSanitiser from '../../lib/utilities/idSanitiser';
+import groupShape from '#models/propTypes/frontPageGroup';
+import { storyItem } from '#models/propTypes/storyItem';
+import idSanitiser from '#lib/utilities/idSanitiser';
 
 const TopMargin = styled.div`
   margin-top: ${GEL_SPACING};
