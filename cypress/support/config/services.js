@@ -869,9 +869,7 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' ||
-          Cypress.env('APP_ENV') === 'test' ||
-          Cypress.env('APP_ENV') === 'local'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/persian/bbc_persian_radio/liveradio',
         smoke: false,
