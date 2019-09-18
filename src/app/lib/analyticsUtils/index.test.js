@@ -74,6 +74,16 @@ describe('getDestination', () => {
       summary: 'should return for test WS',
     },
     {
+      statsDestination: 'DEFAULT',
+      expected: 596068,
+      summary: 'should return for live Scotland',
+    },
+    {
+      statsDestination: 'DEFAULT_TEST',
+      expected: 596068,
+      summary: 'should return for test Scotland',
+    },
+    {
       statsDestination: undefined,
       expected: 598285,
       summary: 'should return for live uk statsDestination is undefined',

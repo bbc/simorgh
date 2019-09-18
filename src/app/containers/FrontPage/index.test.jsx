@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import FrontPageContainer from './index';
-import igboConfig from '../../lib/config/services/igbo';
-import igboData from '../../../../data/igbo/frontpage';
+import igboConfig from '#lib/config/services/igbo';
+import igboData from '#data/igbo/frontpage';
 import toggleReducer from '../../reducers/ToggleReducer';
-import defaultToggles from '../../lib/config/toggles';
+import defaultToggles from '#lib/config/toggles';
 
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();

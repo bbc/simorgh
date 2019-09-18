@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from '.';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContext } from '../../../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { buildArticleATIUrl } from './buildParams';
 
 jest.mock('./buildParams', () => {

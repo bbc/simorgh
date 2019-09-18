@@ -14,6 +14,8 @@ export const getDestination = statsDestination => {
     NEWS_GNL_TEST: 598288,
     WS_NEWS_LANGUAGES: 598342,
     WS_NEWS_LANGUAGES_TEST: 598343,
+    DEFAULT: 596068,
+    DEFAULT_TEST: 596068,
   };
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;

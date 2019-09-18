@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
-import { RequestContext } from '../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
-import { EventContext } from '../../contexts/EventContext';
+import { EventContext } from '#contexts/EventContext';
 import { buildATIClickParams } from '../ATIAnalytics/params';
 import { sendEventBeacon, sendViewBeacon } from '../ATIAnalytics/beacon';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const ConsentBanner = props => {
   const requestContext = useContext(RequestContext);

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContext } from '../../../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { buildFrontPageATIUrl } from './buildParams';
 import FrontPageAtiParams from '.';
 

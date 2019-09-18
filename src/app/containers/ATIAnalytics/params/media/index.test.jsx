@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContext } from '../../../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { buildMediaATIUrl } from './buildParams';
 
 import MediaAtiParams from '.';
-import fixture from '../../../../../../data/indonesia/bbc_indonesian_radio/liveradio.json';
+import fixture from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 
 jest.mock('./buildParams', () => {
   const buildParams = jest.requireActual('./buildParams');

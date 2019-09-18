@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import renderer from 'react-test-renderer';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { EventContext } from '../../contexts/EventContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { EventContext } from '#contexts/EventContext';
 import { buildATIClickParams } from '../ATIAnalytics/params';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);
