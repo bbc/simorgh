@@ -1,7 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
@@ -161,7 +161,7 @@ const service = {
         'BBC. El contenido de las páginas externas no es responsabilidad de la BBC.',
     },
     fonts: [],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'Noticias',

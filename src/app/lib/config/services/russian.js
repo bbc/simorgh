@@ -1,7 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
@@ -171,7 +171,7 @@ const service = {
         'Би-би-си. Би-би-си не несет ответственности за содержание других сайтов.',
     },
     fonts: [],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'Главная',

@@ -1,7 +1,7 @@
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
@@ -156,7 +156,7 @@ const baseServiceConfig = {
     copyrightText: 'BBC。BBC不为BBC以外的网站的内容负责',
   },
   fonts: [],
-  timezone: 'Europe/London',
+  timezone: 'GMT',
   navigation: [
     {
       title: '主页',
