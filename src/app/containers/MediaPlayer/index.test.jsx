@@ -7,6 +7,11 @@ import { ToggleContext } from '../../contexts/ToggleContext';
 import { validVideoFixture, missingVpidFixture } from './helpers/fixtures';
 
 const defaultToggles = {
+  local: {
+    mediaPlayer: {
+      enabled: true,
+    },
+  },
   test: {
     mediaPlayer: {
       enabled: true,
@@ -24,6 +29,7 @@ const ContextWrapper = ({ platform, children, toggleState }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     service="news"
+    statusCode={200}
     platform={platform}
     id="foo"
     pageType="article"
@@ -80,7 +86,7 @@ describe('MediaPlayer', () => {
     );
 
     const toggleState = {
-      test: {
+      local: {
         mediaPlayer: {
           enabled: false,
         },
