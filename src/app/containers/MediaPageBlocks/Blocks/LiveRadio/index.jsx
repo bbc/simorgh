@@ -22,6 +22,7 @@ const HeadingContainer = ({ uuid, idAttr, externalId, id }) => {
       showPlaceholder={false}
       src={`/ws/av-embeds/media/${externalId}/${id}`}
       id={idAttr}
+      skin="audio"
     />
   );
 };

@@ -15,6 +15,7 @@ const liveRadioScaffoldProps = {
       pageData: amharicPageData,
     },
   },
+  data: { status: 200 },
 };
 
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {
