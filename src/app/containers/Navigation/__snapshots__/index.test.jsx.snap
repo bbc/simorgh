@@ -2,6 +2,7 @@
 
 exports[`Navigation Container snapshots should render a Navigation with igbo links correctly 1`] = `
 <Navigation
+  dir="ltr"
   script={
     Object {
       "atlas": Object {

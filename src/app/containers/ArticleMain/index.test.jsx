@@ -1,9 +1,9 @@
 import React from 'react';
 import { string, node } from 'prop-types';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { shouldMatchSnapshot } from '#testHelpers';
 import {
   articleDataNews,
   articleDataPersian,

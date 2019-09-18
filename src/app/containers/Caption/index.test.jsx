@@ -3,8 +3,8 @@ import { render } from '@testing-library/react';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CaptionContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { blockContainingText } from '../../models/blocks';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { blockContainingText } from '#models/blocks';
 
 const newsServiceContextStub = {
   imageCaptionOffscreenText: 'Image caption, ',

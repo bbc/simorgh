@@ -17,7 +17,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
   role="text"
 >
   <span
-    class="c0"
+    className="c0"
   >
     AUDIO
     , 
@@ -26,7 +26,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
     An overtyped headline for a media item
   </span>
   <span
-    class="c0"
+    className="c0"
   >
     , 11,06
   </span>
@@ -50,7 +50,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
   role="text"
 >
   <span
-    class="c0"
+    className="c0"
   >
     AUDIO
     , 
@@ -59,7 +59,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for m
     An overtyped headline for a media item
   </span>
   <span
-    class="c0"
+    className="c0"
   >
     , 11,06
   </span>
@@ -83,7 +83,7 @@ exports[`Story Promo Link Contents should render with visually hidden text for p
   role="text"
 >
   <span
-    class="c0"
+    className="c0"
   >
     PHOTOGALLERY
     , 

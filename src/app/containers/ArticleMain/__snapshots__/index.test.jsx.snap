@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArticleMain should render a news article correctly 1`] = `
-.c2 {
+Array [
+  <noscript>
+    <img
+      alt=""
+      height="1px"
+      src="undefineds=598286&s2=64&p=news.articles.c0000000001o.page&r=0x0x24x24&re=1024x768&hl=17x7x9&lng=en-US&x1=[urn:bbc:optimo:c0000000001o]&x2=[responsive]&x3=[news]&x4=[en-gb]&x5=[http://localhost/]&x7=[article]&x9=[Article+Headline+for+SEO]&x11=[2018-01-01T12:01:00.000Z]&x12=[2018-01-01T13:00:00.000Z]&x13=[Royal+Wedding+2018~Duchess+of+Sussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]"
+      style={
+        Object {
+          "position": "absolute",
+        }
+      }
+      width="1px"
+    />
+  </noscript>,
+  .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -176,556 +190,52 @@ exports[`ArticleMain should render a news article correctly 1`] = `
   }
 }
 
-<html
-  dir="ltr"
-  lang="en-gb"
->
-  <head>
-    <title>
-      Article Headline for SEO - BBC News
-    </title>
-    <link
-      href="https://www.test.bbc.com/pathname"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="x-default"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="en"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname"
-      hreflang="en-gb"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
-      rel="amphtml"
-    />
-    <link
-      href="/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="Royal Wedding 2018"
-      name="article:tag"
-    />
-    <meta
-      content="Duchess of Sussex"
-      name="article:tag"
-    />
-    <meta
-      content="Queen Victoria"
-      name="article:tag"
-    />
-    <meta
-      content="BBC News"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News"
-      name="application-name"
-    />
-    <meta
-      content="Article summary."
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      name="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      name="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="Article summary."
-      name="og:description"
-    />
-    <meta
-      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="og:image"
-    />
-    <meta
-      content="BBC News"
-      name="og:image:alt"
-    />
-    <meta
-      content="en_GB"
-      name="og:locale"
-    />
-    <meta
-      content="BBC News"
-      name="og:site_name"
-    />
-    <meta
-      content="Article Headline for SEO - BBC News"
-      name="og:title"
-    />
-    <meta
-      content="article"
-      name="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pathname"
-      name="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="Article summary."
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="Article Headline for SEO - BBC News"
-      name="twitter:title"
-    />
-    <script
-      async="true"
-      type="text/javascript"
+<main
+    role="main"
+  >
+    <div
+      className="c0"
     >
-      
-        (function(){
-          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test.bbc.co.uk","sections":"News, News - ART","uid":50924,"title":"Article Headline for SEO","virtualReferrer":null,"type":"New Article","useCanonical":true,"path":"/"};
-          for (var key in config) {
-            _sf_async_config[key] = config[key];
-          }
-        })();
-      
-    </script>
-    <script
-      async="true"
-      src="//static.chartbeat.com/js/chartbeat.js"
-      type="text/javascript"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
-    </script>
-  </head>
-  <body>
-    <div>
-      <noscript />
-      <main
-        role="main"
+      <div
+        className="c1"
       >
-        <div
-          class="c0"
+        <h1
+          className="c2"
+          id="content"
         >
-          <div
-            class="c1"
-          >
-            <h1
-              class="c2"
-              id="content"
-            >
-              Article Headline
-            </h1>
-          </div>
-          <div
-            class="c3"
-          >
-            <p
-              class="c4"
-            >
-              A paragraph.
-            </p>
-          </div>
-        </div>
-      </main>
+          Article Headline
+        </h1>
+      </div>
+      <div
+        className="c3"
+      >
+        <p
+          className="c4"
+        >
+          A paragraph.
+        </p>
+      </div>
     </div>
-  </body>
-</html>
+  </main>,
+]
 `;
 
 exports[`ArticleMain should render a persian article correctly 1`] = `
-<html
-  dir="ltr"
-  lang="fa"
->
-  <head>
-    <title>
-      سرصفحه مقاله - BBC News
-    </title>
-    <link
-      href="https://www.test.bbc.com/pathname"
-      rel="canonical"
+Array [
+  <noscript>
+    <img
+      alt=""
+      height="1px"
+      src="undefineds=598343&s2=64&p=news.articles.c4vlle3q337o.page&r=0x0x24x24&re=1024x768&hl=17x7x9&lng=en-US&x1=[urn:bbc:optimo:c4vlle3q337o]&x2=[responsive]&x3=[news]&x4=[fa]&x5=[http://localhost/]&x7=[article]&x9=[سرصفحه+مقاله]&x11=[2018-01-01T12:01:00.000Z]&x12=[2018-01-01T13:00:00.000Z]"
+      style={
+        Object {
+          "position": "absolute",
+        }
+      }
+      width="1px"
     />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="x-default"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="en"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname"
-      hreflang="en-gb"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
-      rel="amphtml"
-    />
-    <link
-      href="/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="BBC News"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News"
-      name="application-name"
-    />
-    <meta
-      content="خلاصه مقاله"
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      name="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      name="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="خلاصه مقاله"
-      name="og:description"
-    />
-    <meta
-      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="og:image"
-    />
-    <meta
-      content="BBC News"
-      name="og:image:alt"
-    />
-    <meta
-      content="en_GB"
-      name="og:locale"
-    />
-    <meta
-      content="BBC News"
-      name="og:site_name"
-    />
-    <meta
-      content="سرصفحه مقاله - BBC News"
-      name="og:title"
-    />
-    <meta
-      content="article"
-      name="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pathname"
-      name="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="خلاصه مقاله"
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="سرصفحه مقاله - BBC News"
-      name="twitter:title"
-    />
-    <script
-      async="true"
-      type="text/javascript"
-    >
-      
-        (function(){
-          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test.bbc.co.uk","sections":"News, News - ART","uid":50924,"title":"سرصفحه مقاله","virtualReferrer":null,"type":"New Article","useCanonical":true,"path":"/"};
-          for (var key in config) {
-            _sf_async_config[key] = config[key];
-          }
-        })();
-      
-    </script>
-    <script
-      async="true"
-      src="//static.chartbeat.com/js/chartbeat.js"
-      type="text/javascript"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"سرصفحه مقاله"},"headline":"سرصفحه مقاله","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-  </head>
-  <body>
-    .c2 {
+  </noscript>,
+  .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -900,293 +410,52 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
   }
 }
 
-<div>
-      <noscript />
-      <main
-        role="main"
+<main
+    role="main"
+  >
+    <div
+      className="c0"
+    >
+      <div
+        className="c1"
       >
-        <div
-          class="c0"
+        <h1
+          className="c2"
+          id="content"
         >
-          <div
-            class="c1"
-          >
-            <h1
-              class="c2"
-              id="content"
-            >
-              سرصفحه مقاله
-            </h1>
-          </div>
-          <div
-            class="c3"
-          >
-            <p
-              class="c4"
-            >
-              یک پاراگراف.
-            </p>
-          </div>
-        </div>
-      </main>
+          سرصفحه مقاله
+        </h1>
+      </div>
+      <div
+        className="c3"
+      >
+        <p
+          className="c4"
+        >
+          یک پاراگراف.
+        </p>
+      </div>
     </div>
-  </body>
-</html>
+  </main>,
+]
 `;
 
 exports[`ArticleMain should render a pidgin article correctly (with navigation) 1`] = `
-<html
-  dir="ltr"
-  lang="pcm"
->
-  <head>
-    <title>
-      Article Headline for SEO in Pidgin - BBC News
-    </title>
-    <link
-      href="https://www.test.bbc.com/pathname"
-      rel="canonical"
+Array [
+  <noscript>
+    <img
+      alt=""
+      height="1px"
+      src="undefineds=598343&s2=64&p=news.articles.cwl08rd38l6o.page&r=0x0x24x24&re=1024x768&hl=17x7x9&lng=en-US&x1=[urn:bbc:optimo:cwl08rd38l6o]&x2=[responsive]&x3=[news]&x4=[pcm]&x5=[http://localhost/]&x7=[article]&x9=[Article+Headline+for+SEO+in+Pidgin]&x11=[2018-01-01T12:01:00.000Z]&x12=[2018-01-01T13:00:00.000Z]"
+      style={
+        Object {
+          "position": "absolute",
+        }
+      }
+      width="1px"
     />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="x-default"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="en"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname"
-      hreflang="en-gb"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
-      rel="amphtml"
-    />
-    <link
-      href="/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="BBC News"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News"
-      name="application-name"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      name="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      name="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      name="og:description"
-    />
-    <meta
-      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="og:image"
-    />
-    <meta
-      content="BBC News"
-      name="og:image:alt"
-    />
-    <meta
-      content="en_GB"
-      name="og:locale"
-    />
-    <meta
-      content="BBC News"
-      name="og:site_name"
-    />
-    <meta
-      content="Article Headline for SEO in Pidgin - BBC News"
-      name="og:title"
-    />
-    <meta
-      content="article"
-      name="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pathname"
-      name="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="Article Headline for SEO in Pidgin - BBC News"
-      name="twitter:title"
-    />
-    <script
-      async="true"
-      type="text/javascript"
-    >
-      
-        (function(){
-          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test.bbc.co.uk","sections":"News, News - ART","uid":50924,"title":"Article Headline for SEO in Pidgin","virtualReferrer":null,"type":"New Article","useCanonical":true,"path":"/"};
-          for (var key in config) {
-            _sf_async_config[key] = config[key];
-          }
-        })();
-      
-    </script>
-    <script
-      async="true"
-      src="//static.chartbeat.com/js/chartbeat.js"
-      type="text/javascript"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO in Pidgin"},"headline":"Article Headline for SEO in Pidgin","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-  </head>
-  <body>
-    .c2 {
+  </noscript>,
+  .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1361,36 +630,32 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
   }
 }
 
-<div>
-      <noscript />
-      <main
-        role="main"
+<main
+    role="main"
+  >
+    <div
+      className="c0"
+    >
+      <div
+        className="c1"
       >
-        <div
-          class="c0"
+        <h1
+          className="c2"
+          id="content"
         >
-          <div
-            class="c1"
-          >
-            <h1
-              class="c2"
-              id="content"
-            >
-              Article Headline in Pidgin
-            </h1>
-          </div>
-          <div
-            class="c3"
-          >
-            <p
-              class="c4"
-            >
-              A paragraph in Pidgin.
-            </p>
-          </div>
-        </div>
-      </main>
+          Article Headline in Pidgin
+        </h1>
+      </div>
+      <div
+        className="c3"
+      >
+        <p
+          className="c4"
+        >
+          A paragraph in Pidgin.
+        </p>
+      </div>
     </div>
-  </body>
-</html>
+  </main>,
+]
 `;
