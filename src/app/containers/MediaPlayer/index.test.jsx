@@ -7,6 +7,11 @@ import { ToggleContext } from '../../contexts/ToggleContext';
 import { validVideoFixture, missingVpidFixture } from './helpers/fixtures';
 
 const defaultToggles = {
+  local: {
+    mediaPlayer: {
+      enabled: true,
+    },
+  },
   test: {
     mediaPlayer: {
       enabled: true,
@@ -81,7 +86,7 @@ describe('MediaPlayer', () => {
     );
 
     const toggleState = {
-      test: {
+      local: {
         mediaPlayer: {
           enabled: false,
         },
