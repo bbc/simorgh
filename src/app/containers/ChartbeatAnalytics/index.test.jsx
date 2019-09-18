@@ -9,6 +9,7 @@ import * as testUtils from '../../lib/analyticsUtils/chartbeat';
 import * as utils from '../../lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
+import { localBaseUrl } from '../../../testHelpers/config';
 import frontPageData from '../../../../data/news/frontpage';
 
 const defaultToggleState = {
@@ -123,6 +124,21 @@ describe('Charbeats Analytics Container', () => {
     expect(testUtils.buildSections).toHaveBeenCalledTimes(1);
     expect(testUtils.getTitle).toHaveBeenCalledTimes(1);
     expect(utils.getReferrer).toHaveBeenCalledTimes(1);
+    expect(tree).toMatchSnapshot();
+  });
+  it('should return null when toggle is disbaled for localhost', () => {
+    const tree = renderer
+      .create(
+        <ContextWrap
+          platform="canonical"
+          pageType="article"
+          origin={localBaseUrl}
+        >
+          <ChartbeatAnalytics data={frontPageData} />
+        </ContextWrap>,
+      )
+      .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
   it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {
