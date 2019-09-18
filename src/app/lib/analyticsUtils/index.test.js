@@ -18,6 +18,9 @@ const {
   getReferrer,
   getPublishedDatetime,
   sanitise,
+  getProducer,
+  getAtiUrl,
+  getClickInfo,
 } = require('./index');
 
 let locServeCookieValue;
@@ -375,5 +378,78 @@ describe('getPublishedDatetime', () => {
     const publishedTime = getPublishedDatetime('invalidDate', data);
 
     expect(publishedTime).toEqual(null);
+  });
+});
+
+describe('getProducer', () => {
+  it('should return a number', () => {
+    expect(typeof Number(getProducer('news'))).toEqual('number');
+  });
+});
+
+describe('getAtiUrl', () => {
+  it('should return url', () => {
+    const data = [
+      {
+        key: 'a',
+        value: 'a1',
+        wrap: false,
+      },
+      {
+        key: 'b',
+        value: 'b1',
+        wrap: true,
+      },
+      {
+        key: 'c',
+        value: 'c1',
+        wrap: false,
+      },
+    ];
+    expect(getAtiUrl(data)).toEqual('a=a1&b=[b1]&c=c1');
+  });
+
+  it('should return empty string', () => {
+    const data = [];
+    expect(getAtiUrl(data)).toEqual('');
+  });
+});
+
+describe('getClickInfo', () => {
+  const params = {
+    service: 'service',
+    component: 'component',
+    label: 'label',
+    type: 'type',
+  };
+
+  it('should return url section', () => {
+    expect(getClickInfo({}, params)).toEqual(
+      'PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+    );
+  });
+
+  it('should include elem.dataset.info in output', () => {
+    expect(
+      getClickInfo(
+        {
+          dataset: {
+            info: 'data-info-attr',
+          },
+        },
+        params,
+      ),
+    ).toContain('data-info-attr');
+  });
+
+  it('should include elem.href in output', () => {
+    expect(
+      getClickInfo(
+        {
+          href: 'http://foobar.com',
+        },
+        params,
+      ),
+    ).toContain('[http://foobar.com]');
   });
 });
