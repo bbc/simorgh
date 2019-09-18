@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin, cyrillic } from '@bbc/gel-foundations/scripts';
+import { latinDiacritics, cyrillic } from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
@@ -27,7 +27,6 @@ const baseServiceConfig = {
   twitterSite: '@bbcnasrpskom',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'Početna strana',
@@ -196,7 +195,7 @@ const service = {
     ...baseServiceConfig,
     lang: `sr-latn`,
     locale: `sr-latn`,
-    script: latin,
+    script: latinDiacritics,
   },
   cyr: {
     ...baseServiceConfig,
