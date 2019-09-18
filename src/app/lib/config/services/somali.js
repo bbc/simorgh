@@ -73,49 +73,52 @@ const service = {
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title:
+            'Waan cusbooneysiinay shuruucdeena la xiriirta xogta gaarka ah iyo Cookies-ka',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Waxaa isbedel muhiim ah ku sameynay Shuruucda Xogta gaarka ah iyo qoraallada kooban waxaana dooneynaa in aad ogaato waxa ay arrinta kaaga dhigan tahay adiga iyo xogtaada.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Waxaa isbedel muhiim ah ku sameynay Shuruucda Xogta gaarka ah iyo qoraallada kooban waxaana dooneynaa in aad ogaato waxa ay arrinta kaaga dhigan tahay adiga iyo xogtaada.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'HAYE',
+          reject: 'Ogow waxa isbedelay',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title:
+            'Aan ogaano in aad aqbashay qoraallada dheeriga ah ee cookies-ka',
           description: {
             uk: {
-              first: 'We use ',
+              first: 'Waxaan isticmaaleynaa lifaaq ',
               linkText: 'cookies',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' si aad nooga heshid khibradda ugu wanaagsan ee adeegsiga intarnet-ka. Fadlan aan ogaano haddii aad ogolaatay dhammaan cookies-kan.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
+              first:
+                'Anaga iyo baraha aan ollogga nahay waxaan adeegsanaa teknolijiyad sida ',
               linkText: 'cookies',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ', waxaana uruurinaa xogt booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gar kuu ah. Fadlan aan ogaano haddii aad oggoshahay.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Haa, waan ogolaaday',
+          reject: 'Maya, igee settings-ka',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
