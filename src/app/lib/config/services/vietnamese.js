@@ -70,11 +70,11 @@ const service = {
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'Chúng tôi đã cập nhật Chính sách về Riêng tư và Cookie',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Chúng tôi có một số thay đổi quan trọng về Chính sách Riêng tư và Cookie, và muống bạn biết ý nghĩa của nó đối với bạn và dữ liệu của bạn.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -88,31 +88,31 @@ const service = {
             },
           },
           accept: 'OK',
-          reject: "Find out what's changed",
+          reject: 'Tìm hiểu các thay đổi',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Cho chúng tôi biết bạn đồng ý về cookie',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'Chúng tôi dùng ',
+              linkText: 'cookie',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'Chúng tôi và các đối tác dùng công nghệ, như ',
+              linkText: 'cookie',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Vâng, tôi đồng ý',
+          reject: 'Không, đưa tôi xem phần Settings',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
@@ -139,20 +139,25 @@ const service = {
           text: 'Tại sao bạn có thể tin tưởng BBC News',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/vietnamese/institutional-37622991',
           text: 'Điều khoản sử dụng',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/vietnamese/institutional-37623841',
           text: 'Chính sách riêng tư',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookie',
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/vietnamese/institutional-37623842',
           text: 'Liên hệ BBC',
+        },
+        {
+          href: 'https://www.bbc.com/vietnamese/institutional-37623840',
+          text: 'Về BBC',
         },
       ],
       copyrightText:
