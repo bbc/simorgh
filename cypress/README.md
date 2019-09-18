@@ -12,15 +12,14 @@ We aim to keep the code reusable but also to leverage the cypress framework as m
 
 <!-- prettier-ignore -->
     .
-    ├── fixtures                    # Cypress pre-defined
     ├── integration                 # Cypress tests
     ├── plugins                     # Internal behavior of Cypress
-    └── support                     # Helper utilities for tests
-        └── config*
+    └── support
+        └── commands*               # Custom Cypress commands
+        └── config*                 # What config isn't here should be imported from app config
+        └── helpers*                # Helper utilities for tests
 
-\*Config exists in one place. Config for running tests is in `/support/config/` and config for expected results should either be hardcoded in a test or imported from application config (for example service translations).
-
-## Running Test
+## Running Tests
 
 [Running Cypress locally](https://github.com/bbc/simorgh#end-to-end-tests)
 
@@ -44,4 +43,8 @@ Use the scripts from Simorgh's [package.json](https://github.com/bbc/simorgh/blo
 
 ## Beyond this suite of tests
 
-We have two other cypress test suites. One is just a smoke test of our storybook deployment, see in the repo root under `.storybook/cypress`. The second one is for E2Es of 3rd party systems, the success of those tests may or may not be partially dependent on the simorgh application but they definitely include systems we use in a live environment and may break irrespective of the stability of this application. This is in the repo root under `3rdPartyCypress/`.
+We have one other cypress test suite for E2Es of 3rd party systems, the success of those tests may or may not be partially dependent on the simorgh application but they definitely include systems we use in a live environment and may break irrespective of the stability of this application. This is in the repo root under [3rdPartyCypress/](https://github.com/bbc/simorgh/blob/latest/3rdPartyCypress).
+
+We have a really custom way our approaching our E2E tests with a [comprehensive README.md](https://github.com/bbc/simorgh/blob/latest/cypress/integration/README.md).
+
+We also have [a very limited Puppeteer test suite](https://github.com/bbc/simorgh/tree/latest/puppeteer) for when we go beyond Cypress' functional limits.
