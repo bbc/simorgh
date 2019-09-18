@@ -15,7 +15,7 @@ import frontPageData from '../../../../data/news/frontpage';
 const defaultToggleState = {
   local: {
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
   },
   test: {
