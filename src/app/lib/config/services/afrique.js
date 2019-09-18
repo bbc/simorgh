@@ -74,7 +74,7 @@ const service = {
       consentBanner: {
         privacy: {
           title:
-            'Nous avons mis à jour nos politiques de confidentialité et de cookies',
+            'Nous avons mis à jour nos politiques de confidentialité et de cookies',
           description: {
             uk: {
               first:
@@ -102,13 +102,13 @@ const service = {
               first: 'Nous utilisons ',
               linkText: 'cookies',
               last:
-                ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
+                ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
               first:
-                'Nous et nos partenaires utilisons des technologies, comme ',
+                'Nous et nos partenaires utilisons des technologies, comme ',
               linkText: 'cookies',
               last:
                 ", et collectons des données de navigation pour vous offrir la meilleure expérience en ligne et pour personnaliser le contenu et la publicité qui vous sont présentés. Veuillez nous faire savoir si vous êtes d'accord.",
