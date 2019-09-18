@@ -22,6 +22,8 @@ const WithContexts = Component => {
       variant,
     } = props;
 
+    // Temp fix. This destructuring will become redundant
+    // following https://github.com/bbc/simorgh/issues/3839
     const { status } = data;
 
     return (
