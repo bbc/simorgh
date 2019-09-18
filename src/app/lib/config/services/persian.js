@@ -45,7 +45,7 @@ const persian = {
       home: 'صفحه اول',
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
-      relatedContent: 'Related content',
+      relatedContent: 'مطالب مرتبط',
       error: {
         404: {
           statusCode: '۴۰۴',
