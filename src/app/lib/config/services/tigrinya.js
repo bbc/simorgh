@@ -46,7 +46,7 @@ const service = {
       seeAll: 'ኩሉ ረኣይ',
       home: 'ዜና',
       currentPage: 'ህሉው ገጽ',
-      skipLinkText: 'እቲ ትሕዝቶ ዝለል',
+      skipLinkText: 'ናብቲ ትሕዝቶ ቀጽል',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
       error: {
         404: {
