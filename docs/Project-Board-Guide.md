@@ -12,6 +12,8 @@ Please familiarise yourself with our:
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md) (you are here)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
 
+NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
+
 ### Overiew of each column
 
 <!-- prettier-ignore -->
