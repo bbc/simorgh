@@ -166,6 +166,10 @@ const yoruba = {
           href: 'https://www.bbc.com/yoruba/institutional-43091540',
           text: 'Kàn sí BBC',
         },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'Nípa BBC',
+        },
       ],
       copyrightText:
         'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',

@@ -140,15 +140,15 @@ const service = {
           text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.co.uk/usingthebbc/terms',
           text: 'ውዕሊ ኣጠቓቕማ',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/privacy/',
+          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
           text: 'ናይ ምሽጥራውነት ፖሊሲ',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
           text: 'ኩኪታት',
         },
         {
@@ -156,7 +156,7 @@ const service = {
           text: 'ንቢቢሲ የዛርቡ',
         },
         {
-          href: 'https://www.bbc.com/aboutthebbc',
+          href: 'https://www.bbc.co.uk/aboutthebbc',
           text: 'ብዛዕባ ቢቢሲ',
         },
       ],
