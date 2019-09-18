@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import BannerText from './Text';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -36,6 +36,7 @@ const bannerTextWithContext = (message, topLevelDomain) => (
       isAmp={false}
       pageType="article"
       service="news"
+      statusCode={200}
       pathname="/pathname"
     >
       <BannerText {...message} />
