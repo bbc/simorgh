@@ -20,6 +20,7 @@ const ContextWrap = ({ pageType, platform, children }) => (
       isAmp={platform === 'amp'}
       pageType={pageType}
       service="news"
+      statusCode={200}
       pathname="/pathname"
     >
       {children}
