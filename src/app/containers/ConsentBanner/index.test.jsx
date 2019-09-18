@@ -16,6 +16,7 @@ describe('Consent Banner Container', () => {
       isAmp
       pageType="article"
       service="news"
+      statusCode={200}
       pathname="/pathname"
     >
       <ConsentBanner />
@@ -30,6 +31,7 @@ describe('Consent Banner Container', () => {
       isAmp={false}
       pageType="article"
       service="news"
+      statusCode={200}
       pathname="/pathname"
     >
       <ConsentBanner />

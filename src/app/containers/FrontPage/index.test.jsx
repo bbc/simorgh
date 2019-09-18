@@ -15,6 +15,7 @@ const defaultProps = {
   pageType: 'frontPage',
   service: 'news',
   pathname: '/pathname',
+  data: { status: 200 },
 };
 
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {

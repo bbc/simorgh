@@ -34,6 +34,7 @@ const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
         isAmp={false}
         pageType={pageType}
         service={service}
+        statusCode={200}
         bbcOrigin="https://www.test.bbc.com"
         pathname="/pathname"
       >

@@ -28,6 +28,7 @@ jest.mock('../ChartbeatAnalytics', () => {
 const requestContextData = {
   isAmp: false,
   service: 'igbo',
+  statusCode: 200,
   pageType: 'frontPage',
   pathname: '/pathname',
 };
