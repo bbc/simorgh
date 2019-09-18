@@ -70,6 +70,7 @@ const MediaPageMain = ({ pageData, service }) => {
                       showPlaceholder={false}
                       src={`/ws/av-embeds/media/${externalId}/${id}`}
                       id={idAttr}
+                      skin="audio"
                     />
                   );
                 }
