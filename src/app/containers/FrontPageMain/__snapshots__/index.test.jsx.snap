@@ -9,6 +9,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   pathname="/pathname"
   previousPath={null}
   service="igbo"
+  statusCode={200}
   variant={null}
 >
   <ServiceContextProvider
