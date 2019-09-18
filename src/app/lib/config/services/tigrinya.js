@@ -19,7 +19,7 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
     defaultImageAltText: 'BBC News ትግርኛ',
     dir: `ltr`,
-    externalLinkText: ', ደጋዊ',
+    externalLinkText: ' ደጋዊ',
     imageCaptionOffscreenText: 'መግለጺ ስእሊ, ',
     videoCaptionOffscreenText: 'መግለጺ ቪድዮ, ',
     audioCaptionOffscreenText: 'መግለጺ ድምጺ, ',
