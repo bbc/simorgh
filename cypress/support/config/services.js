@@ -873,6 +873,30 @@ module.exports = {
       mediaAssetPage: { path: undefined, smoke: false },
     },
   },
+  scotland: {
+    font: undefined,
+    isWorldService: false,
+    variant: 'default',
+    pageTypes: {
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/scotland/articles/czwj5l0n210o',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/scotland/articles/cabcdefghijo',
+        smoke: false,
+      },
+      frontPage: { path: undefined, smoke: false },
+      liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
+    },
+  },
   serbian: {
     font: undefined,
     isWorldService: true,
