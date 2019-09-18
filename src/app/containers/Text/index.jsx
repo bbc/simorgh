@@ -1,7 +1,7 @@
 import React from 'react';
 import paragraph from '../Paragraph';
 import Blocks from '../Blocks';
-import { textModelPropTypes } from '../../models/propTypes/text';
+import { textModelPropTypes } from '#models/propTypes/text';
 
 const componentsToRender = { paragraph };
 

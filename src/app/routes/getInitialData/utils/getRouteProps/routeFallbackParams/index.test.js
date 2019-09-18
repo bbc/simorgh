@@ -1,6 +1,6 @@
 import { fallbackAmpParam, fallbackServiceParam } from '.';
 
-jest.mock('../../../../../lib/config/services/loadableConfig', () => ({
+jest.mock('#lib/config/services/loadableConfig', () => ({
   dasher: 'data',
   dancer: 'data',
   prancer: 'data',
