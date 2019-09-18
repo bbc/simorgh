@@ -1,7 +1,13 @@
 import services from '../../../src/app/lib/config/services';
 
 Object.keys(services).forEach(service => {
-  const notWSServices = ['news', 'cymrufyw', 'naidheachdan', 'default']; // Not WS
+  const notWSServices = [
+    'news',
+    'cymrufyw',
+    'naidheachdan',
+    'default',
+    'scotland',
+  ]; // Not WS
 
   if (notWSServices.includes(service)) {
     return;
