@@ -50,7 +50,7 @@ const service = {
           statusCode: '404',
           title: '404 - Không tìm thấy trang này',
           message:
-            'Lỗi có thể do địa chỉ trang web không đúng. Hãy kiểm tra địa chỉ và chính tả.',
+            'Chúng tôi không thể đưa bạn tới trang bạn tìm. Xin hãy thử:',
           solutions: [
             'Kiểm tra lại url',
             'Bấm nút refresh trong trình duyệt',
@@ -63,8 +63,9 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: 'Lỗi 500',
-          message: 'Vừa bị lỗi. Hãy tải lại.',
+          title: 'Lỗi mạng nội bộ',
+          message:
+            'Xin lỗi, chúng tôi không thể đưa bạn tới trang bạn đang tìm. Vui lòng thử:',
           solutions: ['Bấm nút refresh trong trình duyệt', 'Quay lại sau'],
           callToActionFirst: 'Vui lòng thăm ',
           callToActionLinkText: 'Trang tin chính BBC',
@@ -85,7 +86,7 @@ const service = {
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Chúng tôi có một số thay đổi quan trọng về Chính sách Riêng tư và Cookie, và muống bạn biết ý nghĩa của nó đối với bạn và dữ liệu của bạn.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -123,7 +124,7 @@ const service = {
       },
       media: {
         audio: 'Âm thanh',
-        photogallery: 'Ảnh',
+        photogallery: 'Gallery hình ảnh',
         video: 'Video',
       },
     },
