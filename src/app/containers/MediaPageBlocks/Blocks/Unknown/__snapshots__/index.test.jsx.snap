@@ -2,6 +2,6 @@
 
 exports[`MediaPageBlocks Unknown should render correctly 1`] = `
 <div>
-  <!-- unknown block foobar -->
+  <!-- unknown block -->
 </div>
 `;

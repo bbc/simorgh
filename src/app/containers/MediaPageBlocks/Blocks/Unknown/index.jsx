@@ -2,14 +2,10 @@ import React from 'react';
 import { string } from 'prop-types';
 
 /* eslint-disable react/no-danger */
-const UnknownBlockContainer = ({ blockType }) => (
+const UnknownBlockContainer = () => (
   <div
-    dangerouslySetInnerHTML={{ __html: `<!-- unknown block ${blockType} -->` }}
+    dangerouslySetInnerHTML={{ __html: `<!-- unknown block -->` }}
   />
 );
-
-UnknownBlockContainer.propTypes = {
-  blockType: string.isRequired,
-};
 
 export default UnknownBlockContainer;
