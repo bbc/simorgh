@@ -1,18 +1,30 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import * as atiUrlBuilder from '../../atiUrl';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../../contexts/RequestContext';
+import { RequestContext } from '../../../../contexts/RequestContext';
+import { buildMediaATIUrl } from './buildParams';
 
 import MediaAtiParams from '.';
 import fixture from '../../../../../../data/indonesia/bbc_indonesian_radio/liveradio.json';
 
+jest.mock('./buildParams', () => {
+  const buildParams = jest.requireActual('./buildParams');
+
+  return {
+    ...buildParams,
+    buildMediaATIUrl: jest.fn(),
+  };
+});
+
+const mockBuildArticleATIUrl = jest.fn().mockReturnValue(null);
+buildMediaATIUrl.mockImplementation(mockBuildArticleATIUrl);
+
 describe('MediaAtiParams', () => {
   const Component = (serviceContextStub, requestContextStub) => (
     <ServiceContext.Provider value={serviceContextStub}>
-      <RequestContextProvider {...requestContextStub}>
+      <RequestContext.Provider value={requestContextStub}>
         <MediaAtiParams {...fixture} />
-      </RequestContextProvider>
+      </RequestContext.Provider>
     </ServiceContext.Provider>
   );
   const requestContextStub = {
@@ -35,24 +47,14 @@ describe('MediaAtiParams', () => {
     });
 
     it('should call atiPageViewParams', () => {
-      const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiUrlBuilder.buildATIPageTrackPath = mock;
-
       render(Component(serviceContextStub, requestContextStub));
 
-      expect(mock).toHaveBeenCalledTimes(1);
-      expect(mock).toHaveBeenCalledWith({
-        appName: 'news-SERVICE',
-        contentId: 'urn:bbc:ares::ws_live:bbc_indonesian_radio',
-        contentType: 'player-live',
-        language: 'id',
-        pageIdentifier: 'indonesia.bbc_indonesian_radio.liveradio.page',
-        pageTitle: 'BBC Indonesia Radio - BBC News Indonesia',
-        producerId: 0,
-        platform: 'canonical',
-        service: 'SERVICE',
-        statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-      });
+      expect(mockBuildArticleATIUrl).toHaveBeenCalledTimes(1);
+      expect(mockBuildArticleATIUrl).toHaveBeenCalledWith(
+        fixture,
+        requestContextStub,
+        serviceContextStub,
+      );
     });
   });
 });
