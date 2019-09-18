@@ -76,7 +76,7 @@ const service = {
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ጠቃሚ ለውጦችን አድርገናል። ለርስዎም ሆን በመረጃዎች ላይ ለውጦቹ ምን ማለት እንደሆኑ እንዲያውቁ እንፈልጋለን።',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -97,18 +97,17 @@ const service = {
           title: 'ኩኪዎችን መጠቀም ላይ መስማማትዎን ያሳውቁን',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
-              last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              first: 'ለርስዎ ',
+              linkText: 'የምናቀርበውን አገልግሎት ለማሻሻል በማሰብ ኩኪዎችን',
+              last: ' እንጠቀማለን። ኩኪዎችን መጠቀም ላይ መስማማትዎን እባክዎ ያሳውቁን.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'እኛም ሆን ቴክኖሎጂያችንን የሚጠቀሙ አጋሮቻችን ለምሳሌም  ',
+              first: 'እኛም ሆን ቴክኖሎጂያችንን የሚጠቀሙ አጋሮቻችን ለምሳሌም ',
               linkText: 'ኩኪዎችን የምንጠቀመው',
               last:
-                ', ና መረጃዎችንም የምንሰብስበው የሚፈልጓቸውን መረጃዎችና ማስታወቂያዎች ቅድሚያ እንዲያገኙዋቸው በማሰብና አግልግሎታችንም የተሻለ እንዲሆን ነው።እባክዎ መስማማትዎን ያሳውቁን።',
+                ', ና መረጃዎችንም የምንሰብስበው የሚፈልጓቸውን መረጃዎችና ማስታወቂያዎች ቅድሚያ እንዲያገኙዋቸው በማሰብና አግልግሎታችንም የተሻለ እንዲሆን ነው።እባክዎ መስማማትዎን ያሳውቁን',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
