@@ -38,6 +38,7 @@ describe('withContexts HOC', () => {
     isAmp: true,
     pageType: 'article',
     pathname: '/pathname',
+    data: { status: 200 },
   };
 
   shouldShallowMatchSnapshot(
@@ -73,6 +74,7 @@ describe('withContexts HOC', () => {
           isAmp: true,
           pageType,
           pathname: '/pathname',
+          data: { status: 200 },
         };
 
         render(<ContextsHOC {...fixture} />);
@@ -102,6 +104,7 @@ describe('withContexts HOC', () => {
         pageType: 'article',
         pathname: '/pathname',
         variant: 'trad',
+        data: { status: 200 },
       };
 
       render(<ContextsHOC {...fixture} />);
