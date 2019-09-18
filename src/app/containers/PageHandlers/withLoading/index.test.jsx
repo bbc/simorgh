@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import WithLoading from '.';
 
 describe('withLoading HOC', () => {
@@ -7,14 +7,14 @@ describe('withLoading HOC', () => {
   const LoadingHOC = WithLoading(Component);
 
   describe('and the loading prop set to true', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       `should return the loading component`,
       <LoadingHOC loading />,
     );
   });
 
   describe('and no loading prop', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       `should return the passed in component`,
       <LoadingHOC />,
     );
