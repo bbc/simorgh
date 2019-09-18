@@ -74,7 +74,7 @@ const service = {
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -95,10 +95,9 @@ const service = {
           title: '쿠키생성에 동의하시나요',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
-              last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              first: 'BBC는 이용자의 최적의 온라인 경험을 위해 ',
+              linkText: '쿠키',
+              last: ' 정보를 수집합니다. 쿠키생성에 동의하시는지 알려주세요',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -153,6 +152,10 @@ const service = {
         {
           href: 'https://www.bbc.com/korean/institutional-42224941',
           text: '고객센터',
+        },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'BBC 소개',
         },
       ],
       copyrightText:
