@@ -1,5 +1,4 @@
 import React from 'react';
-import { shape } from 'prop-types';
 import { ampChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';
 
 const chartbeatAmpConfigOptions = options => ({
@@ -22,7 +21,7 @@ const AmpChartbeatBeacon = ({ chartbeatConfig }) => (
 );
 
 AmpChartbeatBeacon.propTypes = {
-  chartbeatConfig: shape(ampChartbeatPropTypes).isRequired,
+  chartbeatConfig: ampChartbeatPropTypes.isRequired,
 };
 
 export default AmpChartbeatBeacon;

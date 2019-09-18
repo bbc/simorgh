@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { shape } from 'prop-types';
 import useToggle from '../../../containers/Toggle/useToggle';
 import CanonicalChartbeatBeacon from '../../../containers/ChartbeatAnalytics/canonical';
 import { RequestContext } from '../../RequestContext';
@@ -18,7 +17,7 @@ const Chartbeat = ({ config }) => {
 };
 
 Chartbeat.propTypes = {
-  config: shape(canonicalChartbeatPropTypes),
+  config: canonicalChartbeatPropTypes,
 };
 
 Chartbeat.defaultProps = {

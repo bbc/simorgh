@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { shape } from 'prop-types';
 import Helmet from 'react-helmet';
 import { canonicalChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';
 
@@ -34,7 +33,7 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
 };
 
 CanonicalChartbeatBeacon.propTypes = {
-  chartbeatConfig: shape(canonicalChartbeatPropTypes).isRequired,
+  chartbeatConfig: canonicalChartbeatPropTypes.isRequired,
 };
 
 export default CanonicalChartbeatBeacon;

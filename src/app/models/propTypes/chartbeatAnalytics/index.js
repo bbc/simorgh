@@ -11,13 +11,13 @@ const baseChartbeatPropTypes = {
   }),
 };
 
-export const canonicalChartbeatPropTypes = {
+export const canonicalChartbeatPropTypes = shape({
   ...baseChartbeatPropTypes,
   type: string.isRequired,
   useCanonical: bool.isRequired,
-};
+});
 
-export const ampChartbeatPropTypes = {
+export const ampChartbeatPropTypes = shape({
   ...baseChartbeatPropTypes,
   contentType: string.isRequired,
-};
+});
