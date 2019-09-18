@@ -155,20 +155,25 @@ const service = {
           text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/pashto/institutional-37620701',
           text: 'د کارولو شرايط',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/pashto/institutional-37622762',
           text: 'د محرميت تگلاره',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          text: 'کوکيز',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/pashto/institutional-37622768',
           text: 'زموږ سره اړیکي',
+        },
+        {
+          href: 'https://www.bbc.com/pashto/institutional-37622761',
+          text: 'د بي بي سي‌ په اړه',
         },
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
