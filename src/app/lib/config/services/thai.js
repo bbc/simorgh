@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { thai } from '@bbc/gel-foundations/scripts';
 import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
 import 'moment/locale/th';
@@ -38,6 +38,10 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
