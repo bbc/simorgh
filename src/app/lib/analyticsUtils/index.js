@@ -175,10 +175,11 @@ export const getClickInfo = (elem, { service, component, label, type }) => {
       * format = [PAR=container-[component-name]::name~CHD=slot] = [PAR=container-navigation::name~CHD=1]
          ^ for format, currently using the name of the component clicked as slot
     */
-  const eventComponentInfo = elem.dataset.info || 'brand-top'; // psammead components need to be updated with 'data' attrs
+  const eventComponentInfo =
+    (elem && elem.dataset && elem.dataset.info) || 'brand-top'; // psammead components need to be updated with 'data' attrs
   const cleanCompInfo = eventComponentInfo.split('/').join('-');
   const format = `PAR=container-${component}::name~CHD=${cleanCompInfo.toLowerCase()}`;
-  const url = elem.href || '/';
+  const url = (elem && elem.href) || '/';
 
   return `PUB-[${service}-${component}]-[=${type}]-[${label}]-[${format}]-[]-[]-[]-[${url}]`;
 };
