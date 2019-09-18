@@ -3,10 +3,19 @@ import * as server from 'react-dom/server';
 import renderDocument from '.';
 import { ServerApp } from '../../app/containers/App';
 import DocumentComponent from './component';
+import * as assets from '../assets';
+import * as styles from '../styles';
 
 const { ServerStyleSheet } = jest.requireActual('styled-components');
 const mockSheet = new ServerStyleSheet();
 
+jest.mock('../assets', () => ({
+  getAssetsArray: jest.fn(),
+  getAssetOrigins: jest.fn(),
+}));
+jest.mock('../styles', () => ({
+  getStyleTag: jest.fn(),
+}));
 jest.mock('styled-components', () => {
   return {
     ServerStyleSheet: () => mockSheet,
@@ -33,6 +42,7 @@ jest.mock('react-dom/server', () => ({
 jest.spyOn(mockSheet, 'collectStyles');
 jest.spyOn(server, 'renderToString');
 jest.spyOn(server, 'renderToStaticMarkup');
+jest.spyOn(assets, 'getAssetsArray');
 
 ServerApp.mockImplementation(() => <div />);
 DocumentComponent.mockImplementation(() => <html lang="en-GB" />);
@@ -61,23 +71,13 @@ describe('Render Document', () => {
       );
       expect(server.renderToStaticMarkup.mock.calls[0][0].props).toStrictEqual({
         app: 'no',
-        assetOrigins: [
-          'https://ichef.bbci.co.uk',
-          'https://gel.files.bbci.co.uk',
-          undefined,
-          undefined,
-        ],
-        assets: [
-          'http://localhost.bbc.com:7080/static/js/news-12345.12345.js',
-          'http://localhost.bbc.com:7080/static/js/vendor-54321.12345.js',
-          'http://localhost.bbc.com:7080/static/js/vendor-12345.12345.js',
-          'http://localhost.bbc.com:7080/static/js/main-12345.12345.js',
-        ],
+        assetOrigins: undefined,
+        assets: undefined,
         data: { test: 'data' },
         helmet: undefined,
         isAmp: false,
         service: 'news',
-        styleTags: [],
+        styleTags: undefined,
       });
       expect(
         server.renderToString.mock.calls[0][0].props.children.props,
@@ -93,7 +93,11 @@ describe('Render Document', () => {
       expect(
         server.renderToString.mock.calls[0][0].props.sheet.constructor.name,
       ).toBe('StyleSheet');
+      expect(assets.getAssetsArray).toHaveBeenCalledWith('news');
+      expect(styles.getStyleTag).toHaveBeenCalledWith(mockSheet, false);
       done();
     });
   });
 });
+
+// getStyleTag
