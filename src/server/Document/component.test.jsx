@@ -56,7 +56,7 @@ describe('Document Component', () => {
       isAmp: false,
       testName: 'should render correctly',
     }),
-  ).toMatchSnapshot();
+  );
 
   expect(
     Document({
@@ -64,5 +64,5 @@ describe('Document Component', () => {
       isAmp: true,
       testName: 'should render AMP version correctly',
     }),
-  ).toMatchSnapshot();
+  );
 });
