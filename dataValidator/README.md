@@ -1,4 +1,4 @@
-# Data Validator
+# Data Validator - THIS IS DEPRECATED AS OF: [https://github.com/bbc/simorgh/issues/3697](https://github.com/bbc/simorgh/issues/3697)
 
 ## Overview
 
