@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { string, shape, arrayOf } from 'prop-types';
-import { ServiceContext } from '../../contexts/ServiceContext';
 
 import HeadingBlock from './Blocks/Heading';
 import LiveRadioBlock from './Blocks/LiveRadio';
@@ -17,8 +16,6 @@ const blockMap = {
 const SKIP_LINK_ANCHOR_ID = 'content';
 
 const MediaPageMain = ({ blocks }) => {
-  const { script, service } = useContext(ServiceContext);
-
   if (!blocks || !blocks.length) return null;
 
   return blocks.map((props, index) => {

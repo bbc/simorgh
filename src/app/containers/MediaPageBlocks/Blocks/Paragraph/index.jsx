@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { string } from 'prop-types';
 import ParagraphComponent from '@bbc/psammead-paragraph';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
-// eslint-disable-next-line react/prop-types
-const ParagraphContainer = ({ uuid, script, service, idAttr, text }) => {
+const ParagraphContainer = ({ idAttr, text }) => {
+  const { script, service } = useContext(ServiceContext);
+
   if (!text) return null;
 
   return (
-    <ParagraphComponent
-      key={uuid}
-      script={script}
-      service={service}
-      id={idAttr}
-    >
+    <ParagraphComponent script={script} service={service} id={idAttr}>
       {text}
     </ParagraphComponent>
   );
+};
+
+ParagraphContainer.propTypes = {
+  idAttr: string,
+  text: string.isRequired,
+};
+
+ParagraphContainer.defaultProps = {
+  idAttr: null,
 };
 
 export default ParagraphContainer;

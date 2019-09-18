@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { string } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
-// eslint-disable-next-line react/prop-types
-const HeadingContainer = ({ uuid, script, service, idAttr, text }) => {
+const HeadingContainer = ({ idAttr, text }) => {
+  const { script, service } = useContext(ServiceContext);
+
   if (!text) return null;
 
   return (
-    <Headline key={uuid} script={script} service={service} id={idAttr}>
+    <Headline script={script} service={service} id={idAttr}>
       {text}
     </Headline>
   );
+};
+
+HeadingContainer.propTypes = {
+  idAttr: string,
+  text: string.isRequired,
+};
+
+HeadingContainer.defaultProps = {
+  idAttr: null,
 };
 
 export default HeadingContainer;

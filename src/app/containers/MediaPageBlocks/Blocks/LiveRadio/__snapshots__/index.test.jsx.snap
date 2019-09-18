@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaPageBlocks Heading should render correctly for amp 1`] = `
+.c0 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    <div>
+      <div
+        class="c0"
+      >
+        <amp-iframe
+          allowfullscreen="true"
+          frameborder="0"
+          layout="fill"
+          sandbox="allow-scripts allow-same-origin"
+          src="/ws/av-embeds/media/externalId/id"
+        >
+          <amp-img
+            layout="fill"
+            placeholder="true"
+          />
+        </amp-iframe>
+      </div>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`MediaPageBlocks Heading should render correctly for canonical 1`] = `
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.c0 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+<div
+  class="c0"
+>
+  <iframe
+    allow="autoplay; fullscreen"
+    allowfullscreen=""
+    class="c1"
+    scrolling="no"
+    src="/ws/av-embeds/media/externalId/id"
+  />
+</div>
+`;
