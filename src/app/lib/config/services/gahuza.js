@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `rw`,
     articleAuthor: `https://www.facebook.com/BBCGahuza`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Vyavuguruwe ',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     brandName: 'BBC News Gahuza',
@@ -15,12 +15,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',
     defaultImageAltText: 'BBC News Gahuza',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', bivuye ahandi',
+    imageCaptionOffscreenText: "Insiguro y'isanamu, ",
+    videoCaptionOffscreenText: 'Insiguro ya video, ',
+    audioCaptionOffscreenText: "Insiguro y'amajwi, ",
+    defaultCaptionOffscreenText: 'Insiguro, ',
+    imageCopyrightOffscreenText: 'Ahavuye isanamu, ',
     locale: `rw-RW`,
     datetimeLocale: `rw-rw`,
     service: 'gahuza',
@@ -37,35 +37,36 @@ const service = {
     translations: {
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
-      currentPage: 'Current page',
+      currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
-      relatedContent: 'Related content',
+      relatedContent: 'Ibindi bisa n’ibi',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Hari ikosa',
+          title: 'Urubapuro ntirwabonetse',
           message:
-            "Ibishobora kuba vyatewe n'uko wanditse nabi adresse y'urubuga",
+            'Tubabarire ntidushoboye kukuronsa urupapuro warondera. Tugusavye kugerageza:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'Turi kugenzura umuhora ulr',
+            'Gufyonda ubuto refresh mu buryo bwawe bwa internet',
+            'Kurondera uru rupapuro uciye mu buryo bwa BBC bwo kurondera',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Gahuza',
+          callToActionFirst: "Nk'ubundi buryo, tugusavye kuja kuri ",
+          callToActionLinkText: 'BBC News Gahuza',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/gahuza',
         },
         500: {
           statusCode: '500',
-          title: '500 - Ikosa',
-          message: 'Habaye ikosa, subire utanguze',
+          title: "Ikibazo c'ubuhinga bwacu",
+          message:
+            'Tubabarire ntidushoboye kukuronsa urupapuro warondera. Tugusavye kugerageza:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Gufyonda ubuto refresh mu buryo bwawe bwa internet',
+            'Uragaruka hanyuma',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Gahuza',
+          callToActionFirst: "Nk'ubundi buryo, tugusavye kuja kuri ",
+          callToActionLinkText: 'BBC News Gahuza',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/gahuza',
         },
@@ -120,8 +121,8 @@ const service = {
         },
       },
       media: {
-        audio: 'Amajwi',
-        photogallery: "Urukurikirane rw'amasamu",
+        audio: 'Umviriza',
+        photogallery: 'Amasanamu',
         video: 'Video',
         bbc_gahuza_radio: {
           title: 'Radio BBC Gahuza',
@@ -138,20 +139,20 @@ const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [
         {
           href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          text: 'Igituma ushobora kwizera BBC News',
         },
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'Ingingo zo gukoresha urubuga',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'Ibigenga ubuzima bwite',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -159,10 +160,10 @@ const service = {
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'Vugana na BBC',
         },
       ],
-      copyrightText: 'BBC. BBC ntibazwa ibivuye mu mguga zitari izayo',
+      copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',
     },
     fonts: [],
     timezone: 'Europe/London',
