@@ -27,7 +27,7 @@ const config = {
     atiAnalyticsWSBucket: '598343',
     atiAnalyticsGNLBucket: '598290',
     atiUrl: 'https://logws1363.ati-host.net?',
-    chartbeatEnabled: true,
+    chartbeatEnabled: false,
   },
 };
 
