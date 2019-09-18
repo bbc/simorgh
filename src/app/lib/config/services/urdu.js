@@ -50,7 +50,7 @@ const service = {
       home: 'صفحۂ اول',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
-      relatedContent: 'Related content',
+      relatedContent: 'اسی بارے میں',
       error: {
         404: {
           statusCode: '404',
