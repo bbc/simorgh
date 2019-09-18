@@ -34,7 +34,7 @@ exports[`Media Page Main should match snapshot 1`] = `
 }
 
 .c4 {
-  height: 165px;
+  padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
