@@ -35,7 +35,7 @@ describe('Document Component', () => {
   );
   const styleTagsAmp = <style amp-custom="">{'html { color: red; }'}</style>;
 
-  const Document = ({ service, isAmp, testName }) =>
+  const testDocumentComponent = ({ service, isAmp, testName }) =>
     shouldMatchSnapshot(
       testName,
       <DocumentComponent
@@ -51,7 +51,7 @@ describe('Document Component', () => {
     );
 
   expect(
-    Document({
+    testDocumentComponent({
       service: 'news',
       isAmp: false,
       testName: 'should render correctly',
@@ -59,7 +59,7 @@ describe('Document Component', () => {
   );
 
   expect(
-    Document({
+    testDocumentComponent({
       service: 'news',
       isAmp: true,
       testName: 'should render AMP version correctly',
