@@ -1,11 +1,21 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from '.';
-import * as atiUrlBuilder from '../../atiUrl';
-import * as commonTestUtils from '../../../../lib/analyticsUtils';
-import * as testUtils from '../../../../lib/analyticsUtils/article';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../../contexts/RequestContext';
+import { RequestContext } from '../../../../contexts/RequestContext';
+import { buildArticleATIUrl } from './buildParams';
+
+jest.mock('./buildParams', () => {
+  const buildParams = jest.requireActual('./buildParams');
+
+  return {
+    ...buildParams,
+    buildArticleATIUrl: jest.fn(),
+  };
+});
+
+const mockBuildArticleATIUrl = jest.fn().mockReturnValue(null);
+buildArticleATIUrl.mockImplementation(mockBuildArticleATIUrl);
 
 describe('ArticleAtiParams', () => {
   const mockArticleData = {
@@ -29,9 +39,9 @@ describe('ArticleAtiParams', () => {
 
   const Component = (newsServiceContextStub, requestContextStub) => (
     <ServiceContext.Provider value={newsServiceContextStub}>
-      <RequestContextProvider {...requestContextStub}>
+      <RequestContext.Provider value={requestContextStub}>
         <ArticleAtiParams {...mockArticleData} />
-      </RequestContextProvider>
+      </RequestContext.Provider>
     </ServiceContext.Provider>
   );
   const newsServiceContextStub = {
@@ -48,6 +58,8 @@ describe('ArticleAtiParams', () => {
     previousPath: '/previous-path',
     service: 'news',
     statusCode: 200,
+    atiAnalyticsAppName: 'news',
+    atiAnalyticsProducerId: 0,
   };
 
   describe('atiPageViewParams is called ', () => {
@@ -55,72 +67,14 @@ describe('ArticleAtiParams', () => {
       jest.clearAllMocks();
     });
 
-    it('should call atiPageViewParams with the params from the Contexts', () => {
-      const mock = jest.fn().mockReturnValue('key=value&key2=value2');
-      atiUrlBuilder.buildATIPageTrackPath = mock;
-
+    it('should call buildArticleATIUrl exactly once', () => {
       renderer.create(Component(newsServiceContextStub, requestContextStub));
 
-      expect(mock).toHaveBeenCalledTimes(1);
-      expect(mock).toHaveBeenCalledWith({
-        appName: 'news',
-        contentId: 'urn:bbc:optimo:c0000000000o',
-        contentType: 'article',
-        isUK: true,
-        language: 'language',
-        ldpThingIds: 'id',
-        ldpThingLabels: 'label',
-        pageIdentifier: 'news.articles.c0000000000o.page',
-        pageTitle: 'A headline',
-        producerId: 0,
-        platform: 'canonical',
-        service: 'news',
-        statsDestination: 'NEWS_PS_TEST',
-        timePublished: '2000-01-01T00:00:00.000Z',
-        timeUpdated: '2001-01-01T00:00:00.000Z',
-        previousPath: '/previous-path',
-        origin: 'https://www.test.bbc.co.uk',
-      });
-    });
-
-    it('should call article utility functions with arguments', () => {
-      testUtils.getContentId = jest.fn();
-      testUtils.getLanguage = jest.fn();
-      testUtils.getPageIdentifier = jest.fn();
-      testUtils.getPromoHeadline = jest.fn();
-      testUtils.getThingAttributes = jest.fn();
-      commonTestUtils.getPublishedDatetime = jest.fn();
-
-      renderer.create(Component(newsServiceContextStub, requestContextStub));
-
-      expect(testUtils.getContentId).toHaveBeenCalledTimes(1);
-      expect(testUtils.getContentId).toHaveBeenCalledWith(mockArticleData);
-      expect(testUtils.getLanguage).toHaveBeenCalledTimes(1);
-      expect(testUtils.getLanguage).toHaveBeenCalledWith(mockArticleData);
-      expect(testUtils.getThingAttributes).toHaveBeenCalledTimes(2);
-      expect(testUtils.getThingAttributes).toHaveBeenCalledWith(
-        'thingId',
+      expect(mockBuildArticleATIUrl).toHaveBeenCalledTimes(1);
+      expect(mockBuildArticleATIUrl).toHaveBeenCalledWith(
         mockArticleData,
-      );
-      expect(testUtils.getThingAttributes).toHaveBeenCalledWith(
-        'thingLabel',
-        mockArticleData,
-      );
-      expect(testUtils.getPageIdentifier).toHaveBeenCalledTimes(1);
-      expect(testUtils.getPageIdentifier).toHaveBeenCalledWith(
-        'news',
-        mockArticleData,
-      );
-      expect(testUtils.getPromoHeadline).toHaveBeenCalledTimes(1);
-      expect(testUtils.getPromoHeadline).toHaveBeenCalledWith(mockArticleData);
-      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledTimes(2);
-      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledWith(
-        'firstPublished',
-        mockArticleData,
-      );
-      expect(commonTestUtils.getPublishedDatetime).toHaveBeenCalledWith(
-        'lastPublished',
-        mockArticleData,
+        requestContextStub,
+        newsServiceContextStub,
       );
     });
   });
