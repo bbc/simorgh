@@ -10,6 +10,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
     pathname="/pathname"
     previousPath={null}
     service="news"
+    statusCode={200}
     variant={null}
   >
     <ArticleMain
@@ -173,6 +174,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
     pathname="/pathname"
     previousPath={null}
     service="persian"
+    statusCode={200}
     variant={null}
   >
     <ArticleMain
@@ -293,6 +295,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
     pathname="/pathname"
     previousPath={null}
     service="pidgin"
+    statusCode={200}
     variant={null}
   >
     <ArticleMain
