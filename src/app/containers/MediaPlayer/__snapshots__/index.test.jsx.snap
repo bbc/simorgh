@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPlayer Fails and returns early when component is toggled off 1`] = `null`;
-
-exports[`MediaPlayer Fails and returns early when there is no versionId 1`] = `null`;
+exports[`MediaPlayer Fails and returns early when component is toggled off 1`] = `<div />`;
 
 exports[`MediaPlayer is called correctly Calls the AMP player when platform is AMP 1`] = `
 .c1 {
@@ -54,27 +52,40 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
   }
 }
 
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <amp-iframe
-      allowfullscreen={true}
-      frameborder="0"
-      layout="fill"
-      sandbox="allow-scripts allow-same-origin"
-      src="https://www.test.bbc.com/ws/av-embeds/articles/foo/p01k6msp/amp"
-    >
-      <amp-img
-        layout="fill"
-        placeholder={true}
-        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-      />
-    </amp-iframe>
-  </div>
-</div>
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <amp-iframe
+            allowfullscreen="true"
+            frameborder="0"
+            layout="fill"
+            sandbox="allow-scripts allow-same-origin"
+            src="https://www.test.bbc.com/ws/av-embeds/articles/foo/p01k6msp/amp"
+          >
+            <amp-img
+              layout="fill"
+              placeholder="true"
+              src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            />
+          </amp-iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 `;
 
 exports[`MediaPlayer is called correctly Calls the canonical placeholder when platform is canonical 1`] = `
@@ -143,23 +154,18 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
-      onClick={[Function]}
+      class="c2"
     >
       <img
         alt="Image Alt"
-        className="c3"
-        height={null}
-        sizes={null}
+        class="c3"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-        srcSet={null}
-        width={null}
       />
     </div>
   </div>
@@ -232,23 +238,18 @@ exports[`MediaPlayer is called correctly Calls the canonical player when platfor
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <div
-    className="c1"
+    class="c1"
   >
     <div
-      className="c2"
-      onClick={[Function]}
+      class="c2"
     >
       <img
         alt="Image Alt"
-        className="c3"
-        height={null}
-        sizes={null}
+        class="c3"
         src=""
-        srcSet={null}
-        width={null}
       />
     </div>
   </div>

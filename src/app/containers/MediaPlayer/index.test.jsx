@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, shape, node } from 'prop-types';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import MediaPlayerContainer from '.';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
@@ -78,7 +78,7 @@ describe('MediaPlayer', () => {
   });
 
   describe('Fails and returns early when', () => {
-    shouldMatchSnapshot(
+    isNull(
       'there is no versionId',
       <ContextWrapper platform="canonical">
         <MediaPlayerContainer blocks={missingVpidFixture} />
@@ -93,7 +93,7 @@ describe('MediaPlayer', () => {
       },
     };
 
-    shouldMatchSnapshot(
+    isNull(
       'component is toggled off',
       <ContextWrapper platform="canonical" toggleState={toggleState}>
         <MediaPlayerContainer blocks={validVideoFixture} />
