@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `om`,
     articleAuthor: `https://www.facebook.com/bbcnewsafaanoromoo`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Haaromsameera',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
     brandName: 'BBC News Afaan Oromoo',
@@ -16,12 +16,12 @@ const service = {
       'https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png',
     defaultImageAltText: 'BBC News Afaan Oromoo',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ' alaan',
+    imageCaptionOffscreenText: "Ibsa waa'ee suuraa, ",
+    videoCaptionOffscreenText: "Ibsa waa'ee viidiyoo, ",
+    audioCaptionOffscreenText: "Ibsa wa'ee raadiyoo, ",
+    defaultCaptionOffscreenText: 'Ibsa suuraa/viidiyoo, ',
+    imageCopyrightOffscreenText: 'Madda suuraa, ',
     locale: `om-ET`,
     datetimeLocale: `om-et`,
     service: 'afaanoromoo',
@@ -38,9 +38,9 @@ const service = {
     translations: {
       seeAll: 'Hunda ilaali',
       home: 'Oduu',
-      currentPage: 'Current page',
+      currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
-      relatedContent: 'Related content',
+      relatedContent: 'Odeessa kana irratti dabalata',
       error: {
         404: {
           statusCode: '404',
@@ -123,19 +123,19 @@ const service = {
       },
       media: {
         audio: 'Sagalee',
-        photogallery: 'Kuusaa Fakkii',
+        photogallery: 'Kuusaa suuraa',
         video: 'Viidiyoo',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
+      header: "Baay'ee kan dubbifame",
       lastUpdated: 'Yeroo dhuma kan haaromfame: ',
     },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Itti dhiyaachuu keenya gara geessituu.',
+        text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
         {
@@ -159,7 +159,8 @@ const service = {
           text: 'BBC qunnami',
         },
       ],
-      copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu.",
+      copyrightText:
+        "BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
     },
     fonts: [],
     navigation: [
