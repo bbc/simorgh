@@ -140,7 +140,7 @@ const service = {
           text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms',
+          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'ውዕሊ ኣጠቓቕማ',
         },
         {
