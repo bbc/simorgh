@@ -1,9 +1,9 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { UserContextProvider } from '../../../contexts/UserContext';
-import { ToggleContext } from '../../../contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { UserContextProvider } from '#contexts/UserContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import WithPageWrapper from '.';
 
 const dataProps = {
