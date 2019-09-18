@@ -187,6 +187,10 @@ const igbo = {
           href: 'https://www.bbc.com/igbo/institutional-43090448',
           text: 'Kpọtụrụ BBC',
         },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'Gbasara BBC',
+        },
       ],
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
