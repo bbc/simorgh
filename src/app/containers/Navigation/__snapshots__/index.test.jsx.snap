@@ -224,6 +224,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
     <NavigationLi
       active={true}
       currentPageText="Peegi ị nọ ugbua"
+      dir="ltr"
       script={
         Object {
           "atlas": Object {
@@ -446,6 +447,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
     <NavigationLi
       active={false}
       currentPageText="Peegi ị nọ ugbua"
+      dir="ltr"
       script={
         Object {
           "atlas": Object {
@@ -668,6 +670,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
     <NavigationLi
       active={false}
       currentPageText="Peegi ị nọ ugbua"
+      dir="ltr"
       script={
         Object {
           "atlas": Object {
@@ -890,6 +893,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
     <NavigationLi
       active={false}
       currentPageText="Peegi ị nọ ugbua"
+      dir="ltr"
       script={
         Object {
           "atlas": Object {
