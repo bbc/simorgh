@@ -162,6 +162,7 @@ const GenerateFixtureData = ({
       pageType="article"
       pathname="/pathname"
       service="news"
+      statusCode={200}
     >
       <FigureContainer
         alt={imageAlt}
