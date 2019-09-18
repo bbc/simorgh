@@ -47,6 +47,7 @@ describe('ArticleAtiParams', () => {
     pathname: '/pathname',
     previousPath: '/previous-path',
     service: 'news',
+    statusCode: 200,
   };
 
   describe('atiPageViewParams is called ', () => {
