@@ -1,5 +1,8 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latinDiacritics, cyrillic } from '@bbc/gel-foundations/scripts';
+import {
+  latinDiacritics,
+  cyrillicAndLatin,
+} from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
@@ -201,7 +204,7 @@ const service = {
     ...baseServiceConfig,
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
-    script: cyrillic,
+    script: cyrillicAndLatin,
   },
 };
 
