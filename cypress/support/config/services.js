@@ -1239,7 +1239,7 @@ module.exports = {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/swahili/dira-tv-49602132',
+            : '/telugu/india-49647976',
         smoke: false,
       },
     },
