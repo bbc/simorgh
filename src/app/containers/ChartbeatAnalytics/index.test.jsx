@@ -9,6 +9,7 @@ import { UserContext } from '../../contexts/UserContext';
 import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';
+import { localBaseUrl } from '../../../testHelpers/config';
 import frontPageData from '../../../../data/news/frontpage';
 
 const defaultToggleState = {
@@ -125,6 +126,22 @@ describe('Charbeats Analytics Container', () => {
     const tree = renderer
       .create(
         <ContextWrap platform="canonical" pageType="article" origin="bbc.com">
+          <ChartbeatAnalytics data={frontPageData} />
+        </ContextWrap>,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should return null when toggle is disbaled for localhost', () => {
+    const tree = renderer
+      .create(
+        <ContextWrap
+          platform="canonical"
+          pageType="article"
+          origin={localBaseUrl}
+        >
           <ChartbeatAnalytics data={frontPageData} />
         </ContextWrap>,
       )
