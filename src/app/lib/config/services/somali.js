@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { somali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
@@ -34,6 +34,10 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Somali',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'Arag dhammaan',
       home: 'War',

@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/pcm';
@@ -40,6 +40,10 @@ const pidgin = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See everitin',
       home: 'Home',

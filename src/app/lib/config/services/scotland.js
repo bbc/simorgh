@@ -1,77 +1,87 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_DARK_SALTIRE, C_WHITE } from '@bbc/psammead-styles/colours';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { gahuza as brandSVG } from '@bbc/psammead-assets/svgs';
+import {
+  F_REITH_SANS_BOLD,
+  F_REITH_SANS_BOLD_ITALIC,
+  F_REITH_SANS_ITALIC,
+  F_REITH_SANS_REGULAR,
+  F_REITH_SERIF_MEDIUM,
+  F_REITH_SERIF_MEDIUM_ITALIC,
+} from '@bbc/psammead-styles/fonts';
+import 'moment/locale/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 
 const service = {
   default: {
-    lang: `rw`,
-    articleAuthor: `https://www.facebook.com/BBCGahuza`,
+    lang: 'en-GB',
+    articleAuthor: `https://www.facebook.com/bbcscotland`,
     articleTimestampPrefix: 'Updated',
-    atiAnalyticsAppName: 'news-gahuza',
-    atiAnalyticsProducerId: '40',
-    brandName: 'BBC News Gahuza',
-    product: 'BBC News Gahuza',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',
-    defaultImageAltText: 'BBC News Gahuza',
-    dir: `ltr`,
+    atiAnalyticsAppName: 'scotland',
+    atiAnalyticsProducerId: '79',
+    brandName: 'BBC Scotland',
+    product: 'BBC Scotland',
+    defaultImage:
+      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+    defaultImageAltText: 'BBC Scotland',
+    dir: 'ltr',
     externalLinkText: ', external',
     imageCaptionOffscreenText: 'Image caption, ',
     videoCaptionOffscreenText: 'Video caption, ',
     audioCaptionOffscreenText: 'Audio caption',
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
-    locale: `rw-RW`,
-    datetimeLocale: `rw-rw`,
-    service: 'gahuza',
-    serviceName: 'News Gahuza',
-    themeColor: `${C_POSTBOX}`,
-    twitterCreator: '@bbcgahuza',
-    twitterSite: '@bbcgahuza',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    locale: 'en_GB',
+    datetimeLocale: 'en-gb',
+    service: 'scotland',
+    serviceName: 'Scotland',
+    themeColor: `${C_DARK_SALTIRE}`,
+    twitterCreator: '@BBCScotland',
+    twitterSite: '@BBCScotland',
+    noBylinesPolicy: null,
+    publishingPrinciples: null,
     script: latin,
-    manifestPath: '/manifest.json',
-    swPath: '/sw.js',
-    frontPageTitle: "Urupapuro rw'itangiriro",
+    manifestPath: '/articles/manifest.json',
+    swPath: '/articles/sw.js',
+    frontPageTitle: 'Home',
     theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
+      brandBackgroundColour: `${C_DARK_SALTIRE}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'Raba vyose',
-      home: `Urupapuro rw'itangiriro`,
+      home: 'Home',
       currentPage: 'Current page',
-      skipLinkText: 'Simbira ku birimwo',
+      skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Hari ikosa',
+          title: 'Page cannot be found',
           message:
-            "Ibishobora kuba vyatewe n'uko wanditse nabi adresse y'urubuga",
+            "Sorry, we're unable to bring you the page you're looking for. Please try:",
           solutions: [
             'Double checking the url',
             'Hitting the refresh button in your browser',
             'Searching for this page using the BBC search bar',
           ],
           callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Gahuza',
+          callToActionLinkText: 'BBC Scotland homepage.',
           callToActionLast: '',
-          callToActionLinkUrl: 'https://www.bbc.com/gahuza',
+          callToActionLinkUrl: 'https://www.bbc.com/scotland',
         },
         500: {
           statusCode: '500',
-          title: '500 - Ikosa',
-          message: 'Habaye ikosa, subire utanguze',
+          title: 'Internal server error',
+          message:
+            "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
           solutions: [
             'Hitting the refresh button in your browser',
             'Coming back again later',
           ],
           callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Gahuza',
+          callToActionLinkText: 'BBC Scotland homepage.',
           callToActionLast: '',
-          callToActionLinkUrl: 'https://www.bbc.com/gahuza',
+          callToActionLinkUrl: 'https://www.bbc.com/scotland',
         },
       },
       consentBanner: {
@@ -124,34 +134,25 @@ const service = {
         },
       },
       media: {
-        audio: 'Amajwi',
-        photogallery: "Urukurikirane rw'amasamu",
+        audio: 'Audio',
+        photogallery: 'Image gallery',
         video: 'Video',
-        bbc_gahuza_radio: {
-          title: 'Radio BBC Gahuza',
-          subtitle:
-            'Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.',
-        },
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Ibisomwa cane',
-      lastUpdated: 'Ibiheruka kuvugururwa: ',
+      header: 'Most read',
+      lastUpdated: 'Last updated: ',
     },
     footer: {
-      externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
-      },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
-        },
         {
           href: 'https://www.bbc.com/terms',
           text: 'Terms of Use',
+        },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc/',
+          text: 'About the BBC',
         },
         {
           href: 'https://www.bbc.com/privacy/',
@@ -162,36 +163,30 @@ const service = {
           text: 'Cookies',
         },
         {
+          href: 'https://www.bbc.com/accessibility/',
+          text: 'Accessibility Help',
+        },
+        {
           href: 'https://www.bbc.com/contact/',
           text: 'Contact the BBC',
         },
       ],
-      copyrightText: 'BBC. BBC ntibazwa ibivuye mu mguga zitari izayo',
+      copyrightText:
+        'BBC. The BBC is not responsible for the content of external sites.',
+      externalLink: {
+        href: 'https://www.bbc.co.uk/help/web/links/',
+        text: 'Read about our approach to external linking.',
+      },
     },
-    fonts: [],
-    timezone: 'Europe/London',
-    navigation: [
-      {
-        title: "Urupapuro rw'itangiriro",
-        url: '/gahuza',
-      },
-      {
-        title: 'Amakuru',
-        url: '/gahuza/amakuru',
-      },
-      {
-        title: 'Imikino',
-        url: '/gahuza/imikino',
-      },
-      {
-        title: 'Umviriza',
-        url: '/gahuza/media/audio',
-      },
-      {
-        title: 'Video',
-        url: '/gahuza/media/video',
-      },
+    fonts: [
+      F_REITH_SANS_BOLD,
+      F_REITH_SANS_BOLD_ITALIC,
+      F_REITH_SANS_ITALIC,
+      F_REITH_SANS_REGULAR,
+      F_REITH_SERIF_MEDIUM,
+      F_REITH_SERIF_MEDIUM_ITALIC,
     ],
+    timezone: 'Europe/London',
   },
 };
 
