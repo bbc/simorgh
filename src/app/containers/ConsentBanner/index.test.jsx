@@ -3,10 +3,18 @@ import renderer from 'react-test-renderer';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { EventContext } from '../../contexts/EventContext';
+import { buildATIClickParams } from '../ATIAnalytics/params';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);
 jest.mock('./index.amp', () => () => <div>Amp Cookie banner</div>);
+jest.mock('../ATIAnalytics/params', () => {
+  const atiParams = jest.requireActual('../ATIAnalytics/params');
 
+  return {
+    ...atiParams,
+    buildATIClickParams: jest.fn(),
+  };
+});
 jest.mock('react', () => {
   const react = jest.requireActual('react');
 
@@ -15,11 +23,13 @@ jest.mock('react', () => {
     useEffect: jest.fn(),
   };
 });
+const mockBuildATIClickParams = jest.fn();
 const mockUseEffect = jest.fn();
 const mockEventContextStub = {
   useClickTracker: jest.fn(),
 };
 useEffect.mockImplementation(mockUseEffect);
+buildATIClickParams.mockImplementation(mockBuildATIClickParams);
 
 const ConsentBanner = require('./index').default;
 
@@ -52,5 +62,10 @@ describe('Consent Banner Container', () => {
     renderer.create(Component());
     expect(mockEventContextStub.useClickTracker).toHaveBeenCalledTimes(1);
     expect(mockUseEffect).toHaveBeenCalledTimes(1);
+  });
+
+  it('should call buildATIClickParams exactly once each', () => {
+    renderer.create(Component());
+    expect(buildATIClickParams).toHaveBeenCalledTimes(1);
   });
 });
