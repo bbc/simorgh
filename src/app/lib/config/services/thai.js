@@ -180,6 +180,10 @@ const service = {
           text: 'เงื่อนไขการใช้งานของ BBC',
         },
         {
+          href: 'https://www.bbc.com/thai/institutional-38403476',
+          text: 'เกี่ยวกับบีบีซี',
+        },
+        {
           href: 'https://www.bbc.com/thai/institutional-38497681',
           text: 'นโยบายความเป็นส่วนตัว',
         },
@@ -190,10 +194,6 @@ const service = {
         {
           href: 'https://www.bbc.com/thai/institutional-37981748',
           text: 'ติดต่อบีบีซีี',
-        },
-        {
-          href: 'https://www.bbc.com/thai/institutional-38403476',
-          text: 'เกี่ยวกับบีบีซี',
         },
       ],
       copyrightText:

@@ -159,6 +159,10 @@ const service = {
           text: 'Shuruucda isticmaalka',
         },
         {
+          href: 'https://www.bbc.com/somali/hayadeed-37098081',
+          text: 'Ku saabsan BBC',
+        },
+        {
           href: 'https://www.bbc.com/somali/hayadeed-37098082',
           text: 'Shuruucda xogta gaarka ah',
         },
@@ -169,10 +173,6 @@ const service = {
         {
           href: 'https://www.bbc.com/somali/hayadeed-37098613',
           text: 'La xiriir BBC',
-        },
-        {
-          href: 'https://www.bbc.com/somali/hayadeed-37098081',
-          text: 'Ku saabsan BBC',
         },
       ],
       copyrightText:

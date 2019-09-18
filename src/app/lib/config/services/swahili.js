@@ -153,6 +153,10 @@ const service = {
           text: 'Sheria ya matumizi',
         },
         {
+          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_aboutus',
+          text: 'Kuhusu BBC',
+        },
+        {
           href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_privacy',
           text: 'Sera ya faragha',
         },
@@ -163,10 +167,6 @@ const service = {
         {
           href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus',
           text: 'Wasiliana na BBC',
-        },
-        {
-          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_aboutus',
-          text: 'Kuhusu BBC',
         },
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
