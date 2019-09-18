@@ -118,6 +118,10 @@ const loadableConfig = {
     loader: () => import(/* webpackChunkName: 'russian' */ './russian.js'),
     webpack: () => [require.resolveWeak('./russian.js')],
   },
+  scotland: {
+    loader: () => import(/* webpackChunkName: 'scotland' */ './scotland.js'),
+    webpack: () => [require.resolveWeak('./scotland.js')],
+  },
   serbian: {
     loader: () => import(/* webpackChunkName: 'serbian' */ './serbian.js'),
     webpack: () => [require.resolveWeak('./serbian.js')],
