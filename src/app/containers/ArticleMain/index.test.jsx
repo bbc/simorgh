@@ -24,6 +24,7 @@ const Context = ({ service, children }) => (
         isAmp={false}
         pageType="article"
         service={service}
+        statusCode={200}
         pathname="/pathname"
       >
         {children}
