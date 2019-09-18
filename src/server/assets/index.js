@@ -5,7 +5,10 @@ import assetsFilter from './assetsFilter';
 const logger = nodeLogger(__filename);
 
 const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
-const FONTS_ORIGIN = 'https://gel.files.bbci.co.uk';
+const FONTS_ORIGINS = [
+  'https://gel.files.bbci.co.uk',
+  'https://ws-downloads.files.bbci.co.uk',
+];
 
 const getAssetsArray = service => {
   const assets = [];
@@ -33,8 +36,8 @@ const getAssetsArray = service => {
 
 const getAssetOrigins = () => {
   const assetOrigins = [
+    ...FONTS_ORIGINS,
     IMAGES_ORIGIN,
-    FONTS_ORIGIN,
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     process.env.SIMORGH_ATI_BASE_URL,
   ];

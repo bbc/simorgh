@@ -136,6 +136,7 @@ const testFrontPages = ({ platform, service, variant }) => {
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
+                'https://ws-downloads.files.bbci.co.uk',
                 localBaseUrl,
                 'https://logws1363.ati-host.net?',
               ]}
@@ -258,6 +259,7 @@ const testArticles = ({ platform, service, variant }) => {
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
+                'https://ws-downloads.files.bbci.co.uk',
                 localBaseUrl,
                 'https://logws1363.ati-host.net?',
               ]}
@@ -378,6 +380,7 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
               assetOrigins={[
                 'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
+                'https://ws-downloads.files.bbci.co.uk',
                 localBaseUrl,
                 'https://logws1363.ati-host.net?',
               ]}
@@ -647,6 +650,7 @@ describe('Server', () => {
             assetOrigins={[
               'https://ichef.bbci.co.uk',
               'https://gel.files.bbci.co.uk',
+              'https://ws-downloads.files.bbci.co.uk',
               localBaseUrl,
               'https://logws1363.ati-host.net?',
             ]}
