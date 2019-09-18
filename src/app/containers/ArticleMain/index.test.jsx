@@ -23,6 +23,7 @@ const Context = ({ service, children }) => (
       pageType="article"
       pathname="/pathname"
       service={service}
+      statusCode={200}
     >
       {children}
     </RequestContextProvider>
