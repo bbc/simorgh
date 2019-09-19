@@ -2,7 +2,7 @@
 import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import useToggle from './useToggle';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');

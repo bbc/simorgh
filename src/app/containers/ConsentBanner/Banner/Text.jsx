@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
 import { ConsentBannerText } from '@bbc/psammead-consent-banner';
-import { RequestContext } from '../../../contexts/RequestContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const BannerText = ({ uk, international }) => {
   const { isUK } = useContext(RequestContext);

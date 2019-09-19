@@ -1,13 +1,13 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { storiesOf } from '@storybook/react';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import FrontPageSection from '.';
 
-import igboData from '../../../../data/igbo/frontpage/index.json';
-import pidginData from '../../../../data/pidgin/frontpage/index.json';
+import igboData from '#data/igbo/frontpage/index.json';
+import pidginData from '#data/pidgin/frontpage/index.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 const getSection = platform => (service, data) => (
   <ServiceContextProvider service={service}>

@@ -1056,7 +1056,13 @@ module.exports = {
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/srbija-49427344/lat',
+        smoke: false,
+      },
     },
   },
   sinhala: {
@@ -1398,7 +1404,13 @@ module.exports = {
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/49375846/simp',
+        smoke: false,
+      },
     },
   },
   ukrainian: {
@@ -1606,7 +1618,13 @@ module.exports = {
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/chinese-news-49631219/simp',
+        smoke: false,
+      },
     },
   },
 };
