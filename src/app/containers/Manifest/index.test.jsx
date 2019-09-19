@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Helmet from 'react-helmet';
 import ManifestContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const contextStub = {
   manifestPath: '/manifest.json',

@@ -1,4 +1,4 @@
-import { blockContainingText, blockArrayModel } from '../../../models/blocks';
+import { blockContainingText, blockArrayModel } from '#models/blocks';
 
 const landscapeImageLocator = `7098/production/_104842882_students.jpg`;
 const portraitImageLocator = `439A/production/_100960371_syrians_and_asylum_v2-nc.png`;
