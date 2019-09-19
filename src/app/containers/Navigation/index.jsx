@@ -6,9 +6,10 @@ import Navigation, {
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const NavigationContainer = () => {
-  const { dir, navigation, script, service, translations } = useContext(
+  const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
   );
+
   const { currentPage, skipLinkText } = translations;
 
   if (!navigation || navigation.length === 0) {
@@ -17,10 +18,10 @@ const NavigationContainer = () => {
 
   return (
     <Navigation
-      dir={dir}
       script={script}
       skipLinkText={skipLinkText}
       service={service}
+      dir={dir}
     >
       <NavigationUl>
         {navigation.map((item, index) => {
