@@ -1,6 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Media Page Main should match snapshot 1`] = `
+<<<<<<< HEAD
+=======
+.c2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.c6 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+>>>>>>> 82d41c9f6b03ee8b62a85eeefea632ee04afddf8
 .c0 {
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -10,6 +51,51 @@ exports[`Media Page Main should match snapshot 1`] = `
   grid-column: 1 / span 6;
 }
 
+<<<<<<< HEAD
+=======
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+>>>>>>> 82d41c9f6b03ee8b62a85eeefea632ee04afddf8
 @media (max-width:37.4375rem) {
   .c0 {
     grid-column-gap: 0.5rem;
@@ -89,6 +175,19 @@ exports[`Media Page Main should match snapshot 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 <div>
   <noscript />
   <div
@@ -102,9 +201,45 @@ exports[`Media Page Main should match snapshot 1`] = `
       class="c1"
     >
       <div
+<<<<<<< HEAD
         blocks="[object Object],[object Object],[object Object]"
         id="blocks"
       />
+=======
+        class="c1"
+      >
+        <h1
+          class="c2"
+          id="content"
+        >
+          ያድምጡ
+        </h1>
+        <p
+          class="c3"
+        >
+          ዝግጅቶቻችንን
+        </p>
+        <div
+          class="c4"
+        >
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+            >
+              <iframe
+                allow="autoplay; fullscreen"
+                allowfullscreen=""
+                class="c7"
+                scrolling="no"
+                src="/ws/av-embeds/media/bbc_amharic_radio/liveradio"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> 82d41c9f6b03ee8b62a85eeefea632ee04afddf8
     </div>
   </main>
 </div>
