@@ -1,6 +1,6 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/pcm';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
@@ -24,7 +24,7 @@ const pidgin = {
     defaultImageAltText: 'BBC News Pidgin',
     dir: 'ltr',
     brandSVG,
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
