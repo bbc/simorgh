@@ -1,5 +1,5 @@
 import assetsFilter from './index';
-import { localBaseUrl } from '../../../testHelpers/config';
+import { localBaseUrl } from '#testHelpers/config';
 
 describe('assetsFilter', () => {
   describe('production build', () => {

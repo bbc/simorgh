@@ -1,7 +1,7 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { zhongwen as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
@@ -31,6 +31,10 @@ const baseServiceConfig = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: '主页',
+  theming: {
+    brandBackgroundColour: `${C_POSTBOX}`,
+    brandLogoColour: `${C_WHITE}`,
+  },
   translations: {
     seeAll: 'See all',
     home: 'Home',
@@ -161,7 +165,7 @@ const baseServiceConfig = {
     copyrightText: 'BBC。BBC不为BBC以外的网站的内容负责',
   },
   fonts: [],
-  timezone: 'Europe/London',
+  timezone: 'GMT',
   navigation: [
     {
       title: '主页',

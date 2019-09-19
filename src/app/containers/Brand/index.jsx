@@ -1,12 +1,17 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
 import { bool } from 'prop-types';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandContainer = props => {
-  const { product, serviceLocalizedName, brandSVG, service } = useContext(
-    ServiceContext,
-  );
+  const {
+    product,
+    serviceLocalizedName,
+    brandSVG,
+    service,
+    theming,
+  } = useContext(ServiceContext);
+  const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const svgRatio = brandSVG && brandSVG.ratio;
@@ -15,6 +20,8 @@ const BrandContainer = props => {
 
   return (
     <Brand
+      backgroundColour={brandBackgroundColour}
+      logoColour={brandLogoColour}
       product={product}
       serviceLocalisedName={serviceLocalizedName}
       svgHeight={svgMaxHeight}

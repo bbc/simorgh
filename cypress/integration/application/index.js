@@ -1,5 +1,5 @@
 import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
+import appConfig from '../../../src/testHelpers/serviceConfigs';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
@@ -56,11 +56,11 @@ describe('Application unknown route error pages', () => {
         const service = url.includes('igbo') ? 'igbo' : 'news';
         cy.get('h1 span').should(
           'contain',
-          `${appConfig[service].translations.error[404].statusCode}`,
+          `${appConfig[service].default.translations.error[404].statusCode}`,
         );
         cy.get('h1').should(
           'contain',
-          `${appConfig[service].translations.error[404].title}`,
+          `${appConfig[service].default.translations.error[404].title}`,
         );
       });
     });
