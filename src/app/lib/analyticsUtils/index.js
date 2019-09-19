@@ -132,7 +132,7 @@ export const getAtUserId = platform => {
 
   if (onClient()) {
     const atuserid = Cookie.getJSON('atuserid');
-    return (atuserid && atuserid.val) || null;
+    return pathOr(null, ['val'], atuserid)
   }
 
   return null;
