@@ -48,7 +48,7 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Səhifəni tapmaq mümkün deyil',
+          title: 'Səhifəni tapmaq mümkün deyil',
           message:
             'Bağışlayın, axtardığınız səhifəni sizə çatdırmaq imkanında deyilik. Lütfən, cəhd edin:',
           solutions: [
@@ -57,13 +57,13 @@ const service = {
             'BBC-nin axtarış alətindən istifadə edərək bu səhifənin axtarılması',
           ],
           callToActionFirst: 'Əks halda, lütfən, ',
-          callToActionLinkText: 'BBC News Azərbaycanca baş səhifəsinə keçin',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News Azərbaycanca baş səhifəsinə',
+          callToActionLast: ' keçin',
           callToActionLinkUrl: 'https://www.bbc.com/azeri',
         },
         500: {
           statusCode: '500',
-          title: '500 - Daxili server səhvi',
+          title: 'Daxili server səhvi',
           message:
             'Bağışlayın, hazırda axtardığınız səhifəni sizə çatdırmaq imkanında deyilik. Lütfən, cəhd edin:',
           solutions: [
@@ -71,8 +71,8 @@ const service = {
             'Sonra təkrar qayıtma',
           ],
           callToActionFirst: 'Əks halda, lütfən, ',
-          callToActionLinkText: 'BBC News Azərbaycanca baş səhifəsinə keçin',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News Azərbaycanca baş səhifəsinə',
+          callToActionLast: ' keçin',
           callToActionLinkUrl: 'https://www.bbc.com/azeri',
         },
       },
