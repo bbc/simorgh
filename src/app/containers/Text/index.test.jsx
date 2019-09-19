@@ -5,7 +5,7 @@ import {
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import TextContainer from './index';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
