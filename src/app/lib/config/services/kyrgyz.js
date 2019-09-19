@@ -148,11 +148,11 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
           text: 'Эмнеге BBC News ишенсе болот?',
         },
         {
-          href: 'bbc.com/kyrgyz/institutional-38157280',
+          href: 'https://www.bbc.com/kyrgyz/institutional-38157280',
           text: 'Колдонуу эрежелери',
         },
         {
