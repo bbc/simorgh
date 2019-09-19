@@ -13,7 +13,7 @@ import {
   mediaAssetPageDataRegexPath,
 } from './index';
 
-jest.mock('#lib/config/services', () => ({
+jest.mock('#testHelpers/serviceConfigs', () => ({
   news: {},
   persian: {},
 }));
