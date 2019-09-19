@@ -12,7 +12,7 @@ import {
 import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
 
 // ensure all moment locales have been loaded via service configs
-import '../../config/services/index';
+import '#testHelpers/serviceConfigs';
 
 const locales = [
   // some other locales (eg. Russian) have multiple levels of pluralisation (ie. one, some, many) which might require
