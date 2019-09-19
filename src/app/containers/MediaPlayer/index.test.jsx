@@ -2,8 +2,8 @@ import React from 'react';
 import { string, shape, node } from 'prop-types';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import MediaPlayerContainer from '.';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContext } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import { validVideoFixture, missingVpidFixture } from './helpers/fixtures';
 
 const defaultToggles = {

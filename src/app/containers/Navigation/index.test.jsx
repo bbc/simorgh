@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import NavigationContainer from './index';
-import igboConfig from '../../lib/config/services/igbo';
+import igboConfig from '#lib/config/services/igbo';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');

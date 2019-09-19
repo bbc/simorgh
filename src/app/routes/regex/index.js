@@ -1,4 +1,4 @@
-import services from '../../lib/config/services/loadableConfig';
+import services from '#lib/config/services/loadableConfig';
 import servicesWithRadioOrTv from '../config';
 import buildMediaRoutes, { buildMediaDataRoutes } from '../buildMediaRoutes';
 
@@ -31,5 +31,5 @@ export const mediaRadioAndTvRegexPathsArray = buildMediaRoutes(
 
 export const mediaDataRegexPath = buildMediaDataRoutes(servicesWithRadioOrTv);
 
-export const mediaAssetPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):amp(${ampRegex})?`;
+export const mediaAssetPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 export const mediaAssetPageDataRegexPath = `${mediaAssetPageRegexPath}.json`;
