@@ -94,7 +94,7 @@ const service = {
             },
           },
           accept: 'ਓਕੇ',
-          reject: 'ਜਾਣੋ  ਕੀ ਬਦਲਿਆ ਹੈ',
+          reject: 'ਜਾਣੋ ਕੀ ਬਦਲਿਆ ਹੈ',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {

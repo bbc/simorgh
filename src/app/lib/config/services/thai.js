@@ -47,7 +47,7 @@ const service = {
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
-      relatedContent: 'Related content',
+      relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
       error: {
         404: {
           statusCode: '404',
