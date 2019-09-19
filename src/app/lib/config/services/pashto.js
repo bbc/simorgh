@@ -151,12 +151,16 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/pashto/institutional-49283007',
           text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
         },
         {
           href: 'https://www.bbc.com/pashto/institutional-37620701',
           text: 'د کارولو شرايط',
+        },
+        {
+          href: 'https://www.bbc.com/pashto/institutional-37622761',
+          text: 'د بي بي سي‌ په اړه',
         },
         {
           href: 'https://www.bbc.com/pashto/institutional-37622762',
@@ -170,10 +174,6 @@ const service = {
         {
           href: 'https://www.bbc.com/pashto/institutional-37622768',
           text: 'زموږ سره اړیکي',
-        },
-        {
-          href: 'https://www.bbc.com/pashto/institutional-37622761',
-          text: 'د بي بي سي‌ په اړه',
         },
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
