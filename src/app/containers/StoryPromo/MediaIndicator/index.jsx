@@ -4,8 +4,8 @@ import { shape, bool, string, oneOfType } from 'prop-types';
 import MediaIndicatorComp from '@bbc/psammead-media-indicator';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { storyItem, linkPromo } from '../../../models/propTypes/storyItem';
-import formatDuration from '../../../lib/utilities/formatDuration';
+import { storyItem, linkPromo } from '#models/propTypes/storyItem';
+import formatDuration from '#lib/utilities/formatDuration';
 
 const getAssetContentTypes = item => {
   const type = pathOr('', ['contentType'], item);

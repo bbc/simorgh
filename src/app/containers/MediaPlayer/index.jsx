@@ -7,14 +7,14 @@ import {
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import getPlaceholderSrc from './helpers/placeholder';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 import useToggle from '../Toggle/useToggle';
-import { RequestContext } from '../../contexts/RequestContext';
-import { GridItemConstrainedMedium } from '../../lib/styledGrid';
+import { RequestContext } from '#contexts/RequestContext';
+import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
-} from '../../models/propTypes';
+} from '#models/propTypes';
 
 const MediaPlayerContainer = ({ blocks, placeholder }) => {
   const { id, platform, origin } = React.useContext(RequestContext);

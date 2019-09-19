@@ -1,3 +1,5 @@
+const { eslintDirAlias } = require('./dirAlias');
+
 module.exports = {
   extends: [
     'airbnb',
@@ -41,17 +43,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      alias: {
-        map: [
-          ['#app', './src/app'],
-          ['#contexts', './src/app/contexts'],
-          ['#data', './data'],
-          ['#lib', './src/app/lib'],
-          ['#models', './src/app/models'],
-          ['#testHelpers', './src/testHelpers'],
-        ],
-        extensions: ['.js', '.jsx', '.json'],
-      },
+      alias: eslintDirAlias,
     },
   },
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shape } from 'prop-types';
 import compose from 'ramda/src/compose';
-import articlePropTypes from '../../models/propTypes/article';
+import articlePropTypes from '#models/propTypes/article';
 import ArticleMain from '../ArticleMain';
 
 import withContexts from '../PageHandlers/withContexts';
