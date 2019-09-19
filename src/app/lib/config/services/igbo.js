@@ -69,7 +69,7 @@ const igbo = {
           statusCode: '500',
           title: '500 - Mperi',
           message:
-            'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ.Gbalịa ọzọ:',
+            'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ. Gbalịa ọzọ:',
           solutions: [
             'Kpatụ ọdụmbi Refresh dị na braụza gị aka',
             'Ga alọghachị azụ ma e mechaa',
@@ -172,8 +172,12 @@ const igbo = {
           text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms',
+          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Usoro Ojiji',
+        },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'Gbasara BBC',
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
@@ -186,10 +190,6 @@ const igbo = {
         {
           href: 'https://www.bbc.com/igbo/institutional-43090448',
           text: 'Kpọtụrụ BBC',
-        },
-        {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
-          text: 'Gbasara BBC',
         },
       ],
       copyrightText:
