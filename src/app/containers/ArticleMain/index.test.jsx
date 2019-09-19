@@ -2,35 +2,35 @@ import React from 'react';
 import { string, node } from 'prop-types';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
   articleDataPersian,
   articleDataPidgin,
 } from '../Article/fixtureData';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
 const Context = ({ service, children }) => (
-  <ServiceContextProvider service="news">
-    <ToggleContextProvider>
+  <ToggleContextProvider>
+    <ServiceContextProvider service={service}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
         pageType="article"
+        pathname="/pathname"
         service={service}
         statusCode={200}
-        pathname="/pathname"
       >
         {children}
       </RequestContextProvider>
-    </ToggleContextProvider>
-  </ServiceContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 Context.propTypes = {
