@@ -1,4 +1,4 @@
-import services from '../../../../../lib/config/services/loadableConfig';
+import services from '#lib/config/services/loadableConfig';
 
 export const fallbackAmpParam = url => {
   const ampRegex = /\.amp$/;

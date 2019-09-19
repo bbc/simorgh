@@ -51,10 +51,6 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c12 {
-  background-color: #B80000;
-}
-
 .c13 {
   position: relative;
   max-width: 80rem;
@@ -102,23 +98,22 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   overflow: hidden;
 }
 
-.c16 {
+.c17 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c16::after {
+.c17::after {
   content: '';
   position: absolute;
   bottom: 0;
   width: 80rem;
   border-bottom: 0.0625rem solid #eab3b3;
   z-index: -1;
-  left: 0;
 }
 
-.c17 {
+.c18 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -132,7 +127,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c17:hover::after {
+.c18:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -142,7 +137,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c17:focus::after {
+.c18:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -153,7 +148,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c19 {
+.c20 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -167,7 +162,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c19:hover::after {
+.c20:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -176,7 +171,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c19:focus::after {
+.c20:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -187,13 +182,21 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c18::after {
+.c19::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c12 {
+  background-color: #B80000;
+}
+
+.c12 .c16::after {
+  left: 0;
 }
 
 .c0 {
@@ -333,41 +336,41 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
+  .c18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c17 {
+  .c18 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c19 {
+  .c20 {
     padding: 0.75rem 0.5rem;
   }
 }
@@ -577,6 +580,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   </div>
   <nav
     className="c12"
+    dir="ltr"
     role="navigation"
   >
     <div
@@ -593,16 +597,15 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         role="list"
       >
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c17"
+            className="c18"
             href="/pidgin"
           >
             <span
-              className="c18"
+              className="c19"
               role="text"
             >
               <span
@@ -616,96 +619,88 @@ exports[`Header should render correctly for WS frontPage 1`] = `
           </a>
         </li>
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c19"
+            className="c20"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
           </a>
         </li>
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c19"
+            className="c20"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
           </a>
         </li>
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c19"
+            className="c20"
             href="/pidgin/world"
           >
             World
           </a>
         </li>
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c19"
+            className="c20"
             href="/pidgin/media/video"
           >
             Video
           </a>
         </li>
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c19"
+            className="c20"
             href="/pidgin/media/audio"
           >
             Audio
           </a>
         </li>
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c19"
+            className="c20"
             href="/pidgin/sport"
           >
             Sport
           </a>
         </li>
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c19"
+            className="c20"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
           </a>
         </li>
         <li
-          className="c16"
-          dir="ltr"
+          className="c16 c17"
           role="listitem"
         >
           <a
-            className="c19"
+            className="c20"
             href="/pidgin/popular/read"
           >
             Most popular
@@ -769,10 +764,6 @@ exports[`Header should render correctly for WS media page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c6 {
-  background-color: #B80000;
-}
-
 .c7 {
   position: relative;
   max-width: 80rem;
@@ -820,23 +811,22 @@ exports[`Header should render correctly for WS media page 1`] = `
   overflow: hidden;
 }
 
-.c10 {
+.c11 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c10::after {
+.c11::after {
   content: '';
   position: absolute;
   bottom: 0;
   width: 80rem;
   border-bottom: 0.0625rem solid #eab3b3;
   z-index: -1;
-  left: 0;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -850,7 +840,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c11:hover::after {
+.c12:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -860,7 +850,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c11:focus::after {
+.c12:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -871,7 +861,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c13 {
+.c14 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -885,7 +875,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c13:hover::after {
+.c14:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -894,7 +884,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c13:focus::after {
+.c14:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -905,13 +895,21 @@ exports[`Header should render correctly for WS media page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c12::after {
+.c13::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c6 {
+  background-color: #B80000;
+}
+
+.c6 .c10::after {
+  left: 0;
 }
 
 @media (min-width:25rem) {
@@ -961,41 +959,41 @@ exports[`Header should render correctly for WS media page 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c13 {
+  .c14 {
     padding: 0.75rem 0.5rem;
   }
 }
@@ -1063,6 +1061,7 @@ exports[`Header should render correctly for WS media page 1`] = `
   </div>
   <nav
     className="c6"
+    dir="ltr"
     role="navigation"
   >
     <div
@@ -1079,16 +1078,15 @@ exports[`Header should render correctly for WS media page 1`] = `
         role="list"
       >
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c11"
+            className="c12"
             href="/pidgin"
           >
             <span
-              className="c12"
+              className="c13"
               role="text"
             >
               <span
@@ -1102,96 +1100,88 @@ exports[`Header should render correctly for WS media page 1`] = `
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/world"
           >
             World
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/media/video"
           >
             Video
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/media/audio"
           >
             Audio
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/sport"
           >
             Sport
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/popular/read"
           >
             Most popular
@@ -1255,10 +1245,6 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c6 {
-  background-color: #B80000;
-}
-
 .c7 {
   position: relative;
   max-width: 80rem;
@@ -1306,23 +1292,22 @@ exports[`Header should render correctly for news article 1`] = `
   overflow: hidden;
 }
 
-.c10 {
+.c11 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c10::after {
+.c11::after {
   content: '';
   position: absolute;
   bottom: 0;
   width: 80rem;
   border-bottom: 0.0625rem solid #eab3b3;
   z-index: -1;
-  left: 0;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1336,7 +1321,7 @@ exports[`Header should render correctly for news article 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c11:hover::after {
+.c12:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1346,7 +1331,7 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c11:focus::after {
+.c12:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1357,7 +1342,7 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c13 {
+.c14 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1371,7 +1356,7 @@ exports[`Header should render correctly for news article 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c13:hover::after {
+.c14:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1380,7 +1365,7 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c13:focus::after {
+.c14:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1391,13 +1376,21 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c12::after {
+.c13::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c6 {
+  background-color: #B80000;
+}
+
+.c6 .c10::after {
+  left: 0;
 }
 
 @media (min-width:25rem) {
@@ -1447,41 +1440,41 @@ exports[`Header should render correctly for news article 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c13 {
+  .c14 {
     padding: 0.75rem 0.5rem;
   }
 }
@@ -1549,6 +1542,7 @@ exports[`Header should render correctly for news article 1`] = `
   </div>
   <nav
     className="c6"
+    dir="ltr"
     role="navigation"
   >
     <div
@@ -1565,16 +1559,15 @@ exports[`Header should render correctly for news article 1`] = `
         role="list"
       >
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c11"
+            className="c12"
             href="/pidgin"
           >
             <span
-              className="c12"
+              className="c13"
               role="text"
             >
               <span
@@ -1588,96 +1581,88 @@ exports[`Header should render correctly for news article 1`] = `
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/world"
           >
             World
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/media/video"
           >
             Video
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/media/audio"
           >
             Audio
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/sport"
           >
             Sport
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
           </a>
         </li>
         <li
-          className="c10"
-          dir="ltr"
+          className="c10 c11"
           role="listitem"
         >
           <a
-            className="c13"
+            className="c14"
             href="/pidgin/popular/read"
           >
             Most popular

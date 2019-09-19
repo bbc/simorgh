@@ -1,11 +1,11 @@
 import React from 'react';
-import { RequestContext } from '../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import getArticleAtiParams from './params/article';
 import getFrontPageAtiParams from './params/frontpage';
 import getMediaPageAtiParams from './params/media';
-import { pageDataPropType } from '../../models/propTypes/data';
+import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
   const { pageType, platform } = React.useContext(RequestContext);

@@ -7,7 +7,7 @@ import {
   sameDayTimestampsGenerator,
   isBritishSummerTime,
 } from './testHelpers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
 const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
