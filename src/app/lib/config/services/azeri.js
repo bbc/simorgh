@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
 
@@ -31,7 +31,7 @@ const service = {
     twitterSite: '@bbcazeri',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Xəbərlər',
