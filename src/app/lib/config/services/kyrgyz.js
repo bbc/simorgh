@@ -48,30 +48,31 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Баракча табылган жок',
+          title: 'Баракча табылган жок',
           message:
-            'Бул веб-даректи туура эмес тергенден келип чыгышы мүмкүн. Даректи жана анын жазылышын текшерип көрүңүз.',
+            'Кечиресиз, сиз тандаган баракча ачылган жок. Кайра кириңиз:',
           solutions: [
             'Баракчанын дарегин текшериңиз',
             'Браузердеги жаңылоо баскычын басыңыз',
             'Баракчаны издөө аянтчадан табыңыз',
           ],
           callToActionFirst: 'Анын ордуна ',
-          callToActionLinkText: 'BBC News Кыргыз КызMATы',
-          callToActionLast: 'баракчабызга кириңиз',
+          callToActionLinkText: 'BBC News Кыргыз Кызматы',
+          callToActionLast: ' баракчабызга кириңиз',
           callToActionLinkUrl: 'https://www.bbc.com/kyrgyz',
         },
         500: {
           statusCode: '500',
-          title: '500 - Ички сервердеги ката',
-          message: 'Ката келип чыкты. Бетти жаңылап көрүңүз.',
+          title: 'Ички сервердеги ката',
+          message:
+            'Кечиресиз, сиз издеп жаткан баракчаны таба алган жокпуз. Кайра кириңиз:',
           solutions: [
             'Браузердеги жаңылоо баскычын басыңыз',
             'Бир аздан кийин кайтып келиңиз',
           ],
           callToActionFirst: 'Анын ордуна ',
-          callToActionLinkText: 'BBC News Кыргыз КызMATы',
-          callToActionLast: 'баракчабызга кириңиз',
+          callToActionLinkText: 'BBC News Кыргыз Кызматы',
+          callToActionLast: ' баракчабызга кириңиз',
           callToActionLinkUrl: 'https://www.bbc.com/kyrgyz',
         },
       },
