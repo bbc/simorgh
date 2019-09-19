@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { zhongwen as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 
@@ -27,7 +27,7 @@ const baseServiceConfig = {
   twitterSite: '@bbcchinese',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
+  script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: '主页',

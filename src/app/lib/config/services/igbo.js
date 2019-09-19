@@ -1,30 +1,30 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const igbo = {
   default: {
     lang: 'ig',
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
     brandName: 'BBC News Ìgbò',
+    product: 'BBC News',
+    serviceLocalizedName: 'Ìgbò',
     locale: 'ig',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ig',
     datetimeLocale: 'ig',
     service: 'igbo',
     serviceName: 'Igbo',
-    serviceLocalizedName: 'Ìgbò',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
     brandSVG,
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Ogbako',

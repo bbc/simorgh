@@ -1,6 +1,6 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/yo';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
@@ -13,6 +13,7 @@ const yoruba = {
     atiAnalyticsProducerId: '107',
     brandName: 'BBC News Yorùbá',
     product: 'BBC News',
+    serviceLocalizedName: 'Yorùbá',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
     defaultImageAltText: 'BBC News Yorùbá',
     dir: 'ltr',
@@ -28,7 +29,6 @@ const yoruba = {
     datetimeLocale: 'yo',
     service: 'yoruba',
     serviceName: 'Yoruba',
-    serviceLocalizedName: 'Yorùbá',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
@@ -38,7 +38,7 @@ const yoruba = {
     },
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
