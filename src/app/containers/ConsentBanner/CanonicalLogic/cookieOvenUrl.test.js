@@ -1,5 +1,5 @@
 import cookieOvenUrl from './cookieOvenUrl';
-import { localBaseUrl } from '../../../../testHelpers/config';
+import { localBaseUrl } from '#testHelpers/config';
 
 describe('cookieOvenUrl', () => {
   const logicMap = [

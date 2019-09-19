@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);
 jest.mock('./index.amp', () => () => <div>Amp Cookie banner</div>);
@@ -16,8 +16,8 @@ describe('Consent Banner Container', () => {
       isAmp
       pageType="article"
       service="news"
-      pathname="/pathname"
       statusCode={200}
+      pathname="/pathname"
     >
       <ConsentBanner />
     </RequestContextProvider>,
@@ -31,8 +31,8 @@ describe('Consent Banner Container', () => {
       isAmp={false}
       pageType="article"
       service="news"
-      pathname="/pathname"
       statusCode={200}
+      pathname="/pathname"
     >
       <ConsentBanner />
     </RequestContextProvider>,
