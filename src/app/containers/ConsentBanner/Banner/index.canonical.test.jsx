@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Banner from './index.canonical';
 
 describe('Canonical Consent Banner Container', () => {

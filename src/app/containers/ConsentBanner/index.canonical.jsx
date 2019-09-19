@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Banner from './Banner/index.canonical';
 import consentBannerUtilities from './CanonicalLogic';
-import { UserContext } from '#contexts/UserContext';
+import { UserContext } from '../../contexts/UserContext';
 
 const Canonical = () => {
   const { updateCookiePolicy } = useContext(UserContext);

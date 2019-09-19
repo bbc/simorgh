@@ -1,26 +1,7 @@
 /* eslint-disable global-require */
-import React, { useContext, createContext } from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-
-const RequestContext = createContext({
-  env: 'getEnv',
-  id: 'id',
-  isUK: true,
-  origin: 'origin',
-  pageType: 'article',
-  platform: 'amp',
-  statsDestination: 'getStatsDestination',
-  statsPageIdentifier: 'getStatsPageIdentifier',
-  previousPath: '/previous-path',
-});
-
-const ServiceContext = createContext({});
-
-const EventContext = createContext({
-  useWindowEvent: () => {},
-  useClickTracker: () => {},
-});
 
 let CanonicalContainer;
 let logic;
@@ -50,9 +31,7 @@ jest.mock('react', () => {
 
 const updateCookiePolicy = jest.fn();
 
-useContext.mockImplementation(({ _currentValue }) => {
-  return { ..._currentValue, updateCookiePolicy };
-});
+useContext.mockImplementation(() => ({ updateCookiePolicy }));
 
 describe('Canonical Consent Banner Container', () => {
   beforeEach(() => {
@@ -74,17 +53,7 @@ describe('Canonical Consent Banner Container', () => {
       },
     );
 
-    const ConsentBanner = require('./index').default;
-
-    CanonicalContainer = () => (
-      <ServiceContext.Provider>
-        <RequestContext.Provider>
-          <EventContext.Provider>
-            <ConsentBanner />
-          </EventContext.Provider>
-        </RequestContext.Provider>
-      </ServiceContext.Provider>
-    );
+    CanonicalContainer = require('./index').default;
 
     container = document.createElement('div');
     document.body.appendChild(container);

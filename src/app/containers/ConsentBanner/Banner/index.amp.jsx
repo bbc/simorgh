@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '@bbc/psammead-consent-banner';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import BannerText from './Text';
 
 const Accept = (message, onClick) => (
