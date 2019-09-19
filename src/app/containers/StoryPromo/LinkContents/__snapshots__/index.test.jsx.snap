@@ -1,47 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Story Promo Link Contents should render with visually hidden text for media promos 1`] = `
+.c0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <span
   role="text"
 >
-  <ForwardRef(VisuallyHiddenText)>
+  <span
+    class="c0"
+  >
     AUDIO
     , 
-  </ForwardRef(VisuallyHiddenText)>
+  </span>
   <span>
     An overtyped headline for a media item
   </span>
-  <ForwardRef(VisuallyHiddenText)>
+  <span
+    class="c0"
+  >
     , 11,06
-  </ForwardRef(VisuallyHiddenText)>
+  </span>
 </span>
 `;
 
 exports[`Story Promo Link Contents should render with visually hidden text for media with overtyped headline 1`] = `
+.c0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <span
   role="text"
 >
-  <ForwardRef(VisuallyHiddenText)>
+  <span
+    class="c0"
+  >
     AUDIO
     , 
-  </ForwardRef(VisuallyHiddenText)>
+  </span>
   <span>
     An overtyped headline for a media item
   </span>
-  <ForwardRef(VisuallyHiddenText)>
+  <span
+    class="c0"
+  >
     , 11,06
-  </ForwardRef(VisuallyHiddenText)>
+  </span>
 </span>
 `;
 
 exports[`Story Promo Link Contents should render with visually hidden text for photogallery promos 1`] = `
+.c0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <span
   role="text"
 >
-  <ForwardRef(VisuallyHiddenText)>
+  <span
+    class="c0"
+  >
     PHOTOGALLERY
     , 
-  </ForwardRef(VisuallyHiddenText)>
+  </span>
   <span>
     A photo gallery item
   </span>
