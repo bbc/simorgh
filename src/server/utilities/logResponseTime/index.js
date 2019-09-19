@@ -1,4 +1,4 @@
-import nodeLogger from '../../../app/lib/logger.node';
+import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;

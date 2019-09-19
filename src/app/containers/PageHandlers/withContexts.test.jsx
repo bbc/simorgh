@@ -1,27 +1,25 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
 import WithContexts from './withContexts';
-import getOriginContext from '../../contexts/RequestContext/getOriginContext';
-import getStatsDestination from '../../contexts/RequestContext/getStatsDestination';
-import getStatsPageIdentifier from '../../contexts/RequestContext/getStatsPageIdentifier';
-import * as requestContextImports from '../../contexts/RequestContext';
-import * as serviceContextImports from '../../contexts/ServiceContext';
+import getOriginContext from '#contexts/RequestContext/getOriginContext';
+import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
+import getStatsPageIdentifier from '#contexts/RequestContext/getStatsPageIdentifier';
+import * as requestContextImports from '#contexts/RequestContext';
+import * as serviceContextImports from '#contexts/ServiceContext';
 
-jest.mock('../../contexts/RequestContext/getOriginContext', () => jest.fn());
+jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 
 getOriginContext.mockImplementation(origin => ({
   isUK: true,
   origin,
 }));
 
-jest.mock('../../contexts/RequestContext/getStatsDestination', () => jest.fn());
+jest.mock('#contexts/RequestContext/getStatsDestination', () => jest.fn());
 
 getStatsDestination.mockImplementation(() => 'NEWS_PS_TEST');
 
-jest.mock('../../contexts/RequestContext/getStatsPageIdentifier', () =>
-  jest.fn(),
-);
+jest.mock('#contexts/RequestContext/getStatsPageIdentifier', () => jest.fn());
 
 getStatsPageIdentifier.mockImplementation(
   () => 'news.articles.c0000000000o.page',

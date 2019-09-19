@@ -3,7 +3,7 @@ import uuid from 'uuid';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ParagraphContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
