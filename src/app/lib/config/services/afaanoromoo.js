@@ -6,7 +6,7 @@ import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 const service = {
   default: {
     lang: `om`,
-    product: 'BBC News Afaan Oromoo',
+    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-afaanoromoo',
