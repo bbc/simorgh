@@ -137,7 +137,7 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/japanese/help-49677253',
           text: 'BBCが信頼できる理由',
         },
         {
