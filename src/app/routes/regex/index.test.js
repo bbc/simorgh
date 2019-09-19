@@ -13,7 +13,7 @@ import {
   mediaAssetPageDataRegexPath,
 } from './index';
 
-jest.mock('../../../testHelpers/serviceConfigs', () => ({
+jest.mock('#testHelpers/serviceConfigs', () => ({
   news: {},
   persian: {},
 }));
@@ -238,6 +238,9 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/punjabi/international-49567825.amp',
       '/kyrgyz/sapar-tv-48695523',
       '/mundo/test_underscore-12345678',
+      '/zhongwen/test-12345678/simp',
+      '/zhongwen/test-12345678/trad',
+      '/zhongwen/test-12345678/simp.amp',
     ];
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
@@ -262,6 +265,8 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/pidgin/test-49450859.json',
       '/kyrgyz/test-tv-48695523.json',
       '/mundo/test_underscore-12345678.json',
+      '/zhongwen/test-12345678/simp.json',
+      '/zhongwen/test-12345678/trad.json',
     ];
 
     shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);

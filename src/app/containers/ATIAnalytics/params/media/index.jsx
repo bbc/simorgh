@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 
 import atiPageViewParams from '../../atiUrl';
-import { RequestContext } from '../../../../contexts/RequestContext';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const Params = pageData => {
   const { platform, statsDestination } = useContext(RequestContext);

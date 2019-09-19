@@ -5,7 +5,7 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes from '../app/routes';
+import routes from '#app/routes';
 import {
   articleDataRegexPath,
   articleManifestRegexPath,
@@ -16,9 +16,9 @@ import {
   mediaDataRegexPath,
   mediaAssetPageDataRegexPath,
 } from '../app/routes/regex';
-import nodeLogger from '../app/lib/logger.node';
+import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
-import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 
 const morgan = require('morgan');
@@ -138,12 +138,13 @@ if (process.env.APP_ENV === 'local') {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(mediaAssetPageDataRegexPath, async ({ params }, res, next) => {
-      const { service, assetUri: id } = params;
+      const { service, assetUri: id, variant } = params;
 
       const dataFilePath = constructDataFilePath({
         pageType: 'mediaAssetPage',
         service,
         id,
+        variant,
       });
 
       sendDataFile(res, dataFilePath, next);
