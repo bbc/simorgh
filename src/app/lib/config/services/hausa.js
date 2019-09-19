@@ -43,7 +43,7 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: 'Ba za a samu wannan shafin ba',
+          title: '404 - Ba za a samu wannan shafin ba',
           message:
             'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
           solutions: [
@@ -58,7 +58,7 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: "Matsalar na'ura",
+          title: "500 - Matsalar na'ura",
           message:
             'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
           solutions: ['Sabunta shafin', 'Ziyarci shafin daga baya'],
@@ -141,7 +141,7 @@ const service = {
     footer: {
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
           text: 'Me yasa za ka aminta da BBC',
         },
         {
