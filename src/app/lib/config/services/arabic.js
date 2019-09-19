@@ -6,7 +6,7 @@ import {
   F_NASSIM_ARABIC_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ar';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
@@ -185,7 +185,7 @@ const service = {
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
     },
     fonts: [F_NASSIM_ARABIC_REGULAR, F_NASSIM_ARABIC_BOLD],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'رئيسية',
