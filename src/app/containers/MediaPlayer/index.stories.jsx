@@ -17,6 +17,7 @@ const defaultToggles = {
 };
 
 storiesOf('Containers|Media Player/Canonical', module)
+  .addParameters({ chromatic: { disable: false } })
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .add('default', ({ service }) => {
@@ -37,6 +38,7 @@ storiesOf('Containers|Media Player/Canonical', module)
   });
 
 storiesOf('Containers|Media Player/AMP', module)
+  .addParameters({ chromatic: { disable: false } })
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .addDecorator(AmpDecorator)
