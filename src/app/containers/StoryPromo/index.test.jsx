@@ -2,8 +2,8 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relItems from './IndexAlsos/relatedItems';
 import StoryPromo from '.';
 
@@ -207,6 +207,7 @@ const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
       isAmp={platform === 'amp'}
       pageType="article"
       service={service}
+      statusCode={200}
       pathname="/pathname"
     >
       <StoryPromo {...props} />

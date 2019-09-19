@@ -1,9 +1,9 @@
 import React from 'react';
 import { any, bool, string, number, objectOf } from 'prop-types';
 import FigureContainer from '.';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { blockContainingText } from '../../models/blocks';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { blockContainingText } from '#models/blocks';
 
 const imageAlt = 'Pauline Clayton';
 const imageHeight = 360;
@@ -162,6 +162,7 @@ const GenerateFixtureData = ({
       pageType="article"
       pathname="/pathname"
       service="news"
+      statusCode={200}
     >
       <FigureContainer
         alt={imageAlt}

@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { amharic as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
@@ -38,6 +38,10 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       home: 'ዜና',
       currentPage: 'Current page',
@@ -54,7 +58,7 @@ const service = {
             'የቢቢሲን መፈለጊያ ቁልፍ በመጠቀም ይፈልጉ',
           ],
           callToActionFirst: 'እንደ አማራጭም እባክዎ ገፃችን ላይ የሚገኘውን ',
-          callToActionLinkText: '[BBC ድረገፅ ይጎብኙ]',
+          callToActionLinkText: 'BBC News አማርኛ ድረገፅ ይጎብኙ',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },
@@ -64,7 +68,7 @@ const service = {
           message: 'የሚፈልጉትን ገፅ ማምጣት ባለመቻላችን እናዝናለን። እባክዎ እንደገና ይሞክሩ',
           solutions: ['በገፅዎ ላይ ያለውን ሪፍሬሽ የሚለውን ቁልፍ ይጫኑ', 'እንደገና ይመለሱ'],
           callToActionFirst: 'እንደ አማራጭም እባክዎ ገፃችን ላይ የሚገኘውን ',
-          callToActionLinkText: '[BBC ድረገፅ ይጎብ]',
+          callToActionLinkText: 'BBC News አማርኛ ድረገፅ ይጎብኙ',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },

@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { tigrinya as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
@@ -38,6 +38,10 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See all',
       home: 'ዜና',
@@ -55,8 +59,8 @@ const service = {
             'ነቲ ናይ ቢቢሲ መአለሺ ስፍራ ተጠቒምካ ነዚ ገጽ ክትረኽቦ ፈትን',
           ],
           callToActionFirst: 'ከም ኣማራጺ ከኣ ',
-          callToActionLinkText: '[BBC News ረኣይ።]',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News ትግርኛ',
+          callToActionLast: ' ረኣይ።',
           callToActionLinkUrl: 'https://www.bbc.com/tigrinya',
         },
         500: {
@@ -65,8 +69,8 @@ const service = {
           message: 'ይቕረታ፡ ነቲ ዝደለኻዮ ገጽ ክነቕርበልካ ኣይከኣልናን። በጃኻ፡ ነዚ ዝስዕብ ፈትን፡',
           solutions: ['ኣብ መአለሺኻ ንዘሎ ደጊምካ መፈተኒ መልጎም ጠውቕ', 'ጸኒሕካ ደጊምካ ፈትን'],
           callToActionFirst: 'ከም ኣማራጺ ከኣ ',
-          callToActionLinkText: '[BBC News ረኣይ።]',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News ትግርኛ',
+          callToActionLast: ' ረኣይ።',
           callToActionLinkUrl: 'https://www.bbc.com/tigrinya',
         },
       },

@@ -1,11 +1,11 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_ISKOOLA_POTA_BBC_BOLD,
   F_ISKOOLA_POTA_BBC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
@@ -38,6 +38,10 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'මුල් පිටුව',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See all',
       home: 'මුල් පිටුව',
@@ -171,7 +175,7 @@ const service = {
         'බීබීසී. වෙනත් අන්තර්ජාල අඩවිවල අන්තර්ගතය පිළිබඳව බීබීසීය වගකීමෙන් නොබැඳේ',
     },
     fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'මුල් පිටුව',

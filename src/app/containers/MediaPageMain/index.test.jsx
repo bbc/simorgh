@@ -4,7 +4,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import MediaPageMain from '.';
-import amharicPageData from '../../../../data/amharic/bbc_amharic_radio/liveradio';
+import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
 
 jest.mock('../Metadata', () => () => <div id="metadata" />);

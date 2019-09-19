@@ -2,9 +2,9 @@ import React from 'react';
 import { string, node } from 'prop-types';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
   articleDataPersian,
@@ -25,6 +25,7 @@ const Context = ({ service, children }) => (
         pageType="article"
         pathname="/pathname"
         service={service}
+        statusCode={200}
       >
         {children}
       </RequestContextProvider>
