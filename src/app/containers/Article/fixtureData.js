@@ -1,4 +1,4 @@
-import { blockContainingText, singleTextBlock } from '../../models/blocks';
+import { blockContainingText, singleTextBlock } from '#models/blocks';
 
 const articleDataBuilder = (
   id,

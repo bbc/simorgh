@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import FrontPageMain from '.';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
-import preprocessor from '../../lib/utilities/preprocessor';
-import addIdsToItems from '../../lib/utilities/preprocessor/rules/addIdsToItems';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
+import frontPageDataPidgin from '#data/pidgin/frontpage';
+import preprocessor from '#lib/utilities/preprocessor';
+import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const processedPidgin = preprocessor(frontPageDataPidgin, [addIdsToItems]);
 

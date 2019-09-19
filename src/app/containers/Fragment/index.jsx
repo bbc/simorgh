@@ -2,7 +2,7 @@ import React from 'react';
 import { getSansRegularItalic } from '@bbc/psammead-styles/font-styles';
 import styled from 'styled-components';
 import { string, node, arrayOf } from 'prop-types';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const italic = styled.i`
   ${({ service }) => getSansRegularItalic(service)}
