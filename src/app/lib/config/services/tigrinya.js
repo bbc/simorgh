@@ -160,7 +160,7 @@ const service = {
           text: 'ንቢቢሲ የዛርቡ',
         },
       ],
-      copyrightText: '© 2019 BBC. ቢቢሲ ንናይ ደገ መርበብ ሓበሬታታት ሓላፍነት ኣይወስድን.',
+      copyrightText: 'BBC. ቢቢሲ ንናይ ደገ መርበብ ሓበሬታታት ሓላፍነት ኣይወስድን.',
     },
     fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [
