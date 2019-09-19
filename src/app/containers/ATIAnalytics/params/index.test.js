@@ -1,4 +1,4 @@
-import { createBuilderFactory, buildATIUrl, buildATIClickParams } from '.';
+import { buildATIUrl, buildATIClickParams } from '.';
 
 jest.mock('./article/buildParams', () => ({
   buildArticleATIUrl: jest.fn(),
@@ -25,21 +25,6 @@ const { buildFrontPageATIUrl, buildFrontPageATIParams } = jest.requireMock(
 );
 
 describe('ATIAnalytics params', () => {
-  describe('createBuilderFactory', () => {
-    it('should return empty function', () => {
-      const fn = createBuilderFactory({}, {});
-      expect(fn()).toEqual(null);
-    });
-
-    it('should return r1', () => {
-      const fn = createBuilderFactory(
-        { pageType: 'page1' },
-        { page1: () => 'r1', page2: 'r2' },
-      );
-      expect(fn()).toEqual('r1');
-    });
-  });
-
   describe('buildATIUrl', () => {
     it('should call buildArticleATIUrl function', () => {
       buildATIUrl({}, { pageType: 'article' }, {});

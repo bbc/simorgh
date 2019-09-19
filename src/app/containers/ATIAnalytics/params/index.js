@@ -20,7 +20,7 @@ const pageTypeParamBuilders = {
   media: buildMediaATIParams,
 };
 
-export const createBuilderFactory = (requestContext, pageTypeHandlers = {}) => {
+const createBuilderFactory = (requestContext, pageTypeHandlers = {}) => {
   const { pageType } = requestContext;
 
   return pageTypeHandlers[pageType] || (() => null);
