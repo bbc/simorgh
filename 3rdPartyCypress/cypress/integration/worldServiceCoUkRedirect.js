@@ -1,4 +1,4 @@
-import services from '../../../src/app/lib/config/services';
+import services from '../../../src/testHelpers/serviceConfigs';
 
 Object.keys(services).forEach(service => {
   const notWSServices = [
