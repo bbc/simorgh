@@ -25,10 +25,9 @@ const getConsentBanner = platform => (
   </ServiceContextProvider>
 );
 
-storiesOf('Containers|Consent Banner/', module)
-  .addDecorator(AmpDecorator)
-  .add('amp', () => getConsentBanner('amp'));
+const stories = storiesOf('Containers|Consent Banner/', module).addParameters({
+  chromatic: { disable: false },
+});
 
-storiesOf('Containers|Consent Banner/', module).add('canonical', () =>
-  getConsentBanner('canonical'),
-);
+stories.addDecorator(AmpDecorator).add('amp', () => getConsentBanner('amp'));
+stories.add('canonical', () => getConsentBanner('canonical'));

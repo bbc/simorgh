@@ -7,6 +7,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Footer from '.';
 
 storiesOf('Containers|Footer', module)
+  .addParameters({ chromatic: { disable: false } })
   .addDecorator(withKnobs)
   .add(
     'default',
