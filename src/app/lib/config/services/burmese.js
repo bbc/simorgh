@@ -2,7 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { burmese } from '@bbc/gel-foundations/scripts';
 import { burmese as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_PADAUK_BOLD, F_PADAUK_REGULAR } from '@bbc/psammead-styles/fonts';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
@@ -178,7 +178,7 @@ const service = {
         'ပြဘီဘီစီ။ င်ပ ဝက်ဘ်ဆိုက်ပါ အကြောင်းအရာများအပေါ် ဘီဘီစီက တာဝန်မယူပါ။',
     },
     fonts: [F_PADAUK_BOLD, F_PADAUK_REGULAR],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'ပင်မစာမျက်နှာ',

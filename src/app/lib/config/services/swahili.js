@@ -1,7 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
 
 const service = {
   default: {
@@ -175,7 +175,7 @@ const service = {
       },
     },
     fonts: [],
-    timezone: 'Europe/London',
+    timezone: 'Africa/Nairobi',
     navigation: [
       {
         title: 'Habari',

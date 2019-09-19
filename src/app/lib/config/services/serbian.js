@@ -4,7 +4,7 @@ import {
   cyrillicAndLatin,
 } from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
@@ -164,7 +164,7 @@ const baseServiceConfig = {
       'BBC. BBC nije odgovoran za sadržaj sajtova sa spoljnih linkova',
   },
   fonts: [],
-  timezone: 'Europe/London',
+  timezone: 'GMT',
   navigation: [
     {
       title: 'Početna strana',
