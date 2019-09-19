@@ -43,7 +43,7 @@ const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Ba za a samu wannan shafin ba',
+          title: 'Ba za a samu wannan shafin ba',
           message:
             'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
           solutions: [
@@ -58,7 +58,7 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: "500 - Matsalar na'ura",
+          title: "Matsalar na'ura",
           message:
             'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
           solutions: ['Sabunta shafin', 'Ziyarci shafin daga baya'],

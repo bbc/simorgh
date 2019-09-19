@@ -52,7 +52,7 @@ const igbo = {
         skipLinkText: 'Wụga n’ọdịnaya',
         404: {
           statusCode: '404',
-          title: '404 - Ahụghị ibe akwụkwọ a',
+          title: 'Ahụghị ibe akwụkwọ a',
           message:
             'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ. Nwalie ọzọ:',
           solutions: [
@@ -67,7 +67,7 @@ const igbo = {
         },
         500: {
           statusCode: '500',
-          title: '500 - Mperi',
+          title: 'Mperi',
           message:
             'E wela iwe, anyị enweghị ike iwetara gị ibe akwụkwọ ị na-achọ. Gbalịa ọzọ:',
           solutions: [
