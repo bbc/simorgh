@@ -1,87 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextContainer with data should render correctly 1`] = `
-<React.Fragment>
-  <Blocks
-    blocks={
-      Array [
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 1st paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 2nd paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 3rd paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 4th paragraph block..",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-        Object {
-          "model": Object {
-            "blocks": Array [
-              Object {
-                "model": Object {
-                  "attributes": Array [],
-                  "text": "This is a 5th paragraph block.",
-                },
-                "type": "fragment",
-              },
-            ],
-          },
-          "type": "paragraph",
-        },
-      ]
-    }
-    componentsToRender={
-      Object {
-        "paragraph": [Function],
-      }
-    }
-  />
-</React.Fragment>
+.c1 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      This is a 1st paragraph block.
+    </p>
+  </div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      This is a 2nd paragraph block.
+    </p>
+  </div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      This is a 3rd paragraph block.
+    </p>
+  </div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      This is a 4th paragraph block..
+    </p>
+  </div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      This is a 5th paragraph block.
+    </p>
+  </div>
+</div>
 `;

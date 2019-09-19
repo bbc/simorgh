@@ -32,6 +32,7 @@ const Context = ({ service, children }) => (
     </ServiceContextProvider>
   </ToggleContextProvider>
 );
+
 Context.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
