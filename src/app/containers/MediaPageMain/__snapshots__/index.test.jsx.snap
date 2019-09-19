@@ -23,7 +23,7 @@ exports[`Media Page Main should match snapshot 1`] = `
   margin: 0;
 }
 
-.c5 {
+.c7 {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ exports[`Media Page Main should match snapshot 1`] = `
   overflow: hidden;
 }
 
-.c4 {
+.c6 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -46,6 +46,14 @@ exports[`Media Page Main should match snapshot 1`] = `
 
 .c1 {
   grid-column: 1 / span 6;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -161,6 +169,19 @@ exports[`Media Page Main should match snapshot 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 <div>
   <noscript />
   <div
@@ -189,13 +210,21 @@ exports[`Media Page Main should match snapshot 1`] = `
         <div
           class="c4"
         >
-          <iframe
-            allow="autoplay; fullscreen"
-            allowfullscreen=""
+          <div
             class="c5"
-            scrolling="no"
-            src="/ws/av-embeds/media/bbc_amharic_radio/liveradio"
-          />
+          >
+            <div
+              class="c6"
+            >
+              <iframe
+                allow="autoplay; fullscreen"
+                allowfullscreen=""
+                class="c7"
+                scrolling="no"
+                src="/ws/av-embeds/media/bbc_amharic_radio/liveradio"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
