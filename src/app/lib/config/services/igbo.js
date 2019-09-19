@@ -7,19 +7,19 @@ import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 const igbo = {
   default: {
     lang: 'ig',
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
     brandName: 'BBC News Ìgbò',
+    product: 'BBC News',
+    serviceLocalizedName: 'Ìgbò',
     locale: 'ig',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ig',
     datetimeLocale: 'ig',
     service: 'igbo',
     serviceName: 'Igbo',
-    serviceLocalizedName: 'Ìgbò',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
