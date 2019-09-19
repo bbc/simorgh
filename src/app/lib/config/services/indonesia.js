@@ -147,7 +147,11 @@ const service = {
           text: 'Peraturan Penggunaan',
         },
         {
-          href: 'https://www.bbc.com/indonesia/institutional-37818425/',
+          href: 'https://www.bbc.com/indonesia/institutional-37818424',
+          text: 'Mengenai BBC',
+        },
+        {
+          href: 'https://www.bbc.com/indonesia/institutional-37818425',
           text: 'Kebijakan tentang Privasi',
         },
         {
@@ -158,10 +162,6 @@ const service = {
         {
           href: 'https://www.bbc.com/indonesia/institutional-37818427',
           text: 'Hubungi BBC',
-        },
-        {
-          href: 'https://www.bbc.com/indonesia/institutional-37818424',
-          text: 'Mengenai BBC',
         },
       ],
       copyrightText:
