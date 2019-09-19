@@ -130,7 +130,7 @@ export const getAtUserId = platform => {
     return null;
   }
 
-  if (onClient()) {
+  if (onClient() && platform !== 'amp') {
     const atuserid = Cookie.getJSON('atuserid');
     return pathOr(null, ['val'], atuserid)
   }
