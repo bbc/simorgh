@@ -1,6 +1,6 @@
 import * as genericLabelHelpers from '#lib/analyticsUtils';
 
-const { buildATIPageTrackPath } = require('.');
+const { buildATIPageTrackPath, buildATIEventTrackUrl } = require('.');
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -109,5 +109,25 @@ describe('getThingAttributes', () => {
 
     expect(queryParamsArray).toHaveLength(expectedValues.length);
     expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
+  });
+});
+
+describe('buildATIEventTrackUrl', () => {
+  it('should return the right url', () => {
+    process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
+    expect(
+      buildATIEventTrackUrl({
+        pageIdentifier: 'pageIdentifier',
+        service: 'service',
+        platform: 'platform',
+        statsDestination: 'statsDestination',
+        element: 'element',
+        component: 'component',
+        label: 'label',
+        type: 'type',
+      }),
+    ).toEqual(
+      'http://foobar.com?s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&ati=PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+    );
   });
 });
