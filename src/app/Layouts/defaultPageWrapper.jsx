@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { node } from 'prop-types';
+import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
-import GlobalStyle from '../lib/globalStyles';
 import MPulseBeacon from '../containers/MPulseBeacon';
+import { ServiceContext } from '../contexts/ServiceContext';
 
-const PageWrapper = ({ children }) => (
-  <>
-    <GlobalStyle />
-    <ServiceWorkerContainer />
-    <ManifestContainer />
-    <MPulseBeacon />
-    <HeaderContainer />
-    {children}
-    <FooterContainer />
-  </>
-);
+const PageWrapper = ({ children }) => {
+  const { fonts } = useContext(ServiceContext);
+  return (
+    <>
+      <GlobalStyles fonts={fonts} />
+      <ServiceWorkerContainer />
+      <ManifestContainer />
+      <MPulseBeacon />
+      <HeaderContainer />
+      {children}
+      <FooterContainer />
+    </>
+  );
+};
 
 PageWrapper.propTypes = {
   children: node.isRequired,
