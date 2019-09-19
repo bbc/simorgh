@@ -5,8 +5,8 @@ import { dirDecorator } from '@bbc/psammead-storybook-helpers';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import MediaPlayerContainer from '.';
 import { validVideoFixture } from './helpers/fixtures';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContext } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 
 const defaultToggles = {
   test: {
