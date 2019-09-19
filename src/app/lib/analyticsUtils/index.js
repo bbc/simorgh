@@ -125,6 +125,19 @@ export const getReferrer = (platform, origin, previousPath) => {
   return null;
 };
 
+export const getAtUserId = platform => {
+  if (platform === 'amp') {
+    return null;
+  }
+
+  if (onClient()) {
+    const atuserid = Cookie.getJSON('atuserid');
+    return (atuserid && atuserid.val) || null;
+  }
+
+  return null;
+};
+
 export const sanitise = initialString =>
   initialString ? initialString.trim().replace(/\s/g, '+') : null;
 
