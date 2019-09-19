@@ -6,12 +6,13 @@ import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 const service = {
   default: {
     lang: `vi`,
-    articleAuthor: `https://www.facebook.com/pages/BBC-Vietnamese/228458913833525?ref=ts&sk=wall`,
+    product: 'BBC News',
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     brandName: 'BBC News Tiếng Việt',
-    product: 'BBC News Tiếng Việt',
+    serviceLocalizedName: 'Tiếng Việt',
     defaultImage:
       'https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png',
     defaultImageAltText: 'BBC News Tiếng Việt',
@@ -25,7 +26,7 @@ const service = {
     locale: `vi-VN`,
     datetimeLocale: `vi-vn`,
     service: 'vietnamese',
-    serviceName: 'BBC News Tiếng Việt',
+    serviceName: 'Tiếng Việt',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
