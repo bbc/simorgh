@@ -381,8 +381,9 @@ const testMediaAssetPages = ({ platform, service, assetUri, variant }) => {
                 `${localBaseUrl}/static/js/main-12345.12345.js`,
               ]}
               assetOrigins={[
-                'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
+                'https://ws-downloads.files.bbci.co.uk',
+                'https://ichef.bbci.co.uk',
                 localBaseUrl,
                 'https://logws1363.ati-host.net?',
               ]}
