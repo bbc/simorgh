@@ -6,7 +6,7 @@ import {
   F_NASSIM_PASHTO_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ps';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
@@ -178,7 +178,7 @@ const service = {
       copyrightText: 'بی بی سی. بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده',
     },
     fonts: [F_NASSIM_PASHTO_REGULAR, F_NASSIM_PASHTO_BOLD],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'کور پاڼه',
