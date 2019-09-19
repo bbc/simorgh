@@ -135,7 +135,7 @@ const service = {
     footer: {
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/azeri/institutional-49283479',
           text: 'BBC News-a niyə etibar etməlisiniz',
         },
         {
@@ -156,7 +156,7 @@ const service = {
           text: 'Cookies',
         },
         {
-          href: 'bbc.com/azeri/institutional-37131054',
+          href: 'https://www.bbc.com/azeri/institutional-37131054',
           text: 'BBC ilə Əlaqə',
         },
       ],
