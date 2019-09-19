@@ -4,6 +4,8 @@ import config from '../../../support/config/services';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
 
+const serviceHasInlineLink = service => service === 'news';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
@@ -67,6 +69,19 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             cy.get('div div').should('not.have.class', 'lazyload-placeholder');
           });
       });
+
+      if (serviceHasInlineLink(service)) {
+        it('should have an inline link in a paragraph that results in a successful navigation', () => {
+          cy.get('main > div > div > p > a[href]')
+            .first()
+            .then(link => {
+              const linkHref = link.prop('href');
+              const linkText = link.text();
+              cy.contains(linkText).click();
+              cy.url().should('include', linkHref);
+            });
+        });
+      }
     }
   });
 
