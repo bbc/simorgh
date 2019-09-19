@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, oneOfType } from 'prop-types';
+import { string, shape, oneOfType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -34,14 +34,6 @@ const pageTypeMetadata = {
   },
 };
 
-/* An array of each thingLabel from tags.about & tags.mention */
-const allTags = tags => {
-  const { about, mentions } = tags;
-  const aboutTags = about ? about.map(thing => thing.thingLabel) : [];
-  const mentionTags = mentions ? mentions.map(thing => thing.thingLabel) : [];
-  return aboutTags.concat(mentionTags);
-};
-
 const getTitle = promo =>
   pathOr(null, ['headlines', 'seoHeadline'], promo)
     ? pathOr(null, ['headlines', 'seoHeadline'], promo)
@@ -51,14 +43,6 @@ const getDescription = (metadata, promo) =>
   pathOr(null, ['summary'], promo) ||
   pathOr(null, ['headlines', 'seoHeadline'], promo) ||
   pathOr(null, ['summary'], metadata);
-
-const getTimeTags = (timeTag, pageType) => {
-  if (pageType !== 'article') {
-    return null;
-  }
-
-  return new Date(timeTag).toISOString();
-};
 
 const getAppleTouchUrl = service => {
   const assetsPath = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH || '/';
@@ -73,7 +57,7 @@ const getAppleTouchUrl = service => {
   ].join('');
 };
 
-const MetadataContainer = ({ metadata, promo }) => {
+const MetadataContainer = ({ metadata, promo, pageSpecificLinkedData }) => {
   const {
     pageType,
     platform,
@@ -105,9 +89,6 @@ const MetadataContainer = ({ metadata, promo }) => {
   if (!aresArticleId) {
     return null;
   }
-
-  const timeFirstPublished = getTimeTags(metadata.firstPublished, pageType);
-  const timeLastPublished = getTimeTags(metadata.lastPublished, pageType);
 
   const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
@@ -166,14 +147,13 @@ const MetadataContainer = ({ metadata, promo }) => {
       <LinkedData
         brandName={brandName}
         canonicalLink={canonicalNonUkLink}
-        firstPublished={timeFirstPublished}
-        lastUpdated={timeLastPublished}
         logoUrl={defaultImage}
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
         seoHeadline={getTitle(promo)}
         type={pathOr(null, [pageType, 'schemaOrg'], pageTypeMetadata)}
         about={aboutTagsContent(pathOr(null, ['tags', 'about'], metadata))}
+        pageSpecific={pageSpecificLinkedData}
       />
       <Metadata
         isAmp={isAmp}
@@ -195,16 +175,12 @@ const MetadataContainer = ({ metadata, promo }) => {
           pathOr(null, ['language'], metadata)
         }
         locale={locale}
-        metaTags={allTags(metadata.tags)}
         themeColor={themeColor}
-        timeFirstPublished={timeFirstPublished}
-        timeLastPublished={timeLastPublished}
         title={title}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
         type={pathOr(null, [pageType, 'openGraph'], pageTypeMetadata)}
         service={service}
-        showArticleTags={pageType === 'article'}
         iconSizes={iconSizes}
       />
     </>
@@ -222,6 +198,11 @@ MetadataContainer.propTypes = {
     shape(optimoPromoPropTypes),
     shape(mediaPromoPropTypes),
   ]).isRequired,
+  pageSpecificLinkedData: shape(string),
+};
+
+MetadataContainer.defaultProps = {
+  pageSpecificLinkedData: {},
 };
 
 export default MetadataContainer;

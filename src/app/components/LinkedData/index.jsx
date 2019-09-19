@@ -1,19 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { arrayOf, string, shape } from 'prop-types';
-import propTypeCheck from '../Metadata/propTypesCheck';
+import { string, shape } from 'prop-types';
 
 const LinkedData = ({
   brandName,
   type,
   seoHeadline,
-  firstPublished,
-  lastUpdated,
   logoUrl,
   publishingPrinciples,
-  noBylinesPolicy,
-  about,
   canonicalLink,
+  pageSpecific,
 }) => {
   const imgObject = 'ImageObject';
   const newsMediaOrg = 'NewsMediaOrganization';
@@ -40,20 +36,13 @@ const LinkedData = ({
     logo,
   };
 
-  const author = {
-    '@type': newsMediaOrg,
-    name: brandName,
-    logo,
-    noBylinesPolicy,
-  };
-
   const mainEntityOfPage = {
     '@type': webPageType,
     '@id': canonicalLink,
     name: seoHeadline,
   };
 
-  const linkMetadata = {
+  const linkedMetadata = {
     '@context': 'http://schema.org',
     '@type': type,
     url: canonicalLink,
@@ -61,24 +50,15 @@ const LinkedData = ({
     image,
     thumbnailUrl: logoUrl,
     mainEntityOfPage,
+    ...pageSpecific,
   };
-
-  if (type === 'Article') {
-    const articleSpecificSchema = {
-      headline: seoHeadline,
-      datePublished: firstPublished,
-      dateModified: lastUpdated,
-      author,
-      about,
-    };
-
-    Object.assign(linkMetadata, articleSpecificSchema);
-  }
 
   return (
     <Helmet>
       {/* eslint-disable react/no-danger */}
-      <script type="application/ld+json">{JSON.stringify(linkMetadata)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify(linkedMetadata)}
+      </script>
     </Helmet>
   );
 };
@@ -88,30 +68,13 @@ LinkedData.propTypes = {
   canonicalLink: string.isRequired,
   type: string.isRequired,
   seoHeadline: string.isRequired,
-  firstPublished: (props, propName) =>
-    propTypeCheck(props, propName, 'LinkedData', string.isRequired),
-  lastUpdated: (props, propName) =>
-    propTypeCheck(props, propName, 'LinkedData', string.isRequired),
   publishingPrinciples: string.isRequired,
-  noBylinesPolicy: string.isRequired,
   logoUrl: string.isRequired,
-  about: arrayOf(
-    shape({
-      '@type': string.isRequired,
-      alternateName: string,
-      name: string.isRequired,
-      sameAs: arrayOf(string.isRequired),
-    }),
-  ),
+  pageSpecific: shape(string),
 };
 
 LinkedData.defaultProps = {
-  about: undefined,
-
-  // custom propType checks used
-  // eslint doesn't recognise that props are required
-  firstPublished: undefined,
-  lastUpdated: undefined,
+  pageSpecific: {},
 };
 
 export default LinkedData;
