@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import ServiceWorkerContainer from './index';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const contextStub = {
   swPath: '/articles/sw.js',
