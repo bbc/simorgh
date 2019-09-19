@@ -54,7 +54,7 @@ describe('Document Component', () => {
     isAmp: bool.isRequired,
   };
 
-  describe('', () => {
+  describe('Document Component', () => {
     shouldMatchSnapshot(
       'should render correctly',
       testDocumentComponent('news', false),
