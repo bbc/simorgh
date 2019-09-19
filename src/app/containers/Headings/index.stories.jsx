@@ -16,7 +16,7 @@ const headingsContainerWithContext = (type, blocks) => (
 );
 
 storiesOf('Containers|Heading', module)
-  .addParameters({ chromatic: { disable: false } })
+  .addParameters({ chromatic: { disable: true } })
   .add('default heading', () =>
     headingsContainerWithContext('headline', headline),
   )

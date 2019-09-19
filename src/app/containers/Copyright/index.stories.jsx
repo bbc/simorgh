@@ -7,7 +7,7 @@ import services from '#lib/config/services';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 storiesOf('Containers|Copyright', module)
-  .addParameters({ chromatic: { disable: false } })
+  .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .add(
     'default',

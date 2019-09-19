@@ -26,7 +26,7 @@ const WrappedArticleTimestamp = ({ service, ...rest }) => (
 const stories = storiesOf(
   'Containers|Article/Article Timestamp',
   module,
-).addParameters({ chromatic: { disable: false } });
+).addParameters({ chromatic: { disable: true } });
 
 stories.add('default', () => (
   <WrappedArticleTimestamp

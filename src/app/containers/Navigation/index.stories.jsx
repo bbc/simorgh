@@ -5,7 +5,7 @@ import services from '#lib/config/services';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const stories = storiesOf('Containers|Navigation', module).addParameters({
-  chromatic: { disable: false },
+  chromatic: { disable: true },
 });
 
 Object.keys(services).forEach(service => {

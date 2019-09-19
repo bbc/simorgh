@@ -11,7 +11,7 @@ import {
 } from './helpers/fixtureData';
 
 storiesOf('Containers|Image within grid', module)
-  .addParameters({ chromatic: { disable: false } })
+  .addParameters({ chromatic: { disable: true } })
   .add('landscape image', () => (
     <Grid>
       <ImageContainer {...imageData(landscape)} />

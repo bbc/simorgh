@@ -26,7 +26,7 @@ const getConsentBanner = platform => (
 );
 
 const stories = storiesOf('Containers|Consent Banner/', module).addParameters({
-  chromatic: { disable: false },
+  chromatic: { disable: true },
 });
 
 stories.addDecorator(AmpDecorator).add('amp', () => getConsentBanner('amp'));

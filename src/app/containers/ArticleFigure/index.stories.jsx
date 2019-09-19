@@ -19,7 +19,7 @@ import {
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 storiesOf('Containers|Article/Article Figure/Canonical', module)
-  .addParameters({ chromatic: { disable: false } })
+  .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .add('with a caption', ({ service }) => FigureImageWithCaption(service))
@@ -41,7 +41,7 @@ storiesOf('Containers|Article/Article Figure/Canonical', module)
   .add('with a lazyloaded image', () => FigureLazyLoadImage);
 
 storiesOf('Containers|Article/Article Figure/AMP', module)
-  .addParameters({ chromatic: { disable: false } })
+  .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(dirDecorator)
   .addDecorator(AmpDecorator)
