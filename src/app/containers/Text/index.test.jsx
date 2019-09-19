@@ -1,10 +1,11 @@
 import React from 'react';
 import {
-  shouldShallowMatchSnapshot,
+  shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '#testHelpers';
+} from '@bbc/psammead-test-helpers';
 import TextContainer from './index';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
@@ -13,7 +14,8 @@ describe('TextContainer', () => {
   });
 
   describe('with data', () => {
-    const fragmentBlock = (text, attributes = []) => ({
+    const fragmentBlock = (id = null, text, attributes = []) => ({
+      id,
       type: 'fragment',
       model: {
         text,
@@ -21,26 +23,40 @@ describe('TextContainer', () => {
       },
     });
 
-    const paragraphBlock = blocks => ({
+    const paragraphBlock = (id = null, blocks) => ({
+      id,
       type: 'paragraph',
       model: {
+        id,
         blocks,
       },
     });
 
     const data = {
       blocks: [
-        paragraphBlock([fragmentBlock('This is a 1st paragraph block.')]),
-        paragraphBlock([fragmentBlock('This is a 2nd paragraph block.')]),
-        paragraphBlock([fragmentBlock('This is a 3rd paragraph block.')]),
-        paragraphBlock([fragmentBlock('This is a 4th paragraph block..')]),
-        paragraphBlock([fragmentBlock('This is a 5th paragraph block.')]),
+        paragraphBlock('mock-id-1', [
+          fragmentBlock('mock-id-1.1', 'This is a 1st paragraph block.'),
+        ]),
+        paragraphBlock('mock-id-2', [
+          fragmentBlock('mock-id-2.1', 'This is a 2nd paragraph block.'),
+        ]),
+        paragraphBlock('mock-id-3', [
+          fragmentBlock('mock-id-3.1', 'This is a 3rd paragraph block.'),
+        ]),
+        paragraphBlock('mock-id-4', [
+          fragmentBlock('mock-key-4.1', 'This is a 4th paragraph block..'),
+        ]),
+        paragraphBlock('mock-id-5', [
+          fragmentBlock('mock-id-5.1', 'This is a 5th paragraph block.'),
+        ]),
       ],
     };
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly',
-      <TextContainer {...data} />,
+      <ServiceContextProvider service="news">
+        <TextContainer {...data} />
+      </ServiceContextProvider>,
     );
   });
 });
