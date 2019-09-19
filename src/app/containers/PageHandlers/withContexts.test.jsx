@@ -1,12 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { ComponentUsingContext } from '#testHelpers/mockComponents';
 import WithContexts from './withContexts';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '#contexts/RequestContext/getStatsPageIdentifier';
 import * as requestContextImports from '#contexts/RequestContext';
 import * as serviceContextImports from '#contexts/ServiceContext';
+import { ToggleContext } from '#contexts/ToggleContext';
+import { UserContext } from '#contexts/UserContext';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 
@@ -26,7 +29,15 @@ getStatsPageIdentifier.mockImplementation(
 );
 
 describe('withContexts HOC', () => {
-  const Component = () => <h1>All the contexts!!</h1>;
+  const Component = () => (
+    <>
+      <ComponentUsingContext context={serviceContextImports} />
+      <ComponentUsingContext context={requestContextImports} />
+      <ComponentUsingContext context={ToggleContext} />
+      <ComponentUsingContext context={UserContext} />
+    </>
+  );
+
   const ContextsHOC = WithContexts(Component);
 
   const props = {
@@ -41,7 +52,7 @@ describe('withContexts HOC', () => {
 
   shouldMatchSnapshot(
     `should return all context providers`,
-    <ContextsHOC {...props} />,
+    <Component {...props} />,
   );
 
   describe('assertions', () => {

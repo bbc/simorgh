@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withContexts HOC should return all context providers 1`] = `
-<h1>
-  All the contexts!!
-</h1>
+<div>
+  <span />
+  <span />
+  <span />
+  <span>
+    {}
+  </span>
+</div>
 `;
