@@ -2,7 +2,7 @@
 
 exports[`Index Alsos should render multiple correctly 1`] = `
 <IndexAlsos
-  offScreenText="Related content"
+  offScreenText="Karin bayani"
 >
   <IndexAlsosUl>
     <IndexAlsosLi
@@ -465,7 +465,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
 
 exports[`Index Alsos should render one correctly 1`] = `
 <IndexAlsos
-  offScreenText="Related content"
+  offScreenText="Karin bayani"
 >
   <React.Fragment>
     <IndexAlso
