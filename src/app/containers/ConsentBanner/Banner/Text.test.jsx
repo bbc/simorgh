@@ -37,6 +37,7 @@ const bannerTextWithContext = (message, topLevelDomain) => (
       pageType="article"
       service="news"
       pathname="/pathname"
+      statusCode={200}
     >
       <BannerText {...message} />
     </RequestContextProvider>

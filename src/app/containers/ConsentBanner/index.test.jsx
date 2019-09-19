@@ -17,6 +17,7 @@ describe('Consent Banner Container', () => {
       pageType="article"
       service="news"
       pathname="/pathname"
+      statusCode={200}
     >
       <ConsentBanner />
     </RequestContextProvider>,
@@ -31,6 +32,7 @@ describe('Consent Banner Container', () => {
       pageType="article"
       service="news"
       pathname="/pathname"
+      statusCode={200}
     >
       <ConsentBanner />
     </RequestContextProvider>,
