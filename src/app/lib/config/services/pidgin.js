@@ -53,7 +53,7 @@ const pidgin = {
       error: {
         404: {
           statusCode: '404',
-          title: 'Dem no see page - 404',
+          title: 'Dem no see page',
           message:
             'Sorry, we no go bring you di page you dey look for. Abeg try:',
           solutions: [
@@ -68,7 +68,7 @@ const pidgin = {
         },
         500: {
           statusCode: '500',
-          title: 'Mistake - 500',
+          title: 'Mistake',
           message:
             'Sorry, we no dey available for now to bring you di page you dey look for. Abeg try:',
           solutions: [
