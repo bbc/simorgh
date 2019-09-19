@@ -1,4 +1,4 @@
-import { loggerMock } from '../../../testHelpers/index';
+import { loggerMock } from '#testHelpers/index';
 import logResponseTime from '.';
 
 const req = {
