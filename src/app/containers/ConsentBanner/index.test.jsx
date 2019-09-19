@@ -1,52 +1,29 @@
-import React, { useEffect } from 'react';
-import renderer from 'react-test-renderer';
+import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { EventContext } from '#contexts/EventContext';
-import { buildATIClickParams } from '../ATIAnalytics/params';
 
 jest.mock('./index.canonical', () => () => <div>Canonical Cookie banner</div>);
 jest.mock('./index.amp', () => () => <div>Amp Cookie banner</div>);
-jest.mock('../ATIAnalytics/params', () => {
-  const atiParams = jest.requireActual('../ATIAnalytics/params');
-
-  return {
-    ...atiParams,
-    buildATIClickParams: jest.fn(),
-  };
-});
 jest.mock('react', () => {
   const react = jest.requireActual('react');
 
-  return {
-    ...react,
-    useEffect: jest.fn(),
-  };
+  return react;
 });
-const mockBuildATIClickParams = jest.fn();
-const mockUseEffect = jest.fn();
-const mockEventContextStub = {
-  useClickTracker: jest.fn(),
-};
-useEffect.mockImplementation(mockUseEffect);
-buildATIClickParams.mockImplementation(mockBuildATIClickParams);
 
 const ConsentBanner = require('./index').default;
 
 const Component = (isAmp = false) => (
-  <EventContext.Provider value={mockEventContextStub}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={isAmp}
-      pageType="article"
-      service="news"
-      statusCode={200}
-      pathname="/pathname"
-    >
-      <ConsentBanner />
-    </RequestContextProvider>
-  </EventContext.Provider>
+  <RequestContextProvider
+    bbcOrigin="https://www.test.bbc.co.uk"
+    id="c0000000000o"
+    isAmp={isAmp}
+    pageType="article"
+    service="news"
+    statusCode={200}
+    pathname="/pathname"
+  >
+    <ConsentBanner />
+  </RequestContextProvider>
 );
 
 describe('Consent Banner Container', () => {
@@ -57,15 +34,4 @@ describe('Consent Banner Container', () => {
   shouldMatchSnapshot('should correctly render amp banner', Component(true));
 
   shouldMatchSnapshot('should correctly render canonical banner', Component());
-
-  it('should call useClickTracker and useEffect exactly once each', () => {
-    renderer.create(Component());
-    expect(mockEventContextStub.useClickTracker).toHaveBeenCalledTimes(1);
-    expect(mockUseEffect).toHaveBeenCalledTimes(1);
-  });
-
-  it('should call buildATIClickParams exactly once each', () => {
-    renderer.create(Component());
-    expect(buildATIClickParams).toHaveBeenCalledTimes(1);
-  });
 });
