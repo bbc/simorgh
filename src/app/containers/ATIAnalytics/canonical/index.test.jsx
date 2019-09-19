@@ -2,8 +2,8 @@ import React from 'react';
 import { create, act } from 'react-test-renderer';
 import { render } from 'enzyme';
 import CanonicalATIAnalytics from '.';
-import { shouldMatchSnapshot } from '../../../../testHelpers';
-import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
+import { shouldMatchSnapshot } from '#testHelpers';
+import * as beacon from '#lib/analyticsUtils/sendBeacon';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {

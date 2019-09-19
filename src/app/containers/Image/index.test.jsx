@@ -4,8 +4,8 @@ import {
   shouldShallowMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '../../../testHelpers';
-import { blockContainingText, blockArrayModel } from '../../models/blocks';
+} from '#testHelpers';
+import { blockContainingText, blockArrayModel } from '#models/blocks';
 
 describe('Image', () => {
   describe('with no data', () => {
