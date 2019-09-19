@@ -142,20 +142,20 @@ const service = {
           text: '이용 약관',
         },
         {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'BBC 소개',
+        },
+        {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
           text: '개인정보취급방침',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: '쿠키정책',
         },
         {
           href: 'https://www.bbc.com/korean/institutional-42224941',
           text: '고객센터',
-        },
-        {
-          href: 'https://www.bbc.co.uk/aboutthebbc',
-          text: 'BBC 소개',
         },
       ],
       copyrightText:
