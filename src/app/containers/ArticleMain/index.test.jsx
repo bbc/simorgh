@@ -1,9 +1,10 @@
 import React from 'react';
 import { string, node } from 'prop-types';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { shouldShallowMatchSnapshot } from '#testHelpers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
   articleDataPersian,
@@ -16,40 +17,43 @@ articleDataNewsNoHeadline.content.model.blocks.shift();
 
 const Context = ({ service, children }) => (
   <ToggleContextProvider>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      pathname="/pathname"
-      service={service}
-      statusCode={200}
-    >
-      {children}
-    </RequestContextProvider>
+    <ServiceContextProvider service={service}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="article"
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+      >
+        {children}
+      </RequestContextProvider>
+    </ServiceContextProvider>
   </ToggleContextProvider>
 );
+
 Context.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
 };
 
 describe('ArticleMain', () => {
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a news article correctly',
     <Context service="news">
       <ArticleMain articleData={articleDataNews} />
     </Context>,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a persian article correctly',
     <Context service="persian">
       <ArticleMain articleData={articleDataPersian} />
     </Context>,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a pidgin article correctly (with navigation)',
     <Context service="pidgin">
       <ArticleMain articleData={articleDataPidgin} />

@@ -11,5 +11,3 @@ exports[`ToggleContainer should render fallback component should match snapshot 
   Fallback UI
 </p>
 `;
-
-exports[`ToggleContainer should render null should match snapshot 1`] = `null`;
