@@ -3,7 +3,7 @@ import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '#testHelpers';
+} from '@bbc/psammead-test-helpers';
 import TextContainer from './index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 

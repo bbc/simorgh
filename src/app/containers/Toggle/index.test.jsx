@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot, isNull } from '#testHelpers';
+import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import ToggleContainer from '.';
 
 jest.mock('react', () => {

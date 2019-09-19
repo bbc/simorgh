@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import LinkContents from '.';
 
 const defaultProps = {
