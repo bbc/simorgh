@@ -147,6 +147,10 @@ const service = {
           text: 'Haala itti fayyadamaa',
         },
         {
+          href: 'https://www.bbc.com/aboutthebbc',
+          text: "Waa'ee BBC",
+        },
+        {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
           text: 'Imaammata mateenyaa',
         },
@@ -157,10 +161,6 @@ const service = {
         {
           href: 'https://www.bbc.com/afaanoromoo/institutional-42228538',
           text: 'BBC qunnami',
-        },
-        {
-          href: 'https://www.bbc.com/aboutthebbc',
-          text: "Waa'ee BBC",
         },
       ],
       copyrightText:

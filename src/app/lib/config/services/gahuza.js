@@ -143,12 +143,16 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/gahuza/institutional-49283343',
           text: 'Igituma ushobora kwizera BBC News',
         },
         {
           href: 'https://www.bbc.com/gahuza/institutional-35754053',
           text: 'Ingingo zo gukoresha urubuga',
+        },
+        {
+          href: 'https://www.bbc.com/gahuza/institutional-35754055',
+          text: 'Ibijanye na BBC',
         },
         {
           href: 'https://www.bbc.com/gahuza/institutional-35754059',
@@ -162,10 +166,6 @@ const service = {
         {
           href: 'https://www.bbc.com/gahuza/institutional-35754061',
           text: 'Vugana na BBC',
-        },
-        {
-          href: 'https://www.bbc.com/gahuza/institutional-35754055',
-          text: 'Ibijanye na BBC',
         },
       ],
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',

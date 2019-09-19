@@ -152,12 +152,16 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/arabic/institutional-49283069',
           text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
         },
         {
           href: 'https://www.bbc.com/arabic/institutional-37731351',
           text: 'شروط الاستخدام',
+        },
+        {
+          href: 'https://www.bbc.com/arabic/institutional-37731352',
+          text: 'عن بي بي سي',
         },
         {
           href: 'https://www.bbc.com/arabic/institutional-37731353',
@@ -171,10 +175,6 @@ const service = {
         {
           href: 'https://www.bbc.com/arabic/institutional-37731355',
           text: 'اتصل بـ بي بي سي',
-        },
-        {
-          href: 'https://www.bbc.com/arabic/institutional-37731352',
-          text: 'عن بي بي سي',
         },
       ],
       copyrightText:

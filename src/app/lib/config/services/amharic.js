@@ -20,9 +20,9 @@ const service = {
     defaultImageAltText: 'BBC News አማርኛ',
     dir: `ltr`,
     externalLinkText: ', ውጫዊ',
-    imageCaptionOffscreenText: 'የምስሉ መግለጫ',
-    videoCaptionOffscreenText: 'የተንቀሳቃሹ ምስል መግለጫ',
-    audioCaptionOffscreenText: 'የድምፅ መግለጫ',
+    imageCaptionOffscreenText: 'የምስሉ መግለጫ ',
+    videoCaptionOffscreenText: 'የተንቀሳቃሹ ምስል መግለጫ ',
+    audioCaptionOffscreenText: 'የድምፅ መግለጫ ',
     defaultCaptionOffscreenText: 'መግለጫ, ',
     imageCopyrightOffscreenText: 'የፎቶው ባለመብት, ',
     locale: `am-ET`,
@@ -136,7 +136,7 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/amharic/institutional-49283133',
           text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
         },
         {
@@ -144,7 +144,11 @@ const service = {
           text: 'የአጠቃቀም ደንብ',
         },
         {
-          href: 'https://www.bbc.com//usingthebbc/privacy/',
+          href: 'https://www.bbc.com/aboutthebbc',
+          text: 'ስለ ቢቢሲ',
+        },
+        {
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'የፕራይቬሲ ፖሊሲ',
         },
         {
@@ -154,10 +158,6 @@ const service = {
         {
           href: 'https://www.bbc.com/amharic/institutional-42228117',
           text: 'ቢቢሲን ያግኙ',
-        },
-        {
-          href: 'https://www.bbc.com/aboutthebbc',
-          text: 'ስለ ቢቢሲ',
         },
       ],
       copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',

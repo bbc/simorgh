@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `fr`,
     articleAuthor: `https://facebook.com/bbcnewsafrique`,
-    articleTimestampPrefix: 'Mise à jour ',
+    articleTimestampPrefix: 'Mise à jour',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     brandName: 'BBC News Afrique',
@@ -45,13 +45,14 @@ const service = {
           statusCode: '404',
           title: 'La page ne peut pas être trouvée',
           message:
-            "Désolé, nous ne pouvons pas afficher la page que vous cherchez. Essayez s'il vous plaît :",
+            "Désolé, nous ne pouvons pas afficher la page que vous cherchez. Essayez s'il vous plaît:",
           solutions: [
             "Double vérification de l'url",
             "Cliquez sur le bouton d'actualisation de votre navigateur",
             "Recherche de cette page à l'aide de la barre de recherche de la BBC",
           ],
-          callToActionFirst: 'Vous pouvez également consulter le site Web de ',
+          callToActionFirst:
+            "Vous pouvez également consulter le page d'accueil du site ",
           callToActionLinkText: 'BBC News Afrique',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/afrique',
@@ -60,12 +61,13 @@ const service = {
           statusCode: '500',
           title: 'Erreur interne du serveur',
           message:
-            "Désolé, nous sommes actuellement dans l'impossibilité d'afficher la page que vous recherchez. Essayez s'il vous plaît :",
+            "Désolé, nous sommes actuellement dans l'impossibilité d'afficher la page que vous recherchez. Essayez s'il vous plaît:",
           solutions: [
             "Cliquez sur le bouton d'actualisation de votre navigateur",
             'Revenir plus tard',
           ],
-          callToActionFirst: 'Vous pouvez également consulter le site Web de ',
+          callToActionFirst:
+            "Vous pouvez également consulter le page d'accueil du site ",
           callToActionLinkText: 'BBC News Afrique',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/afrique',
@@ -149,12 +151,16 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/afrique/institutionelles-49283281',
           text: 'Pourquoi vous pouvez faire confiance à BBC News',
         },
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826639',
           text: "Conditions d'utilisation",
+        },
+        {
+          href: 'https://www.bbc.com/afrique/institutionelles-36826641',
+          text: 'A propos de la BBC',
         },
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826642',
@@ -168,10 +174,6 @@ const service = {
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826644',
           text: 'Contactez la BBC',
-        },
-        {
-          href: 'https://www.bbc.com/afrique/institutionelles-36826641',
-          text: 'A propos de la BBC',
         },
       ],
       copyrightText:
