@@ -7,7 +7,7 @@ import { articleDataNews, articleDataPersian } from '../../Article/fixtureData';
 import WithData from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
 
-jest.mock('../../ErrorMain', () => () => <h1>This is an error.</h1>);
+jest.mock('../../ErrorMain', () => ({ status }) => <h1>This is a {status} error.</h1>);
 
 describe('withData HOC', () => {
   const Component = () => <h1>Hola</h1>;
