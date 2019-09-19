@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/GMT';
 const service = {
   default: {
     lang: `rw`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     brandName: 'BBC News Gahuza',
+    product: 'BBC News',
     serviceLocalizedName: 'Gahuza',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',
     defaultImageAltText: 'BBC News Gahuza',

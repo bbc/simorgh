@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/GMT';
 const service = {
   default: {
     lang: `fr`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     brandName: 'BBC News Afrique',
+    product: 'BBC News',
     serviceLocalizedName: 'Afrique',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
     defaultImageAltText: 'BBC News Afrique',

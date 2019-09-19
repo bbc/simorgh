@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
 const service = {
   default: {
     lang: `sw`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     brandName: 'BBC News Swahili',
+    product: 'BBC News',
     serviceLocalizedName: 'Swahili',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png',
     defaultImageAltText: 'BBC News Swahili',

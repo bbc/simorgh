@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
 const service = {
   default: {
     lang: `so`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     brandName: 'BBC News Somali',
+    product: 'BBC News',
     serviceLocalizedName: 'Somali',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
     defaultImageAltText: 'BBC News Somali',

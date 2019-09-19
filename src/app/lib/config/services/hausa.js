@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/GMT';
 const service = {
   default: {
     lang: `ha`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     brandName: 'BBC News Hausa',
+    product: 'BBC News',
     serviceLocalizedName: 'Hausa',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
     defaultImageAltText: 'BBC News Hausa',

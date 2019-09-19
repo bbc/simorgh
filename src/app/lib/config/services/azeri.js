@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/Asia/Baku';
 const service = {
   default: {
     lang: `az`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
     brandName: 'BBC News Azərbaycanca',
+    product: 'BBC News',
     serviceLocalizedName: 'Azərbaycanca',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png',
     defaultImageAltText: 'BBC News Azərbaycanca',

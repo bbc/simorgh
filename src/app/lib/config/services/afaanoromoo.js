@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 const service = {
   default: {
     lang: `om`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
     brandName: 'BBC News Afaan Oromoo',
+    product: 'BBC News',
     serviceLocalizedName: 'Afaan Oromoo',
     defaultImage:
       'https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png',

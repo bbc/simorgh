@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 const service = {
   default: {
     lang: `vi`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     brandName: 'BBC News Tiếng Việt',
+    product: 'BBC News',
     serviceLocalizedName: 'Tiếng Việt',
     defaultImage:
       'https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png',

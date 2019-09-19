@@ -6,12 +6,12 @@ import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 const service = {
   default: {
     lang: `id`,
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     brandName: 'BBC News Indonesia',
+    product: 'BBC News',
     serviceLocalizedName: 'Indonesia',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
     defaultImageAltText: 'BBC News Indonesia',
