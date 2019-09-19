@@ -23,6 +23,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           envConfig.assetOrigin,
           'https://ichef.bbci.co.uk',
           'https://gel.files.bbci.co.uk',
+          'https://ws-downloads.files.bbci.co.uk',
         ];
 
         resources.forEach(resource => {
