@@ -1,10 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
-.c0 {
+.c2 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+}
+
+.c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 <html>
@@ -20,18 +41,26 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
       <div
         class="c0"
       >
-        <amp-iframe
-          allowfullscreen="true"
-          frameborder="0"
-          layout="fill"
-          sandbox="allow-scripts allow-same-origin"
-          src="/ws/av-embeds/media/externalId/id"
+        <div
+          class="c1"
         >
-          <amp-img
-            layout="fill"
-            placeholder="true"
-          />
-        </amp-iframe>
+          <div
+            class="c2"
+          >
+            <amp-iframe
+              allowfullscreen="true"
+              frameborder="0"
+              layout="fill"
+              sandbox="allow-scripts allow-same-origin"
+              src="/ws/av-embeds/media/externalId/id"
+            >
+              <amp-img
+                layout="fill"
+                placeholder="true"
+              />
+            </amp-iframe>
+          </div>
+        </div>
       </div>
     </div>
   </body>
@@ -39,7 +68,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
 `;
 
 exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
-.c1 {
+.c3 {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,21 +78,50 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
   overflow: hidden;
 }
 
-.c0 {
+.c2 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
+.c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 <div
   class="c0"
 >
-  <iframe
-    allow="autoplay; fullscreen"
-    allowfullscreen=""
+  <div
     class="c1"
-    scrolling="no"
-    src="/ws/av-embeds/media/externalId/id"
-  />
+  >
+    <div
+      class="c2"
+    >
+      <iframe
+        allow="autoplay; fullscreen"
+        allowfullscreen=""
+        class="c3"
+        scrolling="no"
+        src="/ws/av-embeds/media/externalId/id"
+      />
+    </div>
+  </div>
 </div>
 `;
