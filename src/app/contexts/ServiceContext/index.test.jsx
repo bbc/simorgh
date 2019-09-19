@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { cleanup, render, waitForElement } from '@testing-library/react';
-import services from '#lib/config/services';
+import services from '#testHelpers/serviceConfigs';
 import * as createLoadableContext from '../utils/createLoadableContext';
 
 // Unmock service context which is mocked globally in jest-setup.js
