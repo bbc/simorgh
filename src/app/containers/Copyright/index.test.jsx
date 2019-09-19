@@ -1,7 +1,7 @@
 import React from 'react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CopyrightContainer from './index';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const CopyrightWithContext = (copyrightText, contextStub) => (
   <ServiceContext.Provider value={contextStub}>

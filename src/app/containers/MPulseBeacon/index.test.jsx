@@ -2,50 +2,75 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import useToggle from '../Toggle/useToggle';
-import { UserContext } from '../../contexts/UserContext';
-import { loggerMock, isNull } from '../../../testHelpers';
+import { loggerMock, isNull } from '#testHelpers';
 import MPulseBeaconContainer from './index';
-import onClient from '../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import boomr from './boomr';
+import { UserContext } from '#contexts/UserContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 let container;
-const userContextMock = personalisationEnabled => ({ personalisationEnabled });
 const useToggleMock = enabled => ({ enabled });
 
 jest.mock('./boomr', () => jest.fn());
 jest.mock('../Toggle/useToggle', () => jest.fn());
-jest.mock('../../lib/utilities/onClient', () => jest.fn());
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-const { useContext } = jest.requireMock('react');
+jest.mock('#lib/utilities/onClient', () => jest.fn());
+
+let serviceContextMock;
+let requestContextMock;
+let userContextMock;
+
+const ContextWrappedMPulse = () => (
+  <ServiceContext.Provider value={serviceContextMock}>
+    <RequestContext.Provider value={requestContextMock}>
+      <UserContext.Provider value={userContextMock}>
+        <MPulseBeaconContainer />
+      </UserContext.Provider>
+    </RequestContext.Provider>
+  </ServiceContext.Provider>
+);
 
 describe('MPulseBeacon', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    useContext.mockReturnValue(userContextMock(true));
     useToggle.mockReturnValue(useToggleMock(true));
     onClient.mockReturnValue(true);
     process.env.SIMORGH_MPULSE_API_KEY = 'APIKey';
     container = document.createElement('div');
     document.body.appendChild(container);
+
+    serviceContextMock = { service: 'news' };
+    requestContextMock = { pageType: 'article', statusCode: 200 };
+    userContextMock = { personalisationEnabled: true };
+
+    delete window.SIMORGH_MPULSE_INFO;
   });
 
-  isNull('should not render any react components', <MPulseBeaconContainer />);
+  isNull('should not render any react components', <ContextWrappedMPulse />);
 
   it('should call boomr when all info is provided', () => {
     act(() => {
-      ReactDOM.render(<MPulseBeaconContainer />, container);
+      ReactDOM.render(<ContextWrappedMPulse />, container);
     });
 
     expect(boomr).toHaveBeenCalledTimes(1);
     expect(useToggle).toHaveBeenCalledWith('mpulse');
-    expect(useContext).toHaveBeenCalledWith(UserContext);
     expect(loggerMock.error).not.toHaveBeenCalled();
+  });
+
+  it('should set pageType, service & statusCode to window', () => {
+    expect(window.SIMORGH_MPULSE_INFO).toBeUndefined();
+
+    act(() => {
+      ReactDOM.render(<ContextWrappedMPulse />, container);
+    });
+
+    expect(window.SIMORGH_MPULSE_INFO).toEqual({
+      pageType: 'article',
+      service: 'news',
+      statusCode: 200,
+    });
   });
 
   describe('when toggle is disabled', () => {
@@ -55,7 +80,7 @@ describe('MPulseBeacon', () => {
 
     it('should not call boomr', () => {
       act(() => {
-        ReactDOM.render(<MPulseBeaconContainer />, container);
+        ReactDOM.render(<ContextWrappedMPulse />, container);
       });
 
       expect(boomr).not.toHaveBeenCalled();
@@ -70,7 +95,7 @@ describe('MPulseBeacon', () => {
 
     it('should not call boomr', () => {
       act(() => {
-        ReactDOM.render(<MPulseBeaconContainer />, container);
+        ReactDOM.render(<ContextWrappedMPulse />, container);
       });
 
       expect(boomr).not.toHaveBeenCalled();
@@ -80,12 +105,12 @@ describe('MPulseBeacon', () => {
 
   describe('when user doesnt have personalisation enabled', () => {
     beforeEach(() => {
-      useContext.mockReturnValue(userContextMock(false));
+      userContextMock = { personalisationEnabled: false };
     });
 
     it('should not call boomr', () => {
       act(() => {
-        ReactDOM.render(<MPulseBeaconContainer />, container);
+        ReactDOM.render(<ContextWrappedMPulse />, container);
       });
 
       expect(boomr).not.toHaveBeenCalled();
@@ -100,7 +125,7 @@ describe('MPulseBeacon', () => {
 
     it('should not call boomr', () => {
       act(() => {
-        ReactDOM.render(<MPulseBeaconContainer />, container);
+        ReactDOM.render(<ContextWrappedMPulse />, container);
       });
 
       expect(boomr).not.toHaveBeenCalled();
@@ -115,7 +140,7 @@ describe('MPulseBeacon', () => {
 
     it('should not call boomr', () => {
       act(() => {
-        ReactDOM.render(<MPulseBeaconContainer />, container);
+        ReactDOM.render(<ContextWrappedMPulse />, container);
       });
 
       expect(boomr).toHaveBeenCalled();

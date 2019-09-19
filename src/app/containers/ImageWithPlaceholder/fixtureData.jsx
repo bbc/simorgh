@@ -1,8 +1,8 @@
 import React from 'react';
 import { any, bool, string, number, objectOf } from 'prop-types';
 import FigureContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
@@ -16,6 +16,7 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
       origin="https://www.bbc.co.uk"
       id="c0000000000o"
       service="news"
+      statusCode={200}
       pathname="/pathname"
       pageType="frontPage"
     >

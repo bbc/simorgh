@@ -3,7 +3,7 @@ import {
   shouldShallowMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '../../../testHelpers';
+} from '#testHelpers';
 import TextContainer from './index';
 
 describe('TextContainer', () => {

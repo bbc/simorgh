@@ -11,8 +11,8 @@ import {
 } from '@bbc/psammead-media-player';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
-import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const HEADING_BLOCK = 'heading';
@@ -85,6 +85,7 @@ const MediaPageMain = ({ pageData, service }) => {
                           showPlaceholder={false}
                           src={`/ws/av-embeds/media/${externalId}/${id}`}
                           id={idAttr}
+                          skin="audio"
                         />
                       </MediaPlayerInnerWrapper>
                     </MediaPlayerOuterWrapper>

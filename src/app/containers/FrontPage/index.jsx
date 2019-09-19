@@ -1,7 +1,7 @@
 import React from 'react';
 import { shape } from 'prop-types';
 import compose from 'ramda/src/compose';
-import frontPagePropTypes from '../../models/propTypes/frontPage';
+import frontPagePropTypes from '#models/propTypes/frontPage';
 import FrontPageMain from '../FrontPageMain';
 
 import withContexts from '../PageHandlers/withContexts';

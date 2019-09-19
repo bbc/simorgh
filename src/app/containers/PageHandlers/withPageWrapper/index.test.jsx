@@ -1,9 +1,9 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../../testHelpers';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { UserContextProvider } from '../../../contexts/UserContext';
-import { ToggleContext } from '../../../contexts/ToggleContext';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { UserContextProvider } from '#contexts/UserContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import WithPageWrapper from '.';
 
 const dataProps = {
@@ -33,7 +33,7 @@ const defaultToggleState = {
 const mockToggleDispatch = jest.fn();
 
 describe('with pageWrapper', () => {
-  const PageWrapperContainer = () => <h1>Holla</h1>;
+  const PageWrapperContainer = () => <h1>Hola</h1>;
   const PageWrapperHOC = WithPageWrapper(PageWrapperContainer);
   shouldMatchSnapshot(
     `should render correctly`,
@@ -48,6 +48,7 @@ describe('with pageWrapper', () => {
           isAmp={false}
           pageType="article"
           service="news"
+          statusCode={200}
           bbcOrigin="https://www.test.bbc.com"
           pathname="/pathname"
         >

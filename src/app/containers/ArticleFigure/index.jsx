@@ -11,7 +11,7 @@ import {
   NestedGridItemChildSmall,
   NestedGridItemChildMedium,
   NestedGridItemChildLarge,
-} from '../../lib/styledGrid';
+} from '#lib/styledGrid';
 
 const renderCopyright = copyright =>
   copyright && <Copyright>{copyright}</Copyright>;
