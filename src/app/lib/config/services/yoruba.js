@@ -7,19 +7,19 @@ import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 const yoruba = {
   default: {
     lang: 'yo',
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     brandName: 'BBC News Yorùbá',
+    product: 'BBC News',
+    serviceLocalizedName: 'Yorùbá',
     locale: 'yo',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'yo',
     datetimeLocale: 'yo',
     service: 'yoruba',
     serviceName: 'Yoruba',
-    serviceLocalizedName: 'Yorùbá',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
     defaultImageAltText: 'BBC News Yorùbá',
     dir: 'ltr',

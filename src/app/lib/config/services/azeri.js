@@ -6,7 +6,7 @@ import '@bbc/moment-timezone-include/tz/Asia/Baku';
 const service = {
   default: {
     lang: `az`,
-    articleAuthor: `https://www.facebook.com/pages/bbc-azeri/347501767628`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
@@ -25,7 +25,7 @@ const service = {
     locale: `az-AZ`,
     datetimeLocale: `az-az`,
     service: 'azeri',
-    serviceName: 'News Azərbaycanca',
+    serviceName: 'Azərbaycanca',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',
