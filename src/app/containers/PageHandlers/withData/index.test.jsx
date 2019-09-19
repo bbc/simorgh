@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-  shouldShallowMatchSnapshot,
-  suppressPropWarnings,
-} from '../../../../testHelpers';
+import { shouldShallowMatchSnapshot, suppressPropWarnings } from '#testHelpers';
 import { articleDataNews, articleDataPersian } from '../../Article/fixtureData';
 import WithData from '.';
-import frontPageDataPidgin from '../../../../../data/pidgin/frontpage';
+import frontPageDataPidgin from '#data/pidgin/frontpage';
 
 describe('withData HOC', () => {
   beforeEach(() => {

@@ -1,18 +1,23 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
 import renderer from 'react-test-renderer';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ToggleContext } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import ChartbeatAnalytics from '.';
-import * as testUtils from '../../lib/analyticsUtils/chartbeat';
-import * as utils from '../../lib/analyticsUtils';
+import * as testUtils from '#lib/analyticsUtils/chartbeat';
+import * as utils from '#lib/analyticsUtils';
 import * as amp from './amp';
 import * as canonical from './canonical';
-import { localBaseUrl } from '../../../testHelpers/config';
-import frontPageData from '../../../../data/news/frontpage';
+import { localBaseUrl } from '#testHelpers/config';
+import frontPageData from '#data/news/frontpage';
 
 const defaultToggleState = {
+  local: {
+    chartbeatAnalytics: {
+      enabled: false,
+    },
+  },
   test: {
     chartbeatAnalytics: {
       enabled: true,
@@ -32,6 +37,7 @@ const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
     isAmp={platform === 'amp'}
     pageType={pageType}
     service="news"
+    statusCode={200}
     bbcOrigin={origin}
     pathname="/pathname"
   >
@@ -61,7 +67,7 @@ ContextWrap.defaultProps = {
 };
 
 describe('Charbeats Analytics Container', () => {
-  it('should call CanonicalCharbeatsBeacon when platform is canonical, and toggle enabled for chartbeat for local', () => {
+  it('should call CanonicalCharbeatsBeacon when platform is canonical, and toggle enabled for chartbeat for test', () => {
     const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
     const { chartbeatSource } = testUtils;
     utils.getReferrer = jest.fn().mockImplementation(() => '/some-path');
@@ -84,7 +90,7 @@ describe('Charbeats Analytics Container', () => {
         <ContextWrap
           platform="canonical"
           pageType="article"
-          origin={localBaseUrl}
+          origin="test.bbc.com"
         >
           <ChartbeatAnalytics data={frontPageData} />
         </ContextWrap>,
@@ -119,6 +125,21 @@ describe('Charbeats Analytics Container', () => {
     expect(testUtils.buildSections).toHaveBeenCalledTimes(1);
     expect(testUtils.getTitle).toHaveBeenCalledTimes(1);
     expect(utils.getReferrer).toHaveBeenCalledTimes(1);
+    expect(tree).toMatchSnapshot();
+  });
+  it('should return null when toggle is disbaled for localhost', () => {
+    const tree = renderer
+      .create(
+        <ContextWrap
+          platform="canonical"
+          pageType="article"
+          origin={localBaseUrl}
+        >
+          <ChartbeatAnalytics data={frontPageData} />
+        </ContextWrap>,
+      )
+      .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
   it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {

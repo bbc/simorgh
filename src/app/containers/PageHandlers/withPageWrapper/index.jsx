@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import { dataPropType } from '../../../models/propTypes/data';
+import { dataPropType } from '#models/propTypes/data';
 import PageWrapper from '../../../Layouts/defaultPageWrapper';
 
 const WithPageWrapper = Component => {

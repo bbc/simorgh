@@ -4,20 +4,12 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 import LinkedData from '../../components/LinkedData';
 import Metadata from '../../components/Metadata';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
-import services from '../../lib/config/services/index';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import frontPageData from '../../../../data/igbo/frontpage/index.json';
-import liveRadioPageData from '../../../../data/korean/bbc_korean_radio/liveradio.json';
-
-// eslint-disable-next-line react/prop-types
-jest.mock('react-helmet', () => ({ htmlAttributes, ...props }) => (
-  <>
-    {htmlAttributes && <helmet-html-attributes {...htmlAttributes} />}
-    <helmet-head {...props} />
-  </>
-));
+import services from '#lib/config/services/index';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import frontPageData from '#data/igbo/frontpage/index.json';
+import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
@@ -47,6 +39,7 @@ const getContainer = ({
         pageType={pageType}
         pathname={pathname}
         service={service}
+        statusCode={200}
       >
         <MetadataContainer {...articleDataNews} {...data} />
       </RequestContextProvider>

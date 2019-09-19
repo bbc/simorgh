@@ -1,5 +1,5 @@
 import getEnv from '.';
-import { localBaseUrl } from '../../../../testHelpers/config';
+import { localBaseUrl } from '#testHelpers/config';
 
 const tests = [
   {

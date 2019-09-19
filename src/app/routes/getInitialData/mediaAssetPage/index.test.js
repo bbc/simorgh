@@ -12,20 +12,55 @@ baseUrl.mockImplementation(() => mockBaseUrl);
 jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => mockData);
 
+const defaultServiceParam = 'pidgin';
+const defaultAssetUri = 'tori-49450859';
+const defaultAmpParam = '';
+let defaultContext;
+
 describe('getMediaAssetPageInitialData', () => {
+  beforeEach(() => {
+    defaultContext = {
+      service: defaultServiceParam,
+      assetUri: defaultAssetUri,
+      amp: defaultAmpParam,
+    };
+
+    jest.clearAllMocks();
+  });
+
   it('should match the url for MAPs', async () => {
-    await getMediaAssetPageInitialData({
-      service: 'pidgin',
-      assetUri: 'tori-49450859',
-    });
+    await getMediaAssetPageInitialData(defaultContext);
 
     expect(fetchData).toBeCalledWith({
       url: `${mockBaseUrl}/pidgin/tori-49450859.json`,
     });
   });
+
   it('should return the expected page data', async () => {
     expect(await getMediaAssetPageInitialData({ service: 'pidgin' })).toEqual(
       mockData,
     );
+  });
+
+  it('fetches data and returns expected object with variant', async () => {
+    await getMediaAssetPageInitialData({
+      ...defaultContext,
+      variant: 'variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.SIMORGH_BASE_URL.com/pidgin/tori-49450859/variant.json',
+    });
+  });
+
+  it('fetches data and returns expected object with variant with leading slash', async () => {
+    await getMediaAssetPageInitialData({
+      ...defaultContext,
+      variant: '/variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.SIMORGH_BASE_URL.com/pidgin/tori-49450859/variant.json',
+    });
   });
 });
