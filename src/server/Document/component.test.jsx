@@ -54,12 +54,10 @@ describe('Document Component', () => {
     isAmp: bool.isRequired,
   };
 
-  describe('Document Component', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      testDocumentComponent('news', false),
-    );
-  });
+  shouldMatchSnapshot(
+    'should render correctly',
+    testDocumentComponent('news', false),
+  );
 
   shouldMatchSnapshot(
     'should render AMP version correctly',
