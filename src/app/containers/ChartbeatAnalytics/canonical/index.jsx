@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react';
-import { string, shape, number, bool, oneOf, oneOfType } from 'prop-types';
+import React, { useEffect, useRef } from 'react';
 import Helmet from 'react-helmet';
+import { canonicalChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';
 
-const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
+const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
+
+const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
+  const chartbeatConfigRef = useRef(chartbeatConfig);
+
   useEffect(() => {
-    return () => {
-      if (typeof window !== 'undefined' && window.pSUPERFLY) {
-        /*
-          This function is always called to update config values on page changes
-          https://chartbeat.zendesk.com/hc/en-us/articles/210271287-Handling-virtual-page-changes
-        */
-        window.pSUPERFLY.virtualPage(chartbeatConfig);
-      }
-    };
-  }, [chartbeatConfig]);
+    if (chartbeatConfigRef.current !== chartbeatConfig) {
+      // eslint-disable-next-line no-unused-expressions
+      window.pSUPERFLY && window.pSUPERFLY.virtualPage(chartbeatConfig);
+    }
+  }, [chartbeatConfig, chartbeatConfigRef]);
 
   return (
     <Helmet>
@@ -34,19 +33,7 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig, chartbeatSource }) => {
 };
 
 CanonicalChartbeatBeacon.propTypes = {
-  chartbeatConfig: shape({
-    domain: string.isRequired,
-    sections: string.isRequired,
-    uid: number.isRequired,
-    title: string.isRequired,
-    type: string.isRequired,
-    useCanonical: bool.isRequired,
-    virtualReferrer: oneOfType([string, oneOf([null])]),
-    idSync: shape({
-      bbc_hid: string,
-    }),
-  }).isRequired,
-  chartbeatSource: string.isRequired,
+  chartbeatConfig: canonicalChartbeatPropTypes.isRequired,
 };
 
 export default CanonicalChartbeatBeacon;

@@ -26,6 +26,7 @@ Object {
         "_debugNeedsRemount": false,
         "_debugOwner": FiberNode {
           "_debugHookTypes": Array [
+            "useRef",
             "useEffect",
           ],
           "_debugID": 3,
@@ -63,24 +64,53 @@ Object {
             "baseState": null,
             "baseUpdate": null,
             "memoizedState": Object {
-              "create": [Function],
-              "deps": Array [
-                Object {
-                  "chartbeatUID": 1111,
-                  "domain": "test-domain",
-                  "sections": "section1 section2",
-                  "title": "This is an article",
-                  "type": "article",
-                  "uid": 123,
-                  "useCanonical": true,
-                  "virtualReferrer": null,
-                },
-              ],
-              "destroy": undefined,
-              "next": [Circular],
-              "tag": 192,
+              "current": Object {
+                "chartbeatUID": 1111,
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "title": "This is an article",
+                "type": "article",
+                "uid": 123,
+                "useCanonical": true,
+                "virtualReferrer": null,
+              },
             },
-            "next": null,
+            "next": Object {
+              "baseState": null,
+              "baseUpdate": null,
+              "memoizedState": Object {
+                "create": [Function],
+                "deps": Array [
+                  Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "uid": 123,
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  },
+                  Object {
+                    "current": Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "uid": 123,
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  },
+                ],
+                "destroy": undefined,
+                "next": [Circular],
+                "tag": 192,
+              },
+              "next": null,
+              "queue": null,
+            },
             "queue": null,
           },
           "mode": 0,
@@ -339,6 +369,18 @@ Object {
                   "uid": 123,
                   "useCanonical": true,
                   "virtualReferrer": null,
+                },
+                Object {
+                  "current": Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "uid": 123,
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  },
                 },
               ],
               "destroy": undefined,
@@ -400,7 +442,7 @@ Object {
                 },
                 Object {
                   "async": true,
-                  "src": "//chartbeat.js",
+                  "src": "//static.chartbeat.com/js/chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -427,7 +469,7 @@ Object {
                 },
                 Object {
                   "async": true,
-                  "src": "//chartbeat.js",
+                  "src": "//static.chartbeat.com/js/chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -470,7 +512,7 @@ Object {
               },
               Object {
                 "async": true,
-                "src": "//chartbeat.js",
+                "src": "//static.chartbeat.com/js/chartbeat.js",
                 "type": "text/javascript",
               },
             ],
@@ -497,7 +539,7 @@ Object {
               },
               Object {
                 "async": true,
-                "src": "//chartbeat.js",
+                "src": "//static.chartbeat.com/js/chartbeat.js",
                 "type": "text/javascript",
               },
             ],
@@ -529,7 +571,7 @@ Object {
                 },
                 Object {
                   "async": true,
-                  "src": "//chartbeat.js",
+                  "src": "//static.chartbeat.com/js/chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -575,7 +617,7 @@ Object {
             </script>,
             <script
               async={true}
-              src="//chartbeat.js"
+              src="//static.chartbeat.com/js/chartbeat.js"
               type="text/javascript"
             />,
           ],
@@ -603,7 +645,7 @@ Object {
             </script>,
             <script
               async={true}
-              src="//chartbeat.js"
+              src="//static.chartbeat.com/js/chartbeat.js"
               type="text/javascript"
             />,
           ],
@@ -613,6 +655,7 @@ Object {
         "ref": null,
         "return": FiberNode {
           "_debugHookTypes": Array [
+            "useRef",
             "useEffect",
           ],
           "_debugID": 3,
@@ -650,24 +693,53 @@ Object {
             "baseState": null,
             "baseUpdate": null,
             "memoizedState": Object {
-              "create": [Function],
-              "deps": Array [
-                Object {
-                  "chartbeatUID": 1111,
-                  "domain": "test-domain",
-                  "sections": "section1 section2",
-                  "title": "This is an article",
-                  "type": "article",
-                  "uid": 123,
-                  "useCanonical": true,
-                  "virtualReferrer": null,
-                },
-              ],
-              "destroy": undefined,
-              "next": [Circular],
-              "tag": 192,
+              "current": Object {
+                "chartbeatUID": 1111,
+                "domain": "test-domain",
+                "sections": "section1 section2",
+                "title": "This is an article",
+                "type": "article",
+                "uid": 123,
+                "useCanonical": true,
+                "virtualReferrer": null,
+              },
             },
-            "next": null,
+            "next": Object {
+              "baseState": null,
+              "baseUpdate": null,
+              "memoizedState": Object {
+                "create": [Function],
+                "deps": Array [
+                  Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "uid": 123,
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  },
+                  Object {
+                    "current": Object {
+                      "chartbeatUID": 1111,
+                      "domain": "test-domain",
+                      "sections": "section1 section2",
+                      "title": "This is an article",
+                      "type": "article",
+                      "uid": 123,
+                      "useCanonical": true,
+                      "virtualReferrer": null,
+                    },
+                  },
+                ],
+                "destroy": undefined,
+                "next": [Circular],
+                "tag": 192,
+              },
+              "next": null,
+              "queue": null,
+            },
             "queue": null,
           },
           "mode": 0,
@@ -927,6 +999,18 @@ Object {
                   "useCanonical": true,
                   "virtualReferrer": null,
                 },
+                Object {
+                  "current": Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "uid": 123,
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  },
+                },
               ],
               "destroy": undefined,
               "next": [Circular],
@@ -962,7 +1046,7 @@ Object {
           </script>,
           <script
             async={true}
-            src="//chartbeat.js"
+            src="//static.chartbeat.com/js/chartbeat.js"
             type="text/javascript"
           />,
         ],
@@ -997,7 +1081,7 @@ Object {
         </script>,
         <script
           async={true}
-          src="//chartbeat.js"
+          src="//static.chartbeat.com/js/chartbeat.js"
           type="text/javascript"
         />,
       ],
@@ -1018,6 +1102,7 @@ Object {
             "_debugNeedsRemount": false,
             "_debugOwner": FiberNode {
               "_debugHookTypes": Array [
+                "useRef",
                 "useEffect",
               ],
               "_debugID": 3,
@@ -1055,24 +1140,53 @@ Object {
                 "baseState": null,
                 "baseUpdate": null,
                 "memoizedState": Object {
-                  "create": [Function],
-                  "deps": Array [
-                    Object {
-                      "chartbeatUID": 1111,
-                      "domain": "test-domain",
-                      "sections": "section1 section2",
-                      "title": "This is an article",
-                      "type": "article",
-                      "uid": 123,
-                      "useCanonical": true,
-                      "virtualReferrer": null,
-                    },
-                  ],
-                  "destroy": undefined,
-                  "next": [Circular],
-                  "tag": 192,
+                  "current": Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "uid": 123,
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  },
                 },
-                "next": null,
+                "next": Object {
+                  "baseState": null,
+                  "baseUpdate": null,
+                  "memoizedState": Object {
+                    "create": [Function],
+                    "deps": Array [
+                      Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "uid": 123,
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      },
+                      Object {
+                        "current": Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "uid": 123,
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        },
+                      },
+                    ],
+                    "destroy": undefined,
+                    "next": [Circular],
+                    "tag": 192,
+                  },
+                  "next": null,
+                  "queue": null,
+                },
                 "queue": null,
               },
               "mode": 0,
@@ -1331,6 +1445,18 @@ Object {
                       "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
+                    },
+                    Object {
+                      "current": Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "uid": 123,
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      },
                     },
                   ],
                   "destroy": undefined,
@@ -1371,7 +1497,7 @@ Object {
                 </script>,
                 <script
                   async={true}
-                  src="//chartbeat.js"
+                  src="//static.chartbeat.com/js/chartbeat.js"
                   type="text/javascript"
                 />,
               ],
@@ -1399,7 +1525,7 @@ Object {
                 </script>,
                 <script
                   async={true}
-                  src="//chartbeat.js"
+                  src="//static.chartbeat.com/js/chartbeat.js"
                   type="text/javascript"
                 />,
               ],
@@ -1409,6 +1535,7 @@ Object {
             "ref": null,
             "return": FiberNode {
               "_debugHookTypes": Array [
+                "useRef",
                 "useEffect",
               ],
               "_debugID": 3,
@@ -1446,24 +1573,53 @@ Object {
                 "baseState": null,
                 "baseUpdate": null,
                 "memoizedState": Object {
-                  "create": [Function],
-                  "deps": Array [
-                    Object {
-                      "chartbeatUID": 1111,
-                      "domain": "test-domain",
-                      "sections": "section1 section2",
-                      "title": "This is an article",
-                      "type": "article",
-                      "uid": 123,
-                      "useCanonical": true,
-                      "virtualReferrer": null,
-                    },
-                  ],
-                  "destroy": undefined,
-                  "next": [Circular],
-                  "tag": 192,
+                  "current": Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "uid": 123,
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  },
                 },
-                "next": null,
+                "next": Object {
+                  "baseState": null,
+                  "baseUpdate": null,
+                  "memoizedState": Object {
+                    "create": [Function],
+                    "deps": Array [
+                      Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "uid": 123,
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      },
+                      Object {
+                        "current": Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "uid": 123,
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        },
+                      },
+                    ],
+                    "destroy": undefined,
+                    "next": [Circular],
+                    "tag": 192,
+                  },
+                  "next": null,
+                  "queue": null,
+                },
                 "queue": null,
               },
               "mode": 0,
@@ -1723,6 +1879,18 @@ Object {
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
+                    Object {
+                      "current": Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "uid": 123,
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      },
+                    },
                   ],
                   "destroy": undefined,
                   "next": [Circular],
@@ -1754,7 +1922,7 @@ Object {
                   </script>,
                   <script
                     async={true}
-                    src="//chartbeat.js"
+                    src="//static.chartbeat.com/js/chartbeat.js"
                     type="text/javascript"
                   />,
                 ],
@@ -1818,7 +1986,7 @@ Object {
                 },
                 Object {
                   "async": true,
-                  "src": "//chartbeat.js",
+                  "src": "//static.chartbeat.com/js/chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -1845,7 +2013,7 @@ Object {
                 },
                 Object {
                   "async": true,
-                  "src": "//chartbeat.js",
+                  "src": "//static.chartbeat.com/js/chartbeat.js",
                   "type": "text/javascript",
                 },
               ],
@@ -1888,7 +2056,7 @@ Object {
               },
               Object {
                 "async": true,
-                "src": "//chartbeat.js",
+                "src": "//static.chartbeat.com/js/chartbeat.js",
                 "type": "text/javascript",
               },
             ],
@@ -1915,7 +2083,7 @@ Object {
               },
               Object {
                 "async": true,
-                "src": "//chartbeat.js",
+                "src": "//static.chartbeat.com/js/chartbeat.js",
                 "type": "text/javascript",
               },
             ],
@@ -1928,6 +2096,7 @@ Object {
             "_debugNeedsRemount": false,
             "_debugOwner": FiberNode {
               "_debugHookTypes": Array [
+                "useRef",
                 "useEffect",
               ],
               "_debugID": 3,
@@ -1965,24 +2134,53 @@ Object {
                 "baseState": null,
                 "baseUpdate": null,
                 "memoizedState": Object {
-                  "create": [Function],
-                  "deps": Array [
-                    Object {
-                      "chartbeatUID": 1111,
-                      "domain": "test-domain",
-                      "sections": "section1 section2",
-                      "title": "This is an article",
-                      "type": "article",
-                      "uid": 123,
-                      "useCanonical": true,
-                      "virtualReferrer": null,
-                    },
-                  ],
-                  "destroy": undefined,
-                  "next": [Circular],
-                  "tag": 192,
+                  "current": Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "uid": 123,
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  },
                 },
-                "next": null,
+                "next": Object {
+                  "baseState": null,
+                  "baseUpdate": null,
+                  "memoizedState": Object {
+                    "create": [Function],
+                    "deps": Array [
+                      Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "uid": 123,
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      },
+                      Object {
+                        "current": Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "uid": 123,
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        },
+                      },
+                    ],
+                    "destroy": undefined,
+                    "next": [Circular],
+                    "tag": 192,
+                  },
+                  "next": null,
+                  "queue": null,
+                },
                 "queue": null,
               },
               "mode": 0,
@@ -2241,6 +2439,18 @@ Object {
                       "uid": 123,
                       "useCanonical": true,
                       "virtualReferrer": null,
+                    },
+                    Object {
+                      "current": Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "uid": 123,
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      },
                     },
                   ],
                   "destroy": undefined,
@@ -2281,7 +2491,7 @@ Object {
                 </script>,
                 <script
                   async={true}
-                  src="//chartbeat.js"
+                  src="//static.chartbeat.com/js/chartbeat.js"
                   type="text/javascript"
                 />,
               ],
@@ -2309,7 +2519,7 @@ Object {
                 </script>,
                 <script
                   async={true}
-                  src="//chartbeat.js"
+                  src="//static.chartbeat.com/js/chartbeat.js"
                   type="text/javascript"
                 />,
               ],
@@ -2319,6 +2529,7 @@ Object {
             "ref": null,
             "return": FiberNode {
               "_debugHookTypes": Array [
+                "useRef",
                 "useEffect",
               ],
               "_debugID": 3,
@@ -2356,24 +2567,53 @@ Object {
                 "baseState": null,
                 "baseUpdate": null,
                 "memoizedState": Object {
-                  "create": [Function],
-                  "deps": Array [
-                    Object {
-                      "chartbeatUID": 1111,
-                      "domain": "test-domain",
-                      "sections": "section1 section2",
-                      "title": "This is an article",
-                      "type": "article",
-                      "uid": 123,
-                      "useCanonical": true,
-                      "virtualReferrer": null,
-                    },
-                  ],
-                  "destroy": undefined,
-                  "next": [Circular],
-                  "tag": 192,
+                  "current": Object {
+                    "chartbeatUID": 1111,
+                    "domain": "test-domain",
+                    "sections": "section1 section2",
+                    "title": "This is an article",
+                    "type": "article",
+                    "uid": 123,
+                    "useCanonical": true,
+                    "virtualReferrer": null,
+                  },
                 },
-                "next": null,
+                "next": Object {
+                  "baseState": null,
+                  "baseUpdate": null,
+                  "memoizedState": Object {
+                    "create": [Function],
+                    "deps": Array [
+                      Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "uid": 123,
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      },
+                      Object {
+                        "current": Object {
+                          "chartbeatUID": 1111,
+                          "domain": "test-domain",
+                          "sections": "section1 section2",
+                          "title": "This is an article",
+                          "type": "article",
+                          "uid": 123,
+                          "useCanonical": true,
+                          "virtualReferrer": null,
+                        },
+                      },
+                    ],
+                    "destroy": undefined,
+                    "next": [Circular],
+                    "tag": 192,
+                  },
+                  "next": null,
+                  "queue": null,
+                },
                 "queue": null,
               },
               "mode": 0,
@@ -2633,6 +2873,18 @@ Object {
                       "useCanonical": true,
                       "virtualReferrer": null,
                     },
+                    Object {
+                      "current": Object {
+                        "chartbeatUID": 1111,
+                        "domain": "test-domain",
+                        "sections": "section1 section2",
+                        "title": "This is an article",
+                        "type": "article",
+                        "uid": 123,
+                        "useCanonical": true,
+                        "virtualReferrer": null,
+                      },
+                    },
                   ],
                   "destroy": undefined,
                   "next": [Circular],
@@ -2664,7 +2916,7 @@ Object {
                   </script>,
                   <script
                     async={true}
-                    src="//chartbeat.js"
+                    src="//static.chartbeat.com/js/chartbeat.js"
                     type="text/javascript"
                   />,
                 ],
@@ -2714,7 +2966,7 @@ Object {
             },
             Object {
               "async": true,
-              "src": "//chartbeat.js",
+              "src": "//static.chartbeat.com/js/chartbeat.js",
               "type": "text/javascript",
             },
           ],
@@ -2748,7 +3000,7 @@ Object {
           },
           Object {
             "async": true,
-            "src": "//chartbeat.js",
+            "src": "//static.chartbeat.com/js/chartbeat.js",
             "type": "text/javascript",
           },
         ],
@@ -2775,7 +3027,7 @@ Object {
             },
             Object {
               "async": true,
-              "src": "//chartbeat.js",
+              "src": "//static.chartbeat.com/js/chartbeat.js",
               "type": "text/javascript",
             },
           ],
