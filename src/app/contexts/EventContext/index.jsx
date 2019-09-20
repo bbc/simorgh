@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { node } from 'prop-types';
 import { useWindowEvent } from './useWindowEvent';
 import { useHandlerMap } from './useHandlerMap';
@@ -12,21 +12,23 @@ export const EventContextProvider = ({ children }) => {
   const [handlerMap, setHandlerMap] = useState({});
 
   const useClickTracker = (selector, handler) => {
-    const cleanup = () => {
-      setHandlerMap(_map => ({
-        ..._map,
-        [selector]: (_map[selector] || []).filter(h => h !== handler),
-      }));
-    };
+    const selectorRef = useRef(selector).current;
+    const handlerRef = useRef(handler).current;
     useEffect(() => {
       setHandlerMap(_map => ({
         ..._map,
-        [selector]: [...(_map[selector] || []), handler],
+        [selectorRef]: [...(_map[selectorRef] || []), handlerRef],
       }));
 
-      return cleanup;
-    }, [children]);
-    return cleanup;
+      return () => {
+        setHandlerMap(_map => ({
+          ..._map,
+          [selectorRef]: (_map[selectorRef] || []).filter(
+            h => h !== handlerRef,
+          ),
+        }));
+      };
+    }, [selectorRef, handlerRef]);
   };
 
   const value = {
