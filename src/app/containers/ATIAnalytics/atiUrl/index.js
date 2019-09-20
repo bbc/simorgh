@@ -44,7 +44,7 @@ const atiPageViewParams = ({
     {
       key: 'idclient',
       description: 'at user id',
-      value: getAtUserId(platform),
+      value: getAtUserId(),
       wrap: false,
     },
     {

@@ -125,11 +125,7 @@ export const getReferrer = (platform, origin, previousPath) => {
   return null;
 };
 
-export const getAtUserId = platform => {
-  if (platform === 'amp') {
-    return null;
-  }
-
+export const getAtUserId = () => {
   if (onClient()) {
     const atuserid = Cookie.getJSON('atuserid');
     return (atuserid && atuserid.val) || null;
