@@ -24,7 +24,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
         describe('ATI', () => {
-          it('should have an amp-analytics tag with the ati url smoke', () => {
+          it('should have a noscript img tag with the ati url smoke', () => {
             if (serviceIsGNL(service)) {
               cy.hasNoscriptImgAtiUrl(
                 envConfig.atiUrl,
@@ -42,7 +42,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
         });
       } else if (serviceIsGNL(service)) {
         describe('ATI', () => {
-          it('should have an amp-analytics tag with the ati url', () => {
+          it('should have a noscript img tag with the ati url', () => {
             cy.hasNoscriptImgAtiUrl(
               envConfig.atiUrl,
               envConfig.atiAnalyticsGNLBucket,
@@ -50,7 +50,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           });
         });
       } else if (config[service].isWorldService) {
-        it('should have an amp-analytics tag with the ati url', () => {
+        it('should have a noscript img tag with the ati url', () => {
           cy.hasNoscriptImgAtiUrl(
             envConfig.atiUrl,
             envConfig.atiAnalyticsWSBucket,
@@ -58,7 +58,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
         });
       } else if (serviceUsesDefault(service)) {
         describe('ATI', () => {
-          it('should have an amp-analytics tag with the ati url', () => {
+          it('should have a noscript img tag with the ati url', () => {
             cy.hasNoscriptImgAtiUrl(
               envConfig.atiUrl,
               envConfig.atiAnalyticsDefaultBucket,
@@ -66,7 +66,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           });
         });
       } else {
-        it('should have an amp-analytics tag with the ati url', () => {
+        it('should have a noscript img tag with the ati url', () => {
           cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
         });
       }
