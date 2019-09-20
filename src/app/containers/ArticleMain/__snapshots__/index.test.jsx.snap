@@ -414,25 +414,6 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       name="twitter:title"
     />
     <script
-      async="true"
-      type="text/javascript"
-    >
-      
-        (function(){
-          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test.bbc.co.uk","sections":"News, News - ART","uid":50924,"title":"Article Headline for SEO","virtualReferrer":null,"type":"New Article","useCanonical":true,"path":"/"};
-          for (var key in config) {
-            _sf_async_config[key] = config[key];
-          }
-        })();
-      
-    </script>
-    <script
-      async="true"
-      src="//static.chartbeat.com/js/chartbeat.js"
-      type="text/javascript"
-    />
-    <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"},"about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}]}
@@ -441,6 +422,9 @@ exports[`ArticleMain should render a news article correctly 1`] = `
   <body>
     <div>
       <noscript />
+      <div>
+        chartbeat
+      </div>
       <main
         role="main"
       >
@@ -685,25 +669,6 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       name="twitter:title"
     />
     <script
-      async="true"
-      type="text/javascript"
-    >
-      
-        (function(){
-          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test.bbc.co.uk","sections":"Persian, Persian - ART","uid":50924,"title":"سرصفحه مقاله","virtualReferrer":null,"type":"New Article","useCanonical":true,"path":"/"};
-          for (var key in config) {
-            _sf_async_config[key] = config[key];
-          }
-        })();
-      
-    </script>
-    <script
-      async="true"
-      src="//static.chartbeat.com/js/chartbeat.js"
-      type="text/javascript"
-    />
-    <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"سرصفحه مقاله"},"headline":"سرصفحه مقاله","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
@@ -887,6 +852,9 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
 
 <div>
       <noscript />
+      <div>
+        chartbeat
+      </div>
       <main
         role="main"
       >
@@ -1131,25 +1099,6 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       name="twitter:title"
     />
     <script
-      async="true"
-      type="text/javascript"
-    >
-      
-        (function(){
-          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test.bbc.co.uk","sections":"Pidgin, Pidgin - ART","uid":50924,"title":"Article Headline for SEO in Pidgin","virtualReferrer":null,"type":"New Article","useCanonical":true,"path":"/"};
-          for (var key in config) {
-            _sf_async_config[key] = config[key];
-          }
-        })();
-      
-    </script>
-    <script
-      async="true"
-      src="//static.chartbeat.com/js/chartbeat.js"
-      type="text/javascript"
-    />
-    <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO in Pidgin"},"headline":"Article Headline for SEO in Pidgin","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
@@ -1333,6 +1282,9 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
 
 <div>
       <noscript />
+      <div>
+        chartbeat
+      </div>
       <main
         role="main"
       >
