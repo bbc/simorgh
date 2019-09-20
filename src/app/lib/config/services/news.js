@@ -191,6 +191,32 @@ const news = {
       F_REITH_SERIF_MEDIUM_ITALIC,
     ],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'Home',
+        url: '/news',
+      },
+      {
+        title: 'UK',
+        url: '/news/uk',
+      },
+      {
+        title: 'World',
+        url: '/news/world',
+      },
+      {
+        title: 'Business',
+        url: '/news/business',
+      },
+      {
+        title: 'Politics',
+        url: '/news/politics',
+      },
+      {
+        title: 'Tech',
+        url: '/news/technology',
+      },
+    ],
   },
 };
 
