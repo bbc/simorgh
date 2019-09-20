@@ -211,10 +211,6 @@ const service = {
         title: 'ワールドニュースTV',
         url: 'https://www.bbcworldnews-japan.com/',
       },
-      {
-        title: 'BBC News',
-        url: '/news',
-      },
     ],
   },
 };
