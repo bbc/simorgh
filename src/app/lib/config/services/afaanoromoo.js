@@ -1,17 +1,18 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 
 const service = {
   default: {
     lang: `om`,
-    articleAuthor: `https://www.facebook.com/bbcnewsafaanoromoo`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Haaromsameera',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
     brandName: 'BBC News Afaan Oromoo',
-    product: 'BBC News Afaan Oromoo',
+    product: 'BBC News',
+    serviceLocalizedName: 'Afaan Oromoo',
     defaultImage:
       'https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png',
     defaultImageAltText: 'BBC News Afaan Oromoo',
@@ -25,13 +26,13 @@ const service = {
     locale: `om-ET`,
     datetimeLocale: `om-et`,
     service: 'afaanoromoo',
-    serviceName: 'News Afaan Oromoo',
+    serviceName: 'Afaan Oromoo',
     themeColor: `${C_POSTBOX}`,
-    twitterCreator: '@BBCAfrica',
-    twitterSite: '@BBCAfrica',
+    twitterCreator: '@BBCNews',
+    twitterSite: '@BBCNews',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Oduu',
