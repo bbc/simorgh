@@ -31,8 +31,8 @@ getStatsPageIdentifier.mockImplementation(
 describe('withContexts HOC', () => {
   const Component = () => (
     <>
-      <ComponentUsingContext context={serviceContextImports} />
-      <ComponentUsingContext context={requestContextImports} />
+      <ComponentUsingContext context={serviceContextImports.ServiceContext} />
+      <ComponentUsingContext context={requestContextImports.RequestContext} />
       <ComponentUsingContext context={ToggleContext} />
       <ComponentUsingContext context={UserContext} />
     </>
@@ -52,7 +52,7 @@ describe('withContexts HOC', () => {
 
   shouldMatchSnapshot(
     `should return all context providers`,
-    <Component {...props} />,
+    <ContextsHOC {...props} />,
   );
 
   describe('assertions', () => {
@@ -85,9 +85,7 @@ describe('withContexts HOC', () => {
           pathname: '/pathname',
           data: { status: 200 },
         };
-
         render(<ContextsHOC {...fixture} />);
-
         expect(requestContextSpy).toHaveBeenCalled();
         expect(requestContextSpy).toHaveBeenCalledWith(
           expect.objectContaining({
