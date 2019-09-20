@@ -18,5 +18,5 @@ export const getPassportHome = pageData => {
 export const isValidPassportHome = (passportHome, service) => {
   if (!passportHome) return true;
 
-  return passportHome === service;
+  return (passportHome || '').toLowerCase() === (service || '').toLowerCase();
 };
