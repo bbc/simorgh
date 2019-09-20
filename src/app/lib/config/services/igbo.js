@@ -176,7 +176,7 @@ const igbo = {
           text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+          href: 'https://www.bbc.co.uk/usingthebbc/terms',
           text: 'Usoro Ojiji',
         },
         {
