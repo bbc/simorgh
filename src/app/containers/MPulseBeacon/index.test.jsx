@@ -39,6 +39,7 @@ describe('MPulseBeacon', () => {
     process.env.SIMORGH_MPULSE_API_KEY = 'APIKey';
     container = document.createElement('div');
     document.body.appendChild(container);
+    process.env.SIMORGH_VERSION = '1.2.3';
 
     serviceContextMock = { service: 'news' };
     requestContextMock = { pageType: 'article', statusCode: 200 };
@@ -70,6 +71,7 @@ describe('MPulseBeacon', () => {
       pageType: 'article',
       service: 'news',
       statusCode: 200,
+      simorghVersion: '1.2.3',
     });
   });
 

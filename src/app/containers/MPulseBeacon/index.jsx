@@ -16,6 +16,7 @@ const MPulseBeaconContainer = () => {
   const { service } = useContext(ServiceContext);
   const API_KEY = process.env.SIMORGH_MPULSE_API_KEY;
   const isEnabled = enabled && API_KEY && onClient();
+  const simorghVersion = process.env.SIMORGH_VERSION;
 
   useEffect(() => {
     if (isEnabled && personalisationEnabled) {
@@ -33,9 +34,17 @@ const MPulseBeaconContainer = () => {
         pageType,
         service,
         statusCode,
+        simorghVersion,
       };
     }
-  }, [isEnabled, personalisationEnabled, pageType, service, statusCode]);
+  }, [
+    isEnabled,
+    personalisationEnabled,
+    pageType,
+    service,
+    statusCode,
+    simorghVersion,
+  ]);
 
   return null;
 };
