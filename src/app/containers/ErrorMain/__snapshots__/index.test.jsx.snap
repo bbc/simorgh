@@ -589,12 +589,12 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
             <p
               class="c4"
             >
-              برای یافتن اطلاعات مورد نظر به صفحه 
+              برای یافتن اطلاعات مورد نظر به 
               <a
                 class="c5"
                 href="https://www.bbc.com/persian"
               >
-                اصلی بی‌بی‌سی فارسی
+                صفحه اصلی بی‌بی‌سی فارسی
               </a>
                بروید
             </p>
@@ -1185,12 +1185,12 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
             <p
               class="c4"
             >
-              برای یافتن اطلاعات مورد نظر به صفحه 
+              برای یافتن اطلاعات مورد نظر به 
               <a
                 class="c5"
                 href="https://www.bbc.com/persian"
               >
-                اصلی بی‌بی‌سی فارسی
+                صفحه اصلی بی‌بی‌سی فارسی
               </a>
                بروید
             </p>
