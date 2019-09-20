@@ -15,6 +15,11 @@ import {
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
+jest.mock('../ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
 const Context = ({ service, children }) => (
   <ToggleContextProvider>
     <ServiceContextProvider service={service}>
