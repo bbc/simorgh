@@ -7,6 +7,7 @@ import {
   getDeviceLanguage,
   getHref,
   getReferrer,
+  getAtUserId,
   isLocServeCookieSet,
   sanitise,
 } from '#lib/analyticsUtils';
@@ -38,6 +39,12 @@ const atiPageViewParams = ({
       key: 's',
       description: 'destination',
       value: getDestination(statsDestination),
+      wrap: false,
+    },
+    {
+      key: 'idclient',
+      description: 'at user id',
+      value: getAtUserId(),
       wrap: false,
     },
     {
