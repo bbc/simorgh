@@ -121,26 +121,6 @@ exports[`Metadata News AMP article should render correctly 1`] = `
     />
     <meta
       content="BBC News"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="tagA"
-      name="article:tag"
-    />
-    <meta
-      content="tagB"
-      name="article:tag"
-    />
-    <meta
-      content="BBC News"
       name="apple-mobile-web-app-title"
     />
     <meta
@@ -362,26 +342,6 @@ exports[`Metadata News article should render correctly 1`] = `
     />
     <meta
       content="BBC News"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="tagA"
-      name="article:tag"
-    />
-    <meta
-      content="tagB"
-      name="article:tag"
-    />
-    <meta
-      content="BBC News"
       name="apple-mobile-web-app-title"
     />
     <meta
@@ -582,26 +542,6 @@ exports[`Metadata Persian AMP article should render correctly 1`] = `
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="tagA"
-      name="article:tag"
-    />
-    <meta
-      content="tagB"
-      name="article:tag"
     />
     <meta
       content="BBC News فارسی"
@@ -809,26 +749,6 @@ exports[`Metadata Persian article should render correctly 1`] = `
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="tagA"
-      name="article:tag"
-    />
-    <meta
-      content="tagB"
-      name="article:tag"
     />
     <meta
       content="BBC News فارسی"
@@ -1495,30 +1415,6 @@ exports[`Metadata articleSection is not null should render correctly 1`] = `
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
-    />
-    <meta
-      content="BBC News"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="Politics"
-      name="article:section"
-    />
-    <meta
-      content="tagA"
-      name="article:tag"
-    />
-    <meta
-      content="tagB"
-      name="article:tag"
     />
     <meta
       content="BBC News"

@@ -70,7 +70,7 @@ LinkedData.propTypes = {
   seoHeadline: string.isRequired,
   publishingPrinciples: string.isRequired,
   logoUrl: string.isRequired,
-  pageSpecific: shape(string),
+  pageSpecific: shape({}),
 };
 
 LinkedData.defaultProps = {

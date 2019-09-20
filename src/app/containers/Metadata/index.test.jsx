@@ -55,14 +55,10 @@ const metadataProps = ({
   description,
   dir,
   lang,
-  metaTags,
-  timeFirstPublished,
-  timeLastPublished,
   title,
   serviceConfig,
   type,
   service,
-  showArticleTags,
 }) => ({
   isAmp,
   alternateLinks,
@@ -80,16 +76,12 @@ const metadataProps = ({
   facebookAppID: 1609039196070050,
   lang,
   locale: serviceConfig.locale,
-  metaTags,
   themeColor: serviceConfig.themeColor,
-  timeFirstPublished,
-  timeLastPublished,
   title,
   twitterCreator: serviceConfig.twitterCreator,
   twitterSite: serviceConfig.twitterSite,
   type,
   service,
-  showArticleTags,
   iconSizes: {
     'apple-touch-icon': [
       '72x72',
@@ -114,6 +106,7 @@ const linkedDataProps = ({
   seoHeadline,
   type,
   about = undefined,
+  pageSpecific = {},
 }) => ({
   brandName,
   canonicalLink,
@@ -125,6 +118,7 @@ const linkedDataProps = ({
   seoHeadline,
   type,
   about,
+  pageSpecific,
 });
 
 describe('Metadata Container', () => {
@@ -169,26 +163,16 @@ describe('Metadata Container', () => {
           description: 'Article summary.',
           dir: 'ltr',
           lang: 'en-gb',
-          metaTags: [
-            'Royal Wedding 2018',
-            'Duchess of Sussex',
-            'Queen Victoria',
-          ],
-          timeFirstPublished: '2018-01-01T12:01:00.000Z',
-          timeLastPublished: '2018-01-01T13:00:00.000Z',
           title: 'Article Headline for SEO',
           serviceConfig: services.news.default,
           type: 'article',
           service: 'news',
-          showArticleTags: true,
         }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps({
           brandName: 'BBC News',
           canonicalLink: 'https://www.bbc.com/news/articles/c0000000001o',
-          firstPublished: '2018-01-01T12:01:00.000Z',
-          lastUpdated: '2018-01-01T13:00:00.000Z',
           createdBy: 'News',
           logoUrl:
             'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
@@ -262,26 +246,16 @@ describe('Metadata Container', () => {
           description: 'Article summary.',
           dir: 'ltr',
           lang: 'en-gb',
-          metaTags: [
-            'Royal Wedding 2018',
-            'Duchess of Sussex',
-            'Queen Victoria',
-          ],
-          timeFirstPublished: '2018-01-01T12:01:00.000Z',
-          timeLastPublished: '2018-01-01T13:00:00.000Z',
           title: 'Article Headline for SEO',
           serviceConfig: services.news.default,
           type: 'article',
           service: 'news',
-          showArticleTags: true,
         }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps({
           brandName: 'BBC News',
           canonicalLink: 'https://www.bbc.com/news/articles/c0000000001o',
-          firstPublished: '2018-01-01T12:01:00.000Z',
-          lastUpdated: '2018-01-01T13:00:00.000Z',
           createdBy: 'News',
           logoUrl:
             'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
@@ -342,22 +316,16 @@ describe('Metadata Container', () => {
           description: 'خلاصه مقاله',
           dir: 'rtl',
           lang: 'fa',
-          metaTags: [],
-          timeFirstPublished: '2018-01-01T12:01:00.000Z',
-          timeLastPublished: '2018-01-01T13:00:00.000Z',
           title: 'سرصفحه مقاله',
           serviceConfig: services.persian.default,
           type: 'article',
           service: 'persian',
-          showArticleTags: true,
         }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps({
           brandName: 'BBC News فارسی',
           canonicalLink: 'https://www.bbc.com/persian/articles/c4vlle3q337o',
-          firstPublished: '2018-01-01T12:01:00.000Z',
-          lastUpdated: '2018-01-01T13:00:00.000Z',
           createdBy: 'Persian',
           logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           seoHeadline: 'سرصفحه مقاله',
@@ -406,22 +374,16 @@ describe('Metadata Container', () => {
           description: 'خلاصه مقاله',
           dir: 'rtl',
           lang: 'fa',
-          metaTags: [],
-          timeFirstPublished: '2018-01-01T12:01:00.000Z',
-          timeLastPublished: '2018-01-01T13:00:00.000Z',
           title: 'سرصفحه مقاله',
           serviceConfig: services.persian.default,
           type: 'article',
           service: 'persian',
-          showArticleTags: true,
         }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps({
           brandName: 'BBC News فارسی',
           canonicalLink: 'https://www.bbc.com/persian/articles/c4vlle3q337o',
-          firstPublished: '2018-01-01T12:01:00.000Z',
-          lastUpdated: '2018-01-01T13:00:00.000Z',
           createdBy: 'Persian',
           logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
           seoHeadline: 'سرصفحه مقاله',
@@ -476,22 +438,16 @@ describe('Metadata Container', () => {
             'BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.',
           dir: 'ltr',
           lang: 'ig',
-          metaTags: [],
-          timeFirstPublished: null,
-          timeLastPublished: null,
           title: 'Ogbako',
           serviceConfig: services.igbo.default,
           type: 'website',
           service: 'igbo',
-          showArticleTags: false,
         }),
       );
       expect(Wrapper.find(LinkedData).props()).toEqual(
         linkedDataProps({
           brandName: 'BBC News Ìgbò',
           canonicalLink: 'https://www.bbc.com/igbo',
-          firstPublished: null,
-          lastUpdated: null,
           createdBy: 'Igbo',
           logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
           seoHeadline: 'Ogbako',
@@ -541,22 +497,16 @@ describe('Metadata Container', () => {
         description: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
         dir: 'ltr',
         lang: 'ko',
-        metaTags: [],
-        timeFirstPublished: null,
-        timeLastPublished: null,
         title: 'BBC News 코리아 라디오',
         serviceConfig: services.korean.default,
         type: 'website',
         service: 'korean',
-        showArticleTags: false,
       }),
     );
     expect(Wrapper.find(LinkedData).props()).toEqual(
       linkedDataProps({
         brandName: 'BBC News 코리아',
         canonicalLink: 'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
-        firstPublished: null,
-        lastUpdated: null,
         createdBy: 'Korean',
         logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
         seoHeadline: 'BBC News 코리아 라디오',
