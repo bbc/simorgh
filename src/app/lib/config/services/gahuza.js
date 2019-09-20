@@ -161,7 +161,7 @@ const service = {
         },
         {
           href: 'https://www.bbc.com/gahuza/institutional-35754059',
-          text: 'Ibigenga ubuzima bwite',
+          text: "Ibigenga n'ubuzima bwite",
         },
         {
           href:
