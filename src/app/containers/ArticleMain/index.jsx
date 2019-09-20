@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import MetadataContainer from '../Metadata';
 import ArticleMetadata from '../../components/ArticleMetadata';
+import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
@@ -12,6 +13,7 @@ import { GhostGrid } from '#lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';
+import aboutTagsContent from '../Metadata/linkedDataAbout';
 
 const componentsToRender = {
   headline: headings,
@@ -23,21 +25,59 @@ const componentsToRender = {
   timestamp,
 };
 
+const getISOStringDate = date => new Date(date).toISOString();
+
 const ArticleMain = ({ articleData }) => {
-  const { content, metadata, promo } = articleData;
+  const {
+    brandName,
+    noBylinesPolicy,
+    defaultImage,
+    articleAuthor,
+  } = useContext(ServiceContext);
+  const content = path(['content'], articleData);
+  const metadata = path(['metadata'], articleData);
+  const promo = path(['promo'], articleData);
   const { blocks } = content.model;
+  const headline = path(['headlines', 'seoHeadline'], promo);
+  const firstPublished = getISOStringDate(path(['firstPublished'], metadata));
+  const lastPublished = getISOStringDate(path(['lastPublished'], metadata));
+  const aboutTags = path(['tags', 'about'], metadata);
+  const articleSection = path(['passport', 'genre'], metadata);
+  const mentionsTags = path(['tags', 'mentions'], metadata);
+  const articleSpecificLinkedData = {
+    headline,
+    datePublished: firstPublished,
+    dateModified: lastPublished,
+    about: aboutTagsContent(aboutTags),
+    author: {
+      '@type': 'NewsMediaOrganization',
+      name: brandName,
+      logo: {
+        '@type': 'ImageObject',
+        width: 1024,
+        height: 576,
+        url: defaultImage,
+      },
+      noBylinesPolicy,
+    },
+  };
 
   return (
     <>
       <ATIAnalytics data={articleData} />
       <ChartbeatAnalytics data={articleData} />
-      <MetadataContainer metadata={metadata} promo={promo} />
+      <MetadataContainer
+        metadata={metadata}
+        promo={promo}
+        pageSpecificLinkedData={articleSpecificLinkedData}
+      />
       <ArticleMetadata
-        firstPublished={path('firstPublished', metadata)}
-        lastPublished={path('lastPublished', metadata)}
-        articleSection={path('passport', 'genre', metadata)}
-        aboutTags={path('tags', 'about', metadata)}
-        mentionsTags={path('tags', 'mentions', metadata)}
+        author={articleAuthor}
+        firstPublished={firstPublished}
+        lastPublished={lastPublished}
+        articleSection={articleSection}
+        aboutTags={aboutTags}
+        mentionsTags={mentionsTags}
       />
       <main role="main">
         <GhostGrid>

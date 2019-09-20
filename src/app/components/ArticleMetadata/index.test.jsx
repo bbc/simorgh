@@ -1,34 +1,37 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import ArticleContainer from './index';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ArticleMetadata from './index';
 import {
   articleDataNews,
   articleDataPersian,
 } from '../../containers/Article/fixtureData';
 
+const getISOStringDate = date => new Date(date).toISOString();
+
 describe('ArticleMetadata', () => {
   shouldMatchSnapshot(
     'should match snapshot for News & International',
-    <ServiceContextProvider service="news">
-      <ArticleContainer
-        firstPublished={articleDataNews.metadata.firstPublished}
-        lastPublished={articleDataNews.metadata.lastPublished}
-        articleSection={articleDataNews.metadata.passport.genre}
-        aboutTags={articleDataNews.metadata.tags.about}
-        mentionsTags={articleDataNews.metadata.tags.mentions}
-      />
-    </ServiceContextProvider>,
+    <ArticleMetadata
+      author="https://www.facebook.com/bbcnews"
+      firstPublished={getISOStringDate(articleDataNews.metadata.firstPublished)}
+      lastPublished={getISOStringDate(articleDataNews.metadata.lastPublished)}
+      section={articleDataNews.metadata.passport.genre}
+      aboutTags={articleDataNews.metadata.tags.about}
+      mentionsTags={articleDataNews.metadata.tags.mentions}
+    />,
   );
 
   shouldMatchSnapshot(
     'should match snapshot for Persian News & UK origin',
-    <ServiceContextProvider service="persian">
-      <ArticleContainer
-        firstPublished={articleDataPersian.metadata.firstPublished}
-        lastPublished={articleDataPersian.metadata.lastPublished}
-        articleSection={articleDataPersian.metadata.passport.genre}
-      />
-    </ServiceContextProvider>,
+    <ArticleMetadata
+      author="https://www.facebook.com/bbcnews"
+      firstPublished={getISOStringDate(
+        articleDataPersian.metadata.firstPublished,
+      )}
+      lastPublished={getISOStringDate(
+        articleDataPersian.metadata.lastPublished,
+      )}
+      section={articleDataPersian.metadata.passport.genre}
+    />,
   );
 });

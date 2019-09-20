@@ -1,44 +1,28 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
-import { string, number, shape, arrayOf } from 'prop-types';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { string, shape, arrayOf } from 'prop-types';
 
 const renderTags = tags =>
-  tags.map(({ thingLabel: tag }) => (
-    <meta name="article:tag" content={tag} key={tag} />
+  tags.map(({ thingLabel: content }) => (
+    <meta name="article:tag" content={content} key={content} />
   ));
 
-const getISOStringDate = date => new Date(date).toISOString();
-
 const ArticleMetadata = ({
+  author,
   firstPublished,
   lastPublished,
-  articleSection,
+  section,
   aboutTags,
   mentionsTags,
 }) => {
-  const { articleAuthor } = useContext(ServiceContext); // TODO
-
   return (
     <Helmet>
-      <meta name="article:author" content={articleAuthor} />
-      {Boolean(lastPublished) && (
-        <meta
-          name="article:modified_time"
-          content={getISOStringDate(lastPublished)}
-        />
-      )}
-      {Boolean(firstPublished) && (
-        <meta
-          name="article:published_time"
-          content={getISOStringDate(firstPublished)}
-        />
-      )}
-      {articleSection && (
-        <meta name="article:section" content={articleSection} />
-      )}
-      {Boolean(aboutTags.length) && renderTags(aboutTags)}
-      {Boolean(mentionsTags.length) && renderTags(mentionsTags)}
+      <meta name="article:author" content={author} />
+      <meta name="article:modified_time" content={lastPublished} />
+      <meta name="article:published_time" content={firstPublished} />
+      {section && <meta name="article:section" content={section} />}
+      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
+      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
     </Helmet>
   );
 };
@@ -55,17 +39,16 @@ const tagPropTypes = shape({
 });
 
 ArticleMetadata.propTypes = {
-  firstPublished: number,
-  lastPublished: number,
-  articleSection: string,
+  author: string.isRequired,
+  firstPublished: string.isRequired,
+  lastPublished: string.isRequired,
+  section: string,
   aboutTags: arrayOf(tagPropTypes),
   mentionsTags: arrayOf(tagPropTypes),
 };
 
 ArticleMetadata.defaultProps = {
-  firstPublished: 0,
-  lastPublished: 0,
-  articleSection: '',
+  section: '',
   aboutTags: [],
   mentionsTags: [],
 };
