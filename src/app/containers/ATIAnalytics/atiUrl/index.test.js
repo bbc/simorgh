@@ -22,6 +22,7 @@ const analyticsUtilFunctions = [
   { name: 'getDeviceLanguage', source: genericLabelHelpers },
   { name: 'getHref', source: genericLabelHelpers },
   { name: 'getReferrer', source: genericLabelHelpers },
+  { name: 'getAtUserId', source: genericLabelHelpers },
   { name: 'isLocServeCookieSet', source: genericLabelHelpers },
   { name: 'sanitise', source: genericLabelHelpers },
 ];
@@ -96,6 +97,7 @@ describe('getThingAttributes', () => {
     const queryParamsArray = splitUrl(queryParams);
     const expectedValues = [
       's=getDestination',
+      'idclient=getAtUserId',
       'r=getScreenInfo',
       're=getBrowserViewPort',
       'hl=getCurrentTime',
