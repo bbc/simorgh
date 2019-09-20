@@ -1,6 +1,6 @@
 import { C_DARK_SALTIRE, C_WHITE } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,
@@ -40,7 +40,7 @@ const service = {
     twitterSite: '@BBCScotland',
     noBylinesPolicy: null,
     publishingPrinciples: null,
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',

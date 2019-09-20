@@ -1,12 +1,12 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
 
 const service = {
   default: {
     lang: `az`,
-    articleAuthor: `https://www.facebook.com/pages/bbc-azeri/347501767628`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
@@ -25,13 +25,13 @@ const service = {
     locale: `az-AZ`,
     datetimeLocale: `az-az`,
     service: 'azeri',
-    serviceName: 'News Azərbaycanca',
+    serviceName: 'Azərbaycanca',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Xəbərlər',
