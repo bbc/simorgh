@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { sinhalese } from '@bbc/gel-foundations/scripts';
 import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_ISKOOLA_POTA_BBC_BOLD,
@@ -34,7 +34,7 @@ const service = {
     twitterSite: '@bbcsinhala',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: sinhalese,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'මුල් පිටුව',

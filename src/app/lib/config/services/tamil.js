@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { tamil } from '@bbc/gel-foundations/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -31,7 +31,7 @@ const service = {
     twitterSite: '@bbctamil',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: tamil,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'முகப்பு',
