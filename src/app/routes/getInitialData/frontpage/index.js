@@ -1,12 +1,12 @@
-import onClient from '../../../lib/utilities/onClient';
-import { variantSanitiser } from '../../../lib/utilities/variantHandler';
+import onClient from '#lib/utilities/onClient';
+import { variantSanitiser } from '#lib/utilities/variantHandler';
 import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
-import filterUnknownContentTypes from '../../../lib/utilities/preprocessor/rules/filterContentType';
-import filterEmptyGroupItems from '../../../lib/utilities/preprocessor/rules/filterEmptyGroupItems';
-import applySquashTopstories from '../../../lib/utilities/preprocessor/rules/topstories';
-import addIdsToItems from '../../../lib/utilities/preprocessor/rules/addIdsToItems';
-import filterGroupsWithoutStraplines from '../../../lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
+import filterUnknownContentTypes from '#lib/utilities/preprocessor/rules/filterContentType';
+import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmptyGroupItems';
+import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
+import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
+import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
 
 const preprocessorRules = [
   filterUnknownContentTypes,

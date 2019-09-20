@@ -1,12 +1,12 @@
 import fetchData from '../utils/fetchData';
 import baseUrl from '../utils/getBaseUrl';
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import getMediaPageInitialData from '.';
 import addIdsToBlocks from './addIdsToBlocks';
 
 jest.mock('./addIdsToBlocks');
 jest.mock('../utils/getBaseUrl');
-jest.mock('../../../lib/utilities/onClient');
+jest.mock('#lib/utilities/onClient');
 jest.mock('../utils/fetchData');
 
 const mockData = { service: 'amharic', status: 200, pageData: {} };

@@ -32,6 +32,7 @@ cp Jenkinsfile ./pack
 cp Makefile ./pack
 cp a11y.js ./pack
 cp excludeFromPublicBuild.txt ./pack
+cp dirAlias.js ./pack
 
 # Copy the webpack configs
 cp webpack.config.js ./pack

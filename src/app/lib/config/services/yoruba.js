@@ -1,45 +1,53 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/yo';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const yoruba = {
   default: {
     lang: 'yo',
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     brandName: 'BBC News Yorùbá',
+    product: 'BBC News',
+    serviceLocalizedName: 'Yorùbá',
+    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
+    defaultImageAltText: 'BBC News Yorùbá',
+    dir: 'ltr',
+    externalLinkText: ', Láti ìta',
+    imageCaptionOffscreenText: 'Àkọlé àwòrán, ',
+    videoCaptionOffscreenText: 'Àkọlé fídíò, ',
+    audioCaptionOffscreenText: 'Àkọlé fọ́nrán ohùn, ',
+    defaultCaptionOffscreenText: 'Àkọlé, ',
+    imageCopyrightOffscreenText: 'Oríṣun àwòrán, ',
     locale: 'yo',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'yo',
     datetimeLocale: 'yo',
     service: 'yoruba',
     serviceName: 'Yoruba',
-    serviceLocalizedName: 'Yorùbá',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
-    defaultImageAltText: 'BBC News Yorùbá',
-    dir: 'ltr',
-    brandSVG,
-    script: latin,
-    manifestPath: '/manifest.json',
-    swPath: '/sw.js',
-    frontPageTitle: 'Àbáwọlé',
-    fonts: [],
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
+    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    script: cyrillicAndLatin,
+    manifestPath: '/manifest.json',
+    swPath: '/sw.js',
+    frontPageTitle: 'Àbáwọlé',
     translations: {
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
-      relatedContent: 'Related content',
+      relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
       error: {
         404: {
           statusCode: '404',
@@ -124,32 +132,18 @@ const yoruba = {
       media: {
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
-        video: 'Fidio',
+        video: 'Fídíò',
         bbc_yoruba_radio: {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
         },
       },
     },
+    brandSVG,
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní ',
     },
-    navigation: [
-      {
-        title: 'Ìròyìn',
-        url: '/yoruba',
-      },
-      { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
-      {
-        title: 'Fídíò',
-        url: '/yoruba/media/video',
-      },
-      {
-        title: 'Èyí to gbajúmọ̀ jù',
-        url: '/yoruba/popular/read',
-      },
-    ],
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -163,6 +157,10 @@ const yoruba = {
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Ìlànà Lílò',
+        },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'Nípa BBC',
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
@@ -180,7 +178,23 @@ const yoruba = {
       copyrightText:
         'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
     },
+    fonts: [],
     timezone: 'Africa/Lagos',
+    navigation: [
+      {
+        title: 'Ìròyìn',
+        url: '/yoruba',
+      },
+      { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
+      {
+        title: 'Fídíò',
+        url: '/yoruba/media/video',
+      },
+      {
+        title: 'Èyí to gbajúmọ̀ jù',
+        url: '/yoruba/popular/read',
+      },
+    ],
   },
 };
 

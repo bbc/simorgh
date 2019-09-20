@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import CopyrightContainer from '.';
-import services from '../../lib/config/services';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import services from '#testHelpers/serviceConfigs';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 storiesOf('Containers|Copyright', module)
   .addDecorator(withKnobs)

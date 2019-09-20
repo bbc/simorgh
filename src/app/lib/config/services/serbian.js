@@ -1,7 +1,10 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin, cyrillic } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  latinDiacritics,
+  cyrillicAndLatin,
+} from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
@@ -27,10 +30,13 @@ const baseServiceConfig = {
   twitterSite: '@bbcnasrpskom',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'Početna strana',
+  theming: {
+    brandBackgroundColour: `${C_POSTBOX}`,
+    brandLogoColour: `${C_WHITE}`,
+  },
   translations: {
     seeAll: 'See all',
     home: 'Home',
@@ -158,7 +164,7 @@ const baseServiceConfig = {
       'BBC. BBC nije odgovoran za sadržaj sajtova sa spoljnih linkova',
   },
   fonts: [],
-  timezone: 'Europe/London',
+  timezone: 'GMT',
   navigation: [
     {
       title: 'Početna strana',
@@ -192,13 +198,13 @@ const service = {
     ...baseServiceConfig,
     lang: `sr-latn`,
     locale: `sr-latn`,
-    script: latin,
+    script: latinDiacritics,
   },
   cyr: {
     ...baseServiceConfig,
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
-    script: cyrillic,
+    script: cyrillicAndLatin,
   },
 };
 

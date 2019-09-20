@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-
-import { shouldShallowMatchSnapshot } from '../../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import LinkContents from '.';
 
 const defaultProps = {
@@ -110,17 +109,17 @@ describe('Story Promo Link Contents', () => {
     );
   });
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render with visually hidden text for media promos',
     <LinkContents item={mediaItem} />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render with visually hidden text for media with overtyped headline',
     <LinkContents item={mediaItemWithOvertyped} />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render with visually hidden text for photogallery promos',
     <LinkContents item={photogalleryItem} />,
   );

@@ -1,5 +1,5 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { nepali } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { punjabi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/psammead-locales/moment/pa-in';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
@@ -32,10 +32,14 @@ const service = {
     twitterSite: '@bbcnewspunjabi',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: nepali,
+    script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ਨਿਊਜ਼',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See all',
       home: 'ਖ਼ਬਰਾਂ',

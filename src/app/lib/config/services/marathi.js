@@ -1,5 +1,5 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { marathi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 
@@ -30,10 +30,14 @@ const service = {
     twitterSite: '@bbcnewsmarathi',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'बातम्या',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See all',
       home: 'बातम्या',

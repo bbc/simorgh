@@ -9,7 +9,7 @@ jest.mock('../containers/MPulseBeacon', () => () => (
   <p>I am the mPulse component</p>
 ));
 
-jest.mock('../lib/globalStyles', () => () => (
+jest.mock('@bbc/psammead-styles/global-styles', () => () => (
   <p>I am the GlobalStyles component</p>
 ));
 
