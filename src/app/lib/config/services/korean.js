@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
@@ -30,7 +30,7 @@ const service = {
     twitterSite: '@bbcworld',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: '홈페이지',
@@ -160,7 +160,7 @@ const service = {
         },
       ],
       copyrightText:
-        'Copyright © 2019 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+        'BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
     },
     fonts: [],
     navigation: [
