@@ -1,17 +1,18 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { vietnamese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 
 const service = {
   default: {
     lang: `vi`,
-    articleAuthor: `https://www.facebook.com/pages/BBC-Vietnamese/228458913833525?ref=ts&sk=wall`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     brandName: 'BBC News Tiếng Việt',
-    product: 'BBC News Tiếng Việt',
+    product: 'BBC News',
+    serviceLocalizedName: 'Tiếng Việt',
     defaultImage:
       'https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png',
     defaultImageAltText: 'BBC News Tiếng Việt',
@@ -25,13 +26,13 @@ const service = {
     locale: `vi-VN`,
     datetimeLocale: `vi-vn`,
     service: 'vietnamese',
-    serviceName: 'BBC News Tiếng Việt',
+    serviceName: 'Tiếng Việt',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Tin chính',

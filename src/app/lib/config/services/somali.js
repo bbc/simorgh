@@ -1,17 +1,18 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { somali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
 
 const service = {
   default: {
     lang: `so`,
-    articleAuthor: `https://www.facebook.com/bbcsomali`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     brandName: 'BBC News Somali',
-    product: 'BBC News Somali',
+    product: 'BBC News',
+    serviceLocalizedName: 'Somali',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
@@ -24,13 +25,13 @@ const service = {
     locale: `so-SO`,
     datetimeLocale: `so-so`,
     service: 'somali',
-    serviceName: 'News Somali',
+    serviceName: 'Somali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsomali',
     twitterSite: '@bbcsomali',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Somali',

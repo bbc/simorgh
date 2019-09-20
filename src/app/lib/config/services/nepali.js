@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { nepali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
 
@@ -31,7 +31,7 @@ const service = {
     twitterSite: '@bbcnepali',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'मुख पृष्ठ',

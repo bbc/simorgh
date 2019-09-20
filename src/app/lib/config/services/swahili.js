@@ -1,17 +1,18 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
 
 const service = {
   default: {
     lang: `sw`,
-    articleAuthor: `https://www.facebook.com/pages/BBC-Swahili/160894643929209?v=wall`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     brandName: 'BBC News Swahili',
-    product: 'BBC News Swahili',
+    product: 'BBC News',
+    serviceLocalizedName: 'Swahili',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png',
     defaultImageAltText: 'BBC News Swahili',
     dir: `ltr`,
@@ -24,13 +25,13 @@ const service = {
     locale: `sw-KE`,
     datetimeLocale: `sw-ke`,
     service: 'swahili',
-    serviceName: 'News Swahili',
+    serviceName: 'Swahili',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Swahili',
