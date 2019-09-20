@@ -1,17 +1,18 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { gahuza as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
     lang: `rw`,
-    articleAuthor: `https://www.facebook.com/BBCGahuza`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     brandName: 'BBC News Gahuza',
-    product: 'BBC News Gahuza',
+    product: 'BBC News',
+    serviceLocalizedName: 'Gahuza',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',
     defaultImageAltText: 'BBC News Gahuza',
     dir: `ltr`,
@@ -24,13 +25,13 @@ const service = {
     locale: `rw-RW`,
     datetimeLocale: `rw-rw`,
     service: 'gahuza',
-    serviceName: 'News Gahuza',
+    serviceName: 'Gahuza',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcgahuza',
     twitterSite: '@bbcgahuza',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: "Urupapuro rw'itangiriro",
