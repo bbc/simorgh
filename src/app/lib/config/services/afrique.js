@@ -1,17 +1,18 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
     lang: `fr`,
-    articleAuthor: `https://facebook.com/bbcnewsafrique`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     brandName: 'BBC News Afrique',
-    product: 'BBC News Afrique',
+    product: 'BBC News',
+    serviceLocalizedName: 'Afrique',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
@@ -24,13 +25,13 @@ const service = {
     locale: `fr`,
     datetimeLocale: `fr`,
     service: 'afrique',
-    serviceName: 'News Afrique',
+    serviceName: 'Afrique',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcafrique',
     twitterSite: '@bbcafrique',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Accueil',
@@ -176,7 +177,7 @@ const service = {
         "BBC. La BBC n'est pas responsable du contenu de sites externes",
     },
     fonts: [],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'Accueil',

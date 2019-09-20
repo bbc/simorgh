@@ -1,7 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
@@ -30,7 +30,7 @@ const service = {
     twitterSite: '@bbcuzbek',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
@@ -173,7 +173,7 @@ const service = {
       copyrightText: 'BBC. BBC ташқи интернет саҳифалар учун масъул эмас',
     },
     fonts: [],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'Бош саҳифа',

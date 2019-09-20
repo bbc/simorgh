@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
-import { shouldShallowMatchSnapshot } from '#testHelpers';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
 import preprocessor from '#lib/utilities/preprocessor';
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
@@ -43,7 +43,7 @@ const FrontPageMainWithContext = props => (
 
 describe('FrontPageMain', () => {
   describe('snapshots', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render a pidgin frontpage correctly',
       <FrontPageMainWithContext frontPageData={processedPidgin} />,
     );

@@ -1,5 +1,5 @@
 import config from '../../support/config/services';
-import appConfig from '../../../src/app/lib/config/services';
+import appConfig from '../../../src/testHelpers/serviceConfigs';
 
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
