@@ -1,6 +1,6 @@
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
-import appConfig from '../../../src/app/lib/config/services';
+import appConfig from '../../../src/testHelpers/serviceConfigs';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
@@ -23,6 +23,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           envConfig.assetOrigin,
           'https://ichef.bbci.co.uk',
           'https://gel.files.bbci.co.uk',
+          'https://ws-downloads.files.bbci.co.uk',
         ];
 
         resources.forEach(resource => {

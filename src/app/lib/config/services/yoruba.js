@@ -1,30 +1,30 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/yo';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const yoruba = {
   default: {
     lang: 'yo',
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     brandName: 'BBC News Yorùbá',
+    product: 'BBC News',
+    serviceLocalizedName: 'Yorùbá',
     locale: 'yo',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'yo',
     datetimeLocale: 'yo',
     service: 'yoruba',
     serviceName: 'Yoruba',
-    serviceLocalizedName: 'Yorùbá',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
     defaultImageAltText: 'BBC News Yorùbá',
     dir: 'ltr',
     brandSVG,
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
