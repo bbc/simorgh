@@ -75,7 +75,7 @@ const ArticleMain = ({ articleData }) => {
         author={articleAuthor}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        articleSection={articleSection}
+        section={articleSection}
         aboutTags={aboutTags}
         mentionsTags={mentionsTags}
       />
