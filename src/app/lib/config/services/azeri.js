@@ -6,7 +6,7 @@ import '@bbc/moment-timezone-include/tz/Asia/Baku';
 const service = {
   default: {
     lang: `az`,
-    articleAuthor: `https://www.facebook.com/pages/bbc-azeri/347501767628`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
@@ -25,7 +25,7 @@ const service = {
     locale: `az-AZ`,
     datetimeLocale: `az-az`,
     service: 'azeri',
-    serviceName: 'News Azərbaycanca',
+    serviceName: 'Azərbaycanca',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',
@@ -44,11 +44,11 @@ const service = {
       home: 'Xəbərlər',
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
-      relatedContent: 'Related content',
+      relatedContent: 'Bu barədə daha geniş',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Səhifəni tapmaq mümkün deyil',
+          title: 'Səhifəni tapmaq mümkün deyil',
           message:
             'Bağışlayın, axtardığınız səhifəni sizə çatdırmaq imkanında deyilik. Lütfən, cəhd edin:',
           solutions: [
@@ -57,13 +57,13 @@ const service = {
             'BBC-nin axtarış alətindən istifadə edərək bu səhifənin axtarılması',
           ],
           callToActionFirst: 'Əks halda, lütfən, ',
-          callToActionLinkText: 'BBC News Azərbaycanca baş səhifəsinə keçin',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News Azərbaycanca baş səhifəsinə',
+          callToActionLast: ' keçin',
           callToActionLinkUrl: 'https://www.bbc.com/azeri',
         },
         500: {
           statusCode: '500',
-          title: '500 - Daxili server səhvi',
+          title: 'Daxili server səhvi',
           message:
             'Bağışlayın, hazırda axtardığınız səhifəni sizə çatdırmaq imkanında deyilik. Lütfən, cəhd edin:',
           solutions: [
@@ -71,14 +71,14 @@ const service = {
             'Sonra təkrar qayıtma',
           ],
           callToActionFirst: 'Əks halda, lütfən, ',
-          callToActionLinkText: 'BBC News Azərbaycanca baş səhifəsinə keçin',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News Azərbaycanca baş səhifəsinə',
+          callToActionLast: ' keçin',
           callToActionLinkUrl: 'https://www.bbc.com/azeri',
         },
       },
       consentBanner: {
         privacy: {
-          title: 'Biz Məxfilik və Kukilər (Cookies) Siyasətimizi yeniləmişik',
+          title: 'Biz Məxfilik və Kukilər (Cookies) Siyasətimizi yeniləmişik.',
           description: {
             uk: {
               first:
@@ -139,23 +139,28 @@ const service = {
     footer: {
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/azeri/institutional-49283479',
           text: 'BBC News-a niyə etibar etməlisiniz',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/azeri/institutional-37131047',
           text: 'İstifadə qaydaları',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/azeri/institutional-37131049',
+          text: 'BBC haqqında',
+        },
+        {
+          href: 'https://www.bbc.com/azeri/institutional-37131051',
           text: 'Məxfilik siyasəti',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/azeri/institutional-37131054',
           text: 'BBC ilə Əlaqə',
         },
       ],

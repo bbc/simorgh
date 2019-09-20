@@ -17,7 +17,6 @@ const service = {
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     brandName: 'BBC News اردو',
-    serviceLocalizedName: 'اردو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
     defaultImageAltText: 'BBC News اردو',
     dir: 'rtl',
@@ -31,6 +30,7 @@ const service = {
     datetimeLocale: 'ur',
     service: 'urdu',
     serviceName: 'Urdu',
+    serviceLocalizedName: 'اردو',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
     twitterSite: '@bbcurdu',
@@ -48,9 +48,9 @@ const service = {
     translations: {
       seeAll: 'See all',
       home: 'صفحۂ اول',
-      currentPage: 'Current page',
+      currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
-      relatedContent: 'Related content',
+      relatedContent: 'اسی بارے میں',
       error: {
         404: {
           statusCode: '404',
@@ -63,8 +63,8 @@ const service = {
             'بی بی سی کی سرچ بار کی مدد سے اس صفحے کی تلاش جاری',
           ],
           callToActionFirst: 'متبادل کے طور پر بی بی سی نیوز ',
-          callToActionLinkText: 'کے ہوم پیچ پر جائیں اردو.',
-          callToActionLast: '',
+          callToActionLinkText: 'اردو',
+          callToActionLast: ' کے ہوم پیچ پر جائیں.',
           callToActionLinkUrl: 'https://www.bbc.com/urdu',
         },
         500: {
@@ -74,8 +74,8 @@ const service = {
             'ہم معذرت خواہ ہیں کہ آپ جو صفحہ تلاش کر رہے ہیں وہ دستیاب نہیں۔ یہ کوشش کر کے دیکھیں:',
           solutions: ['اپنے براؤزر کو ریفریش کریں', 'کچھ دیر بعد کوشش کیجیے'],
           callToActionFirst: 'متبادل کے طور پر بی بی سی نیوز ',
-          callToActionLinkText: 'کے ہوم پیچ پر جائیں اردو.',
-          callToActionLast: '',
+          callToActionLinkText: 'اردو',
+          callToActionLast: ' کے ہوم پیچ پر جائیں.',
           callToActionLinkUrl: 'https://www.bbc.com/urdu',
         },
       },
@@ -146,23 +146,28 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/urdu/institutional-49282935',
           text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/urdu/institutional-37588278',
           text: 'استعمال کے ضوابط',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/urdu/institutional-37588280',
+          text: 'بی بی سی کے بارے میں',
+        },
+        {
+          href: 'https://www.bbc.com/urdu/institutional-37588282',
           text: 'پرائیویسی پالیسی',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/urdu/institutional-37588285',
           text: 'بی بی سی سے رابطہ کریں',
         },
       ],
