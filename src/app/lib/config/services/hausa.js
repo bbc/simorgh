@@ -1,17 +1,18 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { hausa as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
     lang: `ha`,
-    articleAuthor: `https://www.facebook.com/bbchausa?v=wall&ref=mf`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Wanda aka sabunta',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     brandName: 'BBC News Hausa',
-    product: 'BBC News Hausa',
+    product: 'BBC News',
+    serviceLocalizedName: 'Hausa',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
     defaultImageAltText: 'BBC News Hausa',
     dir: `ltr`,
@@ -24,13 +25,13 @@ const service = {
     locale: `ha-GH`,
     datetimeLocale: `ha-gh`,
     service: 'hausa',
-    serviceName: 'News Hausa',
+    serviceName: 'Hausa',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchausa',
     twitterSite: '@bbchausa',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Labaran Duniya',
