@@ -20,12 +20,11 @@ const shouldRender = (data, service, passportHomesOverride = []) => {
   const hasDataAnd200Status = pageData && status === 200;
   if (hasDataAnd200Status) {
     const passportHome = getPassportHome(pageData);
-    isCorrectService = isValidPassportHome(passportHome, service);
-    if (!isCorrectService) {
-      (passportHomesOverride || []).forEach(serviceHome => {
-        isCorrectService = isValidPassportHome(passportHome, serviceHome);
-      });
-    }
+    isCorrectService = isValidPassportHome(
+      passportHome,
+      service,
+      passportHomesOverride,
+    );
     statusCode = !isCorrectService ? 404 : status;
   }
 

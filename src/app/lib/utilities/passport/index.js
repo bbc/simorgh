@@ -15,8 +15,17 @@ export const getPassportHome = pageData => {
     : null;
 };
 
-export const isValidPassportHome = (passportHome, service) => {
-  if (!passportHome) return true;
+export const isValidPassportHome = (
+  passportHome,
+  service,
+  passportHomesOverride = [],
+) => {
+  if (!passportHome && !(passportHomesOverride || []).length) return true;
 
-  return (passportHome || '').toLowerCase() === (service || '').toLowerCase();
+  return (
+    (passportHome || '').toLowerCase() === (service || '').toLowerCase() ||
+    (passportHomesOverride || []).some(
+      home => (home || '').toLowerCase() === (passportHome || '').toLowerCase(),
+    )
+  );
 };
