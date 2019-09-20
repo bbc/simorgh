@@ -16,14 +16,6 @@ describe('LinkData', () => {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     logoUrl:
       'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png',
-    about: [
-      {
-        '@type': 'Person',
-        name: 'Duchess of Sussex',
-        alternateName: 'Meghan Markle',
-        sameAs: ['http://dbpedia.org/resource/Meghan_Markle'],
-      },
-    ],
   };
 
   const propsWithNoAbout = {
@@ -60,6 +52,39 @@ describe('LinkData', () => {
   shouldMatchSnapshot(
     'should correctly render metadata for links',
     <LinkData {...props} />,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly include page specific metadata for links',
+    <LinkData
+      {...props}
+      pageSpecific={{
+        about: [
+          {
+            '@type': 'Person',
+            alternateName: 'Meghan Markle',
+            name: 'Duchess of Sussex',
+            sameAs: ['http://dbpedia.org/resource/Meghan_Markle'],
+          },
+        ],
+        author: {
+          '@type': 'NewsMediaOrganization',
+          logo: {
+            '@type': 'ImageObject',
+            height: 576,
+            url:
+              'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png',
+            width: 1024,
+          },
+          name: 'BBC News',
+          noBylinesPolicy:
+            'https://www.bbc.com/news/help-41670342#authorexpertise',
+        },
+        dateModified: '2019-02-26T11:25:10.555Z',
+        datePublished: '2018-10-10T16:19:31.344Z',
+        headline: 'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
+      }}
+    />,
   );
 
   shouldMatchSnapshot(
