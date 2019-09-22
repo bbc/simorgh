@@ -3,7 +3,7 @@ import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { punjabi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/psammead-locales/moment/pa-in';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
-import { withContext } from '#contexts/ServiceContext';
+import withContext from '#contexts/utils/withContext';
 
 export const service = {
   default: {

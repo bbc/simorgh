@@ -3,7 +3,7 @@ import { burmese } from '@bbc/gel-foundations/scripts';
 import { burmese as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_PADAUK_BOLD, F_PADAUK_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
-import { withContext } from '#contexts/ServiceContext';
+import withContext from '#contexts/utils/withContext';
 
 export const service = {
   default: {

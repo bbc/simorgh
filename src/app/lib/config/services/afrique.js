@@ -2,7 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
-import { withContext } from '#contexts/ServiceContext';
+import withContext from '#contexts/utils/withContext';
 
 export const service = {
   default: {
