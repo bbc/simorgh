@@ -3,8 +3,9 @@ import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/pcm';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+import { withContext } from '#contexts/ServiceContext';
 
-const pidgin = {
+const service = {
   default: {
     lang: 'pcm',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -209,4 +210,4 @@ const pidgin = {
   },
 };
 
-export default pidgin;
+export default withContext(service);

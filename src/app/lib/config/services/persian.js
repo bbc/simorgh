@@ -7,8 +7,9 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
+import { withContext } from '#contexts/ServiceContext';
 
-const persian = {
+const service = {
   default: {
     lang: 'fa',
     product: 'BBC News',
@@ -271,4 +272,4 @@ const persian = {
   },
 };
 
-export default persian;
+export default withContext(service);

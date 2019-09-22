@@ -6,6 +6,7 @@ import {
   F_ISKOOLA_POTA_BBC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
+import { withContext } from '#contexts/ServiceContext';
 
 const service = {
   default: {
@@ -213,4 +214,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

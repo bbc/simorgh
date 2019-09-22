@@ -11,8 +11,9 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import { withContext } from '#contexts/ServiceContext';
 
-const news = {
+const service = {
   default: {
     lang: 'en-GB',
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -220,4 +221,4 @@ const news = {
   },
 };
 
-export default news;
+export default withContext(service);

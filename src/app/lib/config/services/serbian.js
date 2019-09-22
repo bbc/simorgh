@@ -5,6 +5,7 @@ import {
 } from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import { withContext } from '#contexts/ServiceContext';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
@@ -208,4 +209,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

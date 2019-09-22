@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
+import { withContext } from '#contexts/ServiceContext';
 
 const service = {
   default: {
@@ -205,4 +206,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

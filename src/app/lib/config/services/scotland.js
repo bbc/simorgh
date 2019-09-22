@@ -11,6 +11,7 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import { withContext } from '#contexts/ServiceContext';
 
 const service = {
   default: {
@@ -190,4 +191,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import { withContext } from '#contexts/ServiceContext';
 
 const service = {
   default: {
@@ -219,4 +220,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);
