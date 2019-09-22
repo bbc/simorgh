@@ -5,7 +5,7 @@ import '@bbc/psammead-locales/moment/ig';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: 'ig',
     articleAuthor: 'https://www.facebook.com/bbcnews',

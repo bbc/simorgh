@@ -5,7 +5,7 @@ import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnewstelugu`,

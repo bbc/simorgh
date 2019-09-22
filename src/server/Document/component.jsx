@@ -8,7 +8,7 @@ import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
 /* eslint-disable react/prop-types */
 const Document = ({
-  // assetOrigins,
+  assetOrigins,
   app,
   data,
   styleTags,
@@ -36,7 +36,7 @@ const Document = ({
       <head>
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        {/* <ResourceHints assetOrigins={assetOrigins} /> */}
+        <ResourceHints assetOrigins={assetOrigins} />
         {title}
         {links}
         {styleTags}

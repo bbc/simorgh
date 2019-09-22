@@ -5,7 +5,7 @@ import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ta`,
     articleAuthor: `https://www.facebook.com/bbctamil`,

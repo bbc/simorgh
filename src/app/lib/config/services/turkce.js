@@ -4,7 +4,7 @@ import { turkce as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Istanbul';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/pages/BBC-Turkce/230299653821`,

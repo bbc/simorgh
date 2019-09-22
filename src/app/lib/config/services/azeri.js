@@ -4,7 +4,7 @@ import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',

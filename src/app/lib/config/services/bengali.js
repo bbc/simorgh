@@ -8,7 +8,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `bn`,
     articleAuthor: `https://www.facebook.com/BBCBengaliService`,

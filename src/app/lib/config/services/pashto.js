@@ -9,7 +9,7 @@ import '@bbc/psammead-locales/moment/ps';
 import '@bbc/moment-timezone-include/tz/GMT';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: 'ps',
     product: 'BBC News',

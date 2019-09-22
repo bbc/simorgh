@@ -4,7 +4,7 @@ import { gujarati as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnewsgujarati`,

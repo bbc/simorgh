@@ -4,7 +4,7 @@ import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnewskorean`,

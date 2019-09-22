@@ -194,7 +194,7 @@ const baseServiceConfig = {
   ],
 };
 
-const service = {
+export const service = {
   simp: {
     ...baseServiceConfig,
     lang: `zh-hans`,

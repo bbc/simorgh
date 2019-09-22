@@ -20,7 +20,7 @@ const renderDocument = async ({
   const sheet = new ServerStyleSheet();
 
   const statsFile = path.resolve(
-    '/Users/mcmild07/dev/simorgh/build/public/loadable-stats.json',
+    `${__dirname}/public/loadable-stats-${process.env.APP_ENV}.json`,
   );
 
   const extractor = new ChunkExtractor({ statsFile });
@@ -43,8 +43,10 @@ const renderDocument = async ({
 
   const scripts = extractor.getScriptElements();
   const headHelmet = Helmet.renderStatic();
+  const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(
     <DocumentComponent
+      assetOrigins={assetOrigins}
       scripts={scripts}
       app={app}
       data={data}

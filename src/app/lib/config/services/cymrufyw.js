@@ -4,7 +4,7 @@ import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `cy`,
     articleAuthor: `https://www.facebook.com/BBCCymruFyw`,

@@ -4,7 +4,7 @@ import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcrussian`,

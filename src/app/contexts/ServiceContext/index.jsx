@@ -7,9 +7,24 @@ import variantPropType from '../../models/propTypes/variants';
 /* Create ServiceContext using the default service */
 export const ServiceContext = React.createContext({});
 
-export const withContext = data => ({ children }) => (
-  <ServiceContext.Provider value={data}>{children}</ServiceContext.Provider>
-);
+export const withContext = data => {
+  const LoadedServiceContextProvider = ({ configKey, children }) => (
+    <ServiceContext.Provider value={data[configKey]}>
+      {children}
+    </ServiceContext.Provider>
+  );
+
+  LoadedServiceContextProvider.propTypes = {
+    children: node.isRequired,
+    configKey: string,
+  };
+
+  LoadedServiceContextProvider.defaultProps = {
+    configKey: null,
+  };
+
+  return LoadedServiceContextProvider;
+};
 
 export const ServiceContextProvider = ({ children, service, variant }) => {
   const LoadableServiceContextProvider = services[service];

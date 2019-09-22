@@ -9,7 +9,7 @@ import 'moment/locale/ur';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: 'ur',
     product: 'BBC News',

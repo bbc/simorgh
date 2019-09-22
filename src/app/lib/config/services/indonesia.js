@@ -4,7 +4,7 @@ import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 import { withContext } from '#contexts/ServiceContext';
 
-const service = {
+export const service = {
   default: {
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
