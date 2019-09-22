@@ -5,6 +5,7 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
+import getAssetOrigins from '../utilities/getAssetOrigins';
 
 import { getStyleTag } from '../styles';
 import DocumentComponent from './component';
