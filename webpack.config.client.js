@@ -119,7 +119,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/,
       }),
-      // keep track of the generated chunks in build/assets.json
+      // keep track of the generated chunks
       // this determines what scripts get put in the footer of the page
       new LoadablePlugin({
         filename: `loadable-stats-${APP_ENV}.json`,

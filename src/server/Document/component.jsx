@@ -29,8 +29,6 @@ const Document = ({
     </>
   );
 
-  // TODO - Fix ResourceHints
-
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
