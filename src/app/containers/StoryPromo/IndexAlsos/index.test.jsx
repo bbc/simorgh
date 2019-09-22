@@ -1,6 +1,6 @@
 import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
-import hausaConfig from '#lib/config/services/hausa';
+import { service as hausaConfig } from '#lib/config/services/hausa';
 import { shouldShallowMatchSnapshot } from '#testHelpers';
 import relatedItems from './relatedItems';
 import IndexAlsos from '.';

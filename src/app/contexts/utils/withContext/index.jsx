@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, string, elementType } from 'prop-types';
 
 const withContext = data => {
   const LoadedContextProvider = ({ Context, dataKey, children }) => (
@@ -7,7 +7,7 @@ const withContext = data => {
   );
 
   LoadedContextProvider.propTypes = {
-    Context: node.isRequired,
+    Context: elementType.isRequired,
     children: node.isRequired,
     dataKey: string,
   };
