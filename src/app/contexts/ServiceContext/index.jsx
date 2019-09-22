@@ -1,6 +1,8 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import services from '../../lib/config/services/loadableConfig';
+import services from '#lib/config/services/loadableConfig';
+import { getVariant } from '../../lib/utilities/variantHandler';
+import variantPropType from '../../models/propTypes/variants';
 
 /* Create ServiceContext using the default service */
 export const ServiceContext = React.createContext({});
@@ -9,7 +11,7 @@ export const withContext = data => ({ children }) => (
   <ServiceContext.Provider value={data}>{children}</ServiceContext.Provider>
 );
 
-export const ServiceContextProvider = ({ children, service }) => {
+export const ServiceContextProvider = ({ children, service, variant }) => {
   const LoadableServiceContextProvider = services[service];
 
   if (!LoadableServiceContextProvider) {
@@ -17,15 +19,21 @@ export const ServiceContextProvider = ({ children, service }) => {
   }
 
   return (
-    <LoadableServiceContextProvider>{children}</LoadableServiceContextProvider>
+    <LoadableServiceContextProvider
+      configKey={getVariant({ service, variant })}
+    >
+      {children}
+    </LoadableServiceContextProvider>
   );
 };
 
 ServiceContextProvider.propTypes = {
   children: node.isRequired,
   service: string,
+  variant: variantPropType,
 };
 
 ServiceContextProvider.defaultProps = {
   service: 'default',
+  variant: null,
 };

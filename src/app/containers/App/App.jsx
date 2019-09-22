@@ -2,12 +2,13 @@ import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
-import usePrevious from '../../lib/utilities/usePrevious';
+import usePrevious from '#lib/utilities/usePrevious';
 
 export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const {
     service,
     isAmp,
+    variant,
     id,
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
@@ -15,6 +16,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const [state, setState] = useState({
     data: initialData,
     service,
+    variant,
     id,
     isAmp,
     pageType,
@@ -31,6 +33,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       // Only update on subsequent page renders
       const {
         service: nextService,
+        variant: nextVariant,
         id: nextId,
         isAmp: nextIsAmp,
         route,
@@ -40,6 +43,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       setState({
         data: null,
         service: nextService,
+        variant: nextVariant,
         id: nextId,
         isAmp: nextIsAmp,
         pageType: route.pageType,
@@ -75,6 +79,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
+    pathname: location.pathname,
     previousPath,
   });
 };

@@ -4,8 +4,8 @@ import { loadableReady } from '@loadable/component';
 import { hydrate } from 'react-dom';
 import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
-import { template, templateStyles } from './app/lib/joinUsTemplate';
-import loggerNode from './app/lib/logger.node';
+import { template, templateStyles } from '#lib/joinUsTemplate';
+import loggerNode from '#lib/logger.node';
 
 const logger = loggerNode();
 

@@ -14,6 +14,8 @@ export const getDestination = statsDestination => {
     NEWS_GNL_TEST: 598288,
     WS_NEWS_LANGUAGES: 598342,
     WS_NEWS_LANGUAGES_TEST: 598343,
+    DEFAULT: 596068,
+    DEFAULT_TEST: 596068,
   };
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
@@ -118,6 +120,15 @@ export const getReferrer = (platform, origin, previousPath) => {
 
   if (onClient() && (document.referrer || previousPath)) {
     return previousPath ? `${origin}${previousPath}` : document.referrer;
+  }
+
+  return null;
+};
+
+export const getAtUserId = () => {
+  if (onClient()) {
+    const atuserid = Cookie.getJSON('atuserid');
+    return pathOr(null, ['val'], atuserid);
   }
 
   return null;

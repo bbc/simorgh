@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relItems from './IndexAlsos/relatedItems';
 import StoryPromo from '.';
 
@@ -142,6 +142,27 @@ const standardLinkItem = {
   type: 'link',
 };
 
+const featureLinkItem = {
+  name: 'Feature promo with summary',
+  summary: 'Summary text for feature Promo',
+  indexImage: {
+    id: 63692548,
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
+    path: '/cpsdevpb/14A31/test/_63692548_000327537-1.jpg',
+    height: 549,
+    width: 976,
+    altText: 'A lone Koala perches in a eucalyptus tree',
+    caption: 'Koalas are from Australia',
+    copyrightHolder: 'BBC',
+  },
+  uri: 'http://www.bbc.com/azeri',
+  contentType: 'Feature',
+  assetTypeCode: 'PRO',
+  timestamp: 1565186015000,
+  type: 'link',
+};
+
 const indexAlsosItem = {
   headlines: {
     headline: 'A headline',
@@ -174,6 +195,7 @@ const fixtures = {
   live: liveItem,
   'audio with no duration': audioItemNoDuration,
   standardLink: standardLinkItem,
+  featureLink: featureLinkItem,
 };
 
 // eslint-disable-next-line react/prop-types
@@ -185,6 +207,8 @@ const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
       isAmp={platform === 'amp'}
       pageType="article"
       service={service}
+      statusCode={200}
+      pathname="/pathname"
     >
       <StoryPromo {...props} />
     </RequestContextProvider>

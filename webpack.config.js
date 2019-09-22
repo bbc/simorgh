@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
 const MomentTimezoneInclude = require('@bbc/moment-timezone-include');
+const { webpackDirAlias } = require('./dirAlias');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
@@ -35,14 +36,7 @@ module.exports = (shell = {}) => {
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
     resolve: {
       extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
-      alias: {
-        '#app': resolvePath('src/app'),
-        '#contexts': resolvePath('src/app/contexts'),
-        '#data': resolvePath('data/'),
-        '#lib': resolvePath('src/app/lib/'),
-        '#models': resolvePath('src/app/models/'),
-        '#testHelpers': resolvePath('src/testHelpers/'),
-      },
+      alias: webpackDirAlias,
     },
     devServer: {
       stats,

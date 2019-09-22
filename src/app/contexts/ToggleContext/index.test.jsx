@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import { ComponentUsingContext } from '../../../testHelpers/mockComponents';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { ComponentUsingContext } from '#testHelpers/mockComponents';
 
 const mockToggleValues = {
   local: {
@@ -20,7 +20,7 @@ const mockToggleValues = {
   },
 };
 
-jest.mock('../../lib/config/toggles', () => mockToggleValues);
+jest.mock('#lib/config/toggles', () => mockToggleValues);
 
 // Require after mock to allow mocking of JS object
 const { ToggleContext, ToggleContextProvider } = require('./index');

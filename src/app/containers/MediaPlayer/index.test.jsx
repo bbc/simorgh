@@ -1,12 +1,17 @@
 import React from 'react';
 import { string, shape, node } from 'prop-types';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '#testHelpers';
 import MediaPlayerContainer from '.';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContext } from '../../contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import { validVideoFixture, missingVpidFixture } from './helpers/fixtures';
 
 const defaultToggles = {
+  local: {
+    mediaPlayer: {
+      enabled: true,
+    },
+  },
   test: {
     mediaPlayer: {
       enabled: true,
@@ -24,9 +29,11 @@ const ContextWrapper = ({ platform, children, toggleState }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     service="news"
+    statusCode={200}
     platform={platform}
     id="foo"
     pageType="article"
+    pathname="/pathname"
   >
     <ToggleContext.Provider
       value={{ toggleState, toggleDispatch: mockToggleDispatch }}
@@ -79,7 +86,7 @@ describe('MediaPlayer', () => {
     );
 
     const toggleState = {
-      test: {
+      local: {
         mediaPlayer: {
           enabled: false,
         },

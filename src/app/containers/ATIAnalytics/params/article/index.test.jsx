@@ -2,10 +2,10 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import ArticleAtiParams from '.';
 import * as atiPageViewParams from '../../atiUrl';
-import * as commonTestUtils from '../../../../lib/analyticsUtils';
-import * as testUtils from '../../../../lib/analyticsUtils/article';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../../contexts/RequestContext';
+import * as commonTestUtils from '#lib/analyticsUtils';
+import * as testUtils from '#lib/analyticsUtils/article';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 describe('ArticleAtiParams', () => {
   const mockArticleData = {
@@ -44,8 +44,10 @@ describe('ArticleAtiParams', () => {
     id: 'c0000000000o',
     isAmp: false,
     pageType: 'article',
+    pathname: '/pathname',
     previousPath: '/previous-path',
     service: 'news',
+    statusCode: 200,
   };
 
   describe('atiPageViewParams is called ', () => {

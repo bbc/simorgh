@@ -4,7 +4,7 @@ import path from 'path';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import { ServerApp } from '../../app/containers/App';
+import { ServerApp } from '#app/containers/App';
 
 import { getStyleTag } from '../styles';
 import DocumentComponent from './component';

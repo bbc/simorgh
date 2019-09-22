@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
+import styled from 'styled-components';
 import path from 'ramda/src/path';
+import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import { Headline } from '@bbc/psammead-headings';
 import Paragraph from '@bbc/psammead-paragraph';
 import {
@@ -9,8 +11,8 @@ import {
 } from '@bbc/psammead-media-player';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
-import { Grid, GridItemConstrainedMedium } from '../../lib/styledGrid';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 
 const HEADING_BLOCK = 'heading';
@@ -59,18 +61,34 @@ const MediaPageMain = ({ pageData, service }) => {
                 }
 
                 case LIVE_RADIO_BLOCK: {
+                  const MediaPlayerOuterWrapper = styled.div`
+                    @media (min-width: 63rem) {
+                      display: flex;
+                      justify-content: center;
+                    }
+                  `;
+
+                  const MediaPlayerInnerWrapper = styled.div`
+                    flex-shrink: 0;
+                    width: 50rem;
+                    max-width: calc(100vw - ${GEL_SPACING_QUAD});
+                  `;
                   const MediaPlayer = {
                     canonical: CanonicalMediaPlayer,
                     amp: AmpMediaPlayer,
                   }[platform];
 
                   return (
-                    <MediaPlayer
-                      key={uuid}
-                      showPlaceholder={false}
-                      src={`/ws/av-embeds/media/${externalId}/${id}`}
-                      id={idAttr}
-                    />
+                    <MediaPlayerOuterWrapper key={uuid}>
+                      <MediaPlayerInnerWrapper>
+                        <MediaPlayer
+                          showPlaceholder={false}
+                          src={`/ws/av-embeds/media/${externalId}/${id}`}
+                          id={idAttr}
+                          skin="audio"
+                        />
+                      </MediaPlayerInnerWrapper>
+                    </MediaPlayerOuterWrapper>
                   );
                 }
                 default:

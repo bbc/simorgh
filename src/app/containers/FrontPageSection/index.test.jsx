@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
 import * as SectionLabel from '@bbc/psammead-section-label';
-import newsConfig from '../../lib/config/services/news';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import newsConfig from '#lib/config/services/news';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
 import FrontPageSection from '.';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const React = jest.requireActual('react');
 
@@ -198,7 +198,7 @@ const { useContext } = jest.requireMock('react');
 describe('FrontPageSection Container', () => {
   describe('snapshots', () => {
     beforeEach(() => {
-      useContext.mockReturnValue(newsConfig);
+      useContext.mockReturnValue(newsConfig.default);
     });
 
     afterEach(() => {
@@ -233,7 +233,7 @@ describe('FrontPageSection Container', () => {
 
     beforeEach(() => {
       jest.spyOn(SectionLabel, 'default');
-      useContext.mockReturnValue(newsConfig);
+      useContext.mockReturnValue(newsConfig.default);
     });
 
     it('should be called with true when sectionNumber === 0', () => {

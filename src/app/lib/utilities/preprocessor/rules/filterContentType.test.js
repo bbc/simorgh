@@ -1,6 +1,10 @@
 import filterUnknownContentTypes from './filterContentType';
-import azeriFixtureData from '../../../../../../data/azeri/frontpage/index.json';
-import igboFixtureData from '../../../../../../data/igbo/frontpage/index.json';
+import azeriFixtureData from '#data/azeri/frontpage/index.json';
+import igboFixtureData from '#data/igbo/frontpage/index.json';
+
+/*
+ * CPS types
+ */
 
 const cpsItems = [
   {
@@ -23,19 +27,60 @@ const cpsItems = [
   },
 ];
 
-const assetTypeCodeItems = [
-  {
-    name: 'Test standard link promo',
-    summary: 'This is a standard link promo',
-    indexImage: {},
-    indexThumbnail: {},
-    uri: 'http://this.is.a.test.com/',
-    contentType: 'Text',
-    assetTypeCode: 'PRO',
-    timestamp: 1527598380040,
-    type: 'link',
+/*
+ * Asset types
+ */
+
+const TextAssetType = {
+  name: 'Test standard link promo',
+  contentType: 'Text',
+  assetTypeCode: 'PRO',
+};
+
+const AudioAssetType = {
+  name: 'Test audio link promo',
+  contentType: 'Audio',
+  assetTypeCode: 'PRO',
+};
+
+const VideoAssetType = {
+  name: 'Test video link promo',
+  summary: 'This is a video link promo',
+  indexImage: {},
+  indexThumbnail: {},
+  uri: 'http://this.is.a.test.com/',
+  contentType: 'Video',
+  assetTypeCode: 'PRO',
+  timestamp: 1527598380040,
+  type: 'link',
+};
+
+const GalleryAssetType = {
+  name: 'Test gallery link promo',
+  summary: 'This is a gallery link promo',
+  indexImage: {
+    id: '63692548',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
+    path: '/cpsdevpb/14A31/test/_63692548_000327537-1.jpg',
+    height: 549,
+    width: 976,
+    altText: 'A lone Koala perches in a eucalyptus tree',
+    caption: 'Koalas are from Australia',
+    copyrightHolder: 'BBC',
   },
-];
+  uri: 'http://www.bbc.com/azeri',
+  contentType: 'Gallery',
+  assetTypeCode: 'PRO',
+  timestamp: 1565192199000,
+  type: 'link',
+};
+
+const FeatureAssetType = {
+  name: 'Test feature link promo',
+  contentType: 'Feature',
+  assetTypeCode: 'PRO',
+};
 
 describe('filterUnknownContentTypes', () => {
   it('should no-op when no groups', () => {
@@ -79,7 +124,7 @@ describe('filterUnknownContentTypes', () => {
       content: {
         groups: [
           {
-            items: cpsItems.concat(assetTypeCodeItems),
+            items: cpsItems.concat(TextAssetType),
           },
         ],
       },
@@ -88,7 +133,7 @@ describe('filterUnknownContentTypes', () => {
       content: {
         groups: [
           {
-            items: cpsItems.concat(assetTypeCodeItems),
+            items: cpsItems.concat(TextAssetType),
           },
         ],
       },
@@ -275,14 +320,8 @@ describe('filterUnknownContentTypes', () => {
               items: [
                 {
                   name: 'Test assetTypeCode',
-                  summary: 'This is a test',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
                   contentType: 'Text',
                   assetTypeCode: 'OOO',
-                  timestamp: 1527598380040,
-                  type: 'link',
                 },
               ],
             },
@@ -307,7 +346,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: assetTypeCodeItems,
+              items: AudioAssetType,
             },
           ],
         },
@@ -316,7 +355,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: assetTypeCodeItems,
+              items: AudioAssetType,
             },
           ],
         },
@@ -329,56 +368,22 @@ describe('filterUnknownContentTypes', () => {
       const data = {
         content: {
           groups: [
-            {
-              name: 'Test assetTypeCode 1',
-              summary: 'This is the first test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380090,
-              type: 'link',
-            },
-            {
-              name: 'Test assetTypeCode 2',
-              summary: 'This is another test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380040,
-              type: 'link',
-            },
+            TextAssetType,
+            FeatureAssetType,
+            AudioAssetType,
+            VideoAssetType,
+            GalleryAssetType,
           ],
         },
       };
       const expected = {
         content: {
           groups: [
-            {
-              name: 'Test assetTypeCode 1',
-              summary: 'This is the first test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380090,
-              type: 'link',
-            },
-            {
-              name: 'Test assetTypeCode 2',
-              summary: 'This is another test',
-              indexImage: {},
-              indexThumbnail: {},
-              uri: 'http://this.is.a.test.com/',
-              contentType: 'Text',
-              assetTypeCode: 'PRO',
-              timestamp: 1527598380040,
-              type: 'link',
-            },
+            TextAssetType,
+            FeatureAssetType,
+            AudioAssetType,
+            VideoAssetType,
+            GalleryAssetType,
           ],
         },
       };
@@ -394,9 +399,7 @@ describe('filterUnknownContentTypes', () => {
               items: [
                 {
                   name: 'Test assetTypeCode 1',
-                  summary: 'This is the first test',
-                  indexImage: {},
-                  indexThumbnail: {},
+                  contentType: 'Audio',
                 },
               ],
             },
@@ -422,40 +425,29 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
+              items: [VideoAssetType],
+            },
+          ],
+        },
+      };
+
+      expect(filterUnknownContentTypes(data)).toEqual(data);
+    });
+
+    it('should keep items with known contentTypes', () => {
+      const data = {
+        content: {
+          groups: [
+            {
               items: [
                 {
                   name: 'Test assetTypeCode',
-                  summary: 'This is a test',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Text',
-                  assetTypeCode: 'OOO',
-                  timestamp: 1527598380040,
-                  type: 'link',
-                },
-                {
-                  name: 'Test standard link promo',
-                  summary: 'This is a standard link promo',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Text',
+                  contentType: 'SomeContent',
                   assetTypeCode: 'PRO',
-                  timestamp: 1527598380040,
-                  type: 'link',
                 },
-                {
-                  name: 'Test audio link promo',
-                  summary: 'This is an audio link promo',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Audio',
-                  assetTypeCode: 'PRO',
-                  timestamp: 1469005433000,
-                  type: 'link',
-                },
+                TextAssetType,
+                AudioAssetType,
+                FeatureAssetType,
               ],
             },
           ],
@@ -465,19 +457,7 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: [
-                {
-                  name: 'Test standard link promo',
-                  summary: 'This is a standard link promo',
-                  indexImage: {},
-                  indexThumbnail: {},
-                  uri: 'http://this.is.a.test.com/',
-                  contentType: 'Text',
-                  assetTypeCode: 'PRO',
-                  timestamp: 1527598380040,
-                  type: 'link',
-                },
-              ],
+              items: [TextAssetType, AudioAssetType, FeatureAssetType],
             },
           ],
         },

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
+import { string, func, arrayOf, shape } from 'prop-types';
 import { C_PEBBLE } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING_HLF,
@@ -11,7 +12,7 @@ import {
 import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
 
 // ensure all moment locales have been loaded via service configs
-import '../../config/services/index';
+import '#testHelpers/serviceConfigs';
 
 const locales = [
   // some other locales (eg. Russian) have multiple levels of pluralisation (ie. one, some, many) which might require
@@ -66,101 +67,121 @@ const NOVEMBER = 1573776000000;
 const DECEMBER = 1576368000000;
 
 /* eslint-disable prettier/prettier */
-const funcs = [
-  { what: '[default format]', func: locale => moment(A_DATE).locale(locale).format() },
-  { what: 'MMM Do YYYY', func: locale => moment(A_DATE).locale(locale).format("MMM Do YYYY") },
-  { what: 'MMMM Do YYYY, h:mm:ss a', func: locale => moment(A_DATE).locale(locale).format('MMMM Do YYYY, h:mm:ss a') },
-  { what: 'YYYY [escaped text] YYYY', func: locale => moment(A_DATE).locale(locale).format('YYYY [escaped text] YYYY') },
-  { what: 'LT', func: locale => moment(A_DATE).locale(locale).format('LT') },
-  { what: 'LTS', func: locale => moment(A_DATE).locale(locale).format('LTS') },
-  { what: 'l', func: locale => moment(A_DATE).locale(locale).format('l') },
-  { what: 'L', func: locale => moment(A_DATE).locale(locale).format('L') },
-  { what: 'll', func: locale => moment(A_DATE).locale(locale).format('ll') },
-  { what: 'LL', func: locale => moment(A_DATE).locale(locale).format('LL') },
-  { what: 'lll', func: locale => moment(A_DATE).locale(locale).format('lll') },
-  { what: 'LLL', func: locale => moment(A_DATE).locale(locale).format('LLL') },
-  { what: 'llll', func: locale => moment(A_DATE).locale(locale).format('llll') },
-  { what: 'LLLL', func: locale => moment(A_DATE).locale(locale).format('LLLL') },
+const editorialWhitelist = [
+  'LL',
+  'January',
+  'February',
+  'March',
+  'April',
+  'May (long)',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+  '1 minute in the past',
+  '5 minutes in the past',
+  '1 hour in the past',
+  '5 hours in the past',
+];
 
-  { what: 'Mo', func: locale => moment(MONDAY).locale(locale).format('dd') },
-  { what: 'Mon', func: locale => moment(MONDAY).locale(locale).format('ddd') },
-  { what: 'Monday', func: locale => moment(MONDAY).locale(locale).format('dddd') },
-  { what: 'Tu', func: locale => moment(TUESDAY).locale(locale).format('dd') },
-  { what: 'Tue', func: locale => moment(TUESDAY).locale(locale).format('ddd') },
-  { what: 'Tuesday', func: locale => moment(TUESDAY).locale(locale).format('dddd') },
-  { what: 'We', func: locale => moment(WEDNESDAY).locale(locale).format('dd') },
-  { what: 'Wed', func: locale => moment(WEDNESDAY).locale(locale).format('ddd') },
-  { what: 'Wednesday', func: locale => moment(WEDNESDAY).locale(locale).format('dddd') },
-  { what: 'Th', func: locale => moment(THURSDAY).locale(locale).format('dd') },
-  { what: 'Thu', func: locale => moment(THURSDAY).locale(locale).format('ddd') },
-  { what: 'Thursday', func: locale => moment(THURSDAY).locale(locale).format('dddd') },
-  { what: 'Fr', func: locale => moment(FRIDAY).locale(locale).format('dd') },
-  { what: 'Fri', func: locale => moment(FRIDAY).locale(locale).format('ddd') },
-  { what: 'Friday', func: locale => moment(FRIDAY).locale(locale).format('dddd') },
-  { what: 'Sa', func: locale => moment(SATURDAY).locale(locale).format('dd') },
-  { what: 'Sat', func: locale => moment(SATURDAY).locale(locale).format('ddd') },
-  { what: 'Saturday', func: locale => moment(SATURDAY).locale(locale).format('dddd') },
-  { what: 'Su', func: locale => moment(SUNDAY).locale(locale).format('dd') },
-  { what: 'Sun', func: locale => moment(SUNDAY).locale(locale).format('ddd') },
-  { what: 'Sunday', func: locale => moment(SUNDAY).locale(locale).format('dddd') },
+const methods = [
+  { what: '[default format]', method: locale => moment(A_DATE).locale(locale).format() },
+  { what: 'MMM Do YYYY', method: locale => moment(A_DATE).locale(locale).format("MMM Do YYYY") },
+  { what: 'MMMM Do YYYY, h:mm:ss a', method: locale => moment(A_DATE).locale(locale).format('MMMM Do YYYY, h:mm:ss a') },
+  { what: 'YYYY [escaped text] YYYY', method: locale => moment(A_DATE).locale(locale).format('YYYY [escaped text] YYYY') },
+  { what: 'LT', method: locale => moment(A_DATE).locale(locale).format('LT') },
+  { what: 'LTS', method: locale => moment(A_DATE).locale(locale).format('LTS') },
+  { what: 'l', method: locale => moment(A_DATE).locale(locale).format('l') },
+  { what: 'L', method: locale => moment(A_DATE).locale(locale).format('L') },
+  { what: 'll', method: locale => moment(A_DATE).locale(locale).format('ll') },
+  { what: 'LL', method: locale => moment(A_DATE).locale(locale).format('LL') },
+  { what: 'lll', method: locale => moment(A_DATE).locale(locale).format('lll') },
+  { what: 'LLL', method: locale => moment(A_DATE).locale(locale).format('LLL') },
+  { what: 'llll', method: locale => moment(A_DATE).locale(locale).format('llll') },
+  { what: 'LLLL', method: locale => moment(A_DATE).locale(locale).format('LLLL') },
 
-  { what: 'Jan', func: locale => moment(JANUARY).locale(locale).format('MMM') },
-  { what: 'January', func: locale => moment(JANUARY).locale(locale).format('MMMM') },
-  { what: 'Feb', func: locale => moment(FEBRUARY).locale(locale).format('MMM') },
-  { what: 'February', func: locale => moment(FEBRUARY).locale(locale).format('MMMM') },
-  { what: 'Mar', func: locale => moment(MARCH).locale(locale).format('MMM') },
-  { what: 'March', func: locale => moment(MARCH).locale(locale).format('MMMM') },
-  { what: 'Apr', func: locale => moment(APRIL).locale(locale).format('MMM') },
-  { what: 'April', func: locale => moment(APRIL).locale(locale).format('MMMM') },
-  { what: 'May (short)', func: locale => moment(MAY).locale(locale).format('MMM') },
-  { what: 'May (long)', func: locale => moment(MAY).locale(locale).format('MMMM') },
-  { what: 'Jun', func: locale => moment(JUNE).locale(locale).format('MMM') },
-  { what: 'June', func: locale => moment(JUNE).locale(locale).format('MMMM') },
-  { what: 'Jul', func: locale => moment(JULY).locale(locale).format('MMM') },
-  { what: 'July', func: locale => moment(JULY).locale(locale).format('MMMM') },
-  { what: 'Aug', func: locale => moment(AUGUST).locale(locale).format('MMM') },
-  { what: 'August', func: locale => moment(AUGUST).locale(locale).format('MMMM') },
-  { what: 'Sep', func: locale => moment(SEPTEMBER).locale(locale).format('MMM') },
-  { what: 'September', func: locale => moment(SEPTEMBER).locale(locale).format('MMMM') },
-  { what: 'Oct', func: locale => moment(OCTOBER).locale(locale).format('MMM') },
-  { what: 'October', func: locale => moment(OCTOBER).locale(locale).format('MMMM') },
-  { what: 'Nov', func: locale => moment(NOVEMBER).locale(locale).format('MMM') },
-  { what: 'November', func: locale => moment(NOVEMBER).locale(locale).format('MMMM') },
-  { what: 'Dec', func: locale => moment(DECEMBER).locale(locale).format('MMM') },
-  { what: 'December', func: locale => moment(DECEMBER).locale(locale).format('MMMM') },
+  { what: 'Mo', method: locale => moment(MONDAY).locale(locale).format('dd') },
+  { what: 'Mon', method: locale => moment(MONDAY).locale(locale).format('ddd') },
+  { what: 'Monday', method: locale => moment(MONDAY).locale(locale).format('dddd') },
+  { what: 'Tu', method: locale => moment(TUESDAY).locale(locale).format('dd') },
+  { what: 'Tue', method: locale => moment(TUESDAY).locale(locale).format('ddd') },
+  { what: 'Tuesday', method: locale => moment(TUESDAY).locale(locale).format('dddd') },
+  { what: 'We', method: locale => moment(WEDNESDAY).locale(locale).format('dd') },
+  { what: 'Wed', method: locale => moment(WEDNESDAY).locale(locale).format('ddd') },
+  { what: 'Wednesday', method: locale => moment(WEDNESDAY).locale(locale).format('dddd') },
+  { what: 'Th', method: locale => moment(THURSDAY).locale(locale).format('dd') },
+  { what: 'Thu', method: locale => moment(THURSDAY).locale(locale).format('ddd') },
+  { what: 'Thursday', method: locale => moment(THURSDAY).locale(locale).format('dddd') },
+  { what: 'Fr', method: locale => moment(FRIDAY).locale(locale).format('dd') },
+  { what: 'Fri', method: locale => moment(FRIDAY).locale(locale).format('ddd') },
+  { what: 'Friday', method: locale => moment(FRIDAY).locale(locale).format('dddd') },
+  { what: 'Sa', method: locale => moment(SATURDAY).locale(locale).format('dd') },
+  { what: 'Sat', method: locale => moment(SATURDAY).locale(locale).format('ddd') },
+  { what: 'Saturday', method: locale => moment(SATURDAY).locale(locale).format('dddd') },
+  { what: 'Su', method: locale => moment(SUNDAY).locale(locale).format('dd') },
+  { what: 'Sun', method: locale => moment(SUNDAY).locale(locale).format('ddd') },
+  { what: 'Sunday', method: locale => moment(SUNDAY).locale(locale).format('dddd') },
 
-  { what: 'calendar sameDay', func: locale => moment().locale(locale).calendar() },
-  { what: 'calendar nextDay', func: locale => moment().locale(locale).add(1, 'day').calendar() },
-  { what: 'calendar nextWeek', func: locale => moment().locale(locale).add(1, 'week').startOf('week').calendar() },
-  { what: 'calendar lastDay', func: locale => moment().locale(locale).subtract(1, 'day').calendar() },
-  { what: 'calendar lastWeek', func: locale => moment().locale(locale).subtract(1, 'week').endOf('week').calendar() },
-  { what: 'calendar sameElse', func: locale => moment(A_DATE).locale(locale).calendar() },
+  { what: 'Jan', method: locale => moment(JANUARY).locale(locale).format('MMM') },
+  { what: 'January', method: locale => moment(JANUARY).locale(locale).format('MMMM') },
+  { what: 'Feb', method: locale => moment(FEBRUARY).locale(locale).format('MMM') },
+  { what: 'February', method: locale => moment(FEBRUARY).locale(locale).format('MMMM') },
+  { what: 'Mar', method: locale => moment(MARCH).locale(locale).format('MMM') },
+  { what: 'March', method: locale => moment(MARCH).locale(locale).format('MMMM') },
+  { what: 'Apr', method: locale => moment(APRIL).locale(locale).format('MMM') },
+  { what: 'April', method: locale => moment(APRIL).locale(locale).format('MMMM') },
+  { what: 'May (short)', method: locale => moment(MAY).locale(locale).format('MMM') },
+  { what: 'May (long)', method: locale => moment(MAY).locale(locale).format('MMMM') },
+  { what: 'Jun', method: locale => moment(JUNE).locale(locale).format('MMM') },
+  { what: 'June', method: locale => moment(JUNE).locale(locale).format('MMMM') },
+  { what: 'Jul', method: locale => moment(JULY).locale(locale).format('MMM') },
+  { what: 'July', method: locale => moment(JULY).locale(locale).format('MMMM') },
+  { what: 'Aug', method: locale => moment(AUGUST).locale(locale).format('MMM') },
+  { what: 'August', method: locale => moment(AUGUST).locale(locale).format('MMMM') },
+  { what: 'Sep', method: locale => moment(SEPTEMBER).locale(locale).format('MMM') },
+  { what: 'September', method: locale => moment(SEPTEMBER).locale(locale).format('MMMM') },
+  { what: 'Oct', method: locale => moment(OCTOBER).locale(locale).format('MMM') },
+  { what: 'October', method: locale => moment(OCTOBER).locale(locale).format('MMMM') },
+  { what: 'Nov', method: locale => moment(NOVEMBER).locale(locale).format('MMM') },
+  { what: 'November', method: locale => moment(NOVEMBER).locale(locale).format('MMMM') },
+  { what: 'Dec', method: locale => moment(DECEMBER).locale(locale).format('MMM') },
+  { what: 'December', method: locale => moment(DECEMBER).locale(locale).format('MMMM') },
 
-  { what: '1 second in the past', func: locale => moment().locale(locale).subtract(1, 'seconds').fromNow() },
-  { what: '5 seconds in the past', func: locale => moment().locale(locale).subtract(5, 'seconds').fromNow() },
-  { what: '1 minute in the past', func: locale => moment().locale(locale).subtract(1, 'minutes').fromNow() },
-  { what: '5 minutes in the past', func: locale => moment().locale(locale).subtract(5, 'minutes').fromNow() },
-  { what: '1 hour in the past', func: locale => moment().locale(locale).subtract(1, 'hours').fromNow() },
-  { what: '5 hours in the past', func: locale => moment().locale(locale).subtract(5, 'hours').fromNow() },
-  { what: '1 day in the past', func: locale => moment().locale(locale).subtract(1, 'days').fromNow() },
-  { what: '5 days in the past', func: locale => moment().locale(locale).subtract(5, 'days').fromNow() },
-  { what: '1 month in the past', func: locale => moment().locale(locale).subtract(1, 'months').fromNow() },
-  { what: '5 months in the past', func: locale => moment().locale(locale).subtract(5, 'months').fromNow() },
-  { what: '1 year in the past', func: locale => moment().locale(locale).subtract(1, 'years').fromNow() },
-  { what: '5 years in the past', func: locale => moment().locale(locale).subtract(5, 'years').fromNow() },
+  { what: 'calendar sameDay', method: locale => moment().locale(locale).calendar() },
+  { what: 'calendar nextDay', method: locale => moment().locale(locale).add(1, 'day').calendar() },
+  { what: 'calendar nextWeek', method: locale => moment().locale(locale).add(1, 'week').startOf('week').calendar() },
+  { what: 'calendar lastDay', method: locale => moment().locale(locale).subtract(1, 'day').calendar() },
+  { what: 'calendar lastWeek', method: locale => moment().locale(locale).subtract(1, 'week').endOf('week').calendar() },
+  { what: 'calendar sameElse', method: locale => moment(A_DATE).locale(locale).calendar() },
 
-  { what: '1 second in the future', func: locale => moment().locale(locale).add(1, 'seconds').fromNow() },
-  { what: '5 seconds in the future', func: locale => moment().locale(locale).add(5, 'seconds').fromNow() },
-  { what: '1 minute in the future', func: locale => moment().locale(locale).add(1, 'minutes').fromNow() },
-  { what: '5 minutes in the future', func: locale => moment().locale(locale).add(5, 'minutes').fromNow() },
-  { what: '1 hour in the future', func: locale => moment().locale(locale).add(1, 'hours').fromNow() },
-  { what: '5 hours in the future', func: locale => moment().locale(locale).add(5, 'hours').fromNow() },
-  { what: '1 day in the future', func: locale => moment().locale(locale).add(1, 'days').fromNow() },
-  { what: '5 days in the future', func: locale => moment().locale(locale).add(5, 'days').fromNow() },
-  { what: '1 month in the future', func: locale => moment().locale(locale).add(1, 'months').fromNow() },
-  { what: '5 months in the future', func: locale => moment().locale(locale).add(5, 'months').fromNow() },
-  { what: '1 year in the future', func: locale => moment().locale(locale).add(1, 'years').fromNow() },
-  { what: '5 years in the future', func: locale => moment().locale(locale).add(5, 'years').fromNow() },
+  { what: '1 second in the past', method: locale => moment().locale(locale).subtract(1, 'seconds').fromNow() },
+  { what: '5 seconds in the past', method: locale => moment().locale(locale).subtract(5, 'seconds').fromNow() },
+  { what: '1 minute in the past', method: locale => moment().locale(locale).subtract(1, 'minutes').fromNow() },
+  { what: '5 minutes in the past', method: locale => moment().locale(locale).subtract(5, 'minutes').fromNow() },
+  { what: '1 hour in the past', method: locale => moment().locale(locale).subtract(1, 'hours').fromNow() },
+  { what: '5 hours in the past', method: locale => moment().locale(locale).subtract(5, 'hours').fromNow() },
+  { what: '1 day in the past', method: locale => moment().locale(locale).subtract(1, 'days').fromNow() },
+  { what: '5 days in the past', method: locale => moment().locale(locale).subtract(5, 'days').fromNow() },
+  { what: '1 month in the past', method: locale => moment().locale(locale).subtract(1, 'months').fromNow() },
+  { what: '5 months in the past', method: locale => moment().locale(locale).subtract(5, 'months').fromNow() },
+  { what: '1 year in the past', method: locale => moment().locale(locale).subtract(1, 'years').fromNow() },
+  { what: '5 years in the past', method: locale => moment().locale(locale).subtract(5, 'years').fromNow() },
+
+  { what: '1 second in the future', method: locale => moment().locale(locale).add(1, 'seconds').fromNow() },
+  { what: '5 seconds in the future', method: locale => moment().locale(locale).add(5, 'seconds').fromNow() },
+  { what: '1 minute in the future', method: locale => moment().locale(locale).add(1, 'minutes').fromNow() },
+  { what: '5 minutes in the future', method: locale => moment().locale(locale).add(5, 'minutes').fromNow() },
+  { what: '1 hour in the future', method: locale => moment().locale(locale).add(1, 'hours').fromNow() },
+  { what: '5 hours in the future', method: locale => moment().locale(locale).add(5, 'hours').fromNow() },
+  { what: '1 day in the future', method: locale => moment().locale(locale).add(1, 'days').fromNow() },
+  { what: '5 days in the future', method: locale => moment().locale(locale).add(5, 'days').fromNow() },
+  { what: '1 month in the future', method: locale => moment().locale(locale).add(1, 'months').fromNow() },
+  { what: '5 months in the future', method: locale => moment().locale(locale).add(5, 'months').fromNow() },
+  { what: '1 year in the future', method: locale => moment().locale(locale).add(1, 'years').fromNow() },
+  { what: '5 years in the future', method: locale => moment().locale(locale).add(5, 'years').fromNow() },
 ];
 /* eslint-enable prettier/prettier */
 
@@ -176,10 +197,8 @@ const Table = styled.table`
   }
 `;
 
-const stories = storiesOf('Moment Locales', module);
-
-locales.forEach(({ name, locale }) => {
-  stories.add(`${name} - ${locale}`, () => (
+const ShowMoment = ({ name, locale, moments }) => {
+  return (
     <Table>
       <tbody>
         <tr>
@@ -187,15 +206,50 @@ locales.forEach(({ name, locale }) => {
           <th>British English</th>
           <th>{name}</th>
         </tr>
-        {funcs.map(({ what, func }, index) => (
+        {moments.map(({ what, method }, index) => (
           /* eslint-disable react/no-array-index-key */
           <tr key={index}>
             <td>{what}</td>
-            <td>{func('en-gb')}</td>
-            <td>{func(locale)}</td>
+            <td>{method('en-gb')}</td>
+            <td>{method(locale)}</td>
           </tr>
         ))}
       </tbody>
     </Table>
-  ));
+  );
+};
+
+ShowMoment.propTypes = {
+  name: string.isRequired,
+  moments: arrayOf(
+    shape({
+      what: string.isRequired,
+      func: func.isRequired,
+    }),
+  ).isRequired,
+  locale: string.isRequired,
+};
+
+locales.forEach(({ name, locale }) => {
+  storiesOf('Moment Locales/Editorial view', module).add(
+    `${name} - ${locale}`,
+    () => {
+      return (
+        <ShowMoment
+          name={name}
+          locale={locale}
+          moments={methods.filter(method =>
+            editorialWhitelist.includes(method.what),
+          )}
+        />
+      );
+    },
+  );
+
+  storiesOf('Moment Locales/Developer view', module).add(
+    `${name} - ${locale}`,
+    () => {
+      return <ShowMoment name={name} locale={locale} moments={methods} />;
+    },
+  );
 });

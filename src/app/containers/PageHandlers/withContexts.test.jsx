@@ -1,26 +1,25 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { shouldShallowMatchSnapshot } from '#testHelpers';
 import WithContexts from './withContexts';
-import getOriginContext from '../../contexts/RequestContext/getOriginContext';
-import getStatsDestination from '../../contexts/RequestContext/getStatsDestination';
-import getStatsPageIdentifier from '../../contexts/RequestContext/getStatsPageIdentifier';
-import * as requestContextImports from '../../contexts/RequestContext';
+import getOriginContext from '#contexts/RequestContext/getOriginContext';
+import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
+import getStatsPageIdentifier from '#contexts/RequestContext/getStatsPageIdentifier';
+import * as requestContextImports from '#contexts/RequestContext';
+import * as serviceContextImports from '#contexts/ServiceContext';
 
-jest.mock('../../contexts/RequestContext/getOriginContext', () => jest.fn());
+jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 
 getOriginContext.mockImplementation(origin => ({
   isUK: true,
   origin,
 }));
 
-jest.mock('../../contexts/RequestContext/getStatsDestination', () => jest.fn());
+jest.mock('#contexts/RequestContext/getStatsDestination', () => jest.fn());
 
 getStatsDestination.mockImplementation(() => 'NEWS_PS_TEST');
 
-jest.mock('../../contexts/RequestContext/getStatsPageIdentifier', () =>
-  jest.fn(),
-);
+jest.mock('#contexts/RequestContext/getStatsPageIdentifier', () => jest.fn());
 
 getStatsPageIdentifier.mockImplementation(
   () => 'news.articles.c0000000000o.page',
@@ -36,6 +35,8 @@ describe('withContexts HOC', () => {
     service: 'news',
     isAmp: true,
     pageType: 'article',
+    pathname: '/pathname',
+    data: { status: 200 },
   };
 
   shouldShallowMatchSnapshot(
@@ -45,11 +46,19 @@ describe('withContexts HOC', () => {
 
   describe('assertions', () => {
     let requestContextSpy;
+    let serviceContextSpy;
     beforeEach(() => {
       requestContextSpy = jest.spyOn(
         requestContextImports,
         'RequestContextProvider',
       );
+
+      serviceContextSpy = jest.spyOn(
+        serviceContextImports,
+        'ServiceContextProvider',
+      );
+
+      jest.clearAllMocks();
     });
 
     const pageTypes = ['article', 'frontPage', 'chicken'];
@@ -62,6 +71,8 @@ describe('withContexts HOC', () => {
           service: 'news',
           isAmp: true,
           pageType,
+          pathname: '/pathname',
+          data: { status: 200 },
         };
 
         render(<ContextsHOC {...fixture} />);
@@ -73,7 +84,41 @@ describe('withContexts HOC', () => {
           }),
           {},
         );
+        expect(serviceContextSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            variant: null,
+          }),
+          {},
+        );
       });
+    });
+
+    it(`should pass variant to the service context provider`, () => {
+      const fixture = {
+        bbcOrigin: 'https://www.bbc.com',
+        id: 'c0000000000o',
+        service: 'zhongwen',
+        isAmp: true,
+        pageType: 'article',
+        pathname: '/pathname',
+        variant: 'trad',
+        data: { status: 200 },
+      };
+
+      render(<ContextsHOC {...fixture} />);
+
+      expect(serviceContextSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          variant: 'trad',
+        }),
+        {},
+      );
+      expect(requestContextSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          variant: 'trad',
+        }),
+        {},
+      );
     });
   });
 });

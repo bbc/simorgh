@@ -1,5 +1,5 @@
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/app/lib/config/services';
+import appConfig from '../../../../src/testHelpers/serviceConfigs';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -8,7 +8,11 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  pageType,
+  variant,
+}) =>
   describe(`Tests for ${service} ${pageType}`, () => {
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
@@ -37,14 +41,14 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
       });
 
-      it(`should display a ${appConfig[service].translations.error[404].statusCode} error message on screen`, () => {
+      it(`should display a ${appConfig[service][variant].translations.error[404].statusCode} error message on screen`, () => {
         cy.get('h1 span').should(
           'contain',
-          `${appConfig[service].translations.error[404].statusCode}`,
+          `${appConfig[service][variant].translations.error[404].statusCode}`,
         );
         cy.get('h1').should(
           'contain',
-          `${appConfig[service].translations.error[404].title}`,
+          `${appConfig[service][variant].translations.error[404].title}`,
         );
       });
 
@@ -55,16 +59,17 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             cy.get('a').should(
               'have.attr',
               'href',
-              `${appConfig[service].translations.error[404].callToActionLinkUrl}`,
+              `${appConfig[service][variant].translations.error[404].callToActionLinkUrl}`,
             );
           });
       });
 
       it('should have correct title & description metadata', () => {
         /* Note that description & title tests for all other page types are in /pages/testsForAllPages.js */
-        const description = appConfig[service].translations.error[404].title;
-        const { title } = appConfig[service].translations.error[404];
-        const pageTitle = `${title} - ${appConfig[service].brandName}`;
+        const description =
+          appConfig[service][variant].translations.error[404].title;
+        const { title } = appConfig[service][variant].translations.error[404];
+        const pageTitle = `${title} - ${appConfig[service][variant].brandName}`;
 
         cy.get('head').within(() => {
           cy.title().should('eq', pageTitle);
@@ -92,7 +97,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
       });
 
       it('should have lang attribute', () => {
-        cy.get('html').should('have.attr', 'lang', appConfig[service].lang);
+        cy.get('html').should(
+          'have.attr',
+          'lang',
+          appConfig[service][variant].lang,
+        );
       });
     });
   });

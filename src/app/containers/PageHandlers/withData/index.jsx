@@ -1,9 +1,9 @@
 import React from 'react';
 import { element, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
-import { dataPropType } from '../../../models/propTypes/data';
+import { dataPropType } from '#models/propTypes/data';
 import ErrorMain from '../../ErrorMain';
-import getPassportHome from '../../../lib/utilities/getPassportHome';
+import getPassportHome from '#lib/utilities/getPassportHome';
 
 // checks for data, status, setting default status if not found
 const constructRenderObject = data => ({

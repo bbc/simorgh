@@ -3,8 +3,8 @@ import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import ResourceHints from '../../app/components/ResourceHints';
-import IfAboveIE9 from '../../app/components/IfAboveIE9Comment';
+import ResourceHints from '#app/components/ResourceHints';
+import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
 /* eslint-disable react/prop-types */
 const Document = ({
