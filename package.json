@@ -29,7 +29,7 @@
     "test:puppeteer": "jest --env=jsdom --colors ./puppeteer",
     "test:unit": "jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\"",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/assets-local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
   },
   "husky": {
     "hooks": {
