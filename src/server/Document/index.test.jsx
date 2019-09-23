@@ -108,7 +108,7 @@ describe('Render Document', () => {
         location: '/',
         routes: ['someRoute'],
         service: 'news',
-      }); 
+      });
 
       expect(ChunkExtractor).toHaveBeenCalledWith({
         statsFile: `${__dirname}/public/loadable-stats-foobar.json`,
