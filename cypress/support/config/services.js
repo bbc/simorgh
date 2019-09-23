@@ -786,8 +786,11 @@ module.exports = {
     pageTypes: {
       articles: {
         path:
+          // eslint-disable-next-line no-nested-ternary
           Cypress.env('APP_ENV') === 'live'
             ? '/news/articles/c5ll353v7y9o'
+            : Cypress.env('APP_ENV') === 'test'
+            ? '/news/articles/cn7k01xp8kxo'
             : '/news/articles/c6v11qzyv8po',
         smoke: true,
       },
