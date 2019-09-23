@@ -51,6 +51,7 @@ storiesOf('Containers|Media', module)
               <RequestContextProvider
                 isAmp={false}
                 pageType="media"
+                origin="https://www.bbc.com"
                 service={service}
               >
                 <MediaPageMain
