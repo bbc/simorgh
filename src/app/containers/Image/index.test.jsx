@@ -1,11 +1,12 @@
 import React from 'react';
-import ImageContainer from './index';
 import {
-  shouldShallowMatchSnapshot,
+  shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '#testHelpers';
-import { blockContainingText, blockArrayModel } from '#models/blocks';
+} from '@bbc/psammead-test-helpers';
+import ImageContainer from './index';
+import { blockContainingText, blockArrayModel } from '../../models/blocks';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 describe('Image', () => {
   describe('with no data', () => {
@@ -77,12 +78,12 @@ describe('Image', () => {
       isNull('should return null', <ImageContainer {...dataWithoutAltText} />);
     });
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text',
       <ImageContainer {...data} />,
     );
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render a lazyload container instead of an image if the image is after the 3rd block',
       <ImageContainer position={[4]} {...data} />,
     );
@@ -95,9 +96,11 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text and offscreen copyright',
-      <ImageContainer {...dataWithNonBbcCopyright} />,
+      <ServiceContextProvider service="news">
+        <ImageContainer {...dataWithNonBbcCopyright} />
+      </ServiceContextProvider>,
     );
 
     const dataWithCaption = blockArrayModel([
@@ -112,9 +115,11 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with alt text and caption',
-      <ImageContainer {...dataWithCaption} />,
+      <ServiceContextProvider service="news">
+        <ImageContainer {...dataWithCaption} />
+      </ServiceContextProvider>,
     );
 
     const dataWithOtherOriginCode = blockArrayModel([
@@ -125,9 +130,11 @@ describe('Image', () => {
       ),
     ]);
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render an image with other originCode - this would be a broken image',
-      <ImageContainer {...dataWithOtherOriginCode} />,
+      <ServiceContextProvider service="news">
+        <ImageContainer {...dataWithOtherOriginCode} />
+      </ServiceContextProvider>,
     );
   });
 });
