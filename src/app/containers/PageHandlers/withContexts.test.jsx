@@ -1,12 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '#testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { ComponentUsingContext } from '#testHelpers/mockComponents';
 import WithContexts from './withContexts';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '#contexts/RequestContext/getStatsPageIdentifier';
 import * as requestContextImports from '#contexts/RequestContext';
 import * as serviceContextImports from '#contexts/ServiceContext';
+import { ToggleContext } from '#contexts/ToggleContext';
+import { UserContext } from '#contexts/UserContext';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 
@@ -26,7 +29,15 @@ getStatsPageIdentifier.mockImplementation(
 );
 
 describe('withContexts HOC', () => {
-  const Component = () => <h1>All the contexts!!</h1>;
+  const Component = () => (
+    <>
+      <ComponentUsingContext context={serviceContextImports.ServiceContext} />
+      <ComponentUsingContext context={requestContextImports.RequestContext} />
+      <ComponentUsingContext context={ToggleContext} />
+      <ComponentUsingContext context={UserContext} />
+    </>
+  );
+
   const ContextsHOC = WithContexts(Component);
 
   const props = {
@@ -39,7 +50,7 @@ describe('withContexts HOC', () => {
     data: { status: 200 },
   };
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     `should return all context providers`,
     <ContextsHOC {...props} />,
   );
@@ -74,9 +85,7 @@ describe('withContexts HOC', () => {
           pathname: '/pathname',
           data: { status: 200 },
         };
-
         render(<ContextsHOC {...fixture} />);
-
         expect(requestContextSpy).toHaveBeenCalled();
         expect(requestContextSpy).toHaveBeenCalledWith(
           expect.objectContaining({
