@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { string, shape } from 'prop-types';
+import { string, objectOf, any } from 'prop-types';
 
 const LinkedData = ({
   brandName,
@@ -55,7 +55,6 @@ const LinkedData = ({
 
   return (
     <Helmet>
-      {/* eslint-disable react/no-danger */}
       <script type="application/ld+json">
         {JSON.stringify(linkedMetadata)}
       </script>
@@ -70,7 +69,7 @@ LinkedData.propTypes = {
   seoHeadline: string.isRequired,
   publishingPrinciples: string.isRequired,
   logoUrl: string.isRequired,
-  pageSpecific: shape({}),
+  pageSpecific: objectOf(any),
 };
 
 LinkedData.defaultProps = {

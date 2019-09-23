@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, oneOfType } from 'prop-types';
+import { shape, oneOfType, objectOf, any } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -198,7 +198,7 @@ MetadataContainer.propTypes = {
     shape(optimoPromoPropTypes),
     shape(mediaPromoPropTypes),
   ]).isRequired,
-  pageSpecificLinkedData: shape({}),
+  pageSpecificLinkedData: objectOf(any),
 };
 
 MetadataContainer.defaultProps = {
