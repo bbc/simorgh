@@ -10,7 +10,7 @@ const service = {
     articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
-    brandName: 'BBC News Кыргыз КызMATы',
+    brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
     serviceLocalizedName: 'Кыргыз КызMATы',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
