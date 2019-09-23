@@ -7,6 +7,7 @@ import {
   getDeviceLanguage,
   getHref,
   getReferrer,
+  getAtUserId,
   isLocServeCookieSet,
   sanitise,
   getAtiUrl,
@@ -41,6 +42,12 @@ export const buildATIPageTrackPath = ({
       key: 's',
       description: 'destination',
       value: getDestination(statsDestination),
+      wrap: false,
+    },
+    {
+      key: 'idclient',
+      description: 'at user id',
+      value: getAtUserId(),
       wrap: false,
     },
     {

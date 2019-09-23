@@ -17,6 +17,7 @@ const {
   getHref,
   getReferrer,
   getPublishedDatetime,
+  getAtUserId,
   sanitise,
   getProducer,
   getAtiUrl,
@@ -461,5 +462,25 @@ describe('getClickInfo', () => {
         params,
       ),
     ).toContain('[http://foobar.com]');
+  });
+});
+
+describe('getAtUserId', () => {
+  returnsNullWhenOffClient(getAtUserId);
+
+  it('should return AT user id when found', () => {
+    Cookie.getJSON = jest.fn().mockReturnValue({ val: 'uuid' });
+    const id = getAtUserId();
+    expect(id).toEqual('uuid');
+  });
+
+  it('should return null if AT user id not found', () => {
+    Cookie.getJSON = jest.fn().mockReturnValue(null);
+    let id = getAtUserId();
+    expect(id).toBeNull();
+
+    Cookie.getJSON = jest.fn().mockReturnValue({});
+    id = getAtUserId();
+    expect(id).toBeNull();
   });
 });

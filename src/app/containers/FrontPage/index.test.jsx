@@ -18,6 +18,16 @@ const defaultProps = {
   data: { status: 200 },
 };
 
+jest.mock('../PageHandlers/withContexts', () => Component => {
+  const DataContainer = props => (
+    <div id="ContextsContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return DataContainer;
+});
+
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
