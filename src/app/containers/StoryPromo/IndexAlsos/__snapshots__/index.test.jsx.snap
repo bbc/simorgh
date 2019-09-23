@@ -166,6 +166,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
 `;
 
 exports[`Index Alsos should render one correctly 1`] = `
+
 .c6 {
   vertical-align: middle;
   margin: 0 0.25rem;
