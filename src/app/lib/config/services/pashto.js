@@ -171,8 +171,7 @@ const service = {
           text: 'د محرميت تگلاره',
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
           text: 'کوکيز',
         },
         {

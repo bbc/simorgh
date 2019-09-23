@@ -160,8 +160,7 @@ const service = {
           text: 'Kebijakan tentang Privasi',
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
