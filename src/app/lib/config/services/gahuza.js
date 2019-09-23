@@ -164,8 +164,7 @@ const service = {
           text: "Ibigenga n'ubuzima bwite",
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
