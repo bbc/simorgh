@@ -34,7 +34,7 @@ const service = {
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Xəbərlər',
+    frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
