@@ -2,6 +2,7 @@
 
 exports[`Index Alsos should render multiple correctly 1`] = `
 <IndexAlsos
+  data-e2e="index-alsos"
   offScreenText="Related content"
 >
   <IndexAlsosUl>
@@ -465,6 +466,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
 
 exports[`Index Alsos should render one correctly 1`] = `
 <IndexAlsos
+  data-e2e="index-alsos"
   offScreenText="Related content"
 >
   <React.Fragment>
