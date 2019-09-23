@@ -28,6 +28,7 @@ const ChartbeatAnalytics = ({ data }) => {
           env,
           service,
           origin,
+          previousPath,
         }),
       );
     }
@@ -41,6 +42,7 @@ const ChartbeatAnalytics = ({ data }) => {
     service,
     sendCanonicalChartbeatBeacon,
     isCanonicalAndEnabled,
+    previousPath,
   ]);
 
   return (

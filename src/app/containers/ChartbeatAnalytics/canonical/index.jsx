@@ -22,7 +22,10 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           var config = ${JSON.stringify(chartbeatConfig)};
           for (var key in config) {
-            _sf_async_config[key] = config[key];
+            if (!_sf_async_config[key]) {
+              _sf_async_config[key] = config[key];
+            }
+            
           }
         })();
       `}
