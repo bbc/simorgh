@@ -60,7 +60,7 @@
     "@bbc/psammead-brand": "^5.0.1",
     "@bbc/psammead-caption": "^2.2.9",
     "@bbc/psammead-consent-banner": "^2.3.10",
-    "@bbc/psammead-copyright": "^1.2.8",
+    "@bbc/psammead-copyright": "^1.2.9",
     "@bbc/psammead-figure": "^1.2.5",
     "@bbc/psammead-headings": "^3.1.9",
     "@bbc/psammead-image": "^1.2.2",
