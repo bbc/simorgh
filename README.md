@@ -24,6 +24,8 @@ Please familiarise yourself with our:
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md) (you are here)
 
+NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
+
 ## Simorgh Overview
 
 ### A High Level User Journey
@@ -322,7 +324,7 @@ CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true npm run build && npm ru
 ```
 
 CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.
-CYPRESS_SMOKE can be true or false. It is false by default and runs a specific subset of tests.
+CYPRESS_SMOKE can be true or false. It is true by default and runs a specific subset of tests.
 
 ### Lighthouse Best Practice tests
 

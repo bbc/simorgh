@@ -1,8 +1,9 @@
 import React from 'react';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import BrandContainer from './index';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import BrandContainer from '.';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const newsServiceContextStub = {
   product: 'BBC News',
@@ -11,6 +12,10 @@ const newsServiceContextStub = {
   svgHeight: 24,
   maxWidth: 280,
   minWidth: 180,
+  theming: {
+    brandBackgroundColour: `${C_POSTBOX}`,
+    brandLogoColour: `${C_WHITE}`,
+  },
 };
 
 const BrandContainerWithContext = context => (

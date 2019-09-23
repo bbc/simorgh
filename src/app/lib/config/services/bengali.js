@@ -1,5 +1,5 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { bengali } from '@bbc/gel-foundations/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_SHONAR_BANGLA_BOLD,
@@ -34,11 +34,15 @@ const service = {
     twitterSite: '@bbcbangla',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: bengali,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See all',
       home: 'মূলপাতা',

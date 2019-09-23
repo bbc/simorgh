@@ -1,17 +1,18 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
 
 const service = {
   default: {
     lang: `id`,
-    articleAuthor: `https://www.facebook.com/pages/BBC-Indonesia/10150118096995434`,
+    articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     brandName: 'BBC News Indonesia',
-    product: 'BBC News Indonesia',
+    product: 'BBC News',
+    serviceLocalizedName: 'Indonesia',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
     defaultImageAltText: 'BBC News Indonesia',
     dir: `ltr`,
@@ -24,16 +25,20 @@ const service = {
     locale: `id-ID`,
     datetimeLocale: `id-id`,
     service: 'indonesia',
-    serviceName: 'News Indonesia',
+    serviceName: 'Indonesia',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcindonesia',
     twitterSite: '@bbcindonesia',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Berita',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'Lihat semua',
       home: 'Berita',
@@ -161,7 +166,7 @@ const service = {
         },
       ],
       copyrightText:
-        'Copyright © 2019 BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
+        'BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
     },
     fonts: [],
     navigation: [

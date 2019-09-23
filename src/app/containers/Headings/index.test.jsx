@@ -7,8 +7,8 @@ import {
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import HeadingsContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { textBlock } from '../../models/blocks';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { textBlock } from '#models/blocks';
 import blocksSingleFragment from './testHelpers';
 
 const HeadingsContainerWithContext = data => (

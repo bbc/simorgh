@@ -1,6 +1,6 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,
@@ -40,10 +40,14 @@ const news = {
     twitterSite: '@BBCNews',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       home: 'Home',
       currentPage: 'Current page',
@@ -187,6 +191,32 @@ const news = {
       F_REITH_SERIF_MEDIUM_ITALIC,
     ],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'Home',
+        url: '/news',
+      },
+      {
+        title: 'UK',
+        url: '/news/uk',
+      },
+      {
+        title: 'World',
+        url: '/news/world',
+      },
+      {
+        title: 'Business',
+        url: '/news/business',
+      },
+      {
+        title: 'Politics',
+        url: '/news/politics',
+      },
+      {
+        title: 'Tech',
+        url: '/news/technology',
+      },
+    ],
   },
 };
 

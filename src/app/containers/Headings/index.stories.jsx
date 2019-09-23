@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import HeadingsContainer from '.';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import blocksSingleFragment from './testHelpers';
 
 const headline = blocksSingleFragment('This is a headline.', []);

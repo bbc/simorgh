@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import * as atiPageViewParams from '../../atiUrl';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 import MediaAtiParams from '.';
-import fixture from '../../../../../../data/indonesia/bbc_indonesian_radio/liveradio.json';
+import fixture from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 
 describe('MediaAtiParams', () => {
   const Component = (serviceContextStub, requestContextStub) => (
@@ -21,6 +21,7 @@ describe('MediaAtiParams', () => {
     pageType: 'media',
     pathname: '/pathname',
     service: 'SERVICE',
+    statusCode: 200,
   };
   const serviceContextStub = {
     atiAnalyticsAppName: 'news-SERVICE',

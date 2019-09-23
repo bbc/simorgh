@@ -17,6 +17,7 @@ const {
   getHref,
   getReferrer,
   getPublishedDatetime,
+  getAtUserId,
   sanitise,
 } = require('./index');
 
@@ -69,6 +70,16 @@ describe('getDestination', () => {
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
       expected: 598343,
       summary: 'should return for test WS',
+    },
+    {
+      statsDestination: 'DEFAULT',
+      expected: 596068,
+      summary: 'should return for live Scotland',
+    },
+    {
+      statsDestination: 'DEFAULT_TEST',
+      expected: 596068,
+      summary: 'should return for test Scotland',
     },
     {
       statsDestination: undefined,
@@ -375,5 +386,25 @@ describe('getPublishedDatetime', () => {
     const publishedTime = getPublishedDatetime('invalidDate', data);
 
     expect(publishedTime).toEqual(null);
+  });
+});
+
+describe('getAtUserId', () => {
+  returnsNullWhenOffClient(getAtUserId);
+
+  it('should return AT user id when found', () => {
+    Cookie.getJSON = jest.fn().mockReturnValue({ val: 'uuid' });
+    const id = getAtUserId();
+    expect(id).toEqual('uuid');
+  });
+
+  it('should return null if AT user id not found', () => {
+    Cookie.getJSON = jest.fn().mockReturnValue(null);
+    let id = getAtUserId();
+    expect(id).toBeNull();
+
+    Cookie.getJSON = jest.fn().mockReturnValue({});
+    id = getAtUserId();
+    expect(id).toBeNull();
   });
 });

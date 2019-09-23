@@ -1,4 +1,4 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { arabic as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
@@ -6,7 +6,7 @@ import {
   F_NASSIM_ARABIC_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ar';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
 const service = {
   default: {
@@ -40,6 +40,10 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: 'See all',
       home: 'رئيسية',
@@ -173,7 +177,7 @@ const service = {
       copyrightText: 'بي بي سي. بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
     },
     fonts: [F_NASSIM_ARABIC_REGULAR, F_NASSIM_ARABIC_BOLD],
-    timezone: 'Europe/London',
+    timezone: 'GMT',
     navigation: [
       {
         title: 'رئيسية',

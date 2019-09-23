@@ -1,11 +1,11 @@
 import React from 'react';
 import { string, shape } from 'prop-types';
 import HeaderContainer from './index';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { ToggleContext } from '../../contexts/ToggleContext';
-import { shouldMatchSnapshot } from '../../../testHelpers';
-import pidginServiceConfig from '../../lib/config/services/pidgin';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { ToggleContext } from '#contexts/ToggleContext';
+import { shouldMatchSnapshot } from '#testHelpers';
+import pidginServiceConfig from '#lib/config/services/pidgin';
 
 const defaultToggleState = {
   test: {
@@ -34,6 +34,7 @@ const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
         isAmp={false}
         pageType={pageType}
         service={service}
+        statusCode={200}
         bbcOrigin="https://www.test.bbc.com"
         pathname="/pathname"
       >

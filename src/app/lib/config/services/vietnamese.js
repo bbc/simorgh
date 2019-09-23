@@ -1,165 +1,173 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { vietnamese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 
 const service = {
   default: {
     lang: `vi`,
-    articleAuthor: `https://www.facebook.com/pages/BBC-Vietnamese/228458913833525?ref=ts&sk=wall`,
-    articleTimestampPrefix: 'Updated',
+    articleAuthor: 'https://www.facebook.com/bbcnews',
+    articleTimestampPrefix: 'Cập nhật',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     brandName: 'BBC News Tiếng Việt',
-    product: 'BBC News Tiếng Việt',
+    product: 'BBC News',
+    serviceLocalizedName: 'Tiếng Việt',
     defaultImage:
       'https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png',
     defaultImageAltText: 'BBC News Tiếng Việt',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', bên ngoài',
+    imageCaptionOffscreenText: 'Chụp lại hình ảnh, ',
+    videoCaptionOffscreenText: 'Chụp lại video, ',
+    audioCaptionOffscreenText: 'Lưu lại audio, ',
+    defaultCaptionOffscreenText: 'Chụp lại, ',
+    imageCopyrightOffscreenText: 'Nguồn hình ảnh, ',
     locale: `vi-VN`,
     datetimeLocale: `vi-vn`,
     service: 'vietnamese',
-    serviceName: 'BBC News Tiếng Việt',
+    serviceName: 'Tiếng Việt',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Tin chính',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'Xem tất cả',
       home: 'Tin chính',
-      currentPage: 'Current page',
+      currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
-      relatedContent: 'Related content',
+      relatedContent: 'Tin liên quan',
       error: {
         404: {
           statusCode: '404',
           title: '404 - Không tìm thấy trang này',
           message:
-            'Lỗi có thể do địa chỉ trang web không đúng. Hãy kiểm tra địa chỉ và chính tả.',
+            'Chúng tôi không thể đưa bạn tới trang bạn tìm. Xin hãy thử:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'Kiểm tra lại url',
+            'Bấm nút refresh trong trình duyệt',
+            'Tìm trang này qua thanh tìm kiếm của BBC',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'Trang tin chính BBC',
+          callToActionFirst: 'Vui lòng thăm ',
+          callToActionLinkText: 'BBC News Tiếng Việt',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/vietnamese',
         },
         500: {
           statusCode: '500',
-          title: 'Lỗi 500',
-          message: 'Vừa bị lỗi. Hãy tải lại.',
-          solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
-          ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'Trang tin chính BBC',
+          title: 'Lỗi mạng nội bộ',
+          message:
+            'Xin lỗi, chúng tôi không thể đưa bạn tới trang bạn đang tìm. Vui lòng thử:',
+          solutions: ['Bấm nút refresh trong trình duyệt', 'Quay lại sau'],
+          callToActionFirst: 'Vui lòng thăm ',
+          callToActionLinkText: 'BBC News Tiếng Việt',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/vietnamese',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'Chúng tôi đã cập nhật Chính sách về Riêng tư và Cookie',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Chúng tôi có một số thay đổi quan trọng về Chính sách Riêng tư và Cookie, và muống bạn biết ý nghĩa của nó đối với bạn và dữ liệu của bạn.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Chúng tôi có một số thay đổi quan trọng về Chính sách Riêng tư và Cookie, và muống bạn biết ý nghĩa của nó đối với bạn và dữ liệu của bạn.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
           accept: 'OK',
-          reject: "Find out what's changed",
+          reject: 'Tìm hiểu các thay đổi',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Cho chúng tôi biết bạn đồng ý về cookie',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'Chúng tôi dùng ',
+              linkText: 'cookie',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'Chúng tôi và các đối tác dùng công nghệ, như ',
+              linkText: 'cookie',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Vâng, tôi đồng ý',
+          reject: 'Không, đưa tôi xem phần Settings',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
         audio: 'Âm thanh',
-        photogallery: 'Ảnh',
+        photogallery: 'Gallery hình ảnh',
         video: 'Video',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'Đọc nhiều nhất',
+      lastUpdated: 'Cập nhật gần nhất: ',
     },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          href: 'https://www.bbc.com/vietnamese/institutional-49283563',
+          text: 'Tại sao bạn có thể tin tưởng BBC News',
         },
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/vietnamese/institutional-37622991',
+          text: 'Điều khoản sử dụng',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/vietnamese/institutional-37623840',
+          text: 'Về BBC',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/vietnamese/institutional-37623841',
+          text: 'Chính sách riêng tư',
+        },
+        {
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/vietnamese/institutional-37623842',
+          text: 'Liên hệ BBC',
         },
       ],
       copyrightText:
-        'BBC. BBC không chịu trách nhiệm nội dung các trang bên ngoài',
+        'BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',
     },
     fonts: [],
     timezone: 'Asia/Ho_Chi_Minh',

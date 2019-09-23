@@ -1,5 +1,5 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
@@ -30,10 +30,14 @@ const service = {
     twitterSite: '@bbcworld',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: '홈페이지',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
+    },
     translations: {
       seeAll: '모든 기사 보기',
       home: '뉴스',
@@ -106,7 +110,7 @@ const service = {
               first: 'BBC와 파트너사는 ',
               linkText: '쿠키',
               last:
-                '웹브라우징 데이터 수집 같은 기술을 통해 이용자에게 최적의 온라인 경험을 제공하고 개인에 맞춤화된 콘텐츠와 광고를 노출하고자 합니다. 이에 동의하는지 알려주세요.',
+                ' 웹브라우징 데이터 수집 같은 기술을 통해 이용자에게 최적의 온라인 경험을 제공하고 개인에 맞춤화된 콘텐츠와 광고를 노출하고자 합니다. 이에 동의하는지 알려주세요.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -156,7 +160,7 @@ const service = {
         },
       ],
       copyrightText:
-        'Copyright © 2019 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+        'BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
     },
     fonts: [],
     navigation: [

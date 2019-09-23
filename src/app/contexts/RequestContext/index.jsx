@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node, oneOf, string } from 'prop-types';
+import { bool, node, oneOf, string, number } from 'prop-types';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
@@ -16,6 +16,7 @@ export const RequestContextProvider = ({
   isAmp,
   pageType,
   service,
+  statusCode,
   previousPath,
   pathname,
   variant,
@@ -43,6 +44,7 @@ export const RequestContextProvider = ({
     platform,
     statsDestination,
     statsPageIdentifier,
+    statusCode,
     previousPath,
     variant,
     ...getMetaUrls(origin, pathname),
@@ -60,6 +62,7 @@ RequestContextProvider.propTypes = {
   isAmp: bool.isRequired,
   pageType: oneOf(['article', 'frontPage', 'media', 'error']).isRequired,
   service: string.isRequired,
+  statusCode: number.isRequired,
   pathname: string.isRequired,
   previousPath: string,
   variant: variantPropType,

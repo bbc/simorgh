@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import SitewideLinks from '@bbc/psammead-sitewide-links';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import BrandContainer from '../Brand';
 
 const currentYear = () => new Date().getFullYear();

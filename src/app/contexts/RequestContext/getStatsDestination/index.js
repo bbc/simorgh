@@ -16,6 +16,9 @@ const getStatsDestination = ({ isUK = true, env = 'test', service }) => {
     case 'japanese':
       destination = 'NEWS_LANGUAGES_GNL';
       break;
+    case 'scotland':
+      destination = 'DEFAULT';
+      break;
     default:
       destination = 'WS_NEWS_LANGUAGES';
   }

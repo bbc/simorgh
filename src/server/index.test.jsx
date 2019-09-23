@@ -134,8 +134,9 @@ const testFrontPages = ({ platform, service, variant }) => {
                 `${localBaseUrl}/static/js/main-12345.12345.js`,
               ]}
               assetOrigins={[
-                'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
+                'https://ws-downloads.files.bbci.co.uk',
+                'https://ichef.bbci.co.uk',
                 localBaseUrl,
                 'https://logws1363.ati-host.net?',
               ]}
@@ -256,8 +257,9 @@ const testArticles = ({ platform, service, variant }) => {
                 `${localBaseUrl}/static/js/main-12345.12345.js`,
               ]}
               assetOrigins={[
-                'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
+                'https://ws-downloads.files.bbci.co.uk',
+                'https://ichef.bbci.co.uk',
                 localBaseUrl,
                 'https://logws1363.ati-host.net?',
               ]}
@@ -327,6 +329,130 @@ const testArticles = ({ platform, service, variant }) => {
   });
 };
 
+const testMediaAssetPages = ({ platform, service, assetUri, variant }) => {
+  const isAmp = platform === 'amp';
+  const extension = isAmp ? '.amp' : '';
+
+  describe(`/{service}/{assetUri}${extension}`, () => {
+    const successDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    const articleURL = `/${service}/${assetUri}${extension}`;
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            assetUri,
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+            variant,
+          });
+        });
+
+        it('should respond with rendered data', async () => {
+          const { text, status } = await makeRequest(articleURL);
+
+          expect(status).toBe(200);
+
+          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
+            <h1>Mock app</h1>,
+          );
+
+          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+            <Document
+              app="<h1>Mock app</h1>"
+              assets={[
+                `${localBaseUrl}/static/js/${service}-12345.12345.js`,
+                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
+                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
+                `${localBaseUrl}/static/js/main-12345.12345.js`,
+              ]}
+              assetOrigins={[
+                'https://gel.files.bbci.co.uk',
+                'https://ws-downloads.files.bbci.co.uk',
+                'https://ichef.bbci.co.uk',
+                localBaseUrl,
+                'https://logws1363.ati-host.net?',
+              ]}
+              data={successDataResponse}
+              helmet={{ head: 'tags' }}
+              isAmp={isAmp}
+              service={service}
+              styleTags={<style />}
+            />,
+          );
+
+          expect(renderDocumentSpy).toHaveBeenCalledWith({
+            bbcOrigin: undefined,
+            data: successDataResponse,
+            isAmp,
+            service,
+            routes,
+            url: articleURL,
+            variant,
+          });
+
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+
+      describe('404 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            assetUri,
+            service,
+            isAmp,
+            dataResponse: notFoundDataResponse,
+            variant,
+          });
+        });
+
+        it('should respond with a rendered 404', async () => {
+          const { status, text } = await makeRequest(articleURL);
+          expect(status).toBe(404);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
+        });
+      });
+    });
+
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          assetUri,
+          service,
+          isAmp,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+          variant,
+        });
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(articleURL);
+        expect(status).toEqual(500);
+        expect(text).toEqual('Error!');
+      });
+    });
+  });
+};
+
 const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
   describe(`${platform} media page - live radio`, () => {
     const isAmp = platform === 'amp';
@@ -376,8 +502,9 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
                 `${localBaseUrl}/static/js/main-12345.12345.js`,
               ]}
               assetOrigins={[
-                'https://ichef.bbci.co.uk',
                 'https://gel.files.bbci.co.uk',
+                'https://ws-downloads.files.bbci.co.uk',
+                'https://ichef.bbci.co.uk',
                 localBaseUrl,
                 'https://logws1363.ati-host.net?',
               ]}
@@ -607,6 +734,29 @@ describe('Server', () => {
     mediaId: 'liveradio',
   });
 
+  testMediaAssetPages({
+    platform: 'amp',
+    service: 'pidgin',
+    assetUri: 'tori-49450859',
+  });
+  testMediaAssetPages({
+    platform: 'canonical',
+    service: 'pidgin',
+    assetUri: 'tori-49450859',
+  });
+  testMediaAssetPages({
+    platform: 'amp',
+    service: 'serbian',
+    assetUri: 'srbija-49427344',
+    variant: 'cyr',
+  });
+  testMediaAssetPages({
+    platform: 'canonical',
+    service: 'serbian',
+    assetUri: 'srbija-49427344',
+    variant: 'cyr',
+  });
+
   describe('Unknown routes', () => {
     const service = 'igbo';
     const isAmp = false;
@@ -645,8 +795,9 @@ describe('Server', () => {
               `${localBaseUrl}/static/js/main-12345.12345.js`,
             ]}
             assetOrigins={[
-              'https://ichef.bbci.co.uk',
               'https://gel.files.bbci.co.uk',
+              'https://ws-downloads.files.bbci.co.uk',
+              'https://ichef.bbci.co.uk',
               localBaseUrl,
               'https://logws1363.ati-host.net?',
             ]}
