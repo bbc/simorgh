@@ -8,7 +8,7 @@ export const service = {
   default: {
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Mise à jour',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     brandName: 'BBC News Afrique',
@@ -18,10 +18,10 @@ export const service = {
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
     externalLinkText: ', lien externe',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
+    imageCaptionOffscreenText: 'Légende image, ',
+    videoCaptionOffscreenText: 'Légende vidéo, ',
+    audioCaptionOffscreenText: 'Légende audio, ',
+    defaultCaptionOffscreenText: 'Légende, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `fr`,
     datetimeLocale: `fr`,
@@ -43,35 +43,38 @@ export const service = {
     translations: {
       seeAll: 'Tout voir',
       home: 'Accueil',
-      currentPage: 'Current page',
+      currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
-      relatedContent: 'Related content',
+      relatedContent: 'Lire plus',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Page non trouvée',
+          title: 'La page ne peut pas être trouvée',
           message:
-            "Vous avez peut-être mal entré l'adresse internet. Veuillez vérifier l'adresse.",
+            "Désolé, nous ne pouvons pas afficher la page que vous cherchez. Essayez s'il vous plaît:",
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            "Double vérification de l'url",
+            "Cliquez sur le bouton d'actualisation de votre navigateur",
+            "Recherche de cette page à l'aide de la barre de recherche de la BBC",
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: "Page d'accueil BBC",
+          callToActionFirst:
+            "Vous pouvez également consulter le page d'accueil du site ",
+          callToActionLinkText: 'BBC News Afrique',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/afrique',
         },
         500: {
           statusCode: '500',
-          title: '500 - Erreur',
-          message: "Une erreur s'est produite. Veuillez rafraichir la page.",
+          title: 'Erreur interne du serveur',
+          message:
+            "Désolé, nous sommes actuellement dans l'impossibilité d'afficher la page que vous recherchez. Essayez s'il vous plaît:",
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            "Cliquez sur le bouton d'actualisation de votre navigateur",
+            'Revenir plus tard',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: "Page d'accueil BBC",
+          callToActionFirst:
+            "Vous pouvez également consulter le page d'accueil du site ",
+          callToActionLinkText: 'BBC News Afrique',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/afrique',
         },
@@ -79,7 +82,7 @@ export const service = {
       consentBanner: {
         privacy: {
           title:
-            'Nous avons mis à jour nos politiques de confidentialité et de cookies',
+            'Nous avons mis à jour nos politiques de confidentialité et de cookies',
           description: {
             uk: {
               first:
@@ -107,13 +110,13 @@ export const service = {
               first: 'Nous utilisons ',
               linkText: 'cookies',
               last:
-                ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
+                ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
               first:
-                'Nous et nos partenaires utilisons des technologies, comme ',
+                'Nous et nos partenaires utilisons des technologies, comme ',
               linkText: 'cookies',
               last:
                 ", et collectons des données de navigation pour vous offrir la meilleure expérience en ligne et pour personnaliser le contenu et la publicité qui vous sont présentés. Veuillez nous faire savoir si vous êtes d'accord.",
@@ -129,8 +132,8 @@ export const service = {
       },
       media: {
         audio: 'Audio',
-        photogallery: 'En images',
-        video: 'Video',
+        photogallery: 'Galerie de photos',
+        video: 'Vidéo',
         bbc_afrique_radio: {
           title: 'BBC Afrique Radio',
           subtitle: 'Infos, musique et sports',
@@ -150,32 +153,36 @@ export const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          href: 'https://www.bbc.com/afrique/institutionelles-49283281',
+          text: 'Pourquoi vous pouvez faire confiance à BBC News',
         },
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/afrique/institutionelles-36826639',
+          text: "Conditions d'utilisation",
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/afrique/institutionelles-36826641',
+          text: 'A propos de la BBC',
+        },
+        {
+          href: 'https://www.bbc.com/afrique/institutionelles-36826642',
+          text: 'Politique de confidentialité',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/afrique/institutionelles-36826644',
+          text: 'Contactez la BBC',
         },
       ],
       copyrightText:
-        "BBC. La BBC n'est pas responsable du contenu de sites externes",
+        "BBC. La BBC n'est pas responsable du contenu des sites externes.",
     },
     fonts: [],
     timezone: 'GMT',
