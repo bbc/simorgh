@@ -11,7 +11,7 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
-import withContext from '#contexts/utils/withContext';
+import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {

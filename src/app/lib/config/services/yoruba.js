@@ -3,7 +3,7 @@ import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/yo';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
-import withContext from '#contexts/utils/withContext';
+import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {

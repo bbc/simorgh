@@ -6,7 +6,7 @@ import {
   F_NOTO_SANS_ETHIOPIC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
-import withContext from '#contexts/utils/withContext';
+import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {

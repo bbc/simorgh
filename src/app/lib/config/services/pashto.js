@@ -7,7 +7,7 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ps';
 import '@bbc/moment-timezone-include/tz/GMT';
-import withContext from '#contexts/utils/withContext';
+import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
