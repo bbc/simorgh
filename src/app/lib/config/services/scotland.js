@@ -1,5 +1,5 @@
 import { C_DARK_SALTIRE, C_WHITE } from '@bbc/psammead-styles/colours';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { scotland as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import {
   F_REITH_SANS_BOLD,
