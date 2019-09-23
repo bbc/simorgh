@@ -14,18 +14,16 @@ const ArticleMetadata = ({
   section,
   aboutTags,
   mentionsTags,
-}) => {
-  return (
-    <Helmet>
-      <meta name="article:author" content={author} />
-      <meta name="article:modified_time" content={lastPublished} />
-      <meta name="article:published_time" content={firstPublished} />
-      {section && <meta name="article:section" content={section} />}
-      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
-      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
-    </Helmet>
-  );
-};
+}) => (
+  <Helmet>
+    <meta name="article:author" content={author} />
+    <meta name="article:modified_time" content={lastPublished} />
+    <meta name="article:published_time" content={firstPublished} />
+    {section && <meta name="article:section" content={section} />}
+    {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
+    {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
+  </Helmet>
+);
 
 const tagPropTypes = shape({
   thingUri: string,
