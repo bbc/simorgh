@@ -1,5 +1,5 @@
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/app/lib/config/services';
+import appConfig from '../../../../src/testHelpers/serviceConfigs';
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
