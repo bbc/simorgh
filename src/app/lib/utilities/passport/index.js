@@ -20,13 +20,14 @@ export const isValidPassportHome = (
   service,
   passportHomesOverride = [],
 ) => {
-  if (!passportHome && !(passportHomesOverride || []).length) return true;
-
+  const passportHomesOverrideArray = passportHomesOverride || [];
   const passportHomeLower = (passportHome || '').toLowerCase();
+
+  if (!passportHome && !passportHomesOverrideArray.length) return true;
 
   return (
     passportHomeLower === service ||
-    (passportHomesOverride || []).some(
+    passportHomesOverrideArray.some(
       home => (home || '').toLowerCase() === passportHomeLower,
     )
   );
