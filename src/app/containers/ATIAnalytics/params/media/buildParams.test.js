@@ -1,8 +1,14 @@
 import { buildMediaATIParams, buildMediaATIUrl } from './buildParams';
-import { buildATIPageTrackPath } from '../../atiUrl';
 
-jest.mock('../../../../lib/analyticsUtils');
-jest.mock('../../atiUrl');
+jest.mock('../../../../lib/analyticsUtils', () => {
+  const utils = jest.requireActual('../../../../lib/analyticsUtils');
+
+  return {
+    ...utils,
+    getPublishedDatetime: jest.fn(),
+    getCurrentTime: jest.fn(),
+  };
+});
 
 const pageData = {
   metadata: {
@@ -54,12 +60,10 @@ describe('buildMediaATIParams', () => {
 });
 
 describe('buildMediaATIUrl', () => {
-  it('should call buildATIPageTrackPath exactly once', () => {
-    const mockBuildATIPageTrackPath = jest.fn();
-    buildATIPageTrackPath.mockImplementation(mockBuildATIPageTrackPath);
-
-    buildMediaATIUrl(pageData, requestContext, serviceContext);
-    expect(mockBuildATIPageTrackPath).toHaveBeenCalledTimes(1);
-    expect(mockBuildATIPageTrackPath).toHaveBeenCalledWith(validURLParams);
+  it('should return the right url', () => {
+    const result = buildMediaATIUrl(pageData, requestContext, serviceContext);
+    expect(result).toEqual(
+      's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
+    );
   });
 });

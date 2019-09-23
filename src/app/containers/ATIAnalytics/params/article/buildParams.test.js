@@ -1,5 +1,8 @@
 import { buildArticleATIParams, buildArticleATIUrl } from './buildParams';
-import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
+import {
+  getPublishedDatetime,
+  getCurrentTime,
+} from '../../../../lib/analyticsUtils';
 import {
   getLanguage,
   getContentId,
@@ -7,12 +10,19 @@ import {
   getPromoHeadline,
   getThingAttributes,
 } from '../../../../lib/analyticsUtils/article';
-import { buildATIPageTrackPath } from '../../atiUrl';
 
-jest.mock('../../../../lib/analyticsUtils');
+jest.mock('../../../../lib/analyticsUtils', () => {
+  const utils = jest.requireActual('../../../../lib/analyticsUtils');
+
+  return {
+    ...utils,
+    getPublishedDatetime: jest.fn(),
+    getCurrentTime: jest.fn(),
+  };
+});
 jest.mock('../../../../lib/analyticsUtils/article');
-jest.mock('../../atiUrl');
 
+getCurrentTime.mockImplementation(() => '00:00:00');
 getPublishedDatetime.mockImplementation(() => 'getPublishedDatetime');
 getLanguage.mockImplementation(() => 'getLanguage');
 getContentId.mockImplementation(() => 'getContentId');
@@ -63,48 +73,10 @@ describe('buildParams', () => {
   });
 
   describe('buildArticleATIUrl', () => {
-    it('should call buildATIPageTrackPath exactly once', () => {
-      const mockBuildATIPageTrackPath = jest.fn();
-      buildATIPageTrackPath.mockImplementation(mockBuildATIPageTrackPath);
-
-      buildArticleATIUrl({}, requestContext, serviceContext);
-      expect(mockBuildATIPageTrackPath).toHaveBeenCalledTimes(1);
-      expect(mockBuildATIPageTrackPath).toHaveBeenCalledWith(validURLParams);
-    });
-
-    it('should call article utility functions with arguments', () => {
-      const mockArticleData = {};
-      const mockServiceContext = {
-        ...serviceContext,
-        service: 'news',
-      };
-      buildArticleATIUrl({}, requestContext, mockServiceContext);
-
-      expect(getContentId).toHaveBeenCalledTimes(1);
-      expect(getContentId).toHaveBeenCalledWith(mockArticleData);
-      expect(getLanguage).toHaveBeenCalledTimes(1);
-      expect(getLanguage).toHaveBeenCalledWith(mockArticleData);
-      expect(getThingAttributes).toHaveBeenCalledTimes(2);
-      expect(getThingAttributes).toHaveBeenCalledWith(
-        'thingId',
-        mockArticleData,
-      );
-      expect(getThingAttributes).toHaveBeenCalledWith(
-        'thingLabel',
-        mockArticleData,
-      );
-      expect(getPageIdentifier).toHaveBeenCalledTimes(1);
-      expect(getPageIdentifier).toHaveBeenCalledWith('news', mockArticleData);
-      expect(getPromoHeadline).toHaveBeenCalledTimes(1);
-      expect(getPromoHeadline).toHaveBeenCalledWith(mockArticleData);
-      expect(getPublishedDatetime).toHaveBeenCalledTimes(2);
-      expect(getPublishedDatetime).toHaveBeenCalledWith(
-        'firstPublished',
-        mockArticleData,
-      );
-      expect(getPublishedDatetime).toHaveBeenCalledWith(
-        'lastPublished',
-        mockArticleData,
+    it('should return the right url', () => {
+      const result = buildArticleATIUrl({}, requestContext, serviceContext);
+      expect(result).toEqual(
+        's=598285&s2=atiAnalyticsProducerId&p=getPageIdentifier&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[getContentId]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[getLanguage]&x5=[http://localhost/]&x6=[originpreviousPath]&x7=[article]&x9=[getPromoHeadline]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]&x13=[getThingAttributes]&x14=[getThingAttributes]',
       );
     });
   });
