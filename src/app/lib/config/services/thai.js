@@ -193,11 +193,11 @@ const service = {
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'คุกกี้ี้',
+          text: 'Cookies',
         },
         {
           href: 'https://www.bbc.com/thai/institutional-37981748',
-          text: 'ติดต่อบีบีซีี',
+          text: 'ติดต่อบีบีซี',
         },
       ],
       copyrightText:
