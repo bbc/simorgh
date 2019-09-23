@@ -89,10 +89,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
 
 <div
   class="c0"
-<<<<<<< HEAD
   data-e2e="index-alsos"
-=======
->>>>>>> b29766bc8bf289e6efbd62700e3efd9b8c7f23bf
 >
   <h4
     class="c1"
@@ -170,10 +167,6 @@ exports[`Index Alsos should render multiple correctly 1`] = `
 `;
 
 exports[`Index Alsos should render one correctly 1`] = `
-<<<<<<< HEAD
-=======
-
->>>>>>> b29766bc8bf289e6efbd62700e3efd9b8c7f23bf
 .c6 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -256,10 +249,7 @@ exports[`Index Alsos should render one correctly 1`] = `
 
 <div
   class="c0"
-<<<<<<< HEAD
   data-e2e="index-alsos"
-=======
->>>>>>> b29766bc8bf289e6efbd62700e3efd9b8c7f23bf
 >
   <h4
     class="c1"
