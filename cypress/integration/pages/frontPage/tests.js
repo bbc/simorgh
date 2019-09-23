@@ -1,8 +1,8 @@
-// For testing important features that differ between services, e.g. Timestamps.
-// We recommend using inline conditional logic to limit tests to services which differ.
+import config from '../../../support/config/services';
+import appConfig from '../../../../src/testHelpers/serviceConfigs';
 
-// Defaulting to false for now whilst we look to improve the index also's test coverage to cater for the varying scenarios: https://github.com/bbc/simorgh/issues/3586
-const serviceHasIndexAlsos = () => false;
+// Limiting to only one service
+const serviceHasIndexAlsos = service => service === 'thai';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -82,7 +82,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               if ($el.length > 0) {
                 cy.get('p')
                   .eq(0)
-                  .should('be.hidden');
+                  .should('be.visible');
               }
             });
 
@@ -92,26 +92,48 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
         });
 
-        if (serviceHasIndexAlsos(service)) {
-          it('should contain Index Alsos at a mobile view', () => {
-            cy.viewport('iphone-5');
-            cy.get('section li')
-              .eq(0)
-              .within(() => {
-                cy.get('div div div a')
+        it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
+          cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
+            ({ body }) => {
+              const topstories = body.content.groups[0].items[0];
+              const relatedItemsExists = 'relatedItems' in topstories;
+
+              if (relatedItemsExists && serviceHasIndexAlsos(service)) {
+                cy.get('[aria-labelledby="Top-stories"]')
                   .eq(0)
                   .within(() => {
-                    cy.get('span').then($el => {
-                      if ($el.length > 1) {
-                        cy.get('svg').should('be.visible');
-                      } else {
-                        expect($el).not.to.have.descendants('svg');
-                      }
-                    });
+                    cy.get('div[data-e2e=index-alsos]')
+                      .eq(0)
+                      .within(() => {
+                        cy.get('h4')
+                          .eq(0)
+                          .then($el => {
+                            expect($el.text()).includes(
+                              `${appConfig[service].default.translations.relatedContent}`,
+                            );
+                          });
+
+                        if (topstories.relatedItems.length > 1) {
+                          cy.get('ul li a').should('be.visible');
+                        } else {
+                          cy.get('div').within(() => {
+                            cy.get('a span').should('be.visible');
+                          });
+                        }
+                      });
                   });
-              });
-          });
-        }
+
+                cy.get('section')
+                  .eq(1)
+                  .within(() => {
+                    cy.get('div[class^="StyledIndexAlsos"]').should(
+                      'not.exist',
+                    );
+                  });
+              }
+            },
+          );
+        });
       });
     });
   });

@@ -1,8 +1,8 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import InlineLinkContainer from './index';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
   id: '91238901',

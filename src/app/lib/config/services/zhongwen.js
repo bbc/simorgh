@@ -1,10 +1,9 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { zhongwen as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
-const service = {
-  lang: `zh_CN`,
+const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-zhongwen',
@@ -20,7 +19,6 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `zh_CN`,
   datetimeLocale: `zh_cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
@@ -29,10 +27,14 @@ const service = {
   twitterSite: '@bbcchinese',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
+  script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: '主页',
+  theming: {
+    brandBackgroundColour: `${C_POSTBOX}`,
+    brandLogoColour: `${C_WHITE}`,
+  },
   translations: {
     seeAll: 'See all',
     home: 'Home',
@@ -163,7 +165,66 @@ const service = {
     copyrightText: 'BBC。BBC不为BBC以外的网站的内容负责',
   },
   fonts: [],
-  timezone: 'Europe/London',
+  timezone: 'GMT',
+  navigation: [
+    {
+      title: '主页',
+      url: '/zhongwen/simp',
+    },
+    {
+      title: '国际',
+      url: '/zhongwen/simp/world',
+    },
+    {
+      title: '两岸',
+      url: '/zhongwen/simp/chinese_news',
+    },
+    {
+      title: '英国',
+      url: '/zhongwen/simp/uk',
+    },
+    {
+      title: '评论',
+      url: '/zhongwen/simp/indepth',
+    },
+    {
+      title: '科技',
+      url: '/zhongwen/simp/science',
+    },
+    {
+      title: '财经',
+      url: '/zhongwen/simp/business',
+    },
+    {
+      title: '图辑',
+      url: '/zhongwen/simp/media/photogalleries',
+    },
+    {
+      title: '音频材料',
+      url: '/zhongwen/simp/media/audio',
+    },
+    {
+      title: '视频材料',
+      url: '/zhongwen/simp/media/video',
+    },
+    {
+      title: 'BBC英伦网',
+      url: 'http://www.bbc.co.uk/ukchina/simp',
+    },
+  ],
+};
+
+const service = {
+  simp: {
+    ...baseServiceConfig,
+    lang: `zh-hans`,
+    locale: `zh-hans`,
+  },
+  trad: {
+    ...baseServiceConfig,
+    lang: `zh-hant`,
+    locale: `zh-hant`,
+  },
 };
 
 export default service;

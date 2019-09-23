@@ -7,9 +7,10 @@ import {
   getDeviceLanguage,
   getHref,
   getReferrer,
+  getAtUserId,
   isLocServeCookieSet,
   sanitise,
-} from '../../../lib/analyticsUtils';
+} from '#lib/analyticsUtils';
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -38,6 +39,12 @@ const atiPageViewParams = ({
       key: 's',
       description: 'destination',
       value: getDestination(statsDestination),
+      wrap: false,
+    },
+    {
+      key: 'idclient',
+      description: 'at user id',
+      value: getAtUserId(),
       wrap: false,
     },
     {

@@ -15,7 +15,7 @@ describe('AmpChartbeatAnalytics', () => {
   it('renders with appropriate props', () => {
     const config = {
       domain: 'test-domain',
-      type: 'article',
+      contentType: 'article',
       sections: 'section1 section2',
       uid: 1111,
       referrer: '/some-path',
@@ -51,7 +51,7 @@ describe('AmpChartbeatAnalytics', () => {
   it('renders with with appropriate props without referrer or cookie', () => {
     const config = {
       domain: 'test-domain',
-      type: 'article',
+      contentType: 'article',
       sections: 'section1 section2',
       uid: 1111,
       referrer: null,

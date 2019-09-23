@@ -5,7 +5,7 @@ import path from 'path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes from '../app/routes';
+import routes from '#app/routes';
 import {
   articleDataRegexPath,
   articleManifestRegexPath,
@@ -16,9 +16,9 @@ import {
   mediaDataRegexPath,
   mediaAssetPageDataRegexPath,
 } from '../app/routes/regex';
-import nodeLogger from '../app/lib/logger.node';
+import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
-import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 
 const morgan = require('morgan');
@@ -38,8 +38,11 @@ class LoggerStream {
   }
 }
 
-const constructDataFilePath = (pageType, service, id) => {
-  const dataPath = pageType === 'frontpage' ? 'index.json' : `${id}.json`;
+const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
+  const dataPath =
+    pageType === 'frontpage'
+      ? `${variant || 'index'}.json`
+      : `${id}${variant}.json`;
 
   return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
@@ -99,16 +102,25 @@ if (process.env.APP_ENV === 'local') {
       }),
     )
     .get(articleDataRegexPath, async ({ params }, res, next) => {
-      const { service, id } = params;
+      const { service, id, variant } = params;
 
-      const dataFilePath = constructDataFilePath('articles', service, id);
+      const dataFilePath = constructDataFilePath({
+        pageType: 'articles',
+        service,
+        id,
+        variant,
+      });
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(frontpageDataRegexPath, async ({ params }, res, next) => {
-      const { service } = params;
+      const { service, variant } = params;
 
-      const dataFilePath = constructDataFilePath('frontpage', service);
+      const dataFilePath = constructDataFilePath({
+        pageType: 'frontpage',
+        service,
+        variant,
+      });
 
       sendDataFile(res, dataFilePath, next);
     })
@@ -126,13 +138,14 @@ if (process.env.APP_ENV === 'local') {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(mediaAssetPageDataRegexPath, async ({ params }, res, next) => {
-      const { service, assetUri } = params;
+      const { service, assetUri: id, variant } = params;
 
-      const dataFilePath = constructDataFilePath(
-        'mediaAssetPage',
+      const dataFilePath = constructDataFilePath({
+        pageType: 'mediaAssetPage',
         service,
-        assetUri,
-      );
+        id,
+        variant,
+      });
 
       sendDataFile(res, dataFilePath, next);
     })
@@ -172,7 +185,10 @@ server
   )
   .get('/*', async ({ url, headers, path: urlPath }, res) => {
     try {
-      const { service, isAmp, route, match } = getRouteProps(routes, url);
+      const { service, isAmp, route, match, variant } = getRouteProps(
+        routes,
+        url,
+      );
       const data = await route.getInitialData(match.params);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
@@ -187,6 +203,7 @@ server
           routes,
           service,
           url,
+          variant,
         }),
       );
     } catch ({ message, status }) {

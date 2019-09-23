@@ -22,5 +22,17 @@
   },
   "eigth": {
     "js": "http://localhost.bbc.com:7080/static/js/wrongServiceName-54321.12345.js"
+  },
+  "ninth": {
+    "js": "http://localhost.bbc.com:7080/static/js/zhongwen-12345.12345.js"
+  },
+  "tenth": {
+    "js": "http://localhost.bbc.com:7080/static/js/ukchina-12345.12345.js"
+  },
+  "eleventh": {
+    "js": "http://localhost.bbc.com:7080/static/js/serbian-12345.12345.js"
+  },
+  "twelfth": {
+    "js": "http://localhost.bbc.com:7080/static/js/pidgin-12345.12345.js"
   }
 }

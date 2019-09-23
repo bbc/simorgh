@@ -1,10 +1,12 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  latinDiacritics,
+  cyrillicAndLatin,
+} from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+import '@bbc/moment-timezone-include/tz/GMT';
 
-const service = {
-  lang: `sr-Latn`,
+const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
   articleTimestampPrefix: 'Updated',
   atiAnalyticsAppName: 'news-serbian',
@@ -20,7 +22,6 @@ const service = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  locale: `sr-Latn`,
   datetimeLocale: `sr-latn`,
   service: 'serbian',
   serviceName: 'News na srpskom',
@@ -29,10 +30,13 @@ const service = {
   twitterSite: '@bbcnasrpskom',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'Početna strana',
+  theming: {
+    brandBackgroundColour: `${C_POSTBOX}`,
+    brandLogoColour: `${C_WHITE}`,
+  },
   translations: {
     seeAll: 'See all',
     home: 'Home',
@@ -160,7 +164,48 @@ const service = {
       'BBC. BBC nije odgovoran za sadržaj sajtova sa spoljnih linkova',
   },
   fonts: [],
-  timezone: 'Europe/London',
+  timezone: 'GMT',
+  navigation: [
+    {
+      title: 'Početna strana',
+      url: '/serbian/lat',
+    },
+    {
+      title: 'Srbija',
+      url: '/serbian/lat/srbija',
+    },
+    {
+      title: 'Balkan',
+      url: '/serbian/lat/balkan',
+    },
+    {
+      title: 'Svet',
+      url: '/serbian/lat/svet',
+    },
+    {
+      title: 'Video',
+      url: '/serbian/lat/media/video',
+    },
+    {
+      title: 'Najpopularnije',
+      url: '/serbian/lat/popular/read',
+    },
+  ],
+};
+
+const service = {
+  lat: {
+    ...baseServiceConfig,
+    lang: `sr-latn`,
+    locale: `sr-latn`,
+    script: latinDiacritics,
+  },
+  cyr: {
+    ...baseServiceConfig,
+    lang: `sr-cyrl`,
+    locale: `sr-cyrl`,
+    script: cyrillicAndLatin,
+  },
 };
 
 export default service;

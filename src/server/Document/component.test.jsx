@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallowRender } from '../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { string, bool } from 'prop-types';
 import DocumentComponent from './component';
 
 describe('Document Component', () => {
@@ -35,27 +36,31 @@ describe('Document Component', () => {
   );
   const styleTagsAmp = <style amp-custom="">{'html { color: red; }'}</style>;
 
-  const shallowDocument = ({ service, isAmp }) =>
-    shallowRender(
-      <DocumentComponent
-        assets={assets}
-        assetOrigins={assetOrigins}
-        app={'<h1>App!</h1>'}
-        data={{ ...data }}
-        helmet={helmet}
-        styleTags={isAmp ? styleTagsAmp : styleTags}
-        service={service}
-        isAmp={isAmp}
-      />,
-    );
+  const testDocumentComponent = ({ service, isAmp }) => (
+    <DocumentComponent
+      assets={assets}
+      assetOrigins={assetOrigins}
+      app={'<h1>App!</h1>'}
+      data={{ ...data }}
+      helmet={helmet}
+      styleTags={isAmp ? styleTagsAmp : styleTags}
+      service={service}
+      isAmp={isAmp}
+    />
+  );
 
-  it('should render correctly', () => {
-    expect(
-      shallowDocument({ service: 'news', isAmp: false }),
-    ).toMatchSnapshot();
-  });
+  testDocumentComponent.propTypes = {
+    service: string.isRequired,
+    isAmp: bool.isRequired,
+  };
 
-  it('should render AMP version correctly', () => {
-    expect(shallowDocument({ service: 'news', isAmp: true })).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'should render correctly',
+    testDocumentComponent('news', false),
+  );
+
+  shouldMatchSnapshot(
+    'should render AMP version correctly',
+    testDocumentComponent('news', true),
+  );
 });

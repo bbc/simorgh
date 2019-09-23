@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import NavigationContainer from './index';
-import igboConfig from '../../lib/config/services/igbo';
+import igboConfig from '#lib/config/services/igbo';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');
@@ -16,7 +16,7 @@ const { useContext } = jest.requireMock('react');
 
 describe('Navigation Container', () => {
   beforeEach(() => {
-    useContext.mockReturnValue(igboConfig);
+    useContext.mockReturnValue(igboConfig.default);
   });
 
   afterEach(() => {
@@ -24,7 +24,7 @@ describe('Navigation Container', () => {
   });
 
   describe('snapshots', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render a Navigation with igbo links correctly',
       <NavigationContainer />,
     );

@@ -1,13 +1,12 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
-import { shouldShallowMatchSnapshot } from '../../../testHelpers';
-import frontPageDataPidgin from '../../../../data/pidgin/frontpage';
-import igboConfig from '../../lib/config/services/igbo';
-import preprocessor from '../../lib/utilities/preprocessor';
-import addIdsToItems from '../../lib/utilities/preprocessor/rules/addIdsToItems';
-import { RequestContext } from '../../contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import frontPageDataPidgin from '#data/pidgin/frontpage';
+import preprocessor from '#lib/utilities/preprocessor';
+import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const processedPidgin = preprocessor(frontPageDataPidgin, [addIdsToItems]);
 
@@ -27,20 +26,24 @@ jest.mock('../ChartbeatAnalytics', () => {
 });
 
 const requestContextData = {
+  isAmp: false,
+  service: 'igbo',
+  statusCode: 200,
   pageType: 'frontPage',
+  pathname: '/pathname',
 };
 
 const FrontPageMainWithContext = props => (
-  <RequestContext.Provider value={requestContextData}>
-    <ServiceContext.Provider value={igboConfig}>
+  <RequestContextProvider {...requestContextData}>
+    <ServiceContextProvider service="igbo">
       <FrontPageMain {...props} />
-    </ServiceContext.Provider>
-  </RequestContext.Provider>
+    </ServiceContextProvider>
+  </RequestContextProvider>
 );
 
 describe('FrontPageMain', () => {
   describe('snapshots', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render a pidgin frontpage correctly',
       <FrontPageMainWithContext frontPageData={processedPidgin} />,
     );

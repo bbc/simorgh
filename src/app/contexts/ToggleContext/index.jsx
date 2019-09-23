@@ -1,9 +1,9 @@
 import React, { createContext, useReducer } from 'react';
 import { node } from 'prop-types';
 import toggleReducer from '../../reducers/ToggleReducer';
-import defaultToggles from '../../lib/config/toggles';
+import defaultToggles from '#lib/config/toggles';
 
-const ToggleContext = createContext();
+const ToggleContext = createContext({});
 
 const ToggleContextProvider = ({ children }) => {
   const [toggleState, toggleDispatch] = useReducer(

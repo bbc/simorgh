@@ -96,17 +96,16 @@ exports[`ParagraphContainer should render correctly 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <p
-    className="c1"
+    class="c1"
   >
     <b>
       This is some text.
     </b>
     <a
-      aria-label={null}
-      className="c2"
+      class="c2"
       href="/bbc-test"
     >
       Some text
@@ -114,7 +113,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
          for the 
       </b>
       <i
-        className="c3"
+        class="c3"
       >
          link!
       </i>
@@ -216,21 +215,21 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <p
-    className="c1"
+    class="c1"
   >
     <b>
       This is some text.
     </b>
     <span
-      className="c2"
+      class="c2"
       lang="fa"
     >
       <a
         aria-label="چیسربرگرundefined"
-        className="c3"
+        class="c3"
         href="https://google.com"
       >
         چیسربرگر

@@ -1,11 +1,11 @@
 /* eslint-disable global-require */
 import path from 'path';
-import nodeLogger from '../../app/lib/logger.node';
-import { localBaseUrl } from '../../testHelpers/config';
+import nodeLogger from '#lib/logger.node';
+import { localBaseUrl } from '#testHelpers/config';
 
 const mockLogError = jest.fn();
 
-jest.mock('../../app/lib/logger.node', () => jest.fn());
+jest.mock('#lib/logger.node', () => jest.fn());
 
 nodeLogger.mockImplementation(() => ({ error: mockLogError }));
 
@@ -79,8 +79,9 @@ describe('getAssetsArray', () => {
 
     it('should return the asset origins as an array', async () => {
       const defaultOrigins = [
-        'https://ichef.bbci.co.uk',
         'https://gel.files.bbci.co.uk',
+        'https://ws-downloads.files.bbci.co.uk',
+        'https://ichef.bbci.co.uk',
       ];
       process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
         'http://some.statichost.net';

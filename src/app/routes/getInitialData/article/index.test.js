@@ -1,5 +1,5 @@
 import baseUrl from '../utils/getBaseUrl';
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import fetchData from '../utils/fetchData';
 
 const mockApplyTimestampRules = jest.fn();
@@ -7,17 +7,17 @@ const mockAddIdsToBlocks = jest.fn();
 const mockApplyBlockPositioning = jest.fn();
 
 jest.mock(
-  '../../../lib/utilities/preprocessor/rules/timestamp',
+  '#lib/utilities/preprocessor/rules/timestamp',
   () => mockApplyTimestampRules,
 );
 
 jest.mock(
-  '../../../lib/utilities/preprocessor/rules/addIdsToBlocks',
+  '#lib/utilities/preprocessor/rules/addIdsToBlocks',
   () => mockAddIdsToBlocks,
 );
 
 jest.mock(
-  '../../../lib/utilities/preprocessor/rules/blockPositioning',
+  '#lib/utilities/preprocessor/rules/blockPositioning',
   () => mockApplyBlockPositioning,
 );
 
@@ -34,7 +34,7 @@ jest.mock('../utils/getBaseUrl', () => jest.fn());
 baseUrl.mockImplementation(() => getBaseUrlMockOrigin);
 
 let onClientMockResponse = true;
-jest.mock('../../../lib/utilities/onClient', () => jest.fn());
+jest.mock('#lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => onClientMockResponse);
 
 const fetchDataMockResponse = {
@@ -74,6 +74,30 @@ describe('getArticleInitialData', () => {
     });
   });
 
+  it('fetches data and returns expected object with variant', async () => {
+    await getArticleInitialData({
+      ...defaultContext,
+      variant: 'variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/news/articles/c0000000001o/variant.json',
+      preprocessorRules,
+    });
+  });
+
+  it('fetches data and returns expected object with variant with leading slash', async () => {
+    await getArticleInitialData({
+      ...defaultContext,
+      variant: '/variant',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/news/articles/c0000000001o/variant.json',
+      preprocessorRules,
+    });
+  });
+
   describe('When not on client', () => {
     beforeEach(() => {
       onClientMockResponse = false;
@@ -90,6 +114,19 @@ describe('getArticleInitialData', () => {
       expect(response).toEqual({
         pageData: 'foo',
         status: 123,
+      });
+    });
+
+    it('fetches data from SIMORGH_BASE_URL enviroment variable origin with variant', async () => {
+      await getArticleInitialData({
+        ...defaultContext,
+        variant: 'variant',
+      });
+
+      expect(fetchData).toHaveBeenCalledWith({
+        url:
+          'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o/variant.json',
+        preprocessorRules,
       });
     });
   });

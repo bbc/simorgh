@@ -9,7 +9,7 @@ import {
   IndexAlsosUl,
   IndexAlsosLi,
 } from '@bbc/psammead-story-promo/index-alsos';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const MAX_NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.
 
@@ -48,7 +48,7 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
   const IndexAlsoItem = alsoItems.length > 1 ? IndexAlsosLi : IndexAlso;
 
   return (
-    <IndexAlsos offScreenText={relatedContent}>
+    <IndexAlsos offScreenText={relatedContent} data-e2e="index-alsos">
       <IndexAlsosWrapper>
         {alsoItems.slice(0, MAX_NUM_INDEX_ALSOS).map(item => {
           const { id, cpsType, mediaType } = item;

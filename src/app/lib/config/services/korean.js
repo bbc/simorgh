@@ -1,182 +1,188 @@
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 
 const service = {
-  lang: `ko`,
-  articleAuthor: `https://www.facebook.com/bbcnewskorean`,
-  articleTimestampPrefix: 'Updated',
-  atiAnalyticsAppName: 'news-korean',
-  atiAnalyticsProducerId: '57',
-  brandName: 'BBC News 코리아',
-  product: 'BBC News 코리아',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
-  defaultImageAltText: 'BBC News 코리아',
-  dir: `ltr`,
-  externalLinkText: ', external',
-  imageCaptionOffscreenText: 'Image caption, ',
-  videoCaptionOffscreenText: 'Video caption, ',
-  audioCaptionOffscreenText: 'Audio caption',
-  defaultCaptionOffscreenText: 'Caption, ',
-  imageCopyrightOffscreenText: 'Image source, ',
-  locale: `ko-KO`,
-  datetimeLocale: `ko-ko`,
-  service: 'korean',
-  serviceName: 'News 코리아',
-  themeColor: `${C_POSTBOX}`,
-  twitterCreator: '@bbcworld',
-  twitterSite: '@bbcworld',
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-  script: latin,
-  manifestPath: '/manifest.json',
-  swPath: '/sw.js',
-  frontPageTitle: '홈페이지',
-  translations: {
-    seeAll: '모든 기사 보기',
-    home: '뉴스',
-    currentPage: 'Current page',
-    skipLinkText: '내용으로 건너뛰기',
-    relatedContent: 'Related content',
-    error: {
-      404: {
-        statusCode: '404',
-        title: '페이지를 찾을 수 없습니다',
-        message:
-          '죄송합니다. 찾으시는 페이지를 가져올 수 없습니다. 이 중 하나를 해보세요:',
-        solutions: [
-          'URL 주소 재확인',
-          '웹브라우저의 새로 고침 버튼 누르기',
-          'BBC 검색 기능을 이용해 해당 페이지 찾아보기',
-        ],
-        callToActionFirst: '',
-        callToActionLinkText: 'BBC News 코리아',
-        callToActionLast: ' 홈페이지를 방문해보세요',
-        callToActionLinkUrl: 'https://www.bbc.com/korean',
-      },
-      500: {
-        statusCode: '500',
-        title: '내부 서버 에러',
-        message:
-          '죄송합니다. 찾으시는 페이지를 가져올 수 없습니다. 이 중 하나를 해보세요:',
-        solutions: ['웹브라우저의 새로 고침 버튼 누르기', '다시 시도해 보기'],
-        callToActionFirst: '',
-        callToActionLinkText: 'BBC News 코리아',
-        callToActionLast: ' 홈페이지를 방문해보세요',
-        callToActionLinkUrl: 'https://www.bbc.com/korean',
-      },
+  default: {
+    lang: `ko`,
+    articleAuthor: `https://www.facebook.com/bbcnewskorean`,
+    articleTimestampPrefix: 'Updated',
+    atiAnalyticsAppName: 'news-korean',
+    atiAnalyticsProducerId: '57',
+    brandName: 'BBC News 코리아',
+    product: 'BBC News 코리아',
+    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
+    defaultImageAltText: 'BBC News 코리아',
+    dir: `ltr`,
+    externalLinkText: ', external',
+    imageCaptionOffscreenText: 'Image caption, ',
+    videoCaptionOffscreenText: 'Video caption, ',
+    audioCaptionOffscreenText: 'Audio caption',
+    defaultCaptionOffscreenText: 'Caption, ',
+    imageCopyrightOffscreenText: 'Image source, ',
+    locale: `ko-KO`,
+    datetimeLocale: `ko-ko`,
+    service: 'korean',
+    serviceName: 'News 코리아',
+    themeColor: `${C_POSTBOX}`,
+    twitterCreator: '@bbcworld',
+    twitterSite: '@bbcworld',
+    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    script: noAscendersOrDescenders,
+    manifestPath: '/manifest.json',
+    swPath: '/sw.js',
+    frontPageTitle: '홈페이지',
+    theming: {
+      brandBackgroundColour: `${C_POSTBOX}`,
+      brandLogoColour: `${C_WHITE}`,
     },
-    consentBanner: {
-      privacy: {
-        title: '개인정보와 쿠키 처리방침을 변경했습니다',
-        description: {
-          uk: {
-            first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
-            linkText: null,
-            last: null,
-            linkUrl: null,
-          },
-          international: {
-            first:
-              '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다.',
-            linkText: null,
-            last: null,
-            linkUrl: null,
-          },
+    translations: {
+      seeAll: '모든 기사 보기',
+      home: '뉴스',
+      currentPage: 'Current page',
+      skipLinkText: '내용으로 건너뛰기',
+      relatedContent: 'Related content',
+      error: {
+        404: {
+          statusCode: '404',
+          title: '페이지를 찾을 수 없습니다',
+          message:
+            '죄송합니다. 찾으시는 페이지를 가져올 수 없습니다. 이 중 하나를 해보세요:',
+          solutions: [
+            'URL 주소 재확인',
+            '웹브라우저의 새로 고침 버튼 누르기',
+            'BBC 검색 기능을 이용해 해당 페이지 찾아보기',
+          ],
+          callToActionFirst: '',
+          callToActionLinkText: 'BBC News 코리아',
+          callToActionLast: ' 홈페이지를 방문해보세요',
+          callToActionLinkUrl: 'https://www.bbc.com/korean',
         },
-        accept: '알겠습니다',
-        reject: '변경사항을 확인하세요',
-        rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
-      },
-      cookie: {
-        title: '쿠키생성에 동의하시나요',
-        description: {
-          uk: {
-            first: 'We use ',
-            linkText: 'cookies',
-            last:
-              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
-            linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
-          },
-          international: {
-            first: 'BBC와 파트너사는 ',
-            linkText: '쿠키',
-            last:
-              '웹브라우징 데이터 수집 같은 기술을 통해 이용자에게 최적의 온라인 경험을 제공하고 개인에 맞춤화된 콘텐츠와 광고를 노출하고자 합니다. 이에 동의하는지 알려주세요.',
-            linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
-          },
+        500: {
+          statusCode: '500',
+          title: '내부 서버 에러',
+          message:
+            '죄송합니다. 찾으시는 페이지를 가져올 수 없습니다. 이 중 하나를 해보세요:',
+          solutions: ['웹브라우저의 새로 고침 버튼 누르기', '다시 시도해 보기'],
+          callToActionFirst: '',
+          callToActionLinkText: 'BBC News 코리아',
+          callToActionLast: ' 홈페이지를 방문해보세요',
+          callToActionLinkUrl: 'https://www.bbc.com/korean',
         },
-        accept: '네, 동의합니다',
-        reject: '아니요, 재 세팅 하겠습니다',
-        rejectUrl:
-          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+      },
+      consentBanner: {
+        privacy: {
+          title: '개인정보와 쿠키 처리방침을 변경했습니다',
+          description: {
+            uk: {
+              first:
+                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              linkText: null,
+              last: null,
+              linkUrl: null,
+            },
+            international: {
+              first:
+                '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다.',
+              linkText: null,
+              last: null,
+              linkUrl: null,
+            },
+          },
+          accept: '알겠습니다',
+          reject: '변경사항을 확인하세요',
+          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+        },
+        cookie: {
+          title: '쿠키생성에 동의하시나요',
+          description: {
+            uk: {
+              first: 'We use ',
+              linkText: 'cookies',
+              last:
+                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              linkUrl:
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            },
+            international: {
+              first: 'BBC와 파트너사는 ',
+              linkText: '쿠키',
+              last:
+                ' 웹브라우징 데이터 수집 같은 기술을 통해 이용자에게 최적의 온라인 경험을 제공하고 개인에 맞춤화된 콘텐츠와 광고를 노출하고자 합니다. 이에 동의하는지 알려주세요.',
+              linkUrl:
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            },
+          },
+          accept: '네, 동의합니다',
+          reject: '아니요, 재 세팅 하겠습니다',
+          rejectUrl:
+            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+        },
+      },
+      media: {
+        audio: '오디오',
+        photogallery: '이미지 갤러리',
+        video: '비디오',
       },
     },
-    media: {
-      audio: '오디오',
-      photogallery: '이미지 갤러리',
-      video: '비디오',
+    brandSVG,
+    mostRead: {
+      header: 'TOP 뉴스',
+      lastUpdated: '최종 송고일',
     },
-  },
-  brandSVG,
-  mostRead: {
-    header: 'TOP 뉴스',
-    lastUpdated: '최종 송고일',
-  },
-  footer: {
-    externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
-      text: '외부 콘텐츠 링크에 대한 본사 정책 보기.',
+    footer: {
+      externalLink: {
+        href: 'https://www.bbc.co.uk/help/web/links/',
+        text: '외부 콘텐츠 링크에 대한 본사 정책 보기.',
+      },
+      links: [
+        {
+          href: 'https://www.bbc.com/korean/institutional-49283197',
+          text: 'BBC News를 신뢰할 수 있는 이유',
+        },
+        {
+          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
+          text: '이용 약관',
+        },
+        {
+          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
+          text: '개인정보취급방침',
+        },
+        {
+          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          text: '쿠키정책',
+        },
+        {
+          href: 'https://www.bbc.com/korean/institutional-42224941',
+          text: '고객센터',
+        },
+      ],
+      copyrightText:
+        'BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
     },
-    links: [
+    fonts: [],
+    navigation: [
       {
-        href: 'https://www.bbc.com/korean/institutional-49283197',
-        text: 'BBC News를 신뢰할 수 있는 이유',
+        title: '뉴스',
+        url: '/korean',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/terms/',
-        text: '이용 약관',
+        title: '비디오',
+        url: '/korean/media/video',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
-        text: '개인정보취급방침',
+        title: '다운로드',
+        url: '/korean/downloads',
       },
       {
-        href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
-        text: '쿠키정책',
-      },
-      {
-        href: 'https://www.bbc.com/korean/institutional-42224941',
-        text: '고객센터',
+        title: 'TOP 뉴스',
+        url: '/korean/popular/read',
       },
     ],
-    copyrightText:
-      'Copyright © 2019 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+    timezone: 'Asia/Seoul',
   },
-  fonts: [],
-  navigation: [
-    {
-      title: '뉴스',
-      url: '/korean',
-    },
-    {
-      title: '비디오',
-      url: '/korean/media/video',
-    },
-    {
-      title: '다운로드',
-      url: '/korean/downloads',
-    },
-    {
-      title: 'TOP 뉴스',
-      url: '/korean/popular/read',
-    },
-  ],
-  timezone: 'Asia/Seoul',
 };
 
 export default service;

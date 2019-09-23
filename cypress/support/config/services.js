@@ -2,6 +2,7 @@ module.exports = {
   afaanoromoo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -26,13 +27,21 @@ module.exports = {
           Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-        smoke: true,
+        smoke: false,
+      },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/afaanoromoo/oduu-49490954',
+        smoke: false,
       },
     },
   },
   afrique: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -61,11 +70,19 @@ module.exports = {
             : '/afrique/bbc_afrique_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/afrique/monde-49500638',
+        smoke: false,
+      },
     },
   },
   amharic: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -92,11 +109,19 @@ module.exports = {
             : '/amharic/bbc_amharic_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/amharic/news-49562667',
+        smoke: false,
+      },
     },
   },
   arabic: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -125,11 +150,19 @@ module.exports = {
             : '/arabic/bbc_arabic_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/arabic/media-49580542',
+        smoke: false,
+      },
     },
   },
   azeri: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -150,11 +183,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/azeri/region-49364777',
+        smoke: false,
+      },
     },
   },
   bengali: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -183,11 +224,19 @@ module.exports = {
             : '/bengali/bbc_bangla_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/bengali/news-49579870',
+        smoke: false,
+      },
     },
   },
   burmese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -216,11 +265,19 @@ module.exports = {
             : '/burmese/bbc_burmese_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/burmese/media-49571787',
+        smoke: false,
+      },
     },
   },
   cymrufyw: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -244,11 +301,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   gahuza: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -277,11 +336,19 @@ module.exports = {
             : '/gahuza/bbc_gahuza_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/gahuza/amakuru-49534170',
+        smoke: false,
+      },
     },
   },
   gujarati: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -302,11 +369,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/gujarati/media-49502679',
+        smoke: false,
+      },
     },
   },
   hausa: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -335,11 +410,19 @@ module.exports = {
             : '/hausa/bbc_hausa_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/hausa/labarai-49513456',
+        smoke: false,
+      },
     },
   },
   hindi: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -368,11 +451,19 @@ module.exports = {
             : '/hindi/bbc_hindi_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/hindi/media-49583110',
+        smoke: false,
+      },
     },
   },
   igbo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -390,11 +481,19 @@ module.exports = {
       },
       frontPage: { path: '/igbo', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/igbo/media-42986440',
+        smoke: false,
+      },
     },
   },
   indonesia: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -421,11 +520,19 @@ module.exports = {
             : '/indonesia/bbc_indonesian_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/indonesia/media-49591990',
+        smoke: false,
+      },
     },
   },
   japanese: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -446,11 +553,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/japanese/video-49589128',
+        smoke: false,
+      },
     },
   },
   korean: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -477,11 +592,19 @@ module.exports = {
             : '/korean/bbc_korean_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/korean/media-49590387',
+        smoke: false,
+      },
     },
   },
   kyrgyz: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -510,11 +633,19 @@ module.exports = {
             : '/kyrgyz/bbc_kyrgyz_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/kyrgyz/sapar-tv-48695523',
+        smoke: false,
+      },
     },
   },
   marathi: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -535,11 +666,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/marathi/india-48062804',
+        smoke: false,
+      },
     },
   },
   mundo: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -560,11 +699,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/mundo/noticias-49546078',
+        smoke: false,
+      },
     },
   },
   naidheachdan: {
     font: undefined,
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -588,11 +735,13 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   nepali: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -621,11 +770,19 @@ module.exports = {
             : '/nepali/bbc_nepali_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/nepali/news-49613544',
+        smoke: false,
+      },
     },
   },
   news: {
     font: 'Reith',
     isWorldService: false,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -643,11 +800,13 @@ module.exports = {
       },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   pashto: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -676,11 +835,19 @@ module.exports = {
             : '/pashto/bbc_pashto_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/pashto/afghanistan-49628873',
+        smoke: false,
+      },
     },
   },
   persian: {
     font: 'Nassim',
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -707,11 +874,19 @@ module.exports = {
             : '/persian/bbc_persian_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/persian/world-49653162',
+        smoke: false,
+      },
     },
   },
   pidgin: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -729,11 +904,19 @@ module.exports = {
       },
       frontPage: { path: '/pidgin', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/pidgin/tori-49450859',
+        smoke: false,
+      },
     },
   },
   portuguese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: { path: undefined, smoke: false },
       errorPage404: {
@@ -748,10 +931,18 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/portuguese/geral-49602758',
+        smoke: false,
+      },
     },
   },
   punjabi: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -772,11 +963,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/punjabi/international-49567825',
+        smoke: false,
+      },
     },
   },
   russian: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -797,20 +996,79 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/russian/media-49281069',
+        smoke: false,
+      },
+    },
+  },
+  scotland: {
+    font: undefined,
+    isWorldService: false,
+    variant: 'default',
+    pageTypes: {
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/scotland/articles/czwj5l0n210o',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/scotland/articles/cabcdefghijo',
+        smoke: false,
+      },
+      frontPage: { path: undefined, smoke: false },
+      liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   serbian: {
     font: undefined,
+    isWorldService: true,
+    variant: 'lat',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/c805k05kr73o/lat',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/cabcdefghijo/lat',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/lat',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/srbija-49427344/lat',
+        smoke: false,
+      },
     },
   },
   sinhala: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -839,10 +1097,18 @@ module.exports = {
             : '/sinhala/bbc_sinhala_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/sinhala/sri-lanka-49411205',
+        smoke: false,
+      },
     },
   },
   somali: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -871,20 +1137,30 @@ module.exports = {
             : '/somali/bbc_somali_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/somali/media-48870869',
+        smoke: false,
+      },
     },
   },
   sport: {
     font: undefined,
+    variant: 'default',
     pageTypes: {
       articles: { path: undefined, smoke: false },
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: { path: undefined, smoke: false },
     },
   },
   swahili: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -913,11 +1189,19 @@ module.exports = {
             : '/swahili/bbc_swahili_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/swahili/dira-tv-49602132',
+        smoke: false,
+      },
     },
   },
   tamil: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -946,11 +1230,19 @@ module.exports = {
             : '/tamil/bbc_tamil_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/tamil/science-49626264',
+        smoke: false,
+      },
     },
   },
   telugu: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -971,11 +1263,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/telugu/india-49647976',
+        smoke: false,
+      },
     },
   },
   thai: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -996,11 +1296,19 @@ module.exports = {
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/thai/international-49514085',
+        smoke: false,
+      },
     },
   },
   tigrinya: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1027,11 +1335,19 @@ module.exports = {
             : '/tigrinya/bbc_tigrinya_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/tigrinya/news-49562338',
+        smoke: false,
+      },
     },
   },
   turkce: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1052,21 +1368,55 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/turkce/haberler-dunya-49655644',
+        smoke: false,
+      },
     },
   },
   ukchina: {
     font: undefined,
     isWorldService: true,
+    variant: 'simp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/simp',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/cabcdefghijo/simp',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/simp',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/49375846/simp',
+        smoke: false,
+      },
     },
   },
   ukrainian: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1087,11 +1437,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukrainian/media-49656852',
+        smoke: false,
+      },
     },
   },
   urdu: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1120,11 +1478,19 @@ module.exports = {
             : '/urdu/bbc_urdu_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/urdu/pakistan-49644768',
+        smoke: false,
+      },
     },
   },
   uzbek: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1153,11 +1519,19 @@ module.exports = {
             : '/uzbek/bbc_uzbek_radio/liveradio',
         smoke: false,
       },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/uzbek/uzbekistan-49192467',
+        smoke: false,
+      },
     },
   },
   vietnamese: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1178,11 +1552,19 @@ module.exports = {
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/vietnamese/media-49614583',
+        smoke: false,
+      },
     },
   },
   yoruba: {
     font: undefined,
     isWorldService: true,
+    variant: 'default',
     pageTypes: {
       articles: {
         path:
@@ -1200,16 +1582,49 @@ module.exports = {
       },
       frontPage: { path: '/yoruba', smoke: false },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/yoruba/media-42985961',
+        smoke: false,
+      },
     },
   },
   zhongwen: {
     font: undefined,
     isWorldService: true,
+    variant: 'simp',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/simp',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/cabcdefghijo/simp',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/simp',
+        smoke: true,
+      },
       liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/chinese-news-49631219/simp',
+        smoke: false,
+      },
     },
   },
 };

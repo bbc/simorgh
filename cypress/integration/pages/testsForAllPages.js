@@ -1,6 +1,6 @@
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
-import appConfig from '../../../src/app/lib/config/services';
+import appConfig from '../../../src/testHelpers/serviceConfigs';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
@@ -14,6 +14,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigforAllPages = ({
   service,
   pageType,
+  variant,
 }) => {
   describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
@@ -22,6 +23,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           envConfig.assetOrigin,
           'https://ichef.bbci.co.uk',
           'https://gel.files.bbci.co.uk',
+          'https://ws-downloads.files.bbci.co.uk',
         ];
 
         resources.forEach(resource => {
@@ -38,7 +40,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           cy.get('head link[rel="canonical"]').should(
             'have.attr',
             'href',
-            `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
+            `${envConfig.baseUrl}${config[service].pageTypes[pageType].path}`,
           );
         });
 
@@ -78,22 +80,22 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             cy.get('meta[name="og:image"]').should(
               'have.attr',
               'content',
-              appConfig[service].defaultImage,
+              appConfig[service][variant].defaultImage,
             );
             cy.get('meta[name="og:image:alt"]').should(
               'have.attr',
               'content',
-              appConfig[service].defaultImageAltText,
+              appConfig[service][variant].defaultImageAltText,
             );
             cy.get('meta[name="og:locale"]').should(
               'have.attr',
               'content',
-              appConfig[service].locale,
+              appConfig[service][variant].locale,
             );
             cy.get('meta[name="og:site_name"]').should(
               'have.attr',
               'content',
-              appConfig[service].defaultImageAltText,
+              appConfig[service][variant].defaultImageAltText,
             );
             cy.get('meta[name="og:type"]').should(
               'have.attr',
@@ -103,12 +105,12 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             cy.get('meta[name="og:url"]').should(
               'have.attr',
               'content',
-              `https://www.bbc.com${config[service].pageTypes[pageType].path}`,
+              `${envConfig.baseUrl}${config[service].pageTypes[pageType].path}`,
             );
             cy.get('meta[name="og:site_name"]').should(
               'have.attr',
               'content',
-              appConfig[service].brandName,
+              appConfig[service][variant].brandName,
             );
             cy.get('meta[name="twitter:card"]').should(
               'have.attr',
@@ -118,22 +120,22 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             cy.get('meta[name="twitter:creator"]').should(
               'have.attr',
               'content',
-              appConfig[service].twitterCreator,
+              appConfig[service][variant].twitterCreator,
             );
             cy.get('meta[name="twitter:image:alt"]').should(
               'have.attr',
               'content',
-              appConfig[service].defaultImageAltText,
+              appConfig[service][variant].defaultImageAltText,
             );
             cy.get('meta[name="twitter:image:src"]').should(
               'have.attr',
               'content',
-              appConfig[service].defaultImage,
+              appConfig[service][variant].defaultImage,
             );
             cy.get('meta[name="twitter:site"]').should(
               'have.attr',
               'content',
-              appConfig[service].twitterSite,
+              appConfig[service][variant].twitterSite,
             );
           });
         });
@@ -161,7 +163,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     break;
                   case 'frontPage':
                     description = body.metadata.summary;
-                    title = appConfig[service].frontPageTitle;
+                    title = appConfig[service][variant].frontPageTitle;
                     break;
                   case 'liveRadio':
                     description = body.promo.summary;
@@ -171,8 +173,8 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = '';
                     title = '';
                 }
-                /* Note that if updating these, also do the same for errorPage404/test.js */
-                const pageTitle = `${title} - ${appConfig[service].brandName}`;
+                /* Note that if updating these, also do the same for errorPage404/tests.js */
+                const pageTitle = `${title} - ${appConfig[service][variant].brandName}`;
 
                 cy.get('head').within(() => {
                   cy.title().should('eq', pageTitle);
@@ -205,27 +207,29 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       /* End of block (pageType !== 'errorPage404') */
 
       it('should have dir matching service config', () => {
-        cy.get('html').and('have.attr', 'dir', appConfig[service].dir);
+        cy.get('html').and('have.attr', 'dir', appConfig[service][variant].dir);
       });
     });
 
     describeForEuOnly('Consent Banners', () => {
       it('have correct translations', () => {
         cy.contains(
-          appConfig[service].translations.consentBanner.privacy.title,
+          appConfig[service][variant].translations.consentBanner.privacy.title,
         );
         cy.contains(
-          appConfig[service].translations.consentBanner.privacy.reject,
+          appConfig[service][variant].translations.consentBanner.privacy.reject,
         );
         cy.contains(
-          appConfig[service].translations.consentBanner.privacy.accept,
+          appConfig[service][variant].translations.consentBanner.privacy.accept,
         ).click();
-        cy.contains(appConfig[service].translations.consentBanner.cookie.title);
         cy.contains(
-          appConfig[service].translations.consentBanner.cookie.reject,
+          appConfig[service][variant].translations.consentBanner.cookie.title,
         );
         cy.contains(
-          appConfig[service].translations.consentBanner.cookie.accept,
+          appConfig[service][variant].translations.consentBanner.cookie.reject,
+        );
+        cy.contains(
+          appConfig[service][variant].translations.consentBanner.cookie.accept,
         );
       });
     });
@@ -234,9 +238,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
           'contain',
-          appConfig[service].serviceLocalizedName !== undefined
-            ? `${appConfig[service].product}, ${appConfig[service].serviceLocalizedName}`
-            : appConfig[service].product,
+          appConfig[service][variant].serviceLocalizedName !== undefined
+            ? `${appConfig[service][variant].product}, ${appConfig[service][variant].serviceLocalizedName}`
+            : appConfig[service][variant].product,
         );
       });
 
@@ -252,7 +256,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('be.visible');
       });
 
-      if (appConfig[service].navigation) {
+      if (appConfig[service][variant].navigation) {
         if (
           pageType !== 'articles' ||
           (pageType === 'articles' && useAppToggles.navOnArticles.enabled)
@@ -265,8 +269,15 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               .should('have.lengthOf', 1)
               .should('have.attr', 'href', '#content');
             cy.get('nav a[class^="StyledLink"]')
-              .should('have.attr', 'href', appConfig[service].navigation[0].url)
-              .should('contain', appConfig[service].navigation[0].title);
+              .should(
+                'have.attr',
+                'href',
+                appConfig[service][variant].navigation[0].url,
+              )
+              .should(
+                'contain',
+                appConfig[service][variant].navigation[0].title,
+              );
             cy.get('h1')
               .should('have.lengthOf', 1)
               .should('have.attr', 'id', 'content');
@@ -293,16 +304,16 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .eq(0)
           .should(
             'contain',
-            appConfig[service].serviceLocalizedName !== undefined
-              ? `${appConfig[service].product}, ${appConfig[service].serviceLocalizedName}`
-              : appConfig[service].product,
+            appConfig[service][variant].serviceLocalizedName !== undefined
+              ? `${appConfig[service][variant].product}, ${appConfig[service][variant].serviceLocalizedName}`
+              : appConfig[service][variant].product,
           );
       });
 
       it('should contain copyright text', () => {
         cy.get('footer p').should(
           'contain',
-          appConfig[service].footer.copyrightText,
+          appConfig[service][variant].footer.copyrightText,
         );
       });
 
@@ -314,7 +325,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         cy.get('footer p')
           .children('a')
           .should('have.attr', 'href')
-          .and('contain', appConfig[service].footer.externalLink.href);
+          .and('contain', appConfig[service][variant].footer.externalLink.href);
       });
     });
   });

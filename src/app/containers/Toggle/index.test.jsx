@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '../../../testHelpers';
+import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import ToggleContainer from '.';
 
 jest.mock('react', () => {
@@ -35,7 +35,7 @@ describe('ToggleContainer', () => {
   });
 
   describe('should render null', () => {
-    shouldMatchSnapshot('should match snapshot', WithContext('bar'));
+    isNull('should match snapshot', WithContext('bar'));
   });
 
   describe('should render fallback component', () => {

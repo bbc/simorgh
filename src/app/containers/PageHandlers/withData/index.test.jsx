@@ -1,11 +1,16 @@
 import React from 'react';
 import {
-  shouldShallowMatchSnapshot,
+  shouldMatchSnapshot,
   suppressPropWarnings,
-} from '../../../../testHelpers';
+} from '@bbc/psammead-test-helpers';
 import { articleDataNews, articleDataPersian } from '../../Article/fixtureData';
 import WithData from '.';
-import frontPageDataPidgin from '../../../../../data/pidgin/frontpage';
+import frontPageDataPidgin from '#data/pidgin/frontpage';
+
+// eslint-disable-next-line react/prop-types
+jest.mock('../../ErrorMain', () => ({ status }) => (
+  <h1>This is a {status} error.</h1>
+));
 
 describe('withData HOC', () => {
   const Component = () => <h1>Hola</h1>;
@@ -53,7 +58,7 @@ describe('withData HOC', () => {
 
   describe('with no data', () => {
     suppressPropWarnings(['data.dials', 'undefined']);
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the errorMain component and 500 status',
       <WithDataHOC {...noDataProps} />,
     );
@@ -61,20 +66,20 @@ describe('withData HOC', () => {
 
   describe('with missing pageData', () => {
     suppressPropWarnings(['data.pageData', 'undefined']);
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the errorMain component',
       <WithDataHOC {...noAssetData} />,
     );
   });
 
   describe('with valid articles data', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the passed in component',
       <WithDataHOC {...validNewsProps} />,
     );
 
     describe('but different home service other than locale service', () => {
-      shouldShallowMatchSnapshot(
+      shouldMatchSnapshot(
         'should return the errorMain component',
         <WithDataHOC {...validPersianProps} />,
       );
@@ -82,14 +87,14 @@ describe('withData HOC', () => {
   });
 
   describe('with valid front-pages data', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the passed in component',
       <WithDataHOC {...validFrontPagesProps} />,
     );
   });
 
   describe('with non 200 status', () => {
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should return the errorMain component',
       <WithDataHOC {...non200StatusProps} />,
     );
