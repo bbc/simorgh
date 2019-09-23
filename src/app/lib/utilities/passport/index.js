@@ -22,10 +22,12 @@ export const isValidPassportHome = (
 ) => {
   if (!passportHome && !(passportHomesOverride || []).length) return true;
 
+  const passportHomeLower = (passportHome || '').toLowerCase();
+
   return (
-    (passportHome || '').toLowerCase() === (service || '').toLowerCase() ||
+    passportHomeLower === service ||
     (passportHomesOverride || []).some(
-      home => (home || '').toLowerCase() === (passportHome || '').toLowerCase(),
+      home => (home || '').toLowerCase() === passportHomeLower,
     )
   );
 };
