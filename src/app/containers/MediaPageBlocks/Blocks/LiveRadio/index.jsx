@@ -7,6 +7,7 @@ import {
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
 import { RequestContext } from '#contexts/RequestContext';
+import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
 
 const MediaPlayerOuterWrapper = styled.div`
   @media (min-width: 63rem) {
@@ -22,7 +23,15 @@ const MediaPlayerInnerWrapper = styled.div`
 `;
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
-  const { platform } = useContext(RequestContext);
+  const { platform, origin } = useContext(RequestContext);
+  const isAmp = platform === 'amp';
+
+  const embedSource = embedUrl({
+    assetId: `${externalId}/${id}`,
+    type: 'media',
+    isAmp,
+    origin,
+  });
 
   const MediaPlayer = {
     canonical: CanonicalMediaPlayer,
@@ -36,7 +45,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
       <MediaPlayerInnerWrapper>
         <MediaPlayer
           showPlaceholder={false}
-          src={`/ws/av-embeds/media/${externalId}/${id}`}
+          src={embedSource}
           id={idAttr}
           skin="audio"
         />

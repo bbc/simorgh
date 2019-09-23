@@ -120,7 +120,7 @@ exports[`Media Page Blocks should match snapshot 1`] = `
           allowfullscreen=""
           class="c5"
           scrolling="no"
-          src="/ws/av-embeds/media/bbc_amharic_radio/liveradio"
+          src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio"
         />
       </div>
     </div>
