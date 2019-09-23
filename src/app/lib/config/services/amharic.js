@@ -144,7 +144,7 @@ const service = {
           text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
         },
         {
-          href: 'https://www.bbc.com//usingthebbc/terms/',
+          href: 'https://www.bbc.com/usingthebbc/terms/',
           text: 'የአጠቃቀም ደንብ',
         },
         {
