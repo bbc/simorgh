@@ -118,7 +118,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.5.5",
     "@bbc/apache2-license-checker": "^1.1.4",
-    "@bbc/psammead-storybook-helpers": "^6.0.1",
+    "@bbc/psammead-storybook-helpers": "^6.0.3",
     "@bbc/psammead-test-helpers": "^3.0.2",
     "@storybook/addon-knobs": "^5.1.11",
     "@storybook/react": "^5.1.11",
