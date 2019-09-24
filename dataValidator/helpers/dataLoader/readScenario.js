@@ -20,7 +20,7 @@ const readScenario = (fileName, dirName) => {
     'frontpage',
     'most',
     'mediaAssetPage',
-    'fix',
+    'feature_index',
   ];
 
   if (!ignoreDirs.includes(fileName)) {
