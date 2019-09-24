@@ -7,7 +7,7 @@ import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 import variantPropType from '../../models/propTypes/variants';
 
-export const RequestContext = React.createContext('default');
+export const RequestContext = React.createContext({});
 
 export const RequestContextProvider = ({
   children,
