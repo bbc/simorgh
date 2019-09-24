@@ -142,7 +142,7 @@ const service = {
       links: [
         {
           href: 'https://www.bbc.com/japanese/help-49677253',
-          text: 'BBCが信頼できる理由',
+          text: 'BBCニュースが信頼できる理由',
         },
         {
           href: 'https://www.bbc.com/japanese/help/terms',
