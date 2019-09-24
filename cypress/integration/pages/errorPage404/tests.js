@@ -41,15 +41,19 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
-      it(`should display a ${appConfig[service][variant].translations.error[404].statusCode} error message on screen`, () => {
+      it(`should display h1 with attributes id and tabindex and an error message '${appConfig[service][variant].translations.error[404].statusCode}' on screen`, () => {
         cy.get('h1 span').should(
           'contain',
           `${appConfig[service][variant].translations.error[404].statusCode}`,
         );
-        cy.get('h1').should(
-          'contain',
-          `${appConfig[service][variant].translations.error[404].title}`,
-        );
+        cy.get('h1')
+          .should('have.lengthOf', 1)
+          .should('have.attr', 'id', 'content')
+          .should('have.attr', 'tabindex', '-1')
+          .should(
+            'contain',
+            `${appConfig[service][variant].translations.error[404].title}`,
+          );
       });
 
       it('should have an inline link on the page that is linked to the home page', () => {

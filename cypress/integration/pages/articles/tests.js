@@ -94,14 +94,18 @@ export const testsThatFollowSmokeTestConfig = ({
     });
 
     describe(`Article Body`, () => {
-      it('should render a H1, which contains/displays a styled headline', () => {
+      it('should render a H1 which has attrs `id` and `tabindex` and displays a styled headline', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             const headlineData = getBlockData('headline', body);
-            cy.get('h1').should(
-              'contain',
-              headlineData.model.blocks[0].model.blocks[0].model.text,
-            );
+            cy.get('h1')
+              .should('have.lengthOf', 1)
+              .should('have.attr', 'id', 'content')
+              .should('have.attr', 'tabindex', '-1')
+              .should(
+                'contain',
+                headlineData.model.blocks[0].model.blocks[0].model.text,
+              );
           },
         );
       });

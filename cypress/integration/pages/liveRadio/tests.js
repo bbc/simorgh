@@ -10,11 +10,15 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Live Radio body', () => {
-      it('should render a H1, which contains/displays a styled headline', () => {
+      it('should render a H1 which has attrs `id` and `tabindex` and displays a styled headline', () => {
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
             const [{ text: headline }] = body.content.blocks;
-            cy.get('h1').should('contain', headline);
+            cy.get('h1')
+              .should('have.lengthOf', 1)
+              .should('have.attr', 'id', 'content')
+              .should('have.attr', 'tabindex', '-1')
+              .should('contain', headline);
           },
         );
       });
