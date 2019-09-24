@@ -10,7 +10,7 @@ const service = {
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: `th`,
     articleAuthor: `https://www.facebook.com/BBCThai`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'ปรับปรุงแล้ว',
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
     brandName: 'BBC News บีบีซีไทย',
@@ -19,12 +19,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
     defaultImageAltText: 'BBC News บีบีซีไทย',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ' ลิงก์จากภายนอก',
+    imageCaptionOffscreenText: 'คำบรรยายภาพ ',
+    videoCaptionOffscreenText: 'คำบรรยายวิดีโอ ',
+    audioCaptionOffscreenText: 'คำบรรยายเสียง ',
+    defaultCaptionOffscreenText: 'คำบรรยาย ',
+    imageCopyrightOffscreenText: 'ที่มาของภาพ ',
     locale: `th-TH`,
     datetimeLocale: 'th',
     service: 'thai',
@@ -47,32 +47,34 @@ const service = {
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
-      relatedContent: 'Related content',
+      relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - ไม่พบหน้าเว็บ',
-          message: 'กรุุณาตรวจสอบ URL และตัวสะกด อาจมีการพิมพ์ไม่ถูกต้อง',
+          title: 'ไม่พบเนื้อหา',
+          message:
+            'ขออภัย เราไม่สามารถแสดงเนื้อหาที่คุณกำลังค้นหาได้ กรุณาลอง:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'ตรวจสอบชื่อเว็บไซต์ ',
+            'กดปุ่มรีเฟรชในบราวเซอร์ของคุณ',
+            'ค้นหาหน้านี้โดยใช้แถบค้นหาของ บีบีซี',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'หน้าหลัก บีบีซีนิวส์',
+          callToActionFirst: 'กรุณาเข้าไปที่โฮมเพจของ ',
+          callToActionLinkText: 'บีบีซีไทย',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/thai',
         },
         500: {
           statusCode: '500',
-          title: '500 - เกิดความผิดพลาด',
-          message: 'เกิดความผิดพลาด กรุณารีเฟรชหน้าเว็บใหม่',
+          title: 'เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์ ',
+          message:
+            'ขออภัย เราไม่สามารถแสดงเนื้อหาที่คุณกำลังค้นหาได้ กรุณาลอง:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'กดปุ่มรีเฟรชในบราวเซอร์ของคุณ',
+            'กลับเข้ามาใหม่ในภายหลัง',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'หน้าหลัก บีบีซีนิวส์',
+          callToActionFirst: 'กรุณาเข้าไปที่โฮมเพจของ ',
+          callToActionLinkText: 'บีบีซีไทย',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/thai',
         },
@@ -104,8 +106,8 @@ const service = {
           title: 'กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์',
           description: {
             uk: {
-              first: 'เราใช้',
-              linkText: ' คุกกีส์',
+              first: 'เราใช้ ',
+              linkText: 'คุกกีส์',
               last:
                 ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
               linkUrl:
@@ -179,7 +181,11 @@ const service = {
         },
         {
           href: 'https://www.bbc.com/thai/institutional-38403477',
-          text: 'เงื่อนไขการใช้เว็บไซต์',
+          text: 'เงื่อนไขการใช้งานของ BBC',
+        },
+        {
+          href: 'https://www.bbc.com/thai/institutional-38403476',
+          text: 'เกี่ยวกับบีบีซี',
         },
         {
           href: 'https://www.bbc.com/thai/institutional-38497681',
@@ -195,7 +201,7 @@ const service = {
         },
       ],
       copyrightText:
-        'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. ',
+        'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.',
     },
     fonts: [],
     timezone: 'Asia/Bangkok',
