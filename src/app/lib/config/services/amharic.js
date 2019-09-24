@@ -11,7 +11,7 @@ const service = {
   default: {
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnewsamharic`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'ተሻሽሏል ',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
     brandName: 'BBC News አማርኛ',
@@ -19,12 +19,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png',
     defaultImageAltText: 'BBC News አማርኛ',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', ውጫዊ',
+    imageCaptionOffscreenText: 'የምስሉ መግለጫ ',
+    videoCaptionOffscreenText: 'የተንቀሳቃሹ ምስል መግለጫ ',
+    audioCaptionOffscreenText: 'የድምፅ መግለጫ ',
+    defaultCaptionOffscreenText: 'መግለጫ, ',
+    imageCopyrightOffscreenText: 'የፎቶው ባለመብት, ',
     locale: `am-ET`,
     datetimeLocale: 'am-et',
     service: 'amharic',
@@ -43,10 +43,11 @@ const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      seeAll: 'ሁሉንም ይመልከቱ',
       home: 'ዜና',
-      currentPage: 'Current page',
+      currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
-      relatedContent: 'Related content',
+      relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       error: {
         404: {
           statusCode: '404',
@@ -58,8 +59,8 @@ const service = {
             'የቢቢሲን መፈለጊያ ቁልፍ በመጠቀም ይፈልጉ',
           ],
           callToActionFirst: 'እንደ አማራጭም እባክዎ ገፃችን ላይ የሚገኘውን ',
-          callToActionLinkText: 'BBC News አማርኛ ድረገፅ ይጎብኙ',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News አማርኛ',
+          callToActionLast: ' ድረገፅ ይጎብኙ',
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },
         500: {
@@ -68,8 +69,8 @@ const service = {
           message: 'የሚፈልጉትን ገፅ ማምጣት ባለመቻላችን እናዝናለን። እባክዎ እንደገና ይሞክሩ',
           solutions: ['በገፅዎ ላይ ያለውን ሪፍሬሽ የሚለውን ቁልፍ ይጫኑ', 'እንደገና ይመለሱ'],
           callToActionFirst: 'እንደ አማራጭም እባክዎ ገፃችን ላይ የሚገኘውን ',
-          callToActionLinkText: 'BBC News አማርኛ ድረገፅ ይጎብኙ',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News አማርኛ',
+          callToActionLast: ' ድረገፅ ይጎብኙ',
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },
       },
@@ -79,7 +80,7 @@ const service = {
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ጠቃሚ ለውጦችን አድርገናል። ለርስዎም ሆን በመረጃዎች ላይ ለውጦቹ ምን ማለት እንደሆኑ እንዲያውቁ እንፈልጋለን።',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -100,18 +101,17 @@ const service = {
           title: 'ኩኪዎችን መጠቀም ላይ መስማማትዎን ያሳውቁን',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
-              last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              first: 'ለርስዎ ',
+              linkText: 'የምናቀርበውን አገልግሎት ለማሻሻል በማሰብ ኩኪዎችን',
+              last: ' እንጠቀማለን። ኩኪዎችን መጠቀም ላይ መስማማትዎን እባክዎ ያሳውቁን.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'እኛም ሆን ቴክኖሎጂያችንን የሚጠቀሙ አጋሮቻችን ለምሳሌም  ',
+              first: 'እኛም ሆን ቴክኖሎጂያችንን የሚጠቀሙ አጋሮቻችን ለምሳሌም ',
               linkText: 'ኩኪዎችን የምንጠቀመው',
               last:
-                ', ና መረጃዎችንም የምንሰብስበው የሚፈልጓቸውን መረጃዎችና ማስታወቂያዎች ቅድሚያ እንዲያገኙዋቸው በማሰብና አግልግሎታችንም የተሻለ እንዲሆን ነው።እባክዎ መስማማትዎን ያሳውቁን።',
+                ', ና መረጃዎችንም የምንሰብስበው የሚፈልጓቸውን መረጃዎችና ማስታወቂያዎች ቅድሚያ እንዲያገኙዋቸው በማሰብና አግልግሎታችንም የተሻለ እንዲሆን ነው።እባክዎ መስማማትዎን ያሳውቁን',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -124,8 +124,8 @@ const service = {
       },
       media: {
         audio: 'ድምጽ',
-        photogallery: 'የምስል ቋት',
-        video: 'ተንቀሳቃሽ ምስል',
+        photogallery: 'የፎቶ መድብሎች',
+        video: 'ቪዲዮ',
       },
     },
     brandSVG,
@@ -136,19 +136,23 @@ const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ፡፡',
+        text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/amharic/institutional-49283133',
           text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/usingthebbc/terms/',
           text: 'የአጠቃቀም ደንብ',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/aboutthebbc',
+          text: 'ስለ ቢቢሲ',
+        },
+        {
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'የፕራይቬሲ ፖሊሲ',
         },
         {
@@ -156,11 +160,11 @@ const service = {
           text: 'ኩኪዎች',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/amharic/institutional-42228117',
           text: 'ቢቢሲን ያግኙ',
         },
       ],
-      copyrightText: 'BBC፡፡ ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም፡፡',
+      copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
     },
     fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [
