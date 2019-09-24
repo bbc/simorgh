@@ -9,7 +9,7 @@ export const service = {
   default: {
     lang: 'pcm',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'New Informate',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
     brandName: 'BBC News Pidgin',
@@ -24,6 +24,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
     defaultImageAltText: 'BBC News Pidgin',
     dir: 'ltr',
+    externalLinkText: ', outside',
+    imageCaptionOffscreenText: 'Wetin we call dis foto, ',
+    videoCaptionOffscreenText: 'Wetin we call dis Video, ',
+    audioCaptionOffscreenText: 'Wetin we call dis Audio, ',
+    defaultCaptionOffscreenText: 'Wetin we call am, ',
+    imageCopyrightOffscreenText: 'Wia dis foto come from, ',
     brandSVG,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -44,7 +50,7 @@ export const service = {
       home: 'Home',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
-      relatedContent: 'Related content',
+      relatedContent: 'Another thing we de for inside dis tori',
       error: {
         404: {
           statusCode: '404',
@@ -190,6 +196,10 @@ export const service = {
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'How dem dey take use am',
+        },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'As e concern BBC',
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',

@@ -8,7 +8,7 @@ export const service = {
   default: {
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Waa la cusbooneysiiyay',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     brandName: 'BBC News Somali',
@@ -17,12 +17,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', bogag kale',
+    imageCaptionOffscreenText: 'Qoraalka sawirka ',
+    videoCaptionOffscreenText: 'Qoraalka Muuqaalka ',
+    audioCaptionOffscreenText: 'Qoralka Codka ',
+    defaultCaptionOffscreenText: 'Qoraal ',
+    imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
     datetimeLocale: `so-so`,
     service: 'somali',
@@ -41,93 +41,97 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'Arag dhammaan',
       home: 'War',
-      currentPage: 'Current page',
+      currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
-      relatedContent: 'Related content',
+      relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Boggan lama hayo',
+          title: 'Bogga lama heli karo',
           message:
-            'Waxaa dhici karta inaad cinwaanka web-ka khalad u qortay. Fadlan hubi cinwaanka iyo hingaadda',
+            'Waan ka xunnahay, ma awoodno inaan kuu soo gudbino bogga aad raadineyso. Fadlan iskuday.',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'iska xaqiiji url-ka ama linkiga',
+            'Guji batanka cusbooneysiinta ee boggaaga',
+            'Boggan wax k raadi adigoo adeegsanaya hanaanka raadinta ee BBC',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'Bogga hore ee wararka BBC-da',
+          callToActionFirst: 'Taa bedelkeeda, fadlan booqo bogga hore ee ',
+          callToActionLinkText: 'BBC News Somali',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/somali',
         },
         500: {
           statusCode: '500',
-          title: '500 - Khalad',
-          message: 'Khalad ayaa dhacay. Fadlan bogga cusbooneysii',
+          title: 'Khalad ka dhacy gudaha server-ka',
+          message:
+            'Waan ka xunnahay, hadda ma awoodno inaan kuu soo gudbinno bogga aad raadineyso. Fadlan iskuday:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Guji batanka cusbooneysiinta ee boggaaga',
+            'Markale dib ugu soo noqo',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'Bogga hore ee wararka BBC-da',
+          callToActionFirst: 'Taa bedelkeeda, fadlan booqo bogga hore ee ',
+          callToActionLinkText: 'BBC News Somali',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/somali',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title:
+            'Waan cusbooneysiinay shuruucdeena la xiriirta xogta gaarka ah iyo Cookies-ka',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Waxaa isbedel muhiim ah ku sameynay Shuruucda Xogta gaarka ah iyo qoraallada kooban waxaana dooneynaa in aad ogaato waxa ay arrinta kaaga dhigan tahay adiga iyo xogtaada.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Waxaa isbedel muhiim ah ku sameynay Shuruucda Xogta gaarka ah iyo qoraallada kooban waxaana dooneynaa in aad ogaato waxa ay arrinta kaaga dhigan tahay adiga iyo xogtaada.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'HAYE',
+          reject: 'Ogow waxa isbedelay',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title:
+            'Aan ogaano in aad aqbashay qoraallada dheeriga ah ee cookies-ka',
           description: {
             uk: {
-              first: 'We use ',
+              first: 'Waxaan isticmaaleynaa lifaaq ',
               linkText: 'cookies',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' si aad nooga heshid khibradda ugu wanaagsan ee adeegsiga intarnet-ka. Fadlan aan ogaano haddii aad ogolaatay dhammaan cookies-kan.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
+              first:
+                'Anaga iyo baraha aan ollogga nahay waxaan adeegsanaa teknolijiyad sida ',
               linkText: 'cookies',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ', waxaana uruurinaa xogt booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gar kuu ah. Fadlan aan ogaano haddii aad oggoshahay.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Haa, waan ogolaaday',
+          reject: 'Maya, igee settings-ka',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
         audio: 'Maqal',
-        photogallery: 'Sawirro',
+        photogallery: 'Albamka sawirrada',
         video: 'Muuqaal',
         bbc_somali_radio: {
           title: 'Raadiyaha BBC Soomaali',
@@ -149,32 +153,36 @@ export const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.',
       },
       links: [
         {
           href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          text: 'Sababta aada ku aamini kartid BBC News',
         },
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/somali/hayadeed-37098011',
+          text: 'Shuruucda isticmaalka',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/somali/hayadeed-37098081',
+          text: 'Ku saabsan BBC',
+        },
+        {
+          href: 'https://www.bbc.com/somali/hayadeed-37098082',
+          text: 'Shuruucda xogta gaarka ah',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/somali/hayadeed-37098613',
+          text: 'La xiriir BBC',
         },
       ],
       copyrightText:
-        "BBC. BBC-du mas'uul kama aha sugnaansha macluumaadka ka yimaad website kale ee debadda",
+        'BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
     },
     fonts: [],
     timezone: 'Africa/Mogadishu',

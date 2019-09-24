@@ -8,7 +8,7 @@ export const service = {
   default: {
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Diperbarui',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     brandName: 'BBC News Indonesia',
@@ -17,12 +17,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
     defaultImageAltText: 'BBC News Indonesia',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', eksternal',
+    imageCaptionOffscreenText: 'Keterangan gambar, ',
+    videoCaptionOffscreenText: 'Keterangan video, ',
+    audioCaptionOffscreenText: 'Keterangan audio,',
+    defaultCaptionOffscreenText: 'Keterangan, ',
+    imageCopyrightOffscreenText: 'Sumber gambar, ',
     locale: `id-ID`,
     datetimeLocale: `id-id`,
     service: 'indonesia',
@@ -43,9 +43,9 @@ export const service = {
     translations: {
       seeAll: 'Lihat semua',
       home: 'Berita',
-      currentPage: 'Current page',
+      currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
-      relatedContent: 'Related content',
+      relatedContent: 'Berita terkait',
       error: {
         404: {
           statusCode: '404',
@@ -58,7 +58,7 @@ export const service = {
             'Cari halaman ini dengan menggunakan tombol pencari di BBC',
           ],
           callToActionFirst: 'Sebagai alternatif, coba klik ',
-          callToActionLinkText: 'Berita.',
+          callToActionLinkText: 'BBC News Indonesia.',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/indonesia',
         },
@@ -72,7 +72,7 @@ export const service = {
             'Telusuri lagi nanti',
           ],
           callToActionFirst: 'Sebagai alternatif, coba klik ',
-          callToActionLinkText: 'Berita.',
+          callToActionLinkText: 'BBC News Indonesia.',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/indonesia',
         },
@@ -83,7 +83,7 @@ export const service = {
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Kami melakukan sejumlah perubahan penting terkait Kebijakan Privasi dan Cookies dan kami ingin memberitahu Anda, apa arti langkah ini bagi Anda dan data Anda.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -104,10 +104,10 @@ export const service = {
           title: 'Tolong beritahu kami apakah Anda setuju dengan cookies',
           description: {
             uk: {
-              first: 'We use ',
+              first: 'Kami menggunakan ',
               linkText: 'cookies',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -153,12 +153,15 @@ export const service = {
           text: 'Peraturan Penggunaan',
         },
         {
-          href: 'https://www.bbc.com/indonesia/institutional-37818425/',
+          href: 'https://www.bbc.com/indonesia/institutional-37818424',
+          text: 'Mengenai BBC',
+        },
+        {
+          href: 'https://www.bbc.com/indonesia/institutional-37818425',
           text: 'Kebijakan tentang Privasi',
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
@@ -167,7 +170,7 @@ export const service = {
         },
       ],
       copyrightText:
-        'BBC. BBC tidak bertanggung jawab atas isi situs dari luar.',
+        'BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.',
     },
     fonts: [],
     navigation: [

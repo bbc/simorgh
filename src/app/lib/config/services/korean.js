@@ -8,7 +8,7 @@ export const service = {
   default: {
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnewskorean`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: '최종 송고일',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     brandName: 'BBC News 코리아',
@@ -16,12 +16,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
     defaultImageAltText: 'BBC News 코리아',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', 외부 사이트',
+    imageCaptionOffscreenText: '사진 설명 ',
+    videoCaptionOffscreenText: '동영상 설명 ',
+    audioCaptionOffscreenText: '오디오 설명',
+    defaultCaptionOffscreenText: '설명 ',
+    imageCopyrightOffscreenText: '사진 출처 ',
     locale: `ko-KO`,
     datetimeLocale: `ko-ko`,
     service: 'korean',
@@ -42,9 +42,9 @@ export const service = {
     translations: {
       seeAll: '모든 기사 보기',
       home: '뉴스',
-      currentPage: 'Current page',
+      currentPage: '현재 페이지',
       skipLinkText: '내용으로 건너뛰기',
-      relatedContent: 'Related content',
+      relatedContent: '관련 기사 더 보기',
       error: {
         404: {
           statusCode: '404',
@@ -79,7 +79,7 @@ export const service = {
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -100,10 +100,9 @@ export const service = {
           title: '쿠키생성에 동의하시나요',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
-              last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              first: 'BBC는 이용자의 최적의 온라인 경험을 위해 ',
+              linkText: '쿠키',
+              last: ' 정보를 수집합니다. 쿠키생성에 동의하시는지 알려주세요',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -124,7 +123,7 @@ export const service = {
       },
       media: {
         audio: '오디오',
-        photogallery: '이미지 갤러리',
+        photogallery: '사진 갤러리',
         video: '비디오',
       },
     },
@@ -146,6 +145,10 @@ export const service = {
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: '이용 약관',
+        },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'BBC 소개',
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
