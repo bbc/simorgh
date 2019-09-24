@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Haaromsameera',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
     brandName: 'BBC News Afaan Oromoo',
@@ -17,12 +17,12 @@ const service = {
       'https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png',
     defaultImageAltText: 'BBC News Afaan Oromoo',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ' alaan',
+    imageCaptionOffscreenText: "Ibsa waa'ee suuraa, ",
+    videoCaptionOffscreenText: "Ibsa waa'ee viidiyoo, ",
+    audioCaptionOffscreenText: "Ibsa wa'ee raadiyoo, ",
+    defaultCaptionOffscreenText: 'Ibsa suuraa/viidiyoo, ',
+    imageCopyrightOffscreenText: 'Madda suuraa, ',
     locale: `om-ET`,
     datetimeLocale: `om-et`,
     service: 'afaanoromoo',
@@ -43,9 +43,9 @@ const service = {
     translations: {
       seeAll: 'Hunda ilaali',
       home: 'Oduu',
-      currentPage: 'Current page',
+      currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
-      relatedContent: 'Related content',
+      relatedContent: 'Odeessa kana irratti dabalata',
       error: {
         404: {
           statusCode: '404',
@@ -58,8 +58,8 @@ const service = {
             "Bo'aa barbaacha kan BBC fayyadamuun fuula kana barbaaduu",
           ],
           callToActionFirst: 'Akka filannootti, maaloo fuula duraa ',
-          callToActionLinkText: 'BBC Afaan Oromoo daawwadhu',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News Afaan Oromoo',
+          callToActionLast: ' daawwadhu',
           callToActionLinkUrl: 'https://www.bbc.com/afaanoromoo',
         },
         500: {
@@ -72,8 +72,8 @@ const service = {
             'Ammas gara boodaarra ni deebiya',
           ],
           callToActionFirst: 'Akka filannootti, maaloo fuula duraa ',
-          callToActionLinkText: 'BBC Afaan Oromoo daawwadhu',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News Afaan Oromoo',
+          callToActionLast: ' daawwadhu',
           callToActionLinkUrl: 'https://www.bbc.com/afaanoromoo',
         },
       },
@@ -83,7 +83,7 @@ const service = {
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                "Imaammata mateenyaafi kuus-yaadannoo keenyaarratti jijjirama barbaachisaa muraasa kan taasifne yoo ta'u, kunis siifi daataa keetiif maal jechu akka ta'e akka bartu barbaadna.",
               linkText: null,
               last: null,
               linkUrl: null,
@@ -104,18 +104,18 @@ const service = {
           title: 'Kuus-yaadannoo waliin waliigalu kee haa beeknu',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'Kan nuti ',
+              linkText: 'kuus-yaadannoo fayyadamnu',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'Kan nuti ',
+              first: 'Nutiifi michuuwwan keenya tekinikoota kan akka ',
               linkText: 'kuus-yaadannoo',
               last:
-                ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
+                ", akkasumas muuxannoo toora interneetaa hunda caaluufi qabiyyee isaa akka fedha dhuunfaatti ta'u gochuu akkasumallee beekssisni sitti akka mul'atuuf daataa  ittiin barbaadan walitti qaba. Yoo itti walii galta ta'e nu beeksisi maaloo.",
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -128,19 +128,19 @@ const service = {
       },
       media: {
         audio: 'Sagalee',
-        photogallery: 'Kuusaa Fakkii',
+        photogallery: 'Kuusaa suuraa',
         video: 'Viidiyoo',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
+      header: "Baay'ee kan dubbifame",
       lastUpdated: 'Yeroo dhuma kan haaromfame: ',
     },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Itti dhiyaachuu keenya gara geessituu.',
+        text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
         {
@@ -150,6 +150,10 @@ const service = {
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Haala itti fayyadamaa',
+        },
+        {
+          href: 'https://www.bbc.com/aboutthebbc',
+          text: "Waa'ee BBC",
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
@@ -164,7 +168,8 @@ const service = {
           text: 'BBC qunnami',
         },
       ],
-      copyrightText: "BBC. Qabiyyee iddoola alaatiif BBC'n itti hin gaafatamu.",
+      copyrightText:
+        "BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
     },
     fonts: [],
     navigation: [

@@ -21,12 +21,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
     defaultImageAltText: 'BBC News عربي',
     dir: 'rtl',
-    externalLinkText: '، خارجي',
-    imageCaptionOffscreenText: '،التعليق على الصورة',
-    videoCaptionOffscreenText: '،التعليق على الفيديو',
-    audioCaptionOffscreenText: '،التعليق على التسجيل السماعي',
+    externalLinkText: ' ،خارجي',
+    imageCaptionOffscreenText: ' ،التعليق على الصورة',
+    videoCaptionOffscreenText: ' ،التعليق على الفيديو',
+    audioCaptionOffscreenText: ' ،التعليق على التسجيل السماعي',
     defaultCaptionOffscreenText: '،التعليق',
-    imageCopyrightOffscreenText: '،مصدر الصورة',
+    imageCopyrightOffscreenText: ' ،مصدر الصورة',
     locale: 'ar',
     datetimeLocale: 'ar',
     service: 'arabic',
@@ -47,9 +47,9 @@ const service = {
     translations: {
       seeAll: 'See all',
       home: 'رئيسية',
-      currentPage: 'Current page',
+      currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
-      relatedContent: 'Related content',
+      relatedContent: 'المزيد حول هذه القصة',
       error: {
         404: {
           statusCode: '404',
@@ -61,8 +61,9 @@ const service = {
             'أن تنقر زر التجديد (refresh) في برنامج التصفح الذي تستخدمه',
             'أن تبحث عن هذه الصفحة باستخدام خانة البحث الخاصة ببي بي سي',
           ],
-          callToActionFirst: 'كبديل، يرجى زيارة ',
-          callToActionLinkText: 'الصفحة الرئيسية عربي لأخبار بي بي سي',
+          callToActionFirst:
+            'كبديل، يرجى زيارة الصفحة الرئيسية لأخبار بي بي سي ',
+          callToActionLinkText: 'Arabic',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/arabic',
         },
@@ -75,8 +76,9 @@ const service = {
             'أن تنقر زر التجديد (refresh) في برنامج التصفح الذي تستخدمه',
             'أن تكرر الطلب بعد فترة',
           ],
-          callToActionFirst: 'كبديل، يرجى زيارة ',
-          callToActionLinkText: 'الصفحة الرئيسية عربي لأخبار بي بي سي',
+          callToActionFirst:
+            'كبديل، يرجى زيارة الصفحة الرئيسية لأخبار بي بي سي ',
+          callToActionLinkText: 'Arabic',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/arabic',
         },
@@ -112,7 +114,7 @@ const service = {
               first: 'نستخدم ',
               linkText: 'ملفات ارتباط (كوكيز)',
               last:
-                '  لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الكوكيز.',
+                ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الكوكيز.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -133,7 +135,7 @@ const service = {
       },
       media: {
         audio: 'تسجيل صوتي',
-        photogallery: 'بالصور',
+        photogallery: 'معرض الصور',
         video: 'فيديو',
         bbc_arabic_radio: {
           title: 'إذاعة بي بي سي العربية',
@@ -154,15 +156,19 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/arabic/institutional-49283069',
           text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/arabic/institutional-37731351',
           text: 'شروط الاستخدام',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/arabic/institutional-37731352',
+          text: 'عن بي بي سي',
+        },
+        {
+          href: 'https://www.bbc.com/arabic/institutional-37731353',
           text: 'سياسة الخصوصية',
         },
         {
@@ -170,11 +176,12 @@ const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/arabic/institutional-37731355',
           text: 'اتصل بـ بي بي سي',
         },
       ],
-      copyrightText: 'بي بي سي. بي بي سي غير مسؤولة عن محتوى الروابط الخارجية',
+      copyrightText:
+        'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
     },
     fonts: [F_NASSIM_ARABIC_REGULAR, F_NASSIM_ARABIC_BOLD],
     timezone: 'GMT',
