@@ -244,6 +244,16 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         );
       });
 
+      it("should have offscreen text with product's language code set to English", () => {
+        cy.get('header a span span').should('have.attr', 'lang', 'en-GB');
+      });
+
+      it('should not set the language code for localised name', () => {
+        cy.get('header a span')
+          .eq(0)
+          .should('not.have.attr', 'lang', 'en-GB');
+      });
+
       it('should have a visible banner', () => {
         cy.get('header')
           .should('have.lengthOf', 1)
