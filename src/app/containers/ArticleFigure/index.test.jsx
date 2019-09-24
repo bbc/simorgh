@@ -38,6 +38,7 @@ describe('ArticleFigure', () => {
   });
 
   it('should render a lazyloaded image when lazyLoad set to true', () => {
+    // Render using enzyme to capture noscript contents
     const container = render(FigureLazyLoadImage);
     expect(container).toMatchSnapshot();
   });
