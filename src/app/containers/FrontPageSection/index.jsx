@@ -40,11 +40,11 @@ const FirstSectionTopMargin = styled.div`
 `;
 
 const TopMargin = styled.div`
+  margin-top: ${GEL_SPACING_DBL};
+
   ${({ oneItem }) =>
     oneItem
       ? css`
-          margin-top: ${GEL_SPACING_DBL};
-
           @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
             margin-top: ${GEL_SPACING_TRPL};
           }
@@ -54,8 +54,6 @@ const TopMargin = styled.div`
           }
         `
       : css`
-          margin-top: ${GEL_SPACING_DBL};
-
           @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
             margin-top: ${GEL_SPACING};
           }
