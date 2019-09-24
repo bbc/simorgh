@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `rw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Vyavuguruwe ',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     brandName: 'BBC News Gahuza',
@@ -16,12 +16,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',
     defaultImageAltText: 'BBC News Gahuza',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', bivuye ahandi',
+    imageCaptionOffscreenText: "Insiguro y'isanamu, ",
+    videoCaptionOffscreenText: 'Insiguro ya video, ',
+    audioCaptionOffscreenText: "Insiguro y'amajwi, ",
+    defaultCaptionOffscreenText: 'Insiguro, ',
+    imageCopyrightOffscreenText: 'Ahavuye isanamu, ',
     locale: `rw-RW`,
     datetimeLocale: `rw-rw`,
     service: 'gahuza',
@@ -42,91 +42,92 @@ const service = {
     translations: {
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
-      currentPage: 'Current page',
+      currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
-      relatedContent: 'Related content',
+      relatedContent: 'Ibindi bisa n’ibi',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Hari ikosa',
+          title: 'Urubapuro ntirwabonetse',
           message:
-            "Ibishobora kuba vyatewe n'uko wanditse nabi adresse y'urubuga",
+            'Tubabarire ntidushoboye kukuronsa urupapuro warondera. Tugusavye kugerageza:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'Turi kugenzura umuhora ulr',
+            'Gufyonda ubuto refresh mu buryo bwawe bwa internet',
+            'Kurondera uru rupapuro uciye mu buryo bwa BBC bwo kurondera',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Gahuza',
+          callToActionFirst: "Nk'ubundi buryo, tugusavye kuja kuri ",
+          callToActionLinkText: 'BBC News Gahuza',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/gahuza',
         },
         500: {
           statusCode: '500',
-          title: '500 - Ikosa',
-          message: 'Habaye ikosa, subire utanguze',
+          title: "Ikibazo c'ubuhinga bwacu",
+          message:
+            'Tubabarire ntidushoboye kukuronsa urupapuro warondera. Tugusavye kugerageza:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Gufyonda ubuto refresh mu buryo bwawe bwa internet',
+            'Uragaruka hanyuma',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Gahuza',
+          callToActionFirst: "Nk'ubundi buryo, tugusavye kuja kuri ",
+          callToActionLinkText: 'BBC News Gahuza',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/gahuza',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: "Twaravuguriye ibijanye n'ubuzima bwite n'ibigenga Cookies",
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                "Twaragize ivyo duhindura ngirakamaro ku buzima bwite n'ibigenga Cookies kandi dushaka ko umenya ico ibi bisigura kuri wewe n'ibikuranga utanga",
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                "Twaragize ivyo duhindura ngirakamaro ku buzima bwite n'ibigenga Cookies kandi dushaka ko umenya ico ibi bisigura kuri wewe n'ibikuranga utanga",
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
           accept: 'OK',
-          reject: "Find out what's changed",
+          reject: 'Menya ivyahindutse',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Tumenyesha niba wemeye cookies',
           description: {
             uk: {
-              first: 'We use ',
+              first: 'Dukoresha ',
               linkText: 'cookies',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' kugira woroherwe bishoboka kuri internet. Tugusavye kutumenyesha niba wemeye ibi vyose bijanye na cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
+              first: "Twebwe n'abo dukorana dukoresha ikoranabuhinga, nka ",
               linkText: 'cookies',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ", kandi tugatororokanya amakuru y'ibikorerwa kuri internet kugira tugufashe kworoherwa cane hamwe no kwihitiramwo ivyo uraba hamwe n'abarata ibidandazwa ushaka kubona. Tugusavye kutumenyesha ko uvyemeye.",
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Ego, ndavyemeye',
+          reject: 'Oya, njana aho bihindurirwa',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
-        audio: 'Amajwi',
-        photogallery: "Urukurikirane rw'amasamu",
+        audio: 'Umviriza',
+        photogallery: 'Amasanamu',
         video: 'Video',
         bbc_gahuza_radio: {
           title: 'Radio BBC Gahuza',
@@ -143,31 +144,35 @@ const service = {
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          href: 'https://www.bbc.com/gahuza/institutional-49283343',
+          text: 'Igituma ushobora kwizera BBC News',
         },
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/gahuza/institutional-35754053',
+          text: 'Ingingo zo gukoresha urubuga',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/gahuza/institutional-35754055',
+          text: 'Ibijanye na BBC',
+        },
+        {
+          href: 'https://www.bbc.com/gahuza/institutional-35754059',
+          text: "Ibigenga n'ubuzima bwite",
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/gahuza/institutional-35754061',
+          text: 'Vugana na BBC',
         },
       ],
-      copyrightText: 'BBC. BBC ntibazwa ibivuye mu mguga zitari izayo',
+      copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',
     },
     fonts: [],
     timezone: 'GMT',
