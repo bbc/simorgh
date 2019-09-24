@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { tigrinya as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_NOTO_SANS_ETHIOPIC_BOLD,
@@ -11,7 +11,7 @@ const service = {
   default: {
     lang: `ti`,
     articleAuthor: `https://www.facebook.com/bbcnewstigrinya`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'ዝተመሓየሸ',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     brandName: 'BBC News ትግርኛ',
@@ -19,12 +19,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
     defaultImageAltText: 'BBC News ትግርኛ',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ' ደጋዊ',
+    imageCaptionOffscreenText: 'መግለጺ ስእሊ, ',
+    videoCaptionOffscreenText: 'መግለጺ ቪድዮ, ',
+    audioCaptionOffscreenText: 'መግለጺ ድምጺ, ',
+    defaultCaptionOffscreenText: 'መግለጺ, ',
+    imageCopyrightOffscreenText: 'ምንጪ ስእሊ, ',
     locale: `ti-ET`,
     datetimeLocale: `ti-et`,
     service: 'tigrinya',
@@ -34,7 +34,7 @@ const service = {
     twitterSite: '@bbcafrica',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
@@ -43,11 +43,11 @@ const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'ኩሉ ረኣይ',
       home: 'ዜና',
-      currentPage: 'Current page',
-      skipLinkText: 'እቲ ትሕዝቶ ዝለል',
-      relatedContent: 'Related content',
+      currentPage: 'ህሉው ገጽ',
+      skipLinkText: 'ናብቲ ትሕዝቶ ቀጽል',
+      relatedContent: 'ተዛማዲ ትሕዝቶ',
       error: {
         404: {
           statusCode: '404',
@@ -111,7 +111,7 @@ const service = {
               first: 'ንሕና ኾነ መሻርኽትና ከም ',
               linkText: 'ኩኪታት',
               last:
-                'ዝኣመሰሉ ቴክኖሎጂ ተጠቒምና፡ ነቲ ናትኩም ናይ ኣለሻ ዴታ ብምውህላል ንዓኹም ኣገዳሲ ክኸውን ዝኽእል ትሕዝቶ ወይ መወዓውዒ ንክነርእየኩም ንጥቀመሉ። እንተድኣተሰማሚዕኩም ኣፍልጡና።',
+                ' ዝኣመሰሉ ቴክኖሎጂ ተጠቒምና፡ ነቲ ናትኩም ናይ ኣለሻ ዴታ ብምውህላል ንዓኹም ኣገዳሲ ክኸውን ዝኽእል ትሕዝቶ ወይ መወዓውዒ ንክነርእየኩም ንጥቀመሉ። እንተድኣተሰማሚዕኩም ኣፍልጡና።',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -124,14 +124,14 @@ const service = {
       },
       media: {
         audio: 'ድምፂ',
-        photogallery: 'ማህደረ-ምስሊ',
+        photogallery: 'ስእልታት',
         video: 'ቪድዮ',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'ብበዝሒ ዝተነበበ',
+      lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ: ',
     },
     footer: {
       externalLink: {
@@ -140,27 +140,31 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/tigrinya/institutional-49283259',
           text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'ውዕሊ ኣጠቓቕማ',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'ብዛዕባ ቢቢሲ',
+        },
+        {
+          href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
           text: 'ናይ ምሽጥራውነት ፖሊሲ',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
           text: 'ኩኪታት',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/tigrinya/institutional-42228875',
           text: 'ንቢቢሲ የዛርቡ',
         },
       ],
-      copyrightText: '© 2019 BBC. ቢቢሲ ንናይ ደገ መርበብ ሓበሬታታት ሓላፍነት ኣይወስድን.',
+      copyrightText: 'BBC. ቢቢሲ ንናይ ደገ መርበብ ሓበሬታታት ሓላፍነት ኣይወስድን.',
     },
     fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [

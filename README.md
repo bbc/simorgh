@@ -324,7 +324,7 @@ CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true npm run build && npm ru
 ```
 
 CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.
-CYPRESS_SMOKE can be true or false. It is false by default and runs a specific subset of tests.
+CYPRESS_SMOKE can be true or false. It is true by default and runs a specific subset of tests.
 
 ### Lighthouse Best Practice tests
 

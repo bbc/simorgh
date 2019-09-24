@@ -1,5 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 
@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbckyrgyz`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
     brandName: 'BBC News Кыргыз КызMATы',
@@ -16,12 +16,12 @@ const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
     defaultImageAltText: 'BBC News Кыргыз КызMATы',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', Би-Би-Сиден тышкары баракча',
+    imageCaptionOffscreenText: 'Сүрөттүн түшүндүрмөсү, ',
+    videoCaptionOffscreenText: 'Видеонун түшүндүрмөсү, ',
+    audioCaptionOffscreenText: 'Аудионун түшүндүрмөсү, ',
+    defaultCaptionOffscreenText: 'Түшүндүрмө, ',
+    imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
     locale: `ky-KG`,
     datetimeLocale: `ky-kg`,
     service: 'kyrgyz',
@@ -31,7 +31,7 @@ const service = {
     twitterSite: '@bbckyrgyz',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Башталгыч бет',
@@ -40,93 +40,94 @@ const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'Баарын көрүү',
       home: 'Башталгыч бет',
-      currentPage: 'Current page',
+      currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
-      relatedContent: 'Related content',
+      relatedContent: 'Тема боюнча башка макалалар',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Барак табылган жок',
+          title: 'Баракча табылган жок',
           message:
-            'Бул веб-даректи туура эмес тергенден келип чыгышы мүмкүн. Даректи жана анын жазылышын текшерип көрүңүз.',
+            'Кечиресиз, сиз тандаган баракча ачылган жок. Кайра кириңиз:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'Баракчанын дарегин текшериңиз',
+            'Браузердеги жаңылоо баскычын басыңыз',
+            'Баракчаны издөө аянтчадан табыңыз',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Башкы бет',
-          callToActionLast: '',
+          callToActionFirst: 'Анын ордуна ',
+          callToActionLinkText: 'BBC News Кыргыз Кызматы',
+          callToActionLast: ' баракчабызга кириңиз',
           callToActionLinkUrl: 'https://www.bbc.com/kyrgyz',
         },
         500: {
           statusCode: '500',
-          title: '500 - Ката',
-          message: 'Ката келип чыкты. Бетти жаңылап көрүңүз.',
+          title: 'Ички сервердеги ката',
+          message:
+            'Кечиресиз, сиз издеп жаткан баракчаны таба алган жокпуз. Кайра кириңиз:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Браузердеги жаңылоо баскычын басыңыз',
+            'Бир аздан кийин кайтып келиңиз',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Башкы бет',
-          callToActionLast: '',
+          callToActionFirst: 'Анын ордуна ',
+          callToActionLinkText: 'BBC News Кыргыз Кызматы',
+          callToActionLast: ' баракчабызга кириңиз',
           callToActionLinkUrl: 'https://www.bbc.com/kyrgyz',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'Жеке маалыматтын купуялуулугу боюнча эрежелер жаңыланды',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Жеке маалыматтын купуялуулугу боюнча эрежелер жаңыланды. Би-Би-Си жаңы эрежелер сизге кандай таасир этерин түшүндүрүп берет.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Жеке маалыматтын купуялуулугу боюнча эрежелер жаңыланды. Би-Би-Си жаңы эрежелер сизге кандай таасир этерин түшүндүрүп берет.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'ЖАРАЙТ',
+          reject: 'Кандай өзгөрүүлөр болгонун билип алыңыз.',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Өзгөрүүлөргө макулсузбу?',
           description: {
             uk: {
-              first: 'We use ',
+              first: 'Биздин сайтыбызда иштөөнү жакшыртуу үчүн ',
               linkText: 'cookies',
-              last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              last: ' колдонобуз. Cookies боюнча эрежелерге макулсузбу?',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
+              first:
+                'Биз жана өнөктөштөрүбүз сайтыбызда иштөөнү жакшыртуу үчүн ',
               linkText: 'cookies',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ' колдонуп, браузердеги маалыматты топтойт. Бул аркылуу сиз жактырган контент жана жарнамалар көрсөтүлөт. Буга макулсузбу?',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Ооба, мен макулмун',
+          reject: 'Жок, мени жөндөө баракчасына алып бар',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
         audio: 'Аудио',
-        photogallery: 'Сүрөт галереясы',
+        photogallery: 'Көз ирмем',
         video: 'Видео',
         bbc_kyrgyz_radio: {
           title: 'Би-Би-Си Кыргыз кызматынын радиосу',
@@ -142,38 +143,43 @@ const service = {
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'Эң көп окулгандар',
+      lastUpdated: 'Акыркы жаңылоо: ',
     },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
+          text: 'Эмнеге BBC News ишенсе болот?',
         },
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/kyrgyz/institutional-38157280',
+          text: 'Колдонуу эрежелери',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/kyrgyz/institutional-38157281',
+          text: 'Би-Би-Си жөнүндө',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/kyrgyz/institutional-38157282',
+          text: 'Купуялык',
+        },
+        {
+          href:
+            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/kyrgyz/institutional-38157284',
+          text: 'Би-Би-Си менен байланышыңыз',
         },
       ],
       copyrightText:
-        'Би-Би-Си. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
+        'BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
     },
     fonts: [],
     timezone: 'GMT',
