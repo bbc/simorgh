@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { renderToString } from 'react-dom/server';
 import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -13,7 +14,7 @@ const renderImage = (imageToRender, lazyLoad, fallback) =>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
         {imageToRender}
       </LazyLoad>
-      {fallback && <noscript>{imageToRender}</noscript>}
+      {fallback && <noscript>{renderToString(imageToRender)}</noscript>}
     </>
   ) : (
     imageToRender
