@@ -124,9 +124,9 @@ const service = {
         },
       },
       media: {
-        audio: 'Audio',
+        audio: '音声',
         photogallery: '写真ギャラリー',
-        video: 'Video',
+        video: 'ビデオ',
       },
     },
     brandSVG,
