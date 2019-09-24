@@ -47,9 +47,9 @@ const service = {
     translations: {
       seeAll: 'See all',
       home: 'کور پاڼه',
-      currentPage: 'Current page',
+      currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
-      relatedContent: 'Related content',
+      relatedContent: 'اسی بارے میں',
       error: {
         404: {
           statusCode: '۴۰۴',
@@ -155,27 +155,31 @@ const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
+          href: 'https://www.bbc.com/pashto/institutional-49283007',
           text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/pashto/institutional-37620701',
           text: 'د کارولو شرايط',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/pashto/institutional-37622761',
+          text: 'د بي بي سي‌ په اړه',
+        },
+        {
+          href: 'https://www.bbc.com/pashto/institutional-37622762',
           text: 'د محرميت تگلاره',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'کوکيز',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
           text: 'زموږ سره اړیکي',
         },
       ],
-      copyrightText: 'بی بی سی. بي بي سي د پردېو ویبپاڼو د محتوا مسوله نه ده',
+      copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
     },
     fonts: [F_NASSIM_PASHTO_REGULAR, F_NASSIM_PASHTO_BOLD],
     timezone: 'GMT',
