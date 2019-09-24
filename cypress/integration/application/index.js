@@ -1,6 +1,11 @@
 import config from '../../support/config/services';
 import appConfig from '../../../src/app/lib/config/services';
 
+const resetDocument = () => {
+  const doc = cy.state('document');
+  doc.body.innerHTML = '';
+};
+
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
@@ -65,4 +70,40 @@ describe('Application unknown route error pages', () => {
       });
     });
   }
+});
+
+describe('Application', () => {
+  it('renders same application after hydration', () => {
+    const win = cy.state('window');
+    delete win.createReactClass;
+
+    let pageHtml;
+    cy.request('/news/')
+      .its('body')
+      .then(html => {
+        pageHtml = html;
+        cy.state('document').write(
+          html.replace('<script src="/bundle.js"></script>', ''),
+        );
+      });
+
+    cy.get('li').should('have.length', 53);
+
+    let staticHTML;
+    cy.get('#root')
+      .invoke('html')
+      .then(html => {
+        staticHTML = html;
+      })
+      .then(resetDocument)
+      .then(() => {
+        cy.state('document').write(pageHtml);
+      });
+
+    cy.get('#root')
+      .invoke('html')
+      .then(html => {
+        expect(html).to.equal(staticHTML);
+      });
+  });
 });
