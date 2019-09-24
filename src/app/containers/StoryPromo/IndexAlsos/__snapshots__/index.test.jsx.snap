@@ -94,7 +94,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
   <h4
     class="c1"
   >
-    Related content
+    Karin bayani
   </h4>
   <ul
     class="c2"
@@ -254,7 +254,7 @@ exports[`Index Alsos should render one correctly 1`] = `
   <h4
     class="c1"
   >
-    Related content
+    Karin bayani
   </h4>
   <div
     class="c2"
