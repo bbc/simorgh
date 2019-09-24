@@ -73,37 +73,75 @@ describe('Application unknown route error pages', () => {
 });
 
 describe('Application', () => {
-  it('renders same application after hydration', () => {
-    const win = cy.state('window');
-    delete win.createReactClass;
+  beforeEach(resetDocument);
+  Object.keys(config)
+    .filter(service =>
+      ['amharic', 'gahuza', 'nepali', 'news', 'indonesia', 'yoruba'].includes(
+        service,
+      ),
+    )
+    .forEach(service => {
+      it(`${service} front page renders same application after hydration`, () => {
+        const win = cy.state('window');
+        delete win.createReactClass;
 
-    let pageHtml;
-    cy.request('/news/')
-      .its('body')
-      .then(html => {
-        pageHtml = html;
-        cy.state('document').write(
-          html.replace('<script src="/bundle.js"></script>', ''),
-        );
+        let pageHtml;
+        cy.request(`/${service}/`)
+          .its('body')
+          .then(html => {
+            pageHtml = html;
+            cy.state('document').write(
+              html.replace('<script src="/bundle.js"></script>', ''),
+            );
+          });
+
+        let staticHTML;
+        cy.get('#root')
+          .invoke('html')
+          .then(html => {
+            staticHTML = html;
+          })
+          .then(resetDocument)
+          .then(() => {
+            cy.state('document').write(pageHtml);
+          });
+
+        cy.get('#root')
+          .invoke('html')
+          .then(html => {
+            expect(html).to.equal(staticHTML);
+          });
       });
+      it(`${service} article renders same application after hydration`, () => {
+        const win = cy.state('window');
+        delete win.createReactClass;
 
-    cy.get('li').should('have.length', 53);
+        let pageHtml;
+        cy.request(`${config[service].pageTypes.articles.path}`)
+          .its('body')
+          .then(html => {
+            pageHtml = html;
+            cy.state('document').write(
+              html.replace('<script src="/bundle.js"></script>', ''),
+            );
+          });
 
-    let staticHTML;
-    cy.get('#root')
-      .invoke('html')
-      .then(html => {
-        staticHTML = html;
-      })
-      .then(resetDocument)
-      .then(() => {
-        cy.state('document').write(pageHtml);
+        let staticHTML;
+        cy.get('body')
+          .invoke('html')
+          .then(html => {
+            staticHTML = html;
+          })
+          .then(resetDocument)
+          .then(() => {
+            cy.state('document').write(pageHtml);
+          });
+
+        cy.get('body')
+          .invoke('html')
+          .then(html => {
+            expect(html).to.equal(staticHTML);
+          });
       });
-
-    cy.get('#root')
-      .invoke('html')
-      .then(html => {
-        expect(html).to.equal(staticHTML);
-      });
-  });
+    });
 });
