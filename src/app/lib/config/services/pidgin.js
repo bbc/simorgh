@@ -1,30 +1,36 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/pcm';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 
 const pidgin = {
   default: {
     lang: 'pcm',
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'New Informate',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
     brandName: 'BBC News Pidgin',
+    product: 'BBC News',
+    serviceLocalizedName: 'Pidgin',
     locale: 'pcm',
     // there is no valid ISO 639-1 code for Pidgin
     isoLang: null,
     datetimeLocale: 'pcm',
     service: 'pidgin',
     serviceName: 'Pidgin',
-    serviceLocalizedName: 'Pidgin',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
     defaultImageAltText: 'BBC News Pidgin',
     dir: 'ltr',
+    externalLinkText: ', outside',
+    imageCaptionOffscreenText: 'Wetin we call dis foto, ',
+    videoCaptionOffscreenText: 'Wetin we call dis Video, ',
+    audioCaptionOffscreenText: 'Wetin we call dis Audio, ',
+    defaultCaptionOffscreenText: 'Wetin we call am, ',
+    imageCopyrightOffscreenText: 'Wia dis foto come from, ',
     brandSVG,
-    script: latin,
+    script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
@@ -43,7 +49,7 @@ const pidgin = {
       home: 'Home',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
-      relatedContent: 'Related content',
+      relatedContent: 'Another thing we de for inside dis tori',
       error: {
         404: {
           statusCode: '404',
@@ -189,6 +195,10 @@ const pidgin = {
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'How dem dey take use am',
+        },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'As e concern BBC',
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
