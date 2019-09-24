@@ -35,7 +35,7 @@ const service = {
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ホーム',
+    frontPageTitle: '最新ニュース',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
