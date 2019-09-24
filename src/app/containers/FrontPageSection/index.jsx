@@ -1,8 +1,16 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
-import styled from 'styled-components';
-import { GEL_GROUP_CD_MIN_WIDTH } from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import styled, { css } from 'styled-components';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import pathOr from 'ramda/src/pathOr';
@@ -12,38 +20,64 @@ import groupShape from '#models/propTypes/frontPageGroup';
 import { storyItem } from '#models/propTypes/storyItem';
 import idSanitiser from '#lib/utilities/idSanitiser';
 
-const TopMargin = styled.div`
-  margin-top: ${GEL_SPACING};
+const FirstSectionTopMargin = styled.div`
+  ${({ oneItem }) =>
+    oneItem
+      ? css`
+          @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+            margin-top: ${GEL_SPACING_TRPL};
+          }
+
+          @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+            margin-top: ${GEL_SPACING_QUAD};
+          }
+        `
+      : css`
+          @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+            margin-top: ${GEL_SPACING};
+          }
+        `}
 `;
 
-// TODO this is a bodge until desktop width top stories get merged.
-//  At that point, delete TopMarginSixHundred.
-const TopMarginSixHundred = styled.div`
-  @media (min-width: ${GEL_GROUP_CD_MIN_WIDTH}rem) {
-    margin-top: ${GEL_SPACING};
-  }
+const TopMargin = styled.div`
+  ${({ oneItem }) =>
+    oneItem
+      ? css`
+          margin-top: ${GEL_SPACING_DBL};
+
+          @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+            margin-top: ${GEL_SPACING_TRPL};
+          }
+
+          @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+            margin-top: ${GEL_SPACING_QUAD};
+          }
+        `
+      : css`
+          margin-top: ${GEL_SPACING_DBL};
+
+          @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+            margin-top: ${GEL_SPACING};
+          }
+        `}
 `;
 
 // eslint-disable-next-line react/prop-types
-const MarginWrapper = ({ addMargin, as, children }) => {
-  // Conditionally add a `margin-top` to the `children`, mixing in
-  // `as` if present.
-  if (addMargin) {
-    return <TopMargin as={as}>{children}</TopMargin>;
+const MarginWrapper = ({ firstSection, oneItem, children }) => {
+  // Conditionally add a `margin-top` to the `children`.
+  if (firstSection) {
+    return (
+      <FirstSectionTopMargin oneItem={oneItem}>
+        {children}
+      </FirstSectionTopMargin>
+    );
   }
-  if (as) {
-    // TODO this is a bodge until desktop width top stories get merged.
-    //  At that point, delete the below return statement and uncomment the following.
 
-    // const AsComponent = as;
-    // return <AsComponent>{children}</AsComponent>;
-    return <TopMarginSixHundred as={as}>{children}</TopMarginSixHundred>;
+  if (oneItem) {
+    return <TopMargin oneItem={oneItem}>{children}</TopMargin>;
   }
-  // TODO this is a bodge until desktop width top stories get merged.
-  //  At that point, delete the below return statement and uncomment the following.
 
-  // return children;
-  return <TopMarginSixHundred>{children}</TopMarginSixHundred>;
+  return <TopMargin>{children}</TopMargin>;
 };
 
 const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
@@ -103,19 +137,21 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         {group.strapline.name}
       </SectionLabel>
       {items.length > 1 ? (
-        <MarginWrapper addMargin={!isFirstSection} as={StoryPromoUl}>
-          {items.map((item, index) => (
-            <StoryPromoLi key={item.id}>
-              <StoryPromoComponent
-                item={item}
-                sectionNumber={sectionNumber}
-                storyNumber={index}
-              />
-            </StoryPromoLi>
-          ))}
+        <MarginWrapper firstSection={isFirstSection}>
+          <StoryPromoUl>
+            {items.map((item, index) => (
+              <StoryPromoLi key={item.id}>
+                <StoryPromoComponent
+                  item={item}
+                  sectionNumber={sectionNumber}
+                  storyNumber={index}
+                />
+              </StoryPromoLi>
+            ))}
+          </StoryPromoUl>
         </MarginWrapper>
       ) : (
-        <MarginWrapper addMargin={!isFirstSection}>
+        <MarginWrapper firstSection={isFirstSection} oneItem>
           <StoryPromoComponent
             item={items[0]}
             sectionNumber={sectionNumber}
