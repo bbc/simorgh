@@ -34,7 +34,10 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
       it('should render article timestamp', () => {
         cy.get('time')
           .eq(0)
-          .should('exist');
+          .should('exist')
+          .should('be.visible')
+          .should('have.attr', 'datetime')
+          .should('not.be.empty');
       });
     }
   });
