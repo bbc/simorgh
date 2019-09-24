@@ -1186,7 +1186,53 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             href="/pidgin/live/tori-48591362"
                           >
                             <span
-                              role="text"
+                              aria-hidden="true"
+                              class="c21"
+                              dir="ltr"
+                            >
+                              LIVE
+                            </span>
+                            <span
+                              class="c0"
+                              lang="en-GB"
+                            >
+                              Live, 
+                            </span>
+                            Senators don begin vote for Senate President
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c22"
+                      >
+                        Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
+                      </p>
+                      <time
+                        class="c23"
+                        datetime="2019-06-11"
+                      >
+                        11 Juun 2019
+                      </time>
+                      <div
+                        class="c24"
+                        data-e2e="index-alsos"
+                      >
+                        <h4
+                          class="c0"
+                        >
+                          Ihe ndị ọzọ n'akụkọ a
+                        </h4>
+                        <ul
+                          class="c25"
+                          role="list"
+                        >
+                          <li
+                            class="c26"
+                            role="listitem"
+                          >
+                            <a
+                              class="c27"
+                              href="/pidgin/tori-48591361"
                             >
                               <span
                                 aria-hidden="true"

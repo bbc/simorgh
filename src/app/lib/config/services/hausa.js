@@ -7,7 +7,7 @@ const service = {
   default: {
     lang: `ha`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Wanda aka sabunta',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     brandName: 'BBC News Hausa',
@@ -20,7 +20,7 @@ const service = {
     imageCaptionOffscreenText: 'Bayanan hoto, ',
     videoCaptionOffscreenText: 'Bayanan bidiyo, ',
     audioCaptionOffscreenText: 'Bayanan sauti',
-    defaultCaptionOffscreenText: 'Caption, ',
+    defaultCaptionOffscreenText: 'Bayani, ',
     imageCopyrightOffscreenText: 'Asalin hoton, ',
     locale: `ha-GH`,
     datetimeLocale: `ha-gh`,
@@ -42,13 +42,13 @@ const service = {
     translations: {
       seeAll: 'Duba su baki daya',
       home: 'Labaran Duniya',
-      currentPage: 'Current page',
+      currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
-      relatedContent: 'Related content',
+      relatedContent: 'Karin bayani',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Ba za a samu wannan shafin ba',
+          title: 'Ba za a samu wannan shafin ba',
           message:
             'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
           solutions: [
@@ -63,7 +63,7 @@ const service = {
         },
         500: {
           statusCode: '500',
-          title: "500 - Matsalar na'ura",
+          title: "Matsalar na'ura",
           message:
             'Afuwa, ba za mu iya kawo maku wannan shafin da kuke nema ba. Sake gwadawa:',
           solutions: ['Sabunta shafin', 'Ziyarci shafin daga baya'],
@@ -75,56 +75,56 @@ const service = {
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: "Mun sabunta Ka'idojinmu na Tsare Sirri",
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                "Mun yi wasu sauye-sauye kan muhimman Ka'idojinmu na Tsare Sirri, muna so ku san ta yadda hakan zai shafe ku da kuma bayananku.",
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                "Mun yi wasu sauye-sauye kan muhimman Ka'idojinmu na Tsare Sirri, muna so ku san ta yadda hakan zai shafe ku da kuma bayananku.",
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'Madalla',
+          reject: 'Duba abin da ya sauya',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: "Bayyana mana idan ka amince da ka'idojin",
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'Muna amfani da ',
+              linkText: "ka'idoji",
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
-              last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              first:
+                'Mu da sauran abokan hulda muna amfani da fasaha kamar adireshin waje, sannan mu tattara wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
+              linkText: '',
+              last: '',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Eh, na gamsu',
+          reject: "A'a, ku kai ni wurin zabar tsari",
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
         audio: 'Sauti',
-        photogallery: 'Hotuna',
+        photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',
         bbc_hausa_radio: {
           title: 'BBC Hausa Rediyo',
@@ -146,27 +146,32 @@ const service = {
     footer: {
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
+          text: 'Me yasa za ka aminta da BBC',
         },
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/hausa/game-da-mu-37377086',
+          text: 'Sharudan yin amfani',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/hausa/game-da-mu-37377088',
+          text: 'Dangane da BBC',
+        },
+        {
+          href: 'https://www.bbc.com/hausa/game-da-mu-37377090',
+          text: "Ka'idojin tsare sirri",
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: "Ka'idoji",
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/hausa/game-da-mu-37377092',
+          text: 'Tuntubi BBC',
         },
       ],
-      copyrightText: 'BBC. BBC ba tada alhaki game da shafukan da ba nata ba',
+      copyrightText:
+        'BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba. ',
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',

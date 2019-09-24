@@ -2846,11 +2846,12 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
     </time>
     <div
       class="c10"
+      data-e2e="index-alsos"
     >
       <h4
         class="c11"
       >
-        Related content
+        Ihe ndị ọzọ n'akụkọ a
       </h4>
       <ul
         class="c12"
