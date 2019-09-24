@@ -11,7 +11,8 @@ const service = {
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     brandName: 'BBC News नेपाली',
-    product: 'BBC News नेपाली',
+    product: 'BBC News',
+    serviceLocalizedName: 'नेपाली',
     defaultImage:
       'https://www.bbc.co.uk/news/special/2015/newsspec_11063/nepali_1024x576.png',
     defaultImageAltText: 'BBC News नेपाली',
