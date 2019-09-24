@@ -94,7 +94,7 @@ export const testsThatFollowSmokeTestConfig = ({
     });
 
     describe(`Article Body`, () => {
-      it('should render a H1 which has attrs `id` and `tabindex` and displays a styled headline', () => {
+      it('should render a H1 which has attributes `id` and `tabindex` and displays a styled headline', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             const headlineData = getBlockData('headline', body);
