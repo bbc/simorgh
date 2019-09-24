@@ -22,7 +22,7 @@ const service = {
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
-      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/og/poster-1024x576.png',
     defaultImageAltText: 'BBC Scotland',
     dir: 'ltr',
     externalLinkText: ', external',
