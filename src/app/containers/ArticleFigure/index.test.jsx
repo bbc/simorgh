@@ -1,4 +1,4 @@
-import { mount } from 'enzyme';
+import { mount, render } from 'enzyme';
 import LazyLoad from 'react-lazyload';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
@@ -37,10 +37,10 @@ describe('ArticleFigure', () => {
     expect(Object.keys(wrapper.props()).length).toBe(7);
   });
 
-  shouldMatchSnapshot(
-    'should render a lazyloaded image when lazyLoad set to true',
-    FigureLazyLoadImage,
-  );
+  it('should render a lazyloaded image when lazyLoad set to true', () => {
+    const container = render(FigureLazyLoadImage);
+    expect(container).toMatchSnapshot();
+  });
 
   shouldMatchSnapshot('should render an image with alt text', FigureImage);
 
