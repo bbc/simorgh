@@ -162,7 +162,7 @@ const service = {
           text: "Ka'idojin tsare sirri",
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: "Ka'idoji",
         },
         {

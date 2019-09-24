@@ -171,11 +171,11 @@ const service = {
           text: 'د محرميت تگلاره',
         },
         {
-          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'کوکيز',
         },
         {
-          href: 'https://www.bbc.com/pashto/institutional-37622768',
+          href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
           text: 'زموږ سره اړیکي',
         },
       ],

@@ -1209,6 +1209,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </time>
                       <div
                         class="c24"
+                        data-e2e="index-alsos"
                       >
                         <h4
                           class="c0"

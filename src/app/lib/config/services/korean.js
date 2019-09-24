@@ -154,7 +154,7 @@ const service = {
           text: '개인정보취급방침',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
+          href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
           text: '쿠키정책',
         },
         {
