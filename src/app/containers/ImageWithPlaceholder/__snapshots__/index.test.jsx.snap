@@ -43,7 +43,9 @@ exports[`ImageWithPlaceholder should render a lazyloaded image when lazyLoad set
   <div
     class="lazyload-placeholder"
   />
-  <noscript />
+  <noscript>
+    &lt;img srcSet="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w" alt="Pauline Clayton" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg" width="640" class=""/&gt;
+  </noscript>
 </div>
 `;
 
