@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { japanese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Tokyo';
+import 'moment/locale/ja';
 
 const service = {
   default: {
@@ -35,7 +36,7 @@ const service = {
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ホーム',
+    frontPageTitle: '最新ニュース',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -124,9 +125,9 @@ const service = {
         },
       },
       media: {
-        audio: 'Audio',
+        audio: '音声',
         photogallery: '写真ギャラリー',
-        video: 'Video',
+        video: 'ビデオ',
       },
     },
     brandSVG,
@@ -142,7 +143,7 @@ const service = {
       links: [
         {
           href: 'https://www.bbc.com/japanese/help-49677253',
-          text: 'BBCが信頼できる理由',
+          text: 'BBCニュースが信頼できる理由',
         },
         {
           href: 'https://www.bbc.com/japanese/help/terms',
