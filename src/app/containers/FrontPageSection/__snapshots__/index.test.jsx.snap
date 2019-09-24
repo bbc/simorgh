@@ -231,88 +231,62 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
     Top Stories
   </SectionLabel>
   <MarginWrapper
-    addMargin={false}
-    as={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [
-          Object {
-            "role": "list",
-          },
-        ],
-        "componentStyle": ComponentStyle {
-          "componentId": "StoryPromoUl-sc-171lqjd-1",
-          "isStatic": true,
-          "rules": Array [
-            "list-style-type:none;margin:0;padding:0;",
-          ],
-        },
-        "displayName": "StoryPromoUl",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "children": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "StoryPromoUl-sc-171lqjd-1",
-        "target": "ul",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
+    firstSection={true}
   >
-    <ForwardRef(StoryPromoLi)>
-      <StoryPromoComponent
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 1 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
-            "indexImage": Object {
-              "altText": "Image Alt text 1",
-              "copyrightHolder": "Image provider 1",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image1.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 1",
-            "timestamp": 1557738768,
+    <ForwardRef(StoryPromoUl)>
+      <ForwardRef(StoryPromoLi)>
+        <StoryPromoComponent
+          item={
+            Object {
+              "headlines": Object {
+                "headline": "Top Story 1 headline",
+              },
+              "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
+              "indexImage": Object {
+                "altText": "Image Alt text 1",
+                "copyrightHolder": "Image provider 1",
+                "height": 1152,
+                "path": "/cpsprodpb/0A06/production/image1.jpg",
+                "width": 2048,
+              },
+              "locators": Object {
+                "assetUri": "https://www.bbc.co.uk",
+              },
+              "summary": "Summary text 1",
+              "timestamp": 1557738768,
+            }
           }
-        }
-        sectionNumber={0}
-        storyNumber={0}
-      />
-    </ForwardRef(StoryPromoLi)>
-    <ForwardRef(StoryPromoLi)>
-      <StoryPromoComponent
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 2 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
-            "indexImage": Object {
-              "altText": "Image Alt text 2",
-              "copyrightHolder": "Image provider 2",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image2.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 2",
-            "timestamp": 1557738768,
+          sectionNumber={0}
+          storyNumber={0}
+        />
+      </ForwardRef(StoryPromoLi)>
+      <ForwardRef(StoryPromoLi)>
+        <StoryPromoComponent
+          item={
+            Object {
+              "headlines": Object {
+                "headline": "Top Story 2 headline",
+              },
+              "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
+              "indexImage": Object {
+                "altText": "Image Alt text 2",
+                "copyrightHolder": "Image provider 2",
+                "height": 1152,
+                "path": "/cpsprodpb/0A06/production/image2.jpg",
+                "width": 2048,
+              },
+              "locators": Object {
+                "assetUri": "https://www.bbc.co.uk",
+              },
+              "summary": "Summary text 2",
+              "timestamp": 1557738768,
+            }
           }
-        }
-        sectionNumber={0}
-        storyNumber={1}
-      />
-    </ForwardRef(StoryPromoLi)>
+          sectionNumber={0}
+          storyNumber={1}
+        />
+      </ForwardRef(StoryPromoLi)>
+    </ForwardRef(StoryPromoUl)>
   </MarginWrapper>
 </section>
 `;
@@ -548,88 +522,62 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
     Top Stories
   </SectionLabel>
   <MarginWrapper
-    addMargin={true}
-    as={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [
-          Object {
-            "role": "list",
-          },
-        ],
-        "componentStyle": ComponentStyle {
-          "componentId": "StoryPromoUl-sc-171lqjd-1",
-          "isStatic": true,
-          "rules": Array [
-            "list-style-type:none;margin:0;padding:0;",
-          ],
-        },
-        "displayName": "StoryPromoUl",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "children": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "StoryPromoUl-sc-171lqjd-1",
-        "target": "ul",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
+    firstSection={false}
   >
-    <ForwardRef(StoryPromoLi)>
-      <StoryPromoComponent
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 1 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
-            "indexImage": Object {
-              "altText": "Image Alt text 1",
-              "copyrightHolder": "Image provider 1",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image1.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 1",
-            "timestamp": 1557738768,
+    <ForwardRef(StoryPromoUl)>
+      <ForwardRef(StoryPromoLi)>
+        <StoryPromoComponent
+          item={
+            Object {
+              "headlines": Object {
+                "headline": "Top Story 1 headline",
+              },
+              "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
+              "indexImage": Object {
+                "altText": "Image Alt text 1",
+                "copyrightHolder": "Image provider 1",
+                "height": 1152,
+                "path": "/cpsprodpb/0A06/production/image1.jpg",
+                "width": 2048,
+              },
+              "locators": Object {
+                "assetUri": "https://www.bbc.co.uk",
+              },
+              "summary": "Summary text 1",
+              "timestamp": 1557738768,
+            }
           }
-        }
-        sectionNumber={2}
-        storyNumber={0}
-      />
-    </ForwardRef(StoryPromoLi)>
-    <ForwardRef(StoryPromoLi)>
-      <StoryPromoComponent
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 2 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
-            "indexImage": Object {
-              "altText": "Image Alt text 2",
-              "copyrightHolder": "Image provider 2",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image2.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 2",
-            "timestamp": 1557738768,
+          sectionNumber={2}
+          storyNumber={0}
+        />
+      </ForwardRef(StoryPromoLi)>
+      <ForwardRef(StoryPromoLi)>
+        <StoryPromoComponent
+          item={
+            Object {
+              "headlines": Object {
+                "headline": "Top Story 2 headline",
+              },
+              "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
+              "indexImage": Object {
+                "altText": "Image Alt text 2",
+                "copyrightHolder": "Image provider 2",
+                "height": 1152,
+                "path": "/cpsprodpb/0A06/production/image2.jpg",
+                "width": 2048,
+              },
+              "locators": Object {
+                "assetUri": "https://www.bbc.co.uk",
+              },
+              "summary": "Summary text 2",
+              "timestamp": 1557738768,
+            }
           }
-        }
-        sectionNumber={2}
-        storyNumber={1}
-      />
-    </ForwardRef(StoryPromoLi)>
+          sectionNumber={2}
+          storyNumber={1}
+        />
+      </ForwardRef(StoryPromoLi)>
+    </ForwardRef(StoryPromoUl)>
   </MarginWrapper>
 </section>
 `;
@@ -865,7 +813,8 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
     Top Stories
   </SectionLabel>
   <MarginWrapper
-    addMargin={false}
+    firstSection={true}
+    oneItem={true}
   >
     <StoryPromoComponent
       item={
@@ -1126,88 +1075,62 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
     Top Stories
   </SectionLabel>
   <MarginWrapper
-    addMargin={true}
-    as={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [
-          Object {
-            "role": "list",
-          },
-        ],
-        "componentStyle": ComponentStyle {
-          "componentId": "StoryPromoUl-sc-171lqjd-1",
-          "isStatic": true,
-          "rules": Array [
-            "list-style-type:none;margin:0;padding:0;",
-          ],
-        },
-        "displayName": "StoryPromoUl",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "children": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "StoryPromoUl-sc-171lqjd-1",
-        "target": "ul",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
+    firstSection={false}
   >
-    <ForwardRef(StoryPromoLi)>
-      <StoryPromoComponent
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 1 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
-            "indexImage": Object {
-              "altText": "Image Alt text 1",
-              "copyrightHolder": "Image provider 1",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image1.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 1",
-            "timestamp": 1557738768,
+    <ForwardRef(StoryPromoUl)>
+      <ForwardRef(StoryPromoLi)>
+        <StoryPromoComponent
+          item={
+            Object {
+              "headlines": Object {
+                "headline": "Top Story 1 headline",
+              },
+              "id": "urn:bbc:ares::asset:igbo/testasset-00000001",
+              "indexImage": Object {
+                "altText": "Image Alt text 1",
+                "copyrightHolder": "Image provider 1",
+                "height": 1152,
+                "path": "/cpsprodpb/0A06/production/image1.jpg",
+                "width": 2048,
+              },
+              "locators": Object {
+                "assetUri": "https://www.bbc.co.uk",
+              },
+              "summary": "Summary text 1",
+              "timestamp": 1557738768,
+            }
           }
-        }
-        sectionNumber={1}
-        storyNumber={0}
-      />
-    </ForwardRef(StoryPromoLi)>
-    <ForwardRef(StoryPromoLi)>
-      <StoryPromoComponent
-        item={
-          Object {
-            "headlines": Object {
-              "headline": "Top Story 2 headline",
-            },
-            "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
-            "indexImage": Object {
-              "altText": "Image Alt text 2",
-              "copyrightHolder": "Image provider 2",
-              "height": 1152,
-              "path": "/cpsprodpb/0A06/production/image2.jpg",
-              "width": 2048,
-            },
-            "locators": Object {
-              "assetUri": "https://www.bbc.co.uk",
-            },
-            "summary": "Summary text 2",
-            "timestamp": 1557738768,
+          sectionNumber={1}
+          storyNumber={0}
+        />
+      </ForwardRef(StoryPromoLi)>
+      <ForwardRef(StoryPromoLi)>
+        <StoryPromoComponent
+          item={
+            Object {
+              "headlines": Object {
+                "headline": "Top Story 2 headline",
+              },
+              "id": "urn:bbc:ares::asset:igbo/testasset-00000002",
+              "indexImage": Object {
+                "altText": "Image Alt text 2",
+                "copyrightHolder": "Image provider 2",
+                "height": 1152,
+                "path": "/cpsprodpb/0A06/production/image2.jpg",
+                "width": 2048,
+              },
+              "locators": Object {
+                "assetUri": "https://www.bbc.co.uk",
+              },
+              "summary": "Summary text 2",
+              "timestamp": 1557738768,
+            }
           }
-        }
-        sectionNumber={1}
-        storyNumber={1}
-      />
-    </ForwardRef(StoryPromoLi)>
+          sectionNumber={1}
+          storyNumber={1}
+        />
+      </ForwardRef(StoryPromoLi)>
+    </ForwardRef(StoryPromoUl)>
   </MarginWrapper>
 </section>
 `;
