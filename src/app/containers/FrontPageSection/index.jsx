@@ -40,24 +40,13 @@ const FirstSectionTopMargin = styled.div`
 `;
 
 const TopMargin = styled.div`
-  margin-top: ${GEL_SPACING_DBL};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
 
-  ${({ oneItem }) =>
-    oneItem
-      ? css`
-          @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-            margin-top: ${GEL_SPACING_TRPL};
-          }
-
-          @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-            margin-top: ${GEL_SPACING_QUAD};
-          }
-        `
-      : css`
-          @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-            margin-top: ${GEL_SPACING};
-          }
-        `}
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_TRPL};
+  }
 `;
 
 // eslint-disable-next-line react/prop-types
@@ -75,7 +64,7 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
     return <TopMargin oneItem={oneItem}>{children}</TopMargin>;
   }
 
-  return <TopMargin>{children}</TopMargin>;
+  return children;
 };
 
 const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
