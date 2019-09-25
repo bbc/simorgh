@@ -47,6 +47,28 @@ node {
           stage ('Install & Setup') {
             sh 'make install'
           }
+          stage ('Verify') {
+            try {
+              sh 'make boomE2E'
+            } catch (Throwable e) {
+              def messageParameters = [
+                buildStatus: 'Failed',
+                env: 'LIVE',
+                branch: env.BRANCH_NAME,
+                colour: 'danger',
+                emoji: '😱',
+              ]
+
+              if (env.BRANCH_NAME == 'latest') {
+                notifySlack(messageParameters, channels.simorgh)
+                notifySlack(messageParameters, channels.liveAlarms)
+                stageHasFailed = true
+              }
+
+              currentBuild.result = 'FAILURE'
+              throw e
+            }
+          }
           stage ('Test E2Es') {
             try {
               sh 'make testE2Es'
