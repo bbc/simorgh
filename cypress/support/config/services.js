@@ -789,7 +789,7 @@ module.exports = {
           // eslint-disable-next-line no-nested-ternary
           Cypress.env('APP_ENV') === 'live'
             ? '/news/articles/cj7xrxz0e8zo'
-            : '/news/articles/cn7k01xp8kxo',
+            : '/news/articles/c6v11qzyv8po',
         smoke: true,
       },
       errorPage404: {
