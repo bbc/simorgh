@@ -1,6 +1,7 @@
 import Article from '../containers/Article';
 import FrontPage from '../containers/FrontPage';
 import MediaPage from '../containers/MediaPage';
+import CpsAssetPage from '../containers/CpsAsset';
 import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
@@ -38,7 +39,7 @@ const routes = [
   {
     path: mediaAssetPageRegexPath,
     exact: true,
-    component: MediaPage,
+    component: CpsAssetPage,
     getInitialData: getMediaAssetPageInitialData,
     pageType: 'MAP',
   },

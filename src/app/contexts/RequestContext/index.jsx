@@ -60,7 +60,8 @@ RequestContextProvider.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
-  pageType: oneOf(['article', 'frontPage', 'media', 'error']).isRequired,
+  pageType: oneOf(['article', 'frontPage', 'media', 'error', 'MAP', 'FIX'])
+    .isRequired,
   service: string.isRequired,
   statusCode: number.isRequired,
   pathname: string.isRequired,
