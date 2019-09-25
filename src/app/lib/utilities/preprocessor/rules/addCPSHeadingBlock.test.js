@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { clone } from 'ramda';
 import transformer, { headingResolver } from './addCPSHeadingBlock';
 import realExample from '#data/japanese/mediaAssetPage/video-23248670.json';
 
@@ -14,7 +14,7 @@ const fixture = {
       {
         text: 'Lonely block :(',
         markupType: 'plain_text',
-        type: 'text',
+        type: 'paragraph',
       },
     ],
   },
@@ -22,7 +22,7 @@ const fixture = {
 
 describe('addCPSHeadingBlock', () => {
   it('handles basic case', () => {
-    const expectedResult = R.clone(fixture);
+    const expectedResult = clone(fixture);
     expectedResult.content.blocks = [
       {
         text: fixture.promo.headlines.headline,

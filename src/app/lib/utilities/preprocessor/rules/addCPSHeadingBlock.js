@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { clone, path } from 'ramda';
 
 const buildHeadingBlock = text => ({
   text,
@@ -10,20 +10,18 @@ export const headingResolver = headlines =>
   headlines.headline.replace(/<[^>]*>/g, '');
 
 export default payload => {
-  const output = R.clone(payload);
+  const output = clone(payload);
 
-  if (
-    !payload ||
-    !payload.promo ||
-    !payload.promo.headlines ||
-    !payload.content
-  ) {
+  const headlines = path(['promo', 'headlines'], output);
+  const blocks = path(['content', 'blocks'], output);
+
+  if (!headlines || !blocks) {
     return output;
   }
 
   output.content.blocks = [
     buildHeadingBlock(headingResolver(payload.promo.headlines)),
-    ...output.content.blocks,
+    ...blocks,
   ];
 
   return output;

@@ -1,13 +1,10 @@
-import R from 'ramda';
+import { clone, path } from 'ramda';
 
 export default payload => {
-  const output = R.clone(payload);
-  if (
-    !payload ||
-    !payload.content ||
-    !payload.content.blocks ||
-    !payload.content.blocks.length
-  ) {
+  const output = clone(payload);
+
+  const blocks = path(['content', 'blocks'], payload);
+  if (!Array.isArray(blocks)) {
     return output;
   }
 

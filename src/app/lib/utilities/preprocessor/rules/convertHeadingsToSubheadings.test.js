@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { clone, path } from 'ramda';
 import transformer from './convertHeadingsToSubheadings';
 import realExample from '#data/japanese/mediaAssetPage/video-23248670.json';
 
@@ -27,24 +27,21 @@ const fixture = {
 
 describe('convertHeadingsToSubheadings', () => {
   it('handles basic case', () => {
-    const expectedResult = R.clone(fixture);
+    const expectedResult = clone(fixture);
     expectedResult.content.blocks[0].type = 'subheading';
     expectedResult.content.blocks[2].type = 'subheading';
 
     expect(transformer(fixture)).toStrictEqual(expectedResult);
   });
+
   it('handles real example', () => {
     const countBlocks = (payload, type) => {
-      if (
-        !payload ||
-        !payload.content ||
-        !payload.content.blocks ||
-        !payload.content.blocks.filter
-      ) {
+      const blocks = path(['content', 'blocks'], payload);
+      if (!Array.isArray(blocks)) {
         return 0;
       }
 
-      return payload.content.blocks.filter(block => block.type === type).length;
+      return blocks.filter(block => block.type === type).length;
     };
 
     const output = transformer(realExample);
