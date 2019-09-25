@@ -22,33 +22,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin-top: 0.5rem;
 }
 
-.c44 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.c33 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-
-.c45 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 1rem;
-  height: 0.8125rem;
-}
-
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -192,7 +165,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   border: none;
 }
 
-.c9 {
+.c10 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -360,6 +333,33 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   display: block;
   width: 100%;
   visibility: visible;
+}
+
+.c44 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c33 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c45 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
 }
 
 .c31 {
@@ -854,7 +854,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     margin-top: 0.5rem;
   }
 }
@@ -1491,7 +1491,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c9 c39"
+                class="c39 c10"
                 role="list"
               >
                 <li
@@ -1749,7 +1749,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c9 c39"
+                class="c39 c10"
                 role="list"
               >
                 <li
@@ -1941,7 +1941,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c9 c39"
+                class="c39 c10"
                 role="list"
               >
                 <li
@@ -2457,7 +2457,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c9 c39"
+                class="c39 c10"
                 role="list"
               >
                 <li
@@ -2753,7 +2753,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c9 c39"
+                class="c39 c10"
                 role="list"
               >
                 <li
@@ -3101,7 +3101,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c9 c39"
+                class="c39 c10"
                 role="list"
               >
                 <li
