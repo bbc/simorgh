@@ -27,7 +27,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const isAmp = platform === 'amp';
 
   const embedSource = embedUrl({
-    assetId: `${externalId}/${id}`,
+    requestUrl: `${externalId}/${id}`,
     type: 'media',
     isAmp,
     origin,

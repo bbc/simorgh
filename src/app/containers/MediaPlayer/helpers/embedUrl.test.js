@@ -1,75 +1,75 @@
 import embedUrl from './embedUrl';
 
-const assetId = 'foo/bar';
+const requestUrl = 'foo/bar';
 const type = 'articles';
 
 const testCases = [
   {
     description: 'CANONICAL: builds a URL for LIVE environment on .co.uk',
-    expected: `https://www.bbc.co.uk/ws/av-embeds/articles/${assetId}`,
+    expected: `https://www.bbc.co.uk/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
       origin: 'https://www.bbc.co.uk',
-      assetId,
+      requestUrl,
       type,
     },
   },
   {
     description: 'CANONICAL: builds a URL for TEST environment on .com',
-    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${assetId}`,
+    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
       origin: 'https://www.test.bbc.com',
-      assetId,
+      requestUrl,
       type,
     },
   },
   {
     description:
       'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.co.uk',
-    expected: `https://www.test.bbc.co.uk/ws/av-embeds/articles/${assetId}`,
+    expected: `https://www.test.bbc.co.uk/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
       origin: 'http://localhost.bbc.co.uk:7080',
-      assetId,
+      requestUrl,
       type,
     },
   },
   {
     description:
       'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.com',
-    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${assetId}`,
+    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
       origin: 'http://localhost.bbc.com:7080',
-      assetId,
+      requestUrl,
       type,
     },
   },
   {
     description: 'AMP: builds a URL for LIVE environment on .co.uk',
-    expected: `https://www.bbc.co.uk/ws/av-embeds/articles/${assetId}/amp`,
+    expected: `https://www.bbc.co.uk/ws/av-embeds/articles/${requestUrl}/amp`,
     embedObject: {
       origin: 'https://www.bbc.co.uk',
       isAmp: true,
-      assetId,
+      requestUrl,
       type,
     },
   },
   {
     description: 'AMP: builds a URL for TEST environment on .com',
-    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${assetId}/amp`,
+    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${requestUrl}/amp`,
     embedObject: {
       origin: 'https://www.test.bbc.com',
       isAmp: true,
-      assetId,
+      requestUrl,
       type,
     },
   },
   {
     description:
       'AMP: builds a URL for LOCAL environment that has a base of test.bbc.co.uk',
-    expected: `https://www.test.bbc.co.uk/ws/av-embeds/articles/${assetId}/amp`,
+    expected: `https://www.test.bbc.co.uk/ws/av-embeds/articles/${requestUrl}/amp`,
     embedObject: {
       origin: 'http://localhost.bbc.co.uk:7080',
       isAmp: true,
-      assetId,
+      requestUrl,
       type,
     },
   },
