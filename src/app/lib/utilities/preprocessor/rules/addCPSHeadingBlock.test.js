@@ -7,7 +7,7 @@ const fixture = {
   promo: {
     headlines: {
       headline: 'Default headline',
-    }
+    },
   },
   content: {
     blocks: [
@@ -29,21 +29,20 @@ describe('addCPSHeadingBlock', () => {
         markupType: 'plain_text',
         type: 'heading',
       },
-      ...expectedResult.content.blocks
+      ...expectedResult.content.blocks,
     ];
 
     expect(transformer(fixture)).toStrictEqual(expectedResult);
   });
 
   it('handles real case', () => {
-    const countBlocks = (payload) => {
+    const countBlocks = payload => {
       if (!payload || !payload.content || !payload.content.blocks) {
         return 0;
       }
       return payload.content.blocks.length || 0;
-    }
-      
-    
+    };
+
     const output = transformer(realExample);
 
     expect(countBlocks(output)).toBe(countBlocks(realExample) + 1);

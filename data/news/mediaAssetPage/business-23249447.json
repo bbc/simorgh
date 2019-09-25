@@ -1,1 +1,329 @@
-{"metadata":{"id":"urn:bbc:ares::asset:news/av/business-23249447","locators":{"assetUri":"/news/av/business-23249447","cpsUrn":"urn:bbc:content:assetUri:news/av/business-23249447","curie":"http://www.bbc.co.uk/asset/6faf0ed9-bbd5-754a-9719-cec3a46f50c6"},"type":"MAP","createdBy":"news","language":"en-gb","lastUpdated":1569235774497,"firstPublished":1568910155000,"lastPublished":1569235765000,"options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"map","counterName":"news.business.media_asset.23249447.page","cps_asset_id":"23249447"},"tags":{},"version":"v1.1.2","blockTypes":["media","heading","crosshead","paragraph","list"],"includeComments":false},"content":{"blocks":[{"id":"p01ggx4d","subType":"clip","format":"video","title":"Demolition","synopses":{"short":"A bus driver ruined a perfect shot"},"imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01ggx88.jpg","embedding":true,"advertising":true,"caption":"A bus driver ruined a perfect shot","versions":[{"versionId":"p01ggx4g","types":["Original"],"duration":38,"durationISO8601":"PT38S","warnings":{},"availableTerritories":{"uk":true,"nonUk":true},"availableFrom":1518788866000}],"type":"media"},{"text":"This is a subheading ","markupType":"plain_text","type":"heading"},{"text":"This is a crosshead ","markupType":"plain_text","type":"crosshead"},{"text":"This is a regular piece of paragraph text. This is a regular piece of paragraph 'text'. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text.","markupType":"plain_text","type":"paragraph"},{"text":"Start of paragraph on a new line. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text.","markupType":"plain_text","type":"paragraph"},{"text":"This is a regular piece of paragraph text. <bold>This is a regular piece of paragraph text in bold.</bold> This is a regular piece of paragraph text. <italic>This is a regular piece of paragraph text in italics</italic>. This is a regular piece of paragraph text. This is a regular piece of &quot;paragraph&quot; text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. <link><caption>This is a piece of text for a link</caption><altText>this is the alt text for a link </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>. This is a regular piece of paragraph text.","markupType":"candy_xml","type":"paragraph"},{"numbered":false,"items":[{"text":"I'm line 1 in a bullet list","markupType":"plain_text","type":"listItem"},{"text":"<bold>I'm line 2 in a bullet list I'm in bold </bold>","markupType":"candy_xml","type":"listItem"},{"text":"<italic>I'm line 3 in a bullet list I'm in italics </italic>","markupType":"candy_xml","type":"listItem"},{"text":"<link><caption>I'm line 4 in the bullet list and I'm a link</caption><altText>This is the alt text for the link in the bullet list </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link>","markupType":"candy_xml","type":"listItem"}],"type":"list"},{"text":"We don't necessarily want to support numbered lists but we might have to: ","markupType":"plain_text","type":"paragraph"},{"text":"<itemMeta>pidgin/media-23248770</itemMeta>","meta":[{"headlines":{"shortHeadline":"This is a test","headline":"This is a test","overtyped":"I've pulled in a MAP from elsewhere"},"locators":{"href":"http://www.bbc.com/pidgin/media-23248770"},"summary":"This is test","timestamp":1568707892000,"passport":{"category":{"categoryId":"","categoryName":""}},"id":"urn:bbc:ares::asset:pidgin/media-23248770","type":"cps"}],"markupType":"candy_xml","type":"paragraph"},{"text":"<itemMeta>pidgin/23248703</itemMeta>","meta":[{"headlines":{"shortHeadline":"WSMEDIA TEST - Lorem ipsum dolor sit amet, þ ¼","headline":"Lorem ipsum dolor sit amet, consectetur \"Lorem\" <bold>ipsum</bold> dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur þ ¼ © M","overtyped":"This is a MAP from elsewhere - this is the link text "},"locators":{"href":"http://www.bbc.com/pidgin/23248703"},"summary":"Lorem ipsum dolor sit amet, consectetur","timestamp":1568388704000,"passport":{"category":{"categoryId":"","categoryName":""}},"id":"urn:bbc:ares::asset:pidgin/23248703","type":"cps"}],"markupType":"candy_xml","type":"paragraph"},{"numbered":false,"items":[{"text":"<itemMeta>pidgin/media-23248770</itemMeta> in a numbered list ","meta":[{"headlines":{"shortHeadline":"This is a test","headline":"This is a test","overtyped":"I've pulled in a MAP from elsewhere"},"locators":{"href":"http://www.bbc.com/pidgin/media-23248770"},"summary":"This is test","timestamp":1568707892000,"passport":{"category":{"categoryId":"","categoryName":""}},"id":"urn:bbc:ares::asset:pidgin/media-23248770","type":"cps"}],"markupType":"candy_xml","type":"listItem"},{"text":"This is the second item in the numbered list ","markupType":"plain_text","type":"listItem"}],"type":"list"},{"text":"<link><caption>This is a piece of text for a link</caption><altText>this is the alt text for a link </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>. This is a regular piece of paragraph text.","markupType":"candy_xml","type":"paragraph"},{"text":"<bold>This is a regular </bold>piece of paragraph <italic>text.</italic>","markupType":"candy_xml","type":"paragraph"},{"text":"<italic>This is a an italicised piece of text.</italic>","markupType":"candy_xml","type":"paragraph"},{"text":"-- WE DON'T NEED TO SUPPORT THIS BUT SHOULD RENDER IT AS SOMETHING ELSE-- ","markupType":"plain_text","type":"heading"},{"text":"This is an introduction","role":"introduction","markupType":"plain_text","type":"paragraph"},{"text":"This is a heading ","markupType":"plain_text","type":"heading"},{"text":"this is transmission info ","role":"transmission-info","markupType":"plain_text","type":"paragraph"},{"text":"This is a footer ","role":"footer","markupType":"plain_text","type":"paragraph"},{"numbered":true,"items":[{"text":"I'm line 1 in a numbered list","markupType":"plain_text","type":"listItem"},{"text":"<bold>I'm line 2 in a numbered list I'm in bold </bold>","markupType":"candy_xml","type":"listItem"},{"text":"<italic>I'm line 3 in a bullet list I'm in italics </italic>","markupType":"candy_xml","type":"listItem"},{"text":"<link><caption>I'm line 4 in the bullet list and I'm a link</caption><altText>This is the alt text for the link in the bullet list </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link>","markupType":"candy_xml","type":"listItem"}],"type":"list"},{"text":"This is text where someone has added in &lt;bold&gt;markup&lt;/bold&gt;","markupType":"plain_text","type":"paragraph"}]},"promo":{"headlines":{"shortHeadline":"New Media Team Begins to understand CPS","headline":"New Media Team Begins to understand CPS Full Headline"},"locators":{"assetUri":"/news/av/business-23249447","cpsUrn":"urn:bbc:content:assetUri:news/av/business-23249447","curie":"http://www.bbc.co.uk/asset/6faf0ed9-bbd5-754a-9719-cec3a46f50c6"},"summary":"New Media Team Begins to understand CPS Summary","timestamp":1569235774497,"passport":{},"media":{"id":"p01ggx4d","subType":"clip","format":"video","title":"Demolition","synopses":{"short":"A bus driver ruined a perfect shot"},"imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01ggx88.jpg","embedding":true,"advertising":true,"caption":"A bus driver ruined a perfect shot","versions":[{"versionId":"p01ggx4g","types":["Original"],"duration":38,"durationISO8601":"PT38S","warnings":{},"availableTerritories":{"uk":true,"nonUk":true},"availableFrom":1518788866000}],"type":"media"},"indexImage":{"id":"63722155","subType":"index","href":"http://b.files.bbci.co.uk/D752/test/_63722155_p01ggx88.jpg","path":"/cpsdevpb/D752/test/_63722155_p01ggx88.jpg","height":360,"width":640,"altText":"Keyframe #1","copyrightHolder":"BBC","type":"image"},"id":"urn:bbc:ares::asset:news/av/business-23249447","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"Business","uri":"/news/business","type":"simple"},"site":{"subType":"site","name":"BBC News","uri":"/news","type":"simple"},"groups":[{"type":"more-media-asset-pages","promos":[{"locators":{"assetUri":"/news/10301118","cpsUrn":"urn:bbc:content:assetUri:/news/10301118"},"title":"AV content promotion hyperpuff - importers - LIVE","timestamp":1279018179000,"id":"urn:bbc:ares::asset:news/10301118","type":"hyper"}]}]}}
+{
+    "metadata": {
+        "id": "urn:bbc:ares::asset:news/av/business-23249447",
+        "locators": {
+            "assetUri": "/news/av/business-23249447",
+            "cpsUrn": "urn:bbc:content:assetUri:news/av/business-23249447",
+            "curie": "http://www.bbc.co.uk/asset/6faf0ed9-bbd5-754a-9719-cec3a46f50c6"
+        },
+        "type": "MAP",
+        "createdBy": "news",
+        "language": "en-gb",
+        "lastUpdated": 1569235774497,
+        "firstPublished": 1568910155000,
+        "lastPublished": 1569235765000,
+        "options": {
+            "isIgorSeoTagsEnabled": false,
+            "includeComments": false,
+            "allowRightHandSide": true,
+            "isFactCheck": false,
+            "allowDateStamp": true,
+            "hasNewsTracker": false,
+            "allowRelatedStoriesBox": true,
+            "isKeyContent": false,
+            "allowHeadline": true,
+            "isBreakingNews": false,
+            "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+            "cps_asset_type": "map",
+            "counterName": "news.business.media_asset.23249447.page",
+            "cps_asset_id": "23249447"
+        },
+        "tags": {},
+        "version": "v1.1.2",
+        "blockTypes": ["media", "heading", "crosshead", "paragraph", "list"],
+        "includeComments": false
+    },
+    "content": {
+        "blocks": [{
+            "id": "p01ggx4d",
+            "subType": "clip",
+            "format": "video",
+            "title": "Demolition",
+            "synopses": {
+                "short": "A bus driver ruined a perfect shot"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01ggx88.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "A bus driver ruined a perfect shot",
+            "versions": [{
+                "versionId": "p01ggx4g",
+                "types": ["Original"],
+                "duration": 38,
+                "durationISO8601": "PT38S",
+                "warnings": {},
+                "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                },
+                "availableFrom": 1518788866000
+            }],
+            "type": "media"
+        }, {
+            "text": "This is a subheading ",
+            "markupType": "plain_text",
+            "type": "heading"
+        }, {
+            "text": "This is a crosshead ",
+            "markupType": "plain_text",
+            "type": "crosshead"
+        }, {
+            "text": "This is a regular piece of paragraph text. This is a regular piece of paragraph 'text'. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+        }, {
+            "text": "Start of paragraph on a new line. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+        }, {
+            "text": "This is a regular piece of paragraph text. <bold>This is a regular piece of paragraph text in bold.</bold> This is a regular piece of paragraph text. <italic>This is a regular piece of paragraph text in italics</italic>. This is a regular piece of paragraph text. This is a regular piece of &quot;paragraph&quot; text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. This is a regular piece of paragraph text. <link><caption>This is a piece of text for a link</caption><altText>this is the alt text for a link </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>. This is a regular piece of paragraph text.",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+        }, {
+            "numbered": false,
+            "items": [{
+                "text": "I'm line 1 in a bullet list",
+                "markupType": "plain_text",
+                "type": "listItem"
+            }, {
+                "text": "<bold>I'm line 2 in a bullet list I'm in bold </bold>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+            }, {
+                "text": "<italic>I'm line 3 in a bullet list I'm in italics </italic>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+            }, {
+                "text": "<link><caption>I'm line 4 in the bullet list and I'm a link</caption><altText>This is the alt text for the link in the bullet list </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+            }],
+            "type": "list"
+        }, {
+            "text": "We don't necessarily want to support numbered lists but we might have to: ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+        }, {
+            "text": "<itemMeta>pidgin/media-23248770</itemMeta>",
+            "meta": [{
+                "headlines": {
+                    "shortHeadline": "This is a test",
+                    "headline": "This is a test",
+                    "overtyped": "I've pulled in a MAP from elsewhere"
+                },
+                "locators": {
+                    "href": "http://www.bbc.com/pidgin/media-23248770"
+                },
+                "summary": "This is test",
+                "timestamp": 1568707892000,
+                "passport": {
+                    "category": {
+                        "categoryId": "",
+                        "categoryName": ""
+                    }
+                },
+                "id": "urn:bbc:ares::asset:pidgin/media-23248770",
+                "type": "cps"
+            }],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+        }, {
+            "text": "<itemMeta>pidgin/23248703</itemMeta>",
+            "meta": [{
+                "headlines": {
+                    "shortHeadline": "WSMEDIA TEST - Lorem ipsum dolor sit amet, þ ¼",
+                    "headline": "Lorem ipsum dolor sit amet, consectetur \"Lorem\" <bold>ipsum</bold> dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur þ ¼ © M",
+                    "overtyped": "This is a MAP from elsewhere - this is the link text "
+                },
+                "locators": {
+                    "href": "http://www.bbc.com/pidgin/23248703"
+                },
+                "summary": "Lorem ipsum dolor sit amet, consectetur",
+                "timestamp": 1568388704000,
+                "passport": {
+                    "category": {
+                        "categoryId": "",
+                        "categoryName": ""
+                    }
+                },
+                "id": "urn:bbc:ares::asset:pidgin/23248703",
+                "type": "cps"
+            }],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+        }, {
+            "numbered": false,
+            "items": [{
+                "text": "<itemMeta>pidgin/media-23248770</itemMeta> in a numbered list ",
+                "meta": [{
+                    "headlines": {
+                        "shortHeadline": "This is a test",
+                        "headline": "This is a test",
+                        "overtyped": "I've pulled in a MAP from elsewhere"
+                    },
+                    "locators": {
+                        "href": "http://www.bbc.com/pidgin/media-23248770"
+                    },
+                    "summary": "This is test",
+                    "timestamp": 1568707892000,
+                    "passport": {
+                        "category": {
+                            "categoryId": "",
+                            "categoryName": ""
+                        }
+                    },
+                    "id": "urn:bbc:ares::asset:pidgin/media-23248770",
+                    "type": "cps"
+                }],
+                "markupType": "candy_xml",
+                "type": "listItem"
+            }, {
+                "text": "This is the second item in the numbered list ",
+                "markupType": "plain_text",
+                "type": "listItem"
+            }],
+            "type": "list"
+        }, {
+            "text": "<link><caption>This is a piece of text for a link</caption><altText>this is the alt text for a link </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>. This is a regular piece of paragraph text.",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+        }, {
+            "text": "<bold>This is a regular </bold>piece of paragraph <italic>text.</italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+        }, {
+            "text": "<italic>This is a an italicised piece of text.</italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+        }, {
+            "text": "-- WE DON'T NEED TO SUPPORT THIS BUT SHOULD RENDER IT AS SOMETHING ELSE-- ",
+            "markupType": "plain_text",
+            "type": "heading"
+        }, {
+            "text": "This is an introduction",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+        }, {
+            "text": "This is a heading ",
+            "markupType": "plain_text",
+            "type": "heading"
+        }, {
+            "text": "this is transmission info ",
+            "role": "transmission-info",
+            "markupType": "plain_text",
+            "type": "paragraph"
+        }, {
+            "text": "This is a footer ",
+            "role": "footer",
+            "markupType": "plain_text",
+            "type": "paragraph"
+        }, {
+            "numbered": true,
+            "items": [{
+                "text": "I'm line 1 in a numbered list",
+                "markupType": "plain_text",
+                "type": "listItem"
+            }, {
+                "text": "<bold>I'm line 2 in a numbered list I'm in bold </bold>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+            }, {
+                "text": "<italic>I'm line 3 in a bullet list I'm in italics </italic>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+            }, {
+                "text": "<link><caption>I'm line 4 in the bullet list and I'm a link</caption><altText>This is the alt text for the link in the bullet list </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+            }],
+            "type": "list"
+        }, {
+            "text": "This is text where someone has added in &lt;bold&gt;markup&lt;/bold&gt;",
+            "markupType": "plain_text",
+            "type": "paragraph"
+        }]
+    },
+    "promo": {
+        "headlines": {
+            "shortHeadline": "New Media Team Begins to understand CPS",
+            "headline": "New Media Team Begins to understand CPS Full Headline"
+        },
+        "locators": {
+            "assetUri": "/news/av/business-23249447",
+            "cpsUrn": "urn:bbc:content:assetUri:news/av/business-23249447",
+            "curie": "http://www.bbc.co.uk/asset/6faf0ed9-bbd5-754a-9719-cec3a46f50c6"
+        },
+        "summary": "New Media Team Begins to understand CPS Summary",
+        "timestamp": 1569235774497,
+        "passport": {},
+        "media": {
+            "id": "p01ggx4d",
+            "subType": "clip",
+            "format": "video",
+            "title": "Demolition",
+            "synopses": {
+                "short": "A bus driver ruined a perfect shot"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01ggx88.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "A bus driver ruined a perfect shot",
+            "versions": [{
+                "versionId": "p01ggx4g",
+                "types": ["Original"],
+                "duration": 38,
+                "durationISO8601": "PT38S",
+                "warnings": {},
+                "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                },
+                "availableFrom": 1518788866000
+            }],
+            "type": "media"
+        },
+        "indexImage": {
+            "id": "63722155",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D752/test/_63722155_p01ggx88.jpg",
+            "path": "/cpsdevpb/D752/test/_63722155_p01ggx88.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "Keyframe #1",
+            "copyrightHolder": "BBC",
+            "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:news/av/business-23249447",
+        "type": "cps"
+    },
+    "relatedContent": {
+        "section": {
+            "subType": "index",
+            "name": "Business",
+            "uri": "/news/business",
+            "type": "simple"
+        },
+        "site": {
+            "subType": "site",
+            "name": "BBC News",
+            "uri": "/news",
+            "type": "simple"
+        },
+        "groups": [{
+            "type": "more-media-asset-pages",
+            "promos": [{
+                "locators": {
+                    "assetUri": "/news/10301118",
+                    "cpsUrn": "urn:bbc:content:assetUri:/news/10301118"
+                },
+                "title": "AV content promotion hyperpuff - importers - LIVE",
+                "timestamp": 1279018179000,
+                "id": "urn:bbc:ares::asset:news/10301118",
+                "type": "hyper"
+            }]
+        }]
+    }
+}
