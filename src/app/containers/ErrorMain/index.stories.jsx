@@ -4,7 +4,6 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ErrorMain from '.';
 
 storiesOf('Pages|Error Page', module)
-  .addParameters({ chromatic: { disable: true } })
   .add('404', () => (
     <ServiceContextProvider service="news">
       <ErrorMain status={404} />
