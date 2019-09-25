@@ -11,7 +11,6 @@ import '@bbc/moment-timezone-include/tz/GMT';
 const service = {
   default: {
     lang: 'ar',
-    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'جدّد في',
     atiAnalyticsAppName: 'news-arabic',
