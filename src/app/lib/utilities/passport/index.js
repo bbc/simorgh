@@ -20,15 +20,15 @@ export const isValidPassportHome = (
   service,
   passportHomesOverride = [],
 ) => {
+  const isMissingRequiredArgs = !passportHome && !passportHomesOverride.length;
+  if (isMissingRequiredArgs) return true;
+
+  const matchesPassportHome = (home = '') =>
+    (home || '').toLowerCase() === passportHome.toLowerCase();
+
+  if (matchesPassportHome(service)) return true;
+
   const passportHomesOverrideArray = passportHomesOverride || [];
-  const passportHomeLower = (passportHome || '').toLowerCase();
 
-  if (!passportHome && !passportHomesOverrideArray.length) return true;
-
-  return (
-    passportHomeLower === service ||
-    passportHomesOverrideArray.some(
-      home => (home || '').toLowerCase() === passportHomeLower,
-    )
-  );
+  return passportHomesOverrideArray.some(matchesPassportHome);
 };
