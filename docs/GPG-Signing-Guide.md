@@ -1,4 +1,4 @@
-# GPG Singning Guide
+# GPG Signing Guide
 
 ## Documentation index
 Please familiarise yourself with our:
