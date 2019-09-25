@@ -236,13 +236,13 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
           'contain',
-          localizedName
+          hasLocalisedName
             ? `${appConfig[service][variant].product}, ${appConfig[service][variant].serviceLocalizedName}`
             : appConfig[service][variant].product,
         );
       });
 
-      if (localizedName) {
+      if (hasLocalisedName) {
         it("should have offscreen text with product's language code set to English", () => {
           cy.get('header a span span').should('have.attr', 'lang', 'en-GB');
         });
