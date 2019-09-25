@@ -2,13 +2,10 @@ import onClient from '../../../lib/utilities/onClient';
 import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import { variantSanitiser } from '../../../lib/utilities/variantHandler';
-import addIdsToBlocks from '#lib/utilities/preprocessor/rules/convertHeadingsToSubheadings';
+import convertHeadingsToSubheadings from '#lib/utilities/preprocessor/rules/convertHeadingsToSubheadings';
 import addCPSHeadingBlock from '#lib/utilities/preprocessor/rules/addCPSHeadingBlock';
 
-const preprocessorRules = [
-  addIdsToBlocks,
-  addCPSHeadingBlock
-];
+const preprocessorRules = [convertHeadingsToSubheadings, addCPSHeadingBlock];
 
 const getMediaAssetPageInitialData = async ({ service, variant, assetUri }) => {
   const baseUrl = onClient()

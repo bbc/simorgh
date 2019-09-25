@@ -2,6 +2,9 @@ import baseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import getMediaAssetPageInitialData from '.';
 
+import convertHeadingsToSubheadings from '#lib/utilities/preprocessor/rules/convertHeadingsToSubheadings';
+import addCPSHeadingBlock from '#lib/utilities/preprocessor/rules/addCPSHeadingBlock';
+
 const mockData = { service: 'pidgin', status: 200, pageData: {} };
 
 const mockBaseUrl = 'https://www.SIMORGH_BASE_URL.com';
@@ -11,6 +14,11 @@ baseUrl.mockImplementation(() => mockBaseUrl);
 
 jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => mockData);
+
+convertHeadingsToSubheadings.default = jest.fn();
+addCPSHeadingBlock.default = jest.fn();
+
+const preprocessorRules = [convertHeadingsToSubheadings, addCPSHeadingBlock];
 
 const defaultServiceParam = 'pidgin';
 const defaultAssetUri = 'tori-49450859';
@@ -33,6 +41,7 @@ describe('getMediaAssetPageInitialData', () => {
 
     expect(fetchData).toBeCalledWith({
       url: `${mockBaseUrl}/pidgin/tori-49450859.json`,
+      preprocessorRules,
     });
   });
 
@@ -50,6 +59,7 @@ describe('getMediaAssetPageInitialData', () => {
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.SIMORGH_BASE_URL.com/pidgin/tori-49450859/variant.json',
+      preprocessorRules,
     });
   });
 
@@ -61,6 +71,7 @@ describe('getMediaAssetPageInitialData', () => {
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.SIMORGH_BASE_URL.com/pidgin/tori-49450859/variant.json',
+      preprocessorRules,
     });
   });
 });
