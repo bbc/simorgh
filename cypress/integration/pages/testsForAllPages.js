@@ -230,7 +230,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
     });
 
     describe('Header Tests', () => {
-      const localizedName =
+      const hasLocalisedName =
         appConfig[service][variant].serviceLocalizedName !== undefined;
 
       it('should render the BBC News branding', () => {
