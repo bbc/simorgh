@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleAtiParams atiPageViewParams is called  should call buildArticleATIUrl exactly once 1`] = `
+Object {
+  "instance": null,
+  "nodeType": "component",
+  "props": Object {
+    "content": Object {},
+    "metadata": Object {
+      "firstPublished": 946684800000,
+      "lastPublished": 978307200000,
+      "locators": Object {
+        "optimoUrn": "urn:bbc:optimo:asset:c0000000000o",
+      },
+      "passport": Object {
+        "language": "language",
+      },
+      "tags": Object {
+        "about": Array [
+          Object {
+            "thingId": "id",
+            "thingLabel": "label",
+          },
+        ],
+      },
+    },
+    "promo": Object {
+      "headlines": Object {
+        "seoHeadline": "A headline",
+      },
+    },
+  },
+  "rendered": null,
+  "type": [Function],
+}
+`;

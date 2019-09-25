@@ -68,7 +68,9 @@ describe('ArticleAtiParams', () => {
     });
 
     it('should call buildArticleATIUrl exactly once', () => {
-      renderer.create(Component(newsServiceContextStub, requestContextStub));
+      const output = renderer.create(
+        Component(newsServiceContextStub, requestContextStub),
+      );
 
       expect(mockBuildArticleATIUrl).toHaveBeenCalledTimes(1);
       expect(mockBuildArticleATIUrl).toHaveBeenCalledWith(
@@ -76,6 +78,7 @@ describe('ArticleAtiParams', () => {
         requestContextStub,
         newsServiceContextStub,
       );
+      expect(output.toTree()).toMatchSnapshot();
     });
   });
 });
