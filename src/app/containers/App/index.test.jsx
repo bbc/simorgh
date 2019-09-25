@@ -33,6 +33,11 @@ describe('ClientApp', () => {
       },
       {},
     );
+    expect(BrowserRouter.mock.calls[0][0].children).not.toBeInstanceOf(Array);
+    // eslint-disable-next-line no-underscore-dangle
+    expect(BrowserRouter.mock.calls[0][0].children._owner.type.name).toEqual(
+      'ClientApp',
+    );
   });
 });
 
