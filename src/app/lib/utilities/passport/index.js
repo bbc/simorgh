@@ -9,7 +9,6 @@ export const getPassportHome = pageData => {
   return pageData && homeServiceUrl
     ? homeServiceUrl
         .split('/')
-        .slice(-1)
         .pop()
         .toLowerCase()
     : null;
