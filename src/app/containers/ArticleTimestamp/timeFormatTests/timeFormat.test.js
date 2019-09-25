@@ -1,4 +1,4 @@
-import services from '../../../../testHelpers/serviceConfigs';
+import services from '#testHelpers/serviceConfigs';
 import expectedFormats from './expectedFormats.json';
 import { format, timestampsFixtures } from './testUtils';
 

@@ -1,7 +1,6 @@
 import * as moment from 'moment-timezone';
 import { timestampGenerator } from '../testHelpers';
-
-const timeFormat = 'D MMMM YYYY';
+import { formatDate } from '../timeFormats';
 
 export const timestampsFixtures = {
   'exact date': {
@@ -50,5 +49,5 @@ export const format = (datetimeLocale, timezone, timeStamp) => {
     : moment
         .tz(timestampsFixtures[timeStamp].time, timezone)
         .locale(datetimeLocale)
-        .format(timeFormat);
+        .format(formatDate);
 };
