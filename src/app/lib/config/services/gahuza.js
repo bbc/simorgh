@@ -24,7 +24,7 @@ const service = {
     defaultCaptionOffscreenText: 'Insiguro, ',
     imageCopyrightOffscreenText: 'Ahavuye isanamu, ',
     locale: `rw-RW`,
-    datetimeLocale: `rw-rw`,
+    datetimeLocale: `rw`,
     service: 'gahuza',
     serviceName: 'Gahuza',
     themeColor: `${C_POSTBOX}`,

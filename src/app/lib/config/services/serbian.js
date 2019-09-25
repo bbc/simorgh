@@ -24,7 +24,6 @@ const baseServiceConfig = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  datetimeLocale: `sr-latn`,
   service: 'serbian',
   serviceName: 'News na srpskom',
   themeColor: `${C_POSTBOX}`,
@@ -201,12 +200,14 @@ const service = {
     lang: `sr-latn`,
     locale: `sr-latn`,
     script: latinDiacritics,
+    datetimeLocale: `sr`,
   },
   cyr: {
     ...baseServiceConfig,
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
     script: cyrillicAndLatin,
+    datetimeLocale: `sr-cyrl`,
   },
 };
 

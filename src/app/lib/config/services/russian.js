@@ -23,7 +23,7 @@ const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `ru-RU`,
-    datetimeLocale: `ru-ru`,
+    datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'News Русская служба',
     themeColor: `${C_POSTBOX}`,

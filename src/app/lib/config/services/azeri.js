@@ -24,7 +24,7 @@ const service = {
     defaultCaptionOffscreenText: 'Altyazı, ',
     imageCopyrightOffscreenText: 'Şəklin mənbəyi, ',
     locale: `az-AZ`,
-    datetimeLocale: `az-az`,
+    datetimeLocale: `az`,
     service: 'azeri',
     serviceName: 'Azərbaycanca',
     themeColor: `${C_POSTBOX}`,

@@ -25,7 +25,7 @@ const service = {
     defaultCaptionOffscreenText: 'Ibsa suuraa/viidiyoo, ',
     imageCopyrightOffscreenText: 'Madda suuraa, ',
     locale: `om-ET`,
-    datetimeLocale: `om-et`,
+    datetimeLocale: `om`,
     service: 'afaanoromoo',
     serviceName: 'Afaan Oromoo',
     themeColor: `${C_POSTBOX}`,

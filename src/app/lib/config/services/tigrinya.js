@@ -27,7 +27,7 @@ const service = {
     defaultCaptionOffscreenText: 'መግለጺ, ',
     imageCopyrightOffscreenText: 'ምንጪ ስእሊ, ',
     locale: `ti-ET`,
-    datetimeLocale: `ti-et`,
+    datetimeLocale: `ti`,
     service: 'tigrinya',
     serviceName: 'News ትግርኛ',
     themeColor: `${C_POSTBOX}`,

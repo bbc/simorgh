@@ -27,7 +27,7 @@ const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `si-LK`,
-    datetimeLocale: `si-lk`,
+    datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'News සිංහල',
     themeColor: `${C_POSTBOX}`,

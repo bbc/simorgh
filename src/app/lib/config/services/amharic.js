@@ -27,7 +27,7 @@ const service = {
     defaultCaptionOffscreenText: 'መግለጫ, ',
     imageCopyrightOffscreenText: 'የፎቶው ባለመብት, ',
     locale: `am-ET`,
-    datetimeLocale: 'am-et',
+    datetimeLocale: 'am',
     service: 'amharic',
     serviceName: 'News አማርኛ',
     themeColor: `${C_POSTBOX}`,

@@ -24,7 +24,7 @@ const service = {
     defaultCaptionOffscreenText: 'Bayani, ',
     imageCopyrightOffscreenText: 'Asalin hoton, ',
     locale: `ha-GH`,
-    datetimeLocale: `ha-gh`,
+    datetimeLocale: `ha`,
     service: 'hausa',
     serviceName: 'Hausa',
     themeColor: `${C_POSTBOX}`,

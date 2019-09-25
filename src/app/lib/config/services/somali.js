@@ -24,7 +24,7 @@ const service = {
     defaultCaptionOffscreenText: 'Qoraal ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
-    datetimeLocale: `so-so`,
+    datetimeLocale: `so`,
     service: 'somali',
     serviceName: 'Somali',
     themeColor: `${C_POSTBOX}`,

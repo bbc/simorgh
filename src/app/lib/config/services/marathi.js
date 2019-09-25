@@ -23,7 +23,7 @@ const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `mr-IN`,
-    datetimeLocale: `mr-in`,
+    datetimeLocale: `mr`,
     service: 'marathi',
     serviceName: 'News मराठी',
     themeColor: `${C_POSTBOX}`,

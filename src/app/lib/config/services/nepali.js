@@ -24,7 +24,7 @@ const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `ne-NP`,
-    datetimeLocale: `ne-np`,
+    datetimeLocale: `ne`,
     service: 'nepali',
     serviceName: 'News नेपाली',
     themeColor: `${C_POSTBOX}`,

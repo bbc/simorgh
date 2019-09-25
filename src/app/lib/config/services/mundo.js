@@ -23,7 +23,7 @@ const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `es-005`,
-    datetimeLocale: `es-005`,
+    datetimeLocale: `es`,
     service: 'mundo',
     serviceName: 'News Mundo',
     themeColor: `${C_POSTBOX}`,
