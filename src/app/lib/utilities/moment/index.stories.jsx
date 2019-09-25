@@ -22,6 +22,7 @@ const locales = [
   { name: 'Indonesian', locale: 'id' },
   { name: 'Korean', locale: 'ko' },
   { name: 'Marathi', locale: 'mr' },
+  { name: 'Pashto', locale: 'ps' },
   { name: 'Pidgin', locale: 'pcm' },
   { name: 'Punjabi', locale: 'pa-in' },
   { name: 'Telugu', locale: 'te' },
