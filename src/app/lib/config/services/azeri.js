@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
+import 'moment/locale/az';
 
 const service = {
   default: {
@@ -34,7 +35,7 @@ const service = {
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Xəbərlər',
+    frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,

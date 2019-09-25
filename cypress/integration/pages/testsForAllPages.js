@@ -92,11 +92,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               'content',
               appConfig[service][variant].locale,
             );
-            cy.get('meta[name="og:site_name"]').should(
-              'have.attr',
-              'content',
-              appConfig[service][variant].defaultImageAltText,
-            );
             cy.get('meta[name="og:type"]').should(
               'have.attr',
               'content',
