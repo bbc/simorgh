@@ -90,13 +90,10 @@ describe('Application', () => {
           .its('body')
           .then(html => {
             pageHtml = html;
-            cy.state('document').write(
-              html.replace('<script src="/bundle.js"></script>', ''),
-            );
           });
 
         let staticHTML;
-        cy.get('#root')
+        cy.get('body')
           .invoke('html')
           .then(html => {
             staticHTML = html;
@@ -106,12 +103,13 @@ describe('Application', () => {
             cy.state('document').write(pageHtml);
           });
 
-        cy.get('#root')
+        cy.get('body')
           .invoke('html')
           .then(html => {
             expect(html).to.equal(staticHTML);
           });
       });
+
       it(`${service} article renders same application after hydration`, () => {
         const win = cy.state('window');
         delete win.createReactClass;
@@ -121,9 +119,6 @@ describe('Application', () => {
           .its('body')
           .then(html => {
             pageHtml = html;
-            cy.state('document').write(
-              html.replace('<script src="/bundle.js"></script>', ''),
-            );
           });
 
         let staticHTML;
