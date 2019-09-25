@@ -45,21 +45,21 @@ const media = {
 
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
-    it('should call buildArticleATIUrl function', () => {
+    it('should return the right article url', () => {
       const url = buildATIUrl(article, { pageType: 'article' }, {});
       expect(url).toEqual(
         's=598285&p=getPageIdentifier&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[getContentId]&x2=[responsive]&x4=[getLanguage]&x5=[http://localhost/]&x7=[article]&x9=[getPromoHeadline]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]&x13=[getThingAttributes]&x14=[getThingAttributes]',
       );
     });
 
-    it('should call buildFrontPageATIUrl function', () => {
+    it('should return the right frontPage url', () => {
       const url = buildATIUrl(frontPage, { pageType: 'frontPage' }, {});
       expect(url).toEqual(
         's=598285&p=unknown.page&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x2=[responsive]&x5=[http://localhost/]&x7=[index-home]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]',
       );
     });
 
-    it('should call buildMediaATIUrl function', () => {
+    it('should return the right media url', () => {
       const url = buildATIUrl(media, { pageType: 'media' }, {});
       expect(url).toEqual(
         's=598285&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[id]&x2=[responsive]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
@@ -68,7 +68,7 @@ describe('ATIAnalytics params', () => {
   });
 
   describe('buildATIClickParams', () => {
-    it('should call buildArticleATIParams function', () => {
+    it('should return the right article params', () => {
       const params = buildATIClickParams(article, { pageType: 'article' }, {});
       expect(params).toEqual({
         appName: undefined,
@@ -91,7 +91,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should call buildFrontPageATIParams function', () => {
+    it('should return the right frontPage params', () => {
       const params = buildATIClickParams(
         frontPage,
         { pageType: 'frontPage' },
@@ -113,7 +113,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should call buildMediaATIParams function', () => {
+    it('should return the right media params', () => {
       const params = buildATIClickParams(media, { pageType: 'media' }, {});
       expect(params).toEqual({
         appName: undefined,
