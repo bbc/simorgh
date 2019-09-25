@@ -23,6 +23,9 @@ test3rdPartyE2Es:
 liveE2Es:
 	CYPRESS_SMOKE=false CYPRESS_APP_ENV=live npm run cypress
 
+boomE2E:
+	./scripts/boomE2E.sh
+
 buildStorybook:
 	npm run build:storybook;
 
