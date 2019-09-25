@@ -44,6 +44,7 @@ const service = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
+    passportHomes: ['BBCScotland'],
     theming: {
       brandBackgroundColour: `${C_DARK_SALTIRE}`,
       brandLogoColour: `${C_WHITE}`,
