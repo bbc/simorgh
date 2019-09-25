@@ -5,8 +5,8 @@ import {
   F_NASSIM_URDU_REGULAR,
   F_NASSIM_URDU_BOLD,
 } from '@bbc/psammead-styles/fonts';
-import 'moment/locale/ur';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
+import '@bbc/psammead-locales/moment/ur';
 
 const service = {
   default: {
