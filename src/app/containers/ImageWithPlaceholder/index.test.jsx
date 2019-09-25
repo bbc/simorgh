@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount, render } from 'enzyme';
 import LazyLoad from 'react-lazyload';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
@@ -30,7 +30,7 @@ describe('ImageWithPlaceholder', () => {
   });
 
   it('should render a lazyloaded image when lazyLoad set to true', () => {
-    const container = shallow(<LazyLoadImageWithPlaceholder />);
+    const container = render(<LazyLoadImageWithPlaceholder />);
     expect(container).toMatchSnapshot();
   });
 
