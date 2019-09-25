@@ -35,8 +35,6 @@ describe('Canonical ATI Analytics', () => {
     expect(renderedATI).toMatchSnapshot();
   });
 
-  // `<img height="1px" width="1px" alt="" style="position:absolute" src="https://foobar.com?key=value&amp;key2=value2"/>`,
-
   shouldMatchSnapshot(
     'should render correctly',
     <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
