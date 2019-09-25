@@ -34,6 +34,7 @@ const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
+    passportHomes: ['brasil'],
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
