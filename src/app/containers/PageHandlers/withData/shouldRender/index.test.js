@@ -1,5 +1,4 @@
 import shouldRender from '.';
-import { isValidPassportHome } from '../../../../lib/utilities/passport';
 
 const validPortugueseData = {
   pageData: {
@@ -23,16 +22,6 @@ const invalidPortugueseData = {
   status: 404,
 };
 
-jest.mock('../../../../lib/utilities/passport', () => {
-  const { getPassportHome } = jest.requireActual(
-    '../../../../lib/utilities/passport',
-  );
-  return {
-    getPassportHome,
-    isValidPassportHome: jest.fn(),
-  };
-});
-
 jest.mock('../../../../contexts/ServiceContext', () => {
   const mockReact = jest.requireActual('react');
   return jest.fn().mockImplementation(
@@ -49,51 +38,55 @@ describe('passport home override', () => {
 
   it('should match passport home override', () => {
     const service = 'portuguese';
-    shouldRender(validPortugueseData, service, ['brasil']);
-    expect(isValidPassportHome).toHaveBeenCalled();
-    expect(isValidPassportHome).toHaveBeenCalledWith('brasil', 'portuguese', [
-      'brasil',
-    ]);
+    const result = shouldRender(validPortugueseData, service, ['brasil']);
+    expect(result).toEqual({
+      hasData200StatusAndCorrectService: true,
+      status: 200,
+      pageData: validPortugueseData.pageData,
+    });
   });
 
   it('should NOT match passport home override', () => {
     const service = 'portuguese';
-    shouldRender(validPortugueseData, service, ['xyz']);
-    expect(isValidPassportHome).toHaveBeenCalled();
-    expect(isValidPassportHome).toHaveBeenCalledWith('brasil', 'portuguese', [
-      'xyz',
-    ]);
+    const result = shouldRender(validPortugueseData, service, ['xyz']);
+    expect(result).toEqual({
+      hasData200StatusAndCorrectService: false,
+      status: 404,
+      pageData: validPortugueseData.pageData,
+    });
   });
 
   describe('no passportHomeOverride', () => {
     it('should NOT match passport home override', () => {
       const service = 'portuguese';
-      shouldRender(validPortugueseData, service);
-      expect(isValidPassportHome).toHaveBeenCalled();
-      expect(isValidPassportHome).toHaveBeenCalledWith(
-        'brasil',
-        'portuguese',
-        [],
-      );
+      const result = shouldRender(validPortugueseData, service);
+      expect(result).toEqual({
+        hasData200StatusAndCorrectService: false,
+        status: 404,
+        pageData: validPortugueseData.pageData,
+      });
     });
   });
 
   describe('null passportHomeOverride', () => {
     it('should NOT match passport home override', () => {
       const service = 'portuguese';
-      shouldRender(validPortugueseData, service, null);
-      expect(isValidPassportHome).toHaveBeenCalled();
-      expect(isValidPassportHome).toHaveBeenCalledWith(
-        'brasil',
-        'portuguese',
-        null,
-      );
+      const result = shouldRender(validPortugueseData, service, null);
+      expect(result).toEqual({
+        hasData200StatusAndCorrectService: false,
+        status: 404,
+        pageData: validPortugueseData.pageData,
+      });
     });
   });
 
   it('should return 404 status', () => {
     const service = 'portuguese';
-    shouldRender(invalidPortugueseData, service, ['brasil']);
-    expect(isValidPassportHome).not.toHaveBeenCalled();
+    const result = shouldRender(invalidPortugueseData, service, ['brasil']);
+    expect(result).toEqual({
+      hasData200StatusAndCorrectService: false,
+      status: 404,
+      pageData: invalidPortugueseData.pageData,
+    });
   });
 });
