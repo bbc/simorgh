@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'enzyme';
 import {
   shouldMatchSnapshot,
   isNull,
@@ -83,10 +84,11 @@ describe('Image', () => {
       <ImageContainer {...data} />,
     );
 
-    shouldMatchSnapshot(
-      'should render a lazyload container instead of an image if the image is after the 3rd block',
-      <ImageContainer position={[4]} {...data} />,
-    );
+    it('should render a lazyload container instead of an image if the image is after the 3rd block', () => {
+      // Render using enzyme to capture noscript contents
+      const container = render(<ImageContainer position={[4]} {...data} />);
+      expect(container).toMatchSnapshot();
+    });
 
     const dataWithNonBbcCopyright = blockArrayModel([
       rawImageBlockWithNonBbcCopyright,
