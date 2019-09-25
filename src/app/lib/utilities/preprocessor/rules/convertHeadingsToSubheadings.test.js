@@ -34,8 +34,13 @@ describe('convertHeadingsToSubheadings', () => {
     expect(transformer(fixture)).toStrictEqual(expectedResult);
   });
   it('handles real example', () => {
-    const countBlocks = (payload, type) =>
-      payload.content.blocks.filter(block => block.type === type).length;
+    const countBlocks = (payload, type) => {
+      if (!payload || !payload.content || !payload.content.blocks || !payload.content.blocks.filter) {
+        return 0;
+      }
+      
+      return payload.content.blocks.filter(block => block.type === type).length;
+    }
 
     const output = transformer(realExample);
 
