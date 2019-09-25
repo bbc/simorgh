@@ -1,48 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { element, string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
-import { dataPropType } from '#models/propTypes/data';
+import { dataPropType } from '../../../models/propTypes/data';
 import ErrorMain from '../../ErrorMain';
-import getPassportHome from '#lib/utilities/getPassportHome';
-
-// checks for data, status, setting default status if not found
-const constructRenderObject = data => ({
-  status: pathOr(null, ['status'], data) || 500,
-  pageData: pathOr(null, ['pageData'], data),
-});
-
-const isValidPassportHome = (passportHome, service) =>
-  passportHome ? passportHome === service : true;
-
-// checks for pageData, 200 status and if home service from article data fits the service locale
-const shouldRender = (data, service) => {
-  const { status, pageData } = constructRenderObject(data);
-
-  let statusCode = status;
-  let isCorrectService;
-
-  const hasDataAnd200Status = pageData && status === 200;
-  if (hasDataAnd200Status) {
-    const passportHome = getPassportHome(pageData);
-    isCorrectService = isValidPassportHome(passportHome, service);
-    statusCode = !isCorrectService ? 404 : status;
-  }
-
-  return {
-    hasData200StatusAndCorrectService: hasDataAnd200Status && isCorrectService,
-    status: statusCode,
-    pageData,
-  };
-};
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import shouldRender from './shouldRender';
 
 const WithData = Component => {
   const DataContainer = ({ data, ...props }) => {
     const { service } = props;
+    const { passportHomes } = useContext(ServiceContext) || {};
     const {
       hasData200StatusAndCorrectService,
       status,
       pageData,
-    } = shouldRender(data, service);
+    } = shouldRender(data, service, passportHomes);
 
     if (hasData200StatusAndCorrectService) {
       return <Component pageData={pageData} {...props} />;
