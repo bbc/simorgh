@@ -1,12 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-
-import {
-  shouldShallowMatchSnapshot,
-  shouldMatchSnapshot,
-  isNull,
-} from '#testHelpers';
-
+import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import MediaIndicator from '.';
 
 const audioItem = {
@@ -101,22 +95,22 @@ const noMediaFormat = {
 };
 
 describe('Story Promo Media Indicator', () => {
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render an audio item correctly',
     <MediaIndicator item={audioItem} service="news" />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a video item correctly',
     <MediaIndicator item={videoItem} service="news" />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render a photo gallery item correctly',
     <MediaIndicator item={photogalleryItem} service="news" />,
   );
 
-  shouldShallowMatchSnapshot(
+  shouldMatchSnapshot(
     'should render correctly even without duration',
     <MediaIndicator item={noDurationItem} service="news" />,
   );
