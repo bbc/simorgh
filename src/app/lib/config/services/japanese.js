@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { japanese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Tokyo';
+import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -36,7 +37,7 @@ export const service = {
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ホーム',
+    frontPageTitle: '最新ニュース',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
