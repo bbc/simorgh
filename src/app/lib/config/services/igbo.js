@@ -8,7 +8,7 @@ const igbo = {
   default: {
     lang: 'ig',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
     brandName: 'BBC News Ìgbò',
@@ -23,6 +23,12 @@ const igbo = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
+    externalLinkText: ', Site na mpụta',
+    imageCaptionOffscreenText: 'Nkọwa foto ',
+    videoCaptionOffscreenText: 'Aha onyonyo ',
+    audioCaptionOffscreenText: 'Aha nkeananụānụ',
+    defaultCaptionOffscreenText: 'Ihe a na-akpọ ya ',
+    imageCopyrightOffscreenText: 'Ebe foto si ',
     brandSVG,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -43,7 +49,7 @@ const igbo = {
       home: 'Akụkọ',
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
-      relatedContent: 'Related content',
+      relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       error: {
         home: 'Akụkọ',
         currentPage: 'Current page',
@@ -172,6 +178,10 @@ const igbo = {
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms',
           text: 'Usoro Ojiji',
+        },
+        {
+          href: 'https://www.bbc.co.uk/aboutthebbc',
+          text: 'Gbasara BBC',
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
