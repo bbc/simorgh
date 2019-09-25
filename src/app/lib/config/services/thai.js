@@ -1,8 +1,8 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { thai } from '@bbc/gel-foundations/scripts';
 import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
-import 'moment/locale/th';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
+import '@bbc/psammead-locales/moment/th';
 
 const service = {
   default: {

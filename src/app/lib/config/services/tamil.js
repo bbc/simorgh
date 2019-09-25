@@ -3,6 +3,7 @@ import { tamil } from '@bbc/gel-foundations/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/ta';
 
 const service = {
   default: {

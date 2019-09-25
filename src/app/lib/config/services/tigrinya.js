@@ -6,6 +6,7 @@ import {
   F_NOTO_SANS_ETHIOPIC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
+import '@bbc/psammead-locales/moment/ti';
 
 const service = {
   default: {

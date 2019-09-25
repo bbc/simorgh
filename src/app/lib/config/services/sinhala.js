@@ -6,6 +6,7 @@ import {
   F_ISKOOLA_POTA_BBC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/si';
 
 const service = {
   default: {
