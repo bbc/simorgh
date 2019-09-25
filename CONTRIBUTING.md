@@ -56,7 +56,7 @@ git pull upstream latest
 ```
 
 ### Your work
-> Make sure you have a valid GPG key set up in GitHub. **All commits must be GPG signed** We do have a very small [guide](docs/GPG-Signing-Guide.md) for setting up GPG signing on MacOs.
+> Make sure you have a valid GPG key set up in GitHub. **All commits must be GPG signed** We do have a very small [guide](docs/GPG-Signing-Guide.md) for setting up GPG signing on MacOS.
 
 Create a new topic branch (off the main project `latest` branch) that will contain your feature, change, or fix:
 
