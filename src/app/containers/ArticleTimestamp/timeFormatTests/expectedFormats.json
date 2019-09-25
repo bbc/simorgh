@@ -1,42 +1,42 @@
 {
-  "arabic":{
-     "exact date":"10 أكتوبر/ تشرين الأول 2018",
-     "three hours ago":"منذ 3 ساعات",
-     "five hours ago":"منذ 5 ساعات",
-     "eleven hours ago":"منذ 11 ساعة",
-     "twelve hours ago":"منذ 12 ساعة",
-     "twenty four hours ago":"منذ يوم واحد",
-     "two days ago":"منذ يومين",
-     "three days ago":"منذ 3 أيام"
+  "arabic": {
+    "exact date": "10 أكتوبر/ تشرين الأول 2018",
+    "three hours ago": "قبل 3 ساع",
+    "five hours ago": "قبل 5 ساع",
+    "eleven hours ago": "قبل 11 ساع",
+    "twelve hours ago": "قبل 12 ساع",
+    "twenty four hours ago": "يوم واحد",
+    "two days ago": "يومين",
+    "three days ago": "3 أيام"
   },
-  "igbo":{
-     "exact date":"10 Ọktọba 2018",
-     "three hours ago":"elekere 3 gara aga",
-     "five hours ago":"elekere 5 gara aga",
-     "eleven hours ago":"elekere 11 gara aga",
-     "twelve hours ago":"elekere 12 gara aga",
-     "twenty four hours ago":"otu ụbọchị gara aga",
-     "two days ago":"Ụbọchị 2 gara aga",
-     "three days ago":"Ụbọchị 3 gara aga"
+  "igbo": {
+    "exact date": "10 Ọktọba 2018",
+    "three hours ago": "elekere 3 gara aga",
+    "five hours ago": "elekere 5 gara aga",
+    "eleven hours ago": "elekere 11 gara aga",
+    "twelve hours ago": "elekere 12 gara aga",
+    "twenty four hours ago": "otu ụbọchị gara aga",
+    "two days ago": "Ụbọchị 2 gara aga",
+    "three days ago": "Ụbọchị 3 gara aga"
   },
-  "news":{
-     "exact date":"10 October 2018",
-     "three hours ago":"3 hours ago",
-     "five hours ago":"5 hours ago",
-     "eleven hours ago":"11 hours ago",
-     "twelve hours ago":"12 hours ago",
-     "twenty four hours ago":"a day ago",
-     "two days ago":"2 days ago",
-     "three days ago":"3 days ago"
+  "news": {
+    "exact date": "10 October 2018",
+    "three hours ago": "3 hours ago",
+    "five hours ago": "5 hours ago",
+    "eleven hours ago": "11 hours ago",
+    "twelve hours ago": "12 hours ago",
+    "twenty four hours ago": "a day ago",
+    "two days ago": "2 days ago",
+    "three days ago": "3 days ago"
   },
-  "persian":{
-     "exact date":"۱۸ مهر ۱۳۹۷ - ۱۰ اکتبر ۲۰۱۸",
-     "three hours ago":"۳ ساعت پیش",
-     "five hours ago":"۵ ساعت پیش",
-     "eleven hours ago":"۱۱ ساعت پیش",
-     "twelve hours ago":"۱۲ ساعت پیش",
-     "twenty four hours ago":"یک روز پیش",
-     "two days ago":"۲ روز پیش",
-     "three days ago":"۳ روز پیش"
+  "persian": {
+    "exact date": "۱۸ مهر ۱۳۹۷ - ۱۰ اکتبر ۲۰۱۸",
+    "three hours ago": "۳ ساعت پیش",
+    "five hours ago": "۵ ساعت پیش",
+    "eleven hours ago": "۱۱ ساعت پیش",
+    "twelve hours ago": "۱۲ ساعت پیش",
+    "twenty four hours ago": "یک روز پیش",
+    "two days ago": "۲ روز پیش",
+    "three days ago": "۳ روز پیش"
   }
 }
