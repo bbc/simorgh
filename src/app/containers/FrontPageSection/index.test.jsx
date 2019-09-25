@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import * as SectionLabel from '@bbc/psammead-section-label';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { service as newsConfig } from '#lib/config/services/news';
-import { shouldShallowMatchSnapshot } from '#testHelpers';
 import FrontPageSection from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
@@ -205,22 +205,22 @@ describe('FrontPageSection Container', () => {
       useContext.mockReset();
     });
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly for canonical',
       <FrontPageSection group={group} sectionNumber={0} />,
     );
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render correctly with a linking strapline',
       <FrontPageSection group={groupWithLink} sectionNumber={2} />,
     );
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render without a bar',
       <FrontPageSection group={group} bar={false} sectionNumber={1} />,
     );
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render with only one item',
       <FrontPageSection group={hasOneItem} sectionNumber={0} />,
     );
