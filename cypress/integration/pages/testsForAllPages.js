@@ -35,6 +35,13 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
       });
 
+      it('should render a H1 which has attributes `id` and `tabindex`', () => {
+        cy.get('h1')
+          .should('have.lengthOf', 1)
+          .should('have.attr', 'id', 'content')
+          .should('have.attr', 'tabindex', '-1');
+      });
+
       if (pageType !== 'errorPage404') {
         it('should include the canonical URL', () => {
           cy.get('head link[rel="canonical"]').should(
