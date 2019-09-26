@@ -61,7 +61,7 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   }
 
   if (oneItem) {
-    return <TopMargin oneItem={oneItem}>{children}</TopMargin>;
+    return <TopMargin>{children}</TopMargin>;
   }
 
   return children;
