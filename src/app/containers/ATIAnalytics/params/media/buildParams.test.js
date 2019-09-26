@@ -10,7 +10,7 @@ jest.mock('../../../../lib/analyticsUtils', () => {
   };
 });
 
-const pageData = {
+const media = {
   metadata: {
     id: 'id',
     language: 'language',
@@ -50,18 +50,14 @@ const validURLParams = {
 
 describe('buildMediaATIParams', () => {
   it('should return the right object', () => {
-    const result = buildMediaATIParams(
-      pageData,
-      requestContext,
-      serviceContext,
-    );
+    const result = buildMediaATIParams(media, requestContext, serviceContext);
     expect(result).toEqual(validURLParams);
   });
 });
 
 describe('buildMediaATIUrl', () => {
   it('should return the right url', () => {
-    const result = buildMediaATIUrl(pageData, requestContext, serviceContext);
+    const result = buildMediaATIUrl(media, requestContext, serviceContext);
     expect(result).toEqual(
       's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
     );
