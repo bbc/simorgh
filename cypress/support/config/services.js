@@ -1630,9 +1630,9 @@ const services = {
 };
 
 // Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env var
-const runOnlyForService = Cypress.env('ONLY_SERVICE');
-if (runOnlyForService) {
-  module.exports = { [runOnlyForService]: services[runOnlyForService] };
+const runOnlyService = Cypress.env('ONLY_SERVICE');
+if (runOnlyService && Object.keys(services).includes(runOnlyService)) {
+  module.exports = { [runOnlyService]: services[runOnlyService] };
 } else {
   module.exports = services;
 }
