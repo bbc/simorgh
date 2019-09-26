@@ -3,12 +3,6 @@ import {
   getPublishedDatetime,
   getCurrentTime,
 } from '../../../../lib/analyticsUtils';
-import {
-  getLanguage,
-  getContentId,
-  getPageIdentifier,
-  getPageTitle,
-} from '../../../../lib/analyticsUtils/frontpage';
 
 jest.mock('../../../../lib/analyticsUtils', () => {
   const utils = jest.requireActual('../../../../lib/analyticsUtils');
@@ -19,14 +13,9 @@ jest.mock('../../../../lib/analyticsUtils', () => {
     getCurrentTime: jest.fn(),
   };
 });
-jest.mock('../../../../lib/analyticsUtils/frontpage');
 
 getCurrentTime.mockImplementation(() => '00:00:00');
 getPublishedDatetime.mockImplementation(() => 'getPublishedDatetime');
-getLanguage.mockImplementation(() => 'getLanguage');
-getContentId.mockImplementation(() => 'getContentId');
-getPageIdentifier.mockImplementation(() => 'getPageIdentifier');
-getPageTitle.mockImplementation(() => 'getPageTitle');
 
 const requestContext = {
   platform: 'platform',
@@ -45,17 +34,31 @@ const serviceContext = {
 
 const validURLParams = {
   appName: serviceContext.atiAnalyticsAppName,
-  contentId: getContentId(),
+  contentId: 'urn:bbc:cps:00000000-0000-0000-0000-000000000000',
   contentType: 'index-home',
-  language: getLanguage(),
-  pageIdentifier: getPageIdentifier(),
-  pageTitle: getPageTitle(),
+  language: 'language',
+  pageIdentifier: 'service.page',
+  pageTitle: 'title - brandName',
   producerId: serviceContext.atiAnalyticsProducerId,
   timePublished: getPublishedDatetime(),
   timeUpdated: getPublishedDatetime(),
   platform: requestContext.platform,
   service: 'service',
   statsDestination: requestContext.statsDestination,
+};
+
+const frontPage = {
+  metadata: {
+    analyticsLabels: {
+      counterName: 'service.page',
+    },
+    locators: {
+      curie:
+        'http://www.bbc.co.uk/asset/00000000-0000-0000-0000-000000000000/desktop/domestic',
+    },
+    language: 'language',
+    title: 'title',
+  },
 };
 
 describe('frontpage buildParams', () => {
@@ -66,7 +69,7 @@ describe('frontpage buildParams', () => {
   describe('buildFrontPageATIParams', () => {
     it('should return the right object', () => {
       const result = buildFrontPageATIParams(
-        {},
+        frontPage,
         requestContext,
         serviceContext,
       );
@@ -76,9 +79,13 @@ describe('frontpage buildParams', () => {
 
   describe('buildFrontPageATIUrl', () => {
     it('should return the right url', () => {
-      const result = buildFrontPageATIUrl({}, requestContext, serviceContext);
+      const result = buildFrontPageATIUrl(
+        frontPage,
+        requestContext,
+        serviceContext,
+      );
       expect(result).toEqual(
-        's=598285&s2=atiAnalyticsProducerId&p=getPageIdentifier&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[getContentId]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[getLanguage]&x5=[http://localhost/]&x7=[index-home]&x9=[getPageTitle]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]',
+        's=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[urn:bbc:cps:00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[index-home]&x9=[title+-+brandName]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]',
       );
     });
   });
