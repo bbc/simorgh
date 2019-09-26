@@ -98,6 +98,7 @@ exports[`Media Page Blocks should match snapshot 1`] = `
   <h1
     class="c0"
     id="content"
+    tabindex="-1"
   >
     ያድምጡ
   </h1>
