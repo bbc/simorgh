@@ -51,6 +51,7 @@ const routes = [
     exact: true,
     component: CpsAsset,
     getInitialData: getCpsAssetInitialData,
+    pageType: 'MAP',
   },
   {
     component: ErrorPage,
