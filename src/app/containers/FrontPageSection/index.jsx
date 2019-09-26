@@ -73,7 +73,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const isFirstSection = sectionNumber === 0;
 
   // Don't render a section without any items.
-  if (items.length === 0) {
+  if (!items || items.length === 0) {
     return null;
   }
 
