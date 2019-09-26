@@ -2,8 +2,9 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { gujarati as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnewsgujarati`,
@@ -197,4 +198,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);
