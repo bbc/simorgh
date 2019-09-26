@@ -7,8 +7,9 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/ur';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: 'ur',
     product: 'BBC News',
@@ -225,4 +226,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

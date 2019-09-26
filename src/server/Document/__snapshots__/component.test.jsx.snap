@@ -54,10 +54,13 @@ exports[`Document Component should render AMP version correctly 1`] = `
       <!--[if !IE]&gt;&lt;!-->
     </div>
     <script
-      crossorigin="anonymous"
-      defer=""
-      src="http://example.com/file.js"
-      type="text/javascript"
+      src="main.js"
+    />
+    <script
+      src="vendor.js"
+    />
+    <script
+      src="igbo.js"
     />
     <div>
       <!--&lt;![endif]-->
@@ -120,10 +123,13 @@ exports[`Document Component should render correctly 1`] = `
       <!--[if !IE]&gt;&lt;!-->
     </div>
     <script
-      crossorigin="anonymous"
-      defer=""
-      src="http://example.com/file.js"
-      type="text/javascript"
+      src="main.js"
+    />
+    <script
+      src="vendor.js"
+    />
+    <script
+      src="igbo.js"
     />
     <div>
       <!--&lt;![endif]-->
