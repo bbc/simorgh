@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import FrontPageContainer from './index';
-import igboConfig from '#lib/config/services/igbo';
+import { service as igboConfig } from '#lib/config/services/igbo';
 import igboData from '#data/igbo/frontpage';
 import toggleReducer from '../../reducers/ToggleReducer';
 import defaultToggles from '#lib/config/toggles';
