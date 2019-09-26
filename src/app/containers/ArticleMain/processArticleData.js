@@ -4,26 +4,23 @@ import aboutTagsContent from '../Metadata/linkedDataAbout';
 const getISOStringDate = date => new Date(date).toISOString();
 
 export default articleData => {
-  const content = path(['content'], articleData);
-  const metadata = path(['metadata'], articleData);
-  const promo = path(['promo'], articleData);
-  const blocks = path(['model', 'blocks'], content);
-  const headline = path(['headlines', 'seoHeadline'], promo);
-  const firstPublished = getISOStringDate(path(['firstPublished'], metadata));
-  const lastPublished = getISOStringDate(path(['lastPublished'], metadata));
-  const aboutTags = path(['tags', 'about'], metadata);
-  const articleSection = path(['passport', 'genre'], metadata);
-  const mentionsTags = path(['tags', 'mentions'], metadata);
+  const headline = path(['promo', 'headlines', 'seoHeadline'], articleData);
+  const firstPublished = getISOStringDate(
+    path(['metadata', 'firstPublished'], articleData),
+  );
+  const lastPublished = getISOStringDate(
+    path(['metadata', 'lastPublished'], articleData),
+  );
+  const aboutTags = path(['metadata', 'tags', 'about'], articleData);
+  const articleSection = path(['metadata', 'passport', 'genre'], articleData);
+  const mentionsTags = path(['metadata', 'tags', 'mentions'], articleData);
 
   return {
     firstPublished,
     lastPublished,
-    blocks,
     articleSection,
     mentionsTags,
     aboutTags,
-    promo,
-    metadata,
     articleSpecificLinkedData: {
       headline,
       datePublished: firstPublished,

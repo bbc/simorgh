@@ -71,9 +71,6 @@ describe('processArticleData', () => {
   it('should process the article data and return the expected object', () => {
     const actual = processArticleData(articleDataNews);
     const expected = {
-      blocks: articleDataNews.content.model.blocks,
-      promo: articleDataNews.promo,
-      metadata: articleDataNews.metadata,
       firstPublished: '2018-01-01T12:01:00.000Z',
       lastPublished: '2018-01-01T13:00:00.000Z',
       articleSection: null,

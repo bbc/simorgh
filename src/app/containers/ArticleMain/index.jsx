@@ -47,8 +47,8 @@ const ArticleMain = ({ articleData }) => {
       <ChartbeatAnalytics data={articleData} />
 
       <MetadataContainer
-        metadata={path(['metadata'], processedData)}
-        promo={path(['promo'], processedData)}
+        metadata={path(['metadata'], articleData)}
+        promo={path(['promo'], articleData)}
         pageSpecificLinkedData={path(
           ['articleSpecificLinkedData'],
           processedData,
@@ -67,7 +67,7 @@ const ArticleMain = ({ articleData }) => {
       <main role="main">
         <GhostGrid>
           <Blocks
-            blocks={path(['blocks'], processedData)}
+            blocks={path(['content', 'model', 'blocks'], articleData)}
             componentsToRender={componentsToRender}
           />
         </GhostGrid>
