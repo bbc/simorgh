@@ -3,13 +3,6 @@ import {
   getPublishedDatetime,
   getCurrentTime,
 } from '../../../../lib/analyticsUtils';
-import {
-  getLanguage,
-  getContentId,
-  getPageIdentifier,
-  getPromoHeadline,
-  getThingAttributes,
-} from '../../../../lib/analyticsUtils/article';
 
 jest.mock('../../../../lib/analyticsUtils', () => {
   const utils = jest.requireActual('../../../../lib/analyticsUtils');
@@ -20,15 +13,9 @@ jest.mock('../../../../lib/analyticsUtils', () => {
     getCurrentTime: jest.fn(),
   };
 });
-jest.mock('../../../../lib/analyticsUtils/article');
 
 getCurrentTime.mockImplementation(() => '00:00:00');
 getPublishedDatetime.mockImplementation(() => 'getPublishedDatetime');
-getLanguage.mockImplementation(() => 'getLanguage');
-getContentId.mockImplementation(() => 'getContentId');
-getPageIdentifier.mockImplementation(() => 'getPageIdentifier');
-getPromoHeadline.mockImplementation(() => 'getPromoHeadline');
-getThingAttributes.mockImplementation(() => 'getThingAttributes');
 
 const requestContext = {
   platform: 'platform',
@@ -46,18 +33,50 @@ const serviceContext = {
 
 const validURLParams = {
   appName: serviceContext.atiAnalyticsAppName,
-  contentId: getContentId(),
+  contentId: 'urn:bbc:optimo://www.bbc.co.uk',
   contentType: 'article',
-  language: getLanguage(),
-  ldpThingIds: getThingAttributes(),
-  ldpThingLabels: getThingAttributes(),
-  pageIdentifier: getPageIdentifier(),
-  pageTitle: getPromoHeadline(),
+  language: 'language',
+  ldpThingIds: 'thing+id+1~thing+id+2',
+  ldpThingLabels: 'thing+label+1~thing+label+2',
+  pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
+  pageTitle: 'pageTitle',
   producerId: serviceContext.atiAnalyticsProducerId,
   timePublished: getPublishedDatetime(),
   timeUpdated: getPublishedDatetime(),
   service: 'service',
   ...requestContext,
+};
+
+const article = {
+  metadata: {
+    analyticsLabels: {
+      counterName: 'service.page',
+    },
+    locators: {
+      optimoUrn: 'http://www.bbc.co.uk',
+    },
+    passport: {
+      language: 'language',
+    },
+    tags: {
+      about: [
+        {
+          thingId: 'thing id 1',
+          thingLabel: 'thing label 1',
+        },
+        {
+          thingId: 'thing id 2',
+          thingLabel: 'thing label 2',
+        },
+      ],
+    },
+    title: 'title',
+  },
+  promo: {
+    headlines: {
+      seoHeadline: 'pageTitle',
+    },
+  },
 };
 
 describe('buildParams', () => {
@@ -67,16 +86,24 @@ describe('buildParams', () => {
 
   describe('buildArticleATIParams', () => {
     it('should return the right object', () => {
-      const result = buildArticleATIParams({}, requestContext, serviceContext);
+      const result = buildArticleATIParams(
+        article,
+        requestContext,
+        serviceContext,
+      );
       expect(result).toEqual(validURLParams);
     });
   });
 
   describe('buildArticleATIUrl', () => {
     it('should return the right url', () => {
-      const result = buildArticleATIUrl({}, requestContext, serviceContext);
+      const result = buildArticleATIUrl(
+        article,
+        requestContext,
+        serviceContext,
+      );
       expect(result).toEqual(
-        's=598285&s2=atiAnalyticsProducerId&p=getPageIdentifier&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[getContentId]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[getLanguage]&x5=[http://localhost/]&x6=[originpreviousPath]&x7=[article]&x9=[getPromoHeadline]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]&x13=[getThingAttributes]&x14=[getThingAttributes]',
+        's=598285&s2=atiAnalyticsProducerId&p=service.articles.//www.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[urn:bbc:optimo://www.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x6=[originpreviousPath]&x7=[article]&x9=[pageTitle]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]&x13=[thing+label+1~thing+label+2]&x14=[thing+id+1~thing+id+2]',
       );
     });
   });
