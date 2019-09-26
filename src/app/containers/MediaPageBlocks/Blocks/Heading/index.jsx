@@ -9,7 +9,7 @@ const HeadingContainer = ({ idAttr, text }) => {
   if (!text) return null;
 
   return (
-    <Headline script={script} service={service} id={idAttr}>
+    <Headline script={script} service={service} id={idAttr} tabIndex="-1">
       {text}
     </Headline>
   );
