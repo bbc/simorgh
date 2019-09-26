@@ -72,14 +72,8 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
 
-  // The current implementation of SectionLabel *requires* a strapline to be
-  // present in order to render. It is currently *not possible* to render a
-  // section that does not have a strapline without breaking both the visual
-  // *and especially* the screen reader UX.
-  // If this group does not have a strapline; do not render!
-  // This may change in the future, if a way to avoid breaking UX is found.
-  // Also, don't render a section without any items.
-  if (!(strapline && items) || items.length === 0) {
+  // Don't render a section without any items.
+  if (items.length === 0) {
     return null;
   }
 
@@ -90,18 +84,28 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // the greatest possible support.
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section role="region" aria-labelledby={sectionLabelId}>
-      <SectionLabel
-        script={script}
-        labelId={sectionLabelId}
-        bar={bar}
-        visuallyHidden={isFirstSection}
-        service={service}
-        dir={dir}
-        linkText={isLink ? seeAll : null}
-        href={href}
-      >
-        {group.strapline.name}
-      </SectionLabel>
+      {/*
+         The current implementation of SectionLabel *requires* a strapline to be
+         present in order to render. It is currently *not possible* to render a
+         section that does not have a strapline without breaking both the visual
+         *and especially* the screen reader UX.
+         If this group does not have a strapline; do not render!
+         This may change in the future, if a way to avoid breaking UX is found.
+      */}
+      {strapline && (
+        <SectionLabel
+          script={script}
+          labelId={sectionLabelId}
+          bar={bar}
+          visuallyHidden={isFirstSection}
+          service={service}
+          dir={dir}
+          linkText={isLink ? seeAll : null}
+          href={href}
+        >
+          {group.strapline.name}
+        </SectionLabel>
+      )}
       {items.length > 1 ? (
         <MarginWrapper addMargin={!isFirstSection} as={StoryPromoUl}>
           {items.map((item, index) => (

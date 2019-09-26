@@ -10,8 +10,19 @@ import {
   articleRegexPath,
   frontpageRegexPath,
   mediaRadioAndTvRegexPathsArray,
-  mediaAssetPageRegexPath,
+  cpsAssetPageRegexPath,
 } from './regex';
+
+const pages = {
+  MAP: MediaPage,
+  FIX: FrontPage,
+};
+
+const CpsAsset = props => {
+  const { type } = props.data.pageData.metadata;
+  const Page = pages[type];
+  return Page({ ...props, pageType: type });
+};
 
 const routes = [
   {
@@ -36,9 +47,9 @@ const routes = [
     pageType: 'media',
   },
   {
-    path: mediaAssetPageRegexPath,
+    path: cpsAssetPageRegexPath,
     exact: true,
-    component: MediaPage,
+    component: CpsAsset,
     getInitialData: getMediaAssetPageInitialData,
     pageType: 'MAP',
   },

@@ -9,7 +9,7 @@ import {
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
   mediaRadioAndTvRegexPathsArray,
-  mediaAssetPageRegexPath,
+  cpsAssetPageRegexPath,
   mediaAssetPageDataRegexPath,
 } from './index';
 
@@ -226,7 +226,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
     ];
     shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
   });
-  describe('mediaAssetPageRegexPath', () => {
+  describe('cpsAssetPageRegexPath', () => {
     const validRoutes = [
       '/pidgin/12345678',
       '/pidgin/12345678.amp',
@@ -243,7 +243,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/zhongwen/test-12345678/simp.amp',
     ];
 
-    shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
+    shouldMatchValidRoutes(validRoutes, cpsAssetPageRegexPath);
 
     // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
     const inValidRoutes = [
@@ -256,7 +256,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/pidgin/test-49450859/',
       '/pidgin/test-494859.amp',
     ];
-    shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageRegexPath);
+    shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageRegexPath);
   });
 
   describe('mediaAssetPageDataRegexPath', () => {
