@@ -13,7 +13,7 @@ import { GhostGrid } from '#lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';
-import aboutTagsContent from '../Metadata/linkedDataAbout';
+import processArticleData from './processArticleData';
 
 const componentsToRender = {
   headline: headings,
@@ -25,8 +25,6 @@ const componentsToRender = {
   timestamp,
 };
 
-const getISOStringDate = date => new Date(date).toISOString();
-
 const ArticleMain = ({ articleData }) => {
   const {
     brandName,
@@ -34,54 +32,44 @@ const ArticleMain = ({ articleData }) => {
     defaultImage,
     articleAuthor,
   } = useContext(ServiceContext);
-  const content = path(['content'], articleData);
-  const metadata = path(['metadata'], articleData);
-  const promo = path(['promo'], articleData);
-  const { blocks } = content.model;
-  const headline = path(['headlines', 'seoHeadline'], promo);
-  const firstPublished = getISOStringDate(path(['firstPublished'], metadata));
-  const lastPublished = getISOStringDate(path(['lastPublished'], metadata));
-  const aboutTags = path(['tags', 'about'], metadata);
-  const articleSection = path(['passport', 'genre'], metadata);
-  const mentionsTags = path(['tags', 'mentions'], metadata);
-  const articleSpecificLinkedData = {
-    headline,
-    datePublished: firstPublished,
-    dateModified: lastPublished,
-    about: aboutTagsContent(aboutTags),
-    author: {
-      '@type': 'NewsMediaOrganization',
-      name: brandName,
-      logo: {
-        '@type': 'ImageObject',
-        width: 1024,
-        height: 576,
-        url: defaultImage,
-      },
-      noBylinesPolicy,
-    },
-  };
+
+  const processedData = processArticleData({
+    ...articleData,
+    brandName,
+    noBylinesPolicy,
+    defaultImage,
+  });
 
   return (
     <>
       <ATIAnalytics data={articleData} />
+
       <ChartbeatAnalytics data={articleData} />
+
       <MetadataContainer
-        metadata={metadata}
-        promo={promo}
-        pageSpecificLinkedData={articleSpecificLinkedData}
+        metadata={path(['metadata'], processedData)}
+        promo={path(['promo'], processedData)}
+        pageSpecificLinkedData={path(
+          ['articleSpecificLinkedData'],
+          processedData,
+        )}
       />
+
       <ArticleMetadata
         author={articleAuthor}
-        firstPublished={firstPublished}
-        lastPublished={lastPublished}
-        section={articleSection}
-        aboutTags={aboutTags}
-        mentionsTags={mentionsTags}
+        firstPublished={path(['firstPublished'], processedData)}
+        lastPublished={path(['lastPublished'], processedData)}
+        section={path(['articleSection'], processedData)}
+        aboutTags={path(['aboutTags'], processedData)}
+        mentionsTags={path(['mentionsTags'], processedData)}
       />
+
       <main role="main">
         <GhostGrid>
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          <Blocks
+            blocks={path(['blocks'], processedData)}
+            componentsToRender={componentsToRender}
+          />
         </GhostGrid>
       </main>
     </>
