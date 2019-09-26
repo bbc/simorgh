@@ -23,7 +23,7 @@ export const isValidPassportHome = (
   const passportHomesOverrideArray = passportHomesOverride || [];
   const passportHomeLower = (passportHome || '').toLowerCase();
 
-  if (!passportHome && !passportHomesOverrideArray.length) return true;
+  if (!passportHome) return true;
 
   return (
     passportHomeLower === service ||
