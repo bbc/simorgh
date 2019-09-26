@@ -3,8 +3,9 @@ import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { somali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
 import '@bbc/psammead-locales/moment/so';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -227,4 +228,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

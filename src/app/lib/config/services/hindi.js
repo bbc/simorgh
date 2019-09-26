@@ -3,8 +3,9 @@ import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { hindi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 import '@bbc/psammead-locales/moment/hi';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `hi`,
     articleAuthor: `https://www.facebook.com/bbchindi`,
@@ -223,4 +224,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

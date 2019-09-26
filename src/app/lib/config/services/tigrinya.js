@@ -7,8 +7,9 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '@bbc/psammead-locales/moment/ti';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ti`,
     articleAuthor: `https://www.facebook.com/bbcnewstigrinya`,
@@ -186,4 +187,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

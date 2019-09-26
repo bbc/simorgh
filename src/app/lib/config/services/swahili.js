@@ -3,8 +3,9 @@ import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
 import '@bbc/psammead-locales/moment/sw';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -212,4 +213,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

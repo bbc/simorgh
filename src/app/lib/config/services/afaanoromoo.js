@@ -3,8 +3,9 @@ import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '@bbc/psammead-locales/moment/om';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -195,4 +196,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

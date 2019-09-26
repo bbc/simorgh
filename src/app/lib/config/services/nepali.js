@@ -3,8 +3,9 @@ import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { nepali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
 import '@bbc/psammead-locales/moment/ne';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnepaliservice`,
@@ -198,4 +199,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

@@ -3,8 +3,9 @@ import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ru';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcrussian`,
@@ -222,4 +223,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

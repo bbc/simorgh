@@ -7,8 +7,9 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `si`,
     articleAuthor: `https://www.facebook.com/BBCSinhala`,
@@ -214,4 +215,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

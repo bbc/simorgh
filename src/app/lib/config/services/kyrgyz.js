@@ -3,8 +3,9 @@ import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ky';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbckyrgyz`,
@@ -225,4 +226,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);
