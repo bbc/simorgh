@@ -1611,7 +1611,7 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
 >
   <head>
     <title>
-      BBC News 코리아 라디오 - BBC News 코리아
+      BBC 코리아 라디오 - BBC News 코리아
     </title>
     <link
       href="https://www.bbc.com/news/articles/c0000000001o"
@@ -2029,7 +2029,7 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
       name="og:site_name"
     />
     <meta
-      content="BBC News 코리아 라디오 - BBC News 코리아"
+      content="BBC 코리아 라디오 - BBC News 코리아"
       name="og:title"
     />
     <meta
@@ -2065,7 +2065,7 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
       name="twitter:site"
     />
     <meta
-      content="BBC News 코리아 라디오 - BBC News 코리아"
+      content="BBC 코리아 라디오 - BBC News 코리아"
       name="twitter:title"
     />
     <script
@@ -2086,7 +2086,7 @@ exports[`Metadata Container should match snapshot for WS Media liveradio 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.bbc.com/korean/bbc_korean_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/korean/bbc_korean_radio/liveradio","name":"BBC News 코리아 라디오"}}
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.bbc.com/korean/bbc_korean_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.bbc.com/korean/bbc_korean_radio/liveradio","name":"BBC 코리아 라디오"}}
     </script>
   </head>
   <body>

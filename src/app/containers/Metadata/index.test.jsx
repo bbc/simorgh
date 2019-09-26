@@ -544,7 +544,7 @@ describe('Metadata Container', () => {
         metaTags: [],
         timeFirstPublished: null,
         timeLastPublished: null,
-        title: 'BBC News 코리아 라디오',
+        title: 'BBC 코리아 라디오',
         serviceConfig: services.korean.default,
         type: 'website',
         service: 'korean',
@@ -559,7 +559,7 @@ describe('Metadata Container', () => {
         lastUpdated: null,
         createdBy: 'Korean',
         logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
-        seoHeadline: 'BBC News 코리아 라디오',
+        seoHeadline: 'BBC 코리아 라디오',
         type: 'RadioChannel',
       }),
     );

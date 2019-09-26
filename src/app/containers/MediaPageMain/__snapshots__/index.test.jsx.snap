@@ -312,7 +312,7 @@ exports[`Media Page Main should match snapshot 1`] = `
       name="application-name"
     />
     <meta
-      content="ዝግጅቶቻችንን"
+      content="ዝግጅቶቻችንን’"
       name="description"
     />
     <meta
@@ -336,7 +336,7 @@ exports[`Media Page Main should match snapshot 1`] = `
       name="msapplication-TileImage"
     />
     <meta
-      content="ዝግጅቶቻችንን"
+      content="ዝግጅቶቻችንን’"
       name="og:description"
     />
     <meta
@@ -376,7 +376,7 @@ exports[`Media Page Main should match snapshot 1`] = `
       name="twitter:creator"
     />
     <meta
-      content="ዝግጅቶቻችንን"
+      content="ዝግጅቶቻችንን’"
       name="twitter:description"
     />
     <meta
@@ -421,7 +421,7 @@ exports[`Media Page Main should match snapshot 1`] = `
           <p
             class="c3"
           >
-            ዝግጅቶቻችንን
+            ዝግጅቶቻችንን’
           </p>
           <div
             class="c4"
