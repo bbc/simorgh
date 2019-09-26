@@ -126,7 +126,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 </div>
 `;
 
-exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo should render correctly for amp 1`] = `
+exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for amp 1`] = `
 <html>
   <head>
     <script
@@ -193,7 +193,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
 </html>
 `;
 
-exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo should render correctly for canonical 1`] = `
+exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for canonical 1`] = `
 .c3 {
   position: absolute;
   top: 0;

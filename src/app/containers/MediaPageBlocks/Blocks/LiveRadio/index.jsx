@@ -7,6 +7,7 @@ import {
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
 import { RequestContext } from '#contexts/RequestContext';
+import checkExternalIdOverrides from './helper';
 
 const MediaPlayerOuterWrapper = styled.div`
   @media (min-width: 63rem) {
@@ -20,9 +21,6 @@ const MediaPlayerInnerWrapper = styled.div`
   width: 50rem;
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
 `;
-
-const checkExternalIdOverrides = externalId =>
-  externalId === 'bbc_oromo_radio' ? `bbc_afaanoromoo_radio` : externalId;
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform } = useContext(RequestContext);
