@@ -4,13 +4,20 @@ import { string, bool } from 'prop-types';
 import DocumentComponent from './component';
 
 describe('Document Component', () => {
-  const assets = ['http://example.com/file.js'];
   const assetOrigins = ['http://example.com'];
   const data = { test: 'data' };
 
   const mockHelmetToComponent = element => ({
     toComponent: jest.fn().mockImplementation(() => element),
   });
+
+  const scripts = (
+    <>
+      <script src="main.js" />
+      <script src="vendor.js" />
+      <script src="igbo.js" />
+    </>
+  );
 
   const helmet = {
     htmlAttributes: mockHelmetToComponent({
@@ -38,12 +45,12 @@ describe('Document Component', () => {
 
   const testDocumentComponent = ({ service, isAmp }) => (
     <DocumentComponent
-      assets={assets}
       assetOrigins={assetOrigins}
       app={'<h1>App!</h1>'}
       data={{ ...data }}
       helmet={helmet}
       styleTags={isAmp ? styleTagsAmp : styleTags}
+      scripts={scripts}
       service={service}
       isAmp={isAmp}
     />
