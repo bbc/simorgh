@@ -9,6 +9,7 @@ import {
 import { path } from 'ramda';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
 
 const MediaPlayerOuterWrapper = styled.div`
   @media (min-width: 63rem) {
@@ -24,8 +25,10 @@ const MediaPlayerInnerWrapper = styled.div`
 `;
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
-  const { platform } = useContext(RequestContext);
+  const { platform, origin } = useContext(RequestContext);
   const { liveRadio } = useContext(ServiceContext);
+
+  const isAmp = platform === 'amp';
 
   const MediaPlayer = {
     canonical: CanonicalMediaPlayer,
@@ -42,12 +45,19 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     });
   }
 
+  const embedSource = embedUrl({
+    requestUrl: `${serviceId}/${id}`,
+    type: 'media',
+    isAmp,
+    origin,
+  });
+
   return (
     <MediaPlayerOuterWrapper>
       <MediaPlayerInnerWrapper>
         <MediaPlayer
           showPlaceholder={false}
-          src={`/ws/av-embeds/media/${serviceId}/${id}`}
+          src={embedSource}
           id={idAttr}
           skin="audio"
         />

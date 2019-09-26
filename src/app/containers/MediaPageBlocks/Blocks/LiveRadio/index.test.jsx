@@ -5,10 +5,12 @@ import { RequestContext } from '#contexts/RequestContext';
 import { suppressPropWarnings } from '#testHelpers';
 import LiveRadio from '.';
 
+const origin = 'http://localhost.bbc.co.uk:7080';
+
 describe('MediaPageBlocks LiveRadio', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
-    <RequestContext.Provider value={{ platform: 'canonical' }}>
+    <RequestContext.Provider value={{ platform: 'canonical', origin }}>
       <ServiceContextProvider service="korean">
         <LiveRadio
           uuid="uuid"
@@ -25,7 +27,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
   shouldMatchSnapshot(
     'should render correctly for amp',
-    <RequestContext.Provider value={{ platform: 'amp' }}>
+    <RequestContext.Provider value={{ platform: 'amp', origin }}>
       <ServiceContextProvider service="korean">
         <LiveRadio
           uuid="uuid"
@@ -42,7 +44,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
     isNull(
       'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar' }}>
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
           <LiveRadio
             uuid="uuid"
@@ -60,7 +62,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
     isNull(
       'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar' }}>
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
           <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" />
         </ServiceContextProvider>
@@ -73,7 +75,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
     isNull(
       'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar' }}>
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
           <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
         </ServiceContextProvider>
@@ -84,7 +86,7 @@ describe('MediaPageBlocks LiveRadio', () => {
   describe('when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio', () => {
     shouldMatchSnapshot(
       'should render correctly for canonical',
-      <RequestContext.Provider value={{ platform: 'canonical' }}>
+      <RequestContext.Provider value={{ platform: 'canonical', origin }}>
         <ServiceContextProvider service="afaanoromoo">
           <LiveRadio
             uuid="uuid"
@@ -101,7 +103,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
     shouldMatchSnapshot(
       'should render correctly for amp',
-      <RequestContext.Provider value={{ platform: 'amp' }}>
+      <RequestContext.Provider value={{ platform: 'amp', origin }}>
         <ServiceContextProvider service="afaanoromoo">
           <LiveRadio
             uuid="uuid"
