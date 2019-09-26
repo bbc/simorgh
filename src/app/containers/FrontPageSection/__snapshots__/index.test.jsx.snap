@@ -634,6 +634,98 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 </section>
 `;
 
+exports[`FrontPageSection Container snapshots should render with no strapline 1`] = `
+<section
+  aria-labelledby="We-dont-need-no-strapline"
+  role="region"
+>
+  <MarginWrapper
+    addMargin={false}
+    as={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [
+          Object {
+            "role": "list",
+          },
+        ],
+        "componentStyle": ComponentStyle {
+          "componentId": "StoryPromoUl-sc-171lqjd-1",
+          "isStatic": true,
+          "rules": Array [
+            "list-style-type:none;margin:0;padding:0;",
+          ],
+        },
+        "displayName": "StoryPromoUl",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "children": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "StoryPromoUl-sc-171lqjd-1",
+        "target": "ul",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+  >
+    <ForwardRef(StoryPromoLi)>
+      <StoryPromoComponent
+        item={
+          Object {
+            "headlines": Object {
+              "headline": "Nothing rendered because we didn't set a strapline",
+            },
+            "id": "urn:bbc:ares::asset:igbo/testasset-00000003",
+            "indexImage": Object {
+              "altText": "Image Alt text 1",
+              "copyrightHolder": "Image provider 1",
+              "height": 1152,
+              "path": "/cpsprodpb/0A06/production/image.jpg",
+              "width": 2048,
+            },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
+            },
+            "summary": "Oops",
+            "timestamp": 1557738768,
+          }
+        }
+        sectionNumber={0}
+        storyNumber={0}
+      />
+    </ForwardRef(StoryPromoLi)>
+    <ForwardRef(StoryPromoLi)>
+      <StoryPromoComponent
+        item={
+          Object {
+            "headlines": Object {
+              "headline": "Top Story 2 headline",
+            },
+            "id": "urn:bbc:ares::asset:igbo/testasset-00000004",
+            "indexImage": Object {
+              "altText": "Image Alt text 2",
+              "copyrightHolder": "Image provider 2",
+              "height": 1152,
+              "path": "/cpsprodpb/0A06/production/image.jpg",
+              "width": 2048,
+            },
+            "locators": Object {
+              "assetUri": "https://www.bbc.co.uk",
+            },
+            "summary": "Summary text 2",
+            "timestamp": 1557738768,
+          }
+        }
+        sectionNumber={0}
+        storyNumber={1}
+      />
+    </ForwardRef(StoryPromoLi)>
+  </MarginWrapper>
+</section>
+`;
+
 exports[`FrontPageSection Container snapshots should render with only one item 1`] = `
 <section
   aria-labelledby="Top-Stories"

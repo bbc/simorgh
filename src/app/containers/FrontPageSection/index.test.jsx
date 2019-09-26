@@ -224,6 +224,11 @@ describe('FrontPageSection Container', () => {
       'should render with only one item',
       <FrontPageSection group={hasOneItem} sectionNumber={0} />,
     );
+
+    shouldShallowMatchSnapshot(
+      'should render with no strapline',
+      <FrontPageSection group={hasNoStrapline} sectionNumber={0} />,
+    );
   });
 
   describe('Section Label visuallyHidden prop', () => {
@@ -323,7 +328,7 @@ describe('FrontPageSection Container', () => {
       expect(container.children).toHaveLength(0);
     });
 
-    it('should render null when there is no strapline', () => {
+    it('should render with no strapline', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
           <FrontPageSection group={hasNoStrapline} sectionNumber={0} />
@@ -332,7 +337,7 @@ describe('FrontPageSection Container', () => {
 
       // container is a <div> which would contain the rendered elements...
       // IF THERE WERE ANY!
-      expect(container.children).toHaveLength(0);
+      expect(container.children).toHaveLength(1);
     });
 
     it('should not render the story promo inside a list when only one item exists', () => {
