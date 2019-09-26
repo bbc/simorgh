@@ -69,13 +69,17 @@ describe('ArticleMain', () => {
 
 describe('processArticleData', () => {
   it('should process the article data and return the expected object', () => {
-    const actual = processArticleData(articleDataNews);
+    const actual = processArticleData({
+      ...articleDataNews,
+      brandName: 'BBC News',
+      noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+      defaultImage:
+        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+    });
     const expected = {
       firstPublished: '2018-01-01T12:01:00.000Z',
       lastPublished: '2018-01-01T13:00:00.000Z',
       articleSection: null,
-      mentionsTags: articleDataNews.metadata.tags.mentions,
-      aboutTags: articleDataNews.metadata.tags.about,
       articleSpecificLinkedData: {
         headline: 'Article Headline for SEO',
         datePublished: '2018-01-01T12:01:00.000Z',
@@ -90,7 +94,16 @@ describe('processArticleData', () => {
         ],
         author: {
           '@type': 'NewsMediaOrganization',
-          logo: { '@type': 'ImageObject', width: 1024, height: 576 },
+          logo: {
+            '@type': 'ImageObject',
+            width: 1024,
+            height: 576,
+            url:
+              'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+          },
+          name: 'BBC News',
+          noBylinesPolicy:
+            'https://www.bbc.com/news/help-41670342#authorexpertise',
         },
       },
     };

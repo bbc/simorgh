@@ -13,14 +13,11 @@ export default articleData => {
   );
   const aboutTags = path(['metadata', 'tags', 'about'], articleData);
   const articleSection = path(['metadata', 'passport', 'genre'], articleData);
-  const mentionsTags = path(['metadata', 'tags', 'mentions'], articleData);
 
   return {
     firstPublished,
     lastPublished,
     articleSection,
-    mentionsTags,
-    aboutTags,
     articleSpecificLinkedData: {
       headline,
       datePublished: firstPublished,

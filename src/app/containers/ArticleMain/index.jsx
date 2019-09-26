@@ -60,8 +60,8 @@ const ArticleMain = ({ articleData }) => {
         firstPublished={path(['firstPublished'], processedData)}
         lastPublished={path(['lastPublished'], processedData)}
         section={path(['articleSection'], processedData)}
-        aboutTags={path(['aboutTags'], processedData)}
-        mentionsTags={path(['mentionsTags'], processedData)}
+        aboutTags={path(['metadata', 'tags', 'about'], articleData)}
+        mentionsTags={path(['metadata', 'tags', 'mentions'], articleData)}
       />
 
       <main role="main">
