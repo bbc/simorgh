@@ -1,5 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { suppressPropWarnings } from '#testHelpers';
 import LiveRadio from '.';
@@ -8,7 +9,14 @@ describe('MediaPageBlocks LiveRadio', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
     <RequestContext.Provider value={{ platform: 'canonical' }}>
-      <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" id="id" />
+      <ServiceContextProvider service="korean">
+        <LiveRadio
+          uuid="uuid"
+          idAttr="idAttr"
+          externalId="externalId"
+          id="id"
+        />
+      </ServiceContextProvider>
     </RequestContext.Provider>,
   );
 
@@ -18,7 +26,14 @@ describe('MediaPageBlocks LiveRadio', () => {
   shouldMatchSnapshot(
     'should render correctly for amp',
     <RequestContext.Provider value={{ platform: 'amp' }}>
-      <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" id="id" />
+      <ServiceContextProvider service="korean">
+        <LiveRadio
+          uuid="uuid"
+          idAttr="idAttr"
+          externalId="externalId"
+          id="id"
+        />
+      </ServiceContextProvider>
     </RequestContext.Provider>,
   );
 
@@ -28,12 +43,14 @@ describe('MediaPageBlocks LiveRadio', () => {
     isNull(
       'should render null',
       <RequestContext.Provider value={{ platform: 'foobar' }}>
-        <LiveRadio
-          uuid="uuid"
-          idAttr="idAttr"
-          externalId="externalId"
-          id="id"
-        />
+        <ServiceContextProvider service="korean">
+          <LiveRadio
+            uuid="uuid"
+            idAttr="idAttr"
+            externalId="externalId"
+            id="id"
+          />
+        </ServiceContextProvider>
       </RequestContext.Provider>,
     );
   });
@@ -44,7 +61,9 @@ describe('MediaPageBlocks LiveRadio', () => {
     isNull(
       'should render null',
       <RequestContext.Provider value={{ platform: 'foobar' }}>
-        <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" />
+        <ServiceContextProvider service="korean">
+          <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" />
+        </ServiceContextProvider>
       </RequestContext.Provider>,
     );
   });
@@ -55,7 +74,9 @@ describe('MediaPageBlocks LiveRadio', () => {
     isNull(
       'should render null',
       <RequestContext.Provider value={{ platform: 'foobar' }}>
-        <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
+        <ServiceContextProvider service="korean">
+          <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
+        </ServiceContextProvider>
       </RequestContext.Provider>,
     );
   });
@@ -64,12 +85,14 @@ describe('MediaPageBlocks LiveRadio', () => {
     shouldMatchSnapshot(
       'should render correctly for canonical',
       <RequestContext.Provider value={{ platform: 'canonical' }}>
-        <LiveRadio
-          uuid="uuid"
-          idAttr="idAttr"
-          externalId="bbc_oromo_radio"
-          id="id"
-        />
+        <ServiceContextProvider service="afaanoromoo">
+          <LiveRadio
+            uuid="uuid"
+            idAttr="idAttr"
+            externalId="bbc_oromo_radio"
+            id="id"
+          />
+        </ServiceContextProvider>
       </RequestContext.Provider>,
     );
 
@@ -79,12 +102,14 @@ describe('MediaPageBlocks LiveRadio', () => {
     shouldMatchSnapshot(
       'should render correctly for amp',
       <RequestContext.Provider value={{ platform: 'amp' }}>
-        <LiveRadio
-          uuid="uuid"
-          idAttr="idAttr"
-          externalId="bbc_oromo_radio"
-          id="id"
-        />
+        <ServiceContextProvider service="afaanoromoo">
+          <LiveRadio
+            uuid="uuid"
+            idAttr="idAttr"
+            externalId="bbc_oromo_radio"
+            id="id"
+          />
+        </ServiceContextProvider>
       </RequestContext.Provider>,
     );
   });

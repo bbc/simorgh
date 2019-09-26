@@ -6,8 +6,9 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
+import { path } from 'ramda';
 import { RequestContext } from '#contexts/RequestContext';
-import checkExternalIdOverrides from './helper';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const MediaPlayerOuterWrapper = styled.div`
   @media (min-width: 63rem) {
@@ -24,6 +25,7 @@ const MediaPlayerInnerWrapper = styled.div`
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform } = useContext(RequestContext);
+  const { liveRadio } = useContext(ServiceContext);
 
   const MediaPlayer = {
     canonical: CanonicalMediaPlayer,
@@ -32,14 +34,20 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
 
   if (!MediaPlayer || !externalId || !id) return null;
 
+  let serviceId = externalId;
+
+  if (path(['externalIdOverrides'], liveRadio)) {
+    liveRadio.externalIdOverrides.forEach(override => {
+      serviceId = override[externalId] ? override[externalId] : externalId;
+    });
+  }
+
   return (
     <MediaPlayerOuterWrapper>
       <MediaPlayerInnerWrapper>
         <MediaPlayer
           showPlaceholder={false}
-          src={`/ws/av-embeds/media/${checkExternalIdOverrides(
-            externalId,
-          )}/${id}`}
+          src={`/ws/av-embeds/media/${serviceId}/${id}`}
           id={idAttr}
           skin="audio"
         />
