@@ -7,13 +7,8 @@ describe('LiveRadio helper override externalId', () => {
   });
 
   it('should not override anything other than bbc_afaanoromoo_radio', () => {
-    let externalId = 'foobar';
-    expect(checkExternalIdOverrides(externalId)).toBe('foobar');
-
-    externalId = 'bbc_korean_radio';
-    expect(checkExternalIdOverrides(externalId)).toBe('bbc_korean_radio');
-
-    externalId = 'do_not_override_me';
-    expect(checkExternalIdOverrides(externalId)).toBe('do_not_override_me');
+    ['foobar', 'bbc_korean_radio', 'do_not_override_me'].forEach(externalId =>
+      expect(checkExternalIdOverrides(externalId)).toBe(externalId),
+    );
   });
 });
