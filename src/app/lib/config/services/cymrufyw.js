@@ -2,8 +2,9 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `cy`,
     articleAuthor: `https://www.facebook.com/BBCCymruFyw`,
@@ -208,4 +209,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);
