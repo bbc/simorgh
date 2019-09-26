@@ -6,7 +6,7 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
-import { path } from 'ramda';
+import { pathOr } from 'ramda';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
@@ -37,13 +37,11 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
 
   if (!MediaPlayer || !externalId || !id) return null;
 
-  let serviceId = externalId;
-
-  if (path(['externalIdOverrides'], liveRadio)) {
-    liveRadio.externalIdOverrides.forEach(override => {
-      serviceId = override[externalId] ? override[externalId] : externalId;
-    });
-  }
+  const serviceId = pathOr(
+    externalId,
+    ['externalIdOverrides', externalId],
+    liveRadio,
+  );
 
   const embedSource = embedUrl({
     requestUrl: `${serviceId}/${id}`,
