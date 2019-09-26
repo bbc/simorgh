@@ -179,7 +179,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/azeri',
+        path: '/azeri',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -549,7 +549,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/japanese',
+        path: '/japanese',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -621,7 +621,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/kyrgyz',
+        path: '/kyrgyz',
         smoke: false,
       },
       liveRadio: {
