@@ -3,8 +3,9 @@ import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/yo';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+import withContext from '../../../contexts/utils/withContext';
 
-const yoruba = {
+export const service = {
   default: {
     lang: 'yo',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -198,4 +199,4 @@ const yoruba = {
   },
 };
 
-export default yoruba;
+export default withContext(service);
