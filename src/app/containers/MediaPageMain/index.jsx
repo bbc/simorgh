@@ -4,7 +4,15 @@ import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
-import MediaPageBlocks from '../MediaPageBlocks';
+import Blocks from '../Blocks';
+import headings from '../Headings';
+import text from '../Text';
+
+const componentsToRender = {
+  headline: headings,
+  subheadline: headings,
+  text,
+};
 
 const MediaPageMain = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);
@@ -17,7 +25,7 @@ const MediaPageMain = ({ pageData }) => {
       <MetadataContainer metadata={metadata} promo={promo} />
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
-          <MediaPageBlocks blocks={blocks} />
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </GridItemConstrainedMedium>
       </Grid>
     </>

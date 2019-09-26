@@ -78,6 +78,7 @@
     "@bbc/psammead-styles": "^2.3.0",
     "@bbc/psammead-timestamp-container": "^2.4.15",
     "@bbc/psammead-visually-hidden-text": "^1.2.2",
+    "@fabl/rich-text-transforms": "1.0.0",
     "@loadable/component": "^5.10.2",
     "@loadable/server": "^5.10.2",
     "@loadable/webpack-plugin": "^5.7.1",
