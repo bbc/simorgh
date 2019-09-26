@@ -192,6 +192,9 @@ export const service = {
       },
     ],
     timezone: 'Africa/Addis_Ababa',
+    liveRadio: {
+      externalIdOverrides: [{ bbc_oromo_radio: 'bbc_afaanoromoo_radio' }],
+    },
   },
 };
 
