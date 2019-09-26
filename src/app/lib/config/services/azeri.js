@@ -3,8 +3,9 @@ import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
 import 'moment/locale/az';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -206,4 +207,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

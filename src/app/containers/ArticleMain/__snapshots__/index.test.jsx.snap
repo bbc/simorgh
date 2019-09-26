@@ -437,6 +437,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
             <h1
               class="c2"
               id="content"
+              tabindex="-1"
             >
               Article Headline
             </h1>
@@ -867,6 +868,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
             <h1
               class="c2"
               id="content"
+              tabindex="-1"
             >
               سرصفحه مقاله
             </h1>
@@ -1297,6 +1299,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
             <h1
               class="c2"
               id="content"
+              tabindex="-1"
             >
               Article Headline in Pidgin
             </h1>

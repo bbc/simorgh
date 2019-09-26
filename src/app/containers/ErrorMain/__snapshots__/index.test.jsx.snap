@@ -253,6 +253,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
             <h1
               class="c2"
               id="content"
+              tabindex="-1"
             >
               <span
                 class="c3"
@@ -556,6 +557,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
             <h1
               class="c2"
               id="content"
+              tabindex="-1"
             >
               <span
                 class="c3"
@@ -859,6 +861,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
             <h1
               class="c2"
               id="content"
+              tabindex="-1"
             >
               <span
                 class="c3"
@@ -1157,6 +1160,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
             <h1
               class="c2"
               id="content"
+              tabindex="-1"
             >
               <span
                 class="c3"
@@ -1455,6 +1459,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
             <h1
               class="c2"
               id="content"
+              tabindex="-1"
             >
               <span
                 class="c3"
