@@ -11,6 +11,11 @@ const validPortugueseData = {
   status: 200,
 };
 
+const noPassport = {
+  pageData: {},
+  status: 200,
+};
+
 const invalidPortugueseData = {
   pageData: {
     metadata: {
@@ -76,6 +81,32 @@ describe('passport home override', () => {
         hasData200StatusAndCorrectService: false,
         status: 404,
         pageData: validPortugueseData.pageData,
+      });
+    });
+  });
+
+  describe('data without passport', () => {
+    describe('null override', () => {
+      it('should NOT match', () => {
+        const service = 'portuguese';
+        const result = shouldRender(noPassport, service, null);
+        expect(result).toEqual({
+          hasData200StatusAndCorrectService: true,
+          status: 200,
+          pageData: noPassport.pageData,
+        });
+      });
+    });
+
+    describe('empty override', () => {
+      it('should NOT match', () => {
+        const service = 'portuguese';
+        const result = shouldRender(noPassport, service, []);
+        expect(result).toEqual({
+          hasData200StatusAndCorrectService: true,
+          status: 200,
+          pageData: noPassport.pageData,
+        });
       });
     });
   });

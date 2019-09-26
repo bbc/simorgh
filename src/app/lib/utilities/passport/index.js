@@ -19,7 +19,7 @@ export const isValidPassportHome = (
   service,
   passportHomesOverride = [],
 ) => {
-  const isMissingRequiredArgs = !passportHome && !passportHomesOverride.length;
+  const isMissingRequiredArgs = !passportHome;
   if (isMissingRequiredArgs) return true;
 
   const matchesPassportHome = (home = '') =>
