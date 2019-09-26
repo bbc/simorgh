@@ -3,13 +3,6 @@ import {
   getPublishedDatetime,
   getCurrentTime,
 } from '../../../lib/analyticsUtils';
-import {
-  getLanguage,
-  getContentId,
-  getPageIdentifier,
-  getPromoHeadline,
-  getThingAttributes,
-} from '../../../lib/analyticsUtils/article';
 
 jest.mock('../../../lib/analyticsUtils', () => {
   const utils = jest.requireActual('../../../lib/analyticsUtils');
@@ -20,18 +13,69 @@ jest.mock('../../../lib/analyticsUtils', () => {
     getCurrentTime: jest.fn(),
   };
 });
-jest.mock('../../../lib/analyticsUtils/article');
 
-getCurrentTime.mockImplementation(() => '00:00:00');
-getPublishedDatetime.mockImplementation(() => 'getPublishedDatetime');
-getLanguage.mockImplementation(() => 'getLanguage');
-getContentId.mockImplementation(() => 'getContentId');
-getPageIdentifier.mockImplementation(() => 'getPageIdentifier');
-getPromoHeadline.mockImplementation(() => 'getPromoHeadline');
-getThingAttributes.mockImplementation(() => 'getThingAttributes');
+getCurrentTime.mockImplementation(() => '00-00-00');
+getPublishedDatetime.mockImplementation(() => '1970-01-01T00:00:00.000Z');
 
-const article = {};
-const frontPage = {};
+const requestContext = {
+  platform: 'platform',
+  isUK: 'isUK',
+  statsDestination: 'statsDestination',
+  previousPath: 'previousPath',
+  origin: 'origin',
+};
+
+const serviceContext = {
+  atiAnalyticsAppName: 'atiAnalyticsAppName',
+  atiAnalyticsProducerId: 'atiAnalyticsProducerId',
+  service: 'service',
+  brandName: 'brandName',
+};
+
+const article = {
+  metadata: {
+    analyticsLabels: {
+      counterName: 'service.page',
+    },
+    locators: {
+      optimoUrn: 'http://www.bbc.co.uk',
+    },
+    passport: {
+      language: 'language',
+    },
+    tags: {
+      about: [
+        {
+          thingId: 'thing id 1',
+          thingLabel: 'thing label 1',
+        },
+        {
+          thingId: 'thing id 2',
+          thingLabel: 'thing label 2',
+        },
+      ],
+    },
+    title: 'title',
+  },
+  promo: {
+    headlines: {
+      seoHeadline: 'pageTitle',
+    },
+  },
+};
+const frontPage = {
+  metadata: {
+    analyticsLabels: {
+      counterName: 'service.page',
+    },
+    locators: {
+      curie:
+        'http://www.bbc.co.uk/asset/00000000-0000-0000-0000-000000000000/desktop/domestic',
+    },
+    language: 'language',
+    title: 'title',
+  },
+};
 const media = {
   metadata: {
     id: 'id',
@@ -46,86 +90,106 @@ const media = {
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
     it('should return the right article url', () => {
-      const url = buildATIUrl(article, { pageType: 'article' }, {});
+      const url = buildATIUrl(
+        article,
+        { ...requestContext, pageType: 'article' },
+        serviceContext,
+      );
       expect(url).toEqual(
-        's=598285&p=getPageIdentifier&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[getContentId]&x2=[responsive]&x4=[getLanguage]&x5=[http://localhost/]&x7=[article]&x9=[getPromoHeadline]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]&x13=[getThingAttributes]&x14=[getThingAttributes]',
+        's=598285&s2=atiAnalyticsProducerId&p=service.articles.//www.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:optimo://www.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x6=[originpreviousPath]&x7=[article]&x9=[pageTitle]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[thing+label+1~thing+label+2]&x14=[thing+id+1~thing+id+2]',
       );
     });
 
     it('should return the right frontPage url', () => {
-      const url = buildATIUrl(frontPage, { pageType: 'frontPage' }, {});
+      const url = buildATIUrl(
+        frontPage,
+        { ...requestContext, pageType: 'frontPage' },
+        serviceContext,
+      );
       expect(url).toEqual(
-        's=598285&p=unknown.page&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x2=[responsive]&x5=[http://localhost/]&x7=[index-home]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]',
+        's=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:cps:00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[index-home]&x9=[title+-+brandName]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]',
       );
     });
 
     it('should return the right media url', () => {
-      const url = buildATIUrl(media, { pageType: 'media' }, {});
+      const url = buildATIUrl(
+        media,
+        { ...requestContext, pageType: 'media' },
+        serviceContext,
+      );
       expect(url).toEqual(
-        's=598285&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[id]&x2=[responsive]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
+        's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
       );
     });
   });
 
   describe('buildATIClickParams', () => {
     it('should return the right article params', () => {
-      const params = buildATIClickParams(article, { pageType: 'article' }, {});
+      const params = buildATIClickParams(
+        article,
+        { ...requestContext, pageType: 'article' },
+        serviceContext,
+      );
       expect(params).toEqual({
-        appName: undefined,
-        contentId: 'getContentId',
+        appName: 'atiAnalyticsAppName',
+        contentId: 'urn:bbc:optimo://www.bbc.co.uk',
         contentType: 'article',
-        isUK: undefined,
-        language: 'getLanguage',
-        ldpThingIds: 'getThingAttributes',
-        ldpThingLabels: 'getThingAttributes',
-        origin: undefined,
-        pageIdentifier: 'getPageIdentifier',
-        pageTitle: 'getPromoHeadline',
-        platform: undefined,
-        previousPath: undefined,
-        producerId: undefined,
-        service: undefined,
-        statsDestination: undefined,
-        timePublished: 'getPublishedDatetime',
-        timeUpdated: 'getPublishedDatetime',
+        isUK: 'isUK',
+        language: 'language',
+        ldpThingIds: 'thing+id+1~thing+id+2',
+        ldpThingLabels: 'thing+label+1~thing+label+2',
+        origin: 'origin',
+        pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
+        pageTitle: 'pageTitle',
+        platform: 'platform',
+        previousPath: 'previousPath',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
+        timePublished: getPublishedDatetime(),
+        timeUpdated: getPublishedDatetime(),
       });
     });
 
     it('should return the right frontPage params', () => {
       const params = buildATIClickParams(
         frontPage,
-        { pageType: 'frontPage' },
-        {},
+        { ...requestContext, pageType: 'frontPage' },
+        serviceContext,
       );
       expect(params).toEqual({
-        appName: undefined,
-        contentId: null,
+        appName: 'atiAnalyticsAppName',
+        contentId: 'urn:bbc:cps:00000000-0000-0000-0000-000000000000',
         contentType: 'index-home',
-        language: null,
-        pageIdentifier: 'unknown.page',
-        pageTitle: null,
-        platform: undefined,
-        producerId: undefined,
-        service: undefined,
-        statsDestination: undefined,
-        timePublished: 'getPublishedDatetime',
-        timeUpdated: 'getPublishedDatetime',
+        language: 'language',
+        pageIdentifier: 'service.page',
+        pageTitle: 'title - brandName',
+        platform: 'platform',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
+        timePublished: '1970-01-01T00:00:00.000Z',
+        timeUpdated: '1970-01-01T00:00:00.000Z',
       });
     });
 
     it('should return the right media params', () => {
-      const params = buildATIClickParams(media, { pageType: 'media' }, {});
+      const params = buildATIClickParams(
+        media,
+        { ...requestContext, pageType: 'media' },
+        serviceContext,
+      );
       expect(params).toEqual({
-        appName: undefined,
+        appName: 'atiAnalyticsAppName',
         contentId: 'id',
         contentType: 'player-live',
         language: 'language',
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'pageTitle',
-        platform: undefined,
-        producerId: undefined,
-        service: undefined,
-        statsDestination: undefined,
+        platform: 'platform',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
       });
     });
   });
