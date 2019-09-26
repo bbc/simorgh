@@ -5,7 +5,7 @@ import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
 import getMediaPageInitialData from './getInitialData/mediapage';
-import getMediaAssetPageInitialData from './getInitialData/mediaAssetPage';
+import getCpsAssetInitialData from './getInitialData/cpsAsset';
 import {
   articleRegexPath,
   frontpageRegexPath,
@@ -50,8 +50,7 @@ const routes = [
     path: cpsAssetPageRegexPath,
     exact: true,
     component: CpsAsset,
-    getInitialData: getMediaAssetPageInitialData,
-    pageType: 'MAP',
+    getInitialData: getCpsAssetInitialData,
   },
   {
     component: ErrorPage,

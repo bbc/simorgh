@@ -1,6 +1,6 @@
 import baseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
-import getMediaAssetPageInitialData from '.';
+import getCpsAssetInitialData from '.';
 
 const mockData = { service: 'pidgin', status: 200, pageData: {} };
 
@@ -17,7 +17,7 @@ const defaultAssetUri = 'tori-49450859';
 const defaultAmpParam = '';
 let defaultContext;
 
-describe('getMediaAssetPageInitialData', () => {
+describe('getCpsAssetInitialData', () => {
   beforeEach(() => {
     defaultContext = {
       service: defaultServiceParam,
@@ -29,7 +29,7 @@ describe('getMediaAssetPageInitialData', () => {
   });
 
   it('should match the url for MAPs', async () => {
-    await getMediaAssetPageInitialData(defaultContext);
+    await getCpsAssetInitialData(defaultContext);
 
     expect(fetchData).toBeCalledWith({
       url: `${mockBaseUrl}/pidgin/tori-49450859.json`,
@@ -37,13 +37,13 @@ describe('getMediaAssetPageInitialData', () => {
   });
 
   it('should return the expected page data', async () => {
-    expect(await getMediaAssetPageInitialData({ service: 'pidgin' })).toEqual(
+    expect(await getCpsAssetInitialData({ service: 'pidgin' })).toEqual(
       mockData,
     );
   });
 
   it('fetches data and returns expected object with variant', async () => {
-    await getMediaAssetPageInitialData({
+    await getCpsAssetInitialData({
       ...defaultContext,
       variant: 'variant',
     });
@@ -54,7 +54,7 @@ describe('getMediaAssetPageInitialData', () => {
   });
 
   it('fetches data and returns expected object with variant with leading slash', async () => {
-    await getMediaAssetPageInitialData({
+    await getCpsAssetInitialData({
       ...defaultContext,
       variant: '/variant',
     });

@@ -3,7 +3,7 @@ import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import { variantSanitiser } from '../../../lib/utilities/variantHandler';
 
-const getMediaAssetPageInitialData = async ({ service, variant, assetUri }) => {
+const getCpsAssetInitialData = async ({ service, variant, assetUri }) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
@@ -17,4 +17,4 @@ const getMediaAssetPageInitialData = async ({ service, variant, assetUri }) => {
   return fetchData({ url });
 };
 
-export default getMediaAssetPageInitialData;
+export default getCpsAssetInitialData;
