@@ -14,8 +14,8 @@ jest.mock('../../../../lib/analyticsUtils', () => {
   };
 });
 
-getCurrentTime.mockImplementation(() => '00:00:00');
-getPublishedDatetime.mockImplementation(() => 'getPublishedDatetime');
+getCurrentTime.mockImplementation(() => '00-00-00');
+getPublishedDatetime.mockImplementation(() => '1970-01-01T00:00:00.000Z');
 
 const requestContext = {
   platform: 'platform',
@@ -103,7 +103,7 @@ describe('buildParams', () => {
         serviceContext,
       );
       expect(result).toEqual(
-        's=598285&s2=atiAnalyticsProducerId&p=service.articles.//www.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00:00:00&lng=en-US&x1=[urn:bbc:optimo://www.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x6=[originpreviousPath]&x7=[article]&x9=[pageTitle]&x11=[getPublishedDatetime]&x12=[getPublishedDatetime]&x13=[thing+label+1~thing+label+2]&x14=[thing+id+1~thing+id+2]',
+        's=598285&s2=atiAnalyticsProducerId&p=service.articles.//www.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:optimo://www.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x6=[originpreviousPath]&x7=[article]&x9=[pageTitle]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[thing+label+1~thing+label+2]&x14=[thing+id+1~thing+id+2]',
       );
     });
   });

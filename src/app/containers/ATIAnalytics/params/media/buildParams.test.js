@@ -1,4 +1,8 @@
 import { buildMediaATIParams, buildMediaATIUrl } from './buildParams';
+import {
+  getPublishedDatetime,
+  getCurrentTime,
+} from '../../../../lib/analyticsUtils';
 
 jest.mock('../../../../lib/analyticsUtils', () => {
   const utils = jest.requireActual('../../../../lib/analyticsUtils');
@@ -9,6 +13,9 @@ jest.mock('../../../../lib/analyticsUtils', () => {
     getCurrentTime: jest.fn(),
   };
 });
+
+getCurrentTime.mockImplementation(() => '00-00-00');
+getPublishedDatetime.mockImplementation(() => '1970-01-01T00:00:00.000Z');
 
 const media = {
   metadata: {
@@ -59,7 +66,7 @@ describe('buildMediaATIUrl', () => {
   it('should return the right url', () => {
     const result = buildMediaATIUrl(media, requestContext, serviceContext);
     expect(result).toEqual(
-      's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
+      's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
     );
   });
 });
