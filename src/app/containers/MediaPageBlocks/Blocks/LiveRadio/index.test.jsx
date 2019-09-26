@@ -12,7 +12,7 @@ describe('MediaPageBlocks LiveRadio', () => {
     </RequestContext.Provider>,
   );
 
-  // TODO: remove the need for this suppressPropWarnings
+  // TODO: remove the need for this suppressPropWarnings for placeholderSrc on AMP player
   suppressPropWarnings(['placeholderSrc', 'undefined']);
 
   shouldMatchSnapshot(
@@ -56,6 +56,35 @@ describe('MediaPageBlocks LiveRadio', () => {
       'should render null',
       <RequestContext.Provider value={{ platform: 'foobar' }}>
         <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
+      </RequestContext.Provider>,
+    );
+  });
+
+  describe('when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio', () => {
+    shouldMatchSnapshot(
+      'should render correctly for canonical',
+      <RequestContext.Provider value={{ platform: 'canonical' }}>
+        <LiveRadio
+          uuid="uuid"
+          idAttr="idAttr"
+          externalId="bbc_oromo_radio"
+          id="id"
+        />
+      </RequestContext.Provider>,
+    );
+
+    // TODO: remove the need for this suppressPropWarnings for placeholderSrc on AMP player
+    suppressPropWarnings(['placeholderSrc', 'undefined']);
+
+    shouldMatchSnapshot(
+      'should render correctly for amp',
+      <RequestContext.Provider value={{ platform: 'amp' }}>
+        <LiveRadio
+          uuid="uuid"
+          idAttr="idAttr"
+          externalId="bbc_oromo_radio"
+          id="id"
+        />
       </RequestContext.Provider>,
     );
   });

@@ -125,3 +125,129 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
   </div>
 </div>
 `;
+
+exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo should render correctly for amp 1`] = `
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    .c2 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <amp-iframe
+              allowfullscreen="true"
+              frameborder="0"
+              layout="fill"
+              sandbox="allow-scripts allow-same-origin"
+              src="/ws/av-embeds/media/bbc_afaanoromoo_radio/id"
+            >
+              <amp-img
+                layout="fill"
+                placeholder="true"
+              />
+            </amp-iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo should render correctly for canonical 1`] = `
+.c3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.c2 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <iframe
+        allow="autoplay; fullscreen"
+        allowfullscreen=""
+        class="c3"
+        scrolling="no"
+        src="/ws/av-embeds/media/bbc_afaanoromoo_radio/id"
+      />
+    </div>
+  </div>
+</div>
+`;

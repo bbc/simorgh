@@ -21,6 +21,9 @@ const MediaPlayerInnerWrapper = styled.div`
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
 `;
 
+const checkExternalIdOverrides = externalId =>
+  externalId === 'bbc_oromo_radio' ? `bbc_afaanoromoo_radio` : externalId;
+
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform } = useContext(RequestContext);
 
@@ -36,7 +39,9 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
       <MediaPlayerInnerWrapper>
         <MediaPlayer
           showPlaceholder={false}
-          src={`/ws/av-embeds/media/${externalId}/${id}`}
+          src={`/ws/av-embeds/media/${checkExternalIdOverrides(
+            externalId,
+          )}/${id}`}
           id={idAttr}
           skin="audio"
         />
