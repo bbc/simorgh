@@ -1,11 +1,13 @@
 import React from 'react';
+import { ChunkExtractor } from '@loadable/server';
+import path from 'path';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
+import getAssetOrigins from '../utilities/getAssetOrigins';
 
 import { getStyleTag } from '../styles';
-import { getAssetsArray, getAssetOrigins } from '../assets';
 import DocumentComponent from './component';
 
 const renderDocument = async ({
@@ -18,27 +20,39 @@ const renderDocument = async ({
 }) => {
   const sheet = new ServerStyleSheet();
 
+  const statsFile = path.resolve(
+    `${__dirname}/public/loadable-stats-${process.env.APP_ENV}.json`,
+  );
+
+  const extractor = new ChunkExtractor({ statsFile });
+
   const app = renderToString(
-    sheet.collectStyles(
-      <ServerApp
-        location={url}
-        routes={routes}
-        data={data}
-        bbcOrigin={bbcOrigin}
-        context={{}}
-        service={service}
-        isAmp={isAmp}
-      />,
+    extractor.collectChunks(
+      sheet.collectStyles(
+        <ServerApp
+          location={url}
+          routes={routes}
+          data={data}
+          bbcOrigin={bbcOrigin}
+          context={{}}
+          service={service}
+          isAmp={isAmp}
+        />,
+      ),
     ),
   );
 
-  const assets = getAssetsArray(service);
+  const scripts = extractor.getScriptElements({
+    crossOrigin: 'anonymous',
+    type: 'text/javascript',
+    defer: true,
+  });
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins();
   const doc = renderToStaticMarkup(
     <DocumentComponent
-      assets={assets}
       assetOrigins={assetOrigins}
+      scripts={scripts}
       app={app}
       data={data}
       styleTags={getStyleTag(sheet, isAmp)}

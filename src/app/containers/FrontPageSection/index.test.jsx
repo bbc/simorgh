@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import * as SectionLabel from '@bbc/psammead-section-label';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import newsConfig from '#lib/config/services/news';
+import { service as newsConfig } from '#lib/config/services/news';
 import FrontPageSection from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
