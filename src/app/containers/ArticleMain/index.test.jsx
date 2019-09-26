@@ -10,6 +10,7 @@ import {
   articleDataPersian,
   articleDataPidgin,
 } from '../Article/fixtureData';
+import processArticleData from './processArticleData';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
@@ -64,4 +65,39 @@ describe('ArticleMain', () => {
       <ArticleMain articleData={articleDataPidgin} />
     </Context>,
   );
+});
+
+describe('processArticleData', () => {
+  it('should process the article data and return the expected object', () => {
+    const actual = processArticleData(articleDataNews);
+    const expected = {
+      blocks: articleDataNews.content.model.blocks,
+      promo: articleDataNews.promo,
+      metadata: articleDataNews.metadata,
+      firstPublished: '2018-01-01T12:01:00.000Z',
+      lastPublished: '2018-01-01T13:00:00.000Z',
+      articleSection: null,
+      mentionsTags: articleDataNews.metadata.tags.mentions,
+      aboutTags: articleDataNews.metadata.tags.about,
+      articleSpecificLinkedData: {
+        headline: 'Article Headline for SEO',
+        datePublished: '2018-01-01T12:01:00.000Z',
+        dateModified: '2018-01-01T13:00:00.000Z',
+        about: [
+          {
+            '@type': 'Thing',
+            name: 'Royal Wedding 2018',
+            sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
+          },
+          { '@type': 'Person', name: 'Duchess of Sussex' },
+        ],
+        author: {
+          '@type': 'NewsMediaOrganization',
+          logo: { '@type': 'ImageObject', width: 1024, height: 576 },
+        },
+      },
+    };
+
+    expect(actual).toEqual(expected);
+  });
 });
