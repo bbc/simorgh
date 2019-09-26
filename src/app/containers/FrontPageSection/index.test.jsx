@@ -1,9 +1,6 @@
 import { render } from '@testing-library/react';
 import * as SectionLabel from '@bbc/psammead-section-label';
-import {
-  shouldMatchSnapshot,
-  shouldShallowMatchSnapshot,
-} from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { service as newsConfig } from '#lib/config/services/news';
 import FrontPageSection from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -228,7 +225,7 @@ describe('FrontPageSection Container', () => {
       <FrontPageSection group={hasOneItem} sectionNumber={0} />,
     );
 
-    shouldShallowMatchSnapshot(
+    shouldMatchSnapshot(
       'should render with no strapline',
       <FrontPageSection group={hasNoStrapline} sectionNumber={0} />,
     );
