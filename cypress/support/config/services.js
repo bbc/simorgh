@@ -24,7 +24,7 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: false,
