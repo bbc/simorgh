@@ -7,6 +7,7 @@ import services from '#testHelpers/serviceConfigs';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 storiesOf('Containers|Copyright', module)
+  .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .add(
     'default',
