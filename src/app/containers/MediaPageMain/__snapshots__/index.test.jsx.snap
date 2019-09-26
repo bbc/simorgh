@@ -414,6 +414,7 @@ exports[`Media Page Main should match snapshot 1`] = `
           <h1
             class="c2"
             id="content"
+            tabindex="-1"
           >
             ያድምጡ
           </h1>
