@@ -152,11 +152,21 @@
                 "type": "paragraph"
             },
             {
+                "text": "<italic>Hey, I'm a candy XML block in italic<italic>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            { 
+                "text": "<bold>Hey, I'm a candy XML block in bold</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
                 "text": "Salah satu peristiwa yang menjadi tajuk utama pemberitaan adalah saat Ahed Tamimi (16 tahun) dipenjara selama delapan bulan pada Desember 2017 karena didakwa memukul tentara Israel. ",
                 "markupType": "plain_text",
                 "type": "paragraph"
             },
-            {
+            { 
                 "text": "<bold>Simak juga:</bold>",
                 "markupType": "candy_xml",
                 "type": "paragraph"
