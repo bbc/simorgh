@@ -29,7 +29,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           ({ body }) => {
             const { id, externalId } = body.content.blocks[2];
             cy.get(
-              `amp-iframe[src="${`www.test.bbc.com/ws/av-embeds/media/${externalId}/${id}`}"]`,
+              `amp-iframe[src="${`https://www.test.bbc.com/ws/av-embeds/media/${externalId}/${id}`}"]`,
             ).should('be.visible');
           },
         );
