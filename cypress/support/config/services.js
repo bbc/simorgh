@@ -787,8 +787,8 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/news/articles/c5ll353v7y9o'
-            : '/news/articles/c6v11qzyv8po',
+            ? '/news/articles/cj7xrxz0e8zo'
+            : '/news/articles/cn7k01xp8kxo',
         smoke: true,
       },
       errorPage404: {
