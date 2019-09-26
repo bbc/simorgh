@@ -13,6 +13,7 @@ const fragmentBlock = (text, attributes = []) => ({
 });
 
 storiesOf('Containers|InlineLink', module)
+  .addParameters({ chromatic: { disable: true } })
   .add('internal link', () => (
     <InlineLinkContainer
       locator="https://www.bbc.com/news"
