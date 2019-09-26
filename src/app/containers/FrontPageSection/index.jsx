@@ -20,6 +20,7 @@ import groupShape from '#models/propTypes/frontPageGroup';
 import { storyItem } from '#models/propTypes/storyItem';
 import idSanitiser from '#lib/utilities/idSanitiser';
 
+// Apply the right margin-top to the first section of the page when there is one or multiple items.
 const FirstSectionTopMargin = styled.div`
   ${({ oneItem }) =>
     oneItem
@@ -39,6 +40,7 @@ const FirstSectionTopMargin = styled.div`
         `}
 `;
 
+// Apply the right margin-top between the section label and the promos
 const TopMargin = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
