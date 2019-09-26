@@ -15,7 +15,7 @@ storiesOf('Containers|Brand', module)
       componentFunction: ({ service }) => {
         // eslint-disable-next-line import/no-dynamic-require,global-require
         const serviceConfig = require(`../../lib/config/services/${service}`)
-          .default;
+          .service;
         const configVariant = serviceConfig.default;
 
         return (
