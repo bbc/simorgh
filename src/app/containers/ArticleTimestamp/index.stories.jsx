@@ -23,7 +23,10 @@ const WrappedArticleTimestamp = ({ service, ...rest }) => (
   </ServiceContextProvider>
 );
 
-const stories = storiesOf('Containers|Article/Article Timestamp', module);
+const stories = storiesOf(
+  'Containers|Article/Article Timestamp',
+  module,
+).addParameters({ chromatic: { disable: true } });
 
 stories.add('default', () => (
   <WrappedArticleTimestamp
