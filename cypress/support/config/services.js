@@ -1,4 +1,4 @@
-module.exports = {
+const services = {
   afaanoromoo: {
     font: undefined,
     isWorldService: true,
@@ -1628,3 +1628,11 @@ module.exports = {
     },
   },
 };
+
+// Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env ar
+const runOnlyForService = Cypress.env('ONLY_SERVICE');
+if (runOnlyForService) {
+  module.exports = { [runOnlyForService]: services[runOnlyForService] };
+} else {
+  module.exports = services;
+}
