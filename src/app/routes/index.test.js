@@ -46,10 +46,10 @@ describe('Routes', () => {
       jest.resetAllMocks();
     });
 
-    it('should route to MediaPage component', () => {
-      const mediaPage = jest.requireMock('../containers/MediaPage');
-      const frontPage = jest.requireMock('../containers/FrontPage');
+    const mediaPage = jest.requireMock('../containers/MediaPage');
+    const frontPage = jest.requireMock('../containers/FrontPage');
 
+    it('should route to MediaPage component', () => {
       const data = generateFixtureData('MAP');
       Component(data);
 
@@ -58,9 +58,6 @@ describe('Routes', () => {
     });
 
     it('should route to FrontPage component', () => {
-      const mediaPage = jest.requireMock('../containers/MediaPage');
-      const frontPage = jest.requireMock('../containers/FrontPage');
-
       const data = generateFixtureData('FIX');
       Component(data);
 
