@@ -2,8 +2,9 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcbrasil`,
@@ -216,4 +217,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);
