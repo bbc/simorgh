@@ -59,6 +59,7 @@ const getCanonicalStoryPromo = getStoryPromo('canonical');
 const getAmpStoryPromo = getStoryPromo('amp');
 
 storiesOf('Containers|Story Promo/Canonical', module)
+  .addParameters({ chromatic: { disable: true } })
   .add('canonical', () => getCanonicalStoryPromo(firstFixture))
   .add('audio fixture', () => getCanonicalStoryPromo(audioFixture))
   .add('video fixture', () => getCanonicalStoryPromo(videoFixture))
@@ -69,6 +70,7 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('gallery link promo', () => getCanonicalStoryPromo(galleryPromo));
 
 storiesOf('Containers|Story Promo/AMP', module)
+  .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('amp', () => getAmpStoryPromo(firstFixture))
   .add('audio fixture - amp', () => getAmpStoryPromo(audioFixture))

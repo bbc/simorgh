@@ -40,9 +40,9 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     });
 
     if (serviceHasCaption(service)) {
-      it('should have a visible image with a caption that is lazyloaded and has a noscript fallback image', () => {
+      it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
         cy.get('figure')
-          .eq(2)
+          .eq(1)
           .within(() => {
             cy.get('div div div div').should(
               'have.class',
@@ -52,10 +52,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           .scrollIntoView();
 
         cy.get('figure')
-          .eq(2)
+          .eq(1)
           .should('be.visible')
           .should('to.have.descendants', 'img')
-          .should('to.have.descendants', 'figcaption')
+          .should('not.to.have.descendants', 'figcaption')
 
           // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
           // cleared during hydration. React won't render noscript tags on the client so if they

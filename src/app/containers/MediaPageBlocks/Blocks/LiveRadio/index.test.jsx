@@ -4,10 +4,12 @@ import { RequestContext } from '#contexts/RequestContext';
 import { suppressPropWarnings } from '#testHelpers';
 import LiveRadio from '.';
 
+const origin = 'http://localhost.bbc.co.uk:7080';
+
 describe('MediaPageBlocks LiveRadio', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
-    <RequestContext.Provider value={{ platform: 'canonical' }}>
+    <RequestContext.Provider value={{ platform: 'canonical', origin }}>
       <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" id="id" />
     </RequestContext.Provider>,
   );
@@ -17,7 +19,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
   shouldMatchSnapshot(
     'should render correctly for amp',
-    <RequestContext.Provider value={{ platform: 'amp' }}>
+    <RequestContext.Provider value={{ platform: 'amp', origin }}>
       <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" id="id" />
     </RequestContext.Provider>,
   );
@@ -27,7 +29,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
     isNull(
       'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar' }}>
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <LiveRadio
           uuid="uuid"
           idAttr="idAttr"
@@ -43,7 +45,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
     isNull(
       'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar' }}>
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" />
       </RequestContext.Provider>,
     );
@@ -54,7 +56,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
     isNull(
       'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar' }}>
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
       </RequestContext.Provider>,
     );
