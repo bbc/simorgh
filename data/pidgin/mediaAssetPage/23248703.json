@@ -211,7 +211,7 @@
                 "text": "Lorem ipsum<link><caption> dolor sit amet</caption><altText>dolor sit amet poop poop </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link>, consectetur adipiscing elit",
                 "markupType": "candy_xml",
                 "type": "paragraph"
-            },
+            }, 
             {
                 "id": "63721686",
                 "subType": "body",

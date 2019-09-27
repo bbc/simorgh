@@ -4,24 +4,38 @@ import {
 } from '@fabl/rich-text-transforms';
 import { clone, path } from 'ramda';
 
-const handleCandyXML = block => candyXmlToRichText(block.text);
+const wrapInBody = innerXML => `<body>${innerXML}</body>`;
+
+const handleCandyXML = xml => candyXmlToRichText(xml);
+
 const handlePlainText = block => stringToRichText(block.text);
-const handleMissingMarkupType = block => {
-  console.log('missing markupType field on block');
+
+const handleMissingType = block => {
+  console.log(`Missing type field on block ${block.type}`);
   return block;
 };
 
+const handleParagraph = block =>
+  block.markupType === 'candy_xml'
+    ? handleCandyXML(wrapInBody(`<paragraph>${block.text}</paragraph>`))
+    : handlePlainText(block);
+
 // list and altText don't have a markupType so add `undefined` for now
-const parseByMarkupType = {
-  candy_xml: handleCandyXML,
-  plain_text: handlePlainText,
-  undefined: handleMissingMarkupType,
+const parseByType = {
+  paragraph: handleParagraph,
+  heading: handleMissingType,
+  subheading: handleMissingType,
+  crosshead: handleMissingType,
+  image: handleMissingType,
+  list: handleMissingType,
+  media: handleMissingType,
+  undefined: handleMissingType,
 };
 
 const parseBlockByMarkupType = block => {
-  const { markupType } = block;
+  const { type } = block;
 
-  const parsedBlock = parseByMarkupType[markupType](block);
+  const parsedBlock = parseByType[type](block);
 
   return parsedBlock;
 };

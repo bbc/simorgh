@@ -152,12 +152,12 @@
                 "type": "paragraph"
             },
             {
-                "text": "<italic>Hey, I'm a candy XML block in italic<italic>",
+                "text": "<italic>Hey, I'm a candy XML block in italic</italic> then some text that isn't in italic",
                 "markupType": "candy_xml",
                 "type": "paragraph"
             },
             { 
-                "text": "<bold>Hey, I'm a candy XML block in bold</bold>",
+                "text": "<bold>Hey, I'm a candy XML block in bold</bold> then some text that isn't in bold",
                 "markupType": "candy_xml",
                 "type": "paragraph"
             },
