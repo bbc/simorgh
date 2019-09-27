@@ -19,7 +19,11 @@ const getMediaAssetPageInitialData = async ({ service, variant, assetUri }) => {
 
   return fetchData({
     url,
-    preprocessorRules: [convertCpsBlocksToOptimoBlocks, addHeadlineBlock, addTimestampBlock],
+    preprocessorRules: [
+      convertCpsBlocksToOptimoBlocks,
+      addHeadlineBlock,
+      addTimestampBlock,
+    ],
   });
 };
 

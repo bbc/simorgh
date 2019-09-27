@@ -18,7 +18,6 @@ const augmentWithTimestamp = jsonRaw => {
         lastPublished,
       },
     };
-
     return insertTimestampBlock(jsonRaw, timestampBlock);
   }
 
