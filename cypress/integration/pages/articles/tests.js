@@ -123,12 +123,12 @@ export const testsThatFollowSmokeTestConfig = ({
         });
 
         if (serviceHasCaption(service)) {
-          it('should have a visible image without a caption, and also not be lazyloaded', () => {
+          it('should have a visible image with a caption, and also not be lazyloaded', () => {
             cy.get('figure')
               .eq(0)
               .should('be.visible')
               .should('to.have.descendants', 'img')
-              .should('not.to.have.descendants', 'figcaption')
+              .should('to.have.descendants', 'figcaption')
               .within(() => cy.get('noscript').should('not.exist'));
           });
         }
