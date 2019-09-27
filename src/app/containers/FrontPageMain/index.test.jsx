@@ -4,7 +4,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
 import preprocessor from '#lib/utilities/preprocessor';
-import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
+import addIdsToItems from '#lib/utilities/preprocessor/rules/frontPage/addIdsToItems';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 

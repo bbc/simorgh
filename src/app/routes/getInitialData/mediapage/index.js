@@ -1,5 +1,5 @@
 import fetchData from '../utils/fetchData';
-import addIdsToBlocks from './addIdsToBlocks';
+import addIdsToBlocks from '#lib/utilities/preprocessor/rules/mediaPage/addIdsToBlocks';
 import onClient from '#lib/utilities/onClient';
 import getBaseUrl from '../utils/getBaseUrl';
 
