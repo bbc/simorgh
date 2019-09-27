@@ -6,7 +6,9 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
+import { pathOr } from 'ramda';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
 
 const MediaPlayerOuterWrapper = styled.div`
@@ -24,14 +26,9 @@ const MediaPlayerInnerWrapper = styled.div`
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform, origin } = useContext(RequestContext);
-  const isAmp = platform === 'amp';
+  const { liveRadio } = useContext(ServiceContext);
 
-  const embedSource = embedUrl({
-    requestUrl: `${externalId}/${id}`,
-    type: 'media',
-    isAmp,
-    origin,
-  });
+  const isAmp = platform === 'amp';
 
   const MediaPlayer = {
     canonical: CanonicalMediaPlayer,
@@ -39,6 +36,19 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   }[platform];
 
   if (!MediaPlayer || !externalId || !id) return null;
+
+  const serviceId = pathOr(
+    externalId,
+    ['externalIdOverrides', externalId],
+    liveRadio,
+  );
+
+  const embedSource = embedUrl({
+    requestUrl: `${serviceId}/${id}`,
+    type: 'media',
+    isAmp,
+    origin,
+  });
 
   return (
     <MediaPlayerOuterWrapper>
