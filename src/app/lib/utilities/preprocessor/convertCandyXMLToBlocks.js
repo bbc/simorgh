@@ -1,8 +1,8 @@
+import { clone, path } from 'ramda';
 import {
   candyXmlToRichText,
   stringToRichText,
-} from '@fabl/rich-text-transforms';
-import { clone, path } from 'ramda';
+} from '../../../../../../fabl-modules/libraries/rich-text-transforms';
 
 const wrapInBody = innerXML => `<body>${innerXML}</body>`;
 
@@ -23,29 +23,20 @@ const handleParagraph = block =>
 const subheadlineBlock = textBlock => ({
   type: 'subheadline',
   model: {
-    blocks: [
-      {
-        type: 'paragraph',
-        model: {
-          text: string,
-          blocks: [textBlock],
-        },
-      },
-    ],
+    blocks: [textBlock],
   },
 });
 
-const handleCrossHead = block =>
+const handleCrosshead = block =>
   block.markupType === 'candy_xml'
     ? handleCandyXML(wrapInBody(`<subheadline>${block.text}</subheadline>`))
-    : handlePlainText(block);
+    : subheadlineBlock(handlePlainText(block));
 
 // list and altText don't have a markupType so add `undefined` for now
 const parseByType = {
   paragraph: handleParagraph,
-  // heading: handleMissingType,
   // subheading: handleMissingType,
-  crosshead: handleCrossHead,
+  crosshead: handleCrosshead,
   // image: handleMissingType,
   // list: handleMissingType,
   // media: handleMissingType,
