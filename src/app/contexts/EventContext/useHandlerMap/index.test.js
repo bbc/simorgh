@@ -1,4 +1,4 @@
-import { useHandlerMap } from './index';
+import useHandlerMap from './index';
 
 describe('useHandlerMap', () => {
   let fn1;
