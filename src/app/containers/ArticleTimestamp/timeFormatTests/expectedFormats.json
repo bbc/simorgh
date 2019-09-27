@@ -1,42 +1,34 @@
 {
   "arabic": {
-    "exact date": "10 أكتوبر/ تشرين الأول 2018",
-    "three hours ago": "قبل 3 ساع",
+    "one minute ago": "قبل دقيقة واحدة",
+    "five minutes ago": "قبل 5 دقيقة",
+    "one hour ago": "قبل ساعة واحدة",
     "five hours ago": "قبل 5 ساع",
-    "eleven hours ago": "قبل 11 ساع",
-    "twelve hours ago": "قبل 12 ساع",
-    "twenty four hours ago": "يوم واحد",
-    "two days ago": "يومين",
-    "three days ago": "3 أيام"
+    "exact date": "10 أكتوبر/ تشرين الأول 2018",
+    "exact date with timezone": "12 يوليو/ تموز 2019، 12:55 GMT"
   },
   "igbo": {
-    "exact date": "10 Ọktọba 2018",
-    "three hours ago": "elekere 3 gara aga",
+    "one minute ago": "otu nkeji gara aga",
+    "five minutes ago": "nkeji 5 gara aga",
+    "one hour ago": "otu elekere gara aga",
     "five hours ago": "elekere 5 gara aga",
-    "eleven hours ago": "elekere 11 gara aga",
-    "twelve hours ago": "elekere 12 gara aga",
-    "twenty four hours ago": "otu ụbọchị gara aga",
-    "two days ago": "Ụbọchị 2 gara aga",
-    "three days ago": "Ụbọchị 3 gara aga"
+    "exact date": "10 Ọktọba 2018",
+    "exact date with timezone": "12 Julaị 2019, 13:55 WAT"
   },
   "news": {
-    "exact date": "10 October 2018",
-    "three hours ago": "3 hours ago",
+    "one minute ago": "a minute ago",
+    "five minutes ago": "5 minutes ago",
+    "one hour ago": "an hour ago",
     "five hours ago": "5 hours ago",
-    "eleven hours ago": "11 hours ago",
-    "twelve hours ago": "12 hours ago",
-    "twenty four hours ago": "a day ago",
-    "two days ago": "2 days ago",
-    "three days ago": "3 days ago"
+    "exact date": "10 October 2018",
+    "exact date with timezone": "12 July 2019, 13:55 BST"
   },
   "persian": {
-    "exact date": "۱۸ مهر ۱۳۹۷ - ۱۰ اکتبر ۲۰۱۸",
-    "three hours ago": "۳ ساعت پیش",
+    "one minute ago": "یک دقیقه پیش",
+    "five minutes ago": "۵ دقیقه پیش",
+    "one hour ago": "یک ساعت پیش",
     "five hours ago": "۵ ساعت پیش",
-    "eleven hours ago": "۱۱ ساعت پیش",
-    "twelve hours ago": "۱۲ ساعت پیش",
-    "twenty four hours ago": "یک روز پیش",
-    "two days ago": "۲ روز پیش",
-    "three days ago": "۳ روز پیش"
+    "exact date": "۱۸ مهر ۱۳۹۷ - ۱۰ اکتبر ۲۰۱۸",
+    "exact date with timezone": "۱۲ ژوئیه ۲۰۱۹، ۱۲:۵۵ GMT"
   }
 }
