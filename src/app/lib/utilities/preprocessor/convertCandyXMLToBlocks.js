@@ -20,22 +20,42 @@ const handleParagraph = block =>
     ? handleCandyXML(wrapInBody(`<paragraph>${block.text}</paragraph>`))
     : handlePlainText(block);
 
+const subheadlineBlock = textBlock => ({
+  type: 'subheadline',
+  model: {
+    blocks: [
+      {
+        type: 'paragraph',
+        model: {
+          text: string,
+          blocks: [textBlock],
+        },
+      },
+    ],
+  },
+});
+
+const handleCrossHead = block =>
+  block.markupType === 'candy_xml'
+    ? handleCandyXML(wrapInBody(`<subheadline>${block.text}</subheadline>`))
+    : handlePlainText(block);
+
 // list and altText don't have a markupType so add `undefined` for now
 const parseByType = {
   paragraph: handleParagraph,
-  heading: handleMissingType,
-  subheading: handleMissingType,
-  crosshead: handleMissingType,
-  image: handleMissingType,
-  list: handleMissingType,
-  media: handleMissingType,
-  undefined: handleMissingType,
+  // heading: handleMissingType,
+  // subheading: handleMissingType,
+  crosshead: handleCrossHead,
+  // image: handleMissingType,
+  // list: handleMissingType,
+  // media: handleMissingType,
+  // social_embed: handleMissingType,
 };
 
 const parseBlockByMarkupType = block => {
   const { type } = block;
 
-  const parsedBlock = parseByType[type](block);
+  const parsedBlock = (parseByType[type] || handleMissingType)(block);
 
   return parsedBlock;
 };

@@ -7,15 +7,22 @@ import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import Blocks from '../Blocks';
 import headings from '../Headings';
 import text from '../Text';
+import image from '../Image';
+import timestamp from '../ArticleTimestamp';
+import mediaPlayer from '../MediaPlayer';
 
 const componentsToRender = {
   headline: headings,
   subheadline: headings,
+  audio: mediaPlayer,
+  video: mediaPlayer,
   text,
+  image,
+  timestamp,
 };
-
 const MediaPageMain = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);
+
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
 
