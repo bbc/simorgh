@@ -1,6 +1,6 @@
 import { sendEventBeacon, sendViewBeacon } from '.';
-import * as sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
-import * as analyticsUtils from '../../../lib/analyticsUtils';
+import * as sendBeacon from '#lib/analyticsUtils/sendBeacon';
+import * as analyticsUtils from '#lib/analyticsUtils';
 
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');

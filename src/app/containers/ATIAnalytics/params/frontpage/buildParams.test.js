@@ -1,5 +1,5 @@
 import { buildFrontPageATIParams, buildFrontPageATIUrl } from './buildParams';
-import * as analyticsUtils from '../../../../lib/analyticsUtils';
+import * as analyticsUtils from '#lib/analyticsUtils';
 
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
