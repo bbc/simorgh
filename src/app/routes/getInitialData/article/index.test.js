@@ -7,17 +7,17 @@ const mockAddIdsToBlocks = jest.fn();
 const mockApplyBlockPositioning = jest.fn();
 
 jest.mock(
-  '#lib/utilities/preprocessor/rules/optimoArticle/timestamp',
+  '#lib/utilities/preprocessor/rules/article/timestamp',
   () => mockApplyTimestampRules,
 );
 
 jest.mock(
-  '#lib/utilities/preprocessor/rules/optimoArticle/addIdsToBlocks',
+  '#lib/utilities/preprocessor/rules/article/addIdsToBlocks',
   () => mockAddIdsToBlocks,
 );
 
 jest.mock(
-  '#lib/utilities/preprocessor/rules/optimoArticle/blockPositioning',
+  '#lib/utilities/preprocessor/rules/article/blockPositioning',
   () => mockApplyBlockPositioning,
 );
 
