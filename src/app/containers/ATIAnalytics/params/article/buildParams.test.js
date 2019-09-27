@@ -1,21 +1,10 @@
 import { buildArticleATIParams, buildArticleATIUrl } from './buildParams';
-import {
-  getPublishedDatetime,
-  getCurrentTime,
-} from '../../../../lib/analyticsUtils';
+import * as analyticsUtils from '../../../../lib/analyticsUtils';
 
-jest.mock('../../../../lib/analyticsUtils', () => {
-  const utils = jest.requireActual('../../../../lib/analyticsUtils');
-
-  return {
-    ...utils,
-    getPublishedDatetime: jest.fn(),
-    getCurrentTime: jest.fn(),
-  };
-});
-
-getCurrentTime.mockImplementation(() => '00-00-00');
-getPublishedDatetime.mockImplementation(() => '1970-01-01T00:00:00.000Z');
+analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
+analyticsUtils.getPublishedDatetime = jest
+  .fn()
+  .mockReturnValue('1970-01-01T00:00:00.000Z');
 
 const requestContext = {
   platform: 'platform',
@@ -41,8 +30,8 @@ const validURLParams = {
   pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
   pageTitle: 'pageTitle',
   producerId: serviceContext.atiAnalyticsProducerId,
-  timePublished: getPublishedDatetime(),
-  timeUpdated: getPublishedDatetime(),
+  timePublished: analyticsUtils.getPublishedDatetime(),
+  timeUpdated: analyticsUtils.getPublishedDatetime(),
   service: 'service',
   ...requestContext,
 };
