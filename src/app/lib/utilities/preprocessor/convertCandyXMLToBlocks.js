@@ -4,7 +4,7 @@ import {
   stringToRichText,
 } from '../../../../../../fabl-modules/libraries/rich-text-transforms';
 
-const wrapInBody = innerXML => `<body>${innerXML}</body>`;
+const wrapText = innerXML => `<body><paragraph>${innerXML}</paragraph></body>`;
 
 const handleCandyXML = xml => candyXmlToRichText(xml);
 
@@ -17,7 +17,7 @@ const handleMissingType = block => {
 
 const handleParagraph = block =>
   block.markupType === 'candy_xml'
-    ? handleCandyXML(wrapInBody(`<paragraph>${block.text}</paragraph>`))
+    ? handleCandyXML(wrapText(block.text))
     : handlePlainText(block);
 
 const subheadlineBlock = textBlock => ({
@@ -29,7 +29,7 @@ const subheadlineBlock = textBlock => ({
 
 const handleCrosshead = block =>
   block.markupType === 'candy_xml'
-    ? handleCandyXML(wrapInBody(`<subheadline>${block.text}</subheadline>`))
+    ? subheadlineBlock(handleCandyXML(wrapText(block.text)))
     : subheadlineBlock(handlePlainText(block));
 
 // list and altText don't have a markupType so add `undefined` for now
