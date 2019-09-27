@@ -676,7 +676,7 @@ module.exports = {
     },
   },
   mundo: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
