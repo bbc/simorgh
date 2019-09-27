@@ -1,48 +1,27 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
 import { func } from 'prop-types';
-import { useWindowEvent } from './useWindowEvent';
-import { useHandlerMap } from './useHandlerMap';
+import * as useWindowEvent from './useWindowEvent';
+import * as useHandlerMap from './useHandlerMap';
+
+const useContextSpy = jest.spyOn(React, 'useContext');
+const useStateSpy = jest.spyOn(React, 'useState');
+const useEffectSpy = jest.spyOn(React, 'useEffect');
+const useWindowEventSpy = jest.spyOn(useWindowEvent, 'default');
+const useHandlerMapSpy = jest.spyOn(useHandlerMap, 'default');
 
 const { EventContextProvider, EventContext } = require('./index');
 
 const Component = () => {
-  useContext(EventContext);
+  React.useContext(EventContext);
   return null;
 };
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn().mockImplementation(original.useContext),
-    useState: jest.fn().mockImplementation(original.useState),
-    useEffect: jest.fn().mockImplementation(original.useEffect),
-  };
-});
-
-jest.mock('./useWindowEvent', () => {
-  const { useWindowEvent: _useWindowEvent } = jest.requireActual(
-    './useWindowEvent',
-  );
-  return {
-    useWindowEvent: jest.fn().mockImplementation(_useWindowEvent),
-  };
-});
-jest.mock('./useHandlerMap', () => {
-  const { useHandlerMap: _useHandlerMap } = jest.requireActual(
-    './useHandlerMap',
-  );
-  return {
-    useHandlerMap: jest.fn().mockImplementation(_useHandlerMap),
-  };
+afterEach(() => {
+  jest.clearAllMocks();
 });
 
 describe('EventContext', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('should call hooks', () => {
     render(
       <EventContextProvider>
@@ -50,26 +29,18 @@ describe('EventContext', () => {
       </EventContextProvider>,
     );
 
-    expect(useWindowEvent).toHaveBeenCalled();
+    expect(useWindowEventSpy).toHaveBeenCalled();
 
-    expect(useHandlerMap).toHaveBeenCalled();
+    expect(useHandlerMapSpy).toHaveBeenCalled();
 
-    expect(React.useContext).toHaveBeenCalled();
-  });
+    expect(useContextSpy).toHaveBeenCalledWith(EventContext);
 
-  it('should useState', () => {
-    render(
-      <EventContextProvider>
-        <Component />
-      </EventContextProvider>,
-    );
-
-    expect(useState).toHaveBeenCalled();
+    expect(useStateSpy).toHaveBeenCalledWith({});
   });
 
   describe('useClickTracker', () => {
     const ClickComponent = ({ handler }) => {
-      const { useClickTracker, handlerMap } = useContext(EventContext);
+      const { useClickTracker, handlerMap } = React.useContext(EventContext);
       useClickTracker('my-test-component', handler);
       return (
         <ul>
@@ -94,7 +65,7 @@ describe('EventContext', () => {
         </EventContextProvider>,
       );
 
-      expect(useEffect).toHaveBeenCalled();
+      expect(useEffectSpy).toHaveBeenCalled();
       expect(container).toMatchSnapshot();
       expect(handler).not.toHaveBeenCalled();
     });
@@ -110,7 +81,7 @@ describe('EventContext', () => {
       window.matches = selector => ['my-test-component'].includes(selector);
       window.dispatchEvent(new Event('click'));
 
-      expect(useEffect).toHaveBeenCalled();
+      expect(useEffectSpy).toHaveBeenCalled();
       expect(container).toMatchSnapshot();
       expect(handler).toHaveBeenCalled();
     });

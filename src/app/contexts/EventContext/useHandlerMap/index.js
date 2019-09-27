@@ -2,7 +2,7 @@
  * Will store mappings between query selectors and event handler functions
  * @param {object} _map a datastore for mapping query selectors to array of event handler functions
  */
-export const useHandlerMap = _map => e => {
+const useHandlerMap = _map => e => {
   if (e && e.target) {
     const attrs = Object.keys(_map).filter(attr => e.target.matches(attr));
 
