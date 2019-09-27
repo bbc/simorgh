@@ -275,7 +275,7 @@ module.exports = {
     },
   },
   cymrufyw: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: false,
     variant: 'default',
     pageTypes: {
@@ -709,7 +709,7 @@ module.exports = {
     },
   },
   naidheachdan: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: false,
     variant: 'default',
     pageTypes: {
@@ -914,7 +914,7 @@ module.exports = {
     },
   },
   portuguese: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -1345,7 +1345,7 @@ module.exports = {
     },
   },
   turkce: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {

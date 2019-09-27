@@ -1,5 +1,13 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+import {
+  F_REITH_SANS_BOLD,
+  F_REITH_SANS_BOLD_ITALIC,
+  F_REITH_SANS_ITALIC,
+  F_REITH_SANS_REGULAR,
+  F_REITH_SERIF_MEDIUM,
+  F_REITH_SERIF_MEDIUM_ITALIC,
+} from '@bbc/psammead-styles/fonts';
 import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
 import withContext from '../../../contexts/utils/withContext';
@@ -166,7 +174,14 @@ export const service = {
       copyrightText:
         'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
     },
-    fonts: [],
+    fonts: [
+      F_REITH_SANS_BOLD,
+      F_REITH_SANS_BOLD_ITALIC,
+      F_REITH_SANS_ITALIC,
+      F_REITH_SANS_REGULAR,
+      F_REITH_SERIF_MEDIUM,
+      F_REITH_SERIF_MEDIUM_ITALIC,
+    ],
     timezone: 'America/Sao_Paulo',
     navigation: [
       {
