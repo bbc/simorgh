@@ -22,7 +22,7 @@ export const isValidPassportHome = (
   const isMissingRequiredArgs = !passportHome;
   if (isMissingRequiredArgs) return true;
 
-  const matchesPassportHome = (home = '') =>
+  const matchesPassportHome = home =>
     (home || '').toLowerCase() === passportHome.toLowerCase();
 
   if (matchesPassportHome(service)) return true;
