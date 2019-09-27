@@ -8,13 +8,13 @@ import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
 /* eslint-disable react/prop-types */
 const Document = ({
-  assets,
   assetOrigins,
   app,
   data,
   styleTags,
   helmet,
   isAmp,
+  scripts,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -23,19 +23,9 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
-  const scripts = (
+  const scriptTags = (
     <>
-      <IfAboveIE9>
-        {assets.map(asset => (
-          <script
-            crossOrigin="anonymous"
-            key={asset}
-            type="text/javascript"
-            src={asset}
-            defer
-          />
-        ))}
-      </IfAboveIE9>
+      <IfAboveIE9>{scripts}</IfAboveIE9>
     </>
   );
 
@@ -89,7 +79,7 @@ const Document = ({
             }}
           />
         )}
-        {scriptsAllowed && scripts}
+        {scriptsAllowed && scriptTags}
       </body>
     </html>
   );

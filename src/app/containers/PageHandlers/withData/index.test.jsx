@@ -13,6 +13,10 @@ jest.mock('../../ErrorMain', () => ({ status }) => (
 ));
 
 describe('withData HOC', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   const Component = () => <h1>Hola</h1>;
   const WithDataHOC = WithData(Component);
 

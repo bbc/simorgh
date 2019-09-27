@@ -11,8 +11,9 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: 'en-GB',
     articleAuthor: `https://www.facebook.com/bbcscotland`,
@@ -22,7 +23,7 @@ const service = {
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
-      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/og/poster-1024x576.png',
     defaultImageAltText: 'BBC Scotland',
     dir: 'ltr',
     externalLinkText: ', external',
@@ -44,6 +45,7 @@ const service = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
+    passportHomes: ['BBCScotland'],
     theming: {
       brandBackgroundColour: `${C_DARK_SALTIRE}`,
       brandLogoColour: `${C_WHITE}`,
@@ -190,4 +192,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

@@ -2,6 +2,7 @@ var plugins = [
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-transform-runtime',
+  '@loadable/babel-plugin',
   [
     'babel-plugin-styled-components',
     {

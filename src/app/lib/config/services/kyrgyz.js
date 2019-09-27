@@ -2,15 +2,17 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/ky';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbckyrgyz`,
     articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
-    brandName: 'BBC News Кыргыз КызMATы',
+    brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
     serviceLocalizedName: 'Кыргыз КызMATы',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
@@ -34,7 +36,7 @@ const service = {
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Башталгыч бет',
+    frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -224,4 +226,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

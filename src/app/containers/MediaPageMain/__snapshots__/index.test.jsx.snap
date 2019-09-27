@@ -414,6 +414,7 @@ exports[`Media Page Main should match snapshot 1`] = `
           <h1
             class="c2"
             id="content"
+            tabindex="-1"
           >
             ያድምጡ
           </h1>
@@ -436,7 +437,7 @@ exports[`Media Page Main should match snapshot 1`] = `
                   allowfullscreen=""
                   class="c7"
                   scrolling="no"
-                  src="/ws/av-embeds/media/bbc_amharic_radio/liveradio"
+                  src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio"
                 />
               </div>
             </div>

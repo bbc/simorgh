@@ -35,6 +35,13 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
       });
 
+      it('should render a H1 which has attributes `id` and `tabindex`', () => {
+        cy.get('h1')
+          .should('have.lengthOf', 1)
+          .should('have.attr', 'id', 'content')
+          .should('have.attr', 'tabindex', '-1');
+      });
+
       if (pageType !== 'errorPage404') {
         it('should include the canonical URL', () => {
           cy.get('head link[rel="canonical"]').should(
@@ -91,11 +98,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               'have.attr',
               'content',
               appConfig[service][variant].locale,
-            );
-            cy.get('meta[name="og:site_name"]').should(
-              'have.attr',
-              'content',
-              appConfig[service][variant].defaultImageAltText,
             );
             cy.get('meta[name="og:type"]').should(
               'have.attr',

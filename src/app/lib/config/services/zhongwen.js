@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { zhongwen as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import withContext from '../../../contexts/utils/withContext';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
@@ -214,7 +215,7 @@ const baseServiceConfig = {
   ],
 };
 
-const service = {
+export const service = {
   simp: {
     ...baseServiceConfig,
     lang: `zh-hans`,
@@ -227,4 +228,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

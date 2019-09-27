@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin } from '@bbc/gel-foundations/scripts';
-import hausaConfig from '#lib/config/services/hausa';
+import { service as hausaConfig } from '#lib/config/services/hausa';
 import relatedItems from './relatedItems';
 import IndexAlsos from '.';
 

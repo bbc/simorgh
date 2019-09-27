@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
-const AssetsPlugin = require('assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const { DuplicatesPlugin } = require('inspectpack/plugin');
@@ -76,12 +76,6 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       __filename: 'mock',
     },
     plugins: [
-      // keep track of the generated chunks in build/assets.json
-      // this determines what scripts get put in the footer of the page
-      new AssetsPlugin({
-        path: resolvePath('build'),
-        filename: `assets-${APP_ENV}.json`,
-      }),
       // copy static files otherwise untouched by Webpack, e.g. favicon
       new CopyWebpackPlugin([
         {
@@ -124,6 +118,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/,
+      }),
+      // keep track of the generated chunks
+      // this determines what scripts get put in the footer of the page
+      new LoadablePlugin({
+        filename: `loadable-stats-${APP_ENV}.json`,
+        writeToDisk: true,
       }),
     ],
   };

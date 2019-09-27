@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-filename-extension  */
 import React from 'react';
-import Loadable from 'react-loadable';
+import { loadableReady } from '@loadable/component';
 import { hydrate } from 'react-dom';
 import { ClientApp } from './app/containers/App';
 import routes from './app/routes';
@@ -17,7 +17,7 @@ const root = document.getElementById('root');
 // see a blank screen. Avoid this by only hydrating when the embedded page data
 // and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
-  Loadable.preloadReady().then(() => {
+  loadableReady(() => {
     hydrate(<ClientApp data={data} routes={routes} />, root);
   });
 } else {

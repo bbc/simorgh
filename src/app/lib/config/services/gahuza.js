@@ -2,8 +2,9 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { gahuza as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `rw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -201,4 +202,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

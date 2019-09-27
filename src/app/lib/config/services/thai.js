@@ -3,8 +3,9 @@ import { thai } from '@bbc/gel-foundations/scripts';
 import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
 import 'moment/locale/th';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -208,4 +209,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

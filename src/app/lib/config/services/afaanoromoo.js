@@ -2,8 +2,9 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -191,7 +192,10 @@ const service = {
       },
     ],
     timezone: 'Africa/Addis_Ababa',
+    liveRadio: {
+      externalIdOverrides: { bbc_oromo_radio: 'bbc_afaanoromoo_radio' },
+    },
   },
 };
 
-export default service;
+export default withContext(service);

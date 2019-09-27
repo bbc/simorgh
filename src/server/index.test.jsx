@@ -40,6 +40,13 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
+jest.mock('@loadable/server', () => ({
+  ChunkExtractor: () => ({
+    collectChunks: arg => arg,
+    getScriptElements: () => '__mock_script_elements__',
+  }),
+}));
+
 jest.mock('../app/routes/getInitialData/utils/getRouteProps');
 
 const mockRouteProps = ({
@@ -127,12 +134,6 @@ const testFrontPages = ({ platform, service, variant }) => {
           expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
             <Document
               app="<h1>Mock app</h1>"
-              assets={[
-                `${localBaseUrl}/static/js/${service}-12345.12345.js`,
-                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-                `${localBaseUrl}/static/js/main-12345.12345.js`,
-              ]}
               assetOrigins={[
                 'https://gel.files.bbci.co.uk',
                 'https://ws-downloads.files.bbci.co.uk',
@@ -144,6 +145,7 @@ const testFrontPages = ({ platform, service, variant }) => {
               helmet={{ head: 'tags' }}
               isAmp={isAmp}
               service={service}
+              scripts="__mock_script_elements__"
               styleTags={<style />}
             />,
           );
@@ -250,12 +252,6 @@ const testArticles = ({ platform, service, variant }) => {
           expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
             <Document
               app="<h1>Mock app</h1>"
-              assets={[
-                `${localBaseUrl}/static/js/${service}-12345.12345.js`,
-                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-                `${localBaseUrl}/static/js/main-12345.12345.js`,
-              ]}
               assetOrigins={[
                 'https://gel.files.bbci.co.uk',
                 'https://ws-downloads.files.bbci.co.uk',
@@ -267,6 +263,7 @@ const testArticles = ({ platform, service, variant }) => {
               helmet={{ head: 'tags' }}
               isAmp={isAmp}
               service={service}
+              scripts="__mock_script_elements__"
               styleTags={<style />}
             />,
           );
@@ -374,12 +371,6 @@ const testMediaAssetPages = ({ platform, service, assetUri, variant }) => {
           expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
             <Document
               app="<h1>Mock app</h1>"
-              assets={[
-                `${localBaseUrl}/static/js/${service}-12345.12345.js`,
-                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-                `${localBaseUrl}/static/js/main-12345.12345.js`,
-              ]}
               assetOrigins={[
                 'https://gel.files.bbci.co.uk',
                 'https://ws-downloads.files.bbci.co.uk',
@@ -391,6 +382,7 @@ const testMediaAssetPages = ({ platform, service, assetUri, variant }) => {
               helmet={{ head: 'tags' }}
               isAmp={isAmp}
               service={service}
+              scripts="__mock_script_elements__"
               styleTags={<style />}
             />,
           );
@@ -495,12 +487,6 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
           expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
             <Document
               app="<h1>Mock app</h1>"
-              assets={[
-                `${localBaseUrl}/static/js/korean-12345.12345.js`,
-                `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-                `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-                `${localBaseUrl}/static/js/main-12345.12345.js`,
-              ]}
               assetOrigins={[
                 'https://gel.files.bbci.co.uk',
                 'https://ws-downloads.files.bbci.co.uk',
@@ -512,6 +498,7 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
               helmet={{ head: 'tags' }}
               isAmp={isAmp}
               service={service}
+              scripts="__mock_script_elements__"
               styleTags={<style />}
             />,
           );
@@ -788,12 +775,6 @@ describe('Server', () => {
         expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
           <Document
             app="<h1>Mock app</h1>"
-            assets={[
-              `${localBaseUrl}/static/js/igbo-12345.12345.js`,
-              `${localBaseUrl}/static/js/vendor-54321.12345.js`,
-              `${localBaseUrl}/static/js/vendor-12345.12345.js`,
-              `${localBaseUrl}/static/js/main-12345.12345.js`,
-            ]}
             assetOrigins={[
               'https://gel.files.bbci.co.uk',
               'https://ws-downloads.files.bbci.co.uk',
@@ -805,6 +786,7 @@ describe('Server', () => {
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
             service={service}
+            scripts="__mock_script_elements__"
             styleTags={<style />}
           />,
         );

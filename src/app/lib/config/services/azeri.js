@@ -2,8 +2,10 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
+import 'moment/locale/az';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -34,7 +36,7 @@ const service = {
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Xəbərlər',
+    frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -205,4 +207,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

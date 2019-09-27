@@ -7,8 +7,9 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ar';
 import '@bbc/moment-timezone-include/tz/GMT';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: 'ar',
     product: 'BBC News',
@@ -258,4 +259,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);
