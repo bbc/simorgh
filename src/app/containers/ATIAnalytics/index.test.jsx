@@ -9,8 +9,20 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
-import * as articleatiparams from './params/article';
-import * as frontpageatiparams from './params/frontpage';
+import { getPublishedDatetime, getCurrentTime } from '../../lib/analyticsUtils';
+
+jest.mock('../../lib/analyticsUtils', () => {
+  const utils = jest.requireActual('../../lib/analyticsUtils');
+
+  return {
+    ...utils,
+    getPublishedDatetime: jest.fn(),
+    getCurrentTime: jest.fn(),
+  };
+});
+
+getCurrentTime.mockImplementation(() => '00-00-00');
+getPublishedDatetime.mockImplementation(() => '1970-01-01T00:00:00.000Z');
 
 const ContextWrap = ({ pageType, platform, children }) => (
   <ServiceContextProvider service="news">
@@ -34,8 +46,6 @@ ContextWrap.propTypes = {
   platform: string.isRequired,
 };
 
-const mockAtiQueryParams = 'key1=value1&key2=value2';
-
 describe('ATI Analytics Container', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -43,13 +53,10 @@ describe('ATI Analytics Container', () => {
 
   describe('pageType article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const pageviewParams =
+        's=598286&s2=64&p=news.articles.c0000000001o.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:optimo:c0000000001o]&x2=[responsive]&x3=[news]&x4=[en-gb]&x5=[http://localhost/]&x7=[article]&x9=[Article+Headline+for+SEO]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[Royal+Wedding+2018~Duchess+of+Sussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]';
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
-
-      const mockArticleAtiParams = jest
-        .fn()
-        .mockReturnValue(mockAtiQueryParams);
-      articleatiparams.default = mockArticleAtiParams;
 
       renderer.create(
         <ContextWrap platform="canonical" pageType="article">
@@ -57,23 +64,16 @@ describe('ATI Analytics Container', () => {
         </ContextWrap>,
       );
 
-      expect(mockCanonical).toHaveBeenCalledTimes(1);
       expect(mockCanonical.mock.calls[0][0]).toEqual({
-        pageviewParams: mockAtiQueryParams,
+        pageviewParams,
       });
-
-      expect(mockArticleAtiParams).toHaveBeenCalledTimes(1);
-      expect(mockArticleAtiParams).toHaveBeenCalledWith(articleDataNews);
     });
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
+      const pageviewParams = `s=598286&s2=64&p=news.articles.c0000000001o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn:bbc:optimo:c0000000001o]&x2=[amp]&x3=[news]&x4=[en-gb]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x9=[Article+Headline+for+SEO]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[Royal+Wedding+2018~Duchess+of+Sussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]`;
+
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       amp.default = mockAmp;
-
-      const mockArticleAtiParams = jest
-        .fn()
-        .mockReturnValue(mockAtiQueryParams);
-      articleatiparams.default = mockArticleAtiParams;
 
       renderer.create(
         <ContextWrap platform="amp" pageType="article">
@@ -81,25 +81,18 @@ describe('ATI Analytics Container', () => {
         </ContextWrap>,
       );
 
-      expect(mockAmp).toHaveBeenCalledTimes(1);
       expect(mockAmp.mock.calls[0][0]).toEqual({
-        pageviewParams: mockAtiQueryParams,
+        pageviewParams,
       });
-
-      expect(mockArticleAtiParams).toHaveBeenCalledTimes(1);
-      expect(mockArticleAtiParams).toHaveBeenCalledWith(articleDataNews);
     });
   });
 
   describe('pageType=frontPage', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const pageviewParams =
+        's=598286&s2=64&p=news.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news]&x5=[http://localhost/]&x7=[index-home]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]';
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
-
-      const mockFrontPageAtiParams = jest
-        .fn()
-        .mockReturnValue(mockAtiQueryParams);
-      frontpageatiparams.default = mockFrontPageAtiParams;
 
       renderer.create(
         <ContextWrap platform="canonical" pageType="frontPage">
@@ -107,23 +100,15 @@ describe('ATI Analytics Container', () => {
         </ContextWrap>,
       );
 
-      expect(mockCanonical).toHaveBeenCalledTimes(1);
       expect(mockCanonical.mock.calls[0][0]).toEqual({
-        pageviewParams: mockAtiQueryParams,
+        pageviewParams,
       });
-
-      expect(mockFrontPageAtiParams).toHaveBeenCalledTimes(1);
-      expect(mockFrontPageAtiParams).toHaveBeenCalledWith(articleDataNews);
     });
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
+      const pageviewParams = `s=598286&s2=64&p=news.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]`;
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       amp.default = mockAmp;
-
-      const mockFrontPageAtiParams = jest
-        .fn()
-        .mockReturnValue(mockAtiQueryParams);
-      frontpageatiparams.default = mockFrontPageAtiParams;
 
       renderer.create(
         <ContextWrap platform="amp" pageType="frontPage">
@@ -131,13 +116,9 @@ describe('ATI Analytics Container', () => {
         </ContextWrap>,
       );
 
-      expect(mockAmp).toHaveBeenCalledTimes(1);
       expect(mockAmp.mock.calls[0][0]).toEqual({
-        pageviewParams: mockAtiQueryParams,
+        pageviewParams,
       });
-
-      expect(mockFrontPageAtiParams).toHaveBeenCalledTimes(1);
-      expect(mockFrontPageAtiParams).toHaveBeenCalledWith(articleDataNews);
     });
   });
 

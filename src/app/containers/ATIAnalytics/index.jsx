@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
-import getArticleAtiParams from './params/article';
-import getFrontPageAtiParams from './params/frontpage';
-import getMediaPageAtiParams from './params/media';
+import { buildArticleATIUrl } from './params/article/buildParams';
+import { buildFrontPageATIUrl } from './params/frontpage/buildParams';
+import { buildMediaATIUrl } from './params/media/buildParams';
 import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
-  const { pageType, platform } = React.useContext(RequestContext);
+  const requestContext = useContext(RequestContext);
+  const serviceContext = useContext(ServiceContext);
+  const { pageType, platform } = requestContext;
 
   const pageTypeHandlers = {
-    article: getArticleAtiParams,
-    frontPage: getFrontPageAtiParams,
-    media: getMediaPageAtiParams,
+    article: buildArticleATIUrl,
+    frontPage: buildFrontPageATIUrl,
+    media: buildMediaATIUrl,
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
@@ -21,7 +24,11 @@ const ATIAnalytics = ({ data }) => {
     return null;
   }
 
-  const pageviewParams = pageTypeHandlers[pageType](data);
+  const pageviewParams = pageTypeHandlers[pageType](
+    data,
+    requestContext,
+    serviceContext,
+  );
 
   return platform === 'amp' ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
