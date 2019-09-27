@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { node } from 'prop-types';
-import { useWindowEvent } from './useWindowEvent';
-import { useHandlerMap } from './useHandlerMap';
+import useWindowEvent from './useWindowEvent';
+import useHandlerMap from './useHandlerMap';
 
 export const EventContext = React.createContext({
   useWindowEvent,
