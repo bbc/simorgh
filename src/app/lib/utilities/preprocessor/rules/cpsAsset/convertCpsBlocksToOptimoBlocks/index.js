@@ -1,11 +1,14 @@
 import { clone, pathOr } from 'ramda';
+import image from './generators/image';
 
 const handleMissingType = block => {
   console.log(`Missing type field on block ${block.type}`);
-  return block;
+  return null;
 };
 
-const parseByType = {};
+const parseByType = {
+  image,
+};
 
 const parseBlockByMarkupType = block => {
   const { type } = block;
@@ -19,9 +22,11 @@ const convertCpsBlocksToOptimoBlocks = jsonRaw => {
   const json = clone(jsonRaw);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
-  const parsedBlocks = blocks.map(block => {
-    return parseBlockByMarkupType(block);
-  });
+  const parsedBlocks = blocks
+    .map(block => {
+      return parseBlockByMarkupType(block);
+    })
+    .filter(Boolean);
 
   return {
     ...json,
