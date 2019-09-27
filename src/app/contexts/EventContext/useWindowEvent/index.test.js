@@ -2,14 +2,6 @@ import { useEffect } from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import useWindowEvent from './index';
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useEffect: jest.fn().mockImplementation(original.useEffect),
-  };
-});
-
 afterEach(() => {
   jest.clearAllMocks();
 });
