@@ -2,9 +2,9 @@ import onClient from '../../../lib/utilities/onClient';
 import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import { variantSanitiser } from '../../../lib/utilities/variantHandler';
-import convertCandyXMLToBlocks from '../../../lib/utilities/preprocessor/convertCandyXMLToBlocks';
-
-const preprocessorRules = [convertCandyXMLToBlocks];
+import convertCpsBlocksToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAsset/convertCpsBlocksToOptimoBlocks';
+import addHeadlineBlock from '#lib/utilities/preprocessor/rules/cpsAsset/addHeadlineBlock';
+import addTimestampBlock from '#lib/utilities/preprocessor/rules/article/timestamp';
 
 const getMediaAssetPageInitialData = async ({ service, variant, assetUri }) => {
   const baseUrl = onClient()
@@ -17,7 +17,14 @@ const getMediaAssetPageInitialData = async ({ service, variant, assetUri }) => {
     ? `${baseUrl}/${service}/${assetUri}/${processedVariant}.json`
     : `${baseUrl}/${service}/${assetUri}.json`;
 
-  return fetchData({ url, preprocessorRules });
+  return fetchData({
+    url,
+    preprocessorRules: [
+      convertCpsBlocksToOptimoBlocks,
+      addHeadlineBlock,
+      addTimestampBlock,
+    ],
+  });
 };
 
 export default getMediaAssetPageInitialData;

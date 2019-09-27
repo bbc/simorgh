@@ -1,11 +1,11 @@
 import baseUrl from '../utils/getBaseUrl';
 import onClient from '#lib/utilities/onClient';
 import fetchData from '../utils/fetchData';
-import filterUnknownContentTypes from '#lib/utilities/preprocessor/rules/filterContentType';
-import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmptyGroupItems';
-import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
-import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
-import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
+import filterUnknownContentTypes from '#lib/utilities/preprocessor/rules/frontPage/filterContentType';
+import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/frontPage/filterEmptyGroupItems';
+import applySquashTopstories from '#lib/utilities/preprocessor/rules/frontPage/topstories';
+import addIdsToItems from '#lib/utilities/preprocessor/rules/frontPage/addIdsToItems';
+import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/frontPage/filterGroupsWithoutStraplines';
 
 const preprocessorRules = [
   filterUnknownContentTypes,

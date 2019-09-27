@@ -1,5 +1,5 @@
 import articleJson from '#data/news/articles/c0000000003o.json';
-import addIdsToBlocks from './addIdsToBlocks';
+import addIdsToBlocks from '.';
 
 jest.mock('uuid', () => () => 'mockId');
 

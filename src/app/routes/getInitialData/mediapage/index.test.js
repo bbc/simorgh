@@ -2,9 +2,9 @@ import fetchData from '../utils/fetchData';
 import baseUrl from '../utils/getBaseUrl';
 import onClient from '#lib/utilities/onClient';
 import getMediaPageInitialData from '.';
-import addIdsToBlocks from './addIdsToBlocks';
+import addIdsToBlocks from '#lib/utilities/preprocessor/rules/mediaPage/addIdsToBlocks';
 
-jest.mock('./addIdsToBlocks');
+jest.mock('#lib/utilities/preprocessor/rules/mediaPage/addIdsToBlocks');
 jest.mock('../utils/getBaseUrl');
 jest.mock('#lib/utilities/onClient');
 jest.mock('../utils/fetchData');

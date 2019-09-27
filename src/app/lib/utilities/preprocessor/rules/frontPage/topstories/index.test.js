@@ -1,4 +1,4 @@
-import applySquashTopstories from './topstories';
+import applySquashTopstories from '.';
 import fixtureDataFormatOne from '#data/thai/frontpage/index.json';
 import fixtureDataFormatTwo from '#data/igbo/frontpage/index.json';
 

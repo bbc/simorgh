@@ -1,4 +1,4 @@
-import addIdsToItems from './addIdsToItems';
+import addIdsToItems from '.';
 
 jest.mock('uuid', () => () => 'mockId');
 

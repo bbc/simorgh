@@ -38,7 +38,7 @@ const routes = [
   {
     path: mediaAssetPageRegexPath,
     exact: true,
-    component: MediaPage,
+    component: Article,
     getInitialData: getMediaAssetPageInitialData,
     pageType: 'MAP',
   },

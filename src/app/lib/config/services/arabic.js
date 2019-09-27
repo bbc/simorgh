@@ -12,12 +12,12 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: 'ar',
+    product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'جدّد في',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
     brandName: 'BBC News عربي',
-    product: 'BBC News',
     serviceLocalizedName: 'عربي',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
     defaultImageAltText: 'BBC News عربي',

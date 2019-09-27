@@ -1,8 +1,8 @@
-import { clone, path } from 'ramda';
+import { clone, path, pathOr } from 'ramda';
 import {
   candyXmlToRichText,
   stringToRichText,
-} from '../../../../../../fabl-modules/libraries/rich-text-transforms';
+} from '../../../../../../../../../fabl-modules/libraries/rich-text-transforms';
 
 const wrapText = innerXML => `<body><paragraph>${innerXML}</paragraph></body>`;
 
@@ -51,17 +51,22 @@ const parseBlockByMarkupType = block => {
   return parsedBlock;
 };
 
-const convertCandyXMLToBlocks = jsonRaw => {
+const convertCpsBlocksToOptimoBlocks = jsonRaw => {
   const json = clone(jsonRaw);
-  const blocks = path(['content', 'blocks'], json);
+  const blocks = pathOr([], ['content', 'blocks'], json);
 
   const parsedBlocks = blocks.map(block => {
     return parseBlockByMarkupType(block);
   });
 
-  json.content.blocks = parsedBlocks;
-
-  return json;
+  return {
+    ...json,
+    content: {
+      model: {
+        blocks: parsedBlocks,
+      },
+    },
+  };
 };
 
-export default convertCandyXMLToBlocks;
+export default convertCpsBlocksToOptimoBlocks;
