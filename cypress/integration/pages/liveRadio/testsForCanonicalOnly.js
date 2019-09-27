@@ -19,7 +19,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           ({ body }) => {
             const { id, externalId } = body.content.blocks[2];
             cy.get(
-              `iframe[src="${`/ws/av-embeds/media/${externalId}/${id}`}"]`,
+              `iframe[src="${`https://www.test.bbc.com/ws/av-embeds/media/${externalId}/${id}`}"]`,
             ).should('be.visible');
           },
         );

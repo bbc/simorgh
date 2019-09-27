@@ -9,6 +9,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 storiesOf('Containers|Header', module)
+  .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .add(
     'default',
