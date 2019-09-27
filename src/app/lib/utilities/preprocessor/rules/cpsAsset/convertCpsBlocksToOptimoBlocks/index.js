@@ -1,24 +1,33 @@
-import path from 'ramda/src/path';
-import deepClone from 'ramda/src/clone';
+import { clone, pathOr } from 'ramda';
+
+const handleMissingType = block => {
+  console.log(`Missing type field on block ${block.type}`);
+  return block;
+};
+
+const parseByType = {};
+
+const parseBlockByMarkupType = block => {
+  const { type } = block;
+
+  const parsedBlock = (parseByType[type] || handleMissingType)(block);
+
+  return parsedBlock;
+};
 
 const convertCpsBlocksToOptimoBlocks = jsonRaw => {
-  const json = deepClone(jsonRaw);
+  const json = clone(jsonRaw);
+  const blocks = pathOr([], ['content', 'blocks'], json);
 
-  const blocks = path(['content', 'blocks'], json);
-
-  const supportedBlocks = {
-    blockyBlock: () => 'i am block',
-  };
-
-  const newBlocks = blocks
-    .map(block => supportedBlocks[path(['type'], block)] || null)
-    .filter(Boolean);
+  const parsedBlocks = blocks.map(block => {
+    return parseBlockByMarkupType(block);
+  });
 
   return {
-    ...jsonRaw,
+    ...json,
     content: {
       model: {
-        blocks: newBlocks,
+        blocks: parsedBlocks,
       },
     },
   };
