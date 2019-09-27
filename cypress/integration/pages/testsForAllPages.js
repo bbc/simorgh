@@ -237,39 +237,14 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
     });
 
     describe('Header Tests', () => {
-      const hasLocalisedName =
-        appConfig[service][variant].serviceLocalizedName !== undefined;
-
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
           'contain',
-          hasLocalisedName
+          appConfig[service][variant].serviceLocalizedName !== undefined
             ? `${appConfig[service][variant].product}, ${appConfig[service][variant].serviceLocalizedName}`
             : appConfig[service][variant].product,
         );
       });
-
-      if (hasLocalisedName) {
-        it("should have offscreen text with product's language code set to English", () => {
-          cy.get(
-            'header div[class^="Banner"] span[class^="VisuallyHiddenText"] span',
-          ).should('have.attr', 'lang', 'en-GB');
-        });
-
-        it('should not set the language code for localised name', () => {
-          cy.get(
-            'header div[class^="Banner"] span[class^="VisuallyHiddenText"]',
-          )
-            .eq(0)
-            .should('not.have.attr', 'lang', 'en-GB');
-        });
-      } else {
-        it('should not have a language attribute if no serviceLocalizedName set', () => {
-          cy.get(
-            'header div[class^="Banner"] span[class^="VisuallyHiddenText"]',
-          ).should('not.have.attr', 'lang', 'en-GB');
-        });
-      }
 
       it('should have a visible banner', () => {
         cy.get('header')
