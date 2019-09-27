@@ -2,8 +2,9 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `es`,
     articleAuthor: `https://www.facebook.com/bbcmundo`,
@@ -219,4 +220,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

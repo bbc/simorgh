@@ -7,10 +7,10 @@ import services from '#testHelpers/serviceConfigs';
  * async behavior in tests across the application when
  * using service contexts.
  */
-export const ServiceContext = React.createContext(services.default);
+export const ServiceContext = React.createContext({});
 
 export const ServiceContextProvider = ({ children, service, variant }) => (
-  <ServiceContext.Provider value={services[service][variant]}>
+  <ServiceContext.Provider value={services[service][variant || 'default']}>
     {children}
   </ServiceContext.Provider>
 );

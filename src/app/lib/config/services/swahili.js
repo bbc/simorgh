@@ -2,8 +2,9 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -44,11 +45,11 @@ const service = {
       home: 'Habari',
       currentPage: 'Ukurasa uliopo',
       skipLinkText: 'Ruka hadi maelezo',
-      relatedContent: 'Related content',
+      relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Ukurasa haupatikani',
+          title: 'Ukurasa haupatikani',
           message:
             'Samahani, hatuwezi kukupeleka kwenye ukurasa unaoutafuta. Tafadhali jaribu:',
           solutions: [
@@ -56,22 +57,22 @@ const service = {
             'Kubonyeza kitufe cha kufungua upya ukurasa',
             'Tafuta ukurasa huu kwa kutumia sehemu ya Tafuta kwenye ukurasa wa BBC',
           ],
-          callToActionFirst: 'Pia, tafadhali tembelea ukurasa wa ',
-          callToActionLinkText: 'kwanza wa BBC News Swahili',
+          callToActionFirst: 'Pia, tafadhali tembelea ukurasa wa kwanza wa ',
+          callToActionLinkText: 'BBC News Swahili',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/swahili',
         },
         500: {
           statusCode: '500',
-          title: '500 - Hitilafu katika server ya ndani',
+          title: 'Hitilafu katika server ya ndani',
           message:
             'Samahani, hatuwezi kukuletea ukurasa unaoutafuta. Tafadhali jaribu:',
           solutions: [
             'Kubonyeza kitufe cha kufungua upya ukurasa',
             'Inarudi tena baadaye',
           ],
-          callToActionFirst: 'Pia, tafadhali tembelea ukurasa wa ',
-          callToActionLinkText: 'kwanza wa BBC News Swahili',
+          callToActionFirst: 'Pia, tafadhali tembelea ukurasa wa kwanza wa ',
+          callToActionLinkText: 'BBC News Swahili',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/swahili',
         },
@@ -153,11 +154,16 @@ const service = {
           text: 'Kwanini unaweza kuiamini BBC News',
         },
         {
-          href: 'https://www.bbc.com/terms',
+          href:
+            'https://www.bbc.com/swahili/taasisi/2011/10/000001_terms_of_use',
           text: 'Sheria ya matumizi',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_aboutus',
+          text: 'Kuhusu BBC',
+        },
+        {
+          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_privacy',
           text: 'Sera ya faragha',
         },
         {
@@ -165,7 +171,7 @@ const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus',
           text: 'Wasiliana na BBC',
         },
       ],
@@ -206,4 +212,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

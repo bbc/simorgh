@@ -3,8 +3,9 @@ import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnewstelugu`,
@@ -197,4 +198,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

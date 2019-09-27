@@ -7,8 +7,9 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
+import withContext from '../../../contexts/utils/withContext';
 
-const persian = {
+export const service = {
   default: {
     lang: 'fa',
     product: 'BBC News',
@@ -49,7 +50,7 @@ const persian = {
       home: 'صفحه اول',
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
-      relatedContent: 'Related content',
+      relatedContent: 'مطالب مرتبط',
       error: {
         404: {
           statusCode: '۴۰۴',
@@ -58,11 +59,11 @@ const persian = {
             'متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:',
           solutions: [
             'آدرس صفحه مورد نظر را دوباره بررسی کنید',
-            'با مرورگر خود صفحه را ریفرش (refresh) کنید',
+            'با مرورگر خود صفحه را ریفرش (Refresh) کنید',
             'در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید',
           ],
           callToActionFirst: 'برای یافتن اطلاعات مورد نظر به ',
-          callToActionLinkText: 'صفحه اصلی بی بی سی فارسی',
+          callToActionLinkText: 'صفحه اصلی بی‌بی‌سی فارسی',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/persian',
         },
@@ -72,19 +73,19 @@ const persian = {
           message:
             'متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:',
           solutions: [
-            'با مرورگر خود صفحه را ریفرش (refresh) کنید',
+            'با مرورگر خود صفحه را ریفرش (Refresh) کنید',
             'بعدا دوباره امتحان کنید',
           ],
-          callToActionFirst: 'روش دیگر، لطفآ به ',
-          callToActionLinkText: 'صفحه اصلی بی بی سی فارسی',
-          callToActionLast: ' بازدید کنید',
+          callToActionFirst: 'برای یافتن اطلاعات مورد نظر به ',
+          callToActionLinkText: 'صفحه اصلی بی‌بی‌سی فارسی',
+          callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/persian',
         },
       },
       consentBanner: {
         privacy: {
           title:
-            'ما سیاست‌های حفظ حریم خصوصی و کوکی‌های خود را به روز کرده‌ایم',
+            'ما سیاست‌های حفظ حریم خصوصی و کوکی‌های (Cookies) خود را به روز کرده‌ایم',
           description: {
             uk: {
               first:
@@ -106,7 +107,7 @@ const persian = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'آیا با دریافت کوکی‌های ما موافقید؟',
+          title: 'آیا با دریافت کوکی‌های ما (Cookies) موافقید؟',
           description: {
             uk: {
               first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
@@ -189,8 +190,7 @@ const persian = {
           text: 'تماس با بی بی سی',
         },
       ],
-      copyrightText:
-        'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
+      copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
     timezone: 'GMT',
     fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
@@ -271,4 +271,4 @@ const persian = {
   },
 };
 
-export default persian;
+export default withContext(service);

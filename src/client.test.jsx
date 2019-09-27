@@ -12,9 +12,15 @@ jest.mock('./app/containers/App');
 
 jest.mock('./app/routes', () => [{ path: '/foobar/articles/:id' }]);
 
-jest.mock('react-loadable', () => ({
-  preloadReady: () => Promise.resolve(),
-}));
+jest.mock('@loadable/component', () => {
+  const original = jest.requireActual('@loadable/component');
+  return {
+    ...original,
+    __esModule: true,
+    default: () => {},
+    loadableReady: callback => callback(),
+  };
+});
 
 jest.mock('./app/routes/getInitialData/utils/getRouteProps');
 

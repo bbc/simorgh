@@ -2,8 +2,9 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { nepali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
+import withContext from '../../../contexts/utils/withContext';
 
-const service = {
+export const service = {
   default: {
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnepaliservice`,
@@ -197,4 +198,4 @@ const service = {
   },
 };
 
-export default service;
+export default withContext(service);

@@ -5,7 +5,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { shouldMatchSnapshot } from '#testHelpers';
-import pidginServiceConfig from '#lib/config/services/pidgin';
+import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 
 const defaultToggleState = {
   test: {

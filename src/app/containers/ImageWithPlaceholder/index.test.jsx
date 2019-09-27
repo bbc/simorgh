@@ -1,7 +1,7 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, render } from 'enzyme';
 import LazyLoad from 'react-lazyload';
-import { shouldMatchSnapshot } from '#testHelpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,
@@ -29,10 +29,11 @@ describe('ImageWithPlaceholder', () => {
     expect(Object.keys(wrapper.props()).length).toBe(7);
   });
 
-  shouldMatchSnapshot(
-    'should render a lazyloaded image when lazyLoad set to true',
-    <LazyLoadImageWithPlaceholder />,
-  );
+  it('should render a lazyloaded image when lazyLoad set to true', () => {
+    // Render using enzyme to capture noscript contents
+    const container = render(<LazyLoadImageWithPlaceholder />);
+    expect(container).toMatchSnapshot();
+  });
 
   shouldMatchSnapshot(
     'should not provide non-js fallback',

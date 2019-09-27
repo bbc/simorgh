@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import MediaPageMain from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
