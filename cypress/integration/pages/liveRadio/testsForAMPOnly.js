@@ -1,6 +1,10 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 
+// the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
+const getMappedServiceId = externalId =>
+  externalId === 'bbc_oromo_radio' ? 'bbc_afaanoromoo_radio' : externalId;
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
@@ -28,8 +32,9 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
             const { id, externalId } = body.content.blocks[2];
+            const serviceId = getMappedServiceId(externalId);
             cy.get(
-              `amp-iframe[src="${`https://www.test.bbc.com/ws/av-embeds/media/${externalId}/${id}/amp`}"]`,
+              `amp-iframe[src="${`https://www.test.bbc.com/ws/av-embeds/media/${serviceId}/${id}/amp`}"]`,
             ).should('be.visible');
           },
         );
