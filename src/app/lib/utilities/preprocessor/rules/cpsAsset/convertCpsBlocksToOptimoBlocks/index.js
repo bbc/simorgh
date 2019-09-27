@@ -1,4 +1,5 @@
-import { clone, path, pathOr } from 'ramda';
+import { clone, pathOr } from 'ramda';
+import image from './generators/image';
 import {
   candyXmlToRichText,
   stringToRichText,
@@ -12,7 +13,7 @@ const handlePlainText = block => stringToRichText(block.text);
 
 const handleMissingType = block => {
   console.log(`Missing type field on block ${block.type}`);
-  return block;
+  return null;
 };
 
 const handleParagraph = block =>
@@ -37,7 +38,7 @@ const parseByType = {
   paragraph: handleParagraph,
   // subheading: handleMissingType,
   crosshead: handleCrosshead,
-  // image: handleMissingType,
+  image,
   // list: handleMissingType,
   // media: handleMissingType,
   // social_embed: handleMissingType,
@@ -55,9 +56,11 @@ const convertCpsBlocksToOptimoBlocks = jsonRaw => {
   const json = clone(jsonRaw);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
-  const parsedBlocks = blocks.map(block => {
-    return parseBlockByMarkupType(block);
-  });
+  const parsedBlocks = blocks
+    .map(block => {
+      return parseBlockByMarkupType(block);
+    })
+    .filter(Boolean);
 
   return {
     ...json,
