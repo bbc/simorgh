@@ -4,7 +4,9 @@ import NavigationContainer from '.';
 import services from '#testHelpers/serviceConfigs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-const stories = storiesOf('Containers|Navigation', module);
+const stories = storiesOf('Containers|Navigation', module).addParameters({
+  chromatic: { disable: true },
+});
 
 Object.keys(services).forEach(service => {
   Object.keys(services[service])
