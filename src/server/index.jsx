@@ -20,6 +20,7 @@ import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
+const fs = require('fs');
 
 const morgan = require('morgan');
 
@@ -53,6 +54,12 @@ const server = express();
  * Default headers, compression, logging, status route
  */
 
+const getBuildMetadata = () => {
+  const data = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  const { buildMetadata } = data;
+  return buildMetadata;
+};
+
 server
   .disable('x-powered-by')
   .use(
@@ -65,7 +72,7 @@ server
   .use(helmet({ frameguard: { action: 'deny' } }))
   .use(gnuTP())
   .get('/status', (req, res) => {
-    res.sendStatus(200);
+    res.status(200).send(getBuildMetadata());
   });
 
 /*
