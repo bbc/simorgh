@@ -1299,7 +1299,10 @@ const services = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: '/tigrinya/articles/c12g32eldk6o',
+        path:
+          Cypress.env('APP_ENV') === 'live'
+            ? undefined
+            : '/tigrinya/articles/c12g32eldk6o',
         smoke: false,
       },
       errorPage404: {
