@@ -75,21 +75,17 @@ describe('Application unknown route error pages', () => {
 describe('Application', () => {
   beforeEach(resetDocument);
   Object.keys(config)
-    .filter(service =>
-      ['amharic', 'gahuza', 'nepali', 'news', 'indonesia', 'yoruba'].includes(
-        service,
-      ),
-    )
+    .filter(service => ['pidgin'].includes(service))
     .forEach(service => {
-      it(`${service} front page renders same application after hydration`, () => {
+      it.skip(`${service} front page renders same application after hydration`, () => {
         const win = cy.state('window');
         delete win.createReactClass;
 
-        let pageHtml;
+        let serverHtml;
         cy.request(`/${service}/`)
           .its('body')
           .then(html => {
-            pageHtml = html;
+            serverHtml = html;
           });
 
         let staticHTML;
@@ -100,7 +96,7 @@ describe('Application', () => {
           })
           .then(resetDocument)
           .then(() => {
-            cy.state('document').write(pageHtml);
+            cy.state('document').write(serverHtml);
           });
 
         cy.get('body')
@@ -110,32 +106,80 @@ describe('Application', () => {
           });
       });
 
-      it(`${service} article renders same application after hydration`, () => {
+      it.skip('renders same application after hydration', () => {
+        // technical detail - removes any stubs from previous tests
+        // since our application iframe does not get reset
+        // (there is no "cy.visit" call to reset it)
         const win = cy.state('window');
         delete win.createReactClass;
 
-        let pageHtml;
+        // Options for the observer (which mutations to observe)
+        const obConfig = { attributes: true, childList: true, subtree: true };
+
+        // Callback function to execute when mutations are observed
+        const callback = (mutationsList, observer) => {
+          for (let mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+              cy.log('A child node has been added or removed.');
+            } else if (mutation.type === 'attributes') {
+              cy.log(
+                'The ' + mutation.attributeName + ' attribute was modified.',
+              );
+            }
+          }
+        };
+
+        // Create an observer instance linked to the callback function
+        const observer = new MutationObserver(callback);
+
+        // Later, you can stop observing
+        observer.disconnect();
+
+        let SSRHtml;
         cy.request(`${config[service].pageTypes.articles.path}`)
           .its('body')
           .then(html => {
-            pageHtml = html;
+            SSRHtml = html;
+            // remove bundle script to only have static HTML
+            const scriptRegex = new RegExp(
+              `<script crossorigin="anonymous" type="text\/javascript" src=".+?static.+?script>`,
+              'gm',
+            );
+            cy.state('document').write(html.replace(scriptRegex, ''));
           });
+
+        // cy.get('li').should('have.length', 4);
+        // cy.get('button').should('be.disabled');
 
         let staticHTML;
-        cy.get('body')
+        cy.get('#root')
           .invoke('html')
+
           .then(html => {
             staticHTML = html;
+            // Start observing the target node for configured mutations
+            // Select the node that will be observed for mutations
+            const targetNode = win.document.getElementById('root');
+            cy.log(observer.observe(targetNode, obConfig));
           })
+
+          // now mount the full page and let it hydrate
           .then(resetDocument)
           .then(() => {
-            cy.state('document').write(pageHtml);
-          });
+            cy.state('document').write(SSRHtml);
+            // Select the node that will be observed for mutations
+            const targetNode = win.document.getElementById('root');
+            cy.log(observer.observe(targetNode, obConfig));
+          })
+          .debug();
 
-        cy.get('body')
+        cy.get('#root')
           .invoke('html')
           .then(html => {
             expect(html).to.equal(staticHTML);
+            // Select the node that will be observed for mutations
+            const targetNode = win.document.getElementById('root');
+            observer.observe(targetNode, obConfig);
           });
       });
     });
