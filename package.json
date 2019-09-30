@@ -98,7 +98,7 @@
         "path-to-regexp": "^3.1.0",
         "polyfill-crypto.getrandomvalues": "1.0.0",
         "ramda": "^0.26.1",
-        "react": "^16.9.0",
+        "react": "^16.10.1",
         "react-dom": "^16.9.0",
         "react-helmet": "^5.2.1",
         "react-lazyload": "^2.6.2",
