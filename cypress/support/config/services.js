@@ -1,4 +1,4 @@
-module.exports = {
+const services = {
   afaanoromoo: {
     font: undefined,
     isWorldService: true,
@@ -24,7 +24,7 @@ module.exports = {
       },
       liveRadio: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: false,
@@ -179,7 +179,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/azeri',
+        path: '/azeri',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -549,7 +549,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/japanese',
+        path: '/japanese',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -621,7 +621,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/kyrgyz',
+        path: '/kyrgyz',
         smoke: false,
       },
       liveRadio: {
@@ -787,8 +787,8 @@ module.exports = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/news/articles/c5ll353v7y9o'
-            : '/news/articles/c6v11qzyv8po',
+            ? '/news/articles/cj7xrxz0e8zo'
+            : '/news/articles/cn7k01xp8kxo',
         smoke: true,
       },
       errorPage404: {
@@ -1628,3 +1628,11 @@ module.exports = {
     },
   },
 };
+
+// Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env var
+const runOnlyService = Cypress.env('ONLY_SERVICE');
+if (runOnlyService && Object.keys(services).includes(runOnlyService)) {
+  module.exports = { [runOnlyService]: services[runOnlyService] };
+} else {
+  module.exports = services;
+}
