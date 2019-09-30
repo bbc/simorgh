@@ -38,7 +38,7 @@ const matchFixtures = service => ({
   },
 });
 
-storiesOf('Containers|Radio', module)
+storiesOf('Main|Radio Page', module)
   .addDecorator(withKnobs)
   .add(
     'default',
