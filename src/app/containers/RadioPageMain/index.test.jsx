@@ -2,13 +2,13 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import MediaPageMain from '.';
+import RadioPageMain from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
-import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
+import addIdsToBlocks from '../../routes/getInitialData/radioPage/addIdsToBlocks';
 
 const pageData = addIdsToBlocks(amharicPageData);
 
-describe('Media Page Main', () => {
+describe('Radio Page Main', () => {
   shouldMatchSnapshot(
     'should match snapshot',
     <ServiceContextProvider service="news">
@@ -20,7 +20,7 @@ describe('Media Page Main', () => {
         service="news"
         statusCode={200}
       >
-        <MediaPageMain service="amharic" pageData={pageData} />
+        <RadioPageMain service="amharic" pageData={pageData} />
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
