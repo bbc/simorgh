@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "#testHelpers/*": ["./src/testHelpers/*"],
+      "#lib/*": ["./src/app/lib/*"],
+      "#data/*": ["./data/*"],
+      "#models/*": ["./src/app/models/*"],
+      "#contexts/*": ["./src/app/contexts/*"],
+      "#app/*": ["./src/app/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
