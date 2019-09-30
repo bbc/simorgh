@@ -126,7 +126,7 @@
         "@storybook/theming": "^5.2.0",
         "@bbc/psammead-test-helpers": "^3.0.2",
         "@loadable/babel-plugin": "^5.10.0",
-        "@testing-library/react": "^9.1.4",
+        "@testing-library/react": "^9.2.0",
         "@testing-library/react-hooks": "^2.0.1",
         "amphtml-validator": "^1.0.23",
         "babel-eslint": "^10.0.3",
