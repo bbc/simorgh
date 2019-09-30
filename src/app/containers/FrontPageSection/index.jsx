@@ -87,7 +87,6 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       {/*
          The current implementation of SectionLabel *requires* a strapline to be
          present in order to render. 
-
       */}
       {strapline && (
         <SectionLabel
