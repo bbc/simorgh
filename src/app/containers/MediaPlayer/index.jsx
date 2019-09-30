@@ -48,8 +48,8 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
 
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
-    vpid: versionId,
-    assetId: id,
+    requestUrl: `${id}/${versionId}`,
+    type: 'articles',
     isAmp,
     origin,
   });
