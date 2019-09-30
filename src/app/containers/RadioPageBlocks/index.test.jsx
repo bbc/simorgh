@@ -6,7 +6,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioPageBlocks from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
-import addIdsToBlocks from '../../routes/getInitialData/radiopage/addIdsToBlocks';
+import addIdsToBlocks from '../../routes/getInitialData/radioPage/addIdsToBlocks';
 
 const pageData = addIdsToBlocks(amharicPageData);
 const blocks = path(['content', 'blocks'], pageData);

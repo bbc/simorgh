@@ -4,7 +4,7 @@ import RadioPage from '../containers/RadioPage';
 import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
-import getRadioPageInitialData from './getInitialData/radiopage';
+import getRadioPageInitialData from './getInitialData/radioPage';
 import getMediaAssetPageInitialData from './getInitialData/mediaAssetPage';
 import {
   articleRegexPath,

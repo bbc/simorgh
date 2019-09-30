@@ -4,7 +4,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import RadioPageMain from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
-import addIdsToBlocks from '../../routes/getInitialData/radiopage/addIdsToBlocks';
+import addIdsToBlocks from '../../routes/getInitialData/radioPage/addIdsToBlocks';
 
 const pageData = addIdsToBlocks(amharicPageData);
 
