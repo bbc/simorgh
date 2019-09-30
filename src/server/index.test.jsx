@@ -563,8 +563,13 @@ describe('Server', () => {
 
   describe('/status', () => {
     it('should respond with a 200', async () => {
-      const { statusCode } = await makeRequest('/status');
+      const { statusCode, body } = await makeRequest('/status');
       expect(statusCode).toBe(200);
+      expect(body).toStrictEqual({
+        commitHash: '383522b',
+        deployEnvironment: 'green',
+        version: '1.0.0',
+      });
     });
   });
 

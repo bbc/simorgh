@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
+import '@bbc/psammead-locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -24,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Maelezo, ',
     imageCopyrightOffscreenText: 'Chanzo cha picha, ',
     locale: `sw-KE`,
-    datetimeLocale: `sw-ke`,
+    datetimeLocale: `sw`,
     service: 'swahili',
     serviceName: 'Swahili',
     themeColor: `${C_POSTBOX}`,

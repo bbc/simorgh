@@ -321,7 +321,7 @@ CYPRESS_SKIP_EU=true npm run cypress:interactive
 The following command runs both simorgh and cypress:
 
 ```
-CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true npm run build && npm run test:e2e
+CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true npm run test:e2e
 ```
 
 CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.
