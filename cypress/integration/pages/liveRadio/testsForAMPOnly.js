@@ -31,7 +31,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             const { id, externalId } = body.content.blocks[2];
             const serviceId = getMappedServiceId(externalId);
             cy.get(
-              `amp-iframe[src="${envConfig.baseUrl}/${serviceId}/${id}/amp"]`,
+              `amp-iframe[src="${envConfig.baseUrl}/ws/av-embeds/media/${serviceId}/${id}/amp"]`,
             ).should('be.visible');
           },
         );
