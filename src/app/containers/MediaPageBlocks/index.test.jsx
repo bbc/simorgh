@@ -16,7 +16,11 @@ describe('Media Page Blocks', () => {
     'should match snapshot',
     <ServiceContext.Provider value={{ service: 'news', script: latin }}>
       <RequestContext.Provider
-        value={{ platform: 'canonical', pageType: 'media' }}
+        value={{
+          platform: 'canonical',
+          pageType: 'media',
+          origin: 'http://localhost.bbc.co.uk:7080',
+        }}
       >
         <MediaPageBlocks blocks={blocks} />
       </RequestContext.Provider>

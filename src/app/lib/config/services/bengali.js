@@ -6,6 +6,7 @@ import {
   F_SHONAR_BANGLA_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
+import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -16,7 +17,8 @@ export const service = {
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
     brandName: 'BBC News বাংলা',
-    product: 'BBC News বাংলা',
+    product: 'BBC News',
+    serviceLocalizedName: 'বাংলা',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png',
     defaultImageAltText: 'BBC News বাংলা',
     dir: `ltr`,
@@ -27,7 +29,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `bn-BD`,
-    datetimeLocale: `bn-bd`,
+    datetimeLocale: `bn`,
     service: 'bengali',
     serviceName: 'News বাংলা',
     themeColor: `${C_POSTBOX}`,

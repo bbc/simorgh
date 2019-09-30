@@ -6,6 +6,7 @@ import {
   F_ISKOOLA_POTA_BBC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -16,7 +17,8 @@ export const service = {
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     brandName: 'BBC News සිංහල',
-    product: 'BBC News සිංහල',
+    product: 'BBC News',
+    serviceLocalizedName: 'සිංහල',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png',
     defaultImageAltText: 'BBC News සිංහල',
     dir: `ltr`,
@@ -27,7 +29,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `si-LK`,
-    datetimeLocale: `si-lk`,
+    datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'News සිංහල',
     themeColor: `${C_POSTBOX}`,

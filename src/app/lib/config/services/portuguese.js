@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
+import '@bbc/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -12,7 +13,8 @@ export const service = {
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
     brandName: 'BBC News Brasil',
-    product: 'BBC News Brasil',
+    product: 'BBC News',
+    serviceLocalizedName: 'Brasil',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/brasil.png',
     defaultImageAltText: 'BBC News Brasil',
     dir: `ltr`,

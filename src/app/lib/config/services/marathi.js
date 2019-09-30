@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { marathi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+import '@bbc/psammead-locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -12,7 +13,8 @@ export const service = {
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
     brandName: 'BBC News मराठी',
-    product: 'BBC News मराठी',
+    product: 'BBC News',
+    serviceLocalizedName: 'मराठी',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
     defaultImageAltText: 'BBC News मराठी',
     dir: `ltr`,
@@ -23,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `mr-IN`,
-    datetimeLocale: `mr-in`,
+    datetimeLocale: `mr`,
     service: 'marathi',
     serviceName: 'News मराठी',
     themeColor: `${C_POSTBOX}`,

@@ -35,6 +35,7 @@ exports[`MediaPageBlocks Heading should render correctly 1`] = `
 <h1
   class="c0"
   id="idAttr"
+  tabindex="-1"
 >
   Example text
 </h1>

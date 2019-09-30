@@ -42,7 +42,12 @@ const ErrorPage = ({
   <main role="main">
     <GhostGrid>
       <LongGridItemConstrainedMedium>
-        <ShortHeadline id="content" script={script} service={service}>
+        <ShortHeadline
+          id="content"
+          script={script}
+          service={service}
+          tabIndex="-1"
+        >
           <StatusCode script={script}>{statusCode}</StatusCode>
           {title}
         </ShortHeadline>
