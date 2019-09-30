@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -12,7 +13,8 @@ export const service = {
     atiAnalyticsAppName: 'news-ukrainian',
     atiAnalyticsProducerId: '94',
     brandName: 'BBC News Україна',
-    product: 'BBC News Україна',
+    product: 'BBC News',
+    serviceLocalizedName: 'Україна',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
     defaultImageAltText: 'BBC News Україна',
     dir: `ltr`,
@@ -23,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `uk-UA`,
-    datetimeLocale: `uk-ua`,
+    datetimeLocale: `uk`,
     service: 'ukrainian',
     serviceName: 'Україна',
     themeColor: `${C_POSTBOX}`,

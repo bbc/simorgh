@@ -431,7 +431,7 @@ describe('StoryPromo Container', () => {
           textContent: bengaliTime,
           dateTime: bengaliDate,
         } = bengaliContainer.querySelector('time');
-        expect(bengaliTime).toEqual('৬ আগস্ট ২০১৯');
+        expect(bengaliTime).toEqual('৬ অগাস্ট ২০১৯');
         expect(bengaliDate).toEqual('2019-08-06');
       });
     });
