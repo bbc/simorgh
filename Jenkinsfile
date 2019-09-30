@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+library 'Simorgh'
 
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
 def nodeImageVersion = "10.16.3"
@@ -110,6 +111,8 @@ pipeline {
             }
           }
           steps {
+            // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
+            Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, appGitCommit)
             setupCodeCoverage()
             withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
               runDevelopmentTests()
@@ -176,6 +179,9 @@ pipeline {
               getCommitInfo()
               sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
             }
+
+            // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
+            Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, appGitCommit)
 
             sh "rm -f ${packageName}"
             zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
