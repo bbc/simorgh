@@ -1,9 +1,6 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
-
-// the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
-const getMappedServiceId = externalId =>
-  externalId === 'bbc_oromo_radio' ? 'bbc_afaanoromoo_radio' : externalId;
+import getMappedServiceId from './helper';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
