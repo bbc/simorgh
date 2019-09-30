@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/uz';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -12,7 +13,8 @@ export const service = {
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
     brandName: "BBC News O'zbek",
-    product: "BBC News O'zbek",
+    product: 'BBC News',
+    serviceLocalizedName: "O'zbek",
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
     defaultImageAltText: "BBC News O'zbek",
     dir: `ltr`,
@@ -23,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `uz-UZ`,
-    datetimeLocale: `uz-uz`,
+    datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: "News O'zbek",
     themeColor: `${C_POSTBOX}`,

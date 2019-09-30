@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -12,7 +13,8 @@ export const service = {
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     brandName: 'BBC News Mundo',
-    product: 'BBC News Mundo',
+    product: 'BBC News',
+    serviceLocalizedName: 'Mundo',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
     defaultImageAltText: 'BBC News Mundo',
     dir: `ltr`,
@@ -23,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `es-005`,
-    datetimeLocale: `es-005`,
+    datetimeLocale: `es`,
     service: 'mundo',
     serviceName: 'News Mundo',
     themeColor: `${C_POSTBOX}`,
