@@ -45,8 +45,26 @@ describe('ATI Analytics Container', () => {
 
   describe('pageType article', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
-      const pageviewParams =
-        's=598286&s2=64&p=news.articles.c0000000001o.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:optimo:c0000000001o]&x2=[responsive]&x3=[news]&x4=[en-gb]&x5=[http://localhost/]&x7=[article]&x9=[Article+Headline+for+SEO]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[Royal+Wedding+2018~Duchess+of+Sussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]';
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=news.articles.c0000000001o.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:optimo:c0000000001o]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[en-gb]',
+        'x5=[http://localhost/]',
+        'x7=[article]',
+        'x9=[Article+Headline+for+SEO]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Royal+Wedding+2018~Duchess+of+Sussex]',
+        'x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
+      ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
 
@@ -62,7 +80,27 @@ describe('ATI Analytics Container', () => {
     });
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
-      const pageviewParams = `s=598286&s2=64&p=news.articles.c0000000001o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn:bbc:optimo:c0000000001o]&x2=[amp]&x3=[news]&x4=[en-gb]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x9=[Article+Headline+for+SEO]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[Royal+Wedding+2018~Duchess+of+Sussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]`;
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=news.articles.c0000000001o.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:optimo:c0000000001o]',
+        'x2=[amp]',
+        'x3=[news]',
+        'x4=[en-gb]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article]',
+        'x9=[Article+Headline+for+SEO]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Royal+Wedding+2018~Duchess+of+Sussex]',
+        'x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
+      ].join('&');
 
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       amp.default = mockAmp;
@@ -81,8 +119,21 @@ describe('ATI Analytics Container', () => {
 
   describe('pageType=frontPage', () => {
     it('should call CanonicalATIAnalytics when platform is canonical', () => {
-      const pageviewParams =
-        's=598286&s2=64&p=news.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[news]&x5=[http://localhost/]&x7=[index-home]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]';
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=news.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x5=[http://localhost/]',
+        'x7=[index-home]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+      ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
 
@@ -98,7 +149,22 @@ describe('ATI Analytics Container', () => {
     });
 
     it('should call AmpATIAnalytics when platform is Amp', () => {
-      const pageviewParams = `s=598286&s2=64&p=news.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]`;
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=news.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x2=[amp]',
+        'x3=[news]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[index-home]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+      ].join('&');
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       amp.default = mockAmp;
 

@@ -55,7 +55,22 @@ describe('buildMediaATIUrl', () => {
   it('should return the right url', () => {
     const result = buildMediaATIUrl(media, requestContext, serviceContext);
     expect(result).toEqual(
-      's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
+      [
+        's=598285',
+        's2=atiAnalyticsProducerId',
+        'p=pageIdentifier',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[id]',
+        'x2=[responsive]',
+        'x3=[atiAnalyticsAppName]',
+        'x4=[language]',
+        'x5=[http://localhost/]',
+        'x7=[player-live]',
+        'x9=[pageTitle]',
+      ].join('&'),
     );
   });
 });

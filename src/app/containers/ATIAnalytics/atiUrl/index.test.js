@@ -129,7 +129,15 @@ describe('buildATIEventTrackUrl', () => {
         type: 'type',
       }),
     ).toEqual(
-      'http://foobar.com?s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&ati=PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+      `http://foobar.com?${[
+        's=getDestination',
+        'p=pageIdentifier',
+        'r=getScreenInfo',
+        're=getBrowserViewPort',
+        'hl=getCurrentTime',
+        'lng=getDeviceLanguage',
+        'ati=PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+      ].join('&')}`,
     );
   });
 });
