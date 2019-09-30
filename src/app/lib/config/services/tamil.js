@@ -3,6 +3,7 @@ import { tamil } from '@bbc/gel-foundations/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -25,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `ta-IN`,
-    datetimeLocale: `ta-in`,
+    datetimeLocale: `ta`,
     service: 'tamil',
     serviceName: 'News தமிழ்',
     themeColor: `${C_POSTBOX}`,

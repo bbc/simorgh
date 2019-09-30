@@ -2,7 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
-import 'moment/locale/az';
+import '@bbc/psammead-locales/moment/az';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -25,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Altyazı, ',
     imageCopyrightOffscreenText: 'Şəklin mənbəyi, ',
     locale: `az-AZ`,
-    datetimeLocale: `az-az`,
+    datetimeLocale: `az`,
     service: 'azeri',
     serviceName: 'Azərbaycanca',
     themeColor: `${C_POSTBOX}`,
