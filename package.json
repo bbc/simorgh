@@ -178,7 +178,7 @@
         "timemachine": "^0.3.0",
         "wait-on": "^3.3.0",
         "webpack": "^4.40.2",
-        "webpack-bundle-analyzer": "^3.5.0",
+        "webpack-bundle-analyzer": "^3.5.2",
         "webpack-cli": "^3.3.8",
         "webpack-dev-server": "^3.8.1",
         "webpack-merge": "^4.2.2",
