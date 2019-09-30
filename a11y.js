@@ -15,6 +15,8 @@ const getFrontPages = pageType => pathOr(null, ['frontPage'], pageType);
 
 const getArticles = pageType => pathOr(null, ['articles'], pageType);
 
+const getLiveRadio = pageType => pathOr(null, ['liveRadio'], pageType);
+
 const getSmokePaths = config => {
   const { path, smoke } = config;
   return smoke && path ? path : null;
@@ -31,7 +33,13 @@ const getUrls = () => {
     .map(getArticles)
     .map(getSmokePaths)
     .filter(article => !!article);
-  return [...frontPages, ...articles].map(url => `${baseUrl}${url}`);
+  const liveRadio = pageTypes
+    .map(getLiveRadio)
+    .map(getSmokePaths)
+    .filter(page => !!page);
+  return [...frontPages, ...articles, ...liveRadio].map(
+    url => `${baseUrl}${url}`,
+  );
 };
 
 const urls = getUrls();
