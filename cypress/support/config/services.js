@@ -24,7 +24,7 @@ const services = {
       },
       liveRadio: {
         path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         path:
@@ -101,7 +101,7 @@ const services = {
       },
       liveRadio: {
         path: '/amharic/bbc_amharic_radio/liveradio',
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         path:
@@ -509,7 +509,7 @@ const services = {
       },
       liveRadio: {
         path: '/indonesia/bbc_indonesian_radio/liveradio',
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         path:
@@ -578,7 +578,7 @@ const services = {
       },
       liveRadio: {
         path: '/korean/bbc_korean_radio/liveradio',
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         path:
@@ -1314,11 +1314,8 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/tigrinya/bbc_tigrinya_radio/liveradio',
-        smoke: false,
+        path: '/tigrinya/bbc_tigrinya_radio/liveradio',
+        smoke: true,
       },
       mediaAssetPage: {
         path:
