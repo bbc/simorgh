@@ -61,8 +61,8 @@ describe('Routes', () => {
       const data = generateFixtureData('FIX');
       Component(data);
 
-      expect(frontPage).toHaveBeenCalled();
       expect(mediaPage).not.toHaveBeenCalled();
+      expect(frontPage).toHaveBeenCalled();
     });
   });
 });
