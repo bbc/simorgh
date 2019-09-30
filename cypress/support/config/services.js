@@ -23,10 +23,7 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+        path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -103,10 +100,7 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/amharic/bbc_amharic_radio/liveradio',
+        path: '/amharic/bbc_amharic_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -514,10 +508,7 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/indonesia/bbc_indonesian_radio/liveradio',
+        path: '/indonesia/bbc_indonesian_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -586,10 +577,7 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/korean/bbc_korean_radio/liveradio',
+        path: '/korean/bbc_korean_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -1311,10 +1299,7 @@ const services = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/tigrinya/articles/c12g32eldk6o',
+        path: '/tigrinya/articles/c12g32eldk6o',
         smoke: false,
       },
       errorPage404: {
