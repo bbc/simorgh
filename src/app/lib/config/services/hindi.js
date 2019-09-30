@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { hindi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+import '@bbc/psammead-locales/moment/hi';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -24,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `hi-IN`,
-    datetimeLocale: `hi-in`,
+    datetimeLocale: `hi`,
     service: 'hindi',
     serviceName: 'News हिंदी',
     themeColor: `${C_POSTBOX}`,
