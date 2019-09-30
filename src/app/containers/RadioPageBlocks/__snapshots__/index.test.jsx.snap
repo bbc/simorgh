@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Page Blocks should match snapshot 1`] = `
+exports[`Radio Page Blocks should match snapshot 1`] = `
 .c0 {
   font-size: 1.75rem;
   line-height: 2rem;

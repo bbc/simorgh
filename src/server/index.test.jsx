@@ -446,7 +446,7 @@ const testMediaAssetPages = ({ platform, service, assetUri, variant }) => {
 };
 
 const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
-  describe(`${platform} media page - live radio`, () => {
+  describe(`${platform} radio page - live radio`, () => {
     const isAmp = platform === 'amp';
     const successDataResponse = {
       isAmp,
@@ -662,7 +662,7 @@ describe('Server', () => {
       });
     });
 
-    describe('for media page - live radio', () => {
+    describe('for radio page - live radio', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest(
           '/korean/bbc_korean_radio/liveradio.json',

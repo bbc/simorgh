@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Page snapshots should match scaffold snapshot 1`] = `
+exports[`Radio Page snapshots should match scaffold snapshot 1`] = `
 <div
   id="PageWrapperContainer"
 >
@@ -14,7 +14,7 @@ exports[`Media Page snapshots should match scaffold snapshot 1`] = `
         id="DataContainer"
       >
         <div>
-          MediaPageMain
+          RadioPageMain
         </div>
       </div>
     </div>
