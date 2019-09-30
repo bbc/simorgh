@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-library 'Simorgh'
+library 'Simorgh@legacy-simorgh-library'
 
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
 def nodeImageVersion = "10.16.3"
@@ -96,16 +96,20 @@ pipeline {
     string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
     booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
-  // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
-  script {
-    Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, 'test commit hash')
-  }
   stages {
     stage ('Build and Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
       failFast true
+      stage ('Set Build Metadata') {
+          steps {
+            // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
+            script {
+                Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, 'test commit hash')
+            }
+          }
+      }
       parallel {
         stage ('Test Development') {
           agent {
@@ -147,9 +151,13 @@ pipeline {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
-      // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
-      script {
-        Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, appGitCommit)
+      stage ('Set Build Metadata') {
+        steps {
+          // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
+          script {
+            Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, 'test commit hash')
+          }
+        }
       }
       parallel {
         stage ('Test Development') {
