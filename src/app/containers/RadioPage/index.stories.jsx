@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 
-import MediaPage from '.';
+import RadioPage from '.';
 import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 import korean from '#data/korean/bbc_korean_radio/liveradio.json';
 import tigrinya from '#data/tigrinya/bbc_tigrinya_radio/liveradio.json';
@@ -38,7 +38,7 @@ storiesOf('Pages|Media Page', module)
     inputProvider({
       // eslint-disable-next-line react/prop-types
       componentFunction: ({ service }) => (
-        <MediaPage
+        <RadioPage
           match={matchFixtures(service)}
           data={{
             pageData: liveRadioFixtures[service],

@@ -4,7 +4,7 @@ import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
-import MediaPageBlocks from '../MediaPageBlocks';
+import MediaPageBlocks from '../RadioPageBlocks';
 
 const MediaPageMain = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);

@@ -1,6 +1,6 @@
 import Article from '../containers/Article';
 import FrontPage from '../containers/FrontPage';
-import MediaPage from '../containers/MediaPage';
+import RadioPage from '../containers/RadioPage';
 import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
@@ -31,14 +31,14 @@ const routes = [
   {
     path: mediaRadioAndTvRegexPathsArray,
     exact: true,
-    component: MediaPage,
+    component: RadioPage,
     getInitialData: getMediaPageInitialData,
     pageType: 'media',
   },
   {
     path: mediaAssetPageRegexPath,
     exact: true,
-    component: MediaPage,
+    component: RadioPage,
     getInitialData: getMediaAssetPageInitialData,
     pageType: 'MAP',
   },

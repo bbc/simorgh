@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import MediaPage from '.';
+import RadioPage from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 
 const liveRadioScaffoldProps = {
@@ -68,7 +68,7 @@ describe('Media Page', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should match scaffold snapshot',
-      <MediaPage {...liveRadioScaffoldProps} />,
+      <RadioPage {...liveRadioScaffoldProps} />,
     );
   });
 });

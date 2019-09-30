@@ -1,6 +1,6 @@
 import React from 'react';
 import compose from 'ramda/src/compose';
-import MediaPageMain from '../MediaPageMain';
+import MediaPageMain from '../RadioPageMain';
 
 import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
