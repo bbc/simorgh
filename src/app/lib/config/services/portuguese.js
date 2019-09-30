@@ -10,6 +10,7 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
+import '@bbc/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

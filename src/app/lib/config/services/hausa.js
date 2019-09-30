@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { hausa as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/ha';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -24,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Bayani, ',
     imageCopyrightOffscreenText: 'Asalin hoton, ',
     locale: `ha-GH`,
-    datetimeLocale: `ha-gh`,
+    datetimeLocale: `ha`,
     service: 'hausa',
     serviceName: 'Hausa',
     themeColor: `${C_POSTBOX}`,
