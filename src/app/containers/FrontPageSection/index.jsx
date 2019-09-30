@@ -86,11 +86,8 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     <section role="region" aria-labelledby={sectionLabelId}>
       {/*
          The current implementation of SectionLabel *requires* a strapline to be
-         present in order to render. It is currently *not possible* to render a
-         section that does not have a strapline without breaking both the visual
-         *and especially* the screen reader UX.
-         If this group does not have a strapline; do not render!
-         This may change in the future, if a way to avoid breaking UX is found.
+         present in order to render. 
+
       */}
       {strapline && (
         <SectionLabel
