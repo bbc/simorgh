@@ -13,7 +13,7 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
-  mediaDataRegexPath,
+  radioAndTvDataRegexPath,
   mediaAssetPageDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
@@ -124,7 +124,7 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(mediaDataRegexPath, async ({ params }, res, next) => {
+    .get(radioAndTvDataRegexPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
       const dataFilePath = path.join(

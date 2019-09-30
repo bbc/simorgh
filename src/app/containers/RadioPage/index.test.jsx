@@ -58,13 +58,13 @@ jest.mock('../PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../MediaPageMain', () => {
-  const MediaPageMain = () => <div>MediaPageMain</div>;
+jest.mock('../RadioPageMain', () => {
+  const RadioPageMain = () => <div>RadioPageMain</div>;
 
-  return MediaPageMain;
+  return RadioPageMain;
 });
 
-describe('Media Page', () => {
+describe('Radio Page', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should match scaffold snapshot',

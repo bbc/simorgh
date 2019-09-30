@@ -31,7 +31,7 @@ const matchFixtures = service => ({
   },
 });
 
-storiesOf('Pages|Media Page', module)
+storiesOf('Pages|Radio Page', module)
   .addDecorator(withKnobs)
   .add(
     'default',

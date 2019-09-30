@@ -6,7 +6,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-import MediaPageMain from '.';
+import RadioPageMain from '.';
 import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 import korean from '#data/korean/bbc_korean_radio/liveradio.json';
 import tigrinya from '#data/tigrinya/bbc_tigrinya_radio/liveradio.json';
@@ -38,7 +38,7 @@ const matchFixtures = service => ({
   },
 });
 
-storiesOf('Containers|Media', module)
+storiesOf('Containers|Radio', module)
   .addDecorator(withKnobs)
   .add(
     'default',
@@ -54,7 +54,7 @@ storiesOf('Containers|Media', module)
                 origin="https://www.bbc.com"
                 service={service}
               >
-                <MediaPageMain
+                <RadioPageMain
                   pageData={liveRadioFixtures[service]}
                   match={matchFixtures(service)}
                   service={service}
