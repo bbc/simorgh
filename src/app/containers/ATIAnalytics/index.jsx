@@ -4,7 +4,7 @@ import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import getArticleAtiParams from './params/article';
 import getFrontPageAtiParams from './params/frontpage';
-import getRadioPageAtiParams from './params/radio';
+import getRadioPageAtiParams from './params/radioPage';
 import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
