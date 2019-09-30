@@ -24,7 +24,7 @@ const services = {
       },
       liveRadio: {
         path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         path:
@@ -509,7 +509,7 @@ const services = {
       },
       liveRadio: {
         path: '/indonesia/bbc_indonesian_radio/liveradio',
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         path:
@@ -578,7 +578,7 @@ const services = {
       },
       liveRadio: {
         path: '/korean/bbc_korean_radio/liveradio',
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         path:
@@ -1318,7 +1318,7 @@ const services = {
       },
       liveRadio: {
         path: '/tigrinya/bbc_tigrinya_radio/liveradio',
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         path:
