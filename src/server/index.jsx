@@ -56,8 +56,7 @@ const server = express();
  */
 
 const getBuildMetadata = () => {
-  const data = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  const { buildMetadata } = data;
+  const { buildMetadata } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   return buildMetadata;
 };
 
