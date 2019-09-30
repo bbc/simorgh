@@ -4,14 +4,14 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import MediaPageBlocks from '.';
+import RadioPageBlocks from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
-import addIdsToBlocks from '../../routes/getInitialData/mediapage/addIdsToBlocks';
+import addIdsToBlocks from '../../routes/getInitialData/radioPage/addIdsToBlocks';
 
 const pageData = addIdsToBlocks(amharicPageData);
 const blocks = path(['content', 'blocks'], pageData);
 
-describe('Media Page Blocks', () => {
+describe('Radio Page Blocks', () => {
   shouldMatchSnapshot(
     'should match snapshot',
     <ServiceContext.Provider value={{ service: 'news', script: latin }}>
@@ -22,7 +22,7 @@ describe('Media Page Blocks', () => {
           origin: 'http://localhost.bbc.co.uk:7080',
         }}
       >
-        <MediaPageBlocks blocks={blocks} />
+        <RadioPageBlocks blocks={blocks} />
       </RequestContext.Provider>
     </ServiceContext.Provider>,
   );
