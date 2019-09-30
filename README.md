@@ -285,14 +285,21 @@ For running tests using interactive, run:
 npm run test:e2e:interactive
 ```
 
-This loads a user interface which easily allows for indivdual tests to be run alongside a visual stream of the browser, as the tests run.
+This loads a user interface which easily allows for individual tests to be run alongside a visual stream of the browser, as the tests run.
 
-To run only a particular spec, ensure Simorgh is already running in another tab and then run (for example):
+#### Limiting scope of runs
+
+Tests can be restricted to only run for a single service by specifying it using the `CYPRESS_ONLY_SERVICE` environment variable. For example:
+
+```
+CYPRESS_ONLY_SERVICE=urdu npm run test:e2e
+```
+
+To run only a particular spec it is necessary to invoke Cypress directly. First ensure Simorgh is already running in another tab and then run (for example, to only run article tests):
 
 ```
 npx cypress run --spec cypress/integration/pages/articles/index.js
 ```
-
 
 Further details on using the Cypress CLI can be found at https://docs.cypress.io/guides/guides/command-line.html
 
