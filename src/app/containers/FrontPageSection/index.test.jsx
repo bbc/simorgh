@@ -330,7 +330,7 @@ describe('FrontPageSection Container', () => {
         </ServiceContextProvider>,
       );
 
-      // container is a <div> which contains the rendered elements
+      // container is a <div> which would contain the rendered elements...
       // IF THERE WERE ANY!
       expect(container.children).toHaveLength(0);
     });
