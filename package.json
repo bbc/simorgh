@@ -79,7 +79,7 @@
         "@bbc/psammead-timestamp-container": "^2.4.15",
         "@bbc/psammead-visually-hidden-text": "^1.2.2",
         "@loadable/component": "^5.10.2",
-        "@loadable/server": "^5.10.2",
+        "@loadable/server": "^5.10.3",
         "@loadable/webpack-plugin": "^5.7.1",
         "compression": "^1.7.4",
         "core-js": "^3.2.1",
