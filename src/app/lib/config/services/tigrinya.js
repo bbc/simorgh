@@ -6,6 +6,7 @@ import {
   F_NOTO_SANS_ETHIOPIC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
+import '@bbc/psammead-locales/moment/ti';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -28,7 +29,7 @@ export const service = {
     defaultCaptionOffscreenText: 'መግለጺ, ',
     imageCopyrightOffscreenText: 'ምንጪ ስእሊ, ',
     locale: `ti-ET`,
-    datetimeLocale: `ti-et`,
+    datetimeLocale: `ti`,
     service: 'tigrinya',
     serviceName: 'News ትግርኛ',
     themeColor: `${C_POSTBOX}`,
