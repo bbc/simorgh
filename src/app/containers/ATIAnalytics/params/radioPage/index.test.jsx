@@ -4,14 +4,14 @@ import * as atiPageViewParams from '../../atiUrl';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-import RadioAtiParams from '.';
+import RadioPageAtiParams from '.';
 import fixture from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 
-describe('RadioAtiParams', () => {
+describe('RadioPageAtiParams', () => {
   const Component = (serviceContextStub, requestContextStub) => (
     <ServiceContext.Provider value={serviceContextStub}>
       <RequestContextProvider {...requestContextStub}>
-        <RadioAtiParams {...fixture} />
+        <RadioPageAtiParams {...fixture} />
       </RequestContextProvider>
     </ServiceContext.Provider>
   );
