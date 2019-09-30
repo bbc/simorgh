@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/uz';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -24,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `uz-UZ`,
-    datetimeLocale: `uz-uz`,
+    datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: "News O'zbek",
     themeColor: `${C_POSTBOX}`,
