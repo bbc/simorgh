@@ -59,14 +59,14 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   flex-direction: column;
 }
 
-.c41 {
+.c40 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c41:focus,
-.c41:hover {
+.c40:focus,
+.c40:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -90,7 +90,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   align-items: baseline;
 }
 
-.c42 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -129,7 +129,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   align-items: center;
 }
 
-.c43 {
+.c42 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -343,7 +343,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c40 {
+.c39 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -360,6 +360,33 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   display: block;
   width: 100%;
   visibility: visible;
+}
+
+.c43 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c33 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c44 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
 }
 
 .c31 {
@@ -433,10 +460,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 .c27:visited {
   color: #6E6E73;
-}
-
-.c39 {
-  margin-top: 0.5rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -531,7 +554,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c42 {
+  .c41 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -566,21 +589,21 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c43 {
+  .c42 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c43 {
+  .c42 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c43 {
+  .c42 {
     margin: 0;
   }
 }
@@ -1132,333 +1155,337 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </h2>
               </div>
-              <ul
-                class="c9 c10"
-                role="list"
+              <div
+                class="c9"
               >
-                <li
-                  class="c11"
-                  role="listitem"
+                <ul
+                  class="c10"
+                  role="list"
                 >
-                  <div
-                    class="c12"
+                  <li
+                    class="c11"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c12"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
-                          <img
-                            alt="Senator Ahmad Lawan and Ali Ndume"
-                            class="c16"
-                            sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
-                            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
-                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 624w"
-                            width="976"
+                          <div
+                            class="c15"
+                          >
+                            <img
+                              alt="Senator Ahmad Lawan and Ali Ndume"
+                              class="c16"
+                              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
+                              src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+                              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 624w"
+                              width="976"
+                            />
+                          </div>
+                          <div
+                            class="c17"
                           />
                         </div>
-                        <div
-                          class="c17"
-                        />
                       </div>
-                    </div>
-                    <div
-                      class="c18"
-                    >
-                      <h3
-                        class="c19"
-                      >
-                        <a
-                          class="c20"
-                          href="/pidgin/live/tori-48591362"
-                        >
-                          <span
-                            role="text"
-                          >
-                            <span
-                              aria-hidden="true"
-                              class="c21"
-                              dir="ltr"
-                            >
-                              LIVE
-                            </span>
-                            <span
-                              class="c0"
-                              lang="en-GB"
-                            >
-                              Live, 
-                            </span>
-                            Senators don begin vote for Senate President
-                          </span>
-                        </a>
-                      </h3>
-                      <p
-                        class="c22"
-                      >
-                        Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
-                      </p>
-                      <time
-                        class="c23"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
                       <div
-                        class="c24"
-                        data-e2e="index-alsos"
+                        class="c18"
                       >
-                        <h4
-                          class="c0"
+                        <h3
+                          class="c19"
                         >
-                          Ihe ndị ọzọ n'akụkọ a
-                        </h4>
-                        <ul
-                          class="c25"
-                          role="list"
-                        >
-                          <li
-                            class="c26"
-                            role="listitem"
+                          <a
+                            class="c20"
+                            href="/pidgin/live/tori-48591362"
                           >
-                            <a
-                              class="c27"
-                              href="/pidgin/tori-48591361"
+                            <span
+                              role="text"
                             >
                               <span
-                                class="c28"
+                                aria-hidden="true"
+                                class="c21"
+                                dir="ltr"
                               >
-                                Who go lead di Ninth National Assembly?
+                                LIVE
                               </span>
-                            </a>
-                          </li>
-                          <li
-                            class="c26"
-                            role="listitem"
-                          >
-                            <a
-                              class="c27"
-                              href="/pidgin/tori-47603701"
-                            >
                               <span
-                                class="c28"
+                                class="c0"
+                                lang="en-GB"
                               >
-                                4 tins wey go determine who become di next Senate President, Speaker
+                                Live, 
                               </span>
-                            </a>
-                          </li>
-                        </ul>
+                              Senators don begin vote for Senate President
+                            </span>
+                          </a>
+                        </h3>
+                        <p
+                          class="c22"
+                        >
+                          Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
+                        </p>
+                        <time
+                          class="c23"
+                          datetime="2019-06-11"
+                        >
+                          11 Juun 2019
+                        </time>
+                        <div
+                          class="c24"
+                          data-e2e="index-alsos"
+                        >
+                          <h4
+                            class="c0"
+                          >
+                            Ihe ndị ọzọ n'akụkọ a
+                          </h4>
+                          <ul
+                            class="c25"
+                            role="list"
+                          >
+                            <li
+                              class="c26"
+                              role="listitem"
+                            >
+                              <a
+                                class="c27"
+                                href="/pidgin/tori-48591361"
+                              >
+                                <span
+                                  class="c28"
+                                >
+                                  Who go lead di Ninth National Assembly?
+                                </span>
+                              </a>
+                            </li>
+                            <li
+                              class="c26"
+                              role="listitem"
+                            >
+                              <a
+                                class="c27"
+                                href="/pidgin/tori-47603701"
+                              >
+                                <span
+                                  class="c28"
+                                >
+                                  4 tins wey go determine who become di next Senate President, Speaker
+                                </span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-                <li
-                  class="c11"
-                  role="listitem"
-                >
-                  <div
-                    class="c12"
+                  </li>
+                  <li
+                    class="c11"
+                    role="listitem"
                   >
                     <div
-                      class="c29"
+                      class="c12"
                     >
                       <div
-                        class="c14"
+                        class="c29"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
-                        </div>
-                        <div
-                          class="c30"
-                        >
-                          <div
-                            aria-hidden="true"
-                            class="c31"
+                            class="c15"
                           >
                             <div
-                              class="c32"
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c30"
+                          >
+                            <div
+                              aria-hidden="true"
+                              class="c31"
                             >
-                              <svg
-                                class="c33"
-                                focusable="false"
-                                height="12px"
-                                viewBox="0 0 13 12"
-                                width="13px"
+                              <div
+                                class="c32"
                               >
-                                <path
-                                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                                />
-                                <path
-                                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                                />
-                              </svg>
-                              <time
-                                class="c34"
-                                datetime="PT59S"
-                              >
-                                0:59
-                              </time>
+                                <svg
+                                  class="c33"
+                                  focusable="false"
+                                  height="12px"
+                                  viewBox="0 0 13 12"
+                                  width="13px"
+                                >
+                                  <path
+                                    d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                                  />
+                                  <path
+                                    d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                                  />
+                                </svg>
+                                <time
+                                  class="c34"
+                                  datetime="PT59S"
+                                >
+                                  0:59
+                                </time>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="c35"
-                    >
-                      <h3
-                        class="c36"
+                      <div
+                        class="c35"
                       >
-                        <a
-                          class="c20"
-                          href="/pidgin/media-44221514"
+                        <h3
+                          class="c36"
                         >
-                          <span
-                            role="text"
+                          <a
+                            class="c20"
+                            href="/pidgin/media-44221514"
                           >
                             <span
-                              class="c0"
+                              role="text"
                             >
-                              Ọdịyo
-                              , 
+                              <span
+                                class="c0"
+                              >
+                                Ọdịyo
+                                , 
+                              </span>
+                              <span>
+                                BBC Pidgin Minute
+                              </span>
+                              <span
+                                class="c0"
+                              >
+                                , 0,59
+                              </span>
                             </span>
-                            <span>
-                              BBC Pidgin Minute
-                            </span>
-                            <span
-                              class="c0"
-                            >
-                              , 0,59
-                            </span>
-                          </span>
-                        </a>
-                      </h3>
-                      <p
-                        class="c37"
-                      >
-                        All di local and world tori wey you suppose know in 60 seconds!
-                      </p>
-                      <time
-                        class="c23"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  class="c11"
-                  role="listitem"
-                >
-                  <div
-                    class="c12"
-                  >
-                    <div
-                      class="c29"
-                    >
-                      <div
-                        class="c14"
-                      >
-                        <div
-                          class="c15"
+                          </a>
+                        </h3>
+                        <p
+                          class="c37"
                         >
-                          <div
-                            class="lazyload-placeholder"
-                          />
-                        </div>
-                        <div
-                          class="c30"
-                        />
+                          All di local and world tori wey you suppose know in 60 seconds!
+                        </p>
+                        <time
+                          class="c23"
+                          datetime="2019-06-11"
+                        >
+                          11 Juun 2019
+                        </time>
                       </div>
                     </div>
-                    <div
-                      class="c35"
-                    >
-                      <h3
-                        class="c36"
-                      >
-                        <a
-                          class="c20"
-                          href="/pidgin/tori-48591366"
-                        >
-                          Majid Waris no get ‘sɛlɛ’ for Coach Kwesi Appiah en Black Stars Afcon squad
-                        </a>
-                      </h3>
-                      <p
-                        class="c37"
-                      >
-                        Major shocker wey come out be sey dem drop striker, Majeed Waris who dem replace plus U-23 striker, Kwabena Owusu.
-                      </p>
-                      <time
-                        class="c23"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  class="c11"
-                  role="listitem"
-                >
-                  <div
-                    class="c12"
+                  </li>
+                  <li
+                    class="c11"
+                    role="listitem"
                   >
                     <div
-                      class="c29"
+                      class="c12"
                     >
                       <div
-                        class="c14"
+                        class="c29"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
-                            class="lazyload-placeholder"
+                            class="c15"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c30"
                           />
                         </div>
-                        <div
-                          class="c30"
-                        />
+                      </div>
+                      <div
+                        class="c35"
+                      >
+                        <h3
+                          class="c36"
+                        >
+                          <a
+                            class="c20"
+                            href="/pidgin/tori-48591366"
+                          >
+                            Majid Waris no get ‘sɛlɛ’ for Coach Kwesi Appiah en Black Stars Afcon squad
+                          </a>
+                        </h3>
+                        <p
+                          class="c37"
+                        >
+                          Major shocker wey come out be sey dem drop striker, Majeed Waris who dem replace plus U-23 striker, Kwabena Owusu.
+                        </p>
+                        <time
+                          class="c23"
+                          datetime="2019-06-11"
+                        >
+                          11 Juun 2019
+                        </time>
                       </div>
                     </div>
+                  </li>
+                  <li
+                    class="c11"
+                    role="listitem"
+                  >
                     <div
-                      class="c35"
+                      class="c12"
                     >
-                      <h3
-                        class="c36"
+                      <div
+                        class="c29"
                       >
-                        <a
-                          class="c20"
-                          href="/pidgin/tori-48579283"
+                        <div
+                          class="c14"
                         >
-                          Woman write exam 30 minutes afta she born
-                        </a>
-                      </h3>
-                      <p
-                        class="c37"
+                          <div
+                            class="c15"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c30"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="c35"
                       >
-                        Di 21-year-old Ethiopian woman don take one of her secondary school leaving exams 30 minutes afta she born.
-                      </p>
-                      <time
-                        class="c23"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
+                        <h3
+                          class="c36"
+                        >
+                          <a
+                            class="c20"
+                            href="/pidgin/tori-48579283"
+                          >
+                            Woman write exam 30 minutes afta she born
+                          </a>
+                        </h3>
+                        <p
+                          class="c37"
+                        >
+                          Di 21-year-old Ethiopian woman don take one of her secondary school leaving exams 30 minutes afta she born.
+                        </p>
+                        <time
+                          class="c23"
+                          datetime="2019-06-11"
+                        >
+                          11 Juun 2019
+                        </time>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </div>
             </section>
             <section
               aria-labelledby="Cluster-1"
@@ -1491,7 +1518,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c39 c10"
+                class="c10"
                 role="list"
               >
                 <li
@@ -1664,7 +1691,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         class="c14"
                       >
                         <div
-                          class="c40"
+                          class="c39"
                         >
                           <div
                             class="lazyload-placeholder"
@@ -1719,14 +1746,14 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 >
                   <a
                     aria-labelledby="Section-1"
-                    class="c41"
+                    class="c40"
                     href="https://www.bbc.com/pidgin/sport"
                   >
                     <div
                       class="c6"
                     >
                       <span
-                        class="c42"
+                        class="c41"
                         role="text"
                       >
                         <span
@@ -1738,7 +1765,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         </span>
                         <span
                           aria-hidden="true"
-                          class="c43"
+                          class="c42"
                           dir="ltr"
                         >
                           Lee ha niile
@@ -1749,7 +1776,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c39 c10"
+                class="c10"
                 role="list"
               >
                 <li
@@ -1941,7 +1968,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c39 c10"
+                class="c10"
                 role="list"
               >
                 <li
@@ -1975,7 +2002,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c32"
                             >
                               <svg
-                                class="c44"
+                                class="c43"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 32 32"
@@ -2071,7 +2098,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c32"
                             >
                               <svg
-                                class="c44"
+                                class="c43"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 32 32"
@@ -2167,7 +2194,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c32"
                             >
                               <svg
-                                class="c44"
+                                class="c43"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 32 32"
@@ -2263,7 +2290,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c32"
                             >
                               <svg
-                                class="c44"
+                                class="c43"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 32 32"
@@ -2359,7 +2386,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c32"
                             >
                               <svg
-                                class="c44"
+                                class="c43"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 32 32"
@@ -2457,7 +2484,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c39 c10"
+                class="c10"
                 role="list"
               >
                 <li
@@ -2753,7 +2780,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c39 c10"
+                class="c10"
                 role="list"
               >
                 <li
@@ -3101,7 +3128,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c39 c10"
+                class="c10"
                 role="list"
               >
                 <li
@@ -3399,7 +3426,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c32"
                             >
                               <svg
-                                class="c44"
+                                class="c43"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 32 32"
@@ -3514,7 +3541,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c32"
                             >
                               <svg
-                                class="c45"
+                                class="c44"
                                 focusable="false"
                                 height="13px"
                                 viewBox="0 0 32 26"
