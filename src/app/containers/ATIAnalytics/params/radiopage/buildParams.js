@@ -1,7 +1,7 @@
 import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
 
-export const buildMediaATIParams = (
+export const buildRadioATIParams = (
   pageData,
   requestContext,
   serviceContext,
@@ -17,9 +17,9 @@ export const buildMediaATIParams = (
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: (metadata || {}).id,
+    contentId: metadata.id,
     contentType: 'player-live',
-    language: (metadata || {}).language,
+    language: metadata.language,
     pageIdentifier: path(['analyticsLabels', 'pageIdentifier'], metadata),
     pageTitle: path(['analyticsLabels', 'pageTitle'], metadata),
     producerId: atiAnalyticsProducerId,
@@ -29,10 +29,8 @@ export const buildMediaATIParams = (
   };
 };
 
-export const buildMediaATIUrl = (pageData, requestContext, serviceContext) => {
+export const buildRadioATIUrl = (pageData, requestContext, serviceContext) => {
   return buildATIPageTrackPath(
-    buildMediaATIParams(pageData, requestContext, serviceContext),
+    buildRadioATIParams(pageData, requestContext, serviceContext),
   );
 };
-
-export default buildMediaATIParams;

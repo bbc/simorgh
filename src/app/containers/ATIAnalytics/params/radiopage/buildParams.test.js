@@ -1,4 +1,4 @@
-import { buildMediaATIParams, buildMediaATIUrl } from './buildParams';
+import { buildRadioATIParams, buildRadioATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -6,7 +6,7 @@ analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-const media = {
+const radio = {
   metadata: {
     id: 'id',
     language: 'language',
@@ -44,16 +44,16 @@ const validURLParams = {
   service: 'service',
 };
 
-describe('buildMediaATIParams', () => {
+describe('buildRadioATIParams', () => {
   it('should return the right object', () => {
-    const result = buildMediaATIParams(media, requestContext, serviceContext);
+    const result = buildRadioATIParams(radio, requestContext, serviceContext);
     expect(result).toEqual(validURLParams);
   });
 });
 
-describe('buildMediaATIUrl', () => {
+describe('buildRadioATIUrl', () => {
   it('should return the right url', () => {
-    const result = buildMediaATIUrl(media, requestContext, serviceContext);
+    const result = buildRadioATIUrl(radio, requestContext, serviceContext);
     expect(result).toEqual(
       [
         's=598285',

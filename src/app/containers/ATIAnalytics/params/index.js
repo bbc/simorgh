@@ -6,18 +6,18 @@ import {
   buildFrontPageATIParams,
   buildFrontPageATIUrl,
 } from './frontpage/buildParams';
-import { buildMediaATIParams, buildMediaATIUrl } from './media/buildParams';
+import { buildRadioATIParams, buildRadioATIUrl } from './radiopage/buildParams';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   frontPage: buildFrontPageATIUrl,
-  media: buildMediaATIUrl,
+  media: buildRadioATIUrl,
 };
 
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   frontPage: buildFrontPageATIParams,
-  media: buildMediaATIParams,
+  media: buildRadioATIParams,
 };
 
 const createBuilderFactory = (requestContext, pageTypeHandlers = {}) => {
