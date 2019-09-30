@@ -96,6 +96,10 @@ pipeline {
     string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
     booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
+  // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
+  script {
+    Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, 'test commit hash')
+  }
   stages {
     stage ('Build and Test') {
       when {
@@ -111,11 +115,6 @@ pipeline {
             }
           }
           steps {
-            // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
-            script {
-                Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, 'test commit hash')
-            }
-            
             setupCodeCoverage()
             withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
               runDevelopmentTests()
@@ -147,6 +146,10 @@ pipeline {
     stage ('Build, Test & Package') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
+      }
+      // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
+      script {
+        Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, appGitCommit)
       }
       parallel {
         stage ('Test Development') {
@@ -181,11 +184,6 @@ pipeline {
             script {
               getCommitInfo()
               sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-            }
-
-            // Sets the buildMetadata object in package.json, buildEnv hardcoded to 'live' and version is set as the job number until we have Blue/Green as these values are not available
-            script {
-                Simorgh.setBuildMetadata('live', env.BUILD_NUMBER, appGitCommit)
             }
             
 
