@@ -4,7 +4,7 @@ import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import getArticleAtiParams from './params/article';
 import getFrontPageAtiParams from './params/frontpage';
-import getMediaPageAtiParams from './params/media';
+import getRadioPageAtiParams from './params/radio';
 import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
@@ -13,7 +13,7 @@ const ATIAnalytics = ({ data }) => {
   const pageTypeHandlers = {
     article: getArticleAtiParams,
     frontPage: getFrontPageAtiParams,
-    media: getMediaPageAtiParams,
+    media: getRadioPageAtiParams,
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
