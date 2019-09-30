@@ -10,7 +10,7 @@ import {
   frontpageSwRegexPath,
   mediaRadioAndTvRegexPathsArray,
   cpsAssetPageRegexPath,
-  mediaAssetPageDataRegexPath,
+  cpsAssetPageDataRegexPath,
 } from './index';
 
 jest.mock('#testHelpers/serviceConfigs', () => ({
@@ -259,7 +259,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
     shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageRegexPath);
   });
 
-  describe('mediaAssetPageDataRegexPath', () => {
+  describe('cpsAssetPageDataRegexPath', () => {
     const validRoutes = [
       '/pidgin/12345678.json',
       '/pidgin/test-49450859.json',
@@ -269,7 +269,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/zhongwen/test-12345678/trad.json',
     ];
 
-    shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
+    shouldMatchValidRoutes(validRoutes, cpsAssetPageDataRegexPath);
 
     // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
     const inValidRoutes = [
@@ -281,6 +281,6 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/pidgin/test-49450859/.json',
       '/pidgin/test-494859.amp.json',
     ];
-    shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageDataRegexPath);
+    shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageDataRegexPath);
   });
 });

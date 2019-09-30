@@ -32,4 +32,4 @@ export const mediaRadioAndTvRegexPathsArray = buildMediaRoutes(
 export const mediaDataRegexPath = buildMediaDataRoutes(servicesWithRadioOrTv);
 
 export const cpsAssetPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
-export const mediaAssetPageDataRegexPath = `${cpsAssetPageRegexPath}.json`;
+export const cpsAssetPageDataRegexPath = `${cpsAssetPageRegexPath}.json`;
