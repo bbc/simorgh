@@ -125,7 +125,6 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      )
       {items.length > 1 ? (
         <MarginWrapper firstSection={isFirstSection}>
           <StoryPromoUl>

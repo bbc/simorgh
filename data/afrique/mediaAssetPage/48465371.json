@@ -82,7 +82,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Lead Feature"
+        "semanticGroupName": "Lead Feature",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "container-top-stories",
@@ -313,7 +316,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Container Top Stories"
+        "semanticGroupName": "Container Top Stories",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "av-stories-now",
@@ -359,9 +365,7 @@
               "versions": [
                 {
                   "versionId": "p07fk08t",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 46,
                   "durationISO8601": "PT46S",
                   "warnings": {},
@@ -434,9 +438,7 @@
               "versions": [
                 {
                   "versionId": "p078k1c6",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 271,
                   "durationISO8601": "PT4M31S",
                   "warnings": {},
@@ -516,9 +518,7 @@
               "versions": [
                 {
                   "versionId": "p07f4r9h",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 112,
                   "durationISO8601": "PT1M52S",
                   "warnings": {},
@@ -587,9 +587,7 @@
               "versions": [
                 {
                   "versionId": "p07fmxpl",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 273,
                   "durationISO8601": "PT4M33S",
                   "warnings": {},
@@ -658,9 +656,7 @@
               "versions": [
                 {
                   "versionId": "p07dswyf",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 62,
                   "durationISO8601": "PT1M2S",
                   "warnings": {},
@@ -745,9 +741,7 @@
               "versions": [
                 {
                   "versionId": "p07bmwtj",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 285,
                   "durationISO8601": "PT4M45S",
                   "warnings": {},
@@ -837,9 +831,7 @@
               "versions": [
                 {
                   "versionId": "p07bwdr4",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 145,
                   "durationISO8601": "PT2M25S",
                   "warnings": {},
@@ -929,9 +921,7 @@
               "versions": [
                 {
                   "versionId": "p07dv3hk",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 168,
                   "durationISO8601": "PT2M48S",
                   "warnings": {},
@@ -974,7 +964,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Watch/Listen"
+        "semanticGroupName": "Watch/Listen",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "other-top-stories",
@@ -1137,7 +1130,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Standalone Other Top Stories"
+        "semanticGroupName": "Standalone Other Top Stories",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "container-guides",
@@ -1402,7 +1398,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Guides 1"
+        "semanticGroupName": "Guides 1",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "container-guides",
@@ -1673,7 +1672,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Guides 2"
+        "semanticGroupName": "Guides 2",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "container-guides",
@@ -1886,7 +1888,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Guides 3"
+        "semanticGroupName": "Guides 3",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "topic-cluster",
@@ -2073,7 +2078,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Standalone Topic Cluster"
+        "semanticGroupName": "Standalone Topic Cluster",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "feature-main",
@@ -2169,9 +2177,7 @@
               "versions": [
                 {
                   "versionId": "p079khvl",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 251,
                   "durationISO8601": "PT4M11S",
                   "warnings": {},
@@ -2554,7 +2560,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Features and Analysis"
+        "semanticGroupName": "Features and Analysis",
+        "strapline": {
+          "name": "Feature Index"
+        }
       },
       {
         "type": "feature-digest",
@@ -3369,7 +3378,10 @@
             "type": "cps"
           }
         ],
-        "semanticGroupName": "Feature Digest"
+        "semanticGroupName": "Feature Digest",
+        "strapline": {
+          "name": "Feature Index"
+        }
       }
     ]
   },
