@@ -5,6 +5,8 @@ import {
 } from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/sr-cyrl';
+import '@bbc/psammead-locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
 
 const baseServiceConfig = {
@@ -24,7 +26,6 @@ const baseServiceConfig = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  datetimeLocale: `sr-latn`,
   service: 'serbian',
   serviceName: 'News na srpskom',
   themeColor: `${C_POSTBOX}`,
@@ -201,12 +202,14 @@ export const service = {
     lang: `sr-latn`,
     locale: `sr-latn`,
     script: latinDiacritics,
+    datetimeLocale: `sr`,
   },
   cyr: {
     ...baseServiceConfig,
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
     script: cyrillicAndLatin,
+    datetimeLocale: `sr-cyrl`,
   },
 };
 
