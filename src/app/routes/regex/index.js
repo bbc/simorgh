@@ -1,6 +1,8 @@
 import services from '#lib/config/services/loadableConfig';
-import servicesWithRadioOrTv from '../config';
-import buildMediaRoutes, { buildMediaDataRoutes } from '../buildMediaRoutes';
+import servicesWithRadioAndTv from '../config';
+import buildRadioAndTvRoutes, {
+  buildRadioAndTvDataRoutes,
+} from '../buildRadioAndTvRoutes';
 
 const serviceRegex = Object.keys(services).join('|');
 const idRegex = 'c[a-zA-Z0-9]{10}o';
@@ -25,11 +27,13 @@ export const frontpageManifestRegexPath = `/:service(${serviceRegex})/manifest.j
 
 export const frontpageSwRegexPath = `/:service(${serviceRegex})/sw.js`;
 
-export const mediaRadioAndTvRegexPathsArray = buildMediaRoutes(
-  servicesWithRadioOrTv,
+export const radioAndTvRegexPathsArray = buildRadioAndTvRoutes(
+  servicesWithRadioAndTv,
 );
 
-export const mediaDataRegexPath = buildMediaDataRoutes(servicesWithRadioOrTv);
+export const radioAndTvDataRegexPath = buildRadioAndTvDataRoutes(
+  servicesWithRadioAndTv,
+);
 
 export const mediaAssetPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 export const mediaAssetPageDataRegexPath = `${mediaAssetPageRegexPath}.json`;
