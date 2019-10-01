@@ -1,26 +1,25 @@
-import { useContext } from 'react';
-import atiPageViewParams from '../../atiUrl';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
+import { buildATIPageTrackPath } from '../../atiUrl';
 
-import { getPublishedDatetime } from '#lib/analyticsUtils';
+import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 import {
   getLanguage,
   getContentId,
   getPageIdentifier,
   getPromoHeadline,
   getThingAttributes,
-} from '#lib/analyticsUtils/article';
+} from '../../../../lib/analyticsUtils/article';
 
-const ArticleAtiParams = articleData => {
-  const { platform, isUK, statsDestination, previousPath, origin } = useContext(
-    RequestContext,
-  );
-  const { atiAnalyticsAppName, atiAnalyticsProducerId, service } = useContext(
-    ServiceContext,
-  );
+export const buildArticleATIParams = (
+  articleData,
+  requestContext,
+  serviceContext,
+) => {
+  const { platform, isUK, statsDestination, previousPath, origin } =
+    requestContext || {};
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, service } =
+    serviceContext || {};
 
-  return atiPageViewParams({
+  return {
     appName: atiAnalyticsAppName,
     contentId: getContentId(articleData),
     contentType: 'article',
@@ -38,7 +37,17 @@ const ArticleAtiParams = articleData => {
     statsDestination,
     previousPath,
     origin,
-  });
+  };
 };
 
-export default ArticleAtiParams;
+export const buildArticleATIUrl = (
+  articleData,
+  requestContext,
+  serviceContext,
+) => {
+  return buildATIPageTrackPath(
+    buildArticleATIParams(articleData, requestContext, serviceContext),
+  );
+};
+
+export default buildArticleATIParams;
