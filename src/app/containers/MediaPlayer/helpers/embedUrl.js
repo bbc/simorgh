@@ -1,6 +1,16 @@
 const buildBaseUrl = origin => {
+  /*
+    Explicitly request the embed from the opposite domain to ensure valid playback on traffic direct to `.amp` pages.
+    
+    EG: 
+    www.bbc.com/bbc_korean_radio/liveradio requests www.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio
+  */
+  const swappedOrigin = origin.includes('.co.uk')
+    ? origin.replace('.co.uk', '.com')
+    : origin.replace('.com', '.co.uk');
+
   if (!origin.includes('local')) {
-    return origin;
+    return swappedOrigin;
   }
 
   const tld = origin.includes('.co.uk') ? '.co.uk' : '.com';
