@@ -269,7 +269,7 @@ const services = {
     },
   },
   cymrufyw: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: false,
     variant: 'default',
     pageTypes: {
@@ -664,7 +664,7 @@ const services = {
     },
   },
   mundo: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -697,7 +697,7 @@ const services = {
     },
   },
   naidheachdan: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: false,
     variant: 'default',
     pageTypes: {
@@ -902,7 +902,7 @@ const services = {
     },
   },
   portuguese: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -1330,7 +1330,7 @@ const services = {
     },
   },
   turkce: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
