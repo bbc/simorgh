@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import Blocks from './index';
 import { blockContainingText, singleTextBlock } from '#models/blocks';
 
@@ -75,7 +75,7 @@ describe('Blocks', () => {
   describe('with unknown blocks', () => {
     const unknownBlocks = [unknownTestBlock, parentBlockNotAllowed];
 
-    shouldMatchSnapshot(
+    isNull(
       'should render correctly as null',
       <Blocks blocks={unknownBlocks} componentsToRender={componentsToRender} />,
     );

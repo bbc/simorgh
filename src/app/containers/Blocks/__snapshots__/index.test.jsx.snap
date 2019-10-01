@@ -11,5 +11,3 @@ exports[`Blocks with mixed set of known and unknown blocks should render known b
   Some text
 </p>
 `;
-
-exports[`Blocks with unknown blocks should render correctly as null 1`] = `<div />`;
