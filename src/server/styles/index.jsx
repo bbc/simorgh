@@ -1,4 +1,5 @@
 import React from 'react';
+import xss from 'xss';
 
 export const getStyleTag = (sheet, isAmp = false) => {
   const styleTags = sheet.getStyleElement();
@@ -16,7 +17,7 @@ export const getStyleTag = (sheet, isAmp = false) => {
 
   return (
     // eslint-disable-next-line react/no-danger
-    <style amp-custom="" dangerouslySetInnerHTML={{ __html: inlineCss }} />
+    <style amp-custom="" dangerouslySetInnerHTML={{ __html: xss(inlineCss) }} />
   );
 };
 

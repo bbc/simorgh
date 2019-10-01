@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import AmpGeo from '@bbc/psammead-amp-geo';
+import xss from 'xss';
 import Banner from './Banner/index.amp';
 
 const parentId = 'consent';
@@ -21,7 +22,7 @@ const jsonInlinedScript = data => (
   <script
     type="application/json"
     /* eslint-disable-next-line react/no-danger */
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    dangerouslySetInnerHTML={{ __html: xss(JSON.stringify(data)) }}
   />
 );
 

@@ -1,3 +1,4 @@
+/* eslint-disable jam3/no-sanitizer-with-danger */
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { node } from 'prop-types';

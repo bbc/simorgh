@@ -1,4 +1,5 @@
 import React from 'react';
+import xss from 'xss';
 import { ampChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';
 
 const chartbeatAmpConfigOptions = options => ({
@@ -10,7 +11,7 @@ const JsonInlinedScript = data => (
   <script
     type="application/json"
     /* eslint-disable-next-line react/no-danger */
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    dangerouslySetInnerHTML={{ __html: xss(JSON.stringify(data)) }}
   />
 );
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import xss from 'xss';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -71,11 +72,11 @@ const Document = ({
       <body>
         {/* eslint-disable react/no-danger */
         /* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
-        <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: xss(app) }} />
         {scriptsAllowed && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `window.SIMORGH_DATA=${serialisedData}`,
+              __html: xss(`window.SIMORGH_DATA=${serialisedData}`),
             }}
           />
         )}

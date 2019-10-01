@@ -21,7 +21,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['prettier', 'json', 'jsx-a11y', 'react-hooks', 'cypress'],
+  plugins: ['prettier', 'json', 'jsx-a11y', 'react-hooks', 'cypress', 'jam3'],
   rules: {
     'react/forbid-foreign-prop-types': 'error',
     'react/jsx-one-expression-per-line': 'off',
@@ -40,6 +40,12 @@ module.exports = {
         ],
       },
     ],
+    'jam3/no-sanitizer-with-danger': [
+      2,
+      {
+        "wrapperName": ["xss"]
+      }
+    ]
   },
   settings: {
     'import/resolver': {
