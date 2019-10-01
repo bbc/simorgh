@@ -25,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Түшүндүрмө, ',
     imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
     locale: `ky-KG`,
-    datetimeLocale: `ky-kg`,
+    datetimeLocale: `ky`,
     service: 'kyrgyz',
     serviceName: 'News Кыргыз КызMATы',
     themeColor: `${C_POSTBOX}`,

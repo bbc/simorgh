@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { gujarati as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+import '@bbc/psammead-locales/moment/gu';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -12,7 +13,8 @@ export const service = {
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
     brandName: 'BBC News ગુજરાતી',
-    product: 'BBC News ગુજરાતી',
+    product: 'BBC News',
+    serviceLocalizedName: 'ગુજરાતી',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png',
     defaultImageAltText: 'BBC News ગુજરાતી',
     dir: `ltr`,
@@ -23,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `gu-IN`,
-    datetimeLocale: `gu-in`,
+    datetimeLocale: `gu`,
     service: 'gujarati',
     serviceName: 'News ગુજરાતી',
     themeColor: `${C_POSTBOX}`,

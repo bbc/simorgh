@@ -1,5 +1,6 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
+import getMappedServiceId from './helper';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -28,8 +29,9 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
             const { id, externalId } = body.content.blocks[2];
+            const serviceId = getMappedServiceId(externalId);
             cy.get(
-              `amp-iframe[src="${`/ws/av-embeds/media/${externalId}/${id}`}"]`,
+              `amp-iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/amp"]`,
             ).should('be.visible');
           },
         );
