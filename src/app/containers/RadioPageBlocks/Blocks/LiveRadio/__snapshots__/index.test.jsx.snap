@@ -2,7 +2,7 @@
 
 exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
 .c2 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
@@ -57,7 +57,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
               <amp-img
                 layout="fill"
                 placeholder="true"
-                src="https://news.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png"
+                src="https://news.test.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png"
               />
             </amp-iframe>
           </div>
@@ -80,7 +80,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 }
 
 .c2 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
@@ -138,7 +138,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
   </head>
   <body>
     .c2 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
@@ -184,7 +184,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
               <amp-img
                 layout="fill"
                 placeholder="true"
-                src="https://news.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png"
+                src="https://news.test.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png"
               />
             </amp-iframe>
           </div>
@@ -207,7 +207,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
 }
 
 .c2 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
