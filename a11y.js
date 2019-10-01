@@ -28,7 +28,7 @@ const getUrls = pageType =>
 // which creates iframe in document head
 
 // '//div[@id='root']/main/div/div/div/div/iframe' Added to hide
-// iframe errors to be fixed inhttps://github.com/bbc/bbc-a11y/issues/298
+// iframe errors to be fixed in https://github.com/bbc/bbc-a11y/issues/298
 
 const pageTypes = {
   frontPage: ['/html/head/iframe'],
