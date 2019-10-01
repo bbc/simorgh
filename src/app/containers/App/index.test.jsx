@@ -43,7 +43,7 @@ describe('ClientApp', () => {
     ReactRouter.BrowserRouter = actualBrowserRouter; //  restore the original (non-mocked) implementation
   });
 
-  it('should render correctly', () => {
+  it('should render App component', () => {
     const { getByText } = renderClientApp();
     expect(getByText('Mocked App component')).toBeInTheDocument();
   });
