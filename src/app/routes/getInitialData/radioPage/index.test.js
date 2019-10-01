@@ -1,7 +1,7 @@
 import fetchData from '../utils/fetchData';
 import baseUrl from '../utils/getBaseUrl';
 import onClient from '#lib/utilities/onClient';
-import getMediaPageInitialData from '.';
+import getRadioPageInitialData from '.';
 import addIdsToBlocks from './addIdsToBlocks';
 
 jest.mock('./addIdsToBlocks');
@@ -26,14 +26,14 @@ const defaultParams = {
   mediaId: 'liveradio',
 };
 
-describe('getMediaPageInitialData', () => {
+describe('getRadioPageInitialData', () => {
   it('returns expected pageData', async () => {
-    expect(await getMediaPageInitialData(defaultParams)).toEqual(mockData);
+    expect(await getRadioPageInitialData(defaultParams)).toEqual(mockData);
   });
 
   describe('When not on client', () => {
     it('fetches data from SIMORGH_BASE_URL enviroment variable origin', async () => {
-      const response = await getMediaPageInitialData(defaultParams);
+      const response = await getRadioPageInitialData(defaultParams);
       expect(response).toEqual(mockData);
 
       expect(fetchData).toHaveBeenCalledWith({

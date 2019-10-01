@@ -4,9 +4,9 @@ import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
-import MediaPageBlocks from '../MediaPageBlocks';
+import RadioPageBlocks from '../RadioPageBlocks';
 
-const MediaPageMain = ({ pageData }) => {
+const RadioPageMain = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -17,14 +17,14 @@ const MediaPageMain = ({ pageData }) => {
       <MetadataContainer metadata={metadata} promo={promo} />
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
-          <MediaPageBlocks blocks={blocks} />
+          <RadioPageBlocks blocks={blocks} />
         </GridItemConstrainedMedium>
       </Grid>
     </>
   );
 };
 
-MediaPageMain.propTypes = {
+RadioPageMain.propTypes = {
   pageData: shape({
     metadata: shape({
       id: string,
@@ -48,4 +48,4 @@ MediaPageMain.propTypes = {
   }).isRequired,
 };
 
-export default MediaPageMain;
+export default RadioPageMain;

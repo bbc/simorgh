@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Page Main should match snapshot 1`] = `
+exports[`Radio Page Main should match snapshot 1`] = `
 .c0 {
   margin: 0 auto;
   padding-bottom: 2rem;
