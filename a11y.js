@@ -24,15 +24,20 @@ const getUrls = pageType =>
     .filter(page => !!page)
     .map(url => `${baseUrl}${url}`);
 
+// '/html/head/iframe' Added to prevent false negatives from mPulse beacon
+// which creates iframe in document head
+
+// '//div[@id='root']/main/div/div/div/div/iframe' Added to hide
+// iframe errors to be fixed inhttps://github.com/bbc/bbc-a11y/issues/298
+
 const pageTypes = {
   frontPage: ['/html/head/iframe'],
   articles: ['/html/head/iframe'],
-  liveRadio: ['/html/head/iframe', "//div[@id='root']/main/div/div/div/div/iframe"],
+  liveRadio: [
+    '/html/head/iframe',
+    "//div[@id='root']/main/div/div/div/div/iframe",
+  ],
 };
-
-// // Added to prevent false negatives from mPulse beacon
-// // which creates iframe in document head
-// const hide = ['/html/head/iframe'];
 
 Object.keys(pageTypes).forEach(pageType => {
   getUrls(pageType).forEach(url =>
