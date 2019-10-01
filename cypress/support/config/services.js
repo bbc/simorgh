@@ -23,11 +23,8 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-        smoke: true,
+        path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+        smoke: false,
       },
       mediaAssetPage: {
         path:
