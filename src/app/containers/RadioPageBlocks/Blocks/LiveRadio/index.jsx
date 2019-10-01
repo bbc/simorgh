@@ -12,7 +12,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
 
 const liveRadioPlaceholderImageSrc =
-  'https://news.test.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png';
+  'https://news.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png';
 
 const MediaPlayerOuterWrapper = styled.div`
   @media (min-width: 63rem) {
