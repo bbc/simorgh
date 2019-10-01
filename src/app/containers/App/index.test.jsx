@@ -1,15 +1,11 @@
-/*
- * © Jordan Tart https://github.com/jtart
- * https://github.com/jtart/react-universal-app
- */
 import React from 'react';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
 import { ClientApp, ServerApp } from '.';
-// eslint-disable-next-line import/no-named-as-default
-import App from './App';
+import * as App from './App';
 
-jest.mock('./App', () => jest.fn(() => <div>Client App</div>));
+jest.mock('./App', () => jest.fn(() => <div>I am the App component</div>));
 
 jest.mock('react-router-dom', () => ({
   BrowserRouter: jest.fn(),
@@ -33,6 +29,12 @@ describe('ClientApp', () => {
       },
       {},
     );
+    const { getByText } = render(
+      <div>I am inside the ClientApp component</div>,
+    );
+    expect(
+      getByText('I am inside the ClientApp component'),
+    ).toBeInTheDocument();
   });
 });
 
@@ -66,5 +68,11 @@ describe('ServerApp', () => {
       },
       {},
     );
+    const { getByText } = render(
+      <div>I am inside the ServerApp component</div>,
+    );
+    expect(
+      getByText('I am inside the ServerApp component'),
+    ).toBeInTheDocument();
   });
 });
