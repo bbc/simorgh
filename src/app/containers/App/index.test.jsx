@@ -16,7 +16,9 @@ StaticRouter.mockImplementation(({ children }) => <div>{children}</div>);
 
 describe('ClientApp', () => {
   it('should render correctly', () => {
-    render(<ClientApp data="someData!" routes={['someRoute']} />);
+    const { getByText } = render(
+      <ClientApp data="someData!" routes={['someRoute']} />,
+    );
     expect(App).toHaveBeenCalledWith(
       { initialData: 'someData!', routes: ['someRoute'] },
       {},
@@ -29,12 +31,7 @@ describe('ClientApp', () => {
       },
       {},
     );
-    const { getByText } = render(
-      <div>I am inside the ClientApp component</div>,
-    );
-    expect(
-      getByText('I am inside the ClientApp component'),
-    ).toBeInTheDocument();
+    expect(getByText('I am the App component')).toBeInTheDocument();
   });
 });
 
@@ -44,7 +41,7 @@ describe('ServerApp', () => {
   });
 
   it('should render correctly', () => {
-    render(
+    const { getByText } = render(
       <ServerApp
         data="somePassedData"
         routes={['someRoute']}
@@ -68,11 +65,6 @@ describe('ServerApp', () => {
       },
       {},
     );
-    const { getByText } = render(
-      <div>I am inside the ServerApp component</div>,
-    );
-    expect(
-      getByText('I am inside the ServerApp component'),
-    ).toBeInTheDocument();
+    expect(getByText('I am the App component')).toBeInTheDocument();
   });
 });
