@@ -2,10 +2,10 @@ import { shape, arrayOf, oneOf } from 'prop-types';
 import aresBlockPropTypes from './aresBlock';
 import versionPropTypes from './version';
 
-const mediaPageContentPropTypes = {
+const radioPageContentPropTypes = {
   content: shape({
     blocks: arrayOf(oneOf([versionPropTypes, aresBlockPropTypes])).isRequired,
   }),
 };
 
-export default mediaPageContentPropTypes;
+export default radioPageContentPropTypes;

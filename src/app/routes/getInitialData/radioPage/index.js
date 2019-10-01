@@ -3,7 +3,7 @@ import addIdsToBlocks from './addIdsToBlocks';
 import onClient from '#lib/utilities/onClient';
 import getBaseUrl from '../utils/getBaseUrl';
 
-const getMediaPageInitialData = ({ service, serviceId, mediaId }) => {
+const getRadioPageInitialData = ({ service, serviceId, mediaId }) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
@@ -16,4 +16,4 @@ const getMediaPageInitialData = ({ service, serviceId, mediaId }) => {
   });
 };
 
-export default getMediaPageInitialData;
+export default getRadioPageInitialData;
