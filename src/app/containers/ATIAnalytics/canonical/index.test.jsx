@@ -2,7 +2,6 @@ import React from 'react';
 import { create, act } from 'react-test-renderer';
 import { render } from 'enzyme';
 import CanonicalATIAnalytics from '.';
-import { shouldMatchSnapshot } from '#testHelpers';
 import * as beacon from '#lib/analyticsUtils/sendBeacon';
 
 describe('Canonical ATI Analytics', () => {
@@ -32,14 +31,6 @@ describe('Canonical ATI Analytics', () => {
     const renderedATI = render(
       <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
     );
-
-    expect(renderedATI.html()).toBe(
-      `<img height="1px" width="1px" alt="" style="position:absolute" src="https://foobar.com?key=value&amp;key2=value2"/>`,
-    );
+    expect(renderedATI).toMatchSnapshot();
   });
-
-  shouldMatchSnapshot(
-    'should render correctly',
-    <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
-  );
 });
