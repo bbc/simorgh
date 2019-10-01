@@ -1,8 +1,12 @@
 import pathOr from 'ramda/src/pathOr';
 
-export const getPageIdentifier = frontpageData =>
-  pathOr(null, ['metadata', 'analyticsLabels', 'counterName'], frontpageData) ||
-  'unknown.page';
+export const getPageIdentifier = (frontpageData, service) => {
+  return pathOr(
+    `${service || 'unknown'}.page`,
+    ['metadata', 'analyticsLabels', 'counterName'],
+    frontpageData,
+  );
+};
 
 const guidRegex =
   '([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})';
