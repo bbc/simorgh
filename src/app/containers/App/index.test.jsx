@@ -1,29 +1,38 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import { StaticRouter, BrowserRouter } from 'react-router-dom';
+import ReactRouter from 'react-router-dom';
 import { ClientApp, ServerApp } from '.';
 import * as App from './App';
 
-jest.mock('./App', () => jest.fn(() => <div>I am the App component</div>));
+jest.mock('./App', () => jest.fn(() => <>Mocked App component</>));
 
-jest.mock('react-router-dom', () => ({
-  BrowserRouter: jest.fn(),
-  StaticRouter: jest.fn(),
-}));
-BrowserRouter.mockImplementation(({ children }) => <div>{children}</div>);
-StaticRouter.mockImplementation(({ children }) => <div>{children}</div>);
+const renderClientApp = () =>
+  render(<ClientApp data="someData!" routes={['someRoute']} />);
+
+const renderServerApp = () =>
+  render(
+    <ServerApp
+      data="somePassedData"
+      routes={['someRoute']}
+      bbcOrigin="https://www.bbc.com"
+    />,
+  );
 
 describe('ClientApp', () => {
-  it('should render correctly', () => {
-    const { getByText } = render(
-      <ClientApp data="someData!" routes={['someRoute']} />,
-    );
+  it('App should be called with the correct props', () => {
+    renderClientApp();
     expect(App).toHaveBeenCalledWith(
       { initialData: 'someData!', routes: ['someRoute'] },
       {},
     );
-    expect(BrowserRouter).toHaveBeenCalledWith(
+  });
+
+  it('BrowserRouter should be called with the correct props', () => {
+    const actualBrowserRouter = ReactRouter.BrowserRouter;
+    ReactRouter.BrowserRouter = jest.fn(() => <></>);
+    renderClientApp();
+    expect(ReactRouter.BrowserRouter).toHaveBeenCalledWith(
       {
         children: expect.anything(),
         data: 'someData!',
@@ -31,23 +40,18 @@ describe('ClientApp', () => {
       },
       {},
     );
-    expect(getByText('I am the App component')).toBeInTheDocument();
+    ReactRouter.BrowserRouter = actualBrowserRouter; //  restore the original (non-mocked) implementation
+  });
+
+  it('should render correctly', () => {
+    const { getByText } = renderClientApp();
+    expect(getByText('Mocked App component')).toBeInTheDocument();
   });
 });
 
 describe('ServerApp', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
-  it('should render correctly', () => {
-    const { getByText } = render(
-      <ServerApp
-        data="somePassedData"
-        routes={['someRoute']}
-        bbcOrigin="https://www.bbc.com"
-      />,
-    );
+  it('App should be called with the correct props', () => {
+    renderServerApp();
     expect(App).toHaveBeenCalledWith(
       {
         initialData: 'somePassedData',
@@ -56,7 +60,13 @@ describe('ServerApp', () => {
       },
       {},
     );
-    expect(StaticRouter).toHaveBeenCalledWith(
+  });
+
+  it('StaticRouter should be called with the correct props', () => {
+    const actualStaticRouter = ReactRouter.StaticRouter;
+    ReactRouter.StaticRouter = jest.fn(() => <></>);
+    renderServerApp();
+    expect(ReactRouter.StaticRouter).toHaveBeenCalledWith(
       {
         children: expect.anything(),
         data: 'somePassedData',
@@ -65,6 +75,11 @@ describe('ServerApp', () => {
       },
       {},
     );
-    expect(getByText('I am the App component')).toBeInTheDocument();
+    ReactRouter.StaticRouter = actualStaticRouter; //  restore the original (non-mocked) implementation
+  });
+
+  it('should render App component', () => {
+    const { getByText } = renderServerApp();
+    expect(getByText('Mocked App component')).toBeInTheDocument();
   });
 });
