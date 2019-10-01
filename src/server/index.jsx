@@ -200,6 +200,9 @@ server
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 
+      // Temp log to test upstream change
+      logger.info(`Country code: ${headers['bbc-country'] || 'unknown!'}`);
+
       data.path = urlPath;
 
       res.status(status).send(
