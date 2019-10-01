@@ -712,7 +712,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 </header>
 `;
 
-exports[`Header should render correctly for WS media page 1`] = `
+exports[`Header should render correctly for WS radio page 1`] = `
 .c5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
