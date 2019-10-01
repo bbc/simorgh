@@ -67,7 +67,7 @@ describe(`Header`, () => {
     }),
   );
   shouldMatchSnapshot(
-    'should render correctly for WS media page',
+    'should render correctly for WS radio page',
     HeaderContainerWithContext({
       pageType: 'media',
       service: 'pidgin',

@@ -1,19 +1,19 @@
 import { bool, shape, string, number } from 'prop-types';
 import { mediaMetadataPropTypes } from '../metadata';
 import { mediaPromoPropTypes } from '../promo';
-import mediaPageContentPropTypes from './content';
+import radioPageContentPropTypes from './content';
 
-export const mediaPageDataPropTypes = shape({
+export const radioPageDataPropTypes = shape({
   metadata: shape(mediaMetadataPropTypes).isRequired,
-  content: shape(mediaPageContentPropTypes).isRequired,
+  content: shape(radioPageContentPropTypes).isRequired,
   promo: shape(mediaPromoPropTypes).isRequired,
 });
 
-const mediaPagePropTypes = {
+const radioPagePropTypes = {
   isAmp: bool,
-  data: mediaPageDataPropTypes,
+  data: radioPageDataPropTypes,
   service: string,
   status: number,
 };
 
-export default mediaPagePropTypes;
+export default radioPagePropTypes;

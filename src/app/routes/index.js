@@ -1,20 +1,20 @@
 import Article from '../containers/Article';
 import FrontPage from '../containers/FrontPage';
-import MediaPage from '../containers/MediaPage';
+import RadioPage from '../containers/RadioPage';
 import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
-import getMediaPageInitialData from './getInitialData/mediapage';
 import getCpsAssetInitialData from './getInitialData/cpsAsset';
+import getRadioPageInitialData from './getInitialData/radioPage';
 import {
   articleRegexPath,
   frontpageRegexPath,
-  mediaRadioAndTvRegexPathsArray,
   cpsAssetPageRegexPath,
+  radioAndTvRegexPathsArray,
 } from './regex';
 
 const pages = {
-  MAP: MediaPage,
+  MAP: RadioPage,
   FIX: FrontPage,
 };
 
@@ -40,10 +40,10 @@ const routes = [
     pageType: 'frontPage',
   },
   {
-    path: mediaRadioAndTvRegexPathsArray,
+    path: radioAndTvRegexPathsArray,
     exact: true,
-    component: MediaPage,
-    getInitialData: getMediaPageInitialData,
+    component: RadioPage,
+    getInitialData: getRadioPageInitialData,
     pageType: 'media',
   },
   {

@@ -8,9 +8,9 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
-  mediaRadioAndTvRegexPathsArray,
   cpsAssetPageRegexPath,
   cpsAssetPageDataRegexPath,
+  radioAndTvRegexPathsArray,
 } from './index';
 
 jest.mock('#testHelpers/serviceConfigs', () => ({
@@ -183,7 +183,7 @@ jest.mock('../config', () => ({
   persian: ['bbc_persian_radio', 'bbc_dari_radio', 'bbc_persian_tv'],
 }));
 
-describe('mediaRadioAndTvRegexPathsArray', () => {
+describe('radioAndTvRegexPathsArray', () => {
   describe('should return an array of regexs for the radio config', () => {
     const validRoutes = [
       '/hausa/bbc_hausa_radio/liveradio',
@@ -193,7 +193,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/hausa/bbc_hausa_radio/liveradio.amp',
       '/hausa/bbc_hausa_radio/abcd1234.amp',
     ];
-    shouldMatchValidRoutes(validRoutes, mediaRadioAndTvRegexPathsArray);
+    shouldMatchValidRoutes(validRoutes, radioAndTvRegexPathsArray);
 
     const invalidRoutes = [
       '/hausa/bbc_persian_radio/liveradio',
@@ -204,7 +204,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/persian/foobar/liveradio',
       '/persian/foobar/liveradio.amp',
     ];
-    shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
+    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvRegexPathsArray);
   });
 
   describe('should return an array of regexs for the tv config', () => {
@@ -214,7 +214,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/gujarati/bbc_gujarati_tv/abcd1234',
       '/persian/bbc_persian_tv/abcd1234.amp',
     ];
-    shouldMatchValidRoutes(validRoutes, mediaRadioAndTvRegexPathsArray);
+    shouldMatchValidRoutes(validRoutes, radioAndTvRegexPathsArray);
 
     const invalidRoutes = [
       '/persian/bbc_marathi_tv/livetv',
@@ -224,7 +224,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/marathi/bbc_marathi_tv/.amp',
       '/blah/bbc_hausa_radio/livetv',
     ];
-    shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
+    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvRegexPathsArray);
   });
   describe('cpsAssetPageRegexPath', () => {
     const validRoutes = [
