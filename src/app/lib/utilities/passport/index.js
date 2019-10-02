@@ -9,7 +9,6 @@ export const getPassportHome = pageData => {
   return pageData && homeServiceUrl
     ? homeServiceUrl
         .split('/')
-        .slice(-1)
         .pop()
         .toLowerCase()
     : null;
@@ -20,15 +19,15 @@ export const isValidPassportHome = (
   service,
   passportHomesOverride = [],
 ) => {
+  const isMissingRequiredArgs = !passportHome;
+  if (isMissingRequiredArgs) return true;
+
+  const matchesPassportHome = home =>
+    (home || '').toLowerCase() === passportHome.toLowerCase();
+
+  if (matchesPassportHome(service)) return true;
+
   const passportHomesOverrideArray = passportHomesOverride || [];
-  const passportHomeLower = (passportHome || '').toLowerCase();
 
-  if (!passportHome) return true;
-
-  return (
-    passportHomeLower === service ||
-    passportHomesOverrideArray.some(
-      home => (home || '').toLowerCase() === passportHomeLower,
-    )
-  );
+  return passportHomesOverrideArray.some(matchesPassportHome);
 };
