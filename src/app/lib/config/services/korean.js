@@ -3,6 +3,7 @@ import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
+import 'moment/locale/ko';
 
 export const service = {
   default: {
