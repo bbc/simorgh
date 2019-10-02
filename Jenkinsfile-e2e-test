@@ -36,7 +36,7 @@ node {
         pipelineTriggers([cron(cron_string)])
     ]
   )
-  timeout(time: 90, unit: 'MINUTES') {
+  timeout(time: 120, unit: 'MINUTES') {
     withEnv([
       'CI=true'
     ]) {
