@@ -23,7 +23,7 @@ exports[`Radio Page Blocks should match snapshot 1`] = `
 }
 
 .c4 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
