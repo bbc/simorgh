@@ -32,6 +32,10 @@ const pageTypeMetadata = {
     schemaOrg: 'RadioChannel',
     openGraph: 'website',
   },
+  FIX: {
+    schemaOrg: 'WebPage',
+    openGraph: 'website',
+  },
 };
 
 /* An array of each thingLabel from tags.about & tags.mention */
