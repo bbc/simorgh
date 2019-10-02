@@ -93,7 +93,7 @@ describe('ArticleTimestamp helper functions', () => {
   describe('formatType', () => {
     const dateFormats = {
       date: 'D MMMM YYYY',
-      dateTimeTimeZone: 'D MMMM YYYY, HH:mm z',
+      dateTimeTimezone: 'D MMMM YYYY, HH:mm z',
     };
     it(`should return default date format when firstPublished is > 10 hours ago`, () => {
       const firstPublished = timestampGenerator({ days: 5 });
@@ -104,7 +104,7 @@ describe('ArticleTimestamp helper functions', () => {
       const firstPublished = timestampGenerator({ hours: 8 });
       const lastPublished = timestampGenerator({ hours: 2 });
       expect(formatType({ firstPublished, lastPublished })).toEqual(
-        dateFormats.dateTimeTimeZone,
+        dateFormats.dateTimeTimezone,
       );
     });
 
