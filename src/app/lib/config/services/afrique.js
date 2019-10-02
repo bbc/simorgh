@@ -4,6 +4,7 @@ import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import 'moment/locale/fr';
 import withContext from '../../../contexts/utils/withContext';
+import 'moment/locale/fr';
 
 export const service = {
   default: {
