@@ -1,38 +1,85 @@
-/*
- * © Jordan Tart https://github.com/jtart
- * https://github.com/jtart/react-universal-app
- */
 import React from 'react';
-import { shouldShallowMatchSnapshot } from '#testHelpers';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import ReactRouter from 'react-router-dom';
 import { ClientApp, ServerApp } from '.';
+import * as App from './App';
+
+jest.mock('./App', () => jest.fn(() => <>Mocked App component</>));
+
+const renderClientApp = () =>
+  render(<ClientApp data="someData!" routes={['someRoute']} />);
+
+const renderServerApp = () =>
+  render(
+    <ServerApp
+      data="somePassedData"
+      routes={['someRoute']}
+      bbcOrigin="https://www.bbc.com"
+    />,
+  );
 
 describe('ClientApp', () => {
-  shouldShallowMatchSnapshot(
-    'should render correctly',
-    <ClientApp data="someData!" routes={['someRoute']} />,
-  );
-});
-
-describe('ServerApp', () => {
-  describe('no passed routerContext', () => {
-    shouldShallowMatchSnapshot(
-      'should render correctly',
-      <ServerApp
-        location="someUrl"
-        routes={['someRoute']}
-        data="somePassedData"
-        context={{}}
-      />,
+  it('App should be called with the correct props', () => {
+    renderClientApp();
+    expect(App).toHaveBeenCalledWith(
+      { initialData: 'someData!', routes: ['someRoute'] },
+      {},
     );
   });
 
-  shouldShallowMatchSnapshot(
-    'should render correctly',
-    <ServerApp
-      location="someUrl"
-      routes={['someRoute']}
-      data="somePassedData"
-      context={{ context: 'someRouterContext' }}
-    />,
-  );
+  it('BrowserRouter should be called with the correct props', () => {
+    const actualBrowserRouter = ReactRouter.BrowserRouter;
+    ReactRouter.BrowserRouter = jest.fn(() => <></>);
+    renderClientApp();
+    expect(ReactRouter.BrowserRouter).toHaveBeenCalledWith(
+      {
+        children: expect.anything(),
+        data: 'someData!',
+        routes: ['someRoute'],
+      },
+      {},
+    );
+    ReactRouter.BrowserRouter = actualBrowserRouter; //  restore the original (non-mocked) implementation
+  });
+
+  it('should render App component', () => {
+    const { getByText } = renderClientApp();
+    expect(getByText('Mocked App component')).toBeInTheDocument();
+  });
+});
+
+describe('ServerApp', () => {
+  it('App should be called with the correct props', () => {
+    renderServerApp();
+    expect(App).toHaveBeenCalledWith(
+      {
+        initialData: 'somePassedData',
+        routes: ['someRoute'],
+        bbcOrigin: 'https://www.bbc.com',
+      },
+      {},
+    );
+  });
+
+  it('StaticRouter should be called with the correct props', () => {
+    const actualStaticRouter = ReactRouter.StaticRouter;
+    ReactRouter.StaticRouter = jest.fn(() => <></>);
+    renderServerApp();
+    expect(ReactRouter.StaticRouter).toHaveBeenCalledWith(
+      {
+        children: expect.anything(),
+        data: 'somePassedData',
+        routes: ['someRoute'],
+        bbcOrigin: 'https://www.bbc.com',
+      },
+      {},
+    );
+    ReactRouter.StaticRouter = actualStaticRouter; //  restore the original (non-mocked) implementation
+  });
+
+  it('should render App component', () => {
+    const { getByText } = renderServerApp();
+    expect(getByText('Mocked App component')).toBeInTheDocument();
+  });
 });
