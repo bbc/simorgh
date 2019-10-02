@@ -1,7 +1,10 @@
 import React from 'react';
-import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
+import {
+  shouldMatchSnapshot,
+  isNull,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { suppressPropWarnings } from '#testHelpers';
 import Heading from '.';
 
 describe('MediaPageBlocks Heading', () => {
