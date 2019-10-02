@@ -8,9 +8,9 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
-  mediaRadioAndTvRegexPathsArray,
-  mediaAssetPageRegexPath,
-  mediaAssetPageDataRegexPath,
+  cpsAssetPageRegexPath,
+  cpsAssetPageDataRegexPath,
+  radioAndTvRegexPathsArray,
 } from './index';
 
 jest.mock('#testHelpers/serviceConfigs', () => ({
@@ -183,7 +183,7 @@ jest.mock('../config', () => ({
   persian: ['bbc_persian_radio', 'bbc_dari_radio', 'bbc_persian_tv'],
 }));
 
-describe('mediaRadioAndTvRegexPathsArray', () => {
+describe('radioAndTvRegexPathsArray', () => {
   describe('should return an array of regexs for the radio config', () => {
     const validRoutes = [
       '/hausa/bbc_hausa_radio/liveradio',
@@ -193,7 +193,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/hausa/bbc_hausa_radio/liveradio.amp',
       '/hausa/bbc_hausa_radio/abcd1234.amp',
     ];
-    shouldMatchValidRoutes(validRoutes, mediaRadioAndTvRegexPathsArray);
+    shouldMatchValidRoutes(validRoutes, radioAndTvRegexPathsArray);
 
     const invalidRoutes = [
       '/hausa/bbc_persian_radio/liveradio',
@@ -204,7 +204,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/persian/foobar/liveradio',
       '/persian/foobar/liveradio.amp',
     ];
-    shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
+    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvRegexPathsArray);
   });
 
   describe('should return an array of regexs for the tv config', () => {
@@ -214,7 +214,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/gujarati/bbc_gujarati_tv/abcd1234',
       '/persian/bbc_persian_tv/abcd1234.amp',
     ];
-    shouldMatchValidRoutes(validRoutes, mediaRadioAndTvRegexPathsArray);
+    shouldMatchValidRoutes(validRoutes, radioAndTvRegexPathsArray);
 
     const invalidRoutes = [
       '/persian/bbc_marathi_tv/livetv',
@@ -224,9 +224,9 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/marathi/bbc_marathi_tv/.amp',
       '/blah/bbc_hausa_radio/livetv',
     ];
-    shouldNotMatchInvalidRoutes(invalidRoutes, mediaRadioAndTvRegexPathsArray);
+    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvRegexPathsArray);
   });
-  describe('mediaAssetPageRegexPath', () => {
+  describe('cpsAssetPageRegexPath', () => {
     const validRoutes = [
       '/pidgin/12345678',
       '/pidgin/12345678.amp',
@@ -243,7 +243,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/zhongwen/test-12345678/simp.amp',
     ];
 
-    shouldMatchValidRoutes(validRoutes, mediaAssetPageRegexPath);
+    shouldMatchValidRoutes(validRoutes, cpsAssetPageRegexPath);
 
     // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
     const inValidRoutes = [
@@ -256,10 +256,10 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/pidgin/test-49450859/',
       '/pidgin/test-494859.amp',
     ];
-    shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageRegexPath);
+    shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageRegexPath);
   });
 
-  describe('mediaAssetPageDataRegexPath', () => {
+  describe('cpsAssetPageDataRegexPath', () => {
     const validRoutes = [
       '/pidgin/12345678.json',
       '/pidgin/test-49450859.json',
@@ -269,7 +269,7 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/zhongwen/test-12345678/trad.json',
     ];
 
-    shouldMatchValidRoutes(validRoutes, mediaAssetPageDataRegexPath);
+    shouldMatchValidRoutes(validRoutes, cpsAssetPageDataRegexPath);
 
     // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
     const inValidRoutes = [
@@ -281,6 +281,6 @@ describe('mediaRadioAndTvRegexPathsArray', () => {
       '/pidgin/test-49450859/.json',
       '/pidgin/test-494859.amp.json',
     ];
-    shouldNotMatchInvalidRoutes(inValidRoutes, mediaAssetPageDataRegexPath);
+    shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageDataRegexPath);
   });
 });

@@ -23,10 +23,7 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+        path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -103,11 +100,8 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/amharic/bbc_amharic_radio/liveradio',
-        smoke: false,
+        path: '/amharic/bbc_amharic_radio/liveradio',
+        smoke: true,
       },
       mediaAssetPage: {
         path:
@@ -275,7 +269,7 @@ const services = {
     },
   },
   cymrufyw: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: false,
     variant: 'default',
     pageTypes: {
@@ -514,10 +508,7 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/indonesia/bbc_indonesian_radio/liveradio',
+        path: '/indonesia/bbc_indonesian_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -586,10 +577,7 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/korean/bbc_korean_radio/liveradio',
+        path: '/korean/bbc_korean_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -676,7 +664,7 @@ const services = {
     },
   },
   mundo: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -709,7 +697,7 @@ const services = {
     },
   },
   naidheachdan: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: false,
     variant: 'default',
     pageTypes: {
@@ -914,7 +902,7 @@ const services = {
     },
   },
   portuguese: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -1329,10 +1317,7 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/tigrinya/bbc_tigrinya_radio/liveradio',
+        path: '/tigrinya/bbc_tigrinya_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -1345,7 +1330,7 @@ const services = {
     },
   },
   turkce: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
