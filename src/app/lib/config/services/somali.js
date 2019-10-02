@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { somali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
+import '@bbc/psammead-locales/moment/so';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -24,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Qoraal ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
-    datetimeLocale: `so-so`,
+    datetimeLocale: `so`,
     service: 'somali',
     serviceName: 'Somali',
     themeColor: `${C_POSTBOX}`,

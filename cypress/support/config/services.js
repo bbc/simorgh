@@ -1,4 +1,4 @@
-module.exports = {
+const services = {
   afaanoromoo: {
     font: undefined,
     isWorldService: true,
@@ -23,10 +23,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+        path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -103,11 +100,8 @@ module.exports = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/amharic/bbc_amharic_radio/liveradio',
-        smoke: false,
+        path: '/amharic/bbc_amharic_radio/liveradio',
+        smoke: true,
       },
       mediaAssetPage: {
         path:
@@ -179,7 +173,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/azeri',
+        path: '/azeri',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -275,7 +269,7 @@ module.exports = {
     },
   },
   cymrufyw: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: false,
     variant: 'default',
     pageTypes: {
@@ -514,10 +508,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/indonesia/bbc_indonesian_radio/liveradio',
+        path: '/indonesia/bbc_indonesian_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -549,7 +540,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/japanese',
+        path: '/japanese',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -586,10 +577,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/korean/bbc_korean_radio/liveradio',
+        path: '/korean/bbc_korean_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -621,7 +609,7 @@ module.exports = {
         smoke: false,
       },
       frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/kyrgyz',
+        path: '/kyrgyz',
         smoke: false,
       },
       liveRadio: {
@@ -676,7 +664,7 @@ module.exports = {
     },
   },
   mundo: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -709,7 +697,7 @@ module.exports = {
     },
   },
   naidheachdan: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: false,
     variant: 'default',
     pageTypes: {
@@ -787,8 +775,8 @@ module.exports = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/news/articles/c5ll353v7y9o'
-            : '/news/articles/c6v11qzyv8po',
+            ? '/news/articles/cj7xrxz0e8zo'
+            : '/news/articles/cn7k01xp8kxo',
         smoke: true,
       },
       errorPage404: {
@@ -914,7 +902,7 @@ module.exports = {
     },
   },
   portuguese: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -1329,10 +1317,7 @@ module.exports = {
         smoke: false,
       },
       liveRadio: {
-        path:
-          Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/tigrinya/bbc_tigrinya_radio/liveradio',
+        path: '/tigrinya/bbc_tigrinya_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -1345,7 +1330,7 @@ module.exports = {
     },
   },
   turkce: {
-    font: undefined,
+    font: 'Reith',
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -1628,3 +1613,11 @@ module.exports = {
     },
   },
 };
+
+// Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env var
+const runOnlyService = Cypress.env('ONLY_SERVICE');
+if (runOnlyService && Object.keys(services).includes(runOnlyService)) {
+  module.exports = { [runOnlyService]: services[runOnlyService] };
+} else {
+  module.exports = services;
+}

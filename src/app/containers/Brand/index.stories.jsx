@@ -7,6 +7,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import BrandContainer from '.';
 
 storiesOf('Containers|Brand', module)
+  .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .add(
     'default',

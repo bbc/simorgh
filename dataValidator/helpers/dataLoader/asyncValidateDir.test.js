@@ -38,13 +38,13 @@ describe('asyncValidateDir helper', () => {
   it('should call fileToValidate for only the valid json file in the /data directory', async () => {
     fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
-    await expectMethodToBeCalledTimes(99, fileToValidateSpy);
+    await expectMethodToBeCalledTimes(100, fileToValidateSpy);
   });
 
   it('should call fileToValidate for only the files in /data/news', async () => {
     fileToValidateSpy = jest.spyOn(readScenario, 'fileToValidate');
 
-    await expectMethodToBeCalledTimes(38, fileToValidateSpy, './data/news');
+    await expectMethodToBeCalledTimes(39, fileToValidateSpy, './data/news');
   });
 
   it('should return a promise', () => {

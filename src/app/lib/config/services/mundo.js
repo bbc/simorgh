@@ -1,7 +1,16 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+import {
+  F_REITH_SANS_BOLD,
+  F_REITH_SANS_BOLD_ITALIC,
+  F_REITH_SANS_ITALIC,
+  F_REITH_SANS_REGULAR,
+  F_REITH_SERIF_MEDIUM,
+  F_REITH_SERIF_MEDIUM_ITALIC,
+} from '@bbc/psammead-styles/fonts';
 import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -12,7 +21,8 @@ export const service = {
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     brandName: 'BBC News Mundo',
-    product: 'BBC News Mundo',
+    product: 'BBC News',
+    serviceLocalizedName: 'Mundo',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
     defaultImageAltText: 'BBC News Mundo',
     dir: `ltr`,
@@ -23,7 +33,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `es-005`,
-    datetimeLocale: `es-005`,
+    datetimeLocale: `es`,
     service: 'mundo',
     serviceName: 'News Mundo',
     themeColor: `${C_POSTBOX}`,
@@ -165,7 +175,14 @@ export const service = {
       copyrightText:
         'BBC. El contenido de las páginas externas no es responsabilidad de la BBC.',
     },
-    fonts: [],
+    fonts: [
+      F_REITH_SANS_BOLD,
+      F_REITH_SANS_BOLD_ITALIC,
+      F_REITH_SANS_ITALIC,
+      F_REITH_SANS_REGULAR,
+      F_REITH_SERIF_MEDIUM,
+      F_REITH_SERIF_MEDIUM_ITALIC,
+    ],
     timezone: 'GMT',
     navigation: [
       {

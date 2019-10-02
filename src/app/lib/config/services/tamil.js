@@ -3,6 +3,7 @@ import { tamil } from '@bbc/gel-foundations/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -13,7 +14,8 @@ export const service = {
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
     brandName: 'BBC News தமிழ்',
-    product: 'BBC News தமிழ்',
+    product: 'BBC News',
+    serviceLocalizedName: 'தமிழ்',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
     defaultImageAltText: 'BBC News தமிழ்',
     dir: `ltr`,
@@ -24,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `ta-IN`,
-    datetimeLocale: `ta-in`,
+    datetimeLocale: `ta`,
     service: 'tamil',
     serviceName: 'News தமிழ்',
     themeColor: `${C_POSTBOX}`,
