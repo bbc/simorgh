@@ -1,8 +1,11 @@
 import React from 'react';
-import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
+import {
+  shouldMatchSnapshot,
+  isNull,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import { suppressPropWarnings } from '#testHelpers';
 import LiveRadio from '.';
 
 const origin = 'http://localhost.bbc.co.uk:7080';
