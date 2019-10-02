@@ -7,6 +7,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
+import { EventContextProvider } from '#contexts/EventContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
@@ -40,9 +41,11 @@ const WithContexts = Component => {
             previousPath={previousPath}
             variant={variant}
           >
-            <UserContextProvider>
-              <Component {...props} />
-            </UserContextProvider>
+            <EventContextProvider>
+              <UserContextProvider>
+                <Component {...props} />
+              </UserContextProvider>
+            </EventContextProvider>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>

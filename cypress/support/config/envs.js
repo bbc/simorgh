@@ -9,6 +9,7 @@ const config = {
     atiAnalyticsDefaultBucket: '596068',
     atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
     chartbeatEnabled: false,
+    liveRadioIframeBaseUrl: 'https://www.bbc.com',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -20,6 +21,7 @@ const config = {
     atiAnalyticsDefaultBucket: '596068',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: true,
+    liveRadioIframeBaseUrl: 'https://www.test.bbc.com',
   },
   local: {
     baseUrl: 'http://localhost.bbc.com:7080',
@@ -31,6 +33,7 @@ const config = {
     atiAnalyticsDefaultBucket: '596068',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: false,
+    liveRadioIframeBaseUrl: 'https://www.test.bbc.com',
   },
 };
 

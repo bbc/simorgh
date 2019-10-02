@@ -1,4 +1,18 @@
 import routes from './index';
+import { cpsAssetPageRegexPath } from './regex';
+
+jest.mock('../containers/FrontPage', () => jest.fn());
+jest.mock('../containers/RadioPage', () => jest.fn());
+
+const generateFixtureData = type => ({
+  data: {
+    pageData: {
+      metadata: {
+        type,
+      },
+    },
+  },
+});
 
 describe('Routes', () => {
   test('It should be an array', () => {
@@ -18,6 +32,37 @@ describe('Routes', () => {
       } else {
         expect(route).toHaveProperty('path');
       }
+    });
+  });
+
+  describe('CPS Assets', () => {
+    const cpsRoute = routes.filter(
+      route => route.path === cpsAssetPageRegexPath,
+    );
+
+    const Component = cpsRoute[0].component;
+
+    beforeEach(() => {
+      jest.resetAllMocks();
+    });
+
+    const mediaPage = jest.requireMock('../containers/RadioPage');
+    const frontPage = jest.requireMock('../containers/FrontPage');
+
+    it('should route to RadioPage component', () => {
+      const data = generateFixtureData('MAP');
+      Component(data);
+
+      expect(mediaPage).toHaveBeenCalled();
+      expect(frontPage).not.toHaveBeenCalled();
+    });
+
+    it('should route to FrontPage component', () => {
+      const data = generateFixtureData('FIX');
+      Component(data);
+
+      expect(mediaPage).not.toHaveBeenCalled();
+      expect(frontPage).toHaveBeenCalled();
     });
   });
 });
