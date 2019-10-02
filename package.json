@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "scripts": {
-    "amp:validate": "wait-on http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost.bbc.com:7080/igbo.amp",
+    "amp:validate": "wait-on http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost.bbc.com:7080/igbo.amp && amphtml-validator http://localhost.bbc.com:7080/korean/bbc_korean_radio/liveradio.amp",
     "bbcA11y": "wait-on -t 20000 http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost.bbc.com:7080/news/articles/c6v11qzyv8po && xvfb-run -a bbc-a11y",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack && node ./scripts/bundleSize.js",
