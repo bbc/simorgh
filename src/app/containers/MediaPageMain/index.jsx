@@ -19,6 +19,8 @@ const MediaPageMain = ({ pageData }) => {
         lang={metadata.language}
         description={promo.summary}
         seoHeadline={promo.name}
+        schemaOrg="RadioChannel"
+        openGraph="website"
       />
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>

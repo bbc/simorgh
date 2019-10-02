@@ -185,7 +185,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       Article Headline for SEO - BBC News
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -358,7 +358,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta
@@ -389,6 +389,30 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       content="Article Headline for SEO - BBC News"
       name="twitter:title"
     />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
     <script
       type="application/ld+json"
     >
@@ -401,30 +425,6 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       <div>
         chartbeat
       </div>
-      <meta
-        content="https://www.facebook.com/bbcnews"
-        name="article:author"
-      />
-      <meta
-        content="2018-01-01T13:00:00.000Z"
-        name="article:modified_time"
-      />
-      <meta
-        content="2018-01-01T12:01:00.000Z"
-        name="article:published_time"
-      />
-      <meta
-        content="Royal Wedding 2018"
-        name="article:tag"
-      />
-      <meta
-        content="Duchess of Sussex"
-        name="article:tag"
-      />
-      <meta
-        content="Queen Victoria"
-        name="article:tag"
-      />
       <main
         role="main"
       >
@@ -468,7 +468,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       سرصفحه مقاله - BBC News فارسی
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -626,7 +626,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta
@@ -656,6 +656,18 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
     />
     <script
       type="application/ld+json"
@@ -844,18 +856,6 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       <div>
         chartbeat
       </div>
-      <meta
-        content="https://www.facebook.com/bbcnews"
-        name="article:author"
-      />
-      <meta
-        content="2018-01-01T13:00:00.000Z"
-        name="article:modified_time"
-      />
-      <meta
-        content="2018-01-01T12:01:00.000Z"
-        name="article:published_time"
-      />
       <main
         role="main"
       >
@@ -899,7 +899,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       Article Headline for SEO in Pidgin - BBC News Pidgin
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -1057,7 +1057,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta
@@ -1087,6 +1087,18 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
     <meta
       content="Article Headline for SEO in Pidgin - BBC News Pidgin"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
     />
     <script
       type="application/ld+json"
@@ -1275,18 +1287,6 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       <div>
         chartbeat
       </div>
-      <meta
-        content="https://www.facebook.com/bbcnews"
-        name="article:author"
-      />
-      <meta
-        content="2018-01-01T13:00:00.000Z"
-        name="article:modified_time"
-      />
-      <meta
-        content="2018-01-01T12:01:00.000Z"
-        name="article:published_time"
-      />
       <main
         role="main"
       >

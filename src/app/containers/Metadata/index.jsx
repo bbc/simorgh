@@ -1,53 +1,45 @@
 import React, { useContext } from 'react';
-import { string, shape, node, objectOf, any, arrayOf } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
+import Helmet from 'react-helmet';
+import { string, node, objectOf, any } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import Metadata from '../../components/Metadata';
-import LinkedData from '../../components/LinkedData';
-import aboutTagsContent from './linkedDataAbout';
+import {
+  getIconAssetUrl,
+  getIconLinks,
+  renderAmpHtml,
+  getAppleTouchUrl,
+  buildLinkedData,
+  renderAlternateLinks,
+} from './utils';
 
+const FACEBOOK_ADMIN_ID = 100004154058350;
+const FACEBOOK_APP_ID = 1609039196070050;
 const ENGLISH_SERVICES = ['news'];
-
-const pageTypeMetadata = {
-  article: {
-    schemaOrg: 'Article',
-    openGraph: 'article',
-  },
-  frontPage: {
-    schemaOrg: 'WebPage',
-    openGraph: 'website',
-  },
-  media: {
-    schemaOrg: 'RadioChannel',
-    openGraph: 'website',
-  },
-};
-
-const getAppleTouchUrl = service => {
-  const assetsPath = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH || '/';
-  const separatorSlash = assetsPath[assetsPath.length - 1] !== '/' ? '/' : '';
-
-  return [
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
-    assetsPath,
-    separatorSlash,
-    service,
-    '/images/icons/icon-192x192.png',
-  ].join('');
+const iconSizes = {
+  'apple-touch-icon': [
+    '72x72',
+    '96x96',
+    '128x128',
+    '144x144',
+    '152x152',
+    '192x192',
+    '384x384',
+    '512x512',
+  ],
+  icon: ['72x72', '96x96', '192x192'],
 };
 
 const MetadataContainer = ({
   title,
-  aboutTags,
   lang,
   seoHeadline,
   description,
   pageSpecificLinkedData,
+  schemaOrg,
+  openGraph,
   children,
 }) => {
   const {
-    pageType,
     platform,
     canonicalLink,
     ampLink,
@@ -72,9 +64,7 @@ const MetadataContainer = ({
   } = useContext(ServiceContext);
   const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
-
-  let alternateLinks = [];
-
+  const isEnglishService = ENGLISH_SERVICES.includes(service);
   const alternateLinksEnglishSites = [
     {
       href: isAmp ? ampNonUkLink : canonicalNonUkLink,
@@ -97,91 +87,93 @@ const MetadataContainer = ({
     },
   ];
 
-  if (ENGLISH_SERVICES.includes(service)) {
-    alternateLinks = alternateLinksEnglishSites;
-  } else if (isoLang) {
-    alternateLinks = alternateLinksWsSites;
-  }
-
-  const iconSizes = {
-    'apple-touch-icon': [
-      '72x72',
-      '96x96',
-      '128x128',
-      '144x144',
-      '152x152',
-      '192x192',
-      '384x384',
-      '512x512',
-    ],
-    icon: ['72x72', '96x96', '192x192'],
+  const htmlAttributes = {
+    dir,
+    lang,
+    ...(isAmp && { amp: '' }), // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
   };
+  const pageTitle = `${title} - ${brandName}`;
+
+  const linkedData = buildLinkedData({
+    brandName,
+    noBylinesPolicy,
+    publishingPrinciples,
+    seoHeadline,
+    type: schemaOrg,
+    canonicalLink: canonicalNonUkLink,
+    logoUrl: defaultImage,
+    pageSpecific: pageSpecificLinkedData,
+  });
 
   return (
-    <>
-      <LinkedData
-        brandName={brandName}
-        canonicalLink={canonicalNonUkLink}
-        logoUrl={defaultImage}
-        noBylinesPolicy={noBylinesPolicy}
-        publishingPrinciples={publishingPrinciples}
-        seoHeadline={seoHeadline}
-        type={pathOr(null, [pageType, 'schemaOrg'], pageTypeMetadata)}
-        about={aboutTagsContent(aboutTags)}
-        pageSpecific={pageSpecificLinkedData}
+    <Helmet htmlAttributes={htmlAttributes}>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta charSet="utf-8" />
+      <meta name="robots" content="noodp,noydir" />
+      <meta name="theme-color" content={themeColor} />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1"
       />
-      <Metadata
-        isAmp={isAmp}
-        alternateLinks={alternateLinks}
-        ampLink={ampLink}
-        appleTouchIcon={appleTouchIcon}
-        brandName={brandName}
-        canonicalLink={canonicalNonUkLink}
-        defaultImage={defaultImage}
-        defaultImageAltText={defaultImageAltText}
-        description={description}
-        dir={dir}
-        facebookAdmin={100004154058350}
-        facebookAppID={1609039196070050}
-        lang={lang}
-        locale={locale}
-        themeColor={themeColor}
-        title={title}
-        twitterCreator={twitterCreator}
-        twitterSite={twitterSite}
-        type={pathOr(null, [pageType, 'openGraph'], pageTypeMetadata)}
-        service={service}
-        iconSizes={iconSizes}
+      <title>{pageTitle}</title>
+      <link rel="canonical" href={canonicalLink} />
+      {isEnglishService && alternateLinksEnglishSites.map(renderAlternateLinks)}
+      {isoLang &&
+        !isEnglishService &&
+        alternateLinksWsSites.map(renderAlternateLinks)}
+      {renderAmpHtml(ampLink, isAmp)}
+      <meta name="apple-mobile-web-app-title" content={brandName} />
+      <meta name="application-name" content={brandName} />
+      <meta name="description" content={description} />
+      <meta name="fb:admins" content={FACEBOOK_ADMIN_ID} />
+      <meta name="fb:app_id" content={FACEBOOK_APP_ID} />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="msapplication-TileColor" content={themeColor} />
+      <meta
+        name="msapplication-TileImage"
+        content={getIconAssetUrl(service, '144x144')}
       />
+      <meta name="og:description" content={description} />
+      <meta name="og:image" content={defaultImage} />
+      <meta name="og:image:alt" content={defaultImageAltText} />
+      <meta name="og:locale" content={locale} />
+      <meta name="og:site_name" content={brandName} />
+      <meta name="og:title" content={pageTitle} />
+      <meta name="og:type" content={openGraph} />
+      <meta name="og:url" content={canonicalLink} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={twitterCreator} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image:alt" content={defaultImageAltText} />
+      <meta name="twitter:image:src" content={defaultImage} />
+      <meta name="twitter:site" content={twitterSite} />
+      <meta name="twitter:title" content={pageTitle} />
+      <link rel="apple-touch-icon" href={appleTouchIcon} />
+      {getIconLinks(service, iconSizes)}
+      <link
+        rel="apple-touch-startup-image"
+        href={getIconAssetUrl(service, '512x512')}
+      />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       {children}
-    </>
+      <script type="application/ld+json">{JSON.stringify(linkedData)}</script>
+    </Helmet>
   );
 };
 
-const tagPropTypes = shape({
-  thingUri: string,
-  topicId: string,
-  topicName: string,
-  curationType: arrayOf(string),
-  thingId: string,
-  thingLabel: string,
-  thingType: arrayOf(string),
-  thingSameAs: arrayOf(string),
-});
-
 MetadataContainer.propTypes = {
   title: string.isRequired,
-  aboutTags: arrayOf(tagPropTypes),
   lang: string.isRequired,
   seoHeadline: string.isRequired,
   description: string.isRequired,
   pageSpecificLinkedData: objectOf(any),
+  schemaOrg: string.isRequired,
+  openGraph: string.isRequired,
   children: node,
 };
 
 MetadataContainer.defaultProps = {
   pageSpecificLinkedData: {},
-  aboutTags: [],
   children: null,
 };
 

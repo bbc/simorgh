@@ -1,6 +1,5 @@
-const acceptableTypes = ['Person', 'Event', 'Organization', 'Place'];
-
 export const checkType = types => {
+  const acceptableTypes = ['Person', 'Event', 'Organization', 'Place'];
   if (types.length === 0 || types.length > 1) {
     return 'Thing';
   }

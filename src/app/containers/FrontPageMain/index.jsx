@@ -40,6 +40,8 @@ const FrontPageMain = ({ frontPageData }) => {
         lang={metadata.language}
         description={metadata.summary}
         seoHeadline={promo.name}
+        schemaOrg="WebPage"
+        openGraph="website"
       />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">

@@ -191,7 +191,7 @@ exports[`Media Page Main should match snapshot 1`] = `
       ያድምጡ - BBC News አማርኛ
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -349,7 +349,7 @@ exports[`Media Page Main should match snapshot 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta

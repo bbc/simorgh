@@ -27,6 +27,8 @@ const ArticleMetadata = ({
     description={description}
     aboutTags={aboutTags}
     pageSpecificLinkedData={linkedData}
+    schemaOrg="Article"
+    openGraph="article"
   >
     <meta name="article:author" content={author} />
     <meta name="article:modified_time" content={lastPublished} />
