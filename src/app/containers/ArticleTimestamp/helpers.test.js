@@ -80,7 +80,7 @@ describe('ArticleTimestamp helper functions', () => {
 
   describe('isToday', () => {
     it('should return true if timestamp is today (9 hours ago)', () => {
-      const timestamp = timestampGenerator({ hours: 9 });
+      const timestamp = timestampGenerator({ hours: 8 });
       expect(isToday(timestamp)).toEqual(true);
     });
 
