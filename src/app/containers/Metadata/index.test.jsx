@@ -17,15 +17,41 @@ const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
 
+const getArticleMetadataProps = data => ({
+  title: data.promo.headlines.seoHeadline,
+  lang: data.metadata.passport.language,
+  seoHeadline: data.promo.headlines.seoHeadline,
+  description: data.promo.summary,
+  aboutTags: data.metadata.tags.about,
+});
+
+const frontPageMetadataProps = {
+  title: 'Ogbako',
+  lang: frontPageData.metadata.language,
+  description: frontPageData.metadata.summary,
+  seoHeadline: frontPageData.promo.name,
+};
+
+const liveRadioMetadataProps = {
+  title: liveRadioPageData.promo.name,
+  lang: liveRadioPageData.metadata.language,
+  description: liveRadioPageData.promo.summary,
+  seoHeadline: liveRadioPageData.promo.name,
+};
+
 const getContainer = ({
   /* eslint-disable react/prop-types */
   service,
   bbcOrigin,
   platform,
-  data,
   id,
   pageType,
   pathname,
+  title,
+  lang,
+  seoHeadline,
+  description,
+  aboutTags,
   /* eslint-enable react/prop-types */
 }) => {
   const serviceConfig = services[service].default;
@@ -41,7 +67,13 @@ const getContainer = ({
         service={service}
         statusCode={200}
       >
-        <MetadataContainer {...articleDataNews} {...data} />
+        <MetadataContainer
+          title={title}
+          lang={lang}
+          seoHeadline={seoHeadline}
+          description={description}
+          aboutTags={aboutTags}
+        />
       </RequestContextProvider>
     </ServiceContextProvider>
   );
@@ -64,8 +96,6 @@ const metadataProps = ({
   alternateLinks,
   ampLink,
   appleTouchIcon: `https://foo.com/static/${serviceConfig.service}/images/icons/icon-192x192.png`,
-  articleAuthor: serviceConfig.articleAuthor || null,
-  articleSection: null,
   brandName: serviceConfig.brandName,
   canonicalLink,
   defaultImage: serviceConfig.defaultImage,
@@ -133,12 +163,13 @@ describe('Metadata Container', () => {
           id: 'c0000000001o',
           pageType: 'article',
           pathname: '/news/articles/c0000000001o',
+          ...getArticleMetadataProps(articleDataNews),
         }),
       );
 
       expect(
         Wrapper.containsMatchingElement(
-          <MetadataContainer {...articleDataNews} />,
+          <MetadataContainer {...getArticleMetadataProps(articleDataNews)} />,
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
@@ -203,6 +234,7 @@ describe('Metadata Container', () => {
         id: 'c0000000001o',
         pageType: 'article',
         pathname: '/news/articles/c0000000001o',
+        ...getArticleMetadataProps(articleDataNews),
       }),
     );
 
@@ -216,12 +248,13 @@ describe('Metadata Container', () => {
           id: 'c0000000001o',
           pageType: 'article',
           pathname: '/news/articles/c0000000001o.amp',
+          ...getArticleMetadataProps(articleDataNews),
         }),
       );
 
       expect(
         Wrapper.containsMatchingElement(
-          <MetadataContainer {...articleDataNews} />,
+          <MetadataContainer {...getArticleMetadataProps(articleDataNews)} />,
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
@@ -286,6 +319,7 @@ describe('Metadata Container', () => {
         id: 'c0000000001o',
         pageType: 'article',
         pathname: '/news/articles/c0000000001o.amp',
+        ...getArticleMetadataProps(articleDataNews),
       }),
     );
 
@@ -299,12 +333,15 @@ describe('Metadata Container', () => {
           id: 'c4vlle3q337o',
           pageType: 'article',
           pathname: '/persian/articles/c4vlle3q337o',
+          ...getArticleMetadataProps(articleDataPersian),
         }),
       );
 
       expect(
         Wrapper.containsMatchingElement(
-          <MetadataContainer {...articleDataPersian} />,
+          <MetadataContainer
+            {...getArticleMetadataProps(articleDataPersian)}
+          />,
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
@@ -344,6 +381,7 @@ describe('Metadata Container', () => {
         id: 'c4vlle3q337o',
         pageType: 'article',
         pathname: '/persian/articles/c4vlle3q337o',
+        ...getArticleMetadataProps(articleDataPersian),
       }),
     );
 
@@ -357,12 +395,15 @@ describe('Metadata Container', () => {
           id: 'c4vlle3q337o',
           pageType: 'article',
           pathname: '/persian/articles/c4vlle3q337o.amp',
+          ...getArticleMetadataProps(articleDataPersian),
         }),
       );
 
       expect(
         Wrapper.containsMatchingElement(
-          <MetadataContainer {...articleDataPersian} />,
+          <MetadataContainer
+            {...getArticleMetadataProps(articleDataPersian)}
+          />,
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
@@ -402,6 +443,7 @@ describe('Metadata Container', () => {
         id: 'c4vlle3q337o',
         pageType: 'article',
         pathname: '/persian/articles/c4vlle3q337o.amp',
+        ...getArticleMetadataProps(articleDataPersian),
       }),
     );
 
@@ -411,16 +453,16 @@ describe('Metadata Container', () => {
           service: 'igbo',
           bbcOrigin: dotComOrigin,
           platform: 'canonical',
-          data: frontPageData,
           id: null,
           pageType: 'frontPage',
           pathname: '/igbo',
+          ...frontPageMetadataProps,
         }),
       );
 
       expect(
         Wrapper.containsMatchingElement(
-          <MetadataContainer {...frontPageData} />,
+          <MetadataContainer {...frontPageMetadataProps} />,
         ),
       ).toEqual(true);
       expect(Wrapper.find(Metadata).props()).toEqual(
@@ -462,10 +504,10 @@ describe('Metadata Container', () => {
         service: 'igbo',
         bbcOrigin: dotComOrigin,
         platform: 'canonical',
-        data: frontPageData,
         id: null,
         pageType: 'frontPage',
         pathname: '/igbo',
+        ...frontPageMetadataProps,
       }),
     );
   });
@@ -476,16 +518,16 @@ describe('Metadata Container', () => {
         service: 'korean',
         bbcOrigin: dotComOrigin,
         platform: 'canonical',
-        data: liveRadioPageData,
         id: null,
         pageType: 'media',
         pathname: '/korean/bbc_korean_radio/liveradio',
+        ...liveRadioMetadataProps,
       }),
     );
 
     expect(
       Wrapper.containsMatchingElement(
-        <MetadataContainer {...liveRadioPageData} />,
+        <MetadataContainer {...liveRadioMetadataProps} />,
       ),
     ).toEqual(true);
     expect(Wrapper.find(Metadata).props()).toEqual(
@@ -521,10 +563,10 @@ describe('Metadata Container', () => {
       service: 'korean',
       bbcOrigin: dotComOrigin,
       platform: 'canonical',
-      data: liveRadioPageData,
       id: null,
       pageType: 'media',
       pathname: '/korean/bbc_korean_radio/liveradio',
+      ...liveRadioMetadataProps,
     }),
   );
 });

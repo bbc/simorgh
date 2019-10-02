@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import { articleDataPropTypes } from '#models/propTypes/article';
-import MetadataContainer from '../Metadata';
 import ArticleMetadata from '../../components/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '../Headings';
@@ -13,7 +12,16 @@ import { GhostGrid } from '#lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';
-import processArticleData from './processArticleData';
+import {
+  getHeadline,
+  getFirstPublished,
+  getLastPublished,
+  getAboutTags,
+  getArticleSection,
+  getMentions,
+  getLang,
+  buildLinkedData,
+} from './utils';
 
 const componentsToRender = {
   headline: headings,
@@ -25,7 +33,7 @@ const componentsToRender = {
   timestamp,
 };
 
-const ArticleMain = ({ articleData }) => {
+const ArticleMain = ({ articleData: data }) => {
   const {
     brandName,
     noBylinesPolicy,
@@ -33,8 +41,9 @@ const ArticleMain = ({ articleData }) => {
     articleAuthor,
   } = useContext(ServiceContext);
 
-  const processedData = processArticleData({
-    ...articleData,
+  const headline = getHeadline(data);
+  const linkedData = buildLinkedData({
+    ...data,
     brandName,
     noBylinesPolicy,
     defaultImage,
@@ -42,32 +51,28 @@ const ArticleMain = ({ articleData }) => {
 
   return (
     <>
-      <ATIAnalytics data={articleData} />
+      <ATIAnalytics data={data} />
 
-      <ChartbeatAnalytics data={articleData} />
-
-      <MetadataContainer
-        metadata={path(['metadata'], articleData)}
-        promo={path(['promo'], articleData)}
-        pageSpecificLinkedData={path(
-          ['articleSpecificLinkedData'],
-          processedData,
-        )}
-      />
+      <ChartbeatAnalytics data={data} />
 
       <ArticleMetadata
+        title={headline}
+        seoHeadline={headline}
+        description={headline}
         author={articleAuthor}
-        firstPublished={path(['firstPublished'], processedData)}
-        lastPublished={path(['lastPublished'], processedData)}
-        section={path(['articleSection'], processedData)}
-        aboutTags={path(['metadata', 'tags', 'about'], articleData)}
-        mentionsTags={path(['metadata', 'tags', 'mentions'], articleData)}
+        linkedData={linkedData}
+        lang={getLang(data)}
+        aboutTags={getAboutTags(data)}
+        firstPublished={getFirstPublished(data)}
+        lastPublished={getLastPublished(data)}
+        section={getArticleSection(data)}
+        mentionsTags={getMentions(data)}
       />
 
       <main role="main">
         <GhostGrid>
           <Blocks
-            blocks={path(['content', 'model', 'blocks'], articleData)}
+            blocks={path(['content', 'model', 'blocks'], data)}
             componentsToRender={componentsToRender}
           />
         </GhostGrid>

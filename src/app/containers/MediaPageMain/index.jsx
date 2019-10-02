@@ -14,7 +14,12 @@ const MediaPageMain = ({ pageData }) => {
   return (
     <>
       <ATIAnalytics data={pageData} />
-      <MetadataContainer metadata={metadata} promo={promo} />
+      <MetadataContainer
+        title={promo.name}
+        lang={metadata.language}
+        description={promo.summary}
+        seoHeadline={promo.name}
+      />
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
           <MediaPageBlocks blocks={blocks} />

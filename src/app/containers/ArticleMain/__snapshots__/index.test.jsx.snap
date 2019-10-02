@@ -306,7 +306,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       name="application-name"
     />
     <meta
-      content="Article summary."
+      content="Article Headline for SEO"
       name="description"
     />
     <meta
@@ -330,7 +330,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       name="msapplication-TileImage"
     />
     <meta
-      content="Article summary."
+      content="Article Headline for SEO"
       name="og:description"
     />
     <meta
@@ -370,7 +370,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       name="twitter:creator"
     />
     <meta
-      content="Article summary."
+      content="Article Headline for SEO"
       name="twitter:description"
     />
     <meta
@@ -389,30 +389,6 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       content="Article Headline for SEO - BBC News"
       name="twitter:title"
     />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="Royal Wedding 2018"
-      name="article:tag"
-    />
-    <meta
-      content="Duchess of Sussex"
-      name="article:tag"
-    />
-    <meta
-      content="Queen Victoria"
-      name="article:tag"
-    />
     <script
       type="application/ld+json"
     >
@@ -425,6 +401,30 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       <div>
         chartbeat
       </div>
+      <meta
+        content="https://www.facebook.com/bbcnews"
+        name="article:author"
+      />
+      <meta
+        content="2018-01-01T13:00:00.000Z"
+        name="article:modified_time"
+      />
+      <meta
+        content="2018-01-01T12:01:00.000Z"
+        name="article:published_time"
+      />
+      <meta
+        content="Royal Wedding 2018"
+        name="article:tag"
+      />
+      <meta
+        content="Duchess of Sussex"
+        name="article:tag"
+      />
+      <meta
+        content="Queen Victoria"
+        name="article:tag"
+      />
       <main
         role="main"
       >
@@ -574,7 +574,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       name="application-name"
     />
     <meta
-      content="خلاصه مقاله"
+      content="سرصفحه مقاله"
       name="description"
     />
     <meta
@@ -598,7 +598,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       name="msapplication-TileImage"
     />
     <meta
-      content="خلاصه مقاله"
+      content="سرصفحه مقاله"
       name="og:description"
     />
     <meta
@@ -638,7 +638,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       name="twitter:creator"
     />
     <meta
-      content="خلاصه مقاله"
+      content="سرصفحه مقاله"
       name="twitter:description"
     />
     <meta
@@ -656,18 +656,6 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
     />
     <script
       type="application/ld+json"
@@ -856,6 +844,18 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       <div>
         chartbeat
       </div>
+      <meta
+        content="https://www.facebook.com/bbcnews"
+        name="article:author"
+      />
+      <meta
+        content="2018-01-01T13:00:00.000Z"
+        name="article:modified_time"
+      />
+      <meta
+        content="2018-01-01T12:01:00.000Z"
+        name="article:published_time"
+      />
       <main
         role="main"
       >
@@ -1005,7 +1005,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       name="application-name"
     />
     <meta
-      content="Article summary in Pidgin"
+      content="Article Headline for SEO in Pidgin"
       name="description"
     />
     <meta
@@ -1029,7 +1029,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       name="msapplication-TileImage"
     />
     <meta
-      content="Article summary in Pidgin"
+      content="Article Headline for SEO in Pidgin"
       name="og:description"
     />
     <meta
@@ -1069,7 +1069,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       name="twitter:creator"
     />
     <meta
-      content="Article summary in Pidgin"
+      content="Article Headline for SEO in Pidgin"
       name="twitter:description"
     />
     <meta
@@ -1087,18 +1087,6 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
     <meta
       content="Article Headline for SEO in Pidgin - BBC News Pidgin"
       name="twitter:title"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
     />
     <script
       type="application/ld+json"
@@ -1287,6 +1275,18 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       <div>
         chartbeat
       </div>
+      <meta
+        content="https://www.facebook.com/bbcnews"
+        name="article:author"
+      />
+      <meta
+        content="2018-01-01T13:00:00.000Z"
+        name="article:modified_time"
+      />
+      <meta
+        content="2018-01-01T12:01:00.000Z"
+        name="article:published_time"
+      />
       <main
         role="main"
       >

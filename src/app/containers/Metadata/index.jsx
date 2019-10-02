@@ -1,20 +1,10 @@
 import React, { useContext } from 'react';
-import { shape, oneOfType, objectOf, any } from 'prop-types';
+import { string, shape, node, objectOf, any, arrayOf } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import Metadata from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
-import {
-  optimoMetadataPropTypes,
-  cpsMetadataPropTypes,
-  mediaMetadataPropTypes,
-} from '#models/propTypes/metadata';
-import {
-  optimoPromoPropTypes,
-  cpsPromoPropTypes,
-  mediaPromoPropTypes,
-} from '#models/propTypes/promo';
 import aboutTagsContent from './linkedDataAbout';
 
 const ENGLISH_SERVICES = ['news'];
@@ -34,16 +24,6 @@ const pageTypeMetadata = {
   },
 };
 
-const getTitle = promo =>
-  pathOr(null, ['headlines', 'seoHeadline'], promo)
-    ? pathOr(null, ['headlines', 'seoHeadline'], promo)
-    : pathOr(null, ['name'], promo);
-
-const getDescription = (metadata, promo) =>
-  pathOr(null, ['summary'], promo) ||
-  pathOr(null, ['headlines', 'seoHeadline'], promo) ||
-  pathOr(null, ['summary'], metadata);
-
 const getAppleTouchUrl = service => {
   const assetsPath = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH || '/';
   const separatorSlash = assetsPath[assetsPath.length - 1] !== '/' ? '/' : '';
@@ -57,7 +37,15 @@ const getAppleTouchUrl = service => {
   ].join('');
 };
 
-const MetadataContainer = ({ metadata, promo, pageSpecificLinkedData }) => {
+const MetadataContainer = ({
+  title,
+  aboutTags,
+  lang,
+  seoHeadline,
+  description,
+  pageSpecificLinkedData,
+  children,
+}) => {
   const {
     pageType,
     platform,
@@ -71,7 +59,6 @@ const MetadataContainer = ({ metadata, promo, pageSpecificLinkedData }) => {
   const {
     service,
     brandName,
-    articleAuthor,
     defaultImage,
     defaultImageAltText,
     dir,
@@ -82,14 +69,7 @@ const MetadataContainer = ({ metadata, promo, pageSpecificLinkedData }) => {
     twitterSite,
     publishingPrinciples,
     noBylinesPolicy,
-    frontPageTitle,
   } = useContext(ServiceContext);
-  const { id: aresArticleId } = metadata;
-
-  if (!aresArticleId) {
-    return null;
-  }
-
   const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
 
@@ -137,11 +117,6 @@ const MetadataContainer = ({ metadata, promo, pageSpecificLinkedData }) => {
     icon: ['72x72', '96x96', '192x192'],
   };
 
-  const title =
-    pageType === 'frontPage' && frontPageTitle
-      ? frontPageTitle
-      : getTitle(promo);
-
   return (
     <>
       <LinkedData
@@ -150,9 +125,9 @@ const MetadataContainer = ({ metadata, promo, pageSpecificLinkedData }) => {
         logoUrl={defaultImage}
         noBylinesPolicy={noBylinesPolicy}
         publishingPrinciples={publishingPrinciples}
-        seoHeadline={getTitle(promo)}
+        seoHeadline={seoHeadline}
         type={pathOr(null, [pageType, 'schemaOrg'], pageTypeMetadata)}
-        about={aboutTagsContent(pathOr(null, ['tags', 'about'], metadata))}
+        about={aboutTagsContent(aboutTags)}
         pageSpecific={pageSpecificLinkedData}
       />
       <Metadata
@@ -160,20 +135,15 @@ const MetadataContainer = ({ metadata, promo, pageSpecificLinkedData }) => {
         alternateLinks={alternateLinks}
         ampLink={ampLink}
         appleTouchIcon={appleTouchIcon}
-        articleAuthor={articleAuthor}
-        articleSection={pathOr(null, ['passport', 'genre'], metadata)}
         brandName={brandName}
         canonicalLink={canonicalNonUkLink}
         defaultImage={defaultImage}
         defaultImageAltText={defaultImageAltText}
-        description={getDescription(metadata, promo)}
+        description={description}
         dir={dir}
         facebookAdmin={100004154058350}
         facebookAppID={1609039196070050}
-        lang={
-          pathOr(null, ['passport', 'language'], metadata) ||
-          pathOr(null, ['language'], metadata)
-        }
+        lang={lang}
         locale={locale}
         themeColor={themeColor}
         title={title}
@@ -183,26 +153,36 @@ const MetadataContainer = ({ metadata, promo, pageSpecificLinkedData }) => {
         service={service}
         iconSizes={iconSizes}
       />
+      {children}
     </>
   );
 };
 
+const tagPropTypes = shape({
+  thingUri: string,
+  topicId: string,
+  topicName: string,
+  curationType: arrayOf(string),
+  thingId: string,
+  thingLabel: string,
+  thingType: arrayOf(string),
+  thingSameAs: arrayOf(string),
+});
+
 MetadataContainer.propTypes = {
-  metadata: oneOfType([
-    shape(cpsMetadataPropTypes),
-    shape(optimoMetadataPropTypes),
-    shape(mediaMetadataPropTypes),
-  ]).isRequired,
-  promo: oneOfType([
-    shape(cpsPromoPropTypes),
-    shape(optimoPromoPropTypes),
-    shape(mediaPromoPropTypes),
-  ]).isRequired,
+  title: string.isRequired,
+  aboutTags: arrayOf(tagPropTypes),
+  lang: string.isRequired,
+  seoHeadline: string.isRequired,
+  description: string.isRequired,
   pageSpecificLinkedData: objectOf(any),
+  children: node,
 };
 
 MetadataContainer.defaultProps = {
   pageSpecificLinkedData: {},
+  aboutTags: [],
+  children: null,
 };
 
 export default MetadataContainer;
