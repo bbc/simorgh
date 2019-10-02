@@ -1,3 +1,5 @@
+/* eslint-disable jam3/no-sanitizer-with-danger */
+/* eslint-disable react/prop-types */
 import React from 'react';
 import xss from 'xss';
 import {
@@ -7,7 +9,6 @@ import {
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
-/* eslint-disable react/prop-types */
 const Document = ({
   assetOrigins,
   app,
@@ -72,11 +73,11 @@ const Document = ({
       <body>
         {/* eslint-disable react/no-danger */
         /* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
-        <div id="root" dangerouslySetInnerHTML={{ __html: xss(app) }} />
+        <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
         {scriptsAllowed && (
           <script
             dangerouslySetInnerHTML={{
-              __html: xss(`window.SIMORGH_DATA=${serialisedData}`),
+              __html: `window.SIMORGH_DATA=${xss(serialisedData)}`,
             }}
           />
         )}
