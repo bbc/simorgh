@@ -6,7 +6,11 @@ export const ComponentUsingContext = ({ context }) => {
   const value = useContext(context);
   return (
     <>
-      <span>{JSON.stringify(value)}</span>
+      <span>
+        {JSON.stringify(value, (key, val) =>
+          typeof val === 'function' ? val.toString() : val,
+        )}
+      </span>
     </>
   );
 };
