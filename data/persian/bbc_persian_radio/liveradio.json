@@ -50,7 +50,7 @@
   "promo": {
     "name": "رادیو فارسی بی‌بی‌سی",
     "summary": "مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.",
-    "uri": "/pashto/bbc_pashto_radio/liveradio",
+    "uri": "/persian/bbc_persian_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_persian_radio",
     "type": "link"
