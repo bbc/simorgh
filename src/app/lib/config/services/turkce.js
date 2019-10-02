@@ -11,6 +11,7 @@ import {
 import { turkce as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
+import 'moment/locale/tr';
 
 export const service = {
   default: {
