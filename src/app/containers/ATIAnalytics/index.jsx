@@ -5,7 +5,7 @@ import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import { buildArticleATIUrl } from './params/article/buildParams';
 import { buildFrontPageATIUrl } from './params/frontpage/buildParams';
-import { buildRadioATIUrl } from './params/radiopage/buildParams';
+import { buildRadioATIUrl } from './params/radioPage/buildParams';
 import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {

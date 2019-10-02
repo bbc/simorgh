@@ -11,38 +11,39 @@ const baseUrl = 'http://localhost.bbc.com:7080';
 
 const getPageTypes = service => pathOr(null, [service, 'pageTypes'], services);
 
-const getFrontPages = pageType => pathOr(null, ['frontPage'], pageType);
-
-const getArticles = pageType => pathOr(null, ['articles'], pageType);
-
 const getSmokePaths = config => {
   const { path, smoke } = config;
   return smoke && path ? path : null;
 };
 
-const getUrls = () => {
-  const serviceNames = Object.keys(services);
-  const pageTypes = serviceNames.map(getPageTypes);
-  const frontPages = pageTypes
-    .map(getFrontPages)
+const getUrls = pageType =>
+  Object.keys(services)
+    .map(getPageTypes)
+    .map(pageTypes => pathOr(null, [pageType], pageTypes))
     .map(getSmokePaths)
-    .filter(page => !!page);
-  const articles = pageTypes
-    .map(getArticles)
-    .map(getSmokePaths)
-    .filter(article => !!article);
-  return [...frontPages, ...articles].map(url => `${baseUrl}${url}`);
+    .filter(page => !!page)
+    .map(url => `${baseUrl}${url}`);
+
+// '/html/head/iframe' Added to prevent false negatives from mPulse beacon
+// which creates iframe in document head
+
+// '//div[@id='root']/main/div/div/div/div/iframe' Added to hide
+// iframe errors to be fixed in https://github.com/bbc/bbc-a11y/issues/298
+
+const pageTypes = {
+  frontPage: ['/html/head/iframe'],
+  articles: ['/html/head/iframe'],
+  liveRadio: [
+    '/html/head/iframe',
+    "//div[@id='root']/main/div/div/div/div/iframe",
+  ],
 };
 
-const urls = getUrls();
-
-// Added to prevent false negatives from mPulse beacon
-// which creates iframe in document head
-const hide = ['/html/head/iframe'];
-
-urls.forEach(url =>
-  pageWidths.forEach(width =>
-    // eslint-disable-next-line no-undef
-    page(url, { width, hide }),
-  ),
-);
+Object.keys(pageTypes).forEach(pageType => {
+  getUrls(pageType).forEach(url =>
+    pageWidths.forEach(width =>
+      // eslint-disable-next-line no-undef
+      page(url, { width, hide: pageTypes[pageType] }),
+    ),
+  );
+});

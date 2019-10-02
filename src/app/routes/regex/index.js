@@ -35,5 +35,5 @@ export const radioAndTvDataRegexPath = buildRadioAndTvDataRoutes(
   servicesWithRadioAndTv,
 );
 
-export const mediaAssetPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
-export const mediaAssetPageDataRegexPath = `${mediaAssetPageRegexPath}.json`;
+export const cpsAssetPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+export const cpsAssetPageDataRegexPath = `${cpsAssetPageRegexPath}.json`;
