@@ -12,7 +12,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
     {"toggleState":{"local":{"chartbeatAnalytics":{"enabled":false},"mediaPlayer":{"enabled":true},"mpulse":{"enabled":false},"navOnArticles":{"enabled":true}},"test":{"chartbeatAnalytics":{"enabled":true},"mediaPlayer":{"enabled":true},"mpulse":{"enabled":true},"navOnArticles":{"enabled":true}},"live":{"chartbeatAnalytics":{"enabled":false},"mediaPlayer":{"enabled":false},"mpulse":{"enabled":true},"navOnArticles":{"enabled":false}}},"toggleDispatch":"function () { [native code] }"}
   </span>
   <span>
-    {"cookiePolicy":"000","sendCanonicalChartbeatBeacon":"function () { [native code] }","updateCookiePolicy":"function updateCookiePolicy() {\\n      return setCookiePolicy((0, _cookies.getCookiePolicy)());\\n    }","personalisationEnabled":false}
+    {"cookiePolicy":"000","sendCanonicalChartbeatBeacon":"function () { [native code] }","updateCookiePolicy":"function\\n    /* istanbul ignore next */\\n    updateCookiePolicy() {\\n      /* istanbul ignore next */\\n      cov_19m71cbwl4.f[1]++;\\n      cov_19m71cbwl4.s[5]++;\\n      return setCookiePolicy(\\n      /* istanbul ignore next */\\n      (0,\\n      /* istanbul ignore next */\\n      _cookies.\\n      /* istanbul ignore next */\\n      getCookiePolicy)());\\n    }","personalisationEnabled":false}
   </span>
 </div>
 `;
