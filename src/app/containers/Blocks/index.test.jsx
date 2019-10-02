@@ -47,8 +47,8 @@ describe('Blocks', () => {
   };
 
   const blocks = [
-    blockContainingText('mock-id-1', 'headline', 'This is a headline!'),
-    blockContainingText('mock-id-2', 'subheadline', 'This is a subheadline!'),
+    blockContainingText('headline', 'This is a headline!', 'mock-id-1'),
+    blockContainingText('subheadline', 'This is a subheadline!', 'mock-id-2'),
     singleTextBlock('This is some text content!'),
   ];
 
@@ -59,8 +59,8 @@ describe('Blocks', () => {
 
   describe('with mixed set of known and unknown blocks', () => {
     const mixedBlocks = [
-      blockContainingText('mock-id-1', 'headline', 'This is a headline!'),
-      blockContainingText('mock-id-2', 'subheadline', 'This is a subheadline!'),
+      blockContainingText('headline', 'This is a headline!', 'mock-id-1'),
+      blockContainingText('subheadline', 'This is a subheadline!', 'mock-id-2'),
       singleTextBlock('This is some text content!'),
       unknownTestBlock,
       parentBlockNotAllowed,

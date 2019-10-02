@@ -1,13 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blocks should render correctly 1`] = `
-<p>
-  Some text
-</p>
+<div>
+  <h1>
+    A headline
+  </h1>
+  <h2>
+    A subheadline
+  </h2>
+  <p>
+    Some text
+  </p>
+</div>
 `;
 
 exports[`Blocks with mixed set of known and unknown blocks should render known blocks; unknown blocks rendered null 1`] = `
-<p>
-  Some text
-</p>
+<div>
+  <h1>
+    A headline
+  </h1>
+  <h2>
+    A subheadline
+  </h2>
+  <p>
+    Some text
+  </p>
+</div>
 `;
