@@ -75,7 +75,7 @@
     "@bbc/psammead-sitewide-links": "^3.1.11",
     "@bbc/psammead-story-promo": "^2.7.16",
     "@bbc/psammead-story-promo-list": "^2.1.13",
-    "@bbc/psammead-styles": "^4.0.0",
+    "@bbc/psammead-styles": "^4.0.1",
     "@bbc/psammead-timestamp-container": "^2.4.18",
     "@bbc/psammead-visually-hidden-text": "^1.2.2",
     "@loadable/component": "^5.10.2",
