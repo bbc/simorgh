@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::ws_live:bbc_sinhala_radio",
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_sinhala_radio"
+    },
+    "type": "WS-LIVE",
+    "createdBy": "sinhala",
+    "language": "si",
+    "lastUpdated": 0,
+    "firstPublished": 0,
+    "lastPublished": 0,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "බීබීසී සිංහල සංදේශය - BBC News සිංහල",
+      "pageIdentifier": "sinhala.bbc_sinhala_radio.liveradio.page",
+      "producerId": "82",
+      "contentType": "player-live",
+      "producer": "SINHALA"
+    },
+    "tags": {},
+    "version": "1.1.2",
+    "blockTypes": ["heading", "version", "paragraph"]
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "බීබීසී සිංහල සංදේශය",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_sinhala_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "promo": {
+    "name": "බීබීසී සිංහල සංදේශය",
+    "summary": "බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්",
+    "uri": "/sinhala/bbc_sinhala_radio/liveradio",
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares::ws_live:bbc_sinhala_radio",
+    "type": "link"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "simple",
+      "name": "sinhala",
+      "uri": "/sinhala",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
