@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import { articleDataPropTypes } from '#models/propTypes/article';
-import ArticleMetadata from '../../components/ArticleMetadata';
+import ArticleMetadata from '../ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '../Headings';
 import text from '../Text';

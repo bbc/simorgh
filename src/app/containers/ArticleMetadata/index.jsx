@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, shape, arrayOf, objectOf, any } from 'prop-types';
-import Metadata from '../../containers/Metadata';
+import Metadata from '../Metadata';
 
 const renderTags = tags =>
   tags.map(({ thingLabel: content }) => (
