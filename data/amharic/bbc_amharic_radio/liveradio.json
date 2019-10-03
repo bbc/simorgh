@@ -1,7 +1,9 @@
 {
   "metadata": {
     "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
-    "locators": {},
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_amharic_radio"
+    },
     "type": "WS-LIVE",
     "createdBy": "amharic",
     "language": "am",
@@ -10,11 +12,14 @@
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
+      "pageTitle": "ያድምጡ - BBC News አማርኛ",
       "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page",
-      "pageTitle": "ያድምጡ - BBC News አማርኛ"
+      "producerId": "4",
+      "contentType": "player-live",
+      "producer": "AMHARIC"
     },
     "tags": {},
-    "version": "1.1.1",
+    "version": "1.1.2",
     "blockTypes": ["heading", "version", "paragraph"]
   },
   "content": {
@@ -25,7 +30,7 @@
         "type": "heading"
       },
       {
-        "text": "ዝግጅቶቻችንን",
+        "text": "ዝግጅቶቻችንን’",
         "type": "paragraph"
       },
       {
@@ -44,7 +49,7 @@
   },
   "promo": {
     "name": "ያድምጡ",
-    "summary": "ዝግጅቶቻችንን",
+    "summary": "ዝግጅቶቻችንን’",
     "uri": "/amharic/bbc_amharic_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
