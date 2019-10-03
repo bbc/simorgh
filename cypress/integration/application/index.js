@@ -35,7 +35,7 @@ describe('Application', () => {
 
 describe('Application', () => {
   servicesUsingArticlePaths.forEach(service => {
-    it('should return a 200 status code for the news service worker', () => {
+    it(`should return a 200 status code for the ${service} service worker`, () => {
       cy.testResponseCodeAndType(
         `/${service}/articles/sw.js`,
         200,
