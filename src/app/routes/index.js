@@ -16,10 +16,12 @@ import {
 const pages = {
   MAP: RadioPage,
   FIX: FrontPage,
+  error: ErrorPage,
 };
 
 const CpsAsset = props => {
-  const { type } = props.pageData.metadata;
+  const pageData = props.pageData || {};
+  const { type } = pageData.metadata || { type: 'error' };
   const Page = pages[type];
   return Page({ ...props, pageType: type });
 };
