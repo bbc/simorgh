@@ -1,7 +1,9 @@
 {
   "metadata": {
     "id": "urn:bbc:ares::ws_live:bbc_dari_radio",
-    "locators": {},
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_dari_radio"
+    },
     "type": "WS-LIVE",
     "createdBy": "persian",
     "language": "fa",
@@ -10,11 +12,14 @@
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
+      "pageTitle": "بی بی سی افغانستان (برنامه های دری) - BBC News فارسی",
       "pageIdentifier": "persian.bbc_dari_radio.liveradio.page",
-      "pageTitle": "بی بی سی افغانستان (برنامه های دری) - BBC News فارسی"
+      "producerId": "69",
+      "contentType": "player-live",
+      "producer": "PERSIAN"
     },
     "tags": {},
-    "version": "1.1.1",
+    "version": "1.1.2",
     "blockTypes": ["heading", "version", "paragraph"]
   },
   "content": {
