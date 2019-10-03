@@ -436,7 +436,6 @@ exports[`Radio Page Main should match snapshot 1`] = `
                   allow="autoplay; fullscreen"
                   allowfullscreen=""
                   class="c7"
-                  scrolling="no"
                   src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio"
                 />
               </div>
