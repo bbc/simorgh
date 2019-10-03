@@ -1,6 +1,7 @@
 import React from 'react';
-import { bool, element, string, shape, number } from 'prop-types';
+import { bool, element, string, number } from 'prop-types';
 import variantPropType from '#models/propTypes/variants';
+import { pageDataPropType } from '#models/propTypes/data';
 
 // context providers
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -13,7 +14,7 @@ const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
       bbcOrigin,
-      data,
+      status,
       id,
       service,
       isAmp,
@@ -22,10 +23,6 @@ const WithContexts = Component => {
       previousPath,
       variant,
     } = props;
-
-    // Temp fix. This destructuring will become redundant
-    // following https://github.com/bbc/simorgh/issues/3839
-    const { status } = data || {};
 
     return (
       <ToggleContextProvider>
@@ -54,11 +51,10 @@ const WithContexts = Component => {
 
   WithContextsContainer.propTypes = {
     bbcOrigin: string,
-    data: shape({
-      status: number.isRequired,
-    }).isRequired,
+    status: number.isRequired,
     id: string,
     isAmp: bool.isRequired,
+    pageData: pageDataPropType,
     pageType: string.isRequired,
     pathname: string.isRequired,
     previousPath: string,
@@ -69,6 +65,7 @@ const WithContexts = Component => {
   WithContextsContainer.defaultProps = {
     bbcOrigin: null,
     id: null,
+    pageData: null,
     previousPath: null,
     variant: null,
   };
