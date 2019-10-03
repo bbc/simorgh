@@ -1,22 +1,22 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
+    "id": "urn:bbc:ares::ws_live:bbc_uzbek_radio",
     "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_indonesian_radio"
+      "pipsUrn": "urn:bbc:pips:bbc_uzbek_radio"
     },
     "type": "WS-LIVE",
-    "createdBy": "indonesia",
-    "language": "id",
+    "createdBy": "uzbek",
+    "language": "uz",
     "lastUpdated": 0,
     "firstPublished": 0,
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
-      "pageTitle": "BBC Indonesia Radio - BBC News Indonesia",
-      "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page",
-      "producerId": "54",
+      "pageTitle": "BBC Uzbek Radio - BBC News O'zbek",
+      "pageIdentifier": "uzbek.bbc_uzbek_radio.liveradio.page",
+      "producerId": "96",
       "contentType": "player-live",
-      "producer": "INDONESIAN"
+      "producer": "UZBEK"
     },
     "tags": {},
     "version": "1.1.2",
@@ -25,19 +25,19 @@
   "content": {
     "blocks": [
       {
-        "text": "BBC Indonesia Radio",
+        "text": "",
         "markupType": "plain_text",
         "type": "heading"
       },
       {
-        "text": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+        "text": "",
         "type": "paragraph"
       },
       {
         "id": "liveradio",
         "subType": "primary",
         "format": "audio",
-        "externalId": "bbc_indonesian_radio",
+        "externalId": "bbc_uzbek_radio",
         "duration": "PT0S",
         "caption": "",
         "embedding": false,
@@ -48,18 +48,18 @@
     ]
   },
   "promo": {
-    "name": "BBC Indonesia Radio",
-    "summary": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
-    "uri": "/indonesia/bbc_indonesian_radio/liveradio",
+    "name": "",
+    "summary": "",
+    "uri": "/uzbek/bbc_uzbek_radio/liveradio",
     "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
+    "id": "urn:bbc:ares::ws_live:bbc_uzbek_radio",
     "type": "link"
   },
   "relatedContent": {
     "site": {
       "subType": "simple",
-      "name": "indonesia",
-      "uri": "/indonesia",
+      "name": "uzbek",
+      "uri": "/uzbek",
       "type": "simple"
     },
     "groups": []
