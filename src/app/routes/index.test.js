@@ -5,11 +5,9 @@ jest.mock('../containers/FrontPage', () => jest.fn());
 jest.mock('../containers/RadioPage', () => jest.fn());
 
 const generateFixtureData = type => ({
-  data: {
-    pageData: {
-      metadata: {
-        type,
-      },
+  pageData: {
+    metadata: {
+      type,
     },
   },
 });

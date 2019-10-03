@@ -19,7 +19,7 @@ const pages = {
 };
 
 const CpsAsset = props => {
-  const { type } = props.data.pageData.metadata;
+  const { type } = props.pageData.metadata;
   const Page = pages[type];
   return Page({ ...props, pageType: type });
 };
