@@ -32,7 +32,7 @@ exports[`Radio Page Main should match snapshot 1`] = `
 }
 
 .c6 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }

@@ -11,4 +11,5 @@ Resolves #NUMBER
 
 - [ ] I have assigned myself to this PR and the corresponding issues
 - [ ] Automated (jest and/or cypress) tests added (for new features) or updated (for existing features)
+- [ ] If necessary, I have run the local E2E non-smoke tests relevant to my changes (`CYPRESS_APP_ENV=local CYPRESS_SMOKE=false npm run test:e2e:interactive`) 
 - [ ] This PR requires manual testing
