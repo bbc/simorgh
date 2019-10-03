@@ -66,9 +66,9 @@ describe('ArticleTimestamp helper functions', () => {
 
   describe('isSameDay', () => {
     it('should return true if both timestamps are within 24 hours of each other', () => {
-      const fortyHoursAgo = timestampGenerator({ hours: 40 });
-      const thirtySixHoursAgo = timestampGenerator({ hours: 36 });
-      expect(isSameDay(fortyHoursAgo, thirtySixHoursAgo)).toEqual(true);
+      const firstPublished = 1569962265000;
+      const lastPublished = 1569962145008;
+      expect(isSameDay(firstPublished, lastPublished)).toEqual(true);
     });
 
     it('should return false if both timestamps are not within 24 hours of each other', () => {
