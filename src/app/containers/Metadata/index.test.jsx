@@ -25,8 +25,8 @@ const getArticleMetadataProps = data => ({
   openGraph: 'article',
 });
 
-const englishMetadataProps = getArticleMetadataProps(articleDataNews);
-const persianMetadataProps = getArticleMetadataProps(articleDataPersian);
+const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
+const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
 
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
@@ -80,7 +80,7 @@ const CanonicalNewsInternationalOrigin = () => (
     id="c0000000001o"
     pageType="article"
     pathname="/news/articles/c0000000001o"
-    {...englishMetadataProps}
+    {...newsArticleMetadataProps}
   />
 );
 
@@ -470,7 +470,7 @@ shouldMatchSnapshot(
     id="c0000000001o"
     pageType="article"
     pathname="/news/articles/c0000000001o.amp"
-    {...englishMetadataProps}
+    {...newsArticleMetadataProps}
   />,
 );
 
@@ -483,7 +483,7 @@ shouldMatchSnapshot(
     id="c4vlle3q337o"
     pageType="article"
     pathname="/persian/articles/c4vlle3q337o"
-    {...persianMetadataProps}
+    {...persianArticleMetadataProps}
   />,
 );
 
@@ -496,7 +496,7 @@ shouldMatchSnapshot(
     id="c4vlle3q337o"
     pageType="article"
     pathname="/persian/articles/c4vlle3q337o.amp"
-    {...persianMetadataProps}
+    {...persianArticleMetadataProps}
   />,
 );
 
