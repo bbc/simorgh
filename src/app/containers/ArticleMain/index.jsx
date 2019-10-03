@@ -23,7 +23,7 @@ import {
   getMentions,
   getLang,
   buildLinkedData,
-} from './utils';
+} from '../ArticleMetadata/utils';
 
 const componentsToRender = {
   headline: headings,
