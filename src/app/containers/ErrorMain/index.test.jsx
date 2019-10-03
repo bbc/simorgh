@@ -7,7 +7,7 @@ describe('ErrorMain', () => {
   shouldMatchSnapshot(
     'should correctly render for 404',
     <ServiceContextProvider service="news">
-      <ErrorMain status={404} service="news" />
+      <ErrorMain status={404} />
     </ServiceContextProvider>,
   );
 
