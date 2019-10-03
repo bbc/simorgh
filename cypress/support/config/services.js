@@ -1000,7 +1000,7 @@ const services = {
     pageTypes: {
       articles: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/scotland/articles/czwj5l0n210o',
         smoke: true,
