@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::ws_live:bbc_burmese_radio",
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_burmese_radio"
+    },
+    "type": "WS-LIVE",
+    "createdBy": "burmese",
+    "language": "my",
+    "lastUpdated": 0,
+    "firstPublished": 0,
+    "lastPublished": 0,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို - BBC News မြန်မာ",
+      "pageIdentifier": "burmese.bbc_burmese_radio.liveradio.page",
+      "producerId": "35",
+      "contentType": "player-live",
+      "producer": "BURMESE"
+    },
+    "tags": {},
+    "version": "1.1.2",
+    "blockTypes": ["heading", "version", "paragraph"]
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "နေ့စဉ် ပြည်တွင်း ပြည်ပ သတင်းနဲ့ သုံးသပ်ချက်များ၊ ပညာရေး၊ ကျန်းမာရေး၊ အားကစား၊ နည်းပညာ အစီအစဉ်များ နဲ့ မျက်မှောက်ရေးရာ ဆွေးနွေးခန်းများ",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_burmese_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "promo": {
+    "name": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို",
+    "summary": "နေ့စဉ် ပြည်တွင်း ပြည်ပ သတင်းနဲ့ သုံးသပ်ချက်များ၊ ပညာရေး၊ ကျန်းမာရေး၊ အားကစား၊ နည်းပညာ အစီအစဉ်များ နဲ့ မျက်မှောက်ရေးရာ ဆွေးနွေးခန်းများ",
+    "uri": "/burmese/bbc_burmese_radio/liveradio",
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares::ws_live:bbc_burmese_radio",
+    "type": "link"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "simple",
+      "name": "burmese",
+      "uri": "/burmese",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
