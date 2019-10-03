@@ -67,7 +67,7 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
           class="c1"
         >
           <amp-iframe
-            allowfullscreen="true"
+            allowfullscreen="allowfullscreen"
             frameborder="0"
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
