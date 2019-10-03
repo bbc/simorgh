@@ -64,3 +64,55 @@ export const renderAlternateLinks = link => (
     key={link.hrefLang}
   />
 );
+
+export const buildLinkedData = ({
+  brandName,
+  type,
+  seoHeadline,
+  logoUrl,
+  publishingPrinciples,
+  canonicalLink,
+  pageSpecific,
+}) => {
+  const imgObject = 'ImageObject';
+  const newsMediaOrg = 'NewsMediaOrganization';
+  const webPageType = 'WebPage';
+
+  const logo = {
+    '@type': imgObject,
+    width: 1024,
+    height: 576,
+    url: logoUrl,
+  };
+
+  const image = {
+    '@type': imgObject,
+    width: 1024,
+    height: 576,
+    url: logoUrl,
+  };
+
+  const publisher = {
+    '@type': newsMediaOrg,
+    name: brandName,
+    publishingPrinciples,
+    logo,
+  };
+
+  const mainEntityOfPage = {
+    '@type': webPageType,
+    '@id': canonicalLink,
+    name: seoHeadline,
+  };
+
+  return {
+    '@context': 'http://schema.org',
+    '@type': type,
+    url: canonicalLink,
+    publisher,
+    image,
+    thumbnailUrl: logoUrl,
+    mainEntityOfPage,
+    ...pageSpecific,
+  };
+};
