@@ -60,7 +60,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 .c2 {
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -412,7 +412,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 .c2 {
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -714,7 +714,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 .c2 {
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1011,7 +1011,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 .c2 {
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1308,7 +1308,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 .c2 {
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
