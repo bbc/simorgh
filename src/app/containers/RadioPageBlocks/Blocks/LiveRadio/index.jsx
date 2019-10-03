@@ -11,6 +11,9 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
 
+const liveRadioPlaceholderImageSrc =
+  'https://news.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png';
+
 const MediaPlayerOuterWrapper = styled.div`
   @media (min-width: 63rem) {
     display: flex;
@@ -54,7 +57,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     <MediaPlayerOuterWrapper>
       <MediaPlayerInnerWrapper>
         <MediaPlayer
-          showPlaceholder={false}
+          placeholderSrc={isAmp ? liveRadioPlaceholderImageSrc : null}
+          showPlaceholder={!isAmp ? false : null}
           src={embedSource}
           id={idAttr}
           skin="audio"

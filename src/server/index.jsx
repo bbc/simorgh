@@ -13,8 +13,8 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
+  cpsAssetPageDataRegexPath,
   radioAndTvDataRegexPath,
-  mediaAssetPageDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -144,7 +144,7 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
-    .get(mediaAssetPageDataRegexPath, async ({ params }, res, next) => {
+    .get(cpsAssetPageDataRegexPath, async ({ params }, res, next) => {
       const { service, assetUri: id, variant } = params;
 
       const dataFilePath = constructDataFilePath({
@@ -199,6 +199,9 @@ server
       const data = await route.getInitialData(match.params);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
+
+      // Temp log to test upstream change
+      logger.info(`Country code: ${headers['bbc-country'] || 'unknown!'}`);
 
       data.path = urlPath;
 
