@@ -29,7 +29,7 @@ const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
 
 const ErrorTag = styled(Paragraph)`
   padding-top: 50px;
-  margin-bottom: -50px;
+  margin-bottom: -55px;
 `;
 
 const ErrorPage = ({
@@ -47,7 +47,7 @@ const ErrorPage = ({
   <main role="main">
     <GhostGrid>
       <LongGridItemConstrainedMedium>
-        <ErrorTag>
+        <ErrorTag script={script} service={service}>
           <StatusCode script={script}>{statusCode}</StatusCode>
         </ErrorTag>
         <ShortHeadline
