@@ -23,9 +23,10 @@ const StatusCode = styled.span`
 `;
 
 const HeadingFix = styled.h1`
-${({ script }) => script && getCanon(script)};
-${({ service }) => getSerifMedium(service)}
-color: ${C_SHADOW};
+  ${({ script }) => script && getCanon(script)};
+  ${({ service }) => getSerifMedium(service)}
+  color: ${C_SHADOW};
+  margin-top: 0;
 `;
 
 const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
