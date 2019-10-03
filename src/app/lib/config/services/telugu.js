@@ -4,6 +4,7 @@ import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
+import 'moment/locale/te';
 
 export const service = {
   default: {

@@ -11,6 +11,7 @@ import {
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
+import 'moment/locale/gd';
 
 export const service = {
   default: {
