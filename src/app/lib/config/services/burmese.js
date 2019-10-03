@@ -4,6 +4,7 @@ import { burmese as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_PADAUK_BOLD, F_PADAUK_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
+import 'moment/locale/my';
 
 export const service = {
   default: {
