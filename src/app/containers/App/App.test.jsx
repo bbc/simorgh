@@ -100,7 +100,7 @@ describe('App', () => {
             {
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
-              status: 500,
+              status: null,
               error: null,
               id: undefined,
               isAmp: false,
@@ -120,7 +120,7 @@ describe('App', () => {
             {
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
-              status: 500,
+              status: null,
               error,
               isAmp: false,
               loading: false,
@@ -158,7 +158,7 @@ describe('App', () => {
             {
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
-              status: 500,
+              status: null,
               error: null,
               id: undefined,
               isAmp: false,
