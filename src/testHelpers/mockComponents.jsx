@@ -8,7 +8,7 @@ export const ComponentUsingContext = ({ context }) => {
     <>
       <span>
         {JSON.stringify(value, (key, val) =>
-          typeof val === 'function' ? val.toString() : val,
+          typeof val === 'function' ? `*function - ${val.name}*` : val,
         )}
       </span>
     </>
