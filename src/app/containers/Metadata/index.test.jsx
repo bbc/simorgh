@@ -15,6 +15,19 @@ const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
 
+const getArticleMetadataProps = data => ({
+  title: data.promo.headlines.seoHeadline,
+  lang: data.metadata.passport.language,
+  seoHeadline: data.promo.headlines.seoHeadline,
+  description: data.promo.summary,
+  aboutTags: data.metadata.tags.about,
+  schemaOrg: 'Article',
+  openGraph: 'article',
+});
+
+const englishMetadataProps = getArticleMetadataProps(articleDataNews);
+const persianMetadataProps = getArticleMetadataProps(articleDataPersian);
+
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
   service,
@@ -23,8 +36,13 @@ const MetadataWithContext = ({
   id,
   pageType,
   pathname,
-  promo,
-  metadata,
+  title,
+  lang,
+  seoHeadline,
+  description,
+  aboutTags,
+  openGraph,
+  schemaOrg,
   /* eslint-enable react/prop-types */
 }) => {
   const serviceConfig = services[service].default;
@@ -40,7 +58,15 @@ const MetadataWithContext = ({
         service={service}
         statusCode={200}
       >
-        <MetadataContainer promo={promo} metadata={metadata} />
+        <MetadataContainer
+          title={title}
+          lang={lang}
+          seoHeadline={seoHeadline}
+          description={description}
+          aboutTags={aboutTags}
+          openGraph={openGraph}
+          schemaOrg={schemaOrg}
+        />
       </RequestContextProvider>
     </ServiceContextProvider>
   );
@@ -54,8 +80,7 @@ const CanonicalNewsInternationalOrigin = () => (
     id="c0000000001o"
     pageType="article"
     pathname="/news/articles/c0000000001o"
-    promo={articleDataNews.promo}
-    metadata={articleDataNews.metadata}
+    {...englishMetadataProps}
   />
 );
 
@@ -399,29 +424,6 @@ it('should render the linked data', async () => {
   const expected = {
     '@context': 'http://schema.org',
     '@type': 'Article',
-    about: [
-      {
-        '@type': 'Thing',
-        name: 'Royal Wedding 2018',
-        sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
-      },
-      { '@type': 'Person', name: 'Duchess of Sussex' },
-    ],
-    author: {
-      '@type': 'NewsMediaOrganization',
-      logo: {
-        '@type': 'ImageObject',
-        height: 576,
-        url:
-          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-        width: 1024,
-      },
-      name: 'BBC News',
-      noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    },
-    dateModified: '2018-01-01T13:00:00.000Z',
-    datePublished: '2018-01-01T12:01:00.000Z',
-    headline: 'Article Headline for SEO',
     image: {
       '@type': 'ImageObject',
       height: 576,
@@ -468,8 +470,7 @@ shouldMatchSnapshot(
     id="c0000000001o"
     pageType="article"
     pathname="/news/articles/c0000000001o.amp"
-    promo={articleDataNews.promo}
-    metadata={articleDataNews.metadata}
+    {...englishMetadataProps}
   />,
 );
 
@@ -482,8 +483,7 @@ shouldMatchSnapshot(
     id="c4vlle3q337o"
     pageType="article"
     pathname="/persian/articles/c4vlle3q337o"
-    promo={articleDataPersian.promo}
-    metadata={articleDataPersian.metadata}
+    {...persianMetadataProps}
   />,
 );
 
@@ -496,8 +496,7 @@ shouldMatchSnapshot(
     id="c4vlle3q337o"
     pageType="article"
     pathname="/persian/articles/c4vlle3q337o.amp"
-    promo={articleDataPersian.promo}
-    metadata={articleDataPersian.metadata}
+    {...persianMetadataProps}
   />,
 );
 
@@ -510,8 +509,12 @@ shouldMatchSnapshot(
     id={null}
     pageType="frontPage"
     pathname="/igbo"
-    promo={frontPageData.promo}
-    metadata={frontPageData.metadata}
+    title="Ogbako"
+    lang={frontPageData.metadata.language}
+    description={frontPageData.metadata.summary}
+    seoHeadline={frontPageData.promo.name}
+    schemaOrg="WebPage"
+    openGraph="website"
   />,
 );
 
@@ -524,7 +527,11 @@ shouldMatchSnapshot(
     id={null}
     pageType="media"
     pathname="/korean/bbc_korean_radio/liveradio"
-    promo={liveRadioPageData.promo}
-    metadata={liveRadioPageData.metadata}
+    title={liveRadioPageData.promo.name}
+    lang={liveRadioPageData.metadata.language}
+    description={liveRadioPageData.promo.summary}
+    seoHeadline={liveRadioPageData.promo.name}
+    schemaOrg="RadioChannel"
+    openGraph="website"
   />,
 );
