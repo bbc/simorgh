@@ -1,12 +1,16 @@
 import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
 import styled from 'styled-components';
-import { Headline } from '@bbc/psammead-headings';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_SHADOW } from '@bbc/psammead-styles/colours';
+import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { getParagon, GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
+import {
+  getCanon,
+  getParagon,
+  GEL_FF_REITH_SANS,
+} from '@bbc/gel-foundations/typography';
 import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import idSanitiser from '#lib/utilities/idSanitiser';
 
@@ -16,20 +20,21 @@ const StatusCode = styled.span`
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
   font-weight: 600;
-  padding-bottom: 0.5rem;
 `;
 
-const ShortHeadline = styled(Headline)`
-  padding: 2.5rem 0 2.5rem 0;
+const HeadingFix = styled.h1`
+${({ script }) => script && getCanon(script)};
+${({ service }) => getSerifMedium(service)}
+color: ${C_SHADOW};
+padding-bottom: 1rem;
 `;
 
 const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
   padding-bottom: 4rem;
 `;
 
-const ErrorTag = styled(Paragraph)`
+const ErrorTag = styled.p`
   padding-top: 2.5rem;
-  margin-bottom: -4rem;
 `;
 
 const ErrorPage = ({
@@ -50,14 +55,14 @@ const ErrorPage = ({
         <ErrorTag script={script} service={service}>
           <StatusCode script={script}>{statusCode}</StatusCode>
         </ErrorTag>
-        <ShortHeadline
+        <HeadingFix
           id="content"
           script={script}
           service={service}
           tabIndex="-1"
         >
           {title}
-        </ShortHeadline>
+        </HeadingFix>
         <Paragraph script={script} service={service}>
           {message}
         </Paragraph>
