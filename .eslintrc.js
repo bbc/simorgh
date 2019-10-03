@@ -43,7 +43,7 @@ module.exports = {
     'jam3/no-sanitizer-with-danger': [
       2,
       {
-        "wrapperName": ["xss"]
+        "wrapperName": ["xss", "xssJsonStringify"]
       }
     ]
   },

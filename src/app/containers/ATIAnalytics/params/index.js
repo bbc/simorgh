@@ -6,7 +6,7 @@ import {
   buildFrontPageATIParams,
   buildFrontPageATIUrl,
 } from './frontpage/buildParams';
-import { buildRadioATIParams, buildRadioATIUrl } from './radioPage/buildParams';
+import { buildRadioATIParams, buildRadioATIUrl } from './radiopage/buildParams';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,

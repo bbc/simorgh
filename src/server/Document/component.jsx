@@ -1,12 +1,12 @@
 /* eslint-disable jam3/no-sanitizer-with-danger */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import xss from 'xss';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '#app/components/ResourceHints';
+import xssJsonStringify from '#lib/utilities/xssJsonStringify';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
 const Document = ({
@@ -23,7 +23,6 @@ const Document = ({
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
-  const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
   const scriptTags = (
     <>
@@ -77,7 +76,7 @@ const Document = ({
         {scriptsAllowed && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `window.SIMORGH_DATA=${xss(serialisedData)}`,
+              __html: `window.SIMORGH_DATA=${xssJsonStringify(data)}`,
             }}
           />
         )}
