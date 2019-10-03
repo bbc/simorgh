@@ -4,9 +4,11 @@ import appConfig from '../../../src/testHelpers/serviceConfigs';
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
+const servicesUsingArticlePaths = ['news', 'scotland'];
+
 describe('Application', () => {
   Object.keys(config)
-    .filter(service => service !== 'news')
+    .filter(service => servicesUsingArticlePaths.includes(service))
     .filter(service =>
       Object.keys(config[service].pageTypes).some(pageType =>
         serviceHasPageType(service, pageType),
@@ -32,12 +34,22 @@ describe('Application', () => {
 });
 
 describe('Application', () => {
-  it('should return a 200 status code for the news service worker', () => {
-    cy.testResponseCodeAndType(
-      '/news/articles/sw.js',
-      200,
-      'application/javascript',
-    );
+  ['news', 'scotland'].forEach(service => {
+    it('should return a 200 status code for the news service worker', () => {
+      cy.testResponseCodeAndType(
+        `/${service}/articles/sw.js`,
+        200,
+        'application/javascript',
+      );
+    });
+
+    it(`should return a 200 status code for ${service} manifest file`, () => {
+      cy.testResponseCodeAndType(
+        `/${service}/articles/manifest.json`,
+        200,
+        'application/json',
+      );
+    });
   });
 });
 
