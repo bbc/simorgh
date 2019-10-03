@@ -147,8 +147,8 @@ describe('FrontPageContainer', () => {
           <FrontPageComponent
             {...defaultProps}
             error={null}
-            data={data}
             service="igbo"
+            {...data}
           />,
         );
 

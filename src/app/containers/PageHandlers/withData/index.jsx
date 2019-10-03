@@ -9,17 +9,16 @@ const WithData = Component => {
   const DataContainer = ({ pageData, status, ...props }) => {
     const { service } = props;
     const { passportHomes } = useContext(ServiceContext) || {};
-    const { hasData200StatusAndCorrectService } = shouldRender(
-      { pageData, status },
-      service,
-      passportHomes,
-    );
+    const {
+      hasData200StatusAndCorrectService,
+      status: statusCode,
+    } = shouldRender({ pageData, status }, service, passportHomes);
 
     if (hasData200StatusAndCorrectService) {
       return <Component pageData={pageData} {...props} />;
     }
 
-    return <ErrorMain status={status} />;
+    return <ErrorMain status={statusCode} />;
   };
 
   DataContainer.propTypes = {
