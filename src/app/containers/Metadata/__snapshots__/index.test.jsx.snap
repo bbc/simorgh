@@ -11,7 +11,7 @@ exports[`should match for AMP News & UK origin 1`] = `
       Article Headline for SEO - BBC News
     </title>
     <link
-      href="https://www.bbc.com/news/articles/c0000000001o"
+      href="https://www.bbc.co.uk/news/articles/c0000000001o"
       rel="canonical"
     />
     <link
@@ -180,7 +180,7 @@ exports[`should match for AMP News & UK origin 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.bbc.com/news/articles/c0000000001o"
+      content="https://www.bbc.co.uk/news/articles/c0000000001o"
       name="og:url"
     />
     <meta
@@ -460,7 +460,7 @@ exports[`should match for Persian News & UK origin 1`] = `
       سرصفحه مقاله - BBC News فارسی
     </title>
     <link
-      href="https://www.bbc.com/persian/articles/c4vlle3q337o"
+      href="https://www.bbc.co.uk/persian/articles/c4vlle3q337o"
       rel="canonical"
     />
     <link
@@ -614,7 +614,7 @@ exports[`should match for Persian News & UK origin 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.bbc.com/persian/articles/c4vlle3q337o"
+      content="https://www.bbc.co.uk/persian/articles/c4vlle3q337o"
       name="og:url"
     />
     <meta
