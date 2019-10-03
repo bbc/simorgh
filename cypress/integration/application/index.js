@@ -8,7 +8,7 @@ const servicesUsingArticlePaths = ['news', 'scotland'];
 
 describe('Application', () => {
   Object.keys(config)
-    .filter(service => servicesUsingArticlePaths.includes(service))
+    .filter(service => !servicesUsingArticlePaths.includes(service))
     .filter(service =>
       Object.keys(config[service].pageTypes).some(pageType =>
         serviceHasPageType(service, pageType),
