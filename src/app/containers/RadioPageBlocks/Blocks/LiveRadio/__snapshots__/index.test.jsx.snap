@@ -2,7 +2,7 @@
 
 exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
 .c2 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
@@ -48,7 +48,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
             class="c2"
           >
             <amp-iframe
-              allowfullscreen="true"
+              allowfullscreen="allowfullscreen"
               frameborder="0"
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
@@ -57,6 +57,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
               <amp-img
                 layout="fill"
                 placeholder="true"
+                src="https://news.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png"
               />
             </amp-iframe>
           </div>
@@ -79,7 +80,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 }
 
 .c2 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
@@ -118,7 +119,6 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
         allow="autoplay; fullscreen"
         allowfullscreen=""
         class="c3"
-        scrolling="no"
         src="https://www.test.bbc.co.uk/ws/av-embeds/media/externalId/id"
       />
     </div>
@@ -137,7 +137,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
   </head>
   <body>
     .c2 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
@@ -174,7 +174,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
             class="c2"
           >
             <amp-iframe
-              allowfullscreen="true"
+              allowfullscreen="allowfullscreen"
               frameborder="0"
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
@@ -183,6 +183,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
               <amp-img
                 layout="fill"
                 placeholder="true"
+                src="https://news.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png"
               />
             </amp-iframe>
           </div>
@@ -205,7 +206,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
 }
 
 .c2 {
-  padding-top: 56.25%;
+  height: 165px;
   position: relative;
   overflow: hidden;
 }
@@ -244,7 +245,6 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
         allow="autoplay; fullscreen"
         allowfullscreen=""
         class="c3"
-        scrolling="no"
         src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id"
       />
     </div>
