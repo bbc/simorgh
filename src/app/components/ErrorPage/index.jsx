@@ -35,6 +35,7 @@ const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
 
 const ErrorTag = styled.p`
   padding-top: 1.5rem;
+  margin-bottom: 0;
 `;
 
 const ErrorPage = ({

@@ -62,6 +62,7 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -306,6 +307,7 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -550,6 +552,7 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -794,6 +797,7 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1038,6 +1042,7 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
