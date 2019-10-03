@@ -26,7 +26,6 @@ const HeadingFix = styled.h1`
 ${({ script }) => script && getCanon(script)};
 ${({ service }) => getSerifMedium(service)}
 color: ${C_SHADOW};
-padding-bottom: 1rem;
 `;
 
 const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`

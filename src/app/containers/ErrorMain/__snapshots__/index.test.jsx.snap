@@ -52,7 +52,6 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   font-weight: 500;
   font-style: normal;
   color: #3F3F42;
-  padding-bottom: 1rem;
 }
 
 .c1 {
@@ -405,7 +404,6 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
-  padding-bottom: 1rem;
 }
 
 .c1 {
@@ -708,7 +706,6 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   font-weight: 500;
   font-style: normal;
   color: #3F3F42;
-  padding-bottom: 1rem;
 }
 
 .c1 {
@@ -1006,7 +1003,6 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
-  padding-bottom: 1rem;
 }
 
 .c1 {
@@ -1304,7 +1300,6 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   font-weight: 500;
   font-style: normal;
   color: #3F3F42;
-  padding-bottom: 1rem;
 }
 
 .c1 {
