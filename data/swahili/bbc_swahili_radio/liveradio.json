@@ -1,22 +1,22 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
+    "id": "urn:bbc:ares::ws_live:bbc_swahili_radio",
     "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_indonesian_radio"
+      "pipsUrn": "urn:bbc:pips:bbc_swahili_radio"
     },
     "type": "WS-LIVE",
-    "createdBy": "indonesia",
-    "language": "id",
+    "createdBy": "swahili",
+    "language": "sw",
     "lastUpdated": 0,
     "firstPublished": 0,
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
-      "pageTitle": "BBC Indonesia Radio - BBC News Indonesia",
-      "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page",
-      "producerId": "54",
+      "pageTitle": "BBC Swahili Radio - BBC News Swahili",
+      "pageIdentifier": "swahili.bbc_swahili_radio.liveradio.page",
+      "producerId": "86",
       "contentType": "player-live",
-      "producer": "INDONESIAN"
+      "producer": "SWAHILI"
     },
     "tags": {},
     "version": "1.1.2",
@@ -25,19 +25,19 @@
   "content": {
     "blocks": [
       {
-        "text": "BBC Indonesia Radio",
+        "text": "BBC Swahili Radio",
         "markupType": "plain_text",
         "type": "heading"
       },
       {
-        "text": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+        "text": "Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia.",
         "type": "paragraph"
       },
       {
         "id": "liveradio",
         "subType": "primary",
         "format": "audio",
-        "externalId": "bbc_indonesian_radio",
+        "externalId": "bbc_swahili_radio",
         "duration": "PT0S",
         "caption": "",
         "embedding": false,
@@ -48,18 +48,18 @@
     ]
   },
   "promo": {
-    "name": "BBC Indonesia Radio",
-    "summary": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
-    "uri": "/indonesia/bbc_indonesian_radio/liveradio",
+    "name": "BBC Swahili Radio",
+    "summary": "Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia.",
+    "uri": "/swahili/bbc_swahili_radio/liveradio",
     "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
+    "id": "urn:bbc:ares::ws_live:bbc_swahili_radio",
     "type": "link"
   },
   "relatedContent": {
     "site": {
       "subType": "simple",
-      "name": "indonesia",
-      "uri": "/indonesia",
+      "name": "swahili",
+      "uri": "/swahili",
       "type": "simple"
     },
     "groups": []

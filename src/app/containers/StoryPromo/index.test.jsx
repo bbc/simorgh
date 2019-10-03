@@ -301,7 +301,7 @@ describe('StoryPromo Container', () => {
         <WrappedStoryPromo service="news" item={newItem} />,
       ).container;
       expect(newsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        'a minute ago',
+        '1 minute ago',
       );
 
       const yorubaContainer = render(
