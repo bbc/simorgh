@@ -42,10 +42,6 @@ export const testsThatFollowSmokeTestConfig = ({
       });
 
       it(`should display a ${appConfig[service][variant].translations.error[404].statusCode} error message on screen`, () => {
-        cy.get('h1 span').should(
-          'contain',
-          `${appConfig[service][variant].translations.error[404].statusCode}`,
-        );
         cy.get('h1').should(
           'contain',
           `${appConfig[service][variant].translations.error[404].title}`,
