@@ -137,10 +137,8 @@ describe('FrontPageContainer', () => {
       });
 
       it('should render the frontpage with data', () => {
-        const data = {
-          pageData: igboData,
-          status: 200,
-        };
+        const pageData = igboData;
+        const status = 200;
 
         const frontPageMainMock = jest.requireMock('../FrontPageMain');
         const { container } = render(
@@ -148,7 +146,8 @@ describe('FrontPageContainer', () => {
             {...defaultProps}
             error={null}
             service="igbo"
-            {...data}
+            pageData={pageData}
+            status={status}
           />,
         );
 
