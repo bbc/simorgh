@@ -11,9 +11,12 @@ import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 
 const FrontPageMain = ({ frontPageData }) => {
-  const { product, serviceLocalizedName, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    product,
+    serviceLocalizedName,
+    translations,
+    frontPageTitle,
+  } = useContext(ServiceContext);
   const { home } = translations;
 
   const groups = pathOr(null, ['content', 'groups'], frontPageData);
@@ -32,7 +35,14 @@ const FrontPageMain = ({ frontPageData }) => {
     <>
       <ATIAnalytics data={frontPageData} />
       <ChartbeatAnalytics data={frontPageData} />
-      <MetadataContainer metadata={metadata} promo={promo} />
+      <MetadataContainer
+        title={frontPageTitle}
+        lang={metadata.language}
+        description={metadata.summary}
+        seoHeadline={promo.name}
+        schemaOrg="WebPage"
+        openGraph="website"
+      />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
