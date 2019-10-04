@@ -23,7 +23,8 @@ import {
   getMentions,
   getLang,
   buildLinkedData,
-} from '../ArticleMetadata/utils';
+  aboutTagsContent,
+} from './utils';
 
 const componentsToRender = {
   headline: headings,
@@ -45,8 +46,13 @@ const ArticleMain = ({ articleData: data }) => {
 
   const headline = getHeadline(data);
   const description = getSummary(data) || getHeadline(data);
+  const firstPublished = getFirstPublished(data);
+  const lastPublished = getLastPublished(data);
   const linkedData = buildLinkedData({
-    ...data,
+    headline,
+    firstPublished,
+    lastPublished,
+    about: aboutTagsContent(getAboutTags(data)),
     brandName,
     noBylinesPolicy,
     defaultImage,
@@ -65,8 +71,8 @@ const ArticleMain = ({ articleData: data }) => {
         linkedData={linkedData}
         lang={getLang(data)}
         aboutTags={getAboutTags(data)}
-        firstPublished={getFirstPublished(data)}
-        lastPublished={getLastPublished(data)}
+        firstPublished={firstPublished}
+        lastPublished={lastPublished}
         section={getArticleSection(data)}
         mentionsTags={getMentions(data)}
       />

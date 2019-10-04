@@ -95,7 +95,23 @@ describe('ArticleMain utils', () => {
   });
 
   it('buildLinkedData › it should return the correct value', () => {
-    const actual = buildLinkedData(articleDataNews);
+    const actual = buildLinkedData({
+      headline: 'Article Headline for SEO',
+      firstPublished: '2018-01-01T12:01:00.000Z',
+      lastPublished: '2018-01-01T13:00:00.000Z',
+      about: [
+        {
+          '@type': 'Thing',
+          name: 'Royal Wedding 2018',
+          sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
+        },
+        { '@type': 'Person', name: 'Duchess of Sussex' },
+      ],
+      brandName: 'BBC News',
+      noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+      defaultImage:
+        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+    });
     const expected = {
       about: [
         {
@@ -110,11 +126,13 @@ describe('ArticleMain utils', () => {
         logo: {
           '@type': 'ImageObject',
           height: 576,
-          url: undefined,
+          url:
+            'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
           width: 1024,
         },
-        name: undefined,
-        noBylinesPolicy: undefined,
+        name: 'BBC News',
+        noBylinesPolicy:
+          'https://www.bbc.com/news/help-41670342#authorexpertise',
       },
       dateModified: '2018-01-01T13:00:00.000Z',
       datePublished: '2018-01-01T12:01:00.000Z',

@@ -35,7 +35,7 @@ const checkSameAs = uris => {
   return sameAs.length ? sameAs : undefined;
 };
 
-const aboutTagsContent = aboutTags => {
+export const aboutTagsContent = aboutTags => {
   if (aboutTags && aboutTags.length > 0) {
     const content = [];
     aboutTags.forEach(tag => {
@@ -60,16 +60,19 @@ const aboutTagsContent = aboutTags => {
 };
 
 export const buildLinkedData = ({
+  headline,
+  firstPublished,
+  lastPublished,
   brandName,
   defaultImage,
   noBylinesPolicy,
-  ...articleData
+  about,
 }) => {
   return {
-    headline: getHeadline(articleData),
-    datePublished: getFirstPublished(articleData),
-    dateModified: getLastPublished(articleData),
-    about: aboutTagsContent(getAboutTags(articleData)),
+    headline,
+    datePublished: firstPublished,
+    dateModified: lastPublished,
+    about,
     author: {
       '@type': 'NewsMediaOrganization',
       name: brandName,
