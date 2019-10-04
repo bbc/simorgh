@@ -145,6 +145,10 @@ export const service = {
       },
       links: [
         {
+          href: 'https://www.bbc.com/korean/institutional-49283197',
+          text: 'BBC News를 신뢰할 수 있는 이유',
+        },
+        {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: '이용 약관',
         },
