@@ -146,11 +146,15 @@ export const service = {
       lastUpdated: 'Na baya-bayan nan ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
+        text: 'Me yasa za ka aminta da BBC',
+      },
+      externalLink: {
+        href: 'https://www.bbc.co.uk/help/web/links/',
+        text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
+      },
       links: [
-        {
-          href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
-          text: 'Me yasa za ka aminta da BBC',
-        },
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377086',
           text: 'Sharudan yin amfani',
@@ -174,10 +178,6 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba. ',
-      externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
-      },
     },
     fonts: [],
     timezone: 'GMT',

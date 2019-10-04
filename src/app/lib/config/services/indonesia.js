@@ -139,16 +139,16 @@ export const service = {
       lastUpdated: 'Terakhir diperbarui: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/indonesia/institutional-49283175',
+        text: 'Alasan Anda dapat mempercayai BBC News',
+      },
       externalLink: {
         href:
           'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
         text: 'Baca tentang peraturan baru terkait link eksternal.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/indonesia/institutional-49283175',
-          text: 'Alasan Anda dapat mempercayai BBC News',
-        },
         {
           href: 'https://www.bbc.com/indonesia/institutional-37818421',
           text: 'Peraturan Penggunaan',

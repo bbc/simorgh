@@ -135,15 +135,15 @@ export const service = {
       lastUpdated: '최종 송고일',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/korean/institutional-49283197',
+        text: 'BBC News를 신뢰할 수 있는 이유',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: '외부 콘텐츠 링크에 대한 본사 정책 보기.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/korean/institutional-49283197',
-          text: 'BBC News를 신뢰할 수 있는 이유',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: '이용 약관',

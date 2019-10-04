@@ -137,15 +137,15 @@ export const service = {
       lastUpdated: 'Last updated: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/japanese/help-49677253',
+        text: 'BBCニュースが信頼できる理由',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: '本サイトの外部リンク方針はこちら',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/japanese/help-49677253',
-          text: 'BBCニュースが信頼できる理由',
-        },
         {
           href: 'https://www.bbc.com/japanese/help/terms',
           text: '利用条件',
