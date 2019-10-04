@@ -46,7 +46,7 @@ describe('App', () => {
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
       bbcOrigin: 'https://www.bbc.co.uk',
-      data: initialData,
+      pageData: initialData.pageData,
       error: null,
       isAmp: false,
       loading: false,
@@ -99,7 +99,8 @@ describe('App', () => {
             [],
             {
               bbcOrigin: 'https://www.bbc.co.uk',
-              data: null,
+              pageData: null,
+              status: null,
               error: null,
               id: undefined,
               isAmp: false,
@@ -118,7 +119,8 @@ describe('App', () => {
             [],
             {
               bbcOrigin: 'https://www.bbc.co.uk',
-              data: null,
+              pageData: null,
+              status: null,
               error,
               isAmp: false,
               loading: false,
@@ -135,7 +137,7 @@ describe('App', () => {
       describe('successful fetch of route, match, and initial props', () => {
         it('should call set state with new data', async () => {
           const pathname = 'pathnameThree';
-          const data = 'Really cool data';
+          const data = { pageData: 'Really cool data', status: 200 };
 
           route.getInitialData.mockImplementation(() => Promise.resolve(data));
 
@@ -143,7 +145,7 @@ describe('App', () => {
             wrapper.setProps({ location: { pathname } });
           });
 
-          await route.getInitialData;
+          await route.getInitialData();
 
           expect.assertions(3);
 
@@ -155,7 +157,8 @@ describe('App', () => {
             [],
             {
               bbcOrigin: 'https://www.bbc.co.uk',
-              data: null,
+              pageData: null,
+              status: null,
               error: null,
               id: undefined,
               isAmp: false,
@@ -174,7 +177,8 @@ describe('App', () => {
             [],
             {
               bbcOrigin: 'https://www.bbc.co.uk',
-              data,
+              pageData: data.pageData,
+              status: data.status,
               error: null,
               id: undefined,
               isAmp: false,

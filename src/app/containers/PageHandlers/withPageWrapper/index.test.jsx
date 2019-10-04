@@ -9,6 +9,7 @@ import WithPageWrapper from '.';
 const dataProps = {
   isAmp: false,
   service: 'news',
+  status: 200,
   route: { pageType: 'article' },
 };
 
