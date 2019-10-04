@@ -214,7 +214,7 @@ exports[`Radio Page Main should match snapshot 1`] = `
       rel="amphtml"
     />
     <link
-      href="/news/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/news/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link

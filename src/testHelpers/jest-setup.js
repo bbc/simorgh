@@ -22,3 +22,6 @@ process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
   __dirname,
   '../server/assets/fixture.json',
 );
+
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
+  'http://localhost.bbc.com:7080';

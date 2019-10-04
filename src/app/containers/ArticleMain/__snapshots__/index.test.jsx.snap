@@ -208,7 +208,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
       rel="amphtml"
     />
     <link
-      href="/news/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/news/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -476,7 +476,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
       rel="amphtml"
     />
     <link
-      href="/persian/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/persian/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -907,7 +907,7 @@ exports[`ArticleMain should render a pidgin article correctly (with navigation) 
       rel="amphtml"
     />
     <link
-      href="/pidgin/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/pidgin/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
