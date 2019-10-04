@@ -148,7 +148,7 @@ if (process.env.APP_ENV === 'local') {
       const { service, assetUri: id, variant } = params;
 
       const dataFilePath = constructDataFilePath({
-        pageType: 'mediaAssetPage',
+        pageType: 'cpsAssets',
         service,
         id,
         variant,

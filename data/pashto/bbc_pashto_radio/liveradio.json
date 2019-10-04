@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::ws_live:bbc_pashto_radio",
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_pashto_radio"
+    },
+    "type": "WS-LIVE",
+    "createdBy": "pashto",
+    "language": "ps",
+    "lastUpdated": 0,
+    "firstPublished": 0,
+    "lastPublished": 0,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "بي بي سي افغانستان (پښتو خپرونه) - BBC News پښتو",
+      "pageIdentifier": "pashto.bbc_pashto_radio.liveradio.page",
+      "producerId": "68",
+      "contentType": "player-live",
+      "producer": "PASHTO"
+    },
+    "tags": {},
+    "version": "1.1.2",
+    "blockTypes": ["heading", "version", "paragraph"]
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "بي بي سي افغانستان (پښتو خپرونه)",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_pashto_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "promo": {
+    "name": "بي بي سي افغانستان (پښتو خپرونه)",
+    "summary": "بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي",
+    "uri": "/pashto/bbc_pashto_radio/liveradio",
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares::ws_live:bbc_pashto_radio",
+    "type": "link"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "simple",
+      "name": "pashto",
+      "uri": "/pashto",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

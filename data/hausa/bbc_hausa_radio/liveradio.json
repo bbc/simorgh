@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::ws_live:bbc_hausa_radio",
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_hausa_radio"
+    },
+    "type": "WS-LIVE",
+    "createdBy": "hausa",
+    "language": "ha",
+    "lastUpdated": 0,
+    "firstPublished": 0,
+    "lastPublished": 0,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "BBC Hausa Rediyo - BBC News Hausa",
+      "pageIdentifier": "hausa.bbc_hausa_radio.liveradio.page",
+      "producerId": "51",
+      "contentType": "player-live",
+      "producer": "HAUSA"
+    },
+    "tags": {},
+    "version": "1.1.2",
+    "blockTypes": ["heading", "version", "paragraph"]
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "BBC Hausa Rediyo",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_hausa_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "promo": {
+    "name": "BBC Hausa Rediyo",
+    "summary": "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+    "uri": "/hausa/bbc_hausa_radio/liveradio",
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares::ws_live:bbc_hausa_radio",
+    "type": "link"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "simple",
+      "name": "hausa",
+      "uri": "/hausa",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
