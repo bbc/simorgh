@@ -11,13 +11,13 @@ const pageData = addIdsToBlocks(amharicPageData);
 describe('Radio Page Main', () => {
   shouldMatchSnapshot(
     'should match snapshot',
-    <ServiceContextProvider service="news">
+    <ServiceContextProvider service="amharic">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
         pageType="media"
         pathname="/pathname"
-        service="news"
+        service="amharic"
         statusCode={200}
       >
         <RadioPageMain service="amharic" pageData={pageData} />
