@@ -365,7 +365,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   .c15 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat( 2,auto );
+    grid-template-rows: repeat( 3,auto );
   }
 }
 
@@ -576,6 +576,21 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               class="c15"
               role="list"
             >
+              <li
+                class="c16"
+                role="listitem"
+              >
+                <a
+                  class="c17 c18"
+                  href="https://www.bbc.com/news/help-41670342"
+                >
+                  <span
+                    class="c19"
+                  >
+                    Why you can trust the BBC
+                  </span>
+                </a>
+              </li>
               <li
                 class="c16"
                 role="listitem"
