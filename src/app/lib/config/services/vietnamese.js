@@ -137,15 +137,15 @@ export const service = {
       lastUpdated: 'Cập nhật gần nhất: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/vietnamese/institutional-49283563',
+        text: 'Tại sao bạn có thể tin tưởng BBC News',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/vietnamese/institutional-49283563',
-          text: 'Tại sao bạn có thể tin tưởng BBC News',
-        },
         {
           href: 'https://www.bbc.com/vietnamese/institutional-37622991',
           text: 'Điều khoản sử dụng',

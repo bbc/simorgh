@@ -171,15 +171,15 @@ export const service = {
       },
     ],
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/thai/institutional-49281839',
+        text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/thai/institutional-49281839',
-          text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
-        },
         {
           href: 'https://www.bbc.com/thai/institutional-38403477',
           text: 'เงื่อนไขการใช้งานของ BBC',

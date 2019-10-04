@@ -149,11 +149,15 @@ export const service = {
       lastUpdated: 'Imeboreshwa mwisho: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: 'Kwanini unaweza kuiamini BBC News',
+      },
+      externalLink: {
+        href: 'https://www.bbc.co.uk/help/web/links/',
+        text: 'Soma kuhusu mtazamo wetu wa viambatanishi vya nje.',
+      },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Kwanini unaweza kuiamini BBC News',
-        },
         {
           href:
             'https://www.bbc.com/swahili/taasisi/2011/10/000001_terms_of_use',
@@ -177,10 +181,6 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
-      externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Soma kuhusu mtazamo wetu wa viambatanishi vya nje.',
-      },
     },
     fonts: [],
     timezone: 'Africa/Nairobi',

@@ -137,15 +137,15 @@ export const service = {
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/tigrinya/institutional-49283259',
+        text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'ንናይ ደገ ርከብ ብዝምልከት፡ ናትና ኣረኣእያ እንታይ ከምዝመስል ኣንብቡ።',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/tigrinya/institutional-49283259',
-          text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'ውዕሊ ኣጠቓቕማ',
