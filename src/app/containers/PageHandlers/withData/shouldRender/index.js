@@ -1,19 +1,14 @@
-import pathOr from 'ramda/src/pathOr';
 import {
   getPassportHome,
   isValidPassportHome,
 } from '../../../../lib/utilities/passport';
 
-// checks for data, status, setting default status if not found
-const constructRenderObject = data => ({
-  status: pathOr(null, ['status'], data) || 500,
-  pageData: pathOr(null, ['pageData'], data),
-});
-
 // checks for pageData, 200 status and if home service from article data fits the service locale
-const shouldRender = (data, service, passportHomesOverride = []) => {
-  const { status, pageData } = constructRenderObject(data);
-
+const shouldRender = (
+  { pageData, status },
+  service,
+  passportHomesOverride = [],
+) => {
   let statusCode = status;
   let isCorrectService;
 
