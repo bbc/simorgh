@@ -156,6 +156,10 @@ export const service = {
       },
       links: [
         {
+          href: 'https://www.bbc.com/yoruba/institutional-48528718',
+          text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
+        },
+        {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Ìlànà Lílò',
         },

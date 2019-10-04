@@ -143,6 +143,10 @@ const baseServiceConfig = {
     },
     links: [
       {
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: 'Why you can trust the BBC',
+      },
+      {
         href: 'https://www.bbc.com/terms',
         text: 'Terms of Use',
       },

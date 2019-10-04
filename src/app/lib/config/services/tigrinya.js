@@ -147,6 +147,10 @@ export const service = {
       },
       links: [
         {
+          href: 'https://www.bbc.com/tigrinya/institutional-49283259',
+          text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
+        },
+        {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'ውዕሊ ኣጠቓቕማ',
         },
