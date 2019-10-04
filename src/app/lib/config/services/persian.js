@@ -160,15 +160,15 @@ export const service = {
       lastUpdated: 'به روز شده در ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
+      },
       externalLink: {
         href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
         text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
-        },
         {
           href: 'https://www.bbc.com/persian/institutional-37474133',
           text: 'شرایط استفاده',

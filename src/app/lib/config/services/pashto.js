@@ -150,15 +150,15 @@ export const service = {
       lastUpdated: 'د خپرېدو نیټه ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/pashto/institutional-49283007',
+        text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/pashto/institutional-49283007',
-          text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
-        },
         {
           href: 'https://www.bbc.com/pashto/institutional-37620701',
           text: 'د کارولو شرايط',
