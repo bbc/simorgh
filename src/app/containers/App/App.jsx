@@ -13,8 +13,11 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
+  const { pageData, status } = initialData;
+
   const [state, setState] = useState({
-    data: initialData,
+    pageData,
+    status,
     service,
     variant,
     id,
@@ -41,7 +44,8 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       } = getRouteProps(routes, location.pathname);
 
       setState({
-        data: null,
+        pageData: null,
+        status: null,
         service: nextService,
         variant: nextVariant,
         id: nextId,
@@ -53,10 +57,15 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
 
       const fetchData = async () => {
         try {
-          const newData = await route.getInitialData(match.params);
+          const {
+            pageData: _pageData,
+            status: _status,
+          } = await route.getInitialData(match.params);
+
           setState(prevState => ({
             ...prevState,
-            data: newData,
+            pageData: _pageData,
+            status: _status,
             loading: false,
           }));
         } catch (error) {
@@ -75,7 +84,6 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
 
   // clear the previous path on back clicks
   const previousPath = history.action === 'POP' ? null : previousLocationPath;
-
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
