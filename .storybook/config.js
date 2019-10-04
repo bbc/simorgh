@@ -21,7 +21,11 @@ function loadStories() {
 addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
   <>
-    <GlobalStyles fonts={Object.values(fontFaces)} />
+    <GlobalStyles
+      fonts={Object.values(fontFaces).map(fontFace => {
+        return fontFace();
+      })}
+    />
     {story()}
   </>
   /* eslint-enable react/jsx-filename-extension */
