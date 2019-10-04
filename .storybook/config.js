@@ -23,7 +23,7 @@ addDecorator(story => (
   <>
     <GlobalStyles
       fonts={Object.values(fontFaces).map(fontFace => {
-        return fontFace('./.storybook/static/fonts/');
+        return fontFace('http://localhost.bbc.com:9001/fonts/');
       })}
     />
     {story()}
