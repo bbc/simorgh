@@ -1,9 +1,11 @@
+/* eslint-disable no-nested-ternary */
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING,
@@ -13,6 +15,11 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
+import {
+  UsefulLink,
+  UsefulLinksLi,
+  UsefulLinksUl,
+} from '@bbc/psammead-useful-links';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
@@ -48,6 +55,22 @@ const TopMargin = styled.div`
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
+  }
+`;
+
+const UsefulLinkWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_TRPL};
+  }
+
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING};
+  }
+`;
+
+const UsefulLinksWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_DBL};
   }
 `;
 
@@ -126,19 +149,45 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         {group.strapline.name}
       </SectionLabel>
       {items.length > 1 ? (
-        <MarginWrapper firstSection={isFirstSection}>
-          <StoryPromoUl>
-            {items.map((item, index) => (
-              <StoryPromoLi key={item.id}>
-                <StoryPromoComponent
-                  item={item}
-                  sectionNumber={sectionNumber}
-                  storyNumber={index}
-                />
-              </StoryPromoLi>
-            ))}
-          </StoryPromoUl>
-        </MarginWrapper>
+        group.strapline.name === 'Useful links' ? (
+          <UsefulLinksWrapper>
+            <UsefulLinksUl>
+              {items.map(item => {
+                return (
+                  <UsefulLinksLi key={item.id}>
+                    <UsefulLink
+                      script={script}
+                      service={service}
+                      href={item.uri}
+                    >
+                      {item.name}
+                    </UsefulLink>
+                  </UsefulLinksLi>
+                );
+              })}
+            </UsefulLinksUl>
+          </UsefulLinksWrapper>
+        ) : (
+          <MarginWrapper firstSection={isFirstSection}>
+            <StoryPromoUl>
+              {items.map((item, index) => (
+                <StoryPromoLi key={item.id}>
+                  <StoryPromoComponent
+                    item={item}
+                    sectionNumber={sectionNumber}
+                    storyNumber={index}
+                  />
+                </StoryPromoLi>
+              ))}
+            </StoryPromoUl>
+          </MarginWrapper>
+        )
+      ) : group.strapline.name === 'Useful links' ? (
+        <UsefulLinkWrapper>
+          <UsefulLink script={script} service={service} href={items[0].uri}>
+            {items[0].name}
+          </UsefulLink>
+        </UsefulLinkWrapper>
       ) : (
         <MarginWrapper firstSection={isFirstSection} oneItem>
           <StoryPromoComponent
