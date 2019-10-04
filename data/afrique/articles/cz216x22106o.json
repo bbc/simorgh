@@ -7,9 +7,9 @@
     "type": "article",
     "createdBy": "Afrique",
     "language": "fr",
-    "lastUpdated": 1562936298204,
+    "lastUpdated": 1569595712108,
     "firstPublished": 1562936294950,
-    "lastPublished": 1562936294950,
+    "lastPublished": 1569595708548,
     "options": {},
     "analyticsLabels": {},
     "passport": {
@@ -17,12 +17,18 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +45,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud",
+                        "text": "C'est le titre de cet article de test",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud",
+                              "text": "C'est le titre de cet article de test",
                               "attributes": []
                             }
                           }
@@ -58,48 +64,214 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Carte de France montrant Paris et Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Carte de France montrant Paris et Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "2571/test/a4699550-e135-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "William Troost-Ekong a qualifié le Nigeria pour les demi-finales de la Coupe d'Afrique des Nations, après une victoire 2-1 contre l'Afrique du Sud au Caire.",
+                  "text": "Ceci est un bloc de texte contenant un lien URL vers la page d'accueil BBC Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "William Troost-Ekong a qualifié le Nigeria pour les demi-finales de la Coupe d'Afrique des Nations, après une victoire 2-1 contre l'Afrique du Sud au Caire.",
+                        "text": "Ceci est un bloc de texte contenant un lien URL vers ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "la page d'accueil BBC Weather",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "la page d'accueil BBC Weather",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Ceci est un bloc de sous-titre",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Ceci est un bloc de sous-titre",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Footballeurs après un match",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Footballeurs après un match",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "Le jeune attaquant Samuel Chukwueze a donné l'avantage aux Super Eagles en première période au stade international du Caire.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Le jeune attaquant Samuel Chukwueze a donné l'avantage aux Super Eagles en première période au stade international du Caire.",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "fef7/test/d4cc0ed0-e135-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Après une première mi-temps difficile, les Nigérians se sont montrés bien plus tranchants après la pause, Peter Etebo faisant trembler la barre transversale sur un superbe coup franc de 25 mètres destiné à la lucarne, mais repoussé par Ronwen Williams, du bout des doigts.",
+                  "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Après une première mi-temps difficile, les Nigérians se sont montrés bien plus tranchants après la pause, Peter Etebo faisant trembler la barre transversale sur un superbe coup franc de 25 mètres destiné à la lucarne, mais repoussé par Ronwen Williams, du bout des doigts.",
+                        "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
                         "attributes": []
                       }
                     }
@@ -120,7 +292,7 @@
       "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o"
     },
     "summary": "",
-    "timestamp": 1562936294950,
+    "timestamp": 1569595708548,
     "id": "urn:bbc:ares::article:cz216x22106o",
     "type": "cps"
   },
