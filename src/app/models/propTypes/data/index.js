@@ -1,12 +1,12 @@
 import { shape, oneOfType, number } from 'prop-types';
 import { frontPageDataPropTypes } from '../frontPage';
 import { articleDataPropTypes } from '../article';
-import { mediaPageDataPropTypes } from '../mediaPage';
+import { radioPageDataPropTypes } from '../radioPage';
 
 export const pageDataPropType = oneOfType([
   articleDataPropTypes,
   frontPageDataPropTypes,
-  mediaPageDataPropTypes,
+  radioPageDataPropTypes,
 ]);
 
 export const dataPropType = shape({

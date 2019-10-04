@@ -3,6 +3,7 @@ import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
+import 'moment/locale/fr';
 
 export const service = {
   default: {

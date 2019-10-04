@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::ws_live:bbc_afrique_radio",
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_afrique_radio"
+    },
+    "type": "WS-LIVE",
+    "createdBy": "afrique",
+    "language": "fr",
+    "lastUpdated": 0,
+    "firstPublished": 0,
+    "lastPublished": 0,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "BBC Afrique Radio - BBC News Afrique",
+      "pageIdentifier": "afrique.bbc_afrique_radio.liveradio.page",
+      "producerId": "3",
+      "contentType": "player-live",
+      "producer": "AFRIQUE"
+    },
+    "tags": {},
+    "version": "1.1.2",
+    "blockTypes": ["heading", "version", "paragraph"]
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "BBC Afrique Radio",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "Infos, musique et sports",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_afrique_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "promo": {
+    "name": "BBC Afrique Radio",
+    "summary": "Infos, musique et sports",
+    "uri": "/afrique/bbc_afrique_radio/liveradio",
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares::ws_live:bbc_afrique_radio",
+    "type": "link"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "simple",
+      "name": "afrique",
+      "uri": "/afrique",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

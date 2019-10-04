@@ -13,13 +13,15 @@ import {
   frontpageDataRegexPath,
   frontpageManifestRegexPath,
   frontpageSwRegexPath,
-  mediaDataRegexPath,
-  mediaAssetPageDataRegexPath,
+  cpsAssetPageDataRegexPath,
+  radioAndTvDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
+
+const fs = require('fs');
 
 const morgan = require('morgan');
 
@@ -53,6 +55,11 @@ const server = express();
  * Default headers, compression, logging, status route
  */
 
+const getBuildMetadata = () => {
+  const { buildMetadata } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  return buildMetadata;
+};
+
 server
   .disable('x-powered-by')
   .use(
@@ -65,7 +72,7 @@ server
   .use(helmet({ frameguard: { action: 'deny' } }))
   .use(gnuTP())
   .get('/status', (req, res) => {
-    res.sendStatus(200);
+    res.status(200).send(getBuildMetadata());
   });
 
 /*
@@ -124,7 +131,7 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(mediaDataRegexPath, async ({ params }, res, next) => {
+    .get(radioAndTvDataRegexPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
       const dataFilePath = path.join(
@@ -137,7 +144,7 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
-    .get(mediaAssetPageDataRegexPath, async ({ params }, res, next) => {
+    .get(cpsAssetPageDataRegexPath, async ({ params }, res, next) => {
       const { service, assetUri: id, variant } = params;
 
       const dataFilePath = constructDataFilePath({
@@ -192,6 +199,9 @@ server
       const data = await route.getInitialData(match.params);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
+
+      // Temp log to test upstream change
+      logger.info(`Country code: ${headers['bbc-country'] || 'unknown!'}`);
 
       data.path = urlPath;
 

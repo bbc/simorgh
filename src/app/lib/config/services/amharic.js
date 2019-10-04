@@ -6,6 +6,7 @@ import {
   F_NOTO_SANS_ETHIOPIC_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
+import '@bbc/psammead-locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -28,7 +29,7 @@ export const service = {
     defaultCaptionOffscreenText: 'መግለጫ, ',
     imageCopyrightOffscreenText: 'የፎቶው ባለመብት, ',
     locale: `am-ET`,
-    datetimeLocale: 'am-et',
+    datetimeLocale: 'am',
     service: 'amharic',
     serviceName: 'News አማርኛ',
     themeColor: `${C_POSTBOX}`,
