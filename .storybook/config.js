@@ -22,7 +22,9 @@ addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
   <>
     <GlobalStyles
-      fonts={Object.values(fontFaces).map(fontFace => fontface())}
+      fonts={Object.values(fontFaces).map(fontFace => {
+        return fontFace();
+      })}
     />
     {story()}
   </>
