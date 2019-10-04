@@ -153,14 +153,18 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: '...',
-        text: '...',
+        href: 'https://www.bbc.com/afrique/institutionelles-49283281',
+        text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {
         href: 'https://www.bbc.com/afrique/institutionelles-49283281',
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       links: [
+        {
+          href: 'https://www.bbc.com/afrique/institutionelles-49283281',
+          text: 'Pourquoi vous pouvez faire confiance à BBC News',
+        },
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826639',
           text: "Conditions d'utilisation",

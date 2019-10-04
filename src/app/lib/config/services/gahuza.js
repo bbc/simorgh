@@ -154,6 +154,10 @@ export const service = {
       },
       links: [
         {
+          href: 'https://www.bbc.com/gahuza/institutional-49283343',
+          text: 'Igituma ushobora kwizera BBC News',
+        },
+        {
           href: 'https://www.bbc.com/gahuza/institutional-35754053',
           text: 'Ingingo zo gukoresha urubuga',
         },

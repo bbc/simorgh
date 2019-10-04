@@ -149,6 +149,10 @@ export const service = {
       },
       links: [
         {
+          href: 'https://www.bbc.com/azeri/institutional-49283479',
+          text: 'BBC News-a niyə etibar etməlisiniz',
+        },
+        {
           href: 'https://www.bbc.com/azeri/institutional-37131047',
           text: 'İstifadə qaydaları',
         },
