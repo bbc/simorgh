@@ -1,5 +1,4 @@
 import React from 'react';
-import { string, node } from 'prop-types';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -20,6 +19,7 @@ jest.mock('../ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+// eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
   <ToggleContextProvider>
     <ServiceContextProvider service={service}>
@@ -38,30 +38,23 @@ const Context = ({ service, children }) => (
   </ToggleContextProvider>
 );
 
-Context.propTypes = {
-  children: node.isRequired,
-  service: string.isRequired,
-};
+shouldMatchSnapshot(
+  'should render a news article correctly',
+  <Context service="news">
+    <ArticleMain articleData={articleDataNews} />
+  </Context>,
+);
 
-describe('ArticleMain', () => {
-  shouldMatchSnapshot(
-    'should render a news article correctly',
-    <Context service="news">
-      <ArticleMain articleData={articleDataNews} />
-    </Context>,
-  );
+shouldMatchSnapshot(
+  'should render a persian article correctly',
+  <Context service="persian">
+    <ArticleMain articleData={articleDataPersian} />
+  </Context>,
+);
 
-  shouldMatchSnapshot(
-    'should render a persian article correctly',
-    <Context service="persian">
-      <ArticleMain articleData={articleDataPersian} />
-    </Context>,
-  );
-
-  shouldMatchSnapshot(
-    'should render a pidgin article correctly (with navigation)',
-    <Context service="pidgin">
-      <ArticleMain articleData={articleDataPidgin} />
-    </Context>,
-  );
-});
+shouldMatchSnapshot(
+  'should render a pidgin article correctly (with navigation)',
+  <Context service="pidgin">
+    <ArticleMain articleData={articleDataPidgin} />
+  </Context>,
+);

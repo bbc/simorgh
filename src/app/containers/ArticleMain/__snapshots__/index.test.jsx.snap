@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleMain should render a news article correctly 1`] = `
+exports[`should render a news article correctly 1`] = `
 .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -458,7 +458,7 @@ exports[`ArticleMain should render a news article correctly 1`] = `
 </html>
 `;
 
-exports[`ArticleMain should render a persian article correctly 1`] = `
+exports[`should render a persian article correctly 1`] = `
 <html
   dir="rtl"
   lang="fa"
@@ -889,7 +889,7 @@ exports[`ArticleMain should render a persian article correctly 1`] = `
 </html>
 `;
 
-exports[`ArticleMain should render a pidgin article correctly (with navigation) 1`] = `
+exports[`should render a pidgin article correctly (with navigation) 1`] = `
 <html
   dir="ltr"
   lang="pcm"

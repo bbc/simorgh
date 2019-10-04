@@ -1,18 +1,17 @@
-const acceptableTypes = ['Person', 'Event', 'Organization', 'Place'];
-
-export const checkType = types => {
+const checkType = types => {
+  const acceptableTypes = ['Person', 'Event', 'Organization', 'Place'];
   if (types.length === 0 || types.length > 1) {
     return 'Thing';
   }
   return acceptableTypes.includes(types[0]) ? types[0] : 'Thing';
 };
 
-export const checkSameAs = uris => {
+const checkSameAs = uris => {
   const sameAs = uris.filter(uri => uri.includes('http://dbpedia.org'));
   return sameAs.length ? sameAs : undefined;
 };
 
-const aboutTagsContent = aboutTags => {
+export default aboutTags => {
   if (aboutTags && aboutTags.length > 0) {
     const content = [];
     aboutTags.forEach(tag => {
@@ -35,5 +34,3 @@ const aboutTagsContent = aboutTags => {
   }
   return undefined;
 };
-
-export default aboutTagsContent;

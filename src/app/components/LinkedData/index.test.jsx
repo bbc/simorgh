@@ -1,74 +1,72 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import LinkData from '.';
 
+// eslint-disable-next-line react/prop-types
+const Context = ({ children }) => (
+  <ServiceContextProvider service="news">
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      isAmp={false}
+      pageType="article"
+      pathname="/pathname"
+      service="news"
+      statusCode={200}
+    >
+      {children}
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
+
 describe('LinkData', () => {
-  const props = {
-    isAmp: false,
-    brandName: 'BBC News',
-    canonicalLink: 'https://www.bbc.com/news/articles/c9rpqy7pmypo',
-    lang: 'en-GB',
-    seoHeadline: 'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
+  const propsForArticle = {
+    showAuthor: true,
     type: 'Article',
-    lastUpdated: '2019-02-26T11:25:10.555Z',
-    firstPublished: '2018-10-10T16:19:31.344Z',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    logoUrl:
-      'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png',
+    seoTitle: 'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
+    headline: 'Article Headline for SEO',
+    datePublished: '2018-01-01T12:01:00.000Z',
+    dateModified: '2018-01-01T13:00:00.000Z',
     about: [
       {
-        '@type': 'Person',
-        name: 'Duchess of Sussex',
-        alternateName: 'Meghan Markle',
-        sameAs: ['http://dbpedia.org/resource/Meghan_Markle'],
+        '@type': 'Thing',
+        name: 'Royal Wedding 2018',
+        sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
       },
+      { '@type': 'Person', name: 'Duchess of Sussex' },
     ],
   };
 
-  const propsWithNoAbout = {
-    isAmp: false,
-    brandName: 'BBC News',
-    canonicalLink: 'https://www.bbc.com/news/articles/c9rpqy7pmypo',
-    lang: 'en-GB',
-    seoHeadline: 'Royal wedding 2018: Bouquet laid on tomb of unknown warrior',
-    type: 'Article',
-    service: 'news',
-    lastUpdated: '2019-02-26T11:25:10.555Z',
-    firstPublished: '2018-10-10T16:19:31.344Z',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    logoUrl:
-      'https://www.bbc.com/news/special/2015/newsspec_10857/bbc_news_logo.png',
+  const propsForRadio = {
+    type: 'RadioChannel',
+    seoTitle: 'BBC News Radio',
   };
 
   const propsForFrontpage = {
-    isAmp: false,
-    brandName: 'BBC News',
-    canonicalLink: 'https://www.bbc.com/igbo',
-    lang: 'ig',
-    seoHeadline: 'Ogbako',
     type: 'WebPage',
-    service: 'igbo',
-    lastUpdated: null,
-    firstPublished: null,
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    logoUrl: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+    seoTitle: 'Home - BBC News',
   };
 
   shouldMatchSnapshot(
-    'should correctly render metadata for links',
-    <LinkData {...props} />,
+    'should correctly render linked data for articles',
+    <Context>
+      <LinkData {...propsForArticle} />
+    </Context>,
   );
 
   shouldMatchSnapshot(
-    'should correctly render metadata with no about tags for links',
-    <LinkData {...propsWithNoAbout} />,
+    'should correctly render linked data for radio pages',
+    <Context>
+      <LinkData {...propsForRadio} />
+    </Context>,
   );
 
   shouldMatchSnapshot(
-    'should correctly render metadata for frontpages',
-    <LinkData {...propsForFrontpage} />,
+    'should correctly render linked data for front pages',
+    <Context>
+      <LinkData {...propsForFrontpage} />
+    </Context>,
   );
 });

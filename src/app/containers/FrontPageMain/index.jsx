@@ -7,6 +7,7 @@ import { Grid, GridItemConstrainedLargeWithTopMargin } from '#lib/styledGrid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
+import LinkedData from '../../components/LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 
@@ -18,7 +19,6 @@ const FrontPageMain = ({ frontPageData }) => {
     frontPageTitle,
   } = useContext(ServiceContext);
   const { home } = translations;
-
   const groups = pathOr(null, ['content', 'groups'], frontPageData);
   const { metadata, promo } = frontPageData;
 
@@ -39,10 +39,9 @@ const FrontPageMain = ({ frontPageData }) => {
         title={frontPageTitle}
         lang={metadata.language}
         description={metadata.summary}
-        seoHeadline={promo.name}
-        schemaOrg="WebPage"
         openGraph="website"
       />
+      <LinkedData type="WebPage" seoTitle={promo.name} />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}

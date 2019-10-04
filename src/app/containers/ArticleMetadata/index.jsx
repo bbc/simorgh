@@ -16,20 +16,14 @@ const ArticleMetadata = ({
   section,
   aboutTags,
   mentionsTags,
-  linkedData,
   lang,
-  seoHeadline,
   description,
 }) =>
   articleId && (
     <Metadata
       title={title}
       lang={lang}
-      seoHeadline={seoHeadline}
       description={description}
-      aboutTags={aboutTags}
-      pageSpecificLinkedData={linkedData}
-      schemaOrg="Article"
       openGraph="article"
     >
       <meta name="article:author" content={author} />
@@ -61,7 +55,6 @@ ArticleMetadata.propTypes = {
   aboutTags: arrayOf(tagPropTypes),
   mentionsTags: arrayOf(tagPropTypes),
   lang: string.isRequired,
-  seoHeadline: string.isRequired,
   description: string.isRequired,
   linkedData: objectOf(any),
 };

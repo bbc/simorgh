@@ -1,76 +1,117 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Helmet from 'react-helmet';
-import { string, objectOf, any } from 'prop-types';
+import { string, shape, arrayOf, bool } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import getAboutTagsContent from './getAboutTagsContent';
 
 const LinkedData = ({
-  brandName,
+  showAuthor,
   type,
-  seoHeadline,
-  logoUrl,
-  publishingPrinciples,
-  canonicalLink,
-  pageSpecific,
+  seoTitle,
+  headline,
+  datePublished,
+  dateModified,
+  aboutTags,
 }) => {
-  const imgObject = 'ImageObject';
-  const newsMediaOrg = 'NewsMediaOrganization';
-  const webPageType = 'WebPage';
+  const {
+    brandName,
+    publishingPrinciples,
+    defaultImage,
+    noBylinesPolicy,
+  } = useContext(ServiceContext);
+  const { canonicalNonUkLink } = useContext(RequestContext);
+  const IMG_TYPE = 'ImageObject';
+  const ORG_TYPE = 'NewsMediaOrganization';
+  const WEB_PAGE_TYPE = 'WebPage';
 
   const logo = {
-    '@type': imgObject,
+    '@type': IMG_TYPE,
     width: 1024,
     height: 576,
-    url: logoUrl,
+    url: defaultImage,
   };
 
   const image = {
-    '@type': imgObject,
+    '@type': IMG_TYPE,
     width: 1024,
     height: 576,
-    url: logoUrl,
+    url: defaultImage,
   };
 
   const publisher = {
-    '@type': newsMediaOrg,
+    '@type': ORG_TYPE,
     name: brandName,
     publishingPrinciples,
     logo,
   };
   const mainEntityOfPage = {
-    '@type': webPageType,
-    '@id': canonicalLink,
-    name: seoHeadline,
+    '@type': WEB_PAGE_TYPE,
+    '@id': canonicalNonUkLink,
+    name: seoTitle,
   };
 
-  const linkMetadata = {
+  const linkedData = {
     '@context': 'http://schema.org',
     '@type': type,
-    url: canonicalLink,
+    url: canonicalNonUkLink,
     publisher,
     image,
-    thumbnailUrl: logoUrl,
+    thumbnailUrl: defaultImage,
     mainEntityOfPage,
-    ...pageSpecific,
+    headline,
+    datePublished,
+    dateModified,
+    ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
+    ...(showAuthor && {
+      author: {
+        '@type': ORG_TYPE,
+        name: brandName,
+        logo: {
+          '@type': 'ImageObject',
+          width: 1024,
+          height: 576,
+          url: defaultImage,
+        },
+        noBylinesPolicy,
+      },
+    }),
   };
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(linkMetadata)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          // spread to a new object to remove undefined properties
+          ...linkedData,
+        })}
+      </script>
     </Helmet>
   );
 };
 
 LinkedData.propTypes = {
-  brandName: string.isRequired,
-  canonicalLink: string.isRequired,
+  showAuthor: bool,
   type: string.isRequired,
-  seoHeadline: string.isRequired,
-  publishingPrinciples: string.isRequired,
-  logoUrl: string.isRequired,
-  pageSpecific: objectOf(any),
+  seoTitle: string.isRequired,
+  headline: string,
+  datePublished: string,
+  dateModified: string,
+  aboutTags: arrayOf(
+    shape({
+      '@type': string,
+      name: string,
+      sameAs: arrayOf(string),
+    }),
+  ),
 };
 
 LinkedData.defaultProps = {
-  pageSpecific: {},
+  showAuthor: false,
+  headline: undefined,
+  datePublished: undefined,
+  dateModified: undefined,
+  aboutTags: undefined,
 };
 
 export default LinkedData;

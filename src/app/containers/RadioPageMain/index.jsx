@@ -4,6 +4,7 @@ import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import LinkedData from '../../components/LinkedData';
 import RadioPageBlocks from '../RadioPageBlocks';
 
 const RadioPageMain = ({ pageData }) => {
@@ -18,10 +19,10 @@ const RadioPageMain = ({ pageData }) => {
         title={promo.name}
         lang={metadata.language}
         description={promo.summary}
-        seoHeadline={promo.name}
-        schemaOrg="RadioChannel"
         openGraph="website"
       />
+      <LinkedData type="RadioChannel" seoTitle={promo.name} />
+
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
           <RadioPageBlocks blocks={blocks} />

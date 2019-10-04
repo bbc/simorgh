@@ -18,10 +18,7 @@ process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
 const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
-  seoHeadline: data.promo.headlines.seoHeadline,
   description: data.promo.summary,
-  aboutTags: data.metadata.tags.about,
-  schemaOrg: 'Article',
   openGraph: 'article',
 });
 
@@ -38,11 +35,8 @@ const MetadataWithContext = ({
   pathname,
   title,
   lang,
-  seoHeadline,
   description,
-  aboutTags,
   openGraph,
-  schemaOrg,
   /* eslint-enable react/prop-types */
 }) => {
   const serviceConfig = services[service].default;
@@ -61,11 +55,8 @@ const MetadataWithContext = ({
         <MetadataContainer
           title={title}
           lang={lang}
-          seoHeadline={seoHeadline}
           description={description}
-          aboutTags={aboutTags}
           openGraph={openGraph}
-          schemaOrg={schemaOrg}
         />
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -414,48 +405,6 @@ it('should render the twitter metatags', async () => {
   expect(actual).toEqual(expected);
 });
 
-it('should render the linked data', async () => {
-  await renderMetadataToDocument();
-
-  const actual = JSON.parse(
-    document.querySelector('head > script[type="application/ld+json"]')
-      .innerHTML,
-  );
-  const expected = {
-    '@context': 'http://schema.org',
-    '@type': 'Article',
-    image: {
-      '@type': 'ImageObject',
-      height: 576,
-      url:
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-      width: 1024,
-    },
-    mainEntityOfPage: {
-      '@id': 'https://www.bbc.com/news/articles/c0000000001o',
-      '@type': 'WebPage',
-      name: 'Article Headline for SEO',
-    },
-    publisher: {
-      '@type': 'NewsMediaOrganization',
-      logo: {
-        '@type': 'ImageObject',
-        height: 576,
-        url:
-          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-        width: 1024,
-      },
-      name: 'BBC News',
-      publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    },
-    thumbnailUrl:
-      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-    url: 'https://www.bbc.com/news/articles/c0000000001o',
-  };
-
-  expect(actual).toEqual(expected);
-});
-
 shouldMatchSnapshot(
   'should match for Canonical News & international origin',
   <CanonicalNewsInternationalOrigin />,
@@ -512,8 +461,6 @@ shouldMatchSnapshot(
     title="Ogbako"
     lang={frontPageData.metadata.language}
     description={frontPageData.metadata.summary}
-    seoHeadline={frontPageData.promo.name}
-    schemaOrg="WebPage"
     openGraph="website"
   />,
 );
@@ -530,8 +477,6 @@ shouldMatchSnapshot(
     title={liveRadioPageData.promo.name}
     lang={liveRadioPageData.metadata.language}
     description={liveRadioPageData.promo.summary}
-    seoHeadline={liveRadioPageData.promo.name}
-    schemaOrg="RadioChannel"
     openGraph="website"
   />,
 );

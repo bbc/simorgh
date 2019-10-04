@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
-import { string, node, objectOf, any } from 'prop-types';
+import { string, node } from 'prop-types';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import Metadata from '../../components/Metadata';
-import LinkedData from '../../components/LinkedData';
 
 const ENGLISH_SERVICES = ['news'];
 
@@ -24,10 +23,7 @@ const getAppleTouchUrl = service => {
 const MetadataContainer = ({
   title,
   lang,
-  seoHeadline,
   description,
-  pageSpecificLinkedData,
-  schemaOrg,
   openGraph,
   children,
 }) => {
@@ -51,8 +47,6 @@ const MetadataContainer = ({
     themeColor,
     twitterCreator,
     twitterSite,
-    publishingPrinciples,
-    noBylinesPolicy,
   } = useContext(ServiceContext);
   const appleTouchIcon = getAppleTouchUrl(service);
   const isAmp = platform === 'amp';
@@ -103,16 +97,6 @@ const MetadataContainer = ({
 
   return (
     <>
-      <LinkedData
-        brandName={brandName}
-        canonicalLink={canonicalNonUkLink}
-        logoUrl={defaultImage}
-        noBylinesPolicy={noBylinesPolicy}
-        publishingPrinciples={publishingPrinciples}
-        seoHeadline={seoHeadline}
-        type={schemaOrg}
-        pageSpecific={pageSpecificLinkedData}
-      />
       <Metadata
         isAmp={isAmp}
         alternateLinks={alternateLinks}
@@ -144,16 +128,12 @@ const MetadataContainer = ({
 MetadataContainer.propTypes = {
   title: string.isRequired,
   lang: string.isRequired,
-  seoHeadline: string.isRequired,
   description: string.isRequired,
-  pageSpecificLinkedData: objectOf(any),
-  schemaOrg: string.isRequired,
   openGraph: string.isRequired,
   children: node,
 };
 
 MetadataContainer.defaultProps = {
-  pageSpecificLinkedData: {},
   children: null,
 };
 

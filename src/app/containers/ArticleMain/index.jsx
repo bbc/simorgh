@@ -12,6 +12,7 @@ import { GhostGrid } from '#lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';
+import LinkedData from '../../components/LinkedData';
 import {
   getArticleId,
   getHeadline,
@@ -22,8 +23,6 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-  buildLinkedData,
-  aboutTagsContent,
 } from './utils';
 
 const componentsToRender = {
@@ -37,26 +36,12 @@ const componentsToRender = {
 };
 
 const ArticleMain = ({ articleData: data }) => {
-  const {
-    brandName,
-    noBylinesPolicy,
-    defaultImage,
-    articleAuthor,
-  } = useContext(ServiceContext);
-
+  const { articleAuthor } = useContext(ServiceContext);
   const headline = getHeadline(data);
   const description = getSummary(data) || getHeadline(data);
   const firstPublished = getFirstPublished(data);
   const lastPublished = getLastPublished(data);
-  const linkedData = buildLinkedData({
-    headline,
-    firstPublished,
-    lastPublished,
-    about: aboutTagsContent(getAboutTags(data)),
-    brandName,
-    noBylinesPolicy,
-    defaultImage,
-  });
+  const aboutTags = getAboutTags(data);
 
   return (
     <>
@@ -65,16 +50,23 @@ const ArticleMain = ({ articleData: data }) => {
       <ArticleMetadata
         articleId={getArticleId(data)}
         title={headline}
-        seoHeadline={headline}
-        description={description}
         author={articleAuthor}
-        linkedData={linkedData}
-        lang={getLang(data)}
-        aboutTags={getAboutTags(data)}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(data)}
+        aboutTags={aboutTags}
         mentionsTags={getMentions(data)}
+        lang={getLang(data)}
+        description={description}
+      />
+      <LinkedData
+        showAuthor
+        type="Article"
+        seoTitle={headline}
+        headline={headline}
+        datePublished={firstPublished}
+        dateModified={lastPublished}
+        aboutTags={aboutTags}
       />
       <main role="main">
         <GhostGrid>
