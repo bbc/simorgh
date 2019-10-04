@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Gahuza",
     "language": "rw",
-    "lastUpdated": 1562936361356,
+    "lastUpdated": 1570032625860,
     "firstPublished": 1562936358638,
     "lastPublished": 1562936358638,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Kapiteni wa Arsenal yanze kujyana nayo muri Amerika kwitegura shampiyona",
+                        "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Kapiteni wa Arsenal yanze kujyana nayo muri Amerika kwitegura shampiyona",
+                              "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
                               "attributes": []
                             }
                           }
@@ -58,48 +65,343 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "1bed/test/e2f3a520-e137-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Kapiteni wa Arsenal Laurent Koscielny yanze kujyana n'iyi kipe muri Leta Zunze Ubumwe z'Amerika mu mikino yo kwitegura shampiyona itaha.",
+                  "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho umuyobozi w'ishami rya BBC.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Kapiteni wa Arsenal Laurent Koscielny yanze kujyana n'iyi kipe muri Leta Zunze Ubumwe z'Amerika mu mikino yo kwitegura shampiyona itaha.",
+                        "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "umuyobozi w'ishami rya BBC",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "umuyobozi w'ishami rya BBC",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Myugariro Koscielny w'imyaka 33 y'amavuko, kontaro ye izarangira mu mwaka utaha w'imikino wa 2019-2020 ndetse bivugwa ko ari kwifuzwa n'amakipe y'iwabo mu Bufaransa nka Bordeaux, Rennes na Lyon.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Myugariro Koscielny w'imyaka 33 y'amavuko, kontaro ye izarangira mu mwaka utaha w'imikino wa 2019-2020 ndetse bivugwa ko ari kwifuzwa n'amakipe y'iwabo mu Bufaransa nka Bordeaux, Rennes na Lyon.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Footballers after a match",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Footballers after a match",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "284c/test/37dd02c0-e138-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "Ubuyobozi bwa Arsenal bwagize buti: \"Tubabajwe cyane n'ibikorwa bya Laurent, binyuranyije n'amabwiriza yacu asobanutse neza\".",
+                  "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Ubuyobozi bwa Arsenal bwagize buti: \"Tubabajwe cyane n'ibikorwa bya Laurent, binyuranyije n'amabwiriza yacu asobanutse neza\".",
+                        "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
                         "attributes": []
                       }
                     }
@@ -114,7 +416,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Kapiteni wa Arsenal yanze kujyana nayo muri Amerika kwitegura shampiyona"
+      "seoHeadline": "Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o"

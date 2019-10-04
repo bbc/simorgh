@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Swahili",
     "language": "sw",
-    "lastUpdated": 1562936575299,
+    "lastUpdated": 1569252305397,
     "firstPublished": 1562936569893,
     "lastPublished": 1562936569893,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Afon 2019: Nigeria na Senegal zatinga nusu fainali baada ya kuzilaza Afrika Kusini na Benin",
+                        "text": "Hii ndio kichwa cha habari cha makala haya ya majaribio",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Afon 2019: Nigeria na Senegal zatinga nusu fainali baada ya kuzilaza Afrika Kusini na Benin",
+                              "text": "Hii ndio kichwa cha habari cha makala haya ya majaribio",
                               "attributes": []
                             }
                           }
@@ -58,48 +65,336 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Picha ya jaribio, hakimiliki ya BBC, inaonyesha ramani ya Ufaransa. Picha iko kwenye vitalu vitatu vya kwanza na ina maelezo haya.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Picha ya jaribio, hakimiliki ya BBC, inaonyesha ramani ya Ufaransa. Picha iko kwenye vitalu vitatu vya kwanza na ina maelezo haya.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ramani ya Ufaransa inayoonyesha Paris na Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ramani ya Ufaransa inayoonyesha Paris na Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "adb4/test/aac5ccc0-de15-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "William Troost-Ekong alifunga goli la dakika za mwisho na kuisaidia Nigeria kutinga nusu fainali ya kombe la mataifa ya Afrika dhidi ya Afrika Kusini.",
+                  "text": "Hiki ni kizuizi cha maandishi, ambayo yana kiunga cha url kwa ukurasa wa nyumbani wa BBC Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "William Troost-Ekong alifunga goli la dakika za mwisho na kuisaidia Nigeria kutinga nusu fainali ya kombe la mataifa ya Afrika dhidi ya Afrika Kusini.",
+                        "text": "Hiki ni kizuizi cha maandishi, ambayo yana kiunga cha url kwa ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "ukurasa wa nyumbani wa BBC Weather.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ukurasa wa nyumbani wa BBC Weather.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.com/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Hii ni kizuizi cha video kilicho na video kuhusu mchwa",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Hii ni kizuizi cha video kilicho na video kuhusu mchwa",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Samuel Chukwueze alifunga goli la kwanza la Nigeria baada ya kupata krosi nzuri kutoka kwka Alexi Iwobi kabla ya kufunga baada ya jaribio la pili.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Samuel Chukwueze alifunga goli la kwanza la Nigeria baada ya kupata krosi nzuri kutoka kwka Alexi Iwobi kabla ya kufunga baada ya jaribio la pili.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Hii ni kifungu cha kichwa cha chini",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Hii ni kifungu cha kichwa cha chini",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Wadau wa mpira wa miguu baada ya mechi",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Wadau wa mpira wa miguu baada ya mechi",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "f737/test/2d7d3d60-de16-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "Hatahivyo Bongani Zungu alisawazisha kupitia kichwa kilichodaiwa kuwa cha kuotea kabla ya refa wa Video VAR kusema kwamba mpira huo ulikuwa umemgonga mchezaji wa Nigeria kabla ya kumfikia.",
+                  "text": "Nakala hii ya majaribio imeundwa ili tuweze kuendesha vipimo vya kujiendesha kwa-mwisho kwenye wavuti yetu.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Hatahivyo Bongani Zungu alisawazisha kupitia kichwa kilichodaiwa kuwa cha kuotea kabla ya refa wa Video VAR kusema kwamba mpira huo ulikuwa umemgonga mchezaji wa Nigeria kabla ya kumfikia.",
+                        "text": "Nakala hii ya majaribio imeundwa ili tuweze kuendesha vipimo vya kujiendesha kwa-mwisho kwenye wavuti yetu.",
                         "attributes": []
                       }
                     }
@@ -114,7 +409,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Afon 2019: Nigeria na Senegal zatinga nusu fainali baada ya kuzilaza Afrika Kusini na Benin"
+      "seoHeadline": "Hii ndio kichwa cha SEO cha makala haya ya majaribio"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o"
