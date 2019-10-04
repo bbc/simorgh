@@ -19,17 +19,6 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   color: #B80000;
 }
 
-.c5 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -62,21 +51,18 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
+.c5 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 @media (max-width:37.4375rem) {
@@ -186,6 +172,20 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 <main
   role="main"
 >
@@ -264,17 +264,6 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
   color: #B80000;
 }
 
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -307,21 +296,18 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
+.c5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 @media (max-width:37.4375rem) {
@@ -428,6 +414,20 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 @supports (display:grid) {
   .c1 {
     max-width: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -509,17 +509,6 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
   color: #B80000;
 }
 
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -552,21 +541,18 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
+.c5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 @media (max-width:37.4375rem) {
@@ -673,6 +659,20 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 @supports (display:grid) {
   .c1 {
     max-width: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -754,17 +754,6 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
   color: #B80000;
 }
 
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -797,21 +786,18 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
+.c5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 @media (max-width:37.4375rem) {
@@ -918,6 +904,20 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 @supports (display:grid) {
   .c1 {
     max-width: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -999,17 +999,6 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
   color: #B80000;
 }
 
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -1042,21 +1031,18 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 
 .c2 {
   padding-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
+.c5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 @media (max-width:37.4375rem) {
@@ -1163,6 +1149,20 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 @supports (display:grid) {
   .c1 {
     max-width: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
