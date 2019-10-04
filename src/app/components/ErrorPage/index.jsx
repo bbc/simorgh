@@ -38,7 +38,9 @@ const ErrorTag = styled.p`
   margin-bottom: 0.5rem;
 `;
 
-const ParaTest = styled(Paragraph)``;
+const ParaTest = styled(Paragraph)`
+  padding-top: 0.2rem;
+`;
 
 const ErrorPage = ({
   statusCode,
