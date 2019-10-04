@@ -23,7 +23,7 @@ addDecorator(story => (
   <>
     <GlobalStyles
       fonts={Object.values(fontFaces).map(fontFace => {
-        return fontFace();
+        return fontFace('./.storybook/static/fonts/');
       })}
     />
     {story()}
