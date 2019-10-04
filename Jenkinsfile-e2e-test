@@ -61,8 +61,7 @@ node {
               ]
 
               if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters, channels.simorgh)
-                notifySlack(messageParameters, simorgh.testAlarms)
+                notifySlack(messageParameters, channels.testAlarms)
                 stageHasFailed = true
               }
 
@@ -73,6 +72,7 @@ node {
         } catch (Throwable e) {
           echo "The pipeline has failed with the error: ${e}"
           currentBuild.result = 'FAILURE'
+
           throw e
         } finally {
           def buildResult = currentBuild.result ?: 'SUCCESS'
@@ -100,7 +100,6 @@ node {
                   colour: 'danger',
                   emoji: '😱',
                 ]
-                notifySlack(messageParameters, channels.simorgh)
                 notifySlack(messageParameters, simorgh.testAlarms)
                 break
               case 'ABORTED':
@@ -111,7 +110,6 @@ node {
                   colour: 'warning',
                   emoji: '🙀',
                 ]
-                notifySlack(messageParameters, channels.simorgh)
                 notifySlack(messageParameters, simorgh.testAlarms)
                 break
               default:
@@ -123,7 +121,6 @@ node {
                     colour: 'danger',
                     emoji: '😱',
                   ]
-                  notifySlack(messageParameters, channels.simorgh)
                   notifySlack(messageParameters, simorgh.testAlarms)
                 }
                 break
