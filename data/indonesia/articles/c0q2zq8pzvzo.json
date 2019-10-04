@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Indonesia",
     "language": "id",
-    "lastUpdated": 1562941591144,
+    "lastUpdated": 1569260046554,
     "firstPublished": 1562941587903,
     "lastPublished": 1562941587903,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Disebut lebih bergizi dari susu sapi, maukah Anda beralih ke susu unta?",
+                        "text": "Ini adalah judul artikel tes ini",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Disebut lebih bergizi dari susu sapi, maukah Anda beralih ke susu unta?",
+                              "text": "Ini adalah judul artikel tes ini",
                               "attributes": []
                             }
                           }
@@ -58,48 +65,336 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Peta Prancis menunjukkan Paris dan Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Peta Prancis menunjukkan Paris dan Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "1d58/test/d37d5d10-de27-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Apakah Anda mau beralih minum susu unta? Semakin banyak peternak unta di Australia yang berharap Anda mau mencoba susu unta.",
+                  "text": "Ini adalah blok teks, yang berisi tautan url ke beranda BBC Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Apakah Anda mau beralih minum susu unta? Semakin banyak peternak unta di Australia yang berharap Anda mau mencoba susu unta.",
+                        "text": "Ini adalah blok teks, yang berisi tautan url ke ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "beranda BBC Weather.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "beranda BBC Weather.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.com/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ini adalah blok video yang berisi video tentang semut",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ini adalah blok video yang berisi video tentang semut",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Bukan hal yang aneh bagi para pemilik usaha kecil untuk memperlakukan pekerja mereka seperti keluarga.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Bukan hal yang aneh bagi para pemilik usaha kecil untuk memperlakukan pekerja mereka seperti keluarga.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Ini adalah blok subjudul",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Ini adalah blok subjudul",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\rPesepakbola setelah pertandingan",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\rPesepakbola setelah pertandingan",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "4629/test/3b60f9a0-de28-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "Tentu saja pekerja itu biasanya bukan binatang berkaki empat yang berpunuk.",
+                  "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Tentu saja pekerja itu biasanya bukan binatang berkaki empat yang berpunuk.",
+                        "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
                         "attributes": []
                       }
                     }
@@ -114,7 +409,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Disebut lebih bergizi dari susu sapi, maukah Anda beralih ke susu unta?"
+      "seoHeadline": "Ini adalah judul SEO dari artikel tes ini"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo"

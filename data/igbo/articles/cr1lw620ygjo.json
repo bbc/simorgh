@@ -7,9 +7,9 @@
     "type": "article",
     "createdBy": "Igbo",
     "language": "ig",
-    "lastUpdated": 1562936761827,
+    "lastUpdated": 1569599210829,
     "firstPublished": 1562936759286,
-    "lastPublished": 1562936759286,
+    "lastPublished": 1569599205836,
     "options": {},
     "analyticsLabels": {},
     "passport": {
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Nigeria vs South Africa: Ugo eberela na mgbagbu",
+                        "text": "Nke a bụ isiokwu nke isiokwu ule a",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Nigeria vs South Africa: Ugo eberela na mgbagbu",
+                              "text": "Nke a bụ isiokwu nke isiokwu ule a",
                               "attributes": []
                             }
                           }
@@ -58,33 +65,365 @@
           }
         },
         {
-          "type": "text",
+          "type": "image",
           "model": {
             "blocks": [
               {
-                "type": "paragraph",
+                "type": "caption",
                 "model": {
-                  "text": "Ndị otu egwuregwu bọọlụ Super Eagles nke Naijiria ekwuola na ha di njikere maka asọmpi nke ha na ndị ogbo ha nke mba Saut Afrịka n'agba anọ ikpeazụ nke iko mba Afrịka.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "type": "text",
                       "model": {
-                        "text": "Ndị otu egwuregwu bọọlụ Super Eagles nke Naijiria ekwuola na ha di njikere maka asọmpi nke ha na ndị ogbo ha nke mba Saut Afrịka n'agba anọ ikpeazụ nke iko mba Afrịka.",
-                        "attributes": []
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Foto nnwale a, BBC nwebisiinka, na-egosi maapụ France. Ihe onyonyo a dị na ngalaba atọ nke mbụ nwere isi okwu a.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Foto nnwale a, BBC nwebisiinka, na-egosi maapụ France. Ihe onyonyo a dị na ngalaba atọ nke mbụ nwere isi okwu a.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Maapụ nke France na-egosi Paris na Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Maapụ nke France na-egosi Paris na Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "5c5e/test/f45b4520-de21-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "Mba Saut Afrịka gosiri na ha so n'ihe a na-eme mgbe ha gbapụrụ mba Ijipt na-agbanyeghi na ọbụ be ha ka a nọ asọ mpi 'African Cup of Nations' (AFCON) nke afọ a.",
+                  "text": "Nke a bụ ngọngọ ederede, nke nwere njikọ URL na ebe obibi BBC Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Mba Saut Afrịka gosiri na ha so n'ihe a na-eme mgbe ha gbapụrụ mba Ijipt na-agbanyeghi na ọbụ be ha ka a nọ asọ mpi 'African Cup of Nations' (AFCON) nke afọ a.",
+                        "text": "Nke a bụ ngọngọ ederede, nke nwere njikọ URL na ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "ebe obibi BBC Weather.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ebe obibi BBC Weather.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.com/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Nke a bụ ngọngọ vidiyo nwere vidiyo gbasara ndanda",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Nke a bụ ngọngọ vidiyo nwere vidiyo gbasara ndanda",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Nke a bụ ngọngọ nke isiokwu dị n'okpuru",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Nke a bụ ngọngọ nke isiokwu dị n'okpuru",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "424e/test/5da6af10-de22-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Edepụtara isiokwu ule a ka anyị wee nwee ike ịme ngwụsị ngwụsị akpaghị aka na weebụsaịtị anyị.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Edepụtara isiokwu ule a ka anyị wee nwee ike ịme ngwụsị ngwụsị akpaghị aka na weebụsaịtị anyị.",
                         "attributes": []
                       }
                     }
@@ -99,13 +438,13 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Nigeria vs South Africa: Ugo eberela na mgbagbu"
+      "seoHeadline": "Nke a bụ isiokwu SEO nke isiokwu nnwale a"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:cr1lw620ygjo"
     },
     "summary": "",
-    "timestamp": 1562936759286,
+    "timestamp": 1569599205836,
     "id": "urn:bbc:ares::article:cr1lw620ygjo",
     "type": "cps"
   },

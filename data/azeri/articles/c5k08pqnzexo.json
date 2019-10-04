@@ -7,9 +7,9 @@
     "type": "article",
     "createdBy": "Azeri",
     "language": "az",
-    "lastUpdated": 1562936695783,
+    "lastUpdated": 1569598554718,
     "firstPublished": 1562936692555,
-    "lastPublished": 1562936692555,
+    "lastPublished": 1569598550759,
     "options": {},
     "analyticsLabels": {},
     "passport": {
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Ən yaxşı it şəkli: dünyada ən sevimli kimdir?",
+                        "text": "Bu test məqaləsinin başlığı budur",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Ən yaxşı it şəkli: dünyada ən sevimli kimdir?",
+                              "text": "Bu test məqaləsinin başlığı budur",
                               "attributes": []
                             }
                           }
@@ -58,63 +65,343 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Bu test şəkli, müəllif hüquqları BBC, Fransanın bir xəritəsini göstərir. Şəkil ilk üç blokdadır və bu başlıq var.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Bu test şəkli, müəllif hüquqları BBC, Fransanın bir xəritəsini göstərir. Şəkil ilk üç blokdadır və bu başlıq var.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Map of France showing Paris and Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Map of France showing Paris and Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "d14e/test/2bb10ad0-e135-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Bu həftə Britaniya Kinologiya Assosiasiyası hər il keçirilən \"Dog Photographer of the Year\" müsabiqəsinin yekunlarını açıqlayıb.",
+                  "text": "Bu BBC Hava səhifəsinə bir url bağlantısı olan bir mətn blokudur.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Bu həftə Britaniya Kinologiya Assosiasiyası hər il keçirilən \"Dog Photographer of the Year\" müsabiqəsinin yekunlarını açıqlayıb.",
+                        "text": "Bu ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "BBC Hava səhifəsinə",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "BBC Hava səhifəsinə",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.com/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " bir url bağlantısı olan bir mətn blokudur.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Bu qarışqalar haqqında bir video ehtiva edən bir video blokdur",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Bu qarışqalar haqqında bir video ehtiva edən bir video blokdur",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Qalibləri artıq mükafatlandırıblar. Müsabiqədə iştirak edən ev heyvanlarının sosial şəbəkələrdə paylaşılan şəkillərini sizə təqdim edirik.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Qalibləri artıq mükafatlandırıblar. Müsabiqədə iştirak edən ev heyvanlarının sosial şəbəkələrdə paylaşılan şəkillərini sizə təqdim edirik.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Bu alt alt blokdur",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Bu alt alt blokdur",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Matçdan sonra futbolçular",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Matçdan sonra futbolçular",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "2006-cı ildən etibarən Britaniyanın \"Kennel Club\" qurumu fotoqraflara bir neçə nominasiyada mükafat təqdim edir - \"Köməkçi itlər\", \"İtlər iş başında\", \"Balaca itləri sevirəm\" (yeniyetmə fotoqraflar üçün), \"İnsanın ən yaxın dostu\", \"Yaşlı köpəklər\", \"Portret\", \"Küçüklər\", \"Küçə itləri\" və \"Gənc fotoqraf\" (öz ev heyvanlarının şəklini çəkən uşaqlar üçün).",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "2006-cı ildən etibarən Britaniyanın \"Kennel Club\" qurumu fotoqraflara bir neçə nominasiyada mükafat təqdim edir - \"Köməkçi itlər\", \"İtlər iş başında\", \"Balaca itləri sevirəm\" (yeniyetmə fotoqraflar üçün), \"İnsanın ən yaxın dostu\", \"Yaşlı köpəklər\", \"Portret\", \"Küçüklər\", \"Küçə itləri\" və \"Gənc fotoqraf\" (öz ev heyvanlarının şəklini çəkən uşaqlar üçün).",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "9809/test/8e3735d0-e135-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Müsabiqəyə dünyanın hər yerindən şəkillər qəbul edilir: \"Kennel Club\"-un mətbuat xidməti BBC-yə bildirib ki, bu il assosiasiyaya 70 ölkədən 7 min şəkil daxil olub.",
+                  "text": "Bu test məqaləsi veb saytımızda avtomatlaşdırılmış son nöqtəli sınaqları keçirə biləcəyimiz üçün yaradıldı.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Müsabiqəyə dünyanın hər yerindən şəkillər qəbul edilir: \"Kennel Club\"-un mətbuat xidməti BBC-yə bildirib ki, bu il assosiasiyaya 70 ölkədən 7 min şəkil daxil olub.",
+                        "text": "Bu test məqaləsi veb saytımızda avtomatlaşdırılmış son nöqtəli sınaqları keçirə biləcəyimiz üçün yaradıldı.",
                         "attributes": []
                       }
                     }
@@ -129,13 +416,13 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Ən yaxşı it şəkli: dünyada ən sevimli kimdir?"
+      "seoHeadline": "Bu test məqaləsinin SEO başlığı"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c5k08pqnzexo"
     },
     "summary": "",
-    "timestamp": 1562936692555,
+    "timestamp": 1569598550759,
     "id": "urn:bbc:ares::article:c5k08pqnzexo",
     "type": "cps"
   },
