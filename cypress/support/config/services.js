@@ -703,7 +703,7 @@ const services = {
     pageTypes: {
       articles: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/naidheachdan/articles/c18q7nedn2ko',
         smoke: false,
@@ -716,10 +716,7 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/naidheachdan',
+        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/naidheachdan',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },

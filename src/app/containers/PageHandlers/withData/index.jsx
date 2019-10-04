@@ -1,34 +1,34 @@
 import React, { useContext } from 'react';
-import { element, string } from 'prop-types';
-import { dataPropType } from '../../../models/propTypes/data';
+import { element, string, number } from 'prop-types';
+import { pageDataPropType } from '../../../models/propTypes/data';
 import ErrorMain from '../../ErrorMain';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import shouldRender from './shouldRender';
 
 const WithData = Component => {
-  const DataContainer = ({ data, ...props }) => {
+  const DataContainer = ({ pageData, status, ...props }) => {
     const { service } = props;
     const { passportHomes } = useContext(ServiceContext) || {};
     const {
       hasData200StatusAndCorrectService,
-      status,
-      pageData,
-    } = shouldRender(data, service, passportHomes);
+      status: statusCode,
+    } = shouldRender({ pageData, status }, service, passportHomes);
 
     if (hasData200StatusAndCorrectService) {
       return <Component pageData={pageData} {...props} />;
     }
 
-    return <ErrorMain status={status} />;
+    return <ErrorMain status={statusCode} />;
   };
 
   DataContainer.propTypes = {
-    data: dataPropType,
+    pageData: pageDataPropType,
+    status: number.isRequired,
     service: string,
   };
 
   DataContainer.defaultProps = {
-    data: null,
+    pageData: null,
     service: 'default',
   };
 
