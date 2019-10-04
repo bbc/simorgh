@@ -19,7 +19,7 @@ const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
   description: data.promo.summary,
-  openGraph: 'article',
+  openGraphType: 'article',
 });
 
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
@@ -36,7 +36,7 @@ const MetadataWithContext = ({
   title,
   lang,
   description,
-  openGraph,
+  openGraphType,
   /* eslint-enable react/prop-types */
 }) => {
   const serviceConfig = services[service].default;
@@ -56,7 +56,7 @@ const MetadataWithContext = ({
           title={title}
           lang={lang}
           description={description}
-          openGraph={openGraph}
+          openGraphType={openGraphType}
         />
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -461,7 +461,7 @@ shouldMatchSnapshot(
     title="Ogbako"
     lang={frontPageData.metadata.language}
     description={frontPageData.metadata.summary}
-    openGraph="website"
+    openGraphType="website"
   />,
 );
 
@@ -477,6 +477,6 @@ shouldMatchSnapshot(
     title={liveRadioPageData.promo.name}
     lang={liveRadioPageData.metadata.language}
     description={liveRadioPageData.promo.summary}
-    openGraph="website"
+    openGraphType="website"
   />,
 );

@@ -24,7 +24,7 @@ const ArticleMetadata = ({
       title={title}
       lang={lang}
       description={description}
-      openGraph="article"
+      openGraphType="article"
     >
       <meta name="article:author" content={author} />
       <meta name="article:modified_time" content={lastPublished} />

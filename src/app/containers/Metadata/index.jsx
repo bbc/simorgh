@@ -24,7 +24,7 @@ const MetadataContainer = ({
   title,
   lang,
   description,
-  openGraph,
+  openGraphType,
   children,
 }) => {
   const {
@@ -116,7 +116,7 @@ const MetadataContainer = ({
         title={title}
         twitterCreator={twitterCreator}
         twitterSite={twitterSite}
-        type={openGraph}
+        type={openGraphType}
         service={service}
         iconSizes={iconSizes}
       />
@@ -129,7 +129,7 @@ MetadataContainer.propTypes = {
   title: string.isRequired,
   lang: string.isRequired,
   description: string.isRequired,
-  openGraph: string.isRequired,
+  openGraphType: string.isRequired,
   children: node,
 };
 

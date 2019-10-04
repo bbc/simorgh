@@ -39,7 +39,7 @@ const FrontPageMain = ({ frontPageData }) => {
         title={frontPageTitle}
         lang={metadata.language}
         description={metadata.summary}
-        openGraph="website"
+        openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={promo.name} />
       <main role="main">

@@ -19,7 +19,7 @@ const RadioPageMain = ({ pageData }) => {
         title={promo.name}
         lang={metadata.language}
         description={promo.summary}
-        openGraph="website"
+        openGraphType="website"
       />
       <LinkedData type="RadioChannel" seoTitle={promo.name} />
 
