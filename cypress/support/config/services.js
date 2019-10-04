@@ -703,7 +703,7 @@ const services = {
     pageTypes: {
       articles: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('APP_ENV') === 'live'
             ? undefined
             : '/naidheachdan/articles/c18q7nedn2ko',
         smoke: false,
