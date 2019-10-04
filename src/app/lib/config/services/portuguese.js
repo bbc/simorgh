@@ -24,7 +24,7 @@ export const service = {
     product: 'BBC News',
     serviceLocalizedName: 'Brasil',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/portuguese/images/og/poster-1024x576.png',
+      'https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Brasil',
     dir: `ltr`,
     externalLinkText: ', external',
