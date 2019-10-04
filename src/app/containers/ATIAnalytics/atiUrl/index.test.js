@@ -1,6 +1,6 @@
 import * as genericLabelHelpers from '#lib/analyticsUtils';
 
-const atiPageViewParams = require('.').default;
+const { buildATIPageTrackPath, buildATIEventTrackUrl } = require('.');
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -37,11 +37,11 @@ describe('getThingAttributes', () => {
       mockAndSet(func, null);
     });
 
-    const queryParams = atiPageViewParams({});
-    const queryParamsArray = splitUrl(queryParams);
+    const atiPath = buildATIPageTrackPath({});
+    const atiPathArray = splitUrl(atiPath);
     const expectedValues = [];
 
-    expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
+    expectedValues.forEach(value => expect(atiPathArray).toContain(value));
   });
 
   it('should take in optional props and add them as correct query params', () => {
@@ -49,7 +49,7 @@ describe('getThingAttributes', () => {
       mockAndSet(func, null);
     });
 
-    const queryParams = atiPageViewParams({
+    const queryParams = buildATIPageTrackPath({
       appName: 'appName',
       contentId: 'contentId',
       contentType: 'contentType',
@@ -87,7 +87,7 @@ describe('getThingAttributes', () => {
       mockAndSet(func, func.name);
     });
 
-    const queryParams = atiPageViewParams({
+    const queryParams = buildATIPageTrackPath({
       pageTitle: 'pageTitle',
       platform: 'platform',
       service: 'service',
@@ -111,5 +111,33 @@ describe('getThingAttributes', () => {
 
     expect(queryParamsArray).toHaveLength(expectedValues.length);
     expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
+  });
+});
+
+describe('buildATIEventTrackUrl', () => {
+  it('should return the right url', () => {
+    process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
+    expect(
+      buildATIEventTrackUrl({
+        pageIdentifier: 'pageIdentifier',
+        service: 'service',
+        platform: 'platform',
+        statsDestination: 'statsDestination',
+        element: 'element',
+        component: 'component',
+        label: 'label',
+        type: 'type',
+      }),
+    ).toEqual(
+      `http://foobar.com?${[
+        's=getDestination',
+        'p=pageIdentifier',
+        'r=getScreenInfo',
+        're=getBrowserViewPort',
+        'hl=getCurrentTime',
+        'lng=getDeviceLanguage',
+        'ati=PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+      ].join('&')}`,
+    );
   });
 });

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::ws_live:bbc_arabic_radio",
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_arabic_radio"
+    },
+    "type": "WS-LIVE",
+    "createdBy": "arabic",
+    "language": "ar",
+    "lastUpdated": 0,
+    "firstPublished": 0,
+    "lastPublished": 0,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "إذاعة بي بي سي العربية - BBC News Arabic",
+      "pageIdentifier": "arabic.bbc_arabic_radio.liveradio.page",
+      "producerId": "5",
+      "contentType": "player-live",
+      "producer": "ARABIC"
+    },
+    "tags": {},
+    "version": "1.1.2",
+    "blockTypes": ["heading", "version", "paragraph"]
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "إذاعة بي بي سي العربية",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_arabic_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "promo": {
+    "name": "إذاعة بي بي سي العربية",
+    "summary": "خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي",
+    "uri": "/arabic/bbc_arabic_radio/liveradio",
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares::ws_live:bbc_arabic_radio",
+    "type": "link"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "simple",
+      "name": "arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

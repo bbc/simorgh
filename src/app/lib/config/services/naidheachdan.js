@@ -1,8 +1,17 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+import {
+  F_REITH_SANS_BOLD,
+  F_REITH_SANS_BOLD_ITALIC,
+  F_REITH_SANS_ITALIC,
+  F_REITH_SANS_REGULAR,
+  F_REITH_SERIF_MEDIUM,
+  F_REITH_SERIF_MEDIUM_ITALIC,
+} from '@bbc/psammead-styles/fonts';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
+import 'moment/locale/gd';
 
 export const service = {
   default: {
@@ -166,7 +175,14 @@ export const service = {
       copyrightText:
         "BhBC. Chan eil uallach air a' BhBC son na tha air làraichean-lìn eile",
     },
-    fonts: [],
+    fonts: [
+      F_REITH_SANS_BOLD,
+      F_REITH_SANS_BOLD_ITALIC,
+      F_REITH_SANS_ITALIC,
+      F_REITH_SANS_REGULAR,
+      F_REITH_SERIF_MEDIUM,
+      F_REITH_SERIF_MEDIUM_ITALIC,
+    ],
     timezone: 'Europe/London',
     navigation: [
       {
