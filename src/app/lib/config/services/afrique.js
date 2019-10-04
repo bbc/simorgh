@@ -152,15 +152,15 @@ export const service = {
       lastUpdated: 'Dernière mise à jour: ',
     },
     footer: {
+      trustProjectLink: {
+        href: '...',
+        text: '...',
+      },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Découvrez notre approche en matière de liens externes.',
+        href: 'https://www.bbc.com/afrique/institutionelles-49283281',
+        text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/afrique/institutionelles-49283281',
-          text: 'Pourquoi vous pouvez faire confiance à BBC News',
-        },
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826639',
           text: "Conditions d'utilisation",

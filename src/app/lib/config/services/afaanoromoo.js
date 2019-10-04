@@ -140,15 +140,15 @@ export const service = {
       lastUpdated: 'Yeroo dhuma kan haaromfame: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',
+        text: 'BBC News maaliif amanuu dandeessa',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',
-          text: 'BBC News maaliif amanuu dandeessa',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Haala itti fayyadamaa',

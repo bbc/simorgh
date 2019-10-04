@@ -144,15 +144,15 @@ export const service = {
       lastUpdated: 'Ibiheruka kuvugururwa: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/gahuza/institutional-49283343',
+        text: 'Igituma ushobora kwizera BBC News',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [
-        {
-          href: 'https://www.bbc.com/gahuza/institutional-49283343',
-          text: 'Igituma ushobora kwizera BBC News',
-        },
         {
           href: 'https://www.bbc.com/gahuza/institutional-35754053',
           text: 'Ingingo zo gukoresha urubuga',

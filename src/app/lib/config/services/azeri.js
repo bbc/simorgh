@@ -139,11 +139,15 @@ export const service = {
       lastUpdated: 'Ən son yeniləmə: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/azeri/institutional-49283479',
+        text: 'BBC News-a niyə etibar etməlisiniz',
+      },
+      externalLink: {
+        href: 'https://www.bbc.co.uk/help/web/links/',
+        text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
+      },
       links: [
-        {
-          href: 'https://www.bbc.com/azeri/institutional-49283479',
-          text: 'BBC News-a niyə etibar etməlisiniz',
-        },
         {
           href: 'https://www.bbc.com/azeri/institutional-37131047',
           text: 'İstifadə qaydaları',
@@ -167,10 +171,6 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
-      externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
-      },
     },
     fonts: [],
     timezone: 'Asia/baku',
