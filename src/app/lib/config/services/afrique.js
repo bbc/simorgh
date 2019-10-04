@@ -157,8 +157,8 @@ export const service = {
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/afrique/institutionelles-49283281',
-        text: 'Pourquoi vous pouvez faire confiance à BBC News',
+        href: 'https://www.bbc.co.uk/help/web/links/',
+        text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
         {
