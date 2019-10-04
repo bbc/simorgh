@@ -23,7 +23,7 @@ export const service = {
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/og/poster-1024x576.png',
+      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC Scotland',
     dir: 'ltr',
     externalLinkText: ', external',
