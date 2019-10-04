@@ -8,13 +8,11 @@ export const ComponentUsingContext = ({ context }) => {
      functions, this is needed. (key, val) below allows the stringify to
      replace null with identify-able strings using the funciton names */
   return (
-    <>
-      <span>
-        {JSON.stringify(value, (key, val) =>
-          typeof val === 'function' ? `*function - ${val.name}*` : val,
-        )}
-      </span>
-    </>
+    <span>
+      {JSON.stringify(value, (key, val) =>
+        typeof val === 'function' ? `*function - ${val.name}*` : val,
+      )}
+    </span>
   );
 };
 
