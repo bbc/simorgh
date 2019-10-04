@@ -4,7 +4,7 @@ import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
-import LinkedData from '../../components/LinkedData';
+import LinkedData from '../LinkedData';
 import RadioPageBlocks from '../RadioPageBlocks';
 
 const RadioPageMain = ({ pageData }) => {

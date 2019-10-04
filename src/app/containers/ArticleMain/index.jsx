@@ -12,7 +12,7 @@ import { GhostGrid } from '#lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';
-import LinkedData from '../../components/LinkedData';
+import LinkedData from '../LinkedData';
 import {
   getArticleId,
   getHeadline,

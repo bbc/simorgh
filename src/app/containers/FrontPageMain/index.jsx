@@ -7,7 +7,7 @@ import { Grid, GridItemConstrainedLargeWithTopMargin } from '#lib/styledGrid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
-import LinkedData from '../../components/LinkedData';
+import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 
