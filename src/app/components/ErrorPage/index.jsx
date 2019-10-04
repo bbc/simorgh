@@ -35,10 +35,10 @@ const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
 
 const ErrorTag = styled.p`
   padding-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 `;
 
-// const ParaTest = styled(Paragraph)``;
+const ParaTest = styled(Paragraph)``;
 
 const ErrorPage = ({
   statusCode,
@@ -66,28 +66,28 @@ const ErrorPage = ({
         >
           {title}
         </HeadingFix>
-        <Paragraph script={script} service={service}>
+        <ParaTest script={script} service={service}>
           {message}
-        </Paragraph>
+        </ParaTest>
         <ul>
           {solutions.map(text => (
-            <Paragraph
+            <ParaTest
               script={script}
               service={service}
               as="li"
               key={idSanitiser(text)}
             >
               {text}
-            </Paragraph>
+            </ParaTest>
           ))}
         </ul>
-        <Paragraph script={script} service={service}>
+        <ParaTest script={script} service={service}>
           {callToActionFirst}
           <InlineLink href={callToActionLinkUrl}>
             {callToActionLinkText}
           </InlineLink>
           {callToActionLast}
-        </Paragraph>
+        </ParaTest>
       </LongGridItemConstrainedMedium>
     </GhostGrid>
   </main>
