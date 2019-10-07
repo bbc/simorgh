@@ -8,7 +8,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
 } from '@bbc/psammead-styles/fonts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { naidheachdan as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/gd';
