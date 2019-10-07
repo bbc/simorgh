@@ -1,0 +1,433 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c1er5mjnznzo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c1er5mjnznzo",
+      "canonicalUrl": "https://www.bbc.com/arabic/articles/c1er5mjnznzo"
+    },
+    "type": "article",
+    "createdBy": "Arabic",
+    "language": "ar",
+    "lastUpdated": 1570184531579,
+    "firstPublished": 1570184527836,
+    "lastPublished": 1570184527836,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ar",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic"
+    },
+    "tags": {},
+    "version": "v1.1.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "هذا هو عنوان هذا المقال الاختبار\n\n\n",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "هذا هو عنوان هذا المقال الاختبار\n\n\n",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.\n\n\n",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.\n\n\n",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.\n",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.\n",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "6eab/test/c2696670-e68f-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "هذا عبارة عن كتلة نصية ، تحتوي على رابط url إلى الصفحة الرئيسية لبي بي سي للطقس.\n\n\n",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "هذا عبارة عن كتلة نصية ، تحتوي على رابط url إلى الصفحة ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "الرئيسية لبي بي سي للطقس",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "الرئيسية لبي بي سي للطقس",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".\n\n\n",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kf9p8",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.\n",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.\n",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01kf9p8",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01kf9p8",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "ÙØ§Ù‡Ø³ Ù‡Ø³ Ø´ Ø´Ù‚Ø´Ø²Ù‡Ø° ÙØ«Ø·Ù",
+                        "synopses": {
+                          "short": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kf9pn.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "caption": "ÙØ§Ù‡Ø³ Ù‡Ø³ ÙˆØ«ÙŠÙ‡Ø´ Ø°Ø´Ø­ÙÙ‡Ø®Ø± Ø¨Ù‡Ù…Ø«ÙŠ ÙØ«Ø·Ù Ø¨Ø®Ù‚ Ø¦[Â» Ø´Ø³Ø³Ø«Ù",
+                        "versions": [
+                          {
+                            "versionId": "p01kf9pb",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 16,
+                            "durationISO8601": "PT16S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1542034042000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9pn.jpg",
+                              "originCode": "mpv"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "هذا كتلة عنوان فرعي\n\n\n",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "هذا كتلة عنوان فرعي\n\n\n",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "هذا كتلة عنوان فرعي\r\n",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "هذا كتلة عنوان فرعي\r\n",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "f6e2/test/a4759840-e690-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "تم إنشاء مقالة الاختبار هذه حتى نتمكن من إجراء اختبارات تلقائية شاملة على موقعنا.\n\n\n",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "تم إنشاء مقالة الاختبار هذه حتى نتمكن من إجراء اختبارات تلقائية شاملة على موقعنا.\n\n\n",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "هذا هو عنوان هذا المقال الاختبار\n\n\n"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c1er5mjnznzo"
+    },
+    "summary": "",
+    "timestamp": 1570184527836,
+    "id": "urn:bbc:ares::article:c1er5mjnznzo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
