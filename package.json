@@ -197,8 +197,7 @@
     "prune": false,
     "requires": [
       "td-agent",
-      "cloudteam-td-agent-setup",
-      "dial-agent"
+      "cloudteam-td-agent-setup"
     ]
   },
   "lint-staged": {
