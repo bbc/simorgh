@@ -9,7 +9,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
 } from '@bbc/psammead-styles/fonts';
-import 'moment/locale/en-gb';
+import '@bbc/psammead-locales/moment/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 
@@ -23,7 +23,7 @@ export const service = {
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/og/poster-1024x576.png',
+      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC Scotland',
     dir: 'ltr',
     externalLinkText: ', external',
@@ -147,6 +147,11 @@ export const service = {
       lastUpdated: 'Last updated: ',
     },
     footer: {
+      trustProjectLink: {},
+      externalLink: {
+        href: 'https://www.bbc.co.uk/help/web/links/',
+        text: 'Read about our approach to external linking.',
+      },
       links: [
         {
           href: 'https://www.bbc.com/terms',
@@ -175,10 +180,6 @@ export const service = {
       ],
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
-      externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
-      },
     },
     fonts: [
       F_REITH_SANS_BOLD,

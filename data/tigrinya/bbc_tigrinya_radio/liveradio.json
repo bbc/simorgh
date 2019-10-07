@@ -1,7 +1,9 @@
 {
   "metadata": {
     "id": "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
-    "locators": {},
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_tigrinya_radio"
+    },
     "type": "WS-LIVE",
     "createdBy": "tigrinya",
     "language": "ti",
@@ -10,11 +12,14 @@
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
+      "pageTitle": "ስምዑ - BBC News ትግርኛ",
       "pageIdentifier": "tigrinya.bbc_tigrinya_radio.liveradio.page",
-      "pageTitle": "ስምዑ - BBC News ትግርኛ"
+      "producerId": "91",
+      "contentType": "player-live",
+      "producer": "TIGRINYA"
     },
     "tags": {},
-    "version": "1.1.1",
+    "version": "1.1.2",
     "blockTypes": ["heading", "version", "paragraph"]
   },
   "content": {

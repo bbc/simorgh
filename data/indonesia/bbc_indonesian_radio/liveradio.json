@@ -1,7 +1,9 @@
 {
   "metadata": {
     "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
-    "locators": {},
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_indonesian_radio"
+    },
     "type": "WS-LIVE",
     "createdBy": "indonesia",
     "language": "id",
@@ -10,11 +12,14 @@
     "lastPublished": 0,
     "options": {},
     "analyticsLabels": {
+      "pageTitle": "BBC Indonesia Radio - BBC News Indonesia",
       "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page",
-      "pageTitle": "BBC Indonesia Radio - BBC News Indonesia"
+      "producerId": "54",
+      "contentType": "player-live",
+      "producer": "INDONESIAN"
     },
     "tags": {},
-    "version": "1.1.1",
+    "version": "1.1.2",
     "blockTypes": ["heading", "version", "paragraph"]
   },
   "content": {
@@ -25,7 +30,7 @@
         "type": "heading"
       },
       {
-        "text": "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+        "text": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
         "type": "paragraph"
       },
       {
@@ -44,7 +49,7 @@
   },
   "promo": {
     "name": "BBC Indonesia Radio",
-    "summary": "Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+    "summary": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
     "uri": "/indonesia/bbc_indonesian_radio/liveradio",
     "contentType": "WS-LIVE",
     "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",

@@ -1,6 +1,6 @@
 import React from 'react';
-import { string } from 'prop-types';
-import { dataPropType } from '#models/propTypes/data';
+import { string, number } from 'prop-types';
+import { pageDataPropType } from '#models/propTypes/data';
 import PageWrapper from '../../../Layouts/defaultPageWrapper';
 
 const WithPageWrapper = Component => {
@@ -11,12 +11,13 @@ const WithPageWrapper = Component => {
   );
 
   PageWrapperContainer.propTypes = {
-    data: dataPropType,
+    pageData: pageDataPropType,
+    status: number.isRequired,
     bbcOrigin: string,
   };
 
   PageWrapperContainer.defaultProps = {
-    data: null,
+    pageData: null,
     bbcOrigin: null,
   };
 

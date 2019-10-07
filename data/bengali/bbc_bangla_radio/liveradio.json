@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::ws_live:bbc_bangla_radio",
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_bangla_radio"
+    },
+    "type": "WS-LIVE",
+    "createdBy": "bengali",
+    "language": "bn",
+    "lastUpdated": 0,
+    "firstPublished": 0,
+    "lastPublished": 0,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "বিবিসি বাংলা - BBC News বাংলা",
+      "pageIdentifier": "bengali.bbc_bangla_radio.liveradio.page",
+      "producerId": "31",
+      "contentType": "player-live",
+      "producer": "BENGALI"
+    },
+    "tags": {},
+    "version": "1.1.2",
+    "blockTypes": ["heading", "version", "paragraph"]
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "বিবিসি বাংলা",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "বাংলাদেশ, তার প্রতিবেশী এবং গোটা বিশ্বের সংবাদ পরিবেশন করে। সংবাদদাতার প্রতিবেদন ছাড়াও আছে সাক্ষাৎকার, সংবাদপত্র পর্যালোচনা এবং সরাসরি ফোন-ইন।",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_bangla_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "promo": {
+    "name": "বিবিসি বাংলা",
+    "summary": "বাংলাদেশ, তার প্রতিবেশী এবং গোটা বিশ্বের সংবাদ পরিবেশন করে। সংবাদদাতার প্রতিবেদন ছাড়াও আছে সাক্ষাৎকার, সংবাদপত্র পর্যালোচনা এবং সরাসরি ফোন-ইন।",
+    "uri": "/bengali/bbc_bangla_radio/liveradio",
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares::ws_live:bbc_bangla_radio",
+    "type": "link"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "simple",
+      "name": "bengali",
+      "uri": "/bengali",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

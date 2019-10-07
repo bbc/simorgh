@@ -9,7 +9,10 @@ import MPulseBeacon from '../containers/MPulseBeacon';
 import { ServiceContext } from '../contexts/ServiceContext';
 
 const PageWrapper = ({ children }) => {
-  const { fonts } = useContext(ServiceContext);
+  const { fonts: fontFunctions } = useContext(ServiceContext);
+
+  const fonts = fontFunctions.map(getFonts => getFonts());
+
   return (
     <>
       <GlobalStyles fonts={fonts} />

@@ -23,7 +23,8 @@ export const service = {
     brandName: 'BBC News Brasil',
     product: 'BBC News',
     serviceLocalizedName: 'Brasil',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/brasil.png',
+    defaultImage:
+      'https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Brasil',
     dir: `ltr`,
     externalLinkText: ', external',
@@ -147,6 +148,10 @@ export const service = {
       lastUpdated: 'Last updated: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: 'Why you can trust the BBC',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Read about our approach to external linking.',

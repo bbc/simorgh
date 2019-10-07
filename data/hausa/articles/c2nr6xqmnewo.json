@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Hausa",
     "language": "ha",
-    "lastUpdated": 1562936833135,
+    "lastUpdated": 1569258503455,
     "firstPublished": 1562936829639,
     "lastPublished": 1562936829639,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Dalilan da suka sa Najeriya ta doke Afirka ta Kudu",
+                        "text": "Wannan shine taken wannan labarin gwajin",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Dalilan da suka sa Najeriya ta doke Afirka ta Kudu",
+                              "text": "Wannan shine taken wannan labarin gwajin",
                               "attributes": []
                             }
                           }
@@ -58,48 +65,336 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Taswirar Faransa wanda ke nuna Paris da Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Taswirar Faransa wanda ke nuna Paris da Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Tawagar kwallon kafa ta Najeriya ta kai wasan kusa da na karshe a gasar Cin Kofin nahiyar Afirka da ake yi a Masar, bayan da ta doke Afirka ta Kudu 2-1 a ranar Laraba.",
+                  "text": "Wannan toshiyar rubutu ce, wacce take dauke da hanyar url zuwa shafin yanar gizo na Weather Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Tawagar kwallon kafa ta Najeriya ta kai wasan kusa da na karshe a gasar Cin Kofin nahiyar Afirka da ake yi a Masar, bayan da ta doke Afirka ta Kudu 2-1 a ranar Laraba.",
+                        "text": "Wannan toshiyar rubutu ce, wacce take dauke da hanyar url zuwa ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "shafin yanar gizo na Weather Weather.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "shafin yanar gizo na Weather Weather.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.com/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Wannan toshe bidiyon da ke da bidiyo game da tururuwa",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Wannan toshe bidiyon da ke da bidiyo game da tururuwa",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Najeriya ta kai wannan matakin duk da kasa halartar wasannin 2015 da aka yi a Equatorial Guinea da wanda aka yi a Gabon a 2017.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Najeriya ta kai wannan matakin duk da kasa halartar wasannin 2015 da aka yi a Equatorial Guinea da wanda aka yi a Gabon a 2017.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Wannan tosheken abu ne",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Wannan tosheken abu ne",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "'Yan wasan kwallon kafa bayan wasa",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "'Yan wasan kwallon kafa bayan wasa",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "0e99/test/a12646e0-de24-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "Super Eagles ta samu karfin gwiwar zuwa karawar Quarter Finals, bayan da ta fitar da mai rike da kofin Kamaru, ita kuwa Afirka ta Kudu mai masaukin baki ta fitar a wasannin.",
+                  "text": "An ƙirƙiri wannan labarin gwaji ne domin mu iya yin gwajin ƙarshen-kai-ƙarshen-kai akan gidan yanar gizon mu.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Super Eagles ta samu karfin gwiwar zuwa karawar Quarter Finals, bayan da ta fitar da mai rike da kofin Kamaru, ita kuwa Afirka ta Kudu mai masaukin baki ta fitar a wasannin.",
+                        "text": "An ƙirƙiri wannan labarin gwaji ne domin mu iya yin gwajin ƙarshen-kai-ƙarshen-kai akan gidan yanar gizon mu.",
                         "attributes": []
                       }
                     }
@@ -114,7 +409,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Dalilan da suka sa Najeriya ta doke Afirka ta Kudu"
+      "seoHeadline": "Wannan shine taken SEO na wannan labarin gwaji"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c2nr6xqmnewo"
