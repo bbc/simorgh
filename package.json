@@ -128,7 +128,7 @@
     "@loadable/babel-plugin": "^5.10.0",
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^9.2.0",
-    "@testing-library/react-hooks": "^2.0.1",
+    "@testing-library/react-hooks": "^2.0.3",
     "amphtml-validator": "^1.0.23",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
