@@ -3,32 +3,32 @@ import nodeLogger from '#lib/logger.node';
 import preprocess from '#lib/utilities/preprocessor';
 
 const logger = nodeLogger(__filename);
-const upstreamStatusCodesToPropagate = [200, 404];
+const STATUS_CODE_OK = 200;
+const STATUS_CODE_BAD_GATEWAY = 502;
+const STATUS_CODE_NOT_FOUND = 404;
+const upstreamStatusCodesToPropagate = [STATUS_CODE_OK, STATUS_CODE_NOT_FOUND];
 
 const fetchData = async ({ url, preprocessorRules }) => {
-  let pageData;
-  let status;
-
   try {
     const response = await fetch(url);
+    const { status } = response;
 
-    status = response.status; // eslint-disable-line prefer-destructuring
-
-    if (status === 200) {
-      pageData = await response.json();
-      pageData = preprocess(pageData, preprocessorRules);
-    } else if (!upstreamStatusCodesToPropagate.includes(status)) {
-      logger.warn(
-        `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
-      );
-      status = 502;
+    if (upstreamStatusCodesToPropagate.includes(status)) {
+      return {
+        status,
+        ...(status === STATUS_CODE_OK && {
+          pageData: preprocess(await response.json(), preprocessorRules),
+        }),
+      };
     }
+
+    logger.warn(
+      `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
+    );
   } catch (error) {
     logger.error(error);
-    status = 502;
   }
-
-  return { pageData, status };
+  return { status: STATUS_CODE_BAD_GATEWAY };
 };
 
 export default fetchData;
