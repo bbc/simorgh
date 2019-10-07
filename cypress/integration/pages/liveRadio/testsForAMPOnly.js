@@ -30,8 +30,13 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           ({ body }) => {
             const { id, externalId } = body.content.blocks[2];
             const serviceId = getMappedServiceId(externalId);
+            const liveRadioBaseUrl = envConfig.liveRadioIframeBaseUrl.includes(
+              '.co.uk',
+            )
+              ? origin.replace('.co.uk', '.com')
+              : origin.replace('.com', '.co.uk');
             cy.get(
-              `amp-iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/amp"]`,
+              `amp-iframe[src="${liveRadioBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/amp"]`,
             ).should('be.visible');
           },
         );
