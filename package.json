@@ -125,7 +125,7 @@
     "@storybook/theming": "^5.2.1",
     "@bbc/psammead-storybook-helpers": "^6.0.3",
     "@bbc/psammead-test-helpers": "^3.0.2",
-    "@loadable/babel-plugin": "^5.10.0",
+    "@loadable/babel-plugin": "^5.10.3",
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^9.2.0",
     "@testing-library/react-hooks": "^2.0.1",
