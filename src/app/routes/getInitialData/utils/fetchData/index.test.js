@@ -87,6 +87,7 @@ describe('fetchData', () => {
       expect(response).toEqual({
         data: undefined,
         status: 502,
+        error: JSON.stringify({ error: true }),
       });
     });
   });
@@ -97,9 +98,15 @@ describe('fetchData', () => {
 
       expect(preprocess).not.toHaveBeenCalled();
 
+      const error = new Error(
+        'invalid json response body at undefined reason: Unexpected token S in JSON at position 0',
+      );
+      error.name = 'FetchError';
+
       expect(response).toEqual({
         data: undefined,
         status: 502,
+        error,
       });
     });
   });
