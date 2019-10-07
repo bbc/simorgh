@@ -47,7 +47,7 @@ describe('withContexts HOC', () => {
     isAmp: true,
     pageType: 'article',
     pathname: '/pathname',
-    data: { status: 200 },
+    status: 200,
   };
 
   shouldMatchSnapshot(
@@ -83,7 +83,7 @@ describe('withContexts HOC', () => {
           isAmp: true,
           pageType,
           pathname: '/pathname',
-          data: { status: 200 },
+          status: 200,
         };
         render(<ContextsHOC {...fixture} />);
         expect(requestContextSpy).toHaveBeenCalled();
@@ -111,7 +111,7 @@ describe('withContexts HOC', () => {
         pageType: 'article',
         pathname: '/pathname',
         variant: 'trad',
-        data: { status: 200 },
+        status: 200,
       };
 
       render(<ContextsHOC {...fixture} />);
