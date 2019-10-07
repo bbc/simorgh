@@ -3,6 +3,7 @@ import { bool, string } from 'prop-types';
 import { ConsentBanner } from '@bbc/psammead-consent-banner';
 import { ServiceContext } from '#contexts/ServiceContext';
 import BannerText from './Text';
+import getDataAttribute from './getDataAttribute';
 
 const Accept = (message, onClick) => (
   <button type="button" on={onClick}>
@@ -26,17 +27,24 @@ const AmpConsentBannerContainer = ({
   const { dir, translations, script, service } = useContext(ServiceContext);
   const consentBannerConfig = translations.consentBanner[type];
 
+  const dataAttribute = getDataAttribute(type);
+
   return (
     <ConsentBanner
       dir={dir}
       id={promptId}
       title={consentBannerConfig.title}
       text={BannerText(consentBannerConfig.description)}
-      accept={Accept(consentBannerConfig.accept, acceptAction)}
+      accept={Accept(
+        consentBannerConfig.accept,
+        acceptAction,
+        dataAttribute('accept'),
+      )}
       reject={Reject(
         consentBannerConfig.reject,
         consentBannerConfig.rejectUrl,
         rejectAction,
+        dataAttribute('reject'),
       )}
       hidden={hidden}
       script={script}
