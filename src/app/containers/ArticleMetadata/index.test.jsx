@@ -29,6 +29,7 @@ const ArticleMetadataForNewsInternational = () => (
   <Context service="news">
     <ArticleMetadata
       articleId={articleDataNews.metadata.id}
+      title={articleDataNews.promo.headlines.seoHeadline}
       author="https://www.facebook.com/bbcnews"
       firstPublished={getISOStringDate(articleDataNews.metadata.firstPublished)}
       lastPublished={getISOStringDate(articleDataNews.metadata.lastPublished)}
@@ -36,35 +37,7 @@ const ArticleMetadataForNewsInternational = () => (
       aboutTags={articleDataNews.metadata.tags.about}
       mentionsTags={articleDataNews.metadata.tags.mentions}
       lang={articleDataNews.metadata.passport.language}
-      title={articleDataNews.promo.headlines.seoHeadline}
-      seoHeadline={articleDataNews.promo.headlines.seoHeadline}
       description={articleDataNews.promo.headlines.seoHeadline}
-      linkedData={{
-        headline: 'Article Headline for SEO',
-        datePublished: '2018-01-01T12:01:00.000Z',
-        dateModified: '2018-01-01T13:00:00.000Z',
-        about: [
-          {
-            '@type': 'Thing',
-            name: 'Royal Wedding 2018',
-            sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
-          },
-          { '@type': 'Person', name: 'Duchess of Sussex' },
-        ],
-        author: {
-          '@type': 'NewsMediaOrganization',
-          logo: {
-            '@type': 'ImageObject',
-            width: 1024,
-            height: 576,
-            url:
-              'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-          },
-          name: 'BBC News',
-          noBylinesPolicy:
-            'https://www.bbc.com/news/help-41670342#authorexpertise',
-        },
-      }}
     />
   </Context>
 );
@@ -111,6 +84,7 @@ shouldMatchSnapshot(
   <Context service="persian">
     <ArticleMetadata
       articleId={articleDataPersian.metadata.id}
+      title={articleDataPersian.promo.headlines.seoHeadline}
       author="https://www.facebook.com/bbcnews"
       firstPublished={getISOStringDate(
         articleDataPersian.metadata.firstPublished,
@@ -122,8 +96,6 @@ shouldMatchSnapshot(
       aboutTags={articleDataPersian.metadata.tags.about}
       mentionsTags={articleDataPersian.metadata.tags.mentions}
       lang={articleDataPersian.metadata.passport.language}
-      title={articleDataPersian.promo.headlines.seoHeadline}
-      seoHeadline={articleDataPersian.promo.headlines.seoHeadline}
       description={articleDataPersian.promo.headlines.seoHeadline}
     />
   </Context>,
