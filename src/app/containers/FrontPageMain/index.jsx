@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { Grid, GridItemConstrainedLargeWithTopMargin } from '#lib/styledGrid';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -18,9 +18,11 @@ const FrontPageMain = ({ frontPageData }) => {
     translations,
     frontPageTitle,
   } = useContext(ServiceContext);
-  const { home } = translations;
-  const groups = pathOr(null, ['content', 'groups'], frontPageData);
-  const { metadata, promo } = frontPageData;
+  const home = path(['home'], translations);
+  const groups = path(['content', 'groups'], frontPageData);
+  const lang = path(['metadata', 'language'], frontPageData);
+  const description = path(['metadata', 'summary'], frontPageData);
+  const seoTitle = path(['promo', 'name'], frontPageData);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -37,11 +39,11 @@ const FrontPageMain = ({ frontPageData }) => {
       <ChartbeatAnalytics data={frontPageData} />
       <MetadataContainer
         title={frontPageTitle}
-        lang={metadata.language}
-        description={metadata.summary}
+        lang={lang}
+        description={description}
         openGraphType="website"
       />
-      <LinkedData type="WebPage" seoTitle={promo.name} />
+      <LinkedData type="WebPage" seoTitle={seoTitle} />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
