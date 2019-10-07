@@ -9,6 +9,19 @@ import {
 
 import { timestampGenerator } from './testHelpers';
 
+const generateTimeLimits = n => {
+  const limits = [];
+  for (let i = 1; i < n; i += 1) {
+    const expectation = {
+      title: `${i} hour(s) ago`,
+      time: timestampGenerator({ hours: i }),
+      expectedValue: i < 10,
+    };
+    limits.push(expectation);
+  }
+  return limits;
+};
+
 describe('ArticleTimestamp helper functions', () => {
   describe('isValidDateTime', () => {
     it('should return true if timestamp is valid', () => {
@@ -29,39 +42,33 @@ describe('ArticleTimestamp helper functions', () => {
   });
 
   describe('isFirstRelative', () => {
-    it(`should return true when lastPublished === firstPublished and firstPublished < 10 hours ago`, () => {
-      const oneHourAgo = timestampGenerator({ hours: 1 });
-      const firstPublished = oneHourAgo;
-      const lastPublished = oneHourAgo;
-
-      expect(isFirstRelative(lastPublished, firstPublished)).toBe(true);
+    describe(`when lastPublished === firstPublished`, () => {
+      const timeLimits = generateTimeLimits(15);
+      timeLimits.forEach(({ expectedValue, time, title }) => {
+        it(`should return ${expectedValue} for ${title}`, () => {
+          const firstPublished = time;
+          const lastPublished = time;
+          expect(isFirstRelative(lastPublished, firstPublished)).toBe(
+            expectedValue,
+          );
+        });
+      });
     });
 
-    it(`should return false when lastPublished === firstPublished and firstPublished > 10 hours ago`, () => {
-      const fiveDaysAgo = timestampGenerator({ days: 5 });
-      const firstPublished = fiveDaysAgo;
-      const lastPublished = fiveDaysAgo;
-
-      expect(isFirstRelative(lastPublished, firstPublished)).toBe(false);
-    });
-
-    it(`should return false when lastPublished !== firstPublished and firstPublished < 10 hours ago`, () => {
+    it(`should return false when lastPublished !== firstPublished`, () => {
       const firstPublished = timestampGenerator({ hours: 2 });
       const lastPublished = timestampGenerator({ days: 3 });
-
       expect(isFirstRelative(lastPublished, firstPublished)).toBe(false);
     });
   });
 
   describe('isLastRelative', () => {
-    it('should return true when lastPublished < 10 hours ago', () => {
-      const lastPublished = timestampGenerator({ hours: 8 });
-      expect(isLastRelative(lastPublished)).toBe(true);
-    });
-
-    it('should return false when lastPublished > 10 hours ago', () => {
-      const lastPublished = timestampGenerator({ days: 1 });
-      expect(isLastRelative(lastPublished)).toBe(false);
+    const timeLimits = generateTimeLimits(15);
+    timeLimits.forEach(({ expectedValue, time, title }) => {
+      it(`should return ${expectedValue} when lastPublished is ${title}`, () => {
+        const lastPublished = time;
+        expect(isLastRelative(lastPublished)).toBe(expectedValue);
+      });
     });
   });
 
