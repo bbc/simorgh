@@ -27,6 +27,7 @@ const fetchData = async ({ url, preprocessorRules }) => {
     );
   } catch (error) {
     logger.error(error);
+    return { status: STATUS_CODE_BAD_GATEWAY, error };
   }
   return { status: STATUS_CODE_BAD_GATEWAY };
 };
