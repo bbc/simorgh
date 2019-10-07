@@ -268,7 +268,8 @@
                             "type": "rawImage",
                             "model": {
                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9pn.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "copyrightHolder": "Fushimi Inari-taisha"
                             }
                           },
                           {
