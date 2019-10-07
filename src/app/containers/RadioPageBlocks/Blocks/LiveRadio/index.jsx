@@ -11,10 +11,9 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
 
-const liveRadioPlaceholderImageSrc = `
-  ${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}
-  /images/amp_audio_placeholder.png
-`;
+const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+
+const liveRadioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
 const MediaPlayerOuterWrapper = styled.div`
   @media (min-width: 63rem) {

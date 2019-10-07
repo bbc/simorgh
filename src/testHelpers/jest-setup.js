@@ -25,3 +25,5 @@ process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
   'http://localhost.bbc.com:7080';
+
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/';
