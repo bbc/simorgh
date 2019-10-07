@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Somali",
     "language": "so",
-    "lastUpdated": 1562936496574,
+    "lastUpdated": 1569597702526,
     "firstPublished": 1562936492234,
     "lastPublished": 1562936492234,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Gabadh qaadatay go'aan Soomaalida qurbaha ku yaryihiin, kuna liibaantay",
+                        "text": "Tani waa cinwaanka maqaalkan imtixaanka",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Gabadh qaadatay go'aan Soomaalida qurbaha ku yaryihiin, kuna liibaantay",
+                              "text": "Tani waa cinwaanka maqaalkan imtixaanka",
                               "attributes": []
                             }
                           }
@@ -58,63 +65,336 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Khariidadda Faransiiska oo muujineysa Paris iyo Cognac\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Khariidadda Faransiiska oo muujineysa Paris iyo Cognac\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "9d53/test/ad9ec840-de13-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Faaduma Cabdiraxmaan Khalif waa gabadh Soomaaliyeed waxay qaxootinimo ku gashay dalka Canada 1988-dii.",
+                  "text": "Kani waa baaldi qoraal ah, oo ay ku jiraan xariir url ah oo loo maro bogga bogga cimilada ee BBC Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Faaduma Cabdiraxmaan Khalif waa gabadh Soomaaliyeed waxay qaxootinimo ku gashay dalka Canada 1988-dii.",
+                        "text": "Kani waa baaldi qoraal ah, oo ay ku jiraan xariir url ah oo loo maro ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "bogga bogga cimilada ee BBC Weather.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "bogga bogga cimilada ee BBC Weather.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.com/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Way yaryihiin, laakiin innaga bini'aadamka waxbaan baran karnaa shay ama labo quraanyo.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Way yaryihiin, laakiin innaga bini'aadamka waxbaan baran karnaa shay ama labo quraanyo.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Waxay go'aan ku gaartay inay wax barato, waxayna ugu danbayn qaadatay afar shahaado oo kala duwan sida danbi-baarista, la talinta iyo kalkaaliso caafimaad.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Waxay go'aan ku gaartay inay wax barato, waxayna ugu danbayn qaadatay afar shahaado oo kala duwan sida danbi-baarista, la talinta iyo kalkaaliso caafimaad.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Kani waa qayb hoosaad ka kooban",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Kani waa qayb hoosaad ka kooban",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ciyaartoyda Kubadda Cagta kadib ciyaar",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ciyaartoyda Kubadda Cagta kadib ciyaar",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "Hadda waxay maamule ka tahay laanta ugu wayn ee adeegga caafimaadka bixisa ee dowlad goboleedka Alberta.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Hadda waxay maamule ka tahay laanta ugu wayn ee adeegga caafimaadka bixisa ee dowlad goboleedka Alberta.",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "4a79/test/725adb60-de14-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Faadumo oo BBC-da la hadashay ayaa sheegtay waxa ku dhiirageliyey dadaalka intaas la eg.",
+                  "text": "Maqaalkaan tijaabada ah waxaa loo sameeyay si aan ugusameyno tijaabooyinka otomaatiga ee dhamaadka iyo dhamaadka dhamaadka bartayada internetka.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Faadumo oo BBC-da la hadashay ayaa sheegtay waxa ku dhiirageliyey dadaalka intaas la eg.",
+                        "text": "Maqaalkaan tijaabada ah waxaa loo sameeyay si aan ugusameyno tijaabooyinka otomaatiga ee dhamaadka iyo dhamaadka dhamaadka bartayada internetka.",
                         "attributes": []
                       }
                     }
@@ -129,7 +409,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Gabadh qaadatay go'aan Soomaalida qurbaha ku yaryihiin, kuna liibaantay"
+      "seoHeadline": "Tani waa cinwaanka SEO ee maqaalkan tijaabada ah"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o"

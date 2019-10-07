@@ -7,9 +7,9 @@
     "type": "article",
     "createdBy": "Yoruba",
     "language": "yo",
-    "lastUpdated": 1562936995573,
+    "lastUpdated": 1569601503741,
     "firstPublished": 1562936993391,
-    "lastPublished": 1562936993391,
+    "lastPublished": 1569601498248,
     "options": {},
     "analyticsLabels": {},
     "passport": {
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Yoruba"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "AFCON 2019: Àmì ayò tí Nàíjíríà àti South Afrika gbá rèé",
+                        "text": "Eyi ni akọle ti nkan idanwo yii",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "AFCON 2019: Àmì ayò tí Nàíjíríà àti South Afrika gbá rèé",
+                              "text": "Eyi ni akọle ti nkan idanwo yii",
                               "attributes": []
                             }
                           }
@@ -58,48 +65,336 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Aworan idanwo yii, BBC aladakọ, fihan maapu ti Ilu Faranse. Aworan naa wa ni awọn bulọọki mẹta akọkọ ati pe o ni ifori.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Aworan idanwo yii, BBC aladakọ, fihan maapu ti Ilu Faranse. Aworan naa wa ni awọn bulọọki mẹta akọkọ ati pe o ni ifori.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Maapu ti Ilu Faranse ṣafihan Paris ati Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Maapu ti Ilu Faranse ṣafihan Paris ati Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "4273/test/097029e0-de26-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Ikọ agbabọọlu orileede Naijiria Super Eagles ti gbewuro soju ikọ Bafana Bafana ti South Africa lati tẹsiwaju ninu idije Afcon 2019 to n waye ni Egypt.",
+                  "text": "Eyi jẹ ohun idena ọrọ kan, eyiti o ni ọna asopọ url kan si oju-iwe Oju opo Oju opo BBC.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Ikọ agbabọọlu orileede Naijiria Super Eagles ti gbewuro soju ikọ Bafana Bafana ti South Africa lati tẹsiwaju ninu idije Afcon 2019 to n waye ni Egypt.",
+                        "text": "Eyi jẹ ohun idena ọrọ kan, eyiti o ni ọna asopọ url kan si oju-iwe ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Oju opo Oju opo BBC.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Oju opo Oju opo BBC.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.com/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Eyi jẹ ohun idena fidio ti o ni fidio kan nipa kokoro",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Eyi jẹ ohun idena fidio ti o ni fidio kan nipa kokoro",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Samuel Chukwueze lo kọkọ gba bọọlu wọnu awọn South Africa ni iṣẹju kẹtadinlọgbọn ifẹswọnsẹ naa ki South Africa to da goolu pada ni iṣẹju karundinlọgọrin.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Samuel Chukwueze lo kọkọ gba bọọlu wọnu awọn South Africa ni iṣẹju kẹtadinlọgbọn ifẹswọnsẹ naa ki South Africa to da goolu pada ni iṣẹju karundinlọgọrin.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Eyi jẹ ohun idena isalẹ-isalẹ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Eyi jẹ ohun idena isalẹ-isalẹ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\rAwọn ẹlẹsẹ lẹhin bọọlu kan",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\rAwọn ẹlẹsẹ lẹhin bọọlu kan",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "3c09/test/5df5e3b0-de26-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "Bongani Zungu lo fi ori kan bọọlu sawọn Naijiria.",
+                  "text": "A ti ṣẹda nkan idanwo yii ki a le ṣiṣẹ awọn idanwo ipari-si-opin lori oju opo wẹẹbu wa.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Bongani Zungu lo fi ori kan bọọlu sawọn Naijiria.",
+                        "text": "A ti ṣẹda nkan idanwo yii ki a le ṣiṣẹ awọn idanwo ipari-si-opin lori oju opo wẹẹbu wa.",
                         "attributes": []
                       }
                     }
@@ -114,13 +409,13 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "AFCON 2019: Àmì ayò tí Nàíjíríà àti South Afrika gbá rèé"
+      "seoHeadline": "Eyi ni akọle SEO ti nkan idanwo yii"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:clw06m0nj8qo"
     },
     "summary": "",
-    "timestamp": 1562936993391,
+    "timestamp": 1569601498248,
     "id": "urn:bbc:ares::article:clw06m0nj8qo",
     "type": "cps"
   },
