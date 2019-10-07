@@ -8,14 +8,14 @@ const testCases = [
     description: 'CANONICAL: builds a URL for LIVE environment on .co.uk',
     expected: `https://www.bbc.com/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
-      origin: 'https://www.bbc.co.uk',
+      origin: 'https://www.bbc.com',
       requestUrl,
       type,
     },
   },
   {
     description: 'CANONICAL: builds a URL for TEST environment on .com',
-    expected: `https://www.test.bbc.co.uk/ws/av-embeds/articles/${requestUrl}`,
+    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
       origin: 'https://www.test.bbc.com',
       requestUrl,
@@ -43,7 +43,8 @@ const testCases = [
     },
   },
   {
-    description: 'AMP: builds a URL for LIVE environment on .co.uk',
+    description:
+      'AMP: builds a URL for LIVE environment on .co.uk using .com domain',
     expected: `https://www.bbc.com/ws/av-embeds/articles/${requestUrl}/amp`,
     embedObject: {
       origin: 'https://www.bbc.co.uk',
@@ -53,7 +54,8 @@ const testCases = [
     },
   },
   {
-    description: 'AMP: builds a URL for TEST environment on .com',
+    description:
+      'AMP: builds a URL for TEST environment on .com using .co.uk domain',
     expected: `https://www.test.bbc.co.uk/ws/av-embeds/articles/${requestUrl}/amp`,
     embedObject: {
       origin: 'https://www.test.bbc.com',
