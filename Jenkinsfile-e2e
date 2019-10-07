@@ -60,7 +60,6 @@ node {
               ]
 
               if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters, channels.simorgh)
                 notifySlack(messageParameters, channels.liveAlarms)
                 stageHasFailed = true
               }
@@ -82,7 +81,6 @@ node {
               ]
 
               if (env.BRANCH_NAME == 'latest') {
-                notifySlack(messageParameters, channels.simorgh)
                 notifySlack(messageParameters, channels.liveAlarms)
                 stageHasFailed = true
               }
@@ -121,7 +119,6 @@ node {
                   colour: 'danger',
                   emoji: '😱',
                 ]
-                notifySlack(messageParameters, channels.simorgh)
                 notifySlack(messageParameters, channels.liveAlarms)
                 break
               case 'ABORTED':
@@ -132,7 +129,6 @@ node {
                   colour: 'warning',
                   emoji: '🙀',
                 ]
-                notifySlack(messageParameters, channels.simorgh)
                 notifySlack(messageParameters, channels.liveAlarms)
                 break
               default:
@@ -144,7 +140,6 @@ node {
                     colour: 'danger',
                     emoji: '😱',
                   ]
-                  notifySlack(messageParameters, channels.simorgh)
                   notifySlack(messageParameters, channels.liveAlarms)
                 }
                 break
