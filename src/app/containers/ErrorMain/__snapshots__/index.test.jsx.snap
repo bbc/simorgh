@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for 404 1`] = `
-.c6 {
+.c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -25,16 +25,17 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -49,12 +50,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -107,28 +103,28 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
@@ -174,14 +170,14 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -247,50 +243,46 @@ exports[`ErrorMain should correctly render for 404 1`] = `
           <div
             class="c1"
           >
-            <p
+            <span
               class="c2"
             >
-              <span
-                class="c3"
-              >
-                404
-              </span>
-            </p>
+              404
+            </span>
             <h1
-              class="c4"
+              class="c3"
               id="content"
               tabindex="-1"
             >
               Page cannot be found
             </h1>
             <p
-              class="c5"
+              class="c4"
             >
               Sorry, we're unable to bring you the page you're looking for. Please try:
             </p>
             <ul>
               <li
-                class="c5"
+                class="c4"
               >
                 Double checking the url
               </li>
               <li
-                class="c5"
+                class="c4"
               >
                 Hitting the refresh button in your browser
               </li>
               <li
-                class="c5"
+                class="c4"
               >
                 Searching for this page using the BBC search bar
               </li>
             </ul>
             <p
-              class="c5"
+              class="c4"
             >
               Alternatively, please visit the 
               <a
-                class="c6"
+                class="c5"
                 href="https://www.bbc.com/news"
               >
                 BBC News homepage.
@@ -356,20 +348,20 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     />
   </head>
   <body>
-    .c6 {
+    .c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -380,16 +372,17 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -404,12 +397,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -462,28 +450,28 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
@@ -529,14 +517,14 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -552,50 +540,46 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
           <div
             class="c1"
           >
-            <p
+            <span
               class="c2"
             >
-              <span
-                class="c3"
-              >
-                ۴۰۴
-              </span>
-            </p>
+              ۴۰۴
+            </span>
             <h1
-              class="c4"
+              class="c3"
               id="content"
               tabindex="-1"
             >
               این صفحه پیدا نشد
             </h1>
             <p
-              class="c5"
+              class="c4"
             >
               متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:
             </p>
             <ul>
               <li
-                class="c5"
+                class="c4"
               >
                 آدرس صفحه مورد نظر را دوباره بررسی کنید
               </li>
               <li
-                class="c5"
+                class="c4"
               >
                 با مرورگر خود صفحه را ریفرش (Refresh) کنید
               </li>
               <li
-                class="c5"
+                class="c4"
               >
                 در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید
               </li>
             </ul>
             <p
-              class="c5"
+              class="c4"
             >
               برای یافتن اطلاعات مورد نظر به 
               <a
-                class="c6"
+                class="c5"
                 href="https://www.bbc.com/persian"
               >
                 صفحه اصلی بی‌بی‌سی فارسی
@@ -661,20 +645,20 @@ exports[`ErrorMain should correctly render for 500 1`] = `
     />
   </head>
   <body>
-    .c6 {
+    .c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -685,16 +669,17 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -709,12 +694,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -767,28 +747,28 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
@@ -834,14 +814,14 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -857,45 +837,41 @@ exports[`ErrorMain should correctly render for 500 1`] = `
           <div
             class="c1"
           >
-            <p
+            <span
               class="c2"
             >
-              <span
-                class="c3"
-              >
-                500
-              </span>
-            </p>
+              500
+            </span>
             <h1
-              class="c4"
+              class="c3"
               id="content"
               tabindex="-1"
             >
               Internal server error
             </h1>
             <p
-              class="c5"
+              class="c4"
             >
               Sorry, we're currently unable to bring you the page you're looking for. Please try:
             </p>
             <ul>
               <li
-                class="c5"
+                class="c4"
               >
                 Hitting the refresh button in your browser
               </li>
               <li
-                class="c5"
+                class="c4"
               >
                 Coming back again later
               </li>
             </ul>
             <p
-              class="c5"
+              class="c4"
             >
               Alternatively, please visit the 
               <a
-                class="c6"
+                class="c5"
                 href="https://www.bbc.com/news"
               >
                 BBC News homepage.
@@ -961,20 +937,20 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     />
   </head>
   <body>
-    .c6 {
+    .c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -985,16 +961,17 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1009,12 +986,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1067,28 +1039,28 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
@@ -1134,14 +1106,14 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -1157,45 +1129,41 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
           <div
             class="c1"
           >
-            <p
+            <span
               class="c2"
             >
-              <span
-                class="c3"
-              >
-                ۵۰۰
-              </span>
-            </p>
+              ۵۰۰
+            </span>
             <h1
-              class="c4"
+              class="c3"
               id="content"
               tabindex="-1"
             >
               خطا در سرور داخلی
             </h1>
             <p
-              class="c5"
+              class="c4"
             >
               متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:
             </p>
             <ul>
               <li
-                class="c5"
+                class="c4"
               >
                 با مرورگر خود صفحه را ریفرش (Refresh) کنید
               </li>
               <li
-                class="c5"
+                class="c4"
               >
                 بعدا دوباره امتحان کنید
               </li>
             </ul>
             <p
-              class="c5"
+              class="c4"
             >
               برای یافتن اطلاعات مورد نظر به 
               <a
-                class="c6"
+                class="c5"
                 href="https://www.bbc.com/persian"
               >
                 صفحه اصلی بی‌بی‌سی فارسی
@@ -1261,20 +1229,20 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
     />
   </head>
   <body>
-    .c6 {
+    .c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -1285,16 +1253,17 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1309,12 +1278,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1367,28 +1331,28 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
@@ -1434,14 +1398,14 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1457,45 +1421,41 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
           <div
             class="c1"
           >
-            <p
+            <span
               class="c2"
             >
-              <span
-                class="c3"
-              >
-                500
-              </span>
-            </p>
+              500
+            </span>
             <h1
-              class="c4"
+              class="c3"
               id="content"
               tabindex="-1"
             >
               Internal server error
             </h1>
             <p
-              class="c5"
+              class="c4"
             >
               Sorry, we're currently unable to bring you the page you're looking for. Please try:
             </p>
             <ul>
               <li
-                class="c5"
+                class="c4"
               >
                 Hitting the refresh button in your browser
               </li>
               <li
-                class="c5"
+                class="c4"
               >
                 Coming back again later
               </li>
             </ul>
             <p
-              class="c5"
+              class="c4"
             >
               Alternatively, please visit the 
               <a
-                class="c6"
+                class="c5"
                 href="https://www.bbc.com/news"
               >
                 BBC News homepage.

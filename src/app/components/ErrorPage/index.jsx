@@ -20,6 +20,7 @@ const StatusCode = styled.span`
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 `;
 
 const Heading = styled.h1`
@@ -31,11 +32,6 @@ const Heading = styled.h1`
 
 const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
   padding-bottom: 4rem;
-`;
-
-const ErrorTag = styled.p`
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
 `;
 
 const CustomParagraph = styled(Paragraph)`
@@ -57,9 +53,7 @@ const ErrorPage = ({
   <main role="main">
     <GhostGrid>
       <LongGridItemConstrainedMedium>
-        <ErrorTag script={script} service={service}>
-          <StatusCode script={script}>{statusCode}</StatusCode>
-        </ErrorTag>
+        <StatusCode script={script}>{statusCode}</StatusCode>
         <Heading id="content" script={script} service={service} tabIndex="-1">
           {title}
         </Heading>

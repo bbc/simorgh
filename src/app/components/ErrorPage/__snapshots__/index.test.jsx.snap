@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for an error page for News 1`] = `
-.c6 {
+.c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -25,16 +25,17 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -49,12 +50,7 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -107,28 +103,28 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
@@ -174,14 +170,14 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -196,45 +192,41 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
     <div
       class="c1"
     >
-      <p
+      <span
         class="c2"
       >
-        <span
-          class="c3"
-        >
-          StatusCode
-        </span>
-      </p>
+        StatusCode
+      </span>
       <h1
-        class="c4"
+        class="c3"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="c5"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="c5"
+          class="c4"
         >
           Option one
         </li>
         <li
-          class="c5"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        class="c5"
+        class="c4"
       >
         You can do 
         <a
-          class="c6"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
@@ -247,20 +239,20 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
-.c6 {
+.c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -271,16 +263,17 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -295,12 +288,7 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -353,28 +341,28 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
@@ -420,14 +408,14 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -442,45 +430,41 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
     <div
       class="c1"
     >
-      <p
+      <span
         class="c2"
       >
-        <span
-          class="c3"
-        >
-          StatusCode
-        </span>
-      </p>
+        StatusCode
+      </span>
       <h1
-        class="c4"
+        class="c3"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="c5"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="c5"
+          class="c4"
         >
           Option one
         </li>
         <li
-          class="c5"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        class="c5"
+        class="c4"
       >
         You can do 
         <a
-          class="c6"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
@@ -493,20 +477,20 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
-.c6 {
+.c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -517,16 +501,17 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -541,12 +526,7 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -599,28 +579,28 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
@@ -666,14 +646,14 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -688,45 +668,41 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
     <div
       class="c1"
     >
-      <p
+      <span
         class="c2"
       >
-        <span
-          class="c3"
-        >
-          StatusCode
-        </span>
-      </p>
+        StatusCode
+      </span>
       <h1
-        class="c4"
+        class="c3"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="c5"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="c5"
+          class="c4"
         >
           Option one
         </li>
         <li
-          class="c5"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        class="c5"
+        class="c4"
       >
         You can do 
         <a
-          class="c6"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
@@ -739,20 +715,20 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for persian 1`] = `
-.c6 {
+.c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -763,16 +739,17 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -787,12 +764,7 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -845,28 +817,28 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
@@ -912,14 +884,14 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -934,45 +906,41 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
     <div
       class="c1"
     >
-      <p
+      <span
         class="c2"
       >
-        <span
-          class="c3"
-        >
-          StatusCode
-        </span>
-      </p>
+        StatusCode
+      </span>
       <h1
-        class="c4"
+        class="c3"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="c5"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="c5"
+          class="c4"
         >
           Option one
         </li>
         <li
-          class="c5"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        class="c5"
+        class="c4"
       >
         You can do 
         <a
-          class="c6"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
@@ -985,20 +953,20 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 `;
 
 exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
-.c6 {
+.c5 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:visited {
+.c5:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c6:focus,
-.c6:hover {
+.c5:focus,
+.c5:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -1009,16 +977,17 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
   padding-bottom: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
 }
 
-.c4 {
+.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1033,12 +1002,7 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
   padding-bottom: 4rem;
 }
 
-.c2 {
-  padding-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.c5 {
+.c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Urdu",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1091,28 +1055,28 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
@@ -1158,14 +1122,14 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -1180,45 +1144,41 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
     <div
       class="c1"
     >
-      <p
+      <span
         class="c2"
       >
-        <span
-          class="c3"
-        >
-          StatusCode
-        </span>
-      </p>
+        StatusCode
+      </span>
       <h1
-        class="c4"
+        class="c3"
         id="content"
         tabindex="-1"
       >
         A error has occured
       </h1>
       <p
-        class="c5"
+        class="c4"
       >
         Something happened, please try an option
       </p>
       <ul>
         <li
-          class="c5"
+          class="c4"
         >
           Option one
         </li>
         <li
-          class="c5"
+          class="c4"
         >
           Option two
         </li>
       </ul>
       <p
-        class="c5"
+        class="c4"
       >
         You can do 
         <a
-          class="c6"
+          class="c5"
           href="https://www.bbc.com"
         >
           this
