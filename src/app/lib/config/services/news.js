@@ -146,6 +146,14 @@ export const service = {
       lastUpdated: 'Last updated: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: 'Why you can trust the BBC',
+      },
+      externalLink: {
+        href: 'https://www.bbc.co.uk/help/web/links/',
+        text: 'Read about our approach to external linking.',
+      },
       links: [
         {
           href: 'https://www.bbc.com/news/help-41670342',
@@ -178,10 +186,6 @@ export const service = {
       ],
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
-      externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
-      },
     },
     fonts: [
       F_REITH_SANS_BOLD,
