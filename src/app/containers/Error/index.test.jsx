@@ -9,9 +9,7 @@ const defaultProps = {
   isAmp: false,
   pageType: 'error',
   dials: {},
-  data: {
-    status: 404,
-  },
+  status: 404,
   service: 'news',
 };
 

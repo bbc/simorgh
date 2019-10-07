@@ -21,43 +21,33 @@ describe('withData HOC', () => {
   const WithDataHOC = WithData(Component);
 
   const noDataProps = {
-    data: null,
+    status: 500,
   };
 
   const noAssetData = {
-    data: {
-      status: 200,
-    },
+    status: 200,
   };
 
   const non200StatusProps = {
-    data: {
-      pageData: articleDataNews,
-      status: 157,
-    },
+    pageData: articleDataNews,
+    status: 157,
   };
 
   const validNewsProps = {
-    data: {
-      pageData: articleDataNews,
-      status: 200,
-    },
+    pageData: articleDataNews,
+    status: 200,
     service: 'news',
   };
 
   const validPersianProps = {
-    data: {
-      pageData: articleDataPersian,
-      status: 200,
-    },
+    pageData: articleDataPersian,
+    status: 200,
     service: 'news',
   };
 
   const validFrontPagesProps = {
-    data: {
-      pageData: frontPageDataPidgin,
-      status: 200,
-    },
+    pageData: frontPageDataPidgin,
+    status: 200,
   };
 
   describe('with no data', () => {

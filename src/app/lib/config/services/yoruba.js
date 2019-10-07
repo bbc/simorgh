@@ -146,6 +146,10 @@ export const service = {
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/yoruba/institutional-48528718',
+        text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.',
