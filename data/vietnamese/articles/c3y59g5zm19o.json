@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Vietnamese",
     "language": "vi",
-    "lastUpdated": 1562936955950,
+    "lastUpdated": 1569258826377,
     "firstPublished": 1562936950490,
     "lastPublished": 1562936950490,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Công Phượng và chuyện xuất ngoại",
+                        "text": "Đây là tiêu đề của bài viết thử nghiệm này",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Công Phượng và chuyện xuất ngoại",
+                              "text": "Đây là tiêu đề của bài viết thử nghiệm này",
                               "attributes": []
                             }
                           }
@@ -58,33 +65,336 @@
           }
         },
         {
-          "type": "text",
+          "type": "image",
           "model": {
             "blocks": [
               {
-                "type": "paragraph",
+                "type": "caption",
                 "model": {
-                  "text": "Trưa ngày 5/7, tiền đạo Nguyễn Công Phượng đã chính thức ký hợp đồng với CLB Sint-Truidense (Bỉ) để trở thành cầu thủ Việt Nam thứ hai sau Lê Công Vinh (CLB Leixoes - Bồ Đào Nha) có cơ hội thi đấu ở châu Âu.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "type": "text",
                       "model": {
-                        "text": "Trưa ngày 5/7, tiền đạo Nguyễn Công Phượng đã chính thức ký hợp đồng với CLB Sint-Truidense (Bỉ) để trở thành cầu thủ Việt Nam thứ hai sau Lê Công Vinh (CLB Leixoes - Bồ Đào Nha) có cơ hội thi đấu ở châu Âu.",
-                        "attributes": []
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Hình ảnh thử nghiệm này, bản quyền BBC, cho thấy một bản đồ của Pháp. Hình ảnh nằm trong ba khối đầu tiên và có chú thích này.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Hình ảnh thử nghiệm này, bản quyền BBC, cho thấy một bản đồ của Pháp. Hình ảnh nằm trong ba khối đầu tiên và có chú thích này.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\rBản đồ Pháp hiển thị Paris và Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\rBản đồ Pháp hiển thị Paris và Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "f97b/test/0a203570-de25-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "Công Phượng sẽ khoác áo Sint-Truidense theo bản hợp đồng cho mượn có thời hạn một năm từ đội bóng chủ quản HAGL.",
+                  "text": "Đây là một khối văn bản, chứa liên kết url đến trang chủ BBC Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Công Phượng sẽ khoác áo Sint-Truidense theo bản hợp đồng cho mượn có thời hạn một năm từ đội bóng chủ quản HAGL.",
+                        "text": "Đây là một khối văn bản, chứa liên kết url đến ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "trang chủ BBC Weather.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "trang chủ BBC Weather.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.com/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Đây là một khối video chứa video về kiến",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Đây là một khối video chứa video về kiến",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Đây là một khối tiêu đề phụ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Đây là một khối tiêu đề phụ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Cầu thủ bóng đá sau một trận đấu",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Cầu thủ bóng đá sau một trận đấu",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "a0b2/test/61a1ca20-de25-11e9-b23c-f1ac9644bb55.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bài viết thử nghiệm này đã được tạo để chúng tôi có thể chạy thử nghiệm đầu cuối tự động trên trang web của chúng tôi.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bài viết thử nghiệm này đã được tạo để chúng tôi có thể chạy thử nghiệm đầu cuối tự động trên trang web của chúng tôi.",
                         "attributes": []
                       }
                     }
@@ -99,7 +409,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Công Phượng và chuyện xuất ngoại"
+      "seoHeadline": "Đây là tiêu đề SEO của bài viết thử nghiệm này"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c3y59g5zm19o"

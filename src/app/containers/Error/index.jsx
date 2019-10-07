@@ -1,6 +1,5 @@
 import React from 'react';
-import pathOr from 'ramda/src/pathOr';
-import { number, shape } from 'prop-types';
+import { number } from 'prop-types';
 import compose from 'ramda/src/compose';
 import ErrorMain from '../ErrorMain';
 
@@ -8,14 +7,10 @@ import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withLoading from '../PageHandlers/withLoading';
 
-const ErrorContainer = ({ data }) => (
-  <ErrorMain status={pathOr(500, ['status'], data)} />
-);
+const ErrorContainer = ({ status }) => <ErrorMain status={status} />;
 
 ErrorContainer.propTypes = {
-  data: shape({
-    status: number.isRequired,
-  }).isRequired,
+  status: number.isRequired,
 };
 
 const EnhancedErrorContainer = compose(
