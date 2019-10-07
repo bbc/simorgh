@@ -2,11 +2,11 @@ import services from '#testHelpers/serviceConfigs';
 import expectedFormats from './expectedFormats.json';
 import { format, timestampsFixtures } from './testUtils';
 
-const testsServces = ['news', 'persian', 'igbo', 'arabic'];
+const testsServices = ['news', 'persian', 'igbo', 'arabic'];
 
 describe('Timestamp Formats', () => {
   Object.keys(services).forEach(service => {
-    if (testsServces.includes(service)) {
+    if (testsServices.includes(service)) {
       describe(`for ${service}`, () => {
         const { datetimeLocale, timezone } = services[service].default;
 

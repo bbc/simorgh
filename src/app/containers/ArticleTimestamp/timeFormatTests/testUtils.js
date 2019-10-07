@@ -24,7 +24,7 @@ export const timestampsFixtures = {
     isRelative: false,
     dateTimeFormat: formatDate,
   },
-  'exact date with timezone': {
+  'exact date and time with timezone': {
     time: 1562936158365,
     isRelative: false,
     dateTimeFormat: formatDateAndTime,

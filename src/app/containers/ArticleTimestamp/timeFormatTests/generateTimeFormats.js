@@ -3,14 +3,14 @@ import path from 'path';
 import { timestampsFixtures, format } from './testUtils';
 import services from '../../../../testHelpers/serviceConfigs';
 
-const testsServces = ['news', 'persian', 'igbo', 'arabic'];
+const testsServices = ['news', 'persian', 'igbo', 'arabic'];
 
 const filePath = path.join(__dirname, './expectedFormats.json');
 
 const generateTimeFormats = () => {
   const timeFormats = {};
   Object.keys(services).forEach(service => {
-    if (testsServces.includes(service)) {
+    if (testsServices.includes(service)) {
       const { datetimeLocale, timezone } = services[service].default;
       timeFormats[service] = {};
       Object.keys(timestampsFixtures).forEach(fixture => {

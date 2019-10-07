@@ -5,7 +5,7 @@
     "one hour ago": "قبل ساعة واحدة",
     "five hours ago": "قبل 5 ساع",
     "exact date": "10 أكتوبر/ تشرين الأول 2018",
-    "exact date with timezone": "12 يوليو/ تموز 2019، 12:55 GMT"
+    "exact date and time with timezone": "12 يوليو/ تموز 2019، 12:55 GMT"
   },
   "igbo": {
     "one minute ago": "otu nkeji gara aga",
@@ -13,15 +13,15 @@
     "one hour ago": "otu elekere gara aga",
     "five hours ago": "elekere 5 gara aga",
     "exact date": "10 Ọktọba 2018",
-    "exact date with timezone": "12 Julaị 2019, 13:55 WAT"
+    "exact date and time with timezone": "12 Julaị 2019, 13:55 WAT"
   },
   "news": {
-    "one minute ago": "a minute ago",
+    "one minute ago": "1 minute ago",
     "five minutes ago": "5 minutes ago",
-    "one hour ago": "an hour ago",
+    "one hour ago": "1 hour ago",
     "five hours ago": "5 hours ago",
     "exact date": "10 October 2018",
-    "exact date with timezone": "12 July 2019, 13:55 BST"
+    "exact date and time with timezone": "12 July 2019, 13:55 BST"
   },
   "persian": {
     "one minute ago": "یک دقیقه پیش",
@@ -29,6 +29,6 @@
     "one hour ago": "یک ساعت پیش",
     "five hours ago": "۵ ساعت پیش",
     "exact date": "۱۸ مهر ۱۳۹۷ - ۱۰ اکتبر ۲۰۱۸",
-    "exact date with timezone": "۱۲ ژوئیه ۲۰۱۹، ۱۲:۵۵ GMT"
+    "exact date and time with timezone": "۱۲ ژوئیه ۲۰۱۹، ۱۲:۵۵ GMT"
   }
 }
