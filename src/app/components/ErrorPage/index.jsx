@@ -22,7 +22,7 @@ const StatusCode = styled.span`
   font-weight: 600;
 `;
 
-const HeadingFix = styled.h1`
+const Heading = styled.h1`
   ${({ script }) => script && getCanon(script)};
   ${({ service }) => getSerifMedium(service)}
   color: ${C_SHADOW};
@@ -38,7 +38,7 @@ const ErrorTag = styled.p`
   margin-bottom: 0.5rem;
 `;
 
-const ParaTest = styled(Paragraph)`
+const CustomParagraph = styled(Paragraph)`
   padding-top: 0.2rem;
 `;
 
@@ -60,36 +60,31 @@ const ErrorPage = ({
         <ErrorTag script={script} service={service}>
           <StatusCode script={script}>{statusCode}</StatusCode>
         </ErrorTag>
-        <HeadingFix
-          id="content"
-          script={script}
-          service={service}
-          tabIndex="-1"
-        >
+        <Heading id="content" script={script} service={service} tabIndex="-1">
           {title}
-        </HeadingFix>
-        <ParaTest script={script} service={service}>
+        </Heading>
+        <CustomParagraph script={script} service={service}>
           {message}
-        </ParaTest>
+        </CustomParagraph>
         <ul>
           {solutions.map(text => (
-            <ParaTest
+            <CustomParagraph
               script={script}
               service={service}
               as="li"
               key={idSanitiser(text)}
             >
               {text}
-            </ParaTest>
+            </CustomParagraph>
           ))}
         </ul>
-        <ParaTest script={script} service={service}>
+        <CustomParagraph script={script} service={service}>
           {callToActionFirst}
           <InlineLink href={callToActionLinkUrl}>
             {callToActionLinkText}
           </InlineLink>
           {callToActionLast}
-        </ParaTest>
+        </CustomParagraph>
       </LongGridItemConstrainedMedium>
     </GhostGrid>
   </main>
