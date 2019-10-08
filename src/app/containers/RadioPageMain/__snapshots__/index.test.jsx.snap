@@ -15,7 +15,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       rel="canonical"
     />
     <link
-      href="/amharic/images/icons/icon-192x192.png"
+      href="http://localhost.bbc.com:7080/amharic/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -425,7 +425,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
                   <amp-img
                     layout="fill"
                     placeholder="true"
-                    src="https://news.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png"
+                    src="http://localhost.bbc.com:7080/images/amp_audio_placeholder.png"
                   />
                 </amp-iframe>
               </div>
@@ -637,7 +637,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       rel="amphtml"
     />
     <link
-      href="/amharic/images/icons/icon-192x192.png"
+      href="http://localhost.bbc.com:7080/amharic/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
