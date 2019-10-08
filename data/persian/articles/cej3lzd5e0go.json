@@ -8,7 +8,7 @@
     "type": "article",
     "createdBy": "Persian",
     "language": "fa",
-    "lastUpdated": 1570185409255,
+    "lastUpdated": 1570520515250,
     "firstPublished": 1570185405464,
     "lastPublished": 1570185405464,
     "options": {},
@@ -26,9 +26,9 @@
       "fragment",
       "image",
       "caption",
-      "urlLink",
       "altText",
       "rawImage",
+      "urlLink",
       "video",
       "subheadline"
     ]
@@ -47,12 +47,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "این عنوان این مقاله آزمایشی است\n\n\n",
+                        "text": "این عنوان این مقاله آزمایشی است",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "این عنوان این مقاله آزمایشی است\n\n\n",
+                              "text": "این عنوان این مقاله آزمایشی است",
                               "attributes": []
                             }
                           }
@@ -80,30 +80,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.\n\n\n",
+                              "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n\n\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n\n\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -126,12 +109,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.\r\n",
+                              "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.\r\n",
+                                    "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.\r",
                                     "attributes": []
                                   }
                                 }
@@ -164,7 +147,7 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "این یک متن متنی است ، که حاوی لینک اینترنتی به صفحه اصلی  است.\n\n",
+                  "text": "این یک متن متنی است ، که حاوی لینک اینترنتی به صفحه اصلی  است.",
                   "blocks": [
                     {
                       "type": "fragment",
@@ -189,13 +172,6 @@
                         "locator": "https://www.bbc.co.uk/weather",
                         "isExternal": false
                       }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "\n\n",
-                        "attributes": []
-                      }
                     }
                   ]
                 }
@@ -219,30 +195,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.\n",
+                              "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -302,7 +261,8 @@
                             "type": "rawImage",
                             "model": {
                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "copyrightHolder": "Ariana TV"
                             }
                           },
                           {
@@ -354,12 +314,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "این یک بلوک زیر خط است\n\n\n",
+                        "text": "این یک بلوک زیر خط است",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "این یک بلوک زیر خط است\n\n\n",
+                              "text": "این یک بلوک زیر خط است",
                               "attributes": []
                             }
                           }
@@ -387,12 +347,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "این یک بلوک زیر خط است\r\n",
+                              "text": "این یک بلوک زیر خط است\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "این یک بلوک زیر خط است\r\n",
+                                    "text": "این یک بلوک زیر خط است\r",
                                     "attributes": []
                                   }
                                 }
@@ -425,30 +385,13 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "این مقاله آزمایشی به گونه ای ایجاد شده است که می توانیم تست های پایان خودکار را در وب سایت خود اجرا کنیم.\n\n\n",
+                  "text": "این مقاله آزمایشی به گونه ای ایجاد شده است که می توانیم تست های پایان خودکار را در وب سایت خود اجرا کنیم.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
                         "text": "این مقاله آزمایشی به گونه ای ایجاد شده است که می توانیم تست های پایان خودکار را در وب سایت خود اجرا کنیم.",
                         "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
                       }
                     }
                   ]

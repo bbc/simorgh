@@ -8,7 +8,7 @@
     "type": "article",
     "createdBy": "Pashto",
     "language": "ps",
-    "lastUpdated": 1570186274499,
+    "lastUpdated": 1570520789432,
     "firstPublished": 1570186271460,
     "lastPublished": 1570186271460,
     "options": {},
@@ -26,9 +26,9 @@
       "fragment",
       "image",
       "caption",
-      "urlLink",
       "altText",
       "rawImage",
+      "urlLink",
       "video",
       "subheadline"
     ]
@@ -47,12 +47,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "دا د دې ازمونې مقالې سرلیک دی\n\n\n",
+                        "text": "دا د دې ازمونې مقالې سرلیک دی",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "دا د دې ازمونې مقالې سرلیک دی\n\n\n",
+                              "text": "دا د دې ازمونې مقالې سرلیک دی",
                               "attributes": []
                             }
                           }
@@ -80,30 +80,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\n\n\n",
+                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n\n\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n\n\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -164,7 +147,7 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو آر ایل لینک لري.\n\n\n",
+                  "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو آر ایل لینک لري.",
                   "blocks": [
                     {
                       "type": "fragment",
@@ -196,23 +179,6 @@
                         "text": ".",
                         "attributes": []
                       }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
-                      }
                     }
                   ]
                 }
@@ -236,30 +202,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\n",
+                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -319,7 +268,8 @@
                             "type": "rawImage",
                             "model": {
                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "copyrightHolder": "Ariana TV"
                             }
                           },
                           {
@@ -371,12 +321,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "دا د فرعي سرلیک بلاک دی\n\n\n",
+                        "text": "دا د فرعي سرلیک بلاک دی",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "دا د فرعي سرلیک بلاک دی\n\n\n",
+                              "text": "دا د فرعي سرلیک بلاک دی",
                               "attributes": []
                             }
                           }
@@ -404,12 +354,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "دا د فرعي سرلیک بلاک دی\r\n",
+                              "text": "دا د فرعي سرلیک بلاک دی\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "دا د فرعي سرلیک بلاک دی\r\n",
+                                    "text": "دا د فرعي سرلیک بلاک دی\r",
                                     "attributes": []
                                   }
                                 }
@@ -442,30 +392,13 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.\n\n\n",
+                  "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
                         "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
                         "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
                       }
                     }
                   ]

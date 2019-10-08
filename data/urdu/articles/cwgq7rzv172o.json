@@ -8,7 +8,7 @@
     "type": "article",
     "createdBy": "Urdu",
     "language": "ur",
-    "lastUpdated": 1570185896306,
+    "lastUpdated": 1570520949455,
     "firstPublished": 1570185893338,
     "lastPublished": 1570185893338,
     "options": {},
@@ -26,9 +26,9 @@
       "fragment",
       "image",
       "caption",
-      "urlLink",
       "altText",
       "rawImage",
+      "urlLink",
       "video",
       "subheadline"
     ]
@@ -47,12 +47,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔\n\n\n",
+                        "text": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔\n\n\n",
+                              "text": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔",
                               "attributes": []
                             }
                           }
@@ -80,30 +80,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\n\n\n",
+                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n\n\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n\n\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -126,12 +109,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\r\n",
+                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\r\n",
+                                    "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\r",
                                     "attributes": []
                                   }
                                 }
@@ -164,7 +147,7 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "یہ ایک ٹیکسٹ بلاک ہے ، جس میں بی بی سی ویدر ہوم پیج پر یو آر ایل لنک ہے۔\n\n\n",
+                  "text": "یہ ایک ٹیکسٹ بلاک ہے ، جس میں بی بی سی ویدر ہوم پیج پر یو آر ایل لنک ہے۔",
                   "blocks": [
                     {
                       "type": "fragment",
@@ -196,23 +179,6 @@
                         "text": "۔",
                         "attributes": []
                       }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
-                      }
                     }
                   ]
                 }
@@ -236,30 +202,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\n",
+                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -319,7 +268,8 @@
                             "type": "rawImage",
                             "model": {
                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
-                              "originCode": "mpv"
+                              "originCode": "mpv",
+                              "copyrightHolder": "Ariana TV"
                             }
                           },
                           {
@@ -371,12 +321,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "یہ سب ہیڈ لائن بلاک ہے۔\n\n\n",
+                        "text": "یہ سب ہیڈ لائن بلاک ہے۔",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "یہ سب ہیڈ لائن بلاک ہے۔\n\n\n",
+                              "text": "یہ سب ہیڈ لائن بلاک ہے۔",
                               "attributes": []
                             }
                           }
@@ -404,12 +354,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "یہ سب ہیڈ لائن بلاک ہے۔\r\n",
+                              "text": "یہ سب ہیڈ لائن بلاک ہے۔\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "یہ سب ہیڈ لائن بلاک ہے۔\r\n",
+                                    "text": "یہ سب ہیڈ لائن بلاک ہے۔\r",
                                     "attributes": []
                                   }
                                 }
@@ -442,30 +392,13 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "یہ ٹیسٹ مضمون تیار کیا گیا ہے تاکہ ہم اپنی ویب سائٹ پر خود کار طریقے سے آخر سے آخر تک کے ٹیسٹ چلاسکیں۔\n\n\n",
+                  "text": "یہ ٹیسٹ مضمون تیار کیا گیا ہے تاکہ ہم اپنی ویب سائٹ پر خود کار طریقے سے آخر سے آخر تک کے ٹیسٹ چلاسکیں۔",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
                         "text": "یہ ٹیسٹ مضمون تیار کیا گیا ہے تاکہ ہم اپنی ویب سائٹ پر خود کار طریقے سے آخر سے آخر تک کے ٹیسٹ چلاسکیں۔",
                         "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
                       }
                     }
                   ]
