@@ -8,13 +8,13 @@ import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 describe('CpsAssetPageMain', () => {
   shouldMatchSnapshot(
     'should match snapshot',
-    <ServiceContextProvider service="news">
+    <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
-        pageType="media"
+        pageType="MAP"
         pathname="/pathname"
-        service="news"
+        service="pidgin"
         statusCode={200}
       >
         <CpsAssetPageMain service="pidgin" pageData={pidginPageData} />
