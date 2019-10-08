@@ -4,9 +4,6 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsAssetPageMain from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
-import addIdsToBlocks from '../../routes/getInitialData/radioPage/addIdsToBlocks';
-
-const pageData = addIdsToBlocks(pidginPageData);
 
 describe('CpsAssetPageMain', () => {
   shouldMatchSnapshot(
@@ -20,7 +17,7 @@ describe('CpsAssetPageMain', () => {
         service="news"
         statusCode={200}
       >
-        <CpsAssetPageMain service="pidgin" pageData={pageData} />
+        <CpsAssetPageMain service="pidgin" pageData={pidginPageData} />
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
