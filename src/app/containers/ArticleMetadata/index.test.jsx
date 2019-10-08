@@ -25,25 +25,21 @@ const Context = ({ service, children }) => (
   </ServiceContextProvider>
 );
 
-const ArticleMetadataForNewsInternational = () => (
-  <Context service="news">
-    <ArticleMetadata
-      articleId={articleDataNews.metadata.id}
-      title={articleDataNews.promo.headlines.seoHeadline}
-      author="https://www.facebook.com/bbcnews"
-      firstPublished={getISOStringDate(articleDataNews.metadata.firstPublished)}
-      lastPublished={getISOStringDate(articleDataNews.metadata.lastPublished)}
-      section={articleDataNews.metadata.passport.genre}
-      aboutTags={articleDataNews.metadata.tags.about}
-      mentionsTags={articleDataNews.metadata.tags.mentions}
-      lang={articleDataNews.metadata.passport.language}
-      description={articleDataNews.promo.headlines.seoHeadline}
-    />
-  </Context>
-);
+const propsForNewsInternational = {
+  articleId: articleDataNews.metadata.id,
+  title: articleDataNews.promo.headlines.seoHeadline,
+  author: 'https://www.facebook.com/bbcnews',
+  firstPublished: getISOStringDate(articleDataNews.metadata.firstPublished),
+  lastPublished: getISOStringDate(articleDataNews.metadata.lastPublished),
+  section: articleDataNews.metadata.passport.genre,
+  aboutTags: articleDataNews.metadata.tags.about,
+  mentionsTags: articleDataNews.metadata.tags.mentions,
+  lang: articleDataNews.metadata.passport.language,
+  description: articleDataNews.promo.headlines.seoHeadline,
+};
 
-const renderMetadataToDocument = async () => {
-  render(<ArticleMetadataForNewsInternational />);
+const renderMetadataToDocument = async Component => {
+  render(Component);
 
   await waitForDomChange({
     container: document.querySelector('head'),
@@ -51,7 +47,11 @@ const renderMetadataToDocument = async () => {
 };
 
 it('should render the article tags', async () => {
-  await renderMetadataToDocument();
+  await renderMetadataToDocument(
+    <Context service="news">
+      <ArticleMetadata {...propsForNewsInternational} />
+    </Context>,
+  );
 
   const actual = Array.from(
     document.querySelectorAll('head > meta[name^="article:"]'),
@@ -72,10 +72,27 @@ it('should render the article tags', async () => {
   expect(actual).toEqual(expected);
 });
 
+it('should render the article section meta tag if section provided', async () => {
+  await renderMetadataToDocument(
+    <Context service="news">
+      <ArticleMetadata
+        {...propsForNewsInternational}
+        section="Mock Article Section"
+      />
+    </Context>,
+  );
+
+  expect(
+    document
+      .querySelector('head > meta[name="article:section"]')
+      .getAttribute('content'),
+  ).toEqual('Mock Article Section');
+});
+
 shouldMatchSnapshot(
   'should match snapshot for News & International',
   <Context service="news">
-    <ArticleMetadataForNewsInternational />
+    <ArticleMetadata {...propsForNewsInternational} />
   </Context>,
 );
 
