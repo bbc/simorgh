@@ -4,13 +4,11 @@ import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
 
 const CpsAssetPageMain = () => {
   return (
-    <>
-      <Grid as="main" role="main">
-        <GridItemConstrainedMedium>
-          <h1> Placeholder content for MAP page skeleton</h1>
-        </GridItemConstrainedMedium>
-      </Grid>
-    </>
+    <Grid as="main" role="main">
+      <GridItemConstrainedMedium>
+        <h1> Placeholder content for MAP page skeleton</h1>
+      </GridItemConstrainedMedium>
+    </Grid>
   );
 };
 
