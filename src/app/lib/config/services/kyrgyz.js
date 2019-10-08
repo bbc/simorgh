@@ -149,6 +149,10 @@ export const service = {
       lastUpdated: 'Акыркы жаңылоо: ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
+        text: 'Эмнеге BBC News ишенсе болот?',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
