@@ -3,6 +3,7 @@ import { string, shape, node } from 'prop-types';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import MediaPlayerContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { validVideoFixture, missingVpidFixture } from './helpers/fixtures';
 
@@ -35,11 +36,13 @@ const ContextWrapper = ({ platform, children, toggleState }) => (
     pageType="article"
     pathname="/pathname"
   >
-    <ToggleContext.Provider
-      value={{ toggleState, toggleDispatch: mockToggleDispatch }}
-    >
-      {children}
-    </ToggleContext.Provider>
+    <ServiceContextProvider service="news">
+      <ToggleContext.Provider
+        value={{ toggleState, toggleDispatch: mockToggleDispatch }}
+      >
+        {children}
+      </ToggleContext.Provider>
+    </ServiceContextProvider>
   </RequestContextProvider>
 );
 

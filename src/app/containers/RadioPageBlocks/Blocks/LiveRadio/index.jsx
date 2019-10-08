@@ -30,7 +30,7 @@ const MediaPlayerInnerWrapper = styled.div`
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform, origin } = useContext(RequestContext);
-  const { liveRadio } = useContext(ServiceContext);
+  const { liveRadio, lang } = useContext(ServiceContext);
 
   const isAmp = platform === 'amp';
 
@@ -48,7 +48,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   );
 
   const embedSource = embedUrl({
-    requestUrl: `${serviceId}/${id}`,
+    requestUrl: `${serviceId}/${id}/${lang}`,
     type: 'media',
     isAmp,
     origin,
