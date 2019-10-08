@@ -199,7 +199,8 @@
     "requires": [
       "td-agent",
       "cloudteam-td-agent-setup",
-      "dial-agent"
+      "dial-agent",
+      "cloud-init"
     ]
   },
   "lint-staged": {
