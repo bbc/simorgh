@@ -21,25 +21,3 @@ exports[`CpsAssetPage snapshots should match scaffold snapshot 1`] = `
   </div>
 </div>
 `;
-
-exports[`Radio Page snapshots should match scaffold snapshot 1`] = `
-<div
-  id="PageWrapperContainer"
->
-  <div
-    id="LoadingContainer"
-  >
-    <div
-      id="ErrorContainer"
-    >
-      <div
-        id="DataContainer"
-      >
-        <div>
-          RadioPageMain
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
