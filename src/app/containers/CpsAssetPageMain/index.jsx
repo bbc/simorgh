@@ -30,7 +30,6 @@ CpsAssetPageMain.propTypes = {
         shape({
           uuid: string,
           id: string,
-          externalId: string,
           text: string,
           type: string,
         }),
