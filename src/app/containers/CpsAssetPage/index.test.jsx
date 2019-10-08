@@ -5,7 +5,7 @@ import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
 const cpsAssetScaffoldProps = {
   isAmp: false,
-  pageType: 'media',
+  pageType: 'MAP',
   service: 'pidgin',
   pathname: '/pathname',
   match: {

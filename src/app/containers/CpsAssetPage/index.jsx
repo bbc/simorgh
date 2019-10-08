@@ -1,6 +1,5 @@
 import React from 'react';
 import compose from 'ramda/src/compose';
-
 import CpsAssetPageMain from '../CpsAssetPageMain';
 import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
