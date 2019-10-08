@@ -1,4 +1,6 @@
 import React from 'react';
+import { render, waitForDomChange } from '@testing-library/react';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -37,6 +39,27 @@ const Context = ({ service, children }) => (
     </ServiceContextProvider>
   </ToggleContextProvider>
 );
+
+it('should use headline for meta description if summary does not exist', async () => {
+  const articleDataNewsWithSummary = mergeDeepLeft(
+    { promo: { summary: '' } },
+    articleDataNews,
+  );
+
+  render(
+    <Context service="news">
+      <ArticleMain articleData={articleDataNewsWithSummary} />
+    </Context>,
+  );
+
+  await waitForDomChange({
+    container: document.querySelector('head'),
+  });
+
+  expect(
+    document.querySelector('meta[name="description"]').getAttribute('content'),
+  ).toEqual('Article Headline for SEO');
+});
 
 shouldMatchSnapshot(
   'should render a news article correctly',
