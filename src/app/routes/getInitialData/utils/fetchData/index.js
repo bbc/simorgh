@@ -8,34 +8,40 @@ const STATUS_CODE_BAD_GATEWAY = 502;
 const STATUS_CODE_NOT_FOUND = 404;
 const upstreamStatusCodesToPropagate = [STATUS_CODE_OK, STATUS_CODE_NOT_FOUND];
 
-const handleSuccess = (url, preprocessorRules) => async response => {
+const handleResponse = preprocessorRules => async response => {
   const { status } = response;
 
-  if (upstreamStatusCodesToPropagate.includes(status)) {
-    return {
-      status,
-      ...(status === STATUS_CODE_OK && {
-        pageData: preprocess(await response.json(), preprocessorRules),
-      }),
-    };
-  }
+  return {
+    status,
+    ...(status === STATUS_CODE_OK && {
+      pageData: preprocess(await response.json(), preprocessorRules),
+    }),
+  };
+};
 
+const checkForError = url => ({ status, pageData }) => {
+  const isHandledStatus = upstreamStatusCodesToPropagate.includes(status);
+
+  if (isHandledStatus) {
+    return { status, pageData };
+  }
   logger.warn(
     `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
   );
-
-  return { status: STATUS_CODE_BAD_GATEWAY };
+  throw new Error();
 };
 
 const handleError = error => {
-  logger.error(error);
-
+  if (error.message) {
+    logger.error(error.message);
+  }
   return { error, status: STATUS_CODE_BAD_GATEWAY };
 };
 
 const fetchData = ({ url, preprocessorRules }) =>
   fetch(url)
-    .then(handleSuccess(url, preprocessorRules))
+    .then(handleResponse(preprocessorRules))
+    .then(checkForError(url))
     .catch(handleError);
 
 export default fetchData;

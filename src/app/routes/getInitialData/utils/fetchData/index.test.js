@@ -12,11 +12,9 @@ describe('fetchData', () => {
   const mockFetchSuccess = () =>
     fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
 
-  const mockFetchFailure = () =>
-    fetch.mockReject(JSON.stringify({ error: true }));
+  const mockFetchFailure = () => fetch.mockReject(true);
 
-  const mockFetchInvalidJSON = () =>
-    fetch.mockResponseOnce('Some Invalid: { JSON');
+  const mockFetchInvalidJSON = () => fetch.mockReject('Some Invalid: { JSON');
 
   const mockFetchNotFoundStatus = () =>
     fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
@@ -85,9 +83,8 @@ describe('fetchData', () => {
       expect(preprocess).not.toHaveBeenCalled();
 
       expect(response).toEqual({
-        data: undefined,
         status: 502,
-        error: JSON.stringify({ error: true }),
+        error: true,
       });
     });
   });
@@ -98,15 +95,9 @@ describe('fetchData', () => {
 
       expect(preprocess).not.toHaveBeenCalled();
 
-      const error = new Error(
-        'invalid json response body at undefined reason: Unexpected token S in JSON at position 0',
-      );
-      error.name = 'FetchError';
-
       expect(response).toEqual({
-        data: undefined,
         status: 502,
-        error,
+        error: 'Some Invalid: { JSON',
       });
     });
   });
@@ -120,7 +111,6 @@ describe('fetchData', () => {
       expect(preprocess).not.toHaveBeenCalled();
 
       expect(response).toEqual({
-        data: undefined,
         status: 404,
       });
     });
@@ -139,8 +129,8 @@ describe('fetchData', () => {
       );
 
       expect(response).toEqual({
-        data: undefined,
         status: 502,
+        error: Error(),
       });
     });
   });
