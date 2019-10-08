@@ -1,3 +1,4 @@
+import appConfig from '../../../../src/testHelpers/serviceConfigs';
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import getMappedServiceId from './helper';
@@ -12,6 +13,7 @@ export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
+  variant,
 }) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
     describe('AMP Status', () => {
@@ -30,8 +32,9 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           ({ body }) => {
             const { id, externalId } = body.content.blocks[2];
             const serviceId = getMappedServiceId(externalId);
+            const { lang } = appConfig[service][variant];
             cy.get(
-              `amp-iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/amp"]`,
+              `amp-iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}/amp"]`,
             ).should('be.visible');
           },
         );
