@@ -95,6 +95,19 @@ const testCases = [
       type: 'media',
     },
   },
+  {
+    description:
+      'CANONICAL: builds a URL for GITHUB environment that has a base of test.bbc.co.uk',
+    expected:
+      'https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio',
+    embedObject: {
+      origin:
+        'https://bbc.github.io/simorgh/iframe.html?id=main-radio-page--default',
+      isAmp: false,
+      requestUrl: 'bbc_korean_radio/liveradio',
+      type: 'media',
+    },
+  },
 ];
 
 describe('Media Player: Embed URL', () =>
