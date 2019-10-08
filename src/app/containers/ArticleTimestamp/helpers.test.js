@@ -111,7 +111,7 @@ describe('ArticleTimestamp helper functions', () => {
       expect(formatType({ firstPublished })).toBe(dateFormats.date);
     });
 
-    it(`should return date and time with timezone format format when firstPublished is today`, () => {
+    it(`should return date and time with timezone format when firstPublished is today`, () => {
       const firstPublished = timestampGenerator({ hours: 4 });
       expect(formatType({ firstPublished })).toBe(dateFormats.dateTimeTimezone);
     });
@@ -124,7 +124,7 @@ describe('ArticleTimestamp helper functions', () => {
       );
     });
 
-    it(`should return date and time with timezone format format when firstPublished and lastPublished are on the same day and today`, () => {
+    it(`should return date and time with timezone format when firstPublished and lastPublished are on the same day and today`, () => {
       const firstPublished = timestampGenerator({ hours: 4 });
       const lastPublished = timestampGenerator({ hours: 2 });
       expect(formatType({ firstPublished, lastPublished })).toBe(
