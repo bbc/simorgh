@@ -184,6 +184,10 @@ export const service = {
       },
     ],
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/pidgin/institutional-48528766',
+        text: 'Why you fit trust BBC News',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'De way wey we de take go external link.',

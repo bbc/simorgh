@@ -211,6 +211,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         dir="ltr"
       >
         <button
+          data-cookie-banner="accept"
           type="button"
         >
           Yes, I agree
@@ -221,6 +222,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         dir="ltr"
       >
         <a
+          data-cookie-banner="reject"
           href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
         >
           No, take me to settings
@@ -442,6 +444,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         dir="rtl"
       >
         <button
+          data-cookie-banner="accept"
           type="button"
         >
           نعم، موافق
@@ -452,6 +455,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         dir="rtl"
       >
         <a
+          data-cookie-banner="reject"
           href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
         >
           كلا، أعدني إلى الإعدادات
