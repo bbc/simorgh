@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Brasil",
     "language": "pt-br",
-    "lastUpdated": 1570187189523,
+    "lastUpdated": 1570522252511,
     "firstPublished": 1570187186382,
     "lastPublished": 1570187186382,
     "options": {},
@@ -25,9 +25,9 @@
       "fragment",
       "image",
       "caption",
-      "urlLink",
       "altText",
       "rawImage",
+      "urlLink",
       "video",
       "subheadline"
     ]
@@ -46,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Este é o título deste artigo de teste\n\n\n",
+                        "text": "Este é o título deste artigo de teste",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Este é o título deste artigo de teste\n\n\n",
+                              "text": "Este é o título deste artigo de teste",
                               "attributes": []
                             }
                           }
@@ -79,30 +79,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\n\n\n",
+                              "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n\n\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n\n\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -125,12 +108,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\r\n",
+                              "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\r\n",
+                                    "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\r",
                                     "attributes": []
                                   }
                                 }
@@ -163,7 +146,7 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Este é um bloco de texto, que contém um link de URL para a página inicial do BBC Weather.\n\n\n",
+                  "text": "Este é um bloco de texto, que contém um link de URL para a página inicial do BBC Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
@@ -195,23 +178,6 @@
                         "text": ".",
                         "attributes": []
                       }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
-                      }
                     }
                   ]
                 }
@@ -235,30 +201,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Indonésios Mark Eid al-Adha em meio a terremotos na região de Lombok\n\n\n",
+                              "text": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Indonésios Mark Eid al-Adha em meio a terremotos na região de Lombok",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Indonésios Mark Eid al-Adha em meio a terremotos na região de Lombok",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n\n\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n\n\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -372,12 +321,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Este é um bloco de subtítulo\n\n\n",
+                        "text": "Este é um bloco de subtítulo",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Este é um bloco de subtítulo\n\n\n",
+                              "text": "Este é um bloco de subtítulo",
                               "attributes": []
                             }
                           }
@@ -405,12 +354,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Este é um bloco de subtítulo\r\n",
+                              "text": "Este é um bloco de subtítulo\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Este é um bloco de subtítulo\r\n",
+                                    "text": "Este é um bloco de subtítulo\r",
                                     "attributes": []
                                   }
                                 }
@@ -443,30 +392,13 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados em nosso site.\n\n\n",
+                  "text": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados em nosso site.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
                         "text": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados em nosso site.",
                         "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
                       }
                     }
                   ]

@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Turkce",
     "language": "tr",
-    "lastUpdated": 1570188411613,
+    "lastUpdated": 1570522529392,
     "firstPublished": 1570188314938,
     "lastPublished": 1570188314938,
     "options": {},
@@ -25,9 +25,9 @@
       "fragment",
       "image",
       "caption",
-      "urlLink",
       "altText",
       "rawImage",
+      "urlLink",
       "video",
       "subheadline"
     ]
@@ -46,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Bu, test makalesinin başlığı\n\n\n\n\n",
+                        "text": "Bu, test makalesinin başlığı",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Bu, test makalesinin başlığı\n\n\n\n\n",
+                              "text": "Bu, test makalesinin başlığı",
                               "attributes": []
                             }
                           }
@@ -79,30 +79,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.\n\n\n",
+                              "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n\n\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n\n\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -125,12 +108,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.\r\n",
+                              "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.\r\n",
+                                    "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.\r",
                                     "attributes": []
                                   }
                                 }
@@ -163,7 +146,7 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Bu, BBC Weather ana sayfasına bir URL bağlantısı içeren bir metin bloğudur.\n\n\n",
+                  "text": "Bu, BBC Weather ana sayfasına bir URL bağlantısı içeren bir metin bloğudur.",
                   "blocks": [
                     {
                       "type": "fragment",
@@ -195,23 +178,6 @@
                         "text": " ana sayfasına bir URL bağlantısı içeren bir metin bloğudur.",
                         "attributes": []
                       }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
-                      }
                     }
                   ]
                 }
@@ -235,30 +201,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Indonesians Mark Endonezyalılar Kurban Bayramı'ndaki Lombok Bölgesi'ndeki depremler arasında\n\n\n",
+                              "text": "Indonesians Mark Endonezyalılar Kurban Bayramı'ndaki Lombok Bölgesi'ndeki depremler arasında",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "Indonesians Mark Endonezyalılar Kurban Bayramı'ndaki Lombok Bölgesi'ndeki depremler arasında",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n\n\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n\n\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -372,12 +321,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Bu bir alt başlık bloğudur\n\n\n",
+                        "text": "Bu bir alt başlık bloğudur",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Bu bir alt başlık bloğudur\n\n\n",
+                              "text": "Bu bir alt başlık bloğudur",
                               "attributes": []
                             }
                           }
@@ -405,12 +354,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Bu bir alt başlık bloğudur\n",
+                              "text": "Bu bir alt başlık bloğudur",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Bu bir alt başlık bloğudur\n",
+                                    "text": "Bu bir alt başlık bloğudur",
                                     "attributes": []
                                   }
                                 }
@@ -443,30 +392,13 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz için hazırlandı.\n\n\n",
+                  "text": "Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz için hazırlandı.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
                         "text": "Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz için hazırlandı.",
                         "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
                       }
                     }
                   ]

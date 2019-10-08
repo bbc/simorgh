@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Mundo",
     "language": "es",
-    "lastUpdated": 1570186729955,
+    "lastUpdated": 1570522105765,
     "firstPublished": 1570186726977,
     "lastPublished": 1570186726977,
     "options": {},
@@ -25,9 +25,9 @@
       "fragment",
       "image",
       "caption",
-      "urlLink",
       "altText",
       "rawImage",
+      "urlLink",
       "video",
       "subheadline"
     ]
@@ -46,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Este es el titular de este artículo de prueba.\n\n\n",
+                        "text": "Este es el titular de este artículo de prueba.",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Este es el titular de este artículo de prueba.\n\n\n",
+                              "text": "Este es el titular de este artículo de prueba.",
                               "attributes": []
                             }
                           }
@@ -79,30 +79,13 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título.\n\n\n",
+                              "text": "Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
                                     "text": "Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título.",
                                     "attributes": []
-                                  }
-                                },
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "\n\n\n",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "\n\n\n",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "locator": null,
-                                    "isExternal": false
                                   }
                                 }
                               ]
@@ -125,12 +108,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título.\r\n",
+                              "text": "Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título.\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título.\r\n",
+                                    "text": "Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título.\r",
                                     "attributes": []
                                   }
                                 }
@@ -163,7 +146,7 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Este es un bloque de texto, que contiene un enlace de URL a la página de inicio de BBC Weather.\n\n\n",
+                  "text": "Este es un bloque de texto, que contiene un enlace de URL a la página de inicio de BBC Weather.",
                   "blocks": [
                     {
                       "type": "fragment",
@@ -195,23 +178,6 @@
                         "text": ".",
                         "attributes": []
                       }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
-                      }
                     }
                   ]
                 }
@@ -235,12 +201,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Indonesians Mark Eid al-Adha \nLos indonesios marcan a Eid al-Adha en medio de terremotos en la región de Lombok\n\n",
+                              "text": "Indonesians Mark Eid al-Adha Los indonesios marcan a Eid al-Adha en medio de terremotos en la región de Lombok",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Indonesians Mark Eid al-Adha \nLos indonesios marcan a Eid al-Adha en medio de terremotos en la región de Lombok\n\n",
+                                    "text": "Indonesians Mark Eid al-Adha Los indonesios marcan a Eid al-Adha en medio de terremotos en la región de Lombok",
                                     "attributes": []
                                   }
                                 }
@@ -355,12 +321,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Este es un bloque de subtítulos\n\n\n",
+                        "text": "Este es un bloque de subtítulos",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Este es un bloque de subtítulos\n\n\n",
+                              "text": "Este es un bloque de subtítulos",
                               "attributes": []
                             }
                           }
@@ -388,12 +354,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Este es un bloque de subtítulos\r\n",
+                              "text": "Este es un bloque de subtítulos\r",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Este es un bloque de subtítulos\r\n",
+                                    "text": "Este es un bloque de subtítulos\r",
                                     "attributes": []
                                   }
                                 }
@@ -426,30 +392,13 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Este artículo de prueba ha sido creado para que podamos ejecutar pruebas automatizadas de extremo a extremo en nuestro sitio web.\n\n\n",
+                  "text": "Este artículo de prueba ha sido creado para que podamos ejecutar pruebas automatizadas de extremo a extremo en nuestro sitio web.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
                         "text": "Este artículo de prueba ha sido creado para que podamos ejecutar pruebas automatizadas de extremo a extremo en nuestro sitio web.",
                         "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "\n\n\n",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "\n\n\n",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": null,
-                        "isExternal": false
                       }
                     }
                   ]
