@@ -13,8 +13,9 @@ const CpsAssetPageMain = () => {
     </>
   );
 };
-/* eslint-disable */
+
 CpsAssetPageMain.propTypes = {
+  /* eslint-disable react/no-unused-prop-types */
   pageData: shape({
     metadata: shape({
       id: string,
