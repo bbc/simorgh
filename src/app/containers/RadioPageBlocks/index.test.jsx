@@ -11,13 +11,30 @@ import addIdsToBlocks from '../../routes/getInitialData/radioPage/addIdsToBlocks
 const pageData = addIdsToBlocks(amharicPageData);
 const blocks = path(['content', 'blocks'], pageData);
 
+const serviceContextMock = { service: 'amharic', script: latin, lang: 'am' };
+
 describe('Radio Page Blocks', () => {
   shouldMatchSnapshot(
-    'should match snapshot',
-    <ServiceContext.Provider value={{ service: 'news', script: latin }}>
+    'should match snapshot for Canonical',
+    <ServiceContext.Provider value={serviceContextMock}>
       <RequestContext.Provider
         value={{
           platform: 'canonical',
+          pageType: 'media',
+          origin: 'http://localhost.bbc.co.uk:7080',
+        }}
+      >
+        <RadioPageBlocks blocks={blocks} />
+      </RequestContext.Provider>
+    </ServiceContext.Provider>,
+  );
+
+  shouldMatchSnapshot(
+    'should match snapshot for AMP',
+    <ServiceContext.Provider value={serviceContextMock}>
+      <RequestContext.Provider
+        value={{
+          platform: 'amp',
           pageType: 'media',
           origin: 'http://localhost.bbc.co.uk:7080',
         }}

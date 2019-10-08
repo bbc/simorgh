@@ -1,5 +1,6 @@
 import React from 'react';
-import { string, node } from 'prop-types';
+import { render, waitForDomChange } from '@testing-library/react';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -20,6 +21,7 @@ jest.mock('../ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+// eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
   <ToggleContextProvider>
     <ServiceContextProvider service={service}>
@@ -38,30 +40,44 @@ const Context = ({ service, children }) => (
   </ToggleContextProvider>
 );
 
-Context.propTypes = {
-  children: node.isRequired,
-  service: string.isRequired,
-};
+it('should use headline for meta description if summary does not exist', async () => {
+  const articleDataNewsWithSummary = mergeDeepLeft(
+    { promo: { summary: '' } },
+    articleDataNews,
+  );
 
-describe('ArticleMain', () => {
-  shouldMatchSnapshot(
-    'should render a news article correctly',
+  render(
     <Context service="news">
-      <ArticleMain articleData={articleDataNews} />
+      <ArticleMain articleData={articleDataNewsWithSummary} />
     </Context>,
   );
 
-  shouldMatchSnapshot(
-    'should render a persian article correctly',
-    <Context service="persian">
-      <ArticleMain articleData={articleDataPersian} />
-    </Context>,
-  );
+  await waitForDomChange({
+    container: document.querySelector('head'),
+  });
 
-  shouldMatchSnapshot(
-    'should render a pidgin article correctly (with navigation)',
-    <Context service="pidgin">
-      <ArticleMain articleData={articleDataPidgin} />
-    </Context>,
-  );
+  expect(
+    document.querySelector('meta[name="description"]').getAttribute('content'),
+  ).toEqual('Article Headline for SEO');
 });
+
+shouldMatchSnapshot(
+  'should render a news article correctly',
+  <Context service="news">
+    <ArticleMain articleData={articleDataNews} />
+  </Context>,
+);
+
+shouldMatchSnapshot(
+  'should render a persian article correctly',
+  <Context service="persian">
+    <ArticleMain articleData={articleDataPersian} />
+  </Context>,
+);
+
+shouldMatchSnapshot(
+  'should render a pidgin article correctly (with navigation)',
+  <Context service="pidgin">
+    <ArticleMain articleData={articleDataPidgin} />
+  </Context>,
+);
