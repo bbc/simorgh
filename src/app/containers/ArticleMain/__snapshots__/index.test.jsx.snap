@@ -185,7 +185,7 @@ exports[`should render a news article correctly 1`] = `
       Article Headline for SEO - BBC News
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -358,7 +358,7 @@ exports[`should render a news article correctly 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta
@@ -468,7 +468,7 @@ exports[`should render a persian article correctly 1`] = `
       سرصفحه مقاله - BBC News فارسی
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -626,7 +626,7 @@ exports[`should render a persian article correctly 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta
@@ -899,7 +899,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
       Article Headline for SEO in Pidgin - BBC News Pidgin
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -1057,7 +1057,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta

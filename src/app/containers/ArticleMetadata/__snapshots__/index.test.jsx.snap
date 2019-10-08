@@ -10,7 +10,7 @@ exports[`should match snapshot for News & International 1`] = `
       Article Headline for SEO - BBC News
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -183,7 +183,7 @@ exports[`should match snapshot for News & International 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta
@@ -255,7 +255,7 @@ exports[`should match snapshot for Persian News & UK origin 1`] = `
       سرصفحه مقاله - BBC News فارسی
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.co.uk/pathname"
       rel="canonical"
     />
     <link
@@ -413,7 +413,7 @@ exports[`should match snapshot for Persian News & UK origin 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.co.uk/pathname"
       name="og:url"
     />
     <meta
