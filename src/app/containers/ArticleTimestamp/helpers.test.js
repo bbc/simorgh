@@ -9,18 +9,23 @@ import {
 
 import { timestampGenerator } from './testHelpers';
 
-const generateTimeLimits = n => {
-  const limits = [];
-  for (let i = 1; i < n; i += 1) {
-    const expectation = {
-      title: `${i} hour(s) ago`,
-      time: timestampGenerator({ hours: i }),
-      expectedValue: i < 10,
-    };
-    limits.push(expectation);
-  }
-  return limits;
-};
+const timeLimits = [
+  {
+    title: '1 hour(s) ago',
+    time: timestampGenerator({ hours: 1 }),
+    expectedValue: true,
+  },
+  {
+    title: '9 hour(s) ago',
+    time: timestampGenerator({ hours: 9 }),
+    expectedValue: true,
+  },
+  {
+    title: '10 hour(s) ago',
+    time: timestampGenerator({ hours: 10 }),
+    expectedValue: false,
+  },
+];
 
 describe('ArticleTimestamp helper functions', () => {
   describe('isValidDateTime', () => {
@@ -43,7 +48,6 @@ describe('ArticleTimestamp helper functions', () => {
 
   describe('isFirstRelative', () => {
     describe(`when lastPublished === firstPublished`, () => {
-      const timeLimits = generateTimeLimits(15);
       timeLimits.forEach(({ expectedValue, time, title }) => {
         it(`should return ${expectedValue} for ${title}`, () => {
           const firstPublished = time;
@@ -63,7 +67,6 @@ describe('ArticleTimestamp helper functions', () => {
   });
 
   describe('isLastRelative', () => {
-    const timeLimits = generateTimeLimits(15);
     timeLimits.forEach(({ expectedValue, time, title }) => {
       it(`should return ${expectedValue} when lastPublished is ${title}`, () => {
         const lastPublished = time;
@@ -103,12 +106,12 @@ describe('ArticleTimestamp helper functions', () => {
       date: 'D MMMM YYYY',
       dateTimeTimezone: 'D MMMM YYYY, HH:mm z',
     };
-    it(`should return default date format when firstPublished is not today`, () => {
+    it(`should return date format when firstPublished is not today`, () => {
       const firstPublished = timestampGenerator({ days: 5 });
       expect(formatType({ firstPublished })).toBe(dateFormats.date);
     });
 
-    it(`should return dateTimeTimezone format when firstPublished is today`, () => {
+    it(`should return date and time with timezone format format when firstPublished is today`, () => {
       const firstPublished = timestampGenerator({ hours: 4 });
       expect(formatType({ firstPublished })).toBe(dateFormats.dateTimeTimezone);
     });
@@ -121,7 +124,7 @@ describe('ArticleTimestamp helper functions', () => {
       );
     });
 
-    it(`should return dateTimeTimezone format when firstPublished and lastPublished are on the same day and today`, () => {
+    it(`should return date and time with timezone format format when firstPublished and lastPublished are on the same day and today`, () => {
       const firstPublished = timestampGenerator({ hours: 4 });
       const lastPublished = timestampGenerator({ hours: 2 });
       expect(formatType({ firstPublished, lastPublished })).toBe(
@@ -129,7 +132,7 @@ describe('ArticleTimestamp helper functions', () => {
       );
     });
 
-    it(`should return default date format when firstPublished is null`, () => {
+    it(`should return date format when firstPublished is null`, () => {
       const firstPublished = null;
       expect(formatType({ firstPublished })).toBe(dateFormats.date);
     });
