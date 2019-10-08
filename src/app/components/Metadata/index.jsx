@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { arrayOf, bool, oneOf, shape, string, number } from 'prop-types';
 import { getIconLinks, getIconAssetUrl } from './helpers/iconLinks';
-import propTypeCheck from './propTypesCheck';
 
 const renderAmpHtml = (ampLink, isAmp) => {
   if (isAmp) {
@@ -11,47 +10,11 @@ const renderAmpHtml = (ampLink, isAmp) => {
   return <link rel="amphtml" href={ampLink} />;
 };
 
-const getAuthor = (articleAuthor, showArticleTags) => {
-  return showArticleTags ? (
-    <meta name="article:author" content={articleAuthor} />
-  ) : null;
-};
-
-const getModifiedTime = (timeLastPublished, showArticleTags) => {
-  return showArticleTags ? (
-    <meta name="article:modified_time" content={timeLastPublished} />
-  ) : null;
-};
-
-const getPublishedTime = (timeFirstPublished, showArticleTags) => {
-  return showArticleTags ? (
-    <meta name="article:published_time" content={timeFirstPublished} />
-  ) : null;
-};
-
-const getArticleSection = (articleSection, showArticleTags) => {
-  return articleSection && showArticleTags ? (
-    <meta name="article:section" content={articleSection} />
-  ) : null;
-};
-
-const getMetaTags = (metaTags, showArticleTags) => {
-  if (!showArticleTags) {
-    return null;
-  }
-
-  return metaTags.map(tag => (
-    <meta name="article:tag" content={tag} key={tag} />
-  ));
-};
-
 const Metadata = ({
   isAmp,
   alternateLinks,
   ampLink,
   appleTouchIcon,
-  articleAuthor,
-  articleSection,
   brandName,
   canonicalLink,
   defaultImage,
@@ -62,15 +25,11 @@ const Metadata = ({
   facebookAppID,
   lang,
   locale,
-  metaTags,
   themeColor,
-  timeFirstPublished,
-  timeLastPublished,
   title,
   twitterCreator,
   twitterSite,
   type,
-  showArticleTags,
   service,
   iconSizes,
 }) => {
@@ -102,11 +61,6 @@ const Metadata = ({
         />
       ))}
       {renderAmpHtml(ampLink, isAmp)}
-      {getAuthor(articleAuthor, showArticleTags)}
-      {getModifiedTime(timeLastPublished, showArticleTags)}
-      {getPublishedTime(timeFirstPublished, showArticleTags)}
-      {getArticleSection(articleSection, showArticleTags)}
-      {getMetaTags(metaTags, showArticleTags)}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
@@ -154,9 +108,6 @@ Metadata.propTypes = {
   ),
   ampLink: string.isRequired,
   appleTouchIcon: string.isRequired,
-  articleAuthor: (props, propName) =>
-    propTypeCheck(props, propName, 'Metadata', string.isRequired),
-  articleSection: string,
   brandName: string.isRequired,
   canonicalLink: string.isRequired,
   defaultImage: string.isRequired,
@@ -167,18 +118,11 @@ Metadata.propTypes = {
   facebookAppID: number.isRequired,
   lang: string.isRequired,
   locale: string.isRequired,
-  metaTags: (props, propName) =>
-    propTypeCheck(props, propName, 'Metadata', arrayOf(string)),
   themeColor: string.isRequired,
-  timeFirstPublished: (props, propName) =>
-    propTypeCheck(props, propName, 'Metadata', string.isRequired),
-  timeLastPublished: (props, propName) =>
-    propTypeCheck(props, propName, 'Metadata', string.isRequired),
   title: string.isRequired,
   twitterCreator: string.isRequired,
   twitterSite: string.isRequired,
   type: string.isRequired,
-  showArticleTags: bool.isRequired,
   service: string.isRequired,
   iconSizes: shape({
     'apple-touch-icon-sizes': arrayOf(string),
@@ -188,15 +132,7 @@ Metadata.propTypes = {
 
 Metadata.defaultProps = {
   alternateLinks: [],
-  articleSection: null,
   iconSizes: null,
-
-  // the default props below are only added to stop eslint from complaining
-  // because we're using custom propType rules for these props
-  articleAuthor: null,
-  metaTags: [],
-  timeFirstPublished: null,
-  timeLastPublished: null,
 };
 
 export default Metadata;
