@@ -1,3 +1,4 @@
+import appConfig from '../../../../src/testHelpers/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 import getMappedServiceId from './helper';
@@ -12,6 +13,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
+  variant,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     describe('live radio body', () => {
@@ -20,8 +22,9 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           ({ body }) => {
             const { id, externalId } = body.content.blocks[2];
             const serviceId = getMappedServiceId(externalId);
+            const { lang } = appConfig[service][variant];
             cy.get(
-              `iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}"]`,
+              `iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}"]`,
             ).should('be.visible');
           },
         );
