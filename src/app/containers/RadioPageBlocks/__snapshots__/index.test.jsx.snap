@@ -125,7 +125,7 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
               <amp-img
                 layout="fill"
                 placeholder="true"
-                src="http://localhost.bbc.com:7080/images/amp_audio_placeholder.png"
+                src="https://news.files.bbci.co.uk/include/articles/public/images/audio-player-placeholder.png"
               />
             </amp-iframe>
           </div>
