@@ -10,7 +10,6 @@ const cpsAssetScaffoldProps = {
   pathname: '/pathname',
   match: {
     params: {
-      serviceId: 'cpsAssets',
       assetUri: 'tori-49450859',
       pageData: pidginPageData,
     },
