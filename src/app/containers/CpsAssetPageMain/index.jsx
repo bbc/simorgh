@@ -1,23 +1,19 @@
 import React from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
-import path from 'ramda/src/path';
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
-import CpsAssetPageBlocks from '../CpsAssetPageBlocks';
 
-const CpsAssetPageMain = ({ pageData }) => {
-  const blocks = path(['content', 'blocks'], pageData);
-
+const CpsAssetPageMain = () => {
   return (
     <>
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
-          <CpsAssetPageBlocks blocks={blocks} />
+          <h1> Placeholder content for MAP page skeleton</h1>
         </GridItemConstrainedMedium>
       </Grid>
     </>
   );
 };
-
+/* eslint-disable */
 CpsAssetPageMain.propTypes = {
   pageData: shape({
     metadata: shape({
