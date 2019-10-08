@@ -341,35 +341,6 @@
           "model": {
             "blocks": [
               {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
                 "type": "altText",
                 "model": {
                   "blocks": [
