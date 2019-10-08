@@ -498,6 +498,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
           dir="ltr"
         >
           <button
+            data-cookie-banner="accept"
             type="button"
           >
             Yes, I agree
@@ -508,6 +509,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
           dir="ltr"
         >
           <a
+            data-cookie-banner="reject"
             href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
           >
             No, cari me go settings
@@ -1203,6 +1205,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
           dir="ltr"
         >
           <button
+            data-cookie-banner="accept"
             type="button"
           >
             Yes, I agree
@@ -1213,6 +1216,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
           dir="ltr"
         >
           <a
+            data-cookie-banner="reject"
             href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
           >
             No, cari me go settings
