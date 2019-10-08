@@ -11,7 +11,7 @@ const cpsAssetScaffoldProps = {
   match: {
     params: {
       serviceId: 'cpsAssets',
-      mediaId: 'tori-49450859',
+      assetUri: 'tori-49450859',
       pageData: pidginPageData,
     },
   },
