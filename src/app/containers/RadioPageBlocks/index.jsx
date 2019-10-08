@@ -14,6 +14,8 @@ const blockMap = {
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
+const UnknownBlock = () => <></>;
+
 const RadioPageBlocks = ({ blocks }) => {
   if (!blocks || !blocks.length) return null;
 
@@ -23,7 +25,7 @@ const RadioPageBlocks = ({ blocks }) => {
     const idAttr = isFirstBlock ? SKIP_LINK_ANCHOR_ID : null;
     const blockType = id || type;
 
-    const Block = pathOr(null, [blockType], blockMap);
+    const Block = pathOr(UnknownBlock, [blockType], blockMap);
 
     return (
       <Block
