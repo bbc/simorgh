@@ -23,6 +23,15 @@ it('returns expected object when given correct tags', () => {
         'http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id',
       'skos:altLabel': 'Test skos:altLabel',
     },
+    {
+      thingId: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa',
+      thingLabel: 'Wedding of Prince Harry and Meghan Markle',
+      thingSameAs: ['http://rdf.freebase.com/ns/m.05mnc3'],
+      thingType: ['Not an acceptable type'],
+      thingUri:
+        'http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id',
+      'skos:altLabel': 'Test skos:altLabel',
+    },
   ];
   const expected = [
     {
@@ -34,6 +43,12 @@ it('returns expected object when given correct tags', () => {
       '@type': 'Thing',
       name: 'Wedding of Prince Harry and Meghan Markle',
       alternateName: 'Test skos:altLabel',
+    },
+    {
+      '@type': 'Thing',
+      alternateName: 'Test skos:altLabel',
+      name: 'Wedding of Prince Harry and Meghan Markle',
+      sameAs: undefined,
     },
   ];
 
