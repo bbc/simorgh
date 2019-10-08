@@ -5,7 +5,6 @@ import { string, shape, arrayOf } from 'prop-types';
 import HeadingBlock from './Blocks/Heading';
 import LiveRadioBlock from './Blocks/LiveRadio';
 import ParagraphBlock from './Blocks/Paragraph';
-import UnknownBlock from './Blocks/Unknown';
 
 const blockMap = {
   heading: HeadingBlock,
@@ -24,7 +23,7 @@ const RadioPageBlocks = ({ blocks }) => {
     const idAttr = isFirstBlock ? SKIP_LINK_ANCHOR_ID : null;
     const blockType = id || type;
 
-    const Block = pathOr(UnknownBlock, [blockType], blockMap);
+    const Block = pathOr(null, [blockType], blockMap);
 
     return (
       <Block
