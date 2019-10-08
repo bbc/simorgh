@@ -141,6 +141,10 @@ export const service = {
       lastUpdated: 'آخری اپ ڈیٹ ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/urdu/institutional-49282935',
+        text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
