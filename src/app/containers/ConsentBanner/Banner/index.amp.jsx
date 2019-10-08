@@ -5,14 +5,14 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
-const Accept = (message, onClick) => (
-  <button type="button" on={onClick}>
+const Accept = (message, onClick, dataAttribute) => (
+  <button type="button" on={onClick} {...dataAttribute}>
     {message}
   </button>
 );
 
-const Reject = (message, href, onClick) => (
-  <a href={href} on={onClick}>
+const Reject = (message, href, onClick, dataAttribute) => (
+  <a href={href} on={onClick} {...dataAttribute}>
     {message}
   </a>
 );
