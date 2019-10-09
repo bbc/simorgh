@@ -15,6 +15,16 @@ const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
 
+const getArticleMetadataProps = data => ({
+  title: data.promo.headlines.seoHeadline,
+  lang: data.metadata.passport.language,
+  description: data.promo.summary,
+  openGraphType: 'article',
+});
+
+const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
+const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
+
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
   service,
@@ -23,8 +33,10 @@ const MetadataWithContext = ({
   id,
   pageType,
   pathname,
-  promo,
-  metadata,
+  title,
+  lang,
+  description,
+  openGraphType,
   /* eslint-enable react/prop-types */
 }) => {
   const serviceConfig = services[service].default;
@@ -40,7 +52,12 @@ const MetadataWithContext = ({
         service={service}
         statusCode={200}
       >
-        <MetadataContainer promo={promo} metadata={metadata} />
+        <MetadataContainer
+          title={title}
+          lang={lang}
+          description={description}
+          openGraphType={openGraphType}
+        />
       </RequestContextProvider>
     </ServiceContextProvider>
   );
@@ -54,8 +71,7 @@ const CanonicalNewsInternationalOrigin = () => (
     id="c0000000001o"
     pageType="article"
     pathname="/news/articles/c0000000001o"
-    promo={articleDataNews.promo}
-    metadata={articleDataNews.metadata}
+    {...newsArticleMetadataProps}
   />
 );
 
@@ -389,71 +405,6 @@ it('should render the twitter metatags', async () => {
   expect(actual).toEqual(expected);
 });
 
-it('should render the linked data', async () => {
-  await renderMetadataToDocument();
-
-  const actual = JSON.parse(
-    document.querySelector('head > script[type="application/ld+json"]')
-      .innerHTML,
-  );
-  const expected = {
-    '@context': 'http://schema.org',
-    '@type': 'Article',
-    about: [
-      {
-        '@type': 'Thing',
-        name: 'Royal Wedding 2018',
-        sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
-      },
-      { '@type': 'Person', name: 'Duchess of Sussex' },
-    ],
-    author: {
-      '@type': 'NewsMediaOrganization',
-      logo: {
-        '@type': 'ImageObject',
-        height: 576,
-        url:
-          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-        width: 1024,
-      },
-      name: 'BBC News',
-      noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    },
-    dateModified: '2018-01-01T13:00:00.000Z',
-    datePublished: '2018-01-01T12:01:00.000Z',
-    headline: 'Article Headline for SEO',
-    image: {
-      '@type': 'ImageObject',
-      height: 576,
-      url:
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-      width: 1024,
-    },
-    mainEntityOfPage: {
-      '@id': 'https://www.bbc.com/news/articles/c0000000001o',
-      '@type': 'WebPage',
-      name: 'Article Headline for SEO',
-    },
-    publisher: {
-      '@type': 'NewsMediaOrganization',
-      logo: {
-        '@type': 'ImageObject',
-        height: 576,
-        url:
-          'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-        width: 1024,
-      },
-      name: 'BBC News',
-      publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    },
-    thumbnailUrl:
-      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-    url: 'https://www.bbc.com/news/articles/c0000000001o',
-  };
-
-  expect(actual).toEqual(expected);
-});
-
 shouldMatchSnapshot(
   'should match for Canonical News & international origin',
   <CanonicalNewsInternationalOrigin />,
@@ -468,8 +419,7 @@ shouldMatchSnapshot(
     id="c0000000001o"
     pageType="article"
     pathname="/news/articles/c0000000001o.amp"
-    promo={articleDataNews.promo}
-    metadata={articleDataNews.metadata}
+    {...newsArticleMetadataProps}
   />,
 );
 
@@ -482,8 +432,7 @@ shouldMatchSnapshot(
     id="c4vlle3q337o"
     pageType="article"
     pathname="/persian/articles/c4vlle3q337o"
-    promo={articleDataPersian.promo}
-    metadata={articleDataPersian.metadata}
+    {...persianArticleMetadataProps}
   />,
 );
 
@@ -496,8 +445,7 @@ shouldMatchSnapshot(
     id="c4vlle3q337o"
     pageType="article"
     pathname="/persian/articles/c4vlle3q337o.amp"
-    promo={articleDataPersian.promo}
-    metadata={articleDataPersian.metadata}
+    {...persianArticleMetadataProps}
   />,
 );
 
@@ -510,8 +458,10 @@ shouldMatchSnapshot(
     id={null}
     pageType="frontPage"
     pathname="/igbo"
-    promo={frontPageData.promo}
-    metadata={frontPageData.metadata}
+    title="Ogbako"
+    lang={frontPageData.metadata.language}
+    description={frontPageData.metadata.summary}
+    openGraphType="website"
   />,
 );
 
@@ -524,7 +474,9 @@ shouldMatchSnapshot(
     id={null}
     pageType="media"
     pathname="/korean/bbc_korean_radio/liveradio"
-    promo={liveRadioPageData.promo}
-    metadata={liveRadioPageData.metadata}
+    title={liveRadioPageData.promo.name}
+    lang={liveRadioPageData.metadata.language}
+    description={liveRadioPageData.promo.summary}
+    openGraphType="website"
   />,
 );
