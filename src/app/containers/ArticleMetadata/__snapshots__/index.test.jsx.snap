@@ -33,7 +33,7 @@ exports[`should match snapshot for News & International 1`] = `
       rel="amphtml"
     />
     <link
-      href="http://localhost.bbc.com:7080/news/images/icons/icon-192x192.png"
+      href="/news/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -263,7 +263,7 @@ exports[`should match snapshot for Persian News & UK origin 1`] = `
       rel="amphtml"
     />
     <link
-      href="http://localhost.bbc.com:7080/persian/images/icons/icon-192x192.png"
+      href="/persian/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link

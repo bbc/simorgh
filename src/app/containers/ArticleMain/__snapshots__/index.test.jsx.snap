@@ -208,7 +208,7 @@ exports[`should render a news article correctly 1`] = `
       rel="amphtml"
     />
     <link
-      href="http://localhost.bbc.com:7080/news/images/icons/icon-192x192.png"
+      href="/news/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -476,7 +476,7 @@ exports[`should render a persian article correctly 1`] = `
       rel="amphtml"
     />
     <link
-      href="http://localhost.bbc.com:7080/persian/images/icons/icon-192x192.png"
+      href="/persian/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -907,7 +907,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
       rel="amphtml"
     />
     <link
-      href="http://localhost.bbc.com:7080/pidgin/images/icons/icon-192x192.png"
+      href="/pidgin/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
