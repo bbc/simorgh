@@ -1,6 +1,6 @@
 # Article Timestamp Format tests
 
-These are unit tests to ensure that we observe and maintain regression for the article timestamp and timezone logic with assiociated timeformats accross services.
+These are unit tests to ensure that we observe and maintain regression for the article timestamp and timezone logic with associated timeformats accross services.
 
 The tests in this directory runs for all services against expectations set in this [file](./expectedFormats.json) and a failure would either indicate a change or breakage in the timestamp or time format logic.
 
