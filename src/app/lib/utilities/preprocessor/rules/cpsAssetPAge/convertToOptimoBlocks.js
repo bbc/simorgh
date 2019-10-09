@@ -16,7 +16,7 @@ const parseBlockByType = block => {
   return parsedBlock;
 };
 
-const convertCpsBlocksToOptimoBlocks = jsonRaw => {
+const convertToOptimoBlocks = jsonRaw => {
   const json = clone(jsonRaw);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
@@ -32,4 +32,4 @@ const convertCpsBlocksToOptimoBlocks = jsonRaw => {
   };
 };
 
-export default convertCpsBlocksToOptimoBlocks;
+export default convertToOptimoBlocks;
