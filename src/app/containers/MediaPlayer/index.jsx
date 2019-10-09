@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import {
   CanonicalMediaPlayer,
@@ -10,6 +10,7 @@ import getPlaceholderSrc from './helpers/placeholder';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import {
   mediaPlayerPropTypes,
@@ -17,7 +18,8 @@ import {
 } from '#models/propTypes';
 
 const MediaPlayerContainer = ({ blocks, placeholder }) => {
-  const { id, platform, origin } = React.useContext(RequestContext);
+  const { id, platform, origin } = useContext(RequestContext);
+  const { lang } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
 
@@ -48,7 +50,7 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
 
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
-    requestUrl: `${id}/${versionId}`,
+    requestUrl: `${id}/${versionId}/${lang}`,
     type: 'articles',
     isAmp,
     origin,
