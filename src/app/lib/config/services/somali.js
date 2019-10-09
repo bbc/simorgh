@@ -152,6 +152,10 @@ export const service = {
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay ',
     },
     footer: {
+      trustProjectLink: {
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: 'Sababta aada ku aamini kartid BBC News',
+      },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.',
