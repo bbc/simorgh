@@ -48,6 +48,9 @@ describe('articleRegexPath', () => {
     '/news/articles/c5jje4ejkqvo/simp',
     '/news/articles/c5jje4ejkqvo/trad.amp',
     '/persian/articles/c7eel0lmr4do/lat',
+    '/cymrufyw/erthyglau/c7eel0lmr4do',
+    '/cymrufyw/erthyglau/c7eel0lmr4do.amp',
+    '/naidheachdan/sgeulachdan/c7eel0lmr4do',
   ];
   shouldMatchValidRoutes(validRoutes, articleRegexPath);
 
@@ -70,6 +73,7 @@ describe('articleDataRegexPath', () => {
     '/persian/articles/c7eel0lmr4do.json',
     '/news/articles/c5jje4ejkqvo/lat.json',
     '/persian/articles/c7eel0lmr4do/trad.json',
+    '/cymrufyw/erthyglau/c5jje4ejkqvo.json',
   ];
   shouldMatchValidRoutes(validRoutes, articleDataRegexPath);
 
@@ -125,13 +129,18 @@ describe('frontpageDataRegexPath', () => {
 });
 
 describe('swRegexPath', () => {
-  const validRoutes = ['/news/articles/sw.js', '/persian/articles/sw.js'];
+  const validRoutes = [
+    '/news/articles/sw.js',
+    '/persian/articles/sw.js',
+    '/cymrufyw/erthyglau/sw.js',
+  ];
   shouldMatchValidRoutes(validRoutes, articleSwRegexPath);
 
   const invalidRoutes = [
     '/news/sw.js',
     '/persian/articles/sw',
     '/news/trad/sw.js',
+    '/cymrufyw/sw.js',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, articleSwRegexPath);
 });
@@ -140,6 +149,7 @@ describe('manifestRegexPath', () => {
   const validRoutes = [
     '/news/articles/manifest.json',
     '/persian/articles/manifest.json',
+    '/naidheachdan/sgeulachdan/manifest.json',
   ];
   shouldMatchValidRoutes(validRoutes, articleManifestRegexPath);
 
@@ -175,7 +185,7 @@ describe('frontpageManifestRegexPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageManifestRegexPath);
 });
 
-jest.mock('../config', () => ({
+jest.mock('../config/servicesWithRadioOrTv', () => ({
   gujarati: ['bbc_gujarati_tv'],
   hausa: ['bbc_hausa_radio', 'bbc_afrique_tv'],
   indonesia: ['bbc_indonesian_radio'],
