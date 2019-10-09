@@ -1,0 +1,436 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cd61pm8gzmpo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cd61pm8gzmpo"
+    },
+    "type": "article",
+    "createdBy": "Brasil",
+    "language": "pt-br",
+    "lastUpdated": 1570522252511,
+    "firstPublished": 1570187186382,
+    "lastPublished": 1570187186382,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "pt-br",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+    },
+    "tags": {},
+    "version": "v1.1.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Este é o título deste artigo de teste",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Este é o título deste artigo de teste",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "8976/test/46e13d00-e696-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Este é um bloco de texto, que contém um link de URL para a página inicial do BBC Weather.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Este é um bloco de texto, que contém um link de URL para a página inicial do ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "BBC Weather",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "BBC Weather",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01jv2zy",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Indonésios Mark Eid al-Adha em meio a terremotos na região de Lombok",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Indonésios Mark Eid al-Adha em meio a terremotos na região de Lombok",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01jv2zy",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01jv2zy",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Lombok Region",
+                        "synopses": {
+                          "short": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Lombok Region"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01jv35f.jpg",
+                        "imageCopyright": "Getty Images",
+                        "embedding": true,
+                        "advertising": true,
+                        "caption": "ritual in Lombok",
+                        "versions": [
+                          {
+                            "versionId": "p01jv300",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 119,
+                            "durationISO8601": "PT1M59S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1536679537000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1280,
+                              "height": 719,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01jv35f.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "Getty Images"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "pakistani girl with green eyes",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "pakistani girl with green eyes",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Este é um bloco de subtítulo",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Este é um bloco de subtítulo",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Este é um bloco de subtítulo\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Este é um bloco de subtítulo\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "925a/test/cfcdba80-e696-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados em nosso site.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados em nosso site.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados\n\n\n"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cd61pm8gzmpo"
+    },
+    "summary": "",
+    "timestamp": 1570187186382,
+    "id": "urn:bbc:ares::article:cd61pm8gzmpo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Brasil",
+      "uri": "/brasil",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

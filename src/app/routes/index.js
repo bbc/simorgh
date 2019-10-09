@@ -1,6 +1,7 @@
 import Article from '../containers/Article';
 import FrontPage from '../containers/FrontPage';
 import RadioPage from '../containers/RadioPage';
+import CpsAssetPage from '../containers/CpsAssetPage';
 import ErrorPage from '../containers/Error';
 import getArticleInitialData from './getInitialData/article';
 import getFrontpageInitialData from './getInitialData/frontpage';
@@ -14,7 +15,7 @@ import {
 } from './regex';
 
 const pages = {
-  MAP: RadioPage,
+  MAP: CpsAssetPage,
   FIX: FrontPage,
   error: ErrorPage,
 };

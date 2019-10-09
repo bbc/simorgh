@@ -3,6 +3,7 @@ import { cpsAssetPageRegexPath } from './regex';
 
 jest.mock('../containers/FrontPage', () => jest.fn());
 jest.mock('../containers/RadioPage', () => jest.fn());
+jest.mock('../containers/CpsAssetPage', () => jest.fn());
 
 const generateFixtureData = type => ({
   pageData: {
@@ -44,10 +45,10 @@ describe('Routes', () => {
       jest.resetAllMocks();
     });
 
-    const mediaPage = jest.requireMock('../containers/RadioPage');
+    const mediaPage = jest.requireMock('../containers/CpsAssetPage');
     const frontPage = jest.requireMock('../containers/FrontPage');
 
-    it('should route to RadioPage component', () => {
+    it('should route to CpsAssetPage component', () => {
       const data = generateFixtureData('MAP');
       Component(data);
 
