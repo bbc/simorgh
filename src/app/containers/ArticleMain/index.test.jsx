@@ -16,6 +16,9 @@ import {
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static/';
+
 jest.mock('../ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
