@@ -10,14 +10,30 @@ const pageData = addIdsToBlocks(amharicPageData);
 
 describe('Radio Page Main', () => {
   shouldMatchSnapshot(
-    'should match snapshot',
-    <ServiceContextProvider service="news">
+    'should match snapshot for Canonical',
+    <ServiceContextProvider service="amharic">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
         pageType="media"
         pathname="/pathname"
-        service="news"
+        service="amharic"
+        statusCode={200}
+      >
+        <RadioPageMain service="amharic" pageData={pageData} />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+
+  shouldMatchSnapshot(
+    'should match snapshot for AMP',
+    <ServiceContextProvider service="amharic">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        isAmp
+        pageType="media"
+        pathname="/pathname"
+        service="amharic"
         statusCode={200}
       >
         <RadioPageMain service="amharic" pageData={pageData} />
