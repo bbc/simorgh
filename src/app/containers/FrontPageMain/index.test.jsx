@@ -10,9 +10,6 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const processedPidgin = preprocessor(frontPageDataPidgin, [addIdsToItems]);
 
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static/';
-
 jest.mock('uuid', () =>
   (() => {
     let x = 1;

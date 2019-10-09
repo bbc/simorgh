@@ -8,9 +8,6 @@ import addIdsToBlocks from '../../routes/getInitialData/radioPage/addIdsToBlocks
 
 const pageData = addIdsToBlocks(amharicPageData);
 
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static/';
-
 describe('Radio Page Main', () => {
   shouldMatchSnapshot(
     'should match snapshot for Canonical',

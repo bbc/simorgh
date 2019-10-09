@@ -6,9 +6,6 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ArticleMetadata from './index';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
 
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static/';
-
 const getISOStringDate = date => new Date(date).toISOString();
 
 // eslint-disable-next-line react/prop-types
