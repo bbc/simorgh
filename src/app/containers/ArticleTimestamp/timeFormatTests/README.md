@@ -6,7 +6,7 @@ The tests in this directory runs for all services against expectations set in th
 
 A change in timestamp logic would require updating the values in [expectedFormats.json](./expectedFormats.json) using the [generateTimeFormats.js](./generateTimeFormats.js) script (see below). However, proper investigation should be carried out to identify if there is a valid reason for why these tests fail before running the update script.
 
-A couple of scenarios that we expect these test would fail and need updating would be
+A couple of scenarios that we expect these tests would fail and need updating would be:
 
 - Change in timestamp or timezone logic in `@bbc/moment-timezone-include`, `@bbc/psammead-locales` etc.
 
