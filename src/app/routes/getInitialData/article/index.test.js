@@ -98,6 +98,31 @@ describe('getArticleInitialData', () => {
     });
   });
 
+  it('fetches from /cymrufyw/erthyglau for cymrufyw service', async () => {
+    await getArticleInitialData({
+      ...defaultContext,
+      service: 'cymrufyw',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url: 'https://www.getBaseUrl.com/cymrufyw/erthyglau/c0000000001o.json',
+      preprocessorRules,
+    });
+  });
+
+  it('fetches from /naidheachdan/sgeulachdan for naidheachdan service', async () => {
+    await getArticleInitialData({
+      ...defaultContext,
+      service: 'naidheachdan',
+    });
+
+    expect(fetchData).toHaveBeenCalledWith({
+      url:
+        'https://www.getBaseUrl.com/naidheachdan/sgeulachdan/c0000000001o.json',
+      preprocessorRules,
+    });
+  });
+
   describe('When not on client', () => {
     beforeEach(() => {
       onClientMockResponse = false;

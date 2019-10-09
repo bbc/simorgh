@@ -1,10 +1,12 @@
+import pathOr from 'ramda/src/pathOr';
 import onClient from '#lib/utilities/onClient';
-import getBaseUrl from '../utils/getBaseUrl';
-import fetchData from '../utils/fetchData';
 import { variantSanitiser } from '#lib/utilities/variantHandler';
 import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
 import addIdsToBlocks from '#lib/utilities/preprocessor/rules/addIdsToBlocks';
 import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositioning';
+import getBaseUrl from '../utils/getBaseUrl';
+import fetchData from '../utils/fetchData';
+import pathnames from '../../config/pathnames';
 
 const getArticleInitialData = async ({ id, service, variant }) => {
   const baseUrl = onClient()
@@ -13,9 +15,11 @@ const getArticleInitialData = async ({ id, service, variant }) => {
 
   const processedVariant = variantSanitiser(variant);
 
+  const pathname = pathOr('articles', [service, 'articles'], pathnames);
+
   const url = processedVariant
-    ? `${baseUrl}/${service}/articles/${id}/${processedVariant}.json`
-    : `${baseUrl}/${service}/articles/${id}.json`;
+    ? `${baseUrl}/${service}/${pathname}/${id}/${processedVariant}.json`
+    : `${baseUrl}/${service}/${pathname}/${id}.json`;
 
   return fetchData({
     url,
