@@ -1,5 +1,6 @@
 import Article from '../containers/Article';
 import FrontPage from '../containers/FrontPage';
+import FeatureIndex from '../containers/FeatureIndex';
 import RadioPage from '../containers/RadioPage';
 import CpsAssetPage from '../containers/CpsAssetPage';
 import ErrorPage from '../containers/Error';
@@ -16,7 +17,7 @@ import {
 
 const pages = {
   MAP: CpsAssetPage,
-  FIX: FrontPage,
+  FIX: FeatureIndex,
   error: ErrorPage,
 };
 
