@@ -49,10 +49,6 @@ describe('Application unknown route error pages', () => {
         cy.testResponseCodeAndType(url, 404, 'text/html');
         cy.visit(url, { failOnStatusCode: false });
         const service = url.includes('igbo') ? 'igbo' : 'news';
-        cy.get('h1 span').should(
-          'contain',
-          `${appConfig[service].default.translations.error[404].statusCode}`,
-        );
         cy.get('h1').should(
           'contain',
           `${appConfig[service].default.translations.error[404].title}`,

@@ -19,6 +19,37 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   color: #B80000;
 }
 
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
+}
+
+.c3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #3F3F42;
+  margin-top: 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -28,53 +59,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
-
-.c2 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
+  padding-top: 0.2rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -118,36 +103,30 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
   }
 }
 
@@ -187,6 +166,20 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 @supports (display:grid) {
   .c1 {
     max-width: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -250,16 +243,16 @@ exports[`ErrorMain should correctly render for 404 1`] = `
           <div
             class="c1"
           >
-            <h1
+            <span
               class="c2"
+            >
+              404
+            </span>
+            <h1
+              class="c3"
               id="content"
               tabindex="-1"
             >
-              <span
-                class="c3"
-              >
-                404
-              </span>
               Page cannot be found
             </h1>
             <p
@@ -373,6 +366,37 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   color: #B80000;
 }
 
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c2 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
+}
+
+.c3 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin-top: 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -382,53 +406,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
-
-.c2 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
+  padding-top: 0.2rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -472,36 +450,30 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
   }
 }
 
@@ -544,6 +516,20 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
 <div>
       <main
         role="main"
@@ -554,16 +540,16 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
           <div
             class="c1"
           >
-            <h1
+            <span
               class="c2"
+            >
+              ۴۰۴
+            </span>
+            <h1
+              class="c3"
               id="content"
               tabindex="-1"
             >
-              <span
-                class="c3"
-              >
-                ۴۰۴
-              </span>
               این صفحه پیدا نشد
             </h1>
             <p
@@ -677,6 +663,37 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   color: #B80000;
 }
 
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
+}
+
+.c3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #3F3F42;
+  margin-top: 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -686,53 +703,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
-
-.c2 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
+  padding-top: 0.2rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -776,36 +747,30 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
   }
 }
 
@@ -848,6 +813,20 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div>
       <main
         role="main"
@@ -858,16 +837,16 @@ exports[`ErrorMain should correctly render for 500 1`] = `
           <div
             class="c1"
           >
-            <h1
+            <span
               class="c2"
+            >
+              500
+            </span>
+            <h1
+              class="c3"
               id="content"
               tabindex="-1"
             >
-              <span
-                class="c3"
-              >
-                500
-              </span>
               Internal server error
             </h1>
             <p
@@ -976,6 +955,37 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   color: #B80000;
 }
 
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c2 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
+}
+
+.c3 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin-top: 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
 .c4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -985,53 +995,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
-
-.c2 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
+  padding-top: 0.2rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -1075,36 +1039,30 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
   }
 }
 
@@ -1147,6 +1105,20 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
 <div>
       <main
         role="main"
@@ -1157,16 +1129,16 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
           <div
             class="c1"
           >
-            <h1
+            <span
               class="c2"
+            >
+              ۵۰۰
+            </span>
+            <h1
+              class="c3"
               id="content"
               tabindex="-1"
             >
-              <span
-                class="c3"
-              >
-                ۵۰۰
-              </span>
               خطا در سرور داخلی
             </h1>
             <p
@@ -1275,6 +1247,37 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   color: #B80000;
 }
 
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #B80000;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  padding: 2.5rem 0 0.5rem 0;
+}
+
+.c3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #3F3F42;
+  margin-top: 0;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+  padding-bottom: 4rem;
+}
+
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1284,53 +1287,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
-
-.c2 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-  padding: 2.5rem 0 2.5rem 0;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-  padding-bottom: 4rem;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
+  padding-top: 0.2rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -1374,36 +1331,30 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
   }
 }
 
@@ -1446,6 +1397,20 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div>
       <main
         role="main"
@@ -1456,16 +1421,16 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
           <div
             class="c1"
           >
-            <h1
+            <span
               class="c2"
+            >
+              500
+            </span>
+            <h1
+              class="c3"
               id="content"
               tabindex="-1"
             >
-              <span
-                class="c3"
-              >
-                500
-              </span>
               Internal server error
             </h1>
             <p
