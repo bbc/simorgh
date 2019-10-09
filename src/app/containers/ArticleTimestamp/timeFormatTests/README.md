@@ -2,7 +2,7 @@
 
 These are unit tests to ensure that we observe and maintain regression for the article timestamp and timezone logic with associated timeformats accross services.
 
-The tests in this directory runs for all services against expectations set in this [file](./expectedFormats.json) and a failure would either indicate a change or breakage in the timestamp or time format logic.
+The tests in this directory runs for all services against expectations set in [expectedFormats.json](./expectedFormats.json) and a failure would either indicate a change or breakage in the timestamp or time format logic.
 
 A change in timestamp logic would require updating the values in [expectedFormats.json](./expectedFormats.json) using the [generateTimeFormats.js](./generateTimeFormats.js) script (see below). However, proper investigation should be carried out to identify if there is a valid reason for why these tests fail before running the update script.
 
