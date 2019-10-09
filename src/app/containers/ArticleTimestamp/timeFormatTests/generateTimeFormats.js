@@ -3,21 +3,22 @@ import path from 'path';
 import { timestampsFixtures, format } from './testUtils';
 import services from '../../../../testHelpers/serviceConfigs';
 
-const testsServices = ['news', 'persian', 'igbo', 'arabic'];
-
 const filePath = path.join(__dirname, './expectedFormats.json');
 
 const generateTimeFormats = () => {
   const timeFormats = {};
   Object.keys(services).forEach(service => {
-    if (testsServices.includes(service)) {
-      const { datetimeLocale, timezone } = services[service].default;
-      timeFormats[service] = {};
+    const variants = Object.keys(services[service]);
+    timeFormats[service] = {};
+    variants.forEach(variant => {
+      const { datetimeLocale, timezone } = services[service][variant];
+      timeFormats[service][variant] = {};
       Object.keys(timestampsFixtures).forEach(fixture => {
         const timeStamp = format(datetimeLocale, timezone, fixture);
-        timeFormats[service][fixture] = timeStamp;
+
+        timeFormats[service][variant][fixture] = timeStamp;
       });
-    }
+    });
   });
   const generatedJSON = JSON.stringify(timeFormats, null, 2);
   fs.writeFile(filePath, generatedJSON, 'utf8', error => {
