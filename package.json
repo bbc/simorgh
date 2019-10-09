@@ -28,6 +28,7 @@
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml && stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --env=jsdom --colors ./puppeteer",
     "test:unit": "jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\"",
+    "test:unit:watch": "npm run test:unit -- --watch",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
   },
@@ -68,7 +69,7 @@
     "@bbc/psammead-inline-link": "^1.3.11",
     "@bbc/psammead-locales": "^2.22.0",
     "@bbc/psammead-media-indicator": "^2.6.4",
-    "@bbc/psammead-media-player": "^1.1.1-alpha.2",
+    "@bbc/psammead-media-player": "^1.1.1-alpha.7",
     "@bbc/psammead-navigation": "^2.3.5",
     "@bbc/psammead-paragraph": "^2.2.13",
     "@bbc/psammead-section-label": "^2.3.17",
