@@ -47,7 +47,7 @@ describe('App', () => {
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
       bbcOrigin: 'https://www.bbc.co.uk',
       pageData: initialData.pageData,
-      error: null,
+      error: undefined,
       isAmp: false,
       loading: false,
       pageType: 'article',
