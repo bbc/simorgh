@@ -199,7 +199,6 @@
     "requires": [
       "td-agent",
       "cloudteam-td-agent-setup",
-      "dial-agent",
       "cloud-init"
     ]
   },
