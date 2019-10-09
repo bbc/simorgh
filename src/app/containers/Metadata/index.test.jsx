@@ -13,7 +13,7 @@ const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
-process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static/';
 
 const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
