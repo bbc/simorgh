@@ -11,7 +11,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       ያድምጡ - BBC News አማርኛ
     </title>
     <link
-      href="https://www.test.bbc.co.uk/pathname"
+      href="https://www.test.bbc.com/pathname"
       rel="canonical"
     />
     <link
@@ -165,7 +165,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.co.uk/pathname"
+      content="https://www.test.bbc.com/pathname"
       name="og:url"
     />
     <meta
@@ -629,7 +629,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       ያድምጡ - BBC News አማርኛ
     </title>
     <link
-      href="https://www.test.bbc.co.uk/pathname"
+      href="https://www.test.bbc.com/pathname"
       rel="canonical"
     />
     <link
@@ -787,7 +787,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.co.uk/pathname"
+      content="https://www.test.bbc.com/pathname"
       name="og:url"
     />
     <meta

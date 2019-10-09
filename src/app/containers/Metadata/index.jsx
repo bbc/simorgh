@@ -99,7 +99,7 @@ const MetadataContainer = ({
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
       <title>{pageTitle}</title>
-      <link rel="canonical" href={canonicalLink} />
+      <link rel="canonical" href={canonicalNonUkLink} />
       {isEnglishService && alternateLinksEnglishSites.map(renderAlternateLinks)}
       {isoLang &&
         !isEnglishService &&
@@ -123,7 +123,7 @@ const MetadataContainer = ({
       <meta name="og:site_name" content={brandName} />
       <meta name="og:title" content={pageTitle} />
       <meta name="og:type" content={openGraphType} />
-      <meta name="og:url" content={canonicalLink} />
+      <meta name="og:url" content={canonicalNonUkLink} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterCreator} />
       <meta name="twitter:description" content={description} />
