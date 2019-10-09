@@ -98,11 +98,11 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
       Nigerian man Emeka Nelson don produce generator wey dey use only water - BBC News Pidgin
     </title>
     <link
-      href="https://www.test.bbc.com/pathname"
+      href="https://www.test.bbc.com/pidgin/tori-49450859"
       rel="canonical"
     />
     <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
+      href="https://www.test.bbc.co.uk/pidgin/tori-49450859.amp"
       rel="amphtml"
     />
     <link
@@ -256,7 +256,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
       name="og:type"
     />
     <meta
-      content="https://www.test.bbc.com/pathname"
+      content="https://www.test.bbc.com/pidgin/tori-49450859"
       name="og:url"
     />
     <meta
@@ -290,7 +290,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Nigerian man Emeka Nelson don produce generator wey dey use only water"}}
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pidgin/tori-49450859","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/tori-49450859","name":"Nigerian man Emeka Nelson don produce generator wey dey use only water"}}
     </script>
   </head>
   <body>

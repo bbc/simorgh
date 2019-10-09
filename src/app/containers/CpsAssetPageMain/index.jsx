@@ -7,18 +7,19 @@ import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 
 const CpsAssetPageMain = ({ pageData }) => {
-  const promo = path(['promo'], pageData);
+  const title = path(['promo', 'headlines', 'headline'], pageData);
+  const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
 
   return (
     <>
       <MetadataContainer
-        title={promo.headlines.headline}
+        title={title}
         lang={metadata.language}
-        description={promo.summary}
+        description={summary}
         openGraphType="website"
       />
-      <LinkedData type="Article" seoTitle={promo.headlines.headline} />
+      <LinkedData type="Article" seoTitle={title} />
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
           <h1> Placeholder content for MAP page skeleton</h1>
