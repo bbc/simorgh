@@ -70,6 +70,9 @@ const UsefulLinkWrapper = styled.div`
 
 const UsefulLinksWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
   }
 `;

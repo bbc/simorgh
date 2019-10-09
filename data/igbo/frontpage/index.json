@@ -1305,7 +1305,7 @@
         "title": "Useful links",
         "items": [
           {
-            "name": "Kedụ ihe ọ na-eri ịgba akwụkwọ Katolik na Naijiria?",
+            "name": "Mitocinmu da sauko da sautin labarai",
             "indexImage": {
             "id": "63692548",
             "subType": "index",
@@ -1324,7 +1324,7 @@
             "type": "link"
             },
             {
-              "name": "Djokovic enwela mmeri Agbanyeghị ihe mmerụ ahụ",
+              "name": "Labaran BBC Hausa a text",
               "indexImage": {
               "id": "63692549",
               "subType": "index",
@@ -1343,7 +1343,7 @@
               "type": "link"
               },
               {
-                "name": "YAzọpụtala ụlọ oriri Kabul na aka ndị omekaome.",
+                "name": "Abokan huldar BBC Hausa",
                 "indexImage": {
                 "id": "63692550",
                 "subType": "index",
@@ -1360,7 +1360,45 @@
                 "assetTypeCode": "PRO",
                 "timestamp": 1569321103000,
                 "type": "link"
-                }
+                },
+                {
+                  "name": "Timi Frank: Osinbajo ya maka mutum biyu",
+                  "indexImage": {
+                  "id": "63692551",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg",
+                  "path": "/cpsdevpb/14A31/test/_63692548_000327537-1.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "A lone Koala perches in a eucalyptus tree",
+                  "caption": "Koalas are from Australia",
+                  "copyrightHolder": "BBC"
+                  },
+                  "uri": "http://www.bbc.com/azeri",
+                  "contentType": "Guide",
+                  "assetTypeCode": "PRO",
+                  "timestamp": 1569321103000,
+                  "type": "link"
+                  },
+                  {
+                    "name": "Gwaninta ba ta karbi wani dan Nijeriya",
+                    "indexImage": {
+                    "id": "63692552",
+                    "subType": "index",
+                    "href": "http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg",
+                    "path": "/cpsdevpb/14A31/test/_63692548_000327537-1.jpg",
+                    "height": 549,
+                    "width": 976,
+                    "altText": "A lone Koala perches in a eucalyptus tree",
+                    "caption": "Koalas are from Australia",
+                    "copyrightHolder": "BBC"
+                    },
+                    "uri": "http://www.bbc.com/azeri",
+                    "contentType": "Guide",
+                    "assetTypeCode": "PRO",
+                    "timestamp": 1569321103000,
+                    "type": "link"
+                    }
         ],
         "strapline": {
             "name": "Useful links"
