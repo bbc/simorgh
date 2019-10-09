@@ -1,0 +1,436 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cwgq7rzv172o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cwgq7rzv172o",
+      "canonicalUrl": "https://www.bbc.com/urdu/articles/cwgq7rzv172o"
+    },
+    "type": "article",
+    "createdBy": "Urdu",
+    "language": "ur",
+    "lastUpdated": 1570520949455,
+    "firstPublished": 1570185893338,
+    "lastPublished": 1570185893338,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ur",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu"
+    },
+    "tags": {},
+    "version": "v1.1.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "d1c3/test/74f82030-e693-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "یہ ایک ٹیکسٹ بلاک ہے ، جس میں بی بی سی ویدر ہوم پیج پر یو آر ایل لنک ہے۔",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "یہ ایک ٹیکسٹ بلاک ہے ، جس میں بی بی سی ویدر ہوم پیج پر یو",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": " آر ایل لنک ہے",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " آر ایل لنک ہے",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "۔",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kf9q4",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01kf9q4",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01kf9q4",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
+                        "synopses": {
+                          "short": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kf9s0.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "caption": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù Ù…Ø«Ø´Ø³Ø« Ù‡Ù„Ø±Ø®Ù‚Ø«",
+                        "versions": [
+                          {
+                            "versionId": "p01kf9q6",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 16,
+                            "durationISO8601": "PT16S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1542034822000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "Ariana TV"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Keyframe #3",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Keyframe #3",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "یہ سب ہیڈ لائن بلاک ہے۔",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "یہ سب ہیڈ لائن بلاک ہے۔",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "یہ سب ہیڈ لائن بلاک ہے۔\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "یہ سب ہیڈ لائن بلاک ہے۔\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "e028/test/e16f75b0-e693-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "یہ ٹیسٹ مضمون تیار کیا گیا ہے تاکہ ہم اپنی ویب سائٹ پر خود کار طریقے سے آخر سے آخر تک کے ٹیسٹ چلاسکیں۔",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "یہ ٹیسٹ مضمون تیار کیا گیا ہے تاکہ ہم اپنی ویب سائٹ پر خود کار طریقے سے آخر سے آخر تک کے ٹیسٹ چلاسکیں۔",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔\n\n\n"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cwgq7rzv172o"
+    },
+    "summary": "",
+    "timestamp": 1570185893338,
+    "id": "urn:bbc:ares::article:cwgq7rzv172o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Urdu",
+      "uri": "/urdu",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
