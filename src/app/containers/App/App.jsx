@@ -14,7 +14,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status } = initialData;
+  const { pageData, status, error } = initialData;
 
   const [state, setState] = useState({
     pageData,
@@ -24,8 +24,8 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     id,
     isAmp,
     pageType,
+    error,
     loading: false,
-    error: null,
   });
 
   const isInitialMount = useRef(true);
