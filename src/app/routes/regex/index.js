@@ -1,5 +1,5 @@
 import services from '#lib/config/services/loadableConfig';
-import servicesWithRadioAndTv from '../config/servicesWithRadioOrTv';
+import servicesWithRadioAndTv from '../config';
 import buildRadioAndTvRoutes, {
   buildRadioAndTvDataRoutes,
 } from '../buildRadioAndTvRoutes';
@@ -18,13 +18,13 @@ const articleLocalMapping = {
 
 const articleLocalRegex = `articles|${articleLocalMapping.cymrufyw}|${articleLocalMapping.naidheachdan}`;
 
-export const articleRegexPath = `/:service(${serviceRegex})/${articleLocalRegex}/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+export const articleRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
 export const articleDataRegexPath = `${articleRegexPath}.json`;
 
-export const articleSwRegexPath = `/:service(${serviceRegex})/:pathname(${articleLocalRegex})/sw.js`;
+export const articleSwRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/sw.js`;
 
-export const articleManifestRegexPath = `/:service(${serviceRegex})/:pathname(${articleLocalRegex})/manifest.json`;
+export const articleManifestRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 
 export const frontpageRegexPath = `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
