@@ -20,6 +20,6 @@ A couple of scenarios that we expect these test would fail and need updating wou
 ## Updating expected time formats
 From your local repository run this command from the root directory
 ```
-npx -p @babel/core -p @babel/node babel-node --presets @babel/preset-env ./src/app/containers/ArticleTimestamp/timeFormatTests/generateTimeFormats.js
+npx -p @babel/core -p @babel/node babel-node ./src/app/containers/ArticleTimestamp/timeFormatTests/generateTimeFormats.js
 ```
 
