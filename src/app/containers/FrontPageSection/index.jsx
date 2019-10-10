@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -58,6 +57,7 @@ const TopMargin = styled.div`
   }
 `;
 
+// Apply the right margin-top between the section label and a single useful item
 const UsefulLinkWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
@@ -68,10 +68,12 @@ const UsefulLinkWrapper = styled.div`
   }
 `;
 
+// Apply the right margin-top between the section label and multiple useful items
 const UsefulLinksWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING};
   }
+
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
   }
@@ -137,6 +139,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // (<section> tags *should* imply `role="region"`)
     // While this may be true in a perfect world, we set it in order to get
     // the greatest possible support.
+    /* eslint-disable no-nested-ternary */
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section role="region" aria-labelledby={sectionLabelId}>
       <SectionLabel
