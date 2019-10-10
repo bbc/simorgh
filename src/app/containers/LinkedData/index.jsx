@@ -5,6 +5,11 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
 
+const noTrustProjectServices = ['scotland'];
+
+const isNoTrustProjectService = service =>
+  noTrustProjectServices.includes(service);
+
 const LinkedData = ({
   showAuthor,
   type,
@@ -15,15 +20,20 @@ const LinkedData = ({
   aboutTags,
 }) => {
   const {
+    service,
     brandName,
     publishingPrinciples,
     defaultImage,
     noBylinesPolicy,
   } = useContext(ServiceContext);
+  const hasTrustProjectMarkup = !isNoTrustProjectService(service);
   const { canonicalNonUkLink } = useContext(RequestContext);
   const IMG_TYPE = 'ImageObject';
-  const ORG_TYPE = 'NewsMediaOrganization';
+  const ORG_TYPE = hasTrustProjectMarkup
+    ? 'NewsMediaOrganization'
+    : 'Organization';
   const WEB_PAGE_TYPE = 'WebPage';
+  const AUTHOR_PUBLISHER_NAME = hasTrustProjectMarkup ? brandName : 'BBC';
 
   const logo = {
     '@type': IMG_TYPE,
@@ -41,7 +51,7 @@ const LinkedData = ({
 
   const publisher = {
     '@type': ORG_TYPE,
-    name: brandName,
+    name: AUTHOR_PUBLISHER_NAME,
     publishingPrinciples,
     logo,
   };
@@ -66,14 +76,14 @@ const LinkedData = ({
     ...(showAuthor && {
       author: {
         '@type': ORG_TYPE,
-        name: brandName,
+        name: AUTHOR_PUBLISHER_NAME,
         logo: {
           '@type': 'ImageObject',
           width: 1024,
           height: 576,
           url: defaultImage,
         },
-        noBylinesPolicy,
+        ...(hasTrustProjectMarkup && { noBylinesPolicy }),
       },
     }),
   };
