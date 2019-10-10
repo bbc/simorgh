@@ -4,9 +4,9 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
-import { start } from './time-machine';
+import { startTimeMachine } from './time-machine';
 
-start();
+startTimeMachine();
 
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
 

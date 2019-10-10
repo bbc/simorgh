@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react';
 import { element } from 'prop-types';
-import { start, reset } from '../../.storybook/time-machine';
+import {
+  startTimeMachine,
+  resetTimeMachine,
+} from '../../.storybook/time-machine';
 
 // This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
 const WithTimemachine = ({ children }) => {
   // set time, but leave it ticking, so knobs work
-  start();
+  startTimeMachine();
   useEffect(() => {
-    reset();
+    resetTimeMachine();
     // stop the timemachine from ticking, so timestamp displayed is frozen
     return () => {
-      reset();
+      resetTimeMachine();
     };
   });
   return <>{children}</>;
