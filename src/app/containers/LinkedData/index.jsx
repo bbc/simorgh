@@ -5,11 +5,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
 
-const noTrustProjectServices = ['scotland'];
-
-const isNoTrustProjectService = service =>
-  noTrustProjectServices.includes(service);
-
 const LinkedData = ({
   showAuthor,
   type,
@@ -20,13 +15,12 @@ const LinkedData = ({
   aboutTags,
 }) => {
   const {
-    service,
     brandName,
     publishingPrinciples,
     defaultImage,
     noBylinesPolicy,
   } = useContext(ServiceContext);
-  const hasTrustProjectMarkup = !isNoTrustProjectService(service);
+  const hasTrustProjectMarkup = !!publishingPrinciples;
   const { canonicalNonUkLink } = useContext(RequestContext);
   const IMG_TYPE = 'ImageObject';
   const ORG_TYPE = hasTrustProjectMarkup
@@ -87,6 +81,8 @@ const LinkedData = ({
       },
     }),
   };
+
+  console.log('LinkedData', linkedData);
 
   return (
     <Helmet>
