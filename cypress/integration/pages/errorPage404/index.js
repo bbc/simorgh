@@ -16,6 +16,7 @@ import {
 } from './testsForCanonicalOnly';
 
 const testsForPage = {
+  varian: 'cyr',
   pageType: 'errorPage404',
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,

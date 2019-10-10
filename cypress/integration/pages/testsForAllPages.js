@@ -13,8 +13,8 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigforAllPages = ({
   service,
-  pageType,
   variant,
+  pageType,
 }) => {
   describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {

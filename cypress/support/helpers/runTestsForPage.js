@@ -16,13 +16,14 @@ import {
   testsThatNeverRunDuringSmokeTestingForAllCanonicalPages,
 } from '../../integration/pages/testsForAllCanonicalPages';
 
-const serviceHasPageType = (service, pageType) =>
-  config[service].pageTypes[pageType].path !== undefined;
+const serviceHasPageType = (service, varian, pageType) =>
+  config[service].variant[varian].pageTypes[pageType].path !== undefined;
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
 // Pass arguments in from each page's index.js file
 const runTestsForPage = ({
+  varian,
   pageType,
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,
@@ -36,19 +37,19 @@ const runTestsForPage = ({
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
   Object.keys(config)
-    .filter(service => serviceHasPageType(service, pageType))
+    .filter(service => serviceHasPageType(service, varian, pageType))
     .forEach(service => {
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
-          cy.visit(config[service].pageTypes[pageType].path, {
+          cy.visit(config[service].variant[varian].pageTypes[pageType].path, {
             failOnStatusCode: !pageType.includes('error'),
           });
         });
 
         const testArgs = {
           service,
+          varian: config[service].variant,
           pageType,
-          variant: config[service].variant,
         };
 
         // Enables overriding of the smoke test values in the config/services.js file

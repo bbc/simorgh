@@ -1017,38 +1017,86 @@ const services = {
   serbian: {
     font: undefined,
     isWorldService: true,
-    variant: 'lat',
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/articles/c805k05kr73o/lat',
-        smoke: true,
+    variant: [
+      {
+        lat: {
+          pageTypes: {
+            articles: {
+              path:
+                Cypress.env('APP_ENV') === 'live' ||
+                Cypress.env('APP_ENV') === 'test'
+                  ? undefined
+                  : '/serbian/articles/c805k05kr73o/lat',
+              smoke: true,
+            },
+            errorPage404: {
+              path:
+                Cypress.env('APP_ENV') === 'live' ||
+                Cypress.env('APP_ENV') === 'test'
+                  ? undefined
+                  : '/serbian/articles/cabcdefghijo/lat',
+              smoke: true,
+            },
+            frontPage: {
+              path:
+                Cypress.env('APP_ENV') === 'live' ||
+                Cypress.env('APP_ENV') === 'test'
+                  ? undefined
+                  : '/serbian/lat',
+              smoke: true,
+            },
+            liveRadio: { path: undefined, smoke: false },
+            mediaAssetPage: {
+              path:
+                Cypress.env('APP_ENV') === 'live' ||
+                Cypress.env('APP_ENV') === 'test'
+                  ? undefined
+                  : '/serbian/srbija-49427344/lat',
+              smoke: false,
+            },
+          },
+        },
       },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/articles/cabcdefghijo/lat',
-        smoke: true,
+      {
+        cyr: {
+          pageTypes: {
+            articles: {
+              path:
+                Cypress.env('APP_ENV') === 'live' ||
+                Cypress.env('APP_ENV') === 'test'
+                  ? undefined
+                  : '/serbian/articles/c805k05kr73o/cyr',
+              smoke: true,
+            },
+            errorPage404: {
+              path:
+                Cypress.env('APP_ENV') === 'live' ||
+                Cypress.env('APP_ENV') === 'test'
+                  ? undefined
+                  : '/serbian/articles/cabcdefghijo/cyr',
+              smoke: true,
+            },
+            frontPage: {
+              path:
+                Cypress.env('APP_ENV') === 'live' ||
+                Cypress.env('APP_ENV') === 'test'
+                  ? undefined
+                  : '/serbian/cyr',
+              smoke: true,
+            },
+            liveRadio: { path: undefined, smoke: false },
+            mediaAssetPage: {
+              path:
+                Cypress.env('APP_ENV') === 'live' ||
+                Cypress.env('APP_ENV') === 'test'
+                  ? undefined
+                  : '/serbian/srbija-49427344/cyr',
+              smoke: false,
+            },
+          },
+        },
       },
-      frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/lat',
-        smoke: true,
-      },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/srbija-49427344/lat',
-        smoke: false,
-      },
-    },
+    ],
   },
   sinhala: {
     font: undefined,
