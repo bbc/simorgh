@@ -80,7 +80,7 @@
     "@bbc/psammead-styles": "^4.0.1",
     "@bbc/psammead-timestamp-container": "^2.4.20",
     "@bbc/psammead-visually-hidden-text": "^1.2.2",
-    "@bbc/psammead-useful-links": "^1.0.0-alpha.2",
+    "@bbc/psammead-useful-links": "^1.0.0",
     "@loadable/component": "^5.10.3",
     "@loadable/server": "^5.10.3",
     "@loadable/webpack-plugin": "^5.7.1",
