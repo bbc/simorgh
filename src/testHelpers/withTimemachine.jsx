@@ -6,7 +6,7 @@ import {
 } from '../../.storybook/time-machine';
 
 // This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
-const WithTimemachine = ({ children }) => {
+const WithTimeMachine = ({ children }) => {
   // set time, but leave it ticking, so knobs work
   startTimeMachine();
   useEffect(() => {
@@ -19,8 +19,8 @@ const WithTimemachine = ({ children }) => {
   return <>{children}</>;
 };
 
-WithTimemachine.propTypes = {
+WithTimeMachine.propTypes = {
   children: element.isRequired,
 };
 
-export default WithTimemachine;
+export default WithTimeMachine;

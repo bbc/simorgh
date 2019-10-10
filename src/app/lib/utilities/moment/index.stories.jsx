@@ -10,7 +10,7 @@ import {
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
-import WithTimemachine from '../../../../testHelpers/withTimemachine';
+import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
 
 // ensure all moment locales have been loaded via service configs
 import '#testHelpers/serviceConfigs';
@@ -798,11 +798,11 @@ ShowMoment.propTypes = {
 const editorialStories = storiesOf(
   'Moment Locales/Editorial view',
   module,
-).addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>);
+).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 const developerStories = storiesOf(
   'Moment Locales/Developer view',
   module,
-).addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>);
+).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
 locales.forEach(({ name, locale }) => {
   editorialStories.add(`${name} - ${locale}`, () => {

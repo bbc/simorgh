@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
-import WithTimemachine from '../../../testHelpers/withTimemachine';
+import WithTimeMachine from '../../../testHelpers/withTimeMachine';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -39,7 +39,7 @@ const matchFixtures = service => ({
 });
 
 storiesOf('Main|Radio Page', module)
-  .addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>)
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .add(
     'default',

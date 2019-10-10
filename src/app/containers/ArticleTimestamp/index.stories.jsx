@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import WithTimemachine from '../../../testHelpers/withTimemachine';
+import WithTimeMachine from '../../../testHelpers/withTimeMachine';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -25,7 +25,7 @@ const WrappedArticleTimestamp = ({ service, ...rest }) => (
 );
 
 const stories = storiesOf('Containers|Article/Article Timestamp', module)
-  .addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>)
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addParameters({ chromatic: { disable: true } });
 
 stories.add('default', () => (

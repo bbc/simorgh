@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import WithTimemachine from '../../../testHelpers/withTimemachine';
+import WithTimeMachine from '../../../testHelpers/withTimeMachine';
 import newsData from '../../../../data/news/frontpage';
 import igboData from '../../../../data/igbo/frontpage';
 import pidginData from '../../../../data/pidgin/frontpage';
@@ -22,7 +22,7 @@ const serviceDataSets = {
 };
 
 const stories = storiesOf('Main|Front Page', module).addDecorator(story => (
-  <WithTimemachine>{story()}</WithTimemachine>
+  <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 
 Object.keys(serviceDataSets).forEach(service => {
