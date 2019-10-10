@@ -28,8 +28,9 @@ const serviceDatasets = {
   punjabi: punjabiData,
 };
 
-const stories = storiesOf('Pages|Front Page', module);
-stories.addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>);
+const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
+  <WithTimemachine>{story()}</WithTimemachine>
+));
 Object.keys(serviceDatasets).forEach(service => {
   stories.add(service, () => {
     const frontPageData = preprocess(
