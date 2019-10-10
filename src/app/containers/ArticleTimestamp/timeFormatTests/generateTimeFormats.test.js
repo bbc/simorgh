@@ -12,7 +12,7 @@ jest.mock('../../../../testHelpers/serviceConfigs', () => ({
 
 describe('generateTimeFormats', () => {
   afterEach(jest.clearAllMocks);
-  it('should run without no error', async () => {
+  it('should run without errors', async () => {
     writeFile.mockImplementation(() => jest.fn());
     let hasError = false;
     jest.isolateModules(() => {
