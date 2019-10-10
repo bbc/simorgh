@@ -42,8 +42,6 @@ addDecorator(story => (
   /* eslint-enable react/jsx-filename-extension */
 ));
 
-addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>);
-
 const theme = create({
   base: 'light',
   brandTitle: 'BBC Simorgh',
