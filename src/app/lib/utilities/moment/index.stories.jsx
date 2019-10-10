@@ -67,7 +67,6 @@ const OCTOBER = 1571097600000;
 const NOVEMBER = 1573776000000;
 const DECEMBER = 1576368000000;
 
-/* eslint-disable prettier/prettier */
 const editorialWhitelist = [
   'LL',
   'January',
