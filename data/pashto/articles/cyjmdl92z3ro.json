@@ -1,0 +1,436 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cyjmdl92z3ro",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro",
+      "canonicalUrl": "https://www.bbc.com/pashto/articles/cyjmdl92z3ro"
+    },
+    "type": "article",
+    "createdBy": "Pashto",
+    "language": "ps",
+    "lastUpdated": 1570520789432,
+    "firstPublished": 1570186271460,
+    "lastPublished": 1570186271460,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ps",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto"
+    },
+    "tags": {},
+    "version": "v1.1.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "دا د دې ازمونې مقالې سرلیک دی",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "دا د دې ازمونې مقالې سرلیک دی",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\r\n",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\r\n",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "8a9e/test/55ffb340-e694-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو آر ایل لینک لري.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": " آر ایل لینک لري",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " آر ایل لینک لري",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kf9q4",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01kf9q4",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01kf9q4",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
+                        "synopses": {
+                          "short": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kf9s0.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "caption": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù Ù…Ø«Ø´Ø³Ø« Ù‡Ù„Ø±Ø®Ù‚Ø«",
+                        "versions": [
+                          {
+                            "versionId": "p01kf9q6",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 16,
+                            "durationISO8601": "PT16S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1542034822000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "Ariana TV"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Keyframe #3",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Keyframe #3",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "دا د فرعي سرلیک بلاک دی",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "دا د فرعي سرلیک بلاک دی",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "دا د فرعي سرلیک بلاک دی\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "دا د فرعي سرلیک بلاک دی\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "6c55/test/bcd2ca30-e694-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\n\n\n"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro"
+    },
+    "summary": "",
+    "timestamp": 1570186271460,
+    "id": "urn:bbc:ares::article:cyjmdl92z3ro",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Pashto",
+      "uri": "/pashto",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
