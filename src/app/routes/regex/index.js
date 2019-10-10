@@ -1,5 +1,4 @@
 import services from '#lib/config/services/loadableConfig';
-import pathnames from '../config/pathnames';
 import servicesWithRadioAndTv from '../config/servicesWithRadioOrTv';
 import buildRadioAndTvRoutes, {
   buildRadioAndTvDataRoutes,
@@ -12,18 +11,20 @@ const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
 
 const variantRegex = '/simp|/trad|/cyr|/lat';
 
-const articlePathnameRegex = Object.keys(pathnames).reduce((regex, service) => {
-  const pathname = pathnames[service].articles;
-  return `${regex}|${pathname}`;
-}, '');
+const articleLocalMapping = {
+  cymrufyw: 'erthyglau',
+  naidheachdan: 'sgeulachdan',
+};
 
-export const articleRegexPath = `/:service(${serviceRegex})/:pathname(${articlePathnameRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+const articleLocalRegex = `articles|${articleLocalMapping.cymrufyw}|${articleLocalMapping.naidheachdan}`;
+
+export const articleRegexPath = `/:service(${serviceRegex})/${articleLocalRegex}/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
 export const articleDataRegexPath = `${articleRegexPath}.json`;
 
-export const articleSwRegexPath = `/:service(${serviceRegex})/:pathname(${articlePathnameRegex})/sw.js`;
+export const articleSwRegexPath = `/:service(${serviceRegex})/:pathname(${articleLocalRegex})/sw.js`;
 
-export const articleManifestRegexPath = `/:service(${serviceRegex})/:pathname(${articlePathnameRegex})/manifest.json`;
+export const articleManifestRegexPath = `/:service(${serviceRegex})/:pathname(${articleLocalRegex})/manifest.json`;
 
 export const frontpageRegexPath = `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
