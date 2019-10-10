@@ -33,11 +33,11 @@ node {
                     Simorgh.installNodeModules()
                     parallel(
                         'Live E2Es': {
-                        Simorgh.rune2Es('live')
-                    },
+                            Simorgh.runE2Es('live')
+                        },
                         'Local Prod Tests': {
-                        Simorgh.runLocalandProductionTests()
-                    }
+                            Simorgh.runLocalandProductionTests()
+                        }
                     )
                 } finally {
                     Simorgh.e2esPostBuildSteps('local & production')
