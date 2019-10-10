@@ -35,14 +35,12 @@ Object.keys(serviceDatasets).forEach(service => {
       preprocessorRules,
     );
 
-    const data = {
-      pageData: frontPageData,
-      status: 200,
-    };
+    const status = 200;
 
     return (
       <FrontPage
-        data={data}
+        pageData={frontPageData}
+        status={status}
         service={service}
         isAmp={false}
         loading={false}
