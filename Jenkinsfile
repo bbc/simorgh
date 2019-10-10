@@ -22,6 +22,7 @@ def setupCodeCoverage() {
 def runDevelopmentTests(){
   sh 'make install'
   sh 'make developmentTests'
+  sh 'make validateArticles'
 }
 
 def runProductionTests(){

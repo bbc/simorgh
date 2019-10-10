@@ -28,3 +28,8 @@ buildStorybook:
 
 buildCi:
 	export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live;
+
+validateArticles:
+	npm install --save bbc/articles-validator
+	npm explore articles-validator -- npm install
+	npm explore articles-validator -- npm run validate
