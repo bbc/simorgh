@@ -795,24 +795,29 @@ ShowMoment.propTypes = {
   locale: string.isRequired,
 };
 
-locales.forEach(({ name, locale }) => {
-  storiesOf('Moment Locales/Editorial view', module)
-    .addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>)
-    .add(`${name} - ${locale}`, () => {
-      return (
-        <ShowMoment
-          name={name}
-          locale={locale}
-          moments={methods.filter(method =>
-            editorialWhitelist.includes(method.what),
-          )}
-        />
-      );
-    });
+const editorialStories = storiesOf(
+  'Moment Locales/Editorial view',
+  module,
+).addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>);
+const developerStories = storiesOf(
+  'Moment Locales/Developer view',
+  module,
+).addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>);
 
-  storiesOf('Moment Locales/Developer view', module)
-    .addDecorator(story => <WithTimemachine>{story()}</WithTimemachine>)
-    .add(`${name} - ${locale}`, () => {
-      return <ShowMoment name={name} locale={locale} moments={methods} />;
-    });
+locales.forEach(({ name, locale }) => {
+  editorialStories.add(`${name} - ${locale}`, () => {
+    return (
+      <ShowMoment
+        name={name}
+        locale={locale}
+        moments={methods.filter(method =>
+          editorialWhitelist.includes(method.what),
+        )}
+      />
+    );
+  });
+
+  developerStories.add(`${name} - ${locale}`, () => {
+    return <ShowMoment name={name} locale={locale} moments={methods} />;
+  });
 });
