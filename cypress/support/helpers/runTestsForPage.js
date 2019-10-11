@@ -18,7 +18,7 @@ import {
 
 const serviceHasPageType = (service, varian, pageType) =>
   config[service].variant[0][varian].pageTypes[pageType].path !== undefined;
-
+;
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
@@ -41,7 +41,7 @@ const runTestsForPage = ({
   Object.keys(config)
     .filter(service => serviceHasPageType(service, varian, pageType))
     .forEach(service => {
-      console.log(service)
+      console.log(service);
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
           cy.visit(config[service].variant[varian].pageTypes[pageType].path, {

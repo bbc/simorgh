@@ -9,8 +9,8 @@ import useAppToggles from '../../support/helpers/useAppToggles';
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
     it('should display', () => {
-      console.log(display);
-    })
+      console.log('display');
+    });
   });
 };
 
