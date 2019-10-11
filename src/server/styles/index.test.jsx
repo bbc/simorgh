@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { ServerStyleSheet } from 'styled-components';
 import { renderToString } from 'react-dom/server';
-import { getStyleTag } from '.'; // eslint-disable-line no-unused-vars
+import { getStyleTag } from '.';
 import packageLock from '../../../package-lock.json';
 
 // mock up and render a simple styled application
