@@ -36,7 +36,7 @@ describe('Js bundle requests', () => {
       .filter(
         pageType =>
           shouldSmokeTest(pageType, service) &&
-          config[service].variant[0]lat.pageTypes[pageType].path !== undefined,
+          config[service].variant[0][varian].pageTypes[pageType].path !== undefined,
       )
       .forEach(pageType => {
         const { path } = config[service].variant[0][varian].pageTypes[pageType];
