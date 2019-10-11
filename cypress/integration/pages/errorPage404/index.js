@@ -1,3 +1,4 @@
+import config from '../../../support/config/services';
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
 import {
   testsThatAlwaysRun,
@@ -15,8 +16,10 @@ import {
   testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
 } from './testsForCanonicalOnly';
 
+//console.log(`${config[service].variant[varian].pageTypes[pageType]}`);
+
 const testsForPage = {
-  varian: 'cyr',
+  varian: 'lat',
   pageType: 'errorPage404',
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,

@@ -7,7 +7,11 @@ import useAppToggles from '../../support/helpers/useAppToggles';
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
+  describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
+    it('should display', () => {
+      console.log(display);
+    })
+  });
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.

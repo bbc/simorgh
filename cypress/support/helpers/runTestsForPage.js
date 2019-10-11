@@ -17,7 +17,8 @@ import {
 } from '../../integration/pages/testsForAllCanonicalPages';
 
 const serviceHasPageType = (service, varian, pageType) =>
-  config[service].variant[varian].pageTypes[pageType].path !== undefined;
+  config[service].variant[0][varian].pageTypes[pageType].path !== undefined;
+
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
@@ -36,9 +37,11 @@ const runTestsForPage = ({
   testsThatNeverRunDuringSmokeTestingForAMPOnly,
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
+
   Object.keys(config)
     .filter(service => serviceHasPageType(service, varian, pageType))
     .forEach(service => {
+      console.log(service)
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
           cy.visit(config[service].variant[varian].pageTypes[pageType].path, {
@@ -48,7 +51,7 @@ const runTestsForPage = ({
 
         const testArgs = {
           service,
-          varian: config[service].variant,
+          variant: 'lat',
           pageType,
         };
 
@@ -61,6 +64,7 @@ const runTestsForPage = ({
 
         // This runs most tests but only on Service:PageType combinations with smoke enabled
         if (shouldSmokeTest(pageType, service)) {
+          console.log('display');
           testsThatFollowSmokeTestConfigforAllPages(testArgs);
           testsThatFollowSmokeTestConfigForAllCanonicalPages(testArgs);
           // Page specific tests
