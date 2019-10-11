@@ -10,7 +10,6 @@ const config = require('../cypress/support/config/services');
 let browser;
 let page;
 let requests = [];
-let varian = 'lat';
 
 const isJsBundle = url => url.includes(localBaseUrl);
 
@@ -33,14 +32,14 @@ describe('Js bundle requests', () => {
   });
 
   Object.keys(config).forEach(service => {
-    Object.keys(config[service].variant[0][varian].pageTypes)
+    Object.keys(config[service].pageTypes)
       .filter(
         pageType =>
           shouldSmokeTest(pageType, service) &&
-          config[service].variant[0][varian].pageTypes[pageType].path !== undefined,
+          config[service].pageTypes[pageType].path !== undefined,
       )
       .forEach(pageType => {
-        const { path } = config[service].variant[0][varian].pageTypes[pageType];
+        const { path } = config[service].pageTypes[pageType];
 
         describe(service, () => {
           beforeAll(async () => {
