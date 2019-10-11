@@ -16,7 +16,7 @@ import 'moment/locale/tr';
 export const service = {
   default: {
     lang: `tr`,
-    articleAuthor: `https://www.facebook.com/pages/BBC-Turkce/230299653821`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
