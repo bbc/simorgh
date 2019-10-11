@@ -10,6 +10,7 @@ const config = require('../cypress/support/config/services');
 let browser;
 let page;
 let requests = [];
+let varian = 'lat';
 
 const isJsBundle = url => url.includes(localBaseUrl);
 
