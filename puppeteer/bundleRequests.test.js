@@ -32,14 +32,14 @@ describe('Js bundle requests', () => {
   });
 
   Object.keys(config).forEach(service => {
-    Object.keys(config[service].pageTypes)
+    Object.keys(config[service].variant[0]lat.pageTypes)
       .filter(
         pageType =>
           shouldSmokeTest(pageType, service) &&
-          config[service].pageTypes[pageType].path !== undefined,
+          config[service].variant[0]lat.pageTypes[pageType].path !== undefined,
       )
       .forEach(pageType => {
-        const { path } = config[service].pageTypes[pageType];
+        const { path } = config[service].variant[0]lat.pageTypes[pageType];
 
         describe(service, () => {
           beforeAll(async () => {
