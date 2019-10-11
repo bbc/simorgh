@@ -24,20 +24,22 @@ describe('fetchData', () => {
   const mockFetchTeapotStatus = () =>
     fetch.mockResponseOnce(JSON.stringify({}), { status: 418 });
 
-  const requestedUrl = 'http://foobar.com/path/to/asset.json';
+  const expectedBaseUrl = 'http://localhost';
+  const requestedPathname = '/path/to/asset';
+  const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 
-  const callfetchData = async ({ url, preprocessorRules, mockFetch }) => {
+  const callfetchData = async ({
+    pathname = requestedPathname,
+    preprocessorRules,
+    mockFetch,
+  }) => {
     if (mockFetch) {
       mockFetch();
     } else {
       mockFetchSuccess();
     }
 
-    const response = await fetchData({
-      url: url || requestedUrl,
-      preprocessorRules,
-    });
-    return response;
+    return fetchData({ pathname, preprocessorRules });
   };
 
   afterEach(() => {
@@ -46,6 +48,12 @@ describe('fetchData', () => {
   });
 
   describe('Succesful fetch', () => {
+    it('should call fetch with correct url', async () => {
+      await callfetchData({});
+
+      expect(fetch).toHaveBeenCalledWith(expectedUrl);
+    });
+
     it('should return an empty object', async () => {
       const response = await callfetchData({});
 
@@ -128,7 +136,7 @@ describe('fetchData', () => {
       expect(preprocess).not.toHaveBeenCalled();
 
       expect(loggerMock.warn).toBeCalledWith(
-        `Unexpected upstream response (HTTP status code 418) when requesting ${requestedUrl}`,
+        `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
       );
 
       expect(response).toEqual({

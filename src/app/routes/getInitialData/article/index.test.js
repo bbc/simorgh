@@ -48,78 +48,21 @@ const getArticleInitialData = require('.').default;
 
 const defaultIdParam = 'c0000000001o';
 const defaultServiceParam = 'news';
-let defaultContext;
+const pathname = `/${defaultServiceParam}/articles/${defaultIdParam}`;
 
 describe('getArticleInitialData', () => {
   beforeEach(() => {
-    defaultContext = {
-      id: defaultIdParam,
-      service: defaultServiceParam,
-    };
-
     jest.clearAllMocks();
   });
 
   it('fetches data and returns expected object', async () => {
-    const response = await getArticleInitialData(defaultContext);
+    const response = await getArticleInitialData(pathname);
 
-    expect(fetchData).toHaveBeenCalledWith({
-      url: 'https://www.getBaseUrl.com/news/articles/c0000000001o.json',
-      preprocessorRules,
-    });
+    expect(fetchData).toHaveBeenCalledWith({ pathname, preprocessorRules });
 
     expect(response).toEqual({
       pageData: 'foo',
       status: 123,
-    });
-  });
-
-  it('fetches data and returns expected object with variant', async () => {
-    await getArticleInitialData({
-      ...defaultContext,
-      variant: 'variant',
-    });
-
-    expect(fetchData).toHaveBeenCalledWith({
-      url: 'https://www.getBaseUrl.com/news/articles/c0000000001o/variant.json',
-      preprocessorRules,
-    });
-  });
-
-  it('fetches data and returns expected object with variant with leading slash', async () => {
-    await getArticleInitialData({
-      ...defaultContext,
-      variant: '/variant',
-    });
-
-    expect(fetchData).toHaveBeenCalledWith({
-      url: 'https://www.getBaseUrl.com/news/articles/c0000000001o/variant.json',
-      preprocessorRules,
-    });
-  });
-
-  it('fetches from /cymrufyw/erthyglau for cymrufyw service', async () => {
-    await getArticleInitialData({
-      ...defaultContext,
-      service: 'cymrufyw',
-    });
-
-    expect(fetchData).toHaveBeenCalledWith({
-      url: 'https://www.getBaseUrl.com/cymrufyw/erthyglau/c0000000001o.json',
-      preprocessorRules,
-    });
-  });
-
-  it('fetches from /naidheachdan/sgeulachdan for naidheachdan service', async () => {
-    await getArticleInitialData({
-      ...defaultContext,
-      service: 'naidheachdan',
-    });
-
-    expect(fetchData).toHaveBeenCalledWith({
-      url:
-        'https://www.getBaseUrl.com/naidheachdan/sgeulachdan/c0000000001o.json',
-      preprocessorRules,
     });
   });
 
@@ -129,29 +72,13 @@ describe('getArticleInitialData', () => {
     });
 
     it('fetches data from SIMORGH_BASE_URL enviroment variable origin', async () => {
-      const response = await getArticleInitialData(defaultContext);
+      const response = await getArticleInitialData(pathname);
 
-      expect(fetchData).toHaveBeenCalledWith({
-        url: 'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o.json',
-        preprocessorRules,
-      });
+      expect(fetchData).toHaveBeenCalledWith({ pathname, preprocessorRules });
 
       expect(response).toEqual({
         pageData: 'foo',
         status: 123,
-      });
-    });
-
-    it('fetches data from SIMORGH_BASE_URL enviroment variable origin with variant', async () => {
-      await getArticleInitialData({
-        ...defaultContext,
-        variant: 'variant',
-      });
-
-      expect(fetchData).toHaveBeenCalledWith({
-        url:
-          'https://www.SIMORGH_BASE_URL.com/news/articles/c0000000001o/variant.json',
-        preprocessorRules,
       });
     });
   });
