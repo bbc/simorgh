@@ -82,8 +82,6 @@ const LinkedData = ({
     }),
   };
 
-  console.log('LinkedData', linkedData);
-
   return (
     <Helmet>
       <script type="application/ld+json">
