@@ -192,8 +192,11 @@ server
   )
   .get('/*', async ({ url, headers, path: urlPath }, res) => {
     try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, url);
-      const data = await route.getInitialData(urlPath);
+      const { service, isAmp, route, match, variant } = getRouteProps(
+        routes,
+        url,
+      );
+      const data = await route.getInitialData(match.params);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 
