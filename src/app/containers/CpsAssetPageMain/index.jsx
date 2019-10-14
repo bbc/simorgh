@@ -1,14 +1,31 @@
 import React from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
-import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import path from 'ramda/src/path';
 
-const CpsAssetPageMain = () => {
+import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import MetadataContainer from '../Metadata';
+import LinkedData from '../LinkedData';
+
+const CpsAssetPageMain = ({ pageData }) => {
+  const title = path(['promo', 'headlines', 'headline'], pageData);
+  const summary = path(['promo', 'summary'], pageData);
+  const metadata = path(['metadata'], pageData);
+
   return (
-    <Grid as="main" role="main">
-      <GridItemConstrainedMedium>
-        <h1> Placeholder content for MAP page skeleton</h1>
-      </GridItemConstrainedMedium>
-    </Grid>
+    <>
+      <MetadataContainer
+        title={title}
+        lang={metadata.language}
+        description={summary}
+        openGraphType="website"
+      />
+      <LinkedData type="Article" seoTitle={title} />
+      <Grid as="main" role="main">
+        <GridItemConstrainedMedium>
+          <h1> Placeholder content for MAP page skeleton</h1>
+        </GridItemConstrainedMedium>
+      </Grid>
+    </>
   );
 };
 
