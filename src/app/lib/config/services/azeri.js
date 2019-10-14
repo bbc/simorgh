@@ -33,6 +33,7 @@ export const service = {
     twitterSite: '@bbcazeri',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    trustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
