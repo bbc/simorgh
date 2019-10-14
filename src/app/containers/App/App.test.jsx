@@ -149,7 +149,7 @@ describe('App', () => {
 
           expect.assertions(3);
 
-          expect(route.getInitialData).toHaveBeenCalledWith(match.params);
+          expect(route.getInitialData).toHaveBeenCalledWith(pathname);
 
           // start data fetch and set loading to true
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
