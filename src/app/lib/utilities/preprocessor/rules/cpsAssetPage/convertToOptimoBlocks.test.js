@@ -58,7 +58,7 @@ describe('convertToOptimoBlocks', () => {
     expect(convertToOptimoBlocks(input)).toEqual(expected);
   });
 
-  it('should return null if blocks is an empty array', () => {
+  it('should return an empty array if blocks is an empty array', () => {
     const input = {
       content: {
         blocks: [],
@@ -67,7 +67,7 @@ describe('convertToOptimoBlocks', () => {
     const expected = {
       content: {
         model: {
-          blocks: null,
+          blocks: [],
         },
       },
     };
@@ -75,7 +75,7 @@ describe('convertToOptimoBlocks', () => {
     expect(convertToOptimoBlocks(input)).toEqual(expected);
   });
 
-  it('should return null if block does not have a type', () => {
+  it('should return an empty array if block does not have a type', () => {
     const input = {
       content: {
         blocks: [
@@ -89,7 +89,7 @@ describe('convertToOptimoBlocks', () => {
     const expected = {
       content: {
         model: {
-          blocks: null,
+          blocks: [],
         },
       },
     };
