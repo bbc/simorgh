@@ -10,3 +10,9 @@ Cypress.on(`window:before:load`, win => {
     throw new Error(msg);
   });
 });
+
+Cypress.on('fail', error => {
+  console.log('khoa phan: This test failed');
+  Cypress.runner.stop();
+  throw error; // throw error to have test fail
+});
