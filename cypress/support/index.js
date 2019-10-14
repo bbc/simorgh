@@ -12,6 +12,7 @@ Cypress.on(`window:before:load`, win => {
 });
 
 Cypress.on('fail', error => {
+  console.log('One Cypress test has failed, this is the:', error);
   console.log('khoa phan: This test failed');
   Cypress.runner.stop();
   throw error; // throw error to have test fail
