@@ -1,14 +1,10 @@
 import { bool, shape, string, number, any } from 'prop-types';
-// import { cpsMetadataPropTypes } from '../metadata';
 import mainContentPropTypes from '../mainContent';
 import cpsAssetPagePromoPropTypes from '../cpsAssetPagePromo';
-
-// if we can reuse `frontPageRelatedContent` then change it to be `cpsAssetPageRelatedContent`
-import relatedContentPropTypes from '../frontPageRelatedContent';
+import relatedContentPropTypes from '../frontPageRelatedContent'; // TODO: check is relatedContent is consistent on frontpage and CpsAsset
 
 export const cpsAssetPageDataPropTypes = shape({
-  // metadata: shape(cpsMetadataPropTypes).isRequired,
-  metadata: any,
+  metadata: any, // TODO: define metadata props for CPS Asset
   content: shape({
     model: shape(mainContentPropTypes).isRequired,
   }).isRequired,
