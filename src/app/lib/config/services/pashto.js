@@ -39,7 +39,7 @@ export const service = {
     twitterSite: '@bbcpashto',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    trustProjectParticipant: true,
+    isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

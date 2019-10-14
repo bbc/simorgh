@@ -19,15 +19,15 @@ const LinkedData = ({
     publishingPrinciples,
     defaultImage,
     noBylinesPolicy,
-    trustProjectParticipant,
+    isTrustProjectParticipant,
   } = useContext(ServiceContext);
   const { canonicalNonUkLink } = useContext(RequestContext);
   const IMG_TYPE = 'ImageObject';
-  const ORG_TYPE = trustProjectParticipant
+  const ORG_TYPE = isTrustProjectParticipant
     ? 'NewsMediaOrganization'
     : 'Organization';
   const WEB_PAGE_TYPE = 'WebPage';
-  const AUTHOR_PUBLISHER_NAME = trustProjectParticipant ? brandName : 'BBC';
+  const AUTHOR_PUBLISHER_NAME = isTrustProjectParticipant ? brandName : 'BBC';
 
   const logo = {
     '@type': IMG_TYPE,
@@ -46,7 +46,7 @@ const LinkedData = ({
   const publisher = {
     '@type': ORG_TYPE,
     name: AUTHOR_PUBLISHER_NAME,
-    ...(trustProjectParticipant && { publishingPrinciples }),
+    ...(isTrustProjectParticipant && { publishingPrinciples }),
     logo,
   };
   const mainEntityOfPage = {
@@ -77,7 +77,7 @@ const LinkedData = ({
           height: 576,
           url: defaultImage,
         },
-        ...(trustProjectParticipant && { noBylinesPolicy }),
+        ...(isTrustProjectParticipant && { noBylinesPolicy }),
       },
     }),
   };
