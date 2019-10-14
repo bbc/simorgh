@@ -7,7 +7,7 @@ const cpsAssetScaffoldProps = {
   isAmp: false,
   pageType: 'MAP',
   service: 'pidgin',
-  pathname: '/pathname',
+  pathname: '/pidgin/tori-49450859',
   match: {
     params: {
       assetUri: 'tori-49450859',
