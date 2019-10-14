@@ -126,9 +126,8 @@ export const testsThatFollowSmokeTestConfig = ({
             ({ body }) => {
               const paragraphData = getBlockData('text', body);
               const { text } = paragraphData.model.blocks[0].model;
-              // eslint-disable-next-line no-console
-              console.log('test fails', text);
-              cy.get('p').should('contain', 'this test should be failing');
+
+              cy.get('p').should('contain', text);
             },
           );
         }
@@ -173,12 +172,12 @@ export const testsThatFollowSmokeTestConfig = ({
                   if ($fig.find('p').length > 0) {
                     cy.get('figure p')
                       .eq(0)
-                      .should('contain', copyrightHolder);
+                      .should('contain', 'Khoa: fail for me');
                   } else {
                     // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
                     // This is why we're asserting the value. If the copyright does not appear and is not
                     // 'BBC' then it is clear there is an error with this component.
-                    expect(copyrightHolder).to.eq('BBC');
+                    expect(copyrightHolder).to.eq('phan: pls fail');
                   }
                 });
             },
