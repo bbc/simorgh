@@ -15,8 +15,7 @@ export const service = {
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
     serviceLocalizedName: 'नेपाली',
-    defaultImage:
-      'https://www.bbc.co.uk/news/special/2015/newsspec_11063/nepali_1024x576.png',
+    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png',
     defaultImageAltText: 'BBC News नेपाली',
     dir: `ltr`,
     externalLinkText: ', external',
