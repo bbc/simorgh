@@ -7,12 +7,14 @@ import getBaseUrl from '../getBaseUrl';
 const logger = nodeLogger(__filename);
 const upstreamStatusCodesToPropagate = [200, 404];
 
-const ampRegex = /(.amp)/g;
+const ampRegex = /(.amp)$/g;
 
 const fetchData = async ({ pathname, preprocessorRules }) => {
   const baseUrl = onClient()
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
+
+  // Remove .amp at the end of pathnames for AMP pages.
   const url = `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
 
   let pageData;

@@ -54,6 +54,12 @@ describe('fetchData', () => {
       expect(fetch).toHaveBeenCalledWith(expectedUrl);
     });
 
+    it('should call fetch on amp pages without .amp in pathname', async () => {
+      await callfetchData({ pathname: `${requestedPathname}.amp` });
+
+      expect(fetch).toHaveBeenCalledWith(expectedUrl);
+    });
+
     it('should return an empty object', async () => {
       const response = await callfetchData({});
 
