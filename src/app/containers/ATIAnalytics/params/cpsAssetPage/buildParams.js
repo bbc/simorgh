@@ -20,8 +20,7 @@ export const buildCPSATIParams = (pageData, requestContext, serviceContext) => {
     pageIdentifier: path(['analyticsLabels', 'counterName'], metadata),
     pageTitle: path(['headlines', 'headline'], promo),
     // Will be second part of counter name, eg 'pidgin.news.media_asset.49529724' -> 'news'
-    chapter1: pathOr('.Unknown', ['analyticsLabels', 'counterName'], metadata)
-      .split['.'][1],
+    chapter1: pathOr('.Unknown', ['analyticsLabels', 'counterName'], metadata).split('.')[1],
     timePublished: metadata.firstPublished, // TODO - convert from epoch
     timeUpdated: metadata.lastUpdated, // TODO - convert from epoch
     category: '', // TODO - new URL param - needs analysis - what is URL key? can be multiple?
