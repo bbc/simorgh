@@ -31,6 +31,8 @@ const matchFixtures = service => ({
   },
 });
 
+const status = 200;
+
 storiesOf('Pages|Radio Page', module)
   .addDecorator(withKnobs)
   .add(
@@ -40,10 +42,8 @@ storiesOf('Pages|Radio Page', module)
       componentFunction: ({ service }) => (
         <RadioPage
           match={matchFixtures(service)}
-          data={{
-            pageData: liveRadioFixtures[service],
-            status: 200,
-          }}
+          pageData={liveRadioFixtures[service]}
+          status={status}
           service={service}
           isAmp={false}
           loading={false}

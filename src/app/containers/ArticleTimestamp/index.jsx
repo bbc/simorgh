@@ -18,6 +18,7 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     script,
     service,
     timezone,
+    altCalendar,
   } = useContext(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
@@ -30,8 +31,8 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     locale: datetimeLocale,
     service,
     timezone,
+    altCalendar,
   };
-
   const firstPublishedProps = {
     timestamp: firstPublished,
     format: formatType({ firstPublished }),

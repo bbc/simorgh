@@ -5,7 +5,6 @@ import { string, shape, arrayOf } from 'prop-types';
 import HeadingBlock from './Blocks/Heading';
 import LiveRadioBlock from './Blocks/LiveRadio';
 import ParagraphBlock from './Blocks/Paragraph';
-import UnknownBlock from './Blocks/Unknown';
 
 const blockMap = {
   heading: HeadingBlock,
@@ -14,6 +13,8 @@ const blockMap = {
 };
 
 const SKIP_LINK_ANCHOR_ID = 'content';
+
+const UnknownBlock = () => <></>;
 
 const RadioPageBlocks = ({ blocks }) => {
   if (!blocks || !blocks.length) return null;
