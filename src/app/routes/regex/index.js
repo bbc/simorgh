@@ -11,7 +11,7 @@ const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
 
 const variantRegex = '/simp|/trad|/cyr|/lat';
 
-const articleLocalRegex = `articles|erthyglau|sgeulachdan`;
+const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 
 export const articleRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
