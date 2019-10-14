@@ -177,7 +177,7 @@ export const testsThatFollowSmokeTestConfig = ({
                     // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
                     // This is why we're asserting the value. If the copyright does not appear and is not
                     // 'BBC' then it is clear there is an error with this component.
-                    expect(copyrightHolder).to.eq('BBC');
+                    expect(copyrightHolder).to.eq('Khoa');
                   }
                 });
             },
