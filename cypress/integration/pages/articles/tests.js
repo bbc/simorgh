@@ -127,7 +127,7 @@ export const testsThatFollowSmokeTestConfig = ({
               const paragraphData = getBlockData('text', body);
               const { text } = paragraphData.model.blocks[0].model;
 
-              cy.get('p').should('contain', text);
+              cy.get('p').should('contain', 'phan');
             },
           );
         }
@@ -172,7 +172,7 @@ export const testsThatFollowSmokeTestConfig = ({
                   if ($fig.find('p').length > 0) {
                     cy.get('figure p')
                       .eq(0)
-                      .should('contain', copyrightHolder);
+                      .should('contain', 'khoa');
                   } else {
                     // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
                     // This is why we're asserting the value. If the copyright does not appear and is not
