@@ -15,10 +15,13 @@ const getAssetOrigins = service => {
 
   // include fonts domains if fonts are defined in service config
   const config = services[service];
-  const keys = Object.keys(config);
-  const { fonts } = config[keys[0]];
-  if (fonts && fonts.length > 0) {
-    assetOrigins.push(...FONTS_ORIGINS);
+
+  if (config) {
+    const keys = Object.keys(config);
+    const { fonts } = config[keys[0]];
+    if (fonts && fonts.length > 0) {
+      assetOrigins.push(...FONTS_ORIGINS);
+    }
   }
 
   return assetOrigins;

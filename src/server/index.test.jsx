@@ -97,8 +97,6 @@ const testRenderedData = ({
   successDataResponse,
   variant,
 }) => async () => {
-  console.log('variant   => ', variant);
-  console.log('service   => ', service);
   const { text, status } = await makeRequest(url);
 
   const assetOrigins = [
