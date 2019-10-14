@@ -71,7 +71,7 @@ describe('LinkData', () => {
   );
 
   shouldMatchSnapshot(
-    'should correctly render linked data for article pages for no service with no trust project markup',
+    'should correctly render linked data for article pages for service with no trust project markup',
     <Context service="scotland">
       <LinkData {...propsForArticle} />
     </Context>,
