@@ -1,24 +1,32 @@
-import React from 'react';
-import { arrayOf, string } from 'prop-types';
+import React, { Fragment } from 'react';
+import { any, objectOf, string } from 'prop-types';
 
-const ResourceHints = ({ assetOrigins }) => (
-  <>
-    {assetOrigins.map(origin => (
-      <link
-        rel="preconnect"
-        key={origin}
-        href={origin}
-        crossOrigin="anonymous"
-      />
-    ))}
-    {assetOrigins.map(origin => (
-      <link rel="dns-prefetch" key={origin} href={origin} />
-    ))}
-  </>
-);
+const ResourceHints = ({ assetOrigins, service }) => {
+  // eslint-disable-next-line global-require,import/no-dynamic-require
+  const serviceConfig = require(`../../lib/config/services/${service}`);
+  const { fonts } = serviceConfig.service.default;
+  const { fontsOrigins, ...rest } = assetOrigins;
+  let origins = Object.values(rest).flat();
+
+  if (fonts && fonts.length > 0) {
+    origins = origins.concat(fontsOrigins);
+  }
+
+  return (
+    <>
+      {origins.map(origin => (
+        <Fragment key={origin}>
+          <link rel="preconnect" href={origin} crossOrigin="anonymous" />
+          <link rel="dns-prefetch" href={origin} />
+        </Fragment>
+      ))}
+    </>
+  );
+};
 
 ResourceHints.propTypes = {
-  assetOrigins: arrayOf(string).isRequired,
+  assetOrigins: objectOf(any).isRequired,
+  service: string.isRequired,
 };
 
 export default ResourceHints;

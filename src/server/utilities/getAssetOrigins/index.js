@@ -5,12 +5,14 @@ const FONTS_ORIGINS = [
 ];
 
 const getAssetOrigins = () => {
-  const assetOrigins = [
-    ...FONTS_ORIGINS,
-    IMAGES_ORIGIN,
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
-    process.env.SIMORGH_ATI_BASE_URL,
-  ];
+  const assetOrigins = {
+    fontsOrigins: [...FONTS_ORIGINS],
+    imagesOrigin: [IMAGES_ORIGIN],
+    staticAssetsOrigins: [
+      process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+      process.env.SIMORGH_ATI_BASE_URL,
+    ],
+  };
 
   return assetOrigins;
 };
