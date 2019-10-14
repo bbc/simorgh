@@ -7,7 +7,7 @@ import {
 // This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
 const WithTimeMachine = ({ children }) => {
   // set time, but leave it ticking, so knobs work
-  startTimeMachine();
+  startTimeMachine(false);
   useEffect(() => {
     resetTimeMachine();
     startTimeMachine(false);
