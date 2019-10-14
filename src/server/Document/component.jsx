@@ -15,7 +15,6 @@ const Document = ({
   helmet,
   isAmp,
   scripts,
-  service,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -35,7 +34,7 @@ const Document = ({
       <head>
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <ResourceHints service={service} assetOrigins={assetOrigins} />
+        <ResourceHints assetOrigins={assetOrigins} />
         {title}
         {links}
         {styleTags}
