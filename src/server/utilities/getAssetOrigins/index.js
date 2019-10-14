@@ -1,18 +1,25 @@
+import services from '#testHelpers/serviceConfigs';
+
 const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
 const FONTS_ORIGINS = [
   'https://gel.files.bbci.co.uk',
   'https://ws-downloads.files.bbci.co.uk',
 ];
 
-const getAssetOrigins = () => {
-  const assetOrigins = {
-    fontsOrigins: [...FONTS_ORIGINS],
-    imagesOrigin: [IMAGES_ORIGIN],
-    staticAssetsOrigins: [
-      process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
-      process.env.SIMORGH_ATI_BASE_URL,
-    ],
-  };
+const getAssetOrigins = service => {
+  const assetOrigins = [
+    IMAGES_ORIGIN,
+    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    process.env.SIMORGH_ATI_BASE_URL,
+  ];
+
+  // include fonts domains if fonts are defined in service config
+  const config = services[service];
+  const keys = Object.keys(config);
+  const { fonts } = config[keys[0]];
+  if (fonts && fonts.length > 1) {
+    assetOrigins.push(...FONTS_ORIGINS);
+  }
 
   return assetOrigins;
 };
