@@ -1,8 +1,5 @@
 import puppeteer from 'puppeteer';
 
-// Example article asset for testing
-const audioVideoUrl = 'https://www.test.bbc.co.uk/news/articles/cn7k01xp8kxo';
-
 // Increase default timeout for all hooks/tests from 5s to 30s
 jest.setTimeout(30000);
 
@@ -10,6 +7,10 @@ describe('Audio/video playback', () => {
   let browser;
   let page;
   let smpContentFrame;
+
+  // Single example article asset for testing
+  // TODO replace with list of services/page types/shouldSmokeTest
+  const audioVideoUrl = 'https://www.test.bbc.co.uk/news/articles/cn7k01xp8kxo';
 
   beforeAll(async () => {
     // Fail fast if path to Chrome not supplied
@@ -20,6 +21,10 @@ describe('Audio/video playback', () => {
       headless: false,
       executablePath: process.env.CHROME_EXECUTABLE_PATH,
     });
+  });
+
+  afterAll(async () => {
+    await browser.close();
   });
 
   beforeEach(async () => {
@@ -33,13 +38,14 @@ describe('Audio/video playback', () => {
 
     await page.setViewport({ width: 1280, height: 800 });
 
-    // Wait for no more than 0 network connections for at least 500 ms
+    // Wait for no more network connections for at least 500 ms
     await page.goto(audioVideoUrl, { waitUntil: 'networkidle0' });
 
+    // NB the following code only finds and plays the first piece of media on the page
+    // TODO look for more reliable selectors; class names may evolve over time
     const videoContainer = await page.$('div[class^="StyledVideoContainer"]');
     await videoContainer.click();
 
-    // Again only finds first piece of media
     const avIframeSelector = 'iframe[class^="StyledIframe"]';
     const wsEmbedIframe = await page.waitForSelector(avIframeSelector);
     const wsEmbedContent = await wsEmbedIframe.contentFrame();
@@ -47,14 +53,11 @@ describe('Audio/video playback', () => {
     // Question: should we use waitForNavigation at this point to defer till the iframe(s) have loaded?
     // https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagewaitfornavigationoptions
 
-    // Is this ID stable?
+    // Question: how stable/reliable are IDs and classes used by SMP? Is there any way we can mitigate
+    // the risk of them changing?
     const smpSelector = 'iframe#smphtml5iframemediaPlayer';
     const smpIframe = await wsEmbedContent.waitForSelector(smpSelector);
     smpContentFrame = await smpIframe.contentFrame();
-  });
-
-  afterAll(async () => {
-    await browser.close();
   });
 
   afterEach(async () => {
@@ -62,17 +65,18 @@ describe('Audio/video playback', () => {
   });
 
   // Question: do we want to have separate tests with common setup (easier to debug and more
-  // isolated but slower to run because of repeated setup overhead) or one big test?
-  test('displays guidance', async () => {
-    const guidance = await smpContentFrame.waitForSelector('.p_guidanceText'); // Stable?
+  // isolated but slower to run because of repeated setup overhead) or one big test? (harder
+  // to maintain)
+  test('includes guidance message', async () => {
+    const guidance = await smpContentFrame.waitForSelector('.p_guidanceText'); // Unreliable?
     const guidanceText = await guidance.evaluate(node => node.innerText);
 
     expect(guidanceText).toBe('Contains strong language and adult humour.');
   });
 
-  test('displays subtitles', async () => {
+  test('includes subtitles', async () => {
     // NB on the test clip there is a miniumum 10s wait before the first subtitle appears
-    const sub1 = await smpContentFrame.waitForSelector('#subtitle_sub1');
+    const sub1 = await smpContentFrame.waitForSelector('#subtitle_sub1'); // Unreliable?
     const sub1text = await sub1.evaluate(node => node.innerText);
 
     expect(sub1text).toMatch(/^Ants and human societies/);
