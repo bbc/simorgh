@@ -128,7 +128,7 @@ describe('frontpageDataRegexPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageDataRegexPath);
 });
 
-describe('swRegexPath', () => {
+describe('articleSwRegexPath', () => {
   const validRoutes = [
     '/news/articles/sw.js',
     '/persian/articles/sw.js',
