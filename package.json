@@ -84,7 +84,7 @@
     "@loadable/server": "^5.10.3",
     "@loadable/webpack-plugin": "^5.7.1",
     "compression": "^1.7.4",
-    "core-js": "^3.2.1",
+    "core-js": "^3.3.1",
     "dotenv": "^8.1.0",
     "es6-promise": "^4.2.8",
     "express": "^4.17.1",
