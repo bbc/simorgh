@@ -241,12 +241,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         appConfig[service][variant].serviceLocalizedName !== undefined;
 
       it('should render the BBC News branding', () => {
-        cy.get('header a').should(
-          'contain',
-          hasLocalisedName
-            ? `${appConfig[service][variant].product}, ${appConfig[service][variant].serviceLocalizedName}`
-            : appConfig[service][variant].product,
-        );
+        cy.get('header a').should('contain', 'phan khoa testing');
       });
 
       if (hasLocalisedName) {
