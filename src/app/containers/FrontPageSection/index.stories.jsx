@@ -56,10 +56,18 @@ storiesOf('Containers|Front Page Section/AMP', module)
     getAmpSection('pidgin', pidginData.content.groups[0]),
   )
   .add('link to more - amp', () =>
-    getCanonicalSection(
+    getAmpSection(
       'pidgin',
       pidginData.content.groups.find(
         sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
+      ),
+    ),
+  )
+  .add('useful links - amp', () =>
+    getAmpSection(
+      'igbo',
+      igboData.content.groups.find(
+        sec => pathOr(null, ['strapline', 'name'], sec) === 'Useful links',
       ),
     ),
   );
