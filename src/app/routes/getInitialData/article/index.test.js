@@ -2,6 +2,8 @@ import baseUrl from '../utils/getBaseUrl';
 import onClient from '#lib/utilities/onClient';
 import fetchData from '../utils/fetchData';
 
+const getArticleInitialData = require('.').default;
+
 const mockApplyTimestampRules = jest.fn();
 const mockAddIdsToBlocks = jest.fn();
 const mockApplyBlockPositioning = jest.fn();
@@ -43,8 +45,6 @@ const fetchDataMockResponse = {
 };
 jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => fetchDataMockResponse);
-
-const getArticleInitialData = require('.').default;
 
 const defaultIdParam = 'c0000000001o';
 const defaultServiceParam = 'news';
