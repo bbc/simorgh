@@ -7,7 +7,7 @@ import getBaseUrl from '../getBaseUrl';
 const logger = nodeLogger(__filename);
 const upstreamStatusCodesToPropagate = [200, 404];
 
-const ampRegex = /(.amp)$/g;
+const ampRegex = /(.amp)$/;
 
 const fetchData = async ({ pathname, preprocessorRules }) => {
   const baseUrl = onClient()
