@@ -14,7 +14,6 @@ const fetchData = async ({ pathname, preprocessorRules }) => {
     ? getBaseUrl(window.location.origin)
     : process.env.SIMORGH_BASE_URL;
   const url = `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
-  console.log('fetch url', url);
 
   let pageData;
   let status;
