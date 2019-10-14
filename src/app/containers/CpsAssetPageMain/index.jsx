@@ -5,6 +5,7 @@ import path from 'ramda/src/path';
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
+import ATIAnalytics from '../ATIAnalytics';
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -20,6 +21,7 @@ const CpsAssetPageMain = ({ pageData }) => {
         openGraphType="website"
       />
       <LinkedData type="Article" seoTitle={title} />
+      <ATIAnalytics data={pageData} />
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
           <h1> Placeholder content for MAP page skeleton</h1>

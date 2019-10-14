@@ -7,6 +7,7 @@ import {
   buildFrontPageATIUrl,
 } from './frontpage/buildParams';
 import { buildRadioATIParams, buildRadioATIUrl } from './radioPage/buildParams';
+import { buildCPSATIParams, buildCPSATIUrl } from './cpsAssetPage/buildParams';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
