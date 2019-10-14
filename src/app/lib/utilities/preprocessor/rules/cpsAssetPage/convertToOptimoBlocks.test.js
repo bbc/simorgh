@@ -57,4 +57,43 @@ describe('convertToOptimoBlocks', () => {
 
     expect(convertToOptimoBlocks(input)).toEqual(expected);
   });
+
+  it('should return null if blocks is an empty array', () => {
+    const input = {
+      content: {
+        blocks: [],
+      },
+    };
+    const expected = {
+      content: {
+        model: {
+          blocks: null,
+        },
+      },
+    };
+
+    expect(convertToOptimoBlocks(input)).toEqual(expected);
+  });
+
+  it('should return null if block does not have a type', () => {
+    const input = {
+      content: {
+        blocks: [
+          {
+            text: 'Paragraph containing <bold>bold text</bold>',
+            markupType: 'candy_xml',
+          },
+        ],
+      },
+    };
+    const expected = {
+      content: {
+        model: {
+          blocks: null,
+        },
+      },
+    };
+
+    expect(convertToOptimoBlocks(input)).toEqual(expected);
+  });
 });

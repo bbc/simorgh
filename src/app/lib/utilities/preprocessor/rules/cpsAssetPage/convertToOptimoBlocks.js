@@ -9,6 +9,9 @@ const typesToConvert = {
 };
 
 const parseBlockByType = block => {
+  if (!block || !block.type) {
+    return null;
+  }
   const { type } = block;
 
   const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
