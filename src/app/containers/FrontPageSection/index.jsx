@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape, number } from 'prop-types';
+import { bool, shape, number, arrayOf, string, object } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -112,6 +112,36 @@ StoryPromoComponent.propTypes = {
   storyNumber: number.isRequired,
 };
 
+const UsefulLinksComponent = ({ items, script, service }) => {
+  return items.length > 1 ? (
+    <UsefulLinksWrapper>
+      <UsefulLinksUl>
+        {items.map(item => {
+          return (
+            <UsefulLinksLi key={item.id}>
+              <UsefulLink script={script} service={service} href={item.uri}>
+                {item.name}
+              </UsefulLink>
+            </UsefulLinksLi>
+          );
+        })}
+      </UsefulLinksUl>
+    </UsefulLinksWrapper>
+  ) : (
+    <UsefulLinkWrapper>
+      <UsefulLink script={script} service={service} href={items[0].uri}>
+        {items[0].name}
+      </UsefulLink>
+    </UsefulLinkWrapper>
+  );
+};
+
+UsefulLinksComponent.propTypes = {
+  items: arrayOf(shape(storyItem)).isRequired,
+  script: shape(object).isRequired,
+  service: string.isRequired,
+};
+
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
@@ -139,7 +169,6 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // (<section> tags *should* imply `role="region"`)
     // While this may be true in a perfect world, we set it in order to get
     // the greatest possible support.
-    /* eslint-disable no-nested-ternary */
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section role="region" aria-labelledby={sectionLabelId}>
       <SectionLabel
@@ -154,46 +183,23 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {items.length > 1 ? (
-        group.strapline.name === 'Useful links' ? (
-          <UsefulLinksWrapper>
-            <UsefulLinksUl>
-              {items.map(item => {
-                return (
-                  <UsefulLinksLi key={item.id}>
-                    <UsefulLink
-                      script={script}
-                      service={service}
-                      href={item.uri}
-                    >
-                      {item.name}
-                    </UsefulLink>
-                  </UsefulLinksLi>
-                );
-              })}
-            </UsefulLinksUl>
-          </UsefulLinksWrapper>
-        ) : (
-          <MarginWrapper firstSection={isFirstSection}>
-            <StoryPromoUl>
-              {items.map((item, index) => (
-                <StoryPromoLi key={item.id}>
-                  <StoryPromoComponent
-                    item={item}
-                    sectionNumber={sectionNumber}
-                    storyNumber={index}
-                  />
-                </StoryPromoLi>
-              ))}
-            </StoryPromoUl>
-          </MarginWrapper>
-        )
-      ) : group.strapline.name === 'Useful links' ? (
-        <UsefulLinkWrapper>
-          <UsefulLink script={script} service={service} href={items[0].uri}>
-            {items[0].name}
-          </UsefulLink>
-        </UsefulLinkWrapper>
+      {/* eslint-disable-next-line no-nested-ternary */}
+      {group.strapline.name === 'Useful links' ? (
+        <UsefulLinksComponent items={items} script={script} service={service} />
+      ) : items.length > 1 ? (
+        <MarginWrapper firstSection={isFirstSection}>
+          <StoryPromoUl>
+            {items.map((item, index) => (
+              <StoryPromoLi key={item.id}>
+                <StoryPromoComponent
+                  item={item}
+                  sectionNumber={sectionNumber}
+                  storyNumber={index}
+                />
+              </StoryPromoLi>
+            ))}
+          </StoryPromoUl>
+        </MarginWrapper>
       ) : (
         <MarginWrapper firstSection={isFirstSection} oneItem>
           <StoryPromoComponent
