@@ -13,7 +13,7 @@ describe('CpsAssetPageMain', () => {
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
         pageType="MAP"
-        pathname="/pathname"
+        pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
       >
