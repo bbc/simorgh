@@ -16,9 +16,9 @@ describe('Audio/video playback', () => {
     // Fail fast if path to Chrome not supplied
     expect(process.env.CHROME_EXECUTABLE_PATH).toBeDefined();
 
-    // Use system installed Chrome instead of Chromium bundled with puppeteer
+    // Use system installed Chrome instead of Chromium bundled with puppeteer because
+    // of Flash playback issues
     browser = await puppeteer.launch({
-      headless: false,
       executablePath: process.env.CHROME_EXECUTABLE_PATH,
     });
   });
