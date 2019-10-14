@@ -123,7 +123,7 @@
     "@babel/runtime": "^7.6.0",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@storybook/addon-knobs": "^5.2.3",
-    "@storybook/react": "^5.2.3",
+    "@storybook/react": "^5.2.4",
     "@storybook/theming": "^5.2.3",
     "@bbc/psammead-storybook-helpers": "^6.0.3",
     "@bbc/psammead-test-helpers": "^3.0.2",
