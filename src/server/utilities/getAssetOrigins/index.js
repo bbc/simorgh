@@ -17,7 +17,7 @@ const getAssetOrigins = service => {
   const config = services[service];
   const keys = Object.keys(config);
   const { fonts } = config[keys[0]];
-  if (fonts && fonts.length > 1) {
+  if (fonts && fonts.length > 0) {
     assetOrigins.push(...FONTS_ORIGINS);
   }
 

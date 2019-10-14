@@ -7,6 +7,7 @@ import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
 import Document from './Document/component';
 import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
+import services from '../testHelpers/serviceConfigs';
 import * as renderDocument from './Document';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
@@ -89,6 +90,69 @@ const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
 const makeRequest = async requestPath => request(server).get(requestPath);
 
+const testRenderedData = ({
+  url,
+  service,
+  isAmp,
+  successDataResponse,
+  variant,
+}) => async () => {
+  console.log('variant   => ', variant);
+  console.log('service   => ', service);
+  const { text, status } = await makeRequest(url);
+
+  const assetOrigins = [
+    'https://ichef.bbci.co.uk',
+    localBaseUrl,
+    'https://logws1363.ati-host.net?',
+  ];
+
+  const config = services[service];
+  const { fonts } = config[variant || 'default'];
+  if (fonts && fonts.length > 0) {
+    assetOrigins.push(
+      'https://gel.files.bbci.co.uk',
+      'https://ws-downloads.files.bbci.co.uk',
+    );
+  }
+
+  expect(status).toBe(200);
+
+  expect(reactDomServer.renderToString).toHaveBeenCalledWith(<h1>Mock app</h1>);
+
+  expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
+    <Document
+      app="<h1>Mock app</h1>"
+      assetOrigins={assetOrigins}
+      data={successDataResponse}
+      helmet={{ head: 'tags' }}
+      isAmp={isAmp}
+      service={service}
+      scripts="__mock_script_elements__"
+      styleTags={<style />}
+    />,
+  );
+
+  const expectedProps = {
+    bbcOrigin: undefined,
+    data: successDataResponse,
+    isAmp,
+    service,
+    routes,
+    url,
+  };
+
+  if (variant) {
+    expectedProps.variant = variant;
+  }
+
+  expect(renderDocumentSpy).toHaveBeenCalledWith(expectedProps);
+
+  expect(text).toEqual(
+    '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+  );
+};
+
 const testFrontPages = ({ platform, service, variant }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
@@ -122,48 +186,15 @@ const testFrontPages = ({ platform, service, variant }) => {
           });
         });
 
-        it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest(serviceURL);
+        const configs = {
+          url: serviceURL,
+          service,
+          isAmp,
+          successDataResponse,
+          variant,
+        };
 
-          expect(status).toBe(200);
-
-          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-            <h1>Mock app</h1>,
-          );
-
-          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-            <Document
-              app="<h1>Mock app</h1>"
-              assetOrigins={[
-                'https://gel.files.bbci.co.uk',
-                'https://ws-downloads.files.bbci.co.uk',
-                'https://ichef.bbci.co.uk',
-                localBaseUrl,
-                'https://logws1363.ati-host.net?',
-              ]}
-              data={successDataResponse}
-              helmet={{ head: 'tags' }}
-              isAmp={isAmp}
-              service={service}
-              scripts="__mock_script_elements__"
-              styleTags={<style />}
-            />,
-          );
-
-          expect(renderDocumentSpy).toHaveBeenCalledWith({
-            bbcOrigin: undefined,
-            data: successDataResponse,
-            isAmp,
-            service,
-            routes,
-            url: serviceURL,
-            variant,
-          });
-
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
+        it('should respond with rendered data', testRenderedData(configs));
       });
 
       describe('404 status code', () => {
@@ -240,48 +271,15 @@ const testArticles = ({ platform, service, variant }) => {
           });
         });
 
-        it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest(articleURL);
+        const configs = {
+          url: articleURL,
+          service,
+          isAmp,
+          successDataResponse,
+          variant,
+        };
 
-          expect(status).toBe(200);
-
-          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-            <h1>Mock app</h1>,
-          );
-
-          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-            <Document
-              app="<h1>Mock app</h1>"
-              assetOrigins={[
-                'https://gel.files.bbci.co.uk',
-                'https://ws-downloads.files.bbci.co.uk',
-                'https://ichef.bbci.co.uk',
-                localBaseUrl,
-                'https://logws1363.ati-host.net?',
-              ]}
-              data={successDataResponse}
-              helmet={{ head: 'tags' }}
-              isAmp={isAmp}
-              service={service}
-              scripts="__mock_script_elements__"
-              styleTags={<style />}
-            />,
-          );
-
-          expect(renderDocumentSpy).toHaveBeenCalledWith({
-            bbcOrigin: undefined,
-            data: successDataResponse,
-            isAmp,
-            service,
-            routes,
-            url: articleURL,
-            variant,
-          });
-
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
+        it('should respond with rendered data', testRenderedData(configs));
       });
 
       describe('404 status code', () => {
@@ -359,48 +357,15 @@ const testMediaAssetPages = ({ platform, service, assetUri, variant }) => {
           });
         });
 
-        it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest(articleURL);
+        const configs = {
+          url: articleURL,
+          service,
+          isAmp,
+          successDataResponse,
+          variant,
+        };
 
-          expect(status).toBe(200);
-
-          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-            <h1>Mock app</h1>,
-          );
-
-          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-            <Document
-              app="<h1>Mock app</h1>"
-              assetOrigins={[
-                'https://gel.files.bbci.co.uk',
-                'https://ws-downloads.files.bbci.co.uk',
-                'https://ichef.bbci.co.uk',
-                localBaseUrl,
-                'https://logws1363.ati-host.net?',
-              ]}
-              data={successDataResponse}
-              helmet={{ head: 'tags' }}
-              isAmp={isAmp}
-              service={service}
-              scripts="__mock_script_elements__"
-              styleTags={<style />}
-            />,
-          );
-
-          expect(renderDocumentSpy).toHaveBeenCalledWith({
-            bbcOrigin: undefined,
-            data: successDataResponse,
-            isAmp,
-            service,
-            routes,
-            url: articleURL,
-            variant,
-          });
-
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
+        it('should respond with rendered data', testRenderedData(configs));
       });
 
       describe('404 status code', () => {
@@ -475,47 +440,14 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
           });
         });
 
-        it('should respond with rendered data', async () => {
-          const { text, status } = await makeRequest(mediaPageURL);
+        const configs = {
+          url: mediaPageURL,
+          service,
+          isAmp,
+          successDataResponse,
+        };
 
-          expect(status).toBe(200);
-
-          expect(reactDomServer.renderToString).toHaveBeenCalledWith(
-            <h1>Mock app</h1>,
-          );
-
-          expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-            <Document
-              app="<h1>Mock app</h1>"
-              assetOrigins={[
-                'https://gel.files.bbci.co.uk',
-                'https://ws-downloads.files.bbci.co.uk',
-                'https://ichef.bbci.co.uk',
-                localBaseUrl,
-                'https://logws1363.ati-host.net?',
-              ]}
-              data={successDataResponse}
-              helmet={{ head: 'tags' }}
-              isAmp={isAmp}
-              service={service}
-              scripts="__mock_script_elements__"
-              styleTags={<style />}
-            />,
-          );
-
-          expect(renderDocumentSpy).toHaveBeenCalledWith({
-            bbcOrigin: undefined,
-            data: successDataResponse,
-            isAmp,
-            service,
-            routes,
-            url: mediaPageURL,
-          });
-
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
-        });
+        it('should respond with rendered data', testRenderedData(configs));
       });
     });
 
@@ -781,8 +713,6 @@ describe('Server', () => {
           <Document
             app="<h1>Mock app</h1>"
             assetOrigins={[
-              'https://gel.files.bbci.co.uk',
-              'https://ws-downloads.files.bbci.co.uk',
               'https://ichef.bbci.co.uk',
               localBaseUrl,
               'https://logws1363.ati-host.net?',
