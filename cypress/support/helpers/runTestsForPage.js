@@ -44,6 +44,12 @@ const runTestsForPage = ({
             failOnStatusCode: !pageType.includes('error'),
           });
         });
+        afterEach(function() {
+          console.log('khoa', this.currentTest.state);
+          if (this.currentTest.state === 'failed') {
+            Cypress.runner.stop();
+          }
+        });
 
         const testArgs = {
           service,
