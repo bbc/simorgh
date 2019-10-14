@@ -1,6 +1,6 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { ukrainian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
