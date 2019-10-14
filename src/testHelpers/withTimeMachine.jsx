@@ -10,7 +10,9 @@ const WithTimeMachine = ({ children }) => {
   startTimeMachine();
   useEffect(() => {
     resetTimeMachine();
-    // stop the timemachine from ticking, so timestamp displayed is frozen
+    startTimeMachine(false);
+    // setting tick to false, prevents the timemachine from ticking,
+    // so the timestamp displayed is frozen, and there are no side effects.
     return () => {
       resetTimeMachine();
     };
