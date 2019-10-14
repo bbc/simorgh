@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+import puppeteer from 'puppeteer';
 
 // Example article asset for testing
 const audioVideoUrl = 'https://www.test.bbc.co.uk/news/articles/cn7k01xp8kxo';
