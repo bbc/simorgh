@@ -1,6 +1,7 @@
 import baseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import getCpsAssetInitialData from '.';
+import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
 
 const mockData = { service: 'pidgin', status: 200, pageData: {} };
 
@@ -16,6 +17,8 @@ const defaultServiceParam = 'pidgin';
 const defaultAssetUri = 'tori-49450859';
 const defaultAmpParam = '';
 let defaultContext;
+
+const preprocessorRules = [convertToOptimoBlocks];
 
 describe('getCpsAssetInitialData', () => {
   beforeEach(() => {
@@ -33,6 +36,7 @@ describe('getCpsAssetInitialData', () => {
 
     expect(fetchData).toBeCalledWith({
       url: `${mockBaseUrl}/pidgin/tori-49450859.json`,
+      preprocessorRules,
     });
   });
 
@@ -50,6 +54,7 @@ describe('getCpsAssetInitialData', () => {
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.SIMORGH_BASE_URL.com/pidgin/tori-49450859/variant.json',
+      preprocessorRules,
     });
   });
 
@@ -61,6 +66,7 @@ describe('getCpsAssetInitialData', () => {
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.SIMORGH_BASE_URL.com/pidgin/tori-49450859/variant.json',
+      preprocessorRules,
     });
   });
 });
