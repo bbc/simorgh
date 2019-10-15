@@ -37,7 +37,7 @@ export const buildATIPageTrackPath = ({
   origin,
   previousPath,
   categoryName,
-  campaigns
+  campaigns,
 }) => {
   const pageViewBeaconValues = [
     {

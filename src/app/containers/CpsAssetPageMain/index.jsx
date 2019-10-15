@@ -1,5 +1,4 @@
 import React from 'react';
-import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';

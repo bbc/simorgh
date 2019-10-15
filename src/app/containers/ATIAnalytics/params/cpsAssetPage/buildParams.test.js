@@ -51,13 +51,17 @@ describe('buildCPSATIUrl', () => {
   it('should return the right url', () => {
     const result = buildCPSATIUrl(payload, requestContext, serviceContext);
     const campaignString = expectation.campaigns
+      .filter(
+        campaign =>
+          campaign.campaignName && typeof campaign.campaignName === 'string',
+      )
       .map(campaign => campaign.campaignName.replace(/ /g, '%20'))
       .join('~');
 
     expect(result).toEqual(
       [
         's=598285',
-        's2=atiAnalyticsProducerId',
+        `s2=${serviceContext.atiAnalyticsProducerId}`,
         `p=${expectation.pageIdentifier}`,
         'r=0x0x24x24',
         're=1024x768',
@@ -65,7 +69,7 @@ describe('buildCPSATIUrl', () => {
         'lng=en-US',
         `x1=[${expectation.contentId}]`,
         'x2=[responsive]',
-        'x3=[atiAnalyticsAppName]',
+        `x3=[${serviceContext.atiAnalyticsAppName}]`,
         `x4=[${expectation.language}]`,
         'x5=[http://localhost/]',
         `x7=[${expectation.contentType}]`,

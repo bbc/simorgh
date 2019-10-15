@@ -1,5 +1,4 @@
 import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 
@@ -15,20 +14,16 @@ export const buildCPSATIParams = (pageData, requestContext, serviceContext) => {
 
   // ATI gets it's "Chapter 1" value from a prefix to the page identifier
   // eg embedded_media::pidgin.embedded_media.media_asset.49529724.page
-  const pageIdentifierPrefix = pathOr(
-    '.Unknown',
-    ['analyticsLabels', 'counterName'],
-    metadata,
-  ).split('.')[1];
-
   const page = path(['analyticsLabels', 'counterName'], metadata);
+  const isValidPage = page && typeof page === 'string' && page.includes('.');
+  const chapter1 = isValidPage && page.split('.')[1];
 
   return {
     appName: atiAnalyticsAppName,
     contentId: metadata.id,
     contentType: 'article-media-asset',
     language: metadata.language,
-    pageIdentifier: `${pageIdentifierPrefix}::${page}`,
+    pageIdentifier: chapter1 ? `${chapter1}::${page}` : page,
     pageTitle: path(['headlines', 'headline'], promo),
     timePublished: getPublishedDatetime('firstPublished', pageData),
     timeUpdated: getPublishedDatetime('lastPublished', pageData),
