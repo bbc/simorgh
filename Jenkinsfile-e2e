@@ -57,7 +57,7 @@ node {
                         },
                         'Local Prod Tests': {
                             sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
-                            Simorgh.runLocalandProductionTests()
+                            Simorgh.runLocalandProductionTests(false)
                         }
                     )
                 } finally {
