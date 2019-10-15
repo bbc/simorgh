@@ -13,26 +13,27 @@ export const buildCPSATIParams = (pageData, requestContext, serviceContext) => {
 
   const { metadata, promo } = pageData;
 
+  // ATI gets it's "Chapter 1" value from a prefix to the page identifier
+  // eg embedded_media::pidgin.embedded_media.media_asset.49529724.page
+  const pageIdentifierPrefix = pathOr(
+    '.Unknown',
+    ['analyticsLabels', 'counterName'],
+    metadata,
+  ).split('.')[1];
+
+  const page = path(['analyticsLabels', 'counterName'], metadata);
+
   return {
     appName: atiAnalyticsAppName,
     contentId: metadata.id,
     contentType: 'article-media-asset',
     language: metadata.language,
-    pageIdentifier: path(['analyticsLabels', 'counterName'], metadata),
+    pageIdentifier: `${pageIdentifierPrefix}::${page}`,
     pageTitle: path(['headlines', 'headline'], promo),
-
-    // Will be second part of counter name, eg 'pidgin.news.media_asset.49529724' -> 'news'
-    // TODO: new url param - what is the URL key?
-    chapter1: pathOr(
-      '.Unknown',
-      ['analyticsLabels', 'counterName'],
-      metadata,
-    ).split('.')[1],
-
     timePublished: getPublishedDatetime('firstPublished', pageData),
     timeUpdated: getPublishedDatetime('lastPublished', pageData),
-    category: '', // TODO - new URL param - needs analysis - what is URL key? can be multiple?
-    campaign: '', // TODO - new URL param - needs analysis - what is URL key? can be multiple?
+    categoryName: path(['passport', 'category', 'categoryName'], metadata),
+    campaigns: path(['passport', 'campaigns'], metadata),
     producerId: atiAnalyticsProducerId,
     statsDestination,
     platform,

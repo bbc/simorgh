@@ -43,7 +43,7 @@ describe('buildRadioATIParams', () => {
   });
 });
 
-describe('buildRadioATIUrl', () => {
+describe('buildCPSATIUrl', () => {
   it('should return the right url', () => {
     const result = buildCPSATIUrl(payload, requestContext, serviceContext);
     expect(result).toEqual(
