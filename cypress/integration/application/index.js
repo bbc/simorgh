@@ -19,7 +19,7 @@ describe('Application', () => {
       it(`should return a 200 status code for ${service}'s service worker`, () => {
         cy.testResponseCodeAndType(
           usesArticlePath ? `/${service}/articles/sw.js` : `/${service}/sw.js`,
-          200,
+          500,
           'application/javascript',
         );
       });
