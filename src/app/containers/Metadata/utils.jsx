@@ -35,3 +35,32 @@ export const getIconLinks = (service, iconSizes) => {
     return createIconLinks(service, iconSizes[iconType], iconType);
   });
 };
+
+export const renderAmpHtml = (ampLink, isAmp) => {
+  if (isAmp) {
+    return null;
+  }
+  return <link rel="amphtml" href={ampLink} />;
+};
+
+export const getAppleTouchUrl = service => {
+  const assetsPath = process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH || '/';
+  const separatorSlash = assetsPath[assetsPath.length - 1] !== '/' ? '/' : '';
+
+  return [
+    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    assetsPath,
+    separatorSlash,
+    service,
+    '/images/icons/icon-192x192.png',
+  ].join('');
+};
+
+export const renderAlternateLinks = link => (
+  <link
+    rel="alternate"
+    href={link.href}
+    hrefLang={link.hrefLang}
+    key={link.hrefLang}
+  />
+);

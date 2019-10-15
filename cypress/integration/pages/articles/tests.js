@@ -1,5 +1,4 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
-import * as moment from 'moment-timezone';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/testHelpers/serviceConfigs';
 
@@ -31,41 +30,8 @@ const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRun = ({ service, pageType, variant }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {
-    if (serviceHasTimestamp(service)) {
-      it('should render a formatted timestamp', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            const { language } = body.metadata.passport;
-            const { lastPublished, firstPublished } = body.metadata;
-            const updatedTimestamp = moment
-              .tz(lastPublished, `${appConfig[service][variant].timezone}`)
-              .locale(language)
-              .format('D MMMM YYYY');
-            const firstTimestamp = moment
-              .tz(firstPublished, `${appConfig[service][variant].timezone}`)
-              .locale(language)
-              .format('D MMMM YYYY');
-            if (lastPublished === firstPublished) {
-              cy.get('time').should('contain', updatedTimestamp);
-            } else {
-              cy.get('time')
-                .eq(0)
-                .should('contain', firstTimestamp);
-              cy.get('time')
-                .eq(1)
-                .should(
-                  'contain',
-                  `${`${appConfig[service].articleTimestampPrefix}` +
-                    ' '}${updatedTimestamp}`,
-                );
-            }
-          },
-        );
-      });
-    }
-  });
+export const testsThatAlwaysRun = ({ service, pageType }) => {
+  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
@@ -194,6 +160,28 @@ export const testsThatFollowSmokeTestConfig = ({
           },
         );
       });
+
+      if (serviceHasTimestamp(service)) {
+        it('should render a timestamp', () => {
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            ({ body }) => {
+              const { lastPublished, firstPublished } = body.metadata;
+              cy.get('time')
+                .eq(0)
+                .should('exist')
+                .should('be.visible')
+                .should('have.attr', 'datetime')
+                .should('not.be.empty');
+
+              if (lastPublished !== firstPublished) {
+                cy.get('time')
+                  .eq(1)
+                  .should('contain', appConfig[service].articleTimestampPrefix);
+              }
+            },
+          );
+        });
+      }
     });
   });
 };
