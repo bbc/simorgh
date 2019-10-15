@@ -11,16 +11,15 @@ const convertToOptimoBlocks = async jsonRaw => {
 
   const parseBlockByType = async block => {
     if (!block || !block.type) {
-      return null;
+      return false;
     }
     const { type } = block;
 
-    const parsedBlock = await (typesToConvert[type] || handleMissingType)(
-      block,
-    );
+    const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
 
-    // eslint-disable-next-line no-console
-    console.log(parsedBlock); // Once resolved outputs: `{ type: 'text', model: { blocks: [ [Object] ] } }`
+    if (!parsedBlock) {
+      return false;
+    }
 
     return parsedBlock;
   };
@@ -28,15 +27,13 @@ const convertToOptimoBlocks = async jsonRaw => {
   const json = clone(jsonRaw);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
-  const parsedBlocks = await blocks.map(await parseBlockByType).filter(Boolean);
-  // eslint-disable-next-line no-console
-  console.log(parsedBlocks); // Outputs : [ Promise { undefined }, Promise { <pending> } ...]
+  const parsedBlocks = blocks.map(parseBlockByType);
 
   return {
     ...json,
     content: {
       model: {
-        blocks: parsedBlocks,
+        blocks: await Promise.all(parsedBlocks),
       },
     },
   };
