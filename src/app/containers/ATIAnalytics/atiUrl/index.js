@@ -36,6 +36,8 @@ export const buildATIPageTrackPath = ({
   timeUpdated,
   origin,
   previousPath,
+  categoryName,
+  campaigns,
 }) => {
   const pageViewBeaconValues = [
     {
@@ -141,6 +143,20 @@ export const buildATIPageTrackPath = ({
       key: 'x14',
       description: 'ldp things ids',
       value: ldpThingIds,
+      wrap: true,
+    },
+    {
+      key: 'x16',
+      description: 'campaigns',
+      value: (Array.isArray(campaigns) ? campaigns : [])
+        .map(campaign => campaign.campaignName.replace(/ /g, '%20'))
+        .join('~'),
+      wrap: true,
+    },
+    {
+      key: 'x17',
+      description: 'category',
+      value: categoryName,
       wrap: true,
     },
     {
