@@ -13,9 +13,7 @@ const WithTimeMachine = ({ children }) => {
   useEffect(() => {
     resetTimeMachine();
     startTimeMachine(true);
-    return () => {
-      resetTimeMachine();
-    };
+    return resetTimeMachine();
   });
   return <>{children}</>;
 };
