@@ -183,12 +183,12 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   cy.get('meta[name="og:description"]').should(
                     'have.attr',
                     'content',
-                    description,
+                    'Priya',
                   );
                   cy.get('meta[name="og:title"]').should(
                     'have.attr',
                     'content',
-                    pageTitle,
+                    'priya',
                   );
                   cy.get('meta[name="twitter:description"]').should(
                     'have.attr',
