@@ -1,11 +1,22 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
 import preprocess from '#lib/utilities/preprocessor';
+import onClient from '#lib/utilities/onClient';
+import getBaseUrl from '../getBaseUrl';
 
 const logger = nodeLogger(__filename);
 const upstreamStatusCodesToPropagate = [200, 404];
 
-const fetchData = async ({ url, preprocessorRules }) => {
+const ampRegex = /(.amp)$/;
+
+const fetchData = async ({ pathname, preprocessorRules }) => {
+  const baseUrl = onClient()
+    ? getBaseUrl(window.location.origin)
+    : process.env.SIMORGH_BASE_URL;
+
+  // Remove .amp at the end of pathnames for AMP pages.
+  const url = `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
+
   let pageData;
   let status;
 
