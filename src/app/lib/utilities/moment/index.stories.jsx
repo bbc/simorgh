@@ -10,7 +10,7 @@ import {
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
-import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 // ensure all moment locales have been loaded via service configs
 import '#testHelpers/serviceConfigs';
@@ -67,7 +67,6 @@ const SEPTEMBER = 1568505600000;
 const OCTOBER = 1571097600000;
 const NOVEMBER = 1573776000000;
 const DECEMBER = 1576368000000;
-
 /* eslint-disable prettier/prettier */
 const editorialWhitelist = [
   'LL',
