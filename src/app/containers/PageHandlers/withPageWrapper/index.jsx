@@ -1,6 +1,5 @@
 import React from 'react';
-import { string, number } from 'prop-types';
-import { pageDataPropType } from '#models/propTypes/data';
+import { string, number, any } from 'prop-types';
 import PageWrapper from '../../../Layouts/defaultPageWrapper';
 
 const WithPageWrapper = Component => {
@@ -11,7 +10,7 @@ const WithPageWrapper = Component => {
   );
 
   PageWrapperContainer.propTypes = {
-    pageData: pageDataPropType,
+    pageData: any, // eslint-disable-line
     status: number.isRequired,
     bbcOrigin: string,
   };

@@ -1,14 +1,21 @@
-import {
-  candyXmlToRichText,
-  stringToRichText,
-} from '@bbc/psammead-rich-text-transforms';
+import loadable from '@loadable/component';
 
-const xmlWrapper = innerXML =>
-  `<body><paragraph>${innerXML}</paragraph></body>`;
+const richTextTransforms = loadable(() =>
+  import('@bbc/psammead-rich-text-transforms'),
+);
 
-const convertParagraph = block =>
-  block.markupType === 'candy_xml'
+const convertParagraph = async block => {
+  const {
+    candyXmlToRichText,
+    stringToRichText,
+  } = await richTextTransforms.load();
+
+  const xmlWrapper = innerXML =>
+    `<body><paragraph>${innerXML}</paragraph></body>`;
+
+  return block.markupType === 'candy_xml'
     ? candyXmlToRichText(xmlWrapper(block.text))
     : stringToRichText(block.text);
+};
 
 export default convertParagraph;

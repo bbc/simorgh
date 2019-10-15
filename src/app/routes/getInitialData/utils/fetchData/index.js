@@ -16,7 +16,7 @@ const fetchData = async ({ url, preprocessorRules }) => {
 
     if (status === 200) {
       pageData = await response.json();
-      pageData = preprocess(pageData, preprocessorRules);
+      pageData = await preprocess(pageData, await preprocessorRules);
     } else if (!upstreamStatusCodesToPropagate.includes(status)) {
       logger.warn(
         `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
