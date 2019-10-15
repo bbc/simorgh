@@ -25,15 +25,19 @@ const serviceContext = {
 
 const expectation = {
   appName: serviceContext.atiAnalyticsAppName,
-  contentId: 'id',
+  contentId: payload.metadata.id,
+  campaigns: payload.metadata.passport.campaigns,
   contentType: 'article-media-asset',
-  language: 'language',
-  pageIdentifier: 'pageIdentifier',
-  pageTitle: 'pageTitle',
+  language: payload.metadata.language,
+  pageIdentifier: `news::${payload.metadata.analyticsLabels.counterName}`,
+  pageTitle: payload.promo.headlines.headline,
+  categoryName: 'News',
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
   platform: requestContext.platform,
   service: 'service',
+  timePublished: analyticsUtils.getPublishedDatetime(),
+  timeUpdated: analyticsUtils.getPublishedDatetime(),
 };
 
 describe('buildRadioATIParams', () => {
@@ -46,22 +50,30 @@ describe('buildRadioATIParams', () => {
 describe('buildCPSATIUrl', () => {
   it('should return the right url', () => {
     const result = buildCPSATIUrl(payload, requestContext, serviceContext);
+    const campaignString = expectation.campaigns
+      .map(campaign => campaign.campaignName.replace(/ /g, '%20'))
+      .join('~');
+
     expect(result).toEqual(
       [
         's=598285',
         's2=atiAnalyticsProducerId',
-        'p=pageIdentifier',
+        `p=${expectation.pageIdentifier}`,
         'r=0x0x24x24',
         're=1024x768',
         'hl=00-00-00',
         'lng=en-US',
-        'x1=[id]',
+        `x1=[${expectation.contentId}]`,
         'x2=[responsive]',
         'x3=[atiAnalyticsAppName]',
-        'x4=[language]',
+        `x4=[${expectation.language}]`,
         'x5=[http://localhost/]',
-        'x7=[article-media-asset]',
-        'x9=[pageTitle]',
+        `x7=[${expectation.contentType}]`,
+        `x9=[${expectation.pageTitle.replace(/ /g, '+')}]`,
+        `x11=[${expectation.timePublished}]`,
+        `x12=[${expectation.timeUpdated}]`,
+        `x16=[${campaignString}]`,
+        `x17=[${expectation.categoryName}]`,
       ].join('&'),
     );
   });
