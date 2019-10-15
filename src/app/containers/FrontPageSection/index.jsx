@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { bool, shape, number } from 'prop-types';
+import { bool, shape, number, arrayOf, string, object } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -13,6 +14,11 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
+import {
+  UsefulLink,
+  UsefulLinksLi,
+  UsefulLinksUl,
+} from '@bbc/psammead-useful-links';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
@@ -51,6 +57,28 @@ const TopMargin = styled.div`
   }
 `;
 
+// Apply the right margin-top between the section label and a single useful item
+const UsefulLinkWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_TRPL};
+  }
+
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING};
+  }
+`;
+
+// Apply the right margin-top between the section label and multiple useful items
+const UsefulLinksWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
+`;
+
 // eslint-disable-next-line react/prop-types
 const MarginWrapper = ({ firstSection, oneItem, children }) => {
   // Conditionally add a `margin-top` to the `children`.
@@ -82,6 +110,36 @@ StoryPromoComponent.propTypes = {
   item: shape(storyItem).isRequired,
   sectionNumber: number.isRequired,
   storyNumber: number.isRequired,
+};
+
+const UsefulLinksComponent = ({ items, script, service }) => {
+  return items.length > 1 ? (
+    <UsefulLinksWrapper>
+      <UsefulLinksUl>
+        {items.map(item => {
+          return (
+            <UsefulLinksLi key={item.id}>
+              <UsefulLink script={script} service={service} href={item.uri}>
+                {item.name}
+              </UsefulLink>
+            </UsefulLinksLi>
+          );
+        })}
+      </UsefulLinksUl>
+    </UsefulLinksWrapper>
+  ) : (
+    <UsefulLinkWrapper>
+      <UsefulLink script={script} service={service} href={items[0].uri}>
+        {items[0].name}
+      </UsefulLink>
+    </UsefulLinkWrapper>
+  );
+};
+
+UsefulLinksComponent.propTypes = {
+  items: arrayOf(shape(storyItem)).isRequired,
+  script: shape(object).isRequired,
+  service: string.isRequired,
 };
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
@@ -125,7 +183,10 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {items.length > 1 ? (
+      {/* eslint-disable-next-line no-nested-ternary */}
+      {group.strapline.name === 'Useful links' ? (
+        <UsefulLinksComponent items={items} script={script} service={service} />
+      ) : items.length > 1 ? (
         <MarginWrapper firstSection={isFirstSection}>
           <StoryPromoUl>
             {items.map((item, index) => (
