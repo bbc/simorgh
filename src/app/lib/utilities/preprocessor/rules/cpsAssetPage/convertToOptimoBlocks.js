@@ -15,16 +15,22 @@ const convertToOptimoBlocks = async jsonRaw => {
     }
     const { type } = block;
 
-    const parsedBlock = ((await typesToConvert[type]) || handleMissingType)(
+    const parsedBlock = await (typesToConvert[type] || handleMissingType)(
       block,
     );
 
+    // eslint-disable-next-line no-console
+    console.log(parsedBlock); // Once resolved outputs: `{ type: 'text', model: { blocks: [ [Object] ] } }`
+
     return parsedBlock;
   };
+
   const json = clone(jsonRaw);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
-  const parsedBlocks = await blocks.map(parseBlockByType).filter(Boolean);
+  const parsedBlocks = await blocks.map(await parseBlockByType).filter(Boolean);
+  // eslint-disable-next-line no-console
+  console.log(parsedBlocks); // Outputs : [ Promise { undefined }, Promise { <pending> } ...]
 
   return {
     ...json,

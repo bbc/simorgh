@@ -7,7 +7,7 @@ import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 
 const CpsAssetPageMain = ({ pageData }) => {
-  console.log(pageData.content.model);
+  // console.log(pageData.content.model);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
