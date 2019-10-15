@@ -14,7 +14,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
             const [{ text: headline }] = body.content.blocks;
-            cy.get('h1').should('contain', headline);
+            cy.get('h1').should('contain', 'khoa', headline);
           },
         );
       });
