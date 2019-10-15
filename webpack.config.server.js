@@ -12,7 +12,6 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
       filename: 'server.js',
     },
     optimization: {
-      // We no not want to minimize our code.
       minimize: false,
     },
     externals: [
