@@ -10,7 +10,7 @@ const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
-  const blocks = path(['content', 'model', 'blocks'], pageData).filter(Boolean);
+  const blocks = path(['content', 'model', 'blocks'], pageData);
 
   console.log(blocks);
 
