@@ -10,7 +10,7 @@ import {
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
-import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 // ensure all moment locales have been loaded via service configs
 import '#testHelpers/serviceConfigs';
