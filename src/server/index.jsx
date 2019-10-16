@@ -197,6 +197,7 @@ server
         url,
       );
       const data = await route.getInitialData(match.params);
+
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 
