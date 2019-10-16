@@ -41,6 +41,7 @@ export const service = {
     twitterSite: '@BBCScotland',
     noBylinesPolicy: null,
     publishingPrinciples: null,
+    isTrustProjectParticipant: false,
     script: cyrillicAndLatin,
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
