@@ -1,5 +1,5 @@
-import convertToOptimoBlocks from './convertToOptimoBlocks';
-import { optimoText } from './helpers';
+import convertToOptimoBlocks from '.';
+import { optimoText } from './utils/helpers';
 
 describe('convertToOptimoBlocks', () => {
   it('should convert CPS data into Optimo format', async () => {
