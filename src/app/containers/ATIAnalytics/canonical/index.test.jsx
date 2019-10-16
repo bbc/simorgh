@@ -1,5 +1,5 @@
 import React from 'react';
-import * as testingLibrary from '@testing-library/react';
+import { render as create, act } from '@testing-library/react';
 import { render } from 'enzyme';
 import CanonicalATIAnalytics from '.';
 import * as beacon from '#lib/analyticsUtils/sendBeacon';
@@ -18,8 +18,6 @@ describe('Canonical ATI Analytics', () => {
 
     process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
     beacon.default = mockSendBeacon;
-
-    const { render: create, act } = testingLibrary;
 
     act(() => {
       create(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
