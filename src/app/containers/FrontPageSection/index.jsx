@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape, number } from 'prop-types';
+import { bool, shape, number, arrayOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -85,6 +85,38 @@ StoryPromoComponent.propTypes = {
   storyNumber: number.isRequired,
 };
 
+const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
+  return items.length > 1 ? (
+    <MarginWrapper firstSection={firstSection}>
+      <StoryPromoUl>
+        {items.map((item, index) => (
+          <StoryPromoLi key={item.id}>
+            <StoryPromoComponent
+              item={item}
+              sectionNumber={sectionNumber}
+              storyNumber={index}
+            />
+          </StoryPromoLi>
+        ))}
+      </StoryPromoUl>
+    </MarginWrapper>
+  ) : (
+    <MarginWrapper firstSection={firstSection} oneItem>
+      <StoryPromoComponent
+        item={items[0]}
+        sectionNumber={sectionNumber}
+        storyNumber={0}
+      />
+    </MarginWrapper>
+  );
+};
+
+StoryPromoRenderer.propTypes = {
+  items: arrayOf(shape(storyItem)).isRequired,
+  firstSection: bool.isRequired,
+  sectionNumber: number.isRequired,
+};
+
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
@@ -126,31 +158,14 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {/* eslint-disable-next-line no-nested-ternary */}
       {group.strapline.name === 'Useful links' ? (
         <UsefulLinksComponent items={items} script={script} service={service} />
-      ) : items.length > 1 ? (
-        <MarginWrapper firstSection={isFirstSection}>
-          <StoryPromoUl>
-            {items.map((item, index) => (
-              <StoryPromoLi key={item.id}>
-                <StoryPromoComponent
-                  item={item}
-                  sectionNumber={sectionNumber}
-                  storyNumber={index}
-                />
-              </StoryPromoLi>
-            ))}
-          </StoryPromoUl>
-        </MarginWrapper>
       ) : (
-        <MarginWrapper firstSection={isFirstSection} oneItem>
-          <StoryPromoComponent
-            item={items[0]}
-            sectionNumber={sectionNumber}
-            storyNumber={0}
-          />
-        </MarginWrapper>
+        <StoryPromoRenderer
+          items={items}
+          firstSection={isFirstSection}
+          sectionNumber={sectionNumber}
+        />
       )}
     </section>
   );
