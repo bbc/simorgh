@@ -29,7 +29,7 @@ export const service = {
     dir: `ltr`,
     externalLinkText: ', taobh a-muigh',
     imageCaptionOffscreenText: 'Tiotal an deilbh, ',
-    videoCaptionOffscreenText: 'Tiotal an deilbh, ',
+    videoCaptionOffscreenText: "Tiotal a' bhidio, ",
     audioCaptionOffscreenText: 'Tiotal na fuaime',
     defaultCaptionOffscreenText: 'Fo-thiotal, ',
     imageCopyrightOffscreenText: 'Tùs an deilbh, ',
