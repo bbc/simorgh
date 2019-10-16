@@ -2,15 +2,21 @@ import React from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 import { Link } from 'react-router-dom';
-import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GhostGrid } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
+import text from '../Text';
+import Blocks from '../Blocks';
+
+const componentsToRender = {
+  text,
+};
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
-  // const blocks = path(['content', 'model', 'blocks'], pageData);
+  const blocks = path(['content', 'model', 'blocks'], pageData);
 
   return (
     <>
@@ -21,14 +27,12 @@ const CpsAssetPageMain = ({ pageData }) => {
         openGraphType="website"
       />
       <LinkedData type="Article" seoTitle={title} />
-      <Grid as="main" role="main">
-        <GridItemConstrainedMedium>
-          <Link to="/pidgin/test-12345678" data-e2e="cpsAssetDummyLink">
-            Test MAP to MAP inline link
-          </Link>
-          <h1> Placeholder content for MAP page skeleton</h1>
-        </GridItemConstrainedMedium>
-      </Grid>
+      <GhostGrid as="main" role="main">
+        <Link to="/pidgin/test-12345678" data-e2e="cpsAssetDummyLink">
+          Test MAP to MAP inline link
+        </Link>
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </GhostGrid>
     </>
   );
 };
