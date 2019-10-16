@@ -186,6 +186,42 @@ const hasOneItem = {
   },
 };
 
+const usefulLinks = {
+  type: 'useful-links',
+  title: 'Useful links',
+  items: [
+    {
+      name: 'Ethiopia: Ndị uweojii agba gbuola ndị mmadụ',
+      indexImage: {
+        id: '63692548',
+        subType: 'index',
+        href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
+      },
+      uri: 'https://www.bbc.com/igbo/egwuregwu-49946491',
+      contentType: 'Guide',
+      assetTypeCode: 'PRO',
+      timestamp: 1569321103000,
+      type: 'link',
+    },
+    {
+      name: 'Onye isi ala ndị New Zealand dị ime',
+      indexImage: {
+        id: '63692549',
+        subType: 'index',
+        href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
+      },
+      uri: 'https://www.bbc.com/igbo/egwuregwu-49946491',
+      contentType: 'Guide',
+      assetTypeCode: 'PRO',
+      timestamp: 1569321103000,
+      type: 'link',
+    },
+  ],
+  strapline: {
+    name: 'Useful links',
+  },
+};
+
 jest.mock('react', () => {
   const original = jest.requireActual('react');
   return {
@@ -363,6 +399,17 @@ describe('FrontPageSection Container', () => {
       expect(image.getAttribute('src')).toEqual(
         'https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg',
       );
+    });
+
+    it('should render useful links when the strapline name is "Useful links"', () => {
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <FrontPageSection group={usefulLinks} sectionNumber={1} />,
+        </ServiceContextProvider>,
+      );
+
+      expect(container.getElementsByTagName('ul')).toHaveLength(1);
+      expect(container.getElementsByTagName('li')).toHaveLength(2);
     });
   });
 });
