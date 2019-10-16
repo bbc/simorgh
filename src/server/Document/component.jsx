@@ -69,11 +69,12 @@ const Document = ({
         )}
       </head>
       <body>
-        {/* eslint-disable react/no-danger */
-        /* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
+        {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
+        {/* eslint-disable-next-line react/no-danger */}
         <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
         {scriptsAllowed && (
           <script
+            /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
               __html: `window.SIMORGH_DATA=${serialisedData}`,
             }}
