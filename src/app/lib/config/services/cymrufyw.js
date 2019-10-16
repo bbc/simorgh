@@ -42,6 +42,7 @@ export const service = {
     twitterSite: '@BBCCymruFyw',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
