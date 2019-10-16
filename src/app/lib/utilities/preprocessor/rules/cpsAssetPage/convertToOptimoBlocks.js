@@ -11,14 +11,14 @@ const convertToOptimoBlocks = async jsonRaw => {
 
   const parseBlockByType = async block => {
     if (!block || !block.type) {
-      return false;
+      return null;
     }
     const { type } = block;
 
     const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
 
     if (!parsedBlock) {
-      return false;
+      return null;
     }
 
     return parsedBlock;
