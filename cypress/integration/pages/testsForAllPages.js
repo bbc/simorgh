@@ -139,6 +139,15 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               'content',
               appConfig[service][variant].twitterSite,
             );
+            cy.get('link[rel="apple-touch-icon"]').each(link => {
+              const url = link.attr('href');
+              cy.request({
+                url,
+                failOnStatusCode: false,
+              }).then(resp => {
+                expect(resp.status).to.equal(200);
+              });
+            });
           });
         });
 
