@@ -1,4 +1,4 @@
-import { clone, pathOr } from 'ramda';
+import { clone, pathOr, path } from 'ramda';
 import convertParagraph from './convertParagraph';
 
 const handleMissingType = block =>
@@ -9,9 +9,8 @@ const typesToConvert = {
 };
 
 const parseBlockByType = block => {
-  if (!block || !block.type) {
-    return null;
-  }
+  if (!path(['type'], block)) return false;
+
   const { type } = block;
 
   const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
