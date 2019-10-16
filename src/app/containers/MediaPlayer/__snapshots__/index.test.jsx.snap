@@ -7,8 +7,70 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
   overflow: hidden;
 }
 
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c2 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c2 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c2 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c2 i {
+  font-style: normal;
+}
+
 .c0 {
   grid-column: 1 / span 6;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    padding: 0.5rem 0 0;
+  }
 }
 
 @media (max-width:25rem) {
@@ -80,6 +142,16 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
             />
           </amp-iframe>
         </div>
+        <figcaption
+          class="c2"
+        >
+          <span
+            class="c3"
+          >
+            Video caption, 
+          </span>
+          <p />
+        </figcaption>
       </div>
     </div>
   </body>
@@ -108,8 +180,70 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
   overflow: hidden;
 }
 
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c4 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c4 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c4 i {
+  font-style: normal;
+}
+
 .c0 {
   grid-column: 1 / span 6;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding: 0.5rem 0 0;
+  }
 }
 
 @media (max-width:25rem) {
@@ -167,6 +301,16 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
       />
     </div>
   </div>
+  <figcaption
+    class="c4"
+  >
+    <span
+      class="c5"
+    >
+      Video caption, 
+    </span>
+    <p />
+  </figcaption>
 </div>
 `;
 
@@ -192,8 +336,70 @@ exports[`MediaPlayer is called correctly Calls the canonical player when platfor
   overflow: hidden;
 }
 
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c4 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c4 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c4 i {
+  font-style: normal;
+}
+
 .c0 {
   grid-column: 1 / span 6;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding: 0.5rem 0 0;
+  }
 }
 
 @media (max-width:25rem) {
@@ -251,5 +457,15 @@ exports[`MediaPlayer is called correctly Calls the canonical player when platfor
       />
     </div>
   </div>
+  <figcaption
+    class="c4"
+  >
+    <span
+      class="c5"
+    >
+      Video caption, 
+    </span>
+    <p />
+  </figcaption>
 </div>
 `;
