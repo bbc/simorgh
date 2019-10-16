@@ -29,7 +29,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
           './src/client',
         ]
       : ['./src/poly', './src/client'],
-    devServer: {  
+    devServer: {
       host: 'localhost.bbc.com',
       port: webpackDevServerPort,
       historyApiFallback: true,
