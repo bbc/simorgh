@@ -30,7 +30,7 @@ exports[`should match for AMP News & UK origin 1`] = `
       rel="alternate"
     />
     <link
-      href="https://foo.com/static/news/images/icons/icon-192x192.png"
+      href="http://localhost.bbc.com:7080/news/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -251,7 +251,7 @@ exports[`should match for Canonical News & international origin 1`] = `
       rel="amphtml"
     />
     <link
-      href="https://foo.com/static/news/images/icons/icon-192x192.png"
+      href="http://localhost.bbc.com:7080/news/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -454,7 +454,7 @@ exports[`should match for Persian News & UK origin 1`] = `
       rel="canonical"
     />
     <link
-      href="https://foo.com/static/persian/images/icons/icon-192x192.png"
+      href="http://localhost.bbc.com:7080/persian/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -661,7 +661,7 @@ exports[`should match for Persian News & international origin 1`] = `
       rel="amphtml"
     />
     <link
-      href="https://foo.com/static/persian/images/icons/icon-192x192.png"
+      href="http://localhost.bbc.com:7080/persian/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -873,7 +873,7 @@ exports[`should match for WS Frontpages 1`] = `
       rel="amphtml"
     />
     <link
-      href="https://foo.com/static/igbo/images/icons/icon-192x192.png"
+      href="http://localhost.bbc.com:7080/igbo/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -1080,7 +1080,7 @@ exports[`should match for WS Media liveradio 1`] = `
       rel="amphtml"
     />
     <link
-      href="https://foo.com/static/korean/images/icons/icon-192x192.png"
+      href="http://localhost.bbc.com:7080/korean/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
