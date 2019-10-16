@@ -56,7 +56,7 @@ describe('Js bundle requests', () => {
             requests = [];
           });
 
-          it('only loads expected js bundles', async () => {
+          it('only loads rich-text-transforms bundle after client navigation to MAP asset', async () => {
             expect(
               requests.some(url => url.match(richTextTransformsBundleRegex)),
             ).toEqual(false);
