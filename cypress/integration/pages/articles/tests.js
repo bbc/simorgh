@@ -138,6 +138,7 @@ export const testsThatFollowSmokeTestConfig = ({
                   .within(() => {
                     cy.get('p')
                       .eq(0)
+                      .should('be.visible')
                       .should('contain', text);
                   });
               },
