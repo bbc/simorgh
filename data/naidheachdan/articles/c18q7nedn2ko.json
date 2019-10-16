@@ -7,9 +7,9 @@
     "type": "article",
     "createdBy": "Naidheachdan",
     "language": "gd",
-    "lastUpdated": 1563022117737,
+    "lastUpdated": 1571231858885,
     "firstPublished": 1563022114054,
-    "lastPublished": 1563022114054,
+    "lastPublished": 1570805527001,
     "options": {},
     "analyticsLabels": {},
     "passport": {
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Naidheachdan"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Cabers ag amas air an tuilleadh eachdraidh",
+                        "text": "Seo an ceann-naidheachd don artaigil deuchainn",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Cabers ag amas air an tuilleadh eachdraidh",
+                              "text": "Seo an ceann-naidheachd don artaigil deuchainn",
                               "attributes": []
                             }
                           }
@@ -58,63 +65,336 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mapa na Frainge a’ sealltainn Paris agus Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mapa na Frainge a’ sealltainn Paris agus Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Tha Cabair Fèidh ag amas air caibideal ùr a sgrìobhadh nan eachdraidh ann an Cupa na Camanachd is fios aca a-nise gur e Baile Ùr an t-Slèibh a bhios nan aghaidh san iar-chuairt dheireannaich.",
+                  "text": "‘S e bloc teacsa a tha seo, anns a bheil url do làraich Aimisire a’ BhBC",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Tha Cabair Fèidh ag amas air caibideal ùr a sgrìobhadh nan eachdraidh ann an Cupa na Camanachd is fios aca a-nise gur e Baile Ùr an t-Slèibh a bhios nan aghaidh san iar-chuairt dheireannaich.",
+                        "text": "‘S e bloc teacsa a tha seo, anns a bheil url do làraich ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Aimisire a’ BhBC",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Aimisire a’ BhBC",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Tha Cabers aig an ìre seo den fharpais airson a' chiad turas bho 1963 às dèidh dhaibh an gnothach a dhèanamh air Loch Abar 7-4 Disathairne.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Tha Cabers aig an ìre seo den fharpais airson a' chiad turas bho 1963 às dèidh dhaibh an gnothach a dhèanamh air Loch Abar 7-4 Disathairne.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "'S e bloc fo-cheann-naidheachd a tha seo",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "'S e bloc fo-cheann-naidheachd a tha seo",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Cluicheadairean bhuill-coise às dèidh gheama",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Cluicheadairean bhuill-coise às dèidh gheama",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "Feumar a dhol air ais nas fhaide na sin, gu 1939, airson an turas mu dheireadh a bhuannaich iad an cupa.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Feumar a dhol air ais nas fhaide na sin, gu 1939, airson an turas mu dheireadh a bhuannaich iad an cupa.",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Tha sgeulachdan air an innse fhathast mun sgioba sin aig Cabers a rinn a' chùis air Caol Bhòid ann an Inbhir Nis sa bhliadhna 'ud, is gu dearbh air an dearbh sgioba ann an Inbhir Aora ann an cuairt dheireannach 1934.",
+                  "text": "Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Tha sgeulachdan air an innse fhathast mun sgioba sin aig Cabers a rinn a' chùis air Caol Bhòid ann an Inbhir Nis sa bhliadhna 'ud, is gu dearbh air an dearbh sgioba ann an Inbhir Aora ann an cuairt dheireannach 1934.",
+                        "text": "Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich",
                         "attributes": []
                       }
                     }
@@ -129,13 +409,13 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Cabers ag amas air an tuilleadh eachdraidh"
+      "seoHeadline": "Seo an ceann-naidheachd SEO ‘son an artaigil seo"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c18q7nedn2ko"
     },
     "summary": "",
-    "timestamp": 1563022114054,
+    "timestamp": 1570805527001,
     "id": "urn:bbc:ares::article:c18q7nedn2ko",
     "type": "cps"
   },
