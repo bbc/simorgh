@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-
 import RadioPageMain from '.';
 import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 import korean from '#data/korean/bbc_korean_radio/liveradio.json';
@@ -39,6 +39,7 @@ const matchFixtures = service => ({
 });
 
 storiesOf('Main|Radio Page', module)
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .add(
     'default',
