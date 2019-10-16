@@ -1,16 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import igboData from '#data/igbo/frontpage';
-import pidginData from '#data/pidgin/frontpage';
+import featureIndexDataAfrique from '#data/afrique/cpsAssets/48465371';
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
-import thaiData from '#data/thai/frontpage';
-import yorubaData from '#data/yoruba/frontpage';
-import punjabiData from '#data/punjabi/frontpage';
 import filterUnknownContentTypes from '#lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmptyGroupItems';
 import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
 import preprocess from '#lib/utilities/preprocessor';
 import FeatureIndex from '.';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const preprocessorRules = [
   filterUnknownContentTypes,
@@ -20,14 +17,13 @@ const preprocessorRules = [
 ];
 
 const serviceDatasets = {
-  igbo: igboData,
-  yoruba: yorubaData,
-  pidgin: pidginData,
-  thai: thaiData,
-  punjabi: punjabiData,
+  afrique: featureIndexDataAfrique,
 };
 
-const stories = storiesOf('Pages|Feature Index', module);
+const stories = storiesOf('Pages|FeatureIndex', module).addDecorator(story => (
+  <WithTimeMachine>{story()}</WithTimeMachine>
+));
+
 Object.keys(serviceDatasets).forEach(service => {
   stories.add(service, () => {
     const featureIndexData = preprocess(
@@ -35,14 +31,12 @@ Object.keys(serviceDatasets).forEach(service => {
       preprocessorRules,
     );
 
-    const data = {
-      pageData: featureIndexData,
-      status: 200,
-    };
+    const status = 200;
 
     return (
       <FeatureIndex
-        data={data}
+        pageData={featureIndexData}
+        status={status}
         service={service}
         isAmp={false}
         loading={false}

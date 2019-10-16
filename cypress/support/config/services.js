@@ -22,6 +22,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/afaanoromoo',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         smoke: false,
@@ -57,6 +58,11 @@ const services = {
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/afrique',
         smoke: false,
+      },
+      FIX: {
+        path:
+          Cypress.env('APP_ENV') === 'live' ? undefined : '/afrique/48465371',
+        smoke: true,
       },
       liveRadio: {
         path:
@@ -99,6 +105,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/amharic',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path: '/amharic/bbc_amharic_radio/liveradio',
         smoke: true,
@@ -135,6 +142,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/arabic',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -176,6 +184,7 @@ const services = {
         path: '/azeri',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -209,6 +218,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/bengali',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -250,6 +260,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/burmese',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -294,6 +305,7 @@ const services = {
             : '/cymrufyw',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -321,6 +333,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/gahuza',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -362,6 +375,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/gujarati',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -395,6 +409,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/hausa',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -436,6 +451,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/hindi',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -474,6 +490,7 @@ const services = {
         smoke: true,
       },
       frontPage: { path: '/igbo', smoke: false },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -507,6 +524,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/indonesia',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path: '/indonesia/bbc_indonesian_radio/liveradio',
         smoke: false,
@@ -543,6 +561,7 @@ const services = {
         path: '/japanese',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -576,6 +595,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/korean',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path: '/korean/bbc_korean_radio/liveradio',
         smoke: false,
@@ -612,6 +632,7 @@ const services = {
         path: '/kyrgyz',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -653,6 +674,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/marathi',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -686,6 +708,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/mundo',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -719,6 +742,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/naidheachdan',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -746,6 +770,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/nepali',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -784,6 +809,7 @@ const services = {
         smoke: true,
       },
       frontPage: { path: undefined, smoke: false },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -811,6 +837,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/pashto',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -852,6 +879,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/persian',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
@@ -888,6 +916,7 @@ const services = {
         smoke: false,
       },
       frontPage: { path: '/pidgin', smoke: false },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -915,6 +944,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/portuguese',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -947,6 +977,7 @@ const services = {
         path: '/punjabi',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -980,6 +1011,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/russian',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1010,6 +1042,7 @@ const services = {
         smoke: false,
       },
       frontPage: { path: undefined, smoke: false },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -1040,6 +1073,7 @@ const services = {
             : '/serbian/lat',
         smoke: true,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1073,6 +1107,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/sinhala',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -1113,6 +1148,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/somali',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -1138,6 +1174,7 @@ const services = {
       articles: { path: undefined, smoke: false },
       errorPage404: { path: undefined, smoke: false },
       frontPage: { path: undefined, smoke: false },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -1165,6 +1202,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/swahili',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -1206,6 +1244,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/tamil',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -1247,6 +1286,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/telugu',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1280,6 +1320,7 @@ const services = {
         path: '/thai',
         smoke: true,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1313,6 +1354,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/tigrinya',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path: '/tigrinya/bbc_tigrinya_radio/liveradio',
         smoke: false,
@@ -1349,6 +1391,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/turkce',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1385,6 +1428,7 @@ const services = {
             : '/ukchina/simp',
         smoke: true,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1418,6 +1462,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/ukrainian',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1451,6 +1496,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/urdu',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -1492,6 +1538,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/uzbek',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||
@@ -1533,6 +1580,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/vietnamese',
         smoke: false,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1563,6 +1611,7 @@ const services = {
         smoke: false,
       },
       frontPage: { path: '/yoruba', smoke: false },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
@@ -1599,6 +1648,7 @@ const services = {
             : '/zhongwen/simp',
         smoke: true,
       },
+      FIX: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:

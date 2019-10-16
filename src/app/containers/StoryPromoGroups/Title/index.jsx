@@ -39,7 +39,11 @@ const Heading = styled.h1`
 
 const Title = ({ children }) => {
   const { script } = useContext(ServiceContext);
-  return <Heading script={script}>{children}</Heading>;
+  return (
+    <Heading script={script} id="content" tabIndex="-1">
+      {children}
+    </Heading>
+  );
 };
 
 Title.propTypes = {
