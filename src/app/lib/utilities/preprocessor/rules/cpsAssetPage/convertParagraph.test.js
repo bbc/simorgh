@@ -2,7 +2,7 @@ import convertParagraph from './convertParagraph';
 import { optimoText } from './helpers';
 
 describe('convertParagraph', () => {
-  it('should convert a plain_text paragraph to Optimo format', () => {
+  it('should convert a plain_text paragraph to Optimo format', async () => {
     const input = {
       text: 'A plain text paragraph',
       markupType: 'plain_text',
@@ -20,10 +20,10 @@ describe('convertParagraph', () => {
       },
     ]);
 
-    expect(convertParagraph(input)).toEqual(expected);
+    expect(await convertParagraph(input)).toEqual(expected);
   });
 
-  it('should convert a candy_xml paragraph to Optimo format', () => {
+  it('should convert a candy_xml paragraph to Optimo format', async () => {
     const input = {
       text: 'A paragraph with <bold>bold text</bold>',
       markupType: 'candy_xml',
@@ -45,6 +45,6 @@ describe('convertParagraph', () => {
       },
     ]);
 
-    expect(convertParagraph(input)).toEqual(expected);
+    expect(await convertParagraph(input)).toEqual(expected);
   });
 });

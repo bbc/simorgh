@@ -2,7 +2,7 @@ import convertToOptimoBlocks from './convertToOptimoBlocks';
 import { optimoText } from './helpers';
 
 describe('convertToOptimoBlocks', () => {
-  it('should convert CPS data into Optimo format', () => {
+  it('should convert CPS data into Optimo format', async () => {
     const input = {
       content: {
         blocks: [
@@ -55,10 +55,10 @@ describe('convertToOptimoBlocks', () => {
       },
     };
 
-    expect(convertToOptimoBlocks(input)).toEqual(expected);
+    expect(await convertToOptimoBlocks(input)).toEqual(expected);
   });
 
-  it('should return an empty array if blocks is an empty array', () => {
+  it('should return an empty array if blocks is an empty array', async () => {
     const input = {
       content: {
         blocks: [],
@@ -72,10 +72,10 @@ describe('convertToOptimoBlocks', () => {
       },
     };
 
-    expect(convertToOptimoBlocks(input)).toEqual(expected);
+    expect(await convertToOptimoBlocks(input)).toEqual(expected);
   });
 
-  it('should return an empty array if block does not have a type', () => {
+  it('should return an empty array if block does not have a type', async () => {
     const input = {
       content: {
         blocks: [
@@ -94,6 +94,6 @@ describe('convertToOptimoBlocks', () => {
       },
     };
 
-    expect(convertToOptimoBlocks(input)).toEqual(expected);
+    expect(await convertToOptimoBlocks(input)).toEqual(expected);
   });
 });
