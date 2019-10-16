@@ -1,0 +1,4584 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureIndexMain snapshots should render an afrique feature index correctly 1`] = `
+.c31 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c34 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c8 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c3 {
+  position: relative;
+  margin-top: 2rem;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c21 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+}
+
+.c23 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c23:first-child {
+  padding-top: 0;
+}
+
+.c23:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c22 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c24 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c15 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c17 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c19 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c28 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c16 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c26 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c18 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c18:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c18:hover,
+.c18:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c18:visited {
+  color: #6E6E73;
+}
+
+.c20 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c33 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c13 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c14 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c29 {
+  padding: 0.5rem 0.25rem;
+  background-color: #FFFFFF;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #222222;
+  height: 2rem;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c32 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+}
+
+.c9 {
+  margin-top: 0.5rem;
+}
+
+.c2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  display: inline-block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  color: #222222;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c23 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c23:first-child {
+    padding-top: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: 33.33%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: block;
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c24 {
+    width: 33.33%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c24 {
+    display: block;
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:25rem) {
+  .c25 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c28 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c28 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c28 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    width: 50%;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c16 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c16 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c26 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c26 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c29 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:25rem) {
+  .c9 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c2 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-top: 2rem;
+  }
+}
+
+<html
+  dir="ltr"
+  lang="fr"
+>
+  <head>
+    <title>
+      Tout savoir sur la CAN 2019 - BBC News Ìgbò
+    </title>
+    <link
+      href="http://localhost/pathname"
+      rel="canonical"
+    />
+    <link
+      href="http://localhost/pathname"
+      hreflang="ig"
+      rel="alternate"
+    />
+    <link
+      href="http://localhost/pathname.amp"
+      rel="amphtml"
+    />
+    <link
+      href="/igbo/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="application-name"
+    />
+    <meta
+      content="La Coupe d'Afrique des nations, compétition de football la plus importante dans le continent, se joue en Egypte du 21 juin au 19 juillet 2019."
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="La Coupe d'Afrique des nations, compétition de football la plus importante dans le continent, se joue en Egypte du 21 juin au 19 juillet 2019."
+      name="og:description"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="og:image:alt"
+    />
+    <meta
+      content="ig"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="og:site_name"
+    />
+    <meta
+      content="Tout savoir sur la CAN 2019 - BBC News Ìgbò"
+      name="og:title"
+    />
+    <meta
+      content="website"
+      name="og:type"
+    />
+    <meta
+      content="http://localhost/pathname"
+      name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="La Coupe d'Afrique des nations, compétition de football la plus importante dans le continent, se joue en Egypte du 21 juin au 19 juillet 2019."
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="Tout savoir sur la CAN 2019 - BBC News Ìgbò"
+      name="twitter:title"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"WebPage","url":"http://localhost/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost/pathname","name":"Tout savoir sur la CAN 2019"}}
+    </script>
+  </head>
+  <body>
+    <div>
+      <noscript />
+      <div>
+        chartbeat
+      </div>
+      <main
+        role="main"
+      >
+        <div
+          class="c0"
+        >
+          <div
+            class="c1"
+          >
+            <h1
+              class="c2"
+            >
+              Tout savoir sur la CAN 2019
+            </h1>
+            <section
+              aria-labelledby="Lead-Feature"
+              role="region"
+            >
+              <div
+                class="c3"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Lead-Feature"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <div
+                class="c9"
+              >
+                <div
+                  class="c10"
+                >
+                  <div
+                    class="c11"
+                  >
+                    <div
+                      class="c12"
+                    >
+                      <div
+                        class="c13"
+                      >
+                        <img
+                          alt="CAN 2019 : le Sénégal en huitième de finale"
+                          class="c14"
+                          sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
+                          src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
+                          srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 624w"
+                          width="976"
+                        />
+                      </div>
+                      <div
+                        class="c15"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="c16"
+                  >
+                    <h3
+                      class="c17"
+                    >
+                      <a
+                        class="c18"
+                        href="/afrique/sports-48835428"
+                      >
+                        CAN 2019 : le Sénégal qualifié pour les huitièmes de finale
+                      </a>
+                    </h3>
+                    <p
+                      class="c19"
+                    >
+                      Vainqueur du Kenya (0-3) grâce à un but de Sarr (63') et un doublé de Mané (71', 78'), le Sénégal se qualifie pour les huitièmes de finale de la compétition.
+                    </p>
+                    <time
+                      class="c20"
+                      datetime="1970-01-19"
+                    >
+                      19 Jenụwarị 1970
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              aria-labelledby="Container-Top-Stories"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Container-Top-Stories"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48833323"
+                        >
+                          CAN 2019 : le Maroc termine premier de son groupe
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Mais malgré le score impressionnant de la Côte d'Ivoire, les Lions de l'Atlas terminent premier du groupe D.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48616674"
+                        >
+                          Ces pays qui ont failli organiser la CAN
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Ébola, insécurité, manque d'infrastructures, voici les raisons qui ont empêché certains pays d'organiser la Coupe d'Afrique des nations.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48730746"
+                        >
+                          La RDC, le "fimbu" accroché aux godasses
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        L'équipe de football de la RDC porte son charme par son style de jeu mais aussi par sa fameuse marque "fimbu na fimbu", le "fouet" administré à l'adversaire.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48749028"
+                        >
+                          CAN 2019 : Peut-on encore parler d'équipes africaines ?
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les équipes africaines sont-elles en voie de disparition ? Le souffle de la mondialisation est passé par là et n'a pas épargné la composition des sélections nationales africaines.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section
+              aria-labelledby="WatchListen"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="WatchListen"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c31"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 32 32"
+                                width="12px"
+                              >
+                                <polygon
+                                  points="3,32 29,16 3,0"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT46S"
+                              >
+                                0:46
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/media-48811974"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Vidio
+                              , 
+                            </span>
+                            <span>
+                              "Qu’il pleuve ou qu’il neige, comptez sur nous"
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 0,46
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Blandine, une jeune Béninoise, supportrice infatigable de l’équipe nationale senior de football de son pays, appelle les Écureuils du Bénin à faire des efforts à la CAN 2019 et à compter sur le soutien de leur public.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c31"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 32 32"
+                                width="12px"
+                              >
+                                <polygon
+                                  points="3,32 29,16 3,0"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT4M31S"
+                              >
+                                4:31
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48202775"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Vidio
+                              , 
+                            </span>
+                            <span>
+                              "Nous n'avons plus peur de Madrid ou Juventus"
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 4,31
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        André Onana, gardien de but de la sélection Camerounaise et du club de football néerlandais Ajax Amsterdam, nous donne le secret de son succès et de celui de son équipe.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c31"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 32 32"
+                                width="12px"
+                              >
+                                <polygon
+                                  points="3,32 29,16 3,0"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT1M52S"
+                              >
+                                1:52
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48759213"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Vidio
+                              , 
+                            </span>
+                            <span>
+                              Dans le vestiaire ghanéen avec Christian Atsu
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 1,52
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        L'international ghanéen, Christian Atsu, se livre au jeu des questions-réponses et nous permet de découvrir ses coéquipiers de l'intérieur.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c34"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 13 12"
+                                width="13px"
+                              >
+                                <path
+                                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                                />
+                                <path
+                                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT4M33S"
+                              >
+                                4:33
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48821711"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Ọdịyo
+                              , 
+                            </span>
+                            <span>
+                              "Le fossé se réduit entre les petites et les grandes nations de football"
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 4,33
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Saer Seck, président de la ligue de football professionnelle du Sénégal revient sur le niveau de la Can 2019 et celui du football africain en général.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c31"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 32 32"
+                                width="12px"
+                              >
+                                <polygon
+                                  points="3,32 29,16 3,0"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT1M2S"
+                              >
+                                1:02
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48724012"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Vidio
+                              , 
+                            </span>
+                            <span>
+                              CAN 2019 : les fans mauritaniens sont prêts !
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 1,02
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        La Mauritanie jouera pour la première fois lors d'une phase finale de cette compétition. A quelques heures de l'ouverture de la CAN, ses fans se disent confiants.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c31"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 32 32"
+                                width="12px"
+                              >
+                                <polygon
+                                  points="3,32 29,16 3,0"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT4M45S"
+                              >
+                                4:45
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48449814"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Vidio
+                              , 
+                            </span>
+                            <span>
+                              Quand le village de Sadio Mané le regarde jouer
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 4,45
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Le village de Bambali vibre à chaque match de l'enfant prodige, devenu joueur du club anglais de Liverpool, en Premier League anglaise.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c31"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 32 32"
+                                width="12px"
+                              >
+                                <polygon
+                                  points="3,32 29,16 3,0"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT2M25S"
+                              >
+                                2:25
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48480111"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Vidio
+                              , 
+                            </span>
+                            <span>
+                              Faneva Andriatsima, tout 1er capitaine de Madagascar à une CAN
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 2,25
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        L'attaquant de Clermont Foot, en France, a intégré la sélection nationale il y a une dizaine d'année alors qu'elle était alors au plus bas.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c31"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 32 32"
+                                width="12px"
+                              >
+                                <polygon
+                                  points="3,32 29,16 3,0"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT2M48S"
+                              >
+                                2:48
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48724015"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Vidio
+                              , 
+                            </span>
+                            <span>
+                              CAN 2019 : bientôt la coupe pour le Sénégal ?
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 2,48
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Pourquoi les Lions de la Téranga n’ont jamais remporté la CAN. Yatma Diop, ancien international sénégalais en parle.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section
+              aria-labelledby="Standalone-Other-Top-Stories"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Standalone-Other-Top-Stories"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48818671"
+                        >
+                          Madagascar s'offre un 8e historique
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Baréas de Madagascar, qui disputent leur première Coupe d'Afrique des nations, se sont qualifiés pour les huitièmes de finale après leur succès face au Nigeria, 2-0.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48811982"
+                        >
+                          Le Cameroun bien placé, le Ghana et le Bénin en embuscade
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Lions indomptables du Cameroun, tenants du titre tenus en échec par le Ghana, 0 à 0, restent en tête du groupe F avec quatre points.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48818672"
+                        >
+                          Six pays qualifiés pour les 8èmes de finale de la CAN 2019
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Après la fin de la troisième journée dans les groupes A et B, dimanche, l'Égypte et l'Ouganda (groupe A), le Nigeria et Madagascar (groupe B), l'Algérie (groupe C) et le Maroc (groupe D) se sont qualifiés pour le prochain tour.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section
+              aria-labelledby="Guides-1"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Guides-1"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48811979"
+                        >
+                          CAN 2019 : pour les huitièmes, le Cameroun va encore attendre
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Lions indomptables du Cameroun devront encore attendre leur dernier match de poule pour se qualifier. Les Black Stars du Ghana, eux, doivent forcément gagner le prochain match pour rester dans la compétition.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48811978"
+                        >
+                          Le Mali en tête du groupe E
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Le Mali a confortablement pris la première place du groupe E de la Coupe d'Afrique des nations (CAN) après son nul face à la Tunisie (1-1), vendredi, et le score vierge (0-0) entre la Mauritanie et l'Angola, samedi.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/48781656"
+                        >
+                          CAN 2019 : les Égyptiens s'imposent face aux Léopards
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        L'Egypte a remporté contre la RD Congo (2-0) son deuxième match du groupe A et se qualifie pour les huitièmes.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48806246"
+                        >
+                          CAN 2019 : La Tunisie et le Mali se séparent sur un score nul
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les deux équipes du Groupe E n'ont pas pu se départager et ont terminé sur le score d'1 but partout au Stade de l'Armée de Suez.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48806247"
+                        >
+                          CAN 2019 : Le Maroc bat la Cote d'ivoire et se qualifie en huitièmes de finale
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Lions de l'Atlas ont fait preuve de réalisme face aux Eléphants.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section
+              aria-labelledby="Guides-2"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Guides-2"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48749032"
+                        >
+                          CAN 2019 : la réintégration de l'égyptien Warda ne fait pas l'unanimité
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Après des accusations d'harcèlement sexuel, le milieu de terrain a été réintégré aux côtés des Pharaons, une décision qui fait polémique.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48793950"
+                        >
+                          CAN 2019 : Madagascar tout près des huitièmes
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Baréas de Madagascar signent leur première victoire en phase finale d'une CAN, devant le Burundi, 1-0.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48791240"
+                        >
+                          Sénégal-Algérie, un duel Sadio Mané-Riyad Mahrez
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Le match entre les Lions du Sénégal et les Fennecs d'Algérie prévu ce jeudi à 17 h GMT oppose deux des plus célèbres joueurs du continent et deux footballeurs de la Premier League.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48776939"
+                        >
+                          CAN 2019 : l'Ouganda très proche des huitièmes
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        L'Ouganda et le Zimbabwe se sont séparés sur un match nul, 1-1.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/media-48776937"
+                        >
+                          Le Nigeria, la première équipe en huitièmes de finale
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Super Eagles se sont qualifiés pour les huitièmes de finale de la Coupe d'Afrique des nations 2019 grâce à leur victoire contre la Guinée, 1-0.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section
+              aria-labelledby="Guides-3"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Guides-3"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48766671"
+                        >
+                          CAN 2019 : un bon début pour le Cameroun
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Lions indomptables, tenants du titre, ont réussi leur entrée dans la CAN en s'imposant face à la Guinée-Bissau, 2-0.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48821710"
+                        >
+                          CAN 2019: la RDC s'impose face au Zimbabwe (4-0)
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Victoire de la RD Congo face au Zimbabwe ce dimanche 30 juin (4-0) lors du troisième et dernier match de poule dans le groupe A.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48639468"
+                        >
+                          Can 2019 : programme des matchs
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Voici le programme des matchs de la Coupe d'Afrique des nations de football.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48580780"
+                        >
+                          CAN 2019 : deuxième participation de la Guinée Bissau
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Après 2017, la sélection a réussi à se qualifier une seconde fois pour une phase finale de la Coupe d'Afrique des nations.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section
+              aria-labelledby="Standalone-Topic-Cluster"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Standalone-Topic-Cluster"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48177239"
+                        >
+                          CAN 2019 : tout savoir des Aigles du Mali
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        La sélection n'a jamais remporté la Coupe d'Afrique des nations et n'a pas pu dépasser le premier tour lors des deux dernières éditions de la compétition.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/region-48070784"
+                        >
+                          CAN 2019 : Namibie, passer le cap du premier tour
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        La Namibie n'a jamais accédé au second tour d'une phase finale de la CAN; un défi qu'elle doit relever.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48580779"
+                        >
+                          CAN 2019 : L’Afrique du Sud signe son retour
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Absent lors de la CAN 2017, les Bafana Bafana d’Afrique du Sud sont de retour dans la compétition.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section
+              aria-labelledby="Features-and-Analysis"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Features-and-Analysis"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48730747"
+                        >
+                          L'Ouganda à l'assaut des "fimbu" de la RDC
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        L'équipe d'Ouganda de football s'est qualifiée à la CAN 2019 dès la 5e journée des éliminatoires sans prendre le moindre but.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c29"
+                          >
+                            <div
+                              class="c30"
+                            >
+                              <svg
+                                class="c31"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 32 32"
+                                width="12px"
+                              >
+                                <polygon
+                                  points="3,32 29,16 3,0"
+                                />
+                              </svg>
+                              <time
+                                class="c32"
+                                datetime="PT4M11S"
+                              >
+                                4:11
+                              </time>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48312305"
+                        >
+                          <span
+                            role="text"
+                          >
+                            <span
+                              class="c33"
+                            >
+                              Vidio
+                              , 
+                            </span>
+                            <span>
+                              Jeremy Morel, l'international malgache qui renoue avec ses racines
+                            </span>
+                            <span
+                              class="c33"
+                            >
+                              , 4,11
+                            </span>
+                          </span>
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Le joueur de l'Olympique Lyonnais jouera la première Coupe d'Afrique des nations avec son pays, Madagascar, un véritable retour aux sources pour ce footballeur vivant en France.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48340393"
+                        >
+                          CAN 2019 : le retour des Ecureuils
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Avec trois participations à la Coupe d'Afrique des nations, le Bénin ne sera pas intimidé lors de cette édition de la Coupe d'Afrique des nations.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48526271"
+                        >
+                          CAN 2019 : réitérer l’exploit de 2004 pour la Tunisie
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Depuis 2004, l’année de sa victoire, la Tunisie n’a plus dépassé les quarts de finale.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48435065"
+                        >
+                          CAN 2019 : le Maroc, l'un des favoris
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        C'est l'une des équipes qui intéressent beaucoup ceux qui suivent la CAN mais qui doit mouiller le maillot pour atteindre à nouveau le sommet de cette compétition.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/region-48070786"
+                        >
+                          CAN 2019 : Angola, en quête d'une place sur le podium
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Palancas Negras sont des habituées de la Coupe d'Afrique des nations mais il doivent encore accrocher une place dans le tiercé de tête.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48561859"
+                        >
+                          CAN 2019 : Cameroun, rester roi d’Afrique
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Privé de l’organisation de la CAN 2019, le Cameroun ne renonce pas à son but principal : "rester roi d’Afrique".
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48435068"
+                        >
+                          CAN 2019 : Tanzanie, le retour !
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        La sélection revient à la Coupe d'Afrique des nations après 39 ans d'absence.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section
+              aria-labelledby="Feature-Digest"
+              role="region"
+            >
+              <div
+                class="c21"
+              >
+                <div
+                  class="c4"
+                />
+                <h2
+                  class="c5"
+                >
+                  <div
+                    class="c6"
+                  >
+                    <span
+                      class="c7"
+                    >
+                      <span
+                        class="c8"
+                        dir="ltr"
+                        id="Feature-Digest"
+                      >
+                        Feature Index
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <ul
+                class="c22"
+                role="list"
+              >
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48177237"
+                        >
+                          Can 2019 : l'Algérie, une équipe à surveiller de près
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Cette sélection qui a participé plusieurs fois à la Coupe du monde et remporté une fois la CAN, sera une menace pour plusieurs lors de cette édition de la Coupe d'Afrique des nations.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48177238"
+                        >
+                          Can 2019 : la Guinée face aux nouveaux venus
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Que nous réserve cette sélection qui n'a pas joué la phase finale de la Can en 2017 mais qui a déjà fait des exploits dans cette compétition il y a des dizaines d'années.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/region-48556147"
+                        >
+                          CAN 2019 : la Côte d’Ivoire à l’assaut d’un 3ème trophée
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les éléphants veulent retrouver les heures de gloire de la génération Drogba.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48435069"
+                        >
+                          CAN 2019 : Le Kenya face à un défi
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Les Kényans n'ont jamais franchi le premier tour de la Coupe d'Afrique des nations.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48340389"
+                        >
+                          Cinq choses à savoir sur les Lions du Sénégal
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Le Sénégal fait partie des équipes les plus habituées à jouer la Coupe d'Afrique des nations, et ses joueurs ne déméritent pas.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/region-48070783"
+                        >
+                          CAN 2019 : Burundi, une sélection à suivre de près
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        La sélection burundaise fait son baptême du feu en phase finale de la Coupe d'Afrique des nations.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48435066"
+                        >
+                          CAN 2019 : Le Nigeria, un poids lourd
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Le Nigéria est l'une des sélections majeures du continent africain. Dans le groupe B, les Nigérians feront face au Burundi, à la Guinée et à Madagascar.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48435067"
+                        >
+                          CAN 2019 : les premiers pas de Madagascar
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        La sélection fait partie de celles qui joueront leur toute première Coupe d'Afrique des nations, un défi pour l'entraîneur Nicolas Dupuis.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48340390"
+                        >
+                          CAN 2019 : l'Égypte, le plus titré du continent
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Le pays hôte de la Coupe d'Afrique des nations est l'une des équipes les plus performantes d'Afrique.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48177241"
+                        >
+                          CAN 2019 : à la rencontre des Léopards de la RDC
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Quelques éléments à connaitre sur cette équipe, considérée par certains experts sportifs comme une sélection "à craindre" en début de compétition.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48340392"
+                        >
+                          CAN 2019 : la Mauritanie, l'un des novices du tournoi
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        L'équipe nationale mauritanienne s'est qualifiée pour la première fois à une phase finale de la Coupe d'Afrique des nations.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-48177240"
+                        >
+                          Can 2019 : l'Ouganda, à quand la fin de la traversée du désert?
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        La sélection devra travailler assidument de manière à délivrer de meilleurs résultats que lors de la précédente CAN.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/region-48070785"
+                        >
+                          CAN 2019 : Zimbabwe, vaincre la malédiction du premier tour
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        En trois participations à la CAN, l'équipe nationale du Zimbabwe n'a jamais réussi à dépasser le premier tour de la compétition.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="c23"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
+                        <div
+                          class="c25"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="c26"
+                    >
+                      <h3
+                        class="c27"
+                      >
+                        <a
+                          class="c18"
+                          href="/afrique/sports-47873312"
+                        >
+                          Les poules de la CAN 2019 connues
+                        </a>
+                      </h3>
+                      <p
+                        class="c28"
+                      >
+                        Le tirage au sort de la 32e Coupe d'Afrique des nations (CAN) a eu lieu vendredi 12 avril 2019, près du Caire, la capitale égyptienne.
+                      </p>
+                      <time
+                        class="c20"
+                        datetime="1970-01-19"
+                      >
+                        19 Jenụwarị 1970
+                      </time>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shape } from 'prop-types';
 import compose from 'ramda/src/compose';
-import frontPagePropTypes from '#models/propTypes/frontPage';
+import featureIndexPropTypes from '#models/propTypes/featureIndex';
 import FeatureIndexMain from '../FeatureIndexMain';
 
 import withContexts from '../PageHandlers/withContexts';
@@ -15,7 +15,7 @@ const FeatureIndexContainer = ({ pageData }) => (
 );
 
 FeatureIndexContainer.propTypes = {
-  pageData: shape(frontPagePropTypes),
+  pageData: shape(featureIndexPropTypes),
 };
 
 FeatureIndexContainer.defaultProps = {

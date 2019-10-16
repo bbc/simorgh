@@ -2,6 +2,7 @@ import routes from './index';
 import { cpsAssetPageRegexPath } from './regex';
 
 jest.mock('../containers/FrontPage', () => jest.fn());
+jest.mock('../containers/FeatureIndex', () => jest.fn());
 jest.mock('../containers/RadioPage', () => jest.fn());
 jest.mock('../containers/CpsAssetPage', () => jest.fn());
 
@@ -47,6 +48,7 @@ describe('Routes', () => {
 
     const mediaPage = jest.requireMock('../containers/CpsAssetPage');
     const frontPage = jest.requireMock('../containers/FrontPage');
+    const featureIndex = jest.requireMock('../containers/FeatureIndex');
 
     it('should route to CpsAssetPage component', () => {
       const data = generateFixtureData('MAP');
@@ -56,12 +58,12 @@ describe('Routes', () => {
       expect(frontPage).not.toHaveBeenCalled();
     });
 
-    it('should route to FrontPage component', () => {
+    it('should route to FeatureIndex component', () => {
       const data = generateFixtureData('FIX');
       Component(data);
 
       expect(mediaPage).not.toHaveBeenCalled();
-      expect(frontPage).toHaveBeenCalled();
+      expect(featureIndex).toHaveBeenCalled();
     });
   });
 });

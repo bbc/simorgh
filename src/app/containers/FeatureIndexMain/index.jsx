@@ -1,7 +1,6 @@
-/* eslint-disable jsx-a11y/aria-role */
 import React from 'react';
 import path from 'ramda/src/path';
-import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
+import { featureIndexDataPropTypes } from '#models/propTypes/featureIndex';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
@@ -27,15 +26,14 @@ const FeatureIndexMain = ({ featureIndexData }) => {
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <main role="main">
-        <h1>{title}</h1>
-        <StoryPromoGroups groups={groups} />
+        <StoryPromoGroups groups={groups} title={title} />
       </main>
     </>
   );
 };
 
 FeatureIndexMain.propTypes = {
-  featureIndexData: frontPageDataPropTypes.isRequired,
+  featureIndexData: featureIndexDataPropTypes.isRequired,
 };
 
 export default FeatureIndexMain;

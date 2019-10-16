@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureIndex Component Composing the Feature Index Container using the page handlers should compose FeatureIndex with the Page Handler in the correct order 1`] = `
+<div>
+  FeatureIndexMain
+</div>
+`;

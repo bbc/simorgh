@@ -235,6 +235,10 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   visibility: visible;
 }
 
+.c6 {
+  margin-top: 0.5rem;
+}
+
 @media (min-width:37.5rem) {
   .c4 {
     -webkit-align-items: stretch;
@@ -508,6 +512,12 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   .c19 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6 {
+    margin-top: 1rem;
   }
 }
 
@@ -1356,6 +1366,10 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   visibility: visible;
 }
 
+.c6 {
+  margin-top: 0.5rem;
+}
+
 @media (min-width:37.5rem) {
   .c4 {
     -webkit-align-items: stretch;
@@ -1521,6 +1535,12 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   .c17 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6 {
+    margin-top: 1rem;
   }
 }
 
