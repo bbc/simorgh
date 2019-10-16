@@ -27,13 +27,13 @@ const convertToOptimoBlocks = async jsonRaw => {
   const json = clone(jsonRaw);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
-  const parsedBlocks = blocks.map(parseBlockByType);
+  const parsedBlocks = await Promise.all(blocks.map(parseBlockByType));
 
   return {
     ...json,
     content: {
       model: {
-        blocks: await Promise.all(parsedBlocks),
+        blocks: parsedBlocks.filter(Boolean),
       },
     },
   };
