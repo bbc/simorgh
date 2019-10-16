@@ -1,7 +1,9 @@
 import loadable from '@loadable/component';
 
 const richTextTransforms = loadable(() =>
-  import('@bbc/psammead-rich-text-transforms'),
+  import(
+    /* webpackChunkName: 'rich-text-transforms' */ '@bbc/psammead-rich-text-transforms'
+  ),
 );
 
 const convertParagraph = async block => {
