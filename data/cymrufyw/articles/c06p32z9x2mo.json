@@ -7,9 +7,9 @@
     "type": "article",
     "createdBy": "Cymrufyw",
     "language": "cy",
-    "lastUpdated": 1563022053853,
+    "lastUpdated": 1571059200691,
     "firstPublished": 1563022049359,
-    "lastPublished": 1563022049359,
+    "lastPublished": 1570805332046,
     "options": {},
     "analyticsLabels": {},
     "passport": {
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Tour de France: Geraint Thomas yn codi i'r pumed safle",
+                        "text": "Dyma bennawd yr erthygl brawf yma",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Tour de France: Geraint Thomas yn codi i'r pumed safle",
+                              "text": "Dyma bennawd yr erthygl brawf yma",
                               "attributes": []
                             }
                           }
@@ -58,108 +65,336 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Map o Ffrainc yn dangos Paris a Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Map o Ffrainc yn dangos Paris a Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "434d/test/2dd9efb0-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Mae Geraint Thomas wedi codi i'r pumed safle yn y Tour de France ar ôl gorffen cymal mynyddig cyntaf ras eleni yn gryf mewn diweddglo dramatig.",
+                  "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen dywydd y BBC",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Mae Geraint Thomas wedi codi i'r pumed safle yn y Tour de France ar ôl gorffen cymal mynyddig cyntaf ras eleni yn gryf mewn diweddglo dramatig.",
+                        "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "dywydd y BBC",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "dywydd y BBC",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "Daeth enillydd y llynedd yn bedwerydd ar ran Tîm Ineos yn y chweched cymal ddydd Iau - cymal a gafodd ei ennill gan Dylan Teuns.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "Daeth enillydd y llynedd yn bedwerydd ar ran Tîm Ineos yn y chweched cymal ddydd Iau - cymal a gafodd ei ennill gan Dylan Teuns.",
-                        "attributes": []
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Dyma flwch ar gyfer is-bennawd",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Dyma flwch ar gyfer is-bennawd",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Pêl-droedwyr ar ôl y gêm",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Pêl-droedwyr ar ôl y gêm",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "Mae Thomas bellach 49 eiliad y tu ôl i arweinydd newydd y ras, Guilio Ciccone.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Mae Thomas bellach 49 eiliad y tu ôl i arweinydd newydd y ras, Guilio Ciccone.",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 2048,
+                  "height": 1152,
+                  "locator": "c761/test/bc387830-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Dechreuodd Thomas y cymal yn y seithfed safle, 45 eiliad y tu ôl i Julian Alaphillippe sydd bellach wedi llithro i'r ail safle yn y tabl.",
+                  "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Dechreuodd Thomas y cymal yn y seithfed safle, 45 eiliad y tu ôl i Julian Alaphillippe sydd bellach wedi llithro i'r ail safle yn y tabl.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Wedi ymdrech arwrol fe lwyddodd y Cymro i groesi'r llinell derfyn ddwy eiliad o flaen Alaphillipe a'i gyd-Ffrancwr, Thibaut Pinot.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Wedi ymdrech arwrol fe lwyddodd y Cymro i groesi'r llinell derfyn ddwy eiliad o flaen Alaphillipe a'i gyd-Ffrancwr, Thibaut Pinot.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Dywedodd Thomas fod \"angen bod yn amyneddgar\" i ymdopi â'r llethr serth ar ddiwedd y cymal yn La Planche des Belles Filles.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Dywedodd Thomas fod \"angen bod yn amyneddgar\" i ymdopi â'r llethr serth ar ddiwedd y cymal yn La Planche des Belles Filles.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Roedd Alaphillipe wedi codi gêr tua'r diwedd mewn ymgais i gadw gafael ar y crys melyn, ond dywedodd y Cymro bod ganddo'r \"hyder i adael iddo fynd\" a mynd ati i'w basio gyda 350 medr i fynd.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Roedd Alaphillipe wedi codi gêr tua'r diwedd mewn ymgais i gadw gafael ar y crys melyn, ond dywedodd y Cymro bod ganddo'r \"hyder i adael iddo fynd\" a mynd ati i'w basio gyda 350 medr i fynd.",
+                        "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
                         "attributes": []
                       }
                     }
@@ -174,13 +409,13 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Tour de France: Geraint Thomas yn codi i'r pumed safle"
+      "seoHeadline": "Dyma bennawd SEO yr erthygl brawf yma"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo"
     },
     "summary": "",
-    "timestamp": 1563022049359,
+    "timestamp": 1570805332046,
     "id": "urn:bbc:ares::article:c06p32z9x2mo",
     "type": "cps"
   },
