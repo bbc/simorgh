@@ -12,17 +12,18 @@ export const buildCPSATIParams = (pageData, requestContext, serviceContext) => {
 
   const { metadata, promo } = pageData;
 
-  // ATI gets it's "Chapter 1" value from a prefix to the page identifier
-  // eg embedded_media::pidgin.embedded_media.media_asset.49529724.page
+  const getChapter1 = pageIdentifier => pageIdentifier.split('.')[1];
+
   const page = path(['analyticsLabels', 'counterName'], metadata);
   const isValidPage = page && typeof page === 'string' && page.includes('.');
-  const chapter1 = isValidPage && page.split('.')[1];
+  const chapter1 = isValidPage ? getChapter1(page) : false;
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: metadata.id,
+    contentId: path(['id'], metadata),
     contentType: 'article-media-asset',
-    language: metadata.language,
+    language: path(['language'], metadata),
+    // Example page identifier: embedded_media::pidgin.embedded_media.media_asset.49529724.page
     pageIdentifier: chapter1 ? `${chapter1}::${page}` : page,
     pageTitle: path(['headlines', 'headline'], promo),
     timePublished: getPublishedDatetime('firstPublished', pageData),
