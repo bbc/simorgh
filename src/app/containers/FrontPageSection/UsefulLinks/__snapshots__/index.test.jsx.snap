@@ -56,6 +56,12 @@ exports[`Useful links should render multiple correctly 1`] = `
   }
 }
 
+@media (max-width:37.4375rem) {
+  .c2:first-child {
+    padding-top: 0;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c2 {
     display: inline-block;
