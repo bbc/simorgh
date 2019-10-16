@@ -36,7 +36,14 @@ module.exports = (shell = {}) => {
     devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
     resolve: {
       extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
-      alias: webpackDirAlias,
+      alias: {
+        ...webpackDirAlias,
+        /*
+           This is needed to avoid multiple versions of isarray in multiple chunks.
+           It tells it to use a single version, in a single location.
+        */
+        isarray: path.resolve(__dirname, 'node_modules/isarray'),
+      },
     },
     devServer: {
       stats,
