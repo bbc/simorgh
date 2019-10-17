@@ -86,7 +86,6 @@
     "compression": "^1.7.4",
     "core-js": "^3.2.1",
     "dotenv": "^8.1.0",
-    "es6-promise": "^4.2.8",
     "express": "^4.17.1",
     "express-static-gzip": "^2.0.5",
     "gnu-terry-pratchett": "0.0.2",
@@ -107,7 +106,6 @@
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.0.1",
     "styled-components": "^4.4.0",
-    "styled-normalize": "^8.0.6",
     "uuid": "^3.3.3",
     "winston": "^3.2.1"
   },
