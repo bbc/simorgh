@@ -5,6 +5,7 @@ const depcheck = require('depcheck');
 const options = {
   specials: ['bin', 'eslint', 'jest', 'babel', 'webpack'],
   ignoreDirs: ['build'],
+  ignoreMatches: ['puppeteer'],
 };
 
 depcheck(
@@ -24,7 +25,6 @@ depcheck(
       return obj;
     }, {});
 
-    console.log('\n');
     console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
     console.log(missingFiltered);
 
