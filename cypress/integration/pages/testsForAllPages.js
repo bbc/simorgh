@@ -1,6 +1,6 @@
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
-import appConfig from '../../../src/testHelpers/serviceConfigs';
+import appConfig from '../../../src/server/utilities/serviceConfigs';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
@@ -19,12 +19,15 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
   describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
-        const resources = [
-          envConfig.assetOrigin,
-          'https://ichef.bbci.co.uk',
-          'https://gel.files.bbci.co.uk',
-          'https://ws-downloads.files.bbci.co.uk',
-        ];
+        const resources = [envConfig.assetOrigin, 'https://ichef.bbci.co.uk'];
+        const serviceConfig = appConfig[service];
+        const { fonts } = serviceConfig[variant || 'default'];
+        if (fonts && fonts.length > 0) {
+          resources.push(
+            'https://gel.files.bbci.co.uk',
+            'https://ws-downloads.files.bbci.co.uk',
+          );
+        }
 
         resources.forEach(resource => {
           const selector = `head link[href="${resource}"]`;

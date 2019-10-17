@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import services from '#testHelpers/serviceConfigs';
+import services from '../../../../server/utilities/serviceConfigs';
 
 /*
  * This file is mocked by default to avoid having to handle
