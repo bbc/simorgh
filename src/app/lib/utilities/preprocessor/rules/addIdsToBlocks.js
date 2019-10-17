@@ -44,6 +44,6 @@ const addIdsToBlocks = async jsonRaw =>
     mapIdsToBlocks,
     getBlocks,
     getJsonContent,
-  )(await jsonRaw);
+  )(await jsonRaw)(await jsonRaw);
 
 export default addIdsToBlocks;
