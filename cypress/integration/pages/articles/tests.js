@@ -161,15 +161,20 @@ export const testsThatFollowSmokeTestConfig = ({
         );
       });
 
-      // 1. Given that the page contains a media block (Video/Audio)
-      // 2. When the user hasn't interacted with the media block (Clicked)
-      // 3. Then the media block should contain a placeholder image that should be the same size as the iframe
-      it.only('should render a placeholder image within a media block, if it contains one', () => {
+      it.only('should render a placeholder image within a media block', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
-            const video = getBlockData('video', body);
-            const audio = getBlockData('audio', body);
-            console.log(video, audio);
+            // `video` blocks can also contain audio, so this
+            // test check both types have a placeholder image.
+            const media = getBlockData('video', body);
+            if (media) {
+              cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                cy.get('div[class^="StyledPlaceholder"] > img')
+                  .eq(0)
+                  .should('have.attr', 'src')
+                  .should('not.be.empty');
+              });
+            }
           },
         );
       });
