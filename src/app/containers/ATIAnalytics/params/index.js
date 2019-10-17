@@ -8,22 +8,22 @@ import {
 } from './frontpage/buildParams';
 import { buildRadioATIParams, buildRadioATIUrl } from './radioPage/buildParams';
 import {
-  buildCpsAssetATIParams,
-  buildCpsAssetATIUrl,
+  buildCpsAssetPageATIParams,
+  buildCpsAssetPageATIUrl,
 } from './cpsAssetPage/buildParams';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   frontPage: buildFrontPageATIUrl,
   media: buildRadioATIUrl,
-  MAP: buildCpsAssetATIUrl,
+  MAP: buildCpsAssetPageATIUrl,
 };
 
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   frontPage: buildFrontPageATIParams,
   media: buildRadioATIParams,
-  MAP: buildCpsAssetATIParams,
+  MAP: buildCpsAssetPageATIParams,
 };
 
 const createBuilderFactory = (requestContext, pageTypeHandlers = {}) => {

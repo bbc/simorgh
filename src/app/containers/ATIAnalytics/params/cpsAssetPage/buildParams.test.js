@@ -1,4 +1,7 @@
-import { buildCpsAssetATIParams, buildCpsAssetATIUrl } from './buildParams';
+import {
+  buildCpsAssetPageATIParams,
+  buildCpsAssetPageATIUrl,
+} from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
 
@@ -40,9 +43,9 @@ const expectation = {
   timeUpdated: analyticsUtils.getPublishedDatetime(),
 };
 
-describe('buildRadioATIParams', () => {
+describe('buildCpsAssetPageATIParams', () => {
   it('should return the right object', () => {
-    const result = buildCpsAssetATIParams(
+    const result = buildCpsAssetPageATIParams(
       payload,
       requestContext,
       serviceContext,
@@ -51,9 +54,13 @@ describe('buildRadioATIParams', () => {
   });
 });
 
-describe('buildCpsAssetATIUrl', () => {
+describe('buildCpsAssetPageATIUrl', () => {
   it('should return the right url', () => {
-    const result = buildCpsAssetATIUrl(payload, requestContext, serviceContext);
+    const result = buildCpsAssetPageATIUrl(
+      payload,
+      requestContext,
+      serviceContext,
+    );
     const campaignString = expectation.campaigns
       .filter(
         campaign =>

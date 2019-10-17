@@ -2,7 +2,7 @@ import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 
-export const buildCpsAssetATIParams = (
+export const buildCpsAssetPageATIParams = (
   pageData,
   requestContext,
   serviceContext,
@@ -41,12 +41,12 @@ export const buildCpsAssetATIParams = (
   };
 };
 
-export const buildCpsAssetATIUrl = (
+export const buildCpsAssetPageATIUrl = (
   pageData,
   requestContext,
   serviceContext,
 ) => {
   return buildATIPageTrackPath(
-    buildCpsAssetATIParams(pageData, requestContext, serviceContext),
+    buildCpsAssetPageATIParams(pageData, requestContext, serviceContext),
   );
 };
