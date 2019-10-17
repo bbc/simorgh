@@ -28,7 +28,10 @@ depcheck(
     }, {});
 
     console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
-    console.log(missingFiltered);
+    Object.keys(missingFiltered).forEach(key => {
+      console.log(key);
+      console.log(`\t${missingFiltered[key].join('\n\t')}`);
+    });
 
     if (dependencies.length > 0 || Object.keys(missingFiltered).length > 0) {
       process.exit(1);
