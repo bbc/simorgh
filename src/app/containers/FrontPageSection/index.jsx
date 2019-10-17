@@ -158,7 +158,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {group.strapline.name === 'Useful links' ? (
+      {group.semanticGroupName === 'Useful links' ? (
         <UsefulLinksComponent items={items} script={script} service={service} />
       ) : (
         <StoryPromoRenderer

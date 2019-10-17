@@ -220,6 +220,7 @@ const usefulLinks = {
   strapline: {
     name: 'Useful links',
   },
+  semanticGroupName: 'Useful links',
 };
 
 jest.mock('react', () => {
@@ -401,7 +402,7 @@ describe('FrontPageSection Container', () => {
       );
     });
 
-    it('should render useful links when the strapline name is "Useful links"', () => {
+    it('should render useful links when the semantic group name is "Useful links"', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
           <FrontPageSection group={usefulLinks} sectionNumber={1} />,
