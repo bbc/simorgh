@@ -180,7 +180,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = body.promo.summary;
                     title = body.promo.name;
                     break;
-                  case 'MAP':
+                  case 'mediaAssetPage':
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
