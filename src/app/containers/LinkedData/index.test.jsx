@@ -5,8 +5,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import LinkData from '.';
 
 // eslint-disable-next-line react/prop-types
-const Context = ({ children, service }) => (
-  <ServiceContextProvider service={service || 'news'}>
+const Context = ({ children }) => (
+  <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
@@ -67,13 +67,6 @@ describe('LinkData', () => {
     'should correctly render linked data for front pages',
     <Context>
       <LinkData {...propsForFrontpage} />
-    </Context>,
-  );
-
-  shouldMatchSnapshot(
-    'should correctly render linked data for article pages for service with no trust project markup',
-    <Context service="scotland">
-      <LinkData {...propsForArticle} />
     </Context>,
   );
 });

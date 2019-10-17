@@ -33,7 +33,6 @@ export const service = {
     twitterSite: '@bbcgahuza',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

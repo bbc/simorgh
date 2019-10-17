@@ -34,7 +34,6 @@ export const service = {
     twitterSite: '@bbctamil',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    isTrustProjectParticipant: true,
     script: tamil,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

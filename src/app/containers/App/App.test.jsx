@@ -47,7 +47,7 @@ describe('App', () => {
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
       bbcOrigin: 'https://www.bbc.co.uk',
       pageData: initialData.pageData,
-      error: undefined,
+      error: null,
       isAmp: false,
       loading: false,
       pageType: 'article',
@@ -84,9 +84,7 @@ describe('App', () => {
       });
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
-          route.getInitialData.mockImplementation(() =>
-            Promise.resolve({ pageData: null, status: null, error }),
-          );
+          route.getInitialData.mockImplementation(() => Promise.reject(error));
 
           await act(async () => {
             wrapper.setProps({ location: { pathname: 'pathnameTwo' } });
@@ -181,7 +179,7 @@ describe('App', () => {
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: data.pageData,
               status: data.status,
-              error: undefined,
+              error: null,
               id: undefined,
               isAmp: false,
               loading: false,

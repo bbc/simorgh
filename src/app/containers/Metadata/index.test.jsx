@@ -12,6 +12,9 @@ import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'https://foo.com';
+process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/static';
+
 const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
@@ -143,7 +146,7 @@ it('should render the apple touch icons', async () => {
   }));
   const expected = [
     {
-      href: 'http://localhost.bbc.com:7080/news/images/icons/icon-192x192.png',
+      href: 'https://foo.com/static/news/images/icons/icon-192x192.png',
       sizes: null,
     },
     {

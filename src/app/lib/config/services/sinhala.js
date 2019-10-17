@@ -37,7 +37,6 @@ export const service = {
     twitterSite: '@bbcsinhala',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    isTrustProjectParticipant: true,
     script: sinhalese,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

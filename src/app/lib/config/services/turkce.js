@@ -16,7 +16,7 @@ import 'moment/locale/tr';
 export const service = {
   default: {
     lang: `tr`,
-    articleAuthor: `https://www.facebook.com/bbcnews`,
+    articleAuthor: `https://www.facebook.com/pages/BBC-Turkce/230299653821`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
@@ -41,7 +41,6 @@ export const service = {
     twitterSite: '@bbcturkce',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

@@ -16,7 +16,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `es`,
-    articleAuthor: `https://www.facebook.com/bbcnews`,
+    articleAuthor: `https://www.facebook.com/bbcmundo`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
@@ -41,7 +41,6 @@ export const service = {
     twitterSite: '@bbcmundo',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

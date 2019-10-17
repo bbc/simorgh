@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import { node } from 'prop-types';
 
@@ -7,10 +8,8 @@ import { node } from 'prop-types';
 
 const IfAboveIE9 = ({ children }) => (
   <>
-    {/* eslint-disable-next-line react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: '<!--[if !IE]><!-->' }} />
     {children}
-    {/* eslint-disable-next-line react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: '<!--<![endif]-->' }} />
   </>
 );

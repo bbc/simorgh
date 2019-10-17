@@ -7,7 +7,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/afaanoromoo/articles/ce3nlgrelv1o'
+            ? undefined
             : '/afaanoromoo/articles/c4g19kgl85ko',
         smoke: false,
       },
@@ -43,7 +43,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/afrique/articles/cx80n852v6mo'
+            ? undefined
             : '/afrique/articles/cz216x22106o',
         smoke: false,
       },
@@ -161,7 +161,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/azeri/articles/cv0lm08kngmo'
+            ? undefined
             : '/azeri/articles/c5k08pqnzexo',
         smoke: false,
       },
@@ -306,7 +306,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/gahuza/articles/cryd02nzn81o'
+            ? undefined
             : '/gahuza/articles/cey23zx8wx8o',
         smoke: false,
       },
@@ -380,7 +380,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/hausa/articles/c41rj1z261zo'
+            ? undefined
             : '/hausa/articles/c2nr6xqmnewo',
         smoke: false,
       },
@@ -462,7 +462,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/igbo/articles/ckjn8jnrn75o'
+            ? undefined
             : '/igbo/articles/cr1lw620ygjo',
         smoke: false,
       },
@@ -492,7 +492,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/indonesia/articles/cvd36dly8zdo'
+            ? undefined
             : '/indonesia/articles/c0q2zq8pzvzo',
         smoke: false,
       },
@@ -876,7 +876,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/pidgin/articles/cgwk9w4zlg8o'
+            ? undefined
             : '/pidgin/articles/cwl08rd38l6o',
         smoke: false,
       },
@@ -998,7 +998,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/scotland/articles/cm49v4x1r9lo'
+            ? undefined
             : '/scotland/articles/czwj5l0n210o',
         smoke: true,
       },
@@ -1098,7 +1098,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/somali/articles/c8z79d4mzrlo'
+            ? undefined
             : '/somali/articles/cgn6emk3jm8o',
         smoke: false,
       },
@@ -1150,7 +1150,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/swahili/articles/cw794z3gpd5o'
+            ? undefined
             : '/swahili/articles/czjqge2jwn2o',
         smoke: false,
       },
@@ -1518,7 +1518,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/vietnamese/articles/cpgqngyexq7o'
+            ? undefined
             : '/vietnamese/articles/c3y59g5zm19o',
         smoke: false,
       },
@@ -1551,7 +1551,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? '/yoruba/articles/cg7qz71en35o'
+            ? undefined
             : '/yoruba/articles/clw06m0nj8qo',
         smoke: false,
       },

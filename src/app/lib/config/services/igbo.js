@@ -38,7 +38,6 @@ export const service = {
     fonts: [],
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
-    isTrustProjectParticipant: true,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated

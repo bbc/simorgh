@@ -12,9 +12,11 @@ describe('fetchData', () => {
   const mockFetchSuccess = () =>
     fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
 
-  const mockFetchFailure = () => fetch.mockReject(true);
+  const mockFetchFailure = () =>
+    fetch.mockReject(JSON.stringify({ error: true }));
 
-  const mockFetchInvalidJSON = () => fetch.mockReject('Some Invalid: { JSON');
+  const mockFetchInvalidJSON = () =>
+    fetch.mockResponseOnce('Some Invalid: { JSON');
 
   const mockFetchNotFoundStatus = () =>
     fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
@@ -83,8 +85,8 @@ describe('fetchData', () => {
       expect(preprocess).not.toHaveBeenCalled();
 
       expect(response).toEqual({
+        data: undefined,
         status: 502,
-        error: true,
       });
     });
   });
@@ -96,8 +98,8 @@ describe('fetchData', () => {
       expect(preprocess).not.toHaveBeenCalled();
 
       expect(response).toEqual({
+        data: undefined,
         status: 502,
-        error: 'Some Invalid: { JSON',
       });
     });
   });
@@ -111,6 +113,7 @@ describe('fetchData', () => {
       expect(preprocess).not.toHaveBeenCalled();
 
       expect(response).toEqual({
+        data: undefined,
         status: 404,
       });
     });
@@ -129,8 +132,8 @@ describe('fetchData', () => {
       );
 
       expect(response).toEqual({
+        data: undefined,
         status: 502,
-        error: Error(),
       });
     });
   });
