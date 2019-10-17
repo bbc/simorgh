@@ -161,6 +161,19 @@ export const testsThatFollowSmokeTestConfig = ({
         );
       });
 
+      // 1. Given that the page contains a media block (Video/Audio)
+      // 2. When the user hasn't interacted with the media block (Clicked)
+      // 3. Then the media block should contain a placeholder image that should be the same size as the iframe
+      it.only('should render a placeholder image within a media block, if it contains one', () => {
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+          ({ body }) => {
+            const video = getBlockData('video', body);
+            const audio = getBlockData('audio', body);
+            console.log(video, audio);
+          },
+        );
+      });
+
       if (serviceHasTimestamp(service)) {
         it('should render a timestamp', () => {
           cy.request(`${config[service].pageTypes.articles.path}.json`).then(
