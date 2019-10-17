@@ -9,11 +9,12 @@ import preprocessor from '#lib/utilities/preprocessor';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
-const pageData = preprocessor(pidginPageData, [convertToOptimoBlocks]);
-
 describe('CpsAssetPageMain', () => {
   it('should match snapshot', async () => {
-    const component = (
+    const pageData = await preprocessor(pidginPageData, [
+      convertToOptimoBlocks,
+    ]);
+    await matchSnapshotAsync(
       /*
         for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
       */
@@ -27,12 +28,10 @@ describe('CpsAssetPageMain', () => {
             service="pidgin"
             statusCode={200}
           >
-            <CpsAssetPageMain service="pidgin" pageData={await pageData} />
+            <CpsAssetPageMain service="pidgin" pageData={pageData} />
           </RequestContextProvider>
         </ServiceContextProvider>
-      </StaticRouter>
+      </StaticRouter>,
     );
-
-    await matchSnapshotAsync(component);
   });
 });
