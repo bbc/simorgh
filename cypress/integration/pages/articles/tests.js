@@ -145,24 +145,6 @@ export const testsThatFollowSmokeTestConfig = ({
         );
       });
 
-      it('should render a placeholder image within a media block', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            // `video` blocks can also contain audio, so this
-            // test check both types have a placeholder image.
-            const media = getBlockData('video', body);
-            if (media) {
-              cy.get('div[class^="StyledVideoContainer"]').within(() => {
-                cy.get('div[class^="StyledPlaceholder"] > img')
-                  .eq(0)
-                  .should('have.attr', 'src')
-                  .should('not.be.empty');
-              });
-            }
-          },
-        );
-      });
-
       if (serviceHasTimestamp(service)) {
         it('should render a timestamp', () => {
           cy.request(`${config[service].pageTypes.articles.path}.json`).then(
