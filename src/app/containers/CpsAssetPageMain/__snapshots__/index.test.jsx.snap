@@ -307,7 +307,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           </h1>
           <a
             data-e2e="cpsAssetDummyLink"
-            href="/pidgin/test-12345678"
+            href="/pidgin/23248703"
           >
             Test MAP to MAP inline link
           </a>

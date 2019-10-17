@@ -24,7 +24,7 @@ const CpsAssetPageMain = ({ pageData }) => {
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
           <h1> Placeholder content for MAP page skeleton</h1>
-          <Link to="/pidgin/test-12345678" data-e2e="cpsAssetDummyLink">
+          <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
             Test MAP to MAP inline link
           </Link>
         </GridItemConstrainedMedium>
