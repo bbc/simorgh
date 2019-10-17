@@ -46,9 +46,9 @@ const renderWithHelmet = component => {
     });
 };
 
-export default (component, done) => {
+export default component => {
   const removeWrappingDiv = container => container.firstChild;
-  renderWithHelmet(component).then(({ container }) => {
+  return renderWithHelmet(component).then(({ container }) => {
     const hasOneChild = container.children.length === 1;
     /*
      * if the container has more than one child then it's a component that uses a
@@ -58,7 +58,5 @@ export default (component, done) => {
     expect(
       hasOneChild ? removeWrappingDiv(container) : container,
     ).toMatchSnapshot();
-
-    done();
   });
 };

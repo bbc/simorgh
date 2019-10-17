@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import matchSnapshot from './testHelpers';
+// import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import matchSnapshotAsync from './testHelpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsAssetPageMain from '.';
@@ -11,7 +12,7 @@ import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 const pageData = preprocessor(pidginPageData, [convertToOptimoBlocks]);
 
 describe('CpsAssetPageMain', () => {
-  it('should match snapshot', async done => {
+  it('should match snapshot', async () => {
     const component = (
       /*
         for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
@@ -32,6 +33,6 @@ describe('CpsAssetPageMain', () => {
       </StaticRouter>
     );
 
-    matchSnapshot(component, done);
+    await matchSnapshotAsync(component);
   });
 });

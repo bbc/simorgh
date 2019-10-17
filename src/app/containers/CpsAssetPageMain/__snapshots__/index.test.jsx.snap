@@ -214,15 +214,15 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
         <div
           class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
         >
+          <h1>
+             Placeholder content for MAP page skeleton
+          </h1>
           <a
             data-e2e="cpsAssetDummyLink"
             href="/pidgin/test-12345678"
           >
             Test MAP to MAP inline link
           </a>
-          <h1>
-             Placeholder content for MAP page skeleton
-          </h1>
         </div>
       </main>
     </div>
