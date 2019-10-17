@@ -30,6 +30,9 @@ const CpsAssetPageMain = ({ pageData }) => {
       <LinkedData type="Article" seoTitle={title} />
       <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
+        <h1 id="content" tabIndex="-1">
+          Placeholder content for MAP page skeleton
+        </h1>
         <Link to="/pidgin/test-12345678" data-e2e="cpsAssetDummyLink">
           Test MAP to MAP inline link
         </Link>
