@@ -1,14 +1,15 @@
-import { bool, shape, string, number, any } from 'prop-types';
+import { bool, shape, string, number } from 'prop-types';
+import { cpsAssetPageMetadataPropTypes } from '../metadata';
+import { cpsAssetPagePromoPropTypes } from '../promo';
 import mainContentPropTypes from '../mainContent';
-import cpsAssetPagePromoPropTypes from '../cpsAssetPagePromo';
-import relatedContentPropTypes from '../frontPageRelatedContent'; // TODO: check is relatedContent is consistent on frontpage and CpsAsset
+import relatedContentPropTypes from '../relatedContent';
 
 export const cpsAssetPageDataPropTypes = shape({
-  metadata: any, // TODO: define metadata props for CPS Asset
+  metadata: shape(cpsAssetPageMetadataPropTypes).isRequired,
   content: shape({
     model: shape(mainContentPropTypes).isRequired,
   }).isRequired,
-  promo: cpsAssetPagePromoPropTypes,
+  promo: shape(cpsAssetPagePromoPropTypes),
   relatedContent: shape(relatedContentPropTypes).isRequired,
 });
 

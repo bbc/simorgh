@@ -1,14 +1,15 @@
 import { arrayOf, bool, shape, string, number } from 'prop-types';
-import { cpsMetadataPropTypes } from '../metadata';
+import { cpsFrontPageMetadataPropTypes } from '../metadata';
+import { cpsFrontPagePromoPropTypes } from '../promo';
 import groupsPropTypes from '../frontPageGroup';
-import relatedContentPropTypes from '../frontPageRelatedContent';
+import relatedContentPropTypes from '../relatedContent';
 
 export const frontPageDataPropTypes = shape({
-  metadata: shape(cpsMetadataPropTypes).isRequired,
+  metadata: shape(cpsFrontPageMetadataPropTypes).isRequired,
   content: shape({
     groups: arrayOf(shape(groupsPropTypes)).isRequired,
   }).isRequired,
-  promo: null,
+  promo: cpsFrontPagePromoPropTypes,
   relatedContent: shape(relatedContentPropTypes).isRequired,
 });
 
