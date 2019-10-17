@@ -33,7 +33,7 @@ const CpsAssetPageMain = ({ pageData }) => {
         <h1 id="content" tabIndex="-1">
           Placeholder content for MAP page skeleton
         </h1>
-        <Link to="/pidgin/test-12345678" data-e2e="cpsAssetDummyLink">
+        <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
           Test MAP to MAP inline link
         </Link>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
