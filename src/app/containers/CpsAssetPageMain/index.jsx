@@ -1,5 +1,4 @@
 import React from 'react';
-import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 import { Link } from 'react-router-dom';
 import { GhostGrid } from '#lib/styledGrid';
