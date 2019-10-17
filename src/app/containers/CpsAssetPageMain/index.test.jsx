@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-// import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
-import matchSnapshotAsync from './testHelpers';
+import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsAssetPageMain from '.';
