@@ -11,6 +11,7 @@ import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmpty
 import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
 import preprocess from '#lib/utilities/preprocessor';
 import FrontPage from '.';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const preprocessorRules = [
   filterUnknownContentTypes,
@@ -27,7 +28,9 @@ const serviceDatasets = {
   punjabi: punjabiData,
 };
 
-const stories = storiesOf('Pages|Front Page', module);
+const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
+  <WithTimeMachine>{story()}</WithTimeMachine>
+));
 Object.keys(serviceDatasets).forEach(service => {
   stories.add(service, () => {
     const frontPageData = preprocess(

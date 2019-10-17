@@ -5,7 +5,7 @@ import {
   F_NASSIM_PERSIAN_REGULAR,
   F_NASSIM_PERSIAN_BOLD,
 } from '@bbc/psammead-styles/fonts';
-import '@bbc/psammead-locales/moment/fa';
+import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
 import { jalaali } from '@bbc/psammead-calendars';
 import withContext from '../../../contexts/utils/withContext';
@@ -39,6 +39,7 @@ export const service = {
     twitterSite: '@bbcpersian',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

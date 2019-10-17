@@ -29,6 +29,7 @@ const baseServiceConfig = {
   twitterSite: '@BBCChina',
   noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+  isTrustProjectParticipant: true,
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
