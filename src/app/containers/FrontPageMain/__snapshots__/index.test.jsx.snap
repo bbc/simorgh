@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] = `
-.c0 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 .c43 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -40,7 +28,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.8125rem;
 }
 
-.c1 {
+.c0 {
   margin: 0 auto;
   padding-bottom: 2rem;
 }
@@ -326,6 +314,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   font-style: normal;
 }
 
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c15 {
   position: relative;
   height: 0;
@@ -436,39 +436,39 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (max-width:37.4375rem) {
-  .c1 {
+  .c0 {
     grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c0 {
     grid-column-gap: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c1 {
+  .c0 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c0 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
     max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c0 {
     display: grid;
     max-width: initial;
     margin: initial;
@@ -476,31 +476,31 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (max-width:63rem) {
-  .c2 {
+  .c1 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c1 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c1 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c2 {
+  .c1 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c1 {
     padding: 0 1rem;
   }
 }
@@ -1067,31 +1067,31 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       <main
         role="main"
       >
-        <h1
-          class="c0"
-          id="content"
-          tabindex="-1"
-        >
-          <span
-            role="text"
-          >
-            <span
-              lang="en-GB"
-            >
-              BBC News
-            </span>
-            , 
-            Ìgbò
-             - 
-            Akụkọ
-          </span>
-        </h1>
         <div
-          class="c1"
+          class="c0"
         >
           <div
-            class="c2"
+            class="c1"
           >
+            <h1
+              class="c2"
+              id="content"
+              tabindex="-1"
+            >
+              <span
+                role="text"
+              >
+                <span
+                  lang="en-GB"
+                >
+                  BBC News
+                </span>
+                , 
+                Ìgbò
+                 - 
+                Akụkọ
+              </span>
+            </h1>
             <section
               aria-labelledby="Top-Stories"
               role="region"
@@ -1180,7 +1180,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                 LIVE
                               </span>
                               <span
-                                class="c0"
+                                class="c2"
                                 lang="en-GB"
                               >
                                 Live, 
@@ -1205,7 +1205,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           data-e2e="index-alsos"
                         >
                           <h4
-                            class="c0"
+                            class="c2"
                           >
                             Ihe ndị ọzọ n'akụkọ a
                           </h4>
@@ -1317,7 +1317,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               role="text"
                             >
                               <span
-                                class="c0"
+                                class="c2"
                               >
                                 Ọdịyo
                                 , 
@@ -1326,7 +1326,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                 BBC Pidgin Minute
                               </span>
                               <span
-                                class="c0"
+                                class="c2"
                               >
                                 , 0,59
                               </span>
@@ -2004,7 +2004,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             role="text"
                           >
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               Vidio
                               , 
@@ -2013,7 +2013,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               “If di spoon attract me, most times na to carry am enta studio” – Collins
                             </span>
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               , 1,51
                             </span>
@@ -2100,7 +2100,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             role="text"
                           >
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               Vidio
                               , 
@@ -2109,7 +2109,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               I realise my World Cup dream afta 14 years
                             </span>
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               , 1,40
                             </span>
@@ -2196,7 +2196,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             role="text"
                           >
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               Vidio
                               , 
@@ -2205,7 +2205,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               Henna Design di natural tattoo
                             </span>
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               , 2,26
                             </span>
@@ -2292,7 +2292,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             role="text"
                           >
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               Vidio
                               , 
@@ -2301,7 +2301,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               Di codeine investigation wey change Nigeria
                             </span>
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               , 7,25
                             </span>
@@ -2388,7 +2388,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             role="text"
                           >
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               Vidio
                               , 
@@ -2397,7 +2397,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               "Dance big pass how pipo dey take see am"
                             </span>
                             <span
-                              class="c0"
+                              class="c2"
                             >
                               , 2,19
                             </span>

@@ -59,11 +59,7 @@ const services = {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/afrique',
         smoke: false,
       },
-      FIX: {
-        path:
-          Cypress.env('APP_ENV') === 'live' ? undefined : '/afrique/48465371',
-        smoke: true,
-      },
+      FIX: { path: '/afrique/48465371', smoke: true },
       liveRadio: {
         path:
           Cypress.env('APP_ENV') === 'live' ||

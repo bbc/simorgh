@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title snapshots should render title without service provided 1`] = `
+.c0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  color: #222222;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    margin-top: 2rem;
+  }
+}
+
+<h1
+  class="c0"
+  id="content"
+  tabindex="-1"
+>
+  Title
+</h1>
+`;
+
+exports[`Title snapshots should render visual title 1`] = `
+.c0 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  color: #222222;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    margin-top: 2rem;
+  }
+}
+
+<h1
+  class="c0"
+  id="content"
+  tabindex="-1"
+>
+  Title
+</h1>
+`;
+
+exports[`Title snapshots should render visually hidden title 1`] = `
+.c0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<h1
+  class="c0"
+  id="content"
+  tabindex="-1"
+>
+  <span
+    role="text"
+  >
+    Title
+  </span>
+</h1>
+`;

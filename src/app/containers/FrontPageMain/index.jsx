@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
-import StoryPromoGroups from '../StoryPromoGroups';
+import Index from '../Index';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
@@ -24,12 +23,9 @@ const FrontPageMain = ({ frontPageData }) => {
   const description = path(['metadata', 'summary'], frontPageData);
   const seoTitle = path(['promo', 'name'], frontPageData);
 
-  // eslint-disable-next-line jsx-a11y/aria-role
-  const offScreenText = (
+  const pageTitle = (
     <>
-      <span role="text">
-        <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
-      </span>
+      <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
     </>
   );
 
@@ -45,10 +41,7 @@ const FrontPageMain = ({ frontPageData }) => {
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <main role="main">
-        <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
-          {offScreenText}
-        </VisuallyHiddenText>
-        <StoryPromoGroups groups={groups} />
+        <Index groups={groups} title={pageTitle} hideTitle />
       </main>
     </>
   );

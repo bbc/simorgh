@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import StoryPromoGroups from '.';
+import Index from '.';
 
 const group = {
   type: 'responsive-top-stories',
@@ -49,19 +49,19 @@ const group = {
   },
 };
 
-describe(`StoryPromoGroups`, () => {
+describe(`Index`, () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
-      'should render promo groups without title if no title passed in',
+      'should render promo groups with visually hidden title',
       <ServiceContextProvider service="igbo">
-        <StoryPromoGroups groups={[group]} />
+        <Index groups={[group]} title="Index Title" hideTitle />
       </ServiceContextProvider>,
     );
 
     shouldMatchSnapshot(
-      'should render promo groups with title if title passed in',
+      'should render promo groups with visual title',
       <ServiceContextProvider service="igbo">
-        <StoryPromoGroups groups={[group]} title="Index Title" />
+        <Index groups={[group]} title="Index Title" />
       </ServiceContextProvider>,
     );
   });

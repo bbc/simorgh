@@ -2,12 +2,9 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import FeatureIndex from './index';
 
-// explicitly ignore console.log errors for Article/index:getInitialProps() error logging
-global.console.log = jest.fn();
-
 const defaultProps = {
   isAmp: false,
-  pageType: 'article',
+  pageType: 'FIX',
   service: 'news',
   pathname: '/pathname',
   status: 200,
@@ -53,19 +50,15 @@ jest.mock('../PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../FeatureIndex', () => {
-  const FeatureIndexMain = () => <div>FeatureIndexMain</div>;
-
-  return FeatureIndexMain;
-});
+jest.mock('../FeatureIndexMain', () =>
+  jest.fn().mockReturnValue(<div>FeatureIndexMain</div>),
+);
 
 describe('FeatureIndex', () => {
   describe('Component', () => {
-    describe('Composing the Feature Index Container using the page handlers', () => {
-      shouldMatchSnapshot(
-        'should compose FeatureIndex with the Page Handler in the correct order',
-        <FeatureIndex {...defaultProps} />,
-      );
-    });
+    shouldMatchSnapshot(
+      'should compose FeatureIndex with the Page Handler in the correct order',
+      <FeatureIndex {...defaultProps} />,
+    );
   });
 });

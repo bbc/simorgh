@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StoryPromoGroups snapshots should render promo groups with title if title passed in 1`] = `
+exports[`Index snapshots should render promo groups with visual title 1`] = `
 .c0 {
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -247,7 +247,6 @@ exports[`StoryPromoGroups snapshots should render promo groups with title if tit
 .c2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
-  display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   color: #222222;
   margin: 0;
@@ -652,6 +651,8 @@ exports[`StoryPromoGroups snapshots should render promo groups with title if tit
   >
     <h1
       class="c2"
+      id="content"
+      tabindex="-1"
     >
       Index Title
     </h1>
@@ -808,13 +809,13 @@ exports[`StoryPromoGroups snapshots should render promo groups with title if tit
 </div>
 `;
 
-exports[`StoryPromoGroups snapshots should render promo groups without title if no title passed in 1`] = `
+exports[`Index snapshots should render promo groups with visually hidden title 1`] = `
 .c0 {
   margin: 0 auto;
   padding-bottom: 2rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -824,7 +825,7 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   flex-direction: column;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -843,7 +844,7 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   align-items: baseline;
 }
 
-.c7 {
+.c8 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -863,12 +864,12 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   align-items: center;
 }
 
-.c3 {
+.c4 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c2 {
+.c3 {
   position: relative;
   margin-top: 2rem;
   -webkit-clip-path: inset(100%);
@@ -881,36 +882,36 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   width: 1px;
 }
 
-.c4 {
-  margin: 0;
-  padding: 0;
-}
-
-.c10 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c10:first-child {
-  padding-top: 0;
-}
-
-.c10:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c9 {
-  list-style-type: none;
+.c5 {
   margin: 0;
   padding: 0;
 }
 
 .c11 {
-  position: relative;
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c11:first-child {
+  padding-top: 0;
+}
+
+.c11:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c10 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .c12 {
+  position: relative;
+}
+
+.c13 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -918,23 +919,23 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   width: 100%;
 }
 
-.c22 {
+.c23 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c13 {
+.c14 {
   position: relative;
 }
 
-.c16 {
+.c17 {
   position: absolute;
   bottom: 0;
 }
 
-.c18 {
+.c19 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -945,7 +946,7 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   padding-bottom: 0.5rem;
 }
 
-.c25 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -956,7 +957,7 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   padding-bottom: 0.5rem;
 }
 
-.c20 {
+.c21 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -967,7 +968,7 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   padding-bottom: 0.5rem;
 }
 
-.c26 {
+.c27 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -978,26 +979,26 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   padding-bottom: 0.5rem;
 }
 
-.c17 {
+.c18 {
   display: inline-block;
   vertical-align: top;
 }
 
-.c24 {
+.c25 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c19 {
+.c20 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c19:before {
+.c20:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1009,17 +1010,17 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   z-index: 1;
 }
 
-.c19:hover,
-.c19:focus {
+.c20:hover,
+.c20:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c19:visited {
+.c20:visited {
   color: #6E6E73;
 }
 
-.c21 {
+.c22 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1029,7 +1030,19 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   font-style: normal;
 }
 
-.c14 {
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c15 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1042,13 +1055,13 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c15 {
+.c16 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c8 {
+.c9 {
   margin-top: 0.5rem;
 }
 
@@ -1123,7 +1136,7 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c7 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1132,39 +1145,39 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
+  .c8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c8 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c8 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c8 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c3 {
+  .c4 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     position: absolute;
     left: 0;
     right: 0;
@@ -1173,37 +1186,37 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c11 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10:first-child {
+  .c11:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c10:first-child {
+  .c11:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
+  .c12 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1211,20 +1224,20 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     width: 50%;
     margin-bottom: 0;
   }
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c13 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
+  .c13 {
     display: block;
     width: initial;
     grid-column: 1 / span 6;
@@ -1232,13 +1245,13 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
 }
 
 @media (min-width:80rem) {
-  .c22 {
+  .c23 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
+  .c23 {
     display: block;
     width: initial;
     grid-column: 1 / span 2;
@@ -1246,116 +1259,116 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
 }
 
 @media (min-width:25rem) {
-  .c23 {
+  .c24 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c19 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c19 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c19 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
+  .c21 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
+  .c27 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c26 {
+  .c27 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     width: 50%;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c17 {
+  .c18 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
+  .c18 {
     display: block;
     width: initial;
     padding: initial;
@@ -1364,19 +1377,19 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c25 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c24 {
+  .c25 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c24 {
+  .c25 {
     display: block;
     width: initial;
     padding: initial;
@@ -1385,27 +1398,27 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
+  .c22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c22 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c8 {
+  .c9 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     margin-top: 0.5rem;
   }
 }
@@ -1416,27 +1429,38 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
   <div
     class="c1"
   >
+    <h1
+      class="c2"
+      id="content"
+      tabindex="-1"
+    >
+      <span
+        role="text"
+      >
+        Index Title
+      </span>
+    </h1>
     <section
       aria-labelledby="Top-Stories"
       role="region"
     >
       <div
-        class="c2"
+        class="c3"
       >
         <div
-          class="c3"
+          class="c4"
         />
         <h2
-          class="c4"
+          class="c5"
         >
           <div
-            class="c5"
+            class="c6"
           >
             <span
-              class="c6"
+              class="c7"
             >
               <span
-                class="c7"
+                class="c8"
                 dir="ltr"
                 id="Top-Stories"
               >
@@ -1447,31 +1471,31 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
         </h2>
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         <ul
-          class="c9"
+          class="c10"
           role="list"
         >
           <li
-            class="c10"
+            class="c11"
             role="listitem"
           >
             <div
-              class="c11"
+              class="c12"
             >
               <div
-                class="c12"
+                class="c13"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   >
                     <img
                       alt="Image Alt text 1"
-                      class="c15"
+                      class="c16"
                       sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image1.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image1.jpg 624w"
@@ -1479,30 +1503,30 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
                     />
                   </div>
                   <div
-                    class="c16"
+                    class="c17"
                   />
                 </div>
               </div>
               <div
-                class="c17"
+                class="c18"
               >
                 <h3
-                  class="c18"
+                  class="c19"
                 >
                   <a
-                    class="c19"
+                    class="c20"
                     href="https://www.bbc.co.uk"
                   >
                     Top Story 1 headline
                   </a>
                 </h3>
                 <p
-                  class="c20"
+                  class="c21"
                 >
                   Summary text 1
                 </p>
                 <time
-                  class="c21"
+                  class="c22"
                   datetime="1970-01-19"
                 >
                   19 Jenụwarị 1970
@@ -1511,50 +1535,50 @@ exports[`StoryPromoGroups snapshots should render promo groups without title if 
             </div>
           </li>
           <li
-            class="c10"
+            class="c11"
             role="listitem"
           >
             <div
-              class="c11"
+              class="c12"
             >
               <div
-                class="c22"
+                class="c23"
               >
                 <div
-                  class="c13"
+                  class="c14"
                 >
                   <div
-                    class="c14"
+                    class="c15"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="c23"
+                    class="c24"
                   />
                 </div>
               </div>
               <div
-                class="c24"
+                class="c25"
               >
                 <h3
-                  class="c25"
+                  class="c26"
                 >
                   <a
-                    class="c19"
+                    class="c20"
                     href="https://www.bbc.co.uk"
                   >
                     Top Story 2 headline
                   </a>
                 </h3>
                 <p
-                  class="c26"
+                  class="c27"
                 >
                   Summary text 2
                 </p>
                 <time
-                  class="c21"
+                  class="c22"
                   datetime="1970-01-19"
                 >
                   19 Jenụwarị 1970

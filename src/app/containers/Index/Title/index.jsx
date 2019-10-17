@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import { node, bool } from 'prop-types';
 import styled from 'styled-components';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { getParagon, GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -18,7 +20,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 
 const Heading = styled.h1`
   ${({ script }) => (script ? getParagon(script) : '')};
-  display: inline-block;
   font-family: ${GEL_FF_REITH_SANS};
   color: ${C_EBON};
   margin: 0;
@@ -37,9 +38,14 @@ const Heading = styled.h1`
   }
 `;
 
-const Title = ({ children }) => {
+const Title = ({ children, isVisuallyHidden }) => {
   const { script } = useContext(ServiceContext);
-  return (
+
+  return isVisuallyHidden ? (
+    <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
+      <span role="text">{children}</span>
+    </VisuallyHiddenText>
+  ) : (
     <Heading script={script} id="content" tabIndex="-1">
       {children}
     </Heading>
@@ -47,7 +53,12 @@ const Title = ({ children }) => {
 };
 
 Title.propTypes = {
-  children: string.isRequired,
+  children: node.isRequired,
+  isVisuallyHidden: bool,
+};
+
+Title.defaultProps = {
+  isVisuallyHidden: false,
 };
 
 export default Title;

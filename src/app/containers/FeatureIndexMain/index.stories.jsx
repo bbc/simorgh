@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import afriqueData from '#data/afrique/cpsAssets/48465371';
-import FrontPageMain from '.';
+import FeatureIndexMain from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -17,7 +17,7 @@ Object.keys(serviceDataSets).forEach(service => {
     <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider isAmp={false} pageType="FIX" service={service}>
-          <FrontPageMain featureIndexData={serviceDataSets[service]} />
+          <FeatureIndexMain featureIndexData={serviceDataSets[service]} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

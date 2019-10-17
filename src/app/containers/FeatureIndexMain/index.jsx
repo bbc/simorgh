@@ -5,7 +5,7 @@ import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
-import StoryPromoGroups from '../StoryPromoGroups';
+import Index from '../Index';
 
 const FeatureIndexMain = ({ featureIndexData }) => {
   const title = path(['metadata', 'title'], featureIndexData);
@@ -26,7 +26,7 @@ const FeatureIndexMain = ({ featureIndexData }) => {
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <main role="main">
-        <StoryPromoGroups groups={groups} title={title} />
+        <Index groups={groups} title={title} />
       </main>
     </>
   );
