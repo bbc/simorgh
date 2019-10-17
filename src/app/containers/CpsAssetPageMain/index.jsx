@@ -7,6 +7,8 @@ import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import text from '../Text';
 import Blocks from '../Blocks';
+import ATIAnalytics from '../ATIAnalytics';
+import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
 const componentsToRender = {
   text,
@@ -27,6 +29,7 @@ const CpsAssetPageMain = ({ pageData }) => {
         openGraphType="website"
       />
       <LinkedData type="Article" seoTitle={title} />
+      <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
         <Link to="/pidgin/test-12345678" data-e2e="cpsAssetDummyLink">
           Test MAP to MAP inline link
@@ -37,29 +40,6 @@ const CpsAssetPageMain = ({ pageData }) => {
   );
 };
 
-CpsAssetPageMain.propTypes = {
-  /* eslint-disable react/no-unused-prop-types */
-  pageData: shape({
-    metadata: shape({
-      id: string,
-      tags: object,
-      type: string,
-    }),
-    promo: shape({
-      id: string,
-      type: string,
-    }),
-    content: shape({
-      blocks: arrayOf(
-        shape({
-          uuid: string,
-          id: string,
-          text: string,
-          type: string,
-        }),
-      ),
-    }),
-  }).isRequired,
-};
+CpsAssetPageMain.propTypes = cpsAssetPagePropTypes;
 
 export default CpsAssetPageMain;
