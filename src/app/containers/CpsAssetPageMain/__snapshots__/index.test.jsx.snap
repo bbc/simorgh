@@ -303,8 +303,11 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
         <div
           class="c1"
         >
-          <h1>
-             Placeholder content for MAP page skeleton
+          <h1
+            id="content"
+            tabindex="-1"
+          >
+            Placeholder content for MAP page skeleton
           </h1>
           <a
             data-e2e="cpsAssetDummyLink"
