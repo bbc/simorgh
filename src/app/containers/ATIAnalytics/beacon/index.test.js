@@ -32,7 +32,7 @@ describe('beacon', () => {
             'hl=00-00-00',
             'lng=en-US',
             'ati=PUB-[service-component]-[=]-[]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
-          ].join('&')}`,
+          ].join('&')}&type=AT`,
         ],
         [
           `https://foobar.com?${[
@@ -42,7 +42,7 @@ describe('beacon', () => {
             'hl=00-00-00',
             'lng=en-US',
             'ati=PUB-[service-component]-[=click]-[test]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
-          ].join('&')}`,
+          ].join('&')}&type=AT`,
         ],
       ]);
     });
@@ -66,7 +66,7 @@ describe('beacon', () => {
             'hl=00-00-00',
             'lng=en-US',
             'ati=PUB-[service-component]-[=viewed]-[]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
-          ].join('&')}`,
+          ].join('&')}&type=AT`,
         ],
       ]);
     });
