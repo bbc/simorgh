@@ -20,9 +20,11 @@ depcheck(
       if (key.startsWith('#')) {
         return obj;
       }
-      // eslint-disable-next-line no-param-reassign
-      obj[key] = missing[key];
-      return obj;
+
+      return {
+        ...obj,
+        key: missing[key],
+      };
     }, {});
 
     console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
