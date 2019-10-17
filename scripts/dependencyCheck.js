@@ -14,6 +14,7 @@ depcheck(
     console.log(`${dependencies.length} unused dependencies.`);
     console.log(dependencies.join('\n'));
 
+    // Filter out dependencies prefixed with "#".
     const missingFiltered = Object.keys(missing).reduce((obj, key) => {
       if (key.startsWith('#')) {
         return obj;
