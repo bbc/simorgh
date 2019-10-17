@@ -9,7 +9,7 @@ export const frontPageDataPropTypes = shape({
   content: shape({
     groups: arrayOf(shape(groupsPropTypes)).isRequired,
   }).isRequired,
-  promo: cpsFrontPagePromoPropTypes,
+  promo: shape(cpsFrontPagePromoPropTypes),
   relatedContent: shape(relatedContentPropTypes).isRequired,
 });
 
