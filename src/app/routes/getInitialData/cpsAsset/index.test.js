@@ -2,6 +2,9 @@ import baseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import getCpsAssetInitialData from '.';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
+import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
+import addIdsToBlocks from '#lib/utilities/preprocessor/rules/addIdsToBlocks';
+import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositioning';
 
 const mockData = { service: 'pidgin', status: 200, pageData: {} };
 
@@ -18,7 +21,12 @@ const defaultAssetUri = 'tori-49450859';
 const defaultAmpParam = '';
 let defaultContext;
 
-const preprocessorRules = [convertToOptimoBlocks];
+const preprocessorRules = [
+  convertToOptimoBlocks,
+  applyTimestampRules,
+  addIdsToBlocks,
+  applyBlockPositioning,
+];
 
 describe('getCpsAssetInitialData', () => {
   beforeEach(() => {

@@ -3,11 +3,23 @@
 exports[`CpsAssetPageMain should match snapshot 1`] = `
 .c0 {
   margin: 0 auto;
+  background: #FDFDFD;
   padding-bottom: 2rem;
 }
 
 .c1 {
   grid-column: 1 / span 6;
+}
+
+.c2 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 @media (max-width:37.4375rem) {
@@ -86,6 +98,20 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
 @supports (display:grid) {
   .c1 {
     max-width: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -300,18 +326,110 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
         class="c0"
         role="main"
       >
+        <a
+          data-e2e="cpsAssetDummyLink"
+          href="/pidgin/test-12345678"
+        >
+          Test MAP to MAP inline link
+        </a>
         <div
           class="c1"
         >
-          <h1>
-             Placeholder content for MAP page skeleton
-          </h1>
-          <a
-            data-e2e="cpsAssetDummyLink"
-            href="/pidgin/23248703"
+          <p
+            class="c2"
           >
-            Test MAP to MAP inline link
-          </a>
+            As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            Wetin ginger Emeka na im friend wey smoke from generator kill.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            Most of di material wey Nelson take arrange im generator na from  scrap.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
+          </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
+          </p>
         </div>
       </main>
     </div>
