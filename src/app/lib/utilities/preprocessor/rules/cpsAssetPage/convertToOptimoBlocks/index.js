@@ -1,11 +1,11 @@
 import { clone, pathOr, path } from 'ramda';
-import convertParagraph from './convertParagraph';
+import paragraph from './blocks/paragraph';
 
 const handleMissingType = block =>
   console.log(`Missing type field on block ${block.type}`); // eslint-disable-line no-console
 
 const typesToConvert = {
-  paragraph: convertParagraph,
+  paragraph,
 };
 
 const parseBlockByType = block => {

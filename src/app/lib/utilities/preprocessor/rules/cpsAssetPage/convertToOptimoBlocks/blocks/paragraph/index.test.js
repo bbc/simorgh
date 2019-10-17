@@ -1,5 +1,5 @@
-import convertParagraph from './convertParagraph';
-import { optimoText } from './helpers';
+import convertParagraph from '.';
+import { optimoText } from '../../utils/helpers';
 
 describe('convertParagraph', () => {
   it('should convert a plain_text paragraph to Optimo format', async () => {
