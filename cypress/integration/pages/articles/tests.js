@@ -161,7 +161,7 @@ export const testsThatFollowSmokeTestConfig = ({
         );
       });
 
-      it.only('should render a placeholder image within a media block', () => {
+      it('should render a placeholder image within a media block', () => {
         cy.request(`${config[service].pageTypes.articles.path}.json`).then(
           ({ body }) => {
             // `video` blocks can also contain audio, so this
