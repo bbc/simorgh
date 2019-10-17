@@ -38,13 +38,12 @@ const mergeJsonRawWithBlocks = blocksWithIds => jsonRaw => ({
   },
 });
 
-export default jsonRaw => {
-  const addIdsToBlocks = compose(
+const addIdsToBlocks = async jsonRaw =>
+  compose(
     mergeJsonRawWithBlocks,
     mapIdsToBlocks,
     getBlocks,
     getJsonContent,
-  )(jsonRaw);
+  )(await jsonRaw);
 
-  return addIdsToBlocks(jsonRaw);
-};
+export default addIdsToBlocks;
