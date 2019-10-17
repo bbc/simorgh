@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router-dom';
+import path from 'ramda/src/path';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 
@@ -13,7 +14,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status } = initialData;
+  const { pageData, status, error } = initialData;
 
   const [state, setState] = useState({
     pageData,
@@ -23,8 +24,8 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     id,
     isAmp,
     pageType,
+    error,
     loading: false,
-    error: null,
   });
 
   const isInitialMount = useRef(true);
@@ -55,28 +56,15 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         error: null,
       });
 
-      const fetchData = async () => {
-        try {
-          const {
-            pageData: _pageData,
-            status: _status,
-          } = await route.getInitialData(match.params);
-
-          setState(prevState => ({
-            ...prevState,
-            pageData: _pageData,
-            status: _status,
-            loading: false,
-          }));
-        } catch (error) {
-          setState(prevState => ({
-            ...prevState,
-            error,
-            loading: false,
-          }));
-        }
-      };
-      fetchData();
+      route.getInitialData(match.params).then(data =>
+        setState(prevState => ({
+          ...prevState,
+          loading: false,
+          pageData: path(['pageData'], data),
+          status: path(['status'], data),
+          error: path(['error'], data),
+        })),
+      );
     }
   }, [routes, location.pathname]);
 
