@@ -18,7 +18,7 @@ const richTextTransformsBundleRegex = new RegExp(
 
 jest.setTimeout(10000); // overriding the default jest timeout
 
-describe('Js bundle requests', () => {
+describe('rich-text-transforms JS bundle request', () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({
       args: ['--no-sandbox'],
