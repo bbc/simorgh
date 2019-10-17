@@ -112,7 +112,7 @@ When adding a new page type there are several parts required.
 #### 2) Serving the fixture data on local development
 
 - The fixture data for the page type should be available on the same route as the page with a `.json` suffix
-  - EG: The `localhost.bbc.com:7080/igbo.json` should have the data to build the index page `localhost.bbc.com:7080/igbo`
+  - EG: The `localhost:7080/igbo.json` should have the data to build the index page `localhost:7080/igbo`
 - To match the correct route we will need a new regex [here](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/routes/regex/index.js)
 - Then we need to add an Express route similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/server/index.jsx#L107-L113)
 
@@ -186,8 +186,8 @@ We are also serving AMP HTML pages at the route `/news/articles/:id.amp` [https:
 
 Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
 
-- [http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp)
-- [http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost.bbc.com:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp).
+- [http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp)
+- [http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp).
 
 ### Front pages
 
@@ -203,8 +203,8 @@ The World Service front pages follow the article format for AMP too, being avail
 
 Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
 
-- [http://localhost.bbc.com:7080/zhongwen/simp](http://localhost.bbc.com:7080/zhongwen/simp)
-- [http://localhost.bbc.com:7080/zhongwen/simp.amp](http://localhost.bbc.com:7080/zhongwen/simp.amp).
+- [http://localhost:7080/zhongwen/simp](http://localhost:7080/zhongwen/simp)
+- [http://localhost:7080/zhongwen/simp.amp](http://localhost:7080/zhongwen/simp.amp).
 
 ### Other page types
 
