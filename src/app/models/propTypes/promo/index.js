@@ -1,5 +1,4 @@
-import { number, shape, string, arrayOf } from 'prop-types';
-import { bool } from '@storybook/addon-knobs';
+import { number, shape, string, arrayOf, bool } from 'prop-types';
 
 export const mediaPromoPropTypes = {
   name: string.isRequired,
