@@ -1,4 +1,4 @@
-import { buildCPSATIParams, buildCPSATIUrl } from './buildParams';
+import { buildCpsAssetATIParams, buildCpsAssetATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
 
@@ -42,14 +42,18 @@ const expectation = {
 
 describe('buildRadioATIParams', () => {
   it('should return the right object', () => {
-    const result = buildCPSATIParams(payload, requestContext, serviceContext);
+    const result = buildCpsAssetATIParams(
+      payload,
+      requestContext,
+      serviceContext,
+    );
     expect(result).toEqual(expectation);
   });
 });
 
-describe('buildCPSATIUrl', () => {
+describe('buildCpsAssetATIUrl', () => {
   it('should return the right url', () => {
-    const result = buildCPSATIUrl(payload, requestContext, serviceContext);
+    const result = buildCpsAssetATIUrl(payload, requestContext, serviceContext);
     const campaignString = expectation.campaigns
       .filter(
         campaign =>
