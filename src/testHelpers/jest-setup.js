@@ -19,7 +19,7 @@ global.shallow = shallow;
 global.mount = mount;
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
-  'http://localhost.bbc.com:7080';
+  'http://localhost:7080';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/';
 process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
   __dirname,

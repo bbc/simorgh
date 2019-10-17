@@ -877,7 +877,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       rel="amphtml"
     />
     <link
-      href="http://localhost.bbc.com:7080/igbo/images/icons/icon-192x192.png"
+      href="http://localhost:7080/igbo/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
