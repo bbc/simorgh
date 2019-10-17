@@ -28,9 +28,9 @@ depcheck(
     }, {});
 
     console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
-    Object.keys(missing).forEach(key => {
+    Object.keys(missingFiltered).forEach(key => {
       console.log(key);
-      console.log(`  ${missing[key].join('\n  ')}`);
+      console.log(`  ${missingFiltered[key].join('\n  ')}`);
     });
 
     if (dependencies.length > 0 || Object.keys(missingFiltered).length > 0) {
