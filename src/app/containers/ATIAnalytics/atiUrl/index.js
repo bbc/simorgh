@@ -15,6 +15,8 @@ import {
   getProducer,
 } from '#lib/analyticsUtils';
 
+const spaceRegex = / /g;
+
 /*
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
@@ -149,7 +151,7 @@ export const buildATIPageTrackPath = ({
       key: 'x16',
       description: 'campaigns',
       value: (Array.isArray(campaigns) ? campaigns : [])
-        .map(campaign => campaign.campaignName.replace(/ /g, '%20'))
+        .map(campaign => campaign.campaignName.replace(spaceRegex, '%20'))
         .join('~'),
       wrap: true,
     },
