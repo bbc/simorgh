@@ -86,6 +86,8 @@ describe('Consent Banner Utilities', () => {
         PRIVACY_COOKIE_CURRENT,
         {
           expires: 365,
+          sameSite: 'none',
+          secure: true,
         },
       );
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
@@ -104,6 +106,8 @@ describe('Consent Banner Utilities', () => {
         PRIVACY_COOKIE_CURRENT,
         {
           expires: 365,
+          sameSite: 'none',
+          secure: true,
         },
       );
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
@@ -122,6 +126,8 @@ describe('Consent Banner Utilities', () => {
         PRIVACY_COOKIE_CURRENT,
         {
           expires: 365,
+          sameSite: 'none',
+          secure: true,
         },
       );
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
@@ -160,6 +166,8 @@ describe('Consent Banner Utilities', () => {
 
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
+        sameSite: 'none',
+        secure: true,
       });
       expect(setCookieOvenMock).toHaveBeenCalledWith(
         POLICY_COOKIE,
@@ -192,6 +200,8 @@ describe('Consent Banner Utilities', () => {
       expect(Cookie.set).toHaveBeenCalledTimes(1);
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
+        sameSite: 'none',
+        secure: true,
       });
       expect(setCookieOvenMock).toHaveBeenCalledWith(
         POLICY_COOKIE,
@@ -250,6 +260,8 @@ describe('Consent Banner Utilities', () => {
       expect(Cookie.set).toHaveBeenCalledTimes(2);
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '111', {
         expires: 365,
+        sameSite: 'none',
+        secure: true,
       });
       expect(setCookieOvenMock).toHaveBeenCalledWith(
         POLICY_COOKIE,
@@ -258,6 +270,8 @@ describe('Consent Banner Utilities', () => {
       );
       expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
         expires: 365,
+        sameSite: 'none',
+        secure: true,
       });
     });
   });
@@ -273,6 +287,8 @@ describe('Consent Banner Utilities', () => {
       expect(Cookie.set).toHaveBeenCalledTimes(1);
       expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
         expires: 365,
+        sameSite: 'none',
+        secure: true,
       });
     });
   });
