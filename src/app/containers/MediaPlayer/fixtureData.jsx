@@ -236,8 +236,10 @@ export const multipleAresMetadataBlock = {
   type: 'aresMedia',
 };
 
-// Block test data below has been commented as they will be used in the future
-// const validVideoWithCaptionBlocks = [captionBlock, validAresMediaVideoBlock];
+export const validVideoWithCaptionBlock = [
+  captionBlock,
+  validAresMediaVideoBlock,
+];
 
 const missingVpidBlocks = [
   captionBlock,
