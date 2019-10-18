@@ -15,17 +15,17 @@ function loadStories() {
 }
 
 const fontPathMap = [
-  { prefix: 'F_REITH', path: '/fonts/Reith/' },
-  { prefix: 'F_NASSIM_ARABIC', path: '/fonts/Nassim/Arabic/' },
-  { prefix: 'F_NASSIM_PASHTO', path: '/fonts/Nassim/Pashto/' },
-  { prefix: 'F_NASSIM_PERSIAN', path: '/fonts/Nassim/Persian/' },
-  { prefix: 'F_NASSIM_URDU', path: '/fonts/Nassim/Urdu/' },
-  { prefix: 'F_ISKOOLA_POTA_BBC', path: '/fonts/IskoolaPota/' },
-  { prefix: 'F_LATHA', path: '/fonts/Latha/' },
-  { prefix: 'F_MALLANNA', path: '/fonts/Mallanna/' },
-  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: '/fonts/NotoSansEthiopic/' },
-  { prefix: 'F_PADAUK', path: '/fonts/Padauk/' },
-  { prefix: 'F_SHONAR_BANGLA', path: '/fonts/ShonarBangla/' },
+  { prefix: 'F_REITH', path: 'fonts/Reith/' },
+  { prefix: 'F_NASSIM_ARABIC', path: 'fonts/Nassim/Arabic/' },
+  { prefix: 'F_NASSIM_PASHTO', path: 'fonts/Nassim/Pashto/' },
+  { prefix: 'F_NASSIM_PERSIAN', path: 'fonts/Nassim/Persian/' },
+  { prefix: 'F_NASSIM_URDU', path: 'fonts/Nassim/Urdu/' },
+  { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
+  { prefix: 'F_LATHA', path: 'fonts/Latha/' },
+  { prefix: 'F_MALLANNA', path: 'fonts/Mallanna/' },
+  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: 'fonts/NotoSansEthiopic/' },
+  { prefix: 'F_PADAUK', path: 'fonts/Padauk/' },
+  { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
 ];
 
 addDecorator(story => (
