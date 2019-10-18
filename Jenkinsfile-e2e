@@ -54,14 +54,10 @@ node {
                         '3rd Party E2Es': {
                             sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
                             Simorgh.runThirdPartyE2Es()
-                        },
-                        'Local Prod Tests': {
-                            sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
-                            Simorgh.runLocalAndProductionTests()
                         }
                     )
                 } finally {
-                    Simorgh.e2esPostBuildSteps('local & production')
+                    Simorgh.e2esPostBuildSteps('live')
                 }
             }
         }
