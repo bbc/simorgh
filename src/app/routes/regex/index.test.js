@@ -13,7 +13,7 @@ import {
   radioAndTvRegexPathsArray,
 } from './index';
 
-jest.mock('../../../server/utilities/serviceConfigs', () => ({
+jest.mock('#utilities/serviceConfigs', () => ({
   news: {},
   persian: {},
 }));

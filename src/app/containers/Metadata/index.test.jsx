@@ -4,7 +4,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
-import services from '../../../server/utilities/serviceConfigs';
+import services from '#utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
