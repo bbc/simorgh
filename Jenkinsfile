@@ -96,6 +96,13 @@ pipeline {
     booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
   stages {
+    stage ('Trigger B/G') {
+      build(
+        job: 'simorgh-blue-green/add-alb-updater-lambda',
+        propagate: false,
+        wait: false
+      )
+    }
     stage ('Build and Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
