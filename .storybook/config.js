@@ -3,14 +3,10 @@ import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
-import timemachine from 'timemachine';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
+import { startTimeMachine } from './time-machine';
 
-// This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
-timemachine.config({
-  dateString: 'Friday, 9 August 2019 14:04:14',
-  timestamp: 1565359454,
-});
+startTimeMachine();
 
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
 
@@ -19,17 +15,17 @@ function loadStories() {
 }
 
 const fontPathMap = [
-  { prefix: 'F_REITH', path: '/fonts/Reith/' },
-  { prefix: 'F_NASSIM_ARABIC', path: '/fonts/Nassim/Arabic/' },
-  { prefix: 'F_NASSIM_PASHTO', path: '/fonts/Nassim/Pashto/' },
-  { prefix: 'F_NASSIM_PERSIAN', path: '/fonts/Nassim/Persian/' },
-  { prefix: 'F_NASSIM_URDU', path: '/fonts/Nassim/Urdu/' },
-  { prefix: 'F_ISKOOLA_POTA_BBC', path: '/fonts/IskoolaPota/' },
-  { prefix: 'F_LATHA', path: '/fonts/Latha/' },
-  { prefix: 'F_MALLANNA', path: '/fonts/Mallanna/' },
-  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: '/fonts/NotoSansEthiopic/' },
-  { prefix: 'F_PADAUK', path: '/fonts/Padauk/' },
-  { prefix: 'F_SHONAR_BANGLA', path: '/fonts/ShonarBangla/' },
+  { prefix: 'F_REITH', path: 'fonts/Reith/' },
+  { prefix: 'F_NASSIM_ARABIC', path: 'fonts/Nassim/Arabic/' },
+  { prefix: 'F_NASSIM_PASHTO', path: 'fonts/Nassim/Pashto/' },
+  { prefix: 'F_NASSIM_PERSIAN', path: 'fonts/Nassim/Persian/' },
+  { prefix: 'F_NASSIM_URDU', path: 'fonts/Nassim/Urdu/' },
+  { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
+  { prefix: 'F_LATHA', path: 'fonts/Latha/' },
+  { prefix: 'F_MALLANNA', path: 'fonts/Mallanna/' },
+  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: 'fonts/NotoSansEthiopic/' },
+  { prefix: 'F_PADAUK', path: 'fonts/Padauk/' },
+  { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
 ];
 
 addDecorator(story => (

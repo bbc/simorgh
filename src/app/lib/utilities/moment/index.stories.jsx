@@ -10,6 +10,7 @@ import {
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 // ensure all moment locales have been loaded via service configs
 import '#testHelpers/serviceConfigs';
@@ -66,7 +67,6 @@ const SEPTEMBER = 1568505600000;
 const OCTOBER = 1571097600000;
 const NOVEMBER = 1573776000000;
 const DECEMBER = 1576368000000;
-
 /* eslint-disable prettier/prettier */
 const editorialWhitelist = [
   'LL',
@@ -231,26 +231,29 @@ ShowMoment.propTypes = {
   locale: string.isRequired,
 };
 
-locales.forEach(({ name, locale }) => {
-  storiesOf('Moment Locales/Editorial view', module).add(
-    `${name} - ${locale}`,
-    () => {
-      return (
-        <ShowMoment
-          name={name}
-          locale={locale}
-          moments={methods.filter(method =>
-            editorialWhitelist.includes(method.what),
-          )}
-        />
-      );
-    },
-  );
+const editorialStories = storiesOf(
+  'Moment Locales/Editorial view',
+  module,
+).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
+const developerStories = storiesOf(
+  'Moment Locales/Developer view',
+  module,
+).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
-  storiesOf('Moment Locales/Developer view', module).add(
-    `${name} - ${locale}`,
-    () => {
-      return <ShowMoment name={name} locale={locale} moments={methods} />;
-    },
-  );
+locales.forEach(({ name, locale }) => {
+  editorialStories.add(`${name} - ${locale}`, () => {
+    return (
+      <ShowMoment
+        name={name}
+        locale={locale}
+        moments={methods.filter(method =>
+          editorialWhitelist.includes(method.what),
+        )}
+      />
+    );
+  });
+
+  developerStories.add(`${name} - ${locale}`, () => {
+    return <ShowMoment name={name} locale={locale} moments={methods} />;
+  });
 });

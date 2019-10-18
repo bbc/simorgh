@@ -6,6 +6,7 @@ import AmpATIAnalytics from './amp';
 import { buildArticleATIUrl } from './params/article/buildParams';
 import { buildFrontPageATIUrl } from './params/frontpage/buildParams';
 import { buildRadioATIUrl } from './params/radioPage/buildParams';
+import { buildCpsAssetPageATIUrl } from './params/cpsAssetPage/buildParams';
 import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
@@ -17,6 +18,7 @@ const ATIAnalytics = ({ data }) => {
     article: buildArticleATIUrl,
     frontPage: buildFrontPageATIUrl,
     media: buildRadioATIUrl,
+    MAP: buildCpsAssetPageATIUrl,
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);

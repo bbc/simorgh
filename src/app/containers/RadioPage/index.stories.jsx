@@ -9,6 +9,7 @@ import korean from '#data/korean/bbc_korean_radio/liveradio.json';
 import tigrinya from '#data/tigrinya/bbc_tigrinya_radio/liveradio.json';
 import afaanoromoo from '#data/afaanoromoo/bbc_afaanoromoo_radio/liveradio.json';
 import amharic from '#data/amharic/bbc_amharic_radio/liveradio.json';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const liveRadioFixtures = {
   indonesia,
@@ -31,7 +32,10 @@ const matchFixtures = service => ({
   },
 });
 
+const status = 200;
+
 storiesOf('Pages|Radio Page', module)
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .add(
     'default',
@@ -40,10 +44,8 @@ storiesOf('Pages|Radio Page', module)
       componentFunction: ({ service }) => (
         <RadioPage
           match={matchFixtures(service)}
-          data={{
-            pageData: liveRadioFixtures[service],
-            status: 200,
-          }}
+          pageData={liveRadioFixtures[service]}
+          status={status}
           service={service}
           isAmp={false}
           loading={false}

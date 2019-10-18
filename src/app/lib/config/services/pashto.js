@@ -7,6 +7,7 @@ import {
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ps';
 import '@bbc/moment-timezone-include/tz/GMT';
+import { jalaali } from '@bbc/psammead-calendars';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -32,11 +33,13 @@ export const service = {
     datetimeLocale: 'ps',
     service: 'pashto',
     serviceName: 'Pashto',
+    altCalendar: jalaali,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',
     twitterSite: '@bbcpashto',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
