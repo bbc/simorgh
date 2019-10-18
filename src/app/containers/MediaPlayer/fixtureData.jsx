@@ -315,7 +315,6 @@ const toggleStateOff = {
   },
 };
 
-const mockToggleDispatch = jest.fn();
 const GenerateFixtureData = ({
   platform,
   toggleState,
@@ -333,7 +332,7 @@ const GenerateFixtureData = ({
   >
     <ServiceContextProvider service="news">
       <ToggleContext.Provider
-        value={{ toggleState, toggleDispatch: mockToggleDispatch }}
+        value={{ toggleState, toggleDispatch: jest.fn() }}
       >
         <MediaPlayerContainer
           blocks={Array.isArray(blocks) ? blocks : [blocks]}
