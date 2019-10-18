@@ -163,21 +163,25 @@ export const testsThatFollowSmokeTestConfig = ({
         );
       });
 
-      if (serviceHasInlineLink(service) && (Cypress.env('APP_ENV') === 'local' ||
-      Cypress.env('APP_ENV') === 'test')) {
-       it('should have an inlink link to an article page', () => {
-         cy.get('[class^="InlineLink"]').eq(1)
-           .should('have.attr', 'href')
-           .then(href => {
-             cy.request({
-               url:href,
-               failOnStatusCode: false,
-             }).then(resp => {
-               expect(resp.status).to.not.equal(404);
-             });
-           });
-       });
-     };
+      if (
+        serviceHasInlineLink(service) &&
+        (Cypress.env('APP_ENV') === 'local' ||
+          Cypress.env('APP_ENV') === 'test')
+      ) {
+        it('should have an inlink link to an article page', () => {
+          cy.get('[class^="InlineLink"]')
+            .eq(1)
+            .should('have.attr', 'href')
+            .then(href => {
+              cy.request({
+                url: href,
+                failOnStatusCode: false,
+              }).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      }
 
       if (serviceHasTimestamp(service)) {
         it('should render a timestamp', () => {
