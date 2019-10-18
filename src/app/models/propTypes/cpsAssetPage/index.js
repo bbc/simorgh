@@ -1,6 +1,6 @@
 import { bool, shape, string, number, object, arrayOf } from 'prop-types';
 
-export const cpsPageDataPropTypes = shape({
+export const cpsAssetPageDataPropTypes = shape({
   metadata: shape({
     id: string,
     tags: object,
@@ -22,11 +22,11 @@ export const cpsPageDataPropTypes = shape({
   }),
 });
 
-const cpsPagePropTypes = {
+const cpsAssetPagePropTypes = {
   isAmp: bool,
-  data: cpsPageDataPropTypes,
+  data: cpsAssetPageDataPropTypes,
   service: string,
   status: number,
 };
 
-export default cpsPagePropTypes;
+export default cpsAssetPagePropTypes;
