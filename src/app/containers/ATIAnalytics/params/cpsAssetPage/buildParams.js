@@ -2,7 +2,11 @@ import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 
-export const buildCPSATIParams = (pageData, requestContext, serviceContext) => {
+export const buildCpsAssetPageATIParams = (
+  pageData,
+  requestContext,
+  serviceContext,
+) => {
   const { platform, statsDestination } = requestContext;
   const {
     atiAnalyticsAppName,
@@ -37,8 +41,12 @@ export const buildCPSATIParams = (pageData, requestContext, serviceContext) => {
   };
 };
 
-export const buildCPSATIUrl = (pageData, requestContext, serviceContext) => {
+export const buildCpsAssetPageATIUrl = (
+  pageData,
+  requestContext,
+  serviceContext,
+) => {
   return buildATIPageTrackPath(
-    buildCPSATIParams(pageData, requestContext, serviceContext),
+    buildCpsAssetPageATIParams(pageData, requestContext, serviceContext),
   );
 };
