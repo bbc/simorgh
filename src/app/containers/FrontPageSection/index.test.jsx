@@ -192,11 +192,6 @@ const usefulLinks = {
   items: [
     {
       name: 'Ethiopia: Ndị uweojii agba gbuola ndị mmadụ',
-      indexImage: {
-        id: '63692548',
-        subType: 'index',
-        href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
-      },
       uri: 'https://www.bbc.com/igbo/egwuregwu-49946491',
       contentType: 'Guide',
       assetTypeCode: 'PRO',
@@ -205,11 +200,6 @@ const usefulLinks = {
     },
     {
       name: 'Onye isi ala ndị New Zealand dị ime',
-      indexImage: {
-        id: '63692549',
-        subType: 'index',
-        href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
-      },
       uri: 'https://www.bbc.com/igbo/egwuregwu-49946491',
       contentType: 'Guide',
       assetTypeCode: 'PRO',
