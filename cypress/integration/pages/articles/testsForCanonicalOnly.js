@@ -71,21 +71,18 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     }
 
     it('should render a visible placeholder image within a media block', () => {
-      cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-        ({ body }) => {
-          // `video` blocks can also contain audio, so this test
-          // checks if both media types have a placeholder image.
-          const media = getBlockData('video', body);
-          if (media) {
-            cy.get('div[class^="StyledVideoContainer"]').within(() => {
-              cy.get('div[class^="StyledPlaceholder"] > img')
-                .should('be.visible')
-                .should('have.attr', 'src')
-                .should('not.be.empty');
-            });
-          }
-        },
-      );
+      cy.window().then(win => {
+        // `video` blocks can also contain audio.
+        const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+        if (media) {
+          cy.get('div[class^="StyledVideoContainer"]').within(() => {
+            cy.get('div[class^="StyledPlaceholder"] > img')
+              .should('be.visible')
+              .should('have.attr', 'src')
+              .should('not.be.empty');
+          });
+        }
+      });
     });
   });
 
