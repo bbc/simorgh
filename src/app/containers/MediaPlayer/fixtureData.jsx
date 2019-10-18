@@ -236,7 +236,7 @@ const validAresMediaVideoBlock = {
 //   },
 //   type: 'aresMedia',
 // };
-//
+
 // const validVideoWithCaptionBlocks = [captionBlock, validAresMediaVideoBlock];
 
 const missingVpidBlocks = [
@@ -333,7 +333,10 @@ const GenerateFixtureData = ({
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: mockToggleDispatch }}
       >
-        <MediaPlayerContainer blocks={blocks} placeholder={placeholder} />
+        <MediaPlayerContainer
+          blocks={Array.isArray(blocks) ? blocks : [blocks]}
+          placeholder={placeholder}
+        />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
