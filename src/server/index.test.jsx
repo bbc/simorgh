@@ -322,7 +322,7 @@ const testArticles = ({ platform, service, variant }) => {
   });
 };
 
-const testMediaAssetPages = ({ platform, service, assetUri, variant }) => {
+const testCpsAssetPages = ({ platform, service, assetUri, variant }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
 
@@ -611,7 +611,7 @@ describe('Server', () => {
         });
       });
     });
-    describe('for media asset pages', () => {
+    describe('for cps asset pages', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/pidgin/tori-49450859.json');
         expect(body).toEqual(
@@ -656,23 +656,23 @@ describe('Server', () => {
     mediaId: 'liveradio',
   });
 
-  testMediaAssetPages({
+  testCpsAssetPages({
     platform: 'amp',
     service: 'pidgin',
     assetUri: 'tori-49450859',
   });
-  testMediaAssetPages({
+  testCpsAssetPages({
     platform: 'canonical',
     service: 'pidgin',
     assetUri: 'tori-49450859',
   });
-  testMediaAssetPages({
+  testCpsAssetPages({
     platform: 'amp',
     service: 'serbian',
     assetUri: 'srbija-49427344',
     variant: 'cyr',
   });
-  testMediaAssetPages({
+  testCpsAssetPages({
     platform: 'canonical',
     service: 'serbian',
     assetUri: 'srbija-49427344',
