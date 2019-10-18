@@ -16,12 +16,13 @@ import 'moment/locale/cy';
 export const service = {
   default: {
     lang: `cy`,
-    articleAuthor: `https://www.facebook.com/BBCCymruFyw`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-cymrufyw',
     atiAnalyticsProducerId: '100',
     brandName: 'BBC Cymru Fyw',
-    product: 'BBC Cymru Fyw',
+    product: 'BBC News',
+    serviceLocalizedName: 'Cymru Fyw',
     defaultImage:
       'https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png',
     defaultImageAltText: 'BBC Cymru Fyw',
@@ -41,9 +42,10 @@ export const service = {
     twitterSite: '@BBCCymruFyw',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    isTrustProjectParticipant: true,
     script: latinDiacritics,
-    manifestPath: '/manifest.json',
-    swPath: '/sw.js',
+    manifestPath: '/articles/manifest.json',
+    swPath: '/articles/sw.js',
     frontPageTitle: 'Newyddion a mwy',
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
