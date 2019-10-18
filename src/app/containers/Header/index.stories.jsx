@@ -4,7 +4,7 @@ import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import HeaderContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import services from '../../../server/utilities/serviceConfigs';
+import services from '#utilities/serviceConfigs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
