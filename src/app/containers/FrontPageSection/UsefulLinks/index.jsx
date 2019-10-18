@@ -45,9 +45,10 @@ const UsefulLinksComponent = ({ items, script, service }) => {
   return items.length > 1 ? (
     <UsefulLinksWrapper>
       <UsefulLinksUl>
-        {items.map(item => {
+        {items.map((item, index) => {
           return (
-            <UsefulLinksLi key={item.indexImage.id}>
+            // eslint-disable-next-line react/no-array-index-key
+            <UsefulLinksLi key={`${item.timestamp}${index}`}>
               <UsefulLink script={script} service={service} href={item.uri}>
                 {item.name}
               </UsefulLink>
