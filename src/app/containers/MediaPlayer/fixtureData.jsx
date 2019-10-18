@@ -47,7 +47,7 @@ const imageBlock = {
   position: [4, 2, 2],
 };
 
-const validAresMediaVideoBlock = {
+export const validAresMediaVideoBlock = {
   model: {
     blocks: [
       {
@@ -94,149 +94,149 @@ const validAresMediaVideoBlock = {
   type: 'aresMedia',
 };
 
-// Block test data below has been commented as they will be used in the future
-// const validAresMediaAudioBlock = {
-//   model: {
-//     blocks: [
-//       {
-//         blockId: 'urn:bbc:ares::clip:p01m7d07',
-//         model: {
-//           advertising: false,
-//           embedding: false,
-//           format: 'audio',
-//           id: 'p01m7d07',
-//           imageCopyright: 'Getty Images',
-//           imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
-//           subType: 'clip',
-//           syndication: {
-//             destinations: [],
-//           },
-//           synopses: {
-//             short: 'Some audio from a supermarket checkout in Birmingham',
-//           },
-//           title: 'Birmingham checkout',
-//           versions: [
-//             {
-//               availableFrom: 1555067395000,
-//               availableTerritories: {
-//                 nonUk: true,
-//                 uk: true,
-//               },
-//               duration: 127,
-//               durationISO8601: 'PT2M7S',
-//               types: ['Original'],
-//               versionId: 'p01m7d09',
-//               warnings: {
-//                 long: 'Contains some strong language.',
-//                 short: 'Contains some strong language.',
-//               },
-//             },
-//           ],
-//         },
-//         type: 'aresMediaMetadata',
-//       },
-//       imageBlock,
-//     ],
-//   },
-//   type: 'aresMedia',
-// };
-//
-// const missingAresMediaMetadataBlock = {
-//   model: {
-//     blocks: [imageBlock],
-//   },
-//   type: 'aresMedia',
-// };
-//
-// const multipleAresMetadataBlock = {
-//   model: {
-//     blocks: [
-//       {
-//         blockId: 'urn:bbc:ares::clip:p01k6msm',
-//         model: {
-//           advertising: true,
-//           caption: null,
-//           embedding: true,
-//           format: 'audio_video',
-//           id: 'p01k6msm',
-//           image: null,
-//           imageCopyright: 'BBC',
-//           imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
-//           subType: 'clip',
-//           syndication: {
-//             destinations: [],
-//           },
-//           synopses: {
-//             short:
-//               'They may be tiny, but us humans could learn a thing or two from ants.',
-//           },
-//           title: 'Five things ants can teach us about management',
-//           versions: [
-//             {
-//               availableTerritories: {
-//                 nonUk: true,
-//                 uk: true,
-//               },
-//               availableUntil: null,
-//               duration: 191,
-//               types: ['Original'],
-//               versionId: 'p01k6msp',
-//               availableFrom: 1540218932,
-//               warnings: {
-//                 long: 'Contains strong language and adult humour.',
-//                 short: 'Contains strong language and adult humour.',
-//               },
-//             },
-//           ],
-//         },
-//         type: 'aresMediaMetadata',
-//       },
-//       {
-//         blockId: 'urn:bbc:ares::clip:p01k6mss',
-//         model: {
-//           advertising: true,
-//           caption: null,
-//           embedding: true,
-//           format: 'audio_video',
-//           id: 'p01k6mss',
-//           image: null,
-//           imageCopyright: 'BBC',
-//           imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
-//           subType: 'clip',
-//           syndication: {
-//             destinations: [],
-//           },
-//           synopses: {
-//             short:
-//               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-//           },
-//           title: 'Lorem ipsum is commonly used placeholder text.',
-//           versions: [
-//             {
-//               availableTerritories: {
-//                 nonUk: true,
-//                 uk: true,
-//               },
-//               availableUntil: null,
-//               duration: 191,
-//               types: ['Original'],
-//               versionId: 'p01k6msp',
-//               availableFrom: 1540218932,
-//               warnings: {
-//                 long: 'Contains common text.',
-//                 short: 'Contains common text.',
-//               },
-//             },
-//           ],
-//         },
-//         type: 'aresMediaMetadata',
-//       },
-//       imageBlock,
-//     ],
-//   },
-//   type: 'aresMedia',
-// };
+export const validAresMediaAudioBlock = {
+  model: {
+    blocks: [
+      {
+        blockId: 'urn:bbc:ares::clip:p01m7d07',
+        model: {
+          advertising: false,
+          embedding: false,
+          format: 'audio',
+          id: 'p01m7d07',
+          imageCopyright: 'Getty Images',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
+          subType: 'clip',
+          syndication: {
+            destinations: [],
+          },
+          synopses: {
+            short: 'Some audio from a supermarket checkout in Birmingham',
+          },
+          title: 'Birmingham checkout',
+          versions: [
+            {
+              availableFrom: 1555067395000,
+              availableTerritories: {
+                nonUk: true,
+                uk: true,
+              },
+              duration: 127,
+              durationISO8601: 'PT2M7S',
+              types: ['Original'],
+              versionId: 'p01m7d09',
+              warnings: {
+                long: 'Contains some strong language.',
+                short: 'Contains some strong language.',
+              },
+            },
+          ],
+        },
+        type: 'aresMediaMetadata',
+      },
+      imageBlock,
+    ],
+  },
+  type: 'aresMedia',
+};
 
+export const missingAresMediaMetadataBlock = {
+  model: {
+    blocks: [imageBlock],
+  },
+  type: 'aresMedia',
+};
+
+export const multipleAresMetadataBlock = {
+  model: {
+    blocks: [
+      {
+        blockId: 'urn:bbc:ares::clip:p01k6msm',
+        model: {
+          advertising: true,
+          caption: null,
+          embedding: true,
+          format: 'audio_video',
+          id: 'p01k6msm',
+          image: null,
+          imageCopyright: 'BBC',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+          subType: 'clip',
+          syndication: {
+            destinations: [],
+          },
+          synopses: {
+            short:
+              'They may be tiny, but us humans could learn a thing or two from ants.',
+          },
+          title: 'Five things ants can teach us about management',
+          versions: [
+            {
+              availableTerritories: {
+                nonUk: true,
+                uk: true,
+              },
+              availableUntil: null,
+              duration: 191,
+              types: ['Original'],
+              versionId: 'p01k6msp',
+              availableFrom: 1540218932,
+              warnings: {
+                long: 'Contains strong language and adult humour.',
+                short: 'Contains strong language and adult humour.',
+              },
+            },
+          ],
+        },
+        type: 'aresMediaMetadata',
+      },
+      {
+        blockId: 'urn:bbc:ares::clip:p01k6mss',
+        model: {
+          advertising: true,
+          caption: null,
+          embedding: true,
+          format: 'audio_video',
+          id: 'p01k6mss',
+          image: null,
+          imageCopyright: 'BBC',
+          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+          subType: 'clip',
+          syndication: {
+            destinations: [],
+          },
+          synopses: {
+            short:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+          },
+          title: 'Lorem ipsum is commonly used placeholder text.',
+          versions: [
+            {
+              availableTerritories: {
+                nonUk: true,
+                uk: true,
+              },
+              availableUntil: null,
+              duration: 191,
+              types: ['Original'],
+              versionId: 'p01k6msp',
+              availableFrom: 1540218932,
+              warnings: {
+                long: 'Contains common text.',
+                short: 'Contains common text.',
+              },
+            },
+          ],
+        },
+        type: 'aresMediaMetadata',
+      },
+      imageBlock,
+    ],
+  },
+  type: 'aresMedia',
+};
+
+// Block test data below has been commented as they will be used in the future
 // const validVideoWithCaptionBlocks = [captionBlock, validAresMediaVideoBlock];
 
 const missingVpidBlocks = [
