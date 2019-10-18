@@ -93,7 +93,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
         });
 
-        if (serviceHasPublishedPromo(service)) {
+        if (
+          serviceHasPublishedPromo(service) &&
+          Cypress.env('APP_ENV') !== 'local'
+        ) {
           it('individual promo should link to corresponding article pages', () => {
             cy.get('h3')
               .eq(3)
