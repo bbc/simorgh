@@ -27,6 +27,12 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     });
 
     describe('live radio body', () => {
+      it('should render an audio player image placeholder', () => {
+        cy.get(
+          `amp-img[src="${envConfig.assetUrl}/images/amp_audio_placeholder.png"]`,
+        ).should('exist');
+      });
+
       it('should render an audio player embed', () => {
         cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
           ({ body }) => {
