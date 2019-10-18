@@ -97,11 +97,13 @@ pipeline {
   }
   stages {
     stage ('Trigger B/G') {
-      build(
-        job: 'simorgh-blue-green/add-alb-updater-lambda',
-        propagate: false,
-        wait: false
-      )
+      steps {
+        build(
+          job: 'simorgh-blue-green/add-alb-updater-lambda',
+          propagate: false,
+          wait: false
+        )
+      }
     }
     stage ('Build and Test') {
       when {
