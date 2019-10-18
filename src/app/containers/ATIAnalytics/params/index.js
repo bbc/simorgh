@@ -7,17 +7,20 @@ import {
   buildFrontPageATIUrl,
 } from './frontpage/buildParams';
 import { buildRadioATIParams, buildRadioATIUrl } from './radioPage/buildParams';
+import { buildCPSATIParams, buildCPSATIUrl } from './cpsAssetPage/buildParams';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   frontPage: buildFrontPageATIUrl,
   media: buildRadioATIUrl,
+  MAP: buildCPSATIUrl,
 };
 
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   frontPage: buildFrontPageATIParams,
   media: buildRadioATIParams,
+  MAP: buildCPSATIParams,
 };
 
 const createBuilderFactory = (requestContext, pageTypeHandlers = {}) => {

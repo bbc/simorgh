@@ -295,6 +295,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
   </head>
   <body>
     <div>
+      <noscript />
       <main
         class="c0"
         role="main"
