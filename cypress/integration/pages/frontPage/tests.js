@@ -3,6 +3,7 @@ import appConfig from '../../../../src/testHelpers/serviceConfigs';
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
+const serviceHasPublishedPromo = service => service === 'persian';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -91,6 +92,28 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible');
           });
         });
+
+        if (
+          serviceHasPublishedPromo(service) &&
+          Cypress.env('APP_ENV') === 'test'
+        ) {
+          it('individual promo should link to corresponding article pages', () => {
+            cy.get('h3')
+              .eq(3)
+              .within(() => {
+                cy.get('a')
+                  .should('have.attr', 'href')
+                  .then(href => {
+                    cy.request({
+                      url: href,
+                      failOnStatusCode: false,
+                    }).then(resp => {
+                      expect(resp.status).to.not.equal(404);
+                    });
+                  });
+              });
+          });
+        }
 
         it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(

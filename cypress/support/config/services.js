@@ -850,7 +850,7 @@ const services = {
       },
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/persian',
-        smoke: false,
+        smoke: true,
       },
       liveRadio: {
         path:
