@@ -2718,151 +2718,6 @@
         "semanticGroupName": "Features"
       },
       {
-        "type": "useful-links",
-        "title": "Useful links",
-        "items": [
-          {
-            "headlines": {
-              "headline": "وظائف شاغرة في بي بي سي عربي"
-            },
-            "locators": {
-              "assetUri": "/arabic/48861031",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/48861031"
-            },
-            "summary": "إعلان عن وظائف في بي بي سي عربي للعمل من مكتب بيروت",
-            "timestamp": 1562170133000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103411364",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/B4E7/production/_103411364_a348361f-ccff-4cb9-a372-84f9a6efd2ec.jpg",
-              "path": "/cpsprodpb/B4E7/production/_103411364_a348361f-ccff-4cb9-a372-84f9a6efd2ec.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "بي بي سي",
-              "copyrightHolder": "BBC"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "section": {
-              "subType": "IDX",
-              "name": "الرئيسية",
-              "uri": "/arabic/front_page",
-              "type": "simple"
-            },
-            "id": "urn:bbc:ares::asset:arabic/48861031",
-            "type": "cps"
-          },
-          {
-            "name": "أكاديمية بي بي سي: اكتشف... تعلم.. .تطور",
-            "summary": "",
-            "indexImage": {
-              "id": "100682406",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/EC0C/production/_100682406_p0550sg1.jpg",
-              "path": "/cpsprodpb/EC0C/production/_100682406_p0550sg1.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "بي بي سي عربي",
-              "copyrightHolder": "BBC"
-            },
-            "indexThumbnail": {
-              "id": "100682408",
-              "subType": "index-thumbnail",
-              "href": "http://c.files.bbci.co.uk/13A2C/production/_100682408_p0550sg1.jpg",
-              "path": "/cpsprodpb/13A2C/production/_100682408_p0550sg1.jpg",
-              "height": 180,
-              "width": 320,
-              "altText": "بي بي سي عربي",
-              "copyrightHolder": "BBC"
-            },
-            "uri": "http://www.bbc.co.uk/academy/ar",
-            "contentType": "Text",
-            "assetTypeCode": "PRO",
-            "timestamp": 1477471316000,
-            "type": "link"
-          },
-          {
-            "name": "ثمانون عاما على بي بي سي عربي: من \"الراديو\" إلى \"الديجتال\"",
-            "summary": "بي سي عربي تحتفي في ذكراها الثمانين بالأشواط التي قطعتها من الإذاعة إلى عصر الوسائط المتعددة",
-            "indexImage": {
-              "id": "99913057",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/12517/production/_99913057_mediaitem99764260.jpg",
-              "path": "/cpsprodpb/12517/production/_99913057_mediaitem99764260.jpg",
-              "height": 261,
-              "width": 464,
-              "altText": "بي بي سي",
-              "copyrightHolder": "BBC"
-            },
-            "indexThumbnail": {
-              "id": "99913055",
-              "subType": "index-thumbnail",
-              "href": "http://c.files.bbci.co.uk/D6F7/production/_99913055_mediaitem99764260.jpg",
-              "path": "/cpsprodpb/D6F7/production/_99913055_mediaitem99764260.jpg",
-              "height": 180,
-              "width": 320,
-              "altText": "بي بي سي",
-              "copyrightHolder": "BBC"
-            },
-            "uri": "http://www.bbc.com/arabic/42791340",
-            "contentType": "Gallery",
-            "assetTypeCode": "PRO",
-            "timestamp": 1516633229000,
-            "type": "link"
-          },
-          {
-            "name": "مدونة المرأة: علامات",
-            "summary": "بصرف النظر عن أماكن وجودهن، تجد نساء كثر أنفسهن في ظروف مختلفة تترك آثارها - الدائمة أحيانا - على أرواحهن وأجسادهن. كثير من هذه القصص لا تصلنا.. هذه خمس منها.",
-            "indexImage": {
-              "id": "99848963",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/9078/production/_99848963_syrian_shorthand_01_18_mobile_4.jpg",
-              "path": "/cpsprodpb/9078/production/_99848963_syrian_shorthand_01_18_mobile_4.jpg",
-              "height": 360,
-              "width": 640,
-              "altText": "امرأة في صحراء",
-              "copyrightHolder": "BBC"
-            },
-            "indexThumbnail": {
-              "id": "99848965",
-              "subType": "index-thumbnail",
-              "href": "http://c.files.bbci.co.uk/DE98/production/_99848965_syrian_shorthand_01_18_mobile_4.jpg",
-              "path": "/cpsprodpb/DE98/production/_99848965_syrian_shorthand_01_18_mobile_4.jpg",
-              "height": 180,
-              "width": 320,
-              "altText": "امرأة في صحراء",
-              "copyrightHolder": "BBC"
-            },
-            "uri": "http://www.bbc.com/arabic/resources/idt-sh/marks_arabic",
-            "contentType": "Text",
-            "assetTypeCode": "PRO",
-            "timestamp": 1517503205000,
-            "type": "link"
-          },
-          {
-            "name": "شركاؤنا",
-            "uri": "http://www.bbc.com/arabic/institutional/2013/04/130415_bbcarabic_partners.shtml",
-            "contentType": "Text",
-            "assetTypeCode": "PRO",
-            "timestamp": 1477471376000,
-            "type": "link"
-          }
-        ],
-        "strapline": {
-          "name": "روابط لبي بي سي"
-        },
-        "semanticGroupName": "Useful links"
-      },
-      {
         "type": "featured-site-top-stories",
         "title": "Frequency info",
         "maxRelatedLinks": 8,
@@ -3688,6 +3543,56 @@
           }
         },
         "semanticGroupName": "Frequency info"
+      },
+      {
+        "type": "useful-links",
+        "title": "Useful links",
+        "items": [
+          {
+            "name": "وظائف شاغرة في بي بي سي عربي",
+            "uri": "/arabic/front_page",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "timestamp": 1569321103000,
+            "type": "link"
+          },
+          {
+            "name": "أكاديمية بي بي سي: اكتشف... تعلم.. .تطور",
+            "uri": "/arabic/front_page",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "timestamp": 1569321103000,
+            "type": "link"
+          },
+          {
+            "name": "ثمانون عاما على بي بي سي عربي: من",
+            "uri": "/arabic/front_page",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "timestamp": 1569321103000,
+            "type": "link"
+          },
+          {
+            "name": "مدونة المرأة: علامات",
+            "uri": "/arabic/front_page",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "timestamp": 1569321103000,
+            "type": "link"
+          },
+          {
+            "name": "شركاؤنا",
+            "uri": "/arabic/front_page",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
+            "timestamp": 1569321103000,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "روابط لبي بي سي"
+        },
+        "semanticGroupName": "Useful links"
       }
     ]
   },

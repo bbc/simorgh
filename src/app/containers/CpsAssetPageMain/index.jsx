@@ -5,7 +5,7 @@ import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
-import cpsPagePropTypes from '../../models/propTypes/cpsPage';
+import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -31,6 +31,6 @@ const CpsAssetPageMain = ({ pageData }) => {
   );
 };
 
-CpsAssetPageMain.propTypes = cpsPagePropTypes;
+CpsAssetPageMain.propTypes = cpsAssetPagePropTypes;
 
 export default CpsAssetPageMain;
