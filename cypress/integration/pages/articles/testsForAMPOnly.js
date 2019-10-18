@@ -40,8 +40,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     it('should render a placeholder image within a media block', () => {
       cy.request(`${config[service].pageTypes.articles.path}.json`).then(
         ({ body }) => {
-          // `video` blocks can also contain audio, so this test
-          // checks if both media types have a placeholder image.
+          // `video` blocks can also contain audio.
           const media = getBlockData('video', body);
           if (media) {
             cy.get('div[class^="StyledVideoContainer"]').within(() => {
