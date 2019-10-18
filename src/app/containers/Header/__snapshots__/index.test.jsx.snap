@@ -475,13 +475,19 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         class="c2"
         dir="ltr"
       >
-        We don update our Privacy and Cookies Policy
+        Let us know say you agree to cookies
       </h2>
       <p
         class="c3"
         dir="ltr"
       >
-        We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+        We and our partners use technologies, like 
+        <a
+          href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+        >
+          cookies
+        </a>
+        , and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.
       </p>
       <ul
         class="c4"
@@ -492,9 +498,10 @@ exports[`Header should render correctly for WS frontPage 1`] = `
           dir="ltr"
         >
           <button
+            data-cookie-banner="accept"
             type="button"
           >
-            OK
+            Yes, I agree
           </button>
         </li>
         <li
@@ -502,9 +509,10 @@ exports[`Header should render correctly for WS frontPage 1`] = `
           dir="ltr"
         >
           <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            data-cookie-banner="reject"
+            href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
           >
-            Find out wetin don change
+            No, cari me go settings
           </a>
         </li>
       </ul>
@@ -1174,13 +1182,19 @@ exports[`Header should render correctly for WS radio page 1`] = `
         class="c2"
         dir="ltr"
       >
-        We don update our Privacy and Cookies Policy
+        Let us know say you agree to cookies
       </h2>
       <p
         class="c3"
         dir="ltr"
       >
-        We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+        We and our partners use technologies, like 
+        <a
+          href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+        >
+          cookies
+        </a>
+        , and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.
       </p>
       <ul
         class="c4"
@@ -1191,9 +1205,10 @@ exports[`Header should render correctly for WS radio page 1`] = `
           dir="ltr"
         >
           <button
+            data-cookie-banner="accept"
             type="button"
           >
-            OK
+            Yes, I agree
           </button>
         </li>
         <li
@@ -1201,9 +1216,10 @@ exports[`Header should render correctly for WS radio page 1`] = `
           dir="ltr"
         >
           <a
-            href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            data-cookie-banner="reject"
+            href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
           >
-            Find out wetin don change
+            No, cari me go settings
           </a>
         </li>
       </ul>
