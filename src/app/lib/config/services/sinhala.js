@@ -52,6 +52,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'Related content',
+      map: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
