@@ -16,7 +16,7 @@
     "cypress:interactive": "export NO_PROXY=localhost,localhost.bbc.com && cypress open",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
-    "lighthouse": "echo '*** Lighthouse temporarily disabled due to https://github.com/GoogleChrome/lighthouse/issues/9860'; true || ./scripts/lighthouseRun.sh",
+    "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -s .storybook/static -c .storybook -h localhost.bbc.com",
