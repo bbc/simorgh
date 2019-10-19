@@ -50,6 +50,11 @@ export const service = {
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',

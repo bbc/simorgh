@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Перейти к содержанию',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
