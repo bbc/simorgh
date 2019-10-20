@@ -13,6 +13,14 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
+    it('should render a H1, which contains/displays a styled headline', () => {
+      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+        ({ body }) => {
+          cy.get('h1').should('contain', body.promo.headlines.headline);
+        },
+      );
+    });
+
     it('should render a paragraph, which contains/displays styled text', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
