@@ -11,7 +11,12 @@ import addIdsToBlocks from '../../routes/getInitialData/radioPage/addIdsToBlocks
 const pageData = addIdsToBlocks(amharicPageData);
 const blocks = path(['content', 'blocks'], pageData);
 
-const serviceContextMock = { service: 'amharic', script: latin, lang: 'am' };
+const serviceContextMock = {
+  service: 'amharic',
+  script: latin,
+  lang: 'am',
+  translations: { mediaAssetPage: { audioPlayer: 'Audio  player' } },
+};
 
 describe('Radio Page Blocks', () => {
   shouldMatchSnapshot(
