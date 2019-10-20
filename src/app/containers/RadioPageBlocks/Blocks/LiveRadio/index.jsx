@@ -30,7 +30,7 @@ const MediaPlayerInnerWrapper = styled.div`
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform, origin } = useContext(RequestContext);
-  const { liveRadio, lang } = useContext(ServiceContext);
+  const { liveRadio, lang, translations } = useContext(ServiceContext);
 
   const isAmp = platform === 'amp';
 
@@ -61,6 +61,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
           placeholderSrc={isAmp ? liveRadioPlaceholderImageSrc : null}
           showPlaceholder={!isAmp ? false : null}
           src={embedSource}
+          title={translations.mediaAssetPage.audioPlayer}
           id={idAttr}
           skin="audio"
         />
