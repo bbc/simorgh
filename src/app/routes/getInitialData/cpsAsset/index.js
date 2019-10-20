@@ -4,11 +4,13 @@ import fetchData from '../utils/fetchData';
 import { variantSanitiser } from '../../../lib/utilities/variantHandler';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
 import addHeadlineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addHeadlineBlock';
+import timestampToMilliseconds from '#lib/utilities/preprocessor/rules/cpsAssetPage/timestampToMilliseconds';
 import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
 import addIdsToBlocks from '#lib/utilities/preprocessor/rules/addIdsToBlocks';
 import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositioning';
 
 export const preprocessorRules = [
+  timestampToMilliseconds,
   convertToOptimoBlocks,
   addHeadlineBlock,
   applyTimestampRules,
