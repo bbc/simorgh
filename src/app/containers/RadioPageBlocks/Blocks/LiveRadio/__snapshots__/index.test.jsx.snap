@@ -53,6 +53,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               src="https://www.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko/amp"
+              title="Audio player"
             >
               <amp-img
                 layout="fill"
@@ -120,6 +121,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
         allowfullscreen=""
         class="c3"
         src="https://www.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
+        title="Audio player"
       />
     </div>
   </div>
@@ -179,6 +181,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om/amp"
+              title="Audio player"
             >
               <amp-img
                 layout="fill"
@@ -246,6 +249,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
         allowfullscreen=""
         class="c3"
         src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
+        title="Audio player"
       />
     </div>
   </div>

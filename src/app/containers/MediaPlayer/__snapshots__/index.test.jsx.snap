@@ -72,6 +72,7 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
             src="https://www.test.bbc.com/ws/av-embeds/articles/foo/p01k6msp/en-GB/amp"
+            title="Media player"
           >
             <amp-img
               layout="fill"
