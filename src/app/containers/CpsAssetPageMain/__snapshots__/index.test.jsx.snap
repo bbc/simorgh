@@ -11,6 +11,10 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
   grid-column: 1 / span 6;
 }
 
+.c4 {
+  grid-column: 1 / span 6;
+}
+
 .c3 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -22,7 +26,22 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
   padding: 2rem 0;
 }
 
-.c4 {
+.c5 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c5:last-child {
+  padding-bottom: 1rem;
+}
+
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -142,6 +161,45 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
   }
 }
 
+@media (max-width:25rem) {
+  .c4 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c4 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    grid-column: 2 / span 4;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    max-width: initial;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
     font-size: 2rem;
@@ -163,14 +221,28 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -409,10 +481,27 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           </h1>
         </div>
         <div
+          class="c4"
+        >
+          <time
+            class="c5"
+            datetime="2019-08-23"
+          >
+            23 August 2019
+          </time>
+          <time
+            class="c5"
+            datetime="2019-08-23"
+          >
+            New Informate 
+            23 August 2019
+          </time>
+        </div>
+        <div
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
           </p>
@@ -421,7 +510,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             Wetin ginger Emeka na im friend wey smoke from generator kill.
           </p>
@@ -430,7 +519,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
           </p>
@@ -439,7 +528,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
           </p>
@@ -448,7 +537,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
           </p>
@@ -457,7 +546,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
           </p>
@@ -466,7 +555,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             Most of di material wey Nelson take arrange im generator na from  scrap.
           </p>
@@ -475,7 +564,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
           </p>
@@ -484,7 +573,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
           </p>
@@ -493,7 +582,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
           </p>
@@ -502,7 +591,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           class="c1"
         >
           <p
-            class="c4"
+            class="c6"
           >
             Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
           </p>

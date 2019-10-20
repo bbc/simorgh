@@ -1,6 +1,7 @@
 import baseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import getCpsAssetInitialData from '.';
+import timestampToMilliseconds from '#lib/utilities/preprocessor/rules/cpsAssetPage/timestampToMilliseconds';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
 import addHeadlineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addHeadlineBlock';
 import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
@@ -23,6 +24,7 @@ const defaultAmpParam = '';
 let defaultContext;
 
 const preprocessorRules = [
+  timestampToMilliseconds,
   convertToOptimoBlocks,
   addHeadlineBlock,
   applyTimestampRules,
