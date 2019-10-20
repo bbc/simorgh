@@ -46,7 +46,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
           if (lastPublished !== firstPublished) {
             cy.get('time')
               .eq(1)
-              .should('contain', appConfig[service].articleTimestampPrefix);
+              .should(
+                'contain',
+                appConfig[service].default.articleTimestampPrefix,
+              );
           }
         },
       );
