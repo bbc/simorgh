@@ -3,12 +3,14 @@ import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import { variantSanitiser } from '../../../lib/utilities/variantHandler';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
+import addHeadlineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addHeadlineBlock';
 import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
 import addIdsToBlocks from '#lib/utilities/preprocessor/rules/addIdsToBlocks';
 import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositioning';
 
 export const preprocessorRules = [
   convertToOptimoBlocks,
+  addHeadlineBlock,
   applyTimestampRules,
   addIdsToBlocks,
   applyBlockPositioning,

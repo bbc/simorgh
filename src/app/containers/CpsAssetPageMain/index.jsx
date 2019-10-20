@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
+import headings from '../Headings';
 import text from '../Text';
 import Blocks from '../Blocks';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
 const componentsToRender = {
+  headline: headings,
   text,
 };
 
