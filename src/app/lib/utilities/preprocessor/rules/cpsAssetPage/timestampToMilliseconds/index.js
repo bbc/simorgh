@@ -3,7 +3,7 @@ import deepClone from 'ramda/src/clone';
 
 // 315532801000 is the first second of 1980 in milliseconds, if a
 // timestamp greater than that, its probably in milliseconds.
-const isAfter1980 = timestamp => timestamp && timestamp > 315532801000;
+const isAfter1980 = timestamp => !timestamp || timestamp > 315532801000;
 
 // This bodge will be removed once ares sends timestamps in milliseconds;
 const timestampToMilliseconds = jsonRaw => {
