@@ -19,6 +19,22 @@ describe('addHeadlineBlock', () => {
     expect(timestampToMilliseconds(input)).toEqual(expected);
   });
 
+  it('should multiply timestamps that exist', async () => {
+    const input = {
+      metadata: {
+        lastPublished: 987654321,
+      },
+    };
+
+    const expected = {
+      metadata: {
+        lastPublished: 987654321000,
+      },
+    };
+
+    expect(timestampToMilliseconds(input)).toEqual(expected);
+  });
+
   it('should not multiply timestamps by 1000 if after 1980', async () => {
     const input = {
       metadata: {
