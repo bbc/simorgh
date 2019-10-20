@@ -46,7 +46,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
 
       setState({
         pageData: null,
-        status: status || null,
+        status: null,
         service: nextService,
         variant: nextVariant,
         id: nextId,
