@@ -19,7 +19,7 @@ describe('mediaPlayerMetadata', () => {
               'They may be tiny, but us humans could learn a thing or two from ants.',
             duration: 191,
             thumbnailUrl:
-              'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+              'https://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg',
             uploadDate: 1540218932000,
           },
         ],
@@ -39,7 +39,7 @@ describe('mediaPlayerMetadata', () => {
             duration: 127,
             name: 'Birmingham checkout',
             thumbnailUrl:
-              'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg',
+              'https://ichef.test.bbci.co.uk/images/ic/640x360/p01mt2kt.jpg',
             uploadDate: 1555067395000,
           },
         ],
@@ -70,7 +70,7 @@ describe('mediaPlayerMetadata', () => {
               'They may be tiny, but us humans could learn a thing or two from ants.',
             duration: 191,
             thumbnailUrl:
-              'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+              'https://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg',
             uploadDate: 1540218932,
           },
           {
@@ -80,7 +80,7 @@ describe('mediaPlayerMetadata', () => {
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
             duration: 191,
             thumbnailUrl:
-              'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+              'https://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg',
             uploadDate: 1540218932,
           },
         ],
