@@ -1,10 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { shape } from 'prop-types';
-import getMediaPlayerMetadata from './helpers/getMediaPlayerMetadata';
+import mediaPlayerMetadata from './helpers/metadata';
 
-const MediaPlayerMetadata = ({ aresMediaBlock }) => {
-  const metadata = getMediaPlayerMetadata(aresMediaBlock);
+const Metadata = ({ aresMediaBlock }) => {
+  const metadata = mediaPlayerMetadata(aresMediaBlock);
 
   return (
     <Helmet>
@@ -15,10 +15,10 @@ const MediaPlayerMetadata = ({ aresMediaBlock }) => {
   );
 };
 
-MediaPlayerMetadata.propTypes = {
+Metadata.propTypes = {
   aresMediaBlock: shape({
     model: shape({}),
   }).isRequired,
 };
 
-export default MediaPlayerMetadata;
+export default Metadata;
