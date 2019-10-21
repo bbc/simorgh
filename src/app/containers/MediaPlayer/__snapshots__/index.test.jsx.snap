@@ -234,7 +234,7 @@ exports[`MediaPlayer Calls the AMP player with a caption 1`] = `
           <span
             class="c3"
           >
-            Video caption,
+            Video caption, 
           </span>
           <p />
         </figcaption>
@@ -244,9 +244,7 @@ exports[`MediaPlayer Calls the AMP player with a caption 1`] = `
 </html>
 `;
 
-exports[
-  `MediaPlayer Calls the canonical placeholder when platform is canonical 1`
-] = `
+exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 1`] = `
 .c3 {
   display: block;
   width: 100%;
@@ -330,9 +328,7 @@ exports[
 </div>
 `;
 
-exports[
-  `MediaPlayer Calls the canonical player when platform is canonical and placeholder is false 1`
-] = `
+exports[`MediaPlayer Calls the canonical player when platform is canonical and placeholder is false 1`] = `
 .c3 {
   display: block;
   width: 100%;
@@ -565,7 +561,7 @@ exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
     <span
       class="c5"
     >
-      Video caption,
+      Video caption, 
     </span>
     <p />
   </figcaption>
