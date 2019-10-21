@@ -1,18 +1,21 @@
 import pathOr from 'ramda/src/pathOr';
 import deepClone from 'ramda/src/clone';
+import semverCompare from 'semver-compare';
 
-// 315532801000 is the first second of 1980 in milliseconds, if a
-// timestamp greater than that, its probably in milliseconds.
-const isAfter1980 = timestamp => timestamp > 315532801000;
-
-// This bodge will be removed once ares sends timestamps in milliseconds;
 const timestampToMilliseconds = jsonRaw => {
   const firstPublished = pathOr(null, ['metadata', 'firstPublished'], jsonRaw);
   const lastPublished = pathOr(null, ['metadata', 'lastPublished'], jsonRaw);
+  const rawAresVersion = pathOr(null, ['metadata', 'version'], jsonRaw);
 
-  if (isAfter1980(firstPublished) && isAfter1980(lastPublished)) {
-    return jsonRaw;
-  }
+  // if cant find ares version, do nothing
+  if (!rawAresVersion) return jsonRaw;
+
+  const aresVersion = rawAresVersion.replace('v', '');
+
+  const semverComparison = semverCompare(aresVersion, '1.1.0');
+
+  // if ares version is 1.1.0 or above, do nothing
+  if (semverComparison !== -1) return jsonRaw;
 
   const json = deepClone(jsonRaw);
 

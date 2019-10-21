@@ -1,11 +1,12 @@
 import timestampToMilliseconds from '.';
 
 describe('addHeadlineBlock', () => {
-  it('should multiply timestamps by 1000 if before 1980', async () => {
+  it('should multiply timestamps by 1000 if version is less than 1.1.0', async () => {
     const input = {
       metadata: {
         firstPublished: 123456789,
         lastPublished: 987654321,
+        version: 'v0.1.1',
       },
     };
 
@@ -13,46 +14,50 @@ describe('addHeadlineBlock', () => {
       metadata: {
         firstPublished: 123456789000,
         lastPublished: 987654321000,
+        version: 'v0.1.1',
       },
     };
 
     expect(timestampToMilliseconds(input)).toEqual(expected);
   });
 
-  it('should multiply timestamps that exist', async () => {
+  it('should not multiply timestamps by 1000 if version is equal to 1.1.0', async () => {
     const input = {
       metadata: {
-        lastPublished: 987654321,
+        firstPublished: 123456789000,
+        lastPublished: 987654321000,
+        version: 'v1.1.0',
       },
     };
 
     const expected = {
       metadata: {
+        firstPublished: 123456789000,
         lastPublished: 987654321000,
+        version: 'v1.1.0',
       },
     };
 
     expect(timestampToMilliseconds(input)).toEqual(expected);
   });
 
-  it('should not multiply timestamps by 1000 if after 1980', async () => {
+  it('should not multiply timestamps by 1000 if version is greater than 1.1.0', async () => {
     const input = {
       metadata: {
-        firstPublished: 1564264928322,
-        lastPublished: 1571610309123,
+        firstPublished: 123456789000,
+        lastPublished: 987654321000,
+        version: 'v1.1.1',
       },
     };
 
-    expect(timestampToMilliseconds(input)).toEqual(input);
-  });
-
-  it('should do nothing if timestamps dont exist', async () => {
-    const input = {
+    const expected = {
       metadata: {
-        foobar: '123',
+        firstPublished: 123456789000,
+        lastPublished: 987654321000,
+        version: 'v1.1.1',
       },
     };
 
-    expect(timestampToMilliseconds(input)).toEqual(input);
+    expect(timestampToMilliseconds(input)).toEqual(expected);
   });
 });
