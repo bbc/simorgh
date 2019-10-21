@@ -129,7 +129,7 @@
     "@bbc/psammead-storybook-helpers": "^6.0.3",
     "@bbc/psammead-test-helpers": "^3.0.2",
     "@loadable/babel-plugin": "^5.10.3",
-    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/jest-dom": "^4.1.2",
     "@testing-library/react": "^9.3.0",
     "@testing-library/react-hooks": "^2.0.3",
     "amphtml-validator": "^1.0.23",
