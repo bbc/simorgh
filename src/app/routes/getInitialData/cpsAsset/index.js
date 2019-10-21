@@ -1,5 +1,3 @@
-import onClient from '../../../lib/utilities/onClient';
-import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import { variantSanitiser } from '../../../lib/utilities/variantHandler';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';

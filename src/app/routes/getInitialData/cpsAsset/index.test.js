@@ -1,33 +1,18 @@
-import baseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import getCpsAssetInitialData from '.';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
 
 const mockData = { service: 'pidgin', status: 200, pageData: {} };
 
-const mockBaseUrl = 'https://www.SIMORGH_BASE_URL.com';
-
-jest.mock('../utils/getBaseUrl', () => jest.fn());
-baseUrl.mockImplementation(() => mockBaseUrl);
-
 jest.mock('../utils/fetchData', () => jest.fn());
 fetchData.mockImplementation(() => mockData);
 
-const defaultServiceParam = 'pidgin';
-const defaultAssetUri = 'tori-49450859';
-const defaultAmpParam = '';
-let defaultContext;
+const pathname = `/pidgin/tori-49450859`;
 
 const preprocessorRules = [convertToOptimoBlocks];
 
 describe('getCpsAssetInitialData', () => {
   beforeEach(() => {
-    defaultContext = {
-      service: defaultServiceParam,
-      assetUri: defaultAssetUri,
-      amp: defaultAmpParam,
-    };
-
     jest.clearAllMocks();
   });
 
@@ -57,16 +42,16 @@ describe('getCpsAssetInitialData', () => {
       preprocessorRules,
     });
   });
+  
+  it('should fetch and return expected data', async () => {
+    const response = await getCpsAssetInitialData(pathname);
 
-  it('fetches data and returns expected object with variant with leading slash', async () => {
-    await getCpsAssetInitialData({
-      ...defaultContext,
-      variant: '/variant',
-    });
+    expect(fetchData).toHaveBeenCalledWith({ pathname });
 
     expect(fetchData).toHaveBeenCalledWith({
       url: 'https://www.SIMORGH_BASE_URL.com/pidgin/tori-49450859/variant.json',
       preprocessorRules,
     });
+    expect(response).toEqual(mockData);
   });
 });
