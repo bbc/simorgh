@@ -7,7 +7,7 @@ const getThumbnailUri = aresMetadataBlock => {
   return `https://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;
 };
 
-const mediaPlayerMetadata = blocks => {
+const getMediaPlayerMetadata = blocks => {
   const aresMediaBlocks = pathOr(null, ['model', 'blocks'], blocks);
   const listContent = [];
   const metadata = {
@@ -45,4 +45,4 @@ const mediaPlayerMetadata = blocks => {
   return listContent.length > 0 ? metadata : null;
 };
 
-export default mediaPlayerMetadata;
+export default getMediaPlayerMetadata;

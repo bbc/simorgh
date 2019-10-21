@@ -4,7 +4,7 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
-import Metadata from './Metadata';
+import MediaPlayerMetadata from './MediaPlayerMetadata';
 import embedUrl from './helpers/embedUrl';
 import getPlaceholderSrc from './helpers/placeholder';
 import filterForBlockType from '#lib/utilities/blockHandlers';
@@ -58,7 +58,7 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
 
   return (
     <GridItemConstrainedMedium>
-      <Metadata aresMediaBlock={aresMediaBlock} />
+      <MediaPlayerMetadata aresMediaBlock={aresMediaBlock} />
       {isAmp ? (
         <AmpMediaPlayer src={embedSource} placeholderSrc={placeholderSrc} />
       ) : (

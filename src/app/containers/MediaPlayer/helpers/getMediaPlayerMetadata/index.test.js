@@ -1,4 +1,4 @@
-import mediaPlayerMetadata from '.';
+import getMediaPlayerMetadata from '.';
 import {
   missingAresMediaMetadata,
   multipleAresMetadata,
@@ -8,7 +8,7 @@ import {
 
 describe('mediaPlayerMetadata', () => {
   it('returns correct video metadata', () => {
-    const metadata = mediaPlayerMetadata(validAresMediaVideoBlock);
+    const metadata = getMediaPlayerMetadata(validAresMediaVideoBlock);
     const output = {
       video: {
         '@list': [
@@ -29,7 +29,7 @@ describe('mediaPlayerMetadata', () => {
   });
 
   it('returns correct audio metadata', () => {
-    const metadata = mediaPlayerMetadata(validAresMediaAudioBlock);
+    const metadata = getMediaPlayerMetadata(validAresMediaAudioBlock);
     const output = {
       video: {
         '@list': [
@@ -49,17 +49,17 @@ describe('mediaPlayerMetadata', () => {
   });
 
   it('handles aresMediaMetadata type not being present', () => {
-    const metadata = mediaPlayerMetadata(missingAresMediaMetadata);
+    const metadata = getMediaPlayerMetadata(missingAresMediaMetadata);
     expect(metadata).toEqual(null);
   });
 
   it('handles empty input', () => {
-    const metadata = mediaPlayerMetadata([]);
+    const metadata = getMediaPlayerMetadata([]);
     expect(metadata).toEqual(null);
   });
 
   it('handles multiple aresMediaMetadata types being present.', () => {
-    const metadata = mediaPlayerMetadata(multipleAresMetadata);
+    const metadata = getMediaPlayerMetadata(multipleAresMetadata);
     const output = {
       video: {
         '@list': [
