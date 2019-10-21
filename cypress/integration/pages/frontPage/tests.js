@@ -5,7 +5,7 @@ import appConfig from '../../../../src/testHelpers/serviceConfigs';
 const serviceHasIndexAlsos = service => service === 'thai';
 const serviceHasPublishedPromo = service => service === 'persian';
 
-const visitPage = (url) => {
+const visitPage = url => {
   cy.visit(url, {
     failOnStatusCode: true,
   });
@@ -115,13 +115,9 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                       failOnStatusCode: false,
                     }).then(resp => {
                       expect(resp.status).to.not.equal(404);
-                      //visitPage(href);
-                      //console.log('pria');
-                      //cy.go('back');
                     });
                     visitPage(href);
-                    //cy.url().should('include', 'cej3lzd5e0go') ;
-                    cy.go('back',{log:true});
+                    cy.go('back', { log: true });
                   });
               });
           });
