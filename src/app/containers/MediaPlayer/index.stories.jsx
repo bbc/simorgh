@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { dirDecorator } from '@bbc/psammead-storybook-helpers';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import MediaPlayerContainer from '.';
-import { validVideoFixture } from './helpers/fixtures';
+import { validVideoWithCaptionBlock } from './fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
@@ -31,7 +31,7 @@ storiesOf('Containers|Media Player/Canonical', module)
         bbcOrigin="https://www.test.bbc.com"
       >
         <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-          <MediaPlayerContainer blocks={validVideoFixture} />
+          <MediaPlayerContainer blocks={validVideoWithCaptionBlock} />
         </ToggleContext.Provider>
       </RequestContextProvider>
     );
@@ -53,7 +53,7 @@ storiesOf('Containers|Media Player/AMP', module)
         bbcOrigin="https://www.test.bbc.com"
       >
         <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-          <MediaPlayerContainer blocks={validVideoFixture} />
+          <MediaPlayerContainer blocks={validVideoWithCaptionBlock} />
         </ToggleContext.Provider>
       </RequestContextProvider>
     );
