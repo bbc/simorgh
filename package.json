@@ -106,7 +106,7 @@
     "react-helmet": "^5.2.1",
     "react-lazyload": "^2.6.2",
     "react-router-config": "^5.1.1",
-    "react-router-dom": "^5.0.1",
+    "react-router-dom": "^5.1.1",
     "styled-components": "^4.4.0",
     "styled-normalize": "^8.0.6",
     "uuid": "^3.3.3",
