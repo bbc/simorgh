@@ -41,7 +41,6 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         id: nextId,
         isAmp: nextIsAmp,
         route,
-        match,
       } = getRouteProps(routes, location.pathname);
 
       setState({
@@ -56,7 +55,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         error: null,
       });
 
-      route.getInitialData(match.params).then(data =>
+      route.getInitialData(location.pathname).then(data =>
         setState(prevState => ({
           ...prevState,
           loading: false,
