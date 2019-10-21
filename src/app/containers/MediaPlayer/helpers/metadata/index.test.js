@@ -1,10 +1,10 @@
 import mediaPlayerMetadata from '.';
 import {
-  missingAresMediaMetadata,
-  multipleAresMetadata,
   validAresMediaVideoBlock,
   validAresMediaAudioBlock,
-} from '../fixtures';
+  missingAresMediaMetadataBlock,
+  multipleAresMetadataBlock,
+} from '../../fixtureData';
 
 describe('mediaPlayerMetadata', () => {
   it('returns correct video metadata', () => {
@@ -49,7 +49,7 @@ describe('mediaPlayerMetadata', () => {
   });
 
   it('handles aresMediaMetadata type not being present', () => {
-    const metadata = mediaPlayerMetadata(missingAresMediaMetadata);
+    const metadata = mediaPlayerMetadata(missingAresMediaMetadataBlock);
     expect(metadata).toEqual(null);
   });
 
@@ -59,7 +59,7 @@ describe('mediaPlayerMetadata', () => {
   });
 
   it('handles multiple aresMediaMetadata types being present.', () => {
-    const metadata = mediaPlayerMetadata(multipleAresMetadata);
+    const metadata = mediaPlayerMetadata(multipleAresMetadataBlock);
     const output = {
       video: {
         '@list': [
