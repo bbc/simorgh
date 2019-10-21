@@ -4,7 +4,7 @@ const DEFAULT_IMAGE_RES = '640x360';
 
 const getThumbnailUri = aresMetadataBlock => {
   const imageUrl = pathOr(null, ['model', 'imageUrl'], aresMetadataBlock);
-  return `htpps://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;
+  return `https://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;
 };
 
 const mediaPlayerMetadata = blocks => {
