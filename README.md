@@ -275,7 +275,6 @@ Every run of `npm run build` will update the bundle analysis files in the repo. 
 
 ### Linting and unit tests
 
-https://github.com/bbc/psammead/pull/1516
 We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `npm run test:lint`.
 
 We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `npm run test:unit`.
