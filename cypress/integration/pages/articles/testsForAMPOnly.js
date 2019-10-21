@@ -1,4 +1,6 @@
 import envConfig from '../../../support/config/envs';
+import config from '../../../support/config/services';
+import { getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -33,6 +35,22 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             cy.get('amp-img').should('be.visible');
           });
       }
+    });
+
+    it('should render a placeholder image within a media block', () => {
+      cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+        ({ body }) => {
+          // `video` blocks can also contain audio.
+          const media = getBlockData('video', body);
+          if (media) {
+            cy.get('div[class^="StyledVideoContainer"]').within(() => {
+              cy.get('amp-img')
+                .should('have.attr', 'src')
+                .should('not.be.empty');
+            });
+          }
+        },
+      );
     });
   });
 
