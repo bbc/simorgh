@@ -1,4 +1,10 @@
+import React from 'react';
+import { string, shape, bool, arrayOf, object } from 'prop-types';
 import { singleTextBlock } from '#models/blocks';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContext } from '#contexts/ToggleContext';
+import MediaPlayerContainer from '.';
 
 const captionBlock = {
   model: {
@@ -134,14 +140,14 @@ export const validAresMediaAudioBlock = {
   type: 'aresMedia',
 };
 
-export const missingAresMediaMetadata = {
+export const missingAresMediaMetadataBlock = {
   model: {
     blocks: [imageBlock],
   },
   type: 'aresMedia',
 };
 
-export const multipleAresMetadata = {
+export const multipleAresMetadataBlock = {
   model: {
     blocks: [
       {
@@ -230,9 +236,12 @@ export const multipleAresMetadata = {
   type: 'aresMedia',
 };
 
-export const validVideoFixture = [captionBlock, validAresMediaVideoBlock];
+export const validVideoWithCaptionBlock = [
+  captionBlock,
+  validAresMediaVideoBlock,
+];
 
-export const missingVpidFixture = [
+const missingVpidBlocks = [
   captionBlock,
   {
     model: {
@@ -279,3 +288,97 @@ export const missingVpidFixture = [
     position: [4, 2],
   },
 ];
+
+const defaultToggles = {
+  local: {
+    mediaPlayer: {
+      enabled: true,
+    },
+  },
+  test: {
+    mediaPlayer: {
+      enabled: true,
+    },
+  },
+  live: {
+    mediaPlayer: {
+      enabled: false,
+    },
+  },
+};
+
+const toggleStateOff = {
+  local: {
+    mediaPlayer: {
+      enabled: false,
+    },
+  },
+};
+
+const GenerateFixtureData = ({
+  platform,
+  toggleState,
+  blocks,
+  placeholder,
+}) => (
+  <RequestContextProvider
+    isAmp={platform === 'amp'}
+    service="news"
+    statusCode={200}
+    platform={platform}
+    id="foo"
+    pageType="article"
+    pathname="/pathname"
+  >
+    <ServiceContextProvider service="news">
+      <ToggleContext.Provider
+        value={{ toggleState, toggleDispatch: jest.fn() }}
+      >
+        <MediaPlayerContainer blocks={blocks} placeholder={placeholder} />
+      </ToggleContext.Provider>
+    </ServiceContextProvider>
+  </RequestContextProvider>
+);
+
+GenerateFixtureData.propTypes = {
+  platform: string.isRequired,
+  toggleState: shape({}),
+  blocks: arrayOf(object).isRequired,
+  placeholder: bool,
+};
+
+GenerateFixtureData.defaultProps = {
+  toggleState: defaultToggles,
+  placeholder: true,
+};
+
+export const VideoCanonical = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={[validAresMediaVideoBlock]}
+  />
+);
+
+export const VideoAmp = (
+  <GenerateFixtureData platform="amp" blocks={[validAresMediaVideoBlock]} />
+);
+
+export const VideoCanonicalNoPlaceHolder = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={[validAresMediaVideoBlock]}
+    placeholder={false}
+  />
+);
+
+export const VideoCanonicalNoVersionId = (
+  <GenerateFixtureData platform="canonical" blocks={missingVpidBlocks} />
+);
+
+export const VideoCanonicalToggledOff = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={[validAresMediaVideoBlock]}
+    toggleState={toggleStateOff}
+  />
+);
