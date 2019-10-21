@@ -222,6 +222,8 @@ When viewing Video stories locally, make sure to use a BBC domain, as outlined i
 
 We also use [Chromatic QA](https://docs.chromaticqa.com/) to run cross-browser testing on our stories.
 
+Please also note that if you would like to see the components rendered with our fonts, you will need to force a repaint of the canvas. This is because our fonts all have the `font-display` property of `optional` or `swap` in accordance with the respective loading strategies here: https://ws-downloads.files.bbci.co.uk/fonts/index.html. The easiest way to force a repaint is just to move the divider between the preview window the and `Knobs` section or resize the browser window.
+
 ## Production build locally
 
 To run this application locally with a production build, run:
@@ -273,6 +275,7 @@ Every run of `npm run build` will update the bundle analysis files in the repo. 
 
 ### Linting and unit tests
 
+https://github.com/bbc/psammead/pull/1516
 We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `npm run test:lint`.
 
 We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `npm run test:unit`.
