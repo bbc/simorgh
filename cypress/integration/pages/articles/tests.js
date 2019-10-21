@@ -1,7 +1,23 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/testHelpers/serviceConfigs';
-import { getBlockByType, getBlockData } from './helpers';
+
+const getBlockByType = (blocks, blockType) => {
+  let blockData;
+
+  blocks.forEach(block => {
+    if (!blockData && block.type === blockType) {
+      blockData = block;
+    }
+  });
+  return blockData;
+};
+
+const getBlockData = (blockType, body) => {
+  const { blocks } = body.content.model;
+
+  return getBlockByType(blocks, blockType);
+};
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
