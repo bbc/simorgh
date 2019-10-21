@@ -6,7 +6,7 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
     <script
       type="application/ld+json"
     >
-      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"htpps://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg","uploadDate":1540218932000}]}}
     </script>
     <script
       async="true"
@@ -161,7 +161,7 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
     <script
       type="application/ld+json"
     >
-      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"htpps://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg","uploadDate":1540218932000}]}}
     </script>
   </head>
   <body>
@@ -194,7 +194,7 @@ exports[`MediaPlayer is called correctly Calls the canonical player when platfor
     <script
       type="application/ld+json"
     >
-      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"htpps://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/640x360/p01k6mtv.jpg","uploadDate":1540218932000}]}}
     </script>
   </head>
   <body>
