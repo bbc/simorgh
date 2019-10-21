@@ -1,5 +1,6 @@
 import fetchData from '../utils/fetchData';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
+import makeIntroductionBold from '#lib/utilities/preprocessor/rules/cpsAssetPage/makeIntroductionBold';
 import addHeadlineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addHeadlineBlock';
 import timestampToMilliseconds from '#lib/utilities/preprocessor/rules/cpsAssetPage/timestampToMilliseconds';
 import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
@@ -8,6 +9,7 @@ import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositi
 
 export const preprocessorRules = [
   timestampToMilliseconds,
+  makeIntroductionBold,
   convertToOptimoBlocks,
   addHeadlineBlock,
   applyTimestampRules,
