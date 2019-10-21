@@ -382,3 +382,14 @@ export const VideoCanonicalToggledOff = (
     toggleState={toggleStateOff}
   />
 );
+
+export const VideoCanonicalWithCaption = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={validVideoWithCaptionBlock}
+  />
+);
+
+export const VideoAmpWithCaption = (
+  <GenerateFixtureData platform="amp" blocks={validVideoWithCaptionBlock} />
+);
