@@ -4,10 +4,16 @@ import clone from 'ramda/src/clone';
 const makeIntroductionBold = jsonRaw => {
   const json = clone(jsonRaw);
   const blocks = pathOr([], ['content', 'blocks'], json);
+  let introIndex;
 
-  const introIndex = blocks.findIndex(
-    block => block.type === 'paragraph' && block.role === 'introduction',
-  );
+  for (let x = 0; x <= blocks.length; x += 1) {
+    const block = blocks[x];
+
+    if (block.type === 'paragraph' && block.role === 'introduction') {
+      introIndex = x;
+      break;
+    }
+  }
 
   if (introIndex >= 0 && blocks[introIndex]) {
     blocks[introIndex].text = `<bold>${blocks[introIndex].text}</bold>`;
