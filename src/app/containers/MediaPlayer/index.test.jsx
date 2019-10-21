@@ -1,32 +1,27 @@
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import {
-  VideoFixture,
-  VideoAmpFixture,
-  VideoFixtureNoPlaceHolder,
-  VideoFixtureNoVersionId,
-  VideoFixtureToggledOff,
+  VideoCanonical,
+  VideoAmp,
+  VideoCanonicalNoPlaceHolder,
+  VideoCanonicalNoVersionId,
+  VideoCanonicalToggledOff,
 } from './fixtureData';
 
 describe('MediaPlayer', () => {
-  describe('is called correctly', () => {
-    shouldMatchSnapshot(
-      'Calls the canonical placeholder when platform is canonical',
-      VideoFixture,
-    );
+  shouldMatchSnapshot(
+    'Calls the canonical placeholder when platform is canonical',
+    VideoCanonical,
+  );
 
-    shouldMatchSnapshot(
-      'Calls the canonical player when platform is canonical and placeholder is false',
-      VideoFixtureNoPlaceHolder,
-    );
+  shouldMatchSnapshot(
+    'Calls the canonical player when platform is canonical and placeholder is false',
+    VideoCanonicalNoPlaceHolder,
+  );
 
-    shouldMatchSnapshot(
-      'Calls the AMP player when platform is AMP',
-      VideoAmpFixture,
-    );
-  });
+  shouldMatchSnapshot('Calls the AMP player when platform is AMP', VideoAmp);
 
   describe('Fails and returns early when', () => {
-    isNull('there is no versionId', VideoFixtureNoVersionId);
-    isNull('component is toggled off', VideoFixtureToggledOff);
+    isNull('there is no versionId', VideoCanonicalNoVersionId);
+    isNull('component is toggled off', VideoCanonicalToggledOff);
   });
 });

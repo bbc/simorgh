@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape, bool, arrayOf, object, oneOfType } from 'prop-types';
+import { string, shape, bool, arrayOf, object } from 'prop-types';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -334,10 +334,7 @@ const GenerateFixtureData = ({
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: jest.fn() }}
       >
-        <MediaPlayerContainer
-          blocks={Array.isArray(blocks) ? blocks : [blocks]}
-          placeholder={placeholder}
-        />
+        <MediaPlayerContainer blocks={blocks} placeholder={placeholder} />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -346,7 +343,7 @@ const GenerateFixtureData = ({
 GenerateFixtureData.propTypes = {
   platform: string.isRequired,
   toggleState: shape({}),
-  blocks: oneOfType([object, arrayOf(object)]).isRequired,
+  blocks: arrayOf(object).isRequired,
   placeholder: bool,
 };
 
@@ -355,30 +352,33 @@ GenerateFixtureData.defaultProps = {
   placeholder: true,
 };
 
-export const VideoFixture = (
-  <GenerateFixtureData platform="canonical" blocks={validAresMediaVideoBlock} />
-);
-
-export const VideoAmpFixture = (
-  <GenerateFixtureData platform="amp" blocks={validAresMediaVideoBlock} />
-);
-
-export const VideoFixtureNoPlaceHolder = (
+export const VideoCanonical = (
   <GenerateFixtureData
     platform="canonical"
-    blocks={validAresMediaVideoBlock}
+    blocks={[validAresMediaVideoBlock]}
+  />
+);
+
+export const VideoAmp = (
+  <GenerateFixtureData platform="amp" blocks={[validAresMediaVideoBlock]} />
+);
+
+export const VideoCanonicalNoPlaceHolder = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={[validAresMediaVideoBlock]}
     placeholder={false}
   />
 );
 
-export const VideoFixtureNoVersionId = (
+export const VideoCanonicalNoVersionId = (
   <GenerateFixtureData platform="canonical" blocks={missingVpidBlocks} />
 );
 
-export const VideoFixtureToggledOff = (
+export const VideoCanonicalToggledOff = (
   <GenerateFixtureData
     platform="canonical"
-    blocks={validAresMediaVideoBlock}
+    blocks={[validAresMediaVideoBlock]}
     toggleState={toggleStateOff}
   />
 );
