@@ -3,6 +3,7 @@ import appConfig from '../../../../src/testHelpers/serviceConfigs';
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
+// Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'persian';
 
 const visitPage = url => {
