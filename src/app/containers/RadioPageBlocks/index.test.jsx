@@ -26,7 +26,7 @@ describe('Radio Page Blocks', () => {
         value={{
           platform: 'canonical',
           pageType: 'media',
-          origin: 'http://localhost.bbc.co.uk:7080',
+          origin: 'http://localhost:7080',
         }}
       >
         <RadioPageBlocks blocks={blocks} />
@@ -41,7 +41,7 @@ describe('Radio Page Blocks', () => {
         value={{
           platform: 'amp',
           pageType: 'media',
-          origin: 'http://localhost.bbc.co.uk:7080',
+          origin: 'http://localhost:7080',
         }}
       >
         <RadioPageBlocks blocks={blocks} />
