@@ -73,6 +73,10 @@ const visitPage = (service, pageType) => {
   });
 };
 
+/* Note: This test is disabled on local env because the "secure=true" attribute was introduced
+ * to our setCookie functionality in this PR: https://github.com/bbc/simorgh/pull/4296
+ * Our localhost is currently insecure and the "secure" attribute will prevent cookies being set on HTTP.
+ */
 if (Cypress.env('APP_ENV') !== 'local') {
   Object.keys(config)
     .filter(serviceFilter)
