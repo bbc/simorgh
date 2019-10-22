@@ -16,3 +16,4 @@ exclude_patterns:
   - 'scripts/signBuild.js'
   - 'scripts/lighthouseBudget.test.js'
   - 'scripts/lighthouseBudget.js'
+  - 'scripts/dependencyCheck.js'
