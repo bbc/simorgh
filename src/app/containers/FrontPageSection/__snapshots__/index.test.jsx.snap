@@ -533,6 +533,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 >
   <div
     class="c0"
+    data-section-divider="Top-Stories"
   >
     <div
       class="c1"
@@ -1051,6 +1052,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 >
   <div
     class="c0"
+    data-section-divider="Top-Stories"
   >
     <div
       class="c1"
@@ -1562,6 +1564,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 >
   <div
     class="c0"
+    data-section-divider="Top-Stories"
   >
     <div
       class="c1"
@@ -1998,6 +2001,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 >
   <div
     class="c0"
+    data-section-divider="Top-Stories"
   >
     <h2
       class="c1"

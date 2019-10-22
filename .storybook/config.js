@@ -1,4 +1,3 @@
-import 'storybook-chromatic';
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';

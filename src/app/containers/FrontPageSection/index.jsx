@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape, number } from 'prop-types';
+import { bool, shape, number, arrayOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -15,6 +15,7 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import pathOr from 'ramda/src/pathOr';
+import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import groupShape from '#models/propTypes/frontPageGroup';
@@ -89,6 +90,38 @@ StoryPromoComponent.propTypes = {
   storyNumber: number.isRequired,
 };
 
+const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
+  return items.length > 1 ? (
+    <MarginWrapper firstSection={firstSection}>
+      <StoryPromoUl>
+        {items.map((item, index) => (
+          <StoryPromoLi key={item.id}>
+            <StoryPromoComponent
+              item={item}
+              sectionNumber={sectionNumber}
+              storyNumber={index}
+            />
+          </StoryPromoLi>
+        ))}
+      </StoryPromoUl>
+    </MarginWrapper>
+  ) : (
+    <MarginWrapper firstSection={firstSection} oneItem>
+      <StoryPromoComponent
+        item={items[0]}
+        sectionNumber={sectionNumber}
+        storyNumber={0}
+      />
+    </MarginWrapper>
+  );
+};
+
+StoryPromoRenderer.propTypes = {
+  items: arrayOf(shape(storyItem)).isRequired,
+  firstSection: bool.isRequired,
+  sectionNumber: number.isRequired,
+};
+
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
@@ -130,28 +163,14 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {items.length > 1 ? (
-        <MarginWrapper firstSection={isFirstSection}>
-          <StoryPromoUl>
-            {items.map((item, index) => (
-              <StoryPromoLi key={item.id}>
-                <StoryPromoComponent
-                  item={item}
-                  sectionNumber={sectionNumber}
-                  storyNumber={index}
-                />
-              </StoryPromoLi>
-            ))}
-          </StoryPromoUl>
-        </MarginWrapper>
+      {group.semanticGroupName === 'Useful links' ? (
+        <UsefulLinksComponent items={items} script={script} service={service} />
       ) : (
-        <MarginWrapper firstSection={isFirstSection} oneItem>
-          <StoryPromoComponent
-            item={items[0]}
-            sectionNumber={sectionNumber}
-            storyNumber={0}
-          />
-        </MarginWrapper>
+        <StoryPromoRenderer
+          items={items}
+          firstSection={isFirstSection}
+          sectionNumber={sectionNumber}
+        />
       )}
     </section>
   );

@@ -1,6 +1,3 @@
-import onClient from '#lib/utilities/onClient';
-import { variantSanitiser } from '#lib/utilities/variantHandler';
-import getBaseUrl from '../utils/getBaseUrl';
 import fetchData from '../utils/fetchData';
 import filterUnknownContentTypes from '#lib/utilities/preprocessor/rules/filterContentType';
 import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmptyGroupItems';
@@ -16,18 +13,8 @@ const preprocessorRules = [
   filterGroupsWithoutStraplines,
 ];
 
-const getFrontpageInitialData = async ({ service, variant }) => {
-  const baseUrl = onClient()
-    ? getBaseUrl(window.location.origin)
-    : process.env.SIMORGH_BASE_URL;
-
-  const processedVariant = variantSanitiser(variant);
-
-  const url = processedVariant
-    ? `${baseUrl}/${service}/${processedVariant}.json`
-    : `${baseUrl}/${service}.json`;
-
-  return fetchData({ url, preprocessorRules });
+const getFrontpageInitialData = async pathname => {
+  return fetchData({ pathname, preprocessorRules });
 };
 
 export default getFrontpageInitialData;

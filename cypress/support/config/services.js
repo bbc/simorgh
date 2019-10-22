@@ -919,7 +919,7 @@ const services = {
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/pidgin/tori-49450859',
-        smoke: false,
+        smoke: true,
       },
     },
   },
