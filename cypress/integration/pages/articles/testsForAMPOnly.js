@@ -1,4 +1,7 @@
 import envConfig from '../../../support/config/envs';
+import config from '../../../support/config/services';
+import envToggles from '../../../support/helpers/useAppToggles';
+import { getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -34,6 +37,26 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           });
       }
     });
+
+    if (envToggles.mediaPlayer.enabled) {
+      describe('Media Player', () => {
+        it('should render a placeholder image', () => {
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            ({ body }) => {
+              // `video` blocks can also contain audio.
+              const media = getBlockData('video', body);
+              if (media) {
+                cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                  cy.get('amp-img')
+                    .should('have.attr', 'src')
+                    .should('not.be.empty');
+                });
+              }
+            },
+          );
+        });
+      });
+    }
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
