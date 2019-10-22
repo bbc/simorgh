@@ -25,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: '설명 ',
     imageCopyrightOffscreenText: '사진 출처 ',
     locale: `ko-KO`,
-    datetimeLocale: `ko-ko`,
+    datetimeLocale: `ko`,
     service: 'korean',
     serviceName: 'News 코리아',
     themeColor: `${C_POSTBOX}`,

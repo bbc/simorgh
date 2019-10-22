@@ -26,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Chụp lại, ',
     imageCopyrightOffscreenText: 'Nguồn hình ảnh, ',
     locale: `vi-VN`,
-    datetimeLocale: `vi-vn`,
+    datetimeLocale: `vi`,
     service: 'vietnamese',
     serviceName: 'Tiếng Việt',
     themeColor: `${C_POSTBOX}`,
