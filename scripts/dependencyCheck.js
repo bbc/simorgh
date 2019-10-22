@@ -5,7 +5,7 @@ const depcheck = require('depcheck');
 const options = {
   specials: ['bin', 'eslint', 'jest', 'babel', 'webpack'],
   ignoreDirs: ['build'],
-  ignoreMatches: ['puppeteer', 'styled-normalize'],
+  ignoreMatches: ['puppeteer', 'styled-normalize', 'isarray'],
 };
 
 depcheck(
