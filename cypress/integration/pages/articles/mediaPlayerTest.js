@@ -1,11 +1,13 @@
+// This is a temporary file.
+
 describe('Media Player', () => {
-  // Note: This needs to be on the same origin as the iframe,
-  // other we won't be able to access `contentWindow` properties.
+  // Note: This needs to be on the same origin as the iframe, otherwise
+  // we won't be able to access the properties on `contentWindow`.
   const audioVideoUrl = 'https://www.test.bbc.co.uk/news/articles/cn7k01xp8kxo';
 
   it('plays media when a user clicks play', () => {
     cy.visit(audioVideoUrl);
-    cy.get('div[class^="StyledVideoContainer"]').click();
+    cy.get('div[class^="StyledVideoContainer"]').click(); // We don't need this for AMP.
 
     cy.get('iframe[class^="StyledIframe"').then($iframe => {
       // We don't have to wait for $iframe's `load` event, because
