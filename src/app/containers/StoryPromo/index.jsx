@@ -13,7 +13,7 @@ import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '#contexts/ServiceContext';
-import createSrcset from '../Image/helpers/srcSet';
+import createSrcset from '../../lib/utilities/srcSet/srcSet';
 import getOriginCode from './imageSrcHelpers/originCode';
 import getLocator from './imageSrcHelpers/locator';
 
