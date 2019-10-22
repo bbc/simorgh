@@ -1,6 +1,6 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
-import envToggles from '../../../support/helpers/useAppToggles';
+import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -71,8 +71,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     }
 
-    // `envToggles` tells us whether a feature is toggled on or off in the current environment.
-    if (envToggles.mediaPlayer.enabled) {
+    // `appToggles` tells us whether a feature is toggled on or off in the current environment.
+    if (appToggles.mediaPlayer.enabled) {
       describe('Media Player', () => {
         it('should render a visible placeholder image', () => {
           cy.window().then(win => {
