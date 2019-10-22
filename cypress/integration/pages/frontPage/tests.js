@@ -6,12 +6,6 @@ const serviceHasIndexAlsos = service => service === 'thai';
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'persian';
 
-const visitPage = url => {
-  cy.visit(url, {
-    failOnStatusCode: true,
-  });
-};
-
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
@@ -105,6 +99,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           Cypress.env('APP_ENV') !== 'local'
         ) {
           it('individual promo should link to corresponding article pages and back navigation should link to frontpage', () => {
+            let currentURL = null;
             cy.get('h3')
               .eq(3)
               .within(() => {
@@ -119,10 +114,9 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                     });
                   });
               });
-            var currentURL = null;
+
             cy.url().then(url => {
               currentURL = url;
-              console.log(currentURL);
               cy.get('h3')
                 .eq(3)
                 .click();
