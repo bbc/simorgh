@@ -1,41 +1,25 @@
-// NOTES:
-// window.embeddedMedia.players[0]
-// testsForCanonicalOnly
-
-// Cypress.Commands.add('iframeBody', { prevSubject: 'element' }, $iframe => {
-//   return new Cypress.Promise(resolve => {
-//     $iframe.on('load', () => {
-//       resolve($iframe.contents().find('body'));
-//     });
-//   });
-// });
-
 describe('Media Player', () => {
+  // Note: This needs to be on the same origin as the iframe,
+  // other we won't be able to access `contentWindow` properties.
   const audioVideoUrl = 'https://www.test.bbc.co.uk/news/articles/cn7k01xp8kxo';
 
   it('plays media when a user clicks play', () => {
     cy.visit(audioVideoUrl);
-    cy.get('div[class^=StyledVideoContainer]').click();
+    cy.get('div[class^="StyledVideoContainer"]').click();
 
-    cy.get('iframe[class^="StyledIframe"]').then($simorghIframe => {
-      $simorghIframe
-        .find('iframe#smphtml5iframemediaPlayer')
-        .then($smpIframeDoc => {
-          cy.wrap($smpIframeDoc).window({ log: true });
+    cy.get('iframe[class^="StyledIframe"').then($iframe => {
+      // We don't have to wait for $iframe's `load` event, because
+      // `its()` retries until the `embeddedMedia` property appears on
+      // the av-embed `window`. As soon as it appears, 'Bump' has
+      // injected SMP into `div#mediaPlayer` and populated the
+      // `window` with details we can used to assert it's playing.
+      cy.wrap($iframe.get(0).contentWindow)
+        .its('embeddedMedia')
+        .then(embeddedMedia => {
+          cy.wrap(embeddedMedia.players[0])
+            .its('_playing') // We must wait for `_playing` also.
+            .should('eq', true);
         });
     });
-
-    // cy.get('iframe[class^="StyledIframe"]')
-    //   .iframeBody()
-    //   .find('iframe#smphtml5iframemediaPlayer')
-    //   .iframeBody().then($smpIframe => {
-    //     cy.wrap($smpIframe)
-    //       .contains('Contains strong language')
-    //       .should('be.visible');
-
-    //     cy.wrap($smpIframe)
-    //       .contains('Ants and human societies', { timeout: 15000 })
-    //       .should('be.visible');
-    //   });
   });
 });
