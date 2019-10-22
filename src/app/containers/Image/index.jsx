@@ -7,7 +7,7 @@ import {
   GridItemConstrainedMedium,
   GridItemConstrainedSmall,
 } from '#lib/styledGrid';
-import createSrcset from '../../lib/utilities/srcSet/srcSet';
+import { createSrcset } from '#lib/utilities/srcSet';
 import getIChefURL from '../../lib/utilities/srcSet/ichefUrl';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
 

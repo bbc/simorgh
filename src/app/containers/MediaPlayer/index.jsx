@@ -7,6 +7,7 @@ import {
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import getPlaceholderSrc from './helpers/placeholder';
+import { getPlaceholderSrcSet } from '../../lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
@@ -48,7 +49,10 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     return null; // this should be the holding image with an error overlay
   }
 
-  const placeholderSrc = getPlaceholderSrc(imageUrl);
+  const defaultWidth = 512;
+  const placeholderSrc = getPlaceholderSrc(imageUrl, defaultWidth);
+  const placeholderSrcset = getPlaceholderSrcSet(imageUrl).join(',');
+
   const embedSource = embedUrl({
     requestUrl: `${id}/${versionId}/${lang}`,
     type: 'articles',
@@ -56,16 +60,22 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     origin,
   });
 
+  console.log(placeholderSrcset, 'jjjjjjjj');
   return (
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
       {isAmp ? (
-        <AmpMediaPlayer src={embedSource} placeholderSrc={placeholderSrc} />
+        <AmpMediaPlayer
+          src={embedSource}
+          placeholderSrc={placeholderSrc}
+          placeholderSrcset={placeholderSrcset}
+        />
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
           placeholder={placeholder}
           placeholderSrc={placeholder ? placeholderSrc : ''}
+          placeholderSrcset={placeholderSrcset}
         />
       )}
     </GridItemConstrainedMedium>

@@ -1,10 +1,13 @@
 import getIchefUrl from './ichefUrl';
+import getPlaceholderSrc from '#app/containers/MediaPlayer/helpers/placeholder';
 
-const createSrcset = (
+const defaultResolutions = [240, 320, 480, 624, 800];
+
+export const createSrcset = (
   originCode,
   locator,
   originalImageWidth,
-  resolutions = [240, 320, 480, 624, 800],
+  resolutions = defaultResolutions,
 ) => {
   if (originCode === 'pips') {
     return null;
@@ -29,4 +32,7 @@ const createSrcset = (
   return urls.join(', ');
 };
 
-export default createSrcset;
+export const getPlaceholderSrcSet = src =>
+  defaultResolutions.map(
+    resolution => `${getPlaceholderSrc(src, resolution)} ${resolution}w`,
+  );
