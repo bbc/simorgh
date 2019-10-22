@@ -19,9 +19,7 @@ Metadata.propTypes = {
   aresMediaBlock: shape({
     model: shape({
       blocks: arrayOf({
-        model: shape({
-          blocks: arrayOf(any),
-        }),
+        model: shape(any),
         type: string,
       }).isRequired,
     }),
