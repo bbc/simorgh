@@ -51,7 +51,6 @@ describe('withData HOC', () => {
   };
 
   describe('with no data', () => {
-    suppressPropWarnings(['data.dials', 'undefined']);
     shouldMatchSnapshot(
       'should return the errorMain component and 500 status',
       <WithDataHOC {...noDataProps} />,
