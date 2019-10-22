@@ -15,7 +15,7 @@ const serviceContextMock = {
   service: 'amharic',
   script: latin,
   lang: 'am',
-  translations: { mediaAssetPage: { audioPlayer: 'Audio  player' } },
+  translations: { mediaAssetPage: { audioPlayer: 'Audio player' } },
 };
 
 describe('Radio Page Blocks', () => {
