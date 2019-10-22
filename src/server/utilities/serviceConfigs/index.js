@@ -4,6 +4,7 @@
   Including this file in the application will cause the
   bundle splitting to stop working.
 */
+
 import { service as afaanoromoo } from '../../../app/lib/config/services/afaanoromoo';
 import { service as afrique } from '../../../app/lib/config/services/afrique';
 import { service as amharic } from '../../../app/lib/config/services/amharic';
