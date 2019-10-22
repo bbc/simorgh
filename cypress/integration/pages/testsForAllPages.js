@@ -183,6 +183,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = body.promo.summary;
                     title = body.promo.name;
                     break;
+                  case 'mediaAssetPage':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
                   default:
                     description = '';
                     title = '';
