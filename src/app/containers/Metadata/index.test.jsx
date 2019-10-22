@@ -143,7 +143,7 @@ it('should render the apple touch icons', async () => {
   }));
   const expected = [
     {
-      href: 'http://localhost.bbc.com:7080/news/images/icons/icon-192x192.png',
+      href: 'http://localhost:7080/news/images/icons/icon-192x192.png',
       sizes: null,
     },
     {
