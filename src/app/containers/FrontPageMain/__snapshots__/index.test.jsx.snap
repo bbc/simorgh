@@ -877,7 +877,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       rel="amphtml"
     />
     <link
-      href="http://localhost.bbc.com:7080/igbo/images/icons/icon-192x192.png"
+      href="http://localhost:7080/igbo/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
@@ -1104,6 +1104,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="c3"
+                data-section-divider="Top-Stories"
               >
                 <div
                   class="c4"
@@ -1466,6 +1467,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="c38"
+                data-section-divider="Cluster-1"
               >
                 <div
                   class="c4"
@@ -1710,6 +1712,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="c38"
+                data-section-divider="Section-1"
               >
                 <div
                   class="c4"
@@ -1916,6 +1919,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="c38"
+                data-section-divider="Section-2"
               >
                 <div
                   class="c4"
@@ -2432,6 +2436,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="c38"
+                data-section-divider="Section-3"
               >
                 <div
                   class="c4"
@@ -2728,6 +2733,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="c38"
+                data-section-divider="Special-reports-2"
               >
                 <div
                   class="c4"
@@ -3076,6 +3082,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="c38"
+                data-section-divider="Frequency-info"
               >
                 <div
                   class="c4"

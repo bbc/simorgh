@@ -8,7 +8,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import LiveRadio from '.';
 
-const origin = 'http://localhost.bbc.co.uk:7080';
+const origin = 'http://localhost:7080';
 
 describe('MediaPageBlocks LiveRadio', () => {
   shouldMatchSnapshot(

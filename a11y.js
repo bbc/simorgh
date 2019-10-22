@@ -7,7 +7,7 @@ const services = require('./cypress/support/config/services');
 // Run a11y on 360px only since designs are done in this width
 // This functionality can be extended to allow for testing on all widths
 const pageWidths = [360];
-const baseUrl = 'http://localhost.bbc.com:7080';
+const baseUrl = 'http://localhost:7080';
 
 const getPageTypes = service => pathOr(null, [service, 'pageTypes'], services);
 

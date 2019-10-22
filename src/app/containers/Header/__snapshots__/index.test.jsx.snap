@@ -596,6 +596,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c18"
+            data-navigation="Home_/pidgin"
             href="/pidgin"
           >
             <span
@@ -618,6 +619,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Nigeria_/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
@@ -629,6 +631,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Africa_/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
@@ -640,6 +643,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
+            data-navigation="World_/pidgin/world"
             href="/pidgin/world"
           >
             World
@@ -651,6 +655,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Video_/pidgin/media/video"
             href="/pidgin/media/video"
           >
             Video
@@ -662,6 +667,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Audio_/pidgin/media/audio"
             href="/pidgin/media/audio"
           >
             Audio
@@ -673,6 +679,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Sport_/pidgin/sport"
             href="/pidgin/sport"
           >
             Sport
@@ -684,6 +691,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Entertainment_/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
@@ -695,6 +703,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Most popular_/pidgin/popular/read"
             href="/pidgin/popular/read"
           >
             Most popular
@@ -1303,6 +1312,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c18"
+            data-navigation="Home_/pidgin"
             href="/pidgin"
           >
             <span
@@ -1325,6 +1335,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Nigeria_/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
@@ -1336,6 +1347,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Africa_/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
@@ -1347,6 +1359,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
+            data-navigation="World_/pidgin/world"
             href="/pidgin/world"
           >
             World
@@ -1358,6 +1371,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Video_/pidgin/media/video"
             href="/pidgin/media/video"
           >
             Video
@@ -1369,6 +1383,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Audio_/pidgin/media/audio"
             href="/pidgin/media/audio"
           >
             Audio
@@ -1380,6 +1395,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Sport_/pidgin/sport"
             href="/pidgin/sport"
           >
             Sport
@@ -1391,6 +1407,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Entertainment_/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
@@ -1402,6 +1419,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Most popular_/pidgin/popular/read"
             href="/pidgin/popular/read"
           >
             Most popular
@@ -2002,6 +2020,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c18"
+            data-navigation="Home_/pidgin"
             href="/pidgin"
           >
             <span
@@ -2024,6 +2043,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Nigeria_/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
           >
             Nigeria
@@ -2035,6 +2055,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Africa_/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
           >
             Africa
@@ -2046,6 +2067,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c20"
+            data-navigation="World_/pidgin/world"
             href="/pidgin/world"
           >
             World
@@ -2057,6 +2079,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Video_/pidgin/media/video"
             href="/pidgin/media/video"
           >
             Video
@@ -2068,6 +2091,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Audio_/pidgin/media/audio"
             href="/pidgin/media/audio"
           >
             Audio
@@ -2079,6 +2103,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Sport_/pidgin/sport"
             href="/pidgin/sport"
           >
             Sport
@@ -2090,6 +2115,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Entertainment_/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
           >
             Entertainment
@@ -2101,6 +2127,7 @@ exports[`Header should render correctly for news article 1`] = `
         >
           <a
             class="c20"
+            data-navigation="Most popular_/pidgin/popular/read"
             href="/pidgin/popular/read"
           >
             Most popular
