@@ -42,8 +42,8 @@ const generateImageBlock = block => {
 const convertMedia = block => {
   return {
     type: 'video',
-    locator: `urn:bbc:pips:pid:${block.id}`,
     model: {
+      locator: `urn:bbc:pips:pid:${block.id}`,
       blocks: [
         {
           type: 'aresMedia',
