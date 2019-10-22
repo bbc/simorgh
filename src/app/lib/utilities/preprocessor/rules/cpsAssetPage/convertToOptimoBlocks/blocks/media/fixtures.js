@@ -87,14 +87,9 @@ export const optimoVideoBlock = {
               model: {
                 blocks: [
                   {
-                    // UNKNOWN - Hardcoded?
                     type: 'rawImage',
-
                     model: {
-                      // input.copyrightHolder
                       copyrightHolder: 'BBC',
-
-                      // input.imageUrl
                       locator:
                         'ichef.bbci.co.uk/images/ic/$recipe/p07jl8g4.jpg',
                     },
