@@ -1,25 +1,16 @@
-import { bool, shape, string, number, object, arrayOf } from 'prop-types';
+import { bool, shape, string, number } from 'prop-types';
+import { cpsAssetPageMetadataPropTypes } from '../metadata';
+import { cpsAssetPagePromoPropTypes } from '../promo';
+import mainContentPropTypes from '../mainContent';
+import relatedContentPropTypes from '../relatedContent';
 
 export const cpsAssetPageDataPropTypes = shape({
-  metadata: shape({
-    id: string,
-    tags: object,
-    type: string,
-  }),
-  promo: shape({
-    id: string,
-    type: string,
-  }),
+  metadata: shape(cpsAssetPageMetadataPropTypes).isRequired,
   content: shape({
-    blocks: arrayOf(
-      shape({
-        uuid: string,
-        id: string,
-        text: string,
-        type: string,
-      }),
-    ),
-  }),
+    model: shape(mainContentPropTypes).isRequired,
+  }).isRequired,
+  promo: shape(cpsAssetPagePromoPropTypes),
+  relatedContent: shape(relatedContentPropTypes).isRequired,
 });
 
 const cpsAssetPagePropTypes = {
