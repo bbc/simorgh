@@ -104,7 +104,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           serviceHasPublishedPromo(service) &&
           Cypress.env('APP_ENV') !== 'local'
         ) {
-          it('individual promo should link to corresponding article pages', () => {
+          it('individual promo should link to corresponding article pages and back navigation should link to frontpage', () => {
             cy.get('h3')
               .eq(3)
               .within(() => {
