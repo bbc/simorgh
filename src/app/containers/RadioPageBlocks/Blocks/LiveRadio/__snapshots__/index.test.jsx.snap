@@ -52,7 +52,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
               frameborder="0"
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
-              src="https://www.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko/amp"
+              src="https://www.test.bbc.com/ws/av-embeds/media/externalId/id/ko/amp"
               title="Audio player"
             >
               <amp-img
@@ -120,7 +120,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
         allow="autoplay; fullscreen"
         allowfullscreen=""
         class="c3"
-        src="https://www.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
+        src="https://www.test.bbc.com/ws/av-embeds/media/externalId/id/ko"
         title="Audio player"
       />
     </div>
@@ -180,7 +180,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
               frameborder="0"
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
-              src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om/amp"
+              src="https://www.test.bbc.com/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om/amp"
               title="Audio player"
             >
               <amp-img
@@ -248,7 +248,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
         allow="autoplay; fullscreen"
         allowfullscreen=""
         class="c3"
-        src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
+        src="https://www.test.bbc.com/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
         title="Audio player"
       />
     </div>
