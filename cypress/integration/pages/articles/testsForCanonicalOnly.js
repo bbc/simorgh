@@ -71,6 +71,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     }
 
+    // `envToggles` tells us whether a feature is toggled on or off in the current environment.
     if (envToggles.mediaPlayer.enabled) {
       describe('Media Player', () => {
         it('should render a visible placeholder image', () => {
