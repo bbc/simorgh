@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { shape } from 'prop-types';
+import { any, arrayOf, shape, string } from 'prop-types';
 import mediaPlayerMetadata from './helpers/metadata';
 
 const Metadata = ({ aresMediaBlock }) => {
@@ -17,7 +17,14 @@ const Metadata = ({ aresMediaBlock }) => {
 
 Metadata.propTypes = {
   aresMediaBlock: shape({
-    model: shape({}),
+    model: shape({
+      blocks: arrayOf({
+        model: shape({
+          blocks: arrayOf(any),
+        }),
+        type: string,
+      }).isRequired,
+    }),
   }).isRequired,
 };
 
