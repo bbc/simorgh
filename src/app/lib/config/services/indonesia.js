@@ -25,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Keterangan, ',
     imageCopyrightOffscreenText: 'Sumber gambar, ',
     locale: `id-ID`,
-    datetimeLocale: `id-id`,
+    datetimeLocale: `id`,
     service: 'indonesia',
     serviceName: 'Indonesia',
     themeColor: `${C_POSTBOX}`,
