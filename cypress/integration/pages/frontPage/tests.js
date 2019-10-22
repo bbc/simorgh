@@ -143,7 +143,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               });
               const hasStrapline = usefulLinks
                 ? Object.prototype.hasOwnProperty.call(usefulLinks, 'strapline')
-                : false;
+	const hasStrapline = usefulLinks && Object.prototype.hasOwnProperty.call(usefulLinks, 'strapline')
 
               if (usefulLinks && hasStrapline) {
                 //  We include the hasStrapline as we don't render Useful Links
