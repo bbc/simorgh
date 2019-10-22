@@ -1,4 +1,4 @@
-import createSrcset from '.';
+import { createSrcset } from '.';
 
 describe('create srcset', () => {
   const srcsetScenarios = [

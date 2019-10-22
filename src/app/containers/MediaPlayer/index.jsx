@@ -60,7 +60,6 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     origin,
   });
 
-  console.log(placeholderSrcset, 'jjjjjjjj');
   return (
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
