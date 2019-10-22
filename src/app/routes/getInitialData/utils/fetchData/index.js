@@ -24,7 +24,7 @@ const handleResponse = preprocessorRules => async response => {
   return {
     status,
     ...(status === STATUS_CODE_OK && {
-      pageData: preprocess(await response.json(), preprocessorRules),
+      pageData: await preprocess(await response.json(), preprocessorRules),
     }),
   };
 };
