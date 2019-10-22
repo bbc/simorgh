@@ -24,10 +24,10 @@ const testCases = [
   },
   {
     description:
-      'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.co.uk',
-    expected: `https://www.test.bbc.co.uk/ws/av-embeds/articles/${requestUrl}`,
+      'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.com',
+    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
-      origin: 'http://localhost.bbc.co.uk:7080',
+      origin: 'http://localhost:7080',
       requestUrl,
       type,
     },
@@ -37,7 +37,7 @@ const testCases = [
       'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.com',
     expected: `https://www.test.bbc.com/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
-      origin: 'http://localhost.bbc.com:7080',
+      origin: 'http://localhost:7080',
       requestUrl,
       type,
     },
@@ -64,10 +64,10 @@ const testCases = [
   },
   {
     description:
-      'AMP: builds a URL for LOCAL environment that has a base of test.bbc.co.uk',
-    expected: `https://www.test.bbc.co.uk/ws/av-embeds/articles/${requestUrl}/amp`,
+      'AMP: builds a URL for LOCAL environment that has a base of test.bbc.com',
+    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${requestUrl}/amp`,
     embedObject: {
-      origin: 'http://localhost.bbc.co.uk:7080',
+      origin: 'http://localhost:7080',
       isAmp: true,
       requestUrl,
       type,
@@ -75,10 +75,10 @@ const testCases = [
   },
   {
     description:
-      'AMP: builds a URL for LOCAL environment that has a base of test.bbc.co.uk',
-    expected: `https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/amp`,
+      'AMP: builds a URL for LOCAL environment that has a base of test.bbc.com',
+    expected: `https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/amp`,
     embedObject: {
-      origin: 'http://localhost.bbc.co.uk:7080',
+      origin: 'http://localhost:7080',
       isAmp: true,
       requestUrl: 'bbc_korean_radio/liveradio',
       type: 'media',
@@ -86,10 +86,10 @@ const testCases = [
   },
   {
     description:
-      'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.co.uk',
-    expected: `https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio`,
+      'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.com',
+    expected: `https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio`,
     embedObject: {
-      origin: 'http://localhost.bbc.co.uk:7080',
+      origin: 'http://localhost:7080',
       isAmp: false,
       requestUrl: 'bbc_korean_radio/liveradio',
       type: 'media',
@@ -97,7 +97,7 @@ const testCases = [
   },
   {
     description:
-      'CANONICAL: builds a URL for GITHUB environment that has a base of test.bbc.co.uk',
+      'CANONICAL: builds a URL for GITHUB environment that has a base of test.bbc.com',
     expected:
       'https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio',
     embedObject: {

@@ -132,7 +132,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
       rel="amphtml"
     />
     <link
-      href="http://localhost.bbc.com:7080/pidgin/images/icons/icon-192x192.png"
+      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
