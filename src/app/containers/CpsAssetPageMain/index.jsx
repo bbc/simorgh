@@ -1,6 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
-
+import { Link } from 'react-router-dom';
 import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
@@ -24,7 +24,12 @@ const CpsAssetPageMain = ({ pageData }) => {
       <ATIAnalytics data={pageData} />
       <Grid as="main" role="main">
         <GridItemConstrainedMedium>
-          <h1> Placeholder content for MAP page skeleton</h1>
+          <h1 id="content" tabIndex="-1">
+            Placeholder content for MAP page skeleton
+          </h1>
+          <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
+            Test MAP to MAP inline link
+          </Link>
         </GridItemConstrainedMedium>
       </Grid>
     </>

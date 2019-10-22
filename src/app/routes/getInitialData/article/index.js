@@ -1,29 +1,18 @@
-import onClient from '#lib/utilities/onClient';
-import getBaseUrl from '../utils/getBaseUrl';
-import fetchData from '../utils/fetchData';
-import { variantSanitiser } from '#lib/utilities/variantHandler';
 import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
 import addIdsToBlocks from '#lib/utilities/preprocessor/rules/addIdsToBlocks';
 import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositioning';
+import fetchData from '../utils/fetchData';
 
-const getArticleInitialData = async ({ id, service, variant }) => {
-  const baseUrl = onClient()
-    ? getBaseUrl(window.location.origin)
-    : process.env.SIMORGH_BASE_URL;
+const preprocessorRules = [
+  applyTimestampRules,
+  addIdsToBlocks,
+  applyBlockPositioning,
+];
 
-  const processedVariant = variantSanitiser(variant);
-
-  const url = processedVariant
-    ? `${baseUrl}/${service}/articles/${id}/${processedVariant}.json`
-    : `${baseUrl}/${service}/articles/${id}.json`;
-
+const getArticleInitialData = async pathname => {
   return fetchData({
-    url,
-    preprocessorRules: [
-      applyTimestampRules,
-      addIdsToBlocks,
-      applyBlockPositioning,
-    ],
+    pathname,
+    preprocessorRules,
   });
 };
 
