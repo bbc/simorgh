@@ -1,5 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import { Link } from 'react-router-dom';
 import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
@@ -17,7 +18,7 @@ const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
-  const blocks = path(['content', 'model', 'blocks'], pageData);
+  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
 
   return (
     <>
