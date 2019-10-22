@@ -117,10 +117,18 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                     }).then(resp => {
                       expect(resp.status).to.not.equal(404);
                     });
-                    visitPage(href);
-                    cy.go('back', { log: true });
                   });
               });
+            var currentURL = null;
+            cy.url().then(url => {
+              currentURL = url;
+              console.log(currentURL);
+              cy.get('h3')
+                .eq(3)
+                .click();
+              cy.go('back');
+              cy.url().should('eq', currentURL);
+            });
           });
         }
 
