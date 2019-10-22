@@ -176,7 +176,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: "Cysylltwch â'r BBC ",
+          text: "Cysylltwch â'r BBC",
         },
       ],
       copyrightText:
