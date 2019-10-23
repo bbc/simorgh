@@ -1,5 +1,5 @@
 import React from 'react';
-import { create, act } from 'react-test-renderer';
+import { render as create, act } from '@testing-library/react';
 import { render } from 'enzyme';
 import CanonicalATIAnalytics from '.';
 import * as beacon from '#lib/analyticsUtils/sendBeacon';
