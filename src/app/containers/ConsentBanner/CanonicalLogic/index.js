@@ -15,7 +15,11 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 const onClient = typeof window !== 'undefined';
 
 const setCookie = (name, value) =>
-  Cookie.set(name, value, { expires: COOKIE_EXPIRY });
+  Cookie.set(name, value, {
+    expires: COOKIE_EXPIRY,
+    sameSite: 'None',
+    secure: true,
+  });
 
 const setPolicyCookie = (value, logger) => {
   setCookie(POLICY_COOKIE, value);
