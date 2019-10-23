@@ -33,6 +33,6 @@ export const createSrcset = (
 };
 
 export const getPlaceholderSrcSet = src =>
-  defaultResolutions.map(
-    resolution => `${getPlaceholderSrc(src, resolution)} ${resolution}w`,
-  );
+  defaultResolutions
+    .map(resolution => `${getPlaceholderSrc(src, resolution)} ${resolution}w`)
+    .join(', ');

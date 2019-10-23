@@ -51,7 +51,7 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
 
   const defaultWidth = 512;
   const placeholderSrc = getPlaceholderSrc(imageUrl, defaultWidth);
-  const placeholderSrcset = getPlaceholderSrcSet(imageUrl).join(',');
+  const placeholderSrcset = getPlaceholderSrcSet(imageUrl);
 
   const embedSource = embedUrl({
     requestUrl: `${id}/${versionId}/${lang}`,
