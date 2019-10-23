@@ -1,5 +1,5 @@
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/testHelpers/serviceConfigs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 const getParagraphText = blocks =>
   blocks.find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
