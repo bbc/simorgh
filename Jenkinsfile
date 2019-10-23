@@ -116,7 +116,6 @@ pipeline {
         expression { env.BRANCH_NAME != 'latest' }
       }
       failFast true
-      cancelPreviousBuilds()
       parallel {
         stage ('Test Development') {
           agent {
@@ -126,6 +125,7 @@ pipeline {
             }
           }
           steps {
+            cancelPreviousBuilds()
             setupCodeCoverage()
             withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
               runDevelopmentTests()
