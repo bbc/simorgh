@@ -12,12 +12,13 @@ const WithPageWrapper = Component => {
 
   PageWrapperContainer.propTypes = {
     pageData: pageDataPropType,
-    status: number.isRequired,
+    status: number,
     bbcOrigin: string,
   };
 
   PageWrapperContainer.defaultProps = {
     pageData: null,
+    status: null,
     bbcOrigin: null,
   };
 
