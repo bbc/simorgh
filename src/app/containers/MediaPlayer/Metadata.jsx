@@ -17,7 +17,7 @@ const Metadata = ({ aresMediaBlock }) => {
 
 Metadata.propTypes = {
   aresMediaBlock: shape({
-    model: shape({}),
+    model: shape({}).isRequired,
   }).isRequired,
 };
 
