@@ -8,7 +8,6 @@ global.console.log = jest.fn();
 const defaultProps = {
   isAmp: false,
   pageType: 'error',
-  dials: {},
   status: 404,
   service: 'news',
 };
