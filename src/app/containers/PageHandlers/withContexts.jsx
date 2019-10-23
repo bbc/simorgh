@@ -51,7 +51,7 @@ const WithContexts = Component => {
 
   WithContextsContainer.propTypes = {
     bbcOrigin: string,
-    status: number.isRequired,
+    status: number,
     id: string,
     isAmp: bool.isRequired,
     pageData: pageDataPropType,
@@ -64,6 +64,7 @@ const WithContexts = Component => {
 
   WithContextsContainer.defaultProps = {
     bbcOrigin: null,
+    status: null,
     id: null,
     pageData: null,
     previousPath: null,
