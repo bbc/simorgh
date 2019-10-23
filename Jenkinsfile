@@ -8,9 +8,17 @@ node {
     ]) {
         Simorgh.cleanUp()
 
-        Simorgh.checkoutAndBuild()
-
-        Simorgh.applicationTests()
+        if (env.BRANCH_NAME == 'latest') {
+            Simorgh.checkoutAndBuild()
+            Simorgh.applicationTests()
+        } else {
+            // Trigger CI/CD Deployment
+            build(
+                job: 'simorgh-blue-green/add-alb-updater-lambda',
+                propagate: false,
+                wait: false
+            )
+        }
         
         Simorgh.cleanUp()
     }
