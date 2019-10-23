@@ -1,6 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 
-const DEFAULT_IMAGE_RES = '640x360';
+const DEFAULT_IMAGE_RES = '1024x576';
 
 const getThumbnailUri = aresMetadataBlock => {
   const imageUrl = pathOr(null, ['model', 'imageUrl'], aresMetadataBlock);
