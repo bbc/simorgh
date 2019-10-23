@@ -175,22 +175,13 @@ export const getAtiUrl = (data = []) => {
   return parsedAtiValues.join('&');
 };
 
-export const getClickInfo = (elem, { service, component, label, type }) => {
-  /*
-    https://paper.dropbox.com/doc/Event-tracking--AjJpWibjeQPWsoRLFdZW13Y9Ag-3i47TvVb9IJBMJFcL8D6u
-    for click events we need to know:
-      * campaings = [service-name]-[component], e.g. yoruba-navigation
-      * creation (label) = [component]-[item], e.g. navigation-ere_idaraya
-      * creation (type) = [event-type], e.g. click or background
-      * url = the destination link
-      * format = [PAR=container-[component-name]::name~CHD=slot] = [PAR=container-navigation::name~CHD=1]
-         ^ for format, currently using the name of the component clicked as slot
-    */
-  const eventComponentInfo =
-    (elem && elem.dataset && elem.dataset.info) || 'brand-top'; // psammead components need to be updated with 'data' attrs
-  const cleanCompInfo = eventComponentInfo.split('/').join('-');
-  const format = `PAR=container-${component}::name~CHD=${cleanCompInfo.toLowerCase()}`;
+export const getClickInfo = (
+  elem,
+  { service, componentName, componentInfo, type },
+) => {
+  const cleanCompInfo = componentInfo.split('/').join('-');
+  const format = `PAR=container-${componentName}::name~CHD=${cleanCompInfo.toLowerCase()}`;
   const url = (elem && elem.href) || '/';
 
-  return `PUB-[${service}-${component}]-[=${type}]-[${label}]-[${format}]-[]-[]-[]-[${url}]`;
+  return `PUB-[${service}-${componentName}]-[=${type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
 };
