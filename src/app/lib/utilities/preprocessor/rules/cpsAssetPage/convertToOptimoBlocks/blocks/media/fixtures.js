@@ -34,7 +34,7 @@ export const CPSMediaBlock = {
 };
 
 export const optimoVideoBlock = {
-  type: 'audio_video',
+  type: 'video',
   model: {
     locator: 'urn:bbc:pips:pid:p07jl3lv',
     blocks: [
@@ -48,7 +48,7 @@ export const optimoVideoBlock = {
               model: {
                 advertising: true,
                 embedding: true,
-                format: 'video',
+                format: 'audio_video',
                 id: 'p07jl3lv',
                 imageCopyright: 'BBC',
                 imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p07jl8g4.jpg',

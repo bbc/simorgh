@@ -1,7 +1,7 @@
 import pick from 'ramda/src/pick';
 
 const generateVideoBlock = block => {
-  return {
+  const generatedBlock = {
     type: 'aresMediaMetadata',
     blockId: `urn:bbc:ares::${block.subType}:${block.id}`,
     model: pick(
@@ -20,6 +20,12 @@ const generateVideoBlock = block => {
       block,
     ),
   };
+
+  if (generatedBlock.model.format === 'video') {
+    generatedBlock.model.format = 'audio_video';
+  }
+
+  return generatedBlock;
 };
 
 const generateImageBlock = block => {
@@ -41,7 +47,7 @@ const generateImageBlock = block => {
 
 const convertMedia = block => {
   return {
-    type: 'audio_video',
+    type: 'video',
     model: {
       locator: `urn:bbc:pips:pid:${block.id}`,
       blocks: [
