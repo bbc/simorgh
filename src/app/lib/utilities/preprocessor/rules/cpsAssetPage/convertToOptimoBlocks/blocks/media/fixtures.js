@@ -34,7 +34,7 @@ export const CPSMediaBlock = {
 };
 
 export const optimoVideoBlock = {
-  type: 'video',
+  type: 'audio_video',
   model: {
     locator: 'urn:bbc:pips:pid:p07jl3lv',
     blocks: [

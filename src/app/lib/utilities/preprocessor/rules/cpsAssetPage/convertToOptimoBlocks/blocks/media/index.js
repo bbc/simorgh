@@ -41,7 +41,7 @@ const generateImageBlock = block => {
 
 const convertMedia = block => {
   return {
-    type: 'video',
+    type: 'audio_video',
     model: {
       locator: `urn:bbc:pips:pid:${block.id}`,
       blocks: [
