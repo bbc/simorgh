@@ -1,4 +1,5 @@
 import config from '../../../support/config/services';
+import appConfig from '../../../../src/testHelpers/serviceConfigs';
 
 const getParagraphText = blocks =>
   blocks.find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
@@ -27,6 +28,29 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
           const text = getParagraphText(body.content.blocks);
 
           cy.get('p').should('contain', text);
+        },
+      );
+    });
+
+    it('should render a timestamp', () => {
+      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+        ({ body }) => {
+          const { lastPublished, firstPublished } = body.metadata;
+          cy.get('time')
+            .eq(0)
+            .should('exist')
+            .should('be.visible')
+            .should('have.attr', 'datetime')
+            .should('not.be.empty');
+
+          if (lastPublished !== firstPublished) {
+            cy.get('time')
+              .eq(1)
+              .should(
+                'contain',
+                appConfig[service].default.articleTimestampPrefix,
+              );
+          }
         },
       );
     });
