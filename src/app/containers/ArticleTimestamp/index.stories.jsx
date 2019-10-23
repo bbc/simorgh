@@ -4,7 +4,7 @@ import WithTimeMachine from '../../../testHelpers/withTimeMachine';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import services from '#testHelpers/serviceConfigs';
+import services from '#server/utilities/serviceConfigs';
 
 const threeHoursAgo = timestampGenerator({ hours: 3 });
 const fiveHoursAgo = timestampGenerator({ hours: 5 });

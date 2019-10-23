@@ -1,4 +1,4 @@
-import appConfig from '../../../../src/testHelpers/serviceConfigs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 import getMappedServiceId from './helper';
