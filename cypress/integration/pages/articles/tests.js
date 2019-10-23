@@ -1,6 +1,6 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/testHelpers/serviceConfigs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 const getBlockByType = (blocks, blockType) => {
   let blockData;
