@@ -13,6 +13,7 @@ import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';
 import LinkedData from '../LinkedData';
+import AdContainer from '../Ads';
 import {
   getArticleId,
   getHeadline,
@@ -33,6 +34,7 @@ const componentsToRender = {
   text,
   image,
   timestamp,
+  advert: AdContainer,
 };
 
 const ArticleMain = ({ articleData: data }) => {
