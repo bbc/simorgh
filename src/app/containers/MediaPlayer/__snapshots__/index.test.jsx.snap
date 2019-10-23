@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPlayer is called correctly Calls the AMP player when platform is AMP 1`] = `
+exports[`MediaPlayer Calls the AMP player when platform is AMP 1`] = `
 .c1 {
   padding-top: 56.25%;
   position: relative;
@@ -86,7 +86,7 @@ exports[`MediaPlayer is called correctly Calls the AMP player when platform is A
 </html>
 `;
 
-exports[`MediaPlayer is called correctly Calls the canonical placeholder when platform is canonical 1`] = `
+exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 1`] = `
 .c3 {
   display: block;
   width: 100%;
@@ -170,7 +170,7 @@ exports[`MediaPlayer is called correctly Calls the canonical placeholder when pl
 </div>
 `;
 
-exports[`MediaPlayer is called correctly Calls the canonical player when platform is canonical and placeholder is false 1`] = `
+exports[`MediaPlayer Calls the canonical player when platform is canonical and placeholder is false 1`] = `
 .c3 {
   display: block;
   width: 100%;

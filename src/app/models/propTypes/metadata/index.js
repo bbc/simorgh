@@ -61,7 +61,7 @@ export const optimoMetadataPropTypes = {
   blockTypes: arrayOf(string),
 };
 
-export const cpsMetadataPropTypes = {
+const cpsMetaDataPropTypes = {
   id: string.isRequired,
   locators: shape({
     assetUri: string,
@@ -85,6 +85,14 @@ export const cpsMetadataPropTypes = {
   tags: objectOf(any),
   version: string.isRequired,
   blockTypes: arrayOf(string),
+};
+
+export const cpsFrontPageMetadataPropTypes = {
+  ...cpsMetaDataPropTypes,
   title: string.isRequired,
   summary: string.isRequired,
+};
+
+export const cpsAssetPageMetadataPropTypes = {
+  ...cpsMetaDataPropTypes,
 };
