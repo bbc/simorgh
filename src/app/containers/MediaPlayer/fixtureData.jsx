@@ -8,13 +8,7 @@ import MediaPlayerContainer from '.';
 
 const captionBlock = {
   model: {
-    blocks: [
-      {
-        model: {
-          blocks: [singleTextBlock('Caption')],
-        },
-      },
-    ],
+    blocks: [singleTextBlock('Caption')],
   },
   type: 'caption',
 };
