@@ -1,4 +1,5 @@
 import pick from 'ramda/src/pick';
+import path from 'ramda/src/path';
 
 const generateVideoBlock = block => {
   const generatedBlock = {
@@ -45,8 +46,33 @@ const generateImageBlock = block => {
   };
 };
 
+const withValidationCheck = convertedBlock => {
+  const aresMediaMetadata = path(
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model'],
+    convertedBlock,
+  );
+
+  const imageBlock = path(
+    ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'blocks', 0, 'model'],
+    convertedBlock,
+  );
+
+  const checks = [
+    path(['type'], convertedBlock),
+    aresMediaMetadata,
+    path(['format'], aresMediaMetadata),
+    path(['id'], aresMediaMetadata),
+    path(['imageUrl'], aresMediaMetadata),
+    path(['versions', 0, 'versionId'], aresMediaMetadata),
+    imageBlock,
+    path(['locator'], imageBlock),
+  ];
+
+  return checks.every(Boolean) && convertedBlock;
+};
+
 const convertMedia = block => {
-  return {
+  const convertedBlock = {
     type: 'video',
     model: {
       locator: `urn:bbc:pips:pid:${block.id}`,
@@ -60,6 +86,8 @@ const convertMedia = block => {
       ],
     },
   };
+
+  return withValidationCheck(convertedBlock);
 };
 
 export default convertMedia;
