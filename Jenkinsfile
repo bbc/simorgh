@@ -81,18 +81,18 @@ def buildStaticAssets(env, tag) {
 }
 
 def cancelPreviousBuilds() {
-    def jobName = env.JOB_NAME
-    def buildNumber = env.BUILD_NUMBER.toInteger()
-    def currentJob = Jenkins.instance.getItemByFullName(jobName)
+  def jobName = env.JOB_NAME
+  def buildNumber = env.BUILD_NUMBER.toInteger()
+  def currentJob = Jenkins.instance.getItemByFullName(jobName)
 
-    // Iterating over the builds for specific job
-    for (def build : currentJob.builds) {
-        // If there is a build that is currently running and it's not current build
-        if (build.isBuilding() && build.number.toInteger() != buildNumber) {
-            // Stop the previous build
-            build.doStop()
-        }
+// Iterating over the builds for specific job
+  for (def build : currentJob.builds) {
+    // If there is a build that is currently running and it's not current build
+    if (build.isBuilding() && build.number.toInteger() != buildNumber) {
+        // Stop the previous build
+        build.doStop()
     }
+  }
 }
 
 pipeline {
@@ -111,6 +111,14 @@ pipeline {
     booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
   stages {
+    stage ('Check and stop previous running builds') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
+      steps {
+        cancelPreviousBuilds()
+      }
+    }
     stage ('Build and Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
@@ -125,7 +133,6 @@ pipeline {
             }
           }
           steps {
-            cancelPreviousBuilds()
             setupCodeCoverage()
             withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
               runDevelopmentTests()
