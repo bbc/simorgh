@@ -1,6 +1,7 @@
 import timestampToMilliseconds from '.';
 
-describe('addHeadlineBlock', () => {
+describe('timestampToMilliseconds', () => {
+``
   it('should multiply timestamps by 1000 if version is less than 1.1.0', async () => {
     const input = {
       metadata: {
