@@ -6,12 +6,14 @@ import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import text from '../Text';
+import image from '../Image';
 import Blocks from '../Blocks';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
 const componentsToRender = {
   text,
+  image,
 };
 
 const CpsAssetPageMain = ({ pageData }) => {
