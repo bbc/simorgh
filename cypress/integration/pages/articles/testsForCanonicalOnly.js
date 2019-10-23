@@ -1,5 +1,6 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
+import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -70,20 +71,25 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     }
 
-    it('should render a visible placeholder image within a media block', () => {
-      cy.window().then(win => {
-        // `video` blocks can also contain audio.
-        const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-        if (media) {
-          cy.get('div[class^="StyledVideoContainer"]').within(() => {
-            cy.get('div[class^="StyledPlaceholder"] > img')
-              .should('be.visible')
-              .should('have.attr', 'src')
-              .should('not.be.empty');
+    // `appToggles` tells us whether a feature is toggled on or off in the current environment.
+    if (appToggles.mediaPlayer.enabled) {
+      describe('Media Player', () => {
+        it('should render a visible placeholder image', () => {
+          cy.window().then(win => {
+            // `video` blocks can also contain audio.
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+            if (media) {
+              cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                cy.get('div[class^="StyledPlaceholder"] > img')
+                  .should('be.visible')
+                  .should('have.attr', 'src')
+                  .should('not.be.empty');
+              });
+            }
           });
-        }
+        });
       });
-    });
+    }
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
