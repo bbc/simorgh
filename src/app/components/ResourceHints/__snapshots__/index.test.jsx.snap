@@ -8,13 +8,13 @@ exports[`ResourceHints should be correct 1`] = `
     rel="preconnect"
   />
   <link
+    href="http://foo.com"
+    rel="dns-prefetch"
+  />
+  <link
     crossorigin="anonymous"
     href="https://bar.com"
     rel="preconnect"
-  />
-  <link
-    href="http://foo.com"
-    rel="dns-prefetch"
   />
   <link
     href="https://bar.com"
