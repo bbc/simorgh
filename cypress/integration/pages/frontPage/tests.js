@@ -141,9 +141,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               const usefulLinks = pageData.find(data => {
                 return data.type === 'useful-links';
               });
-              const hasStrapline = usefulLinks && 'strapline' in usefulLinks;
+              const isValidUsefulLinks =
+                usefulLinks && 'strapline' in usefulLinks;
 
-              if (hasStrapline) {
+              if (isValidUsefulLinks) {
                 //  We include the hasStrapline as we don't render Useful Links
                 //  if we don't receive a strapline in the data
                 cy.get('[aria-labelledby="Useful-links"]').should('be.visible');
