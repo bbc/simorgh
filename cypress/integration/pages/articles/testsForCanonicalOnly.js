@@ -1,5 +1,7 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
+import appToggles from '../../../support/helpers/useAppToggles';
+import { getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
@@ -66,6 +68,26 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             cy.get('noscript').contains('<img ');
             cy.get('div div').should('not.have.class', 'lazyload-placeholder');
           });
+      });
+    }
+
+    // `appToggles` tells us whether a feature is toggled on or off in the current environment.
+    if (appToggles.mediaPlayer.enabled) {
+      describe('Media Player', () => {
+        it('should render a visible placeholder image', () => {
+          cy.window().then(win => {
+            // `video` blocks can also contain audio.
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+            if (media) {
+              cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                cy.get('div[class^="StyledPlaceholder"] > img')
+                  .should('be.visible')
+                  .should('have.attr', 'src')
+                  .should('not.be.empty');
+              });
+            }
+          });
+        });
       });
     }
   });

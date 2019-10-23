@@ -12,6 +12,7 @@ module.exports = {
     '#lib': resolvePath('src/app/lib/'),
     '#models': resolvePath('src/app/models/'),
     '#testHelpers': resolvePath('src/testHelpers/'),
+    '#server': resolvePath('src/server/'),
   },
   jestDirAlias: {
     '^#app(.*)$': '<rootDir>/src/app$1',
@@ -20,6 +21,7 @@ module.exports = {
     '^#lib(.*)$': '<rootDir>/src/app/lib$1',
     '^#models(.*)$': '<rootDir>/src/app/models$1',
     '^#testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
+    '^#server(.*)$': '<rootDir>/src/server$1',
   },
   eslintDirAlias: {
     map: [
@@ -29,6 +31,7 @@ module.exports = {
       ['#lib', './src/app/lib'],
       ['#models', './src/app/models'],
       ['#testHelpers', './src/testHelpers'],
+      ['#server', './src/server'],
     ],
     extensions: ['.js', '.jsx', '.json'],
   },
