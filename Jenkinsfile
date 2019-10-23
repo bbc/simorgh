@@ -116,9 +116,7 @@ pipeline {
         expression { env.BRANCH_NAME != 'latest' }
       }
       failFast true
-      steps {
-        cancelPreviousBuilds()
-      }
+      cancelPreviousBuilds()
       parallel {
         stage ('Test Development') {
           agent {
