@@ -32,10 +32,10 @@ node {
                 try {
                     Simorgh.installNodeModules()
                     parallel (
-                        'Live E2Es' {
+                        'Live E2Es': {
                             Simorgh.runE2Es('live', false)
                         },
-                        'Localhost Tests' {
+                        'Localhost Tests': {
                             sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
                             Simorgh.runLocalAndProductionTests()
                         }
