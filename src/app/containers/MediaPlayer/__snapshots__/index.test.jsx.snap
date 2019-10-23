@@ -237,7 +237,7 @@ exports[`MediaPlayer Calls the AMP player with a caption 1`] = `
             Video caption, 
           </span>
           <p>
-            Caption
+            Media Player With Caption
           </p>
         </figcaption>
       </div>
@@ -566,7 +566,7 @@ exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
       Video caption, 
     </span>
     <p>
-      Caption
+      Media Player With Caption
     </p>
   </figcaption>
 </div>
