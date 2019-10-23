@@ -6,7 +6,7 @@ const makeIntroductionBold = jsonRaw => {
   const blocks = pathOr([], ['content', 'blocks'], json);
   let introIndex;
 
-  for (let x = 0; x <= blocks.length; x += 1) {
+  for (let x = 0; x < blocks.length; x += 1) {
     const block = blocks[x];
 
     if (block.type === 'paragraph' && block.role === 'introduction') {
