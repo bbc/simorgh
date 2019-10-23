@@ -3,20 +3,20 @@ import { buildATIEventTrackUrl } from '../atiUrl';
 
 export const sendEventBeacon = async ({
   element,
-  component,
+  componentName,
   type,
-  label,
+  componentInfo,
   ...params
 }) => {
   const impressionProps = {
     ...params,
     element,
-    component,
+    componentName,
+    componentInfo,
   };
   const viewProps = {
     ...impressionProps,
     type,
-    label,
   };
   await Promise.all([
     sendBeacon(buildATIEventTrackUrl(impressionProps)), // impression event
