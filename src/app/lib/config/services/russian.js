@@ -1,5 +1,13 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+import {
+  F_REITH_SANS_BOLD,
+  F_REITH_SANS_BOLD_ITALIC,
+  F_REITH_SANS_ITALIC,
+  F_REITH_SANS_REGULAR,
+  F_REITH_SERIF_MEDIUM,
+  F_REITH_SERIF_MEDIUM_ITALIC,
+} from '@bbc/psammead-styles/fonts';
 import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ru';
@@ -8,7 +16,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `ru`,
-    articleAuthor: `https://www.facebook.com/bbcrussian`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
@@ -182,7 +190,14 @@ export const service = {
       copyrightText:
         'Би-би-си. Би-би-си не несет ответственности за содержание других сайтов.',
     },
-    fonts: [],
+    fonts: [
+      F_REITH_SANS_BOLD,
+      F_REITH_SANS_BOLD_ITALIC,
+      F_REITH_SANS_ITALIC,
+      F_REITH_SANS_REGULAR,
+      F_REITH_SERIF_MEDIUM,
+      F_REITH_SERIF_MEDIUM_ITALIC,
+    ],
     timezone: 'GMT',
     navigation: [
       {
