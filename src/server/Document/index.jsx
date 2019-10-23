@@ -48,7 +48,7 @@ const renderDocument = async ({
     defer: true,
   });
   const headHelmet = Helmet.renderStatic();
-  const assetOrigins = getAssetOrigins();
+  const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
     <DocumentComponent
       assetOrigins={assetOrigins}
