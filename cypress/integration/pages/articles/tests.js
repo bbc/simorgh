@@ -12,7 +12,7 @@ const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
 
-//TODO: Remove once we have inline link on article pages linking to another article page
+// TODO: Remove once we have inline link on article pages linking to another article page
 const serviceHasInlineLink = service => service === 'news';
 
 // For testing important features that differ between services, e.g. Timestamps.
