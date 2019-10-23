@@ -13,6 +13,11 @@ const parseBlockByType = block => {
 
   const { type } = block;
 
+  // if the block has text handle escaped quotes
+  if (path(['text'], block)) {
+    block.text = block.text.replace(/&quot;/g, '"'); // eslint-disable-line no-param-reassign
+  }
+
   const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
 
   if (!parsedBlock) {

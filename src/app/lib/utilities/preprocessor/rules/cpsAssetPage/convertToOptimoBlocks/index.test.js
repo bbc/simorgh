@@ -58,6 +58,80 @@ describe('convertToOptimoBlocks', () => {
     expect(await convertToOptimoBlocks(input)).toEqual(expected);
   });
 
+  it('should handle escaped quotes in a plain_text block', async () => {
+    const input = {
+      content: {
+        blocks: [
+          {
+            text: 'Paragraph containing &quot;quote marks&quot;',
+            markupType: 'plain_text',
+            type: 'paragraph',
+          },
+        ],
+      },
+    };
+    const expected = {
+      content: {
+        model: {
+          blocks: [
+            optimoText([
+              {
+                fragments: [
+                  {
+                    fragment: 'Paragraph containing "quote marks"',
+                    attributes: [],
+                  },
+                ],
+                text: 'Paragraph containing "quote marks"',
+              },
+            ]),
+          ],
+        },
+      },
+    };
+
+    expect(await convertToOptimoBlocks(input)).toEqual(expected);
+  });
+
+  it('should handle escaped quotes in a candy_xml block', async () => {
+    const input = {
+      content: {
+        blocks: [
+          {
+            text: 'Paragraph containing <bold>&quot;quote marks&quot;</bold>',
+            markupType: 'candy_xml',
+            type: 'paragraph',
+          },
+        ],
+      },
+    };
+    const expected = {
+      content: {
+        model: {
+          blocks: [
+            optimoText([
+              {
+                fragments: [
+                  {
+                    fragment: 'Paragraph containing ',
+                    attributes: [],
+                  },
+                  {
+                    fragment: '"quote marks"',
+                    attributes: ['bold'],
+                  },
+                ],
+                text: 'Paragraph containing "quote marks"',
+              },
+            ]),
+          ],
+        },
+      },
+    };
+
+    expect(await convertToOptimoBlocks(input)).toEqual(expected);
+  });
+
   it('should return an empty array if blocks is an empty array', async () => {
     const input = {
       content: {
