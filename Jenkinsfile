@@ -80,6 +80,21 @@ def buildStaticAssets(env, tag) {
   stash name: "staticAssets${tag}", includes: "static${tag}.zip"
 }
 
+def cancelPreviousBuilds() {
+    def jobName = env.JOB_NAME
+    def buildNumber = env.BUILD_NUMBER.toInteger()
+    def currentJob = Jenkins.instance.getItemByFullName(jobName)
+
+    // Iterating over the builds for specific job
+    for (def build : currentJob.builds) {
+        // If there is a build that is currently running and it's not current build
+        if (build.isBuilding() && build.number.toInteger() != buildNumber) {
+            // Stop the previous build
+            build.doStop()
+        }
+    }
+}
+
 pipeline {
   agent any
   options {
@@ -101,6 +116,9 @@ pipeline {
         expression { env.BRANCH_NAME != 'latest' }
       }
       failFast true
+      steps {
+        cancelPreviousBuilds()
+      }
       parallel {
         stage ('Test Development') {
           agent {
