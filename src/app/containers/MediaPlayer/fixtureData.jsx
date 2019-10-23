@@ -319,7 +319,7 @@ const GenerateFixtureData = ({
   platform,
   toggleState,
   blocks,
-  placeholder,
+  showPlaceholder,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -334,7 +334,10 @@ const GenerateFixtureData = ({
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: jest.fn() }}
       >
-        <MediaPlayerContainer blocks={blocks} placeholder={placeholder} />
+        <MediaPlayerContainer
+          blocks={blocks}
+          showPlaceholder={showPlaceholder}
+        />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -344,12 +347,12 @@ GenerateFixtureData.propTypes = {
   platform: string.isRequired,
   toggleState: shape({}),
   blocks: arrayOf(object).isRequired,
-  placeholder: bool,
+  showPlaceholder: bool,
 };
 
 GenerateFixtureData.defaultProps = {
   toggleState: defaultToggles,
-  placeholder: true,
+  showPlaceholder: true,
 };
 
 export const VideoCanonical = (
@@ -367,7 +370,7 @@ export const VideoCanonicalNoPlaceHolder = (
   <GenerateFixtureData
     platform="canonical"
     blocks={[validAresMediaVideoBlock]}
-    placeholder={false}
+    showPlaceholder={false}
   />
 );
 

@@ -17,7 +17,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const MediaPlayerContainer = ({ blocks, placeholder }) => {
+const MediaPlayerContainer = ({ blocks, showPlaceholder }) => {
   const { id, platform, origin } = useContext(RequestContext);
   const { lang } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
@@ -64,8 +64,8 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
-          placeholder={placeholder}
-          placeholderSrc={placeholder ? placeholderSrc : ''}
+          showPlaceholder={showPlaceholder}
+          placeholderSrc={showPlaceholder ? placeholderSrc : ''}
         />
       )}
     </GridItemConstrainedMedium>
@@ -75,7 +75,7 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
 MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
-  placeholder: true,
+  showPlaceholder: true,
 };
 
 export default MediaPlayerContainer;
