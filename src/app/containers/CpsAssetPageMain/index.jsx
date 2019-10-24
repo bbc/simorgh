@@ -11,6 +11,7 @@ import LinkedData from '../LinkedData';
 import headings from '../Headings';
 import timestamp from '../ArticleTimestamp';
 import text from '../Text';
+import image from '../Image';
 import Blocks from '../Blocks';
 import MediaPlayer from '../MediaPlayer';
 import ATIAnalytics from '../ATIAnalytics';
@@ -27,6 +28,7 @@ const CpsAssetPageMain = ({ pageData }) => {
   const componentsToRender = {
     headline: headings,
     text,
+    image,
     timestamp,
     video: props => (
       <MediaPlayer
