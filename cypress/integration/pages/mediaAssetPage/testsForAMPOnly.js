@@ -12,7 +12,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
 }) =>
-  describe(`No testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
     it('should render a media player', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
