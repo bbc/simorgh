@@ -37,7 +37,7 @@ describe('processBlock', () => {
     expect(processBlock(input)).toEqual(expected);
   });
 
-  it('should escape quotes', () => {
+  it('should escape quotes for plain_text', () => {
     const input = {
       text: 'Paragraph containing &quot;quote marks&quot;',
       markupType: 'plain_text',
@@ -53,7 +53,7 @@ describe('processBlock', () => {
     expect(processBlock(input)).toEqual(expected);
   });
 
-  it('should escape quotes', () => {
+  it('should escape quotes for candy_xml', () => {
     const input = {
       text: 'Paragraph containing <bold>&quot;quote marks&quot;</bold>',
       markupType: 'candy_xml',
