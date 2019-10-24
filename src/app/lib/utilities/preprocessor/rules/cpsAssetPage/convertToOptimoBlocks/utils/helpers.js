@@ -20,3 +20,5 @@ export const optimoText = paragraphs => ({
     blocks: paragraphs.map(optimoParagraph),
   },
 });
+
+export const escapeDoubleQuotes = text => text.replace(/&quot;/g, '"');
