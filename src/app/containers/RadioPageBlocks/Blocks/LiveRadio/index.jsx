@@ -61,7 +61,11 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
           placeholderSrc={isAmp ? liveRadioPlaceholderImageSrc : null}
           showPlaceholder={!isAmp ? false : null}
           src={embedSource}
-          title={translations.mediaAssetPage.audioPlayer}
+          title={pathOr(
+            'Media player',
+            ['mediaAssetPage', 'audioPlayer'],
+            translations,
+          )}
           id={idAttr}
           skin="audio"
         />

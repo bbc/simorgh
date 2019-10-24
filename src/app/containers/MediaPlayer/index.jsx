@@ -55,7 +55,11 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     isAmp,
     origin,
   });
-  const iframeTitle = translations.mediaAssetPage.mediaPlayer;
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'mediaPlayer'],
+    translations,
+  );
 
   return (
     <GridItemConstrainedMedium>
