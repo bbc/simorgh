@@ -51,24 +51,46 @@ exports[`CPSVideoBlock no placeholder 1`] = `
   }
 }
 
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <iframe
-      allow="autoplay; fullscreen"
-      allowfullscreen=""
-      class="c2"
-      src="https://www.test.bbc.co.uk/ws/av-embeds/cps//pidgin/12345678/p07jl3lx/ig"
-    />
-  </div>
-</div>
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"video":{"@list":[{"@type":"VideoObject","name":"Why dis pikin get fish skin","description":"Short Synopsis","duration":101,"thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p07jl8g4.jpg","uploadDate":1564740166}]}}
+    </script>
+  </head>
+  <body>
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <iframe
+            allow="autoplay; fullscreen"
+            allowfullscreen=""
+            class="c2"
+            src="https://www.test.bbc.co.uk/ws/av-embeds/cps//pidgin/12345678/p07jl3lx/ig"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 `;
 
 exports[`CPSVideoBlock with placeholder 1`] = `
-.c3 {
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"video":{"@list":[{"@type":"VideoObject","name":"Why dis pikin get fish skin","description":"Short Synopsis","duration":101,"thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p07jl8g4.jpg","uploadDate":1564740166}]}}
+    </script>
+  </head>
+  <body>
+    .c3 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -123,21 +145,26 @@ exports[`CPSVideoBlock with placeholder 1`] = `
   }
 }
 
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <div
-      class="c2"
-    >
-      <img
-        alt="Image Alt"
-        class="c3"
-        src="https://ichef.bbci.co.uk/images/ic/$recipe/p07jl8g4.jpg"
-      />
+<div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <img
+              alt="Image Alt"
+              class="c3"
+              src="https://ichef.bbci.co.uk/images/ic/$recipe/p07jl8g4.jpg"
+            />
+          </div>
+        </div>
+      </div>
+      ,
     </div>
-  </div>
-</div>
+  </body>
+</html>
 `;

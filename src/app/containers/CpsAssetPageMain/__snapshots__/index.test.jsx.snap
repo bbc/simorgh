@@ -209,6 +209,11 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
     >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pidgin/tori-49450859","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/tori-49450859","name":"Nigerian man Emeka Nelson don produce generator wey dey use only water"}}
     </script>
+    <script
+      type="application/ld+json"
+    >
+      {"video":{"@list":[{"@type":"VideoObject","name":"Nigerian man produce generator wey dey run on water","description":"Nigerian man produce generator wey dey run on water","duration":139,"thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p07lgnlf.jpg","uploadDate":1566573314}]}}
+    </script>
   </head>
   <body>
     .c0 {
@@ -1386,6 +1391,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"}}
+    </script>
+    <script
+      type="application/ld+json"
+    >
+      {"video":{"@list":[{"@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":1961,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":1559819809000}]}}
     </script>
   </head>
   <body>
