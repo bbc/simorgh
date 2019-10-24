@@ -547,7 +547,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
               allow="autoplay; fullscreen"
               allowfullscreen=""
               class="c7"
-              src="https://www.test.bbc.co.uk/ws/av-embeds/cps//pidgin/tori-49450859/p07lg239/pcm"
+              src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/pcm"
             />
           </div>
         </div>
@@ -650,6 +650,12 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
             Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
           </p>
         </div>
+        <a
+          data-e2e="cpsAssetDummyLink"
+          href="/pidgin/23248703"
+          style="pointer-events: none;"
+          tabindex="-1"
+        />
       </main>
     </div>
   </body>
