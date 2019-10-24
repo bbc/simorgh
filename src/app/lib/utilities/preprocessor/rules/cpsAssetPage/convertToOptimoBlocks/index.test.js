@@ -1,3 +1,4 @@
+import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoText } from './utils/helpers';
 
@@ -16,6 +17,7 @@ describe('convertToOptimoBlocks', () => {
             markupType: 'plain_text',
             type: 'paragraph',
           },
+          CPSMediaBlock,
         ],
       },
     };
@@ -50,6 +52,7 @@ describe('convertToOptimoBlocks', () => {
                 text: 'A plain text paragraph',
               },
             ]),
+            optimoVideoBlock,
           ],
         },
       },
