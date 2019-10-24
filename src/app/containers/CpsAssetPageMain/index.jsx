@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GhostGrid } from '#lib/styledGrid';
 import { RequestContext } from '#contexts/RequestContext';
 
 import MetadataContainer from '../Metadata';
@@ -13,7 +12,7 @@ import timestamp from '../ArticleTimestamp';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
-import MediaPlayer from '../MediaPlayer';
+import MediaPlayer from './Blocks/Video';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -33,14 +32,8 @@ const CpsAssetPageMain = ({ pageData }) => {
     video: props => (
       <MediaPlayer
         {...props}
-        embedOverrides={{
-          type: 'cps',
-          id: assetUri.substr(1),
-          showPlaceholder: platform === 'amp',
-          wrapper: styled(GridItemConstrainedLarge)`
-            padding-bottom: 1.5rem;
-          `,
-        }}
+        assetUri={assetUri.substr(1)}
+        showPlaceholder={platform === 'amp'}
       />
     ),
   };
@@ -58,12 +51,9 @@ const CpsAssetPageMain = ({ pageData }) => {
       <GhostGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         {/* this link is temporarily used in a cypress test */}
-        <Link
-          to="/pidgin/23248703"
-          data-e2e="cpsAssetDummyLink"
-          tabIndex={-1}
-          style={{ pointerEvents: 'none' }}
-        />
+        <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
+          _
+        </Link>
       </GhostGrid>
     </>
   );
