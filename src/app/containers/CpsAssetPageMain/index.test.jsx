@@ -5,14 +5,12 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsAssetPageMain from '.';
 import preprocessor from '#lib/utilities/preprocessor';
-import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
+import { preprocessorRules } from '#app/routes/getInitialData/cpsAsset';
 
 describe('CpsAssetPageMain', () => {
   it('should match snapshot', async () => {
-    const pageData = await preprocessor(pidginPageData, [
-      convertToOptimoBlocks,
-    ]);
+    const pageData = await preprocessor(pidginPageData, preprocessorRules);
     await matchSnapshotAsync(
       /*
         for the value it would bring, it is much simpler to wrap a react-router Link in a Router, rather than mock a Router or pass some mocked context.
