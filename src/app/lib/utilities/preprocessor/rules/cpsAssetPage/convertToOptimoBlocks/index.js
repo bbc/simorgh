@@ -1,11 +1,14 @@
 import { clone, pathOr, path } from 'ramda';
 import paragraph from './blocks/paragraph';
+import { escapeDoubleQuotes } from './utils/helpers';
+import media from './blocks/media';
 
 const handleMissingType = block =>
   console.log(`Missing type field on block ${block.type}`); // eslint-disable-line no-console
 
 const typesToConvert = {
   paragraph,
+  media,
 };
 
 const parseBlockByType = block => {
@@ -13,7 +16,17 @@ const parseBlockByType = block => {
 
   const { type } = block;
 
-  const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
+  let cleanBlock = block;
+
+  // if the block has text handle escaped quotes
+  if (path(['text'], cleanBlock)) {
+    cleanBlock = {
+      ...cleanBlock,
+      text: escapeDoubleQuotes(cleanBlock.text),
+    };
+  }
+
+  const parsedBlock = (typesToConvert[type] || handleMissingType)(cleanBlock);
 
   if (!parsedBlock) {
     return null;

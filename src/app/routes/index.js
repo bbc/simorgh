@@ -1,3 +1,4 @@
+import pathOr from 'ramda/src/pathOr';
 import Article from '../containers/Article';
 import FrontPage from '../containers/FrontPage';
 import RadioPage from '../containers/RadioPage';
@@ -14,16 +15,9 @@ import {
   radioAndTvRegexPathsArray,
 } from './regex';
 
-const pages = {
-  MAP: CpsAssetPage,
-  FIX: FrontPage,
-  error: ErrorPage,
-};
-
 const CpsAsset = props => {
-  const pageData = props.pageData || {};
-  const { type } = pageData.metadata || { type: 'error' };
-  const Page = pages[type];
+  const type = pathOr('STY', ['pageData', 'metadata', 'type'], props);
+  const Page = type === 'FIX' ? FrontPage : CpsAssetPage;
   return Page({ ...props, pageType: type });
 };
 
