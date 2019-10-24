@@ -1,6 +1,5 @@
 import { clone, pathOr, path } from 'ramda';
 import paragraph from './blocks/paragraph';
-import { escapeDoubleQuotes } from './utils/helpers';
 import media from './blocks/media';
 
 const handleMissingType = block =>
@@ -16,17 +15,7 @@ const parseBlockByType = block => {
 
   const { type } = block;
 
-  let cleanBlock = block;
-
-  // if the block has text handle escaped quotes
-  if (path(['text'], cleanBlock)) {
-    cleanBlock = {
-      ...cleanBlock,
-      text: escapeDoubleQuotes(cleanBlock.text),
-    };
-  }
-
-  const parsedBlock = (typesToConvert[type] || handleMissingType)(cleanBlock);
+  const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
 
   if (!parsedBlock) {
     return null;

@@ -1,4 +1,5 @@
 import loadable from '@loadable/component';
+import { processBlock } from './helpers';
 
 const richTextTransforms = loadable(() =>
   import(
@@ -15,9 +16,11 @@ const convertParagraph = async block => {
   const xmlWrapper = innerXML =>
     `<body><paragraph>${innerXML}</paragraph></body>`;
 
-  return block.markupType === 'candy_xml'
-    ? candyXmlToRichText(xmlWrapper(block.text))
-    : stringToRichText(block.text);
+  const proccessedBlock = processBlock(block);
+
+  return proccessedBlock.markupType === 'candy_xml'
+    ? candyXmlToRichText(xmlWrapper(proccessedBlock.text))
+    : stringToRichText(proccessedBlock.text);
 };
 
 export default convertParagraph;
