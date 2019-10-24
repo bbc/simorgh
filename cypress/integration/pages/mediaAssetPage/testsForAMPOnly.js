@@ -20,7 +20,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           const { versionId } = body.content.blocks[0].versions[0];
           const { language } = body.metadata;
           cy.get(
-            `amp-iframe[src*="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/cps${assetUri}/${versionId}/${language}"]`,
+            `amp-iframe[src*="${envConfig.avEmbedBaseUrl}/ws/av-embeds/cps${assetUri}/${versionId}/${language}"]`,
           ).should('be.visible');
         },
       );

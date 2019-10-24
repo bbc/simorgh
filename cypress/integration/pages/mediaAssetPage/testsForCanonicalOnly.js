@@ -20,7 +20,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           const { versionId } = body.content.blocks[0].versions[0];
           const { language } = body.metadata;
           cy.get(
-            `iframe[src*="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/cps${assetUri}/${versionId}/${language}"]`,
+            `iframe[src*="${envConfig.avEmbedBaseUrl}/ws/av-embeds/cps${assetUri}/${versionId}/${language}"]`,
           ).should('be.visible');
         },
       );

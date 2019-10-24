@@ -17,13 +17,16 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides = {} }) => {
-  // Player has slightly different behavior depending on whether it is on CPS or articles page
-  const type = embedOverrides.type || 'articles';
+const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides }) => {
   const { id, platform, origin } = useContext(RequestContext);
   const { lang } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
+
+  // Player settings can be overridden for other page types (eg, CPS)
+  const type = embedOverrides.type || 'articles';
+  const assetId = embedOverrides.id || id;
+  const Wrapper = embedOverrides.wrapper || GridItemConstrainedMedium;
 
   if (!enabled || !blocks) {
     return null;
@@ -53,13 +56,11 @@ const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides = {} }) => {
   const showPlaceholder = type === 'articles' || embedOverrides.showPlaceholder;
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
-    requestUrl: `${embedOverrides.id || id}/${versionId}/${lang}`,
+    requestUrl: `${assetId}/${versionId}/${lang}`,
     type,
     isAmp,
     origin,
   });
-
-  const Wrapper = embedOverrides.wrapper || GridItemConstrainedMedium;
 
   return (
     <Wrapper>
@@ -86,6 +87,7 @@ MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   placeholder: true,
+  embedOverrides: {},
 };
 
 export default MediaPlayerContainer;

@@ -1,4 +1,4 @@
-import { arrayOf, bool, shape, string } from 'prop-types';
+import { arrayOf, bool, shape, string, oneOf, elementType } from 'prop-types';
 import { textBlockPropTypes } from './text';
 import { imageBlockPropTypes } from './image';
 
@@ -39,6 +39,11 @@ export const mediaPlayerPropTypes = {
     }),
   ).isRequired,
   placeholder: bool,
+  embedOverrides: shape({
+    type: oneOf(['cps', 'articles']),
+    showPlaceholder: bool,
+    wrapper: elementType,
+  }),
 };
 
 const baseDefaultPropTypes = {
