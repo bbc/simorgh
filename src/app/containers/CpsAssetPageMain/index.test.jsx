@@ -8,11 +8,12 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsAssetPageMain from '.';
 import preprocessor from '#lib/utilities/preprocessor';
-import pidginPageData from '#data/igbo/cpsAssets/afirika-23252735';
+import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
+import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { preprocessorRules } from '#app/routes/getInitialData/cpsAsset';
 
 describe('CpsAssetPageMain', () => {
-  it('should match snapshot', async () => {
+  it('should match snapshot for STY', async () => {
     // TODO: Remove the prop warnings
     // https://github.com/bbc/simorgh/issues/4396
     // https://github.com/bbc/simorgh/issues/4397
@@ -21,7 +22,7 @@ describe('CpsAssetPageMain', () => {
     suppressPropWarnings(['isExternal', 'InlineLinkContainer']);
     suppressPropWarnings(['ParagraphContainer']);
 
-    const pageData = await preprocessor(pidginPageData, preprocessorRules);
+    const pageData = await preprocessor(igboPageData, preprocessorRules);
 
     await matchSnapshotAsync(
       /*
@@ -32,12 +33,33 @@ describe('CpsAssetPageMain', () => {
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             isAmp={false}
-            pageType="MAP"
+            pageType="STY"
             pathname="/igbo/afirika-23252735"
             service="igbo"
             statusCode={200}
           >
             <CpsAssetPageMain service="igbo" pageData={pageData} />
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </StaticRouter>,
+    );
+  });
+
+  it('should match snapshot for MAP', async () => {
+    const pageData = await preprocessor(pidginPageData, preprocessorRules);
+
+    await matchSnapshotAsync(
+      <StaticRouter>
+        <ServiceContextProvider service="igbo">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            pageType="MAP"
+            pathname="/pidgin/tori-49450859"
+            service="pidgin"
+            statusCode={200}
+          >
+            <CpsAssetPageMain service="pidgin" pageData={pageData} />
           </RequestContextProvider>
         </ServiceContextProvider>
       </StaticRouter>,
