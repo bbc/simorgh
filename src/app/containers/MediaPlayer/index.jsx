@@ -24,9 +24,12 @@ const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides }) => {
   const isAmp = platform === 'amp';
 
   // Player settings can be overridden for other page types (eg, CPS)
+  // TODO: Refactor in https://github.com/bbc/simorgh/issues/4418
   const type = embedOverrides.type || 'articles';
   const assetId = embedOverrides.id || id;
   const Wrapper = embedOverrides.wrapper || GridItemConstrainedMedium;
+  const showPlaceholder = type === 'articles' || embedOverrides.showPlaceholder;
+  // End of override logic
 
   if (!enabled || !blocks) {
     return null;
@@ -53,7 +56,6 @@ const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides }) => {
     return null; // this should be the holding image with an error overlay
   }
 
-  const showPlaceholder = type === 'articles' || embedOverrides.showPlaceholder;
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
     requestUrl: `${assetId}/${versionId}/${lang}`,
