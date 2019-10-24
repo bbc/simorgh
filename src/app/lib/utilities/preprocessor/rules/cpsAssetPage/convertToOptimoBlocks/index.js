@@ -1,5 +1,6 @@
 import { clone, pathOr, path } from 'ramda';
 import paragraph from './blocks/paragraph';
+import media from './blocks/media';
 import { escapeDoubleQuotes } from './utils/helpers';
 
 const handleMissingType = block =>
@@ -7,6 +8,7 @@ const handleMissingType = block =>
 
 const typesToConvert = {
   paragraph,
+  media,
 };
 
 const parseBlockByType = block => {
