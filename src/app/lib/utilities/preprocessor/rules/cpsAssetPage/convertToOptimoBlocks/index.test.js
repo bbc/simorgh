@@ -1,4 +1,3 @@
-import { clone } from 'ramda';
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoText } from './utils/helpers';
