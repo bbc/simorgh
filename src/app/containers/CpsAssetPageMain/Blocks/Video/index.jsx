@@ -2,7 +2,6 @@ import React from 'react';
 import { bool, string } from 'prop-types';
 import styled from 'styled-components';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
-
 import MediaPlayer from '../../../MediaPlayer';
 
 const CPSVideoBlock = props => {
