@@ -13,58 +13,7 @@ import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 // ensure all moment locales have been loaded via service configs
-import '#server/utilities/serviceConfigs';
-
-const locales = [
-  // some other locales (eg. Russian) have multiple levels of pluralisation (ie. one, some, many) which might require
-  // adding more examples to the table below.
-  { name: 'Afaan Oromoo', locale: 'om' },
-  { name: 'Afrique', locale: 'fr' },
-  { name: 'Amharic', locale: 'am' },
-  { name: 'Arabic', locale: 'ar' },
-  { name: 'Azeri', locale: 'az' },
-  { name: 'Bengali', locale: 'bn' },
-  { name: 'Burmese', locale: 'my' },
-  { name: 'Cymrufyw', locale: 'cy' },
-  { name: 'Gahuza', locale: 'rw' },
-  { name: 'Gujarati', locale: 'gu' },
-  { name: 'Hausa', locale: 'ha' },
-  { name: 'Hindi', locale: 'hi' },
-  { name: 'Igbo', locale: 'ig' },
-  { name: 'Indonesian', locale: 'id' },
-  { name: 'Japanese', locale: 'ja' },
-  { name: 'Korean', locale: 'ko' },
-  { name: 'Kyrgyz', locale: 'ky' },
-  { name: 'Marathi', locale: 'mr' },
-  { name: 'Mundo', locale: 'es' },
-  { name: 'Naidheachdan', locale: 'gd' },
-  { name: 'Nepali', locale: 'ne' },
-  { name: 'News', locale: 'en-gb' },
-  { name: 'Pashto', locale: 'ps' },
-  { name: 'Persian', locale: 'fa' },
-  { name: 'Pidgin', locale: 'pcm' },
-  { name: 'Portuguese', locale: 'pt-br' },
-  { name: 'Punjabi', locale: 'pa-in' },
-  { name: 'Russian', locale: 'ru' },
-  { name: 'Scotland', locale: 'en-gb' },
-  { name: 'Serbian', locale: 'sr' },
-  { name: 'Serbian Cyrillic', locale: 'sr-cyrl' },
-  { name: 'Sinhala', locale: 'si' },
-  { name: 'Somali', locale: 'so' },
-  { name: 'Swahili', locale: 'sw' },
-  { name: 'Tamil', locale: 'ta' },
-  { name: 'Telugu', locale: 'te' },
-  { name: 'Thai', locale: 'th' },
-  { name: 'Tigrinya', locale: 'ti' },
-  { name: 'Turkce', locale: 'tr' },
-  { name: 'Ukrainian', locale: 'uk' },
-  { name: 'UkChina', locale: 'zh-cn' },
-  { name: 'Urdu', locale: 'ur' },
-  { name: 'Uzbek', locale: 'uz' },
-  { name: 'Vietnamese', locale: 'vi' },
-  { name: 'Yoruba', locale: 'yo' },
-  { name: 'Zhongwen', locale: 'yo' },
-];
+import services from '#server/utilities/serviceConfigs';
 
 // always round downwards
 // 59 minutes, 59 seconds ago -> 59 minutes ago
@@ -834,25 +783,40 @@ const editorialStories = storiesOf(
   'Moment Locales/Editorial view',
   module,
 ).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
+
 const developerStories = storiesOf(
   'Moment Locales/Developer view',
   module,
 ).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
-locales.forEach(({ name, locale }) => {
-  editorialStories.add(`${name} - ${locale}`, () => {
-    return (
-      <ShowMoment
-        name={name}
-        locale={locale}
-        moments={methods.filter(method =>
-          editorialWhitelist.includes(method.what),
-        )}
-      />
-    );
-  });
+const capitalizeService = service =>
+  service.charAt(0).toUpperCase() + service.slice(1);
 
-  developerStories.add(`${name} - ${locale}`, () => {
-    return <ShowMoment name={name} locale={locale} moments={methods} />;
-  });
+Object.keys(services).forEach(service => {
+  Object.keys(services[service])
+    .filter(variant => services[service][variant].datetimeLocale)
+    .forEach(variant => {
+      const serviceName = capitalizeService(service);
+      const storyTitle = `${serviceName} - ${services[service][variant].datetimeLocale} (${variant})`;
+
+      editorialStories.add(storyTitle, () => (
+        <ShowMoment
+          name={serviceName}
+          locale={services[service][variant].datetimeLocale}
+          moments={methods.filter(method =>
+            editorialWhitelist.includes(method.what),
+          )}
+        />
+      ));
+
+      developerStories.add(storyTitle, () => {
+        return (
+          <ShowMoment
+            name={serviceName}
+            locale={services[service][variant].datetimeLocale}
+            moments={methods}
+          />
+        );
+      });
+    });
 });
