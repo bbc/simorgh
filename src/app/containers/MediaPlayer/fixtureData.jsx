@@ -5,6 +5,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import MediaPlayerContainer from '.';
+import { GridItemConstrainedLarge } from '#lib/styledGrid';
 
 const captionBlock = {
   model: {
@@ -320,6 +321,7 @@ const GenerateFixtureData = ({
   toggleState,
   blocks,
   placeholder,
+  embedOverrides,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -334,7 +336,11 @@ const GenerateFixtureData = ({
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: jest.fn() }}
       >
-        <MediaPlayerContainer blocks={blocks} placeholder={placeholder} />
+        <MediaPlayerContainer
+          blocks={blocks}
+          placeholder={placeholder}
+          embedOverrides={embedOverrides}
+        />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -345,17 +351,32 @@ GenerateFixtureData.propTypes = {
   toggleState: shape({}),
   blocks: arrayOf(object).isRequired,
   placeholder: bool,
+  embedOverrides: shape({}),
 };
 
 GenerateFixtureData.defaultProps = {
   toggleState: defaultToggles,
   placeholder: true,
+  embedOverrides: {},
 };
 
 export const VideoCanonical = (
   <GenerateFixtureData
     platform="canonical"
     blocks={[validAresMediaVideoBlock]}
+  />
+);
+
+export const VideoCanonicalWithOverrides = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={[validAresMediaVideoBlock]}
+    embedOverrides={{
+      type: 'cps',
+      id: 'pidgin/12345678',
+      showPlaceholder: false,
+      wrapper: GridItemConstrainedLarge,
+    }}
   />
 );
 
