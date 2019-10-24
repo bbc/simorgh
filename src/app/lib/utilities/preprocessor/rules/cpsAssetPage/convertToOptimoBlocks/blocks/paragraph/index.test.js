@@ -47,25 +47,4 @@ describe('convertParagraph', () => {
 
     expect(await convertParagraph(input)).toEqual(expected);
   });
-
-  it('should convert a plain_text paragraph to Optimo format', async () => {
-    const input = {
-      text: 'A plain text paragraph',
-      markupType: 'plain_text',
-      type: 'paragraph',
-    };
-    const expected = optimoText([
-      {
-        fragments: [
-          {
-            fragment: 'A plain text paragraph',
-            attributes: [],
-          },
-        ],
-        text: 'A plain text paragraph',
-      },
-    ]);
-
-    expect(await convertParagraph(input)).toEqual(expected);
-  });
 });
