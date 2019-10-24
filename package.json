@@ -12,7 +12,7 @@
     "build:storybook": "build-storybook -s .storybook/static -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "cypress": "cypress run",
-    "cypress:ci": "cypress run",
+    "cypress:ci": "xvfb-run -a cypress run",
     "cypress:interactive": "cypress open",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
