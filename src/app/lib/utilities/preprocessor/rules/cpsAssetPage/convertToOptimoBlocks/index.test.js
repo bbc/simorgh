@@ -1,3 +1,4 @@
+import { clone } from 'ramda';
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoText } from './utils/helpers';
@@ -172,5 +173,32 @@ describe('convertToOptimoBlocks', () => {
     };
 
     expect(await convertToOptimoBlocks(input)).toEqual(expected);
+  });
+
+  it('should make the introduction paragraph bold', async () => {
+    const input = {
+      content: {
+        blocks: [
+          {
+            text: 'paragraph two',
+            markupType: 'candy_xml',
+            type: 'paragraph',
+          },
+          {
+            text: 'paragraph one',
+            role: 'introduction',
+            markupType: 'plain_text',
+            type: 'paragraph',
+          },
+        ],
+      },
+    };
+
+    const output = await convertToOptimoBlocks(input);
+
+    expect(
+      output.content.model.blocks[1].model.blocks[0].model.blocks[0].model
+        .attributes,
+    ).toEqual(['bold']);
   });
 });
