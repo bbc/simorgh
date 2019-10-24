@@ -5,13 +5,14 @@ import { GridItemConstrainedLarge } from '#lib/styledGrid';
 
 import MediaPlayer from '../../../MediaPlayer';
 
-const CPSVideoBlock = ({ showPlaceholder, assetUri }) => {
-  return props => (
+const CPSVideoBlock = props => {
+  const { showPlaceholder, assetUri } = props;
+  return (
     <MediaPlayer
       {...props}
       embedOverrides={{
         type: 'cps',
-        id: assetUri.substr(1),
+        id: assetUri,
         showPlaceholder,
         wrapper: styled(GridItemConstrainedLarge)`
           padding-bottom: 1.5rem;
@@ -19,6 +20,10 @@ const CPSVideoBlock = ({ showPlaceholder, assetUri }) => {
       }}
     />
   );
+};
+
+CPSVideoBlock.defaultProps = {
+  showPlaceholder: true,
 };
 
 CPSVideoBlock.propTypes = {
