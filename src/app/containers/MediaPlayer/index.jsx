@@ -18,6 +18,8 @@ import {
 } from '#models/propTypes';
 
 const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides = {} }) => {
+  // Player has slightly different behavior depending on whether it is on CPS or articles page
+  const type = embedOverrides.type || 'articles';
   const { id, platform, origin } = useContext(RequestContext);
   const { lang } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
@@ -48,13 +50,11 @@ const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides = {} }) => {
     return null; // this should be the holding image with an error overlay
   }
 
-  const hidePlaceholder =
-    typeof embedOverrides.showPlaceholder !== 'undefined' &&
-    !embedOverrides.showPlaceholder;
+  const showPlaceholder = type === 'articles' || embedOverrides.showPlaceholder;
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
     requestUrl: `${embedOverrides.id || id}/${versionId}/${lang}`,
-    type: embedOverrides.type || 'articles',
+    type,
     isAmp,
     origin,
   });
@@ -67,13 +67,13 @@ const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides = {} }) => {
       {isAmp ? (
         <AmpMediaPlayer
           src={embedSource}
-          showPlaceholder={!hidePlaceholder}
+          showPlaceholder={showPlaceholder}
           placeholderSrc={placeholderSrc}
         />
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
-          showPlaceholder={!hidePlaceholder}
+          showPlaceholder={showPlaceholder}
           placeholder={placeholder}
           placeholderSrc={placeholder ? placeholderSrc : ''}
         />
