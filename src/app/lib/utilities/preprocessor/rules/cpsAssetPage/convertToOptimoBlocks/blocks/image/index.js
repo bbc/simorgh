@@ -1,3 +1,5 @@
+import { getImageParts } from './helpers';
+
 const captionBlock = ({ caption }) => {
   if (!caption) return null;
 
@@ -69,7 +71,7 @@ const altTextBlock = ({ altText }) => {
 const rawImage = ({ copyrightHolder, height, path, width }) => {
   if (!path) return null;
 
-  const [originCode, locator] = path.split(/\/(.+)/);
+  const [originCode, locator] = getImageParts(path);
 
   return {
     model: {

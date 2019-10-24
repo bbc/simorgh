@@ -70,8 +70,8 @@ export const rawImageBlock = {
   model: {
     copyrightHolder: 'Joe Maher',
     height: 549,
-    locator: 'cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg',
-    originCode: '',
+    locator: '729E/test/_63724392_gettyimages-1098075358.jpg',
+    originCode: 'cpsdevpb',
     width: 976,
   },
   type: 'rawImage',
