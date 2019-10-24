@@ -13,7 +13,7 @@ export const processBlock = _block => {
     block.text = escapeDoubleQuotes(block.text);
 
     // make introductions bold
-    if (block.type === 'paragraph' && block.role === 'introduction') {
+    if (block.role === 'introduction') {
       block.text = boldWrap(block.text);
       block.markupType = 'candy_xml';
     }
