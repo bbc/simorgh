@@ -1,9 +1,9 @@
 import nodeLogger from '../../logger.node';
 
-const Preprocessor = (jsonRaw = {}, rules = []) => {
+const Preprocessor = async (jsonRaw = {}, rules = []) => {
   try {
-    return rules.reduce(
-      (transformedJson, ruleset) => ruleset(transformedJson),
+    return await rules.reduce(
+      async (transformedJson, ruleset) => ruleset(await transformedJson),
       jsonRaw,
     );
   } catch (e) {
