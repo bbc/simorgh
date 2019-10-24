@@ -798,7 +798,7 @@ Object.keys(services).forEach(service => {
     .forEach(variant => {
       const serviceName = capitalizeService(service);
       const serviceLocale = services[service][variant].datetimeLocale;
-      const storyTitle = `${serviceName} - ${serviceLocale} (${variant})`;
+      const storyTitle = `${serviceName} - ${serviceLocale}`;
 
       editorialStories.add(storyTitle, () => (
         <ShowMoment
