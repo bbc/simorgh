@@ -134,6 +134,28 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             },
           );
         });
+        it('should contain Useful Links if usefulLinks block data exists', () => {
+          cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
+            ({ body }) => {
+              const pageData = body.content.groups;
+              const usefulLinks = pageData.find(data => {
+                return data.type === 'useful-links';
+              });
+              const isValidUsefulLinks =
+                usefulLinks && 'strapline' in usefulLinks;
+
+              if (isValidUsefulLinks) {
+                //  We include the hasStrapline as we don't render Useful Links
+                //  if we don't receive a strapline in the data
+                cy.get('[aria-labelledby="Useful-links"]').should('be.visible');
+              } else {
+                cy.get('[aria-labelledby="Useful-links"]').should(
+                  'not.be.visible',
+                );
+              }
+            },
+          );
+        });
       });
     });
   });
