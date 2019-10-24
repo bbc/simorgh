@@ -55,19 +55,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         },
       );
     });
-
-    it('should render a media player', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          const { assetUri } = body.metadata.locators;
-          const { versionId } = body.content.blocks[0].versions[0];
-          const { language } = body.metadata;
-          cy.get(
-            `[src*="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/cps${assetUri}/${versionId}/${language}"]`,
-          ).should('be.visible');
-        },
-      );
-    });
   });
 };
 
