@@ -217,7 +217,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 2rem;
 }
 
-.c5 {
+.c8 {
   grid-column: 1 / span 6;
 }
 
@@ -251,7 +251,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 1rem;
 }
 
-.c6 {
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -260,6 +260,26 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.c6 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c5 {
+  padding-bottom: 1.5rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -303,40 +323,40 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c5 {
+  .c8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
+  .c8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c8 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c5 {
+  .c8 {
     max-width: initial;
   }
 }
@@ -445,16 +465,46 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c5 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c5 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c5 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
   }
 }
 
@@ -495,98 +545,112 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
         <div
           class="c5"
         >
-          <p
+          <div
             class="c6"
+          >
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
+              class="c7"
+              src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
+            />
+          </div>
+        </div>
+        <div
+          class="c8"
+        >
+          <p
+            class="c9"
           >
             As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Wetin ginger Emeka na im friend wey smoke from generator kill.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Most of di material wey Nelson take arrange im generator na from  scrap.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
           </p>
         </div>
         <div
-          class="c5"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
           </p>
@@ -763,6 +827,26 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   animation: eMLfYp 0.2s linear;
   -webkit-transition: visibility 0.2s linear;
   transition: visibility 0.2s linear;
+}
+
+.c21 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.c20 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c19 {
+  padding-bottom: 1.5rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -1062,6 +1146,36 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 @media (min-width:63rem) {
   .c12 {
     padding: 0.5rem 0 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c19 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c19 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c19 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c19 {
+    padding: 0 1rem;
   }
 }
 
@@ -1519,6 +1633,20 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           >
             Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
           </p>
+        </div>
+        <div
+          class="c19"
+        >
+          <div
+            class="c20"
+          >
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
+              class="c21"
+              src="https://www.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
+            />
+          </div>
         </div>
         <div
           class="c15"

@@ -1,5 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CPSVideoBlock no placeholder 1`] = `<div />`;
+exports[`CPSVideoBlock no placeholder 1`] = `
+.c2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
 
-exports[`CPSVideoBlock with placeholder 1`] = `<div />`;
+.c1 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0 {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <iframe
+      allow="autoplay; fullscreen"
+      allowfullscreen=""
+      class="c2"
+      src="https://www.test.bbc.co.uk/ws/av-embeds/cps//pidgin/12345678/p07jl3lx/ig"
+    />
+  </div>
+</div>
+`;
+
+exports[`CPSVideoBlock with placeholder 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c2 {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0 {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <img
+        alt="Image Alt"
+        class="c3"
+        src="https://ichef.bbci.co.uk/images/ic/$recipe/p07jl8g4.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;
