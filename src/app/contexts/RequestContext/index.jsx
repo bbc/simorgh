@@ -60,10 +60,17 @@ RequestContextProvider.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
-  pageType: oneOf(['article', 'frontPage', 'media', 'error', 'MAP', 'FIX'])
-    .isRequired,
+  pageType: oneOf([
+    'article',
+    'frontPage',
+    'media',
+    'error',
+    'MAP',
+    'FIX',
+    'STY',
+  ]).isRequired,
   service: string.isRequired,
-  statusCode: number.isRequired,
+  statusCode: number,
   pathname: string.isRequired,
   previousPath: string,
   variant: variantPropType,
@@ -72,6 +79,7 @@ RequestContextProvider.propTypes = {
 RequestContextProvider.defaultProps = {
   bbcOrigin: null,
   id: null,
+  statusCode: null,
   previousPath: null,
   variant: null,
 };

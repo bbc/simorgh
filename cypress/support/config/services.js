@@ -850,7 +850,7 @@ const services = {
       },
       frontPage: {
         path: Cypress.env('APP_ENV') === 'live' ? undefined : '/persian',
-        smoke: false,
+        smoke: true,
       },
       liveRadio: {
         path:
@@ -894,7 +894,7 @@ const services = {
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/pidgin/tori-49450859',
-        smoke: false,
+        smoke: true,
       },
     },
   },
