@@ -3,6 +3,8 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
+// Limiting to one service for now
+const serviceHasPublishedPromo = service => service === 'persian';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -91,6 +93,38 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible');
           });
         });
+
+        if (
+          serviceHasPublishedPromo(service) &&
+          Cypress.env('APP_ENV') !== 'local'
+        ) {
+          it('individual promo should link to corresponding article pages and back navigation should link to frontpage', () => {
+            let currentURL = null;
+            cy.get('h3')
+              .eq(3)
+              .within(() => {
+                cy.get('a')
+                  .should('have.attr', 'href')
+                  .then(href => {
+                    cy.request({
+                      url: href,
+                      failOnStatusCode: false,
+                    }).then(resp => {
+                      expect(resp.status).to.not.equal(404);
+                    });
+                  });
+              });
+
+            cy.url().then(url => {
+              currentURL = url;
+              cy.get('h3')
+                .eq(3)
+                .click();
+              cy.go('back');
+              cy.url().should('eq', currentURL);
+            });
+          });
+        }
 
         it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
