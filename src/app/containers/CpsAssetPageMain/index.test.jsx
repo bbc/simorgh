@@ -15,6 +15,7 @@ describe('CpsAssetPageMain', () => {
   it('should match snapshot', async () => {
     // TODO: Remove the prop warnings
     // https://github.com/bbc/simorgh/issues/4396
+    // https://github.com/bbc/simorgh/issues/4397
     suppressPropWarnings(['TextContainer']);
     suppressPropWarnings(['ParagraphContainer']);
     suppressPropWarnings(['isExternal', 'InlineLinkContainer']);
