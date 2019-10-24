@@ -63,7 +63,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
           const { versionId } = body.content.blocks[0].versions[0];
           const { language } = body.metadata;
           cy.get(
-            `[src*="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/cps/${assetUri}/${versionId}/${language}"]`,
+            `[src*="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/cps${assetUri}/${versionId}/${language}"]`,
           ).should('be.visible');
         },
       );
