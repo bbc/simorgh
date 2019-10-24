@@ -797,12 +797,13 @@ Object.keys(services).forEach(service => {
     .filter(variant => services[service][variant].datetimeLocale)
     .forEach(variant => {
       const serviceName = capitalizeService(service);
-      const storyTitle = `${serviceName} - ${services[service][variant].datetimeLocale} (${variant})`;
+      const serviceLocale = services[service][variant].datetimeLocale;
+      const storyTitle = `${serviceName} - ${serviceLocale} (${variant})`;
 
       editorialStories.add(storyTitle, () => (
         <ShowMoment
           name={serviceName}
-          locale={services[service][variant].datetimeLocale}
+          locale={serviceLocale}
           moments={methods.filter(method =>
             editorialWhitelist.includes(method.what),
           )}
@@ -813,7 +814,7 @@ Object.keys(services).forEach(service => {
         return (
           <ShowMoment
             name={serviceName}
-            locale={services[service][variant].datetimeLocale}
+            locale={serviceLocale}
             moments={methods}
           />
         );
