@@ -33,7 +33,6 @@ const CpsAssetPageMain = ({ pageData }) => {
     video: props => (
       <MediaPlayer
         {...props}
-        style={{ paddingBottom: 50 }}
         embedOverrides={{
           type: 'cps',
           id: assetUri.substr(1),
