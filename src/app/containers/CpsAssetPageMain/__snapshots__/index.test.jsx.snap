@@ -7,15 +7,15 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
   padding-bottom: 2rem;
 }
 
-.c1 {
-  grid-column: 1 / span 6;
-}
-
-.c4 {
+.c8 {
   grid-column: 1 / span 6;
 }
 
 .c3 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -26,7 +26,7 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
   padding: 2rem 0;
 }
 
-.c5 {
+.c4 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -37,11 +37,11 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c5:last-child {
+.c4:last-child {
   padding-bottom: 1rem;
 }
 
-.c6 {
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -50,6 +50,26 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.c6 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c5 {
+  padding-bottom: 1.5rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -93,158 +113,188 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c1 {
+  .c8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c8 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c8 {
     max-width: initial;
   }
 }
 
 @media (max-width:63rem) {
-  .c2 {
+  .c1 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c1 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c1 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c2 {
+  .c1 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c1 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:25rem) {
-  .c4 {
+  .c3 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c3 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
+  .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c3 {
     grid-column: 2 / span 4;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c4 {
+  .c3 {
     max-width: initial;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c5 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c5 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c5 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
   }
 }
 
@@ -462,18 +512,8 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
         <div
           class="c1"
         >
-          <a
-            data-e2e="cpsAssetDummyLink"
-            href="/pidgin/23248703"
-          >
-            Test MAP to MAP inline link
-          </a>
-        </div>
-        <div
-          class="c2"
-        >
           <h1
-            class="c3"
+            class="c2"
             id="content"
             tabindex="-1"
           >
@@ -481,16 +521,16 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           </h1>
         </div>
         <div
-          class="c4"
+          class="c3"
         >
           <time
-            class="c5"
+            class="c4"
             datetime="2019-08-23"
           >
             23 August 2019
           </time>
           <time
-            class="c5"
+            class="c4"
             datetime="2019-08-23"
           >
             New Informate 
@@ -498,100 +538,114 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           </time>
         </div>
         <div
-          class="c1"
+          class="c5"
+        >
+          <div
+            class="c6"
+          >
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
+              class="c7"
+              src="https://www.test.bbc.co.uk/ws/av-embeds/cps//pidgin/tori-49450859/p07lg239/pcm"
+            />
+          </div>
+        </div>
+        <div
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Wetin ginger Emeka na im friend wey smoke from generator kill.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Most of di material wey Nelson take arrange im generator na from  scrap.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
           </p>
         </div>
         <div
-          class="c1"
+          class="c8"
         >
           <p
-            class="c6"
+            class="c9"
           >
             Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
           </p>

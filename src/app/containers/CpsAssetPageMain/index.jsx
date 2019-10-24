@@ -1,28 +1,47 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { Link } from 'react-router-dom';
-import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import styled from 'styled-components';
+import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
+import { RequestContext } from '#contexts/RequestContext';
+
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import headings from '../Headings';
 import timestamp from '../ArticleTimestamp';
 import text from '../Text';
 import Blocks from '../Blocks';
+import MediaPlayer from '../MediaPlayer';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
-const componentsToRender = {
-  headline: headings,
-  text,
-  timestamp,
-};
-
 const CpsAssetPageMain = ({ pageData }) => {
+  const { platform } = useContext(RequestContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
+  const assetUri = path(['locators', 'assetUri'], metadata);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+
+  const componentsToRender = {
+    headline: headings,
+    text,
+    timestamp,
+    video: props => (
+      <MediaPlayer
+        {...props}
+        style={{ paddingBottom: 50 }}
+        embedOverrides={{
+          type: 'cps',
+          id: assetUri,
+          showPlaceholder: platform === 'amp',
+          wrapper: styled(GridItemConstrainedLarge)`
+            padding-bottom: 1.5rem;
+          `,
+        }}
+      />
+    ),
+  };
 
   return (
     <>
@@ -35,11 +54,6 @@ const CpsAssetPageMain = ({ pageData }) => {
       <LinkedData type="Article" seoTitle={title} />
       <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
-        <GridItemConstrainedMedium>
-          <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
-            Test MAP to MAP inline link
-          </Link>
-        </GridItemConstrainedMedium>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </GhostGrid>
     </>

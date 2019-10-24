@@ -1,5 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import envConfig from '../../../support/config/envs';
 
 const getParagraphText = blocks =>
   blocks.find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
@@ -51,6 +52,19 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
                 appConfig[service].default.articleTimestampPrefix,
               );
           }
+        },
+      );
+    });
+
+    it('should render a media player', () => {
+      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+        ({ body }) => {
+          const { assetUri } = body.metadata.locators;
+          const { versionId } = body.content.blocks[0].versions[0];
+          const { language } = body.metadata;
+          cy.get(
+            `[src*="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/cps/${assetUri}/${versionId}/${language}"]`,
+          ).should('be.visible');
         },
       );
     });

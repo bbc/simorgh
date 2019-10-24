@@ -17,7 +17,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const MediaPlayerContainer = ({ blocks, placeholder }) => {
+const MediaPlayerContainer = ({ blocks, placeholder, embedOverrides = {} }) => {
   const { id, platform, origin } = useContext(RequestContext);
   const { lang } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
@@ -48,27 +48,37 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     return null; // this should be the holding image with an error overlay
   }
 
+  const hidePlaceholder =
+    typeof embedOverrides.showPlaceholder !== 'undefined' &&
+    !embedOverrides.showPlaceholder;
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
-    requestUrl: `${id}/${versionId}/${lang}`,
-    type: 'articles',
+    requestUrl: `${embedOverrides.id || id}/${versionId}/${lang}`,
+    type: embedOverrides.type || 'articles',
     isAmp,
     origin,
   });
 
+  const Wrapper = embedOverrides.wrapper || GridItemConstrainedMedium;
+
   return (
-    <GridItemConstrainedMedium>
+    <Wrapper>
       <Metadata aresMediaBlock={aresMediaBlock} />
       {isAmp ? (
-        <AmpMediaPlayer src={embedSource} placeholderSrc={placeholderSrc} />
+        <AmpMediaPlayer
+          src={embedSource}
+          showPlaceholder={!hidePlaceholder}
+          placeholderSrc={placeholderSrc}
+        />
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
+          showPlaceholder={!hidePlaceholder}
           placeholder={placeholder}
           placeholderSrc={placeholder ? placeholderSrc : ''}
         />
       )}
-    </GridItemConstrainedMedium>
+    </Wrapper>
   );
 };
 
