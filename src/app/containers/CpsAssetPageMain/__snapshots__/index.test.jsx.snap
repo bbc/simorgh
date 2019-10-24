@@ -503,7 +503,9 @@ exports[`CpsAssetPageMain should match snapshot 1`] = `
           <p
             class="c6"
           >
-            As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
+            <b>
+              As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
+            </b>
           </p>
         </div>
         <div
