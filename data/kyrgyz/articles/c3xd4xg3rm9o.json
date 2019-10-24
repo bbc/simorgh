@@ -229,6 +229,9 @@
                         "blocks": [
                           {
                             "model": {
+                              "height": 1920,
+                              "width": 1080,
+                              "copyrightHolder": "BBC",
                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
                               "originCode": "mpv"
                             },
