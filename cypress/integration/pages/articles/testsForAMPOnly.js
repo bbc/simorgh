@@ -1,5 +1,6 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
+import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -37,21 +38,26 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       }
     });
 
-    it('should render a placeholder image within a media block', () => {
-      cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-        ({ body }) => {
-          // `video` blocks can also contain audio.
-          const media = getBlockData('video', body);
-          if (media) {
-            cy.get('div[class^="StyledVideoContainer"]').within(() => {
-              cy.get('amp-img')
-                .should('have.attr', 'src')
-                .should('not.be.empty');
-            });
-          }
-        },
-      );
-    });
+    // `appToggles` tells us whether a feature is toggled on or off in the current environment.
+    if (appToggles.mediaPlayer.enabled) {
+      describe('Media Player', () => {
+        it('should render a placeholder image', () => {
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            ({ body }) => {
+              // `video` blocks can also contain audio.
+              const media = getBlockData('video', body);
+              if (media) {
+                cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                  cy.get('amp-img')
+                    .should('have.attr', 'src')
+                    .should('not.be.empty');
+                });
+              }
+            },
+          );
+        });
+      });
+    }
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.

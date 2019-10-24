@@ -1,6 +1,6 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/testHelpers/serviceConfigs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockByType, getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -11,6 +11,9 @@ const serviceHasCaption = service => service === 'news';
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
+
+// TODO: Remove once we have inline link on article pages linking to another article page
+const serviceHasInlineLink = service => service === 'news';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -144,6 +147,26 @@ export const testsThatFollowSmokeTestConfig = ({
           },
         );
       });
+
+      if (
+        serviceHasInlineLink(service) &&
+        (Cypress.env('APP_ENV') === 'local' ||
+          Cypress.env('APP_ENV') === 'test')
+      ) {
+        it('should have an inlink link to an article page', () => {
+          cy.get('[class^="InlineLink"]')
+            .eq(1)
+            .should('have.attr', 'href')
+            .then(href => {
+              cy.request({
+                url: href,
+                failOnStatusCode: false,
+              }).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      }
 
       if (serviceHasTimestamp(service)) {
         it('should render a timestamp', () => {
