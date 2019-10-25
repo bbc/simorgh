@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { string, bool } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import {
   CanonicalMediaPlayer,
@@ -86,7 +87,12 @@ const MediaPlayerContainer = ({
   );
 };
 
-MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
+MediaPlayerContainer.propTypes = {
+  ...mediaPlayerPropTypes,
+  assetId: string.isRequired,
+  assetType: string.isRequired,
+  showPlaceholder: bool.isRequired,
+};
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
 };
