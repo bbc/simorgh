@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape, bool, arrayOf, object } from 'prop-types';
+import { string, shape, arrayOf, object } from 'prop-types';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -8,13 +8,7 @@ import MediaPlayerContainer from '.';
 
 const captionBlock = {
   model: {
-    blocks: [
-      {
-        model: {
-          blocks: [singleTextBlock('Caption')],
-        },
-      },
-    ],
+    blocks: [singleTextBlock('Media Player With Caption')],
   },
   type: 'caption',
 };
@@ -315,12 +309,7 @@ const toggleStateOff = {
   },
 };
 
-const GenerateFixtureData = ({
-  platform,
-  toggleState,
-  blocks,
-  showPlaceholder,
-}) => (
+const GenerateFixtureData = ({ platform, toggleState, blocks }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     service="news"
@@ -334,10 +323,7 @@ const GenerateFixtureData = ({
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: jest.fn() }}
       >
-        <MediaPlayerContainer
-          blocks={blocks}
-          showPlaceholder={showPlaceholder}
-        />
+        <MediaPlayerContainer blocks={blocks} />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -347,12 +333,10 @@ GenerateFixtureData.propTypes = {
   platform: string.isRequired,
   toggleState: shape({}),
   blocks: arrayOf(object).isRequired,
-  showPlaceholder: bool,
 };
 
 GenerateFixtureData.defaultProps = {
   toggleState: defaultToggles,
-  showPlaceholder: true,
 };
 
 export const VideoCanonical = (
@@ -366,14 +350,6 @@ export const VideoAmp = (
   <GenerateFixtureData platform="amp" blocks={[validAresMediaVideoBlock]} />
 );
 
-export const VideoCanonicalNoPlaceHolder = (
-  <GenerateFixtureData
-    platform="canonical"
-    blocks={[validAresMediaVideoBlock]}
-    showPlaceholder={false}
-  />
-);
-
 export const VideoCanonicalNoVersionId = (
   <GenerateFixtureData platform="canonical" blocks={missingVpidBlocks} />
 );
@@ -384,4 +360,15 @@ export const VideoCanonicalToggledOff = (
     blocks={[validAresMediaVideoBlock]}
     toggleState={toggleStateOff}
   />
+);
+
+export const VideoCanonicalWithCaption = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={validVideoWithCaptionBlock}
+  />
+);
+
+export const VideoAmpWithCaption = (
+  <GenerateFixtureData platform="amp" blocks={validVideoWithCaptionBlock} />
 );

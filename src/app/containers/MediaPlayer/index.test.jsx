@@ -2,9 +2,10 @@ import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import {
   VideoCanonical,
   VideoAmp,
-  VideoCanonicalNoPlaceHolder,
   VideoCanonicalNoVersionId,
   VideoCanonicalToggledOff,
+  VideoCanonicalWithCaption,
+  VideoAmpWithCaption,
 } from './fixtureData';
 
 describe('MediaPlayer', () => {
@@ -13,12 +14,17 @@ describe('MediaPlayer', () => {
     VideoCanonical,
   );
 
+  shouldMatchSnapshot('Calls the AMP player when platform is AMP', VideoAmp);
+
   shouldMatchSnapshot(
-    'Calls the canonical player when platform is canonical and placeholder is false',
-    VideoCanonicalNoPlaceHolder,
+    'Calls the canonical player with a caption',
+    VideoCanonicalWithCaption,
   );
 
-  shouldMatchSnapshot('Calls the AMP player when platform is AMP', VideoAmp);
+  shouldMatchSnapshot(
+    'Calls the AMP player with a caption',
+    VideoAmpWithCaption,
+  );
 
   describe('Fails and returns early when', () => {
     isNull('there is no versionId', VideoCanonicalNoVersionId);

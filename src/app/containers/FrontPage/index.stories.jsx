@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { storiesOf } from '@storybook/react';
 import igboData from '#data/igbo/frontpage';
 import pidginData from '#data/pidgin/frontpage';
@@ -28,28 +28,37 @@ const serviceDatasets = {
   punjabi: punjabiData,
 };
 
+// eslint-disable-next-line react/prop-types
+const DataWrapper = ({ service, children }) => {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    preprocess(serviceDatasets[service], preprocessorRules).then(setData);
+  }, [service]);
+
+  return data ? children(data) : null;
+};
+
 const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
+
 Object.keys(serviceDatasets).forEach(service => {
   stories.add(service, () => {
-    const frontPageData = preprocess(
-      serviceDatasets[service],
-      preprocessorRules,
-    );
-
-    const status = 200;
-
     return (
-      <FrontPage
-        pageData={frontPageData}
-        status={status}
-        service={service}
-        isAmp={false}
-        loading={false}
-        error={null}
-        pageType="frontPage"
-      />
+      <DataWrapper service={service}>
+        {frontPageData => (
+          <FrontPage
+            pageData={frontPageData}
+            status={200}
+            service={service}
+            isAmp={false}
+            loading={false}
+            error={null}
+            pageType="frontPage"
+          />
+        )}
+      </DataWrapper>
     );
   });
 });
