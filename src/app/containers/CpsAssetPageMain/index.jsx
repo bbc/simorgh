@@ -5,13 +5,19 @@ import { Link } from 'react-router-dom';
 import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
+import headings from '../Headings';
+import timestamp from '../ArticleTimestamp';
 import text from '../Text';
+import image from '../Image';
 import Blocks from '../Blocks';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
 const componentsToRender = {
+  headline: headings,
   text,
+  image,
+  timestamp,
 };
 
 const CpsAssetPageMain = ({ pageData }) => {
@@ -32,9 +38,6 @@ const CpsAssetPageMain = ({ pageData }) => {
       <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
         <GridItemConstrainedMedium>
-          <h1 id="content" tabIndex="-1">
-            Placeholder content for MAP page skeleton
-          </h1>
           <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
             Test MAP to MAP inline link
           </Link>
