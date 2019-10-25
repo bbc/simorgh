@@ -95,6 +95,11 @@ exports[`MediaPlayer Calls the AMP player with a caption 1`] = `
 <html>
   <head>
     <script
+      type="application/ld+json"
+    >
+      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+    </script>
+    <script
       async="true"
       custom-element="amp-iframe"
       src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
@@ -446,7 +451,16 @@ exports[`MediaPlayer Calls the canonical player when platform is canonical and p
 `;
 
 exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
-.c3 {
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+    </script>
+  </head>
+  <body>
+    .c3 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -572,33 +586,37 @@ exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
   }
 }
 
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <div
-      class="c2"
-    >
-      <img
-        alt="Image Alt"
-        class="c3"
-        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-      />
+<div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <img
+              alt="Image Alt"
+              class="c3"
+              src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            />
+          </div>
+        </div>
+        <figcaption
+          class="c4"
+        >
+          <span
+            class="c5"
+          >
+            Video caption, 
+          </span>
+          <p>
+            Media Player With Caption
+          </p>
+        </figcaption>
+      </div>
     </div>
-  </div>
-  <figcaption
-    class="c4"
-  >
-    <span
-      class="c5"
-    >
-      Video caption, 
-    </span>
-    <p>
-      Media Player With Caption
-    </p>
-  </figcaption>
-</div>
+  </body>
+</html>
 `;
