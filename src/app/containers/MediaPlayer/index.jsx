@@ -18,7 +18,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const MediaPlayerContainer = ({ blocks, placeholder }) => {
+const MediaPlayerContainer = ({ blocks }) => {
   const { id, platform, origin } = useContext(RequestContext);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
@@ -95,7 +95,6 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
 MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
-  placeholder: true,
 };
 
 export default MediaPlayerContainer;
