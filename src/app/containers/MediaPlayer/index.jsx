@@ -83,8 +83,7 @@ const MediaPlayerContainer = ({ blocks }) => {
         <CanonicalMediaPlayer
           src={embedSource}
           title={iframeTitle}
-          placeholder={placeholder}
-          placeholderSrc={placeholder ? placeholderSrc : ''}
+          placeholderSrc={placeholderSrc}
         />
       )}
       {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
