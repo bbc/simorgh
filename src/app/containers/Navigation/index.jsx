@@ -36,6 +36,7 @@ const NavigationContainer = () => {
               active={active}
               currentPageText={currentPage}
               service={service}
+              data-navigation={`${title}_${url}`}
             >
               {title}
             </NavigationLi>

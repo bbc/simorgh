@@ -155,6 +155,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         dir={dir}
         linkText={isLink ? seeAll : null}
         href={href}
+        data-section-divider={sectionLabelId}
       >
         {group.strapline.name}
       </SectionLabel>
