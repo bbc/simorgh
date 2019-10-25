@@ -1,11 +1,13 @@
 import { clone, pathOr, path } from 'ramda';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
+import image from './blocks/image';
 
 const handleMissingType = block =>
   console.log(`Missing type field on block ${block.type}`); // eslint-disable-line no-console
 
 const typesToConvert = {
+  image,
   paragraph,
   media,
 };

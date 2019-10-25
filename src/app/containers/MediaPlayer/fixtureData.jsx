@@ -8,13 +8,7 @@ import MediaPlayerContainer from '.';
 
 const captionBlock = {
   model: {
-    blocks: [
-      {
-        model: {
-          blocks: [singleTextBlock('Caption')],
-        },
-      },
-    ],
+    blocks: [singleTextBlock('Media Player With Caption')],
   },
   type: 'caption',
 };
@@ -381,4 +375,15 @@ export const VideoCanonicalToggledOff = (
     blocks={[validAresMediaVideoBlock]}
     toggleState={toggleStateOff}
   />
+);
+
+export const VideoCanonicalWithCaption = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={validVideoWithCaptionBlock}
+  />
+);
+
+export const VideoAmpWithCaption = (
+  <GenerateFixtureData platform="amp" blocks={validVideoWithCaptionBlock} />
 );
