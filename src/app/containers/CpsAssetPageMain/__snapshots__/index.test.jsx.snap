@@ -508,7 +508,9 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           <p
             class="c6"
           >
-            As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
+            <b>
+              As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
+            </b>
           </p>
         </div>
         <div
@@ -1386,14 +1388,18 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           <p
             class="c16"
           >
-             This is introduction text, it should be bold by default, but also support 
+            <b>
+               This is introduction text, it should be bold by default, but also support 
+            </b>
             <a
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
               inline links
             </a>
-             to other pages.
+            <b>
+               to other pages.
+            </b>
           </p>
         </div>
         <div

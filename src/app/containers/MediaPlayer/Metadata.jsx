@@ -1,9 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import videoMetadata from './helpers/metadata';
+import { shape } from 'prop-types';
+import mediaPlayerMetadata from './helpers/metadata';
 
-const Metadata = aresMediaBlock => {
-  const metadata = videoMetadata(aresMediaBlock);
+const Metadata = ({ aresMediaBlock }) => {
+  const metadata = mediaPlayerMetadata(aresMediaBlock);
 
   return (
     <Helmet>
@@ -12,6 +13,12 @@ const Metadata = aresMediaBlock => {
       )}
     </Helmet>
   );
+};
+
+Metadata.propTypes = {
+  aresMediaBlock: shape({
+    model: shape({}).isRequired,
+  }).isRequired,
 };
 
 export default Metadata;
