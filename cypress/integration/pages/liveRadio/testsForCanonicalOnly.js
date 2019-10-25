@@ -24,7 +24,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             const serviceId = getMappedServiceId(externalId);
             const { lang } = appConfig[service][variant];
             cy.get(
-              `iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}"]`,
+              `iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}"]`,
             ).should('be.visible');
           },
         );
