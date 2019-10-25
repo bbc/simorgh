@@ -55,7 +55,7 @@ const MediaPlayerContainer = ({
     aresMediaBlock,
   );
 
-  const mediaType = kind === 'audio' ? 'audio' : 'video';
+  const type = kind === 'audio' ? 'audio' : 'video';
 
   if (!versionId) {
     return null; // this should be the holding image with an error overlay
@@ -81,7 +81,7 @@ const MediaPlayerContainer = ({
           showPlaceholder={showPlaceholder}
         />
       )}
-      {captionBlock ? <Caption block={captionBlock} type={mediaType} /> : null}
+      {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
     </>
   );
 };
