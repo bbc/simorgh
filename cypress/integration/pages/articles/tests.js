@@ -12,6 +12,9 @@ const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
 
+// TODO: Remove once we have inline link on article pages linking to another article page
+const serviceHasInlineLink = service => service === 'news';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -104,6 +107,30 @@ export const testsThatFollowSmokeTestConfig = ({
               .should('to.have.descendants', 'figcaption')
               .within(() => cy.get('noscript').should('not.exist'));
           });
+
+          it('should have a visible caption beneath a mediaplayer', () => {
+            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+              ({ body }) => {
+                const mediaData = getBlockData('video', body);
+                const captionBlock = getBlockByType(
+                  mediaData.model.blocks,
+                  'caption',
+                );
+                const {
+                  text,
+                } = captionBlock.model.blocks[0].model.blocks[0].model;
+
+                cy.get('figcaption')
+                  .eq(1)
+                  .within(() => {
+                    cy.get('p')
+                      .eq(0)
+                      .should('be.visible')
+                      .should('contain', text);
+                  });
+              },
+            );
+          });
         }
 
         it('should have an image copyright label with styling', () => {
@@ -144,6 +171,26 @@ export const testsThatFollowSmokeTestConfig = ({
           },
         );
       });
+
+      if (
+        serviceHasInlineLink(service) &&
+        (Cypress.env('APP_ENV') === 'local' ||
+          Cypress.env('APP_ENV') === 'test')
+      ) {
+        it('should have an inlink link to an article page', () => {
+          cy.get('[class^="InlineLink"]')
+            .eq(1)
+            .should('have.attr', 'href')
+            .then(href => {
+              cy.request({
+                url: href,
+                failOnStatusCode: false,
+              }).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      }
 
       if (serviceHasTimestamp(service)) {
         it('should render a timestamp', () => {
