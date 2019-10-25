@@ -206,14 +206,16 @@ export const testsThatFollowSmokeTestConfig = ({
                   text,
                 } = captionBlock.model.blocks[0].model.blocks[0].model;
 
-                cy.get('figcaption')
-                  .eq(1)
-                  .within(() => {
-                    cy.get('p')
-                      .eq(0)
-                      .should('be.visible')
-                      .should('contain', text);
-                  });
+                if (captionBlock) {
+                  cy.get('figcaption')
+                    .eq(1)
+                    .within(() => {
+                      cy.get('p')
+                        .eq(0)
+                        .should('be.visible')
+                        .should('contain', text);
+                    });
+                }
               },
             );
           });
