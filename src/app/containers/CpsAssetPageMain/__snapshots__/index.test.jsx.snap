@@ -1392,6 +1392,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                This is introduction text, it should be bold by default, but also support 
             </b>
             <a
+              aria-label="inline links, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1416,6 +1417,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
               </b>
             </i>
             <a
+              aria-label="a link, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1431,6 +1433,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           >
             Feta the big cheese macaroni cheese. 
             <a
+              aria-label="Caerphilly danish fontina, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1565,6 +1568,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             class="c16"
           >
             <a
+              aria-label="This is an external link to google!, Site na mpụta"
               class="c17"
               href="https://www.google.com/"
             >

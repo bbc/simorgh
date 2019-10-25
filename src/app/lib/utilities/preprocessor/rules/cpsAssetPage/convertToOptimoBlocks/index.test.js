@@ -17,6 +17,12 @@ describe('convertToOptimoBlocks', () => {
             markupType: 'plain_text',
             type: 'paragraph',
           },
+          {
+            text:
+              '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://www.bbc.com/pidgin" platform="highweb"/><url href="https://www.bbc.com/pidgin" platform="enhancedmobile"/></link>',
+            markupType: 'candy_xml',
+            type: 'paragraph',
+          },
           CPSMediaBlock,
         ],
       },
@@ -52,6 +58,38 @@ describe('convertToOptimoBlocks', () => {
                 text: 'A plain text paragraph',
               },
             ]),
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'this is the link text',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  attributes: [],
+                                  text: 'this is the link text',
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                            locator: 'https://www.bbc.com/pidgin',
+                            text: 'this is the link text',
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
             optimoVideoBlock,
           ],
         },
