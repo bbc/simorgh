@@ -12,14 +12,18 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const MediaPlayerContainer = ({ blocks }) => {
-  const { id, platform, origin } = useContext(RequestContext);
+const MediaPlayerContainer = ({
+  blocks,
+  assetId,
+  assetType,
+  showPlaceholder,
+}) => {
+  const { platform, origin } = useContext(RequestContext);
   const { lang } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
@@ -51,7 +55,7 @@ const MediaPlayerContainer = ({ blocks }) => {
     aresMediaBlock,
   );
 
-  const type = kind === 'audio' ? 'audio' : 'video';
+  const mediaType = kind === 'audio' ? 'audio' : 'video';
 
   if (!versionId) {
     return null; // this should be the holding image with an error overlay
@@ -59,25 +63,26 @@ const MediaPlayerContainer = ({ blocks }) => {
 
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
-    requestUrl: `${id}/${versionId}/${lang}`,
-    type: 'articles',
+    requestUrl: `${assetId}/${versionId}/${lang}`,
+    type: assetType,
     isAmp,
     origin,
   });
 
   return (
-    <GridItemConstrainedMedium>
+    <>
       <Metadata aresMediaBlock={aresMediaBlock} />
       {isAmp ? (
         <AmpMediaPlayer src={embedSource} placeholderSrc={placeholderSrc} />
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
-          placeholderSrc={placeholderSrc}
+          placeholderSrc={showPlaceholder && placeholderSrc}
+          showPlaceholder={showPlaceholder}
         />
       )}
-      {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
-    </GridItemConstrainedMedium>
+      {captionBlock ? <Caption block={captionBlock} type={mediaType} /> : null}
+    </>
   );
 };
 
