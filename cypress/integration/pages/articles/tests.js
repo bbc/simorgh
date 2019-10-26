@@ -197,24 +197,27 @@ export const testsThatFollowSmokeTestConfig = ({
           it('should have a visible caption beneath a mediaplayer', () => {
             cy.request(`${config[service].pageTypes.articles.path}.json`).then(
               ({ body }) => {
-                const mediaData = getBlockData('video', body);
-                const captionBlock = getBlockByType(
-                  mediaData.model.blocks,
-                  'caption',
-                );
-                const {
-                  text,
-                } = captionBlock.model.blocks[0].model.blocks[0].model;
+                const media = getBlockData('video', body);
+                if (media) {
+                  const captionBlock = getBlockByType(
+                    media.model.blocks,
+                    'caption',
+                  );
 
-                if (captionBlock) {
-                  cy.get('figcaption')
-                    .eq(1)
-                    .within(() => {
-                      cy.get('p')
-                        .eq(0)
-                        .should('be.visible')
-                        .should('contain', text);
-                    });
+                  if (captionBlock) {
+                    const {
+                      text,
+                    } = captionBlock.model.blocks[0].model.blocks[0].model;
+
+                    cy.get('figcaption')
+                      .eq(1)
+                      .within(() => {
+                        cy.get('p')
+                          .eq(0)
+                          .should('be.visible')
+                          .should('contain', text);
+                      });
+                  }
                 }
               },
             );
