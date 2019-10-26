@@ -26,7 +26,7 @@ const CpsAssetPageMain = ({ pageData }) => {
     text,
     image,
     timestamp,
-    video: props => <MediaPlayer {...props} assetUri={assetUri.substr(1)} />,
+    video: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
   return (

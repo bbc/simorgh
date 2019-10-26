@@ -1,4 +1,5 @@
 import React from 'react';
+import string from 'prop-types';
 import styled from 'styled-components';
 import MediaPlayerContainer from '../MediaPlayer';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
@@ -11,18 +12,25 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   padding-bottom: 1.5rem;
 `;
 
-const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => (
-  <Wrapper>
-    <MediaPlayerContainer
-      block={blocks}
-      assetId={assetUri}
-      assetType="cps"
-      showPlaceholder={false}
-    />
-  </Wrapper>
-);
+const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
+  if (!assetUri) return null;
 
-CpsAssetMediaPlayerContainer.propTypes = mediaPlayerPropTypes;
+  return (
+    <Wrapper>
+      <MediaPlayerContainer
+        block={blocks}
+        assetId={assetUri.substr(1)}
+        assetType="cps"
+        showPlaceholder={false}
+      />
+    </Wrapper>
+  );
+};
+
+CpsAssetMediaPlayerContainer.propTypes = {
+  ...mediaPlayerPropTypes,
+  assetUri: string.isRequired,
+};
 CpsAssetMediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
 };
