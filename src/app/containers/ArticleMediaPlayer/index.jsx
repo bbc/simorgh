@@ -9,7 +9,6 @@ import {
 
 const ArticleMediaPlayerContainer = ({ blocks }) => {
   const { id, pageType } = useContext(RequestContext);
-  const showPlaceholder = true;
 
   return (
     <GridItemConstrainedMedium>
@@ -17,7 +16,7 @@ const ArticleMediaPlayerContainer = ({ blocks }) => {
         block={blocks}
         assetId={id}
         assetType={pageType}
-        showPlaceholder={showPlaceholder}
+        showPlaceholder
       />
     </GridItemConstrainedMedium>
   );
