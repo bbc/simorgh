@@ -33,13 +33,6 @@
                 },
                 {
                     "model": {
-                        "attributes": [],
-                        "text": ""
-                    },
-                    "type": "advert"
-                },
-                {
-                    "model": {
                         "blocks": [
                             {
                                 "model": {
@@ -236,6 +229,13 @@
                 },
                 {
                     "model": {
+                        "attributes": [],
+                        "text": ""
+                    },
+                    "type": "advert"
+                },
+                {
+                    "model": {
                         "blocks": [
                             {
                                 "model": {
@@ -420,6 +420,13 @@
                         ]
                     },
                     "type": "text"
+                },
+                {
+                    "model": {
+                        "attributes": [],
+                        "text": ""
+                    },
+                    "type": "advert"
                 },
                 {
                     "model": {
