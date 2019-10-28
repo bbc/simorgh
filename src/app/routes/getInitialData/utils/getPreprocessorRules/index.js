@@ -5,35 +5,25 @@ import {
   radioPagePreprocessorRules,
 } from '../preprocessorRulesConfig';
 
-let preprocessorRules;
-
 const getPreprocessorRules = type => {
   switch (type) {
     case 'article':
-      preprocessorRules = articlesPreprocessorRules;
-      break;
+      return articlesPreprocessorRules;
     case 'WS-LIVE':
-      preprocessorRules = radioPagePreprocessorRules;
-      break;
+      return radioPagePreprocessorRules;
     case 'IDX':
-      preprocessorRules = indexPreprocessorRules;
-      break;
+      return indexPreprocessorRules;
     case 'FIX':
-      preprocessorRules = indexPreprocessorRules;
-      break;
+      return indexPreprocessorRules;
     case 'MAP':
-      preprocessorRules = cpsAssetPreprocessorRules;
-      break;
+      return cpsAssetPreprocessorRules;
     case 'STY':
-      preprocessorRules = cpsAssetPreprocessorRules;
-      break;
+      return cpsAssetPreprocessorRules;
     case 'PGL':
-      preprocessorRules = cpsAssetPreprocessorRules;
-      break;
+      return cpsAssetPreprocessorRules;
     default:
-      preprocessorRules = [];
+      return [];
   }
-  return preprocessorRules;
 };
 
 export default getPreprocessorRules;
