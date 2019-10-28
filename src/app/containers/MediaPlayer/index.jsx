@@ -4,6 +4,7 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
+import Caption from '../Caption';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import getPlaceholderSrc from './helpers/placeholder';
@@ -18,7 +19,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const MediaPlayerContainer = ({ blocks, placeholder }) => {
+const MediaPlayerContainer = ({ blocks }) => {
   const { id, platform, origin } = useContext(RequestContext);
   const { lang } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
@@ -29,6 +30,7 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
   }
 
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+  const captionBlock = filterForBlockType(blocks, 'caption');
 
   if (!aresMediaBlock) {
     return null;
@@ -44,6 +46,13 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
     aresMediaBlock,
   );
+  const kind = pathOr(
+    null,
+    ['model', 'blocks', 0, 'model', 'format'],
+    aresMediaBlock,
+  );
+
+  const type = kind === 'audio' ? 'audio' : 'video';
 
   if (!versionId) {
     return null; // this should be the holding image with an error overlay
@@ -72,11 +81,11 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
-          placeholder={placeholder}
-          placeholderSrc={placeholder ? placeholderSrc : ''}
+          placeholder={placeholderSrc}
           placeholderSrcset={placeholderSrcset}
         />
       )}
+      {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
     </GridItemConstrainedMedium>
   );
 };
@@ -84,7 +93,6 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
 MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
-  placeholder: true,
 };
 
 export default MediaPlayerContainer;

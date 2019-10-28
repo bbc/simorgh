@@ -1,5 +1,12 @@
 import pathOr from 'ramda/src/pathOr';
 
+const DEFAULT_IMAGE_RES = '1024x576';
+
+const getThumbnailUri = aresMetadataBlock => {
+  const imageUrl = pathOr(null, ['model', 'imageUrl'], aresMetadataBlock);
+  return `https://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;
+};
+
 const mediaPlayerMetadata = blocks => {
   const aresMediaBlocks = pathOr(null, ['model', 'blocks'], blocks);
   const listContent = [];
@@ -26,7 +33,7 @@ const mediaPlayerMetadata = blocks => {
       name: pathOr(null, ['model', 'title'], block),
       description: pathOr(null, ['model', 'synopses', 'short'], block),
       duration: pathOr(null, ['model', 'versions', [0], 'duration'], block),
-      thumbnailUrl: `https://${pathOr(null, ['model', 'imageUrl'], block)}`,
+      thumbnailUrl: getThumbnailUri(block),
       uploadDate: pathOr(
         null,
         ['model', 'versions', [0], 'availableFrom'],

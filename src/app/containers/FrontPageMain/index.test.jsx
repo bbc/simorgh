@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
 import preprocessor from '#lib/utilities/preprocessor';
@@ -8,7 +8,8 @@ import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-const processedPidgin = preprocessor(frontPageDataPidgin, [addIdsToItems]);
+const processedPidgin = () =>
+  preprocessor(frontPageDataPidgin, [addIdsToItems]);
 
 jest.mock('uuid', () =>
   (() => {
@@ -43,18 +44,19 @@ const FrontPageMainWithContext = props => (
 
 describe('FrontPageMain', () => {
   describe('snapshots', () => {
-    shouldMatchSnapshot(
-      'should render a pidgin frontpage correctly',
-      <FrontPageMainWithContext frontPageData={processedPidgin} />,
-    );
+    it('should render a pidgin frontpage correctly', async () => {
+      await matchSnapshotAsync(
+        <FrontPageMainWithContext frontPageData={await processedPidgin()} />,
+      );
+    });
   });
 
   describe('assertions', () => {
     afterEach(cleanup);
 
-    it('should render visually hidden text as h1', () => {
+    it('should render visually hidden text as h1', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={processedPidgin} />,
+        <FrontPageMainWithContext frontPageData={await processedPidgin()} />,
       );
       const h1 = container.querySelector('h1');
       const content = h1.getAttribute('id');
@@ -72,9 +74,9 @@ describe('FrontPageMain', () => {
       expect(langSpan.textContent).toEqual('BBC News');
     });
 
-    it('should render front page sections', () => {
+    it('should render front page sections', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={processedPidgin} />,
+        <FrontPageMainWithContext frontPageData={await processedPidgin()} />,
       );
       const sections = container.querySelectorAll('section');
 
