@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 
 import RadioPage from '.';
@@ -37,21 +37,23 @@ const status = 200;
 storiesOf('Pages|Radio Page', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
-  .adddDecorator(
-    withServicesKnob({
-      defaultService: 'indonesia',
-      services: Object.keys(liveRadioFixtures),
+  .add(
+    'default',
+    inputProvider({
+      // eslint-disable-next-line react/prop-types
+      componentFunction: ({ service }) => (
+        <RadioPage
+          match={matchFixtures(service)}
+          pageData={liveRadioFixtures[service]}
+          status={status}
+          service={service}
+          isAmp={false}
+          loading={false}
+          error=""
+          pageType="media"
+        />
+      ),
+      service: Object.keys(liveRadioFixtures),
+      options: { defaultService: 'indonesia' },
     }),
-  )
-  .add('default', ({ service }) => (
-    <RadioPage
-      match={matchFixtures(service)}
-      pageData={liveRadioFixtures[service]}
-      status={status}
-      service={service}
-      isAmp={false}
-      loading={false}
-      error=""
-      pageType="media"
-    />
-  ));
+  );

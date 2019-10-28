@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { dirDecorator } from '@bbc/psammead-storybook-helpers';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import MediaPlayerContainer from '.';
 import { validVideoWithCaptionBlock } from './fixtureData';
@@ -20,7 +20,7 @@ const defaultToggles = {
 storiesOf('Containers|Media Player/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
+  .addDecorator(dirDecorator)
   .add('default', ({ service }) => {
     return (
       <RequestContextProvider
@@ -43,7 +43,7 @@ storiesOf('Containers|Media Player/Canonical', module)
 storiesOf('Containers|Media Player/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
+  .addDecorator(dirDecorator)
   .addDecorator(AmpDecorator)
   .add('default', ({ service }) => {
     return (
