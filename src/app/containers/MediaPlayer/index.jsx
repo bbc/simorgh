@@ -21,7 +21,7 @@ import {
 
 const MediaPlayerContainer = ({ blocks }) => {
   const { id, platform, origin } = useContext(RequestContext);
-  const { lang } = useContext(ServiceContext);
+  const { lang, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
 
@@ -68,6 +68,11 @@ const MediaPlayerContainer = ({ blocks }) => {
     isAmp,
     origin,
   });
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'mediaPlayer'],
+    translations,
+  );
 
   return (
     <GridItemConstrainedMedium>
@@ -77,12 +82,14 @@ const MediaPlayerContainer = ({ blocks }) => {
           src={embedSource}
           placeholderSrc={placeholderSrc}
           placeholderSrcset={placeholderSrcset}
+          title={iframeTitle}
         />
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
           placeholder={placeholderSrc}
           placeholderSrcset={placeholderSrcset}
+          title={iframeTitle}
         />
       )}
       {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
