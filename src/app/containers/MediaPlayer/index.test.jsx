@@ -2,7 +2,6 @@ import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import {
   VideoCanonical,
   VideoAmp,
-  VideoCanonicalNoPlaceHolder,
   VideoCanonicalNoVersionId,
   VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
@@ -13,11 +12,6 @@ describe('MediaPlayer', () => {
   shouldMatchSnapshot(
     'Calls the canonical placeholder when platform is canonical',
     VideoCanonical,
-  );
-
-  shouldMatchSnapshot(
-    'Calls the canonical player when platform is canonical and placeholder is false',
-    VideoCanonicalNoPlaceHolder,
   );
 
   shouldMatchSnapshot('Calls the AMP player when platform is AMP', VideoAmp);

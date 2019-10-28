@@ -209,17 +209,17 @@
               "type": "listItem"
             },
             {
-              "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+              "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://www.bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://www.bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
               "markupType": "candy_xml",
               "type": "listItem"
             },
             {
-              "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+              "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://www.bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://www.bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
               "markupType": "candy_xml",
               "type": "listItem"
             },
             {
-              "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+              "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://www.bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://www.bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
               "markupType": "candy_xml",
               "type": "listItem"
             }
@@ -227,13 +227,13 @@
           "type": "list"
         },
         {
-          "text": "Lorem ipsum dolor sit amet, <bold>consectetur</bold> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<bold> ullamco laboris nisi ut aliquip </bold>ex ea commodo consequat. Duis aute irure dolor in reprehenderit<italic> in voluptate velit esse cillum </italic>dolore &quot;eu fugiat nulla&quot; pariatur. <link><caption>Excepteur</caption><altText>this is a link</altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "text": "Lorem ipsum dolor sit amet, <bold>consectetur</bold> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<bold> ullamco laboris nisi ut aliquip </bold>ex ea commodo consequat. Duis aute irure dolor in reprehenderit<italic> in voluptate velit esse cillum </italic>dolore &quot;eu fugiat nulla&quot; pariatur. <link><caption>Excepteur</caption><altText>this is a link</altText><url href=\"https://www.bbc.com/pidgin\" platform=\"highweb\"/></link> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           "role": "transmission-info",
           "markupType": "candy_xml",
           "type": "paragraph"
         },
         {
-          "text": "Lorem ipsum<link><caption> dolor sit amet</caption><altText>dolor sit amet poop poop </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link>, consectetur adipiscing elit",
+          "text": "Lorem ipsum<link><caption> dolor sit amet</caption><altText>dolor sit amet poop poop </altText><url href=\"https://www.bbc.com/pidgin\" platform=\"highweb\"/></link>, consectetur adipiscing elit",
           "markupType": "candy_xml",
           "type": "paragraph"
         },
