@@ -122,7 +122,7 @@
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-react": "^7.6.3",
     "@babel/runtime": "^7.6.3",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@storybook/addon-knobs": "^5.2.3",
