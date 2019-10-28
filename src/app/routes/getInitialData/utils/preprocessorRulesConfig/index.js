@@ -1,5 +1,6 @@
 import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
 import addIdsToBlocks from '#lib/utilities/preprocessor/rules/addIdsToBlocks';
+import radioPageAddIdsToBlocks from '#lib/utilities/preprocessor/rules/radioPage/addIdsToBlocks';
 import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositioning';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
 import addHeadlineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addHeadlineBlock';
@@ -33,4 +34,4 @@ export const indexPreprocessorRules = [
   filterGroupsWithoutStraplines,
 ];
 
-export const radioPagePreprocessorRules = [addIdsToBlocks];
+export const radioPagePreprocessorRules = [radioPageAddIdsToBlocks];
