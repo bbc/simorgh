@@ -87,7 +87,7 @@ const MediaPlayerContainer = ({ blocks }) => {
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
-          placeholder={placeholderSrc}
+          placeholderSrc={placeholderSrc}
           placeholderSrcset={placeholderSrcset}
           title={iframeTitle}
         />
