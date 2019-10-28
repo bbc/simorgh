@@ -4,7 +4,7 @@ import config from '../../support/config/services';
 const serviceIsGNL = service => service === 'japanese';
 const serviceIsWS = service => service === 'persian';
 const serviceIsPS = service => service === 'news';
-const serviceUsesDefault = service => service === 'scotland';
+const serviceUsesPlaceholder = service => service === 'scotland';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -75,12 +75,12 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
             envConfig.atiAnalyticsWSBucket,
           );
         });
-      } else if (serviceUsesDefault(service)) {
+      } else if (serviceUsesPlaceholder(service)) {
         describe('ATI', () => {
           it('should have an amp-analytics tag with the ati url', () => {
             cy.hasAmpAnalyticsAtiUrl(
               envConfig.atiUrl,
-              envConfig.atiAnalyticsDefaultBucket,
+              envConfig.atiAnalyticsPlaceholderBucket,
             );
           });
         });
