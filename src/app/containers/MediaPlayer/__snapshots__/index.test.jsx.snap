@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPlayer Calls the AMP player when platform is AMP 1`] = `
+exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
 <html>
   <head>
     <script
@@ -92,7 +92,7 @@ exports[`MediaPlayer Calls the AMP player when platform is AMP 1`] = `
 </html>
 `;
 
-exports[`MediaPlayer Calls the AMP player with a caption 1`] = `
+exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
 <html>
   <head>
     <script
@@ -107,13 +107,7 @@ exports[`MediaPlayer Calls the AMP player with a caption 1`] = `
     />
   </head>
   <body>
-    .c1 {
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-.c3 {
+    .c3 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -123,6 +117,12 @@ exports[`MediaPlayer Calls the AMP player with a caption 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c1 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
 }
 
 .c2 {
@@ -258,20 +258,83 @@ exports[`MediaPlayer Calls the AMP player with a caption 1`] = `
 </html>
 `;
 
-exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 1`] = `
-.c3 {
+exports[`MediaPlayer Renders the canonical player placeholder when platform is canonical 1`] = `
+.c8 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c9 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c2 {
+.c6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
+  background-color: #222222;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  height: 5rem;
+  padding: 0;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  width: 5rem;
+}
+
+.c4:hover,
+.c4:focus {
+  background-color: #B80000;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+.c7 > svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.c3 {
   cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.c5 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c2:hover .c5,
+.c2:focus .c5 {
+  background-color: #B80000;
 }
 
 .c1 {
@@ -340,11 +403,36 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
           class="c1"
         >
           <div
-            class="c2"
+            class="c2 c3"
           >
+            <button
+              class="c4 c5"
+            >
+              <span
+                class="c6"
+              >
+                Play video, "Dummy title"
+              </span>
+              <div
+                aria-hidden="true"
+                class="c7"
+              >
+                <svg
+                  class="c8"
+                  focusable="false"
+                  height="12px"
+                  viewBox="0 0 32 32"
+                  width="12px"
+                >
+                  <polygon
+                    points="3,32 29,16 3,0"
+                  />
+                </svg>
+              </div>
+            </button>
             <img
               alt="Image Alt"
-              class="c3"
+              class="c9"
               src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             />
           </div>
@@ -355,7 +443,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 </html>
 `;
 
-exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
+exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
 <html>
   <head>
     <script
@@ -365,28 +453,22 @@ exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
     </script>
   </head>
   <body>
-    .c3 {
+    .c8 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c9 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c2 {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c1 {
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-.c5 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -399,6 +481,63 @@ exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
 }
 
 .c4 {
+  background-color: #222222;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  height: 5rem;
+  padding: 0;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  width: 5rem;
+}
+
+.c4:hover,
+.c4:focus {
+  background-color: #B80000;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+.c7 > svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.c3 {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c5 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c2:hover .c5,
+.c2:focus .c5 {
+  background-color: #B80000;
+}
+
+.c1 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -409,16 +548,16 @@ exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
   width: 100%;
 }
 
-.c4 > p {
+.c10 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c4 > p:last-child {
+.c10 > p:last-child {
   padding-bottom: 0;
 }
 
-.c4 i {
+.c10 i {
   font-style: normal;
 }
 
@@ -427,27 +566,27 @@ exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c10 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c10 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c10 {
     padding: 0.5rem 0 0;
   }
 }
@@ -499,20 +638,45 @@ exports[`MediaPlayer Calls the canonical player with a caption 1`] = `
           class="c1"
         >
           <div
-            class="c2"
+            class="c2 c3"
           >
+            <button
+              class="c4 c5"
+            >
+              <span
+                class="c6"
+              >
+                Play video, "Dummy title"
+              </span>
+              <div
+                aria-hidden="true"
+                class="c7"
+              >
+                <svg
+                  class="c8"
+                  focusable="false"
+                  height="12px"
+                  viewBox="0 0 32 32"
+                  width="12px"
+                >
+                  <polygon
+                    points="3,32 29,16 3,0"
+                  />
+                </svg>
+              </div>
+            </button>
             <img
               alt="Image Alt"
-              class="c3"
+              class="c9"
               src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             />
           </div>
         </div>
         <figcaption
-          class="c4"
+          class="c10"
         >
           <span
-            class="c5"
+            class="c6"
           >
             Video caption, 
           </span>
