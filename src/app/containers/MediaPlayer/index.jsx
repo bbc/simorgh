@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import {
   CanonicalMediaPlayer,
@@ -9,6 +10,7 @@ import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import getPlaceholderSrc from './helpers/placeholder';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import formatDuration from '#lib/utilities/formatDuration';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -20,7 +22,7 @@ import {
 
 const MediaPlayerContainer = ({ blocks }) => {
   const { id, platform, origin } = useContext(RequestContext);
-  const { lang, translations } = useContext(ServiceContext);
+  const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
 
@@ -45,13 +47,33 @@ const MediaPlayerContainer = ({ blocks }) => {
     ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
     aresMediaBlock,
   );
-  const kind = pathOr(
+  const format = pathOr(
     null,
     ['model', 'blocks', 0, 'model', 'format'],
     aresMediaBlock,
   );
+  const rawDuration = pathOr(
+    null,
+    ['model', 'blocks', 0, 'model', 'versions', 0, 'duration'],
+    aresMediaBlock,
+  );
+  const duration = moment.duration(rawDuration, 'seconds');
 
-  const type = kind === 'audio' ? 'audio' : 'video';
+  const mediaInfo = {
+    title: pathOr(
+      null,
+      ['model', 'blocks', 0, 'model', 'title'],
+      aresMediaBlock,
+    ),
+    duration: formatDuration(duration),
+    durationSpoken: formatDuration(duration, ','),
+    datetime: pathOr(
+      null,
+      ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
+      aresMediaBlock,
+    ),
+    type: format === 'audio' ? 'audio' : 'video',
+  };
 
   if (!versionId) {
     return null; // this should be the holding image with an error overlay
@@ -84,9 +106,11 @@ const MediaPlayerContainer = ({ blocks }) => {
           src={embedSource}
           title={iframeTitle}
           placeholderSrc={placeholderSrc}
+          service={service}
+          mediaInfo={mediaInfo}
         />
       )}
-      {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
+      {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
     </GridItemConstrainedMedium>
   );
 };
