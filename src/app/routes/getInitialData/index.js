@@ -52,7 +52,7 @@ const handleError = error => {
   return { error, status: STATUS_CODE_BAD_GATEWAY };
 };
 
-const fetchData = ({ pathname }) =>
+const fetchData = pathname =>
   fetch(getUrl(pathname)) // Remove .amp at the end of pathnames for AMP pages.
     .then(handleResponse())
     .then(checkForError(getUrl(pathname)))

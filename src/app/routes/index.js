@@ -49,7 +49,7 @@ const routes = [
   },
   {
     component: ErrorPage,
-    getInitialData,
+    getInitialData: () => Promise.resolve({ status: 404 }),
     pageType: 'error',
   },
 ];
