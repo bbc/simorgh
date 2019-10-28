@@ -22,7 +22,7 @@ describe('Routes', () => {
     routes.forEach((route, index) => {
       expect(route).toEqual(expect.any(Object));
       expect(route).toHaveProperty('component');
-      expect(route).toHaveProperty('pageType'); // This stops me removing pageType from `cpsAssetPageRegexPath`
+      expect(route).toHaveProperty('pageType');
 
       // Last route should be catchall (no path specified) error page
       if (index === routes.length - 1) {
