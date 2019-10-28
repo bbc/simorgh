@@ -56,6 +56,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
