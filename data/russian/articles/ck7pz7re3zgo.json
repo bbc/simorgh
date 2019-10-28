@@ -1,121 +1,423 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:ck7pz7re3zgo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo"
-    },
-    "type": "article",
-    "createdBy": "Russian",
-    "language": "ru",
-    "lastUpdated": 1562941788605,
-    "firstPublished": 1562941784981,
-    "lastPublished": 1562941784981,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "ru",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
-    },
-    "tags": {},
-    "version": "v1.1.0",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment"
-    ]
-  },
   "content": {
     "model": {
       "blocks": [
         {
-          "type": "headline",
           "model": {
             "blocks": [
               {
-                "type": "text",
                 "model": {
                   "blocks": [
                     {
-                      "type": "paragraph",
                       "model": {
-                        "text": "Пугало полицейского с камерой следит за водителями под Ливерпулем",
                         "blocks": [
                           {
-                            "type": "fragment",
                             "model": {
-                              "text": "Пугало полицейского с камерой следит за водителями под Ливерпулем",
-                              "attributes": []
-                            }
+                              "attributes": [],
+                              "text": "Это заголовок этой тестовой статьи"
+                            },
+                            "type": "fragment"
                           }
-                        ]
-                      }
+                        ],
+                        "text": "Это заголовок этой тестовой статьи"
+                      },
+                      "type": "paragraph"
                     }
                   ]
-                }
+                },
+                "type": "text"
               }
             ]
-          }
+          },
+          "type": "headline"
         },
         {
-          "type": "text",
           "model": {
             "blocks": [
               {
-                "type": "paragraph",
                 "model": {
-                  "text": "Жительнице британского городка Лидиэйт всерьез надоели водители, постоянно превышающие скорость на ее улице - и она вышла из положения творчески.",
                   "blocks": [
                     {
-                      "type": "fragment",
                       "model": {
-                        "text": "Жительнице британского городка Лидиэйт всерьез надоели водители, постоянно превышающие скорость на ее улице - и она вышла из положения творчески.",
-                        "attributes": []
-                      }
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись."
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
                     }
                   ]
-                }
+                },
+                "type": "caption"
               },
               {
-                "type": "paragraph",
                 "model": {
-                  "text": "Эди Поуп смастерила чучело полицейского с портативной камерой для замера скорости.",
                   "blocks": [
                     {
-                      "type": "fragment",
                       "model": {
-                        "text": "Эди Поуп смастерила чучело полицейского с портативной камерой для замера скорости.",
-                        "attributes": []
-                      }
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись."
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
                     }
                   ]
-                }
+                },
+                "type": "altText"
+              },
+              {
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 351,
+                  "locator": "40ef/test/09d6c9a0-f63d-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 624
+                },
+                "type": "rawImage"
               }
             ]
-          }
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу "
+                      },
+                      "type": "fragment"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "BBC Weather"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "text": "BBC Weather"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу BBC Weather."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Египет нападает: коптские похороны в Каире перерастают в насилие"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Египет нападает: коптские похороны в Каире перерастают в насилие"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p019dx64",
+                      "model": {
+                        "advertising": true,
+                        "caption": "Clashes broke out shortly after the funeral procession began",
+                        "embedding": false,
+                        "format": "audio_video",
+                        "id": "p019dx64",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
+                        "subType": "clip",
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "synopses": {
+                          "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан.",
+                          "short": "Egypt attacks: Coptic funerals in Cairo break into violence"
+                        },
+                        "title": "Clashes at Coptic funerals in Egypt",
+                        "versions": [
+                          {
+                            "availableFrom": 1491823686000,
+                            "availableTerritories": {
+                              "nonUk": true,
+                              "uk": true
+                            },
+                            "duration": 45,
+                            "durationISO8601": "PT45S",
+                            "types": [
+                              "Original"
+                            ],
+                            "versionId": "p019dx68",
+                            "warnings": {}
+                          }
+                        ]
+                      },
+                      "type": "aresMediaMetadata"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "height": 1920,
+                              "width": 1080,
+                              "copyrightHolder": "BBC",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
+                              "originCode": "mpv"
+                            },
+                            "type": "rawImage"
+                          }
+                        ]
+                      },
+                      "type": "image"
+                    }
+                  ]
+                },
+                "type": "aresMedia"
+              }
+            ],
+            "locator": "urn:bbc:pips:pid:p019dx64"
+          },
+          "type": "video"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Это подзаголовок"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "Это подзаголовок"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "subheadline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Это подзаголовок"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Это подзаголовок"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              },
+              {
+                "model": {
+                  "copyrightHolder": "Getty Images",
+                  "height": 450,
+                  "locator": "0aff/test/e170c4a0-f63e-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 800
+                },
+                "type": "rawImage"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
         }
       ]
     }
+  },
+  "metadata": {
+    "analyticsLabels": {},
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ],
+    "createdBy": "Russian",
+    "firstPublished": 1562941784981,
+    "id": "urn:bbc:ares::article:ck7pz7re3zgo",
+    "language": "ru",
+    "lastPublished": 1562941784981,
+    "lastUpdated": 1571917178858,
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo"
+    },
+    "options": {},
+    "passport": {
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+      "language": "ru"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+          "thingLabel": "Russia",
+          "thingSameAs": [
+            "http://sws.geonames.org/2017370/"
+          ],
+          "thingType": [
+            "nsl:Topic",
+            "Place",
+            "Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+        }
+      ]
+    },
+    "type": "article",
+    "version": "v1.1.2"
   },
   "promo": {
     "headlines": {
       "seoHeadline": "Пугало полицейского с камерой следит за водителями под Ливерпулем"
     },
+    "id": "urn:bbc:ares::article:ck7pz7re3zgo",
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo"
     },
     "summary": "",
     "timestamp": 1562941784981,
-    "id": "urn:bbc:ares::article:ck7pz7re3zgo",
     "type": "cps"
   },
   "relatedContent": {
+    "groups": [],
     "site": {
-      "subType": "site",
       "name": "Russian",
-      "uri": "/russian",
-      "type": "simple"
-    },
-    "groups": []
+      "subType": "site",
+      "type": "simple",
+      "uri": "/russian"
+    }
   }
 }
