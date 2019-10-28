@@ -49,6 +49,11 @@ export const service = {
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',

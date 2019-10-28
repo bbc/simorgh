@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
