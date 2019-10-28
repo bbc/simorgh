@@ -57,9 +57,9 @@ export const service = {
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Reproductor multimedia',
+        audioPlayer: 'Reproductor de audio',
+        videoPlayer: 'Reproductor de video',
       },
       error: {
         404: {
