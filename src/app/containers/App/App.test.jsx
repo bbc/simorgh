@@ -97,7 +97,7 @@ describe('App', () => {
             wrapper.setProps({ location: { pathname: 'pathnameTwo' } });
           });
 
-          await route.getInitialData;
+          await act(route.getInitialData);
 
           expect.assertions(2);
 
@@ -156,7 +156,7 @@ describe('App', () => {
             wrapper.setProps({ location: { pathname } });
           });
 
-          await route.getInitialData();
+          await act(route.getInitialData);
 
           expect.assertions(3);
 
