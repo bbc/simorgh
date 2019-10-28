@@ -31,31 +31,11 @@ node {
             docker.image("${nodeImage}").inside('--ipc host') {
                 try {
                     Simorgh.installNodeModules()
-                    parallel(
-                        'FrontPage E2Es': {
-                            Simorgh.runE2Es('live', false, 'cypress/integration/pages/frontPage/index.js')
+                    parallel (
+                        'Live E2Es': {
+                            Simorgh.runE2Es('live', false)
                         },
-                        'Article E2Es': {
-                            sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
-                            Simorgh.runE2Es('live', false, 'cypress/integration/pages/articles/index.js')
-                        },
-                        'ErrorPage E2Es': {
-                            sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
-                            Simorgh.runE2Es('live', false, 'cypress/integration/pages/errorPage404/index.js')
-                        },
-                        'Live Radio E2Es': {
-                            sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
-                            Simorgh.runE2Es('live', false, 'cypress/integration/pages/liveRadio/index.js')
-                        },
-                        'MAP E2Es': {
-                            sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
-                            Simorgh.runE2Es('live', false, 'cypress/integration/pages/mediaAssetPage/index.js')
-                        },
-                        '3rd Party E2Es': {
-                            sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
-                            Simorgh.runThirdPartyE2Es()
-                        },
-                        'Local Prod Tests': {
+                        'Localhost Tests': {
                             sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
                             Simorgh.runLocalAndProductionTests()
                         }
