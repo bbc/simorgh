@@ -77,7 +77,6 @@ exports[`MediaPlayer Calls the AMP player when platform is AMP 1`] = `
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
             src="https://www.test.bbc.com/ws/av-embeds/articles/foo/p01k6msp/en-GB/amp"
-            title="Media player"
           >
             <amp-img
               layout="fill"

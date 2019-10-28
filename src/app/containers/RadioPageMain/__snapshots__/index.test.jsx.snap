@@ -421,7 +421,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
                   layout="fill"
                   sandbox="allow-scripts allow-same-origin"
                   src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
-                  title="Audio player"
                 >
                   <amp-img
                     layout="fill"
@@ -861,7 +860,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   allowfullscreen=""
                   class="c7"
                   src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
-                  title="Audio player"
                 />
               </div>
             </div>
