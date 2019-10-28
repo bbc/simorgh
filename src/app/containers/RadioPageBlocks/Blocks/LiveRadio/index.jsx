@@ -30,7 +30,7 @@ const MediaPlayerInnerWrapper = styled.div`
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform, origin } = useContext(RequestContext);
-  const { liveRadio, lang, translations } = useContext(ServiceContext);
+  const { liveRadio, lang, translations, service } = useContext(ServiceContext);
 
   const isAmp = platform === 'amp';
 
@@ -54,12 +54,16 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     origin,
   });
 
+  const mediaInfo = {
+    title: 'Live radio',
+  };
+
   return (
     <MediaPlayerOuterWrapper>
       <MediaPlayerInnerWrapper>
         <MediaPlayer
           placeholderSrc={isAmp ? liveRadioPlaceholderImageSrc : null}
-          showPlaceholder={!isAmp ? false : null}
+          showPlaceholder={isAmp ? null : false}
           src={embedSource}
           title={pathOr(
             'Media player',
@@ -68,6 +72,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
           )}
           id={idAttr}
           skin="audio"
+          service={isAmp ? null : service}
+          mediaInfo={isAmp ? null : mediaInfo}
         />
       </MediaPlayerInnerWrapper>
     </MediaPlayerOuterWrapper>
