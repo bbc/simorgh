@@ -120,16 +120,20 @@ export const testsThatFollowSmokeTestConfig = ({
               );
               const { copyrightHolder } = rawImageblock.model;
 
-              if (copyrightHolder !== 'BBC') {
-                cy.get('figure p')
-                  .eq(0)
-                  .should('contain', copyrightHolder);
-              } else {
-                // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
-                // This is why we're asserting the value. If the copyright does not appear and is not
-                // 'BBC' then it is clear there is an error with this component.
-                expect(copyrightHolder).to.eq('BBC');
-              }
+              cy.get('figure')
+                .eq(0)
+                .within(() => {
+                  if (copyrightHolder === 'BBC') {
+                    // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
+                    // This is why we're asserting the value. If the copyright does not appear and is not
+                    // 'BBC' then it is clear there is an error with this component.
+                    cy.get('p[class^="Copyright"]').should('not.exist');
+                  } else {
+                    cy.get('p[class^="Copyright"]')
+                      .should('be.visible')
+                      .and('contain', copyrightHolder);
+                  }
+                });
             },
           );
         });
