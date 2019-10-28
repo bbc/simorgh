@@ -34,12 +34,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
 
   const isAmp = platform === 'amp';
 
-  const MediaPlayer = {
-    canonical: CanonicalMediaPlayer,
-    amp: AmpMediaPlayer,
-  }[platform];
-
-  if (!MediaPlayer || !externalId || !id) return null;
+  if (!['amp', 'canonical'].includes(platform) || !externalId || !id)
+    return null;
 
   const serviceId = pathOr(
     externalId,
@@ -54,6 +50,12 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     origin,
   });
 
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'audioPlayer'],
+    translations,
+  );
+
   const mediaInfo = {
     title: 'Live radio',
   };
@@ -61,20 +63,26 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   return (
     <MediaPlayerOuterWrapper>
       <MediaPlayerInnerWrapper>
-        <MediaPlayer
-          placeholderSrc={isAmp ? liveRadioPlaceholderImageSrc : null}
-          showPlaceholder={isAmp ? null : false}
-          src={embedSource}
-          title={pathOr(
-            'Media player',
-            ['mediaAssetPage', 'audioPlayer'],
-            translations,
-          )}
-          id={idAttr}
-          skin="audio"
-          service={isAmp ? null : service}
-          mediaInfo={isAmp ? null : mediaInfo}
-        />
+        {isAmp ? (
+          <AmpMediaPlayer
+            placeholderSrc={liveRadioPlaceholderImageSrc}
+            showPlaceholder={false}
+            src={embedSource}
+            title={iframeTitle}
+            id={idAttr}
+            skin="audio"
+          />
+        ) : (
+          <CanonicalMediaPlayer
+            showPlaceholder={false}
+            src={embedSource}
+            title={iframeTitle}
+            id={idAttr}
+            skin="audio"
+            service={service}
+            mediaInfo={mediaInfo}
+          />
+        )}
       </MediaPlayerInnerWrapper>
     </MediaPlayerOuterWrapper>
   );
