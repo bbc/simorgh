@@ -4,6 +4,7 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
+import Caption from '../Caption';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
 import getPlaceholderSrc from './helpers/placeholder';
@@ -17,9 +18,9 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const MediaPlayerContainer = ({ blocks, placeholder }) => {
+const MediaPlayerContainer = ({ blocks }) => {
   const { id, platform, origin } = useContext(RequestContext);
-  const { lang } = useContext(ServiceContext);
+  const { lang, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
 
@@ -28,6 +29,7 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
   }
 
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+  const captionBlock = filterForBlockType(blocks, 'caption');
 
   if (!aresMediaBlock) {
     return null;
@@ -43,6 +45,13 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
     aresMediaBlock,
   );
+  const kind = pathOr(
+    null,
+    ['model', 'blocks', 0, 'model', 'format'],
+    aresMediaBlock,
+  );
+
+  const type = kind === 'audio' ? 'audio' : 'video';
 
   if (!versionId) {
     return null; // this should be the holding image with an error overlay
@@ -55,19 +64,29 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
     isAmp,
     origin,
   });
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'mediaPlayer'],
+    translations,
+  );
 
   return (
     <GridItemConstrainedMedium>
       <Metadata aresMediaBlock={aresMediaBlock} />
       {isAmp ? (
-        <AmpMediaPlayer src={embedSource} placeholderSrc={placeholderSrc} />
+        <AmpMediaPlayer
+          src={embedSource}
+          title={iframeTitle}
+          placeholderSrc={placeholderSrc}
+        />
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
-          placeholder={placeholder}
-          placeholderSrc={placeholder ? placeholderSrc : ''}
+          title={iframeTitle}
+          placeholderSrc={placeholderSrc}
         />
       )}
+      {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
     </GridItemConstrainedMedium>
   );
 };
@@ -75,7 +94,6 @@ const MediaPlayerContainer = ({ blocks, placeholder }) => {
 MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
-  placeholder: true,
 };
 
 export default MediaPlayerContainer;
