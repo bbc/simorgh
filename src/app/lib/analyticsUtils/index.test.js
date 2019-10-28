@@ -75,13 +75,13 @@ describe('getDestination', () => {
       summary: 'should return for test WS',
     },
     {
-      statsDestination: 'DEFAULT',
-      expected: 596068,
+      statsDestination: 'PLACEHOLDER',
+      expected: 598295,
       summary: 'should return for live Scotland',
     },
     {
-      statsDestination: 'DEFAULT_TEST',
-      expected: 596068,
+      statsDestination: 'PLACEHOLDER_TEST',
+      expected: 598297,
       summary: 'should return for test Scotland',
     },
     {

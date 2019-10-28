@@ -9,7 +9,12 @@ import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import preprocessor from '#lib/utilities/preprocessor';
 import { radioPagePreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 
-const serviceContextMock = { service: 'amharic', script: latin, lang: 'am' };
+const serviceContextMock = {
+  service: 'amharic',
+  script: latin,
+  lang: 'am',
+  translations: { mediaAssetPage: { audioPlayer: 'Audio player' } },
+};
 
 describe('Radio Page Blocks', () => {
   it('should match snapshot for Canonical', async () => {
