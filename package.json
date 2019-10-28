@@ -74,7 +74,7 @@
     "@bbc/psammead-navigation": "^2.3.6",
     "@bbc/psammead-paragraph": "^2.2.13",
     "@bbc/psammead-rich-text-transforms": "^1.1.1",
-    "@bbc/psammead-section-label": "^2.3.18",
+    "@bbc/psammead-section-label": "^3.0.4",
     "@bbc/psammead-sitewide-links": "^3.1.14",
     "@bbc/psammead-story-promo": "^2.7.18",
     "@bbc/psammead-story-promo-list": "^2.1.15",
