@@ -37,7 +37,7 @@ const status = 200;
 storiesOf('Pages|Radio Page', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
-  .addDecorator(
+  .adddDecorator(
     withServicesKnob({
       defaultService: 'indonesia',
       services: Object.keys(liveRadioFixtures),
