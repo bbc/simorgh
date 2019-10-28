@@ -45,6 +45,7 @@ const routes = [
     exact: true,
     component: CpsAsset,
     getInitialData,
+    pageType: 'MAP', // I wanna remove this but it fails on `src/app/routes/index.test.js` line 25
   },
   {
     component: ErrorPage,
