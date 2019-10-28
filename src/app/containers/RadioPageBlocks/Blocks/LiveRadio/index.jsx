@@ -58,6 +58,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
 
   const mediaInfo = {
     title: 'Live radio',
+    type: 'audio',
   };
 
   return (
