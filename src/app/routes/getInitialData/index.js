@@ -20,8 +20,8 @@ const baseUrl = onClient()
 
 const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
 
-const getPageData = json => {
-  const { type } = pathOr({}, ['metadata'], json);
+const getPageData = async json => {
+  const { type } = pathOr({}, ['metadata'], await json);
   return preprocess(json, getPreprocessorRules(type));
 };
 
@@ -31,7 +31,7 @@ const handleResponse = () => async response => {
   return {
     status,
     ...(status === STATUS_CODE_OK && {
-      pageData: getPageData(await response.json()),
+      pageData: await getPageData(response.json()),
     }),
   };
 };
