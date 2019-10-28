@@ -2666,22 +2666,22 @@
           {
             "name": "Источники информации Би-би-си",
             "uri": "http://www.bbc.com/russian/institutional/2011/02/000000_g_news_sources",
-            "contentType": "Unknown",
-            "assetTypeCode": "URL",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
             "type": "link"
           },
           {
             "name": "История Русской службы Би-би-си",
             "uri": "http://www.bbc.com/russian/institutional/2011/02/000000_g_rs_history",
-            "contentType": "Unknown",
-            "assetTypeCode": "URL",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
             "type": "link"
           },
           {
             "name": "Партнерство с Русской службой Би-би-си",
             "uri": "http://www.bbc.com/russian/international/2011/02/000000_g_partners",
-            "contentType": "Unknown",
-            "assetTypeCode": "URL",
+            "contentType": "Guide",
+            "assetTypeCode": "PRO",
             "type": "link"
           }
         ],
