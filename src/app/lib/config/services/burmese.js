@@ -26,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `my-MM`,
-    datetimeLocale: `my-mm`,
+    datetimeLocale: `my`,
     service: 'burmese',
     serviceName: 'မြန်မာ',
     themeColor: `${C_POSTBOX}`,

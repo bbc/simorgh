@@ -26,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'キャプション ',
     imageCopyrightOffscreenText: '画像提供 ',
     locale: `ja-JP`,
-    datetimeLocale: `ja-jp`,
+    datetimeLocale: `ja`,
     service: 'japanese',
     serviceName: 'ニュース',
     themeColor: `${C_POSTBOX}`,
