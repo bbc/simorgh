@@ -268,7 +268,7 @@ exports[`MediaPlayer Renders the canonical player placeholder when platform is c
   height: 0.75rem;
 }
 
-.c9 {
+.c10 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -315,7 +315,13 @@ exports[`MediaPlayer Renders the canonical player placeholder when platform is c
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
+  margin-top: 0.5rem;
   width: 1.5rem;
+}
+
+.c9 {
+  display: block;
+  margin-top: 0.5rem;
 }
 
 .c3 {
@@ -411,7 +417,7 @@ exports[`MediaPlayer Renders the canonical player placeholder when platform is c
               <span
                 class="c6"
               >
-                Play video, "Dummy title"
+                Play video, "Five things ants can teach us about management", 3,11
               </span>
               <div
                 aria-hidden="true"
@@ -429,10 +435,17 @@ exports[`MediaPlayer Renders the canonical player placeholder when platform is c
                   />
                 </svg>
               </div>
+              <time
+                aria-hidden="true"
+                class="c9"
+                datetime="PT3M11S"
+              >
+                3:11
+              </time>
             </button>
             <img
               alt="Image Alt"
-              class="c9"
+              class="c10"
               src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             />
           </div>
@@ -462,7 +475,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   height: 0.75rem;
 }
 
-.c9 {
+.c10 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -509,7 +522,13 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
+  margin-top: 0.5rem;
   width: 1.5rem;
+}
+
+.c9 {
+  display: block;
+  margin-top: 0.5rem;
 }
 
 .c3 {
@@ -537,7 +556,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   overflow: hidden;
 }
 
-.c10 {
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -548,16 +567,16 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   width: 100%;
 }
 
-.c10 > p {
+.c11 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c10 > p:last-child {
+.c11 > p:last-child {
   padding-bottom: 0;
 }
 
-.c10 i {
+.c11 i {
   font-style: normal;
 }
 
@@ -566,27 +585,27 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c10 {
+  .c11 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c11 {
     padding: 0.5rem 0 0;
   }
 }
@@ -646,7 +665,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
               <span
                 class="c6"
               >
-                Play video, "Dummy title"
+                Play video, "Five things ants can teach us about management", 3,11
               </span>
               <div
                 aria-hidden="true"
@@ -664,16 +683,23 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
                   />
                 </svg>
               </div>
+              <time
+                aria-hidden="true"
+                class="c9"
+                datetime="PT3M11S"
+              >
+                3:11
+              </time>
             </button>
             <img
               alt="Image Alt"
-              class="c9"
+              class="c10"
               src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             />
           </div>
         </div>
         <figcaption
-          class="c10"
+          class="c11"
         >
           <span
             class="c6"
