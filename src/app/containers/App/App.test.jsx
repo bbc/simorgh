@@ -84,9 +84,14 @@ describe('App', () => {
       });
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
-          route.getInitialData.mockImplementation(() =>
-            Promise.resolve({ pageData: null, status: null, error }),
-          );
+          route.getInitialData.mockImplementation(() => {
+            return new Promise(resolve => {
+              setTimeout(
+                () => resolve({ pageData: null, status: null, error }),
+                600,
+              );
+            });
+          });
 
           await act(async () => {
             wrapper.setProps({ location: { pathname: 'pathnameTwo' } });
@@ -141,7 +146,11 @@ describe('App', () => {
           const pathname = 'pathnameThree';
           const data = { pageData: 'Really cool data', status: 200 };
 
-          route.getInitialData.mockImplementation(() => Promise.resolve(data));
+          route.getInitialData.mockImplementation(() => {
+            return new Promise(resolve => {
+              setTimeout(() => resolve(data), 600);
+            });
+          });
 
           await act(async () => {
             wrapper.setProps({ location: { pathname } });

@@ -43,27 +43,35 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         route,
       } = getRouteProps(routes, location.pathname);
 
-      setState({
-        pageData: null,
-        status: null,
-        service: nextService,
-        variant: nextVariant,
-        id: nextId,
-        isAmp: nextIsAmp,
-        pageType: route.pageType,
-        loading: true,
-        error: null,
+      let loaderTimeout;
+      const loaderPromise = new Promise(resolve => {
+        loaderTimeout = setTimeout(resolve, 500);
       });
 
-      route.getInitialData(location.pathname).then(data =>
+      loaderPromise.then(() => {
+        setState({
+          pageData: null,
+          status: null,
+          service: nextService,
+          variant: nextVariant,
+          id: nextId,
+          isAmp: nextIsAmp,
+          pageType: route.pageType,
+          loading: true,
+          error: null,
+        });
+      });
+
+      route.getInitialData(location.pathname).then(data => {
+        clearTimeout(loaderTimeout);
         setState(prevState => ({
           ...prevState,
           loading: false,
           pageData: path(['pageData'], data),
           status: path(['status'], data),
           error: path(['error'], data),
-        })),
-      );
+        }));
+      });
     }
   }, [routes, location.pathname]);
 
