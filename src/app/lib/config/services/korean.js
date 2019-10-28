@@ -48,6 +48,11 @@ export const service = {
       currentPage: '현재 페이지',
       skipLinkText: '내용으로 건너뛰기',
       relatedContent: '관련 기사 더 보기',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',

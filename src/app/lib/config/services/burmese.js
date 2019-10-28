@@ -50,6 +50,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားပါ',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
