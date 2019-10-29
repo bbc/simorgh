@@ -168,10 +168,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Sababta aada ku aamini kartid BBC News',
-        },
-        {
           href: 'https://www.bbc.com/somali/hayadeed-37098011',
           text: 'Shuruucda isticmaalka',
         },
