@@ -4,5 +4,13 @@ const envConfig = require('../support/config/envs');
 module.exports = (on, config) => {
   config.baseUrl = envConfig(config.env.APP_ENV, config.env.UK).baseUrl;
 
+  // Debugging console logs to see running config
+  console.log('\n\n\n\n\n');
+  console.log('Cypress running config:');
+  console.log('SMOKE:', config.env.SMOKE);
+  console.log('APP_ENV:', config.env.APP_ENV);
+  console.log('UK:', config.env.UK);
+  console.log('\n\n\n\n\n');
+
   return config;
 };
