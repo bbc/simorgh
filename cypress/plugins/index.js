@@ -12,6 +12,7 @@ module.exports = (on, config) => {
   console.log('APP_ENV:', config.env.APP_ENV);
   console.log('UK:', config.env.UK);
   console.log('\n\n\n\n\n');
+  /* eslint-enable no-console */
 
   return config;
 };
