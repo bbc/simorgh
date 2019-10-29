@@ -21,7 +21,7 @@ const baseServiceConfig = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  datetimeLocale: `zh_cn`,
+  datetimeLocale: `zh-cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
   themeColor: `${C_POSTBOX}`,
