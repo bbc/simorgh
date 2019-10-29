@@ -1,5 +1,6 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before getInitialData
 import preprocess from '#lib/utilities/preprocessor';
+import getPreprocessorRules from './utils/getPreprocessorRules';
 
 jest.mock('#lib/utilities/preprocessor', () => jest.fn());
 preprocess.mockImplementation(data => data);
@@ -7,10 +8,17 @@ preprocess.mockImplementation(data => data);
 const fetchData = require('./index').default;
 
 describe('fetchData', () => {
-  const mockSuccessfulResponse = { pageData: '12345' };
+  const mockSuccessfulResponse = {
+    metadata: {},
+    content: {},
+    promo: {},
+  };
 
   const mockFetchSuccess = () =>
     fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
+
+  const mockFetchSuccessWithData = data =>
+    fetch.mockResponseOnce(JSON.stringify(data));
 
   const mockFetchFailure = () => fetch.mockReject(true);
 
@@ -26,7 +34,7 @@ describe('fetchData', () => {
   const requestedPathname = '/path/to/asset';
   const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 
-  const callfetchData = async ({ pathname = requestedPathname, mockFetch }) => {
+  const callfetchData = ({ pathname = requestedPathname, mockFetch }) => {
     if (mockFetch) {
       mockFetch();
     } else {
@@ -57,32 +65,181 @@ describe('fetchData', () => {
     it('should return an empty object', async () => {
       const response = await callfetchData({});
 
+      expect(preprocess).toHaveBeenCalledWith(response.pageData, []);
+
       expect(response).toEqual({
-        pageData: {
-          pageData: '12345',
-        },
+        pageData: mockSuccessfulResponse,
         status: 200,
       });
     });
 
-    // Should we have a test for each pageType to check it calls with the correct preprocessorRules?
-    /* it('should pass preprocessorRules', async () => {
-      const preprocessorRules = [() => {}];
+    it('should pass preprocessorRules for type: article', async () => {
+      const mockData = {
+        metadata: {
+          type: 'article',
+        },
+      };
+      const expectedPreprocessorRules = getPreprocessorRules('article');
 
-      const response = await callfetchData({ preprocessorRules });
+      const response = await callfetchData(
+        '/news/articles/c0123456789o',
+        mockFetchSuccessWithData(mockData),
+      );
 
-      expect(preprocess).toHaveBeenCalledWith(
+      expect(await preprocess).toHaveBeenCalledWith(
         response.pageData,
-        preprocessorRules,
+        expectedPreprocessorRules,
       );
 
       expect(response).toEqual({
-        pageData: {
-          pageData: '12345',
-        },
+        pageData: mockData,
         status: 200,
       });
-     }); */
+    });
+
+    it('should pass preprocessorRules for type: WS-LIVE', async () => {
+      const mockData = {
+        metadata: {
+          type: 'WS-LIVE',
+        },
+      };
+      const expectedPreprocessorRules = getPreprocessorRules('WS-LIVE');
+
+      const response = await callfetchData(
+        '/korean/bbc_korean_radio/liveradio',
+        mockFetchSuccessWithData(mockData),
+      );
+
+      expect(await preprocess).toHaveBeenCalledWith(
+        response.pageData,
+        expectedPreprocessorRules,
+      );
+
+      expect(response).toEqual({
+        pageData: mockData,
+        status: 200,
+      });
+    });
+
+    it('should pass preprocessorRules for type: IDX', async () => {
+      const mockData = {
+        metadata: {
+          type: 'IDX',
+        },
+      };
+      const expectedPreprocessorRules = getPreprocessorRules('IDX');
+
+      const response = await callfetchData(
+        '/igbo',
+        mockFetchSuccessWithData(mockData),
+      );
+
+      expect(await preprocess).toHaveBeenCalledWith(
+        response.pageData,
+        expectedPreprocessorRules,
+      );
+
+      expect(response).toEqual({
+        pageData: mockData,
+        status: 200,
+      });
+    });
+
+    it('should pass preprocessorRules for type: FIX', async () => {
+      const mockData = {
+        metadata: {
+          type: 'FIX',
+        },
+      };
+      const expectedPreprocessorRules = getPreprocessorRules('FIX');
+
+      const response = await callfetchData(
+        '/afrique/48465371',
+        mockFetchSuccessWithData(mockData),
+      );
+
+      expect(await preprocess).toHaveBeenCalledWith(
+        response.pageData,
+        expectedPreprocessorRules,
+      );
+
+      expect(response).toEqual({
+        pageData: mockData,
+        status: 200,
+      });
+    });
+
+    it('should pass preprocessorRules for type: MAP', async () => {
+      const mockData = {
+        metadata: {
+          type: 'MAP',
+        },
+      };
+      const expectedPreprocessorRules = getPreprocessorRules('MAP');
+
+      const response = await callfetchData(
+        '/pidgin/tori-49450859',
+        mockFetchSuccessWithData(mockData),
+      );
+
+      expect(await preprocess).toHaveBeenCalledWith(
+        response.pageData,
+        expectedPreprocessorRules,
+      );
+
+      expect(response).toEqual({
+        pageData: mockData,
+        status: 200,
+      });
+    });
+
+    it('should pass preprocessorRules for type: STY', async () => {
+      const mockData = {
+        metadata: {
+          type: 'STY',
+        },
+      };
+      const expectedPreprocessorRules = getPreprocessorRules('STY');
+
+      const response = await callfetchData(
+        '/pidgin/world-23252817',
+        mockFetchSuccessWithData(mockData),
+      );
+
+      expect(await preprocess).toHaveBeenCalledWith(
+        response.pageData,
+        expectedPreprocessorRules,
+      );
+
+      expect(response).toEqual({
+        pageData: mockData,
+        status: 200,
+      });
+    });
+
+    it('should pass preprocessorRules for type: PGL', async () => {
+      const mockData = {
+        metadata: {
+          type: 'PGL',
+        },
+      };
+      const expectedPreprocessorRules = getPreprocessorRules('PGL');
+
+      const response = await callfetchData(
+        '/japanese/world-23252856',
+        mockFetchSuccessWithData(mockData),
+      );
+
+      expect(await preprocess).toHaveBeenCalledWith(
+        response.pageData,
+        expectedPreprocessorRules,
+      );
+
+      expect(response).toEqual({
+        pageData: mockData,
+        status: 200,
+      });
+    });
   });
 
   describe('Rejected fetch', () => {
