@@ -62,12 +62,12 @@ const getBuildMetadata = () => {
 
 const constructCspHeader = () => ({
   directives: {
-    'default-src': ['self'],
+    'default-src': ["'self'"],
     'font-src': [
       'https://gel.files.bbci.co.uk',
       'https://ws-downloads.files.bbci.co.uk',
     ],
-    'style-src': ['unsafe-inline'],
+    'style-src': ["'unsafe-inline'"],
     'img-src': [
       'https://ichef.bbci.co.uk',
       'https://ping.chartbeat.net',
@@ -75,8 +75,8 @@ const constructCspHeader = () => ({
       'https://news.files.bbci.co.uk',
       'https://*.akstat.io',
       'https://r.bbci.co.uk',
+      "data: 'self'",
     ],
-    data: ['self'],
     'script-src': [
       'https://news.files.bbci.co.uk',
       'https://*.chartbeat.com',
@@ -84,8 +84,8 @@ const constructCspHeader = () => ({
       'https://mybbc-analytics.files.bbci.co.uk',
       'https://emp.bbci.co.uk',
       'https://static.bbci.co.uk',
-      'self,',
-      'unsafe-inline',
+      "'self'",
+      "'unsafe-inline'",
     ],
     'connect-src': [
       'https://*.akstat.io',
@@ -93,10 +93,10 @@ const constructCspHeader = () => ({
       'https://c.go-mpulse.net',
       'https://cookie-oven.api.bbc.co.uk',
       'https://a1.api.bbc.co.uk/hit.xiti',
-      'self',
+      "'self'",
     ],
     'frame-src': [
-      'self',
+      "'self'",
       'https://emp.bbc.com',
       'https://emp.bbc.co.uk',
       'https://chartbeat.com',
