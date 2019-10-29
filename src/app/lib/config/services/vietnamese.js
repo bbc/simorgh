@@ -26,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Chụp lại, ',
     imageCopyrightOffscreenText: 'Nguồn hình ảnh, ',
     locale: `vi-VN`,
-    datetimeLocale: `vi-vn`,
+    datetimeLocale: `vi`,
     service: 'vietnamese',
     serviceName: 'Tiếng Việt',
     themeColor: `${C_POSTBOX}`,
@@ -49,6 +49,11 @@ export const service = {
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',

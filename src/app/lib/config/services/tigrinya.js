@@ -52,6 +52,11 @@ export const service = {
       currentPage: 'ህሉው ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽል',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',

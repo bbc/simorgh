@@ -251,7 +251,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       >
         <a
           class="c6"
-          data-navigation="Akụkọ_/igbo"
           href="/igbo"
         >
           <span
@@ -274,7 +273,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       >
         <a
           class="c9"
-          data-navigation="Egwuregwu_/igbo/egwuregwu"
           href="/igbo/egwuregwu"
         >
           Egwuregwu
@@ -286,7 +284,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       >
         <a
           class="c9"
-          data-navigation="Ihe nkiri_/igbo/media/video"
           href="/igbo/media/video"
         >
           Ihe nkiri
@@ -298,7 +295,6 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
       >
         <a
           class="c9"
-          data-navigation="Nke ka ewuewu_/igbo/popular/read"
           href="/igbo/popular/read"
         >
           Nke ka ewuewu
