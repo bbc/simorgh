@@ -55,7 +55,12 @@ export const service = {
       home: 'Главная',
       currentPage: 'Текущая страница',
       skipLinkText: 'Перейти к содержанию',
-      relatedContent: 'Новости по теме',
+      relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',

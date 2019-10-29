@@ -21,7 +21,7 @@ const baseServiceConfig = {
   audioCaptionOffscreenText: 'Audio caption',
   defaultCaptionOffscreenText: 'Caption, ',
   imageCopyrightOffscreenText: 'Image source, ',
-  datetimeLocale: `zh_cn`,
+  datetimeLocale: `zh-cn`,
   service: 'zhongwen',
   serviceName: 'News 中文',
   themeColor: `${C_POSTBOX}`,
@@ -44,6 +44,11 @@ const baseServiceConfig = {
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
     relatedContent: 'Related content',
+    mediaAssetPage: {
+      mediaPlayer: 'Media player',
+      audioPlayer: 'Audio player',
+      videoPlayer: 'Video player',
+    },
     error: {
       404: {
         statusCode: '404',

@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
