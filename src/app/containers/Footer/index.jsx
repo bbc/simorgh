@@ -19,10 +19,7 @@ const FooterContainer = () => {
   }
 
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
-  // console.log(
-  //   Object.entries(trustProjectLink).length === 0 &&
-  //     trustProjectLink.constructor === Object,
-  // );
+
   return (
     <footer role="contentinfo">
       <BrandContainer borderTop />
@@ -31,13 +28,7 @@ const FooterContainer = () => {
         copyrightText={getCopyrightText(copyrightText)}
         externalLink={externalLink}
         service={service}
-        trustProjectLink={
-          trustProjectLink
-          // Object.entries(trustProjectLink).length === 0 &&
-          // trustProjectLink.constructor === Object
-          //   ? undefined
-          //   : trustProjectLink
-        }
+        trustProjectLink={trustProjectLink}
       />
     </footer>
   );
