@@ -115,6 +115,7 @@ server
   )
   .use(compression())
   .use(helmet({ frameguard: { action: 'deny' } }))
+  .use(helmet.contentSecurityPolicy(constructCspHeader()))
   .use(gnuTP())
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
