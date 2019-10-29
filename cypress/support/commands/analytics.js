@@ -1,10 +1,10 @@
 // Should be moved into integration/pages/index.js once all pages have ATI
-Cypress.Commands.add('hasNoscriptImgAtiUrl', (atiUrl, analyticsBucketId) => {
+Cypress.Commands.add('hasNoscriptImgAtiUrl', atiUrl => {
   cy.get('noscript')
     .eq(0)
     .should(
       'contain',
-      `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}s=${analyticsBucketId}`,
+      `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}`,
     );
 });
 
