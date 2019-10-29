@@ -9,11 +9,10 @@ Cypress.Commands.add('hasNoscriptImgAtiUrl', (atiUrl, analyticsBucketId) => {
 });
 
 // Should be moved into integration/pages/index.js once all pages have ATI
-Cypress.Commands.add('hasAmpAnalyticsAtiUrl', (atiUrl, analyticsBucketId) => {
+Cypress.Commands.add('hasAmpAnalyticsAtiUrl', atiUrl => {
   cy.get('amp-analytics script[type="application/json"]')
     .eq(0)
-    .should('contain', `${atiUrl}`)
-    .should('contain', `s=${analyticsBucketId}`);
+    .should('contain', `${atiUrl}`);
 });
 
 // Should be moved into integration/pages/index.js once all pages have Chartbeat
