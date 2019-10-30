@@ -414,7 +414,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Este artículo de prueba ha sido creado para que podamos ejecutar pruebas \n\n"
+      "seoHeadline": "Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:ce42wzqr2mko"
