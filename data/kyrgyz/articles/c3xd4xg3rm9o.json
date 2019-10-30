@@ -1,136 +1,407 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
-    },
-    "type": "article",
-    "createdBy": "Kyrgyz",
-    "language": "ky",
-    "lastUpdated": 1562941866882,
-    "firstPublished": 1562941862686,
-    "lastPublished": 1562941862686,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "ky",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
-    },
-    "tags": {},
-    "version": "v1.1.0",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment"
-    ]
-  },
   "content": {
     "model": {
       "blocks": [
         {
-          "type": "headline",
           "model": {
             "blocks": [
               {
-                "type": "text",
                 "model": {
                   "blocks": [
                     {
-                      "type": "paragraph",
                       "model": {
-                        "text": "Интернет жылдызына айланган таксист опера ырчысы болду",
                         "blocks": [
                           {
-                            "type": "fragment",
                             "model": {
-                              "text": "Интернет жылдызына айланган таксист опера ырчысы болду",
-                              "attributes": []
-                            }
+                              "attributes": [],
+                              "text": "Бул сыноо макалада сөздүү кабарында"
+                            },
+                            "type": "fragment"
                           }
-                        ]
-                      }
+                        ],
+                        "text": "Бул сыноо макалада сөздүү кабарында"
+                      },
+                      "type": "paragraph"
                     }
                   ]
-                }
+                },
+                "type": "text"
               }
             ]
-          }
+          },
+          "type": "headline"
         },
         {
-          "type": "text",
           "model": {
             "blocks": [
               {
-                "type": "paragraph",
                 "model": {
-                  "text": "Жүргүнчүлөрдүн бири таксист жигиттин Жузеппе Вердинин La donna è mobile ариясын ырдап баратканын смартфонго тартып алып, интернетке чыгарып жиберген. Таксист интернеттин жылдызына айланып, кийин операда ырдоо боюнча сунуш алды.",
                   "blocks": [
                     {
-                      "type": "fragment",
                       "model": {
-                        "text": "Жүргүнчүлөрдүн бири таксист жигиттин Жузеппе Вердинин La donna è mobile ариясын ырдап баратканын смартфонго тартып алып, интернетке чыгарып жиберген. Таксист интернеттин жылдызына айланып, кийин операда ырдоо боюнча сунуш алды.",
-                        "attributes": []
-                      }
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
                     }
                   ]
-                }
+                },
+                "type": "caption"
               },
               {
-                "type": "paragraph",
                 "model": {
-                  "text": "Түштүк Африка республикасынын 27 жаштагы жараны Мензи Мнгоманын жашоосу ошентип өзгөрдү. Ал унаасында баратып ырдаган Дурбан шаары - өлкөнүн түштүк-чыгышындагы эң ири шаар. Тасма интернетте 660 миң жолу көрүлгөн.",
                   "blocks": [
                     {
-                      "type": "fragment",
                       "model": {
-                        "text": "Түштүк Африка республикасынын 27 жаштагы жараны Мензи Мнгоманын жашоосу ошентип өзгөрдү. Ал унаасында баратып ырдаган Дурбан шаары - өлкөнүн түштүк-чыгышындагы эң ири шаар. Тасма интернетте 660 миң жолу көрүлгөн.",
-                        "attributes": []
-                      }
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
                     }
                   ]
-                }
+                },
+                "type": "altText"
               },
               {
-                "type": "paragraph",
                 "model": {
-                  "text": "\"Жашоомдогу өзгөрүүлөр үчүн абдан кубанычтамын. Азыр эми толтура концерттер, фанаттар дагы мени таанып, сүрөткө түшүүнү сунуштап жатышат. Менин жүзүм ТВда, гезиттерде, үнүм радиодо. Бул өзгөчө сезим...\",-деди Мензи Би-Би-Сиге берген маегинде.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "\"Жашоомдогу өзгөрүүлөр үчүн абдан кубанычтамын. Азыр эми толтура концерттер, фанаттар дагы мени таанып, сүрөткө түшүүнү сунуштап жатышат. Менин жүзүм ТВда, гезиттерде, үнүм радиодо. Бул өзгөчө сезим...\",-деди Мензи Би-Би-Сиге берген маегинде.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
+                  "copyrightHolder": "BBC",
+                  "height": 351,
+                  "locator": "1b40/test/b97149a0-f640-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 624
+                },
+                "type": "rawImage"
               }
             ]
-          }
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Бул "
+                      },
+                      "type": "fragment"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Би-Би-Си ырайы башкы"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "text": "Би-Би-Си ырайы башкы"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Бул Би-Би-Си ырайы башкы бир нускага шилтемени камтыган текст бөлүгү болуп саналат."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p019dx64",
+                      "model": {
+                        "advertising": true,
+                        "caption": "Clashes broke out shortly after the funeral procession began",
+                        "embedding": false,
+                        "format": "audio_video",
+                        "id": "p019dx64",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
+                        "subType": "clip",
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "synopses": {
+                          "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан.",
+                          "short": "Egypt attacks: Coptic funerals in Cairo break into violence"
+                        },
+                        "title": "Clashes at Coptic funerals in Egypt",
+                        "versions": [
+                          {
+                            "availableFrom": 1491823686000,
+                            "availableTerritories": {
+                              "nonUk": true,
+                              "uk": true
+                            },
+                            "duration": 45,
+                            "durationISO8601": "PT45S",
+                            "types": [
+                              "Original"
+                            ],
+                            "versionId": "p019dx68",
+                            "warnings": {}
+                          }
+                        ]
+                      },
+                      "type": "aresMediaMetadata"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "height": 1920,
+                              "width": 1080,
+                              "copyrightHolder": "BBC",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
+                              "originCode": "mpv"
+                            },
+                            "type": "rawImage"
+                          }
+                        ]
+                      },
+                      "type": "image"
+                    }
+                  ]
+                },
+                "type": "aresMedia"
+              }
+            ],
+            "locator": "urn:bbc:pips:pid:p019dx64"
+          },
+          "type": "video"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Бул subheadline болуп саналат"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "Бул subheadline болуп саналат"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "subheadline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Бул subheadline болуп саналат"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Бул subheadline болуп саналат"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              },
+              {
+                "model": {
+                  "copyrightHolder": "Getty Images",
+                  "height": 450,
+                  "locator": "d22a/test/2ec8f5e0-f641-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 800
+                },
+                "type": "rawImage"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
         }
       ]
     }
+  },
+  "metadata": {
+    "analyticsLabels": {},
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ],
+    "createdBy": "Kyrgyz",
+    "firstPublished": 1562941862686,
+    "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
+    "language": "ky",
+    "lastPublished": 1562941862686,
+    "lastUpdated": 1571917178498,
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
+    },
+    "options": {},
+    "passport": {
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+      "language": "ky"
+    },
+    "tags": {},
+    "type": "article",
+    "version": "v1.1.2"
   },
   "promo": {
     "headlines": {
       "seoHeadline": "Интернет жылдызына айланган таксист опера ырчысы болду"
     },
+    "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
     },
     "summary": "",
     "timestamp": 1562941862686,
-    "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
     "type": "cps"
   },
   "relatedContent": {
+    "groups": [],
     "site": {
-      "subType": "site",
       "name": "Kyrgyz",
-      "uri": "/kyrgyz",
-      "type": "simple"
-    },
-    "groups": []
+      "subType": "site",
+      "type": "simple",
+      "uri": "/kyrgyz"
+    }
   }
 }
