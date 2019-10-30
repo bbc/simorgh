@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -37,38 +38,29 @@ const MediaPlayerContainer = ({ blocks }) => {
     return null;
   }
 
-  const imageUrl = pathOr(
-    null,
+  const imageUrl = path(
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
     aresMediaBlock,
   );
-  const versionId = pathOr(
-    null,
+  const versionId = path(
     ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
     aresMediaBlock,
   );
-  const format = pathOr(
-    null,
+  const format = path(
     ['model', 'blocks', 0, 'model', 'format'],
     aresMediaBlock,
   );
-  const rawDuration = pathOr(
-    null,
+  const rawDuration = path(
     ['model', 'blocks', 0, 'model', 'versions', 0, 'duration'],
     aresMediaBlock,
   );
   const duration = moment.duration(rawDuration, 'seconds');
 
   const mediaInfo = {
-    title: pathOr(
-      null,
-      ['model', 'blocks', 0, 'model', 'title'],
-      aresMediaBlock,
-    ),
+    title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
     duration: formatDuration(duration),
     durationSpoken: formatDuration(duration, ','),
-    datetime: pathOr(
-      null,
+    datetime: path(
       ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
       aresMediaBlock,
     ),
