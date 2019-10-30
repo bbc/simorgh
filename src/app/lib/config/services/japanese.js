@@ -26,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'キャプション ',
     imageCopyrightOffscreenText: '画像提供 ',
     locale: `ja-JP`,
-    datetimeLocale: `ja-jp`,
+    datetimeLocale: `ja`,
     service: 'japanese',
     serviceName: 'ニュース',
     themeColor: `${C_POSTBOX}`,
@@ -49,6 +49,11 @@ export const service = {
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
