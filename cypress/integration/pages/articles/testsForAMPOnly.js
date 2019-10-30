@@ -56,6 +56,10 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             },
           );
         });
+
+        it('plays media when a user clicks play', () => {
+          // To do.
+        });
       });
     }
   });
