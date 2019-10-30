@@ -13,7 +13,6 @@ const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
   platform,
   blocks,
-  assetUri,
   /* eslint-disable react/prop-types */
 }) => (
   <RequestContextProvider
