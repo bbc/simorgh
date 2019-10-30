@@ -9,7 +9,7 @@ import {
 } from '#models/propTypes';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 `;
 
 const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
