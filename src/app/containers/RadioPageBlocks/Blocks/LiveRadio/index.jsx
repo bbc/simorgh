@@ -33,9 +33,9 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { liveRadio, lang, translations, service } = useContext(ServiceContext);
 
   const isAmp = platform === 'amp';
+  const isValidPlatform = ['amp', 'canonical'].includes(platform);
 
-  if (!['amp', 'canonical'].includes(platform) || !externalId || !id)
-    return null;
+  if (!isValidPlatform || !externalId || !id) return null;
 
   const serviceId = pathOr(
     externalId,
