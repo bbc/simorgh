@@ -18,7 +18,7 @@ const GenerateMediaPlayer = ({
   platform,
   blocks,
   assetUri,
-  /* eslint-disable react/prop-types */
+  /* eslint-enable react/prop-types */
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
