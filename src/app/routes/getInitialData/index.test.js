@@ -240,6 +240,42 @@ describe('fetchData', () => {
         status: 200,
       });
     });
+
+    it('should pass preprocessor rules as empty array for type: foobar', async () => {
+      const mockData = {
+        metadata: {
+          type: 'foobar',
+        },
+      };
+
+      const response = await callfetchData(
+        '/foobar',
+        mockFetchSuccessWithData(mockData),
+      );
+      expect(await preprocess).toHaveBeenCalledWith(response.pageData, []);
+
+      expect(response).toEqual({
+        pageData: mockData,
+        status: 200,
+      });
+    });
+
+    it('should pass preprocessor rules as empty array for type: undefined', async () => {
+      const mockData = {
+        metadata: {},
+      };
+
+      const response = await callfetchData(
+        '/foobar',
+        mockFetchSuccessWithData(mockData),
+      );
+      expect(await preprocess).toHaveBeenCalledWith(response.pageData, []);
+
+      expect(response).toEqual({
+        pageData: mockData,
+        status: 200,
+      });
+    });
   });
 
   describe('Rejected fetch', () => {
