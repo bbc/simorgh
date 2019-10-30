@@ -9,10 +9,9 @@ import {
   defaultToggles,
 } from '../MediaPlayer/fixtureData';
 
-const GenerateFixtureData = ({
+const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
   platform,
-  toggleState,
   blocks,
   assetUri,
   /* eslint-disable react/prop-types */
@@ -39,7 +38,7 @@ const GenerateFixtureData = ({
 describe('MediaPlayer', () => {
   shouldMatchSnapshot(
     'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
-    <GenerateFixtureData
+    <GenerateMediaPlayer
       platform="canonical"
       blocks={[validAresMediaVideoBlock]}
       assetUri="c123467890o"

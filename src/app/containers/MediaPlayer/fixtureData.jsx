@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape, arrayOf, object } from 'prop-types';
+import { string, shape, arrayOf, object, bool } from 'prop-types';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -345,6 +345,9 @@ GenerateFixtureData.propTypes = {
   platform: string.isRequired,
   toggleState: shape({}),
   blocks: arrayOf(object).isRequired,
+  assetType: string.isRequired,
+  assetId: string.isRequired,
+  showPlaceholder: bool.isRequired,
 };
 
 GenerateFixtureData.defaultProps = {
