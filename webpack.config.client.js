@@ -119,6 +119,12 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/,
       }),
+      /*
+       * Exclude amp logic.
+       */
+      new webpack.IgnorePlugin({
+        resourceRegExp: /\.amp$/,
+      }),
       // keep track of the generated chunks
       // this determines what scripts get put in the footer of the page
       new LoadablePlugin({
