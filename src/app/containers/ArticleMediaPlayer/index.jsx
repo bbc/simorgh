@@ -8,14 +8,14 @@ import {
 } from '#models/propTypes';
 
 const ArticleMediaPlayerContainer = ({ blocks }) => {
-  const { id, pageType } = useContext(RequestContext);
+  const { id } = useContext(RequestContext);
 
   return (
     <GridItemConstrainedMedium>
       <MediaPlayerContainer
         blocks={blocks}
         assetId={id}
-        assetType={pageType}
+        assetType="articles"
         showPlaceholder
       />
     </GridItemConstrainedMedium>
