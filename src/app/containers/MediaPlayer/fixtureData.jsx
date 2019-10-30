@@ -309,16 +309,6 @@ const toggleStateOff = {
   },
 };
 
-// const MediaPlayerContainer = ({
-//   blocks,
-//   assetId,
-//   assetType,
-//   showPlaceholder,
-// }) => {
-//   const { platform, origin } = useContext(RequestContext);
-//   const { lang, translations } = useContext(ServiceContext);
-//   const { enabled } = useToggle('mediaPlayer');
-
 const GenerateFixtureData = ({
   platform,
   toggleState,
