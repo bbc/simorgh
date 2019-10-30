@@ -21,12 +21,12 @@ Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
 const cache = {};
 
 Cypress.Commands.overwrite('request', (originalFn, ...args) => {
-  const url = typeof args[0] === 'string' ? args[0] : args[0].url;
+  const cacheKey = JSON.stringify(args);
 
-  if (!cache[url]) {
+  if (!cache[cacheKey]) {
     const request = originalFn(...args);
-    cache[url] = request;
+    cache[cacheKey] = request;
   }
 
-  return cache[url];
+  return cache[cacheKey];
 });
