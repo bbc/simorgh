@@ -13,7 +13,7 @@ const ArticleMediaPlayerContainer = ({ blocks }) => {
   return (
     <GridItemConstrainedMedium>
       <MediaPlayerContainer
-        block={blocks}
+        blocks={blocks}
         assetId={id}
         assetType={pageType}
         showPlaceholder

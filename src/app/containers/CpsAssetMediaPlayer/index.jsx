@@ -18,7 +18,7 @@ const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
   return (
     <Wrapper>
       <MediaPlayerContainer
-        block={blocks}
+        blocks={blocks}
         assetId={assetUri.substr(1)}
         assetType="cps"
         showPlaceholder={false}
