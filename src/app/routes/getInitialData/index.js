@@ -1,5 +1,5 @@
 import 'isomorphic-fetch';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
 import preprocess from '#lib/utilities/preprocessor';
 import onClient from '#lib/utilities/onClient';
@@ -22,7 +22,7 @@ const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
 
 const getPageData = async json => {
   const response = await json;
-  const { type } = pathOr({}, ['metadata'], response);
+  const type = path(['metadata', 'type'], response);
   return preprocess(response, getPreprocessorRules(type));
 };
 
