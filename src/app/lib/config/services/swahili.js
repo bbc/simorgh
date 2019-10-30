@@ -165,10 +165,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Kwanini unaweza kuiamini BBC News',
-        },
-        {
           href:
             'https://www.bbc.com/swahili/taasisi/2011/10/000001_terms_of_use',
           text: 'Sheria ya matumizi',
