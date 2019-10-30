@@ -12,6 +12,9 @@ const toggles = {
     navOnArticles: {
       enabled: true,
     },
+    ampAds: {
+      enabled: true,
+    },
   },
   test: {
     chartbeatAnalytics: {
@@ -26,6 +29,9 @@ const toggles = {
     navOnArticles: {
       enabled: true,
     },
+    ampAds: {
+      enabled: true,
+    },
   },
   live: {
     chartbeatAnalytics: {
@@ -38,6 +44,9 @@ const toggles = {
       enabled: true,
     },
     navOnArticles: {
+      enabled: false,
+    },
+    ampAds: {
       enabled: false,
     },
   },
