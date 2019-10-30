@@ -20,6 +20,7 @@ import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
+import injectCspHeader from './utilities/constructCspHeader';
 
 const fs = require('fs');
 
@@ -60,51 +61,6 @@ const getBuildMetadata = () => {
   return buildMetadata;
 };
 
-const constructCspHeader = () => ({
-  directives: {
-    'default-src': ["'self'"],
-    'font-src': [
-      'https://gel.files.bbci.co.uk',
-      'https://ws-downloads.files.bbci.co.uk',
-    ],
-    'style-src': ["'unsafe-inline'"],
-    'img-src': [
-      'https://ichef.bbci.co.uk',
-      'https://ping.chartbeat.net',
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      'https://news.files.bbci.co.uk',
-      'https://*.akstat.io',
-      'https://r.bbci.co.uk',
-      "data: 'self'",
-    ],
-    'script-src': [
-      'https://news.files.bbci.co.uk',
-      'https://*.chartbeat.com',
-      'https://*.go-mpulse.net',
-      'https://mybbc-analytics.files.bbci.co.uk',
-      'https://emp.bbci.co.uk',
-      'https://static.bbci.co.uk',
-      "'self'",
-      "'unsafe-inline'",
-    ],
-    'connect-src': [
-      'https://*.akstat.io',
-      'https://*.akamaihd.net',
-      'https://c.go-mpulse.net',
-      'https://cookie-oven.api.bbc.co.uk',
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      "'self'",
-    ],
-    'frame-src': [
-      "'self'",
-      'https://emp.bbc.com',
-      'https://emp.bbc.co.uk',
-      'https://chartbeat.com',
-      'https://*.chartbeat.com',
-    ],
-  },
-});
-
 server
   .disable('x-powered-by')
   .use(
@@ -115,7 +71,7 @@ server
   )
   .use(compression())
   .use(helmet({ frameguard: { action: 'deny' } }))
-  .use(helmet.contentSecurityPolicy(constructCspHeader()))
+  .use(injectCspHeader)
   .use(gnuTP())
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
