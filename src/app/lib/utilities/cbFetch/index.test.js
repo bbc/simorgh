@@ -20,6 +20,7 @@ describe('cbFetch', () => {
     fetch.mockReject(Error('timeout'));
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
+    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow(
       'Client side rate limiting applied.',
     );
@@ -27,6 +28,7 @@ describe('cbFetch', () => {
 
   it('should reopen circuit after timeout time', async () => {
     fetch.mockReject(Error('timeout'));
+    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow(
