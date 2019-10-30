@@ -174,10 +174,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/punjabi/institutional-49282853',
-          text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
-        },
-        {
           href: 'https://www.bbc.com/terms',
           text: 'ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ',
         },
