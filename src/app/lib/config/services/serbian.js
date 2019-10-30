@@ -181,7 +181,7 @@ const baseServiceConfig = {
     },
     {
       title: 'Srbija',
-      url: '/serbian/lat/srbija',
+      url: '/serbian/lat/1791445f-977a-4e6d-b490-51f84bb4fc52',
     },
     {
       title: 'Balkan',
