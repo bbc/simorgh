@@ -21,7 +21,7 @@ const GenerateMediaPlayer = ({
     service="news"
     statusCode={200}
     platform={platform}
-    id="foo"
+    id="c1234567890"
     pageType="article"
     pathname="/pathname"
   >
@@ -29,7 +29,7 @@ const GenerateMediaPlayer = ({
       <ToggleContext.Provider
         value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
       >
-        <ArticleMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+        <ArticleMediaPlayerContainer blocks={blocks} />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -37,11 +37,15 @@ const GenerateMediaPlayer = ({
 
 describe('MediaPlayer', () => {
   shouldMatchSnapshot(
-    'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
+    'Calls the canonical media player, with a placeholder',
     <GenerateMediaPlayer
       platform="canonical"
       blocks={[validAresMediaVideoBlock]}
-      assetUri="c123467890o"
     />,
+  );
+
+  shouldMatchSnapshot(
+    'Calls the amp media player',
+    <GenerateMediaPlayer platform="amp" blocks={[validAresMediaVideoBlock]} />,
   );
 });
