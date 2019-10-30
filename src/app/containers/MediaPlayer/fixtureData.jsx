@@ -309,7 +309,24 @@ const toggleStateOff = {
   },
 };
 
-const GenerateFixtureData = ({ platform, toggleState, blocks }) => (
+// const MediaPlayerContainer = ({
+//   blocks,
+//   assetId,
+//   assetType,
+//   showPlaceholder,
+// }) => {
+//   const { platform, origin } = useContext(RequestContext);
+//   const { lang, translations } = useContext(ServiceContext);
+//   const { enabled } = useToggle('mediaPlayer');
+
+const GenerateFixtureData = ({
+  platform,
+  toggleState,
+  blocks,
+  assetType,
+  assetId,
+  showPlaceholder,
+}) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     service="news"
@@ -323,7 +340,12 @@ const GenerateFixtureData = ({ platform, toggleState, blocks }) => (
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: jest.fn() }}
       >
-        <MediaPlayerContainer blocks={blocks} />
+        <MediaPlayerContainer
+          blocks={blocks}
+          assetId={assetId}
+          assetType={assetType}
+          showPlaceholder={showPlaceholder}
+        />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -339,19 +361,44 @@ GenerateFixtureData.defaultProps = {
   toggleState: defaultToggles,
 };
 
-export const VideoCanonical = (
+export const VideoCanonicalWithPlaceholder = (
   <GenerateFixtureData
     platform="canonical"
     blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
+);
+
+export const VideoCanonicalNoPlaceholder = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder={false}
   />
 );
 
 export const VideoAmp = (
-  <GenerateFixtureData platform="amp" blocks={[validAresMediaVideoBlock]} />
+  <GenerateFixtureData
+    platform="amp"
+    blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
 );
 
 export const VideoCanonicalNoVersionId = (
-  <GenerateFixtureData platform="canonical" blocks={missingVpidBlocks} />
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={missingVpidBlocks}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
 );
 
 export const VideoCanonicalToggledOff = (
@@ -359,6 +406,9 @@ export const VideoCanonicalToggledOff = (
     platform="canonical"
     blocks={[validAresMediaVideoBlock]}
     toggleState={toggleStateOff}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
   />
 );
 
@@ -366,9 +416,18 @@ export const VideoCanonicalWithCaption = (
   <GenerateFixtureData
     platform="canonical"
     blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
   />
 );
 
 export const VideoAmpWithCaption = (
-  <GenerateFixtureData platform="amp" blocks={validVideoWithCaptionBlock} />
+  <GenerateFixtureData
+    platform="amp"
+    blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
 );
