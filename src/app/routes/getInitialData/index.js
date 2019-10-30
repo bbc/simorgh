@@ -20,7 +20,7 @@ const baseUrl = onClient()
 
 const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
 
-const handleResponse = () => async response => {
+const handleResponse = async response => {
   const { status } = response;
 
   if (status === STATUS_CODE_OK) {
@@ -58,7 +58,7 @@ const handleError = error => {
 
 const fetchData = pathname =>
   fetch(getUrl(pathname)) // Remove .amp at the end of pathnames for AMP pages.
-    .then(handleResponse())
+    .then(handleResponse)
     .then(checkForError(getUrl(pathname)))
     .catch(handleError);
 
