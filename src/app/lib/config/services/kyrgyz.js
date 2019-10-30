@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `ky`,
-    articleAuthor: `https://www.facebook.com/bbckyrgyz`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
@@ -164,10 +164,6 @@ export const service = {
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
-          text: 'Эмнеге BBC News ишенсе болот?',
-        },
         {
           href: 'https://www.bbc.com/kyrgyz/institutional-38157280',
           text: 'Колдонуу эрежелери',
