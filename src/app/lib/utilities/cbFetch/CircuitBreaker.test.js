@@ -26,5 +26,14 @@ describe('CircuitBreaker', () => {
     failure = circuitBreaker.failures[`${anotherUrl}-GET`];
     expect(Object.keys(circuitBreaker.failures)).toHaveLength(2);
     expect(failure.count).toEqual(1);
+
+    expect(circuitBreaker.canMakeRequest(url)).toBe(true);
+
+    circuitBreaker.recordFailure(url);
+    expect(circuitBreaker.canMakeRequest(url)).toBe(true);
+
+    circuitBreaker.recordFailure(url);
+
+    expect(circuitBreaker.canMakeRequest(url)).toBe(true);
   });
 });

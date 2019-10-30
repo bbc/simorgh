@@ -25,7 +25,7 @@ export default class CircuitBreaker {
     }
 
     const { expiry } = exists;
-    if (Date.now() > expiry) {
+    if (Date.now() >= expiry) {
       return true;
     }
 
