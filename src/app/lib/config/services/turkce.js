@@ -163,10 +163,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: "Neden BBC'ye güvenebilirsiniz",
-        },
-        {
           href: 'https://www.bbc.com/terms',
           text: 'Kullanım koşulları',
         },
