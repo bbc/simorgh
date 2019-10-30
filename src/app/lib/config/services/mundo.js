@@ -163,10 +163,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Por qué puedes confiar en la BBC',
-        },
-        {
           href: 'https://www.bbc.com/terms',
           text: 'Términos de uso',
         },

@@ -174,10 +174,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Почему BBC News заслуживает доверия',
-        },
-        {
           href: 'https://www.bbc.com/terms',
           text: 'Правила использования',
         },
