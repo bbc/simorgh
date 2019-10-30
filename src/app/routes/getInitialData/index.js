@@ -20,21 +20,21 @@ const baseUrl = onClient()
 
 const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
 
-const getPageData = async json => {
-  const response = await json;
-  const type = path(['metadata', 'type'], response);
-  return preprocess(response, getPreprocessorRules(type));
-};
-
 const handleResponse = () => async response => {
   const { status } = response;
 
-  return {
-    status,
-    ...(status === STATUS_CODE_OK && {
-      pageData: await getPageData(response.json()),
-    }),
-  };
+  if (status === STATUS_CODE_OK) {
+    const pageData = await response.json();
+    const type = path(['metadata', 'type'], pageData);
+    const processedPageData = preprocess(pageData, getPreprocessorRules(type));
+
+    return {
+      status,
+      pageData: processedPageData,
+    };
+  }
+
+  return { status };
 };
 
 const checkForError = pathname => ({ status, pageData }) => {
