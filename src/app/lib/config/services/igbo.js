@@ -183,10 +183,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/igbo/institutional-48529074',
-          text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
-        },
-        {
           href: 'https://www.bbc.co.uk/usingthebbc/terms',
           text: 'Usoro Ojiji',
         },

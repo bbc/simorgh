@@ -153,10 +153,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/japanese/help-49677253',
-          text: 'BBCニュースが信頼できる理由',
-        },
-        {
           href: 'https://www.bbc.com/japanese/help/terms',
           text: '利用条件',
         },

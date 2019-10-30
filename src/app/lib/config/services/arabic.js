@@ -167,10 +167,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/arabic/institutional-49283069',
-          text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
-        },
-        {
           href: 'https://www.bbc.com/arabic/institutional-37731351',
           text: 'شروط الاستخدام',
         },

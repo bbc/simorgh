@@ -5,6 +5,9 @@ import ReactRouter from 'react-router-dom';
 import { ClientApp, ServerApp } from '.';
 import * as App from './App';
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+}));
 jest.mock('./App', () => jest.fn(() => <>Mocked App component</>));
 
 const renderClientApp = () =>
