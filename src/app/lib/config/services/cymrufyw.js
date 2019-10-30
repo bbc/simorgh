@@ -164,10 +164,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Pam y gallwch ymddiried yn BBC Cymru Fyw',
-        },
-        {
           href: 'https://www.bbc.com/usingthebbc/terms/cy/',
           text: 'Telerau Defnyddio',
         },
