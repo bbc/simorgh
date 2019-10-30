@@ -88,6 +88,30 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             }
           });
         });
+
+        it('plays media when a user clicks play', () => {
+          cy.window().then(win => {
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+            if (media.type === 'video') {
+              cy.get('div[class^="StyledVideoContainer"]').click(); // We don't need this for AMP.
+
+              cy.get('iframe[class^="StyledIframe"').then($iframe => {
+                // We don't have to wait for $iframe's `load` event, because
+                // `its()` retries until the `embeddedMedia` property appears on
+                // the av-embed `window`. As soon as it appears, 'Bump' has
+                // injected SMP into `div#mediaPlayer` and populated the
+                // `window` with details we can use to assert it's playing.
+                cy.wrap($iframe.get(0).contentWindow)
+                  .its('embeddedMedia')
+                  .then(embeddedMedia => {
+                    cy.wrap(embeddedMedia.players[0])
+                      .its('_playing') // We must wait for `_playing` also.
+                      .should('eq', true);
+                  });
+              });
+            }
+          });
+        });
       });
     }
   });
