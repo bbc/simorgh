@@ -414,7 +414,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados\n\n\n"
+      "seoHeadline": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:cd61pm8gzmpo"
