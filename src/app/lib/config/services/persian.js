@@ -178,10 +178,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
-        },
-        {
           href: 'https://www.bbc.com/persian/institutional-37474133',
           text: 'شرایط استفاده',
         },
