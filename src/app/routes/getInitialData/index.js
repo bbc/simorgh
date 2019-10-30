@@ -26,7 +26,10 @@ const handleResponse = async response => {
   if (status === STATUS_CODE_OK) {
     const pageData = await response.json();
     const type = path(['metadata', 'type'], pageData);
-    const processedPageData = preprocess(pageData, getPreprocessorRules(type));
+    const processedPageData = await preprocess(
+      pageData,
+      getPreprocessorRules(type),
+    );
 
     return {
       status,
