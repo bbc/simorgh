@@ -1,5 +1,5 @@
 import React from 'react';
-import string from 'prop-types';
+import { string } from 'prop-types';
 import styled from 'styled-components';
 import MediaPlayerContainer from '../MediaPlayer';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';

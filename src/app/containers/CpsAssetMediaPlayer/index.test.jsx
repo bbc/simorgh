@@ -3,7 +3,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import ArticleMediaPlayerContainer from '.';
+import CpsAssetMediaPlayerContainer from '.';
 import {
   validAresMediaVideoBlock,
   defaultToggles,
@@ -23,14 +23,14 @@ const GenerateFixtureData = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType="article"
+    pageType="MAP"
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
       <ToggleContext.Provider
         value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
       >
-        <ArticleMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+        <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -42,7 +42,7 @@ describe('MediaPlayer', () => {
     <GenerateFixtureData
       platform="canonical"
       blocks={[validAresMediaVideoBlock]}
-      assetUri="c123467890o"
+      assetUri="/pidgin/123456789"
     />,
   );
 });

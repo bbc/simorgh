@@ -283,7 +283,7 @@ const missingVpidBlocks = [
   },
 ];
 
-const defaultToggles = {
+export const defaultToggles = {
   local: {
     mediaPlayer: {
       enabled: true,
