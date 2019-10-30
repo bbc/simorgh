@@ -49,6 +49,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',

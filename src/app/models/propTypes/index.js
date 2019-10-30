@@ -38,7 +38,6 @@ export const mediaPlayerPropTypes = {
       ),
     }),
   ).isRequired,
-  placeholder: bool,
 };
 
 const baseDefaultPropTypes = {

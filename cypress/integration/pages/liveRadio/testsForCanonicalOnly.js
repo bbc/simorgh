@@ -1,4 +1,4 @@
-import appConfig from '../../../../src/testHelpers/serviceConfigs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 import getMappedServiceId from './helper';
@@ -24,7 +24,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             const serviceId = getMappedServiceId(externalId);
             const { lang } = appConfig[service][variant];
             cy.get(
-              `iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}"]`,
+              `iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}"]`,
             ).should('be.visible');
           },
         );

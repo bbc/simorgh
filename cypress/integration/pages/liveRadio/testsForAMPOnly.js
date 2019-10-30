@@ -1,4 +1,4 @@
-import appConfig from '../../../../src/testHelpers/serviceConfigs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import getMappedServiceId from './helper';
@@ -40,7 +40,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             const serviceId = getMappedServiceId(externalId);
             const { lang } = appConfig[service][variant];
             cy.get(
-              `amp-iframe[src="${envConfig.liveRadioIframeBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}/amp"]`,
+              `amp-iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}/amp"]`,
             ).should('be.visible');
           },
         );
