@@ -195,7 +195,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               const isValidUsefulLinks =
                 usefulLinks &&
                 'strapline' in usefulLinks &&
-                Array.isArray(usefulLinksItems) &&
                 usefulLinksItems.length;
 
               if (isValidUsefulLinks) {
