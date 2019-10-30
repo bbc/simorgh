@@ -414,7 +414,7 @@
   },
   "promo": {
     "headlines": {
-      "seoHeadline": "هذا هو عنوان هذا المقال الاختبار\n\n\n"
+      "seoHeadline": "هذا هو عنوان هذا المقال الاختبار"
     },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c1er5mjnznzo"
