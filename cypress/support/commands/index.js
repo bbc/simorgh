@@ -17,3 +17,16 @@ Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
     return false;
   });
 });
+
+const cache = {};
+
+Cypress.Commands.overwrite('request', (originalFn, ...args) => {
+  const url = typeof args[0] === 'string' ? args[0] : args[0].url;
+
+  if (!cache[url]) {
+    const request = originalFn(...args);
+    cache[url] = request;
+  }
+
+  return cache[url];
+});
