@@ -1588,6 +1588,17 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         <div
           class="c1"
         >
+          <h2
+            class="c19"
+            id="This-is-a-subheading"
+            tabindex="-1"
+          >
+            This is a subheading!
+          </h2>
+        </div>
+        <div
+          class="c1"
+        >
           <p
             class="c16"
           >
