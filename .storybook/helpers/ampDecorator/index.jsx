@@ -3,6 +3,10 @@ import { Helmet } from 'react-helmet';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
+  AMP_JS,
+  AMP_GEO_JS,
+  AMP_CONSENT_JS,
+  AMP_ANALYTICS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 
 /*
@@ -17,22 +21,10 @@ const AmpDecorator = storyFn => (
       <meta name="viewport" content="width=device-width,minimum-scale=1" />
       <style amp-boilerplate="">{AMP_SCRIPT}</style>
       <noscript>{`<style amp-boilerplate="">${AMP_NO_SCRIPT}</style>`}</noscript>
-      <script async src="https://cdn.ampproject.org/v0.js" />
-      <script
-        async
-        custom-element="amp-geo"
-        src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
-      />
-      <script
-        async
-        custom-element="amp-consent"
-        src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
-      />
-      <script
-        async
-        custom-element="amp-analytics"
-        src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
-      />
+      {AMP_JS}
+      {AMP_GEO_JS}
+      {AMP_CONSENT_JS}
+      {AMP_ANALYTICS_JS}
     </Helmet>
     {storyFn()}
   </div>
