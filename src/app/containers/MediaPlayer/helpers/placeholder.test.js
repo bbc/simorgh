@@ -6,6 +6,6 @@ describe('Media Player: Placeholder Image src', () => {
     const expectedOutput =
       'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg';
 
-    expect(getPlaceholderSrc(input, '512')).toEqual(expectedOutput);
+    expect(getPlaceholderSrc(input)).toEqual(expectedOutput);
   });
 });
