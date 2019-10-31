@@ -12,6 +12,7 @@ import {
   articleRegexPath,
   frontpageRegexPath,
   cpsAssetPageRegexPath,
+  errorPageRegexPath,
   radioAndTvRegexPathsArray,
 } from './regex';
 
@@ -49,6 +50,13 @@ const routes = [
     component: CpsAsset,
     getInitialData: getCpsAssetInitialData,
     pageType: 'MAP',
+  },
+  {
+    path: errorPageRegexPath,
+    exact: true,
+    component: ErrorPage,
+    getInitialData: () => Promise.resolve({ status: 200 }),
+    pageType: 'error',
   },
   {
     component: ErrorPage,
