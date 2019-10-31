@@ -17,21 +17,12 @@ const filterUnknownContentTypes = data => {
     if (Array.isArray(group.items)) {
       newGroup.items = group.items.filter(item => {
         const itemType = item.assetTypeCode || item.cpsType;
-        const validItemType = whitelist.includes(itemType);
-
-        if (group.type === 'useful-links') {
-          const validUsefulLinks =
-            item.assetTypeCode === 'PRO' &&
-            contentTypes.includes(item.contentType);
-
-          return itemType && validItemType && validUsefulLinks;
-        }
-
-        const validContentType =
-          item.assetTypeCode !== 'PRO' ||
-          contentTypes.includes(item.contentType);
-
-        return itemType && validItemType && validContentType;
+        const isValidItemType = whitelist.includes(itemType);
+        const isValidContentType =
+          itemType !== 'PRO' || contentTypes.includes(item.contentType);
+        const isValidGroupType =
+          group.type !== 'useful-links' || itemType === 'PRO';
+        return isValidItemType && isValidContentType && isValidGroupType;
       });
     }
 
