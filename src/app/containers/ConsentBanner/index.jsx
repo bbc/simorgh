@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
+import loadable from '@loadable/component';
 import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
-import Amp from './index.amp';
+
+const Amp = loadable(() => import('./index.amp'));
 
 const ConsentBanner = () => {
   const { platform } = useContext(RequestContext);
