@@ -86,47 +86,59 @@ describe('Construct CSP Header', () => {
     "'self'",
   ];
 
-  it('should be able to generate the live connect src when in the uk', async () => {
-    const expected = connectCommon.concat([
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      'https://cookie-oven.api.bbc.co.uk',
-    ]);
-    const result = generateConnectSrc(false, true, true);
+  const testConnect = (additional, isAmp, isUk, isLive) => {
+    const expected = connectCommon.concat(additional);
+    const result = generateConnectSrc(isAmp, isUk, isLive);
 
     expect(result).toEqual(expected);
+  };
+
+  it('should be able to generate the live connect src when in the uk', async () => {
+    testConnect(
+      [
+        'https://a1.api.bbc.co.uk/hit.xiti',
+        'https://cookie-oven.api.bbc.co.uk',
+      ],
+      false,
+      true,
+      true,
+    );
   });
 
   it('should be able to generate the test connect src when in the uk', async () => {
-    const expected = connectCommon.concat([
-      'https://logws1363.ati-host.net',
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      'https://cookie-oven.api.bbc.co.uk',
-      'https://cookie-oven.test.api.bbc.co.uk',
-    ]);
-    const result = generateConnectSrc(false, true, false);
-
-    expect(result).toEqual(expected);
+    testConnect(
+      [
+        'https://logws1363.ati-host.net',
+        'https://a1.api.bbc.co.uk/hit.xiti',
+        'https://cookie-oven.api.bbc.co.uk',
+        'https://cookie-oven.test.api.bbc.co.uk',
+      ],
+      false,
+      true,
+      false,
+    );
   });
 
   it('should be able to generate the live connect src when not in the uk', async () => {
-    const expected = connectCommon.concat([
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      'https://cookie-oven.api.bbc.com',
-    ]);
-    const result = generateConnectSrc(false, false, true);
-
-    expect(result).toEqual(expected);
+    testConnect(
+      ['https://a1.api.bbc.co.uk/hit.xiti', 'https://cookie-oven.api.bbc.com'],
+      false,
+      false,
+      true,
+    );
   });
 
   it('should be able to generate the test connect src when not in the uk', async () => {
-    const expected = connectCommon.concat([
-      'https://logws1363.ati-host.net',
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      'https://cookie-oven.api.bbc.com',
-      'https://cookie-oven.test.api.bbc.com',
-    ]);
-    const result = generateConnectSrc(false, false, false);
-
-    expect(result).toEqual(expected);
+    testConnect(
+      [
+        'https://logws1363.ati-host.net',
+        'https://a1.api.bbc.co.uk/hit.xiti',
+        'https://cookie-oven.api.bbc.com',
+        'https://cookie-oven.test.api.bbc.com',
+      ],
+      false,
+      false,
+      false,
+    );
   });
 });
