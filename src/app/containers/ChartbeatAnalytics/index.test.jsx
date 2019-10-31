@@ -118,7 +118,8 @@ describe('Charbeats Analytics Container', () => {
       {},
     );
     expect(testUtils.getConfig).toHaveBeenCalledTimes(1);
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstChild).not.toBeNull();
+    expect(container.firstChild.textContent).toEqual('amp-return-value');
   });
 
   it('should return null when toggle is disbaled for live', () => {
