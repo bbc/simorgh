@@ -4,12 +4,12 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
 import preprocessor from '#lib/utilities/preprocessor';
-import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
+import { indexPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const processedPidgin = () =>
-  preprocessor(frontPageDataPidgin, [addIdsToItems]);
+  preprocessor(frontPageDataPidgin, indexPreprocessorRules);
 
 jest.mock('uuid', () =>
   (() => {
