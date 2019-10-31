@@ -115,7 +115,7 @@ export const generateConnectSrc = (isAmp, isUK, isLive) => {
   return connectSrc.concat(generateCookieOvenUrls(isUK, isLive));
 };
 
-const constructCspHeader = (isAmp, isUK, isLive) => ({
+const constructCspHeader = (isAmp, _isUK, isLive) => ({
   directives: {
     'default-src': ["'self'"],
     'font-src': [
@@ -143,11 +143,15 @@ const constructCspHeader = (isAmp, isUK, isLive) => ({
   },
 });
 
+export const localInjectHostCspHeader = (_req, _res, next) => {
+  next();
+};
+
 const injectCspHeader = (req, res, next) => {
   const { isAmp, route } = getRouteProps(routes, req.url);
   const { origin, isUK } = getOriginContext(route.bbcOrigin);
 
-  const isLive = origin === 'https://www.bbc.co.uk/';
+  const isLive = origin === 'https://www.bbc.co.uk';
 
   const middleware = csp(constructCspHeader(isAmp, isUK, isLive));
 

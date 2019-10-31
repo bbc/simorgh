@@ -20,7 +20,9 @@ import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader from './utilities/constructCspHeader';
+import injectCspHeader, {
+  localInjectHostCspHeader,
+} from './utilities/constructCspHeader';
 
 const fs = require('fs');
 
@@ -29,6 +31,9 @@ const morgan = require('morgan');
 const logger = nodeLogger(__filename);
 
 const publicDirectory = 'build/public';
+
+const cspInjectFun =
+  process.env.APP_ENV === 'local' ? localInjectHostCspHeader : injectCspHeader;
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -191,7 +196,7 @@ server
       });
     },
   )
-  .get('/*', injectCspHeader, async ({ url, headers, path: urlPath }, res) => {
+  .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, url);
       const data = await route.getInitialData(urlPath);
