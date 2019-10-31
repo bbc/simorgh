@@ -175,16 +175,16 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 .c15 {
-  border-bottom: 1px solid #3F3F42;
+  border-bottom: 0.0625rem solid #3F3F42;
   list-style-type: none;
   margin: 0;
   padding: 0 0 0.5rem;
-  -webkit-column-count: 3;
-  column-count: 3;
+  -webkit-column-count: 4;
+  column-count: 4;
 }
 
 .c15 > li:first-child {
-  border-bottom: 1px solid #3F3F42;
+  border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   grid-column: 1/-1;
@@ -197,6 +197,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
+  -webkit-break-inside: avoid-column;
+  break-inside: avoid-column;
 }
 
 .c13 {
@@ -211,6 +213,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 .c14 {
   max-width: 80rem;
   margin: 0 auto;
+  padding-top: 0.5rem);
 }
 
 .c20 {
@@ -371,8 +374,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat( 3,auto );
-    -webkit-column-count: 3;
-    column-count: 3;
+    -webkit-column-count: 4;
+    column-count: 4;
   }
 }
 
@@ -381,8 +384,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat( 3,auto );
-    -webkit-column-count: 3;
-    column-count: 3;
+    -webkit-column-count: 5;
+    column-count: 5;
   }
 }
 

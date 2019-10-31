@@ -168,10 +168,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Carson as urrainear earbsa a chur sa BhBC',
-        },
-        {
           href: 'https://www.bbc.com/terms',
           text: 'Teirmean Cleachdaidh',
         },
