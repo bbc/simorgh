@@ -18,20 +18,31 @@ export default class CircuitBreaker {
 
   canMakeRequest(url, options) {
     const key = getKey(url, options);
+    const now = Date.now();
 
-    const exists = this.failures[key];
-    if (!exists) {
+    const failure = this.failures[key];
+    if (!failure) {
       return true;
     }
 
-    const { expiry } = exists;
-    if (Date.now() >= expiry) {
+    const { updatedAt, count } = failure;
+
+    if (count <= this.threshold) {
+      return true;
+    }
+
+    const multiplier = count - this.threshold;
+    let timeout = multiplier * this.timeout;
+    timeout = timeout > this.maxTimeout ? this.maxTimeout : timeout;
+
+    const expiry = updatedAt + timeout;
+    if (now >= expiry) {
       return true;
     }
 
     // Can make request if expiry time difference is more than max timeout.
     // This to account for time updating on client.
-    const difference = Math.abs(Date.now() - expiry);
+    const difference = Math.abs(now - expiry);
     if (difference > this.maxTimeout) {
       return true;
     }
@@ -42,23 +53,17 @@ export default class CircuitBreaker {
   recordFailure(url, options) {
     const key = getKey(url, options);
     const exists = this.failures[key];
-    const now = Date.now();
+    const updatedAt = Date.now();
 
-    if (exists && exists.count > this.threshold) {
-      const timeout = exists.count * this.timeout;
+    if (!exists) {
       this.failures[key] = {
-        count: exists.count + 1,
-        expiry: now + (timeout > this.maxTimeout ? this.maxTimeout : timeout),
-      };
-    } else if (exists && exists.count <= this.threshold) {
-      this.failures[key] = {
-        count: exists.count + 1,
-        expiry: now,
+        count: 1,
+        updatedAt,
       };
     } else {
       this.failures[key] = {
-        count: 1,
-        expiry: now,
+        count: exists.count + 1,
+        updatedAt,
       };
     }
   }

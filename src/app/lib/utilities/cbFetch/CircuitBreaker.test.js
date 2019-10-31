@@ -14,10 +14,11 @@ describe('CircuitBreaker', () => {
     expect(circuitBreaker.maxTimeout).toEqual(60 * 1000 * 3);
   });
 
-  it('should work', () => {
+  it('should work', async () => {
     const url = 'example.com';
     circuitBreaker.recordFailure(url);
-    let failure = circuitBreaker.failures[`${url}-GET`];
+    const failureKey = `${url}-GET`;
+    let failure = circuitBreaker.failures[failureKey];
     expect(Object.keys(circuitBreaker.failures)).toHaveLength(1);
     expect(failure.count).toEqual(1);
 
@@ -33,7 +34,29 @@ describe('CircuitBreaker', () => {
     expect(circuitBreaker.canMakeRequest(url)).toBe(true);
 
     circuitBreaker.recordFailure(url);
-
     expect(circuitBreaker.canMakeRequest(url)).toBe(true);
+
+    failure = circuitBreaker.failures[failureKey];
+    expect(failure.count).toEqual(3);
+
+    circuitBreaker.recordFailure(url);
+
+    failure = circuitBreaker.failures[failureKey];
+    expect(failure.count).toEqual(4);
+
+    expect(circuitBreaker.canMakeRequest(url)).toBe(false);
+
+    await new Promise(resolve =>
+      setTimeout(resolve, Math.ceil(circuitBreaker.timeout / 2)),
+    );
+    expect(circuitBreaker.canMakeRequest(url)).toBe(false);
+
+    await new Promise(resolve => setTimeout(resolve, circuitBreaker.timeout));
+    expect(circuitBreaker.canMakeRequest(url)).toBe(true);
+
+    circuitBreaker.reset(url);
+
+    expect(Object.keys(circuitBreaker.failures)).toHaveLength(1);
+    expect(circuitBreaker.failures).not.toHaveProperty(failureKey);
   });
 });

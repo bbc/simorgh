@@ -2,7 +2,7 @@ import { createFetchWithCircuitBreaker } from '.';
 
 let cbFetch;
 
-describe.skip('cbFetch', () => {
+describe('cbFetch', () => {
   beforeEach(() => {
     fetch.resetMocks();
     cbFetch = createFetchWithCircuitBreaker();
@@ -21,6 +21,10 @@ describe.skip('cbFetch', () => {
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
+    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
+    await expect(cbFetch('example.com')).rejects.toThrow(
+      'Client side rate limiting applied.',
+    );
     await expect(cbFetch('example.com')).rejects.toThrow(
       'Client side rate limiting applied.',
     );
@@ -31,11 +35,12 @@ describe.skip('cbFetch', () => {
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow('timeout');
+    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
     await expect(cbFetch('example.com')).rejects.toThrow(
       'Client side rate limiting applied.',
     );
 
-    fetch.mockResponseOnce(JSON.stringify({ data: 'something' }));
+    fetch.mockResponse(JSON.stringify({ data: 'something' }));
     await new Promise(resolve => setTimeout(resolve, 600));
     const response = await cbFetch('example.com');
     const json = await response.json();
