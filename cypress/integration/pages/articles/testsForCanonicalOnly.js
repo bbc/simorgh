@@ -101,10 +101,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                 // the av-embed `window`. As soon as it appears, 'Bump' has
                 // injected SMP into `div#mediaPlayer` and populated the
                 // `window` with details we can use to assert it's playing.
-                cy.wrap($iframe.get(0).contentWindow)
+                cy.wrap($iframe.get(0).contentWindow, { timeout: 7000 })
                   .its('embeddedMedia')
                   .then(embeddedMedia => {
-                    cy.wrap(embeddedMedia.players[0])
+                    cy.wrap(embeddedMedia.players[0], { timeout: 7000 })
                       .its('_playing') // We must wait for `_playing` also.
                       .should('eq', true);
                   });
