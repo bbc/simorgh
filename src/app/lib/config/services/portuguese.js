@@ -165,10 +165,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Por que você pode confiar na BBC',
-        },
-        {
           href: 'https://www.bbc.com/terms',
           text: 'Termos de Uso',
         },
