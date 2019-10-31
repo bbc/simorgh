@@ -11,7 +11,6 @@ import {
   getParagon,
   GEL_FF_REITH_SANS,
 } from '@bbc/gel-foundations/typography';
-import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import idSanitiser from '#lib/utilities/idSanitiser';
 
 const StatusCode = styled.span`
@@ -30,7 +29,7 @@ const Heading = styled.h1`
   margin-top: 0;
 `;
 
-const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
+const Wrapper = styled.div`
   padding-bottom: 4rem;
 `;
 
@@ -50,38 +49,32 @@ const ErrorPage = ({
   script,
   service,
 }) => (
-  <main role="main">
-    <GhostGrid>
-      <LongGridItemConstrainedMedium>
-        <StatusCode script={script}>{statusCode}</StatusCode>
-        <Heading id="content" script={script} service={service} tabIndex="-1">
-          {title}
-        </Heading>
-        <CustomParagraph script={script} service={service}>
-          {message}
+  <Wrapper>
+    <StatusCode script={script}>{statusCode}</StatusCode>
+    <Heading id="content" script={script} service={service} tabIndex="-1">
+      {title}
+    </Heading>
+    <CustomParagraph script={script} service={service}>
+      {message}
+    </CustomParagraph>
+    <ul>
+      {solutions.map(text => (
+        <CustomParagraph
+          script={script}
+          service={service}
+          as="li"
+          key={idSanitiser(text)}
+        >
+          {text}
         </CustomParagraph>
-        <ul>
-          {solutions.map(text => (
-            <CustomParagraph
-              script={script}
-              service={service}
-              as="li"
-              key={idSanitiser(text)}
-            >
-              {text}
-            </CustomParagraph>
-          ))}
-        </ul>
-        <CustomParagraph script={script} service={service}>
-          {callToActionFirst}
-          <InlineLink href={callToActionLinkUrl}>
-            {callToActionLinkText}
-          </InlineLink>
-          {callToActionLast}
-        </CustomParagraph>
-      </LongGridItemConstrainedMedium>
-    </GhostGrid>
-  </main>
+      ))}
+    </ul>
+    <CustomParagraph script={script} service={service}>
+      {callToActionFirst}
+      <InlineLink href={callToActionLinkUrl}>{callToActionLinkText}</InlineLink>
+      {callToActionLast}
+    </CustomParagraph>
+  </Wrapper>
 );
 
 ErrorPage.propTypes = {
