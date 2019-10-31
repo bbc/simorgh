@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
-import Grid from '@bbc/psammead-grid';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
+import Grid, { GridMaxWidthGroup4 } from '../../components/Grid';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
@@ -44,7 +44,7 @@ const FrontPageMain = ({ frontPageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <Grid
+      <GridMaxWidthGroup4
         as="main"
         role="main"
         columns={{
@@ -88,7 +88,7 @@ const FrontPageMain = ({ frontPageData }) => {
             />
           ))}
         </Grid>
-      </Grid>
+      </GridMaxWidthGroup4>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
-import Grid from '@bbc/psammead-grid';
+import Grid, { GelPageGrid } from '../../components/Grid';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
@@ -23,7 +23,7 @@ const RadioPageMain = ({ pageData }) => {
       />
       <LinkedData type="RadioChannel" seoTitle={promo.name} />
 
-      <Grid
+      <GelPageGrid
         as="main"
         role="main"
         columns={{
@@ -58,7 +58,7 @@ const RadioPageMain = ({ pageData }) => {
         >
           <RadioPageBlocks blocks={blocks} />
         </Grid>
-      </Grid>
+      </GelPageGrid>
     </>
   );
 };
