@@ -8,7 +8,7 @@ import CpsAssetPageMain from '.';
 import preprocessor from '#lib/utilities/preprocessor';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
-import { preprocessorRules } from '#app/routes/getInitialData/cpsAsset';
+import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 
 const toggleState = {
   local: {
@@ -30,7 +30,10 @@ const toggleState = {
 
 describe('CpsAssetPageMain', () => {
   it('should match snapshot for STY', async () => {
-    const pageData = await preprocessor(igboPageData, preprocessorRules);
+    const pageData = await preprocessor(
+      igboPageData,
+      cpsAssetPreprocessorRules,
+    );
 
     await matchSnapshotAsync(
       /*
@@ -58,7 +61,10 @@ describe('CpsAssetPageMain', () => {
   });
 
   it('should match snapshot for MAP', async () => {
-    const pageData = await preprocessor(pidginPageData, preprocessorRules);
+    const pageData = await preprocessor(
+      pidginPageData,
+      cpsAssetPreprocessorRules,
+    );
 
     await matchSnapshotAsync(
       <StaticRouter>
