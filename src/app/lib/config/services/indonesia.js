@@ -156,10 +156,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/indonesia/institutional-49283175',
-          text: 'Alasan Anda dapat mempercayai BBC News',
-        },
-        {
           href: 'https://www.bbc.com/indonesia/institutional-37818421',
           text: 'Peraturan Penggunaan',
         },

@@ -156,10 +156,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',
-          text: 'BBC News maaliif amanuu dandeessa',
-        },
-        {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Haala itti fayyadamaa',
         },

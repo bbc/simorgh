@@ -121,7 +121,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live'
             ? '/arabic/articles/c8j91j2ljppo'
-            : '/arabic/articles/c69dvq19k63o',
+            : '/arabic/articles/c1er5mjnznzo',
         smoke: false,
       },
       errorPage404: {
@@ -671,8 +671,8 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/mundo/articles/c45965g63xno',
+            ? '/mundo/articles/cdwrpl7qwqqo'
+            : '/mundo/articles/ce42wzqr2mko',
         smoke: false,
       },
       errorPage404: {
@@ -797,7 +797,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live'
             ? '/pashto/articles/c70970g2251o'
-            : '/pashto/articles/cng0e8v85eko',
+            : '/pashto/articles/cyjmdl92z3ro',
         smoke: false,
       },
       errorPage404: {
@@ -838,7 +838,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live'
             ? '/persian/articles/c7eel0lmr4do'
-            : '/persian/articles/c4vlle3q337o',
+            : '/persian/articles/cej3lzd5e0go',
         smoke: true,
       },
       errorPage404: {
@@ -903,7 +903,13 @@ const services = {
     isWorldService: true,
     variant: 'default',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live'
+            ? '/portuguese/articles/cpg5prg95lmo'
+            : '/portuguese/articles/cd61pm8gzmpo',
+        smoke: false,
+      },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
@@ -1334,8 +1340,8 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/turkce/articles/cr2d32lwww2o',
+            ? '/turkce/articles/cpgzpzjl3pdo'
+            : '/turkce/articles/c8q1ze59n25o',
         smoke: false,
       },
       errorPage404: {
@@ -1437,7 +1443,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live'
             ? '/urdu/articles/c4qg7qq63y6o'
-            : '/urdu/articles/cx621klkm1ro',
+            : '/urdu/articles/cwgq7rzv172o',
         smoke: false,
       },
       errorPage404: {

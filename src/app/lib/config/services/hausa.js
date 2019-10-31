@@ -162,10 +162,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
-          text: 'Me yasa za ka aminta da BBC',
-        },
-        {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377086',
           text: 'Sharudan yin amfani',
         },
