@@ -200,10 +200,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/pidgin/institutional-48528766',
-          text: 'Why you fit trust BBC News',
-        },
-        {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'How dem dey take use am',
         },

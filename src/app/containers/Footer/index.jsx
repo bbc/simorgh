@@ -18,7 +18,7 @@ const FooterContainer = () => {
     return null;
   }
 
-  const { externalLink, links, copyrightText } = footer;
+  const { externalLink, links, copyrightText, trustProjectLink } = footer;
 
   return (
     <footer role="contentinfo">
@@ -28,6 +28,7 @@ const FooterContainer = () => {
         copyrightText={getCopyrightText(copyrightText)}
         externalLink={externalLink}
         service={service}
+        trustProjectLink={trustProjectLink}
       />
     </footer>
   );

@@ -153,10 +153,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/amharic/institutional-49283133',
-          text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
-        },
-        {
           href: 'https://www.bbc.com/usingthebbc/terms/',
           text: 'የአጠቃቀም ደንብ',
         },
