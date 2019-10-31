@@ -71,7 +71,6 @@ server
   )
   .use(compression())
   .use(helmet({ frameguard: { action: 'deny' } }))
-  .use(injectCspHeader)
   .use(gnuTP())
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
@@ -192,7 +191,7 @@ server
       });
     },
   )
-  .get('/*', async ({ url, headers, path: urlPath }, res) => {
+  .get('/*', injectCspHeader, async ({ url, headers, path: urlPath }, res) => {
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, url);
       const data = await route.getInitialData(urlPath);
