@@ -1,5 +1,5 @@
 import getIchefUrl from './ichefUrl';
-import getPlaceholderSrc from '#app/containers/MediaPlayer/helpers/placeholder';
+import getPlaceholderSrc from './placeholder';
 
 const defaultResolutions = [240, 320, 480, 624, 800];
 
