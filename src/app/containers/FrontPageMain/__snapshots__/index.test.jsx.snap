@@ -17,6 +17,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   position: relative;
 }
 
+.c0 {
+  margin: 0 auto;
+}
+
 .c43 {
   vertical-align: middle;
   margin: 0 0.25rem;

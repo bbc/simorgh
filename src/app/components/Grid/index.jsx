@@ -13,6 +13,7 @@ const group5WrapperMaxWidth = `46.4rem`;
 // (2.95rem * 12) + 11*16px gutters = 742.4 = 46.4 rem
 
 const gelMaxWidths = css`
+  margin: 0 auto;
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     max-width: ${group4WrapperMaxWidth};
   }
@@ -31,6 +32,7 @@ export const GelPageGridGhost = styled(Grid)`
 `;
 
 export const GridMaxWidthGroup4 = styled(Grid)`
+  margin: 0 auto;
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${group4WrapperMaxWidth};
   }
