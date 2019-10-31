@@ -671,7 +671,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? undefined
+            ? '/mundo/articles/cdwrpl7qwqqo'
             : '/mundo/articles/ce42wzqr2mko',
         smoke: false,
       },
@@ -906,7 +906,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? undefined
+            ? '/portuguese/articles/cpg5prg95lmo'
             : '/portuguese/articles/cd61pm8gzmpo',
         smoke: false,
       },
@@ -1340,7 +1340,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? undefined
+            ? '/turkce/articles/cpgzpzjl3pdo'
             : '/turkce/articles/c8q1ze59n25o',
         smoke: false,
       },
