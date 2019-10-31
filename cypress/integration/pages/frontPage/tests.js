@@ -185,12 +185,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                 'Guide',
               ];
 
-              const usefulLinksItems = usefulLinks.items.filter(item => {
-                return (
-                  item.assetTypeCode === 'PRO' &&
-                  contentTypes.includes(item.contentType)
-                );
-              });
+              let usefulLinksItems = [];
+              if (usefulLinks) {
+                usefulLinksItems = usefulLinks.items.filter(item => {
+                  return (
+                    item.assetTypeCode === 'PRO' &&
+                    contentTypes.includes(item.contentType)
+                  );
+                });
+              }
 
               const isValidUsefulLinks =
                 usefulLinks &&
