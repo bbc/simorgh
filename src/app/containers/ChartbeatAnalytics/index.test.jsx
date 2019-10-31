@@ -128,7 +128,7 @@ describe('Charbeats Analytics Container', () => {
       </ContextWrap>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstChild).toBeNull();
   });
 
   it('should return null when toggle is disbaled for localhost', () => {
@@ -142,7 +142,7 @@ describe('Charbeats Analytics Container', () => {
       </ContextWrap>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstChild).toBeNull();
   });
 
   it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on test', () => {
