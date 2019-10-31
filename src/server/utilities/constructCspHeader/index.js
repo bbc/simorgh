@@ -47,8 +47,6 @@ export const generateScriptSrc = (isAmp, isLive) => {
 };
 
 export const generateImgSrc = isLive => {
-  // default_img_src = '
-
   const imgSrc = [
     'https://ichef.bbci.co.uk',
     'https://ping.chartbeat.net',
@@ -141,13 +139,13 @@ export const localInjectHostCspHeader = (_req, _res, next) => {
 };
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp, route } = getRouteProps(routes, req.url);
-  const { origin, isUK } = getOriginContext(route.bbcOrigin);
+  const { isAmp } = getRouteProps(routes, req.url);
+  const originHeader = req.headers['bbc-origin'];
+  const { origin, isUK } = getOriginContext(originHeader);
 
-  const isLive = origin === 'https://www.bbc.co.uk';
+  const isLive = origin === 'https://bbc.co.uk' || origin === 'https://bbc.com';
 
   const middleware = csp(constructCspHeader(isAmp, isUK, isLive));
-
   middleware(req, res, next);
 };
 
