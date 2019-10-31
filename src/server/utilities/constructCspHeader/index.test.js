@@ -4,22 +4,6 @@ import injectCspHeader, {
   generateConnectSrc,
 } from './index';
 
-const req = {
-  url: 'https://bbc.co.uk/igbo',
-  headers: {
-    'user-agent': 'local-agent',
-    'bbc-origin': 'https://bbc.co.uk',
-  },
-};
-
-const headers = {};
-
-const res = {
-  setHeader: (key, value) => {
-    headers[key] = value;
-  },
-};
-
 const next = jest.fn();
 
 describe('Construct CSP Header', () => {
@@ -27,7 +11,7 @@ describe('Construct CSP Header', () => {
     jest.resetAllMocks();
   });
 
-  it('should be able to generate the default live script src', async () => {
+  it('should be able to generate the default live canon script src', async () => {
     const expected = [
       'https://news.files.bbci.co.uk',
       'https://*.chartbeat.com',
@@ -43,7 +27,7 @@ describe('Construct CSP Header', () => {
     expect(result).toEqual(expected);
   });
 
-  it('should be able to generate the default test script src', async () => {
+  it('should be able to generate the default test cannon script src', async () => {
     const expected = [
       'https://news.files.bbci.co.uk',
       'https://*.chartbeat.com',
@@ -56,6 +40,30 @@ describe('Construct CSP Header', () => {
       'https://news.test.files.bbci.co.uk',
     ];
     const result = generateScriptSrc(false, false);
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should be able to generate the default live amp script src', async () => {
+    const expected = [
+      'https://cdn.ampproject.org',
+      'https://*.chartbeat.com',
+      'https://*.go-mpulse.net',
+      "'unsafe-inline'",
+    ];
+    const result = generateScriptSrc(true, true);
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should be able to generate the default test amp script src', async () => {
+    const expected = [
+      'https://cdn.ampproject.org',
+      'https://*.chartbeat.com',
+      'https://*.go-mpulse.net',
+      "'unsafe-inline'",
+    ];
+    const result = generateScriptSrc(true, false);
 
     expect(result).toEqual(expected);
   });
@@ -109,7 +117,6 @@ describe('Construct CSP Header', () => {
     'https://*.akstat.io',
     'https://*.akamaihd.net',
     'https://c.go-mpulse.net',
-    "'self'",
   ];
 
   const testConnect = (additional, isAmp, isUk, isLive) => {
@@ -123,6 +130,7 @@ describe('Construct CSP Header', () => {
     testConnect(
       [
         'https://a1.api.bbc.co.uk/hit.xiti',
+        "'self'",
         'https://cookie-oven.api.bbc.co.uk',
       ],
       false,
@@ -135,7 +143,7 @@ describe('Construct CSP Header', () => {
     testConnect(
       [
         'https://logws1363.ati-host.net',
-        'https://a1.api.bbc.co.uk/hit.xiti',
+        "'self'",
         'https://cookie-oven.api.bbc.co.uk',
         'https://cookie-oven.test.api.bbc.co.uk',
       ],
@@ -147,7 +155,11 @@ describe('Construct CSP Header', () => {
 
   it('should be able to generate the live connect src when not in the uk', async () => {
     testConnect(
-      ['https://a1.api.bbc.co.uk/hit.xiti', 'https://cookie-oven.api.bbc.com'],
+      [
+        'https://a1.api.bbc.co.uk/hit.xiti',
+        "'self'",
+        'https://cookie-oven.api.bbc.com',
+      ],
       false,
       false,
       true,
@@ -158,7 +170,7 @@ describe('Construct CSP Header', () => {
     testConnect(
       [
         'https://logws1363.ati-host.net',
-        'https://a1.api.bbc.co.uk/hit.xiti',
+        "'self'",
         'https://cookie-oven.api.bbc.com',
         'https://cookie-oven.test.api.bbc.com',
       ],
@@ -168,13 +180,127 @@ describe('Construct CSP Header', () => {
     );
   });
 
-  it('should be able to inject the csp header', () => {
+  // Amp, NonUk, Test
+
+  it('connect src: amp, Nonuk test', async () => {
+    testConnect(['https://logws1363.ati-host.net'], true, false, false);
+  });
+
+  // Amp NonUk, Live
+  it('connect src: amp, Nonuk live', async () => {
+    testConnect(['https://a1.api.bbc.co.uk/hit.xiti'], true, false, true);
+  });
+});
+
+describe('CSP Header Middleware', () => {
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+  // CSP header for live, in the uk on cannonical
+  it('should be able to inject the csp header for live in the uk on cannon', async () => {
+    const req = {
+      url: 'https://bbc.co.uk/igbo',
+      headers: {
+        'user-agent': 'local-agent',
+        'bbc-origin': 'https://bbc.co.uk',
+      },
+    };
+
+    const headers = {};
+
+    const res = {
+      setHeader: (key, value) => {
+        headers[key] = value;
+      },
+    };
+
     injectCspHeader(req, res, next);
 
     expect(next).toHaveBeenCalled();
 
     expect(headers['Content-Security-Policy']).toEqual(
-      "default-src 'self'; font-src https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src 'unsafe-inline'; img-src https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk data: 'self'; script-src https://news.files.bbci.co.uk https://*.chartbeat.com https://*.go-mpulse.net https://mybbc-analytics.files.bbci.co.uk https://emp.bbci.co.uk https://static.bbci.co.uk 'self' 'unsafe-inline'; connect-src https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://cookie-oven.api.bbc.co.uk https://a1.api.bbc.co.uk/hit.xiti 'self'; frame-src 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com",
+      "default-src 'self'; font-src https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src 'unsafe-inline'; img-src https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk data: 'self'; script-src https://news.files.bbci.co.uk https://*.chartbeat.com https://*.go-mpulse.net https://mybbc-analytics.files.bbci.co.uk https://emp.bbci.co.uk https://static.bbci.co.uk 'self' 'unsafe-inline'; connect-src https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://a1.api.bbc.co.uk/hit.xiti 'self' https://cookie-oven.api.bbc.co.uk; frame-src 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com",
+    );
+  });
+
+  // CSP header for live, in the uk on amp
+  it('should be able to inject the csp header for live in the uk on amp', async () => {
+    const req = {
+      url: 'https://bbc.co.uk/igbo.amp',
+      headers: {
+        'user-agent': 'local-agent',
+        'bbc-origin': 'https://bbc.co.uk',
+      },
+    };
+
+    const headers = {};
+
+    const res = {
+      setHeader: (key, value) => {
+        headers[key] = value;
+      },
+    };
+
+    injectCspHeader(req, res, next);
+
+    expect(next).toHaveBeenCalled();
+
+    expect(headers['Content-Security-Policy']).toEqual(
+      "default-src 'self'; font-src https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src 'unsafe-inline'; img-src https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk data: 'self'; script-src https://cdn.ampproject.org https://*.chartbeat.com https://*.go-mpulse.net 'unsafe-inline'; connect-src https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://a1.api.bbc.co.uk/hit.xiti; frame-src 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com",
+    );
+  });
+
+  // CSP header for test, in the uk on cannon
+  it('should be able to inject the csp header for test in the uk on cannon', async () => {
+    const req = {
+      url: 'https://www.test.bbc.co.uk/igbo',
+      headers: {
+        'user-agent': 'local-agent',
+        'bbc-origin': 'https://www.test.bbc.co.uk/',
+      },
+    };
+
+    const headers = {};
+
+    const res = {
+      setHeader: (key, value) => {
+        headers[key] = value;
+      },
+    };
+
+    injectCspHeader(req, res, next);
+
+    expect(next).toHaveBeenCalled();
+
+    expect(headers['Content-Security-Policy']).toEqual(
+      "default-src 'self'; font-src https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src 'unsafe-inline'; img-src https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk https://ichef.test.bbci.co.uk https://news.test.files.bbci.co.uk https://logws1363.ati-host.net data: 'self'; script-src https://news.files.bbci.co.uk https://*.chartbeat.com https://*.go-mpulse.net https://mybbc-analytics.files.bbci.co.uk https://emp.bbci.co.uk https://static.bbci.co.uk 'self' 'unsafe-inline' https://news.test.files.bbci.co.uk; connect-src https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://logws1363.ati-host.net 'self' https://cookie-oven.api.bbc.co.uk https://cookie-oven.test.api.bbc.co.uk; frame-src 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com",
+    );
+  });
+
+  // CSP header for test, in the uk on amp
+  it('should be able to inject the csp header for test in the uk on amp', async () => {
+    const req = {
+      url: 'https://www.test.bbc.co.uk/igbo.amp',
+      headers: {
+        'user-agent': 'local-agent',
+        'bbc-origin': 'https://www.test.bbc.co.uk/',
+      },
+    };
+
+    const headers = {};
+
+    const res = {
+      setHeader: (key, value) => {
+        headers[key] = value;
+      },
+    };
+
+    injectCspHeader(req, res, next);
+
+    expect(next).toHaveBeenCalled();
+
+    expect(headers['Content-Security-Policy']).toEqual(
+      "default-src 'self'; font-src https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src 'unsafe-inline'; img-src https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk https://ichef.test.bbci.co.uk https://news.test.files.bbci.co.uk https://logws1363.ati-host.net data: 'self'; script-src https://cdn.ampproject.org https://*.chartbeat.com https://*.go-mpulse.net 'unsafe-inline'; connect-src https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://logws1363.ati-host.net; frame-src 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com",
     );
   });
 });
