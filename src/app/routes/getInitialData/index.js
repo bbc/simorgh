@@ -1,8 +1,10 @@
 import 'isomorphic-fetch';
+import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
 import preprocess from '#lib/utilities/preprocessor';
 import onClient from '#lib/utilities/onClient';
-import getBaseUrl from '../getBaseUrl';
+import getBaseUrl from './utils/getBaseUrl';
+import getPreprocessorRules from './utils/getPreprocessorRules';
 
 const logger = nodeLogger(__filename);
 const STATUS_CODE_OK = 200;
@@ -18,15 +20,24 @@ const baseUrl = onClient()
 
 const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
 
-const handleResponse = preprocessorRules => async response => {
+const handleResponse = async response => {
   const { status } = response;
 
-  return {
-    status,
-    ...(status === STATUS_CODE_OK && {
-      pageData: await preprocess(await response.json(), preprocessorRules),
-    }),
-  };
+  if (status === STATUS_CODE_OK) {
+    const pageData = await response.json();
+    const type = path(['metadata', 'type'], pageData);
+    const processedPageData = await preprocess(
+      pageData,
+      getPreprocessorRules(type),
+    );
+
+    return {
+      status,
+      pageData: processedPageData,
+    };
+  }
+
+  return { status };
 };
 
 const checkForError = pathname => ({ status, pageData }) => {
@@ -48,9 +59,9 @@ const handleError = error => {
   return { error, status: STATUS_CODE_BAD_GATEWAY };
 };
 
-const fetchData = ({ pathname, preprocessorRules }) =>
+const fetchData = pathname =>
   fetch(getUrl(pathname)) // Remove .amp at the end of pathnames for AMP pages.
-    .then(handleResponse(preprocessorRules))
+    .then(handleResponse)
     .then(checkForError(getUrl(pathname)))
     .catch(handleError);
 
