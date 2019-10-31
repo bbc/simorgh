@@ -67,7 +67,6 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
         {isAmp ? (
           <AmpMediaPlayer
             placeholderSrc={liveRadioPlaceholderImageSrc}
-            showPlaceholder={false}
             src={embedSource}
             title={iframeTitle}
             id={idAttr}
