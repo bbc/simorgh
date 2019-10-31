@@ -92,7 +92,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         it('plays media when a user clicks play', () => {
           cy.window().then(win => {
             const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-            if (media.type === 'video') {
+            if (media && media.type === 'video') {
               cy.get('div[class^="StyledVideoContainer"]').click(); // We don't need this for AMP.
 
               cy.get('iframe[class^="StyledIframe"').then($iframe => {
