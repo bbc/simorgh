@@ -153,7 +153,6 @@ export const service = {
       lastUpdated: 'Last updated: ',
     },
     footer: {
-      trustProjectLink: {},
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Read about our approach to external linking.',
