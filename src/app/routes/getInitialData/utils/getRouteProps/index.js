@@ -15,7 +15,11 @@ const getRouteProps = (routes, url) => {
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
   const id = path(['id'], params);
+  const errorCode = path(['errorCode'], params);
+  console.log('khoa', url);
+  console.log(service);
 
+  console.log(errorCode);
   const variant = variantSanitiser(variantPath);
 
   return {
@@ -25,6 +29,7 @@ const getRouteProps = (routes, url) => {
     id,
     route,
     match,
+    errorCode,
   };
 };
 
