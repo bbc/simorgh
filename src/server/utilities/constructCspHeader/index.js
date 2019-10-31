@@ -115,7 +115,7 @@ export const generateConnectSrc = (isAmp, isUK, isLive) => {
   return connectSrc.concat(generateCookieOvenUrls(isUK, isLive));
 };
 
-const constructCspHeader = (isAmp, _isUK, isLive) => ({
+const constructCspHeader = (isAmp, isUK, isLive) => ({
   directives: {
     'default-src': ["'self'"],
     'font-src': [
@@ -125,14 +125,7 @@ const constructCspHeader = (isAmp, _isUK, isLive) => ({
     'style-src': ["'unsafe-inline'"],
     'img-src': generateImgSrc(isLive),
     'script-src': generateScriptSrc(isAmp, isLive),
-    'connect-src': [
-      'https://*.akstat.io',
-      'https://*.akamaihd.net',
-      'https://c.go-mpulse.net',
-      'https://cookie-oven.api.bbc.co.uk',
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      "'self'",
-    ],
+    'connect-src': generateConnectSrc(isAmp, isUK, isLive),
     'frame-src': [
       "'self'",
       'https://emp.bbc.com',
