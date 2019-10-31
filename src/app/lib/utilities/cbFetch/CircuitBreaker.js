@@ -55,16 +55,9 @@ export default class CircuitBreaker {
     const exists = this.failures[key];
     const updatedAt = Date.now();
 
-    if (!exists) {
-      this.failures[key] = {
-        count: 1,
-        updatedAt,
-      };
-    } else {
-      this.failures[key] = {
-        count: exists.count + 1,
-        updatedAt,
-      };
-    }
+    this.failures[key] = {
+      count: !exists ? 1 : exists.count + 1,
+      updatedAt,
+    };
   }
 }
