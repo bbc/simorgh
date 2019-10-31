@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
-import Grid, { GelPageGrid } from '../../components/Grid';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';

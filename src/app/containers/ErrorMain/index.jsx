@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { number, oneOf, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
-import Grid, { GelPageGridGhost } from '../../components/Grid';
+import Grid, { GelPageGridGhost } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
-import ErrorPageComponent from '../../components/ErrorPage';
+import ErrorPageComponent from '#app/components/ErrorPage';
 
 /*
  * MVP Metadata for the error
@@ -66,9 +66,19 @@ const ErrorMain = ({ status }) => {
           group4: 8,
           group5: 20,
         }}
+        enableGelGutters
+        enableGelMargins
       >
         <Grid
           item
+          startOffset={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 2,
+            group5: 5,
+          }}
           columns={{
             group0: 6,
             group1: 6,

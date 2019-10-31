@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
-import Grid, { GridMaxWidthGroup4 } from '../../components/Grid';
+import Grid, { GridMaxWidthGroup4 } from '#app/components/Grid';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
