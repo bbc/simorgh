@@ -44,51 +44,51 @@ const FrontPageMain = ({ frontPageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <main role="main">
-        <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
-          {offScreenText}
-        </VisuallyHiddenText>
+      <Grid
+        as="main"
+        role="main"
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+        enableGelGutters
+        enableGelMargins
+      >
         <Grid
+          item
           columns={{
             group0: 6,
             group1: 6,
             group2: 6,
             group3: 6,
-            group4: 8,
-            group5: 20,
+            group4: 6,
+            group5: 12,
           }}
-          enableGelGutters
-          enableGelMargins
+          startOffset={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 2,
+            group5: 5,
+          }}
         >
-          <Grid
-            item
-            columns={{
-              group0: 6,
-              group1: 6,
-              group2: 6,
-              group3: 6,
-              group4: 6,
-              group5: 12,
-            }}
-            startOffset={{
-              group0: 1,
-              group1: 1,
-              group2: 1,
-              group3: 1,
-              group4: 2,
-              group5: 5,
-            }}
-          >
-            {groups.map((group, index) => (
-              <FrontPageSection
-                key={group.title}
-                group={group}
-                sectionNumber={index}
-              />
-            ))}
-          </Grid>
+          <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
+            {offScreenText}
+          </VisuallyHiddenText>
+          {groups.map((group, index) => (
+            <FrontPageSection
+              key={group.title}
+              group={group}
+              sectionNumber={index}
+            />
+          ))}
         </Grid>
-      </main>
+      </Grid>
     </>
   );
 };
