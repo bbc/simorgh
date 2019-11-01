@@ -8,7 +8,7 @@ import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withLoading from '../PageHandlers/withLoading';
 
 const ErrorContainer = ({ status, errorCode }) => {
-  return <ErrorMain status={Number(errorCode) || status} />;
+  return <ErrorMain status={errorCode || status} />;
 };
 
 ErrorContainer.propTypes = {
