@@ -1,41 +1,45 @@
 import config from '../../support/config/services';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 
-const serviceHasPageType = (service, pageType) =>
-  config[service.serviceName].pageTypes[pageType].path !== undefined;
+const serviceHasPageType = (serviceName, pageType) =>
+  config[serviceName].pageTypes[pageType].path !== undefined;
 
 const servicesUsingArticlePaths = ['news', 'scotland'];
 
+const services = Object.keys(config);
+
+const serviceHasAtLeastOnePageType = service => {
+  console.log(service);
+  // cy.log(service);
+  const pageTypes = Object.keys(config[service].pageTypes);
+
+  return pageTypes.some(pageType => serviceHasPageType(service, pageType));
+};
+
 describe('Application', () => {
-  Object.keys(config)
-    .filter(service =>
-      Object.keys(config[service.serviceName].pageTypes).some(pageType =>
-        serviceHasPageType(service, pageType),
-      ),
-    )
-    .forEach(service => {
-      const usesArticlePath = servicesUsingArticlePaths.includes(service);
+  services.filter(serviceHasAtLeastOnePageType).forEach(service => {
+    const usesArticlePath = servicesUsingArticlePaths.includes(service);
 
-      it(`should return a 200 status code for ${service}'s service worker`, () => {
-        cy.testResponseCodeAndType(
-          usesArticlePath
-            ? `/${service.serviceName}/articles/sw.js`
-            : `/${service.serviceName}/sw.js`,
-          200,
-          'application/javascript',
-        );
-      });
-
-      it(`should return a 200 status code for ${service} manifest file`, () => {
-        cy.testResponseCodeAndType(
-          usesArticlePath
-            ? `/${service.serviceName}/articles/manifest.json`
-            : `/${service.serviceName}/manifest.json`,
-          200,
-          'application/json',
-        );
-      });
+    it(`should return a 200 status code for ${service}'s service worker`, () => {
+      cy.testResponseCodeAndType(
+        usesArticlePath
+          ? `/${service.name}/articles/sw.js`
+          : `/${service.name}/sw.js`,
+        200,
+        'application/javascript',
+      );
     });
+
+    it(`should return a 200 status code for ${service} manifest file`, () => {
+      cy.testResponseCodeAndType(
+        usesArticlePath
+          ? `/${service.name}/articles/manifest.json`
+          : `/${service.name}/manifest.json`,
+        200,
+        'application/json',
+      );
+    });
+  });
 });
 
 describe('Application unknown route error pages', () => {
@@ -53,7 +57,7 @@ describe('Application unknown route error pages', () => {
         const service = url.includes('igbo') ? 'igbo' : 'news';
         cy.get('h1').should(
           'contain',
-          `${appConfig[service.serviceName].default.translations.error[404].title}`,
+          `${appConfig[service.name].default.translations.error[404].title}`,
         );
       });
     });

@@ -1,6 +1,6 @@
 const services = {
   afaanoromoo: {
-    serviceName: 'afaanoromoo',
+    name: 'afaanoromoo',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -37,7 +37,7 @@ const services = {
     },
   },
   afrique: {
-    serviceName: 'afrique',
+    name: 'afrique',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -79,7 +79,7 @@ const services = {
     },
   },
   amharic: {
-    serviceName: 'amharic',
+    name: 'amharic',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -116,7 +116,7 @@ const services = {
     },
   },
   arabic: {
-    serviceName: 'arabic',
+    name: 'arabic',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -158,7 +158,7 @@ const services = {
     },
   },
   azeri: {
-    serviceName: 'azeri',
+    name: 'azeri',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -192,7 +192,7 @@ const services = {
     },
   },
   bengali: {
-    serviceName: 'bengali',
+    name: 'bengali',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -234,7 +234,7 @@ const services = {
     },
   },
   burmese: {
-    serviceName: 'burmese',
+    name: 'burmese',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -276,7 +276,7 @@ const services = {
     },
   },
   cymrufyw: {
-    serviceName: 'cymrufyw',
+    name: 'cymrufyw',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -307,7 +307,7 @@ const services = {
     },
   },
   gahuza: {
-    serviceName: 'gahuza',
+    name: 'gahuza',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -349,7 +349,7 @@ const services = {
     },
   },
   gujarati: {
-    serviceName: 'gujarati',
+    name: 'gujarati',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -383,7 +383,7 @@ const services = {
     },
   },
   hausa: {
-    serviceName: 'hausa',
+    name: 'hausa',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -425,7 +425,7 @@ const services = {
     },
   },
   hindi: {
-    serviceName: 'hindi',
+    name: 'hindi',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -467,7 +467,7 @@ const services = {
     },
   },
   igbo: {
-    serviceName: 'igbo',
+    name: 'igbo',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -498,7 +498,7 @@ const services = {
     },
   },
   indonesia: {
-    serviceName: 'indonesia',
+    name: 'indonesia',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -535,7 +535,7 @@ const services = {
     },
   },
   japanese: {
-    serviceName: 'japanese',
+    name: 'japanese',
     font: undefined,
     isWorldService: false,
     variant: 'default',
@@ -569,7 +569,7 @@ const services = {
     },
   },
   korean: {
-    serviceName: 'korean',
+    name: 'korean',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -606,7 +606,7 @@ const services = {
     },
   },
   kyrgyz: {
-    serviceName: 'kyrgyz',
+    name: 'kyrgyz',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -648,7 +648,7 @@ const services = {
     },
   },
   marathi: {
-    serviceName: 'marathi',
+    name: 'marathi',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -682,7 +682,7 @@ const services = {
     },
   },
   mundo: {
-    serviceName: 'mundo',
+    name: 'mundo',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -716,7 +716,7 @@ const services = {
     },
   },
   naidheachdan: {
-    serviceName: 'naidheachdan',
+    name: 'naidheachdan',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -744,7 +744,7 @@ const services = {
     },
   },
   nepali: {
-    serviceName: 'nepali',
+    name: 'nepali',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -786,7 +786,7 @@ const services = {
     },
   },
   news: {
-    serviceName: 'news',
+    name: 'news',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -811,7 +811,7 @@ const services = {
     },
   },
   pashto: {
-    serviceName: 'pashto',
+    name: 'pashto',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -853,7 +853,7 @@ const services = {
     },
   },
   persian: {
-    serviceName: 'persian',
+    name: 'persian',
     font: 'Nassim',
     isWorldService: true,
     variant: 'default',
@@ -893,7 +893,7 @@ const services = {
     },
   },
   pidgin: {
-    serviceName: 'pidgin',
+    name: 'pidgin',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -924,7 +924,7 @@ const services = {
     },
   },
   portuguese: {
-    serviceName: 'portuguese',
+    name: 'portuguese',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -958,7 +958,7 @@ const services = {
     },
   },
   punjabi: {
-    serviceName: 'punjabi',
+    name: 'punjabi',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -991,7 +991,7 @@ const services = {
     },
   },
   russian: {
-    serviceName: 'russian',
+    name: 'russian',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1025,7 +1025,7 @@ const services = {
     },
   },
   scotland: {
-    serviceName: 'scotland',
+    name: 'scotland',
     font: undefined,
     isWorldService: false,
     variant: 'default',
@@ -1050,7 +1050,7 @@ const services = {
     },
   },
   serbianCyr: {
-    serviceName: 'serbian',
+    name: 'serbian',
     font: undefined,
     isWorldService: true,
     variant: 'cyr',
@@ -1087,7 +1087,7 @@ const services = {
     },
   },
   serbianLat: {
-    serviceName: 'serbian',
+    name: 'serbian',
     font: undefined,
     isWorldService: true,
     variant: 'lat',
@@ -1124,7 +1124,7 @@ const services = {
     },
   },
   sinhala: {
-    serviceName: 'sinhala',
+    name: 'sinhala',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1166,7 +1166,7 @@ const services = {
     },
   },
   somali: {
-    serviceName: 'somali',
+    name: 'somali',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -1207,7 +1207,7 @@ const services = {
     },
   },
   sport: {
-    serviceName: 'sport',
+    name: 'sport',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -1219,7 +1219,7 @@ const services = {
     },
   },
   swahili: {
-    serviceName: 'swahili',
+    name: 'swahili',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1261,7 +1261,7 @@ const services = {
     },
   },
   tamil: {
-    serviceName: 'tamil',
+    name: 'tamil',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1303,7 +1303,7 @@ const services = {
     },
   },
   telugu: {
-    serviceName: 'telugu',
+    name: 'telugu',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1337,7 +1337,7 @@ const services = {
     },
   },
   thai: {
-    serviceName: 'thai',
+    name: 'thai',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1371,7 +1371,7 @@ const services = {
     },
   },
   tigrinya: {
-    serviceName: 'tigrinya',
+    name: 'tigrinya',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1408,7 +1408,7 @@ const services = {
     },
   },
   turkce: {
-    serviceName: 'turkce',
+    name: 'turkce',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -1442,7 +1442,7 @@ const services = {
     },
   },
   ukchinaSimp: {
-    serviceName: 'ukchina',
+    name: 'ukchina',
     font: undefined,
     isWorldService: true,
     variant: 'simp',
@@ -1479,7 +1479,7 @@ const services = {
     },
   },
   ukchinaTrad: {
-    serviceName: 'ukchina',
+    name: 'ukchina',
     font: undefined,
     isWorldService: true,
     variant: 'trad',
@@ -1516,7 +1516,7 @@ const services = {
     },
   },
   ukrainian: {
-    serviceName: 'ukranian',
+    name: 'ukranian',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1550,7 +1550,7 @@ const services = {
     },
   },
   urdu: {
-    serviceName: 'urdu',
+    name: 'urdu',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1592,7 +1592,7 @@ const services = {
     },
   },
   uzbek: {
-    serviceName: 'uzbek',
+    name: 'uzbek',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1634,7 +1634,7 @@ const services = {
     },
   },
   vietnamese: {
-    serviceName: 'vietnamese',
+    name: 'vietnamese',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1668,7 +1668,7 @@ const services = {
     },
   },
   yoruba: {
-    serviceName: 'yoruba',
+    name: 'yoruba',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1699,7 +1699,7 @@ const services = {
     },
   },
   zhongwenSimp: {
-    serviceName: 'zhongwen',
+    name: 'zhongwen',
     font: undefined,
     isWorldService: true,
     variant: 'simp',
@@ -1736,7 +1736,7 @@ const services = {
     },
   },
   zhongwenTrad: {
-    serviceName: 'zhongwen',
+    name: 'zhongwen',
     font: undefined,
     isWorldService: true,
     variant: 'trad',

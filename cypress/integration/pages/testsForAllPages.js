@@ -253,6 +253,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
     });
 
     describe('Header Tests', () => {
+      debugger;
       const hasLocalisedName =
         appConfig[service][variant].serviceLocalizedName !== undefined;
 
