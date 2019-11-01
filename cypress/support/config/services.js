@@ -1511,7 +1511,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/uzbek/uzbekistan-49192467',
+            : '/uzbek/sport-23248721',
         smoke: false,
       },
     },
