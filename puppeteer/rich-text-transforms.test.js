@@ -61,7 +61,10 @@ describe('rich-text-transforms JS bundle request', () => {
               requests.some(url => url.match(richTextTransformsBundleRegex)),
             ).toEqual(false);
 
-            await page.click('a[data-e2e="cpsAssetDummyLink"]');
+            await Promise.all([
+              page.click('a[data-e2e="cpsAssetDummyLink"]'),
+              page.waitForNavigation({ waitUntil: 'networkidle2' }),
+            ]);
 
             await page.waitForRequest(request =>
               request.url().match(richTextTransformsBundleRegex),
