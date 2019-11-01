@@ -710,7 +710,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding: 2rem 0;
 }
 
-.c19 {
+.c22 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1119,21 +1119,21 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c22 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c22 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c22 {
     padding-top: 2rem;
   }
 }
@@ -1718,7 +1718,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c19"
+            class="c22"
             id="This-is-a-heading"
             tabindex="-1"
           >
@@ -1729,7 +1729,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c19"
+            class="c22"
             id="This-is-a-subheading"
             tabindex="-1"
           >
@@ -1749,7 +1749,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c19"
+            class="c22"
             id="This-is-a-crosshead"
             tabindex="-1"
           >
