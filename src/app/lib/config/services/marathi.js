@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `mr`,
-    articleAuthor: `https://www.facebook.com/bbcnewsmarathi`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
@@ -27,10 +27,10 @@ export const service = {
     locale: `mr-IN`,
     datetimeLocale: `mr`,
     service: 'marathi',
-    serviceName: 'News मराठी',
+    serviceName: 'मराठी',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsmarathi',
-    twitterSite: '@bbcnewsmarathi',
+    twitterSite: '@bbcnews',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
