@@ -710,6 +710,17 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding: 2rem 0;
 }
 
+.c19 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
 .c18 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1104,6 +1115,26 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c3 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    padding-top: 2rem;
   }
 }
 
@@ -1686,11 +1717,44 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         <div
           class="c1"
         >
+          <h2
+            class="c19"
+            id="This-is-a-heading"
+            tabindex="-1"
+          >
+            This is a heading!
+          </h2>
+        </div>
+        <div
+          class="c1"
+        >
+          <h2
+            class="c19"
+            id="This-is-a-subheading"
+            tabindex="-1"
+          >
+            This is a subheading!
+          </h2>
+        </div>
+        <div
+          class="c1"
+        >
           <p
             class="c16"
           >
             Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
           </p>
+        </div>
+        <div
+          class="c1"
+        >
+          <h2
+            class="c19"
+            id="This-is-a-crosshead"
+            tabindex="-1"
+          >
+            This is a crosshead!
+          </h2>
         </div>
         <div
           class="c1"

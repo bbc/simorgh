@@ -23,6 +23,7 @@ const CpsAssetPageMain = ({ pageData }) => {
 
   const componentsToRender = {
     headline: headings,
+    subheadline: headings,
     text,
     image,
     timestamp,

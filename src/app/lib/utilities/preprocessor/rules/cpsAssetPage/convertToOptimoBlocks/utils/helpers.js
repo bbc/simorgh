@@ -20,3 +20,10 @@ export const optimoText = paragraphs => ({
     blocks: paragraphs.map(optimoParagraph),
   },
 });
+
+export const optimoSubheadline = paragraphs => ({
+  type: 'subheadline',
+  model: {
+    blocks: [optimoText(paragraphs)],
+  },
+});
