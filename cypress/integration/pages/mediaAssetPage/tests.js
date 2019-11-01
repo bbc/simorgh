@@ -12,7 +12,11 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  pageType,
+  variant,
+}) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a H1, which contains/displays a styled headline', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
@@ -48,7 +52,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
               .eq(1)
               .should(
                 'contain',
-                appConfig[service].default.articleTimestampPrefix,
+                appConfig[service][variant].articleTimestampPrefix,
               );
           }
         },
