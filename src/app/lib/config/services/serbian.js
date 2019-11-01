@@ -218,28 +218,28 @@ export const service = {
     datetimeLocale: `sr-cyrl`,
     navigation: [
       {
-        title: 'Početna strana',
-        url: '/serbian/lat',
+        title: 'Почетна страна',
+        url: '/serbian/cyr',
       },
       {
         title: 'Србија',
         url: '/serbian/cyr/1791445f-977a-4e6d-b490-51f84bb4fc52',
       },
       {
-        title: 'Balkan',
-        url: '/serbian/lat/balkan',
+        title: 'Балкан',
+        url: '/serbian/cyr/balkan',
       },
       {
-        title: 'Svet',
-        url: '/serbian/lat/svet',
+        title: 'Свет',
+        url: '/serbian/cyr/svet',
       },
       {
-        title: 'Video',
-        url: '/serbian/lat/media/video',
+        title: 'Видео',
+        url: '/serbian/cyr/media/video',
       },
       {
-        title: 'Najpopularnije',
-        url: '/serbian/lat/popular/read',
+        title: 'Најпопуларније',
+        url: '/serbian/cyr/popular/read',
       },
     ],
   },
