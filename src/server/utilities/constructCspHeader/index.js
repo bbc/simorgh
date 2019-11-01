@@ -32,7 +32,7 @@ export const generateScriptSrc = (isAmp, isLive) => {
 };
 
 export const generateImgSrc = isLive => {
-  const imgSrc = [
+  let imgSrc = [
     'https://ichef.bbci.co.uk',
     'https://ping.chartbeat.net',
     'https://a1.api.bbc.co.uk/hit.xiti',
@@ -46,9 +46,8 @@ export const generateImgSrc = isLive => {
       'https://ichef.test.bbci.co.uk',
       'https://news.test.files.bbci.co.uk',
       'https://logws1363.ati-host.net',
-      "data: 'self'",
     ];
-    return imgSrc.concat(testSrc);
+    imgSrc = imgSrc.concat(testSrc);
   }
   // Duplicated to maintain proper order
   imgSrc.push("data: 'self'");
