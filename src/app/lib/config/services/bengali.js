@@ -12,7 +12,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `bn`,
-    articleAuthor: `https://www.facebook.com/BBCBengaliService`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
@@ -31,7 +31,7 @@ export const service = {
     locale: `bn-BD`,
     datetimeLocale: `bn`,
     service: 'bengali',
-    serviceName: 'News বাংলা',
+    serviceName: 'বাংলা',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbangla',
     twitterSite: '@bbcbangla',
