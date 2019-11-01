@@ -26,7 +26,7 @@ const getRouteProps = (routes, url) => {
     id,
     route,
     match,
-    errorCode,
+    errorCode: Number(errorCode),
   };
 };
 
