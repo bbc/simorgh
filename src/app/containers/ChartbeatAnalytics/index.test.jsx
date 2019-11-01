@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
 import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
@@ -100,18 +100,16 @@ describe('Charbeats Analytics Container', () => {
       },
     };
 
-    const tree = renderer
-      .create(
-        <ContextWrap
-          platform="amp"
-          pageType="article"
-          origin="bbc.com"
-          toggleState={toggleState}
-        >
-          <ChartbeatAnalytics data={frontPageData} />
-        </ContextWrap>,
-      )
-      .toJSON();
+    const { container } = render(
+      <ContextWrap
+        platform="amp"
+        pageType="article"
+        origin="bbc.com"
+        toggleState={toggleState}
+      >
+        <ChartbeatAnalytics data={frontPageData} />
+      </ContextWrap>,
+    );
     expect(mockAmp).toHaveBeenCalledTimes(1);
     expect(mockAmp).toHaveBeenCalledWith(
       {
@@ -120,35 +118,32 @@ describe('Charbeats Analytics Container', () => {
       {},
     );
     expect(testUtils.getConfig).toHaveBeenCalledTimes(1);
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).not.toBeNull();
+    expect(container.firstChild.textContent).toEqual('amp-return-value');
   });
 
   it('should return null when toggle is disbaled for live', () => {
-    const tree = renderer
-      .create(
-        <ContextWrap platform="canonical" pageType="article" origin="bbc.com">
-          <ChartbeatAnalytics data={frontPageData} />
-        </ContextWrap>,
-      )
-      .toJSON();
+    const { container } = render(
+      <ContextWrap platform="canonical" pageType="article" origin="bbc.com">
+        <ChartbeatAnalytics data={frontPageData} />
+      </ContextWrap>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toBeNull();
   });
 
   it('should return null when toggle is disbaled for localhost', () => {
-    const tree = renderer
-      .create(
-        <ContextWrap
-          platform="canonical"
-          pageType="article"
-          origin={localBaseUrl}
-        >
-          <ChartbeatAnalytics data={frontPageData} />
-        </ContextWrap>,
-      )
-      .toJSON();
+    const { container } = render(
+      <ContextWrap
+        platform="canonical"
+        pageType="article"
+        origin={localBaseUrl}
+      >
+        <ChartbeatAnalytics data={frontPageData} />
+      </ContextWrap>,
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toBeNull();
   });
 
   it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on test', () => {
