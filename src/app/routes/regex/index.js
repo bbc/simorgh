@@ -10,7 +10,7 @@ const ampRegex = '.amp';
 const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
-const errorCodeRegex = '400|500';
+const errorCodeRegex = '404|500';
 
 export const articleRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
