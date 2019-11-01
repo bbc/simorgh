@@ -2,14 +2,14 @@ import config from '../../support/config/services';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 
 const serviceHasPageType = (service, pageType) =>
-  config[service].pageTypes[pageType].path !== undefined;
+  config[service.serviceName].pageTypes[pageType].path !== undefined;
 
 const servicesUsingArticlePaths = ['news', 'scotland'];
 
 describe('Application', () => {
   Object.keys(config)
     .filter(service =>
-      Object.keys(config[service].pageTypes).some(pageType =>
+      Object.keys(config[service.serviceName].pageTypes).some(pageType =>
         serviceHasPageType(service, pageType),
       ),
     )
@@ -18,7 +18,9 @@ describe('Application', () => {
 
       it(`should return a 200 status code for ${service}'s service worker`, () => {
         cy.testResponseCodeAndType(
-          usesArticlePath ? `/${service}/articles/sw.js` : `/${service}/sw.js`,
+          usesArticlePath
+            ? `/${service.serviceName}/articles/sw.js`
+            : `/${service.serviceName}/sw.js`,
           200,
           'application/javascript',
         );
@@ -27,8 +29,8 @@ describe('Application', () => {
       it(`should return a 200 status code for ${service} manifest file`, () => {
         cy.testResponseCodeAndType(
           usesArticlePath
-            ? `/${service}/articles/manifest.json`
-            : `/${service}/manifest.json`,
+            ? `/${service.serviceName}/articles/manifest.json`
+            : `/${service.serviceName}/manifest.json`,
           200,
           'application/json',
         );
@@ -51,7 +53,7 @@ describe('Application unknown route error pages', () => {
         const service = url.includes('igbo') ? 'igbo' : 'news';
         cy.get('h1').should(
           'contain',
-          `${appConfig[service].default.translations.error[404].title}`,
+          `${appConfig[service.serviceName].default.translations.error[404].title}`,
         );
       });
     });
