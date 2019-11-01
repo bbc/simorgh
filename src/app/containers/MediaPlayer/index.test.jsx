@@ -20,15 +20,15 @@ describe('MediaPlayer', () => {
     VideoCanonicalNoPlaceholder,
   );
 
-  shouldMatchSnapshot('Calls the AMP player when platform is AMP', VideoAmp);
+  shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
 
   shouldMatchSnapshot(
-    'Calls the canonical player with a caption',
+    'Renders the canonical player with a caption',
     VideoCanonicalWithCaption,
   );
 
   shouldMatchSnapshot(
-    'Calls the AMP player with a caption',
+    'Renders the AMP player with a caption',
     VideoAmpWithCaption,
   );
 
