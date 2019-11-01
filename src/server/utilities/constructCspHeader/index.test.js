@@ -2,18 +2,19 @@ import injectCspHeader, {
   generateScriptSrc,
   generateImgSrc,
   generateConnectSrc,
+  generateCspContext,
 } from './index';
 
 const next = jest.fn();
 
-const testAmpScript = (isAmp, isLive) => {
+const testAmpScript = context => {
   const expected = [
     'https://cdn.ampproject.org',
     'https://*.chartbeat.com',
     'https://*.go-mpulse.net',
     "'unsafe-inline'",
   ];
-  const result = generateScriptSrc(isAmp, isLive);
+  const result = generateScriptSrc(context);
 
   expect(result).toEqual(expected);
 };
@@ -24,9 +25,9 @@ const connectCommon = [
   'https://c.go-mpulse.net',
 ];
 
-const testConnect = (additional, isAmp, isUk, isLive) => {
+const testConnect = (additional, context) => {
   const expected = connectCommon.concat(additional);
-  const result = generateConnectSrc(isAmp, isUk, isLive);
+  const result = generateConnectSrc(context);
 
   expect(result).toEqual(expected);
 };
@@ -71,7 +72,8 @@ describe('Construct CSP Header', () => {
       "'self'",
       "'unsafe-inline'",
     ];
-    const result = generateScriptSrc(false, true);
+    const context = generateCspContext(false, true, true);
+    const result = generateScriptSrc(context);
 
     expect(result).toEqual(expected);
   });
@@ -88,17 +90,20 @@ describe('Construct CSP Header', () => {
       "'unsafe-inline'",
       'https://news.test.files.bbci.co.uk',
     ];
-    const result = generateScriptSrc(false, false);
+    const context = generateCspContext(false, true, false);
+    const result = generateScriptSrc(context);
 
     expect(result).toEqual(expected);
   });
 
   it('should be able to generate the default live amp script src', async () => {
-    testAmpScript(true, true);
+    const context = generateCspContext(true, true, true);
+    testAmpScript(context);
   });
 
   it('should be able to generate the default test amp script src', async () => {
-    testAmpScript(true, false);
+    const context = generateCspContext(true, true, false);
+    testAmpScript(context);
   });
 
   it('should be able to generate the live img src', async () => {
@@ -111,7 +116,8 @@ describe('Construct CSP Header', () => {
       'https://r.bbci.co.uk',
       "data: 'self'",
     ];
-    const result = generateImgSrc(true);
+    const context = generateCspContext(false, true, true);
+    const result = generateImgSrc(context);
 
     expect(result).toEqual(expected);
   });
@@ -129,25 +135,26 @@ describe('Construct CSP Header', () => {
       'https://logws1363.ati-host.net',
       "data: 'self'",
     ];
-    const result = generateImgSrc(false);
+    const context = generateCspContext(false, true, false);
+    const result = generateImgSrc(context);
 
     expect(result).toEqual(expected);
   });
 
   it('should be able to generate the live connect src when in the uk on cannonical', async () => {
+    const context = generateCspContext(false, true, true);
     testConnect(
       [
         'https://a1.api.bbc.co.uk/hit.xiti',
         "'self'",
         'https://cookie-oven.api.bbc.co.uk',
       ],
-      false,
-      true,
-      true,
+      context,
     );
   });
 
   it('should be able to generate the test connect src when in the uk on cannonical', async () => {
+    const context = generateCspContext(false, true, false);
     testConnect(
       [
         'https://logws1363.ati-host.net',
@@ -155,26 +162,24 @@ describe('Construct CSP Header', () => {
         'https://cookie-oven.api.bbc.co.uk',
         'https://cookie-oven.test.api.bbc.co.uk',
       ],
-      false,
-      true,
-      false,
+      context,
     );
   });
 
   it('should be able to generate the live connect src when not in the uk on cannonical', async () => {
+    const context = generateCspContext(false, false, true);
     testConnect(
       [
         'https://a1.api.bbc.co.uk/hit.xiti',
         "'self'",
         'https://cookie-oven.api.bbc.com',
       ],
-      false,
-      false,
-      true,
+      context,
     );
   });
 
   it('should be able to generate the test connect src when not in the uk on cannonical', async () => {
+    const context = generateCspContext(false, false, false);
     testConnect(
       [
         'https://logws1363.ati-host.net',
@@ -182,26 +187,28 @@ describe('Construct CSP Header', () => {
         'https://cookie-oven.api.bbc.com',
         'https://cookie-oven.test.api.bbc.com',
       ],
-      false,
-      false,
-      false,
+      context,
     );
   });
 
   it('should be able to generate the test connect src when not in the uk on amp', async () => {
-    testConnect(['https://logws1363.ati-host.net'], true, false, false);
+    const context = generateCspContext(true, false, false);
+    testConnect(['https://logws1363.ati-host.net'], context);
   });
 
   it('should be able to generate the live connect src when not in the uk on amp', async () => {
-    testConnect(['https://a1.api.bbc.co.uk/hit.xiti'], true, false, true);
+    const context = generateCspContext(true, false, true);
+    testConnect(['https://a1.api.bbc.co.uk/hit.xiti'], context);
   });
 
   it('should be able to generate the test connect src when in the uk on amp', async () => {
-    testConnect(['https://logws1363.ati-host.net'], true, true, false);
+    const context = generateCspContext(true, true, false);
+    testConnect(['https://logws1363.ati-host.net'], context);
   });
 
   it('should be able to generate the live connect src when in the uk on amp', async () => {
-    testConnect(['https://a1.api.bbc.co.uk/hit.xiti'], true, true, true);
+    const context = generateCspContext(true, true, true);
+    testConnect(['https://a1.api.bbc.co.uk/hit.xiti'], context);
   });
 });
 
