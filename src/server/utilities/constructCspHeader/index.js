@@ -3,12 +3,6 @@ import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
-// Test AMP Connect Tag
-// connect-src https://logws1363.ati-host.net https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net; frame-src 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com
-
-// Live AMP Script Tag
-// connect-src https://a1.api.bbc.co.uk/hit.xiti https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net; frame-src 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com
-
 export const generateScriptSrc = (isAmp, isLive) => {
   if (isAmp) {
     return [

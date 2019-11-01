@@ -6,6 +6,55 @@ import injectCspHeader, {
 
 const next = jest.fn();
 
+const testAmpScript = (isAmp, isLive) => {
+  const expected = [
+    'https://cdn.ampproject.org',
+    'https://*.chartbeat.com',
+    'https://*.go-mpulse.net',
+    "'unsafe-inline'",
+  ];
+  const result = generateScriptSrc(isAmp, isLive);
+
+  expect(result).toEqual(expected);
+};
+
+const connectCommon = [
+  'https://*.akstat.io',
+  'https://*.akamaihd.net',
+  'https://c.go-mpulse.net',
+];
+
+const testConnect = (additional, isAmp, isUk, isLive) => {
+  const expected = connectCommon.concat(additional);
+  const result = generateConnectSrc(isAmp, isUk, isLive);
+
+  expect(result).toEqual(expected);
+};
+
+const testMiddleware = (origin, path, cspString) => {
+  const req = {
+    url: origin + path,
+    headers: {
+      'user-agent': 'local-agent',
+      'bbc-origin': origin,
+    },
+  };
+
+  const headers = {};
+
+  const res = {
+    setHeader: (key, value) => {
+      headers[key] = value;
+    },
+  };
+
+  injectCspHeader(req, res, next);
+
+  expect(next).toHaveBeenCalled();
+
+  expect(headers['Content-Security-Policy']).toEqual(cspString);
+};
+
 describe('Construct CSP Header', () => {
   afterEach(() => {
     jest.resetAllMocks();
@@ -43,18 +92,6 @@ describe('Construct CSP Header', () => {
 
     expect(result).toEqual(expected);
   });
-
-  const testAmpScript = (isAmp, isLive) => {
-    const expected = [
-      'https://cdn.ampproject.org',
-      'https://*.chartbeat.com',
-      'https://*.go-mpulse.net',
-      "'unsafe-inline'",
-    ];
-    const result = generateScriptSrc(isAmp, isLive);
-
-    expect(result).toEqual(expected);
-  };
 
   it('should be able to generate the default live amp script src', async () => {
     testAmpScript(true, true);
@@ -96,19 +133,6 @@ describe('Construct CSP Header', () => {
 
     expect(result).toEqual(expected);
   });
-
-  const connectCommon = [
-    'https://*.akstat.io',
-    'https://*.akamaihd.net',
-    'https://c.go-mpulse.net',
-  ];
-
-  const testConnect = (additional, isAmp, isUk, isLive) => {
-    const expected = connectCommon.concat(additional);
-    const result = generateConnectSrc(isAmp, isUk, isLive);
-
-    expect(result).toEqual(expected);
-  };
 
   it('should be able to generate the live connect src when in the uk on cannonical', async () => {
     testConnect(
@@ -164,12 +188,10 @@ describe('Construct CSP Header', () => {
     );
   });
 
-  // Amp, NonUk, Test
   it('should be able to generate the test connect src when not in the uk on amp', async () => {
     testConnect(['https://logws1363.ati-host.net'], true, false, false);
   });
 
-  // Amp NonUk, Live
   it('should be able to generate the live connect src when not in the uk on amp', async () => {
     testConnect(['https://a1.api.bbc.co.uk/hit.xiti'], true, false, true);
   });
@@ -183,35 +205,11 @@ describe('Construct CSP Header', () => {
   });
 });
 
-const testMiddleware = (origin, path, cspString) => {
-  const req = {
-    url: origin + path,
-    headers: {
-      'user-agent': 'local-agent',
-      'bbc-origin': origin,
-    },
-  };
-
-  const headers = {};
-
-  const res = {
-    setHeader: (key, value) => {
-      headers[key] = value;
-    },
-  };
-
-  injectCspHeader(req, res, next);
-
-  expect(next).toHaveBeenCalled();
-
-  expect(headers['Content-Security-Policy']).toEqual(cspString);
-};
-
 describe('CSP Header Middleware', () => {
   afterEach(() => {
     jest.resetAllMocks();
   });
-  // CSP header for live, in the uk on cannonical
+
   it('should be able to inject the csp header for live in the uk on cannon', async () => {
     testMiddleware(
       'https://bbc.co.uk',
@@ -220,7 +218,6 @@ describe('CSP Header Middleware', () => {
     );
   });
 
-  // CSP header for live, in the uk on amp
   it('should be able to inject the csp header for live in the uk on amp', async () => {
     testMiddleware(
       'https://bbc.co.uk',
@@ -237,7 +234,6 @@ describe('CSP Header Middleware', () => {
     );
   });
 
-  // CSP header for live, in the uk on amp
   it('should be able to inject the csp header for live outside the uk on amp', async () => {
     testMiddleware(
       'https://bbc.com',
@@ -246,7 +242,6 @@ describe('CSP Header Middleware', () => {
     );
   });
 
-  // CSP header for test, in the uk on cannon
   it('should be able to inject the csp header for test in the uk on cannon', async () => {
     testMiddleware(
       'https://www.test.bbc.co.uk',
@@ -255,7 +250,6 @@ describe('CSP Header Middleware', () => {
     );
   });
 
-  // CSP header for test, in the uk on amp
   it('should be able to inject the csp header for test in the uk on amp', async () => {
     testMiddleware(
       'https://www.test.bbc.co.uk',
@@ -272,7 +266,6 @@ describe('CSP Header Middleware', () => {
     );
   });
 
-  // CSP header for test, in the uk on amp
   it('should be able to inject the csp header for test in the uk on amp', async () => {
     testMiddleware(
       'https://www.test.bbc.com',
