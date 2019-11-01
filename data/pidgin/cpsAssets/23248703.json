@@ -112,7 +112,7 @@
         {
           "text": "This is a subheading ",
           "markupType": "plain_text",
-          "type": "heading"
+          "type": "subheading"
         },
         {
           "text": "This is a crosshead ",

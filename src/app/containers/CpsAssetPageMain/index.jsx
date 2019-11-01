@@ -15,6 +15,7 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
 const componentsToRender = {
   headline: headings,
+  subheadline: headings,
   text,
   image,
   timestamp,
