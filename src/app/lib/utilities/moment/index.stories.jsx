@@ -779,15 +779,13 @@ ShowMoment.propTypes = {
   locale: string.isRequired,
 };
 
-const editorialStories = storiesOf(
-  'Moment Locales/Editorial view',
-  module,
-).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
+const editorialStories = storiesOf('Moment Locales/Editorial view', module)
+  .addParameters({ chromatic: { disable: true } })
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
-const developerStories = storiesOf(
-  'Moment Locales/Developer view',
-  module,
-).addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
+const developerStories = storiesOf('Moment Locales/Developer view', module)
+  .addParameters({ chromatic: { disable: true } })
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
 const capitalizeService = service =>
   service.charAt(0).toUpperCase() + service.slice(1);
