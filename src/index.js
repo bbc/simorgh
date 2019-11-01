@@ -7,7 +7,10 @@ if (DOT_ENV_CONFIG.error) {
 }
 
 // now `process.env.*` variables are set run the rest of the app
+const fs = require('fs');
+const path = require('path');
 const http = require('http');
+const https = require('https');
 const nodeLogger = require('#lib/logger.node');
 const app = require('./server').default;
 
@@ -21,6 +24,22 @@ server.listen(port, error => {
     logger.error(error);
   }
 });
+
+if (process.env.NODE_ENV !== 'production') {
+  const secureServer = https.createServer(
+    {
+      key: fs.readFileSync(path.join(__dirname, '../.ssl/server.key')),
+      cert: fs.readFileSync(path.join(__dirname, '../.ssl/server.cert')),
+    },
+    app,
+  );
+  const securePort = port + 1;
+  secureServer.listen(securePort, error => {
+    if (error) {
+      logger.error(error);
+    }
+  });
+}
 
 if (module.hot) {
   logger.info('✅  Server-side Hot Module Replacement enabled');
