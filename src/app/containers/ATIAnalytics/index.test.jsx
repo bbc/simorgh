@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '../Article/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -68,7 +68,7 @@ describe('ATI Analytics Container', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
 
-      renderer.create(
+      render(
         <ContextWrap platform="canonical" pageType="article">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
@@ -105,7 +105,7 @@ describe('ATI Analytics Container', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       amp.default = mockAmp;
 
-      renderer.create(
+      render(
         <ContextWrap platform="amp" pageType="article">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
@@ -137,7 +137,7 @@ describe('ATI Analytics Container', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
 
-      renderer.create(
+      render(
         <ContextWrap platform="canonical" pageType="frontPage">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
@@ -168,7 +168,7 @@ describe('ATI Analytics Container', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       amp.default = mockAmp;
 
-      renderer.create(
+      render(
         <ContextWrap platform="amp" pageType="frontPage">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,

@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CanonicalChartbeatAnalytics from '.';
 
 describe('CanonicalChartbeatAnalytics', () => {
@@ -18,18 +18,14 @@ describe('CanonicalChartbeatAnalytics', () => {
     title: 'This is an article',
     uid: 123,
   };
-  it('should return the helmet wrapper with the script snippet', () => {
-    const tree = renderer
-      .create(
-        <CanonicalChartbeatAnalytics
-          chartbeatConfig={config}
-          chartbeatSource="//chartbeat.js"
-        />,
-      )
-      .toTree();
 
-    expect(tree).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'should return the helmet wrapper with the script snippet',
+    <CanonicalChartbeatAnalytics
+      chartbeatConfig={config}
+      chartbeatSource="//chartbeat.js"
+    />,
+  );
 
   it('should call the global virtualPage function when props change', () => {
     const wrapper = mount(

@@ -1,10 +1,4 @@
 import envConfig from '../../support/config/envs';
-import config from '../../support/config/services';
-
-const serviceIsGNL = service => service === 'japanese';
-const serviceIsWS = service => service === 'persian';
-const serviceIsPS = service => service === 'news';
-const serviceUsesPlaceholder = service => service === 'scotland';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -24,50 +18,9 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
         describe('ATI', () => {
-          it('should have a noscript img tag with the ati url smoke', () => {
-            if (serviceIsGNL(service)) {
-              cy.hasNoscriptImgAtiUrl(
-                envConfig.atiUrl,
-                23453464573456435634563456,
-              );
-            } else if (serviceIsWS(service)) {
-              cy.hasNoscriptImgAtiUrl(
-                envConfig.atiUrl,
-                envConfig.atiAnalyticsWSBucket,
-              );
-            } else if (serviceIsPS(service)) {
-              cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
-            }
-          });
-        });
-      } else if (serviceIsGNL(service)) {
-        describe('ATI', () => {
           it('should have a noscript img tag with the ati url', () => {
-            cy.hasNoscriptImgAtiUrl(
-              envConfig.atiUrl,
-              envConfig.atiAnalyticsGNLBucket,
-            );
+            cy.hasNoscriptImgAtiUrl(envConfig.atiUrl);
           });
-        });
-      } else if (config[service].isWorldService) {
-        it('should have a noscript img tag with the ati url', () => {
-          cy.hasNoscriptImgAtiUrl(
-            envConfig.atiUrl,
-            envConfig.atiAnalyticsWSBucket,
-          );
-        });
-      } else if (serviceUsesPlaceholder(service)) {
-        describe('ATI', () => {
-          it('should have a noscript img tag with the ati url', () => {
-            cy.hasNoscriptImgAtiUrl(
-              envConfig.atiUrl,
-              envConfig.atiAnalyticsPlaceholderBucket,
-            );
-          });
-        });
-      } else {
-        it('should have a noscript img tag with the ati url', () => {
-          cy.hasNoscriptImgAtiUrl(envConfig.atiUrl, '');
         });
       }
       it('should only have expected bundle script tags', () => {
