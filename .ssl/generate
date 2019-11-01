@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+CERT_FILE=$DIR/server.cert
+KEY_FILE=$DIR/server.key
+
+echo "Creating Public Key"
+echo """UK
+London
+Portland
+BBC
+Dev
+it.servicedesk@bbc.co.uk
+""" | openssl req -nodes -new -x509 -keyout $KEY_FILE -out $CERT_FILE
