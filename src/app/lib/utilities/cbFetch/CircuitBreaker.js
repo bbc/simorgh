@@ -21,33 +21,18 @@ export default class CircuitBreaker {
     const now = Date.now();
 
     const failure = this.failures[key];
-    if (!failure) {
+
+    if (!failure || failure.count <= this.threshold) {
       return true;
     }
 
-    const { updatedAt, count } = failure;
-
-    if (count <= this.threshold) {
-      return true;
-    }
-
-    const multiplier = count - this.threshold;
+    // multiplier is used to gradually increase backoff interval.
+    const multiplier = failure.count - this.threshold;
     let timeout = multiplier * this.timeout;
     timeout = timeout > this.maxTimeout ? this.maxTimeout : timeout;
+    const expiry = failure.updatedAt + timeout;
 
-    const expiry = updatedAt + timeout;
-    if (now >= expiry) {
-      return true;
-    }
-
-    // Can make request if expiry time difference is more than max timeout.
-    // This to account for time updating on client.
-    const difference = Math.abs(now - expiry);
-    if (difference > this.maxTimeout) {
-      return true;
-    }
-
-    return false;
+    return now >= expiry;
   }
 
   recordFailure(url, options) {
