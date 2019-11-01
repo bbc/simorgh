@@ -27,7 +27,7 @@ export const service = {
     locale: `mr-IN`,
     datetimeLocale: `mr`,
     service: 'marathi',
-    serviceName: 'मराठी',
+    serviceName: 'Marathi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsmarathi',
     twitterSite: '@bbcnews',

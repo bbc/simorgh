@@ -31,7 +31,7 @@ export const service = {
     locale: `si-LK`,
     datetimeLocale: `si`,
     service: 'sinhala',
-    serviceName: 'සිංහල',
+    serviceName: 'Sinhala',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsinhala',
     twitterSite: '@bbcsinhala',
