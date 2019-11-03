@@ -28,7 +28,7 @@ const useFetch = (initialData, fetchData) => {
     // could remove initial data from context here rather than
     // on page transition
     // }
-  }, [data, fetchData]); // double check this
+  }, []);
 
   return [data, loading, error];
 };
