@@ -14,10 +14,11 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status, error } = initialData;
+  const { pageData, secondaryData, status, error } = initialData;
 
   const [state, setState] = useState({
     pageData,
+    secondaryData,
     status,
     service,
     variant,
@@ -45,6 +46,9 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
 
       setState({
         pageData: null,
+        // set this to null & components handle data fetching themselves after server render
+        // alternative - keep this data in context and pass functions to components to update
+        secondaryData: null,
         status: null,
         service: nextService,
         variant: nextVariant,

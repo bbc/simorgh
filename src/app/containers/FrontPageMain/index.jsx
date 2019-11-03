@@ -10,6 +10,7 @@ import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
+import RadioSchedules from '../RadioSchedules';
 
 const FrontPageMain = ({ frontPageData }) => {
   const {
@@ -17,6 +18,7 @@ const FrontPageMain = ({ frontPageData }) => {
     serviceLocalizedName,
     translations,
     frontPageTitle,
+    service,
   } = useContext(ServiceContext);
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], frontPageData);
@@ -50,6 +52,9 @@ const FrontPageMain = ({ frontPageData }) => {
         </VisuallyHiddenText>
         <Grid>
           <GridItemConstrainedLargeWithTopMargin>
+            {(service === 'afrique' || service === 'korean') && (
+              <RadioSchedules /> // just rendering for POC, this would be rendered if some config says so
+            )}
             {groups.map((group, index) => (
               <FrontPageSection
                 key={group.title}

@@ -9,6 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { EventContextProvider } from '#contexts/EventContext';
+import { SecondaryDataContextProvider } from '#contexts/SecondaryDataContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
@@ -17,6 +18,8 @@ const WithContexts = Component => {
       status,
       id,
       service,
+      // eslint-disable-next-line react/prop-types
+      secondaryData,
       isAmp,
       pageType,
       pathname,
@@ -40,7 +43,9 @@ const WithContexts = Component => {
           >
             <EventContextProvider>
               <UserContextProvider>
-                <Component {...props} />
+                <SecondaryDataContextProvider secondaryData={secondaryData}>
+                  <Component {...props} />
+                </SecondaryDataContextProvider>
               </UserContextProvider>
             </EventContextProvider>
           </RequestContextProvider>

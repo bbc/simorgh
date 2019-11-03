@@ -6,6 +6,7 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   webpackDirAlias: {
+    '#api': resolvePath('src/app/api'),
     '#app': resolvePath('src/app'),
     '#contexts': resolvePath('src/app/contexts'),
     '#data': resolvePath('data/'),
@@ -15,6 +16,7 @@ module.exports = {
     '#server': resolvePath('src/server/'),
   },
   jestDirAlias: {
+    '^#api(.*)$': '<rootDir>/src/app/api$1',
     '^#app(.*)$': '<rootDir>/src/app$1',
     '^#contexts(.*)$': '<rootDir>/src/app/contexts$1',
     '^#data(.*)$': '<rootDir>/data$1',
@@ -25,6 +27,7 @@ module.exports = {
   },
   eslintDirAlias: {
     map: [
+      ['#api', './src/app/api'],
       ['#app', './src/app'],
       ['#contexts', './src/app/contexts'],
       ['#data', './data'],
