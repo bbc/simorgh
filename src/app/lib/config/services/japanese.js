@@ -183,11 +183,6 @@ export const service = {
         url: '/japanese',
       },
       {
-        title: 'ラグビーW杯',
-        url:
-          'https://www.bbc.com/japanese/topics/ef55ff8e-8d36-4473-9f11-3ba9fa9ac787',
-      },
-      {
         title: '日本',
         url:
           'https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b',
