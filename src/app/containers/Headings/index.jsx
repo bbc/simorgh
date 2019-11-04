@@ -33,10 +33,15 @@ const sanitiseSubheadline = (type, text) => {
 const HeadingsContainer = ({ blocks, type, location }) => {
   const { script, service } = useContext(ServiceContext);
   const headerRef = useRef();
+  const isInitialMount = useRef(true);
 
-  useEffect(() => headerRef.current && headerRef.current.focus(), [
-    location.pathname,
-  ]);
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else if (headerRef.current && headerRef.current.tagName === 'H1') {
+      headerRef.current.focus();
+    }
+  }, [location.pathname]);
   const Heading = Headings[type];
   const GridConstrain = GridConstraints[type];
 
@@ -63,7 +68,7 @@ const HeadingsContainer = ({ blocks, type, location }) => {
         service={service}
         id={id}
         tabIndex="-1"
-        headerRef={headerRef}
+        ref={headerRef}
       >
         {renderText()}
       </Heading>
