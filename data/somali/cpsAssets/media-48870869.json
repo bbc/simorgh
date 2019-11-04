@@ -68,6 +68,17 @@
                     }
                 ],
                 "type": "media"
+            },
+            {
+                "text": "Sir laga duubay janankii isku dayay afgembiga Itoobiya",
+                "role": "introduction",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Ciidamada booliiska Itoobiya ayaa toogtay janaraal Tsige oo isku dayay afgembiga",
+                "markupType": "plain_text",
+                "type": "paragraph"
             }
         ]
     },
