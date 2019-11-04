@@ -1,13 +1,13 @@
 import React from 'react';
 import { bool, element } from 'prop-types';
-import Grid from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
     if (!loading) return <Component {...props} />;
     return (
-      <Grid
-        as="main"
+      <GelPageGrid
+        forwardedAs="main"
         role="main"
         columns={{
           group0: 6,
@@ -41,7 +41,7 @@ const WithLoading = Component => {
         >
           <div />
         </Grid>
-      </Grid>
+      </GelPageGrid>
     );
   };
 

@@ -12,7 +12,7 @@ import MediaPlayer from '../CpsAssetMediaPlayer';
 import Blocks from '../Blocks';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-import Grid from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -40,8 +40,8 @@ const CpsAssetPageMain = ({ pageData }) => {
       />
       <LinkedData type="Article" seoTitle={title} />
       <ATIAnalytics data={pageData} />
-      <Grid
-        as="main"
+      <GelPageGrid
+        forwardedAs="main"
         role="main"
         columns={{
           group0: 6,
@@ -78,7 +78,7 @@ const CpsAssetPageMain = ({ pageData }) => {
           </Link>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </Grid>
-      </Grid>
+      </GelPageGrid>
     </>
   );
 };

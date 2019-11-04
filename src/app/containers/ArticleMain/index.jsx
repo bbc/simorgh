@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '../ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Grid from '#app/components/Grid';
+import { GelPageGrid } from '#app/components/Grid';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
@@ -68,7 +68,7 @@ const ArticleMain = ({ articleData: data }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
       />
-      <Grid
+      <GelPageGrid
         as="main"
         role="main"
         columns={{
@@ -85,7 +85,7 @@ const ArticleMain = ({ articleData: data }) => {
           blocks={path(['content', 'model', 'blocks'], data)}
           componentsToRender={componentsToRender}
         />
-      </Grid>
+      </GelPageGrid>
     </>
   );
 };

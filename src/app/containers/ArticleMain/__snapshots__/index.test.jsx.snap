@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a news article correctly 1`] = `
-.c0 {
-  position: relative;
-}
-
 .c1 {
   position: relative;
 }
 
 .c3 {
   position: relative;
+}
+
+.c0 {
+  margin: 0 auto;
 }
 
 .c2 {
@@ -36,13 +36,6 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@supports (display:grid) {
   .c1 {
     display: block;
   }
@@ -51,6 +44,18 @@ exports[`should render a news article correctly 1`] = `
 @supports (display:grid) {
   .c3 {
     display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    max-width: 80rem;
   }
 }
 
@@ -585,16 +590,16 @@ exports[`should render a persian article correctly 1`] = `
     </script>
   </head>
   <body>
-    .c0 {
-  position: relative;
-}
-
-.c1 {
+    .c1 {
   position: relative;
 }
 
 .c3 {
   position: relative;
+}
+
+.c0 {
+  margin: 0 auto;
 }
 
 .c2 {
@@ -620,13 +625,6 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@supports (display:grid) {
   .c1 {
     display: block;
   }
@@ -635,6 +633,18 @@ exports[`should render a persian article correctly 1`] = `
 @supports (display:grid) {
   .c3 {
     display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    max-width: 80rem;
   }
 }
 
@@ -925,16 +935,16 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
     </script>
   </head>
   <body>
-    .c0 {
-  position: relative;
-}
-
-.c1 {
+    .c1 {
   position: relative;
 }
 
 .c3 {
   position: relative;
+}
+
+.c0 {
+  margin: 0 auto;
 }
 
 .c2 {
@@ -960,13 +970,6 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@supports (display:grid) {
   .c1 {
     display: block;
   }
@@ -975,6 +978,18 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 @supports (display:grid) {
   .c3 {
     display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    max-width: 80rem;
   }
 }
 

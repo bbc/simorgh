@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
-import Grid from '#app/components/Grid';
+import Grid, { GridMaxWidthGroup4 } from '#app/components/Grid';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
@@ -44,8 +44,8 @@ const FrontPageMain = ({ frontPageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <Grid
-        as="main"
+      <GridMaxWidthGroup4
+        forwardedAs="main"
         role="main"
         columns={{
           group0: 6,
@@ -88,7 +88,7 @@ const FrontPageMain = ({ frontPageData }) => {
             />
           ))}
         </Grid>
-      </Grid>
+      </GridMaxWidthGroup4>
     </>
   );
 };

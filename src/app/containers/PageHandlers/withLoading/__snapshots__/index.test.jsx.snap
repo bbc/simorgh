@@ -11,6 +11,10 @@ exports[`withLoading HOC and the loading prop set to true should return the load
   position: relative;
 }
 
+.c1 {
+  margin: 0 auto;
+}
+
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -19,7 +23,7 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 }
 
 @media (max-width:14.9375rem) {
-  .c1 {
+  .c2 {
     display: inline-block;
     width: 100%;
     vertical-align: top;
@@ -27,7 +31,7 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
+  .c2 {
     display: inline-block;
     width: 100%;
     vertical-align: top;
@@ -35,7 +39,7 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     display: inline-block;
     width: 100%;
     vertical-align: top;
@@ -43,7 +47,7 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
+  .c2 {
     display: inline-block;
     width: 83.33333333333333%;
     vertical-align: top;
@@ -51,7 +55,7 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c2 {
     display: inline-block;
     width: 62.5%;
     vertical-align: top;
@@ -59,7 +63,7 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     display: inline-block;
     width: 50%;
     vertical-align: top;
@@ -67,17 +71,29 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    max-width: 80rem;
+  }
+}
+
 <main
-  class="c0"
+  class="c0 c1"
   role="main"
 >
   <div
-    class="c1"
+    class="c2"
   >
     <div />
   </div>
