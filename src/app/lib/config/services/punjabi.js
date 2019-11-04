@@ -156,7 +156,7 @@ export const service = {
       },
       {
         title: 'ਭਾਰਤ',
-        url: '/punjabi/topics5a08f030-710f-4168-acee-67294a90fc75',
+        url: '/punjabi/topics/5a08f030-710f-4168-acee-67294a90fc75',
       },
       {
         title: 'ਕੌਮਾਂਤਰੀ',
