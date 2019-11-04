@@ -7,9 +7,9 @@ import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withLoading from '../PageHandlers/withLoading';
 
-const ErrorContainer = ({ status, errorCode }) => {
-  return <ErrorMain status={errorCode || status} />;
-};
+const ErrorContainer = ({ status, errorCode }) => (
+  <ErrorMain status={errorCode || status} />
+);
 
 ErrorContainer.propTypes = {
   status: number.isRequired,
