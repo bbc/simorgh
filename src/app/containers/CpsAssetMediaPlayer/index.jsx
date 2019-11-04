@@ -1,29 +1,42 @@
 import React from 'react';
 import { string } from 'prop-types';
-import styled from 'styled-components';
 import MediaPlayerContainer from '../MediaPlayer';
-import { GridItemConstrainedLarge } from '#lib/styledGrid';
+import Grid from '#app/components/Grid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const Wrapper = styled(GridItemConstrainedLarge)`
-  margin-bottom: 1.5rem;
-`;
-
 const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
   if (!assetUri) return null;
 
   return (
-    <Wrapper>
+    <Grid
+      item
+      startOffset={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 2,
+        group5: 5,
+      }}
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 6,
+        group4: 8,
+        group5: 12,
+      }}
+    >
       <MediaPlayerContainer
         blocks={blocks}
         assetId={assetUri.substr(1)}
         assetType="cps"
         showPlaceholder={false}
       />
-    </Wrapper>
+    </Grid>
   );
 };
 
