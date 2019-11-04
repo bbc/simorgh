@@ -680,7 +680,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         >
           <a
             class="c20"
-            href="/pidgin/sport"
+            href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
           >
             Sport
           </a>
@@ -1394,7 +1394,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         >
           <a
             class="c20"
-            href="/pidgin/sport"
+            href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
           >
             Sport
           </a>
