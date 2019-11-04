@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { string, bool } from 'prop-types';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -15,14 +16,18 @@ import formatDuration from '#lib/utilities/formatDuration';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const MediaPlayerContainer = ({ blocks }) => {
-  const { id, platform, origin } = useContext(RequestContext);
+const MediaPlayerContainer = ({
+  blocks,
+  assetId,
+  assetType,
+  showPlaceholder,
+}) => {
+  const { platform, origin } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
@@ -73,8 +78,8 @@ const MediaPlayerContainer = ({ blocks }) => {
 
   const placeholderSrc = getPlaceholderSrc(imageUrl);
   const embedSource = embedUrl({
-    requestUrl: `${id}/${versionId}/${lang}`,
-    type: 'articles',
+    requestUrl: `${assetId}/${versionId}/${lang}`,
+    type: assetType,
     isAmp,
     origin,
   });
@@ -85,7 +90,7 @@ const MediaPlayerContainer = ({ blocks }) => {
   );
 
   return (
-    <GridItemConstrainedMedium>
+    <>
       <Metadata aresMediaBlock={aresMediaBlock} />
       {isAmp ? (
         <AmpMediaPlayer
@@ -96,18 +101,24 @@ const MediaPlayerContainer = ({ blocks }) => {
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
+          placeholderSrc={showPlaceholder ? placeholderSrc : null}
+          showPlaceholder={showPlaceholder}
           title={iframeTitle}
-          placeholderSrc={placeholderSrc}
           service={service}
           mediaInfo={mediaInfo}
         />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
-    </GridItemConstrainedMedium>
+    </>
   );
 };
 
-MediaPlayerContainer.propTypes = mediaPlayerPropTypes;
+MediaPlayerContainer.propTypes = {
+  ...mediaPlayerPropTypes,
+  assetId: string.isRequired,
+  assetType: string.isRequired,
+  showPlaceholder: bool.isRequired,
+};
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
 };
