@@ -41,10 +41,14 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
-      it(`should display a ${appConfig[service][variant].translations.error[404].statusCode} error message on screen`, () => {
+      const variantService = appConfig[service]
+        ? appConfig[service][variant]
+        : appConfig[config[service].name][variant];
+
+      it(`should display a ${variantService.translations.error[404].statusCode} error message on screen`, () => {
         cy.get('h1').should(
           'contain',
-          `${appConfig[service][variant].translations.error[404].title}`,
+          `${variantService.translations.error[404].title}`,
         );
       });
 
@@ -53,7 +57,7 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.get('a').should(
             'have.attr',
             'href',
-            `${appConfig[service][variant].translations.error[404].callToActionLinkUrl}`,
+            `${variantService.translations.error[404].callToActionLinkUrl}`,
           );
         });
       });

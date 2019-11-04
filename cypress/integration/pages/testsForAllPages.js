@@ -253,9 +253,16 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
     });
 
     describe('Header Tests', () => {
-      debugger;
-      const hasLocalisedName =
-        appConfig[service][variant].serviceLocalizedName !== undefined;
+      // debugger;
+      const hasLocalisedName = appConfig[service]
+        ? appConfig[service][variant].serviceLocalizedName !== undefined
+        : appConfig[config[service].name][variant].serviceLocalizedName !==
+          undefined;
+
+      console.log(
+        appConfig[service],
+        appConfig[config[service].name][variant].serviceLocalizedName,
+      );
 
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
@@ -300,7 +307,11 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('be.visible');
       });
 
-      if (appConfig[service][variant].navigation) {
+      const navigation = appConfig[service]
+        ? appConfig[service][variant].navigation
+        : appConfig[config[service].name][variant].navigation;
+
+      if (navigation) {
         if (
           pageType !== 'articles' ||
           (pageType === 'articles' && useAppToggles.navOnArticles.enabled)

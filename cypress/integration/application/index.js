@@ -21,10 +21,11 @@ describe('Application', () => {
     const usesArticlePath = servicesUsingArticlePaths.includes(service);
 
     it(`should return a 200 status code for ${service}'s service worker`, () => {
+      console.log(config[service].name);
       cy.testResponseCodeAndType(
         usesArticlePath
-          ? `/${service.name}/articles/sw.js`
-          : `/${service.name}/sw.js`,
+          ? `/${config[service].name}/articles/sw.js`
+          : `/${config[service].name}/sw.js`,
         200,
         'application/javascript',
       );
@@ -33,8 +34,8 @@ describe('Application', () => {
     it(`should return a 200 status code for ${service} manifest file`, () => {
       cy.testResponseCodeAndType(
         usesArticlePath
-          ? `/${service.name}/articles/manifest.json`
-          : `/${service.name}/manifest.json`,
+          ? `/${config[service].name}/articles/manifest.json`
+          : `/${config[service].name}/manifest.json`,
         200,
         'application/json',
       );
